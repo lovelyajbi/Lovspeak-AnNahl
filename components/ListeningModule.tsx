@@ -425,7 +425,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     setQuiz([]);
     setSpeakers([]);
     setHasListenedToEnd(false);
-    setQuizLoading(true); // Quiz will always auto-generate
+    setQuizLoading(false);
 
     if (audioUrl) {
       URL.revokeObjectURL(audioUrl);
@@ -459,12 +459,6 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
       const cacheId = btoa(encodeURIComponent(`${title}_${activeLevel}_${activeType}_${accent}_${getTextCacheKey(generatedScript)}`)).replace(/[/+=]/g, '');
       let cachedWavBlob = await getCachedAudioBlob(cacheId);
-
-      // Always generate quiz in parallel (auto-generate)
-      const quizPromise = generateListeningQuiz(generatedScript, activeLevel).catch(e => {
-        console.error('Quiz generation error', e);
-        return [] as QuizQuestion[];
-      });
 
       let finalWavBlob: Blob;
 
@@ -512,15 +506,6 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           }
         }, 15000);
       }
-
-      // Wait for quiz to finish (runs in background while player is already visible)
-      const finalQuiz = await quizPromise;
-      if (requestId !== selectionRequestRef.current) return;
-      if (finalQuiz && finalQuiz.length > 0) {
-        setQuiz(finalQuiz);
-        setUserAnswers(new Array(finalQuiz.length).fill(-1));
-      }
-      setQuizLoading(false);
 
     } catch (e) {
       console.error(e);
@@ -1135,7 +1120,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           </AnimatePresence>
 
           {!quiz.length && !quizLoading && (
-            <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleGenerateQuiz} className="px-5 py-2 md:px-6 md:py-2.5 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white rounded-xl font-black text-[10px] md:text-sm shadow-lg transition"><i className="fas fa-sync-alt mr-1.5"></i> Retry Quiz</motion.button>
+            <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleGenerateQuiz} className="px-5 py-2 md:px-6 md:py-2.5 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white rounded-xl font-black text-[10px] md:text-sm shadow-lg transition"><i className="fas fa-sync-alt mr-1.5"></i> Generate Quiz</motion.button>
           )}
           {quizLoading && <div className="py-3 text-purple-500 font-black animate-pulse text-[10px] md:text-xs flex items-center justify-center gap-2"><i className="fas fa-magic"></i> Preparing quiz automatically...</div>}
           {error && <div className="p-3 bg-red-50 text-red-500 rounded-xl mt-4 border border-red-100 text-[10px] md:text-xs font-bold">{error}</div>}

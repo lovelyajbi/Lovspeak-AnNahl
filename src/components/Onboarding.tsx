@@ -65,7 +65,7 @@ export const ActivationPage: React.FC = () => {
         </div>
         <h2 className="text-3xl font-black text-gray-900 dark:text-white mb-4">Aktivasi Akses</h2>
         <p className="text-gray-500 font-medium mb-8">
-          Masukkan kode aktivasi Anda untuk melanjutkan ke LovSpeak.
+          Masukkan kode aktivasi dari admin untuk melanjutkan ke LovSpeak.
         </p>
 
         <form onSubmit={handleActivate} className="space-y-6">
@@ -74,20 +74,11 @@ export const ActivationPage: React.FC = () => {
               type="text"
               value={code}
               onChange={(e) => setCode(e.target.value)}
-              placeholder="LOVSPEAK-XXXX-XXXX"
+              placeholder="Masukkan kode dari admin"
               className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-900 border-2 border-transparent focus:border-lovelya-500 rounded-2xl font-bold text-center tracking-widest transition-all outline-none"
               required
             />
-            <div className="mt-3">
-              <a
-                href="https://lovelya-edu.myscalev.com/lovspeak1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs font-bold text-lovelya-600 hover:text-lovelya-700 underline transition-colors"
-              >
-                Belum punya akses? Dapatkan kode akses di sini
-              </a>
-            </div>
+            <p className="mt-3 text-xs font-bold text-gray-400 dark:text-gray-500">Belum memiliki kode? Hubungi admin sekolah.</p>
             {error && <p className="text-rose-500 text-xs font-bold mt-2">{error}</p>}
           </div>
 

@@ -570,17 +570,16 @@ export const logActivity = async (log: Omit<ActivityLog, 'id'>) => {
 
 // --- MASTER ACTIVATION CHECK ---
 export const checkActivationCode = async (code: string): Promise<boolean> => {
-    // Hardcoded fallback as requested
-    const HARDCODED_CODE = "BismillahAksesLovSpeakUntukPribadi";
-    if (code === HARDCODED_CODE) return true;
-
     try {
-        const snap = await getDoc(doc(db, 'settings/master'));
-        if (snap.exists()) {
-            const masterCode = snap.data().activationCode;
-            return masterCode === code;
-        }
-        return false;
+        const idToken = await auth.currentUser?.getIdToken();
+        const response = await fetch('/api/activation-check', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', ...(idToken ? { Authorization: `Bearer ${idToken}` } : {}) },
+            body: JSON.stringify({ code: code.trim() }),
+        });
+        if (!response.ok) return false;
+        const result = await response.json() as { valid?: boolean };
+        return result.valid === true;
     } catch (e) {
         console.error("Activation check error:", e);
         return false;

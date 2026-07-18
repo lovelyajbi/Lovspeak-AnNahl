@@ -66,7 +66,16 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setHasApiKey(getGeminiApiKeys().length > 0);
       
       if (firebaseUser) {
-        isAdminUser(firebaseUser.uid, firebaseUser.email).then(setIsAdmin).catch(() => setIsAdmin(false));
+        // Keep the admin's normal LovSpeak entry point, but do not block a
+        // trusted admin account behind the student activation screen.
+        let adminSession = false;
+        Promise.all([isAdminUser(firebaseUser.uid, firebaseUser.email), firebaseUser.getIdTokenResult()])
+          .then(([access, token]) => {
+            adminSession = access || token.claims.adminMaster === true;
+            setIsAdmin(adminSession);
+            if (adminSession) setIsActive(true);
+          })
+          .catch(() => setIsAdmin(false));
         startPresence(firebaseUser.uid).then((stop) => { stopPresence = stop; }).catch(console.error);
         setIsSyncing(true);
         // Initial sync
@@ -81,9 +90,9 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
             const data = snap.data();
             const localProfile = readLocalProfile();
             const resolvedAccess = resolveAccessState(data, localProfile);
-            setIsActive(resolvedAccess);
+            setIsActive(adminSession || resolvedAccess);
 
-            if (!resolvedAccess) {
+            if (!adminSession && !resolvedAccess) {
               syncScalevAccessByEmail({
                 uid: firebaseUser.uid,
                 email: firebaseUser.email,
@@ -93,7 +102,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
                   if (synced) setIsActive(true);
                 })
                 .catch(console.error);
-            } else if (!data.isActive) {
+            } else if (!adminSession && !data.isActive) {
               setDoc(doc(db, `users/${firebaseUser.uid}`), {
                 isActive: true,
               }, { merge: true }).catch(console.error);
@@ -105,11 +114,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
               name: firebaseUser.displayName,
               createdAt: new Date().toISOString()
             }, { merge: true })
-              .then(() => syncScalevAccessByEmail({
+              .then(() => {
+                if (adminSession) setIsActive(true);
+                return syncScalevAccessByEmail({
                 uid: firebaseUser.uid,
                 email: firebaseUser.email,
                 displayName: firebaseUser.displayName,
-              }))
+                });
+              })
               .then((synced) => {
                 if (synced) setIsActive(true);
               })

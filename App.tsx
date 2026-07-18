@@ -9,7 +9,7 @@ import Layout from './components/Layout';
 import { useAuth } from './src/contexts/AuthContext';
 import AdminPortal from './src/components/AdminPortal';
 import AdminLogin from './src/components/AdminLogin';
-import LandingPage from './src/components/LandingPage';
+import LoginPage from './src/components/LoginPage';
 import { ActivationPage, ApiKeySetupPage } from './src/components/Onboarding';
 
 // Lazy load modules for performance
@@ -861,7 +861,7 @@ const App: React.FC = () => {
   }
 
   if (!user) {
-    return <LandingPage />;
+    return <LoginPage />;
   }
 
   // If user exists but sync is still happening, we might want to show a subtle loader 

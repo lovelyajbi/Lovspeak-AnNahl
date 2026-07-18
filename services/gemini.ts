@@ -55,7 +55,7 @@ const isPermissionError = (e: any): boolean => {
 
 export const MODEL_CASCADE_SMART = ['gemini-3.5-flash', 'gemini-2.5-flash', 'gemini-3-flash-preview', 'gemini-3.1-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-3.1-pro-preview', 'gemini-2.5-pro', 'gemini-pro-latest'];
 export const MODEL_CASCADE_LITE = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-2.5-flash', 'gemini-3-flash-preview'];
-export const MODEL_CASCADE_TTS = ['gemini-2.5-flash-preview-tts', 'gemini-3.1-flash-tts-preview', 'gemini-2.5-flash'];
+export const MODEL_CASCADE_TTS = ['gemini-3.1-flash-tts-preview', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-preview-tts'];
 export const MODEL_CASCADE_PRO = ['gemini-3.5-flash', 'gemini-3.1-pro-preview', 'gemini-3-flash-preview', 'gemini-2.5-pro', 'gemini-pro-latest', 'gemini-2.5-flash'];
 
 const COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours
@@ -1034,12 +1034,12 @@ export const generateListeningContent = async (title: string, level: string, typ
         }
         // Level-aware complexity scaling (moderately reduced for speed)
         const levelGuide: Record<string, { vocab: string; sentences: string; speed: string; wordCount: string; turns: string }> = {
-            'A1': { vocab: 'basic everyday words (100-300 most common)', sentences: 'very short and simple (subject-verb-object)', speed: 'clear and gentle', wordCount: '300-400', turns: '18-24' },
-            'A2': { vocab: 'common daily vocabulary (300-600 words)', sentences: 'short sentences with simple connectors (and, but, because)', speed: 'clear and comfortable', wordCount: '350-450', turns: '20-26' },
-            'B1': { vocab: 'intermediate vocabulary with some idiomatic expressions', sentences: 'moderate complexity with relative clauses', speed: 'natural comfortable pace', wordCount: '400-500', turns: '24-30' },
-            'B2': { vocab: 'wide-ranging vocabulary including abstract concepts', sentences: 'complex sentences with multiple clauses', speed: 'natural conversational speed', wordCount: '450-550', turns: '26-32' },
-            'C1': { vocab: 'sophisticated and nuanced vocabulary', sentences: 'complex and varied sentence structures', speed: 'natural confident pace', wordCount: '500-600', turns: '28-34' },
-            'C2': { vocab: 'full range including rare and specialized terms', sentences: 'highly complex, native-level structures', speed: 'fast natural native speed', wordCount: '550-650', turns: '30-36' },
+            'A1': { vocab: 'basic everyday words (100-300 most common)', sentences: 'very short and simple (subject-verb-object)', speed: 'clear and gentle', wordCount: '250-300', turns: '8-12' },
+            'A2': { vocab: 'common daily vocabulary (300-600 words)', sentences: 'short sentences with simple connectors (and, but, because)', speed: 'clear and comfortable', wordCount: '250-300', turns: '10-14' },
+            'B1': { vocab: 'intermediate vocabulary with some idiomatic expressions', sentences: 'moderate complexity with relative clauses', speed: 'natural comfortable pace', wordCount: '300-350', turns: '12-16' },
+            'B2': { vocab: 'wide-ranging vocabulary including abstract concepts', sentences: 'complex sentences with multiple clauses', speed: 'natural conversational speed', wordCount: '300-350', turns: '14-18' },
+            'C1': { vocab: 'sophisticated and nuanced vocabulary', sentences: 'complex and varied sentence structures', speed: 'natural confident pace', wordCount: '350-400', turns: '16-20' },
+            'C2': { vocab: 'full range including rare and specialized terms', sentences: 'highly complex, native-level structures', speed: 'fast natural native speed', wordCount: '350-400', turns: '18-22' },
         };
         const guide = levelGuide[level] || levelGuide['A1'];
 
@@ -1157,7 +1157,7 @@ export const generateListeningScript = async (title: string, level: string, type
         Theme: ${theme}. 
         ${isIslamic ? 'Ensure the content reflects Islamic manners and vocabulary.' : ''}
         ${accentScriptInstruction}
-        ${type === 'dialogue' ? `Choose 2 real character names (mix of Islamic names like Ahmad, Fatimah, Omar and general names like James, Sarah, David). Use audio tags like [warmly], [excited], [laughing], [curious] throughout. Create a vibrant dialogue with 20-26 turns, each 1-3 sentences.` : `Write in first person as someone sharing a personal experience. Use a narrative arc: engaging hook → interesting development → meaningful conclusion. Use audio tags like [warmly], [thoughtful], [pausing], [emphasizing], [with wonder], [smiling] throughout. Aim for 180-200 words. Make it sound like a real person telling a fascinating story, NOT a textbook passage.`}
+        ${type === 'dialogue' ? `Choose 2 real character names (mix of Islamic names like Ahmad, Fatimah, Omar and general names like James, Sarah, David). Use audio tags like [warmly], [excited], [laughing], [curious] throughout. Create a vibrant dialogue with 10-14 turns, each 1-3 sentences.` : `Write in first person as someone sharing a personal experience. Use a narrative arc: engaging hook → interesting development → meaningful conclusion. Use audio tags like [warmly], [thoughtful], [pausing], [emphasizing], [with wonder], [smiling] throughout. Aim for 250-300 words. Make it sound like a real person telling a fascinating story, NOT a textbook passage.`}
         ${STRICT_FILTER} 
         Return only the plain text script.`;
         const response = await ai.models.generateContent({
@@ -1174,6 +1174,7 @@ export const generateListeningQuiz = async (script: string, level: string): Prom
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Create 5 MCQ comprehension questions for this English script at ${level} level: "${script}". 
         ${getLanguageInstruction()}
+        CRITICAL: ALL questions MUST strictly be based ONLY on the provided script. Do not ask generic questions or include information outside of this context.
         ${STRICT_FILTER}
         IMPORTANT: Randomize the correctIndex (0, 1, 2, or 3) for each question so the correct answer is NOT always the first option!
         ${QUALITY_ASSURANCE_PROMPT}
