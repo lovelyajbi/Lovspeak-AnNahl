@@ -1140,9 +1140,11 @@ const ProfileModule: React.FC = () => {
                                     <p className="text-[9px] text-gray-500 truncate">Signed in as: <span className="text-gray-900 dark:text-gray-200 font-bold">{authUser?.email}</span></p>
                                     {isAdmin && <button
                                         onClick={() => window.location.assign('/admin')}
-                                        className="w-full py-1.5 bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-300 rounded-lg text-[8px] font-black uppercase tracking-widest flex items-center justify-center gap-1.5 hover:bg-violet-100 dark:hover:bg-violet-900/35"
+                                        className="w-full py-3 px-4 bg-gradient-to-r from-violet-500 to-lovelya-500 text-white rounded-xl text-xs font-black flex items-center justify-center gap-2 shadow-lg shadow-violet-500/25 hover:shadow-xl hover:shadow-violet-500/35 hover:-translate-y-0.5 active:translate-y-0 transition-all"
                                     >
-                                        <i className="fas fa-shield-halved"></i> Dashboard Admin
+                                        <i className="fas fa-shield-halved text-sm"></i>
+                                        <span>Buka Dashboard Admin</span>
+                                        <i className="fas fa-arrow-right text-[10px] ml-auto"></i>
                                     </button>}
                                     <button
                                         onClick={() => setShowLogoutConfirm(true)}
@@ -1184,9 +1186,11 @@ const ProfileModule: React.FC = () => {
                             </div>
                             {isAdmin && <button
                                 onClick={() => window.location.assign('/admin')}
-                                className="w-full py-2 bg-violet-50 dark:bg-violet-900/20 text-violet-600 dark:text-violet-300 rounded-xl text-[8px] font-black uppercase tracking-widest flex items-center justify-center gap-2 border border-violet-100 dark:border-violet-900/30 active:scale-95 transition-all outline-none"
+                                className="w-full py-3.5 px-4 bg-gradient-to-r from-violet-500 to-lovelya-500 text-white rounded-2xl text-sm font-black flex items-center justify-center gap-2.5 shadow-lg shadow-violet-500/25 active:scale-95 transition-all outline-none"
                             >
-                                <i className="fas fa-shield-halved"></i> Buka Dashboard Admin
+                                <i className="fas fa-shield-halved text-base"></i>
+                                <span>Buka Dashboard Admin</span>
+                                <i className="fas fa-arrow-right text-xs ml-auto"></i>
                             </button>}
                             <ProfileFeedbackHistory user={authUser} />
                             <button

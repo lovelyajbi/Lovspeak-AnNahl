@@ -22,8 +22,8 @@ service cloud.firestore {
 
     // Master Settings (Activation Code)
     match /settings/master {
-      // Users need to read the code to verify it during activation
-      allow read: if isAuthenticated();
+      // Activation is verified server-side; never expose this document to users.
+      allow read: if isAdmin();
       allow write: if isAdmin();
     }
 
@@ -61,6 +61,34 @@ service cloud.firestore {
         allow update: if isAdmin();
         allow delete: if isAdmin() || (isAuthenticated() && resource.data.authorId == request.auth.uid);
       }
+    }
+
+    // Admin-created assignments are private to each recipient. The admin owns
+    // the definition; a learner may only acknowledge/read their own copy.
+    match /assignments/{assignmentId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /userAssignments/{userId}/items/{assignmentId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isAdmin();
+      allow update: if isAdmin() || (isOwner(userId) &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['readAt']) &&
+        request.resource.data.readAt is string);
+      allow delete: if isAdmin();
+    }
+
+    match /broadcasts/{broadcastId} {
+      allow read, write: if isAdmin();
+    }
+
+    match /userNotifications/{userId}/items/{notificationId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow create: if isAdmin();
+      allow update: if isAdmin() || (isOwner(userId) &&
+        request.resource.data.diff(resource.data).affectedKeys().hasOnly(['readAt']) &&
+        request.resource.data.readAt is string);
+      allow delete: if isOwner(userId) || isAdmin();
     }
   }
 }

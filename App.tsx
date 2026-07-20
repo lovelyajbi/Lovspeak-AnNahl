@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { AppView, LearningPlan, Level, DailyTask, UserProfile, AssessmentResult, ModuleContext } from './types';
+import { AppView, LearningPlan, Level, DailyTask, UserProfile, AssessmentResult, ModuleContext, UserAssignment, UserNotification } from './types';
 import { LEARNING_TARGETS, LEARNING_INTENSITIES, LEVEL_DEFINITIONS, LEVELS, ISLAMIC_QUOTES } from './constants';
 import { getLearningPlan, saveLearningPlan, getUserProfile, saveUserProfile, completeRoadmapUnit } from './services/storage';
 import { generateDailyTasks, generateGoogleCalendarUrl } from './services/planner';
@@ -31,6 +31,7 @@ const SettingsModule = lazy(() => import('./components/SettingsModule'));
 import SplashScreen from './components/SplashScreen';
 import InstallPrompt from './src/components/InstallPrompt';
 import { ApiLimitModal } from './components/ApiLimitModal';
+import { getUserAssignments, getUserNotifications, markNotificationRead, markUserAssignmentRead } from './services/admin';
 
 // App version — must match APP_VERSION in sw.js. Bump on every deploy.
 const APP_VERSION = '2.1.0';
@@ -120,6 +121,9 @@ const App: React.FC = () => {
   const [toast, setToast] = useState<{ message: string, type: 'success' | 'info' } | null>(null);
   const [showWisdomModal, setShowWisdomModal] = useState(false);
   const [currentQuote, setCurrentQuote] = useState('');
+  const [assignedTasks, setAssignedTasks] = useState<UserAssignment[]>([]);
+  const [taskNotifications, setTaskNotifications] = useState<UserNotification[]>([]);
+  const [taskPopup, setTaskPopup] = useState<UserNotification | null>(null);
 
   // Dashboard View State
   const [dashboardView, setDashboardView] = useState<'yesterday' | 'today' | 'week' | 'month'>('today');
@@ -130,6 +134,28 @@ const App: React.FC = () => {
   const [tempIntensity, setTempIntensity] = useState('');
   const [tempLevel, setTempLevel] = useState<Level>('A1');
   const [tempDays, setTempDays] = useState(3);
+
+  useEffect(() => {
+    if (!user || !isActive || isSyncing) return;
+    let cancelled = false;
+    const loadInbox = async () => {
+      try {
+        const [tasks, notifications] = await Promise.all([getUserAssignments(user.uid), getUserNotifications(user.uid)]);
+        if (cancelled) return;
+        setAssignedTasks(tasks);
+        setTaskNotifications(notifications);
+        const newest = notifications.find(item => !item.readAt);
+        if (newest) {
+          setTaskPopup(newest);
+          window.setTimeout(() => setTaskPopup(current => current?.id === newest.id ? null : current), 3000);
+        }
+      } catch (error) {
+        console.warn('[LovSpeak] assignment inbox unavailable', error);
+      }
+    };
+    void loadInbox();
+    return () => { cancelled = true; };
+  }, [user?.uid, isActive, isSyncing]);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -342,6 +368,32 @@ const App: React.FC = () => {
       level: task.level || userProfile?.level || 'A1'
     });
     setView(task.moduleView);
+  };
+
+  const handleStartAssignment = async (assignment: UserAssignment) => {
+    if (user) {
+      await markUserAssignmentRead(user.uid, assignment.id).catch(() => undefined);
+      setAssignedTasks(items => items.map(item => item.id === assignment.id ? { ...item, readAt: new Date().toISOString() } : item));
+    }
+    const target = assignment.target;
+    const targetView = target.moduleView || (target.kind === 'roadmap_pack' ? AppView.ROADMAP : AppView.HOME);
+    if (targetView === AppView.HOME) return;
+    setActiveTaskId(null);
+    setModuleContext({
+      autoStart: true,
+      type: target.kind === 'roadmap_pack' ? 'unit' : 'assignment',
+      level: userProfile?.level || 'A1',
+      title: target.title || target.topic || target.theme || assignment.title,
+      desc: assignment.description || 'Tugas khusus dari admin.',
+      unitId: target.packId,
+      stepId: target.stepId,
+      shadowingTaskId: target.shadowingTaskId,
+      minScore: target.minScore,
+      goalMinutes: target.targetDurationSeconds ? Math.ceil(target.targetDurationSeconds / 60) : undefined,
+      promptContext: target.topic || target.theme,
+      taskId: assignment.id
+    });
+    setView(targetView);
   };
   const handleNavigate = (targetView: AppView) => {
     setActiveTaskId(null);
@@ -684,6 +736,23 @@ const App: React.FC = () => {
                                 ))}
                               </div>
                             </div>
+                            {assignedTasks.length > 0 && (
+                              <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 md:p-6 shadow-sm border border-lovelya-200 dark:border-lovelya-800/60">
+                                <div className="flex items-center justify-between gap-3 mb-4">
+                                  <h3 className="font-black text-gray-800 dark:text-white text-xs md:text-sm lg:text-base flex items-center gap-2"><i className="fas fa-clipboard-check text-lovelya-500" /> Tugas dari Admin</h3>
+                                  <span className="text-[10px] font-black text-lovelya-600 bg-lovelya-50 dark:bg-lovelya-900/30 px-2 py-1 rounded-full">{assignedTasks.filter(item => item.status !== 'completed').length} aktif</span>
+                                </div>
+                                <div className="space-y-2">
+                                  {assignedTasks.slice(0, 4).map(assignment => (
+                                    <button key={assignment.id} type="button" onClick={() => void handleStartAssignment(assignment)} className="w-full text-left rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 p-3 hover:border-lovelya-300 transition-colors">
+                                      <div className="flex items-start justify-between gap-3"><span className="font-black text-xs text-gray-800 dark:text-white">{assignment.title}</span><i className="fas fa-arrow-up-right-from-square text-lovelya-500 text-[11px]" /></div>
+                                      <div className="mt-1 text-[10px] text-gray-500 dark:text-gray-300">{assignment.target.packTitle || assignment.target.title || assignment.target.topic || assignment.target.theme || assignment.target.kind}</div>
+                                      <div className="mt-2 flex items-center gap-2 text-[9px] font-bold text-gray-400"><span>{assignment.status === 'completed' ? 'Selesai' : assignment.status === 'needs_retake' ? 'Perlu retake' : 'Belum selesai'}</span>{assignment.dueAt && <span>· Tenggat {new Date(assignment.dueAt).toLocaleDateString('id-ID')}</span>}</div>
+                                    </button>
+                                  ))}
+                                </div>
+                              </div>
+                            )}
                           </div>
 
                           {/* Right: Task List / Schedule Views - Main Content Area */}
@@ -893,6 +962,14 @@ const App: React.FC = () => {
       </Suspense>
       <InstallPrompt />
       <ApiLimitModal onNavigateToSettings={() => setView(AppView.SETTINGS)} />
+
+      <AnimatePresence>
+        {taskPopup && (
+          <motion.div initial={{ y: -30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} exit={{ y: -20, opacity: 0 }} className="fixed top-4 left-1/2 -translate-x-1/2 z-[120] w-[calc(100%-2rem)] max-w-md rounded-2xl bg-white dark:bg-gray-800 border border-lovelya-200 dark:border-gray-700 shadow-2xl p-4">
+            <div className="flex items-start gap-3"><div className="w-10 h-10 rounded-xl bg-lovelya-50 dark:bg-lovelya-900/30 text-lovelya-600 flex items-center justify-center shrink-0"><i className="fas fa-bell" /></div><div className="min-w-0"><p className="font-black text-sm text-gray-900 dark:text-white">{taskPopup.title}</p><p className="text-xs text-gray-500 dark:text-gray-300 mt-1 line-clamp-2">{taskPopup.message}</p></div><button type="button" aria-label="Tutup notifikasi" onClick={() => setTaskPopup(null)} className="ml-auto text-gray-400 hover:text-gray-700"><i className="fas fa-times" /></button></div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {toast && (
         <div className={`fixed bottom-8 left-1/2 transform -translate-x-1/2 px-6 py-3 rounded-full shadow-2xl z-50 animate-bounce-in flex items-center gap-3 text-white font-bold text-sm backdrop-blur-md

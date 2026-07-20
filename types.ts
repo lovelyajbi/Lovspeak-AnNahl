@@ -76,6 +76,57 @@ export interface AdminReply {
   createdAt: string;
 }
 
+export type AssignmentKind = 'roadmap_pack' | 'grammar' | 'reading' | 'listening' | 'speaking' | 'shadowing';
+export type AssignmentStatus = 'assigned' | 'in_progress' | 'completed' | 'needs_retake' | 'expired';
+
+export interface AssignmentTarget {
+  kind: AssignmentKind;
+  moduleView?: AppView;
+  packId?: string;
+  packTitle?: string;
+  packStepIds?: string[];
+  stepId?: string;
+  shadowingTaskId?: string;
+  title?: string;
+  theme?: string;
+  topic?: string;
+  minScore?: number;
+  targetDurationSeconds?: number;
+  requireQuiz?: boolean;
+}
+
+export interface AdminAssignment {
+  id: string;
+  title: string;
+  description?: string;
+  target: AssignmentTarget;
+  dueAt?: string | null;
+  recipientMode: 'all' | 'selected';
+  recipientCount: number;
+  createdBy: string;
+  createdAt: string;
+}
+
+export interface UserAssignment extends AdminAssignment {
+  status: AssignmentStatus;
+  attempts: number;
+  readAt?: string;
+  completedAt?: string;
+  bestScore?: number;
+  bestDurationSeconds?: number;
+  progressLabel?: string;
+}
+
+export interface UserNotification {
+  id: string;
+  kind: 'assignment' | 'broadcast';
+  refId: string;
+  title: string;
+  message: string;
+  createdAt: string;
+  readAt?: string;
+}
+
 export interface VocabItem {
   id: string;
   english: string;
@@ -291,7 +342,7 @@ export interface ModuleContext {
   taskId?: string;
   unitId?: string;
   stepId?: string;
-  type?: 'unit' | 'daily' | 'assessment';
+  type?: 'unit' | 'daily' | 'assignment' | 'assessment';
   autoStart: boolean;
   level: Level;
   title: string;

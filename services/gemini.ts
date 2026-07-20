@@ -23,7 +23,6 @@ const getAiClient = (modelName: string, keyIndex: number = 0) => {
 
     const safeIndex = keyIndex % keys.length;
     const apiKey = keys[safeIndex];
-    console.log(`[AI-USAGE] ${modelName} is using Key #${safeIndex + 1} (${apiKey.substring(0, 4)}...${apiKey.slice(-4)})`);
     return new GoogleGenAI({ apiKey });
 };
 

@@ -19,6 +19,9 @@ export default defineConfig(({ mode }) => {
           '@': path.resolve(__dirname, '.'),
         }
       },
+      esbuild: {
+        drop: mode === 'production' ? ['console', 'debugger'] : []
+      },
       build: {
         rollupOptions: {
           output: {
