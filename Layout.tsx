@@ -54,7 +54,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children }) =>
           <p className="text-xs text-gray-400 mt-1 uppercase tracking-wider">AI Speaking Partner</p>
         </div>
 
-        <nav className="flex-1 p-4 space-y-2 overflow-y-auto">
+        <nav data-tour="bottom-nav" className="flex-1 p-4 space-y-2 overflow-y-auto">
           {navItems.map((item) => (
             <button
               key={item.id}

@@ -257,7 +257,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
           </div>
 
           {/* Navigation - Scrollable Area */}
-          <nav className="flex-1 px-4 py-2 space-y-8 overflow-y-auto custom-scrollbar pb-4">
+          <nav data-tour="bottom-nav" className="flex-1 px-4 py-2 space-y-8 overflow-y-auto custom-scrollbar pb-4">
             {navGroups.map((group, idx) => (
               <div key={idx}>
                 <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 px-4 opacity-80">{group.title}</div>
@@ -271,6 +271,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
                     return (
                       <button
                         key={item.id}
+                        data-tour={item.id === AppView.ROADMAP ? 'roadmap-nav' : undefined}
                         onClick={() => {
                           audioService.play('nav');
                           onNavigate(item.id);

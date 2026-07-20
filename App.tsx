@@ -11,6 +11,7 @@ import AdminPortal from './src/components/AdminPortal';
 import AdminLogin from './src/components/AdminLogin';
 import LoginPage from './src/components/LoginPage';
 import { ActivationPage, ApiKeySetupPage } from './src/components/Onboarding';
+import TourGuide, { buildAppTourSteps, TOUR_KEY_APP } from './src/components/TourGuide';
 
 // Lazy load modules for performance
 const ReadingModule = lazy(() => import('./components/ReadingModule'));
@@ -124,6 +125,7 @@ const App: React.FC = () => {
   const [assignedTasks, setAssignedTasks] = useState<UserAssignment[]>([]);
   const [taskNotifications, setTaskNotifications] = useState<UserNotification[]>([]);
   const [taskPopup, setTaskPopup] = useState<UserNotification | null>(null);
+  const [showTour, setShowTour] = useState(false);
 
   // Dashboard View State
   const [dashboardView, setDashboardView] = useState<'yesterday' | 'today' | 'week' | 'month'>('today');
@@ -249,6 +251,26 @@ const App: React.FC = () => {
       }
     }
   }, [user, isActive, hasApiKey]);
+
+  useEffect(() => {
+    if (!user || !isActive || !hasApiKey || isSyncing) return;
+    if (view !== AppView.HOME) return;
+    try {
+      const seen = localStorage.getItem(TOUR_KEY_APP);
+      if (!seen) {
+        const t = window.setTimeout(() => setShowTour(true), 900);
+        return () => window.clearTimeout(t);
+      }
+    } catch { /* ignore */ }
+  }, [user, isActive, hasApiKey, isSyncing, view]);
+
+  useEffect(() => {
+    (window as any).lovspeakStartTour = () => {
+      try { localStorage.removeItem(TOUR_KEY_APP); } catch { /* ignore */ }
+      setView(AppView.HOME);
+      setShowTour(true);
+    };
+  }, []);
 
   useEffect(() => {
     if (toast) {
@@ -591,7 +613,7 @@ const App: React.FC = () => {
                           Ready to continue? {tasks.length - completedTasks} tasks left today. Keep up the great work!
                         </p>
                       </div>
-                      <div className="flex flex-row md:flex-row gap-2 w-full md:w-auto self-stretch md:self-center">
+                      <div data-tour="hero-actions" className="flex flex-row md:flex-row gap-2 w-full md:w-auto self-stretch md:self-center">
                         <button
                           onClick={() => {
                             const randomQuote = ISLAMIC_QUOTES[Math.floor(Math.random() * ISLAMIC_QUOTES.length)];
@@ -613,7 +635,7 @@ const App: React.FC = () => {
                   </div>
 
                   {/* 2. Categories Grid - Redesigned for Large Screens */}
-                  <div className="pt-2 md:pt-4">
+                  <div data-tour="learning-hub" className="pt-2 md:pt-4">
                     <div className="flex items-center justify-between mb-3 md:mb-6">
                       <div className="flex items-center gap-2 md:gap-3">
                         <div className="w-1.5 h-6 bg-lovelya-600 rounded-full"></div>
@@ -667,7 +689,7 @@ const App: React.FC = () => {
                   </div>
 
                   {/* 4. Detailed Schedule & Stats - Responsive for all screens */}
-                  <div className="block">
+                  <div data-tour="daily-missions" className="block">
                     {!plan ? (
                       <div className="text-center py-10 md:py-24 lg:py-32 bg-white dark:bg-gray-800 rounded-3xl md:rounded-[3rem] border border-gray-100 dark:border-gray-700 shadow-sm px-6">
                         <div className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-lovelya-50 dark:bg-gray-700 rounded-full flex items-center justify-center text-3xl md:text-5xl lg:text-6xl text-lovelya-500 mx-auto mb-8 shadow-inner">
@@ -1152,6 +1174,12 @@ const App: React.FC = () => {
           </div>
         </div>
       )}
+      <TourGuide
+        steps={buildAppTourSteps({ hasPlan: !!plan })}
+        isOpen={showTour}
+        onClose={() => setShowTour(false)}
+        storageKey={TOUR_KEY_APP}
+      />
     </Layout>
   );
 };

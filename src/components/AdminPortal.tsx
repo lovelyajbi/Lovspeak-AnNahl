@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { User } from 'firebase/auth';
 import { ActivityLog, AdminAssignment, AdminFeedback, AdminReply, AppView, AssignmentKind, AssignmentTarget, DailyTask, UserAssignment } from '../../types';
 import { MASTER_CURRICULUM } from '../../data/curriculum';
+import TourGuide, { ADMIN_TOUR_STEPS, TOUR_KEY_ADMIN } from './TourGuide';
 import { SHADOWING_DATA } from '../constants/shadowingData';
 import {
   AdminAccessRecord, AdminUser, AdminUserDetail, deleteFeedback, deleteReply, getAdminAccess, getAdminUserDetail,
@@ -221,6 +222,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   const [adminAccess, setAdminAccess] = useState<AdminAccessRecord[]>([]);
   const [period, setPeriod] = useState<Period>('month');
   const [section, setSection] = useState<Section>('overview');
+  const [showTour, setShowTour] = useState(false);
   const [query, setQuery] = useState('');
   const [selected, setSelected] = useState<AdminUser | null>(null);
   const [loading, setLoading] = useState(true);
@@ -312,6 +314,23 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   };
 
   useEffect(() => { if (isAdmin) void refresh(); }, [isAdmin]);
+  useEffect(() => {
+    if (!isAdmin) return;
+    try {
+      const seen = localStorage.getItem(TOUR_KEY_ADMIN);
+      if (!seen) {
+        const t = window.setTimeout(() => setShowTour(true), 900);
+        return () => window.clearTimeout(t);
+      }
+    } catch { /* ignore */ }
+  }, [isAdmin]);
+  useEffect(() => {
+    (window as any).lovspeakStartAdminTour = () => {
+      try { localStorage.removeItem(TOUR_KEY_ADMIN); } catch { /* ignore */ }
+      setSection('overview');
+      setShowTour(true);
+    };
+  }, []);
   useEffect(() => {
     // The full user list needs complete metrics for ranking and filters.
     // Keep that heavier load out of the initial overview screen.
@@ -711,9 +730,9 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
 }
 `}</style>
     <div className="admin-layout">
-      <aside className="admin-side"><div className="admin-brand"><div className="admin-brand-mark"><i className="fas fa-heart" /></div><div><b>LOVSPEAK</b><span>ADMIN CONSOLE</span></div></div><nav className="admin-nav">{navItems.map(item => <button key={item.id} onClick={() => setSection(item.id)} className={section === item.id ? 'active' : ''}><i className={`fas ${item.icon}`} />{item.label}{item.count !== undefined && <span className="count">{item.count}</span>}</button>)}</nav><div className="admin-side-bottom"><button className="admin-return" onClick={() => window.location.assign('/')}><i className="fas fa-arrow-left mr-2" />Kembali ke LovSpeak</button></div></aside>
+      <aside className="admin-side"><div className="admin-brand"><div className="admin-brand-mark"><i className="fas fa-heart" /></div><div><b>LOVSPEAK</b><span>ADMIN CONSOLE</span></div></div><nav className="admin-nav" data-tour="admin-nav">{navItems.map(item => <button key={item.id} data-tour={item.id === 'users' ? 'admin-users-nav' : item.id === 'assignments' ? 'admin-assignments-nav' : undefined} onClick={() => setSection(item.id)} className={section === item.id ? 'active' : ''}><i className={`fas ${item.icon}`} />{item.label}{item.count !== undefined && <span className="count">{item.count}</span>}</button>)}</nav><div className="admin-side-bottom"><button className="admin-return" onClick={() => window.location.assign('/')}><i className="fas fa-arrow-left mr-2" />Kembali ke LovSpeak</button></div></aside>
       <main className="admin-main">
-        <header className="admin-top"><div><span className="admin-eyebrow">LovSpeak LMS</span><h1><i className={`fas ${SectionIcons[section]} section-icon`} />{section === 'overview' ? 'Overview kelas' : section === 'users' ? 'Semua user' : section === 'attention' ? 'Perlu perhatian' : section === 'comments' ? 'Komentar user' : section === 'assignments' ? 'Tugas & broadcast' : 'Akses admin'}</h1><p>{section === 'overview' ? 'Pantau kondisi kelas dan temukan user yang perlu dibantu.' : section === 'access' ? 'Kelola hak akses tanpa mencampurkannya dengan monitoring user.' : section === 'assignments' ? 'Bagikan tugas terarah, tenggat, dan pesan kelas dari satu tempat.' : 'Data diperbarui dari aktivitas LovSpeak.'}</p></div><div className="admin-tools"><button className="admin-back-btn mobile-hide" onClick={() => window.location.assign('/')} title="Kembali ke LovSpeak"><i className="fas fa-arrow-left" /><span>Kembali ke LovSpeak</span></button><button className="admin-icon-button" onClick={() => void refresh({ resetDetails: true })} title="Muat ulang data"><i className={`fas fa-rotate-right ${loading || detailLoading ? 'fa-spin' : ''}`} /></button><button className="admin-icon-button mobile-hide" onClick={exportReport} title="Unduh laporan Excel-compatible"><i className="fas fa-file-export" /></button><button className="admin-icon-button mobile-hide" onClick={() => saveTheme(theme === 'light' ? 'dark' : 'light')} title="Ganti mode"><i className={`fas fa-${theme === 'light' ? 'moon' : 'sun'}`} /></button><button className="admin-icon-button mobile-hide" onClick={onLogout} title="Keluar"><i className="fas fa-arrow-right-from-bracket" /></button></div></header>
+        <header className="admin-top"><div><span className="admin-eyebrow">LovSpeak LMS</span><h1><i className={`fas ${SectionIcons[section]} section-icon`} />{section === 'overview' ? 'Overview kelas' : section === 'users' ? 'Semua user' : section === 'attention' ? 'Perlu perhatian' : section === 'comments' ? 'Komentar user' : section === 'assignments' ? 'Tugas & broadcast' : 'Akses admin'}</h1><p>{section === 'overview' ? 'Pantau kondisi kelas dan temukan user yang perlu dibantu.' : section === 'access' ? 'Kelola hak akses tanpa mencampurkannya dengan monitoring user.' : section === 'assignments' ? 'Bagikan tugas terarah, tenggat, dan pesan kelas dari satu tempat.' : 'Data diperbarui dari aktivitas LovSpeak.'}</p></div><div className="admin-tools"><button className="admin-back-btn mobile-hide" onClick={() => window.location.assign('/')} title="Kembali ke LovSpeak"><i className="fas fa-arrow-left" /><span>Kembali ke LovSpeak</span></button><button data-tour="admin-refresh" className="admin-icon-button" onClick={() => void refresh({ resetDetails: true })} title="Muat ulang data"><i className={`fas fa-rotate-right ${loading || detailLoading ? 'fa-spin' : ''}`} /></button><button className="admin-icon-button mobile-hide" onClick={exportReport} title="Unduh laporan Excel-compatible"><i className="fas fa-file-export" /></button><button className="admin-icon-button mobile-hide" onClick={() => saveTheme(theme === 'light' ? 'dark' : 'light')} title="Ganti mode"><i className={`fas fa-${theme === 'light' ? 'moon' : 'sun'}`} /></button><button className="admin-icon-button mobile-hide" onClick={onLogout} title="Keluar"><i className="fas fa-arrow-right-from-bracket" /></button></div></header>
         {message && <div className="admin-alert">{message}</div>}
         {detailLoading && <div className="admin-alert" style={{ background: 'var(--accent-soft)', color: 'var(--accent-strong)', borderColor: 'var(--line)' }}>Ringkasan user sudah tampil. Detail nilai dan aktivitas sedang dilengkapi…</div>}
         {loading && !users.length ? <>
@@ -721,7 +740,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
           <div className="admin-card">{[0, 1, 2, 3, 4].map(index => <div key={index} className="skeleton-row"><div className="skeleton circle" /><div><div className="skeleton" style={{ width: 140, marginBottom: 6 }} /><div className="skeleton" style={{ width: 90, height: 10 }} /></div><div className="skeleton short" style={{ marginLeft: 'auto' }} /></div>)}</div>
         </> : !users.length ? <div className="admin-card admin-empty"><svg className="empty-illustration" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="60" cy="60" r="58" fill="var(--accent-soft)" /><circle cx="60" cy="48" r="18" fill="var(--accent)" opacity="0.15" /><circle cx="60" cy="48" r="12" fill="var(--accent)" /><path d="M30 92c0-16 13-28 30-28s30 12 30 28" stroke="var(--accent)" strokeWidth="4" strokeLinecap="round" fill="none" opacity="0.35" /><path d="M85 30l4 4M31 30l-4 4M60 22v-4" stroke="var(--accent-strong)" strokeWidth="2.5" strokeLinecap="round" /></svg><b style={{ display: 'block', color: 'var(--text)', fontSize: 15, marginBottom: 6 }}>Belum ada user terdaftar</b>Bagikan link LovSpeak untuk mulai mengundang murid.<br />Data pantau muncul otomatis setelah user pertama masuk.</div> : <>
           {section === 'overview' && <>
-            <div className="admin-kpis">{[
+            <div className="admin-kpis" data-tour="admin-kpis">{[
               ['fa-users', `${users.length}`, 'Total user', `${activeCount} online${lastUpdated ? ` · diperbarui ${lastUpdated.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' })}` : ''}`],
               ['fa-chart-line', meanScore === null ? '—' : `${meanScore}%`, 'Rata-rata nilai', `User bernilai · ${periodLabel}`],
               ['fa-check', `${dailyPlanFinished} dari ${dailyPlanUsers.length}`, 'Daily Plan aktif selesai', 'Rencana aktif saat ini · bukan riwayat semua hari'],
@@ -801,6 +820,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
         </div>
       </div>
     </div>}
+    <TourGuide steps={ADMIN_TOUR_STEPS} isOpen={showTour} onClose={() => setShowTour(false)} storageKey={TOUR_KEY_ADMIN} />
     {selected && selectedMetric && <DetailPanelV2 user={selected} metric={selectedMetric} detail={selectedDetail} activities={selectedActivities} scored={selectedScored} speaking={selectedSpeaking} period={period} tab={detailTab} setTab={setDetailTab} feedback={feedback} setFeedback={setFeedback} feedbackScope={feedbackScope} setFeedbackScope={setFeedbackScope} taskId={taskId} setTaskId={setTaskId} onClose={() => setSelected(null)} onSubmitFeedback={submitFeedback} submittingFeedback={submittingFeedback} submittingReplyId={submittingReplyId} replies={replies} replyDrafts={replyDrafts} setReplyDrafts={setReplyDrafts} onReply={submitReply} onDeleteFeedback={removeFeedback} onDeleteReply={removeReply} onRetakeAssignment={handleRetakeAssignment} onPrintReport={() => printUserReport(selected)} />}
   </div>;
 };
