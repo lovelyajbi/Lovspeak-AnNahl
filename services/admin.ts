@@ -80,25 +80,68 @@ export const getAdminUserDetail = async (user: AdminUser): Promise<AdminUserDeta
     getDoc(doc(db, `users/${user.uid}/progress/roadmap`)),
     getDocs(query(collection(db, `users/${user.uid}/activity`), orderBy('date', 'desc'), limit(100))),
     getDocs(query(collection(db, 'feedback'), where('recipientId', '==', user.uid), limit(100))),
-    getDocs(query(collection(db, `userAssignments/${user.uid}/items`), orderBy('createdAt', 'desc'), limit(100)))
+    getDocs(query(collection(db, `userAssignments/${user.uid}/items`), orderBy('createdAt', 'desc'), limit(RETENTION.assignmentsPerUser + 30)))
   ]);
   const activities = activitySnap.docs.map(item => item.data() as ActivityLog);
   const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
+  const assignmentExcess = assignmentSnap.docs.slice(RETENTION.assignmentsPerUser);
+  if (assignmentExcess.length) quietly(Promise.all(assignmentExcess.map(item => deleteDoc(item.ref))));
   return {
     ...user,
     plan: planSnap.exists() ? planSnap.data() as LearningPlan : null,
     roadmapUnits,
     activities,
     feedback: feedbackSnap.docs.map(item => ({ id: item.id, ...item.data() } as AdminFeedback)).sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
-    assignments: assignmentSnap.docs.map(item => {
+    assignments: assignmentSnap.docs.slice(0, RETENTION.assignmentsPerUser).map(item => {
       const assignment = { id: item.id, ...item.data() } as UserAssignment;
       return assignmentIsComplete(assignment, activities, roadmapUnits) ? { ...assignment, status: 'completed' as const, completedAt: assignment.completedAt || nowIso() } : assignment;
     })
   };
 };
 
-export const sendFeedback = async (feedback: Omit<AdminFeedback, 'id' | 'createdAt' | 'readAt'>) =>
-  addDoc(collection(db, 'feedback'), { ...feedback, createdAt: new Date().toISOString() });
+/**
+ * Rolling retention: keeps every collection small so reads stay cheap and the UI light.
+ * Trims run fire-and-forget AFTER the main action succeeds — they never block the UI
+ * and a failed trim never breaks the feature (it simply retries on the next write/read).
+ */
+export const RETENTION = {
+  feedbackPerUser: 100,      // komentar admin per user (± 2 tahun pemakaian normal)
+  notificationsPerUser: 50,  // notifikasi per user
+  assignmentsPerUser: 100,   // tugas per user
+  assignmentHistory: 200,    // riwayat tugas (global)
+  broadcastHistory: 200      // riwayat broadcast (global)
+} as const;
+
+const quietly = (task: Promise<unknown>) => { task.catch(() => undefined); };
+
+const trimCollection = async (path: string, keep: number, orderField = 'createdAt') => {
+  const snap = await getDocs(query(collection(db, path), orderBy(orderField, 'desc'), limit(keep + 30)));
+  const excess = snap.docs.slice(keep);
+  if (!excess.length) return;
+  const batch = writeBatch(db);
+  excess.forEach(item => batch.delete(item.ref));
+  await batch.commit();
+};
+
+const trimUserFeedback = async (recipientId: string) => {
+  const snap = await getDocs(query(collection(db, 'feedback'), where('recipientId', '==', recipientId), limit(RETENTION.feedbackPerUser + 30)));
+  const excess = snap.docs
+    .sort((a, b) => String(b.data().createdAt || '').localeCompare(String(a.data().createdAt || '')))
+    .slice(RETENTION.feedbackPerUser);
+  for (const item of excess) {
+    const replies = await getDocs(collection(db, `feedback/${item.id}/replies`));
+    const batch = writeBatch(db);
+    replies.docs.forEach(replyDoc => batch.delete(replyDoc.ref));
+    batch.delete(item.ref);
+    await batch.commit();
+  }
+};
+
+export const sendFeedback = async (feedback: Omit<AdminFeedback, 'id' | 'createdAt' | 'readAt'>) => {
+  const created = await addDoc(collection(db, 'feedback'), { ...feedback, createdAt: new Date().toISOString() });
+  quietly(trimUserFeedback(feedback.recipientId));
+  return created;
+};
 
 export const getReplies = async (feedbackId: string): Promise<AdminReply[]> => {
   const snap = await getDocs(query(collection(db, `feedback/${feedbackId}/replies`), orderBy('createdAt', 'asc')));
@@ -177,6 +220,7 @@ export const createAdminAssignment = async (input: {
     writes.slice(index, index + 450).forEach(item => batch.set(item.ref, item.data));
     await batch.commit();
   }
+  quietly(trimCollection('assignments', RETENTION.assignmentHistory));
   return assignmentRef.id;
 };
 
@@ -189,8 +233,10 @@ export const markUserAssignmentRead = async (uid: string, assignmentId: string) 
   updateDoc(doc(db, `userAssignments/${uid}/items/${assignmentId}`), { readAt: nowIso() });
 
 export const getUserNotifications = async (uid: string): Promise<UserNotification[]> => {
-  const snap = await getDocs(query(collection(db, `userNotifications/${uid}/items`), orderBy('createdAt', 'desc'), limit(50)));
-  return snap.docs.map(item => ({ id: item.id, ...item.data() } as UserNotification));
+  const snap = await getDocs(query(collection(db, `userNotifications/${uid}/items`), orderBy('createdAt', 'desc'), limit(RETENTION.notificationsPerUser + 30)));
+  const excess = snap.docs.slice(RETENTION.notificationsPerUser);
+  if (excess.length) quietly(Promise.all(excess.map(item => deleteDoc(item.ref))));
+  return snap.docs.slice(0, RETENTION.notificationsPerUser).map(item => ({ id: item.id, ...item.data() } as UserNotification));
 };
 
 export const markNotificationRead = async (uid: string, notificationId: string) =>
@@ -212,6 +258,7 @@ export const createAdminBroadcast = async (input: { title: string; message: stri
     writes.slice(index, index + 450).forEach(item => batch.set(item.ref, item.data));
     await batch.commit();
   }
+  quietly(trimCollection('broadcasts', RETENTION.broadcastHistory));
   return broadcastRef.id;
 };
 
@@ -230,12 +277,12 @@ export interface AdminBroadcastSummary {
 }
 
 export const listAssignments = async (): Promise<AdminAssignmentSummary[]> => {
-  const snap = await getDocs(query(collection(db, 'assignments'), orderBy('createdAt', 'desc'), limit(100)));
+  const snap = await getDocs(query(collection(db, 'assignments'), orderBy('createdAt', 'desc'), limit(RETENTION.assignmentHistory)));
   return snap.docs.map(item => ({ id: item.id, ...item.data() } as AdminAssignmentSummary));
 };
 
 export const listBroadcasts = async (): Promise<AdminBroadcastSummary[]> => {
-  const snap = await getDocs(query(collection(db, 'broadcasts'), orderBy('createdAt', 'desc'), limit(100)));
+  const snap = await getDocs(query(collection(db, 'broadcasts'), orderBy('createdAt', 'desc'), limit(RETENTION.broadcastHistory)));
   return snap.docs.map(item => ({ id: item.id, ...item.data() } as AdminBroadcastSummary));
 };
 

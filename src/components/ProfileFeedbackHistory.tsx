@@ -14,6 +14,8 @@ const ProfileFeedbackHistory: React.FC<{ user: User | null }> = ({ user }) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState<string | null>(null);
+  const [shown, setShown] = useState(10);
+  useEffect(() => { if (!open) setShown(10); }, [open]);
 
   const load = async () => {
     if (!user) return;
@@ -21,13 +23,21 @@ const ProfileFeedbackHistory: React.FC<{ user: User | null }> = ({ user }) => {
     try {
       const feedback = await getUserFeedback(user.uid);
       setItems(feedback);
-      const replyPairs = await Promise.all(feedback.map(async item => [item.id, await getReplies(item.id)] as const));
-      setReplies(Object.fromEntries(replyPairs));
     } catch (error) { console.error(error); }
     finally { setLoading(false); }
   };
 
   useEffect(() => { if (open) load(); }, [open, user]);
+  useEffect(() => {
+    // Replies load lazily for the visible items only, so opening the inbox stays fast
+    // even when a student has a long comment history.
+    if (!open) return;
+    const visibleItems = items.slice(0, shown).filter(item => !replies[item.id]);
+    if (!visibleItems.length) return;
+    Promise.all(visibleItems.map(async item => [item.id, await getReplies(item.id)] as const))
+      .then(pairs => setReplies(current => ({ ...current, ...Object.fromEntries(pairs) })))
+      .catch(console.error);
+  }, [open, items, shown]);
   useEffect(() => { if (!open) return; const onKey = (event: KeyboardEvent) => { if (event.key === 'Escape') setOpen(false); }; window.addEventListener('keydown', onKey); return () => window.removeEventListener('keydown', onKey); }, [open]);
   useEffect(() => {
     if (!open) return;
@@ -110,7 +120,7 @@ const ProfileFeedbackHistory: React.FC<{ user: User | null }> = ({ user }) => {
             <b className="block text-gray-800 dark:text-gray-200 text-sm">Belum ada komentar admin</b>
             <p className="text-xs text-gray-500 mt-2 max-w-xs mx-auto">Komentar dari admin/guru tentang progress belajar Anda akan muncul di sini.</p>
           </div>}
-          {items.map(item => {
+          {items.slice(0, shown).map(item => {
             const isOpen = expanded === item.id;
             const itemReplies = replies[item.id] || [];
             return <div key={item.id} className={`rounded-2xl border transition-all ${item.readAt ? 'border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-800/40' : 'border-lovelya-200 dark:border-lovelya-800/50 bg-gradient-to-br from-lovelya-50/60 to-pink-50/40 dark:from-lovelya-900/15 dark:to-pink-900/15 shadow-md shadow-lovelya-200/20'}`}>
@@ -155,6 +165,7 @@ const ProfileFeedbackHistory: React.FC<{ user: User | null }> = ({ user }) => {
               </div>}
             </div>;
           })}
+          {items.length > shown && <button type="button" onClick={() => setShown(current => current + 10)} className="w-full rounded-2xl border border-dashed border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800/50 py-3 text-xs font-black text-lovelya-600 hover:bg-lovelya-50 dark:hover:bg-lovelya-900/20 transition">Muat lebih banyak ({items.length - shown} tersisa)</button>}
         </div>
       </div>
     </div>, document.body)}

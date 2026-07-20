@@ -551,10 +551,25 @@ export const getActivityLogs = (): ActivityLog[] => {
     return data ? JSON.parse(data) : [];
 };
 
+// Rolling retention: only the latest logs are kept so reads stay light for both
+// the user dashboards and the admin monitor (which reads at most 100 anyway).
+// The cleanup query itself costs reads, so it only runs every 20th log.
+const ACTIVITY_RETENTION = 300;
+const KEY_ACTIVITY_TRIM = 'lovspeak_activity_trim_counter';
+const trimActivityLogs = (uid: string) => {
+    const counter = (Number(localStorage.getItem(KEY_ACTIVITY_TRIM)) || 0) + 1;
+    localStorage.setItem(KEY_ACTIVITY_TRIM, String(counter % 20));
+    if (counter < 20) return;
+    getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(ACTIVITY_RETENTION + 30)))
+        .then(snap => Promise.all(snap.docs.slice(ACTIVITY_RETENTION).map(item => deleteDoc(item.ref))))
+        .catch(() => undefined);
+};
+
 export const logActivity = async (log: Omit<ActivityLog, 'id'>) => {
     const logs = getActivityLogs();
     const newLog: ActivityLog = { ...log, id: Date.now().toString() };
     logs.unshift(newLog);
+    if (logs.length > ACTIVITY_RETENTION * 2) logs.length = ACTIVITY_RETENTION * 2;
     localStorage.setItem(KEY_ACTIVITY, JSON.stringify(logs));
 
     const uid = getUserId();
@@ -562,6 +577,7 @@ export const logActivity = async (log: Omit<ActivityLog, 'id'>) => {
         const path = `users/${uid}/activity/${newLog.id}`;
         try {
             await setDoc(doc(db, path), sanitizeData(newLog));
+            trimActivityLogs(uid);
         } catch (e) {
             handleFirestoreError(e, OperationType.WRITE, path);
         }
@@ -714,11 +730,11 @@ export const syncScalevAccessByEmail = async (options?: {
             }
         }), { merge: true });
 
-        const localProfile = getUserProfile();
+        const localProfile = getUserProfile() as UserProfile & { activatedAt?: string };
         localStorage.setItem(KEY_PROFILE, JSON.stringify({
             ...localProfile,
             isActive: true,
-            activatedAt: localProfile?.activatedAt || new Date().toISOString(),
+            activatedAt: localProfile.activatedAt || new Date().toISOString(),
             accessSource: 'scalev_webhook',
         }));
 
