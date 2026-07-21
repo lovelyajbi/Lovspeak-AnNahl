@@ -787,8 +787,8 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
         </>}
       </main>
     </div>
-    <nav className="admin-bottom-nav">
-      {([['overview', 'fa-grid-2', 'Overview'], ['users', 'fa-users', 'User'], ['assignments', 'fa-clipboard-check', 'Tugas']] as [Section, string, string][]).map(([id, icon, label]) => <button key={id} className={section === id && !moreOpen ? 'active' : ''} onClick={() => { setMoreOpen(false); setSection(id); }}><i className={`fas ${icon}`} /><span>{label}</span></button>)}
+    <nav className="admin-bottom-nav" data-tour="admin-nav-mobile">
+      {([['overview', 'fa-grid-2', 'Overview'], ['users', 'fa-users', 'User'], ['assignments', 'fa-clipboard-check', 'Tugas']] as [Section, string, string][]).map(([id, icon, label]) => <button key={id} data-tour={id === 'users' ? 'admin-users-nav-mobile' : id === 'assignments' ? 'admin-assignments-nav-mobile' : undefined} className={section === id && !moreOpen ? 'active' : ''} onClick={() => { setMoreOpen(false); setSection(id); }}><i className={`fas ${icon}`} /><span>{label}</span></button>)}
       <button className={moreOpen || ['attention', 'comments', 'access'].includes(section) ? 'active' : ''} onClick={() => setMoreOpen(current => !current)}><i className="fas fa-ellipsis" /><span>Lainnya</span></button>
     </nav>
     {moreOpen && <div className="admin-more-overlay" onClick={() => setMoreOpen(false)}>
@@ -820,7 +820,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
         </div>
       </div>
     </div>}
-    <TourGuide steps={ADMIN_TOUR_STEPS} isOpen={showTour} onClose={() => setShowTour(false)} storageKey={TOUR_KEY_ADMIN} />
+    <TourGuide steps={ADMIN_TOUR_STEPS} isOpen={showTour} onClose={() => setShowTour(false)} storageKey={TOUR_KEY_ADMIN} mobileBreakpoint={960} />
     {selected && selectedMetric && <DetailPanelV2 user={selected} metric={selectedMetric} detail={selectedDetail} activities={selectedActivities} scored={selectedScored} speaking={selectedSpeaking} period={period} tab={detailTab} setTab={setDetailTab} feedback={feedback} setFeedback={setFeedback} feedbackScope={feedbackScope} setFeedbackScope={setFeedbackScope} taskId={taskId} setTaskId={setTaskId} onClose={() => setSelected(null)} onSubmitFeedback={submitFeedback} submittingFeedback={submittingFeedback} submittingReplyId={submittingReplyId} replies={replies} replyDrafts={replyDrafts} setReplyDrafts={setReplyDrafts} onReply={submitReply} onDeleteFeedback={removeFeedback} onDeleteReply={removeReply} onRetakeAssignment={handleRetakeAssignment} onPrintReport={() => printUserReport(selected)} />}
   </div>;
 };

@@ -690,9 +690,9 @@ const App: React.FC = () => {
                   </div>
 
                   {/* 4. Detailed Schedule & Stats - Responsive for all screens */}
-                  <div data-tour="daily-missions" className="block">
+                  <div className="block">
                     {!plan ? (
-                      <div className="text-center py-10 md:py-24 lg:py-32 bg-white dark:bg-gray-800 rounded-3xl md:rounded-[3rem] border border-gray-100 dark:border-gray-700 shadow-sm px-6">
+                      <div data-tour="daily-missions" className="text-center py-10 md:py-24 lg:py-32 bg-white dark:bg-gray-800 rounded-3xl md:rounded-[3rem] border border-gray-100 dark:border-gray-700 shadow-sm px-6">
                         <div className="w-20 h-20 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-lovelya-50 dark:bg-gray-700 rounded-full flex items-center justify-center text-3xl md:text-5xl lg:text-6xl text-lovelya-500 mx-auto mb-8 shadow-inner">
                           <i className="fas fa-rocket"></i>
                         </div>
@@ -704,7 +704,7 @@ const App: React.FC = () => {
                       </div>
                     ) : (
                       <div className="space-y-6 md:space-y-8">
-                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+                        <div data-tour="daily-missions" className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                           <div className="flex items-center gap-3">
                             <div className="w-1.5 h-7 bg-lovelya-600 rounded-full"></div>
                             <h3 className="text-sm md:text-2xl lg:text-3xl font-black text-gray-800 dark:text-white tracking-tight">Daily Missions</h3>

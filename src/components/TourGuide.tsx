@@ -3,8 +3,14 @@ import { AnimatePresence, motion } from 'motion/react';
 
 export interface TourStep {
   selector?: string;
+  /** Used instead of `selector` on small screens, when the target on mobile
+   * is a different element (e.g. sidebar nav vs. bottom tab bar). */
+  mobileSelector?: string;
   title: string;
   body: string;
+  /** Used instead of `body` on small screens, for a shorter/more accurate
+   * description of what's actually visible there. */
+  mobileBody?: string;
   placement?: 'top' | 'bottom' | 'left' | 'right' | 'auto';
   spotlightPadding?: number;
 }
@@ -17,13 +23,16 @@ interface TourGuideProps {
   onClose: () => void;
   storageKey?: string;
   accentColor?: string;
+  /** Viewport width (px) below which this app's layout switches to its mobile
+   * nav — must match the CSS breakpoint the steps' selectors depend on. */
+  mobileBreakpoint?: number;
 }
 
 const PADDING = 10;
 const BUBBLE_W = 320;
 const BUBBLE_H_EST = 220;
 const MARGIN = 14;
-const MOBILE_BREAKPOINT = 640;
+const DEFAULT_MOBILE_BREAKPOINT = 768;
 
 const getRect = (selector?: string): Rect | null => {
   if (!selector) return null;
@@ -84,12 +93,12 @@ const bubblePos = (
 };
 
 const TourGuide: React.FC<TourGuideProps> = ({
-  steps, isOpen, onClose, storageKey, accentColor = '#e9458b'
+  steps, isOpen, onClose, storageKey, accentColor = '#e9458b', mobileBreakpoint = DEFAULT_MOBILE_BREAKPOINT
 }) => {
   const [index, setIndex] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
   const [tick, setTick] = useState(0);
-  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < MOBILE_BREAKPOINT);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < mobileBreakpoint);
 
   const step = steps[index];
 
@@ -99,16 +108,19 @@ const TourGuide: React.FC<TourGuideProps> = ({
 
   useEffect(() => {
     if (!isOpen) return;
-    const onResize = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    const onResize = () => setIsMobile(window.innerWidth < mobileBreakpoint);
     onResize();
     window.addEventListener('resize', onResize);
     return () => window.removeEventListener('resize', onResize);
-  }, [isOpen]);
+  }, [isOpen, mobileBreakpoint]);
+
+  const effectiveSelector = (isMobile && step?.mobileSelector) ? step.mobileSelector : step?.selector;
+  const effectiveBody = (isMobile && step?.mobileBody) ? step.mobileBody : step?.body;
 
   useLayoutEffect(() => {
     if (!isOpen || !step) return;
-    scrollIntoView(step.selector);
-    const measure = () => setRect(getRect(step.selector));
+    scrollIntoView(effectiveSelector);
+    const measure = () => setRect(getRect(effectiveSelector));
     // give layout a beat
     const t = window.setTimeout(measure, 60);
     const onResize = () => setTick(v => v + 1);
@@ -119,7 +131,7 @@ const TourGuide: React.FC<TourGuideProps> = ({
       window.removeEventListener('resize', onResize);
       window.removeEventListener('scroll', onResize, true);
     };
-  }, [isOpen, index, step, tick]);
+  }, [isOpen, index, step, effectiveSelector, tick]);
 
   const finish = () => {
     if (storageKey) {
@@ -134,6 +146,15 @@ const TourGuide: React.FC<TourGuideProps> = ({
 
   const side = useMemo(() => pickPlacement(rect, step?.placement), [rect, step, tick]);
   const pos = useMemo(() => bubblePos(rect, side), [rect, side, tick]);
+  // On mobile the bubble is always a full-width sheet, not positioned near the
+  // target — so if the target sits in the bottom half of the screen (e.g. the
+  // bottom tab bar), anchoring the sheet at the bottom would cover the very
+  // thing being highlighted. Flip it to the top of the screen in that case.
+  const mobileSheetSide = useMemo(() => {
+    if (!rect) return 'bottom';
+    const center = rect.top + rect.height / 2;
+    return center > window.innerHeight / 2 ? 'top' : 'bottom';
+  }, [rect, tick]);
 
   if (!isOpen || !step) return null;
 
@@ -190,21 +211,25 @@ const TourGuide: React.FC<TourGuideProps> = ({
           Lewati tour
         </button>
 
-        {/* Bubble: on mobile, anchor as a full-width bottom sheet so long text
-            never gets clipped by edge-anchored positioning near small targets. */}
+        {/* Bubble: on mobile, anchor as a full-width sheet (top or bottom,
+            whichever side the highlighted target isn't on) so long text never
+            gets clipped and the sheet never covers what it's pointing at. */}
         <motion.div
           key={`bubble-${index}`}
-          initial={isMobile ? { opacity: 0, y: 24 } : { opacity: 0, scale: 0.96, y: 6 }}
+          initial={isMobile ? { opacity: 0, y: mobileSheetSide === 'top' ? -24 : 24 } : { opacity: 0, scale: 0.96, y: 6 }}
           animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.22, ease: 'easeOut' }}
           style={isMobile ? {
             position: 'fixed',
-            left: 12, right: 12, bottom: 'max(12px, env(safe-area-inset-bottom))',
+            left: 12, right: 12,
+            ...(mobileSheetSide === 'top'
+              ? { top: 'max(12px, env(safe-area-inset-top))' }
+              : { bottom: 'max(12px, env(safe-area-inset-bottom))' }),
             width: 'auto', maxWidth: 'none',
-            maxHeight: 'calc(100vh - 88px)', overflowY: 'auto',
+            maxHeight: 'calc(100vh - 96px)', overflowY: 'auto',
             background: 'white', color: '#172033', borderRadius: 20,
             boxShadow: '0 20px 60px rgba(10,14,25,0.35)',
-            padding: 18, fontFamily: 'inherit'
+            padding: 16, fontFamily: 'inherit'
           } : {
             position: 'absolute',
             top: pos.top, left: pos.left, transform: pos.transform,
@@ -218,7 +243,7 @@ const TourGuide: React.FC<TourGuideProps> = ({
             <div style={{ fontSize: 10, fontWeight: 800, letterSpacing: '0.14em', textTransform: 'uppercase', color: accentColor }}>Panduan LovSpeak · {index + 1}/{steps.length}</div>
             <div style={{ fontSize: 16, fontWeight: 900, lineHeight: 1.25, marginTop: 4, color: '#172033' }}>{step.title}</div>
           </div>
-          <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: '#3a445a' }}>{step.body}</p>
+          <p style={{ margin: 0, fontSize: 13, lineHeight: 1.55, color: '#3a445a' }}>{effectiveBody}</p>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 16 }}>
             {steps.map((_, i) => (
@@ -268,19 +293,19 @@ export const buildAppTourSteps = ({ hasPlan }: { hasPlan: boolean }): TourStep[]
   const steps: TourStep[] = [
     {
       title: 'Selamat datang di LovSpeak!',
-      body: 'Panduan singkat ini akan memperkenalkan fitur utama app dalam beberapa langkah. Silakan ikuti atau lewati kapan saja.',
+      body: 'Panduan singkat fitur utama. Boleh dilewati kapan saja.',
       placement: 'auto',
     },
     {
       selector: '[data-tour="hero-actions"]',
       title: 'Mulai dari sini',
-      body: 'Klik "Test" untuk mengukur level Bahasa Inggrismu, lalu "Plan" untuk membuat rencana belajar harian yang sesuai. Ini langkah pertama yang disarankan.',
+      body: '"Test" untuk cek level Bahasa Inggrismu, "Plan" untuk buat rencana belajar harian.',
       placement: 'bottom',
     },
     {
       selector: '[data-tour="learning-hub"]',
       title: 'Learning Hub',
-      body: 'Semua modul latihan ada di sini: Reading, Listening, Speaking, Shadowing, Vocab, Grammar, dan lainnya. Geser ke samping untuk melihat semuanya.',
+      body: 'Semua modul latihan: Reading, Listening, Speaking, Shadowing, Grammar, dll. Geser untuk lihat semua.',
       placement: 'top',
     },
   ];
@@ -289,7 +314,7 @@ export const buildAppTourSteps = ({ hasPlan }: { hasPlan: boolean }): TourStep[]
     steps.push({
       selector: '[data-tour="daily-missions"]',
       title: 'Daily Missions — fleksibel',
-      body: 'Daily Plan bersifat fleksibel: tugas harian dibuat berdasarkan level, fokus, dan intensitas yang kamu pilih sendiri di menu "Plan". Cocok kalau kamu ingin belajar sesuai kemampuan dan kemauan pribadi. Selesaikan tugas untuk mendapat XP.',
+      body: 'Tugas harian sesuai level & fokus pilihanmu di menu "Plan". Selesaikan untuk dapat XP.',
       placement: 'top',
     });
   }
@@ -297,21 +322,24 @@ export const buildAppTourSteps = ({ hasPlan }: { hasPlan: boolean }): TourStep[]
   steps.push(
     {
       selector: '[data-tour="roadmap-nav"]',
+      mobileSelector: '[data-tour="roadmap-nav-mobile"]',
       title: 'Learning Roadmap — terstruktur',
-      body: 'Berbeda dari Daily Plan, Roadmap adalah jalur latihan berurutan yang sudah dirancang tim Lovelya. Kamu mengikuti template kurikulum tetap dari unit ke unit — pas kalau kamu ingin panduan lengkap tanpa perlu mengatur sendiri.',
+      body: 'Jalur belajar berurutan dari tim Lovelya, dari unit ke unit — cocok kalau ingin panduan lengkap tanpa atur sendiri.',
       placement: 'right',
     },
     {
-      selector: '[data-tour="bottom-nav"]',
+      selector: '[data-tour="sidebar-nav"]',
+      mobileSelector: '[data-tour="bottom-nav"]',
       title: 'Navigasi utama',
-      body: 'Gunakan menu ini untuk berpindah antar bagian: Dashboard, Learning Roadmap, modul latihan (Reading, Listening, Shadowing, dll.), Diary, AI Tutor, Profil, dan Settings.',
+      body: 'Semua bagian app: Dashboard, Roadmap, modul latihan, Profil, Settings.',
+      mobileBody: 'Pindah antar bagian: Home, Roadmap, Games, Profil, Settings.',
       placement: 'right',
     },
     {
       title: 'Siap memulai!',
       body: hasPlan
-        ? 'Rekomendasi langkah pertama: (1) klik "Test" untuk assessment level, (2) buka "Plan" untuk memperbarui Daily Plan fleksibel, atau ikuti "Learning Roadmap" bila ingin jalur terstruktur dari Lovelya, (3) mulai satu misi. Selamat belajar!'
-        : 'Rekomendasi langkah pertama: (1) klik "Test" untuk assessment level, (2) buka "Plan" untuk membuat Daily Plan fleksibel — setelah itu daftar Daily Missions akan muncul di Dashboard, atau (3) langsung ikuti "Learning Roadmap" bila ingin jalur terstruktur dari Lovelya. Selamat belajar!',
+        ? '1) "Test" untuk assessment. 2) "Plan" untuk atur Daily Plan, atau ikuti Roadmap. 3) Mulai satu misi. Selamat belajar!'
+        : '1) "Test" untuk assessment. 2) "Plan" untuk buat Daily Plan, atau langsung ikuti Roadmap. Selamat belajar!',
       placement: 'auto',
     },
   );
@@ -322,42 +350,46 @@ export const buildAppTourSteps = ({ hasPlan }: { hasPlan: boolean }): TourStep[]
 export const ADMIN_TOUR_STEPS: TourStep[] = [
   {
     title: 'Selamat datang di Admin Console',
-    body: 'Panduan singkat ini akan menunjukkan bagian-bagian penting dari dashboard admin LovSpeak. Silakan ikuti atau lewati kapan saja.',
+    body: 'Panduan singkat bagian-bagian penting dashboard admin. Boleh dilewati kapan saja.',
     placement: 'auto',
   },
   {
     selector: '[data-tour="admin-nav"]',
+    mobileSelector: '[data-tour="admin-nav-mobile"]',
     title: 'Menu utama',
-    body: 'Semua bagian admin ada di sisi kiri: Overview, User, Perlu perhatian, Komentar, Tugas, dan Akses.',
+    body: 'Semua bagian admin ada di sini: Overview, User, Perlu perhatian, Komentar, Tugas, Akses.',
+    mobileBody: 'Overview, User, dan Tugas ada di sini. Sisanya di menu "Lainnya".',
     placement: 'right',
   },
   {
     selector: '[data-tour="admin-kpis"]',
     title: 'Ringkasan kelas',
-    body: 'Kartu-kartu ini memperlihatkan kondisi kelasmu sekilas: jumlah user, rata-rata nilai, penyelesaian Daily Plan, dan user yang perlu perhatian.',
+    body: 'Kondisi kelas sekilas: jumlah user, rata-rata nilai, penyelesaian Daily Plan, user yang perlu perhatian.',
     placement: 'bottom',
   },
   {
     selector: '[data-tour="admin-users-nav"]',
+    mobileSelector: '[data-tour="admin-users-nav-mobile"]',
     title: 'Kelola user',
-    body: 'Klik "User" untuk melihat daftar semua siswa, nilai, aktivitas, dan detail komentar mereka.',
+    body: 'Lihat daftar siswa, nilai, aktivitas, dan komentar mereka di sini.',
     placement: 'right',
   },
   {
     selector: '[data-tour="admin-assignments-nav"]',
+    mobileSelector: '[data-tour="admin-assignments-nav-mobile"]',
     title: 'Kirim tugas & broadcast',
-    body: 'Dari sini kamu bisa membuat tugas khusus atau broadcast pesan ke seluruh user, dengan tenggat opsional.',
+    body: 'Buat tugas khusus atau broadcast pesan ke seluruh user, dengan tenggat opsional.',
     placement: 'right',
   },
   {
     selector: '[data-tour="admin-refresh"]',
     title: 'Muat ulang data',
-    body: 'Tekan tombol ini kapan saja untuk memperbarui data terbaru dari user.',
+    body: 'Tekan kapan saja untuk memperbarui data terbaru dari user.',
     placement: 'bottom',
   },
   {
     title: 'Siap mulai!',
-    body: 'Rekomendasi langkah pertama: (1) cek Overview, (2) buka "Perlu perhatian" untuk menemukan user yang perlu dibantu, (3) kirim tugas pertama dari menu Tugas.',
+    body: '1) Cek Overview. 2) "Perlu perhatian" untuk cari user yang butuh bantuan. 3) Kirim tugas pertama.',
     placement: 'auto',
   },
 ];
