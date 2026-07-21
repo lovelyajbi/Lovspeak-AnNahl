@@ -139,6 +139,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
       title: 'Main Menu',
       items: [
         { id: AppView.HOME, label: 'Dashboard', icon: 'fa-house' },
+        { id: AppView.TASKS, label: 'Tugas', icon: 'fa-clipboard-check' },
         { id: AppView.ROADMAP, label: 'Learning Roadmap', icon: 'fa-map-marked-alt' },
         { id: AppView.PROFILE, label: 'My Profile', icon: 'fa-user-circle' },
       ]
@@ -407,8 +408,8 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
         <div data-tour="bottom-nav" className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-100 dark:border-gray-800 px-2 py-1.5 flex justify-around items-center z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
           {[
             { id: AppView.HOME, label: 'Home', icon: 'fa-house' },
+            { id: AppView.TASKS, label: 'Tugas', icon: 'fa-clipboard-check' },
             { id: AppView.ROADMAP, label: 'Roadmap', icon: 'fa-map-marked-alt' },
-            { id: AppView.GAMES, label: 'Games', icon: 'fa-gamepad' },
             { id: AppView.PROFILE, label: 'Profile', icon: 'fa-user-circle' },
             { id: AppView.SETTINGS, label: 'Settings', icon: 'fa-cog' },
           ].map(item => {

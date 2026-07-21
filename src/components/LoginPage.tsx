@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { auth } from '../firebase';
 import { signInWithCustomToken } from 'firebase/auth';
 import { useAuth } from '../contexts/AuthContext';
+import InstallPrompt from './InstallPrompt';
 
 /** Focused entry screen for both learners and staff. */
 const LoginPage: React.FC = () => {
@@ -65,6 +66,8 @@ const LoginPage: React.FC = () => {
               <button disabled={adminLoading} className="w-full rounded-xl bg-slate-900 py-3.5 font-black text-white transition hover:bg-slate-800 disabled:opacity-60 dark:bg-lovelya-600 dark:hover:bg-lovelya-500">{adminLoading ? 'Memproses...' : 'Masuk sebagai Admin'}</button>
             </form>
             <p className="mt-6 text-center text-xs text-slate-400">Akun Google admin tetap masuk ke LovSpeak terlebih dahulu. Dashboard admin tersedia dari menu Profil.</p>
+
+            <InstallPrompt />
           </div>
         </section>
       </div>

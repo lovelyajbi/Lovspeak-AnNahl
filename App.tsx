@@ -28,6 +28,7 @@ const RoadmapModule = lazy(() => import('./components/RoadmapModule'));
 const DiaryModule = lazy(() => import('./components/DiaryModule'));
 const ShadowingModule = lazy(() => import('./components/ShadowingModule'));
 const SettingsModule = lazy(() => import('./components/SettingsModule'));
+const TasksModule = lazy(() => import('./components/TasksModule'));
 
 import SplashScreen from './components/SplashScreen';
 import InstallPrompt from './src/components/InstallPrompt';
@@ -579,6 +580,12 @@ const App: React.FC = () => {
             case AppView.DIARY: return <DiaryModule {...commonProps} />;
             case AppView.SHADOWING: return <ShadowingModule {...commonProps} />;
             case AppView.SETTINGS: return <SettingsModule />;
+            case AppView.TASKS: return <TasksModule
+              user={user}
+              assignments={assignedTasks}
+              onStartAssignment={assignment => void handleStartAssignment(assignment)}
+              onMarkRead={id => setAssignedTasks(items => items.map(item => item.id === id ? { ...item, readAt: new Date().toISOString() } : item))}
+            />;
             case AppView.HOME:
             default:
               const activeTargetData = plan ? LEARNING_TARGETS.filter(t => plan.targetIds.includes(t.id)) : [];

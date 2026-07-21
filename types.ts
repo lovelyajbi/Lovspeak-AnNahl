@@ -313,7 +313,8 @@ export enum AppView {
   ROADMAP = 'ROADMAP',
   DIARY = 'DIARY',
   SHADOWING = 'SHADOWING',
-  SETTINGS = 'SETTINGS'
+  SETTINGS = 'SETTINGS',
+  TASKS = 'TASKS'
 }
 
 export interface AssessmentQuestion {
