@@ -23,6 +23,7 @@ const PADDING = 10;
 const BUBBLE_W = 320;
 const BUBBLE_H_EST = 220;
 const MARGIN = 14;
+const MOBILE_BREAKPOINT = 640;
 
 const getRect = (selector?: string): Rect | null => {
   if (!selector) return null;
@@ -88,11 +89,20 @@ const TourGuide: React.FC<TourGuideProps> = ({
   const [index, setIndex] = useState(0);
   const [rect, setRect] = useState<Rect | null>(null);
   const [tick, setTick] = useState(0);
+  const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < MOBILE_BREAKPOINT);
 
   const step = steps[index];
 
   useEffect(() => {
     if (isOpen) setIndex(0);
+  }, [isOpen]);
+
+  useEffect(() => {
+    if (!isOpen) return;
+    const onResize = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    onResize();
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
   }, [isOpen]);
 
   useLayoutEffect(() => {
@@ -180,13 +190,22 @@ const TourGuide: React.FC<TourGuideProps> = ({
           Lewati tour
         </button>
 
-        {/* Bubble */}
+        {/* Bubble: on mobile, anchor as a full-width bottom sheet so long text
+            never gets clipped by edge-anchored positioning near small targets. */}
         <motion.div
           key={`bubble-${index}`}
-          initial={{ opacity: 0, scale: 0.96, y: 6 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={isMobile ? { opacity: 0, y: 24 } : { opacity: 0, scale: 0.96, y: 6 }}
+          animate={isMobile ? { opacity: 1, y: 0 } : { opacity: 1, scale: 1, y: 0 }}
           transition={{ duration: 0.22, ease: 'easeOut' }}
-          style={{
+          style={isMobile ? {
+            position: 'fixed',
+            left: 12, right: 12, bottom: 'max(12px, env(safe-area-inset-bottom))',
+            width: 'auto', maxWidth: 'none',
+            maxHeight: 'calc(100vh - 88px)', overflowY: 'auto',
+            background: 'white', color: '#172033', borderRadius: 20,
+            boxShadow: '0 20px 60px rgba(10,14,25,0.35)',
+            padding: 18, fontFamily: 'inherit'
+          } : {
             position: 'absolute',
             top: pos.top, left: pos.left, transform: pos.transform,
             width: BUBBLE_W, maxWidth: 'calc(100vw - 24px)',
