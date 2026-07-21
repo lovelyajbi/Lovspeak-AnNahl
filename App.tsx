@@ -255,14 +255,15 @@ const App: React.FC = () => {
   useEffect(() => {
     if (!user || !isActive || !hasApiKey || isSyncing) return;
     if (view !== AppView.HOME) return;
+    if (showWisdomModal) return; // wait for "Enter LovSpeak" to dismiss the wisdom modal first
     try {
       const seen = localStorage.getItem(TOUR_KEY_APP);
       if (!seen) {
-        const t = window.setTimeout(() => setShowTour(true), 900);
+        const t = window.setTimeout(() => setShowTour(true), 500);
         return () => window.clearTimeout(t);
       }
     } catch { /* ignore */ }
-  }, [user, isActive, hasApiKey, isSyncing, view]);
+  }, [user, isActive, hasApiKey, isSyncing, view, showWisdomModal]);
 
   useEffect(() => {
     (window as any).lovspeakStartTour = () => {
