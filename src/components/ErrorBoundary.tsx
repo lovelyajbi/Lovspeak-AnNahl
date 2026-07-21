@@ -33,8 +33,8 @@ class ErrorBoundary extends Component<Props, State> {
     window.location.href = window.location.origin;
   };
 
-  private handleClearAndReload = () => {
-    // Nuclear option: clear potentially corrupted cache/state and reload
+  private handleClearAndReload = async () => {
+    // Nuclear option: clear potentially corrupted cache/state and reload.
     try {
       // Only clear app-specific keys, preserve auth
       const keysToPreserve = ['lovelya_user_uid', 'lovelya_activated', 'lovelya_gemini_keys'];
@@ -54,6 +54,27 @@ class ErrorBoundary extends Component<Props, State> {
       });
     } catch (e) {
       console.error('Failed to clear storage:', e);
+    }
+
+    // Unregister service workers so a stale worker can't keep serving deleted
+    // asset chunks after a redeploy (the usual cause of chunk-load crashes).
+    try {
+      if ('serviceWorker' in navigator) {
+        const registrations = await navigator.serviceWorker.getRegistrations();
+        await Promise.all(registrations.map(reg => reg.unregister()));
+      }
+    } catch (e) {
+      console.error('Failed to unregister service workers:', e);
+    }
+
+    // Clear the Cache Storage API (where old HTML/asset references may live).
+    try {
+      if ('caches' in window) {
+        const cacheKeys = await caches.keys();
+        await Promise.all(cacheKeys.map(key => caches.delete(key)));
+      }
+    } catch (e) {
+      console.error('Failed to clear caches:', e);
     }
 
     window.location.href = window.location.origin;
