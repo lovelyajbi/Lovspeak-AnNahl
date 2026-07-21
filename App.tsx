@@ -35,7 +35,7 @@ import { ApiLimitModal } from './components/ApiLimitModal';
 import { getUserAssignments, getUserNotifications, markNotificationRead, markUserAssignmentRead } from './services/admin';
 
 // App version — must match APP_VERSION in sw.js. Bump on every deploy.
-const APP_VERSION = '2.1.1';
+const APP_VERSION = '2.1.2';
 
 // Force-update: check if the running Service Worker matches this version.
 // If it doesn't (stale cache / old PWA install), force SW update + page reload.
@@ -943,7 +943,7 @@ const App: React.FC = () => {
   };
   if (loading) {
     return (
-      <SplashScreen message="Initializing LovSpeak..." />
+      <SplashScreen message="Initializing LovSpeak..." stuckGuard />
     );
   }
 

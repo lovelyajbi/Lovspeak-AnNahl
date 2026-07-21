@@ -22,11 +22,40 @@ const recoverFromStaleChunk = async () => {
       const keys = await caches.keys();
       await Promise.all(keys.map(key => caches.delete(key)));
     }
+    // Firebase Auth persists its session in IndexedDB. If that database is
+    // corrupted (interrupted write, browser storage-cleanup bug), auth init
+    // can hang forever with no error — wiping it forces a clean re-login
+    // instead of leaving the user stuck on the splash screen indefinitely.
+    if ('indexedDB' in window && indexedDB.databases) {
+      const dbs = await indexedDB.databases();
+      await Promise.all(dbs.map(db => db.name ? new Promise(resolve => {
+        const req = indexedDB.deleteDatabase(db.name!);
+        req.onsuccess = req.onerror = req.onblocked = () => resolve(undefined);
+      }) : Promise.resolve()));
+    }
   } catch (e) {
-    console.error('Chunk recovery cleanup failed:', e);
+    console.error('Stale-state recovery cleanup failed:', e);
   }
   window.location.reload();
 };
+
+// If Firebase Auth's IndexedDB persistence never resolves (corrupted profile,
+// storage blocked by browser policy/extension), onAuthStateChanged silently
+// never fires and the app hangs on the splash screen forever with no error to
+// catch. Force a one-time reload past it so users aren't stuck indefinitely.
+const STUCK_LOADING_GUARD = 'lovspeak_stuck_loading_recovered';
+window.setTimeout(() => {
+  const stillOnSplash = document.getElementById('root')?.querySelector('[data-splash]');
+  if (!stillOnSplash) return;
+  if (sessionStorage.getItem(STUCK_LOADING_GUARD)) return; // already tried once — let it surface
+  sessionStorage.setItem(STUCK_LOADING_GUARD, '1');
+  void recoverFromStaleChunk();
+}, 12000);
+window.addEventListener('load', () => {
+  window.setTimeout(() => {
+    try { sessionStorage.removeItem(STUCK_LOADING_GUARD); } catch { /* ignore */ }
+  }, 15000);
+});
 
 window.addEventListener('error', (event) => {
   if (isChunkLoadError(event.message)) void recoverFromStaleChunk();

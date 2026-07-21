@@ -1,14 +1,9 @@
 import { getSoundEnabled } from './storage';
 
-// High-quality, lightweight SFX from reliable CDN
-const SFX_URLS = {
-  tap: 'https://www.soundjay.com/buttons/sounds/button-16.mp3',
-  success: 'https://www.soundjay.com/buttons/sounds/button-09.mp3',
-  error: 'https://www.soundjay.com/buttons/sounds/button-10.mp3',
-  toggle: 'https://www.soundjay.com/buttons/sounds/button-21.mp3',
-  nav: 'https://www.soundjay.com/buttons/sounds/button-28.mp3',
-  magic: 'https://www.soundjay.com/misc/sounds/magic-chime-02.mp3'
-};
+// soundjay.com no longer serves these paths (confirmed 404 on every one) —
+// disabled rather than pointed at another unverified external host, since a
+// dead SFX feature is silent while a spammed 404 on every page load is not.
+const SFX_URLS: Record<string, string> = {};
 
 class AudioService {
   private sounds: Record<string, HTMLAudioElement> = {};

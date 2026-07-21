@@ -4,11 +4,12 @@ import { motion } from 'motion/react';
 
 interface SplashScreenProps {
   message?: string;
+  stuckGuard?: boolean;
 }
 
-const SplashScreen: React.FC<SplashScreenProps> = ({ message = "Preparing your journey" }) => {
+const SplashScreen: React.FC<SplashScreenProps> = ({ message = "Preparing your journey", stuckGuard = false }) => {
   return (
-    <div className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white dark:bg-gray-950 overflow-hidden">
+    <div data-splash={stuckGuard ? 'true' : undefined} className="fixed inset-0 z-[9999] flex flex-col items-center justify-center bg-white dark:bg-gray-950 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
         <motion.div 
