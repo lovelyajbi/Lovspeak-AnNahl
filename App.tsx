@@ -720,62 +720,60 @@ const App: React.FC = () => {
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 lg:gap-12">
-                          {/* Left: Progress & Focus Areas */}
+                          {/* Left: Focus Areas */}
                           <div className="md:col-span-5 lg:col-span-4 space-y-4 md:space-y-5">
-                            <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 md:p-6 shadow-sm border border-gray-100 dark:border-gray-700 relative overflow-hidden group">
-                              <div className="absolute top-0 right-0 w-24 h-24 lg:w-32 lg:h-32 bg-lovelya-50 dark:bg-lovelya-900/10 rounded-full -mr-8 -mt-8 transition-transform group-hover:scale-110"></div>
-                              <h3 className="font-black text-gray-800 dark:text-white mb-4 lg:mb-5 flex items-center gap-2 relative z-10 text-xs md:text-sm lg:text-base">
-                                <i className="fas fa-bullseye text-lovelya-500"></i> Daily Goal
-                              </h3>
-                              <div className="relative w-28 h-28 md:w-32 md:h-32 lg:w-36 lg:h-36 mx-auto mb-4 lg:mb-5 flex items-center justify-center z-10 transition-transform group-hover:scale-105 duration-500">
-                                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                                  <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" strokeWidth="8" />
-                                  <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="283" strokeDashoffset={283 - (283 * progressPercent) / 100} className="text-lovelya-500 transition-all duration-1000 ease-out" strokeLinecap="round" />
-                                </svg>
-                                <div className="absolute inset-0 flex flex-col items-center justify-center text-gray-800 dark:text-white">
-                                  <span className="text-xl md:text-2xl lg:text-3xl font-black">{progressPercent}%</span>
-                                </div>
-                              </div>
-                              <div className="text-center relative z-10 bg-gray-50 dark:bg-gray-700/50 py-3 rounded-2xl">
-                                <p className="text-gray-600 dark:text-gray-300 text-[9px] md:text-sm lg:text-base font-black uppercase tracking-widest">{completedTasks} of {tasks.length} missions done</p>
-                              </div>
-                            </div>
-
-                            <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 md:p-6 shadow-sm border border-gray-100 dark:border-gray-700">
-                              <h3 className="font-black text-gray-800 dark:text-white mb-4 lg:mb-5 flex items-center gap-2 text-xs md:text-sm lg:text-base">
-                                <i className="fas fa-star text-purple-500"></i> Skill Focus
-                              </h3>
-                              <div className="grid grid-cols-2 lg:grid-cols-1 gap-2 lg:gap-3">
-                                {activeTargetData.map(t => (
-                                  <div key={t.id} className="flex items-center gap-2.5 lg:gap-3 p-2.5 lg:p-3 rounded-xl lg:rounded-2xl bg-gray-50 dark:bg-gray-700/50 border border-transparent hover:border-lovelya-200 hover:bg-white dark:hover:bg-gray-700 transition-all duration-300">
-                                    <div className={`w-8 h-8 md:w-10 md:h-10 rounded-lg lg:rounded-xl flex items-center justify-center text-sm md:text-base ${t.color} bg-white dark:bg-gray-800 shadow-sm shrink-0`}>
-                                      <i className={`fas ${t.icon}`}></i>
-                                    </div>
-                                    <div className="min-w-0">
-                                      <div className="font-black text-[10px] md:text-xs lg:text-sm text-gray-800 dark:text-white truncate">{t.name}</div>
-                                      <div className="text-[8px] md:text-[10px] text-gray-500 dark:text-gray-400 truncate leading-tight mt-0.5">{t.description}</div>
-                                    </div>
-                                  </div>
-                                ))}
-                              </div>
-                            </div>
                             {assignedTasks.length > 0 && (
-                              <div className="bg-white dark:bg-gray-800 rounded-3xl p-5 md:p-6 shadow-sm border border-lovelya-200 dark:border-lovelya-800/60">
-                                <div className="flex items-center justify-between gap-3 mb-4">
-                                  <h3 className="font-black text-gray-800 dark:text-white text-xs md:text-sm lg:text-base flex items-center gap-2"><i className="fas fa-clipboard-check text-lovelya-500" /> Tugas dari Admin</h3>
-                                  <span className="text-[10px] font-black text-lovelya-600 bg-lovelya-50 dark:bg-lovelya-900/30 px-2 py-1 rounded-full">{assignedTasks.filter(item => item.status !== 'completed').length} aktif</span>
+                              <div className="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-5 lg:p-6 shadow-sm border-2 border-lovelya-300 dark:border-lovelya-700/70 ring-4 ring-lovelya-50 dark:ring-lovelya-900/20">
+                                <div className="flex items-center justify-between gap-3 mb-3 md:mb-4">
+                                  <h3 className="font-black text-gray-800 dark:text-white text-sm md:text-base lg:text-lg flex items-center gap-2"><i className="fas fa-clipboard-check text-lovelya-500" /> Tugas dari Admin</h3>
+                                  <span className="text-[10px] md:text-xs font-black text-white bg-lovelya-500 px-2.5 py-1 rounded-full shrink-0">{assignedTasks.filter(item => item.status !== 'completed').length} aktif</span>
                                 </div>
-                                <div className="space-y-2">
-                                  {assignedTasks.slice(0, 4).map(assignment => (
-                                    <button key={assignment.id} type="button" onClick={() => void handleStartAssignment(assignment)} className="w-full text-left rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 p-3 hover:border-lovelya-300 transition-colors">
-                                      <div className="flex items-start justify-between gap-3"><span className="font-black text-xs text-gray-800 dark:text-white">{assignment.title}</span><i className="fas fa-arrow-up-right-from-square text-lovelya-500 text-[11px]" /></div>
-                                      <div className="mt-1 text-[10px] text-gray-500 dark:text-gray-300">{assignment.target.packTitle || assignment.target.title || assignment.target.topic || assignment.target.theme || assignment.target.kind}</div>
-                                      <div className="mt-2 flex items-center gap-2 text-[9px] font-bold text-gray-400"><span>{assignment.status === 'completed' ? 'Selesai' : assignment.status === 'needs_retake' ? 'Perlu retake' : 'Belum selesai'}</span>{assignment.dueAt && <span>· Tenggat {new Date(assignment.dueAt).toLocaleDateString('id-ID')}</span>}</div>
+                                <div className="space-y-2 md:space-y-2.5 max-h-[22rem] overflow-y-auto pr-0.5">
+                                  {assignedTasks.map(assignment => (
+                                    <button key={assignment.id} type="button" onClick={() => void handleStartAssignment(assignment)} className="w-full text-left rounded-xl md:rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 p-3 md:p-3.5 hover:border-lovelya-300 hover:bg-lovelya-50/50 dark:hover:bg-gray-700 transition-colors">
+                                      <div className="flex items-start justify-between gap-3"><span className="font-black text-xs md:text-sm text-gray-800 dark:text-white">{assignment.title}</span><i className="fas fa-arrow-up-right-from-square text-lovelya-500 text-[11px] md:text-xs shrink-0 mt-0.5" /></div>
+                                      <div className="mt-1 text-[10px] md:text-xs text-gray-500 dark:text-gray-300">{assignment.target.packTitle || assignment.target.title || assignment.target.topic || assignment.target.theme || assignment.target.kind}</div>
+                                      <div className="mt-2 flex items-center gap-2 text-[9px] md:text-[10px] font-bold text-gray-400"><span>{assignment.status === 'completed' ? 'Selesai' : assignment.status === 'needs_retake' ? 'Perlu retake' : 'Belum selesai'}</span>{assignment.dueAt && <span>· Tenggat {new Date(assignment.dueAt).toLocaleDateString('id-ID')}</span>}</div>
                                     </button>
                                   ))}
                                 </div>
                               </div>
                             )}
+
+                            {/* Daily Goal + Skill Focus merged into one compact widget */}
+                            <div className="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-5 lg:p-6 shadow-sm border border-gray-100 dark:border-gray-700">
+                              <div className="flex items-center gap-4">
+                                <div className="relative w-16 h-16 md:w-20 md:h-20 shrink-0 flex items-center justify-center">
+                                  <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#e5e7eb" strokeWidth="8" className="dark:opacity-20" />
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" strokeDasharray="283" strokeDashoffset={283 - (283 * progressPercent) / 100} className="text-lovelya-500 transition-all duration-1000 ease-out" strokeLinecap="round" />
+                                  </svg>
+                                  <div className="absolute inset-0 flex items-center justify-center text-gray-800 dark:text-white">
+                                    <span className="text-sm md:text-base font-black">{progressPercent}%</span>
+                                  </div>
+                                </div>
+                                <div className="min-w-0 flex-1">
+                                  <h3 className="font-black text-gray-800 dark:text-white flex items-center gap-1.5 text-xs md:text-sm">
+                                    <i className="fas fa-bullseye text-lovelya-500"></i> Daily Goal
+                                  </h3>
+                                  <p className="text-gray-500 dark:text-gray-400 text-[10px] md:text-xs font-bold mt-1">{completedTasks} of {tasks.length} missions done</p>
+                                </div>
+                              </div>
+
+                              {activeTargetData.length > 0 && <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
+                                <h4 className="text-[9px] md:text-[10px] font-black uppercase tracking-widest text-gray-400 mb-2 flex items-center gap-1.5"><i className="fas fa-star text-purple-500"></i> Skill Focus</h4>
+                                <div className="flex flex-wrap gap-1.5 md:gap-2">
+                                  {activeTargetData.map(t => (
+                                    <div key={t.id} className="flex items-center gap-1.5 md:gap-2 pl-1.5 pr-2.5 md:pl-2 md:pr-3 py-1.5 rounded-full bg-gray-50 dark:bg-gray-700/50 border border-transparent hover:border-lovelya-200 hover:bg-white dark:hover:bg-gray-700 transition-all">
+                                      <div className={`w-5 h-5 md:w-6 md:h-6 rounded-full flex items-center justify-center text-[9px] md:text-[10px] ${t.color} bg-white dark:bg-gray-800 shadow-sm shrink-0`}>
+                                        <i className={`fas ${t.icon}`}></i>
+                                      </div>
+                                      <span className="font-black text-[9px] md:text-[10px] text-gray-700 dark:text-gray-200 whitespace-nowrap">{t.name}</span>
+                                    </div>
+                                  ))}
+                                </div>
+                              </div>}
+                            </div>
                           </div>
 
                           {/* Right: Task List / Schedule Views - Main Content Area */}
