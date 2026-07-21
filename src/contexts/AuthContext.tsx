@@ -68,14 +68,21 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       if (firebaseUser) {
         // Keep the admin's normal LovSpeak entry point, but do not block a
         // trusted admin account behind the student activation screen.
+        // Awaited (not fire-and-forget): granted admins need a Firestore round
+        // trip to resolve `isAdminUser`, which is slower than the master
+        // admin's email check. If `loading` flipped to false before this
+        // settled, AdminPortal briefly rendered with the default isAdmin=false
+        // and showed "Akses admin tidak tersedia" — easy to mistake for a
+        // real denial and log out from, even though it would self-correct.
         let adminSession = false;
-        Promise.all([isAdminUser(firebaseUser.uid, firebaseUser.email), firebaseUser.getIdTokenResult()])
-          .then(([access, token]) => {
-            adminSession = access || token.claims.adminMaster === true;
-            setIsAdmin(adminSession);
-            if (adminSession) setIsActive(true);
-          })
-          .catch(() => setIsAdmin(false));
+        try {
+          const [access, token] = await Promise.all([isAdminUser(firebaseUser.uid, firebaseUser.email), firebaseUser.getIdTokenResult()]);
+          adminSession = access || token.claims.adminMaster === true;
+          setIsAdmin(adminSession);
+          if (adminSession) setIsActive(true);
+        } catch {
+          setIsAdmin(false);
+        }
         startPresence(firebaseUser.uid).then((stop) => { stopPresence = stop; }).catch(console.error);
         setIsSyncing(true);
         // Initial sync
