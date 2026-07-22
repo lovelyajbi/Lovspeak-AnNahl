@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { User } from 'firebase/auth';
 import { AppView, UserAssignment } from '../types';
 import { markUserAssignmentRead } from '../services/admin';
+import ProfileFeedbackHistory from '../src/components/ProfileFeedbackHistory';
 
 type Filter = 'all' | 'active' | 'needs_retake' | 'completed' | 'expired';
 
@@ -157,6 +158,10 @@ const TasksModule: React.FC<TasksModuleProps> = ({ user, assignments, onStartAss
           </div>
         </div>
       </div>
+
+      {/* Inbox komentar/pesan admin — dipindah ke sini dari Profil karena
+          komentar biasanya berkaitan dengan tugas yang sedang dikerjakan. */}
+      <ProfileFeedbackHistory user={user} />
 
       {/* Search + Filter chips */}
       <div className="space-y-3">

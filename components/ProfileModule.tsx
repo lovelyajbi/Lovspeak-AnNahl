@@ -12,7 +12,6 @@ import { generateWeeklyInsight } from '../services/gemini';
 import { audioService } from '../services/audioService';
 import { useAuth } from '../src/contexts/AuthContext';
 import { getGamificationStats, checkAndUnlockBadges, BADGE_SERIES, RANKS } from '../services/achievements';
-import ProfileFeedbackHistory from '../src/components/ProfileFeedbackHistory';
 
 // Types for Analytics
 type TimeFilter = 'today' | 'week' | 'month';
@@ -1152,7 +1151,6 @@ const ProfileModule: React.FC = () => {
                                     >
                                         <i className="fas fa-sign-out-alt"></i> Logout
                                     </button>
-                                    <ProfileFeedbackHistory user={authUser} />
                                 </div>
                             </div>
                         </div>
@@ -1192,7 +1190,6 @@ const ProfileModule: React.FC = () => {
                                 <span>Buka Dashboard Admin</span>
                                 <i className="fas fa-arrow-right text-xs ml-auto"></i>
                             </button>}
-                            <ProfileFeedbackHistory user={authUser} />
                             <button
                                 onClick={() => {
                                     audioService.play('tap');
