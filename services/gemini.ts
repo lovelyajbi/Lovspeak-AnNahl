@@ -135,7 +135,7 @@ async function callGeminiWithRotation<T>(modelName: string | string[], fn: (clie
         while (attemptedKeys < keys.length) {
             const currentKeyIndex = (startIndex + attemptedKeys) % keys.length;
             const cooldownKey = `${currentKeyIndex}_${targetModel}`;
-            
+
             // Skip this specific key for this specific model if it's on cooldown
             if (Date.now() < (getKeyModelCooldowns()[cooldownKey] || 0)) {
                 attemptedKeys++;

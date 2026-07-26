@@ -998,7 +998,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               <div
                 key={i}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === missionTopicIndex ? 'bg-pink-500 scale-125 shadow-md shadow-pink-300' :
-                    completedTopics.has(i) ? 'bg-green-400' : 'bg-gray-200 dark:bg-gray-600'
+                  completedTopics.has(i) ? 'bg-green-400' : 'bg-gray-200 dark:bg-gray-600'
                   }`}
                 title={topic}
               />
@@ -1120,7 +1120,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           </AnimatePresence>
 
           {!quiz.length && !quizLoading && (
-            <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleGenerateQuiz} className="px-5 py-2 md:px-6 md:py-2.5 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white rounded-xl font-black text-[10px] md:text-sm shadow-lg transition"><i className="fas fa-sync-alt mr-1.5"></i> Generate Quiz</motion.button>
+            <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleGenerateQuiz} className="px-5 py-2 md:px-6 md:py-2.5 bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white rounded-xl font-black text-[10px] md:text-sm shadow-lg transition"><i className="fas fa-magic mr-1.5"></i> Generate Quiz</motion.button>
           )}
           {quizLoading && <div className="py-3 text-purple-500 font-black animate-pulse text-[10px] md:text-xs flex items-center justify-center gap-2"><i className="fas fa-magic"></i> Preparing quiz automatically...</div>}
           {error && <div className="p-3 bg-red-50 text-red-500 rounded-xl mt-4 border border-red-100 text-[10px] md:text-xs font-bold">{error}</div>}

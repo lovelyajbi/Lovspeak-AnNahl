@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { GoogleGenAI, Chat } from "@google/genai";
 import ReactMarkdown from 'react-markdown';
-import { getUserProfile, saveVocab, getCustomCategories, saveCustomCategory, CustomCategory, getGeminiApiKey } from '../services/storage';
+import { getUserProfile, saveVocab, getCustomCategories, saveCustomCategory, CustomCategory, getGeminiApiKeys } from '../services/storage';
 import { transcribeAudio, analyzePronunciationAudio, translateText } from '../services/gemini';
 import { ModuleProps, AppView } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
@@ -42,9 +42,25 @@ const QUICK_ACTIONS = [
   { label: "Explain Islamic term", prompt: "Can you explain the meaning of 'Taqwa' in English?" },
 ];
 
-// AI Tutor chat model rotation. If a model is unavailable or temporarily
-// exhausted, the next model is tried automatically without losing the message.
 const CHAT_MODEL_CASCADE = ['gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-2.5-flash'];
+
+const getErrorMessage = (error: any) => (error?.message || error?.toString() || '').toLowerCase();
+const isQuotaError = (error: any) => {
+  const message = getErrorMessage(error);
+  return message.includes('429') || message.includes('quota') || message.includes('rate limit') || message.includes('resource has been exhausted');
+};
+const isInvalidKeyError = (error: any) => {
+  const message = getErrorMessage(error);
+  return message.includes('api key not valid') || message.includes('api_key_invalid') || message.includes('invalid api key');
+};
+const isPermissionError = (error: any) => {
+  const message = getErrorMessage(error);
+  return message.includes('403') || message.includes('permission denied') || message.includes('forbidden') || message.includes('unauthorized');
+};
+const isModelFallbackError = (error: any) => {
+  const message = getErrorMessage(error);
+  return message.includes('400') || message.includes('404') || message.includes('not found') || message.includes('not supported');
+};
 
 const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
   const [messages, setMessages] = useState<Message[]>([]);
@@ -62,36 +78,18 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const chatSessionRef = useRef<Chat | null>(null);
-  const chatModelIndexRef = useRef(0);
+  const activeChatRef = useRef<{ model: string; keyIndex: number } | null>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const userProfile = getUserProfile();
 
-  useEffect(() => {
-    if (toast) {
-      const timer = setTimeout(() => setToast(null), 3000);
-      return () => clearTimeout(timer);
-    }
-  }, [toast]);
+  const getSystemInstruction = () => {
+    const levelGuidelines = userProfile.level === 'A1' || userProfile.level === 'A2'
+      ? "- Use simple basic vocabulary, very short sentences (max 10-15 words). Speak simply."
+      : userProfile.level === 'B1' || userProfile.level === 'B2'
+      ? "- Use moderate vocabulary, standard sentence lengths. Introduce useful idioms occasionally."
+      : "- Use advanced, sophisticated vocabulary, native-like expressions, and complex sentence structures.";
 
-  useEffect(() => {
-    return () => ttsService.cancel();
-  }, []);
-
-  const initChat = async (modelName = CHAT_MODEL_CASCADE[chatModelIndexRef.current], showWelcome = true) => {
-    try {
-      const apiKey = getGeminiApiKey();
-      if (!apiKey) {
-        setMessages([{ id: 'error', role: 'model', text: "Assalamu'alaikum. Sepertinya AI API Key belum diatur. Silakan atur di menu setting agar kita bisa berbincang.", timestamp: new Date() }]);
-        return;
-      }
-      const ai = new GoogleGenAI({ apiKey });
-      const levelGuidelines = userProfile.level === 'A1' || userProfile.level === 'A2'
-        ? "- Use simple basic vocabulary, very short sentences (max 10-15 words). Speak simply."
-        : userProfile.level === 'B1' || userProfile.level === 'B2'
-        ? "- Use moderate vocabulary, standard sentence lengths. Introduce useful idioms occasionally."
-        : "- Use advanced, sophisticated vocabulary, native-like expressions, and complex sentence structures.";
-
-      const systemInstruction = `You are Lovelya, a warm, wise, and encouraging English mentor with a Shari'a-compliant personality. 
+    return `You are Lovelya, a warm, wise, and encouraging English mentor with a Shari'a-compliant personality.
       
       PERSONALITY:
       - You are compassionate, refined, and highly observant.
@@ -114,48 +112,93 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
       ${levelGuidelines}
       
       Keep responses soulful and engaging. You are more than a tool; you are a companion in their learning journey.`;
+  };
 
-      chatSessionRef.current = ai.chats.create({
-        model: modelName,
-        config: { systemInstruction }
+  const buildChatHistory = (sourceMessages: Message[]) => {
+    const history: any[] = [];
+    let hasUserStarted = false;
+
+    for (const message of sourceMessages) {
+      if (message.id === 'init' || message.id === 'error' || !message.text.trim()) continue;
+      if (!hasUserStarted && message.role !== 'user') continue;
+      hasUserStarted = true;
+      history.push({
+        role: message.role,
+        parts: [{ text: message.text }]
       });
+    }
+
+    return history;
+  };
+
+  const createChatSession = (model: string, keyIndex: number, history?: any[]) => {
+    const apiKeys = getGeminiApiKeys();
+    const apiKey = apiKeys[keyIndex];
+    if (!apiKey) throw new Error('API_KEY_MISSING');
+
+    const ai = new GoogleGenAI({ apiKey });
+    activeChatRef.current = { model, keyIndex };
+    chatSessionRef.current = ai.chats.create({
+      model,
+      config: { systemInstruction: getSystemInstruction() },
+      history
+    });
+    return chatSessionRef.current;
+  };
+
+  const getChatCandidates = () => {
+    const apiKeys = getGeminiApiKeys();
+    const candidates: { model: string; keyIndex: number }[] = [];
+    const active = activeChatRef.current;
+    if (active) candidates.push(active);
+
+    CHAT_MODEL_CASCADE.forEach(model => {
+      apiKeys.forEach((_, keyIndex) => {
+        if (!candidates.some(candidate => candidate.model === model && candidate.keyIndex === keyIndex)) {
+          candidates.push({ model, keyIndex });
+        }
+      });
+    });
+
+    return candidates;
+  };
+
+  const getChatFailureMessage = (error: any) => {
+    if (isQuotaError(error)) return 'Kuota API Key sedang habis. Tambahkan key baru atau coba lagi nanti.';
+    if (isInvalidKeyError(error)) return 'API Key tidak valid. Silakan cek ulang key di Settings.';
+    if (isPermissionError(error)) return 'API Key belum memiliki akses untuk model ini. Coba key lain atau buat key baru.';
+    return 'Koneksi ke AI sedang bermasalah. Coba lagi sebentar.';
+  };
+
+  useEffect(() => {
+    if (toast) {
+      const timer = setTimeout(() => setToast(null), 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [toast]);
+
+  useEffect(() => {
+    return () => ttsService.cancel();
+  }, []);
+
+  const initChat = async () => {
+    try {
+      const apiKeys = getGeminiApiKeys();
+      if (apiKeys.length === 0) {
+        setMessages([{ id: 'error', role: 'model', text: "Assalamu'alaikum. Sepertinya AI API Key belum diatur. Silakan atur di menu setting agar kita bisa berbincang.", timestamp: new Date() }]);
+        return;
+      }
+      createChatSession(CHAT_MODEL_CASCADE[0], 0);
 
       const welcomeMsg = userProfile.level === 'A1'
         ? `Assalamu'alaikum ${userProfile.name}! I'm Lovelya. Don't be afraid to make mistakes—that's how we grow. Shall we talk about your day?`
         : `Assalamu'alaikum ${userProfile.name}, it's wonderful to see you. I'm Lovelya, your mentor. What's on your mind today? I'm here to listen and learn with you.`;
 
-      if (showWelcome) setMessages([{ id: 'init', role: 'model', text: welcomeMsg, timestamp: new Date() }]);
+      setMessages([{ id: 'init', role: 'model', text: welcomeMsg, timestamp: new Date() }]);
     } catch (err) {
       console.error("AI Chat Init Error:", err);
       setMessages([{ id: 'error', role: 'model', text: "Bafis... Maaf, sistem Lovelya sedang mengalami gangguan teknis saat mulai. Pastikan API Key Anda benar.", timestamp: new Date() }]);
     }
-  };
-
-  const sendMessageWithRotation = async (parts: any[], onText: (text: string) => void) => {
-    let lastError: unknown;
-    for (let attempt = 0; attempt < CHAT_MODEL_CASCADE.length; attempt += 1) {
-      const modelIndex = (chatModelIndexRef.current + attempt) % CHAT_MODEL_CASCADE.length;
-      try {
-        if (!chatSessionRef.current || attempt > 0) {
-          chatModelIndexRef.current = modelIndex;
-          await initChat(CHAT_MODEL_CASCADE[modelIndex], false);
-        }
-        const stream = await chatSessionRef.current!.sendMessageStream({ message: parts });
-        let fullText = '';
-        for await (const chunk of stream) {
-          fullText += chunk.text || '';
-          onText(fullText);
-        }
-        return fullText;
-      } catch (error) {
-        lastError = error;
-        chatSessionRef.current = null;
-        if (attempt + 1 < CHAT_MODEL_CASCADE.length) {
-          console.warn(`[AI-CHAT-ROTATION] ${CHAT_MODEL_CASCADE[modelIndex]} gagal, mencoba model berikutnya.`);
-        }
-      }
-    }
-    throw lastError || new Error('AI_CHAT_UNAVAILABLE');
   };
 
   useEffect(() => {
@@ -220,28 +263,68 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
         });
       }
 
+      let fullText = '';
+      let lastError: any = null;
+      let hasSuccessfulStream = false;
+      const historyBeforeCurrentMessage = buildChatHistory(messages);
+      const candidates = getChatCandidates();
+
       const correctionRegex = /\[CORRECTION:\s*"?(.*?)"?\s*->\s*"?(.*?)"?\s*\|\s*"?(.*?)"?\]/g;
       const vocabRegex = /\[\[(.*?)\|(.*?)\]\]/g;
       const legacyVocabRegex = /\[VOCAB:\s*"?(.*?)"?\s*\|\s*"?(.*?)"?\]/g;
       const missionRegex = /\[MISSION:\s*"?(.*?)"?\]/g;
       const scoreRegex = /\[SCORE:\s*(\d+)\]/g;
 
-      const fullText = await sendMessageWithRotation(parts, (streamText) => {
+      for (let index = 0; index < candidates.length; index++) {
+        const candidate = candidates[index];
+        try {
+          if (index > 0 || !chatSessionRef.current) {
+            createChatSession(candidate.model, candidate.keyIndex, historyBeforeCurrentMessage);
+          }
 
-        // Live clean text for streaming display
-        const streamingClean = streamText
-          .replace(/\[CORRECTION:.*?\]/g, '')
-          .replace(/\[MISSION:.*?\]/g, '')
-          .replace(/\[VOCAB:.*?\]/g, '')
-          .replace(/\[\[.*?\|.*?\]\]/g, (m) => {
-            // If we encounter any leftover tags, handle them gracefully
-            const parts = m.slice(2, -2).split('|');
-            return parts[0];
-          })
-          .trim();
+          fullText = '';
+          const stream = await chatSessionRef.current!.sendMessageStream({ message: parts });
 
-        setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: streamingClean } : m));
-      });
+          for await (const chunk of stream) {
+            const chunkText = chunk.text || "";
+            fullText += chunkText;
+
+            // Live clean text for streaming display
+            const streamingClean = fullText
+              .replace(/\[CORRECTION:.*?\]/g, '')
+              .replace(/\[MISSION:.*?\]/g, '')
+              .replace(/\[VOCAB:.*?\]/g, '')
+              .replace(/\[\[.*?\|.*?\]\]/g, (m) => {
+                // If we encounter any leftover tags, handle them gracefully
+                const parts = m.slice(2, -2).split('|');
+                return parts[0];
+              })
+              .trim();
+
+            setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: streamingClean } : m));
+          }
+
+          hasSuccessfulStream = true;
+          break;
+        } catch (streamError) {
+          lastError = streamError;
+          console.warn(`[AI-CHAT-ROTATION] ${candidate.model} with Key #${candidate.keyIndex + 1} failed:`, streamError);
+
+          if (fullText.trim() && !isQuotaError(streamError) && !isInvalidKeyError(streamError) && !isPermissionError(streamError) && !isModelFallbackError(streamError)) {
+            break;
+          }
+
+          if (index < candidates.length - 1) {
+            setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: 'Sebentar ya, Lovelya mencoba jalur AI cadangan...' } : m));
+          }
+        }
+      }
+
+      if (!hasSuccessfulStream) {
+        if (isQuotaError(lastError)) window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached'));
+        if (isInvalidKeyError(lastError)) window.dispatchEvent(new CustomEvent('lovelya_api_key_invalid'));
+        throw lastError || new Error('AI_CHAT_FAILED');
+      }
 
       // Final parsing for metadata
       const corrections: Correction[] = [];
@@ -287,7 +370,8 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
       // Auto-play disabled per user request
       // if (cleanText.length < 150) speakText(cleanText, aiMsgId);
     } catch (error) {
-      setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: "Connection error. Try again." } : m));
+      console.error("AI Chat Send Error:", error);
+      setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: getChatFailureMessage(error) } : m));
     } finally {
       setIsLoading(false);
       setIsTyping(false);
