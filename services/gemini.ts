@@ -1173,8 +1173,8 @@ export const generateListeningQuiz = async (script: string, level: string): Prom
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Create 5 MCQ comprehension questions for this English script at ${level} level: "${script}". 
         ${getLanguageInstruction()}
-        CRITICAL: ALL questions MUST strictly be based ONLY on the provided script. Do not ask generic questions or include information outside of this context.
         ${STRICT_FILTER}
+        CRITICAL: ALL questions MUST strictly be based ONLY on the provided script. Do not ask generic questions or include information outside of this context.
         IMPORTANT: Randomize the correctIndex (0, 1, 2, or 3) for each question so the correct answer is NOT always the first option!
         ${QUALITY_ASSURANCE_PROMPT}
         Return JSON: { "quiz": [{ "question": "...", "options": ["4 options"], "correctIndex": 0, "explanation": "..." }] }`;

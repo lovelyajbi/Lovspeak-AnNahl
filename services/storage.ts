@@ -551,8 +551,8 @@ export const getActivityLogs = (): ActivityLog[] => {
     return data ? JSON.parse(data) : [];
 };
 
-// Rolling retention: only the latest logs are kept so reads stay light for both
-// the user dashboards and the admin monitor (which reads at most 100 anyway).
+// Rolling retention: only the latest logs are kept so reads stay light for the
+// dashboards that consume them (which read at most 100 at a time anyway).
 // The cleanup query itself costs reads, so it only runs every 20th log.
 const ACTIVITY_RETENTION = 300;
 const KEY_ACTIVITY_TRIM = 'lovspeak_activity_trim_counter';

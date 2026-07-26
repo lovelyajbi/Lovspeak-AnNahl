@@ -42,6 +42,10 @@ const QUICK_ACTIONS = [
   { label: "Explain Islamic term", prompt: "Can you explain the meaning of 'Taqwa' in English?" },
 ];
 
+// AI Tutor chat model rotation. If a model is unavailable or temporarily
+// exhausted, the next model is tried automatically without losing the message.
+const CHAT_MODEL_CASCADE = ['gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-2.5-flash'];
+
 const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
@@ -58,6 +62,7 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const audioChunksRef = useRef<Blob[]>([]);
   const chatSessionRef = useRef<Chat | null>(null);
+  const chatModelIndexRef = useRef(0);
   const scrollRef = useRef<HTMLDivElement>(null);
   const userProfile = getUserProfile();
 
@@ -72,7 +77,7 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
     return () => ttsService.cancel();
   }, []);
 
-  const initChat = async () => {
+  const initChat = async (modelName = CHAT_MODEL_CASCADE[chatModelIndexRef.current], showWelcome = true) => {
     try {
       const apiKey = getGeminiApiKey();
       if (!apiKey) {
@@ -111,7 +116,7 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
       Keep responses soulful and engaging. You are more than a tool; you are a companion in their learning journey.`;
 
       chatSessionRef.current = ai.chats.create({
-        model: 'gemini-2.5-flash-lite',
+        model: modelName,
         config: { systemInstruction }
       });
 
@@ -119,11 +124,38 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
         ? `Assalamu'alaikum ${userProfile.name}! I'm Lovelya. Don't be afraid to make mistakes—that's how we grow. Shall we talk about your day?`
         : `Assalamu'alaikum ${userProfile.name}, it's wonderful to see you. I'm Lovelya, your mentor. What's on your mind today? I'm here to listen and learn with you.`;
 
-      setMessages([{ id: 'init', role: 'model', text: welcomeMsg, timestamp: new Date() }]);
+      if (showWelcome) setMessages([{ id: 'init', role: 'model', text: welcomeMsg, timestamp: new Date() }]);
     } catch (err) {
       console.error("AI Chat Init Error:", err);
       setMessages([{ id: 'error', role: 'model', text: "Bafis... Maaf, sistem Lovelya sedang mengalami gangguan teknis saat mulai. Pastikan API Key Anda benar.", timestamp: new Date() }]);
     }
+  };
+
+  const sendMessageWithRotation = async (parts: any[], onText: (text: string) => void) => {
+    let lastError: unknown;
+    for (let attempt = 0; attempt < CHAT_MODEL_CASCADE.length; attempt += 1) {
+      const modelIndex = (chatModelIndexRef.current + attempt) % CHAT_MODEL_CASCADE.length;
+      try {
+        if (!chatSessionRef.current || attempt > 0) {
+          chatModelIndexRef.current = modelIndex;
+          await initChat(CHAT_MODEL_CASCADE[modelIndex], false);
+        }
+        const stream = await chatSessionRef.current!.sendMessageStream({ message: parts });
+        let fullText = '';
+        for await (const chunk of stream) {
+          fullText += chunk.text || '';
+          onText(fullText);
+        }
+        return fullText;
+      } catch (error) {
+        lastError = error;
+        chatSessionRef.current = null;
+        if (attempt + 1 < CHAT_MODEL_CASCADE.length) {
+          console.warn(`[AI-CHAT-ROTATION] ${CHAT_MODEL_CASCADE[modelIndex]} gagal, mencoba model berikutnya.`);
+        }
+      }
+    }
+    throw lastError || new Error('AI_CHAT_UNAVAILABLE');
   };
 
   useEffect(() => {
@@ -188,21 +220,16 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
         });
       }
 
-      const stream = await chatSessionRef.current.sendMessageStream({ message: parts });
-      let fullText = '';
-
       const correctionRegex = /\[CORRECTION:\s*"?(.*?)"?\s*->\s*"?(.*?)"?\s*\|\s*"?(.*?)"?\]/g;
       const vocabRegex = /\[\[(.*?)\|(.*?)\]\]/g;
       const legacyVocabRegex = /\[VOCAB:\s*"?(.*?)"?\s*\|\s*"?(.*?)"?\]/g;
       const missionRegex = /\[MISSION:\s*"?(.*?)"?\]/g;
       const scoreRegex = /\[SCORE:\s*(\d+)\]/g;
 
-      for await (const chunk of stream) {
-        const chunkText = chunk.text || "";
-        fullText += chunkText;
+      const fullText = await sendMessageWithRotation(parts, (streamText) => {
 
         // Live clean text for streaming display
-        const streamingClean = fullText
+        const streamingClean = streamText
           .replace(/\[CORRECTION:.*?\]/g, '')
           .replace(/\[MISSION:.*?\]/g, '')
           .replace(/\[VOCAB:.*?\]/g, '')
@@ -214,7 +241,7 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
           .trim();
 
         setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: streamingClean } : m));
-      }
+      });
 
       // Final parsing for metadata
       const corrections: Correction[] = [];
