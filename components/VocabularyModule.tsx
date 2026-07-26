@@ -9,7 +9,8 @@ import {
 } from '../services/storage';
 import { audioService } from '../services/audioService';
 import { VOCAB_CATEGORIES } from '../constants';
-import { STATIC_VOCAB, STATIC_VOCAB_DETAILS } from '../data/vocabData';
+import { STATIC_VOCAB } from '../data/vocabWords';
+import { STATIC_VOCAB_DETAILS } from '../data/vocabDetails';
 import { generateVocabDetails } from '../services/gemini';
 import { ttsService } from '../services/ttsService';
 

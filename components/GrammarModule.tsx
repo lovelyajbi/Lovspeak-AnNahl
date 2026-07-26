@@ -7,6 +7,7 @@ import { GRAMMAR_LESSONS } from '../data/grammarLessons';
 import { audioService } from '../services/audioService';
 import { analyzeGrammar, generateGrammarTask, generateGrammarQuiz } from '../services/gemini';
 import { logActivity, completeRoadmapUnit } from '../services/storage';
+import { getLessonBank, pickQuizSet, pickPracticePrompt } from '../services/grammarContent';
 import MindMapRenderer from './MindMapRenderer';
 
 const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
@@ -79,15 +80,20 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     startTimeRef.current = Date.now();
 
     // Auto-generate task on lesson select
-    refreshTask(lesson.title, lesson.level);
+    refreshTask(lesson.title, lesson.level, lesson.id);
 
-    // Check if quiz already exists in data
-    if (lesson.quiz && lesson.quiz.length > 0) {
-      setCurrentQuiz(lesson.quiz);
-    }
+    // Pre-baked quiz bank, if this lesson has one, is drawn lazily when the
+    // user opens the Quiz tab (handleGenerateLessonQuiz) — nothing to do here.
   };
 
-  const refreshTask = async (title: string, level: string = 'A1') => {
+  const refreshTask = async (title: string, level: string = 'A1', lessonId?: string) => {
+    const bank = lessonId ? await getLessonBank(level, lessonId) : null;
+    const bankedPrompt = bank ? pickPracticePrompt(bank.practicePrompts) : null;
+    if (bankedPrompt) {
+      setGrammarTask(bankedPrompt);
+      return;
+    }
+
     setLoadingTask(true);
     try {
       const task = await generateGrammarTask(title, level);
@@ -101,6 +107,16 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
   const handleGenerateLessonQuiz = async () => {
     if (!selectedLesson) return;
+
+    const bank = await getLessonBank(selectedLesson.level, selectedLesson.id);
+    if (bank && bank.quiz.length > 0) {
+      const drawn = pickQuizSet(bank.quiz, 10);
+      setCurrentQuiz(drawn);
+      setQuizAnswers(new Array(drawn.length).fill(-1));
+      setQuizSubmitted(false);
+      return;
+    }
+
     setQuizLoading(true);
     try {
       const contentString = selectedLesson.sections.map(s => `${s.heading}: ${s.content}`).join('\n');
@@ -490,7 +506,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                   </div>
                 </div>
                 <button
-                  onClick={() => refreshTask(selectedLesson.title, selectedLesson.level)}
+                  onClick={() => refreshTask(selectedLesson.title, selectedLesson.level, selectedLesson.id)}
                   disabled={loadingTask}
                   className="p-2.5 rounded-xl bg-lovelya-50 dark:bg-lovelya-900/20 text-lovelya-600 dark:text-lovelya-400 hover:bg-lovelya-100 transition flex items-center gap-2 text-xs font-bold uppercase tracking-widest disabled:opacity-50"
                 >

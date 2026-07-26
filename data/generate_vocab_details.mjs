@@ -31,9 +31,12 @@ function getNextApiKey() {
   return API_KEYS[currentKeyIndex];
 }
 
-// Read vocabData.ts and extract all english words + existing detail keys
-const vocabPath = path.join(process.cwd(), 'data', 'vocabData.ts');
-const content = fs.readFileSync(vocabPath, 'utf8');
+// Read vocabWords.ts + vocabDetails.ts and extract all english words + existing detail keys
+const wordsPath = path.join(process.cwd(), 'data', 'vocabWords.ts');
+const detailsPath = path.join(process.cwd(), 'data', 'vocabDetails.ts');
+const wordsContent = fs.readFileSync(wordsPath, 'utf8');
+const detailsContent = fs.readFileSync(detailsPath, 'utf8');
+const content = wordsContent + '\n' + detailsContent;
 
 // Extract all english words
 const englishWords = new Set();
@@ -208,20 +211,20 @@ async function main() {
     .join(',\n');
 
   // Insert before the closing }; of STATIC_VOCAB_DETAILS
-  const closingIndex = content.lastIndexOf('};');
+  const closingIndex = detailsContent.lastIndexOf('};');
   if (closingIndex === -1) {
-    console.error('❌ Could not find closing }; in vocabData.ts');
+    console.error('❌ Could not find closing }; in vocabDetails.ts');
     process.exit(1);
   }
 
-  const newContent = content.substring(0, closingIndex) + 
+  const newDetailsContent = detailsContent.substring(0, closingIndex) +
     `,\n  // --- AUTO-GENERATED DETAILS (${new Date().toISOString().split('T')[0]}) ---\n` +
     entries + '\n' +
-    content.substring(closingIndex);
+    detailsContent.substring(closingIndex);
 
-  fs.writeFileSync(vocabPath, newContent);
-  console.log(`✅ Written ${Object.keys(allResults).length} new detail entries to vocabData.ts`);
-  console.log(`📁 File size: ${(fs.statSync(vocabPath).size / 1024).toFixed(0)} KB`);
+  fs.writeFileSync(detailsPath, newDetailsContent);
+  console.log(`✅ Written ${Object.keys(allResults).length} new detail entries to vocabDetails.ts`);
+  console.log(`📁 File size: ${(fs.statSync(detailsPath).size / 1024).toFixed(0)} KB`);
 }
 
 main().catch(e => {

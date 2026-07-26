@@ -4,7 +4,7 @@ import { VOCAB_CATEGORIES, INTENSITY_GOALS } from '../constants';
 import { GRAMMAR_LESSONS } from '../data/grammarLessons';
 import { THEMATIC_BRIDGES } from '../data/thematicBridges';
 import { SHADOWING_DATA } from '../src/constants/shadowingData';
-import { STATIC_VOCAB } from '../data/vocabData';
+import { STATIC_VOCAB } from '../data/vocabWords';
 
 // --- LOGICAL PROGRESSION CURRICULUM (30 Days per Level) ---
 // This ensures basic topics come first and increase in complexity.

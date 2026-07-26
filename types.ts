@@ -200,7 +200,6 @@ export interface GrammarLesson {
   description: string;
   sections: GrammarSection[];
   mindmap?: MindMapNode;
-  quiz?: QuizQuestion[];
 }
 
 // --- GUIDED CURRICULUM TYPES ---
