@@ -38,31 +38,68 @@ const useDialogueSpeech = () => {
   const [isListening, setIsListening] = useState(false);
   const [transcript, setTranscript] = useState('');
   const recognitionRef = useRef<any>(null);
+  // The browser SpeechRecognition engine ends a session on any short pause;
+  // we auto-restart until the user explicitly taps stop, accumulating text across sessions.
+  const manualStopRef = useRef(false);
+  const accumulatedRef = useRef('');
+  const sessionRef = useRef('');
 
   useEffect(() => {
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      recognitionRef.current = new SpeechRecognition();
-      recognitionRef.current.lang = 'en-US';
-      recognitionRef.current.continuous = false;
-      recognitionRef.current.interimResults = true;
-      recognitionRef.current.onresult = (e: any) => {
-        let currentTranscript = '';
-        for (let i = 0; i < e.results.length; i++) currentTranscript += e.results[i][0].transcript + ' ';
-        setTranscript(currentTranscript.trim());
-      };
-      recognitionRef.current.onend = () => setIsListening(false);
-      recognitionRef.current.onerror = () => setIsListening(false);
-    }
+    if (!SpeechRecognition) return;
+    const rec = new SpeechRecognition();
+    rec.lang = 'en-US';
+    rec.continuous = true;
+    rec.interimResults = true;
+    rec.onresult = (e: any) => {
+      let session = '';
+      for (let i = 0; i < e.results.length; i++) session += e.results[i][0].transcript + ' ';
+      sessionRef.current = session.trim();
+      setTranscript((accumulatedRef.current + ' ' + sessionRef.current).trim());
+    };
+    rec.onend = () => {
+      accumulatedRef.current = (accumulatedRef.current + ' ' + sessionRef.current).trim();
+      sessionRef.current = '';
+      if (manualStopRef.current) {
+        setIsListening(false);
+        return;
+      }
+      try {
+        rec.start();
+      } catch {
+        setTimeout(() => {
+          if (manualStopRef.current) { setIsListening(false); return; }
+          try { rec.start(); } catch { setIsListening(false); }
+        }, 150);
+      }
+    };
+    rec.onerror = (e: any) => {
+      if (e?.error === 'not-allowed' || e?.error === 'service-not-allowed') {
+        manualStopRef.current = true;
+      }
+      // Other errors (no-speech, aborted, network) fall through to onend, which restarts.
+    };
+    recognitionRef.current = rec;
+    return () => { manualStopRef.current = true; try { rec.stop(); } catch { /* already stopped */ } };
   }, []);
 
   const startListening = () => {
     if (recognitionRef.current && !isListening) {
-      try { setTranscript(''); recognitionRef.current.start(); setIsListening(true); } catch (e) { console.error('Mic start error', e); }
+      try {
+        manualStopRef.current = false;
+        accumulatedRef.current = '';
+        sessionRef.current = '';
+        setTranscript('');
+        recognitionRef.current.start();
+        setIsListening(true);
+      } catch (e) { console.error('Mic start error', e); }
     }
   };
   const stopListening = () => {
-    if (recognitionRef.current && isListening) { recognitionRef.current.stop(); setIsListening(false); }
+    if (recognitionRef.current && isListening) {
+      manualStopRef.current = true;
+      try { recognitionRef.current.stop(); } catch { setIsListening(false); }
+    }
   };
   return { isListening, transcript, startListening, stopListening, setTranscript };
 };
@@ -136,6 +173,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const [lineIndex, setLineIndex] = useState(0);
   const [dialogueMatch, setDialogueMatch] = useState<number | null>(null);
   const [isDialoguePlaying, setIsDialoguePlaying] = useState(false);
+  const [revealedHints, setRevealedHints] = useState<Set<number>>(new Set());
   const { isListening: isDialogueListening, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
 
   const openDialogueRoleplay = async () => {
@@ -188,6 +226,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     if (!selectedScenario) return;
     setDialogueMatch(null);
     setDialogueTranscript('');
+    setRevealedHints(new Set());
     if (lineIndex >= selectedScenario.lines.length - 1) {
       setDialogueStage('complete');
     } else {
@@ -1089,7 +1128,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         </div>
         <div className="flex gap-3">
           {(['A', 'B'] as const).map(role => (
-            <button key={role} onClick={() => { setSelectedRole(role); setLineIndex(0); setDialogueMatch(null); setDialogueStage('play'); }} className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl p-5 text-center border border-white/60 dark:border-gray-700/50 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all">
+            <button key={role} onClick={() => { setSelectedRole(role); setLineIndex(0); setDialogueMatch(null); setRevealedHints(new Set()); setDialogueStage('play'); }} className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl p-5 text-center border border-white/60 dark:border-gray-700/50 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all">
               <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white text-lg ${role === 'A' ? 'bg-gradient-to-br from-sky-400 to-blue-700' : 'bg-gradient-to-br from-lovelya-400 to-rose-700'}`}>
                 <i className="fas fa-user"></i>
               </div>
@@ -1140,6 +1179,24 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           <div className="bg-white/90 dark:bg-gray-800/90 border-2 border-dashed border-lovelya-400 rounded-2xl p-4">
             <span className="text-[9px] font-black uppercase tracking-widest text-lovelya-600">Terjemahkan &amp; ucapkan</span>
             <p className="text-sm font-black text-gray-900 dark:text-white my-2">"{currentDialogueLine.indonesian}"</p>
+            <div className="mb-3 p-2.5 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-gray-100 dark:border-gray-700/50">
+              <span className="text-[8px] font-black uppercase tracking-widest text-gray-400 flex items-center gap-1 mb-1.5">
+                <i className="fas fa-lightbulb text-amber-400"></i> Hint · ketuk kata untuk lihat Inggris-nya
+              </span>
+              <div className="flex flex-wrap gap-1">
+                {currentDialogueLine.english.split(' ').map((word, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setRevealedHints(prev => new Set(prev).add(i))}
+                    className={`px-1.5 py-0.5 rounded-md text-[11px] font-bold transition-all ${revealedHints.has(i)
+                      ? 'bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-700 dark:text-lovelya-300'
+                      : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 blur-[4px] select-none hover:blur-[2px]'}`}
+                  >
+                    {word}
+                  </button>
+                ))}
+              </div>
+            </div>
             {dialogueTranscript && (
               <p className="text-[11px] text-gray-400 font-bold mb-2">You said: "{dialogueTranscript}"</p>
             )}
@@ -1150,7 +1207,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               >
                 <i className={`fas ${isDialogueListening ? 'fa-stop' : 'fa-microphone'}`}></i>
               </button>
-              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{isDialogueListening ? 'Listening...' : 'Tap to record'}</span>
+              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{isDialogueListening ? 'Mendengarkan... ketuk stop jika selesai' : 'Tap to record'}</span>
               {dialogueMatch !== null && !matchPassed && (
                 <div className="flex flex-col items-center gap-2 mt-1">
                   <span className="inline-flex items-center gap-1 text-[10px] font-black text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-3 py-1 rounded-full">
