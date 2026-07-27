@@ -385,6 +385,21 @@ export interface ShadowingTask {
   scenario?: string;
 }
 
+export interface DialogueLine {
+  speaker: 'A' | 'B';
+  english: string;
+  indonesian: string;
+}
+
+export interface DialogueScenario {
+  id: string;
+  title: string;
+  category: string;
+  roleA: string;
+  roleB: string;
+  lines: DialogueLine[];
+}
+
 export interface ThematicBridgeContent {
   id: string;
   unitTitle: string;

@@ -790,8 +790,13 @@ export const generateGameData = async (category: string, context: string, level:
         ? 'CRITICAL: The context is "islamic". Every single item MUST incorporate themes of Islam, faith, Muslim culture, Quranic values, or Halal lifestyle (e.g. using names like Ahmad/Aisha, mentioning mosque, prayer, fasting, charity, honesty, etc). Do not generate generic English items.'
         : `Context: ${context}`;
 
+    const categoryFocus = category === 'knowledge'
+        ? 'CRITICAL: "knowledge" is a Word Quiz about the ENGLISH LANGUAGE itself — idioms, common expressions, phrasal verbs, word meanings, and collocations. Every question MUST test English language knowledge (e.g. "What does the idiom \'break the ice\' mean?"), NOT general/world trivia.'
+        : '';
+
     const prompt = `Generate ${count} English items for "${category}" at difficulty level ${level}/20.
     ${contextInstruction}
+    ${categoryFocus}
     ${getLanguageInstruction()}
     ${STRICT_FILTER}
     ${QUALITY_ASSURANCE_PROMPT}

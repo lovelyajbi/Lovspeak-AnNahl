@@ -27,7 +27,7 @@ const GAME_CATEGORIES: GameConfig[] = [
     { id: 'scramble', label: 'Sentence Builder', icon: 'fa-layer-group', desc: 'Arrange words.', gradient: 'from-lovelya-400 to-lovelya-700', accent: 'lovelya' },
     { id: 'arcade', label: 'Speed Definer', icon: 'fa-bolt', desc: 'Guess against the clock.', gradient: 'from-amber-400 to-orange-700', accent: 'orange' },
     { id: 'interpreter', label: 'The Interpreter', icon: 'fa-language', desc: 'Translate to English.', gradient: 'from-indigo-400 to-blue-700', accent: 'indigo' },
-    { id: 'knowledge', label: 'Trivia Master', icon: 'fa-graduation-cap', desc: 'Test your knowledge.', gradient: 'from-pink-400 to-rose-700', accent: 'rose' },
+    { id: 'knowledge', label: 'Word Quiz', icon: 'fa-book-open', desc: 'Idioms & English trivia.', gradient: 'from-pink-400 to-rose-700', accent: 'rose' },
     { id: 'vocab_master', label: 'Vocab Master', icon: 'fa-brain', desc: 'Review saved words.', gradient: 'from-fuchsia-400 to-pink-700', accent: 'fuchsia' },
 ];
 
@@ -209,10 +209,8 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
 
     const { isListening, transcript, startListening, stopListening, setTranscript } = useSpeechRecognition();
 
-    // Pagination for Levels
+    // Kept for backward compatibility with persisted navigation state
     const [currentLevelPage, setCurrentLevelPage] = useState(1);
-    const levelsPerPage = 10;
-    const totalLevelPages = Math.ceil(TOTAL_LEVELS / levelsPerPage);
 
     // --- PERSISTENCE LOGIC ---
     useEffect(() => {
@@ -585,7 +583,9 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
                         <p className="text-[10px] md:text-base text-gray-400 font-medium px-4">Challenge yourself and unlock all levels!</p>
                     </div>
                     <div className="grid grid-cols-2 gap-2.5 md:gap-4 px-3 md:px-4">
-                        {GAME_CATEGORIES.map((cat, idx) => (
+                        {GAME_CATEGORIES.map((cat, idx) => {
+                            const completedLevels = Math.min(TOTAL_LEVELS, Math.max(getGameProgress(cat.id, 'islamic'), getGameProgress(cat.id, 'general')) - 1);
+                            return (
                             <motion.button
                                 key={cat.id}
                                 initial={{ opacity: 0, y: 20 }}
@@ -607,12 +607,21 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
                                     </div>
                                     <h3 className="text-[11px] md:text-base font-black text-gray-800 dark:text-white mb-0.5 md:mb-1 line-clamp-1">{cat.label}</h3>
                                     <p className="text-[9px] md:text-xs text-gray-400 dark:text-gray-500 leading-tight md:leading-relaxed flex-1 line-clamp-2">{cat.desc}</p>
+                                    {cat.id !== 'vocab_master' && (
+                                        <div className="mt-2 md:mt-3 flex items-center gap-1.5">
+                                            <div className="flex-1 h-1 md:h-1.5 rounded-full bg-gray-100 dark:bg-gray-700 overflow-hidden">
+                                                <div className={`h-full rounded-full bg-gradient-to-r ${cat.gradient}`} style={{ width: `${(completedLevels / TOTAL_LEVELS) * 100}%` }}></div>
+                                            </div>
+                                            <span className="text-[8px] md:text-[9px] font-black text-gray-400 whitespace-nowrap">{completedLevels}/{TOTAL_LEVELS}</span>
+                                        </div>
+                                    )}
                                     <div className={`mt-2 md:mt-3 flex items-center gap-1 text-[8px] md:text-[10px] font-black uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-r ${cat.gradient} bg-clip-text text-transparent`}>
                                         Play <i className="fas fa-chevron-right text-[6px]"></i>
                                     </div>
                                 </div>
                             </motion.button>
-                        ))}
+                            );
+                        })}
                     </div>
                 </div>
             )}
@@ -671,9 +680,28 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
                     </div>
                     <p className="text-[9px] md:text-xs text-gray-400 mb-6 md:mb-8 font-black uppercase tracking-widest">{selectedContext === 'islamic' ? '🌙' : '🌍'} {selectedContext} Track</p>
 
-                    <div className="grid grid-cols-4 sm:grid-cols-5 gap-2 md:gap-3 max-w-lg mx-auto px-4">
-                        {[...Array(TOTAL_LEVELS)].slice((currentLevelPage - 1) * levelsPerPage, currentLevelPage * levelsPerPage).map((_, i) => {
-                            const levelNum = ((currentLevelPage - 1) * levelsPerPage) + i + 1;
+                    <div className="max-w-lg mx-auto px-4 space-y-5 md:space-y-6">
+                    {[
+                        { name: 'Beginner', icon: 'fa-seedling', from: 1 },
+                        { name: 'Elementary', icon: 'fa-leaf', from: 6 },
+                        { name: 'Intermediate', icon: 'fa-fire', from: 11 },
+                        { name: 'Expert', icon: 'fa-crown', from: 16 },
+                    ].map(tier => {
+                        const tierLevels = [tier.from, tier.from + 1, tier.from + 2, tier.from + 3, tier.from + 4];
+                        const tierCompleted = tierLevels.filter(l => l < unlockedLevel).length;
+                        const tierLocked = tier.from > unlockedLevel;
+                        return (
+                        <div key={tier.name}>
+                            <div className="flex items-center justify-between mb-2 px-1">
+                                <span className={`flex items-center gap-1.5 text-[9px] md:text-[10px] font-black uppercase tracking-widest ${tierLocked ? 'text-gray-300 dark:text-gray-600' : 'text-gray-500 dark:text-gray-400'}`}>
+                                    <i className={`fas ${tier.icon}`}></i> {tier.name}
+                                </span>
+                                <span className={`text-[9px] md:text-[10px] font-black ${tierCompleted === 5 ? 'text-emerald-500' : 'text-gray-400 dark:text-gray-500'}`}>
+                                    {tierCompleted === 5 ? <><i className="fas fa-check-circle mr-1"></i>Done</> : `${tierCompleted}/5`}
+                                </span>
+                            </div>
+                            <div className="grid grid-cols-5 gap-2 md:gap-3">
+                        {tierLevels.map(levelNum => {
                             const isLocked = levelNum > unlockedLevel;
                             const isCompleted = levelNum < unlockedLevel;
                             const isMilestone = [5, 10, 15, 20].includes(levelNum);
@@ -683,7 +711,7 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
                                     key={levelNum}
                                     initial={{ opacity: 0, scale: 0.8 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: i * 0.03 }}
+                                    transition={{ delay: (levelNum - tier.from) * 0.03 }}
                                     whileHover={!isLocked ? { scale: 1.12, y: -4 } : {}}
                                     whileTap={!isLocked ? { scale: 0.95 } : {}}
                                     disabled={isLocked}
@@ -718,15 +746,11 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
                                 </motion.button>
                             );
                         })}
-                    </div>
-
-                    {totalLevelPages > 1 && (
-                        <div className="flex items-center justify-center gap-4 mt-6 md:mt-8">
-                            <button disabled={currentLevelPage === 1} onClick={() => setCurrentLevelPage(prev => prev - 1)} className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center text-gray-500 disabled:opacity-30 transition-all active:scale-90"><i className="fas fa-chevron-left text-sm"></i></button>
-                            <span className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-widest">Page {currentLevelPage} of {totalLevelPages}</span>
-                            <button disabled={currentLevelPage === totalLevelPages} onClick={() => setCurrentLevelPage(prev => prev + 1)} className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-white dark:bg-gray-800 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center justify-center text-gray-500 disabled:opacity-30 transition-all active:scale-90"><i className="fas fa-chevron-right text-sm"></i></button>
+                            </div>
                         </div>
-                    )}
+                        );
+                    })}
+                    </div>
                 </div>
             )}
 

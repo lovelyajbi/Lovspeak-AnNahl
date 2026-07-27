@@ -1,10 +1,71 @@
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { ModuleProps, ShadowingTask, AppView, ModuleContext } from '../types';
+import { ModuleProps, ShadowingTask, AppView, ModuleContext, DialogueScenario } from '../types';
 import { SHADOWING_DATA, ShadowingTheme } from '../src/constants/shadowingData';
 import { logActivity, completeRoadmapUnit } from '../services/storage';
 import { analyzePronunciationAudio } from '../services/gemini';
 import { ttsService } from '../services/ttsService';
+import { getDialogueScenarios } from '../services/dialogueContent';
+
+const MATCH_THRESHOLD = 0.8;
+
+const calculateTextSimilarity = (s1: string, s2: string): number => {
+  const normalize = (s: string) => s.toLowerCase().trim().replace(/[.,/#!$%^&*;:{}=\-_`~()?]/g, '').replace(/\s{2,}/g, ' ');
+  const str1 = normalize(s1);
+  const str2 = normalize(s2);
+  if (str1 === str2) return 1.0;
+  if (str1.length === 0 || str2.length === 0) return 0.0;
+
+  const costs: number[] = [];
+  for (let i = 0; i <= str1.length; i++) {
+    let lastValue = i;
+    for (let j = 0; j <= str2.length; j++) {
+      if (i === 0) costs[j] = j;
+      else if (j > 0) {
+        let newValue = costs[j - 1];
+        if (str1.charAt(i - 1) !== str2.charAt(j - 1)) newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
+        costs[j - 1] = lastValue;
+        lastValue = newValue;
+      }
+    }
+    if (i > 0) costs[str2.length] = lastValue;
+  }
+  const distance = costs[str2.length];
+  return 1.0 - distance / Math.max(str1.length, str2.length);
+};
+
+const useDialogueSpeech = () => {
+  const [isListening, setIsListening] = useState(false);
+  const [transcript, setTranscript] = useState('');
+  const recognitionRef = useRef<any>(null);
+
+  useEffect(() => {
+    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+    if (SpeechRecognition) {
+      recognitionRef.current = new SpeechRecognition();
+      recognitionRef.current.lang = 'en-US';
+      recognitionRef.current.continuous = false;
+      recognitionRef.current.interimResults = true;
+      recognitionRef.current.onresult = (e: any) => {
+        let currentTranscript = '';
+        for (let i = 0; i < e.results.length; i++) currentTranscript += e.results[i][0].transcript + ' ';
+        setTranscript(currentTranscript.trim());
+      };
+      recognitionRef.current.onend = () => setIsListening(false);
+      recognitionRef.current.onerror = () => setIsListening(false);
+    }
+  }, []);
+
+  const startListening = () => {
+    if (recognitionRef.current && !isListening) {
+      try { setTranscript(''); recognitionRef.current.start(); setIsListening(true); } catch (e) { console.error('Mic start error', e); }
+    }
+  };
+  const stopListening = () => {
+    if (recognitionRef.current && isListening) { recognitionRef.current.stop(); setIsListening(false); }
+  };
+  return { isListening, transcript, startListening, stopListening, setTranscript };
+};
 
 interface FeedbackDetail {
   score: number;
@@ -64,6 +125,75 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const [isPlaying, setIsPlaying] = useState(false);
   const [showScenarioModal, setShowScenarioModal] = useState(false);
   const timerRef = useRef<NodeJS.Timeout | null>(null);
+
+  // --- DIALOGUE ROLEPLAY STATE ---
+  const [dialogueStage, setDialogueStage] = useState<'categories' | 'scenarios' | 'role' | 'play' | 'complete' | null>(null);
+  const [dialogueScenarios, setDialogueScenarios] = useState<DialogueScenario[]>([]);
+  const [dialogueLoading, setDialogueLoading] = useState(false);
+  const [selectedDialogueCategory, setSelectedDialogueCategory] = useState<string | null>(null);
+  const [selectedScenario, setSelectedScenario] = useState<DialogueScenario | null>(null);
+  const [selectedRole, setSelectedRole] = useState<'A' | 'B' | null>(null);
+  const [lineIndex, setLineIndex] = useState(0);
+  const [dialogueMatch, setDialogueMatch] = useState<number | null>(null);
+  const [isDialoguePlaying, setIsDialoguePlaying] = useState(false);
+  const { isListening: isDialogueListening, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
+
+  const openDialogueRoleplay = async () => {
+    setDialogueStage('categories');
+    if (dialogueScenarios.length === 0) {
+      setDialogueLoading(true);
+      const data = await getDialogueScenarios();
+      setDialogueScenarios(data);
+      setDialogueLoading(false);
+    }
+  };
+
+  const exitDialogueRoleplay = () => {
+    setDialogueStage(null);
+    setSelectedDialogueCategory(null);
+    setSelectedScenario(null);
+    setSelectedRole(null);
+    setLineIndex(0);
+    setDialogueMatch(null);
+    setDialogueTranscript('');
+    ttsService.cancel();
+  };
+
+  const dialogueCategories = Array.from(new Set(dialogueScenarios.map(s => s.category)));
+
+  const playDialogueLine = (text: string) => {
+    setIsDialoguePlaying(true);
+    ttsService.speak(text, 'en-US', 0.95, 1.0, () => setIsDialoguePlaying(false), () => setIsDialoguePlaying(false));
+  };
+
+  const currentDialogueLine = selectedScenario ? selectedScenario.lines[lineIndex] : null;
+  const isMyTurn = !!currentDialogueLine && currentDialogueLine.speaker === selectedRole;
+
+  useEffect(() => {
+    if (dialogueStage === 'play' && currentDialogueLine && !isMyTurn) {
+      playDialogueLine(currentDialogueLine.english);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [lineIndex, dialogueStage]);
+
+  useEffect(() => {
+    if (!isDialogueListening && dialogueTranscript && isMyTurn && currentDialogueLine) {
+      const sim = calculateTextSimilarity(dialogueTranscript, currentDialogueLine.english);
+      setDialogueMatch(Math.round(sim * 100));
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isDialogueListening]);
+
+  const advanceDialogueLine = () => {
+    if (!selectedScenario) return;
+    setDialogueMatch(null);
+    setDialogueTranscript('');
+    if (lineIndex >= selectedScenario.lines.length - 1) {
+      setDialogueStage('complete');
+    } else {
+      setLineIndex(prev => prev + 1);
+    }
+  };
 
   useEffect(() => {
     return () => ttsService.cancel();
@@ -497,6 +627,26 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
             </div>
           </button>
         ))}
+
+        <button onClick={openDialogueRoleplay} className="relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-2xl p-4 md:p-5 rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-xl transition-all hover:scale-[1.02] border border-lovelya-200/50 dark:border-lovelya-700/30 flex items-center gap-4 md:gap-5 text-left group overflow-hidden">
+          <div className="absolute -right-10 top-1/2 -translate-y-1/2 w-40 h-40 blur-[50px] opacity-20 rounded-full transition-opacity group-hover:opacity-40 bg-lovelya-400"></div>
+
+          <div className="w-14 h-14 md:w-16 md:h-16 shrink-0 rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-lg relative z-10 bg-gradient-to-br from-lovelya-400 to-rose-700 text-white shadow-lovelya-500/30">
+            <i className="fas fa-masks-theater"></i>
+          </div>
+
+          <div className="flex-1 relative z-10">
+            <div className="flex items-center gap-2 mb-0.5">
+              <h4 className="font-black text-base md:text-lg text-gray-900 dark:text-white">Dialogue Roleplay</h4>
+              <span className="px-2 py-0.5 rounded-full bg-lovelya-100 text-lovelya-700 dark:bg-lovelya-900/50 dark:text-lovelya-300 text-[8px] font-black uppercase tracking-widest">New</span>
+            </div>
+            <p className="text-[10px] md:text-xs text-gray-500 font-bold uppercase tracking-widest">Real situations, two roles</p>
+          </div>
+
+          <div className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400 group-hover:bg-gray-100 dark:group-hover:bg-gray-600 group-hover:text-gray-900 dark:group-hover:text-white transition-all relative z-10">
+            <i className="fas fa-chevron-right text-[10px]"></i>
+          </div>
+        </button>
       </div>
     </motion.div>
   );
@@ -864,6 +1014,207 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       </motion.div>
     );
   };
+
+  // --- DIALOGUE ROLEPLAY RENDERING ---
+
+  const renderDialogueCategories = () => (
+    <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} className="space-y-4 pt-2 max-w-lg mx-auto">
+      <div className="text-center mb-6 relative">
+        <button onClick={exitDialogueRoleplay} className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white dark:bg-gray-800 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-lovelya-600 transition">
+          <i className="fas fa-arrow-left text-xs md:text-sm"></i>
+        </button>
+        <h3 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white">Dialogue Roleplay</h3>
+        <p className="text-gray-500 text-xs md:text-sm">Choose a category of real situations.</p>
+      </div>
+      {dialogueLoading ? (
+        <div className="flex justify-center py-16"><div className="w-10 h-10 border-4 border-lovelya-200 border-t-lovelya-500 rounded-full animate-spin"></div></div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+          {dialogueCategories.map(cat => {
+            const count = dialogueScenarios.filter(s => s.category === cat).length;
+            return (
+              <button key={cat} onClick={() => { setSelectedDialogueCategory(cat); setDialogueStage('scenarios'); }} className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-4 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.01] border border-white/60 dark:border-gray-700/50 text-left flex items-center justify-between">
+                <div>
+                  <h4 className="font-bold text-gray-900 dark:text-white text-sm">{cat}</h4>
+                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">{count} situations</p>
+                </div>
+                <i className="fas fa-chevron-right text-gray-300 text-xs"></i>
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </motion.div>
+  );
+
+  const renderDialogueScenarios = () => {
+    const filtered = dialogueScenarios.filter(s => s.category === selectedDialogueCategory);
+    return (
+      <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} className="space-y-4 pt-2 max-w-lg mx-auto">
+        <div className="text-center mb-6 relative">
+          <button onClick={() => setDialogueStage('categories')} className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white dark:bg-gray-800 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-lovelya-600 transition">
+            <i className="fas fa-arrow-left text-xs md:text-sm"></i>
+          </button>
+          <h3 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white truncate px-10">{selectedDialogueCategory}</h3>
+          <p className="text-gray-500 text-xs md:text-sm">Select a situation to begin.</p>
+        </div>
+        <div className="flex flex-col gap-3 max-h-[60vh] overflow-y-auto p-1 custom-scrollbar">
+          {filtered.map(scenario => (
+            <button key={scenario.id} onClick={() => { setSelectedScenario(scenario); setDialogueStage('role'); }} className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-4 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.01] border border-white/60 dark:border-gray-700/50 text-left flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-600 dark:text-lovelya-300 flex items-center justify-center shrink-0">
+                <i className="fas fa-comments text-sm"></i>
+              </div>
+              <div className="flex-1 min-w-0">
+                <h4 className="font-bold text-gray-900 dark:text-white text-sm truncate">{scenario.title}</h4>
+                <p className="text-[10px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">{scenario.roleA} &amp; {scenario.roleB} · {scenario.lines.length} lines</p>
+              </div>
+              <i className="fas fa-chevron-right text-gray-300 text-xs"></i>
+            </button>
+          ))}
+        </div>
+      </motion.div>
+    );
+  };
+
+  const renderDialogueRoleSelect = () => {
+    if (!selectedScenario) return null;
+    return (
+      <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 20 }} className="space-y-4 pt-2 max-w-lg mx-auto">
+        <div className="text-center mb-6 relative">
+          <button onClick={() => setDialogueStage('scenarios')} className="absolute left-0 top-1/2 -translate-y-1/2 w-8 h-8 md:w-10 md:h-10 bg-white dark:bg-gray-800 rounded-full shadow-md flex items-center justify-center text-gray-500 hover:text-lovelya-600 transition">
+            <i className="fas fa-arrow-left text-xs md:text-sm"></i>
+          </button>
+          <h3 className="text-xl md:text-2xl font-black text-gray-800 dark:text-white truncate px-10">{selectedScenario.title}</h3>
+          <p className="text-gray-500 text-xs md:text-sm">Choose who you'll play.</p>
+        </div>
+        <div className="flex gap-3">
+          {(['A', 'B'] as const).map(role => (
+            <button key={role} onClick={() => { setSelectedRole(role); setLineIndex(0); setDialogueMatch(null); setDialogueStage('play'); }} className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl p-5 text-center border border-white/60 dark:border-gray-700/50 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all">
+              <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white text-lg ${role === 'A' ? 'bg-gradient-to-br from-sky-400 to-blue-700' : 'bg-gradient-to-br from-lovelya-400 to-rose-700'}`}>
+                <i className="fas fa-user"></i>
+              </div>
+              <h4 className="font-black text-sm text-gray-900 dark:text-white">{role === 'A' ? selectedScenario.roleA : selectedScenario.roleB}</h4>
+              <p className="text-[9px] text-gray-400 font-bold uppercase tracking-widest mt-0.5">Role {role}</p>
+            </button>
+          ))}
+        </div>
+      </motion.div>
+    );
+  };
+
+  const renderDialoguePlay = () => {
+    if (!selectedScenario || !currentDialogueLine) return null;
+    const progress = ((lineIndex) / selectedScenario.lines.length) * 100;
+    const matchPassed = dialogueMatch !== null && dialogueMatch >= MATCH_THRESHOLD * 100;
+
+    return (
+      <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} className="max-w-lg mx-auto space-y-4">
+        <div className="flex items-center justify-between bg-white/90 dark:bg-gray-800/90 border border-white/60 dark:border-gray-700/50 rounded-2xl px-4 py-3">
+          <button onClick={() => setDialogueStage('role')} className="text-gray-400 hover:text-lovelya-600 transition"><i className="fas fa-arrow-left"></i></button>
+          <div className="text-[11px] font-black text-gray-800 dark:text-white flex items-center gap-2 truncate px-2">
+            <i className="fas fa-masks-theater text-lovelya-600"></i> {selectedScenario.title}
+          </div>
+          <div className="w-16 h-1.5 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden shrink-0">
+            <div className="h-full bg-lovelya-500 rounded-full transition-all" style={{ width: `${progress}%` }}></div>
+          </div>
+        </div>
+
+        <div className="space-y-3 max-h-[40vh] overflow-y-auto p-1 custom-scrollbar">
+          {selectedScenario.lines.slice(Math.max(0, lineIndex - 3), lineIndex + 1).map((line, i, arr) => {
+            const isMine = line.speaker === selectedRole;
+            const isLast = i === arr.length - 1;
+            return (
+              <div key={i} className={`flex gap-2 ${isMine ? 'flex-row-reverse' : ''}`}>
+                <div className={`w-7 h-7 rounded-lg shrink-0 flex items-center justify-center text-white text-[11px] ${line.speaker === 'A' ? 'bg-gradient-to-br from-sky-400 to-blue-700' : 'bg-gradient-to-br from-lovelya-400 to-rose-700'}`}>
+                  <i className="fas fa-user"></i>
+                </div>
+                <div className={`max-w-[75%] px-3 py-2 rounded-2xl text-xs font-bold leading-relaxed ${isLast && isMine && !matchPassed ? 'bg-lovelya-50 dark:bg-lovelya-900/20 text-gray-500 dark:text-gray-400 italic' : isMine ? 'bg-lovelya-100/70 dark:bg-lovelya-900/30 text-gray-900 dark:text-white rounded-tr-sm' : 'bg-gray-100 dark:bg-gray-700/60 text-gray-900 dark:text-white rounded-tl-sm'}`}>
+                  {isLast && isMine && !matchPassed ? line.indonesian : line.english}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {isMyTurn && !matchPassed ? (
+          <div className="bg-white/90 dark:bg-gray-800/90 border-2 border-dashed border-lovelya-400 rounded-2xl p-4">
+            <span className="text-[9px] font-black uppercase tracking-widest text-lovelya-600">Terjemahkan &amp; ucapkan</span>
+            <p className="text-sm font-black text-gray-900 dark:text-white my-2">"{currentDialogueLine.indonesian}"</p>
+            {dialogueTranscript && (
+              <p className="text-[11px] text-gray-400 font-bold mb-2">You said: "{dialogueTranscript}"</p>
+            )}
+            <div className="flex flex-col items-center gap-2">
+              <button
+                onClick={() => isDialogueListening ? stopDialogueListening() : startDialogueListening()}
+                className={`w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg transition-all ${isDialogueListening ? 'bg-rose-500 animate-pulse scale-110' : 'bg-gradient-to-br from-lovelya-500 to-rose-600 hover:scale-105'}`}
+              >
+                <i className={`fas ${isDialogueListening ? 'fa-stop' : 'fa-microphone'}`}></i>
+              </button>
+              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{isDialogueListening ? 'Listening...' : 'Tap to record'}</span>
+              {dialogueMatch !== null && !matchPassed && (
+                <div className="flex flex-col items-center gap-2 mt-1">
+                  <span className="inline-flex items-center gap-1 text-[10px] font-black text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-3 py-1 rounded-full">
+                    <i className="fas fa-redo"></i> {dialogueMatch}% match — try again
+                  </span>
+                  <button onClick={() => { setDialogueMatch(null); setDialogueTranscript(''); }} className="text-[10px] font-black text-gray-400 hover:text-gray-600 uppercase tracking-widest">Clear &amp; retry</button>
+                </div>
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="flex flex-col items-center gap-3">
+            {isMyTurn && matchPassed && (
+              <span className="inline-flex items-center gap-1 text-[10px] font-black text-emerald-700 bg-emerald-100 dark:bg-emerald-900/30 px-3 py-1 rounded-full">
+                <i className="fas fa-check"></i> {dialogueMatch}% match — nice!
+              </span>
+            )}
+            <button onClick={advanceDialogueLine} className="w-full py-3 bg-gradient-to-r from-lovelya-500 to-rose-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg hover:scale-[1.02] transition-all">
+              {isMyTurn ? 'Continue' : (isDialoguePlaying ? 'Playing...' : 'Continue')} <i className="fas fa-chevron-right ml-2"></i>
+            </button>
+          </div>
+        )}
+      </motion.div>
+    );
+  };
+
+  const renderDialogueComplete = () => (
+    <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="max-w-md mx-auto bg-white/90 dark:bg-gray-800/90 rounded-3xl shadow-xl border border-lovelya-200/50 dark:border-lovelya-700/30 p-8 text-center space-y-5">
+      <div className="w-16 h-16 bg-lovelya-100 dark:bg-lovelya-900/30 rounded-3xl flex items-center justify-center mx-auto">
+        <i className="fas fa-check-circle text-3xl text-lovelya-600"></i>
+      </div>
+      <div>
+        <h3 className="text-xl font-black text-gray-800 dark:text-white mb-1">Dialogue Complete!</h3>
+        <p className="text-sm text-gray-500">{selectedScenario?.title}</p>
+      </div>
+      <div className="flex flex-col gap-3">
+        <button onClick={() => setDialogueStage('scenarios')} className="w-full py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-black uppercase tracking-widest text-xs">
+          Try Another Situation
+        </button>
+        <button onClick={exitDialogueRoleplay} className="w-full py-3 bg-white border-2 border-gray-200 dark:border-gray-700 dark:bg-transparent text-gray-700 dark:text-gray-300 rounded-xl font-black uppercase tracking-widest text-xs">
+          Back to Shadowing
+        </button>
+      </div>
+    </motion.div>
+  );
+
+  if (dialogueStage) {
+    return (
+      <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto px-3 md:px-0 mb-20 relative">
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-lovelya-100/30 rounded-full blur-[120px] dark:bg-lovelya-900/10"></div>
+        </div>
+        <div className="relative z-20">
+          <AnimatePresence mode="wait">
+            {dialogueStage === 'categories' && <motion.div key="dc">{renderDialogueCategories()}</motion.div>}
+            {dialogueStage === 'scenarios' && <motion.div key="ds">{renderDialogueScenarios()}</motion.div>}
+            {dialogueStage === 'role' && <motion.div key="dr">{renderDialogueRoleSelect()}</motion.div>}
+            {dialogueStage === 'play' && <motion.div key="dp">{renderDialoguePlay()}</motion.div>}
+            {dialogueStage === 'complete' && <motion.div key="dcp">{renderDialogueComplete()}</motion.div>}
+          </AnimatePresence>
+        </div>
+      </motion.div>
+    );
+  }
 
   return (
     <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl lg:max-w-6xl mx-auto space-y-4 md:space-y-8 lg:space-y-12 px-3 md:px-0 mb-20 relative">
