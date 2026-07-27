@@ -215,20 +215,39 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     }
   }, [step, level]);
 
-  const handleContinueReading = () => {
+  const handleContinueReading = async () => {
     if (!continueEntry) return;
     const matchedTheme = THEMES.find(t => t.id === continueEntry.themeId);
-    if (matchedTheme) {
-      setTheme(matchedTheme);
-      setThemeCategory(matchedTheme.isIslamic ? 'islamic' : 'general');
+    if (!matchedTheme) return;
+    const category = matchedTheme.isIslamic ? 'islamic' : 'general';
+    setTheme(matchedTheme);
+    setThemeCategory(category);
+
+    const staticItems = await getStaticReadingIndex(practiceType, level, matchedTheme);
+    const match = staticItems?.find(it => it.title === continueEntry.title);
+    if (match) {
+      setTitleIdMap({ [match.title]: match.id });
+      setSelectedTitle(match.title);
+      if (practiceType === 'translate') {
+        setStep('translate');
+        await loadStaticTranslateItem(match.id);
+      } else {
+        setLoading(true);
+        setStatusMsg('Loading content...');
+        setContent(null);
+        setStep('reading');
+        await loadStaticReadItem(match.title, match.id);
+      }
+      return;
     }
     handleSelectTitle(continueEntry.title);
   };
 
   const handleOpenTheme = (t: Theme) => {
+    const category = t.isIslamic ? 'islamic' : 'general';
     setTheme(t);
-    setThemeCategory(t.isIslamic ? 'islamic' : 'general');
-    handleStartSetup(false);
+    setThemeCategory(category);
+    handleStartSetup(false, t, category);
   };
 
   useEffect(() => {
@@ -468,28 +487,31 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
   // --- NAVIGATION & FETCHING ---
 
-  const handleStartSetup = async (forceRefresh = false) => {
+  const handleStartSetup = async (forceRefresh = false, overrideTheme?: Theme, overrideCategory?: 'islamic' | 'general' | 'custom') => {
     setError('');
     setTitleIdMap({});
 
-    if (themeCategory === 'custom' && customTitle) {
+    const effectiveTheme = overrideTheme || theme;
+    const effectiveCategory = overrideCategory || themeCategory;
+
+    if (effectiveCategory === 'custom' && customTitle) {
       handleSelectTitle(customTitle);
       return;
     }
 
-    const currentThemeName = themeCategory === 'custom' ? customTopic : theme.name;
-    const isIslamicLocal = themeCategory === 'islamic';
+    const currentThemeName = effectiveCategory === 'custom' ? customTopic : effectiveTheme.name;
+    const isIslamicLocal = effectiveCategory === 'islamic';
 
-    if (themeCategory !== 'custom') {
-      const staticItems = await getStaticReadingIndex(practiceType, level, theme);
+    if (effectiveCategory !== 'custom') {
+      const staticItems = await getStaticReadingIndex(practiceType, level, effectiveTheme);
       if (staticItems && staticItems.length > 0) {
         applyStaticTitleIndex(staticItems);
         return;
       }
     }
 
-    if (themeCategory !== 'custom' && !forceRefresh) {
-      const cached = getCachedTitles(level, theme.id);
+    if (effectiveCategory !== 'custom' && !forceRefresh) {
+      const cached = getCachedTitles(level, effectiveTheme.id);
       if (cached && cached.length > 0) {
         setTitles(cached);
         setStep('titles');
@@ -507,8 +529,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       }
       setTitles(generatedTitles);
       setCurrentPage(1);
-      if (themeCategory !== 'custom') {
-        setCachedTitles(level, theme.id, generatedTitles);
+      if (effectiveCategory !== 'custom') {
+        setCachedTitles(level, effectiveTheme.id, generatedTitles);
       }
       setStep('titles');
     } catch (e: any) {
