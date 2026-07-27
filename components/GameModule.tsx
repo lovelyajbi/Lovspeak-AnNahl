@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { ModuleProps, AppView } from '../types';
 import { getUserProfile, logActivity, getGameProgress, unlockNextLevel, getVocab } from '../services/storage';
 import { generateGameData, generateVocabReviewGame } from '../services/gemini';
+import { getGameBankItems } from '../services/gameContent';
 import { audioService } from '../services/audioService';
 
 type GameCategory = 'visual' | 'grammar_strike' | 'odd_one_out' | 'arcade' | 'scramble' | 'knowledge' | 'interpreter' | 'read_aloud' | 'vocab_master';
@@ -341,10 +342,14 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
 
             let data: any[] = [];
             if (selectedCategory === 'vocab_master') {
-                // Now generating random vocab appropriate for level to avoid failures
+                // Vocab Master stays AI-powered: it reviews the user's own saved words
                 data = await generateVocabReviewGame([], 10, level, selectedContext);
             } else {
-                data = await generateGameData(selectedCategory, selectedContext, level, 10);
+                // Static banks first (instant, offline, no API quota); AI only as fallback
+                const bankItems = await getGameBankItems(selectedCategory, selectedContext, level, 10);
+                data = bankItems && bankItems.length > 0
+                    ? bankItems
+                    : await generateGameData(selectedCategory, selectedContext, level, 10);
             }
 
             clearInterval(msgInterval);
