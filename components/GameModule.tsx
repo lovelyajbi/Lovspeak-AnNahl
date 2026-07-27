@@ -44,38 +44,91 @@ const READ_ALOUD_GOOD = 0.50;       // ≥50% content words = partial score, no 
 // Short function words that browser speech recognition often misses
 const FUNCTION_WORDS = new Set(['a', 'an', 'the', 'is', 'am', 'are', 'was', 'were', 'be', 'to', 'of', 'in', 'on', 'at', 'it', 'i', 'my', 'me', 'we', 'he', 'or', 'so', 'do', 'if', 'up', 'no', 'by', 'as']);
 
+// Speech engines return digits ("5") where the target text has words ("five")
+const NUMBER_WORDS: Record<string, string> = {
+    '0': 'zero', '1': 'one', '2': 'two', '3': 'three', '4': 'four', '5': 'five',
+    '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine', '10': 'ten',
+    '11': 'eleven', '12': 'twelve', '13': 'thirteen', '14': 'fourteen', '15': 'fifteen',
+    '16': 'sixteen', '17': 'seventeen', '18': 'eighteen', '19': 'nineteen', '20': 'twenty',
+    '30': 'thirty', '40': 'forty', '50': 'fifty', '60': 'sixty', '70': 'seventy',
+    '80': 'eighty', '90': 'ninety', '100': 'hundred', '1000': 'thousand'
+};
+
+// Sound-alike groups the speech engine confuses even when pronunciation is perfect
+// (apostrophes are stripped by normalization, so "they're" arrives as "theyre")
+const HOMOPHONE_GROUPS: string[][] = [
+    ['their', 'there', 'theyre'], ['to', 'too', 'two'], ['for', 'four'], ['one', 'won'],
+    ['right', 'write'], ['see', 'sea'], ['by', 'buy', 'bye'], ['our', 'hour'],
+    ['no', 'know'], ['here', 'hear'], ['wear', 'where'], ['weather', 'whether'],
+    ['son', 'sun'], ['week', 'weak'], ['meet', 'meat'], ['read', 'red'],
+    ['ate', 'eight'], ['new', 'knew'], ['your', 'youre'],
+    ['piece', 'peace'], ['would', 'wood'], ['allowed', 'aloud'], ['then', 'than'],
+    ['past', 'passed'], ['through', 'threw'], ['whole', 'hole'], ['sale', 'sail'],
+    ['plain', 'plane'], ['brake', 'break'], ['weight', 'wait'], ['made', 'maid'],
+    ['prayers', 'players'], ['sight', 'site']
+];
+const HOMOPHONE_ID = new Map<string, number>();
+HOMOPHONE_GROUPS.forEach((group, id) => group.forEach(w => HOMOPHONE_ID.set(w, id)));
+
+const normalizeSpokenWord = (w: string): string => NUMBER_WORDS[w] || w;
+
+const soundsAlike = (a: string, b: string): boolean => {
+    if (a === b) return true;
+    const ga = HOMOPHONE_ID.get(a);
+    return ga !== undefined && ga === HOMOPHONE_ID.get(b);
+};
+
+// True Levenshtein ratio between two words (the old positional comparison
+// broke on insertions/deletions that shift every following character)
+const wordEditSimilarity = (a: string, b: string): number => {
+    if (a === b) return 1;
+    const la = a.length, lb = b.length;
+    if (la === 0 || lb === 0) return 0;
+    let prev = new Array(lb + 1);
+    let curr = new Array(lb + 1);
+    for (let j = 0; j <= lb; j++) prev[j] = j;
+    for (let i = 1; i <= la; i++) {
+        curr[0] = i;
+        for (let j = 1; j <= lb; j++) {
+            curr[j] = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+        }
+        [prev, curr] = [curr, prev];
+    }
+    return 1 - prev[lb] / Math.max(la, lb);
+};
+
 // Word-by-word comparison for Read Aloud — gives per-word feedback like Shadowing
 // Returns analysis + separate content word ratio for 3-tier scoring
 const compareWordsDetailed = (spoken: string, target: string): { word: string, status: 'correct' | 'incorrect', isFunction: boolean }[] => {
-    const normalize = (s: string) => s.toLowerCase().trim().replace(/[^a-z0-9\s']/g, '').replace(/\s+/g, ' ');
+    const normalize = (s: string) => s.toLowerCase().trim().replace(/[^a-z0-9\s]/g, '').replace(/\s+/g, ' ');
     const targetWords = normalize(target).split(' ').filter(w => w.length > 0);
-    const spokenWords = normalize(spoken).split(' ').filter(w => w.length > 0);
+    const spokenWords = normalize(spoken).split(' ').filter(w => w.length > 0).map(normalizeSpokenWord);
 
     // Create a mutable copy of spoken words for consumption tracking
     const spokenSet = spokenWords.map(w => w);
 
+    const stripS = (w: string) => w.length > 3 && w.endsWith('s') ? w.slice(0, -1) : w;
+
     return targetWords.map(tw => {
         const isFunc = FUNCTION_WORDS.has(tw);
-        // Try exact match first
+        // 1) Exact match
         const exactIdx = spokenSet.indexOf(tw);
         if (exactIdx !== -1) {
-            spokenSet[exactIdx] = ''; // mark as used
+            spokenSet[exactIdx] = '';
             return { word: tw, status: 'correct' as const, isFunction: isFunc };
         }
-        // Fuzzy match using Levenshtein — adaptive threshold based on word length
+        // 2) Homophone / plural-singular match (perfect pronunciation, different spelling)
+        const equivIdx = spokenSet.findIndex(sw => sw && (soundsAlike(sw, tw) || stripS(sw) === stripS(tw)));
+        if (equivIdx !== -1) {
+            spokenSet[equivIdx] = '';
+            return { word: tw, status: 'correct' as const, isFunction: isFunc };
+        }
+        // 3) Fuzzy match via true edit distance — short words must be near-exact
         const fuzzyIdx = spokenSet.findIndex(sw => {
             if (!sw) return false;
-            // Very short words (1-2 chars) must be exact
-            if (sw.length <= 2 && tw.length <= 2) return sw === tw;
-            // For longer words, allow more tolerance
-            const maxLen = Math.max(sw.length, tw.length);
-            let matches = 0;
-            for (let i = 0; i < Math.min(sw.length, tw.length); i++) {
-                if (sw[i] === tw[i]) matches++;
-            }
-            // Adaptive threshold: short words need 70%, medium need 60%, long need 55%
-            const threshold = tw.length <= 4 ? 0.7 : tw.length <= 7 ? 0.6 : 0.55;
-            return (matches / maxLen) >= threshold;
+            if (tw.length <= 3) return false; // short words: exact/homophone only
+            const threshold = tw.length <= 5 ? 0.75 : tw.length <= 8 ? 0.7 : 0.65;
+            return wordEditSimilarity(sw, tw) >= threshold;
         });
         if (fuzzyIdx !== -1) {
             spokenSet[fuzzyIdx] = '';
@@ -150,29 +203,60 @@ const useSpeechRecognition = () => {
     const [isListening, setIsListening] = useState(false);
     const [transcript, setTranscript] = useState('');
     const recognitionRef = useRef<any>(null);
+    // The browser engine ends a session on any short pause; we auto-restart until
+    // the user explicitly stops, accumulating text across sessions so nothing is lost.
+    // (Rebuilding each session's text from e.results avoids the Android duplication bug.)
+    const manualStopRef = useRef(false);
+    const accumulatedRef = useRef('');
+    const sessionRef = useRef('');
 
     useEffect(() => {
         const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-        if (SpeechRecognition) {
-            recognitionRef.current = new SpeechRecognition();
-            recognitionRef.current.lang = 'en-US';
-            recognitionRef.current.continuous = false; // Fixed: Set to false to prevent Android word duplication bug
-            recognitionRef.current.interimResults = true;
-            recognitionRef.current.onresult = (e: any) => {
-                let currentTranscript = '';
-                for (let i = 0; i < e.results.length; i++) {
-                    currentTranscript += e.results[i][0].transcript + ' ';
-                }
-                setTranscript(currentTranscript.trim());
-            };
-            recognitionRef.current.onend = () => setIsListening(false);
-            recognitionRef.current.onerror = () => setIsListening(false);
-        }
+        if (!SpeechRecognition) return;
+        const rec = new SpeechRecognition();
+        rec.lang = 'en-US';
+        rec.continuous = true;
+        rec.interimResults = true;
+        rec.onresult = (e: any) => {
+            let session = '';
+            for (let i = 0; i < e.results.length; i++) {
+                session += e.results[i][0].transcript + ' ';
+            }
+            sessionRef.current = session.trim();
+            setTranscript((accumulatedRef.current + ' ' + sessionRef.current).trim());
+        };
+        rec.onend = () => {
+            accumulatedRef.current = (accumulatedRef.current + ' ' + sessionRef.current).trim();
+            sessionRef.current = '';
+            if (manualStopRef.current) {
+                setIsListening(false);
+                return;
+            }
+            try {
+                rec.start();
+            } catch {
+                setTimeout(() => {
+                    if (manualStopRef.current) { setIsListening(false); return; }
+                    try { rec.start(); } catch { setIsListening(false); }
+                }, 150);
+            }
+        };
+        rec.onerror = (e: any) => {
+            if (e?.error === 'not-allowed' || e?.error === 'service-not-allowed') {
+                manualStopRef.current = true;
+            }
+            // Other errors (no-speech, aborted, network) fall through to onend, which restarts.
+        };
+        recognitionRef.current = rec;
+        return () => { manualStopRef.current = true; try { rec.stop(); } catch { /* already stopped */ } };
     }, []);
 
     const startListening = () => {
         if (recognitionRef.current && !isListening) {
             try {
+                manualStopRef.current = false;
+                accumulatedRef.current = '';
+                sessionRef.current = '';
                 setTranscript(''); // Clear previous attempt
                 recognitionRef.current.start();
                 setIsListening(true);
@@ -181,8 +265,8 @@ const useSpeechRecognition = () => {
     };
     const stopListening = () => {
         if (recognitionRef.current && isListening) {
-            recognitionRef.current.stop();
-            setIsListening(false);
+            manualStopRef.current = true;
+            try { recognitionRef.current.stop(); } catch { setIsListening(false); }
         }
     };
     return { isListening, transcript, startListening, stopListening, setTranscript };
