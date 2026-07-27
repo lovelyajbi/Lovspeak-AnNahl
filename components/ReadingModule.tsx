@@ -175,6 +175,62 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     } catch (e) { }
   }, [step]);
 
+  // --- LIBRARY (PERPUSTAKAAN) STATE ---
+  const [themeCounts, setThemeCounts] = useState<Record<string, { total: number; completed: number }>>({});
+  const [libraryLoading, setLibraryLoading] = useState(false);
+  const [continueEntry, setContinueEntry] = useState<{ title: string; themeId: string; score: number } | null>(null);
+
+  useEffect(() => {
+    if (step !== 'setup' || themeCategory === 'custom') return;
+    let cancelled = false;
+    setLibraryLoading(true);
+    (async () => {
+      const entries = await Promise.all(
+        THEMES.map(async (t) => {
+          const items = await getStaticReadingIndex(practiceType, level, t);
+          if (!items) return [t.id, { total: 0, completed: 0 }] as const;
+          const completed = items.filter(it => !!completedTitlesData[it.title]).length;
+          return [t.id, { total: items.length, completed }] as const;
+        })
+      );
+      if (cancelled) return;
+      setThemeCounts(Object.fromEntries(entries));
+      setLibraryLoading(false);
+    })();
+    return () => { cancelled = true; };
+  }, [step, level, practiceType, themeCategory, completedTitlesData]);
+
+  useEffect(() => {
+    if (step !== 'setup') return;
+    try {
+      const existing = localStorage.getItem('lovelya_progress');
+      if (!existing) { setContinueEntry(null); return; }
+      const list = JSON.parse(existing).filter((p: any) => p.level === level && p.title && p.themeId && p.themeId !== 'custom');
+      if (!list.length) { setContinueEntry(null); return; }
+      list.sort((a: any, b: any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+      const last = list[0];
+      setContinueEntry({ title: last.title, themeId: last.themeId, score: last.score });
+    } catch (e) {
+      setContinueEntry(null);
+    }
+  }, [step, level]);
+
+  const handleContinueReading = () => {
+    if (!continueEntry) return;
+    const matchedTheme = THEMES.find(t => t.id === continueEntry.themeId);
+    if (matchedTheme) {
+      setTheme(matchedTheme);
+      setThemeCategory(matchedTheme.isIslamic ? 'islamic' : 'general');
+    }
+    handleSelectTitle(continueEntry.title);
+  };
+
+  const handleOpenTheme = (t: Theme) => {
+    setTheme(t);
+    setThemeCategory(t.isIslamic ? 'islamic' : 'general');
+    handleStartSetup(false);
+  };
+
   useEffect(() => {
     const stateToSave = {
       initialTitle: initialContext?.title,
@@ -781,7 +837,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       <div className="space-y-6 md:space-y-10 lg:space-y-12 animate-fade-in max-w-6xl mx-auto pb-20 px-2 md:px-0">
         <div className="flex items-center justify-between px-2 md:px-4">
           <button onClick={() => setStep('setup')} className="text-gray-500 hover:text-gray-800 font-black flex items-center gap-2 transition text-[10px] md:text-sm lg:text-base uppercase tracking-wider">
-            <i className="fas fa-arrow-left"></i> Change Topic
+            <i className="fas fa-arrow-left"></i> Perpustakaan
           </button>
           <div className="flex items-center gap-3 md:gap-4">
             <button
@@ -797,6 +853,31 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             </div>
           </div>
         </div>
+
+        {themeCategory !== 'custom' && titles.length > 0 && (() => {
+          const completedCount = titles.filter(t => !!completedTitlesData[t]).length;
+          const pct = Math.round((completedCount / titles.length) * 100);
+          return (
+            <div className="px-2 md:px-4 -mt-2 md:-mt-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-5 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4">
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-widest">{level} · Progres Tema</span>
+                    <span className="text-[10px] md:text-xs font-black text-lovelya-600">{completedCount}/{titles.length} selesai</span>
+                  </div>
+                  <div className="w-full h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+                    <motion.div
+                      initial={{ width: 0 }}
+                      animate={{ width: `${pct}%` }}
+                      transition={{ duration: 0.5 }}
+                      className={`h-full rounded-full ${pct >= 100 ? 'bg-green-500' : 'bg-gradient-to-r from-fuchsia-400 to-rose-500'}`}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        })()}
 
         {titles.length === 0 ? (
           <div className="text-center py-16 md:py-32 bg-white dark:bg-gray-800 rounded-3xl md:rounded-[3rem] border border-dashed border-gray-300 dark:border-gray-700">
@@ -1465,132 +1546,154 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   return (
     <div className="max-w-5xl mx-auto pb-20">
       {step === 'setup' && (
-        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto px-4 py-6 md:py-10">
-          <button onClick={() => onNavigate?.(AppView.HOME)} className="mb-5 text-gray-400 hover:text-gray-600 font-black transition-all flex items-center gap-2 uppercase text-[10px] tracking-widest">
-            <i className="fas fa-arrow-left"></i> Back to Home
-          </button>
-          <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-xl p-5 md:p-6 rounded-2xl md:rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-fuchsia-400 via-rose-500 to-pink-500"></div>
-            <div className="text-center mb-5">
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-gradient-to-br from-fuchsia-500 to-rose-600 flex items-center justify-center mx-auto mb-2 text-white text-lg shadow-lg"><i className="fas fa-book-reader"></i></div>
-              <h2 className="text-md md:text-xl font-black text-gray-900 dark:text-white tracking-tight">Reading Mastery</h2>
+        <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto px-4 py-6 md:py-10">
+          <div className="flex items-center justify-between mb-5">
+            <button onClick={() => onNavigate?.(AppView.HOME)} className="text-gray-400 hover:text-gray-600 font-black transition-all flex items-center gap-2 uppercase text-[10px] tracking-widest">
+              <i className="fas fa-arrow-left"></i> Home
+            </button>
+            <div className="flex gap-1.5 bg-white dark:bg-gray-800 p-1 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              {([{ id: 'read' as const, icon: 'fa-book-open', label: 'Read' }, { id: 'translate' as const, icon: 'fa-language', label: 'Translate' }]).map(pt => (
+                <button
+                  key={pt.id}
+                  onClick={() => setPracticeType(pt.id)}
+                  className={`px-3.5 py-2 rounded-lg font-black text-[10px] md:text-xs transition-all duration-200 flex items-center gap-1.5 ${practiceType === pt.id ? 'bg-gradient-to-r from-fuchsia-500 to-rose-500 text-white shadow-md' : 'text-gray-400 hover:text-gray-600'}`}
+                >
+                  <i className={`fas ${pt.icon} text-[10px]`}></i> {pt.label}
+                </button>
+              ))}
             </div>
-            {loading ? (
-              <div className="flex flex-col items-center py-12 animate-fade-in">
-                <div className="relative mb-4">
-                  <i className="fas fa-book-open text-4xl text-lovelya-500 animate-bounce block"></i>
-                </div>
-                <p className="font-black text-gray-400 uppercase tracking-widest text-[10px] text-center">{statusMsg || 'Curating your library...'}</p>
-              </div>
-            ) : (
-              <div className="space-y-5">
-                <div>
-                  <label className="block text-[10px] font-black text-gray-400 mb-2.5 uppercase tracking-widest">1. Proficiency Level</label>
-                  <div className="grid grid-cols-3 md:grid-cols-6 gap-2">
-                    {LEVELS.map(l => <motion.button key={l} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setLevel(l)} className={`py-2.5 rounded-xl font-black text-xs transition-all ${level === l ? 'bg-gradient-to-r from-fuchsia-500 to-rose-500 text-white shadow-md' : 'bg-gray-50 dark:bg-gray-700 text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>{l}</motion.button>)}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-[10px] font-black text-gray-400 mb-2.5 uppercase tracking-widest">2. Exercise Type</label>
-                  <div className="flex gap-1.5 bg-gray-50 dark:bg-gray-700 p-1 rounded-xl shadow-inner mb-3">
-                    {([{ id: 'read' as const, icon: 'fa-book-open', label: 'Read' }, { id: 'translate' as const, icon: 'fa-language', label: 'Translate' }]).map(pt => (
-                      <button
-                        key={pt.id}
-                        onClick={() => setPracticeType(pt.id)}
-                        className={`flex-1 py-2.5 rounded-lg font-black text-[10px] md:text-xs transition-all duration-200 flex items-center justify-center gap-1.5 ${practiceType === pt.id ? 'bg-gradient-to-r from-fuchsia-500 to-rose-500 text-white shadow-md' : 'text-gray-400 hover:text-gray-600'}`}
-                      >
-                        <i className={`fas ${pt.icon} text-[10px]`}></i> {pt.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {practiceType === 'read' && (
-                  <div>
-                    <label className="block text-[10px] font-black text-gray-400 mb-2.5 uppercase tracking-widest">3. Practice Mode</label>
-                    <div className="flex gap-1.5 bg-gray-50 dark:bg-gray-700 p-1 rounded-xl shadow-inner">
-                      {(['islamic', 'general', 'custom'] as const).map(cat => (
-                        <button
-                          key={cat}
-                          onClick={() => setThemeCategory(cat)}
-                          className={`flex-1 py-2 rounded-lg font-black text-[10px] md:text-xs capitalize transition-all duration-200 ${themeCategory === cat ? 'bg-white dark:bg-gray-600 text-lovelya-600 shadow-md' : 'text-gray-400 hover:text-gray-600'}`}
-                        >
-                          {cat}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {practiceType === 'translate' && (
-                  <div>
-                    <label className="block text-[10px] font-black text-gray-400 mb-2.5 uppercase tracking-widest">3. Theme</label>
-                    <div className="flex gap-1.5 bg-gray-50 dark:bg-gray-700 p-1 rounded-xl shadow-inner">
-                      {(['islamic', 'general'] as const).map(cat => (
-                        <button
-                          key={cat}
-                          onClick={() => setThemeCategory(cat)}
-                          className={`flex-1 py-2 rounded-lg font-black text-[10px] md:text-xs capitalize transition-all duration-200 ${themeCategory === cat ? 'bg-white dark:bg-gray-600 text-lovelya-600 shadow-md' : 'text-gray-400 hover:text-gray-600'}`}
-                        >
-                          {cat}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-
-                {practiceType === 'read' && (
-                  <>
-                    {themeCategory !== 'custom' ? (
-                      <div className="animate-fade-in">
-                        <label className="block text-[10px] font-black text-gray-400 mb-2.5 uppercase tracking-widest">4. Core Theme</label>
-                        <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-h-52 overflow-y-auto custom-scrollbar pr-1">
-                          {THEMES.filter(t => themeCategory === 'islamic' ? t.isIslamic : !t.isIslamic).map(t => (
-                            <button key={t.id} onClick={() => setTheme(t)} className={`p-3 rounded-xl text-left transition-all duration-200 border-2 text-xs font-semibold ${theme.id === t.id ? 'border-lovelya-500 bg-lovelya-50 dark:bg-lovelya-900/20 text-lovelya-700 font-black shadow-md' : 'border-transparent bg-gray-50 dark:bg-gray-700 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
-                              {t.name}
-                            </button>
-                          ))}
-                        </div>
-                      </div>
-                    ) : (
-                      <div className="space-y-4 animate-slide-up bg-gray-50 dark:bg-gray-700/50 p-4 rounded-xl shadow-inner border border-white dark:border-gray-700">
-                        <div>
-                          <label className="block text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest">4. Exploration Topic</label>
-                          <input value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder="What do you want to learn about?" className="w-full p-3 rounded-xl border-2 border-white dark:border-gray-600 bg-white dark:bg-gray-800 outline-none focus:border-lovelya-500 shadow-sm transition-all text-sm font-medium" />
-                        </div>
-                        <div>
-                          <label className="block text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest">5. Precise Focus (Optional)</label>
-                          <input value={customTitle} onChange={e => setCustomTitle(e.target.value)} placeholder="Specific article title..." className="w-full p-3 rounded-xl border-2 border-white dark:border-gray-600 bg-white dark:bg-gray-800 outline-none focus:border-lovelya-500 shadow-sm transition-all text-sm font-medium" />
-                        </div>
-                      </div>
-                    )}
-                  </>
-                )}
-
-                {practiceType === 'translate' && (
-                  <div className="animate-fade-in">
-                    <label className="block text-[10px] font-black text-gray-400 mb-2.5 uppercase tracking-widest">4. Core Theme</label>
-                    <div className="grid grid-cols-2 md:grid-cols-3 gap-2 max-h-52 overflow-y-auto custom-scrollbar pr-1">
-                      {THEMES.filter(t => themeCategory === 'islamic' ? t.isIslamic : !t.isIslamic).map(t => (
-                        <button key={t.id} onClick={() => setTheme(t)} className={`p-3 rounded-xl text-left transition-all duration-200 border-2 text-xs font-semibold ${theme.id === t.id ? 'border-lovelya-500 bg-lovelya-50 dark:bg-lovelya-900/20 text-lovelya-700 font-black shadow-md' : 'border-transparent bg-gray-50 dark:bg-gray-700 text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-600'}`}>
-                          {t.name}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                {error && error !== 'API_LIMIT_TOTAL' && (
-                  <div className="p-3 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-xl text-xs font-bold text-center border border-red-100 dark:border-red-900/30">
-                    {error}
-                  </div>
-                )}
-                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => handleStartSetup(false)} disabled={loading || (themeCategory === 'islamic' && !theme) || (practiceType === 'read' && themeCategory === 'custom' && !customTopic)} className="w-full py-3.5 mt-2 rounded-xl bg-gradient-to-r from-fuchsia-500 to-rose-600 text-white font-black text-sm shadow-xl transition-all disabled:opacity-30 uppercase tracking-widest flex items-center justify-center gap-3">
-                  {practiceType === 'translate' ? 'Start Translation' : 'Begin Training'} <i className="fas fa-chevron-right"></i>
-                </motion.button>
-              </div>
-            )}
           </div>
+
+          {/* Hero header */}
+          <div className="bg-gradient-to-br from-fuchsia-500 via-rose-500 to-pink-500 rounded-[2rem] p-6 md:p-8 mb-6 shadow-xl relative overflow-hidden">
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.25),transparent_50%)]"></div>
+            <div className="relative flex items-center justify-between gap-4">
+              <div>
+                <div className="flex items-center gap-2 mb-1.5">
+                  <i className="fas fa-book-reader text-white/80"></i>
+                  <span className="text-white/80 text-[10px] font-black uppercase tracking-[0.25em]">Perpustakaan</span>
+                </div>
+                <h2 className="text-xl md:text-2xl font-black text-white tracking-tight">Pilih tema untuk mulai membaca</h2>
+              </div>
+            </div>
+            <div className="relative mt-5 flex gap-1.5 overflow-x-auto no-scrollbar pb-1">
+              {LEVELS.map(l => (
+                <motion.button
+                  key={l}
+                  whileTap={{ scale: 0.92 }}
+                  onClick={() => setLevel(l)}
+                  className={`shrink-0 px-4 py-2 rounded-xl font-black text-xs transition-all ${level === l ? 'bg-white text-rose-600 shadow-md' : 'bg-white/15 text-white hover:bg-white/25'}`}
+                >
+                  {l}
+                </motion.button>
+              ))}
+            </div>
+          </div>
+
+          {/* Continue reading card */}
+          {continueEntry && (
+            <motion.button
+              whileHover={{ scale: 1.01 }}
+              whileTap={{ scale: 0.99 }}
+              onClick={handleContinueReading}
+              className="w-full mb-6 bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-5 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 text-left hover:border-lovelya-300 transition-all"
+            >
+              <div className="w-11 h-11 md:w-14 md:h-14 rounded-2xl bg-lovelya-50 dark:bg-lovelya-900/20 text-lovelya-500 flex items-center justify-center shrink-0 text-lg md:text-xl">
+                <i className="fas fa-bookmark"></i>
+              </div>
+              <div className="flex-1 min-w-0">
+                <p className="text-[9px] md:text-[10px] font-black text-lovelya-500 uppercase tracking-widest mb-0.5">Lanjutkan Membaca</p>
+                <p className="font-black text-gray-800 dark:text-white text-sm md:text-base truncate">{continueEntry.title}</p>
+              </div>
+              <div className="shrink-0 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400">
+                <i className="fas fa-arrow-right"></i>
+              </div>
+            </motion.button>
+          )}
+
+          {error && error !== 'API_LIMIT_TOTAL' && (
+            <div className="mb-5 p-3 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-xl text-xs font-bold text-center border border-red-100 dark:border-red-900/30">
+              {error}
+            </div>
+          )}
+
+          {/* Theme tiles */}
+          {loading ? (
+            <div className="flex flex-col items-center py-16 animate-fade-in">
+              <i className="fas fa-book-open text-4xl text-lovelya-500 animate-bounce block mb-4"></i>
+              <p className="font-black text-gray-400 uppercase tracking-widest text-[10px] text-center">{statusMsg || 'Membuka tema...'}</p>
+            </div>
+          ) : (
+            <div className="space-y-8">
+              {([{ key: 'islamic' as const, label: 'Tema Islami' }, { key: 'general' as const, label: 'Tema Umum' }]).map(group => {
+                const groupThemes = THEMES.filter(t => group.key === 'islamic' ? t.isIslamic : !t.isIslamic);
+                return (
+                  <div key={group.key}>
+                    <h3 className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-3 px-1">{group.label}</h3>
+                    <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                      {groupThemes.map(t => {
+                        const counts = themeCounts[t.id];
+                        const total = counts?.total ?? 0;
+                        const completed = counts?.completed ?? 0;
+                        const isDone = total > 0 && completed >= total;
+                        return (
+                          <motion.button
+                            key={t.id}
+                            whileHover={{ y: -3 }}
+                            whileTap={{ scale: 0.97 }}
+                            onClick={() => handleOpenTheme(t)}
+                            className={`relative p-4 md:p-5 rounded-2xl text-left border transition-all shadow-sm hover:shadow-lg ${isDone ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800' : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 hover:border-lovelya-300'}`}
+                          >
+                            <p className={`font-black text-xs md:text-sm leading-snug mb-3 ${isDone ? 'text-green-800 dark:text-green-200' : 'text-gray-800 dark:text-gray-100'}`}>{t.name}</p>
+                            <div className="flex items-center justify-between">
+                              <div className={`w-8 h-8 md:w-9 md:h-9 rounded-xl flex items-center justify-center ${isDone ? 'bg-green-500 text-white' : 'bg-lovelya-50 dark:bg-gray-700 text-lovelya-400'}`}>
+                                <i className={`fas ${isDone ? 'fa-check' : 'fa-book-open'} text-xs`}></i>
+                              </div>
+                              {!libraryLoading && total > 0 && (
+                                <span className={`text-[10px] font-black uppercase tracking-wider ${isDone ? 'text-green-600' : 'text-gray-400'}`}>{completed}/{total}</span>
+                              )}
+                            </div>
+                          </motion.button>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
+
+              {/* Custom AI topic (secondary, read mode only) */}
+              {practiceType === 'read' && (
+                <div className="pt-2">
+                  <button
+                    onClick={() => setThemeCategory(prev => prev === 'custom' ? 'islamic' : 'custom')}
+                    className="text-[10px] font-black text-gray-400 hover:text-lovelya-500 uppercase tracking-widest flex items-center gap-2 transition-colors"
+                  >
+                    <i className={`fas fa-chevron-${themeCategory === 'custom' ? 'down' : 'right'} text-[8px]`}></i>
+                    Topik Kustom (AI)
+                  </button>
+                  <AnimatePresence>
+                    {themeCategory === 'custom' && (
+                      <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} className="overflow-hidden">
+                        <div className="mt-3 space-y-3 bg-gray-50 dark:bg-gray-800/50 p-4 rounded-xl shadow-inner border border-white dark:border-gray-700">
+                          <div>
+                            <label className="block text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest">Topik Eksplorasi</label>
+                            <input value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder="What do you want to learn about?" className="w-full p-3 rounded-xl border-2 border-white dark:border-gray-600 bg-white dark:bg-gray-900 outline-none focus:border-lovelya-500 shadow-sm transition-all text-sm font-medium" />
+                          </div>
+                          <div>
+                            <label className="block text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest">Judul Spesifik (Opsional)</label>
+                            <input value={customTitle} onChange={e => setCustomTitle(e.target.value)} placeholder="Specific article title..." className="w-full p-3 rounded-xl border-2 border-white dark:border-gray-600 bg-white dark:bg-gray-900 outline-none focus:border-lovelya-500 shadow-sm transition-all text-sm font-medium" />
+                          </div>
+                          <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => handleStartSetup(false)} disabled={loading || !customTopic} className="w-full py-3 rounded-xl bg-gradient-to-r from-fuchsia-500 to-rose-600 text-white font-black text-xs shadow-lg transition-all disabled:opacity-30 uppercase tracking-widest flex items-center justify-center gap-2">
+                            Mulai <i className="fas fa-chevron-right"></i>
+                          </motion.button>
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )}
+            </div>
+          )}
         </motion.div>
       )}
 

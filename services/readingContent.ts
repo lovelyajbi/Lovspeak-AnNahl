@@ -32,8 +32,7 @@ export const getStaticReadingIndex = async (
   level: Level,
   theme: Theme,
 ): Promise<ReadingIndexItem[] | null> => {
-  if (!theme.isIslamic || level !== 'A1') return null;
-
+  // Static datasets may cover any app theme or level. Missing files fall back to the AI flow.
   const cacheKey = `${mode}:${level}:${theme.id}`;
   if (indexCache.has(cacheKey)) {
     return indexCache.get(cacheKey) || null;
