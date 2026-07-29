@@ -7,6 +7,23 @@ import { THEMATIC_BRIDGES } from '../data/thematicBridges';
 import { getRoadmapProgress, completeRoadmapUnit } from '../services/storage';
 import { LEVELS } from '../constants';
 import { audioService } from '../services/audioService';
+import { READING_MANIFEST } from '../data/readingManifest';
+import { LISTENING_MANIFEST } from '../data/listeningManifest';
+
+// The curriculum's own step titles are hand-authored narrative labels (e.g. "Choosing Eid Clothes")
+// that rarely match the actual static content behind targetId (the 14 static themes are broad
+// categories, not specific scenarios). Always prefer the real static item's title so what's shown
+// never diverges from what actually loads.
+const getStepDisplayTitle = (step: CurriculumStep): string => {
+  if (step.type === 'reading_task' && step.targetId) {
+    const match = READING_MANIFEST.find(r => r.id === step.targetId);
+    if (match) return `Reading: ${match.title}`;
+  } else if (step.type === 'listening_task' && step.targetId) {
+    const match = LISTENING_MANIFEST.find(l => l.id === step.targetId);
+    if (match) return `Listening: ${match.title}`;
+  }
+  return step.title;
+};
 
 interface RoadmapModuleProps extends ModuleProps {
   onNavigateToModule: (view: AppView, context: ModuleContext) => void;
@@ -61,7 +78,7 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
       type: 'unit',
       autoStart: true,
       level: selectedUnit.level,
-      title: step.title,
+      title: getStepDisplayTitle(step),
       desc: step.description,
       grammarFocus: selectedUnit.grammarFocus,
       vocabTheme: selectedUnit.vocabTheme,
@@ -175,7 +192,7 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="max-w-6xl mx-auto pb-10" ref={scrollContainerRef}>
       {/* Header */}
-      <div className="text-center mb-6 md:mb-10">
+      <div data-tour="roadmap-overview" className="text-center mb-6 md:mb-10">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-lovelya-50 dark:bg-lovelya-900/20 text-lovelya-600 dark:text-lovelya-400 text-[10px] font-black uppercase tracking-widest mb-3 shadow-sm">
           <i className="fas fa-route"></i> Master Learning Path
         </div>
@@ -204,7 +221,7 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
       </div>
 
       {/* Level Selector */}
-      <div className="sticky top-4 z-30 mb-6">
+      <div data-tour="roadmap-levels" className="sticky top-4 z-30 mb-6">
         <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-1.5 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 flex gap-1.5 overflow-x-auto no-scrollbar items-center">
           <div className="px-4 py-2 border-r border-gray-100 dark:border-gray-700 hidden md:flex flex-col items-center justify-center shrink-0">
             <div className="text-[9px] font-black text-lovelya-600 uppercase tracking-widest leading-none mb-1">Mastery</div>
@@ -234,7 +251,7 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
       {/* Main Content */}
       {viewMode === 'ROADMAP' ? (
         <AnimatePresence mode="wait">
-        <motion.div key="roadmap" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 md:space-y-12">
+        <motion.div data-tour="roadmap-content" key="roadmap" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -10 }} className="space-y-8 md:space-y-12">
           {filteredCurriculum.map((levelData, lvlIdx) => (
             <motion.section 
               key={levelData.level} 
@@ -526,7 +543,7 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
                             {!stepCompleted && <span className="w-1.5 h-1.5 rounded-full bg-lovelya-500 animate-pulse"></span>}
                           </div>
                           <h5 className={`font-black text-sm leading-tight truncate ${stepCompleted ? 'text-green-700 dark:text-green-400' : 'text-gray-800 dark:text-white'}`}>
-                            {step.title}
+                            {getStepDisplayTitle(step)}
                           </h5>
                           <p className="text-[10px] text-gray-500 dark:text-gray-400 font-medium mt-0.5 line-clamp-1 opacity-70 italic">{step.goal}</p>
                         </div>

@@ -392,6 +392,8 @@ const App: React.FC = () => {
       bridgeIds: task.bridgeIds,
       vocabWordIds: task.vocabWordIds,
       listeningTopics: task.listeningTopics,
+      readingItemIds: task.readingItemIds,
+      listeningItemIds: task.listeningItemIds,
       goalMinutes: task.goalMinutes,
       accumulatedSeconds: task.accumulatedSeconds || 0,
       minScore: task.minScore,

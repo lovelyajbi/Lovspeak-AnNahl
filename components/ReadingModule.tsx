@@ -100,6 +100,12 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   const isMissionMode = !!(initialContext?.bridgeIds && initialContext.bridgeIds.length > 0);
   const missionBridgeIds = initialContext?.bridgeIds || [];
 
+  // Sequential Mission Mode — static library items (e.g. Daily Plan asking for 2-3 distinct readings)
+  const [missionReadingIndex, setMissionReadingIndex] = useState(0);
+  const [completedReadingItems, setCompletedReadingItems] = useState<Set<number>>(new Set());
+  const isStaticMissionMode = !!(initialContext?.readingItemIds && initialContext.readingItemIds.length > 1);
+  const missionReadingIds = initialContext?.readingItemIds || [];
+
   // Vocabulary Save Modal
   const [showSaveModal, setShowSaveModal] = useState(false);
   const [saveWordInput, setSaveWordInput] = useState('');
@@ -148,6 +154,10 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         setMissionBridgeIndex(state.missionBridgeIndex || 0);
         if (state.completedBridgesArr) {
           setCompletedBridges(new Set(state.completedBridgesArr));
+        }
+        setMissionReadingIndex(state.missionReadingIndex || 0);
+        if (state.completedReadingItemsArr) {
+          setCompletedReadingItems(new Set(state.completedReadingItemsArr));
         }
       } catch (e) {
         console.error("Failed to load reading state", e);
@@ -257,14 +267,20 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       step, level, theme, themeCategory, practiceType, customTopic, customTitle,
       titles, titleIdMap, content, selectedTitle, wordList, analysisResult,
       fontSize, isFocusMode, currentPage, missionBridgeIndex,
-      completedBridgesArr: Array.from(completedBridges)
+      completedBridgesArr: Array.from(completedBridges),
+      missionReadingIndex,
+      completedReadingItemsArr: Array.from(completedReadingItems)
     };
     localStorage.setItem('lovspeak_state_reading', JSON.stringify(stateToSave));
-  }, [step, level, theme, themeCategory, practiceType, customTopic, customTitle, titles, titleIdMap, content, selectedTitle, wordList, analysisResult, fontSize, isFocusMode, currentPage, missionBridgeIndex, completedBridges]);
+  }, [step, level, theme, themeCategory, practiceType, customTopic, customTitle, titles, titleIdMap, content, selectedTitle, wordList, analysisResult, fontSize, isFocusMode, currentPage, missionBridgeIndex, completedBridges, missionReadingIndex, completedReadingItems]);
 
   // --- AUTO START LOGIC ---
+  const autoLaunchedKeyRef = useRef<string | null>(null);
   useEffect(() => {
     if (initialContext?.autoStart) {
+      const key = `${initialContext.taskId || ''}|${initialContext.stepId || ''}|${initialContext.targetLessonId || ''}|${initialContext.title}`;
+      if (autoLaunchedKeyRef.current === key) return;
+      autoLaunchedKeyRef.current = key;
       autoLaunch(initialContext);
     }
   }, [initialContext]);
@@ -320,6 +336,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
           setCurrentPage(1);
           setMissionBridgeIndex(0);
           setCompletedBridges(new Set());
+          setMissionReadingIndex(0);
+          setCompletedReadingItems(new Set());
           setStreamingText('');
           setIsFocusMode(false);
           setAudioBlob(null);
@@ -332,7 +350,13 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       } catch (e) { }
     }
 
-    // 0. If the roadmap/daily-plan step points at a specific static reading item, open it directly (no AI generation)
+    // 0a. If the daily plan asks for multiple distinct readings, open the first one in sequential mission mode
+    if (ctx.readingItemIds && ctx.readingItemIds.length > 0) {
+      const opened = await loadStaticReadItem(finalTitle, ctx.readingItemIds[0]);
+      if (opened) return;
+    }
+
+    // 0b. If the roadmap/daily-plan step points at a specific static reading item, open it directly (no AI generation)
     if (ctx.targetLessonId) {
       const opened = await loadStaticReadItem(finalTitle, ctx.targetLessonId);
       if (opened) return;
@@ -388,6 +412,26 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   };
 
   const allBridgesComplete = completedBridges.size >= missionBridgeIds.length && missionBridgeIds.length > 0;
+
+  // Mission Navigation — static library items (Daily Plan multi-reading tasks)
+  const handleMissionReadingComplete = () => {
+    if (!currentBridgePassed) return;
+    setCompletedReadingItems(prev => new Set(prev).add(missionReadingIndex));
+  };
+
+  const goToNextReadingItem = async () => {
+    if (!currentBridgePassed) return;
+    handleMissionReadingComplete();
+    if (missionReadingIndex < missionReadingIds.length - 1) {
+      const nextIndex = missionReadingIndex + 1;
+      setMissionReadingIndex(nextIndex);
+      setLoading(true);
+      setStatusMsg('Loading next article...');
+      await loadStaticReadItem('', missionReadingIds[nextIndex]);
+    }
+  };
+
+  const allReadingItemsComplete = completedReadingItems.size >= missionReadingIds.length && missionReadingIds.length > 0;
 
   // --- INTERACTION HANDLERS ---
 
@@ -1472,6 +1516,72 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
           </div>
         )}
 
+        {/* Mission Progress Bar — static library items (Daily Plan multi-reading tasks) */}
+        {isStaticMissionMode && (
+          <div className={`mb-4 bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 ${isFocusMode ? 'mx-4 md:mx-8' : ''}`}>
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
+                Article {missionReadingIndex + 1} of {missionReadingIds.length}
+              </span>
+              <span className="text-[10px] font-black text-lovelya-600">
+                {completedReadingItems.size}/{missionReadingIds.length} read (+{initialContext?.xpReward || 20} XP)
+              </span>
+            </div>
+            <div className="w-full h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
+              <motion.div
+                animate={{ width: `${(completedReadingItems.size / missionReadingIds.length) * 100}%` }}
+                transition={{ duration: 0.4 }}
+                className={`h-full rounded-full ${allReadingItemsComplete ? 'bg-green-500' : 'bg-gradient-to-r from-lovelya-400 to-indigo-500'}`}
+              />
+            </div>
+            <div className="flex items-center justify-center gap-2 mt-3">
+              {missionReadingIds.map((rid, i) => (
+                <div
+                  key={rid}
+                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === missionReadingIndex ? 'bg-lovelya-500 scale-125 shadow-md shadow-lovelya-300' :
+                    completedReadingItems.has(i) ? 'bg-green-400' : 'bg-gray-200 dark:bg-gray-600'
+                    }`}
+                />
+              ))}
+            </div>
+            {/* Next / Complete Buttons */}
+            <div className="mt-3 flex gap-2">
+              {!allReadingItemsComplete ? (
+                <button
+                  onClick={goToNextReadingItem}
+                  disabled={!currentBridgePassed || missionReadingIndex >= missionReadingIds.length - 1}
+                  className={`flex-1 py-2.5 rounded-xl font-black text-xs uppercase tracking-widest transition-all ${currentBridgePassed && missionReadingIndex < missionReadingIds.length - 1
+                    ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900'
+                    : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    }`}
+                >
+                  {missionReadingIndex < missionReadingIds.length - 1
+                    ? <>Mark Read & Next <i className="fas fa-chevron-right ml-1"></i></>
+                    : <>Mark as Read <i className="fas fa-check ml-1"></i></>
+                  }
+                </button>
+              ) : (
+                <button
+                  onClick={handleComplete}
+                  className="flex-1 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-xs uppercase tracking-widest shadow-lg"
+                >
+                  <i className="fas fa-gift mr-2"></i> Complete Mission +{initialContext?.xpReward || 20} XP
+                </button>
+              )}
+              {missionReadingIndex === missionReadingIds.length - 1 && !allReadingItemsComplete && (
+                <button
+                  onClick={handleMissionReadingComplete}
+                  disabled={!currentBridgePassed}
+                  className={`flex-1 py-2.5 rounded-xl font-black text-xs uppercase tracking-widest ${currentBridgePassed ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                    }`}
+                >
+                  Mark Last as Read <i className="fas fa-check ml-1"></i>
+                </button>
+              )}
+            </div>
+          </div>
+        )}
+
         <div className={`bg-white dark:bg-gray-800 transition-all duration-500 ${isFocusMode ? 'min-h-screen py-16 px-6 md:py-24 md:px-12 lg:px-24' : 'p-6 md:p-16 lg:p-24 rounded-3xl md:rounded-[3rem] lg:rounded-[4rem] shadow-[0_32px_128px_-32px_rgba(0,0,0,0.15)] border border-lovelya-50 dark:border-lovelya-900/10 mb-28 md:mb-40'}`}>
           <div className="max-w-[80ch] mx-auto">
             <div className="flex items-start justify-between gap-3 mb-6 md:mb-12 pb-6 md:pb-12 border-b border-gray-100 dark:border-gray-700">
@@ -1550,7 +1660,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 </div>
 
                 {/* Complete Task button for daily missions */}
-                {initialContext?.autoStart && (!isMissionMode || missionBridgeIds.length === 1) && analysisResult.score >= (initialContext?.minScore || 85) && (
+                {initialContext?.autoStart && (!isMissionMode || missionBridgeIds.length === 1) && !isStaticMissionMode && analysisResult.score >= (initialContext?.minScore || 85) && (
                   <div className="mt-8 text-center">
                     <button
                       onClick={handleComplete}

@@ -104,11 +104,15 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
-  // Sequential Mission Mode
+  // Sequential Mission Mode — shared index/completion state whether topics are AI-generated
+  // (freeform strings) or point at specific static library items (Daily Plan multi-listening tasks).
   const [missionTopicIndex, setMissionTopicIndex] = useState(0);
   const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
-  const isMissionMode = !!(initialContext?.listeningTopics && initialContext.listeningTopics.length > 0);
   const missionTopics = initialContext?.listeningTopics || [];
+  const missionItemIds = initialContext?.listeningItemIds || [];
+  const isStaticMissionMode = missionItemIds.length > 0;
+  const isMissionMode = missionTopics.length > 0 || isStaticMissionMode;
+  const missionLength = isStaticMissionMode ? missionItemIds.length : missionTopics.length;
   const missionXpReward = initialContext?.xpReward || 20;
 
   // --- PERSISTENCE LOGIC ---
@@ -244,8 +248,12 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   }, [step, level, type, accent, themeId, selectedTitle, isCustomMode, themeCategory, customTopic, customTitle, titles, script, quiz, speakers, currentPage, missionTopicIndex, completedTopics]);
 
   // --- AUTO START LOGIC ---
+  const autoLaunchedKeyRef = useRef<string | null>(null);
   useEffect(() => {
     if (initialContext?.autoStart) {
+      const key = `${initialContext.taskId || ''}|${initialContext.stepId || ''}|${initialContext.targetLessonId || ''}|${initialContext.title}`;
+      if (autoLaunchedKeyRef.current === key) return;
+      autoLaunchedKeyRef.current = key;
       autoLaunch(initialContext);
     }
   }, [initialContext]);
@@ -297,6 +305,14 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           setShowTranscript(false);
         }
       } catch (e) { }
+    }
+
+    // If the daily plan asks for multiple distinct listenings, open the first one in sequential mission mode
+    if (ctx.listeningItemIds && ctx.listeningItemIds.length > 0) {
+      setLevel(userLevel);
+      setIsCustomMode(false);
+      processStaticSelection(ctx.listeningItemIds[0], userLevel);
+      return;
     }
 
     // If the roadmap/daily-plan step points at a specific static listening item, open it directly (no AI text/quiz generation)
@@ -397,7 +413,8 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       audioRef.current.currentTime = 0;
     }
     // Safety net: also trigger prefetch when audio ends (in case early prefetch didn't fire)
-    if (isMissionMode && missionTopicIndex < missionTopics.length - 1 && !prefetchingRef.current && !nextTopicCacheRef.current) {
+    // Static mission items are fetched fast on-demand in goToNextTopic — no AI prefetch needed.
+    if (isMissionMode && !isStaticMissionMode && missionTopicIndex < missionTopics.length - 1 && !prefetchingRef.current && !nextTopicCacheRef.current) {
       prefetchNextTopic(missionTopicIndex + 1);
     }
   };
@@ -499,6 +516,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       if (!item) throw new Error('Content not found.');
       if (requestId !== selectionRequestRef.current) return;
 
+      setSelectedTitle(item.title);
       const joinedScript = item.script.join('\n');
       setScript(joinedScript);
       setSpeakers(item.speakers);
@@ -629,7 +647,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
       // Start prefetching next topic early (15s after player shows)
       // This gives the AI ample time to prepare while user listens
-      if (isMissionMode && missionTopicIndex < missionTopics.length - 1) {
+      if (isMissionMode && !isStaticMissionMode && missionTopicIndex < missionTopics.length - 1) {
         setTimeout(() => {
           if (!prefetchingRef.current) {
             prefetchNextTopic(missionTopicIndex + 1);
@@ -1172,12 +1190,21 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   };
 
   const goToNextTopic = () => {
-    if (missionTopicIndex < missionTopics.length - 1) {
+    if (missionTopicIndex < missionLength - 1) {
       const nextIndex = missionTopicIndex + 1;
       setMissionTopicIndex(nextIndex);
-      const nextTopic = missionTopics[nextIndex];
       setScore(0);
       setHasListenedToEnd(false);
+
+      if (isStaticMissionMode) {
+        setQuiz([]);
+        setUserAnswers([]);
+        setStep('player');
+        processStaticSelection(missionItemIds[nextIndex], level);
+        return;
+      }
+
+      const nextTopic = missionTopics[nextIndex];
 
       // Check if prefetch cache is ready
       if (nextTopicCacheRef.current?.topicIndex === nextIndex && nextTopicCacheRef.current.topic === nextTopic) {
@@ -1211,7 +1238,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     }
   };
 
-  const allTopicsComplete = completedTopics.size >= missionTopics.length && missionTopics.length > 0;
+  const allTopicsComplete = completedTopics.size >= missionLength && missionLength > 0;
 
   const renderPlayer = () => (
     <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto space-y-4 md:space-y-6 px-2 md:px-0">
@@ -1242,31 +1269,31 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       )}
 
       {/* Mission Progress Bar */}
-      {isMissionMode && missionTopics.length > 0 && (
+      {isMissionMode && missionLength > 0 && (
         <div className="bg-white dark:bg-gray-800 p-4 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700">
           <div className="flex items-center justify-between mb-2">
             <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest">
-              Topic {missionTopicIndex + 1} of {missionTopics.length}
+              Topic {missionTopicIndex + 1} of {missionLength}
             </span>
             <span className="text-[10px] font-black text-pink-600">
-              {completedTopics.size}/{missionTopics.length} completed (+{missionXpReward} XP)
+              {completedTopics.size}/{missionLength} completed (+{missionXpReward} XP)
             </span>
           </div>
           <div className="w-full h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
             <motion.div
-              animate={{ width: `${(completedTopics.size / missionTopics.length) * 100}%` }}
+              animate={{ width: `${(completedTopics.size / missionLength) * 100}%` }}
               transition={{ duration: 0.4 }}
               className={`h-full rounded-full ${allTopicsComplete ? 'bg-green-500' : 'bg-gradient-to-r from-pink-400 to-rose-500'}`}
             />
           </div>
           <div className="flex items-center justify-center gap-2 mt-3">
-            {missionTopics.map((topic, i) => (
+            {Array.from({ length: missionLength }).map((_, i) => (
               <div
                 key={i}
                 className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === missionTopicIndex ? 'bg-pink-500 scale-125 shadow-md shadow-pink-300' :
                   completedTopics.has(i) ? 'bg-green-400' : 'bg-gray-200 dark:bg-gray-600'
                   }`}
-                title={topic}
+                title={isStaticMissionMode ? undefined : missionTopics[i]}
               />
             ))}
           </div>
@@ -1279,7 +1306,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               >
                 <i className="fas fa-gift mr-2"></i> Complete Mission +{missionXpReward} XP
               </button>
-            ) : completedTopics.has(missionTopicIndex) && missionTopicIndex < missionTopics.length - 1 ? (
+            ) : completedTopics.has(missionTopicIndex) && missionTopicIndex < missionLength - 1 ? (
               <button
                 onClick={goToNextTopic}
                 className="w-full py-2.5 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-black text-xs uppercase tracking-widest"
@@ -1451,7 +1478,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-sm shadow-lg uppercase tracking-widest">
               <i className="fas fa-gift mr-2"></i> Complete Mission +{missionXpReward} XP
             </motion.button>
-          ) : completedTopics.has(missionTopicIndex) && missionTopicIndex < missionTopics.length - 1 ? (
+          ) : completedTopics.has(missionTopicIndex) && missionTopicIndex < missionLength - 1 ? (
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={goToNextTopic}
               className="w-full py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-black text-sm uppercase tracking-widest">
               Next Topic <i className="fas fa-chevron-right ml-1"></i>

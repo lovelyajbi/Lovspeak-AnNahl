@@ -1383,12 +1383,16 @@ export const generateTTSAudio = async (text: string, type: string, speakers?: { 
             }
         }
 
+        const speakerGenderNote = type === 'dialogue' && speakers && speakers.length >= 2
+            ? `\n\nSPEAKER-VOICE ASSIGNMENT (do not deviate from this for any line): ${speakers.map(s => `"${s.name}" is voiced by a ${s.gender} voice`).join('; ')}. Every line prefixed "${speakers[0].name}:" must use ${speakers[0].name}'s assigned ${speakers[0].gender} voice, and every line prefixed with another speaker's name must use that speaker's own assigned voice — never swap, blend, or drift between them across the whole recording.`
+            : '';
+
         const prompt = type === 'dialogue'
-            ? `You are world-class voice actors performing a scripted conversation, but you must make it sound 100% natural and alive. ${paceInstruction} ${accentInstruction} Read this dialogue with distinct character voices. Act out real emotions, use natural pauses, and sound alive — like a real podcast or daily conversation. CRITICALLY IMPORTANT ACTING RULES: 
+            ? `You are world-class voice actors performing a scripted conversation, but you must make it sound 100% natural and alive. ${paceInstruction} ${accentInstruction} Read this dialogue with distinct character voices. Act out real emotions, use natural pauses, and sound alive — like a real podcast or daily conversation. CRITICALLY IMPORTANT ACTING RULES:
 1. Fully perform any emotion tags (actually laugh out loud for [laughing], whisper for [whispering], sigh audibly for [sighs], gasp for [gasps]).
 2. Treat ellipses (...) as physical pauses where you take a breath or think.
 3. Pronounce filler words ("um", "well", "ah") naturally and organically.
-4. CRITICAL: You MUST perform the EXACT text provided below word-for-word. Do not change, add, or skip any words. Ensure 100% fidelity to the script.
+4. CRITICAL: You MUST perform the EXACT text provided below word-for-word. Do not change, add, or skip any words. Ensure 100% fidelity to the script.${speakerGenderNote}
 Make it sound incredibly human and alive. Do NOT sound like an AI reading text:\n\n${text}`
             : `Analyze the following text to determine its genre (e.g., personal story, professional lecture, casual journal, or news report). Based on your analysis, adopt the perfect persona and voice for it. For example, if it's a story, be a captivating world-class storyteller. If it's a lecture, be a clear and engaging professional expert. If casual, be a friendly and relaxed narrator. ${paceInstruction} ${accentInstruction} 
 CRITICALLY IMPORTANT ACTING RULES: 

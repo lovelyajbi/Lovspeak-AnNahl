@@ -299,6 +299,8 @@ export interface DailyTask {
   bridgeIds?: string[];
   vocabWordIds?: string[];
   listeningTopics?: string[];
+  readingItemIds?: string[];
+  listeningItemIds?: string[];
   goalMinutes?: number;
   minScore?: number;
   xpReward?: number;
@@ -378,6 +380,8 @@ export interface ModuleContext {
   bridgeId?: string;
   bridgeIds?: string[];
   listeningTopics?: string[];
+  readingItemIds?: string[];
+  listeningItemIds?: string[];
   promptContext?: string;
   minScore?: number;
   goalCount?: number;

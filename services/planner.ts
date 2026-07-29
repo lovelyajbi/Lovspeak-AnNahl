@@ -73,6 +73,20 @@ const PROGRESSIVE_CURRICULUM: Record<string, string[]> = {
 };
 
 /**
+ * HELPER: Pick up to `count` distinct items from a pool, rotating by day so the
+ * selection varies but stays deterministic for a given day/offset.
+ */
+function pickDistinctItems<T>(pool: T[], count: number, startIndex: number): T[] {
+  if (pool.length === 0 || count <= 0) return [];
+  const n = Math.min(count, pool.length);
+  const result: T[] = [];
+  for (let i = 0; i < n; i++) {
+    result.push(pool[(startIndex + i) % pool.length]);
+  }
+  return result;
+}
+
+/**
  * HELPER: Find the most relevant item from a list based on keywords in the theme
  */
 function findBestMatch<T>(theme: string, items: T[], getTitle: (item: T) => string): T | null {
@@ -126,17 +140,17 @@ export const generateDailyTasks = (
   // Match today's theme to one of the 14 static content themes (same keyword-match helper as everything else above)
   const matchedTheme = findBestMatch(dailyTheme, THEMES, t => t.name) || THEMES.find(t => t.id === 'daily') || THEMES[0];
 
-  // Match Reading — pick a specific static item (588-item library) for today's level+theme, rotating through the 7 by day
+  // Match Reading — pick `goals.readingCount` DISTINCT static items (588-item library) for today's
+  // level+theme, rotating through the pool by day so multi-count tasks (regular=2, intensive=3)
+  // each get their own real title instead of repeating the same one.
   const readingPoolForTheme = READING_MANIFEST.filter(r => r.level === level && r.themeId === matchedTheme.id);
-  const primaryReadingItem = readingPoolForTheme.length > 0
-    ? readingPoolForTheme[relativePlanDay % readingPoolForTheme.length]
-    : null;
+  const readingItems = pickDistinctItems(readingPoolForTheme, goals.readingCount, relativePlanDay);
+  const primaryReadingItem = readingItems[0] || null;
 
   // Match Listening — same idea, offset by 3 so it doesn't always line up with the Reading pick from the same theme
   const listeningPoolForTheme = LISTENING_MANIFEST.filter(l => l.level === level && l.themeId === matchedTheme.id);
-  const primaryListeningItem = listeningPoolForTheme.length > 0
-    ? listeningPoolForTheme[(relativePlanDay + 3) % listeningPoolForTheme.length]
-    : null;
+  const listeningItems = pickDistinctItems(listeningPoolForTheme, goals.listeningCount, relativePlanDay + 3);
+  const primaryListeningItem = listeningItems[0] || null;
 
   // Match Shadowing — pick multiple sentences based on intensity
   const categoryShadowing = SHADOWING_DATA.filter(t => t.category === (hasIslamic ? 'Islamic' : 'General'));
@@ -177,12 +191,15 @@ export const generateDailyTasks = (
       minScore: 100, xpReward: goals.xpPerTask, intensityId
     },
     
-    primaryReadingItem
+    readingItems.length > 0
       ? {
           moduleView: AppView.READING, icon: 'fa-book-reader',
-          title: `Reading: ${primaryReadingItem.title}`,
-          description: `A ${level} reading on ${matchedTheme.name}`,
-          targetLessonId: primaryReadingItem.id,
+          title: readingItems.length > 1 ? `Reading: ${readingItems.length} Articles on ${matchedTheme.name}` : `Reading: ${primaryReadingItem!.title}`,
+          description: readingItems.length > 1
+            ? `Complete ${readingItems.length} readings on ${matchedTheme.name}: ${readingItems.map(it => it.title).join(', ')}`
+            : `A ${level} reading on ${matchedTheme.name}`,
+          targetLessonId: primaryReadingItem!.id,
+          readingItemIds: readingItems.length > 1 ? readingItems.map(it => it.id) : undefined,
           minScore: 85, xpReward: goals.xpPerTask, intensityId
         }
       : {
@@ -192,12 +209,15 @@ export const generateDailyTasks = (
           minScore: 85, xpReward: goals.xpPerTask, intensityId
         },
 
-    primaryListeningItem
+    listeningItems.length > 0
       ? {
           moduleView: AppView.LISTENING, icon: 'fa-headphones',
-          title: `Listening: ${primaryListeningItem.title}`,
-          description: `A ${level} listening ${primaryListeningItem.type} on ${matchedTheme.name}`,
-          targetLessonId: primaryListeningItem.id,
+          title: listeningItems.length > 1 ? `Listening: ${listeningItems.length} Topics on ${matchedTheme.name}` : `Listening: ${primaryListeningItem!.title}`,
+          description: listeningItems.length > 1
+            ? `Complete ${listeningItems.length} listening exercises on ${matchedTheme.name}: ${listeningItems.map(it => it.title).join(', ')}`
+            : `A ${level} listening ${primaryListeningItem!.type} on ${matchedTheme.name}`,
+          targetLessonId: primaryListeningItem!.id,
+          listeningItemIds: listeningItems.length > 1 ? listeningItems.map(it => it.id) : undefined,
           minScore: 80, xpReward: goals.xpPerTask, intensityId
         }
       : {
@@ -297,6 +317,8 @@ export const generateDailyTasks = (
       bridgeIds: t.bridgeIds,
       vocabWordIds: t.vocabWordIds,
       listeningTopics: t.listeningTopics,
+      readingItemIds: t.readingItemIds,
+      listeningItemIds: t.listeningItemIds,
       goalMinutes: t.goalMinutes,
       minScore: t.minScore,
       xpReward: t.xpReward,
