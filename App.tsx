@@ -2,7 +2,7 @@
 import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { AppView, LearningPlan, Level, DailyTask, UserProfile, AssessmentResult, ModuleContext, UserAssignment, UserNotification } from './types';
-import { LEARNING_TARGETS, LEARNING_INTENSITIES, LEVEL_DEFINITIONS, LEVELS, ISLAMIC_QUOTES } from './constants';
+import { LEARNING_TARGETS, LEARNING_INTENSITIES, LEVEL_DEFINITIONS, LEVELS, ISLAMIC_QUOTES, THEMES } from './constants';
 import { getLearningPlan, saveLearningPlan, getUserProfile, saveUserProfile, completeRoadmapUnit } from './services/storage';
 import { generateDailyTasks, generateGoogleCalendarUrl } from './services/planner';
 import Layout from './components/Layout';
@@ -92,6 +92,17 @@ if ('serviceWorker' in navigator) {
     console.warn('[LovSpeak] SW ready check failed:', err);
   });
 }
+
+// Reading/Listening daily tasks now target a specific static library item, e.g. "b1-social-04".
+// Since the theme id sits in the middle of that pattern, we can recover a friendly theme label
+// for the task card without needing a new DailyTask field.
+const getStaticTaskThemeLabel = (targetLessonId?: string): string | null => {
+  if (!targetLessonId) return null;
+  const match = targetLessonId.match(/^[a-c][12]-([a-z]+)-\d{2}$/i);
+  if (!match) return null;
+  const theme = THEMES.find(t => t.id === match[1]);
+  return theme?.name || null;
+};
 
 const getWIBDateString = () => {
   // Uses en-CA locale to consistently return YYYY-MM-DD format in Asia/Jakarta timezone.
@@ -816,6 +827,11 @@ const App: React.FC = () => {
                                             {task.title}
                                           </h4>
                                           {!task.isCompleted && <span className="bg-yellow-400 text-[7px] md:text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded-full text-black">New</span>}
+                                          {getStaticTaskThemeLabel(task.targetLessonId) && (
+                                            <span className="bg-lovelya-50 dark:bg-lovelya-900/30 text-lovelya-600 dark:text-lovelya-400 text-[7px] md:text-[8px] font-black uppercase tracking-widest px-1.5 py-0.5 rounded-full">
+                                              {getStaticTaskThemeLabel(task.targetLessonId)}
+                                            </span>
+                                          )}
                                         </div>
                                         <p className="text-[9px] md:text-[10px] lg:text-xs text-gray-500 dark:text-gray-400 leading-snug truncate max-w-lg">{task.description}</p>
                                       </div>

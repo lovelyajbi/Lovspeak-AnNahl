@@ -332,6 +332,12 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       } catch (e) { }
     }
 
+    // 0. If the roadmap/daily-plan step points at a specific static reading item, open it directly (no AI generation)
+    if (ctx.targetLessonId) {
+      const opened = await loadStaticReadItem(finalTitle, ctx.targetLessonId);
+      if (opened) return;
+    }
+
     let bridgeTopic = finalTopic;
     let bridgeTitle = finalTitle;
 
@@ -660,6 +666,55 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       setAnalysisResult(null);
     } catch (e) {
       setError('Failed to generate reading content. Please try again.');
+    } finally {
+      setLoading(false);
+      setStatusMsg('');
+      setStreamingText('');
+    }
+  };
+
+  // Generate a brand new reading text for this title via AI, for this session only.
+  // This never overwrites the authored static content bank — it only replaces what's shown right now.
+  const handleRegenerateReadingText = async () => {
+    if (!window.confirm("Generate a brand new reading text for this title? The original will still be there next time.")) return;
+    const currentThemeName = themeCategory === 'custom' ? customTopic : theme.name;
+    const isIslamicLocal = themeCategory === 'islamic';
+    setLoading(true);
+    setError('');
+    setStatusMsg('Generating new text...');
+    setStreamingText('');
+    try {
+      setContent(null);
+      const stream = await generateReadingContentStream(selectedTitle, level, currentThemeName, isIslamicLocal);
+      let fullText = '';
+      for await (const chunk of (stream as any)) {
+        const chunkText = chunk.text;
+        if (chunkText) {
+          fullText += chunkText;
+          const parsed = safeParseJSON(fullText, null);
+          if (parsed && parsed.paragraphs) {
+            setContent(parsed);
+          } else {
+            setStreamingText(fullText.replace(/\{.*"paragraphs":\s*\[|\]\}/g, '').replace(/"/g, ''));
+          }
+        }
+      }
+      let finalParsed = safeParseJSON(fullText, { title: selectedTitle, paragraphs: [] });
+      if (!finalParsed.paragraphs || finalParsed.paragraphs.length === 0) {
+        const fallbackContent = await generateReadingContent(selectedTitle, level, currentThemeName, isIslamicLocal);
+        if (fallbackContent && fallbackContent.paragraphs && fallbackContent.paragraphs.length > 0) {
+          finalParsed = fallbackContent;
+        } else {
+          throw new Error('Failed to generate new text.');
+        }
+      }
+      setContent(finalParsed);
+      prepareWordList(finalParsed);
+      setAudioBlob(null);
+      setAnalysisResult(null);
+    } catch (e) {
+      console.error(e);
+      setError('Failed to generate new text. Please try again.');
     } finally {
       setLoading(false);
       setStatusMsg('');
@@ -1419,7 +1474,14 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
         <div className={`bg-white dark:bg-gray-800 transition-all duration-500 ${isFocusMode ? 'min-h-screen py-16 px-6 md:py-24 md:px-12 lg:px-24' : 'p-6 md:p-16 lg:p-24 rounded-3xl md:rounded-[3rem] lg:rounded-[4rem] shadow-[0_32px_128px_-32px_rgba(0,0,0,0.15)] border border-lovelya-50 dark:border-lovelya-900/10 mb-28 md:mb-40'}`}>
           <div className="max-w-[80ch] mx-auto">
-            <h1 className="text-2xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6 md:mb-12 pb-6 md:pb-12 border-b border-gray-100 dark:border-gray-700 leading-tight tracking-tight">{content?.title || selectedTitle}</h1>
+            <div className="flex items-start justify-between gap-3 mb-6 md:mb-12 pb-6 md:pb-12 border-b border-gray-100 dark:border-gray-700">
+              <h1 className="text-2xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white leading-tight tracking-tight">{content?.title || selectedTitle}</h1>
+              {content && !loading && (
+                <button onClick={handleRegenerateReadingText} title="Generate a brand new text for this title" className="shrink-0 mt-2 text-purple-600 bg-purple-50 dark:bg-purple-900/20 hover:bg-purple-100 px-2.5 py-1.5 rounded-xl text-[9px] md:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition">
+                  <i className="fas fa-magic"></i> New Text
+                </button>
+              )}
+            </div>
 
             <div className="prose dark:prose-invert max-w-none leading-[1.6] md:leading-[1.8] lg:leading-[2.0] font-medium text-gray-700 dark:text-gray-200 space-y-7 md:space-y-12" style={{ fontSize: `${window.innerWidth < 768 ? fontSize - 1 : fontSize + 4}px` }}>
               {content ? (

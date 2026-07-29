@@ -54,7 +54,7 @@ const isPermissionError = (e: any): boolean => {
 
 export const MODEL_CASCADE_SMART = ['gemini-3.5-flash', 'gemini-2.5-flash', 'gemini-3-flash-preview', 'gemini-3.1-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-3.1-pro-preview', 'gemini-2.5-pro', 'gemini-pro-latest'];
 export const MODEL_CASCADE_LITE = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-2.5-flash', 'gemini-3-flash-preview'];
-export const MODEL_CASCADE_TTS = ['gemini-3.1-flash-tts-preview', 'gemini-2.5-pro-preview-tts', 'gemini-2.5-flash-preview-tts'];
+export const MODEL_CASCADE_TTS = ['gemini-2.5-pro-preview-tts', 'gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts'];
 export const MODEL_CASCADE_PRO = ['gemini-3.5-flash', 'gemini-3.1-pro-preview', 'gemini-3-flash-preview', 'gemini-2.5-pro', 'gemini-pro-latest', 'gemini-2.5-flash'];
 
 const COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours

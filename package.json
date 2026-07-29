@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "reading:sync": "node scripts/sync-reading-content.mjs",
+    "reading:validate": "node scripts/sync-reading-content.mjs --validate-only",
+    "listening:sync": "node scripts/sync-listening-content.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.34.0",
@@ -23,8 +26,8 @@
     "ts-morph": "^28.0.0"
   },
   "devDependencies": {
-    "@types/node": "^22.14.0",
     "@vercel/node": "^5.3.13",
+    "@types/node": "^22.14.0",
     "@vitejs/plugin-react": "^5.0.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.0"

@@ -183,6 +183,27 @@ export interface QuizQuestion {
   explanation: string;
 }
 
+export type ListeningType = 'monologue' | 'dialogue';
+
+export interface ListeningSpeaker {
+  name: string;
+  gender: 'male' | 'female';
+}
+
+export interface ListeningIndexItem {
+  id: string;
+  title: string;
+  level: Level;
+  themeId: string;
+  type: ListeningType;
+}
+
+export interface StaticListeningItem extends ListeningIndexItem {
+  speakers: ListeningSpeaker[];
+  script: string[];
+  quiz: QuizQuestion[];
+}
+
 export interface MindMapNode {
   id: string;
   label: string;

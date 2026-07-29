@@ -1,32 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Level, ModuleProps, AppView, ModuleContext, QuizQuestion } from '../types';
+import { Level, ModuleProps, AppView, ModuleContext, QuizQuestion, Theme } from '../types';
 import { LEVELS, THEMES, AVATAR_ICONS } from '../constants';
 import { generateListeningTitles, generateListeningContent, generateListeningScript, generateListeningQuiz, generateTTSAudio, generateSingleListeningTitle, translateText, TranslationResult } from '../services/gemini';
-import { saveProgress, getCachedTitles, setCachedTitles, getCachedContent, setCachedContent, logActivity, saveVocab, completeRoadmapUnit, saveCustomCategory, getCustomCategories, CustomCategory, getCachedListeningTitles, setCachedListeningTitles, getActivityLogs } from '../services/storage';
+import { saveProgress, getCachedTitles, setCachedTitles, getCachedContent, setCachedContent, logActivity, saveVocab, completeRoadmapUnit, saveCustomCategory, getCustomCategories, CustomCategory, getActivityLogs } from '../services/storage';
+import { getStaticListeningIndex, getStaticListeningItem } from '../services/listeningContent';
 import { audioService } from '../services/audioService';
 import { base64ToUint8Array, pcmToWav, cacheAudioBlob, getCachedAudioBlob } from '../utils/audio';
 import { motion, AnimatePresence } from 'motion/react';
 
-// Define Listening Specific Themes
-const LISTENING_THEMES = [
-  { id: 'adab', name: 'Adab (Manners)', isIslamic: true },
-  { id: 'akhlak', name: 'Akhlak (Character)', isIslamic: true },
-  { id: 'tauhid', name: 'Tauhid (Monotheism)', isIslamic: true },
-  { id: 'prophets', name: 'Stories of Prophets', isIslamic: true },
-  { id: 'righteous', name: 'Stories of Righteous People', isIslamic: true },
-  { id: 'daily', name: 'Daily Conversations', isIslamic: false },
-  { id: 'education', name: 'Education & Learning', isIslamic: false },
-  { id: 'work', name: 'Workplace Scenarios', isIslamic: false },
-  { id: 'travel', name: 'Travel Experiences', isIslamic: false },
-  { id: 'health', name: 'Health & Lifestyle', isIslamic: false },
-  { id: 'tech', name: 'Technology Trends', isIslamic: false },
-  { id: 'environment', name: 'Environment & Nature', isIslamic: false },
-  { id: 'science', name: 'Science & Discovery', isIslamic: false },
-  { id: 'history', name: 'World History', isIslamic: false },
-  { id: 'business', name: 'Business & Finance', isIslamic: false },
-  { id: 'arts', name: 'Arts & Culture', isIslamic: false },
-  { id: 'sports', name: 'Sports & Fitness', isIslamic: false },
-];
+// Listening themes now use the global THEMES constant (14 themes, shared with Reading)
 
 const SPEED_OPTIONS = [0.5, 0.75, 0.9, 1.0, 1.25, 1.5, 2.0];
 
@@ -62,6 +44,9 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
   // Data State
   const [titles, setTitles] = useState<string[]>([]);
+  const [titleIdMap, setTitleIdMap] = useState<Record<string, string>>({});
+  const [titleTypeMap, setTitleTypeMap] = useState<Record<string, 'monologue' | 'dialogue'>>({});
+  const [typeFilter, setTypeFilter] = useState<'all' | 'monologue' | 'dialogue'>('all');
   const [script, setScript] = useState<string>('');
   const [quiz, setQuiz] = useState<QuizQuestion[]>([]);
   const [speakers, setSpeakers] = useState<{ name: string; gender: 'male' | 'female' }[]>([]);
@@ -179,6 +164,74 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     } catch (e) { }
   }, [step]);
 
+  // --- LIBRARY (RUANG DENGAR) STATE ---
+  const [themeCounts, setThemeCounts] = useState<Record<string, { total: number; completed: number }>>({});
+  const [libraryLoading, setLibraryLoading] = useState(false);
+  const [continueEntry, setContinueEntry] = useState<{ title: string; themeId: string } | null>(null);
+
+  useEffect(() => {
+    if (step !== 'setup' || isCustomMode) return;
+    let cancelled = false;
+    setLibraryLoading(true);
+    (async () => {
+      const entries = await Promise.all(
+        THEMES.map(async (t) => {
+          const items = await getStaticListeningIndex(level as Level, t);
+          return [t.id, items || []] as const;
+        })
+      );
+      if (cancelled) return;
+      const counts: Record<string, { total: number; completed: number }> = {};
+      const titleThemeMap: Record<string, string> = {};
+      entries.forEach(([tId, items]) => {
+        const completed = items.filter(it => !!completedTitlesData[it.title]).length;
+        counts[tId] = { total: items.length, completed };
+        items.forEach(it => { titleThemeMap[it.title] = tId; });
+      });
+      setThemeCounts(counts);
+      setLibraryLoading(false);
+
+      try {
+        const logs = getActivityLogs();
+        const listeningLogs = (logs || [])
+          .filter(l => l.type === AppView.LISTENING && l.details)
+          .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+        for (const log of listeningLogs) {
+          const match = log.details!.match(/^(.*?)\s+\(/);
+          const title = match ? match[1] : log.details!;
+          if (title && titleThemeMap[title]) {
+            setContinueEntry({ title, themeId: titleThemeMap[title] });
+            return;
+          }
+        }
+        setContinueEntry(null);
+      } catch (e) { setContinueEntry(null); }
+    })();
+    return () => { cancelled = true; };
+  }, [step, level, isCustomMode, completedTitlesData]);
+
+  const handleContinueListening = async () => {
+    if (!continueEntry) return;
+    const matchedTheme = THEMES.find(t => t.id === continueEntry.themeId);
+    if (!matchedTheme) return;
+    setThemeId(matchedTheme.id);
+    setThemeCategory(matchedTheme.isIslamic ? 'islamic' : 'general');
+    const items = await getStaticListeningIndex(level as Level, matchedTheme);
+    const match = items?.find(it => it.title === continueEntry.title);
+    if (match) {
+      setTitleIdMap({ [match.title]: match.id });
+      setSelectedTitle(match.title);
+      setIsCustomMode(false);
+      processStaticSelection(match.id, level);
+    }
+  };
+
+  const handleOpenTheme = (t: Theme) => {
+    setThemeId(t.id);
+    setThemeCategory(t.isIslamic ? 'islamic' : 'general');
+    handleFetchTitles(t);
+  };
+
   useEffect(() => {
     const stateToSave = {
       initialTitle: initialContext?.title,
@@ -244,6 +297,15 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           setShowTranscript(false);
         }
       } catch (e) { }
+    }
+
+    // If the roadmap/daily-plan step points at a specific static listening item, open it directly (no AI text/quiz generation)
+    if (ctx.targetLessonId) {
+      setSelectedTitle(finalTitle);
+      setLevel(userLevel);
+      setIsCustomMode(false);
+      processStaticSelection(ctx.targetLessonId, userLevel);
+      return;
     }
 
     // If sequential mission mode, load first topic
@@ -376,40 +438,108 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
   // --- LOGIC HANDLERS ---
 
-  const handleFetchTitles = async (forceRefresh = false) => {
-    if (!themeId) {
+  const handleFetchTitles = async (overrideTheme?: Theme) => {
+    const themeObj = overrideTheme || THEMES.find(t => t.id === themeId);
+    if (!themeObj) {
       setError('Please select a theme.');
       return;
-    }
-
-    if (!forceRefresh) {
-      const cached = getCachedListeningTitles(level, type, themeId);
-      if (cached && cached.length > 0) {
-        setTitles(cached);
-        setCurrentPage(1);
-        setStep('titles');
-        return;
-      }
     }
 
     audioService.play('tap');
     setError('');
     setLoading(true);
-    setStatusMsg(forceRefresh ? 'Refreshing topics...' : 'Generating topics...');
+    setStatusMsg('Loading topics...');
     try {
-      const themeObj = LISTENING_THEMES.find(t => t.id === themeId);
-      const generated = await generateListeningTitles(level, type, themeObj?.name || '', themeObj?.isIslamic || false);
-      if (!generated || generated.length === 0) {
-        throw new Error("No titles were generated. Please try again.");
+      const items = await getStaticListeningIndex(level as Level, themeObj);
+      if (!items || items.length === 0) {
+        throw new Error("No content available for this level and theme yet.");
       }
-      setTitles(generated);
-      setCachedListeningTitles(level, type, themeId, generated);
+      const map: Record<string, string> = {};
+      const typeMap: Record<string, 'monologue' | 'dialogue'> = {};
+      const titleList: string[] = [];
+      items.forEach(it => {
+        map[it.title] = it.id;
+        typeMap[it.title] = it.type;
+        titleList.push(it.title);
+      });
+      setTitleIdMap(map);
+      setTitleTypeMap(typeMap);
+      setTitles(titleList);
+      setTypeFilter('all');
       setCurrentPage(1);
       setStep('titles');
     } catch (e: any) {
       console.error(e);
-      setError(e.message || 'Failed to generate titles. Try again.');
+      setError(e.message || 'Failed to load topics. Try again.');
       setTitles([]);
+    } finally {
+      setLoading(false);
+      setStatusMsg('');
+    }
+  };
+
+  // Load a static listening item (script + speakers + quiz already authored) and generate only the audio via TTS
+  const processStaticSelection = async (id: string, activeLevel: string) => {
+    const requestId = ++selectionRequestRef.current;
+    setLoading(true);
+    setError('');
+    setQuiz([]);
+    setSpeakers([]);
+    setHasListenedToEnd(false);
+    setQuizLoading(false);
+
+    if (audioUrl) {
+      URL.revokeObjectURL(audioUrl);
+      setAudioUrl(null);
+    }
+
+    try {
+      setStatusMsg('Loading script...');
+      const item = await getStaticListeningItem(id);
+      if (!item) throw new Error('Content not found.');
+      if (requestId !== selectionRequestRef.current) return;
+
+      const joinedScript = item.script.join('\n');
+      setScript(joinedScript);
+      setSpeakers(item.speakers);
+      setQuiz(item.quiz);
+      setUserAnswers(new Array(item.quiz.length).fill(-1));
+      setType(item.type);
+
+      setStatusMsg('Bringing voices to life...');
+      const cacheId = btoa(encodeURIComponent(`static_${id}_${accent}`)).replace(/[/+=]/g, '');
+      let cachedWavBlob = await getCachedAudioBlob(cacheId);
+      let finalWavBlob: Blob;
+
+      if (cachedWavBlob) {
+        finalWavBlob = cachedWavBlob;
+      } else {
+        const base64Audio = await generateTTSAudio(
+          joinedScript, item.type,
+          item.type === 'dialogue' && item.speakers.length >= 2 ? item.speakers : undefined,
+          activeLevel,
+          undefined,
+          accent
+        );
+        if (!base64Audio || base64Audio.length === 0) throw new Error('Failed to generate audio — empty response from TTS model');
+        const binary = base64ToUint8Array(base64Audio);
+        if (binary.length === 0) throw new Error('Failed to decode audio data');
+        finalWavBlob = pcmToWav(binary, 24000);
+        await cacheAudioBlob(cacheId, finalWavBlob);
+      }
+
+      if (requestId !== selectionRequestRef.current) return;
+
+      setAudioUrl(URL.createObjectURL(finalWavBlob));
+      setCurrentTime(0);
+      setDuration(0);
+      setIsPlaying(false);
+      setPlaybackSpeed(1.0);
+      setShowTranscript(false);
+      setStep('player');
+    } catch (e) {
+      console.error(e);
+      setError('Failed to generate audio. Please try again.');
     } finally {
       setLoading(false);
       setStatusMsg('');
@@ -604,21 +734,72 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     if (isCustomMode) {
       processSelection(title, customTopic, false);
     } else {
-      const themeObj = LISTENING_THEMES.find(t => t.id === themeId);
-      processSelection(title, themeObj?.name || '', themeObj?.isIslamic || false);
+      const id = titleIdMap[title];
+      if (!id) {
+        // Not one of the 7 curated titles for this theme (e.g. a one-off title typed into the
+        // "Custom Title" modal) — fall back to live AI generation for just this one title,
+        // scoped to the current theme, instead of failing with "content not found".
+        const themeObj = THEMES.find(t => t.id === themeId);
+        processSelection(title, themeObj?.name || title, themeObj?.isIslamic || false, level, type);
+        return;
+      }
+      processStaticSelection(id, level);
     }
   };
 
+  // Custom mode: full regenerate (new AI text + new audio), same as before
   const handleRegenerate = () => {
     if (window.confirm("Generate a new conversation for this title?")) {
       handleSelectTitle(selectedTitle);
     }
   };
 
+  // Static library mode — "New Audio": keep the authored script, just synthesize a fresh take (bypassing the audio cache)
+  const handleRegenerateAudioOnly = async () => {
+    if (!script) return;
+    setLoading(true);
+    setError('');
+    setStatusMsg('Generating new audio...');
+    if (audioUrl) { URL.revokeObjectURL(audioUrl); setAudioUrl(null); }
+    try {
+      const base64Audio = await generateTTSAudio(
+        script, type,
+        type === 'dialogue' && speakers.length >= 2 ? speakers : undefined,
+        level, undefined, accent
+      );
+      if (!base64Audio || base64Audio.length === 0) throw new Error('Failed to generate audio');
+      const binary = base64ToUint8Array(base64Audio);
+      if (binary.length === 0) throw new Error('Failed to decode audio data');
+      const wavBlob = pcmToWav(binary, 24000);
+      // Overwrite the cached blob for this item so this take is what plays next time too — this is audio-only, it never touches the authored script/quiz files
+      const id = titleIdMap[selectedTitle];
+      if (id) {
+        const cacheId = btoa(encodeURIComponent(`static_${id}_${accent}`)).replace(/[/+=]/g, '');
+        await cacheAudioBlob(cacheId, wavBlob);
+      }
+      setAudioUrl(URL.createObjectURL(wavBlob));
+      setCurrentTime(0); setDuration(0); setIsPlaying(false); setPlaybackSpeed(1.0);
+    } catch (e) {
+      console.error(e);
+      setError('Failed to generate new audio. Please try again.');
+    } finally {
+      setLoading(false);
+      setStatusMsg('');
+    }
+  };
+
+  // Static library mode — "New Script": ask the AI to write a fresh version of this title for this session only.
+  // This never overwrites the authored static content bank — it only replaces what's shown in the player right now.
+  const handleRegenerateTextOnly = () => {
+    if (!window.confirm("Generate a brand new script (and new audio) for this title? The original will still be there next time.")) return;
+    const themeObj = THEMES.find(t => t.id === themeId);
+    processSelection(selectedTitle, themeObj?.name || selectedTitle, themeObj?.isIslamic || false, level, type);
+  };
+
   const handleRandomTitle = async () => {
     setRandomTitleLoading(true);
     try {
-      const themeObj = LISTENING_THEMES.find(t => t.id === themeId);
+      const themeObj = THEMES.find(t => t.id === themeId);
       const themeName = themeObj?.name || customTopic || 'General Conversation';
       const isIslamic = themeObj?.isIslamic || false;
       const random = await generateSingleListeningTitle(level, type, themeName, isIslamic);
@@ -742,40 +923,138 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   };
 
   const renderSetup = () => (
-    <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto px-2 md:px-0">
-      <button onClick={() => onNavigate?.(AppView.HOME)} className="mb-4 md:mb-6 text-gray-400 hover:text-gray-600 font-bold transition flex items-center gap-2 uppercase text-[10px] md:text-xs tracking-widest">
-        <i className="fas fa-arrow-left"></i> Back to Home
+    <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto px-4 py-6 md:py-10">
+      <button onClick={() => onNavigate?.(AppView.HOME)} className="mb-5 text-gray-400 hover:text-gray-600 font-black transition-all flex items-center gap-2 uppercase text-[10px] tracking-widest">
+        <i className="fas fa-arrow-left"></i> Home
       </button>
-      <div className="relative overflow-hidden rounded-2xl md:rounded-3xl shadow-xl border border-white/20 dark:border-gray-700/50">
-        <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 via-rose-500/5 to-fuchsia-500/5 pointer-events-none" />
 
-        {/* Header */}
-        <div className="relative bg-gradient-to-r from-pink-600 via-rose-600 to-fuchsia-600 p-4 md:p-6 text-center">
-          <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/20 backdrop-blur-sm flex items-center justify-center mx-auto mb-2 text-white text-lg md:text-xl">
-            <i className="fas fa-headphones"></i>
-          </div>
-          <h2 className="text-base md:text-xl font-black text-white tracking-tight">Listening Practice</h2>
-          <p className="text-white/50 text-[9px] md:text-[10px] font-bold mt-0.5">Train your ear with AI-generated audio</p>
-        </div>
-
-        <div className="relative bg-white dark:bg-gray-800 p-4 md:p-6 space-y-5 md:space-y-6">
-          {/* Mode Toggle */}
-          <div className="flex justify-center">
-            <div className="bg-gray-100 dark:bg-gray-700 p-0.5 rounded-xl flex">
-              <button onClick={() => setIsCustomMode(false)} className={`px-4 py-1.5 md:px-5 md:py-2 rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-widest transition ${!isCustomMode ? 'bg-white dark:bg-gray-600 shadow-sm text-pink-600 dark:text-white' : 'text-gray-400'}`}>Standard</button>
-              <button onClick={() => setIsCustomMode(true)} className={`px-4 py-1.5 md:px-5 md:py-2 rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-widest transition ${isCustomMode ? 'bg-white dark:bg-gray-600 shadow-sm text-pink-600 dark:text-white' : 'text-gray-400'}`}>Custom</button>
-            </div>
-          </div>
-
-          {/* Level Selection */}
+      {/* Hero header */}
+      <div className="bg-gradient-to-br from-pink-500 via-rose-500 to-fuchsia-500 rounded-[2rem] p-6 md:p-8 mb-6 shadow-xl relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_0%,rgba(255,255,255,0.25),transparent_50%)]"></div>
+        <div className="relative flex items-center justify-between gap-4">
           <div>
-            <label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest flex items-center gap-1.5"><i className="fas fa-layer-group text-pink-400"></i> Level</label>
-            <div className="grid grid-cols-3 md:grid-cols-6 gap-1.5 md:gap-2">
-              {LEVELS.map(l => (
-                <motion.button key={l} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setLevel(l)} className={`py-1.5 md:py-2 rounded-xl text-[10px] md:text-xs font-black transition-all ${level === l ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-md' : 'bg-gray-50 dark:bg-gray-700 text-gray-400 hover:bg-gray-100'}`}>{l}</motion.button>
-              ))}
+            <div className="flex items-center gap-2 mb-1.5">
+              <i className="fas fa-headphones text-white/80"></i>
+              <span className="text-white/80 text-[10px] font-black uppercase tracking-[0.25em]">Ruang Dengar</span>
+            </div>
+            <h2 className="text-xl md:text-2xl font-black text-white tracking-tight">Pilih tema untuk mulai mendengarkan</h2>
+          </div>
+        </div>
+        <div className="relative mt-5 flex gap-1.5 overflow-x-auto no-scrollbar pb-1">
+          {LEVELS.map(l => (
+            <motion.button
+              key={l}
+              whileTap={{ scale: 0.92 }}
+              onClick={() => setLevel(l)}
+              className={`shrink-0 px-4 py-2 rounded-xl font-black text-xs transition-all ${level === l ? 'bg-white text-rose-600 shadow-md' : 'bg-white/15 text-white hover:bg-white/25'}`}
+            >
+              {l}
+            </motion.button>
+          ))}
+        </div>
+      </div>
+
+      {/* Accent selector */}
+      <div className="mb-6 bg-white dark:bg-gray-800 rounded-2xl p-3 md:p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-3">
+        <span className="text-[9px] md:text-[10px] font-black text-gray-400 uppercase tracking-widest shrink-0 flex items-center gap-1.5"><i className="fas fa-globe text-indigo-400"></i>Aksen</span>
+        <div className="flex gap-1.5 flex-1">
+          {['Default', 'US', 'UK', 'AU'].map(a => (
+            <button key={a} onClick={() => setAccent(a)} className={`flex-1 py-1.5 rounded-lg text-[10px] font-black transition-all ${accent === a ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-sm' : 'bg-gray-50 dark:bg-gray-700 text-gray-400 hover:bg-gray-100'}`}>{a}</button>
+          ))}
+        </div>
+      </div>
+
+      {/* Continue listening card */}
+      {continueEntry && !isCustomMode && (
+        <motion.button
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.99 }}
+          onClick={handleContinueListening}
+          className="w-full mb-6 bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-5 shadow-sm border border-gray-100 dark:border-gray-700 flex items-center gap-4 text-left hover:border-pink-300 transition-all"
+        >
+          <div className="w-11 h-11 md:w-14 md:h-14 rounded-2xl bg-pink-50 dark:bg-pink-900/20 text-pink-500 flex items-center justify-center shrink-0 text-lg md:text-xl">
+            <i className="fas fa-headphones-alt"></i>
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-[9px] md:text-[10px] font-black text-pink-500 uppercase tracking-widest mb-0.5">Lanjutkan Mendengarkan</p>
+            <p className="font-black text-gray-800 dark:text-white text-sm md:text-base truncate">{continueEntry.title}</p>
+          </div>
+          <div className="shrink-0 w-9 h-9 md:w-11 md:h-11 rounded-xl bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400">
+            <i className="fas fa-arrow-right"></i>
+          </div>
+        </motion.button>
+      )}
+
+      {error && (
+        <div className="mb-5 p-3 bg-red-50 dark:bg-red-900/10 text-red-600 dark:text-red-400 rounded-xl text-xs font-bold text-center border border-red-100 dark:border-red-900/30">
+          {error}
+        </div>
+      )}
+
+      {!isCustomMode ? (
+        loading ? (
+          <div className="flex flex-col items-center py-16 animate-fade-in">
+            <i className="fas fa-headphones text-4xl text-pink-500 animate-bounce block mb-4"></i>
+            <p className="font-black text-gray-400 uppercase tracking-widest text-[10px] text-center">{statusMsg || 'Membuka tema...'}</p>
+          </div>
+        ) : (
+          <div className="space-y-8">
+            {([{ key: 'islamic' as const, label: 'Tema Islami' }, { key: 'general' as const, label: 'Tema Umum' }]).map(group => {
+              const groupThemes = THEMES.filter(t => group.key === 'islamic' ? t.isIslamic : !t.isIslamic);
+              return (
+                <div key={group.key}>
+                  <h3 className="text-[10px] md:text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-3 px-1">{group.label}</h3>
+                  <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                    {groupThemes.map(t => {
+                      const counts = themeCounts[t.id];
+                      const total = counts?.total ?? 0;
+                      const completed = counts?.completed ?? 0;
+                      const isDone = total > 0 && completed >= total;
+                      return (
+                        <motion.button
+                          key={t.id}
+                          whileHover={{ y: -3 }}
+                          whileTap={{ scale: 0.97 }}
+                          onClick={() => handleOpenTheme(t)}
+                          className={`relative p-4 md:p-5 rounded-2xl text-left border transition-all shadow-sm hover:shadow-lg ${isDone ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800' : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 hover:border-pink-300'}`}
+                        >
+                          <p className={`font-black text-xs md:text-sm leading-snug mb-3 ${isDone ? 'text-green-800 dark:text-green-200' : 'text-gray-800 dark:text-gray-100'}`}>{t.name}</p>
+                          <div className="flex items-center justify-between">
+                            <div className={`w-8 h-8 md:w-9 md:h-9 rounded-xl flex items-center justify-center ${isDone ? 'bg-green-500 text-white' : 'bg-pink-50 dark:bg-gray-700 text-pink-400'}`}>
+                              <i className={`fas ${isDone ? 'fa-check' : 'fa-headphones'} text-xs`}></i>
+                            </div>
+                            {!libraryLoading && total > 0 && (
+                              <span className={`text-[10px] font-black uppercase tracking-wider ${isDone ? 'text-green-600' : 'text-gray-400'}`}>{completed}/{total}</span>
+                            )}
+                          </div>
+                        </motion.button>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })}
+
+            {/* Custom AI topic (secondary) */}
+            <div className="pt-2">
+              <button
+                onClick={() => setIsCustomMode(true)}
+                className="text-[10px] font-black text-gray-400 hover:text-pink-500 uppercase tracking-widest flex items-center gap-2 transition-colors"
+              >
+                <i className="fas fa-chevron-right text-[8px]"></i>
+                Topik Kustom (AI)
+              </button>
             </div>
           </div>
+        )
+      ) : (
+        <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-sm border border-gray-100 dark:border-gray-700 space-y-4">
+          <button
+            onClick={() => setIsCustomMode(false)}
+            className="text-[10px] font-black text-gray-400 hover:text-pink-500 uppercase tracking-widest flex items-center gap-2 transition-colors mb-1"
+          >
+            <i className="fas fa-chevron-left text-[8px]"></i> Kembali ke Ruang Dengar
+          </button>
 
           {/* Type Selection */}
           <div>
@@ -786,66 +1065,47 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
             </div>
           </div>
 
-          {/* Accent Selection */}
-          <div>
-            <label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest flex items-center gap-1.5"><i className="fas fa-globe text-indigo-400"></i> Accent</label>
-            <div className="grid grid-cols-4 gap-1.5 md:gap-2">
-              {['Default', 'US', 'UK', 'AU'].map(a => (
-                <motion.button key={a} whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setAccent(a)} className={`py-1.5 md:py-2 rounded-xl text-[10px] md:text-xs font-black transition-all ${accent === a ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md' : 'bg-gray-50 dark:bg-gray-700 text-gray-400 hover:bg-gray-100'}`}>{a}</motion.button>
-              ))}
-            </div>
-          </div>
+          <div><label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-1.5 uppercase tracking-widest">Topic Theme</label><input value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder="e.g. Life in Medina..." className="w-full p-2.5 md:p-3.5 rounded-xl border-2 border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 outline-none text-[11px] md:text-sm font-bold transition" /></div>
+          <div><label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-1.5 uppercase tracking-widest">Specific Title <span className="text-[9px] font-medium text-gray-300 ml-1">(Optional)</span></label><input value={customTitle} onChange={e => setCustomTitle(e.target.value)} placeholder="Leave empty for AI suggestions..." className="w-full p-2.5 md:p-3.5 rounded-xl border-2 border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 outline-none text-[11px] md:text-sm font-bold transition" /></div>
 
-          {/* Theme or Custom */}
-          {!isCustomMode ? (
-            <div>
-              <label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-2 uppercase tracking-widest flex items-center gap-1.5"><i className="fas fa-palette text-fuchsia-400"></i> Topic</label>
-              <div className="flex gap-2 mb-2.5">
-                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => setThemeCategory('islamic')} className={`flex-1 py-1.5 md:py-2 rounded-xl border-2 text-[9px] md:text-[10px] font-black uppercase tracking-wider transition flex items-center justify-center gap-1.5 ${themeCategory === 'islamic' ? 'border-pink-400 text-pink-600 bg-pink-50/50 dark:bg-pink-900/10' : 'border-gray-100 text-gray-400 dark:border-gray-700'}`}><i className="fas fa-moon"></i> Islamic</motion.button>
-                <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => setThemeCategory('general')} className={`flex-1 py-1.5 md:py-2 rounded-xl border-2 text-[9px] md:text-[10px] font-black uppercase tracking-wider transition flex items-center justify-center gap-1.5 ${themeCategory === 'general' ? 'border-rose-400 text-rose-600 bg-rose-50/50 dark:bg-rose-900/10' : 'border-gray-100 text-gray-400 dark:border-gray-700'}`}><i className="fas fa-globe"></i> General</motion.button>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1.5 max-h-40 md:max-h-56 overflow-y-auto custom-scrollbar p-0.5">
-                {LISTENING_THEMES.filter(t => themeCategory === 'islamic' ? t.isIslamic : !t.isIslamic).map(t => (
-                  <motion.button key={t.id} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => setThemeId(t.id)} className={`p-2.5 md:p-3 rounded-xl text-left transition border-2 text-[10px] md:text-xs font-bold ${themeId === t.id ? 'border-pink-400 bg-gradient-to-r from-pink-50/50 to-rose-50/50 dark:from-pink-900/10 dark:to-rose-900/10 text-pink-700 dark:text-pink-300' : 'border-transparent bg-gray-50 dark:bg-gray-700 text-gray-500 hover:border-gray-200'}`}>{t.name}{t.isIslamic && <span className="ml-1">🌙</span>}</motion.button>
-                ))}
-              </div>
-            </div>
-          ) : (
-            <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="space-y-3">
-              <div><label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-1.5 uppercase tracking-widest">Topic Theme</label><input value={customTopic} onChange={e => setCustomTopic(e.target.value)} placeholder="e.g. Life in Medina..." className="w-full p-2.5 md:p-3.5 rounded-xl border-2 border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 outline-none text-[11px] md:text-sm font-bold transition" /></div>
-              <div><label className="block text-[9px] md:text-[10px] font-black text-gray-400 mb-1.5 uppercase tracking-widest">Specific Title <span className="text-[9px] font-medium text-gray-300 ml-1">(Optional)</span></label><input value={customTitle} onChange={e => setCustomTitle(e.target.value)} placeholder="Leave empty for AI suggestions..." className="w-full p-2.5 md:p-3.5 rounded-xl border-2 border-gray-100 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 focus:border-pink-400 focus:ring-2 focus:ring-pink-100 outline-none text-[11px] md:text-sm font-bold transition" /></div>
-            </motion.div>
-          )}
-
-          {error && <p className="text-red-500 text-center text-[10px] md:text-sm font-bold border border-red-100 p-2.5 rounded-xl bg-red-50/50">{error}</p>}
-
-          <motion.button whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }} onClick={() => !isCustomMode ? handleFetchTitles(false) : handleCustomStart()} disabled={loading || (!isCustomMode && !themeId) || (isCustomMode && !customTopic)} className="w-full py-3 md:py-3.5 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 text-white font-black text-xs md:text-sm shadow-xl disabled:opacity-30 flex items-center justify-center gap-2 transition-all">
-            {loading ? <span className="flex items-center gap-2"><i className="fas fa-circle-notch fa-spin"></i> {statusMsg || 'Loading...'}</span> : <span className="flex items-center gap-2"><i className={`fas ${!isCustomMode ? 'fa-search' : 'fa-magic'} text-xs`}></i>{!isCustomMode ? 'Get Lessons' : (customTitle ? 'Start Now' : 'Suggestions')}</span>}
+          <motion.button whileHover={{ scale: 1.02, y: -1 }} whileTap={{ scale: 0.98 }} onClick={handleCustomStart} disabled={loading || !customTopic} className="w-full py-3 md:py-3.5 rounded-xl bg-gradient-to-r from-pink-600 to-rose-600 text-white font-black text-xs md:text-sm shadow-xl disabled:opacity-30 flex items-center justify-center gap-2 transition-all">
+            {loading ? <span className="flex items-center gap-2"><i className="fas fa-circle-notch fa-spin"></i> {statusMsg || 'Loading...'}</span> : <span className="flex items-center gap-2"><i className="fas fa-magic text-xs"></i>{customTitle ? 'Start Now' : 'Suggestions'}</span>}
           </motion.button>
-        </div>
-      </div>
+        </motion.div>
+      )}
     </motion.div>
   );
 
   const renderTitles = () => {
+    const filteredTitles = isCustomMode || typeFilter === 'all'
+      ? titles
+      : titles.filter(t => titleTypeMap[t] === typeFilter);
     const indexOfLastItem = currentPage * itemsPerPage;
     const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-    const currentTitles = titles.slice(indexOfFirstItem, indexOfLastItem);
-    const totalPages = Math.ceil(titles.length / itemsPerPage);
+    const currentTitles = filteredTitles.slice(indexOfFirstItem, indexOfLastItem);
+    const totalPages = Math.ceil(filteredTitles.length / itemsPerPage);
+    const monologueCount = titles.filter(t => titleTypeMap[t] === 'monologue').length;
+    const dialogueCount = titles.filter(t => titleTypeMap[t] === 'dialogue').length;
 
     return (
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4 md:space-y-5 max-w-4xl mx-auto pb-20 px-2 md:px-0">
         <div className="flex items-center justify-between bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-3 md:p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
           <button onClick={() => setStep('setup')} className="text-gray-400 hover:text-gray-700 flex items-center gap-2 font-bold text-[10px] md:text-xs uppercase tracking-widest"><i className="fas fa-arrow-left"></i> Back</button>
           <div className="flex items-center gap-2.5">
-            {!isCustomMode && (
-              <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={() => handleFetchTitles(true)} disabled={loading} className="w-8 h-8 rounded-lg bg-gray-50 dark:bg-gray-700 text-gray-400 hover:text-pink-500 transition flex items-center justify-center"><i className={`fas fa-sync-alt text-xs ${loading ? 'fa-spin' : ''}`}></i></motion.button>
-            )}
             <span className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-2.5 py-1 rounded-lg text-[9px] md:text-[10px] font-black uppercase">{level}</span>
-            <span className="font-bold text-gray-600 dark:text-gray-300 text-[10px] md:text-xs">{isCustomMode ? customTopic : LISTENING_THEMES.find(t => t.id === themeId)?.name}</span>
+            <span className="font-bold text-gray-600 dark:text-gray-300 text-[10px] md:text-xs">{isCustomMode ? customTopic : THEMES.find(t => t.id === themeId)?.name}</span>
           </div>
         </div>
-        <h2 className="text-lg md:text-xl font-black text-gray-800 dark:text-white px-1">Select a Conversation</h2>
+        <div className="flex items-center justify-between px-1">
+          <h2 className="text-lg md:text-xl font-black text-gray-800 dark:text-white">Select a Conversation</h2>
+          {!isCustomMode && !loading && titles.length > 0 && (
+            <div className="flex gap-1 bg-white dark:bg-gray-800 p-1 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
+              <button onClick={() => { setTypeFilter('all'); setCurrentPage(1); }} className={`px-2.5 py-1.5 rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-wider transition ${typeFilter === 'all' ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}>All</button>
+              <button onClick={() => { setTypeFilter('monologue'); setCurrentPage(1); }} disabled={monologueCount === 0} className={`px-2.5 py-1.5 rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-wider transition flex items-center gap-1 disabled:opacity-30 ${typeFilter === 'monologue' ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}><i className="fas fa-user text-[8px]"></i> Monologue</button>
+              <button onClick={() => { setTypeFilter('dialogue'); setCurrentPage(1); }} disabled={dialogueCount === 0} className={`px-2.5 py-1.5 rounded-lg text-[9px] md:text-[10px] font-black uppercase tracking-wider transition flex items-center gap-1 disabled:opacity-30 ${typeFilter === 'dialogue' ? 'bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-sm' : 'text-gray-400 hover:text-gray-600'}`}><i className="fas fa-user-friends text-[8px]"></i> Dialogue</button>
+            </div>
+          )}
+        </div>
 
         {error && (<div className="bg-red-50 border border-red-100 p-3 rounded-xl text-red-500 text-[10px] md:text-xs font-bold flex items-center gap-2"><i className="fas fa-exclamation-circle"></i> {error}</div>)}
 
@@ -854,7 +1114,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
             <div className="flex gap-1.5">{[0, 1, 2].map(i => <motion.div key={i} animate={{ y: [0, -8, 0] }} transition={{ duration: 0.6, repeat: Infinity, delay: i * 0.15 }} className="w-2.5 h-2.5 rounded-full bg-gradient-to-r from-pink-400 to-rose-500" />)}</div>
             <span className="text-[10px] text-gray-400 font-bold uppercase tracking-widest">{statusMsg || 'Preparing content...'}</span>
           </div>
-        ) : titles.length === 0 ? (
+        ) : filteredTitles.length === 0 ? (
           <div className="text-center py-16 bg-white dark:bg-gray-800 rounded-2xl border-2 border-dashed border-gray-200 dark:border-gray-700">
             <p className="text-gray-400 font-bold text-sm mb-3">No suggestions found.</p>
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={() => setStep('setup')} className="px-5 py-2 bg-pink-500 text-white rounded-xl font-bold text-xs">Go Back</motion.button>
@@ -865,12 +1125,18 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               {currentTitles.map((title, idx) => {
                 const isCompleted = !!completedTitlesData[title];
                 const score = completedTitlesData[title]?.score;
+                const titleType = titleTypeMap[title];
                 return (
                   <motion.button key={idx} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.05 }} whileHover={{ scale: 1.02, y: -2 }} whileTap={{ scale: 0.98 }} onClick={() => handleSelectTitle(title)} className={`p-3.5 md:p-4 rounded-2xl border hover:shadow-lg transition-all text-left h-full flex flex-col justify-between group relative overflow-hidden ${isCompleted ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800 hover:border-green-300' : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 hover:border-pink-300'}`}>
                     {isCompleted && (
                       <div className="absolute top-0 right-0 bg-green-500 text-white text-[8px] md:text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-bl-lg z-10 shadow-sm flex items-center gap-1">
                         <i className="fas fa-check-circle"></i> Done
                       </div>
+                    )}
+                    {titleType && (
+                      <span className="inline-flex items-center gap-1 text-[8px] md:text-[9px] font-black uppercase tracking-wider text-pink-400 mb-1.5">
+                        <i className={`fas ${titleType === 'dialogue' ? 'fa-user-friends' : 'fa-user'}`}></i> {titleType}
+                      </span>
                     )}
                     <h3 className={`font-bold text-[11px] md:text-sm leading-snug line-clamp-2 ${isCompleted ? 'text-green-800 dark:text-green-100 group-hover:text-green-600' : 'text-gray-700 dark:text-gray-200 group-hover:text-pink-600'}`}>{title}</h3>
                     <div className="flex items-center justify-between mt-3 w-full">
@@ -1058,7 +1324,14 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               <h2 className="text-sm md:text-lg font-black text-gray-800 dark:text-white leading-tight line-clamp-2">{selectedTitle}</h2>
               <p className="text-[9px] md:text-[10px] text-gray-400 mt-0.5 font-bold uppercase tracking-wider">{type === 'dialogue' ? '💬 Conversation' : '🎤 Monologue'}</p>
             </div>
-            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleRegenerate} className="text-pink-600 bg-pink-50 dark:bg-pink-900/20 hover:bg-pink-100 px-2.5 py-1.5 rounded-xl text-[9px] md:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition shrink-0 ml-3"><i className="fas fa-sync-alt"></i> New</motion.button>
+            {isCustomMode ? (
+              <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleRegenerate} className="text-pink-600 bg-pink-50 dark:bg-pink-900/20 hover:bg-pink-100 px-2.5 py-1.5 rounded-xl text-[9px] md:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition shrink-0 ml-3"><i className="fas fa-sync-alt"></i> New</motion.button>
+            ) : (
+              <div className="flex gap-1.5 shrink-0 ml-3">
+                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleRegenerateAudioOnly} title="Keep this text, generate a new voice take" className="text-pink-600 bg-pink-50 dark:bg-pink-900/20 hover:bg-pink-100 px-2.5 py-1.5 rounded-xl text-[9px] md:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition"><i className="fas fa-microphone-alt"></i> New Audio</motion.button>
+                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={handleRegenerateTextOnly} title="Generate a brand new script for this session only" className="text-purple-600 bg-purple-50 dark:bg-purple-900/20 hover:bg-purple-100 px-2.5 py-1.5 rounded-xl text-[9px] md:text-[10px] font-black uppercase tracking-wider flex items-center gap-1 transition"><i className="fas fa-magic"></i> New Script</motion.button>
+              </div>
+            )}
           </div>
 
           {/* Headphone Orb */}

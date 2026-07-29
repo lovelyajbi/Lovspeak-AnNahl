@@ -1,10 +1,11 @@
 
 import { AppView, DailyTask, Level } from '../types';
-import { VOCAB_CATEGORIES, INTENSITY_GOALS } from '../constants';
+import { VOCAB_CATEGORIES, INTENSITY_GOALS, THEMES } from '../constants';
 import { GRAMMAR_LESSONS } from '../data/grammarLessons';
-import { THEMATIC_BRIDGES } from '../data/thematicBridges';
 import { SHADOWING_DATA } from '../src/constants/shadowingData';
 import { STATIC_VOCAB } from '../data/vocabWords';
+import { READING_MANIFEST } from '../data/readingManifest';
+import { LISTENING_MANIFEST } from '../data/listeningManifest';
 
 // --- LOGICAL PROGRESSION CURRICULUM (30 Days per Level) ---
 // This ensures basic topics come first and increase in complexity.
@@ -122,12 +123,20 @@ export const generateDailyTasks = (
   const levelGrammar = GRAMMAR_LESSONS.filter(l => l.level === level);
   const todaysGrammar = findBestMatch(dailyTheme, levelGrammar, l => l.title);
 
-  // Match Reading (Thematic Bridges) — pick multiple based on intensity
-  const bridgeValues = Object.values(THEMATIC_BRIDGES).filter(b => b.level === level);
-  const shuffledBridges = [...bridgeValues].sort(() => 0.5 - Math.random());
-  const todaysBridges = shuffledBridges.slice(0, goals.readingCount);
-  const bridgeIds = todaysBridges.map(b => b.id);
-  const primaryBridge = todaysBridges[0];
+  // Match today's theme to one of the 14 static content themes (same keyword-match helper as everything else above)
+  const matchedTheme = findBestMatch(dailyTheme, THEMES, t => t.name) || THEMES.find(t => t.id === 'daily') || THEMES[0];
+
+  // Match Reading — pick a specific static item (588-item library) for today's level+theme, rotating through the 7 by day
+  const readingPoolForTheme = READING_MANIFEST.filter(r => r.level === level && r.themeId === matchedTheme.id);
+  const primaryReadingItem = readingPoolForTheme.length > 0
+    ? readingPoolForTheme[relativePlanDay % readingPoolForTheme.length]
+    : null;
+
+  // Match Listening — same idea, offset by 3 so it doesn't always line up with the Reading pick from the same theme
+  const listeningPoolForTheme = LISTENING_MANIFEST.filter(l => l.level === level && l.themeId === matchedTheme.id);
+  const primaryListeningItem = listeningPoolForTheme.length > 0
+    ? listeningPoolForTheme[(relativePlanDay + 3) % listeningPoolForTheme.length]
+    : null;
 
   // Match Shadowing — pick multiple sentences based on intensity
   const categoryShadowing = SHADOWING_DATA.filter(t => t.category === (hasIslamic ? 'Islamic' : 'General'));
@@ -168,28 +177,36 @@ export const generateDailyTasks = (
       minScore: 100, xpReward: goals.xpPerTask, intensityId
     },
     
-    primaryBridge
-      ? { 
-          moduleView: AppView.READING, icon: 'fa-book-reader', 
-          title: `Reading: ${primaryBridge.unitTitle}`, 
-          description: `Read ${goals.readingCount} article${goals.readingCount > 1 ? 's' : ''} about ${dailyTheme}`,
-          bridgeId: primaryBridge.id, bridgeIds,
+    primaryReadingItem
+      ? {
+          moduleView: AppView.READING, icon: 'fa-book-reader',
+          title: `Reading: ${primaryReadingItem.title}`,
+          description: `A ${level} reading on ${matchedTheme.name}`,
+          targetLessonId: primaryReadingItem.id,
           minScore: 85, xpReward: goals.xpPerTask, intensityId
         }
-      : { 
-          moduleView: AppView.READING, icon: 'fa-book-reader', 
-          title: `Reading: ${dailyTheme}`, 
+      : {
+          moduleView: AppView.READING, icon: 'fa-book-reader',
+          title: `Reading: ${dailyTheme}`,
           description: `Level ${level} reading: ${goals.readingCount} article${goals.readingCount > 1 ? 's' : ''}`,
           minScore: 85, xpReward: goals.xpPerTask, intensityId
         },
-      
-    { 
-      moduleView: AppView.LISTENING, icon: 'fa-headphones', 
-      title: `Listening: ${dailyTheme}`, 
-      description: `${goals.listeningCount} listening exercise${goals.listeningCount > 1 ? 's' : ''} for ${level} level`,
-      listeningTopics,
-      minScore: 80, xpReward: goals.xpPerTask, intensityId
-    },
+
+    primaryListeningItem
+      ? {
+          moduleView: AppView.LISTENING, icon: 'fa-headphones',
+          title: `Listening: ${primaryListeningItem.title}`,
+          description: `A ${level} listening ${primaryListeningItem.type} on ${matchedTheme.name}`,
+          targetLessonId: primaryListeningItem.id,
+          minScore: 80, xpReward: goals.xpPerTask, intensityId
+        }
+      : {
+          moduleView: AppView.LISTENING, icon: 'fa-headphones',
+          title: `Listening: ${dailyTheme}`,
+          description: `${goals.listeningCount} listening exercise${goals.listeningCount > 1 ? 's' : ''} for ${level} level`,
+          listeningTopics,
+          minScore: 80, xpReward: goals.xpPerTask, intensityId
+        },
     
     todaysGrammar
       ? { 
