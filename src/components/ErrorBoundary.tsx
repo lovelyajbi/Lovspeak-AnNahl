@@ -49,24 +49,16 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   private handleClearAndReload = async () => {
-    // Nuclear option: clear potentially corrupted cache/state and reload.
+    // Remove only disposable module snapshots. Learning plans, XP, roadmap and
+    // activity data must never be erased as part of visual-error recovery.
     try {
-      // Only clear app-specific keys, preserve auth
-      const keysToPreserve = ['lovelya_user_uid', 'lovelya_activated', 'lovelya_gemini_keys'];
-      const preserved: Record<string, string> = {};
-      keysToPreserve.forEach(key => {
-        const val = localStorage.getItem(key);
-        if (val) preserved[key] = val;
+      ['lovspeak_state_reading', 'lovspeak_state_listening'].forEach(key => localStorage.removeItem(key));
+      Object.keys(localStorage).forEach(key => {
+        if (key.startsWith('lovelya_cache_content') || key.startsWith('lovelya_cache_titles')) {
+          localStorage.removeItem(key);
+        }
       });
-
-      // Clear all
-      localStorage.clear();
       sessionStorage.clear();
-
-      // Restore critical keys
-      Object.entries(preserved).forEach(([key, val]) => {
-        localStorage.setItem(key, val);
-      });
     } catch (e) {
       console.error('Failed to clear storage:', e);
     }
@@ -90,22 +82,6 @@ class ErrorBoundary extends Component<Props, State> {
       }
     } catch (e) {
       console.error('Failed to clear caches:', e);
-    }
-
-    // Firebase Auth persists its session in IndexedDB. A corrupted entry there
-    // can hang the app on the splash screen or crash it on every load, and
-    // neither localStorage nor Cache Storage clearing touches it — wipe it too
-    // so this is a genuine "nuclear" recovery, not a partial one.
-    try {
-      if ('indexedDB' in window && indexedDB.databases) {
-        const dbs = await indexedDB.databases();
-        await Promise.all(dbs.map(db => db.name ? new Promise(resolve => {
-          const req = indexedDB.deleteDatabase(db.name!);
-          req.onsuccess = req.onerror = req.onblocked = () => resolve(undefined);
-        }) : Promise.resolve()));
-      }
-    } catch (e) {
-      console.error('Failed to clear IndexedDB:', e);
     }
 
     window.location.href = window.location.origin;

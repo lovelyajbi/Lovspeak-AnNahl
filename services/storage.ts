@@ -96,6 +96,7 @@ const KEY_SOUND_ENABLED = 'lovelya_sound_enabled';
 const KEY_APP_LANGUAGE = 'lovelya_app_language';
 const KEY_VOCAB_ENRICHMENT = 'lovelya_vocab_enrichment';
 const KEY_GEMINI_API_KEYS = 'lovelya_gemini_api_keys';
+const KEY_ROADMAP_UPDATED_AT = 'lovelya_roadmap_progress_updated_at';
 
 const SCALEV_WEBHOOK_COLLECTION = 'scalevWebhookAccess';
 const SCALEV_ALLOWED_SKUS = ['LovspeakAks'];
@@ -225,7 +226,9 @@ export const completeRoadmapUnit = (unitId: string) => {
     if (!progress.includes(unitId)) {
         progress.push(unitId);
         localStorage.setItem(KEY_ROADMAP_PROGRESS, JSON.stringify(progress));
-        syncToFirestore('progress/roadmap', { units: progress });
+        const updatedAt = new Date().toISOString();
+        localStorage.setItem(KEY_ROADMAP_UPDATED_AT, updatedAt);
+        syncToFirestore('progress/roadmap', { units: progress, updatedAt });
     }
 };
 
@@ -361,11 +364,12 @@ export const getUserProfile = (): UserProfile => {
 };
 
 export const saveUserProfile = (profile: UserProfile) => {
-    localStorage.setItem(KEY_PROFILE, JSON.stringify(profile));
+    const profileToSave: UserProfile = { ...profile, updatedAt: new Date().toISOString() };
+    localStorage.setItem(KEY_PROFILE, JSON.stringify(profileToSave));
     const uid = getUserId();
     if (uid) {
         const path = `users/${uid}`;
-        setDoc(doc(db, path), sanitizeData(profile), { merge: true }).catch(e => handleFirestoreError(e, OperationType.WRITE, path));
+        setDoc(doc(db, path), sanitizeData(profileToSave), { merge: true }).catch(e => handleFirestoreError(e, OperationType.WRITE, path));
     }
 };
 
@@ -376,8 +380,9 @@ export const getLearningPlan = (): LearningPlan | null => {
 };
 
 export const saveLearningPlan = (plan: LearningPlan) => {
-    localStorage.setItem(KEY_PLAN, JSON.stringify(plan));
-    syncToFirestore('settings/plan', plan);
+    const planToSave: LearningPlan = { ...plan, schemaVersion: 2, updatedAt: new Date().toISOString() };
+    localStorage.setItem(KEY_PLAN, JSON.stringify(planToSave));
+    syncToFirestore('settings/plan', planToSave);
 };
 
 // --- DIARY ---
@@ -747,6 +752,65 @@ export const syncScalevAccessByEmail = async (options?: {
 };
 
 // --- INITIAL SYNC FROM CLOUD ---
+const getRecordTime = (value: any): number => {
+    const raw = value?.updatedAt || value?.createdAt;
+    const time = raw ? new Date(raw).getTime() : NaN;
+    return Number.isFinite(time) ? time : 0;
+};
+
+const hasMeaningfulLocalProfile = (profile: any): boolean => Boolean(
+    profile && (profile.xp > 0 || profile.level && profile.level !== 'A1' || (profile.name && profile.name !== 'Lovelies'))
+);
+
+const mergeTaskProgress = (primary: any, other?: any) => {
+    if (!other) return primary;
+    return {
+        ...other,
+        ...primary,
+        isCompleted: Boolean(primary.isCompleted || other.isCompleted),
+        accumulatedSeconds: Math.max(primary.accumulatedSeconds || 0, other.accumulatedSeconds || 0) || undefined,
+    };
+};
+
+const mergePlanProgress = (primary: LearningPlan, other: LearningPlan): LearningPlan => {
+    const mergeTasks = (tasks: any[] = [], alternate: any[] = []) => {
+        const alternateById = new Map(alternate.map(task => [task.id, task]));
+        return tasks.map(task => mergeTaskProgress(task, alternateById.get(task.id)));
+    };
+    const sameDailyPlan = primary.lastGeneratedDate === other.lastGeneratedDate
+        && primary.currentLevel === other.currentLevel;
+    return sameDailyPlan ? {
+        ...primary,
+        dailyTasks: mergeTasks(primary.dailyTasks, other.dailyTasks),
+        yesterdayTasks: primary.yesterdayTasks || other.yesterdayTasks
+            ? mergeTasks(primary.yesterdayTasks || other.yesterdayTasks || [], other.yesterdayTasks || primary.yesterdayTasks || [])
+            : undefined,
+    } : primary;
+};
+
+const resolveLearningPlan = (cloudPlan: LearningPlan, localPlan: LearningPlan | null): { plan: LearningPlan; shouldUpload: boolean } => {
+    if (!localPlan) return { plan: cloudPlan, shouldUpload: false };
+    const cloudTime = getRecordTime(cloudPlan);
+    const localTime = getRecordTime(localPlan);
+    let primary: LearningPlan;
+    let secondary: LearningPlan;
+    let shouldUpload = false;
+
+    if (localTime || cloudTime) {
+        primary = localTime >= cloudTime ? localPlan : cloudPlan;
+        secondary = primary === localPlan ? cloudPlan : localPlan;
+        shouldUpload = primary === localPlan && localTime > cloudTime;
+    } else {
+        const localDate = new Date(localPlan.lastGeneratedDate || 0).getTime();
+        const cloudDate = new Date(cloudPlan.lastGeneratedDate || 0).getTime();
+        primary = localDate >= cloudDate ? localPlan : cloudPlan;
+        secondary = primary === localPlan ? cloudPlan : localPlan;
+        shouldUpload = primary === localPlan;
+    }
+    return { plan: mergePlanProgress(primary, secondary), shouldUpload };
+};
+
+// --- INITIAL SYNC FROM CLOUD ---
 export const syncFromCloud = async () => {
     const uid = getUserId();
     if (!uid) return;
@@ -772,7 +836,20 @@ export const syncFromCloud = async () => {
             // Profile
             (async () => {
                 const profileSnap = await getDoc(doc(db, `users/${uid}`));
-                if (profileSnap.exists()) localStorage.setItem(KEY_PROFILE, JSON.stringify(profileSnap.data()));
+                if (!profileSnap.exists()) return;
+                const cloudProfile = profileSnap.data() as UserProfile;
+                const localProfile = getUserProfile();
+                const cloudTime = getRecordTime(cloudProfile);
+                const localTime = getRecordTime(localProfile);
+                const keepLocal = localTime || cloudTime
+                    ? localTime > cloudTime
+                    : hasMeaningfulLocalProfile(localProfile);
+                const resolvedProfile = keepLocal ? localProfile : cloudProfile;
+                localStorage.setItem(KEY_PROFILE, JSON.stringify(resolvedProfile));
+                if (keepLocal) {
+                    setDoc(doc(db, `users/${uid}`), sanitizeData(resolvedProfile), { merge: true })
+                        .catch(e => handleFirestoreError(e, OperationType.WRITE, `users/${uid}`));
+                }
             })(),
 
             // Settings (includes vocab_enrichment)
@@ -780,7 +857,11 @@ export const syncFromCloud = async () => {
                 const settingsSnap = await getDocs(collection(db, `users/${uid}/settings`));
                 settingsSnap.docs.forEach(d => {
                     const data = d.data();
-                    if (d.id === 'plan') localStorage.setItem(KEY_PLAN, JSON.stringify(data));
+                    if (d.id === 'plan') {
+                        const resolved = resolveLearningPlan(data as LearningPlan, getLearningPlan());
+                        localStorage.setItem(KEY_PLAN, JSON.stringify(resolved.plan));
+                        if (resolved.shouldUpload) syncToFirestore('settings/plan', resolved.plan);
+                    }
                     if (d.id === 'api_key') localStorage.setItem(KEY_GEMINI_API_KEY, data.key);
                     if (d.id === 'api_keys') localStorage.setItem(KEY_GEMINI_API_KEYS, JSON.stringify(data.keys));
                     if (d.id === 'api_cooldowns') {
@@ -801,7 +882,17 @@ export const syncFromCloud = async () => {
             // Roadmap
             (async () => {
                 const roadmapSnap = await getDoc(doc(db, `users/${uid}/progress/roadmap`));
-                if (roadmapSnap.exists()) localStorage.setItem(KEY_ROADMAP_PROGRESS, JSON.stringify(roadmapSnap.data().units));
+                if (!roadmapSnap.exists()) return;
+                const cloudData = roadmapSnap.data();
+                const localUnits = getRoadmapProgress();
+                const cloudUnits = Array.isArray(cloudData.units) ? cloudData.units : [];
+                const units = Array.from(new Set([...cloudUnits, ...localUnits]));
+                const updatedAt = new Date().toISOString();
+                localStorage.setItem(KEY_ROADMAP_PROGRESS, JSON.stringify(units));
+                localStorage.setItem(KEY_ROADMAP_UPDATED_AT, updatedAt);
+                if (units.length !== cloudUnits.length || units.some(unit => !cloudUnits.includes(unit))) {
+                    syncToFirestore('progress/roadmap', { units, updatedAt });
+                }
             })(),
 
             // Reading Progress (merge by generated ID)

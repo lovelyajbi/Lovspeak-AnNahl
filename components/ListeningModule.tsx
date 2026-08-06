@@ -60,6 +60,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   // Prefetch cache for next topic
   const nextTopicCacheRef = useRef<{ topicIndex: number; topic: string; script: string; quiz: QuizQuestion[]; speakers: { name: string; gender: 'male' | 'female' }[]; audioUrl: string; type: string } | null>(null);
   const prefetchingRef = useRef(false);
+  const staticPrefetchingRef = useRef(false);
   const selectionRequestRef = useRef(0);
 
   // Player State
@@ -80,6 +81,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   // UI State
   const [loading, setLoading] = useState(false);
   const [statusMsg, setStatusMsg] = useState('');
+  const [backgroundPrefetchStatus, setBackgroundPrefetchStatus] = useState('');
   const [error, setError] = useState('');
   const [showTranscript, setShowTranscript] = useState(false);
 
@@ -114,6 +116,8 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   // (freeform strings) or point at specific static library items (Daily Plan multi-listening tasks).
   const [missionTopicIndex, setMissionTopicIndex] = useState(0);
   const [completedTopics, setCompletedTopics] = useState<Set<number>>(new Set());
+  const [activeStaticItemId, setActiveStaticItemId] = useState('');
+  const [audioCacheId, setAudioCacheId] = useState('');
   const missionTopics = initialContext?.listeningTopics || [];
   const missionItemIds = initialContext?.listeningItemIds || [];
   const isStaticMissionMode = missionItemIds.length > 0;
@@ -143,10 +147,17 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         setSpeakers(state.speakers || []);
         setCurrentPage(state.currentPage || 1);
         setMissionTopicIndex(state.missionTopicIndex || 0);
+        setActiveStaticItemId(state.activeStaticItemId || '');
+        setAudioCacheId(state.audioCacheId || '');
         if (state.completedTopicsArr) {
           setCompletedTopics(new Set(state.completedTopicsArr));
         }
-        // Note: audioUrl is not persisted as it's a blob URL
+        if (!initialContext?.autoStart && state.script && (state.step === 'player' || state.step === 'result')) {
+          const savedCacheId = state.audioCacheId || (state.activeStaticItemId
+            ? btoa(encodeURIComponent(`static_${state.activeStaticItemId}_${state.accent || 'Default'}`)).replace(/[/+=]/g, '')
+            : '');
+          void regenerateAudioOnly(state.script, state.type || 'monologue', state.speakers || [], state.level || 'A1', state.accent || 'Default', savedCacheId);
+        }
       } catch (e) {
         console.error("Failed to load listening state", e);
       }
@@ -256,10 +267,12 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       step, level, type, accent, themeId, selectedTitle, isCustomMode,
       themeCategory, customTopic, customTitle, titles, script, quiz, speakers, currentPage,
       missionTopicIndex,
+      activeStaticItemId,
+      audioCacheId,
       completedTopicsArr: Array.from(completedTopics)
     };
     localStorage.setItem('lovspeak_state_listening', JSON.stringify(stateToSave));
-  }, [step, level, type, accent, themeId, selectedTitle, isCustomMode, themeCategory, customTopic, customTitle, titles, script, quiz, speakers, currentPage, missionTopicIndex, completedTopics]);
+  }, [step, level, type, accent, themeId, selectedTitle, isCustomMode, themeCategory, customTopic, customTitle, titles, script, quiz, speakers, currentPage, missionTopicIndex, activeStaticItemId, audioCacheId, completedTopics]);
 
   // --- AUTO START LOGIC ---
   const autoLaunchedKeyRef = useRef<string | null>(null);
@@ -294,13 +307,41 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         const isSameSavedTask = state.missionKey
           ? state.missionKey === contextKey
           : !isMissionContext && state.initialTitle === ctx.title;
-        if (isSameSavedTask && state.step !== 'setup' && state.script) {
+        const savedMissionIndex = Math.max(0, Math.min(
+          Number.isInteger(state.missionTopicIndex) ? state.missionTopicIndex : 0,
+          Math.max(0, Math.max(ctx.listeningItemIds?.length || 0, ctx.listeningTopics?.length || 0, 1) - 1)
+        ));
+        const expectedStaticItemId = ctx.listeningItemIds?.[savedMissionIndex] || ctx.targetLessonId || '';
+        const expectedLegacyTopic = !expectedStaticItemId ? ctx.listeningTopics?.[savedMissionIndex] || '' : '';
+        const savedContentMatches = expectedStaticItemId
+          ? state.activeStaticItemId === expectedStaticItemId
+          : !expectedLegacyTopic || state.selectedTitle === expectedLegacyTopic;
+
+        if (isSameSavedTask && state.step !== 'setup' && state.script && savedContentMatches) {
           // Same task with script cached — only regenerate audio
           // NOTE: Always resume to 'player', never to 'result', to prevent
           // stale completion state when the same title appears on different days
           if (state.step === 'player' || state.step === 'result') {
-            regenerateAudioOnly(state.script, state.type || 'monologue', state.speakers || []);
+            const savedCacheId = state.audioCacheId || (state.activeStaticItemId
+              ? btoa(encodeURIComponent(`static_${state.activeStaticItemId}_${state.accent || 'Default'}`)).replace(/[/+=]/g, '')
+              : '');
+            regenerateAudioOnly(state.script, state.type || 'monologue', state.speakers || [], userLevel, state.accent || 'Default', savedCacheId);
           }
+          return;
+        } else if (isSameSavedTask && expectedStaticItemId) {
+          // Older/racing persistence may contain a new mission index paired
+          // with the previous item's script. Reload the exact authored item
+          // instead of accepting that stale script for Listening 2 or 3.
+          setMissionTopicIndex(savedMissionIndex);
+          setLevel(userLevel);
+          setIsCustomMode(false);
+          void processStaticSelection(expectedStaticItemId, userLevel);
+          return;
+        } else if (isSameSavedTask && expectedLegacyTopic) {
+          setMissionTopicIndex(savedMissionIndex);
+          setLevel(userLevel);
+          setIsCustomMode(false);
+          void processSelection(expectedLegacyTopic, expectedLegacyTopic, false, userLevel);
           return;
         } else if (!isSameSavedTask) {
           // Different task — clear old state to prevent cross-contamination
@@ -313,6 +354,8 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           setSpeakers([]);
           setCurrentPage(1);
           setMissionTopicIndex(0);
+          setActiveStaticItemId('');
+          setAudioCacheId('');
           setCompletedTopics(new Set());
           setUserAnswers([]);
           setScore(0);
@@ -330,7 +373,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     if (ctx.listeningItemIds && ctx.listeningItemIds.length > 0) {
       setLevel(userLevel);
       setIsCustomMode(false);
-      processStaticSelection(ctx.listeningItemIds[0], userLevel);
+      void processStaticSelection(ctx.listeningItemIds[0], userLevel);
       return;
     }
 
@@ -339,7 +382,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       setSelectedTitle(finalTitle);
       setLevel(userLevel);
       setIsCustomMode(false);
-      processStaticSelection(ctx.targetLessonId, userLevel);
+      void processStaticSelection(ctx.targetLessonId, userLevel);
       return;
     }
 
@@ -366,24 +409,34 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     processSelection(finalTitle, finalTopic, false, userLevel, selectedType);
   };
 
-  // Resume helper: only regenerate audio from cached script (1 API call)
-  const regenerateAudioOnly = async (cachedScript: string, audioType: string, cachedSpeakers: { name: string; gender: 'male' | 'female' }[]) => {
+  const regenerateAudioOnly = async (
+    cachedScript: string,
+    audioType: string,
+    cachedSpeakers: { name: string; gender: 'male' | 'female' }[],
+    audioLevel: string = level,
+    audioAccent: string = accent,
+    savedCacheId: string = audioCacheId
+  ) => {
     setLoading(true);
-    setStatusMsg('Resuming — regenerating audio...');
+    setStatusMsg('Memuat audio tersimpan...');
     setHasListenedToEnd(false);
     if (audioUrl) { URL.revokeObjectURL(audioUrl); setAudioUrl(null); }
     try {
-      const base64Audio = await generateTTSAudio(
-        cachedScript,
-        audioType,
-        cachedSpeakers.length >= 2 ? cachedSpeakers : undefined,
-        level,
-        undefined,
-        accent
-      );
-      if (!base64Audio) throw new Error('Failed to generate audio');
-      const binary = base64ToUint8Array(base64Audio);
-      const wavBlob = pcmToWav(binary, 24000);
+      let wavBlob = savedCacheId ? await getCachedAudioBlob(savedCacheId) : null;
+      if (!wavBlob) {
+        setStatusMsg('Audio belum tersimpan. Sedang menyiapkan audio...');
+        const base64Audio = await generateTTSAudio(
+          cachedScript,
+          audioType,
+          cachedSpeakers.length >= 2 ? cachedSpeakers : undefined,
+          audioLevel,
+          undefined,
+          audioAccent
+        );
+        if (!base64Audio) throw new Error('Failed to generate audio');
+        wavBlob = pcmToWav(base64ToUint8Array(base64Audio), 24000);
+        if (savedCacheId) await cacheAudioBlob(savedCacheId, wavBlob);
+      }
       setAudioUrl(URL.createObjectURL(wavBlob));
       setCurrentTime(0); setDuration(0); setIsPlaying(false); setPlaybackSpeed(1.0);
       setStep('player');
@@ -392,6 +445,33 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       setError('Failed to resume audio. Please try again.');
     } finally {
       setLoading(false); setStatusMsg('');
+    }
+  };
+
+  const prefetchRemainingStaticAudio = async (startIndex: number) => {
+    if (staticPrefetchingRef.current || !isStaticMissionMode || startIndex >= missionItemIds.length) return;
+    staticPrefetchingRef.current = true;
+    try {
+      for (let index = startIndex; index < missionItemIds.length; index++) {
+        const id = missionItemIds[index];
+        const cacheId = btoa(encodeURIComponent(`static_${id}_${accent}`)).replace(/[/+=]/g, '');
+        if (await getCachedAudioBlob(cacheId)) continue;
+        setBackgroundPrefetchStatus(`Menyiapkan audio Listening ${index + 1}...`);
+        const item = await getStaticListeningItem(id);
+        if (!item) continue;
+        const base64Audio = await generateTTSAudio(
+          item.script.join('\n'), item.type,
+          item.type === 'dialogue' && item.speakers.length >= 2 ? item.speakers : undefined,
+          level, undefined, accent
+        );
+        if (base64Audio) await cacheAudioBlob(cacheId, pcmToWav(base64ToUint8Array(base64Audio), 24000));
+      }
+      setBackgroundPrefetchStatus('Audio berikutnya siap diputar.');
+    } catch (e) {
+      console.warn('Unable to prefetch next listening audio:', e);
+      setBackgroundPrefetchStatus('');
+    } finally {
+      staticPrefetchingRef.current = false;
     }
   };
 
@@ -444,6 +524,9 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         audioRef.current.pause();
       } else {
         audioRef.current.play();
+        if (isStaticMissionMode && missionTopicIndex < missionItemIds.length - 1) {
+          void prefetchRemainingStaticAudio(missionTopicIndex + 1);
+        }
       }
       setIsPlaying(!isPlaying);
     }
@@ -517,8 +600,11 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   // Load a static listening item (script + speakers + quiz already authored) and generate only the audio via TTS
   const processStaticSelection = async (id: string, activeLevel: string) => {
     const requestId = ++selectionRequestRef.current;
+    setActiveStaticItemId(id);
     setLoading(true);
     setError('');
+    setSelectedTitle('');
+    setScript('');
     setQuiz([]);
     setSpeakers([]);
     setHasListenedToEnd(false);
@@ -545,10 +631,12 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
       setStatusMsg('Bringing voices to life...');
       const cacheId = btoa(encodeURIComponent(`static_${id}_${accent}`)).replace(/[/+=]/g, '');
+      setAudioCacheId(cacheId);
       let cachedWavBlob = await getCachedAudioBlob(cacheId);
       let finalWavBlob: Blob;
 
       if (cachedWavBlob) {
+        setStatusMsg('Memuat audio tersimpan...');
         finalWavBlob = cachedWavBlob;
       } else {
         const base64Audio = await generateTTSAudio(
@@ -589,6 +677,10 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     const activeType = overrideType || type;
     setLoading(true);
     setError('');
+    setSelectedTitle(title);
+    setCustomTopic(themeName);
+    setActiveStaticItemId('');
+    setScript('');
     setQuiz([]);
     setSpeakers([]);
     setHasListenedToEnd(false);
@@ -625,6 +717,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       setStatusMsg('Step 2/2: Bringing voices to life...');
 
       const cacheId = btoa(encodeURIComponent(`${title}_${activeLevel}_${activeType}_${accent}_${getTextCacheKey(generatedScript)}`)).replace(/[/+=]/g, '');
+      setAudioCacheId(cacheId);
       let cachedWavBlob = await getCachedAudioBlob(cacheId);
 
       let finalWavBlob: Blob;
@@ -901,7 +994,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         completed: finalScore >= targetMinScore,
         planTaskId: initialContext?.taskId,
         stepId: initialContext?.stepId,
-        materialId: initialContext?.targetLessonId,
+        materialId: activeStaticItemId || initialContext?.targetLessonId,
         materialTitle: selectedTitle,
         source: initialContext?.type || 'manual'
       }
@@ -1226,7 +1319,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         setQuiz([]);
         setUserAnswers([]);
         setStep('player');
-        processStaticSelection(missionItemIds[nextIndex], level);
+        void processStaticSelection(missionItemIds[nextIndex], level);
         return;
       }
 
@@ -1271,6 +1364,16 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       {audioUrl && <audio key={audioUrl} ref={audioRef} src={audioUrl} onTimeUpdate={handleTimeUpdate} onLoadedMetadata={handleLoadedMetadata} onEnded={handleAudioEnded} />}
       <button onClick={() => { if (audioRef.current) { audioRef.current.pause(); audioRef.current.currentTime = 0; } setIsPlaying(false); setStep('titles'); }} className="text-gray-400 hover:text-gray-700 flex items-center gap-2 font-bold text-[10px] md:text-xs uppercase tracking-widest"><i className="fas fa-arrow-left"></i> Back to Topics</button>
 
+      {loading && (
+        <div className="bg-white dark:bg-gray-800 p-5 md:p-6 rounded-2xl border border-pink-100 dark:border-pink-900/40 shadow-sm flex flex-col items-center gap-3 text-center">
+          <i className="fas fa-headphones-alt text-2xl text-pink-500 animate-pulse"></i>
+          <div>
+            <p className="text-xs font-black text-gray-700 dark:text-white">Menyiapkan audio</p>
+            <p className="text-[10px] text-gray-400 font-bold mt-1">{statusMsg || 'Mohon tunggu sebentar...'}</p>
+          </div>
+        </div>
+      )}
+
       {/* Audio Generation Failed — Retry Card */}
       {!audioUrl && !loading && (
         <motion.div
@@ -1286,10 +1389,16 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           <motion.button
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            onClick={() => processSelection(selectedTitle, customTopic, false, level, type)}
+            onClick={() => {
+              if (activeStaticItemId) {
+                void processStaticSelection(activeStaticItemId, level);
+              } else {
+                void processSelection(selectedTitle, customTopic, false, level, type);
+              }
+            }}
             className="px-6 py-2.5 md:py-3 bg-gradient-to-r from-pink-600 to-rose-600 text-white rounded-xl font-black text-xs md:text-sm shadow-lg transition-all flex items-center justify-center gap-2 mx-auto"
           >
-            <i className="fas fa-redo"></i> Retry Generate Audio
+            <i className="fas fa-redo"></i> Siapkan Audio Lagi
           </motion.button>
         </motion.div>
       )}
@@ -1305,6 +1414,12 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               {completedTopics.size}/{missionLength} completed (+{missionXpReward} XP)
             </span>
           </div>
+          {backgroundPrefetchStatus && (
+            <div className="mb-3 flex items-center gap-2 text-[10px] font-bold text-pink-500">
+              <i className={`fas ${backgroundPrefetchStatus.includes('Menyiapkan') ? 'fa-circle-notch fa-spin' : 'fa-check-circle'}`}></i>
+              {backgroundPrefetchStatus}
+            </div>
+          )}
           <div className="w-full h-2 bg-gray-100 dark:bg-gray-700 rounded-full overflow-hidden">
             <motion.div
               animate={{ width: `${(completedTopics.size / missionLength) * 100}%` }}

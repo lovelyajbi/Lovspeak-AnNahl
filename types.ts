@@ -266,6 +266,7 @@ export interface UserProfile {
     text: string;
     lastGenerated: string; // ISO date
   };
+  updatedAt?: string;
 }
 
 export interface DiaryEntry {
@@ -324,6 +325,8 @@ export interface LearningPlan {
   yesterdayTasks?: DailyTask[];
   startDate?: string;
   lastGeneratedDate: string;
+  updatedAt?: string;
+  schemaVersion?: number;
 }
 
 export enum AppView {

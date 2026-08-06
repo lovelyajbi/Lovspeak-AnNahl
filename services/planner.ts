@@ -148,7 +148,11 @@ export const generateDailyTasks = (
   const primaryReadingItem = readingItems[0] || null;
 
   // Match Listening — same idea, offset by 3 so it doesn't always line up with the Reading pick from the same theme
-  const listeningPoolForTheme = LISTENING_MANIFEST.filter(l => l.level === level && l.themeId === matchedTheme.id);
+  const listeningPoolForTheme = Array.from(new Map(
+    LISTENING_MANIFEST
+      .filter(l => l.level === level && l.themeId === matchedTheme.id)
+      .map(item => [item.id, item] as const)
+  ).values());
   const listeningItems = pickDistinctItems(listeningPoolForTheme, goals.listeningCount, relativePlanDay + 3);
   const primaryListeningItem = listeningItems[0] || null;
 
