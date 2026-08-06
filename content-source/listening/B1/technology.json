@@ -6,31 +6,145 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] For most of last year, my phone buzzed roughly two hundred times a day, and I genuinely believed that responding instantly made me a reliable person.",
-      "Narrator: [reflective] However, the more I reflect on that period, the more I realize instant responses had very little to do with reliability and everything to do with anxiety.",
-      "Narrator: [thoughtful] Even though every notification felt urgent in the moment, almost none of them actually required an immediate reply once I paused and looked closer.",
-      "Narrator: [tired] I would be halfway through cooking dinner, and a message would pull me away, so the rice would burn while I typed something forgettable.",
-      "Narrator: [determined] Eventually, I decided to run a small experiment. If a notification wasn't from my manager or my family, then it would simply wait until evening.",
-      "Narrator: [honestly] The first three days were harder than I expected, because I kept reaching for my phone out of pure habit, not actual need.",
-      "Narrator: [surprised] By the second week, though, something shifted. My mind felt quieter, and I noticed conversations at dinner instead of half-listening while scrolling underneath the table.",
-      "Narrator: [thoughtful] I also discovered that most messages solved themselves. People found answers elsewhere, or the question simply stopped mattering by the time I checked.",
-      "Narrator: [reflective] Despite what I used to believe, being constantly available never actually made me more helpful; it mostly made me exhausted and distracted from what was right in front of me.",
-      "Narrator: [warmly] Now I check messages three times a day, at set hours, and I tell people clearly so nobody assumes I'm ignoring them on purpose.",
-      "Narrator: [thoughtful] A few colleagues were skeptical at first, assuming I would miss something important, but nothing serious has ever slipped through in six months.",
-      "Narrator: [peacefully] As a result, my evenings finally belong to me again, instead of belonging to whichever app decided to interrupt them that day.",
-      "Narrator: [with a small smile] If someone had told me a year ago that silence would feel this good, I honestly wouldn't have believed them.",
-      "Narrator: [warmly] I'm not against technology; I just refuse to let it decide what deserves my attention every single minute of the day."
+      "Narrator: [thoughtful] For most of last year, my phone buzzed roughly two hundred times a day, and I genuinely believed that responding instantly made me a reliable person.",
+      "Narrator: However, the more I reflect on that period, the more I realize instant responses had very little to do with reliability and everything to do with anxiety.",
+      "Narrator: [carefully] Even though every notification felt urgent in the moment, almost none of them actually required an immediate reply once I paused and looked closer.",
+      "Narrator: I would be halfway through cooking dinner, and a message would pull me away, so the rice would burn while I typed something forgettable.",
+      "Narrator: [reflective] Eventually, I reviewed each alert. I kept essential safety and accessibility notifications, agreed on response times at work, and silenced the rest until planned checks.",
+      "Narrator: The first three days were harder than I expected, because I kept reaching for my phone out of pure habit, not actual need.",
+      "Narrator: [honestly] By the second week, though, something shifted. My mind felt quieter, and I noticed conversations at dinner instead of half-listening while scrolling underneath the table.",
+      "Narrator: I also discovered that most messages solved themselves. People found answers elsewhere, or the question simply stopped mattering by the time I checked.",
+      "Narrator: [seriously] Despite what I used to believe, being constantly available never actually made me more helpful; it mostly made me exhausted and distracted from what was right in front of me.",
+      "Narrator: Now I check routine messages at planned times. People know when to expect a reply and which agreed channel to use for a genuine urgent need.",
+      "Narrator: [gently] A few colleagues were skeptical, so we reviewed the arrangement after a month. It worked for my role, although another job, care duty, emergency need, or disability could require different settings.",
+      "Narrator: As a result, my evenings finally belong to me again, instead of belonging to whichever app decided to interrupt them that day.",
+      "Narrator: [encouraging] If someone had told me a year ago that silence would feel this good, I honestly wouldn't have believed them.",
+      "Narrator: I'm not against technology; I just refuse to let it decide what deserves my attention every single minute of the day."
     ],
     "quiz": [
-      { "question": "How often did the narrator's phone buzz during most of last year?", "options": ["About ten times a day", "Roughly two hundred times a day", "Once an hour", "Never"], "correctIndex": 1, "explanation": "She says her phone buzzed roughly two hundred times a day for most of last year." },
-      { "question": "What experiment did she decide to run?", "options": ["Deleting all her apps permanently", "Only replying immediately to messages from her manager or family, letting others wait until evening", "Turning off her phone completely for a month", "Buying a second phone for work"], "correctIndex": 1, "explanation": "She decided that anything not from her manager or family would wait until evening." },
-      { "question": "What happened by the second week of her experiment?", "options": ["She gave up and went back to old habits", "Her mind felt quieter and she noticed conversations at dinner", "She lost her job", "Nothing changed at all"], "correctIndex": 1, "explanation": "By the second week her mind felt quieter and she began noticing dinner conversations instead of scrolling." },
-      { "question": "What did she discover about most unanswered messages?", "options": ["They caused serious problems", "They usually solved themselves or stopped mattering", "People got angry with her", "They were always urgent"], "correctIndex": 1, "explanation": "She discovered most messages solved themselves or simply stopped mattering by the time she checked." },
-      { "question": "How does the narrator handle messages now?", "options": ["She ignores everyone completely", "She checks messages three times a day at set hours and tells people clearly", "She responds instantly again", "She only uses email"], "correctIndex": 1, "explanation": "She now checks messages three times a day at set hours and communicates this so people don't assume she's ignoring them." }
-    ]
+      {
+        "question": "How often did the narrator's phone buzz during most of last year?",
+        "options": [
+          "About ten times a day",
+          "Once an hour",
+          "Never",
+          "Roughly two hundred times a day"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says her phone buzzed roughly two hundred times a day for most of last year."
+      },
+      {
+        "question": "What experiment did she decide to run?",
+        "options": [
+          "Deleting all her apps permanently",
+          "Turning off her phone completely for a month",
+          "Only replying immediately to messages from her manager or family, letting others wait until evening",
+          "Buying a second phone for work"
+        ],
+        "correctIndex": 2,
+        "explanation": "She decided that anything not from her manager or family would wait until evening."
+      },
+      {
+        "question": "What happened by the second week of her experiment?",
+        "options": [
+          "Her mind felt quieter and she noticed conversations at dinner",
+          "She gave up and went back to old habits",
+          "She lost her job",
+          "Nothing changed at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "By the second week her mind felt quieter and she began noticing dinner conversations instead of scrolling."
+      },
+      {
+        "question": "What did she discover about most unanswered messages?",
+        "options": [
+          "They caused serious problems",
+          "People got angry with her",
+          "They were always urgent",
+          "They usually solved themselves or stopped mattering"
+        ],
+        "correctIndex": 3,
+        "explanation": "She discovered most messages solved themselves or simply stopped mattering by the time she checked."
+      },
+      {
+        "question": "How does the narrator handle messages now?",
+        "options": [
+          "She checks messages three times a day at set hours and tells people clearly",
+          "She ignores everyone completely",
+          "She responds instantly again",
+          "She only uses email"
+        ],
+        "correctIndex": 0,
+        "explanation": "She now checks messages three times a day at set hours and communicates this so people don't assume she's ignoring them."
+      },
+      {
+        "question": "Why is silence not the same as reliability?",
+        "options": [
+          "Every message deserves an instant reply",
+          "Phones measure professional skill",
+          "Reliability depends on clear expectations and appropriate response channels",
+          "Delayed replies are always harmless"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator separates responsiveness from constant interruption."
+      },
+      {
+        "question": "What makes the new routine responsible?",
+        "options": [
+          "All applications are deleted",
+          "People know the response times and how to reach her for genuine urgency",
+          "Her manager reads family messages",
+          "She never changes the settings"
+        ],
+        "correctIndex": 1,
+        "explanation": "Communication and an urgent route support the boundary."
+      },
+      {
+        "question": "Why should another person not copy her exact settings?",
+        "options": [
+          "Notification settings are private property",
+          "Jobs, care duties, emergencies, and accessibility needs differ",
+          "Only managers can change phones",
+          "Every application uses the same alert"
+        ],
+        "correctIndex": 1,
+        "explanation": "The lesson is a process, not one universal schedule."
+      },
+      {
+        "question": "What does the burned rice illustrate?",
+        "options": [
+          "The phone controlled the cooker",
+          "Her family sent an emergency",
+          "Dinner caused the messages",
+          "Attention switching affected an ordinary task"
+        ],
+        "correctIndex": 3,
+        "explanation": "A concrete consequence supports the wider reflection."
+      },
+      {
+        "question": "What is the narrator’s final position on technology?",
+        "options": [
+          "She believes all phones are harmful",
+          "She wants colleagues to stop messaging",
+          "She trusts every alert equally",
+          "She values it but wants human priorities to guide attention"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her conclusion is balanced rather than anti-technology."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; replace a rigid contact whitelist with agreed expectations, urgent channels, and accessibility-aware notification choices",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-technology-02",
@@ -39,34 +153,151 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bima", "gender": "male" },
-      { "name": "Citra", "gender": "female" }
+      {
+        "name": "Bima",
+        "gender": "male"
+      },
+      {
+        "name": "Citra",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Bima: [curious] Citra, have you tried letting the new AI tool draft our monthly reports? It cut my writing time in half yesterday.",
-      "Citra: [hesitant] I've tried it once, but honestly, something about it makes me uneasy, even though I can't fully explain why yet.",
-      "Bima: [reasonable] What exactly bothers you about it? The reports it produced looked fairly accurate to me, as far as I could tell.",
-      "Citra: [thoughtful] They were accurate on the surface, but the analysis felt generic, as if it could describe almost any team's month rather than ours specifically.",
-      "Bima: [considering] That's a fair point, although I edited mine afterward, so the final version still reflected our actual numbers and decisions.",
-      "Citra: [concerned] Even so, if we rely on it every month, won't we eventually lose the habit of noticing patterns ourselves, before the software notices them for us?",
-      "Bima: [thoughtful] I hadn't considered that. In spite of saving time now, we might be trading away a skill we'll need later.",
-      "Citra: [reasoning] Exactly my worry. Despite how convenient it feels, I'd rather write a rough draft myself first, then use the tool only to polish the language.",
-      "Bima: [curious] So you're not against using it entirely, just against depending on it for the actual thinking part?",
-      "Citra: [confirming] Precisely. As a result, I still understand what I'm reporting, instead of just approving whatever sentences appear on the screen.",
-      "Bima: [reflective] That approach seems reasonable, actually. Maybe the mistake isn't using the tool, but skipping the thinking step entirely because it's faster.",
-      "Citra: [warmly] Right, and if something in the report is ever questioned by management, I want to genuinely understand every sentence I submitted.",
-      "Bima: [determined] Fair enough. I'll write my own outline first from now on, then let the tool help with phrasing, the same way you do.",
-      "Citra: [smiling] That sounds like a healthier balance than what either of us was doing before this conversation, honestly.",
-      "Bima: [warmly] Agreed. Thanks for pushing back on this. I hadn't really questioned it until you brought up losing the habit of noticing patterns.",
-      "Citra: [kindly] That's what coworkers are for, I suppose. Questioning each other before a shortcut quietly becomes a permanent weakness."
+      "Bima: [thoughtful] Citra, have you tried letting the new AI tool draft our monthly reports? It cut my writing time in half yesterday.",
+      "Citra: I've tried it once, but honestly, something about it makes me uneasy, even though I can't fully explain why yet.",
+      "Bima: [carefully] What exactly bothers you about it? The reports it produced looked fairly accurate to me, as far as I could tell.",
+      "Citra: They looked accurate on the surface, but I found one invented explanation. I also need to know whether our policy allows company data in this tool.",
+      "Bima: [reflective] That is serious. I used a version approved by the company and removed restricted details, but I still should verify every claim against the source records.",
+      "Citra: Even so, if we rely on it every month, won't we eventually lose the habit of noticing patterns ourselves, before the software notices them for us?",
+      "Bima: [honestly] I hadn't considered that. In spite of saving time now, we might be trading away a skill we'll need later.",
+      "Citra: Exactly my worry. Despite how convenient it feels, I'd rather write a rough draft myself first, then use the tool only to polish the language.",
+      "Bima: [seriously] So you're not against using it entirely, just against depending on it for the actual thinking part?",
+      "Citra: Precisely. I keep the reasoning, evidence, and decisions under human control, then document or disclose the tool use if our policy requires it.",
+      "Bima: [gently] That approach seems reasonable, actually. Maybe the mistake isn't using the tool, but skipping the thinking step entirely because it's faster.",
+      "Citra: Right, and if something in the report is ever questioned by management, I want to genuinely understand every sentence I submitted.",
+      "Bima: [encouraging] Fair enough. I will confirm authorization, use only permitted data, write my own outline, check every factual claim, edit the result, and remain accountable for what I submit.",
+      "Citra: That sounds like a healthier balance than what either of us was doing before this conversation, honestly.",
+      "Bima: [sincere] Agreed. Thanks for pushing back on this. I hadn't really questioned it until you brought up losing the habit of noticing patterns.",
+      "Citra: That's what coworkers are for, I suppose. Questioning each other before a shortcut quietly becomes a permanent weakness."
     ],
     "quiz": [
-      { "question": "What did the AI tool help Bima do yesterday?", "options": ["Fix his computer", "Cut his report writing time in half", "Schedule meetings", "Learn a new language"], "correctIndex": 1, "explanation": "Bima says the tool cut his writing time in half yesterday." },
-      { "question": "What specifically bothers Citra about the AI-written reports?", "options": ["They contain factual errors", "The analysis feels generic, as if it could apply to almost any team", "They take too long to generate", "They are too expensive"], "correctIndex": 1, "explanation": "Citra says the analysis felt generic, like it could describe almost any team's month rather than theirs specifically." },
-      { "question": "What worry does Citra raise about relying on the tool every month?", "options": ["It might crash the computer", "They might lose the habit of noticing patterns themselves", "It costs too much money", "Other coworkers would be jealous"], "correctIndex": 1, "explanation": "Citra worries they'll lose the habit of noticing patterns themselves if the software always notices them first." },
-      { "question": "How does Citra prefer to use the tool?", "options": ["Not at all, ever", "Writing a rough draft herself first, then using the tool only to polish language", "Letting it write everything with no changes", "Only using it on weekends"], "correctIndex": 1, "explanation": "She prefers to write a rough draft herself first and use the tool only to polish the language afterward." },
-      { "question": "What does Bima decide to do by the end of the conversation?", "options": ["Stop using the tool completely", "Write his own outline first, then let the tool help with phrasing", "Report Citra to their manager", "Ignore Citra's concerns"], "correctIndex": 1, "explanation": "Bima decides to write his own outline first and only let the tool help with phrasing, like Citra does." }
-    ]
+      {
+        "question": "What did the AI tool help Bima do yesterday?",
+        "options": [
+          "Cut his report writing time in half",
+          "Fix his computer",
+          "Schedule meetings",
+          "Learn a new language"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bima says the tool cut his writing time in half yesterday."
+      },
+      {
+        "question": "What specifically bothers Citra about the AI-written reports?",
+        "options": [
+          "They contain factual errors",
+          "They take too long to generate",
+          "The analysis feels generic, as if it could apply to almost any team",
+          "They are too expensive"
+        ],
+        "correctIndex": 2,
+        "explanation": "Citra says the analysis felt generic, like it could describe almost any team's month rather than theirs specifically."
+      },
+      {
+        "question": "What worry does Citra raise about relying on the tool every month?",
+        "options": [
+          "It might crash the computer",
+          "It costs too much money",
+          "Other coworkers would be jealous",
+          "They might lose the habit of noticing patterns themselves"
+        ],
+        "correctIndex": 3,
+        "explanation": "Citra worries they'll lose the habit of noticing patterns themselves if the software always notices them first."
+      },
+      {
+        "question": "How does Citra prefer to use the tool?",
+        "options": [
+          "Not at all, ever",
+          "Letting it write everything with no changes",
+          "Writing a rough draft herself first, then using the tool only to polish language",
+          "Only using it on weekends"
+        ],
+        "correctIndex": 2,
+        "explanation": "She prefers to write a rough draft herself first and use the tool only to polish the language afterward."
+      },
+      {
+        "question": "What does Bima decide to do by the end of the conversation?",
+        "options": [
+          "Stop using the tool completely",
+          "Report Citra to their manager",
+          "Write his own outline first, then let the tool help with phrasing",
+          "Ignore Citra's concerns"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bima decides to write his own outline first and only let the tool help with phrasing, like Citra does."
+      },
+      {
+        "question": "What important issue had Bima initially overlooked?",
+        "options": [
+          "Whether the report used enough adjectives",
+          "Whether Citra owned a computer",
+          "Whether management preferred handwriting",
+          "Whether company data was allowed in the tool"
+        ],
+        "correctIndex": 3,
+        "explanation": "Authorization and confidentiality come before convenience."
+      },
+      {
+        "question": "Why is a fluent report still risky?",
+        "options": [
+          "Good grammar always changes the numbers",
+          "Polished language can hide invented facts or weak reasoning",
+          "Long reports cannot be checked",
+          "Software never produces complete sentences"
+        ],
+        "correctIndex": 1,
+        "explanation": "Surface quality is not evidence of accuracy."
+      },
+      {
+        "question": "Who remains accountable for the submitted report?",
+        "options": [
+          "The employee and organization using the tool",
+          "The software alone",
+          "An unnamed internet user",
+          "The first reader only"
+        ],
+        "correctIndex": 0,
+        "explanation": "Human responsibility cannot be delegated to generated text."
+      },
+      {
+        "question": "Which workflow do they finally choose?",
+        "options": [
+          "Upload every record and submit the first result",
+          "Use approved data, draft an outline, verify claims, edit, and disclose use when required",
+          "Let the tool choose confidential facts",
+          "Stop understanding the report"
+        ],
+        "correctIndex": 1,
+        "explanation": "The ending defines a controlled assistance process."
+      },
+      {
+        "question": "What is Citra’s main concern about repeated dependence?",
+        "options": [
+          "Reports will become too short",
+          "Managers will ban all computers",
+          "The team may lose subject knowledge and careful pattern recognition",
+          "Coworkers will stop speaking"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her concern is capability and judgment, not merely style."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; add authorization, confidentiality, evidence checking, disclosure, and human accountability to the AI workflow",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-technology-03",
@@ -75,36 +306,153 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back. Today I'm speaking with Reza, who researches manipulated videos online. Thanks for joining me, Reza.",
-      "Guest: [pleasantly] Happy to be here. It's a subject more people should understand, especially now that these videos look increasingly convincing.",
-      "Host: [curious] Let's start simply. Why should an ordinary listener even worry about this, if they're not journalists or researchers?",
-      "Guest: [explaining] Because even though most people won't create one, almost everyone will eventually see one, and sharing it takes only a single tap.",
-      "Host: [interested] What usually gives a manipulated video away, assuming someone is paying close attention?",
-      "Guest: [thoughtful] Lighting inconsistencies are common, along with unnatural blinking, or a voice that doesn't quite match the mouth movements if you watch closely enough.",
-      "Host: [curious] Is checking those details realistic for someone scrolling quickly during their commute, though?",
-      "Guest: [honestly] Rarely, which is exactly why the technical details matter less than the habit of simply pausing before sharing anything emotional.",
-      "Host: [reflective] That's an interesting shift, from analyzing pixels to just questioning your own reaction first.",
-      "Guest: [explaining] Precisely. If a video makes you furious or terrified within seconds, that intensity itself should be a signal to slow down, not speed up.",
-      "Host: [curious] What's a practical first step, if someone is unsure whether something is genuine?",
-      "Guest: [advising] Search whether reliable news outlets are reporting the same event. If nobody credible is covering it, that's meaningful information on its own.",
-      "Host: [interested] Despite all these warnings, do you think most people will actually change their sharing habits?",
-      "Guest: [honestly] Some will, some won't, but even a small percentage pausing before sharing reduces how quickly false videos spread across a whole network.",
-      "Host: [curious] Any final advice for listeners before we finish today?",
-      "Guest: [warmly] Trust your hesitation. In spite of how confident a video looks, a small doubt is often worth investigating before you press share.",
-      "Host: [smiling] Wonderful advice, Reza. Thank you for making a complicated topic feel manageable for all of us today.",
-      "Guest: [warmly] Thank you for having me. I hope it makes at least one person pause before their next share."
+      "Host: [thoughtful] Welcome back. Today I'm speaking with Reza, who researches manipulated videos online. Thanks for joining me, Reza.",
+      "Guest: Happy to be here. It's a subject more people should understand, especially now that these videos look increasingly convincing.",
+      "Host: [carefully] Let's start simply. Why should an ordinary listener even worry about this, if they're not journalists or researchers?",
+      "Guest: Because even though most people won't create one, almost everyone will eventually see one, and sharing it takes only a single tap.",
+      "Host: [reflective] What usually gives a manipulated video away, assuming someone is paying close attention?",
+      "Guest: Visual or audio defects can be clues, but they are not proof. Manipulated media may look convincing, while genuine compressed or translated video may also look strange.",
+      "Host: [honestly] Is checking those details realistic for someone scrolling quickly during their commute, though?",
+      "Guest: Rarely, which is exactly why the technical details matter less than the habit of simply pausing before sharing anything emotional.",
+      "Host: [seriously] That's an interesting shift, from analyzing pixels to just questioning your own reaction first.",
+      "Guest: Precisely. If a video makes you furious or terrified within seconds, that intensity itself should be a signal to slow down, not speed up.",
+      "Host: [gently] What's a practical first step, if someone is unsure whether something is genuine?",
+      "Guest: Trace the earliest available upload, date, location, and full context. Compare independent reliable reporting or fact-checking, but remember that missing coverage alone does not prove a local event is false.",
+      "Host: [encouraging] Despite all these warnings, do you think most people will actually change their sharing habits?",
+      "Guest: Some will and some will not. While a claim remains uncertain, avoid amplifying it, report harmful deception through appropriate channels, and describe what is not yet known.",
+      "Host: [sincere] Any final advice for listeners before we finish today?",
+      "Guest: Trust your hesitation. In spite of how confident a video looks, a small doubt is often worth investigating before you press share.",
+      "Host: [thoughtful] Wonderful advice, Reza. Thank you for making a complicated topic feel manageable for all of us today.",
+      "Guest: Thank you for having me. I hope it makes at least one person pause before their next share."
     ],
     "quiz": [
-      { "question": "Why does Reza say ordinary listeners should care about manipulated videos?", "options": ["They will all become researchers", "Almost everyone will eventually see one, and sharing takes only a single tap", "It's required by law", "Only journalists are affected"], "correctIndex": 1, "explanation": "Reza explains that even though most people won't create a manipulated video, almost everyone will see one and can share it instantly." },
-      { "question": "What technical details does Reza mention that can reveal a manipulated video?", "options": ["File size and upload date", "Lighting inconsistencies, unnatural blinking, or a mismatched voice and mouth", "The video's title", "The number of views"], "correctIndex": 1, "explanation": "He mentions lighting inconsistencies, unnatural blinking, and voices that don't quite match mouth movements." },
-      { "question": "According to Reza, what matters more than analyzing technical details while scrolling quickly?", "options": ["Watching the video twice", "The habit of pausing before sharing anything emotional", "Turning up the volume", "Reading the comments first"], "correctIndex": 1, "explanation": "He says the habit of pausing before sharing something emotional matters more than checking technical details." },
-      { "question": "What practical first step does Reza suggest for checking if something is genuine?", "options": ["Asking a friend", "Searching whether reliable news outlets are reporting the same event", "Downloading the video", "Ignoring it completely"], "correctIndex": 1, "explanation": "He suggests checking whether reliable news outlets are covering the same event." },
-      { "question": "What is Reza's final advice to listeners?", "options": ["Share everything immediately", "Trust your hesitation, since a small doubt is worth investigating before sharing", "Stop watching videos entirely", "Only trust videos with many views"], "correctIndex": 1, "explanation": "He advises listeners to trust their hesitation and investigate before pressing share, even if a video looks confident." }
-    ]
+      {
+        "question": "Why should ordinary listeners care about manipulated videos?",
+        "options": [
+          "Only researchers can receive videos",
+          "Almost anyone can encounter and quickly spread one",
+          "Manipulation exists only in films",
+          "Sharing requires specialist equipment"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ordinary sharing decisions affect distribution."
+      },
+      {
+        "question": "What limitation of visual clues does Reza explain?",
+        "options": [
+          "They work perfectly on every screen",
+          "They can mislead because false media may look natural and genuine video may contain defects",
+          "They reveal the author’s name",
+          "They replace source checking"
+        ],
+        "correctIndex": 1,
+        "explanation": "Technical appearance is not a complete verification method."
+      },
+      {
+        "question": "What habit matters during fast scrolling?",
+        "options": [
+          "Increasing playback speed",
+          "Reading only the comments",
+          "Pausing before sharing emotional content",
+          "Following the largest account"
+        ],
+        "correctIndex": 2,
+        "explanation": "A pause interrupts impulsive amplification."
+      },
+      {
+        "question": "What practical checks are suggested?",
+        "options": [
+          "Count the number of likes",
+          "Trust any matching repost",
+          "Judge only the speaker’s face",
+          "Trace the source, date, context, and compare reliable independent evidence"
+        ],
+        "correctIndex": 3,
+        "explanation": "Several contextual checks work together."
+      },
+      {
+        "question": "What is Reza’s final advice?",
+        "options": [
+          "Share first and correct later",
+          "Believe every polished clip",
+          "Treat hesitation as a reason to investigate before sharing",
+          "Ignore uncertainty"
+        ],
+        "correctIndex": 2,
+        "explanation": "Doubt should prompt verification rather than amplification."
+      },
+      {
+        "question": "Why can visual defects be a weak test?",
+        "options": [
+          "Lighting never changes naturally",
+          "Manipulated media may look convincing, while genuine compressed video may look strange",
+          "All genuine speakers blink equally",
+          "Only journalists can watch videos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Appearance alone can create both false confidence and false suspicion."
+      },
+      {
+        "question": "What should a viewer trace first?",
+        "options": [
+          "The angriest comment",
+          "The earliest available source and its original context",
+          "The largest account",
+          "The shortest copy"
+        ],
+        "correctIndex": 1,
+        "explanation": "Provenance helps establish where and when media appeared."
+      },
+      {
+        "question": "Why does missing news coverage not settle the question?",
+        "options": [
+          "A real local event may not yet be reported, and a false claim may be widely repeated",
+          "News outlets report every event instantly",
+          "Popular posts are always verified",
+          "Silence proves a video is false"
+        ],
+        "correctIndex": 0,
+        "explanation": "Absence or popularity alone is not proof."
+      },
+      {
+        "question": "What should someone do while verification remains uncertain?",
+        "options": [
+          "Avoid amplifying the claim and describe the uncertainty accurately",
+          "Add a dramatic caption",
+          "Download and edit the video",
+          "Assume the preferred explanation"
+        ],
+        "correctIndex": 0,
+        "explanation": "Responsible sharing includes restraint."
+      },
+      {
+        "question": "What emotional reaction does Reza treat as a warning?",
+        "options": [
+          "Calm curiosity about the source",
+          "A wish to read several reports",
+          "Concern about the upload date",
+          "A sudden urge to share because of anger or fear"
+        ],
+        "correctIndex": 3,
+        "explanation": "Strong emotion can reduce careful checking."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; remove unreliable visual tells and the claim that absent news coverage is evidence, then teach source, context, corroboration, and uncertainty",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-technology-04",
@@ -113,31 +461,145 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [honestly] Three months ago, a friend challenged me to leave my phone in a drawer for an entire weekend, and I laughed, assuming it would be effortless.",
-      "Narrator: [reflective] It was not effortless. Within the first hour, my hand kept reaching toward my pocket, even though nothing was actually there anymore.",
-      "Narrator: [thoughtful] I realized how many small moments I used to fill with scrolling, waiting for coffee, riding elevators, sitting at red lights without even noticing.",
-      "Narrator: [honestly] By Saturday afternoon, I felt genuinely restless, as if something essential were missing, even though nothing in my actual life had changed.",
-      "Narrator: [surprised] However, something interesting happened once that restlessness passed. I noticed the weather, the smell of the neighbor's cooking, a conversation happening two tables away.",
-      "Narrator: [thoughtful] Despite years of believing I was simply too busy to notice these details, it turned out I had time; I had just filled it with a screen instead.",
-      "Narrator: [reflective] I called my sister on Saturday evening, using an actual phone call, and we talked longer than any of our recent text conversations combined.",
-      "Narrator: [warmly] She mentioned she'd been struggling at work, something she never would have typed in a message, but somehow said easily out loud on the phone.",
-      "Narrator: [thoughtful] That conversation made me question whether constant texting actually connects people, or whether it sometimes replaces deeper conversations with quicker, shallower ones.",
-      "Narrator: [determined] On Sunday, I opened the drawer again, expecting relief, but I actually felt a little disappointed, which surprised me more than anything else that weekend.",
-      "Narrator: [thoughtful] As a result, I now leave my phone in another room every Saturday morning, even though nobody is forcing me to anymore.",
-      "Narrator: [peacefully] It's not that my phone is evil; it's simply that, given the chance, it will happily consume every unclaimed minute of my day.",
-      "Narrator: [warmly] So now I claim a few of those minutes back deliberately, before the notifications get the chance to claim them first.",
-      "Narrator: [with a small smile] My friend asked if I'd try a full week next. I told her one weekend was brave enough for now."
+      "Narrator: [thoughtful] Three months ago, a friend challenged me to leave my phone in a drawer for an entire weekend, and I laughed, assuming it would be effortless.",
+      "Narrator: It was not effortless. Within the first hour, my hand kept reaching toward my pocket, even though nothing was actually there anymore.",
+      "Narrator: [carefully] I realized how many safe, unoccupied moments I filled with scrolling—waiting for coffee, riding elevators, or sitting at home between tasks—without noticing. I never use a handheld phone while driving.",
+      "Narrator: By Saturday afternoon, I felt genuinely restless, as if something essential were missing, even though nothing in my actual life had changed.",
+      "Narrator: [reflective] However, something interesting happened once that restlessness passed. I noticed the weather, the smell of the neighbor's cooking, a conversation happening two tables away.",
+      "Narrator: Despite years of believing I was simply too busy to notice these details, it turned out I had time; I had just filled it with a screen instead.",
+      "Narrator: [honestly] I called my sister on Saturday evening, using an actual phone call, and we talked longer than any of our recent text conversations combined.",
+      "Narrator: She mentioned she'd been struggling at work, something she never would have typed in a message, but somehow said easily out loud on the phone.",
+      "Narrator: [seriously] That conversation showed me that a call created room for depth on that occasion. It did not prove that texting is shallow for everyone; different people communicate and access technology differently.",
+      "Narrator: On Sunday, I opened the drawer again, expecting relief, but I actually felt a little disappointed, which surprised me more than anything else that weekend.",
+      "Narrator: [gently] Now I plan a limited phone-free period after checking care, work, travel, and safety needs. Close contacts know an available route for genuine urgency.",
+      "Narrator: It's not that my phone is evil; it's simply that, given the chance, it will happily consume every unclaimed minute of my day.",
+      "Narrator: [encouraging] So now I claim a few of those minutes back deliberately, before the notifications get the chance to claim them first.",
+      "Narrator: My friend asked if I'd try a full week next. I told her one weekend was brave enough for now."
     ],
     "quiz": [
-      { "question": "What challenge did the narrator's friend give him three months ago?", "options": ["To buy a new phone", "To leave his phone in a drawer for an entire weekend", "To delete all his social media accounts", "To learn a new app"], "correctIndex": 1, "explanation": "His friend challenged him to leave his phone in a drawer for an entire weekend." },
-      { "question": "How did the narrator feel by Saturday afternoon?", "options": ["Completely relaxed and happy", "Genuinely restless, as if something essential were missing", "Angry at his friend", "Bored and sleepy"], "correctIndex": 1, "explanation": "He felt genuinely restless by Saturday afternoon, as if something essential were missing." },
-      { "question": "What did the narrator start noticing once the restlessness passed?", "options": ["Nothing changed at all", "The weather, cooking smells, and nearby conversations", "New apps to download", "His phone's battery life"], "correctIndex": 1, "explanation": "He began noticing the weather, the smell of cooking, and a conversation happening nearby." },
-      { "question": "What happened when he called his sister on Saturday evening?", "options": ["She didn't answer", "She mentioned struggling at work, something she wouldn't have typed in a message", "They argued about the challenge", "She refused to talk without video"], "correctIndex": 1, "explanation": "His sister mentioned struggling at work, something she said easily aloud but never would have typed in a text." },
-      { "question": "What does the narrator do now every Saturday morning?", "options": ["He checks his phone constantly", "He leaves his phone in another room, even though nobody forces him to", "He calls his friend to complain", "He avoids his family"], "correctIndex": 1, "explanation": "He now leaves his phone in another room every Saturday morning by his own choice." }
-    ]
+      {
+        "question": "What challenge did the narrator's friend give him three months ago?",
+        "options": [
+          "To buy a new phone",
+          "To delete all his social media accounts",
+          "To learn a new app",
+          "To leave his phone in a drawer for an entire weekend"
+        ],
+        "correctIndex": 3,
+        "explanation": "His friend challenged him to leave his phone in a drawer for an entire weekend."
+      },
+      {
+        "question": "How did the narrator feel by Saturday afternoon?",
+        "options": [
+          "Completely relaxed and happy",
+          "Angry at his friend",
+          "Genuinely restless, as if something essential were missing",
+          "Bored and sleepy"
+        ],
+        "correctIndex": 2,
+        "explanation": "He felt genuinely restless by Saturday afternoon, as if something essential were missing."
+      },
+      {
+        "question": "What did the narrator start noticing once the restlessness passed?",
+        "options": [
+          "Nothing changed at all",
+          "New apps to download",
+          "The weather, cooking smells, and nearby conversations",
+          "His phone's battery life"
+        ],
+        "correctIndex": 2,
+        "explanation": "He began noticing the weather, the smell of cooking, and a conversation happening nearby."
+      },
+      {
+        "question": "What happened when he called his sister on Saturday evening?",
+        "options": [
+          "She didn't answer",
+          "She mentioned struggling at work, something she wouldn't have typed in a message",
+          "They argued about the challenge",
+          "She refused to talk without video"
+        ],
+        "correctIndex": 1,
+        "explanation": "His sister mentioned struggling at work, something she said easily aloud but never would have typed in a text."
+      },
+      {
+        "question": "What does the narrator do now every Saturday morning?",
+        "options": [
+          "He leaves his phone in another room, even though nobody forces him to",
+          "He checks his phone constantly",
+          "He calls his friend to complain",
+          "He avoids his family"
+        ],
+        "correctIndex": 0,
+        "explanation": "He now leaves his phone in another room every Saturday morning by his own choice."
+      },
+      {
+        "question": "Why was the original weekend challenge incomplete as general advice?",
+        "options": [
+          "Some people need a reachable device for safety, care, work, navigation, or accessibility",
+          "Every weekend requires social media",
+          "Phones cannot make calls",
+          "Drawers damage batteries"
+        ],
+        "correctIndex": 0,
+        "explanation": "A safe boundary depends on real responsibilities."
+      },
+      {
+        "question": "What does the narrator do before planned offline time now?",
+        "options": [
+          "Blocks every relative",
+          "Checks essential duties and gives close contacts an urgent route",
+          "Leaves home without directions",
+          "Turns off emergency alerts"
+        ],
+        "correctIndex": 1,
+        "explanation": "Preparation makes the boundary responsible."
+      },
+      {
+        "question": "What did the call with his sister reveal?",
+        "options": [
+          "A longer conversation made space for a concern she had not texted",
+          "She had lost her telephone",
+          "Their messages had been deleted",
+          "She opposed every screen"
+        ],
+        "correctIndex": 0,
+        "explanation": "The medium supported a deeper exchange in this case."
+      },
+      {
+        "question": "What conclusion would be too strong?",
+        "options": [
+          "That attention can become habitual",
+          "That boundaries can be tested",
+          "That a call may feel different from a text",
+          "That texting is always shallow and phone-free time suits everyone"
+        ],
+        "correctIndex": 3,
+        "explanation": "One personal experience cannot define all communication."
+      },
+      {
+        "question": "What lasting change does he choose?",
+        "options": [
+          "A limited weekly period away from routine phone use",
+          "A permanent ban on technology",
+          "No contact with family",
+          "A week without emergency access"
+        ],
+        "correctIndex": 0,
+        "explanation": "The new practice is modest and repeatable."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; remove the admission of scrolling at red lights and make disconnection compatible with emergencies, care duties, navigation, and accessibility",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-technology-05",
@@ -146,34 +608,151 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Fikri", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Fikri",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [concerned] Fikri, our little cousin Bayu got his first tablet last week, and honestly, I'm not sure our aunt has thought through any rules for it.",
-      "Fikri: [thoughtful] I noticed that too. He was watching videos at the dinner table yesterday, and nobody seemed to think it was worth mentioning.",
-      "Nadia: [reasonable] I don't want to lecture our aunt, but if he starts building habits now, they'll likely stay with him for years, not just this year.",
-      "Fikri: [agreeing] True. Although it's not really our place to set rules, maybe we could suggest a few gently, since she did ask what we thought.",
-      "Nadia: [thoughtful] What would you suggest first? I don't think banning it completely would work, or even help him, honestly.",
-      "Fikri: [reasoning] Definitely not banning it. Even though screens worry me sometimes, they're clearly part of his generation's world, whether we like that or not.",
-      "Nadia: [considering] Maybe something like no screens during meals, and nothing right before bedtime, since that seems to affect how children sleep.",
-      "Fikri: [agreeing] That sounds reasonable. As a result, mealtimes stay for actual conversation, and bedtime stays calm instead of overstimulated.",
-      "Nadia: [thoughtful] What about the content itself, though? Not every video is harmless, despite how it might look at first glance.",
-      "Fikri: [explaining] Right, so maybe our aunt could watch alongside him sometimes, instead of just handing over the tablet and walking away.",
-      "Nadia: [warmly] I like that better than strict rules alone. It teaches him to think about what he's watching, not just follow whatever autoplay suggests next.",
-      "Fikri: [thoughtful] Exactly. If we only forbid things, he'll likely find ways around it later. If we explain reasons, he might actually understand them.",
-      "Nadia: [determined] Let's write down three simple suggestions, then offer them gently, without sounding like we're criticizing how she's raising him.",
-      "Fikri: [agreeing] Good plan. In spite of good intentions, nobody likes unsolicited parenting advice, even from family who genuinely cares.",
-      "Nadia: [warmly] Exactly why we'll frame it as something we're figuring out for ourselves too, not as instructions for her specifically.",
-      "Fikri: [smiling] She'll probably appreciate that approach more anyway. Let's talk to her this weekend, before habits get harder to change."
+      "Nadia: [thoughtful] Fikri, our little cousin Bayu got his first tablet last week, and honestly, I'm not sure our aunt has thought through any rules for it.",
+      "Fikri: I noticed that too. He was watching videos at the dinner table yesterday, and nobody seemed to think it was worth mentioning.",
+      "Nadia: [carefully] I do not want to lecture our aunt or predict Bayu’s future. Since she asked, we can offer questions while she makes decisions based on his age, needs, and family routines.",
+      "Fikri: True. Although it's not really our place to set rules, maybe we could suggest a few gently, since she did ask what we thought.",
+      "Nadia: [reflective] What would you suggest first? I don't think banning it completely would work, or even help him, honestly.",
+      "Fikri: Definitely not banning it. Even though screens worry me sometimes, they're clearly part of his generation's world, whether we like that or not.",
+      "Nadia: [honestly] Maybe she could test device-free meals and a calm bedtime routine, then adjust them if Bayu’s sleep, learning, accessibility, or family needs suggest something different.",
+      "Fikri: That sounds reasonable. As a result, mealtimes stay for actual conversation, and bedtime stays calm instead of overstimulated.",
+      "Nadia: [seriously] What about the content itself, though? Not every video is harmless, despite how it might look at first glance.",
+      "Fikri: Right. She could sometimes watch with him, use age-appropriate safety and privacy settings, and teach him not to share location, passwords, school details, or family information.",
+      "Nadia: [gently] I like that better than strict rules alone. It teaches him to think about what he's watching, not just follow whatever autoplay suggests next.",
+      "Fikri: Exactly. Clear reasons, a way to report upsetting contact, and regular review may teach judgment better than unexplained punishment alone.",
+      "Nadia: [encouraging] Let's write down three simple suggestions, then offer them gently, without sounding like we're criticizing how she's raising him.",
+      "Fikri: Good plan. In spite of good intentions, nobody likes unsolicited parenting advice, even from family who genuinely cares.",
+      "Nadia: [sincere] Exactly why we'll frame it as something we're figuring out for ourselves too, not as instructions for her specifically.",
+      "Fikri: She'll probably appreciate that approach more anyway. Let's talk to her this weekend, before habits get harder to change."
     ],
     "quiz": [
-      { "question": "What did Nadia and Fikri notice about their cousin Bayu?", "options": ["He refuses to use his new tablet", "He was watching videos at the dinner table and nobody mentioned it", "He broke the tablet already", "He shares his tablet with friends"], "correctIndex": 1, "explanation": "Fikri noticed Bayu watching videos at the dinner table, and nobody seemed to think it was worth mentioning." },
-      { "question": "Do Nadia and Fikri want to ban the tablet completely?", "options": ["Yes, immediately", "No, they don't think banning it would work or help him", "Yes, but only on weekends", "They haven't discussed it"], "correctIndex": 1, "explanation": "Nadia says she doesn't think banning it completely would work or even help him." },
-      { "question": "What two simple rules do they consider suggesting?", "options": ["No tablet ever, and no friends over", "No screens during meals, and nothing right before bedtime", "Only educational apps allowed", "Only one hour per week"], "correctIndex": 1, "explanation": "They consider suggesting no screens during meals and nothing right before bedtime." },
-      { "question": "What does Fikri suggest about content, instead of just handing over the tablet?", "options": ["Deleting all apps", "Their aunt could watch alongside Bayu sometimes", "Selling the tablet", "Ignoring the issue"], "correctIndex": 1, "explanation": "Fikri suggests their aunt could watch alongside him sometimes instead of just handing over the tablet." },
-      { "question": "How do they plan to present their suggestions to their aunt?", "options": ["As strict instructions she must follow", "Gently, framed as something they're figuring out for themselves too", "By reporting her to a family elder", "They decide not to say anything at all"], "correctIndex": 1, "explanation": "They plan to frame it as something they're figuring out for themselves too, not as criticism or instructions." }
-    ]
+      {
+        "question": "What did Nadia and Fikri notice about their cousin Bayu?",
+        "options": [
+          "He was watching videos at the dinner table and nobody mentioned it",
+          "He refuses to use his new tablet",
+          "He broke the tablet already",
+          "He shares his tablet with friends"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fikri noticed Bayu watching videos at the dinner table, and nobody seemed to think it was worth mentioning."
+      },
+      {
+        "question": "Do Nadia and Fikri want to ban the tablet completely?",
+        "options": [
+          "Yes, immediately",
+          "Yes, but only on weekends",
+          "No, they don't think banning it would work or help him",
+          "They haven't discussed it"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nadia says she doesn't think banning it completely would work or even help him."
+      },
+      {
+        "question": "What two simple rules do they consider suggesting?",
+        "options": [
+          "No tablet ever, and no friends over",
+          "Only educational apps allowed",
+          "Only one hour per week",
+          "No screens during meals, and nothing right before bedtime"
+        ],
+        "correctIndex": 3,
+        "explanation": "They consider suggesting no screens during meals and nothing right before bedtime."
+      },
+      {
+        "question": "What does Fikri suggest about content, instead of just handing over the tablet?",
+        "options": [
+          "Deleting all apps",
+          "Selling the tablet",
+          "Ignoring the issue",
+          "Their aunt could watch alongside Bayu sometimes"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fikri suggests their aunt could watch alongside him sometimes instead of just handing over the tablet."
+      },
+      {
+        "question": "How do they plan to present their suggestions to their aunt?",
+        "options": [
+          "Gently, framed as something they're figuring out for themselves too",
+          "As strict instructions she must follow",
+          "By reporting her to a family elder",
+          "They decide not to say anything at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "They plan to frame it as something they're figuring out for themselves too, not as criticism or instructions."
+      },
+      {
+        "question": "Why do Nadia and Fikri avoid setting rules themselves?",
+        "options": [
+          "They do not know Bayu’s name",
+          "The tablet belongs to a school",
+          "Bayu’s guardian has the authority and relevant knowledge",
+          "Rules are never useful"
+        ],
+        "correctIndex": 2,
+        "explanation": "Their role is supportive rather than parental."
+      },
+      {
+        "question": "What should guide a screen plan besides time?",
+        "options": [
+          "Only the price of the tablet",
+          "The number of cousins",
+          "Whatever autoplay recommends",
+          "Content, purpose, age, privacy, safety, sleep, access needs, and family routines"
+        ],
+        "correctIndex": 3,
+        "explanation": "The dialogue broadens the plan beyond one clock limit."
+      },
+      {
+        "question": "Why is watching together useful?",
+        "options": [
+          "It guarantees every video is true",
+          "It removes the need for settings",
+          "It lets cousins collect passwords",
+          "An adult can discuss content and notice problems rather than leaving autoplay unexamined"
+        ],
+        "correctIndex": 3,
+        "explanation": "Co-use supports guidance but is not a complete safeguard."
+      },
+      {
+        "question": "What private information should Bayu avoid sharing?",
+        "options": [
+          "His favorite color",
+          "His location, passwords, school details, or family information",
+          "A book title",
+          "A general hobby"
+        ],
+        "correctIndex": 1,
+        "explanation": "The revised conversation names practical privacy risks."
+      },
+      {
+        "question": "How should the plan change over time?",
+        "options": [
+          "It should remain fixed forever",
+          "The guardian should review it as Bayu’s needs and behavior change",
+          "Bayu should hide problems",
+          "The cousins should enforce it secretly"
+        ],
+        "correctIndex": 1,
+        "explanation": "A family plan benefits from review rather than permanent assumptions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; keep the guardian in charge and add developmental fit, privacy, safety settings, accessibility, and collaborative review",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-technology-06",
@@ -182,31 +761,145 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] Two years ago, I gradually filled my apartment with connected gadgets, lights that dim automatically, a thermostat that learns my schedule, a lock that opens through an app.",
-      "Narrator: [warmly] At first, it genuinely felt like living in the future, adjusting everything from my phone without ever touching a single switch on the wall.",
-      "Narrator: [reflective] However, one evening the internet went down for six hours, and I suddenly realized how dependent I had become on systems I barely understood.",
-      "Narrator: [honestly] I couldn't dim the lights manually, because the switch itself had been replaced by something that only responded to an app I couldn't open.",
-      "Narrator: [thoughtful] I sat in a brightly lit room, unable to do something as simple as making it darker, and found that genuinely unsettling.",
-      "Narrator: [surprised] Even though convenience was the entire point of these devices, that evening proved how fragile convenience becomes once the connection disappears.",
-      "Narrator: [determined] So afterward, I made a rule for myself: every automated device needed a manual backup that worked without any internet connection whatsoever.",
-      "Narrator: [thoughtful] I replaced one switch, kept a spare key hidden outside despite the smart lock, and learned exactly how to adjust the thermostat by hand.",
-      "Narrator: [reflective] It took an afternoon to set up, which felt inconvenient at the time, though it was nothing compared to sitting helplessly in a lit room again.",
-      "Narrator: [warmly] I still enjoy the automation daily; adjusting the lights from bed remains a small pleasure I wouldn't willingly give up now.",
-      "Narrator: [thoughtful] But I no longer trust convenience blindly, the way I did when I first filled my apartment with these devices.",
-      "Narrator: [peacefully] As a result, I feel calmer now, knowing that if the technology fails again, I won't be sitting helplessly, waiting for a connection to return.",
-      "Narrator: [warmly] In spite of everything these gadgets offer, the most valuable lesson they taught me was simply this: always keep a way to manage without them.",
-      "Narrator: [with a small smile] My friends tease me about my hidden spare key, but I notice they've started copying the idea anyway."
+      "Narrator: [thoughtful] Two years ago, I gradually filled my apartment with connected gadgets, lights that dim automatically, a thermostat that learns my schedule, a lock that opens through an app.",
+      "Narrator: At first, it genuinely felt like living in the future, adjusting everything from my phone without ever touching a single switch on the wall.",
+      "Narrator: [carefully] However, one evening the internet went down for six hours, and I suddenly realized how dependent I had become on systems I barely understood.",
+      "Narrator: I couldn't dim the lights manually, because the switch itself had been replaced by something that only responded to an app I couldn't open.",
+      "Narrator: [reflective] I sat in a brightly lit room, unable to do something as simple as making it darker, and found that genuinely unsettling.",
+      "Narrator: Even though convenience was the entire point of these devices, that evening proved how fragile convenience becomes once the connection disappears.",
+      "Narrator: [honestly] So afterward, I made a rule for myself: every automated device needed a manual backup that worked without any internet connection whatsoever.",
+      "Narrator: I restored manual controls, arranged a secure authorized key backup rather than hiding one outside, and tested how to operate the heating safely without the app.",
+      "Narrator: [seriously] I also reviewed software support, account security, device permissions, and what would happen when a vendor stopped providing updates.",
+      "Narrator: I still enjoy the automation daily; adjusting the lights from bed remains a small pleasure I wouldn't willingly give up now.",
+      "Narrator: [gently] But I no longer trust convenience blindly. I ask what data is collected and make sure household members and guests understand devices that could affect their privacy.",
+      "Narrator: As a result, I feel calmer now, knowing that if the technology fails again, I won't be sitting helplessly, waiting for a connection to return.",
+      "Narrator: [encouraging] In spite of everything these gadgets offer, the most valuable lesson they taught me was simply this: always keep a way to manage without them.",
+      "Narrator: My friends no longer hear about a key hidden outdoors. They hear about tested recovery, secure storage, limited access, and devices that remain safely usable when a service fails."
     ],
     "quiz": [
-      { "question": "What kinds of connected gadgets did the narrator install in her apartment?", "options": ["Only a smart television", "Lights that dim automatically, a learning thermostat, and an app-controlled lock", "A robot vacuum only", "Nothing electronic"], "correctIndex": 1, "explanation": "She mentions lights that dim automatically, a thermostat that learns her schedule, and an app-controlled lock." },
-      { "question": "What happened one evening that changed her perspective?", "options": ["A device caught fire", "The internet went down for six hours, leaving her unable to control anything manually", "She lost her phone", "A neighbor complained about noise"], "correctIndex": 1, "explanation": "The internet went down for six hours, and she realized she couldn't even dim the lights manually." },
-      { "question": "What rule did she make for herself afterward?", "options": ["To remove all smart devices immediately", "Every automated device needed a manual backup that worked without internet", "To never use technology again", "To only use gadgets during the day"], "correctIndex": 1, "explanation": "She made a rule that every automated device needed a manual backup that worked without any internet connection." },
-      { "question": "Did the narrator get rid of her smart devices after this experience?", "options": ["Yes, she removed everything", "No, she still enjoys the automation daily but added manual backups", "Yes, she sold her apartment", "She stopped using her phone entirely"], "correctIndex": 1, "explanation": "She still enjoys the automation daily; she simply added manual backups rather than removing the devices." },
-      { "question": "What does the narrator say is the most valuable lesson from this experience?", "options": ["Never trust any technology", "Always keep a way to manage without the devices", "Buy more expensive gadgets", "Avoid the internet completely"], "correctIndex": 1, "explanation": "She says the most valuable lesson was to always keep a way to manage without the devices." }
-    ]
+      {
+        "question": "What devices had the narrator installed?",
+        "options": [
+          "Only a television",
+          "Medical equipment",
+          "Connected lights, heating controls, and a smart lock",
+          "A public camera network"
+        ],
+        "correctIndex": 2,
+        "explanation": "Several home functions depended on connected devices."
+      },
+      {
+        "question": "What exposed the dependence?",
+        "options": [
+          "A burglary",
+          "A six-hour internet outage",
+          "A power bill",
+          "A visitor’s complaint"
+        ],
+        "correctIndex": 1,
+        "explanation": "The outage blocked an ordinary control."
+      },
+      {
+        "question": "What rule did the narrator adopt?",
+        "options": [
+          "Every device needs the same app",
+          "Critical devices need a secure, tested offline or manual option",
+          "Keys should be hidden outside",
+          "Automation must stay online"
+        ],
+        "correctIndex": 1,
+        "explanation": "The revised rule combines resilience and security."
+      },
+      {
+        "question": "Did the narrator remove all smart devices?",
+        "options": [
+          "No, the useful devices remained with safer controls",
+          "Yes, immediately",
+          "Only the lights remained",
+          "The apartment was abandoned"
+        ],
+        "correctIndex": 0,
+        "explanation": "The conclusion is not anti-technology."
+      },
+      {
+        "question": "What broader review was added?",
+        "options": [
+          "Security updates, data collection, access, consent, and end-of-support",
+          "Interior decoration only",
+          "The weather forecast",
+          "Friends’ preferred brands"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ownership includes privacy and maintenance."
+      },
+      {
+        "question": "Why was a hidden spare key a poor solution?",
+        "options": [
+          "Keys cannot open locks",
+          "Friends dislike metal objects",
+          "An accessible outdoor key can create a physical security risk",
+          "Smart locks never fail"
+        ],
+        "correctIndex": 2,
+        "explanation": "A backup should not introduce an obvious new weakness."
+      },
+      {
+        "question": "What does a safe manual backup require?",
+        "options": [
+          "A public code beside the door",
+          "Permanent internet service",
+          "The same password for every device",
+          "Authorized access that is tested and stored securely"
+        ],
+        "correctIndex": 3,
+        "explanation": "Resilience includes secure recovery."
+      },
+      {
+        "question": "What privacy question does the narrator add?",
+        "options": [
+          "Which light color is fashionable",
+          "How many switches friends own",
+          "What data devices collect and whether household members or guests understand it",
+          "Whether a thermostat has a screen"
+        ],
+        "correctIndex": 2,
+        "explanation": "Convenience can affect other people’s data."
+      },
+      {
+        "question": "Why are software updates mentioned?",
+        "options": [
+          "Updates always remove manual controls",
+          "Every update changes the electricity supply",
+          "Unsupported or unpatched devices can increase security risk",
+          "Old devices cannot contain data"
+        ],
+        "correctIndex": 2,
+        "explanation": "Maintenance is part of connected-device safety."
+      },
+      {
+        "question": "What is the main lesson?",
+        "options": [
+          "Automation must be rejected completely",
+          "Internet failures are impossible",
+          "Manual controls are always superior",
+          "Convenience should be paired with secure, tested alternatives and informed choices"
+        ],
+        "correctIndex": 3,
+        "explanation": "The conclusion balances usefulness and resilience."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; remove the hidden outdoor key and add secure recovery, updates, privacy review, household consent, and safe manual operation",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-technology-07",
@@ -215,35 +908,607 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good evening, listeners. Tonight we're discussing screen time reports, those weekly summaries our phones send us. We have a caller. Hello!",
-      "Caller: [a little nervous] Hello! I've actually wanted to talk about this for weeks, so thank you for taking my call tonight.",
-      "Radio Host: [curious] Tell us what happened. What made this topic worth calling about specifically?",
-      "Caller: [honestly] My weekly report said nine hours a day, and even though I suspected it was high, seeing the number felt like a small shock.",
-      "Radio Host: [interested] What was your first reaction when you actually saw that number written down?",
-      "Caller: [reflective] Honestly, defensiveness. I told myself half of that was work-related, checking emails and messages, so it didn't fully count.",
-      "Radio Host: [curious] Did you eventually accept that explanation, or did something make you question it further?",
-      "Caller: [thoughtful] I questioned it, once I checked the breakdown. Only two hours were work apps; the rest was scrolling, games, and videos I barely remembered watching.",
-      "Radio Host: [interested] That's a striking difference. How did that discovery change what you did afterward?",
-      "Caller: [explaining] Instead of deleting apps immediately, which never worked for me before, I set specific time limits for the ones eating up the most hours.",
-      "Radio Host: [curious] Did the limits actually work, despite how easy those limits usually are to simply ignore?",
-      "Caller: [honestly] The first week, I overrode them constantly. However, by week three, hitting the limit finally felt like a real, useful signal to stop.",
-      "Radio Host: [interested] What does your report look like now, compared to those original nine hours?",
-      "Caller: [warmly] About five hours, and much of that is genuinely intentional now, video calls with my parents, or music while cooking dinner.",
-      "Radio Host: [curious] What would you tell listeners who feel afraid to actually check their own number?",
-      "Caller: [encouraging] Check it anyway, even though it's uncomfortable. As a result, you can't fix a habit that you're still pretending doesn't exist.",
-      "Radio Host: [warmly] Wise advice. Thank you for being so honest with us and our listeners tonight.",
-      "Caller: [sincerely] Thank you for listening. I hope someone finally checks their own number after hearing this."
+      "Radio Host: [thoughtful] Good evening, listeners. Tonight we're discussing screen time reports, those weekly summaries our phones send us. We have a caller. Hello!",
+      "Caller: Hello! I've actually wanted to talk about this for weeks, so thank you for taking my call tonight.",
+      "Radio Host: [carefully] Tell us what happened. What made this topic worth calling about specifically?",
+      "Caller: My weekly report said nine hours a day, and even though I suspected it was high, seeing the number felt like a small shock.",
+      "Radio Host: [reflective] What was your first reaction when you actually saw that number written down?",
+      "Caller: Honestly, defensiveness. Then I realized the total was not a diagnosis or moral score; it mixed work, navigation, calls, reading, and unplanned entertainment.",
+      "Radio Host: [honestly] Did you eventually accept that explanation, or did something make you question it further?",
+      "Caller: I questioned it, once I checked the breakdown. Only two hours were work apps; the rest was scrolling, games, and videos I barely remembered watching.",
+      "Radio Host: [seriously] That's a striking difference. How did that discovery change what you did afterward?",
+      "Caller: Instead of deleting apps immediately, which never worked for me before, I set specific time limits for the ones eating up the most hours.",
+      "Radio Host: [gently] Did the limits actually work, despite how easy those limits usually are to simply ignore?",
+      "Caller: The first week, I overrode them constantly. However, by week three, hitting the limit finally felt like a real, useful signal to stop.",
+      "Radio Host: [encouraging] What does your report look like now, compared to those original nine hours?",
+      "Caller: About five hours, but I do not treat five as a universal target. More of my use is intentional now, including calls with my parents and music while cooking.",
+      "Radio Host: [sincere] What would you tell listeners who feel afraid to actually check their own number?",
+      "Caller: Review it without shame. Consider purpose and whether use disrupts sleep, worship, safety, work, relationships, or chosen priorities, then test one meaningful change.",
+      "Radio Host: [thoughtful] Wise advice. Different jobs, disabilities, care duties, and access needs produce different totals, so comparison with another listener may mislead us.",
+      "Caller: Thank you for listening. I hope someone finally checks their own number after hearing this."
     ],
     "quiz": [
-      { "question": "What number did the caller's weekly screen time report show?", "options": ["Two hours a day", "Nine hours a day", "Twenty hours a day", "One hour a day"], "correctIndex": 1, "explanation": "Her weekly report said nine hours a day, which felt like a small shock." },
-      { "question": "What was the caller's first reaction to seeing that number?", "options": ["Complete acceptance", "Defensiveness, assuming half of it was work-related", "Excitement", "Indifference"], "correctIndex": 1, "explanation": "Her first reaction was defensiveness, telling herself half the time was work-related." },
-      { "question": "What did the caller discover when she checked the actual breakdown?", "options": ["All nine hours were work", "Only two hours were work apps; the rest was scrolling, games, and videos", "The report was completely wrong", "She hadn't used her phone at all"], "correctIndex": 1, "explanation": "She discovered only two hours were work apps, while the rest was scrolling, games, and videos." },
-      { "question": "What did the caller do instead of deleting her apps immediately?", "options": ["Nothing at all", "She set specific time limits for the apps eating up the most hours", "She bought a new phone", "She gave her phone to a friend"], "correctIndex": 1, "explanation": "Instead of deleting apps, which never worked before, she set specific time limits for the biggest time users." },
-      { "question": "What is the caller's report showing now, and what does it mostly consist of?", "options": ["Nine hours, unchanged", "About five hours, much of it intentional, like video calls with parents", "Zero hours, since she quit using her phone", "Twelve hours, worse than before"], "correctIndex": 1, "explanation": "Her report now shows about five hours, much of it intentional, such as video calls with her parents or music while cooking." }
-    ]
+      {
+        "question": "What number did the caller's weekly screen time report show?",
+        "options": [
+          "Nine hours a day",
+          "Two hours a day",
+          "Twenty hours a day",
+          "One hour a day"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her weekly report said nine hours a day, which felt like a small shock."
+      },
+      {
+        "question": "What was the caller's first reaction to seeing that number?",
+        "options": [
+          "Complete acceptance",
+          "Excitement",
+          "Indifference",
+          "Defensiveness, assuming half of it was work-related"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her first reaction was defensiveness, telling herself half the time was work-related."
+      },
+      {
+        "question": "What did the caller discover when she checked the actual breakdown?",
+        "options": [
+          "All nine hours were work",
+          "Only two hours were work apps; the rest was scrolling, games, and videos",
+          "The report was completely wrong",
+          "She hadn't used her phone at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "She discovered only two hours were work apps, while the rest was scrolling, games, and videos."
+      },
+      {
+        "question": "What did the caller do instead of deleting her apps immediately?",
+        "options": [
+          "Nothing at all",
+          "She set specific time limits for the apps eating up the most hours",
+          "She bought a new phone",
+          "She gave her phone to a friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "Instead of deleting apps, which never worked before, she set specific time limits for the biggest time users."
+      },
+      {
+        "question": "What is the caller's report showing now, and what does it mostly consist of?",
+        "options": [
+          "Nine hours, unchanged",
+          "About five hours, much of it intentional, like video calls with parents",
+          "Zero hours, since she quit using her phone",
+          "Twelve hours, worse than before"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her report now shows about five hours, much of it intentional, such as video calls with her parents or music while cooking."
+      },
+      {
+        "question": "Why was nine hours not meaningful by itself?",
+        "options": [
+          "The phone had counted twice",
+          "The total mixed work, navigation, communication, entertainment, and other purposes",
+          "Nine hours is healthy for everyone",
+          "Reports never contain categories"
+        ],
+        "correctIndex": 1,
+        "explanation": "Context changes how a number should be interpreted."
+      },
+      {
+        "question": "What did the detailed report help the caller identify?",
+        "options": [
+          "A medical diagnosis",
+          "Her parents’ passwords",
+          "Unplanned activities she barely remembered choosing",
+          "A broken screen"
+        ],
+        "correctIndex": 2,
+        "explanation": "The breakdown supported a specific behavior change."
+      },
+      {
+        "question": "Why does the host reject comparison with other listeners?",
+        "options": [
+          "Nobody else owns a phone",
+          "Numbers are legally private",
+          "Needs, work, disability, care duties, and goals differ",
+          "Five hours is universally ideal"
+        ],
+        "correctIndex": 2,
+        "explanation": "A useful benchmark should be personal and functional."
+      },
+      {
+        "question": "What signs matter beyond the total?",
+        "options": [
+          "Whether use disrupts sleep, worship, safety, work, relationships, or chosen priorities",
+          "Whether the phone is new",
+          "Whether games have music",
+          "Whether friends report a lower number"
+        ],
+        "correctIndex": 0,
+        "explanation": "Impact matters more than a moralized score."
+      },
+      {
+        "question": "What does the caller advise listeners to do?",
+        "options": [
+          "Delete all applications immediately",
+          "Hide the weekly report",
+          "Compete for the lowest total",
+          "Review the pattern without shame and choose one meaningful change"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised advice is reflective and practical."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "revise; prevent screen-time totals from becoming a diagnosis or moral score and include purpose, function, accessibility, and context",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-technology-08",
+    "title": "The Password Manager Move I Tested Before Trusting",
+    "level": "B1",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] After reusing similar passwords for years, I decided to move my accounts into a password manager.",
+      "Narrator: I expected the job to take one evening, but the first account showed why rushing would be a mistake.",
+      "Narrator: [carefully] Its recovery email belonged to an old workplace, and the telephone number ended several years ago.",
+      "Narrator: If I had changed the password and then lost access to the manager, I might have locked myself out.",
+      "Narrator: [reflective] I began with a list of important accounts, starting with email because it could reset many of the others.",
+      "Narrator: For each account, I updated recovery details, created a unique password, and enabled the strongest suitable extra sign-in protection available.",
+      "Narrator: [honestly] Where a service supported passkeys, I read its recovery instructions instead of assuming the new method removed every risk.",
+      "Narrator: I stored recovery codes in a protected place separate from the device I normally carried.",
+      "Narrator: [seriously] Then I signed out and tested recovery on one low-risk account. The test revealed that one code had been copied incorrectly.",
+      "Narrator: That small failure was useful because it happened before an emergency and before I moved my most important accounts.",
+      "Narrator: [gently] I also learned that a password manager cannot protect me if I approve a false sign-in page or give away a recovery code.",
+      "Narrator: Now I open services through saved addresses or trusted apps and examine unexpected requests rather than following urgent links.",
+      "Narrator: [encouraging] I did not share the master password with a friend, send recovery codes through chat, or keep an unprotected screenshot in my photo library.",
+      "Narrator: For household planning, I documented how a trusted person could obtain essential information during a real emergency without giving them daily access.",
+      "Narrator: [sincere] The migration took several weekends, but the slower process produced something more valuable than a tidy list: accounts that I had actually tested.",
+      "Narrator: Security advice often sounds like a single switch. In practice, reliable access depends on unique credentials, safe recovery, careful verification, and a plan that still works when one device is unavailable."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the old recovery email a problem?",
+        "options": [
+          "It had a short address",
+          "It received too many newsletters",
+          "It belonged to a workplace the narrator no longer used",
+          "It was protected by a password"
+        ],
+        "correctIndex": 2,
+        "explanation": "Recovery details must still be accessible."
+      },
+      {
+        "question": "Which account did the narrator prioritize?",
+        "options": [
+          "A game with no purchases",
+          "A public forum",
+          "Email, because it could reset many other accounts",
+          "A weather app"
+        ],
+        "correctIndex": 2,
+        "explanation": "Email can control downstream recovery."
+      },
+      {
+        "question": "What did the recovery test discover?",
+        "options": [
+          "One code had been copied incorrectly",
+          "Every password was exposed",
+          "The manager had deleted an account",
+          "A friend knew the master password"
+        ],
+        "correctIndex": 0,
+        "explanation": "Testing found a failure before an emergency."
+      },
+      {
+        "question": "What risk remains with a password manager?",
+        "options": [
+          "Approving a false sign-in page or revealing recovery information",
+          "Passwords can never be unique",
+          "Email can no longer be recovered",
+          "Every device must stay online"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tools do not remove social-engineering risk."
+      },
+      {
+        "question": "Why did the narrator move accounts gradually?",
+        "options": [
+          "To use the same password longer",
+          "To avoid updating contact details",
+          "To publish the account list",
+          "To verify recovery and protection before trusting the process"
+        ],
+        "correctIndex": 3,
+        "explanation": "A staged migration reduced lockout risk."
+      },
+      {
+        "question": "Why was email moved before less important accounts?",
+        "options": [
+          "It could be used to reset many other services",
+          "It had the shortest password",
+          "It contained no personal information",
+          "It was the newest account"
+        ],
+        "correctIndex": 0,
+        "explanation": "The order reflects account dependence."
+      },
+      {
+        "question": "What does the incorrect recovery code show?",
+        "options": [
+          "Recovery codes should be posted online",
+          "A backup is only trustworthy after it has been checked",
+          "The password manager created the mistake",
+          "Testing important accounts is unsafe"
+        ],
+        "correctIndex": 1,
+        "explanation": "Verification turns an assumed backup into evidence."
+      },
+      {
+        "question": "Why are recovery codes stored away from the daily device?",
+        "options": [
+          "One lost or damaged device should not remove both access and recovery",
+          "Codes work only on paper",
+          "The device cannot display numbers",
+          "Friends need to read them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Separation reduces a shared point of failure."
+      },
+      {
+        "question": "What tension does the emergency plan address?",
+        "options": [
+          "Making every password public",
+          "Avoiding all trusted contacts",
+          "Replacing recovery details with chat messages",
+          "Giving necessary future access without granting routine access now"
+        ],
+        "correctIndex": 3,
+        "explanation": "The plan balances continuity and least privilege."
+      },
+      {
+        "question": "Which summary best captures the migration?",
+        "options": [
+          "One application removes every risk",
+          "Security requires credentials, recovery, verification, and device-loss planning to work together",
+          "The fastest migration is always safest",
+          "Unique passwords make recovery unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "The conclusion combines several controls."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "retain; strong practical monologue with staged recovery testing, phishing awareness, and no universal product recommendation",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-technology-09",
+    "title": "The Community Spreadsheet That Collected Too Much",
+    "level": "B1",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] I volunteered to organize meal deliveries for families recovering from illness in our neighborhood.",
+      "Narrator: The previous team sent me a spreadsheet containing names, diagnoses, home addresses, telephone numbers, food needs, and detailed family notes.",
+      "Narrator: [carefully] Some information was useful for delivery, but much of it was visible to dozens of volunteers who did not need it.",
+      "Narrator: One column even described private medical conversations. Nobody could explain why it had been collected or how long it would remain.",
+      "Narrator: [reflective] I paused the new entries and asked the coordinator to review the process before we copied the old sheet.",
+      "Narrator: We separated operational needs from sensitive background. A driver needed an address, delivery time, contact method, and relevant dietary or access instruction—not a complete health story.",
+      "Narrator: [honestly] The smaller coordination list used limited permissions, and only the people managing requests could access the protected source record.",
+      "Narrator: We also checked consent, corrected outdated details, created a deletion schedule, and documented whom to contact if information was exposed.",
+      "Narrator: [seriously] Then a volunteer accidentally shared an old link in a large group chat. Because the link still allowed access, we treated it as an incident rather than simply deleting the message.",
+      "Narrator: The coordinator removed access, recorded what may have been viewed, contacted the responsible privacy lead, and followed the organization’s notification process.",
+      "Narrator: [gently] We did not announce the families’ names while discussing the mistake, and we did not blame the volunteer publicly.",
+      "Narrator: Afterward, every shared view contained the minimum information needed for that task and expired when the activity ended.",
+      "Narrator: [encouraging] The project still delivered the meals. In fact, fewer unnecessary details made the list easier to use.",
+      "Narrator: I had once assumed that collecting more information made a service more caring and prepared.",
+      "Narrator: [sincere] Now I understand that respect can mean asking less, limiting access, and deleting information when its purpose has ended.",
+      "Narrator: Helpful technology is not measured only by speed. It should also protect the dignity of the people whose circumstances make the project possible."
+    ],
+    "quiz": [
+      {
+        "question": "What was wrong with the original spreadsheet?",
+        "options": [
+          "It contained no delivery addresses",
+          "Too many volunteers could see unnecessary sensitive information",
+          "It was printed on paper",
+          "It had too few columns"
+        ],
+        "correctIndex": 1,
+        "explanation": "Access exceeded operational need."
+      },
+      {
+        "question": "What information did a driver actually need?",
+        "options": [
+          "Delivery details and relevant dietary or access instructions",
+          "A complete medical history",
+          "Every family conversation",
+          "All volunteer passwords"
+        ],
+        "correctIndex": 0,
+        "explanation": "The revised list followed data minimization."
+      },
+      {
+        "question": "Why was deleting the chat message insufficient?",
+        "options": [
+          "The old link still allowed access",
+          "The volunteer had apologized",
+          "The meals had arrived",
+          "The file name was unclear"
+        ],
+        "correctIndex": 0,
+        "explanation": "The possible exposure still required response."
+      },
+      {
+        "question": "How did the team discuss the incident?",
+        "options": [
+          "By sharing the full sheet again",
+          "By hiding it from the coordinator",
+          "By deleting every current request",
+          "Without publishing family names or publicly blaming the volunteer"
+        ],
+        "correctIndex": 3,
+        "explanation": "Response protected dignity while addressing risk."
+      },
+      {
+        "question": "What changed after the review?",
+        "options": [
+          "Every volunteer received full access",
+          "Medical notes became public",
+          "Shared views contained only needed data and expired after use",
+          "The team stopped all deliveries"
+        ],
+        "correctIndex": 2,
+        "explanation": "The process became safer without ending the service."
+      },
+      {
+        "question": "Why did fewer details improve the service as well as privacy?",
+        "options": [
+          "Families stopped requesting meals",
+          "Medical notes became shorter",
+          "Volunteers could find the information needed for delivery more easily",
+          "Every volunteer became a clinician"
+        ],
+        "correctIndex": 2,
+        "explanation": "Data minimization also reduced operational clutter."
+      },
+      {
+        "question": "What principle separated the two lists?",
+        "options": [
+          "All volunteers should see the source record",
+          "Sensitive data belongs in group chat",
+          "Old information must remain forever",
+          "Access should match each person’s task"
+        ],
+        "correctIndex": 3,
+        "explanation": "Permissions were based on operational need."
+      },
+      {
+        "question": "Why did the team document retention?",
+        "options": [
+          "Spreadsheets cannot be edited",
+          "Drivers requested more diagnoses",
+          "The vendor required permanent storage",
+          "Information should be deleted after its stated purpose ends"
+        ],
+        "correctIndex": 3,
+        "explanation": "A deletion schedule limits unnecessary exposure."
+      },
+      {
+        "question": "What made the response accountable without becoming punitive?",
+        "options": [
+          "The mistake was ignored",
+          "The team contained and recorded the incident while protecting families and avoiding public blame",
+          "The volunteer was named publicly",
+          "All evidence was erased"
+        ],
+        "correctIndex": 1,
+        "explanation": "Responsible response addresses harm and learning."
+      },
+      {
+        "question": "Which assumption changes for the narrator?",
+        "options": [
+          "Technology always reduces dignity",
+          "Addresses are never needed",
+          "Volunteers should avoid all records",
+          "Collecting more information does not automatically mean providing better care"
+        ],
+        "correctIndex": 3,
+        "explanation": "The ending distinguishes useful data from excessive collection."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "retain; strong privacy incident narrative using data minimization, limited access, retention, consent, and accountable response",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-technology-10",
+    "title": "Should the Community Event Use Facial Recognition?",
+    "level": "B1",
+    "themeId": "technology",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Hana",
+        "gender": "female"
+      },
+      {
+        "name": "Omar",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Hana: [thoughtful] Omar, the event company says facial recognition will make entry faster. Should we add it to registration?",
+      "Omar: Before deciding, we should ask what problem it solves and whether a less intrusive check-in method can solve it.",
+      "Hana: [carefully] They say guests could look at a camera instead of showing a ticket. That sounds convenient.",
+      "Omar: Convenience matters, but a face is sensitive personal data. People cannot replace it as easily as a lost card or password.",
+      "Hana: [reflective] Could we put a consent sentence at the bottom of the form?",
+      "Omar: Consent should be clear and genuinely optional. Guests need to understand what is collected, who processes it, how long it remains, and what alternative they can use without unfair treatment.",
+      "Hana: [honestly] What about accuracy? The sales demonstration recognized everyone.",
+      "Omar: A demonstration is not independent evidence. Performance can vary across conditions and groups, and a false match could delay or wrongly challenge a guest.",
+      "Hana: [seriously] Then staff would need a way to review the result rather than trusting the screen.",
+      "Omar: Yes, with respectful human review, a clear appeal path, security controls, and a response plan if data is exposed.",
+      "Hana: [gently] The vendor says it stores only a mathematical template, not a photograph.",
+      "Omar: That may change the format, but it does not remove sensitivity or risk. We need precise technical and contractual information, not a comforting label.",
+      "Hana: [encouraging] Our event has only three hundred guests. A normal QR code and staffed name list may already be enough.",
+      "Omar: That is the key comparison: necessity and proportionality, not whether the newest tool is available.",
+      "Hana: [sincere] We should also consider guests who cannot or do not wish to use a camera.",
+      "Omar: Exactly. Accessibility, religious or privacy concerns, children, and people lacking suitable devices all need a fair route.",
+      "Hana: [thoughtful] I will pause the purchase and request the privacy assessment, evidence, retention terms, and deletion process.",
+      "Omar: And ask the organizing committee, legal or privacy lead, and affected community before making the decision.",
+      "Hana: [carefully] If the ordinary system meets the need, we should not collect faces just to make the entrance look modern.",
+      "Omar: Agreed. Good technology governance sometimes ends with choosing the simpler tool."
+    ],
+    "quiz": [
+      {
+        "question": "What question does Omar ask first?",
+        "options": [
+          "Whether a less intrusive method can solve the problem",
+          "Whether the camera looks modern",
+          "Whether guests own phones",
+          "Whether tickets have colors"
+        ],
+        "correctIndex": 0,
+        "explanation": "Necessity comes before purchase."
+      },
+      {
+        "question": "Why is facial data especially sensitive?",
+        "options": [
+          "It is always stored as paper",
+          "It cannot be replaced as easily as a card or password",
+          "It contains no identifying features",
+          "It works only outdoors"
+        ],
+        "correctIndex": 1,
+        "explanation": "Biometric data creates distinctive risk."
+      },
+      {
+        "question": "Why is the sales demonstration insufficient?",
+        "options": [
+          "No guest was present",
+          "Performance may vary and needs independent evidence",
+          "Cameras cannot recognize faces",
+          "Demonstrations are legally forbidden"
+        ],
+        "correctIndex": 1,
+        "explanation": "A selected demo does not establish reliable operation."
+      },
+      {
+        "question": "What alternative may already meet the event’s need?",
+        "options": [
+          "Publishing guest photographs",
+          "Removing all check-in",
+          "Sharing a master password",
+          "QR codes and a staffed name list"
+        ],
+        "correctIndex": 3,
+        "explanation": "A simpler process may be proportionate."
+      },
+      {
+        "question": "What does Hana decide to do?",
+        "options": [
+          "Buy the system immediately",
+          "Require every guest to use it",
+          "Let the vendor decide alone",
+          "Pause the purchase and request evidence and assessment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The decision is delayed for accountable review."
+      },
+      {
+        "question": "Why is a consent sentence alone inadequate?",
+        "options": [
+          "Consent must always be verbal",
+          "Guests need understandable information and a fair alternative",
+          "Registration forms cannot mention cameras",
+          "Only vendors can give consent"
+        ],
+        "correctIndex": 1,
+        "explanation": "Valid choice requires clarity and freedom from unfair disadvantage."
+      },
+      {
+        "question": "What could a false match cause?",
+        "options": [
+          "Automatic deletion of every ticket",
+          "A faster entrance for everyone",
+          "Delay or an unjust challenge for a guest",
+          "A new QR code design"
+        ],
+        "correctIndex": 2,
+        "explanation": "The dialogue connects technical error to human impact."
+      },
+      {
+        "question": "Why does “mathematical template” not end the privacy concern?",
+        "options": [
+          "Templates always contain a photograph",
+          "Changing the data format does not remove biometric sensitivity or misuse risk",
+          "Mathematics is illegal at events",
+          "The vendor owns every face"
+        ],
+        "correctIndex": 1,
+        "explanation": "A technical label cannot replace risk analysis."
+      },
+      {
+        "question": "Which decision principle is central?",
+        "options": [
+          "Choose the most modern-looking system",
+          "Let the vendor define community values",
+          "Collect sensitive data only when the need and proportionality are established",
+          "Require one method for every guest"
+        ],
+        "correctIndex": 2,
+        "explanation": "Necessity controls the technology choice."
+      },
+      {
+        "question": "What does the final line imply?",
+        "options": [
+          "Responsible innovation may mean declining an unnecessary system",
+          "Simple tools are never innovative",
+          "The event should have no check-in",
+          "Facial recognition is required later"
+        ],
+        "correctIndex": 0,
+        "explanation": "Governance is judged by fit, not novelty."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "technology",
+      "scriptDecision": "retain; strong governance dialogue covering necessity, consent, bias, alternatives, accessibility, retention, and accountability",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

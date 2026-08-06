@@ -7,7 +7,8 @@ import { generateReadingTitles, generateReadingContent, generateReadingContentSt
 import { saveProgress, getCachedTitles, setCachedTitles, getCachedContent, setCachedContent, logActivity, saveVocab, completeRoadmapUnit, saveCustomCategory, getCustomCategories, CustomCategory } from '../services/storage';
 import { audioService } from '../services/audioService';
 import { ttsService } from '../services/ttsService';
-import { getStaticReadingIndex, getStaticReadingItem } from '../services/readingContent';
+import { getStaticReadingIndex, getStaticReadingItem, getStaticReadingLibrarySummary } from '../services/readingContent';
+import { savePendingRecording, getPendingRecording, deletePendingRecording } from '../services/pendingRecordings';
 
 interface WordAnalysis {
   word: string;
@@ -17,6 +18,11 @@ interface WordAnalysis {
 }
 
 const normalizeTaskTitle = (title?: string) => (title || '').replace(/^Reading:\s*/i, '').trim();
+const getMissionKey = (context?: ModuleContext | null) => {
+  if (context?.taskId) return `daily:${context.taskId}`;
+  if (context?.stepId) return `roadmap:${context.stepId}`;
+  return `manual:${normalizeTaskTitle(context?.title)}`;
+};
 
 const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
   const handleComplete = () => {
@@ -105,6 +111,16 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   const [completedReadingItems, setCompletedReadingItems] = useState<Set<number>>(new Set());
   const isStaticMissionMode = !!(initialContext?.readingItemIds && initialContext.readingItemIds.length > 1);
   const missionReadingIds = initialContext?.readingItemIds || [];
+
+  // Recovery of a recording whose AI analysis failed (e.g. offline, API error).
+  // Only tracked for Daily Plan / Roadmap tasks (initialContext.taskId present) so free-practice
+  // reading isn't polluted with cached blobs.
+  const [currentReadingItemId, setCurrentReadingItemId] = useState('');
+  const [pendingRecording, setPendingRecording] = useState<Blob | null>(null);
+  const [isResendingRecording, setIsResendingRecording] = useState(false);
+  const recordingKey = initialContext?.taskId
+    ? `${initialContext.taskId}::${currentReadingItemId || content?.title || ''}`
+    : null;
 
   // Vocabulary Save Modal
   const [showSaveModal, setShowSaveModal] = useState(false);
@@ -195,14 +211,21 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     let cancelled = false;
     setLibraryLoading(true);
     (async () => {
-      const entries = await Promise.all(
-        THEMES.map(async (t) => {
-          const items = await getStaticReadingIndex(practiceType, level, t);
-          if (!items) return [t.id, { total: 0, completed: 0 }] as const;
-          const completed = items.filter(it => !!completedTitlesData[it.title]).length;
-          return [t.id, { total: items.length, completed }] as const;
-        })
-      );
+      const summary = await getStaticReadingLibrarySummary(practiceType, level);
+      const entries = summary
+        ? THEMES.map((t) => {
+            const themeSummary = summary.themes[t.id];
+            const titles = themeSummary?.titles || [];
+            return [t.id, { total: themeSummary?.total || 0, completed: titles.filter(title => !!completedTitlesData[title]).length }] as const;
+          })
+        : await Promise.all(
+            THEMES.map(async (t) => {
+              const items = await getStaticReadingIndex(practiceType, level, t);
+              if (!items) return [t.id, { total: 0, completed: 0 }] as const;
+              const completed = items.filter(it => !!completedTitlesData[it.title]).length;
+              return [t.id, { total: items.length, completed }] as const;
+            })
+          );
       if (cancelled) return;
       setThemeCounts(Object.fromEntries(entries));
       setLibraryLoading(false);
@@ -264,6 +287,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     const stateToSave = {
       initialTitle: initialContext?.title,
       taskId: initialContext?.taskId,
+      missionKey: getMissionKey(initialContext),
       step, level, theme, themeCategory, practiceType, customTopic, customTitle,
       titles, titleIdMap, content, selectedTitle, wordList, analysisResult,
       fontSize, isFocusMode, currentPage, missionBridgeIndex,
@@ -306,11 +330,11 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     if (savedStateStr) {
       try {
         const state = JSON.parse(savedStateStr);
-        const sameTaskById = !!(state.taskId && ctx.taskId && state.taskId === ctx.taskId);
-        const sameTaskByLegacyTitle =
-          !state.taskId &&
-          normalizeTaskTitle(state.initialTitle) === normalizeTaskTitle(ctx.title);
-        const isSameSavedTask = sameTaskById || sameTaskByLegacyTitle;
+        const contextKey = getMissionKey(ctx);
+        const isMissionContext = Boolean(ctx.taskId || ctx.stepId);
+        const isSameSavedTask = state.missionKey
+          ? state.missionKey === contextKey
+          : !isMissionContext && normalizeTaskTitle(state.initialTitle) === normalizeTaskTitle(ctx.title);
 
         if (isSameSavedTask && state.step !== 'setup' && state.content) {
           // Same task with content cached — just restore from localStorage (already loaded by first useEffect)
@@ -461,6 +485,30 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     return () => window.removeEventListener('click', handleClickOutside);
   }, []);
 
+  // Restore a previously-failed recording for this exact task/item, if one is cached.
+  useEffect(() => {
+    if (!recordingKey) {
+      setPendingRecording(null);
+      return;
+    }
+    let cancelled = false;
+    getPendingRecording(recordingKey).then(rec => {
+      if (!cancelled) setPendingRecording(rec ? rec.blob : null);
+    });
+    return () => { cancelled = true; };
+  }, [recordingKey]);
+
+  const handleResendPendingRecording = () => {
+    if (!pendingRecording) return;
+    setIsResendingRecording(true);
+    processAnalysis(pendingRecording).finally(() => setIsResendingRecording(false));
+  };
+
+  const handleDiscardPendingRecording = async () => {
+    if (recordingKey) await deletePendingRecording(recordingKey);
+    setPendingRecording(null);
+  };
+
   const handleSaveToVocab = async (word: string) => {
     setSaveWordInput(word);
     setSaveTransInput('');
@@ -504,6 +552,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     prepareWordList(nextContent);
     setAudioBlob(null);
     setAnalysisResult(null);
+    setCurrentReadingItemId(itemId);
     setStep('reading');
     setLoading(false);
     setStatusMsg('');
@@ -774,6 +823,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     setStatusMsg('Analyzing pronunciation...');
     setError('');
 
+    const keyForThisAttempt = recordingKey;
+
     try {
       const reader = new FileReader();
       reader.onloadend = async () => {
@@ -851,8 +902,17 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
             result.score = calculatedScore;
             result.accuracy = calculatedAccuracy;
+            result.correctCount = correctCount;
+            result.incorrectCount = incorrectCount;
+            result.missedCount = missedCount;
 
             setAnalysisResult(result);
+
+            // Analysis succeeded: this recording no longer needs to be kept around for retry.
+            if (keyForThisAttempt) {
+              deletePendingRecording(keyForThisAttempt);
+              setPendingRecording(null);
+            }
 
             // Save progress
             const score = Math.round(calculatedScore);
@@ -867,16 +927,23 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
               date: new Date().toISOString()
             });
 
+            const targetMinScore = initialContext?.minScore || 85;
             logActivity({
               type: AppView.READING,
               date: new Date().toISOString(),
               durationSeconds: Math.round((Date.now() - startTimeRef.current) / 1000),
               score,
               accuracy,
-              details: content.title
+              details: content.title,
+              metadata: {
+                completed: score >= targetMinScore,
+                planTaskId: initialContext?.taskId,
+                stepId: initialContext?.stepId,
+                materialId: initialContext?.targetLessonId,
+                materialTitle: content.title,
+                source: initialContext?.type || 'manual'
+              }
             });
-
-            const targetMinScore = initialContext?.minScore || 85;
 
             if (initialContext?.stepId && score >= targetMinScore) {
               completeRoadmapUnit(initialContext.stepId);
@@ -897,10 +964,18 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             }, 800);
           } else {
             setError("AI could not provide an analysis. Please try recording again.");
+            if (keyForThisAttempt) {
+              savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
+              setPendingRecording(blob);
+            }
           }
         } catch (innerError) {
           console.error("Inner Analysis Error:", innerError);
-          setError("An error occurred during analysis. Please try again.");
+          setError("An error occurred during analysis. Your recording has been saved — you can leave and resend it later.");
+          if (keyForThisAttempt) {
+            savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
+            setPendingRecording(blob);
+          }
         } finally {
           setLoading(false);
           setStatusMsg('');
@@ -909,13 +984,21 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       reader.onerror = () => {
         setError("Failed to read audio data.");
         setLoading(false);
+        if (keyForThisAttempt) {
+          savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
+          setPendingRecording(blob);
+        }
       };
       reader.readAsDataURL(blob);
     } catch (e) {
       console.error("Outer Analysis Error:", e);
-      setError("Failed to start analysis.");
+      setError("Failed to start analysis. Your recording has been saved — you can leave and resend it later.");
       setLoading(false);
       setStatusMsg('');
+      if (keyForThisAttempt) {
+        savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
+        setPendingRecording(blob);
+      }
     }
   };
 
@@ -1145,7 +1228,15 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
           durationSeconds: Math.round((Date.now() - startTimeRef.current) / 1000),
           score: result.overall,
           accuracy: result.overall,
-          details: `Translation Practice: ${selectedTitle}`
+          details: `Translation Practice: ${selectedTitle}`,
+          metadata: {
+            completed: result.overall >= (initialContext?.minScore || 85),
+            planTaskId: initialContext?.taskId,
+            stepId: initialContext?.stepId,
+            materialId: initialContext?.targetLessonId,
+            materialTitle: selectedTitle,
+            source: initialContext?.type || 'manual'
+          }
         });
       }
     } catch (e: any) {
@@ -1424,7 +1515,43 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   };
 
   const renderReading = () => {
-    if (!content && !streamingText) return null;
+    if (!content && !streamingText) {
+      const returnToReadingHome = () => {
+        localStorage.removeItem('lovspeak_state_reading');
+        setError('');
+        setSelectedTitle('');
+        setContent(null);
+        setWordList([]);
+        setStreamingText('');
+        setAnalysisResult(null);
+        setAudioBlob(null);
+        setStep('setup');
+      };
+
+      return (
+        <div className="max-w-md mx-auto py-12 md:py-20 text-center">
+          <div className="bg-white dark:bg-gray-800 rounded-3xl border border-gray-100 dark:border-gray-700 shadow-xl p-6 md:p-8">
+            <div className={`w-16 h-16 rounded-2xl mx-auto mb-5 flex items-center justify-center text-2xl ${loading ? 'bg-lovelya-50 text-lovelya-500' : 'bg-rose-50 dark:bg-rose-900/20 text-rose-500'}`}>
+              <i className={`fas ${loading ? 'fa-book-open animate-pulse' : 'fa-exclamation-triangle'}`}></i>
+            </div>
+            <h2 className="text-lg font-black text-gray-900 dark:text-white mb-2">
+              {loading ? 'Menyiapkan bacaan...' : 'Bacaan belum dapat dimuat'}
+            </h2>
+            <p className="text-sm text-gray-500 dark:text-gray-400 font-medium leading-relaxed mb-6">
+              {loading ? 'Mohon tunggu sebentar.' : 'Konten tidak berhasil dibuat atau dimuat. Kembali ke halaman utama Reading untuk memilih bacaan lain.'}
+            </p>
+            {!loading && (
+              <button
+                onClick={returnToReadingHome}
+                className="w-full py-3.5 rounded-2xl bg-lovelya-600 text-white font-black text-sm shadow-lg shadow-lovelya-200/40 hover:bg-lovelya-700 transition active:scale-95 flex items-center justify-center gap-2"
+              >
+                <i className="fas fa-redo"></i> Kembali ke Halaman Reading
+              </button>
+            )}
+          </div>
+        </div>
+      );
+    }
     let globalIndex = 0;
     return (
       <div className={`transition-all duration-500 ${isFocusMode ? 'fixed inset-0 z-[60] bg-gray-50 dark:bg-gray-900 overflow-y-auto' : 'max-w-6xl mx-auto px-2 md:px-0'}`}>
@@ -1583,7 +1710,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         )}
 
         <div className={`bg-white dark:bg-gray-800 transition-all duration-500 ${isFocusMode ? 'min-h-screen py-16 px-6 md:py-24 md:px-12 lg:px-24' : 'p-6 md:p-16 lg:p-24 rounded-3xl md:rounded-[3rem] lg:rounded-[4rem] shadow-[0_32px_128px_-32px_rgba(0,0,0,0.15)] border border-lovelya-50 dark:border-lovelya-900/10 mb-28 md:mb-40'}`}>
-          <div className="max-w-[80ch] mx-auto">
+          <div id="reading-article-start" className="max-w-[80ch] mx-auto">
             <div className="flex items-start justify-between gap-3 mb-6 md:mb-12 pb-6 md:pb-12 border-b border-gray-100 dark:border-gray-700">
               <h1 className="text-2xl md:text-5xl lg:text-6xl font-black text-gray-900 dark:text-white leading-tight tracking-tight">{content?.title || selectedTitle}</h1>
               {content && !loading && (
@@ -1592,6 +1719,34 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 </button>
               )}
             </div>
+
+            {pendingRecording && !analysisResult && (
+              <div className="mb-6 md:mb-10 p-4 md:p-6 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-2xl md:rounded-3xl flex flex-col sm:flex-row items-start sm:items-center gap-3 md:gap-4">
+                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-600 flex items-center justify-center shrink-0">
+                  <i className="fas fa-microphone-lines text-lg"></i>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-black text-xs md:text-sm text-gray-800 dark:text-white">Unsent recording found</p>
+                  <p className="text-[10px] md:text-xs text-gray-500 dark:text-gray-400">Your last recording for this text wasn't analyzed yet. Send it now instead of recording again.</p>
+                </div>
+                <div className="flex gap-2 shrink-0">
+                  <button
+                    onClick={handleResendPendingRecording}
+                    disabled={isResendingRecording || loading}
+                    className="px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-xl font-black text-[10px] md:text-xs uppercase tracking-wider disabled:opacity-50"
+                  >
+                    {isResendingRecording ? 'Sending...' : 'Send to AI'}
+                  </button>
+                  <button
+                    onClick={handleDiscardPendingRecording}
+                    disabled={isResendingRecording || loading}
+                    className="px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-xl font-black text-[10px] md:text-xs uppercase tracking-wider disabled:opacity-50"
+                  >
+                    Discard
+                  </button>
+                </div>
+              </div>
+            )}
 
             <div className="prose dark:prose-invert max-w-none leading-[1.6] md:leading-[1.8] lg:leading-[2.0] font-medium text-gray-700 dark:text-gray-200 space-y-7 md:space-y-12" style={{ fontSize: `${window.innerWidth < 768 ? fontSize - 1 : fontSize + 4}px` }}>
               {content ? (
@@ -1645,12 +1800,39 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
             <div id="analysis-results-anchor" className="pt-2"></div>
             {analysisResult && (
-              <div id="analysis-results" className="mt-20 md:mt-32 pt-16 md:pt-24 border-t-4 border-gray-50 dark:border-gray-800 animate-slide-up space-y-8 md:space-y-16">
+              <div id="analysis-results" className="mt-8 md:mt-12 pt-8 md:pt-10 border-t-4 border-gray-50 dark:border-gray-800 animate-slide-up space-y-6 md:space-y-10">
                 <div className="flex items-center gap-4 md:gap-6"><div className="w-10 h-10 md:w-16 md:h-16 rounded-2xl md:rounded-3xl bg-lovelya-600 text-white flex items-center justify-center shadow-xl"><i className="fas fa-chart-line text-lg md:text-3xl"></i></div><h2 className="text-xl md:text-3xl lg:text-4xl font-black text-gray-800 dark:text-white uppercase tracking-tighter">Performance Analysis</h2></div>
                 <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-10">
                   <div className="p-8 md:p-12 bg-gray-50 dark:bg-gray-800/50 rounded-3xl md:rounded-[3rem] text-center shadow-inner border border-white dark:border-gray-700"><div className="text-4xl md:text-7xl font-black text-lovelya-600">{Math.round(analysisResult.score)}</div><div className="text-[10px] md:text-sm lg:text-base font-black text-gray-400 uppercase tracking-[0.3em] mt-3 md:mt-5">Performance Score</div></div>
                   <div className="p-8 md:p-12 bg-green-50 dark:bg-green-900/10 rounded-3xl md:rounded-[3rem] text-center shadow-inner border border-white dark:border-gray-700"><div className="text-4xl md:text-7xl font-black text-green-600">{Math.round(analysisResult.accuracy)}%</div><div className="text-[10px] md:text-sm lg:text-base font-black text-green-500 uppercase tracking-[0.3em] mt-3 md:mt-5">Pronunciation Accuracy</div></div>
                 </div>
+
+                {/* Word breakdown — so the color-coded words above don't need to be re-scanned manually */}
+                {(typeof analysisResult.correctCount === 'number') && (
+                  <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4">
+                    <span className="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-400 px-4 py-2 rounded-xl font-black text-xs md:text-sm">
+                      <i className="fas fa-circle-check"></i> {analysisResult.correctCount} correct
+                    </span>
+                    <span className="flex items-center gap-2 bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-4 py-2 rounded-xl font-black text-xs md:text-sm">
+                      <i className="fas fa-circle-xmark"></i> {analysisResult.incorrectCount} incorrect
+                    </span>
+                    {analysisResult.missedCount > 0 && (
+                      <span className="flex items-center gap-2 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 px-4 py-2 rounded-xl font-black text-xs md:text-sm">
+                        <i className="fas fa-circle-minus"></i> {analysisResult.missedCount} missed
+                      </span>
+                    )}
+                    <button
+                      onClick={() => {
+                        const el = document.getElementById('reading-article-start');
+                        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }}
+                      className="text-lovelya-600 dark:text-lovelya-400 text-xs md:text-sm font-black underline underline-offset-2"
+                    >
+                      <i className="fas fa-arrow-up mr-1"></i> Review marked words
+                    </button>
+                  </div>
+                )}
+
                 <div className="grid grid-cols-1">
                   <div className="bg-white dark:bg-gray-800 p-8 md:p-16 lg:p-20 rounded-3xl md:rounded-[4rem] border border-gray-100 dark:border-gray-700 shadow-xl relative overflow-hidden group">
                     <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-lovelya-50 dark:bg-lovelya-900/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-700"></div>
@@ -1659,17 +1841,91 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                   </div>
                 </div>
 
-                {/* Complete Task button for daily missions */}
+                {/* Complete Task button for plain (single-reading) daily tasks */}
                 {initialContext?.autoStart && (!isMissionMode || missionBridgeIds.length === 1) && !isStaticMissionMode && analysisResult.score >= (initialContext?.minScore || 85) && (
                   <div className="mt-8 text-center">
                     <button
                       onClick={handleComplete}
                       className="px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-base shadow-xl uppercase tracking-widest hover:shadow-2xl transition-all active:scale-95"
                     >
-                      <i className="fas fa-check-circle mr-2"></i> Complete Daily Task +{initialContext?.xpReward || 15} XP
+                      <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
                     </button>
                   </div>
                 )}
+
+                {/* Next Article / Complete Mission buttons — colocated here so mission-mode users
+                    don't have to scroll back up to the sticky mission bar to advance. */}
+                {isMissionMode && missionBridgeIds.length > 1 && (
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    {!allBridgesComplete ? (
+                      <button
+                        onClick={goToNextBridge}
+                        disabled={!currentBridgePassed || missionBridgeIndex >= missionBridgeIds.length - 1}
+                        className={`flex-1 py-3.5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all ${currentBridgePassed && missionBridgeIndex < missionBridgeIds.length - 1
+                          ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg'
+                          : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                          }`}
+                      >
+                        {missionBridgeIndex < missionBridgeIds.length - 1
+                          ? <>Next Article <i className="fas fa-chevron-right ml-1"></i></>
+                          : <>Mark as Read <i className="fas fa-check ml-1"></i></>
+                        }
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleComplete}
+                        className="flex-1 py-3.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-lg"
+                      >
+                        <i className="fas fa-gift mr-2"></i> Complete Mission +{initialContext?.xpReward || 20} XP
+                      </button>
+                    )}
+                    {missionBridgeIndex === missionBridgeIds.length - 1 && !allBridgesComplete && (
+                      <button
+                        onClick={handleMissionBridgeComplete}
+                        disabled={!currentBridgePassed}
+                        className={`flex-1 py-3.5 rounded-2xl font-black text-sm uppercase tracking-widest ${currentBridgePassed ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+                      >
+                        Mark Last as Read <i className="fas fa-check ml-1"></i>
+                      </button>
+                    )}
+                  </div>
+                )}
+                {isStaticMissionMode && (
+                  <div className="flex flex-col sm:flex-row gap-3 pt-2">
+                    {!allReadingItemsComplete ? (
+                      <button
+                        onClick={goToNextReadingItem}
+                        disabled={!currentBridgePassed || missionReadingIndex >= missionReadingIds.length - 1}
+                        className={`flex-1 py-3.5 rounded-2xl font-black text-sm uppercase tracking-widest transition-all ${currentBridgePassed && missionReadingIndex < missionReadingIds.length - 1
+                          ? 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 shadow-lg'
+                          : 'bg-gray-200 text-gray-400 cursor-not-allowed'
+                          }`}
+                      >
+                        {missionReadingIndex < missionReadingIds.length - 1
+                          ? <>Next Article ({missionReadingIndex + 2} of {missionReadingIds.length}) <i className="fas fa-chevron-right ml-1"></i></>
+                          : <>Mark as Read <i className="fas fa-check ml-1"></i></>
+                        }
+                      </button>
+                    ) : (
+                      <button
+                        onClick={handleComplete}
+                        className="flex-1 py-3.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-lg"
+                      >
+                        <i className="fas fa-gift mr-2"></i> Complete Mission +{initialContext?.xpReward || 20} XP
+                      </button>
+                    )}
+                    {missionReadingIndex === missionReadingIds.length - 1 && !allReadingItemsComplete && (
+                      <button
+                        onClick={handleMissionReadingComplete}
+                        disabled={!currentBridgePassed}
+                        className={`flex-1 py-3.5 rounded-2xl font-black text-sm uppercase tracking-widest ${currentBridgePassed ? 'bg-green-500 text-white' : 'bg-gray-200 text-gray-400 cursor-not-allowed'}`}
+                      >
+                        Mark Last as Read <i className="fas fa-check ml-1"></i>
+                      </button>
+                    )}
+                  </div>
+                )}
+
                 {initialContext?.autoStart && analysisResult.score < (initialContext?.minScore || 85) && (
                   <div className="mt-8 text-center">
                     <button

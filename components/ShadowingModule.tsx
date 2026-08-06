@@ -2,12 +2,10 @@ import React, { useState, useRef, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ModuleProps, ShadowingTask, AppView, ModuleContext, DialogueScenario } from '../types';
 import { SHADOWING_DATA, ShadowingTheme } from '../src/constants/shadowingData';
-import { logActivity, completeRoadmapUnit } from '../services/storage';
+import { logActivity, completeRoadmapUnit, getActivityLogs } from '../services/storage';
 import { analyzePronunciationAudio } from '../services/gemini';
 import { ttsService } from '../services/ttsService';
 import { getDialogueScenarios } from '../services/dialogueContent';
-
-const MATCH_THRESHOLD = 0.8;
 
 const calculateTextSimilarity = (s1: string, s2: string): number => {
   const normalize = (s: string) => s.toLowerCase().trim().replace(/[.,/#!$%^&*;:{}=\-_`~()?]/g, '').replace(/\s{2,}/g, ' ');
@@ -174,9 +172,48 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const [dialogueMatch, setDialogueMatch] = useState<number | null>(null);
   const [isDialoguePlaying, setIsDialoguePlaying] = useState(false);
   const [revealedHints, setRevealedHints] = useState<Set<number>>(new Set());
+  const [dialogueLineResults, setDialogueLineResults] = useState<Record<number, { score: number; hintsUsed: number }>>({});
+  const [dialogueSummary, setDialogueSummary] = useState<{ score: number; passed: boolean; hintsUsed: number; turns: number } | null>(null);
+  const [hintLimitMessage, setHintLimitMessage] = useState('');
+  const [completedTasksData, setCompletedTasksData] = useState<Record<string, number>>({});
+  const [completedDialogueScores, setCompletedDialogueScores] = useState<Record<string, number>>({});
+  const dialogueStartedAtRef = useRef<number>(0);
+  const launchedDailyDialogueRef = useRef<string | null>(null);
   const { isListening: isDialogueListening, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
 
+  const isDailyRoleplay = initialContext?.type === 'daily' && initialContext.autoStart && initialContext.shadowingMode === 'roleplay';
+  const isRoadmapRoleplay = initialContext?.type === 'unit' && initialContext.autoStart && initialContext.shadowingMode === 'roleplay';
+  const dialoguePassFloor = isDailyRoleplay ? 70 : 80;
+  const dialogueTargetScore = initialContext?.minScore || 80;
+
+  useEffect(() => {
+    const scores: Record<string, number> = {};
+    const dialogueScores: Record<string, number> = {};
+    getActivityLogs()
+      .filter(log => log.type === AppView.SHADOWING && log.metadata?.completed)
+      .forEach(log => {
+        if (log.metadata?.taskId) {
+          const taskId = String(log.metadata.taskId);
+          scores[taskId] = Math.max(scores[taskId] || 0, log.score || 0);
+        }
+        if (Array.isArray(log.metadata?.taskScores)) {
+          log.metadata.taskScores.forEach((item: { id?: string; score?: number }) => {
+            if (item.id) scores[item.id] = Math.max(scores[item.id] || 0, item.score || 0);
+          });
+        }
+        if (log.metadata?.shadowingMode === 'roleplay' && log.metadata?.scenarioId) {
+          const scenarioId = String(log.metadata.scenarioId);
+          dialogueScores[scenarioId] = Math.max(dialogueScores[scenarioId] || 0, log.score || 0);
+        }
+      });
+    setCompletedTasksData(scores);
+    setCompletedDialogueScores(dialogueScores);
+  }, []);
+
   const openDialogueRoleplay = async () => {
+    setDialogueLineResults({});
+    setDialogueSummary(null);
+    setHintLimitMessage('');
     setDialogueStage('categories');
     if (dialogueScenarios.length === 0) {
       setDialogueLoading(true);
@@ -193,6 +230,9 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     setSelectedRole(null);
     setLineIndex(0);
     setDialogueMatch(null);
+    setDialogueLineResults({});
+    setDialogueSummary(null);
+    setHintLimitMessage('');
     setDialogueTranscript('');
     ttsService.cancel();
   };
@@ -206,6 +246,74 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
   const currentDialogueLine = selectedScenario ? selectedScenario.lines[lineIndex] : null;
   const isMyTurn = !!currentDialogueLine && currentDialogueLine.speaker === selectedRole;
+
+  const getHintAdjustedScore = (rawScore: number, hintsUsed: number) => {
+    if (!isDailyRoleplay) return rawScore;
+    const scoreCeiling = hintsUsed === 0 ? 100 : hintsUsed === 1 ? 95 : hintsUsed === 2 ? 90 : 85;
+    return Math.min(rawScore, scoreCeiling);
+  };
+
+  const revealDialogueHint = (wordIndex: number) => {
+    if (revealedHints.has(wordIndex)) return;
+    if (isDailyRoleplay && revealedHints.size >= 3) {
+      setHintLimitMessage('Hint untuk kalimat ini sudah habis. Maksimal 3 kata.');
+      return;
+    }
+    setHintLimitMessage('');
+    setRevealedHints(previous => new Set(previous).add(wordIndex));
+  };
+
+  const launchDailyDialogue = async (ctx: ModuleContext) => {
+    const launchKey = ctx.taskId || ctx.title;
+    if (launchedDailyDialogueRef.current === launchKey) return;
+    launchedDailyDialogueRef.current = launchKey;
+    setDialogueLoading(true);
+    try {
+      const scenarios = await getDialogueScenarios();
+      setDialogueScenarios(scenarios);
+      const hash = launchKey.split('').reduce((total, char) => total + char.charCodeAt(0), 0);
+      const eligible = scenarios.filter(scenario => {
+        const roleACount = scenario.lines.filter(line => line.speaker === 'A').length;
+        const roleBCount = scenario.lines.filter(line => line.speaker === 'B').length;
+        return roleACount >= 3 || roleBCount >= 3;
+      });
+      const categoryKeywords: Array<{ terms: string[]; categories: string[] }> = [
+        { terms: ['food', 'cafe', 'drink', 'cooking'], categories: ['makan', 'restoran'] },
+        { terms: ['travel', 'airport', 'transport', 'city'], categories: ['perjalanan', 'transportasi'] },
+        { terms: ['work', 'career', 'job', 'business'], categories: ['pekerjaan'] },
+        { terms: ['health', 'body'], categories: ['kesehatan'] },
+        { terms: ['school', 'education', 'learning'], categories: ['pendidikan'] },
+        { terms: ['home', 'family', 'parent'], categories: ['rumah', 'keluarga', 'parenting'] },
+        { terms: ['technology', 'social media'], categories: ['teknologi', 'layanan'] },
+        { terms: ['islamic', 'mosque', 'halal', 'ramadan', 'umrah', 'zakat'], categories: ['islami', 'komunitas'] },
+        { terms: ['money', 'shopping'], categories: ['keuangan', 'belanja', 'retail'] },
+        { terms: ['social', 'relationship', 'friend'], categories: ['sosial', 'pertemanan'] }
+      ];
+      const themeName = (ctx.shadowingTheme || '').toLowerCase();
+      const relatedCategories = categoryKeywords.find(entry => entry.terms.some(term => themeName.includes(term)))?.categories || [];
+      const related = eligible.filter(scenario => relatedCategories.some(term => scenario.category.toLowerCase().includes(term)));
+      const pool = related.length > 0 ? related : eligible.length > 0 ? eligible : scenarios;
+      const scenario = pool[hash % pool.length];
+      if (!scenario) return;
+      const roleACount = scenario.lines.filter(line => line.speaker === 'A').length;
+      const roleBCount = scenario.lines.filter(line => line.speaker === 'B').length;
+      let role: 'A' | 'B' = ctx.shadowingRole || (hash % 2 === 0 ? 'A' : 'B');
+      if ((role === 'A' ? roleACount : roleBCount) < 3) role = role === 'A' ? 'B' : 'A';
+
+      setSelectedScenario(scenario);
+      setSelectedRole(role);
+      setLineIndex(0);
+      setDialogueMatch(null);
+      setDialogueLineResults({});
+      setDialogueSummary(null);
+      setRevealedHints(new Set());
+      setHintLimitMessage('');
+      dialogueStartedAtRef.current = Date.now();
+      setDialogueStage('play');
+    } finally {
+      setDialogueLoading(false);
+    }
+  };
 
   useEffect(() => {
     if (dialogueStage === 'play' && currentDialogueLine && !isMyTurn) {
@@ -224,10 +332,47 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
   const advanceDialogueLine = () => {
     if (!selectedScenario) return;
+    const hintsUsed = revealedHints.size;
+    const currentResult = isMyTurn && dialogueMatch !== null
+      ? { score: getHintAdjustedScore(dialogueMatch, hintsUsed), hintsUsed }
+      : null;
+    const results = currentResult ? { ...dialogueLineResults, [lineIndex]: currentResult } : dialogueLineResults;
+    if (currentResult) setDialogueLineResults(results);
     setDialogueMatch(null);
     setDialogueTranscript('');
     setRevealedHints(new Set());
+    setHintLimitMessage('');
     if (lineIndex >= selectedScenario.lines.length - 1) {
+      const userTurnResults = selectedScenario.lines
+        .map((line, index) => line.speaker === selectedRole ? results[index] : null)
+        .filter(Boolean) as Array<{ score: number; hintsUsed: number }>;
+      const score = userTurnResults.length
+        ? Math.round(userTurnResults.reduce((total, result) => total + result.score, 0) / userTurnResults.length)
+        : 0;
+      const passed = userTurnResults.length > 0
+        && userTurnResults.every(result => result.score >= dialoguePassFloor)
+        && score >= dialogueTargetScore;
+      const totalHints = userTurnResults.reduce((total, result) => total + result.hintsUsed, 0);
+      setDialogueSummary({ score, passed, hintsUsed: totalHints, turns: userTurnResults.length });
+      void logActivity({
+        type: AppView.SHADOWING,
+        date: new Date().toISOString(),
+        durationSeconds: Math.max(1, Math.round((Date.now() - dialogueStartedAtRef.current) / 1000)),
+        score,
+        accuracy: score,
+        details: `Dialogue Roleplay: ${selectedScenario.title}`,
+        metadata: {
+          completed: passed,
+          taskId: initialContext?.taskId,
+          taskTitle: selectedScenario.title,
+          shadowingMode: 'roleplay',
+          scenarioId: selectedScenario.id,
+          role: selectedRole,
+          turns: userTurnResults.length,
+          hintsUsed: totalHints,
+          source: initialContext?.type || 'manual'
+        }
+      });
       setDialogueStage('complete');
     } else {
       setLineIndex(prev => prev + 1);
@@ -275,6 +420,10 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   }, [initialContext]);
 
   const autoLaunch = (ctx: ModuleContext) => {
+    if (ctx.shadowingMode === 'roleplay') {
+      void launchDailyDialogue(ctx);
+      return;
+    }
     let titleToFind = ctx.title;
     if (ctx.type === 'daily') {
       titleToFind = ctx.title.replace(/^Shadowing:\s*/i, '');
@@ -432,6 +581,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     const totalSentences = missionSentences.length;
 
     const [passedSentences, setPassedSentences] = useState<Set<string>>(new Set());
+    const [passedScores, setPassedScores] = useState<Record<string, number>>({});
     const [missionIndex, setMissionIndex] = useState(0);
     const [missionComplete, setMissionComplete] = useState(false);
 
@@ -442,6 +592,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     const handleMissionFeedback = () => {
       if (feedbackDetail && currentSentence && feedbackDetail.score >= minScore) {
         setPassedSentences(prev => new Set(prev).add(currentSentence.id));
+        setPassedScores(prev => ({ ...prev, [currentSentence.id]: Math.max(prev[currentSentence.id] || 0, feedbackDetail.score) }));
       }
     };
 
@@ -531,7 +682,29 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                onClick={() => onComplete?.()}
+                onClick={() => {
+                  const taskScores = missionSentences.map(sentence => ({ id: sentence.id, score: passedScores[sentence.id] || minScore }));
+                  const finalScore = Math.round(taskScores.reduce((total, item) => total + item.score, 0) / taskScores.length);
+                  void logActivity({
+                    type: AppView.SHADOWING,
+                    date: new Date().toISOString(),
+                    durationSeconds: Math.max(15, recordingTime * Math.max(1, totalSentences)),
+                    score: finalScore,
+                    accuracy: finalScore,
+                    details: initialContext?.title || 'Shadowing Mission',
+                    metadata: {
+                      completed: true,
+                      taskScores,
+                      planTaskId: initialContext?.taskId,
+                      stepId: initialContext?.stepId,
+                      shadowingMode: initialContext?.shadowingMode || 'daily',
+                      source: initialContext?.type || 'daily'
+                    }
+                  });
+                  setCompletedTasksData(previous => taskScores.reduce((next, item) => ({ ...next, [item.id]: Math.max(next[item.id] || 0, item.score) }), previous));
+                  if (initialContext?.stepId) completeRoadmapUnit(initialContext.stepId);
+                  onComplete?.();
+                }}
                 className="w-full py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-xl"
               >
                 <i className="fas fa-gift mr-2"></i> Claim Rewards +{xpReward} XP
@@ -769,27 +942,56 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         <p className="text-gray-500 text-xs md:text-sm">Choose a title to begin shadowing.</p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 max-h-[60vh] overflow-y-auto p-2 pr-4 custom-scrollbar">
-        {selectedTheme?.tasks.map((task, idx) => (
-          <button key={task.id} onClick={() => { setSelectedTask(task); setFeedbackDetail(null); setActiveLevel(5); }} className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.01] border border-white/60 dark:border-gray-700/50 text-left flex items-center gap-4 group">
-            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-sm shrink-0 shadow-inner ${selectedTheme.category === 'Islamic' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>
-              {idx + 1}
+        {selectedTheme?.tasks.map((task, idx) => {
+          const completedScore = completedTasksData[task.id];
+          const isCompleted = completedScore !== undefined;
+          return (
+          <button key={task.id} onClick={() => { setSelectedTask(task); setFeedbackDetail(null); setActiveLevel(5); }} className={`backdrop-blur-xl p-4 md:p-5 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.01] border text-left flex items-center gap-4 group ${isCompleted ? 'bg-green-50/90 dark:bg-green-900/10 border-green-200 dark:border-green-800' : 'bg-white/90 dark:bg-gray-800/90 border-white/60 dark:border-gray-700/50'}`}>
+            <div className={`w-10 h-10 rounded-xl flex items-center justify-center font-black text-sm shrink-0 shadow-inner ${isCompleted ? 'bg-green-200 text-green-700 dark:bg-green-800/50 dark:text-green-300' : selectedTheme.category === 'Islamic' ? 'bg-amber-100 text-amber-700' : 'bg-blue-100 text-blue-700'}`}>
+              {isCompleted ? <i className="fas fa-check" /> : idx + 1}
             </div>
             <div className="flex-1 min-w-0">
-              <h4 className="font-bold text-gray-900 dark:text-white truncate text-sm">{task.title}</h4>
+              <h4 className={`font-bold truncate text-sm ${isCompleted ? 'text-green-800 dark:text-green-200' : 'text-gray-900 dark:text-white'}`}>{task.title}</h4>
               <div className="flex gap-2 mt-1.5">
                 <span className={`text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-md shadow-sm ${task.difficulty === 'Easy' ? 'bg-emerald-100 text-emerald-700' : task.difficulty === 'Medium' ? 'bg-amber-100 text-amber-700' : 'bg-rose-100 text-rose-700'}`}>
                   {task.difficulty}
                 </span>
+                {isCompleted && <span className="text-[9px] font-black uppercase tracking-widest px-2 py-0.5 rounded-md bg-green-100 text-green-700">{Math.round(completedScore)}%</span>}
               </div>
             </div>
-            <div className="w-8 h-8 rounded-full bg-gray-50 dark:bg-gray-700 flex items-center justify-center text-gray-400 group-hover:bg-lovelya-100 group-hover:text-lovelya-600 transition-colors shrink-0">
-              <i className="fas fa-play text-xs ml-0.5"></i>
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-colors shrink-0 ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-600' : 'bg-gray-50 dark:bg-gray-700 text-gray-400 group-hover:bg-lovelya-100 group-hover:text-lovelya-600'}`}>
+              <i className={`fas ${isCompleted ? 'fa-check' : 'fa-play'} text-xs ml-0.5`}></i>
             </div>
           </button>
-        ))}
+          );
+        })}
       </div>
     </motion.div>
   );
+
+  const saveShadowingResult = (score: number, completed: boolean) => {
+    if (!selectedTask) return;
+    void logActivity({
+      type: AppView.SHADOWING,
+      date: new Date().toISOString(),
+      score,
+      accuracy: score,
+      durationSeconds: recordingTime || 15,
+      details: `Shadowing: ${selectedTask.title}`,
+      metadata: {
+        completed,
+        taskId: selectedTask.id,
+        planTaskId: initialContext?.taskId,
+        stepId: initialContext?.stepId,
+        taskTitle: selectedTask.title,
+        shadowingMode: initialContext?.shadowingMode || 'manual',
+        source: initialContext?.type || 'manual'
+      }
+    });
+    if (completed) {
+      setCompletedTasksData(previous => ({ ...previous, [selectedTask.id]: Math.max(previous[selectedTask.id] || 0, score) }));
+    }
+  };
 
   const renderLevel5 = () => {
     if (!selectedTheme || !selectedTask) return null;
@@ -993,10 +1195,14 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                   </button>
                   {initialContext?.autoStart && feedbackDetail.score >= (initialContext?.minScore || 85) ? (
                     <button
-                      onClick={() => onComplete?.()}
+                      onClick={() => {
+                        saveShadowingResult(feedbackDetail.score, true);
+                        if (initialContext?.stepId) completeRoadmapUnit(initialContext.stepId);
+                        onComplete?.();
+                      }}
                       className="flex-1 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-xs md:text-sm"
                     >
-                      <i className="fas fa-check-circle mr-2"></i> Complete Daily Task
+                      <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : 'Complete Daily Task'}
                     </button>
                   ) : (
                     <button
@@ -1004,17 +1210,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                         if (feedbackDetail) {
                           const targetMinScore = initialContext?.minScore || 85;
 
-                          logActivity({
-                            type: AppView.SHADOWING,
-                            date: new Date().toISOString(),
-                            score: feedbackDetail.score,
-                            accuracy: feedbackDetail.score,
-                            durationSeconds: recordingTime || 15,
-                            metadata: {
-                              taskTitle: selectedTask.title,
-                              moduleOrigin: 'Shadowing'
-                            }
-                          });
+                          saveShadowingResult(feedbackDetail.score, feedbackDetail.score >= targetMinScore);
 
                           if (initialContext?.stepId && feedbackDetail.score >= targetMinScore) {
                             completeRoadmapUnit(initialContext.stepId);
@@ -1098,10 +1294,14 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           <p className="text-gray-500 text-xs md:text-sm">Select a situation to begin.</p>
         </div>
         <div className="flex flex-col gap-3 max-h-[60vh] overflow-y-auto p-1 custom-scrollbar">
-          {filtered.map(scenario => (
-            <button key={scenario.id} onClick={() => { setSelectedScenario(scenario); setDialogueStage('role'); }} className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl p-4 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.01] border border-white/60 dark:border-gray-700/50 text-left flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-600 dark:text-lovelya-300 flex items-center justify-center shrink-0">
-                <i className="fas fa-comments text-sm"></i>
+          {filtered.map(scenario => {
+            const completedScore = completedDialogueScores[scenario.id];
+            const isCompleted = completedScore !== undefined;
+            return (
+            <button key={scenario.id} onClick={() => { setSelectedScenario(scenario); setDialogueStage('role'); }} className={`${isCompleted ? 'bg-green-50/90 dark:bg-green-900/10 border-green-200 dark:border-green-800' : 'bg-white/90 dark:bg-gray-800/90 border-white/60 dark:border-gray-700/50'} backdrop-blur-xl p-4 rounded-2xl shadow-sm hover:shadow-md transition-all hover:scale-[1.01] border text-left flex items-center gap-3 relative overflow-hidden`}>
+              {isCompleted && <span className="absolute top-0 right-0 bg-green-500 text-white text-[8px] font-black px-2 py-1 rounded-bl-lg">{Math.round(completedScore)}%</span>}
+              <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-300' : 'bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-600 dark:text-lovelya-300'}`}>
+                <i className={`fas ${isCompleted ? 'fa-check' : 'fa-comments'} text-sm`}></i>
               </div>
               <div className="flex-1 min-w-0">
                 <h4 className="font-bold text-gray-900 dark:text-white text-sm truncate">{scenario.title}</h4>
@@ -1109,7 +1309,8 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               </div>
               <i className="fas fa-chevron-right text-gray-300 text-xs"></i>
             </button>
-          ))}
+            );
+          })}
         </div>
       </motion.div>
     );
@@ -1128,7 +1329,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         </div>
         <div className="flex gap-3">
           {(['A', 'B'] as const).map(role => (
-            <button key={role} onClick={() => { setSelectedRole(role); setLineIndex(0); setDialogueMatch(null); setRevealedHints(new Set()); setDialogueStage('play'); }} className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl p-5 text-center border border-white/60 dark:border-gray-700/50 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all">
+            <button key={role} onClick={() => { setSelectedRole(role); setLineIndex(0); setDialogueMatch(null); setDialogueLineResults({}); setDialogueSummary(null); setRevealedHints(new Set()); dialogueStartedAtRef.current = Date.now(); setDialogueStage('play'); }} className="flex-1 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl rounded-2xl p-5 text-center border border-white/60 dark:border-gray-700/50 shadow-sm hover:shadow-md hover:scale-[1.02] transition-all">
               <div className={`w-12 h-12 rounded-full mx-auto mb-2 flex items-center justify-center text-white text-lg ${role === 'A' ? 'bg-gradient-to-br from-sky-400 to-blue-700' : 'bg-gradient-to-br from-lovelya-400 to-rose-700'}`}>
                 <i className="fas fa-user"></i>
               </div>
@@ -1144,12 +1345,12 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const renderDialoguePlay = () => {
     if (!selectedScenario || !currentDialogueLine) return null;
     const progress = ((lineIndex) / selectedScenario.lines.length) * 100;
-    const matchPassed = dialogueMatch !== null && dialogueMatch >= MATCH_THRESHOLD * 100;
+    const matchPassed = dialogueMatch !== null && dialogueMatch >= dialoguePassFloor;
 
     return (
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 20 }} className="max-w-lg mx-auto space-y-4">
         <div className="flex items-center justify-between bg-white/90 dark:bg-gray-800/90 border border-white/60 dark:border-gray-700/50 rounded-2xl px-4 py-3">
-          <button onClick={() => setDialogueStage('role')} className="text-gray-400 hover:text-lovelya-600 transition"><i className="fas fa-arrow-left"></i></button>
+          {isDailyRoleplay ? <span className="w-4" /> : <button onClick={() => setDialogueStage('role')} className="text-gray-400 hover:text-lovelya-600 transition"><i className="fas fa-arrow-left"></i></button>}
           <div className="text-[11px] font-black text-gray-800 dark:text-white flex items-center gap-2 truncate px-2">
             <i className="fas fa-masks-theater text-lovelya-600"></i> {selectedScenario.title}
           </div>
@@ -1181,13 +1382,13 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
             <p className="text-sm font-black text-gray-900 dark:text-white my-2">"{currentDialogueLine.indonesian}"</p>
             <div className="mb-3 p-2.5 rounded-xl bg-gray-50 dark:bg-gray-900/40 border border-gray-100 dark:border-gray-700/50">
               <span className="text-[8px] font-black uppercase tracking-widest text-gray-400 flex items-center gap-1 mb-1.5">
-                <i className="fas fa-lightbulb text-amber-400"></i> Hint · ketuk kata untuk lihat Inggris-nya
+                <i className="fas fa-lightbulb text-amber-400"></i> Hint{isDailyRoleplay ? ` · ${revealedHints.size}/3 kata` : ''} · ketuk kata untuk lihat Inggris-nya
               </span>
               <div className="flex flex-wrap gap-1">
                 {currentDialogueLine.english.split(' ').map((word, i) => (
                   <button
                     key={i}
-                    onClick={() => setRevealedHints(prev => new Set(prev).add(i))}
+                    onClick={() => revealDialogueHint(i)}
                     className={`px-1.5 py-0.5 rounded-md text-[11px] font-bold transition-all ${revealedHints.has(i)
                       ? 'bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-700 dark:text-lovelya-300'
                       : 'bg-gray-200 dark:bg-gray-700 text-gray-400 dark:text-gray-500 blur-[4px] select-none hover:blur-[2px]'}`}
@@ -1196,6 +1397,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                   </button>
                 ))}
               </div>
+              {hintLimitMessage && <p className="mt-2 text-[10px] font-bold text-amber-600">{hintLimitMessage}</p>}
             </div>
             {dialogueTranscript && (
               <p className="text-[11px] text-gray-400 font-bold mb-2">You said: "{dialogueTranscript}"</p>
@@ -1211,7 +1413,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               {dialogueMatch !== null && !matchPassed && (
                 <div className="flex flex-col items-center gap-2 mt-1">
                   <span className="inline-flex items-center gap-1 text-[10px] font-black text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-3 py-1 rounded-full">
-                    <i className="fas fa-redo"></i> {dialogueMatch}% match — try again
+                    <i className="fas fa-redo"></i> {dialogueMatch}% match — need {dialoguePassFloor}%
                   </span>
                   <button onClick={() => { setDialogueMatch(null); setDialogueTranscript(''); }} className="text-[10px] font-black text-gray-400 hover:text-gray-600 uppercase tracking-widest">Clear &amp; retry</button>
                 </div>
@@ -1243,9 +1445,23 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         <h3 className="text-xl font-black text-gray-800 dark:text-white mb-1">Dialogue Complete!</h3>
         <p className="text-sm text-gray-500">{selectedScenario?.title}</p>
       </div>
+      {dialogueSummary && (
+        <div className={`rounded-2xl p-4 ${dialogueSummary.passed ? 'bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300' : 'bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-300'}`}>
+          <div className="text-3xl font-black">{dialogueSummary.score}%</div>
+          <p className="text-[10px] font-black uppercase tracking-widest mt-1">
+            {dialogueSummary.passed ? 'Daily target achieved' : `Need ${dialogueTargetScore}% average`}
+          </p>
+          <p className="text-xs mt-2">{dialogueSummary.turns} turns · {dialogueSummary.hintsUsed} hints used</p>
+        </div>
+      )}
       <div className="flex flex-col gap-3">
-        <button onClick={() => setDialogueStage('scenarios')} className="w-full py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-black uppercase tracking-widest text-xs">
-          Try Another Situation
+        {(isDailyRoleplay || isRoadmapRoleplay) && dialogueSummary?.passed && (
+          <button onClick={() => onComplete?.()} className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black uppercase tracking-widest text-xs">
+            <i className="fas fa-check-circle mr-2"></i> {isRoadmapRoleplay ? 'Complete & Back to Roadmap' : 'Complete Daily Task'}
+          </button>
+        )}
+        <button onClick={() => { setDialogueLineResults({}); setDialogueSummary(null); setLineIndex(0); setDialogueMatch(null); setRevealedHints(new Set()); dialogueStartedAtRef.current = Date.now(); setDialogueStage(isDailyRoleplay ? 'play' : 'scenarios'); }} className="w-full py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-black uppercase tracking-widest text-xs">
+          {isDailyRoleplay ? 'Try Again' : 'Try Another Situation'}
         </button>
         <button onClick={exitDialogueRoleplay} className="w-full py-3 bg-white border-2 border-gray-200 dark:border-gray-700 dark:bg-transparent text-gray-700 dark:text-gray-300 rounded-xl font-black uppercase tracking-widest text-xs">
           Back to Shadowing

@@ -6,39 +6,156 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Mira", "gender": "female" },
-      { "name": "Sam", "gender": "male" }
+      {
+        "name": "Mira",
+        "gender": "female"
+      },
+      {
+        "name": "Sam",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Mira: [tired] Sam, can we talk about the kitchen? The dishes have been piling up for three days now.",
-      "Sam: [defensive] I know, I know. Work has been crazy this week. I meant to do them yesterday.",
-      "Mira: [gently] I'm not trying to blame you. I just think we need a clearer system, because this keeps happening to both of us.",
-      "Sam: [thoughtful] That's fair. Honestly, I never know whose turn it is. We just do things whenever we remember.",
+      "Mira: [concerned] Sam, can we talk about the kitchen? The dishes have been piling up for three days now.",
+      "Sam: [tired] I know, I know. Work has been crazy this week. I meant to do them yesterday.",
+      "Mira: I'm not trying to blame you. I just think we need a clearer system, because this keeps happening to both of us.",
+      "Sam: That's fair. Honestly, I never know whose turn it is. We just do things whenever we remember.",
       "Mira: [practical] What if we make a simple chart? Monday and Wednesday are mine, Tuesday and Thursday are yours, and we split the weekend.",
-      "Sam: [considering] That could work. What about trash and recycling? Those always get forgotten too.",
-      "Mira: [thinking] Let's put trash with whoever cooks that night. It's usually connected anyway.",
-      "Sam: [agreeing] Good idea. And can we agree that dishes get done the same day, not left overnight?",
-      "Mira: [nodding] Yes, please. I hate walking into a messy kitchen in the morning before coffee.",
-      "Sam: [smiling] Same. Okay, what about the bathroom? That one always feels awkward to bring up.",
-      "Mira: [honestly] Let's just alternate weeks for cleaning it. Whoever isn't on duty can just remind the other one nicely.",
+      "Sam: That could work. What about trash and recycling? Those always get forgotten too.",
+      "Mira: Let's put trash with whoever cooks that night. It's usually connected anyway.",
+      "Sam: Good idea. And can we agree that dishes get done the same day, not left overnight?",
+      "Mira: Yes, please. I hate walking into a messy kitchen in the morning before coffee.",
+      "Sam: Same. Okay, what about the bathroom? That one always feels awkward to bring up.",
+      "Mira: Let's just alternate weeks for cleaning it. Whoever isn't on duty can just remind the other one nicely.",
       "Sam: [relieved] I like that this doesn't feel like a fight. It just feels like organizing.",
-      "Mira: [warmly] That's the goal. I'd rather have a chart than get annoyed at you every few days.",
-      "Sam: [determined] Should we write it down and stick it on the fridge, so we actually remember it?",
-      "Mira: [pleased] Perfect. I'll write it tonight and take a photo too, so we both have it on our phones.",
-      "Sam: [grateful] Thanks for bringing this up instead of just getting quietly annoyed with me.",
-      "Mira: [laughing] I was getting there, honestly. But I'd rather fix it than complain about it forever.",
+      "Mira: That's the goal. I'd rather have a chart than get annoyed at you every few days.",
+      "Sam: Should we write it down and stick it on the fridge, so we actually remember it?",
+      "Mira: Perfect. I'll write it tonight and take a photo too, so we both have it on our phones.",
+      "Sam: Thanks for bringing this up instead of just getting quietly annoyed with me.",
+      "Mira: I was getting there, honestly. But I'd rather fix it than complain about it forever.",
       "Sam: [warmly] Deal. Let's try this for a month and see if it actually works for us.",
-      "Mira: [satisfied] Sounds good. And if it doesn't work, we adjust it instead of giving up completely.",
-      "Sam: [smiling] Agreed. Now, should we finally do these dishes together right now?",
-      "Mira: [laughing] Yes. Let's start today, before the chart even exists."
+      "Mira: Sounds good. And if it doesn't work, we adjust it instead of giving up completely.",
+      "Sam: Agreed. Now, should we finally do these dishes together right now?",
+      "Mira: [determined] Yes. Let's start today, before the chart even exists."
     ],
     "quiz": [
-      { "question": "What problem does Mira bring up first?", "options": ["Rent money", "Dishes piling up for three days", "A noisy neighbor", "A broken appliance"], "correctIndex": 1, "explanation": "Mira says the dishes have been piling up for three days." },
-      { "question": "What system does Mira suggest for the kitchen?", "options": ["Hiring a cleaner", "A chore chart splitting specific days", "Doing nothing", "Only Sam does dishes"], "correctIndex": 1, "explanation": "Mira proposes a chart with Monday and Wednesday hers, Tuesday and Thursday his, and split weekends." },
-      { "question": "How do they decide to handle trash and recycling?", "options": ["Whoever remembers first", "Paired with whoever cooks that night", "Only on Sundays", "They hire someone"], "correctIndex": 1, "explanation": "They agree trash goes with whoever cooks that night." },
-      { "question": "How will they handle bathroom cleaning?", "options": ["Never clean it", "Alternate weeks, with friendly reminders", "Only Mira cleans it", "Clean it daily"], "correctIndex": 1, "explanation": "They agree to alternate weeks for cleaning the bathroom." },
-      { "question": "What do they do at the very end of the conversation?", "options": ["Argue more", "Decide to do the dishes together right away", "Go to sleep", "Call a cleaning service"], "correctIndex": 1, "explanation": "Sam suggests doing the dishes together right now, and Mira agrees." }
-    ]
+      {
+        "question": "What problem does Mira bring up first?",
+        "options": [
+          "Dishes piling up for three days",
+          "Rent money",
+          "A noisy neighbor",
+          "A broken appliance"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mira says the dishes have been piling up for three days."
+      },
+      {
+        "question": "What system does Mira suggest for the kitchen?",
+        "options": [
+          "Hiring a cleaner",
+          "A chore chart splitting specific days",
+          "Doing nothing",
+          "Only Sam does dishes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mira proposes a chart with Monday and Wednesday hers, Tuesday and Thursday his, and split weekends."
+      },
+      {
+        "question": "How do they decide to handle trash and recycling?",
+        "options": [
+          "Whoever remembers first",
+          "Only on Sundays",
+          "They hire someone",
+          "Paired with whoever cooks that night"
+        ],
+        "correctIndex": 3,
+        "explanation": "They agree trash goes with whoever cooks that night."
+      },
+      {
+        "question": "How will they handle bathroom cleaning?",
+        "options": [
+          "Never clean it",
+          "Only Mira cleans it",
+          "Clean it daily",
+          "Alternate weeks, with friendly reminders"
+        ],
+        "correctIndex": 3,
+        "explanation": "They agree to alternate weeks for cleaning the bathroom."
+      },
+      {
+        "question": "What do they do at the very end of the conversation?",
+        "options": [
+          "Argue more",
+          "Go to sleep",
+          "Decide to do the dishes together right away",
+          "Call a cleaning service"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sam suggests doing the dishes together right now, and Mira agrees."
+      },
+      {
+        "question": "Why was the old cleaning system confusing?",
+        "options": [
+          "They used two different kitchens",
+          "They cleaned only when they remembered",
+          "The chart was too long",
+          "The fridge had no door"
+        ],
+        "correctIndex": 1,
+        "explanation": "Without assigned turns, neither roommate knew who should act."
+      },
+      {
+        "question": "What does “alternate weeks” mean?",
+        "options": [
+          "Clean twice every week",
+          "Take turns each week",
+          "Choose a new apartment",
+          "Work only on weekends"
+        ],
+        "correctIndex": 1,
+        "explanation": "They will switch bathroom duty from one week to the next."
+      },
+      {
+        "question": "Where will they put the chart?",
+        "options": [
+          "On the fridge",
+          "Inside the bathroom",
+          "Beside the trash bin",
+          "On the front door"
+        ],
+        "correctIndex": 0,
+        "explanation": "A visible place will help both roommates remember."
+      },
+      {
+        "question": "How does Sam feel about Mira’s approach?",
+        "options": [
+          "Angry about the chart",
+          "Grateful she spoke directly",
+          "Confused about the dishes",
+          "Ready to move out"
+        ],
+        "correctIndex": 1,
+        "explanation": "He thanks her for discussing the problem instead of staying silently annoyed."
+      },
+      {
+        "question": "What makes their plan fair?",
+        "options": [
+          "Mira does every task",
+          "Sam chooses every day",
+          "Both people share clear duties",
+          "They leave work for weekends"
+        ],
+        "correctIndex": 2,
+        "explanation": "The chart divides kitchen and bathroom work between them."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; natural problem-solving dialogue with a complete shared plan",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-daily-02",
@@ -47,34 +164,148 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [breathless] Okay, recording this while I walk to the bus stop, because I need to laugh about this later.",
-      "Narrator: [exasperated] My alarm didn't go off. Or maybe it did, and I just didn't hear it, I honestly don't know.",
-      "Narrator: [rushed] I woke up twenty minutes late, which doesn't sound bad, but my whole morning runs on a tight schedule.",
+      "Narrator: My alarm didn't go off. Or maybe it did, and I just didn't hear it, I honestly don't know.",
+      "Narrator: I woke up twenty minutes late, which doesn't sound bad, but my whole morning runs on a tight schedule.",
       "Narrator: [frustrated] I went to make coffee, and there were no clean mugs. Every single one was in the sink from the weekend.",
       "Narrator: [laughing] So I drank coffee from a small bowl. A bowl. I looked completely ridiculous standing in my kitchen.",
-      "Narrator: [tired] Then I couldn't find my keys anywhere. I checked my bag, the counter, my coat pocket, nothing.",
-      "Narrator: [relieved] They were in the fridge. I still don't understand how that happened, but there they were, next to the milk.",
-      "Narrator: [amused] At that point I just started laughing, because clearly today was going to be one of those mornings.",
-      "Narrator: [rushed] I grabbed my bag, forgot my lunch on the counter, and only realized it once I was already outside.",
-      "Narrator: [sighing] I decided not to go back for it. Some mornings you just have to accept the chaos and keep moving.",
-      "Narrator: [thoughtful] I bought a sandwich near the office instead. Not ideal for my budget, but honestly, not a disaster either.",
-      "Narrator: [calmer] Walking to the bus stop now, I'm actually starting to feel calmer. The panic always fades once I'm moving.",
-      "Narrator: [reflective] I think mornings like this happen when I don't prepare anything the night before, not even my clothes.",
+      "Narrator: Then I couldn't find my keys anywhere. I checked my bag, the counter, my coat pocket, nothing.",
+      "Narrator: [surprised] They were in the fridge. I still don't understand how that happened, but there they were, next to the milk.",
+      "Narrator: At that point I just started laughing, because clearly today was going to be one of those mornings.",
+      "Narrator: I grabbed my bag, forgot my lunch on the counter, and only realized it once I was already outside.",
+      "Narrator: [resigned] I decided not to go back for it. Some mornings you just have to accept the chaos and keep moving.",
+      "Narrator: I bought a sandwich near the office instead. Not ideal for my budget, but honestly, not a disaster either.",
+      "Narrator: Walking to the bus stop now, I'm actually starting to feel calmer. The panic always fades once I'm moving.",
+      "Narrator: I think mornings like this happen when I don't prepare anything the night before, not even my clothes.",
       "Narrator: [determined] Tonight, I'm going to wash the mugs, find my keys a proper spot, and pack my lunch before bed.",
-      "Narrator: [honestly] I say that every time, though. Let's see if tonight is actually different from all the other times.",
-      "Narrator: [smiling] Anyway, the bus is here. Recording this made me feel a little less frazzled, so that's something.",
-      "Narrator: [warmly] Talk later. Hopefully with a calmer story than a bowl of coffee and keys in the fridge."
+      "Narrator: I say that every time, though. Let's see if tonight is actually different from all the other times.",
+      "Narrator: [relieved] Anyway, the bus is here. Recording this made me feel a little less frazzled, so that's something.",
+      "Narrator: Talk later. Hopefully with a calmer story than a bowl of coffee and keys in the fridge."
     ],
     "quiz": [
-      { "question": "Why did the narrator wake up late?", "options": ["She stayed up too late", "Her alarm didn't go off or she didn't hear it", "She overslept on purpose", "Her phone died"], "correctIndex": 1, "explanation": "She says her alarm didn't go off, or she didn't hear it." },
-      { "question": "What did she use to drink her coffee?", "options": ["A clean mug", "A bowl, because there were no clean mugs", "A water bottle", "She skipped coffee"], "correctIndex": 1, "explanation": "With no clean mugs, she drank coffee from a small bowl." },
-      { "question": "Where did she eventually find her keys?", "options": ["In her coat pocket", "In the fridge", "Under the couch", "In her bag"], "correctIndex": 1, "explanation": "She found her keys in the fridge, next to the milk." },
-      { "question": "What did she forget on the counter?", "options": ["Her phone", "Her lunch", "Her wallet", "Her umbrella"], "correctIndex": 1, "explanation": "She forgot her lunch on the counter and only noticed once outside." },
-      { "question": "What does she plan to do tonight to prevent this?", "options": ["Nothing, it doesn't matter", "Wash mugs, find a spot for keys, and pack lunch early", "Buy a new alarm clock", "Move to a new apartment"], "correctIndex": 1, "explanation": "She plans to wash the mugs, give her keys a proper spot, and pack her lunch before bed." }
-    ]
+      {
+        "question": "Why did the narrator wake up late?",
+        "options": [
+          "She stayed up too late",
+          "Her alarm didn't go off or she didn't hear it",
+          "She overslept on purpose",
+          "Her phone died"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says her alarm didn't go off, or she didn't hear it."
+      },
+      {
+        "question": "What did she use to drink her coffee?",
+        "options": [
+          "A bowl, because there were no clean mugs",
+          "A clean mug",
+          "A water bottle",
+          "She skipped coffee"
+        ],
+        "correctIndex": 0,
+        "explanation": "With no clean mugs, she drank coffee from a small bowl."
+      },
+      {
+        "question": "Where did she eventually find her keys?",
+        "options": [
+          "In the fridge",
+          "In her coat pocket",
+          "Under the couch",
+          "In her bag"
+        ],
+        "correctIndex": 0,
+        "explanation": "She found her keys in the fridge, next to the milk."
+      },
+      {
+        "question": "What did she forget on the counter?",
+        "options": [
+          "Her phone",
+          "Her wallet",
+          "Her umbrella",
+          "Her lunch"
+        ],
+        "correctIndex": 3,
+        "explanation": "She forgot her lunch on the counter and only noticed once outside."
+      },
+      {
+        "question": "What does she plan to do tonight to prevent this?",
+        "options": [
+          "Nothing, it doesn't matter",
+          "Buy a new alarm clock",
+          "Wash mugs, find a spot for keys, and pack lunch early",
+          "Move to a new apartment"
+        ],
+        "correctIndex": 2,
+        "explanation": "She plans to wash the mugs, give her keys a proper spot, and pack her lunch before bed."
+      },
+      {
+        "question": "What happened before she looked for her keys?",
+        "options": [
+          "She drank coffee from a bowl",
+          "She bought a sandwich",
+          "She reached the bus stop",
+          "She packed her lunch"
+        ],
+        "correctIndex": 0,
+        "explanation": "The missing mug problem came before the search for keys."
+      },
+      {
+        "question": "What does “chaos” mean in this memo?",
+        "options": [
+          "A quiet walk to work",
+          "A carefully planned morning",
+          "A normal bus ride",
+          "A confused and messy situation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Several problems made the morning feel uncontrolled."
+      },
+      {
+        "question": "Why did she buy a sandwich?",
+        "options": [
+          "She disliked her packed food",
+          "Her lunch was left at home",
+          "Her coworker requested one",
+          "The bus arrived early"
+        ],
+        "correctIndex": 1,
+        "explanation": "She noticed the forgotten lunch only after leaving."
+      },
+      {
+        "question": "How does recording the memo help her?",
+        "options": [
+          "It finds her missing keys",
+          "It cleans the kitchen",
+          "It makes her feel calmer",
+          "It delays the bus"
+        ],
+        "correctIndex": 2,
+        "explanation": "Talking and laughing about the morning reduces her stress."
+      },
+      {
+        "question": "Which change may help tomorrow morning most?",
+        "options": [
+          "Preparing important things at night",
+          "Waking twenty minutes later",
+          "Keeping keys in the fridge",
+          "Buying more coffee bowls"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her problems grew because little was prepared before bed."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; humorous voice memo with a clear time sequence and practical ending",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-daily-03",
@@ -83,38 +314,155 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Lila, who spent the last year clearing out her apartment. Thanks for joining me, Lila.",
       "Guest: [pleasantly] Happy to be here. This topic changed my daily life more than I expected.",
-      "Host: [curious] What made you start clearing things out in the first place?",
-      "Guest: [thoughtful] Honestly, I moved apartments and realized I owned way more than I actually used or even liked.",
-      "Host: [interested] Where did you begin? That sounds overwhelming for a lot of people.",
+      "Host: What made you start clearing things out in the first place?",
+      "Guest: [reflective] Honestly, I moved apartments and realized I owned way more than I actually used or even liked.",
+      "Host: Where did you begin? That sounds overwhelming for a lot of people.",
       "Guest: [practical] I started with one drawer. Just one. It felt small enough that I wouldn't give up halfway through.",
-      "Host: [curious] Did that small drawer lead to bigger changes?",
-      "Guest: [warmly] Yes, slowly. Once one drawer felt calm and organized, I wanted that same feeling in the next space too.",
-      "Host: [interested] What kinds of things did you get rid of?",
-      "Guest: [honestly] Clothes I hadn't worn in years, kitchen tools I never used, and papers I was keeping for no real reason.",
-      "Host: [curious] Was it emotionally hard to let go of some items?",
-      "Guest: [reflective] Definitely, with a few things. But I asked myself if the object was useful now, not just meaningful once.",
-      "Host: [thoughtful] How has your daily routine changed since doing this?",
-      "Guest: [smiling] Cleaning takes half the time now. I also spend less time searching for things I actually need.",
-      "Host: [curious] Has it changed how you shop for new things too?",
-      "Guest: [determined] Completely. Before buying something now, I ask if I'll still want it in six months.",
-      "Host: [interested] What would you tell someone who feels overwhelmed by their own home right now?",
+      "Host: Did that small drawer lead to bigger changes?",
+      "Guest: Yes, slowly. Once one drawer felt calm and organized, I wanted that same feeling in the next space too.",
+      "Host: What kinds of things did you get rid of?",
+      "Guest: Clothes I hadn't worn in years, kitchen tools I never used, and papers I was keeping for no real reason.",
+      "Host: Was it emotionally hard to let go of some items?",
+      "Guest: Definitely, with a few things. But I asked myself if the object was useful now, not just meaningful once.",
+      "Host: How has your daily routine changed since doing this?",
+      "Guest: [relieved] Cleaning takes half the time now. I also spend less time searching for things I actually need.",
+      "Host: Has it changed how you shop for new things too?",
+      "Guest: Completely. Before buying something now, I ask if I'll still want it in six months.",
+      "Host: What would you tell someone who feels overwhelmed by their own home right now?",
       "Guest: [encouraging] Start with one shelf or one drawer. Momentum builds naturally once you see the difference it makes.",
-      "Host: [smiling] That's great advice, Lila. Thank you for sharing your experience with us today.",
+      "Host: That's great advice, Lila. Thank you for sharing your experience with us today.",
       "Guest: [warmly] Thank you for listening. I hope it helps someone open just one drawer this week."
     ],
     "quiz": [
-      { "question": "What did Lila spend the last year doing?", "options": ["Renovating her kitchen", "Clearing out her apartment", "Traveling abroad", "Learning to cook"], "correctIndex": 1, "explanation": "The host introduces Lila as someone who spent the last year clearing out her apartment." },
-      { "question": "What made Lila start this process?", "options": ["A friend's advice", "Moving apartments and realizing she owned too much", "A television show", "Losing her job"], "correctIndex": 1, "explanation": "She started after moving apartments and realizing she owned more than she used or liked." },
-      { "question": "Where did Lila begin her decluttering?", "options": ["The whole apartment at once", "One single drawer", "Her closet only", "The garage"], "correctIndex": 1, "explanation": "She started with one drawer, small enough not to give up halfway through." },
-      { "question": "How does Lila decide whether to keep something now?", "options": ["If it was expensive", "If it is useful now, not just meaningful once", "If it matches her decor", "If someone gave it to her"], "correctIndex": 1, "explanation": "She asks if the object is useful now rather than just meaningful in the past." },
-      { "question": "What advice does Lila give to overwhelmed listeners?", "options": ["Clear the whole house in one day", "Start with one shelf or drawer", "Hire someone else to do it", "Buy storage boxes first"], "correctIndex": 1, "explanation": "She advises starting with one shelf or one drawer, since momentum builds naturally." }
-    ]
+      {
+        "question": "What did Lila spend the last year doing?",
+        "options": [
+          "Renovating her kitchen",
+          "Traveling abroad",
+          "Learning to cook",
+          "Clearing out her apartment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The host introduces Lila as someone who spent the last year clearing out her apartment."
+      },
+      {
+        "question": "What made Lila start this process?",
+        "options": [
+          "Moving apartments and realizing she owned too much",
+          "A friend's advice",
+          "A television show",
+          "Losing her job"
+        ],
+        "correctIndex": 0,
+        "explanation": "She started after moving apartments and realizing she owned more than she used or liked."
+      },
+      {
+        "question": "Where did Lila begin her decluttering?",
+        "options": [
+          "The whole apartment at once",
+          "Her closet only",
+          "One single drawer",
+          "The garage"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started with one drawer, small enough not to give up halfway through."
+      },
+      {
+        "question": "How does Lila decide whether to keep something now?",
+        "options": [
+          "If it was expensive",
+          "If it matches her decor",
+          "If it is useful now, not just meaningful once",
+          "If someone gave it to her"
+        ],
+        "correctIndex": 2,
+        "explanation": "She asks if the object is useful now rather than just meaningful in the past."
+      },
+      {
+        "question": "What advice does Lila give to overwhelmed listeners?",
+        "options": [
+          "Clear the whole house in one day",
+          "Start with one shelf or drawer",
+          "Hire someone else to do it",
+          "Buy storage boxes first"
+        ],
+        "correctIndex": 1,
+        "explanation": "She advises starting with one shelf or one drawer, since momentum builds naturally."
+      },
+      {
+        "question": "Why did Lila choose one drawer first?",
+        "options": [
+          "It held all her clothes",
+          "It belonged to her neighbor",
+          "It was already empty",
+          "It felt small enough to finish"
+        ],
+        "correctIndex": 3,
+        "explanation": "A small starting point helped her avoid giving up."
+      },
+      {
+        "question": "What does “overwhelming” mean here?",
+        "options": [
+          "Feeling too difficult to begin",
+          "Feeling easy and relaxing",
+          "Looking clean and empty",
+          "Becoming expensive to repair"
+        ],
+        "correctIndex": 0,
+        "explanation": "Clearing a whole apartment can feel like too much work at once."
+      },
+      {
+        "question": "What became easier after Lila owned less?",
+        "options": [
+          "Moving every six months",
+          "Cleaning and finding things",
+          "Buying kitchen tools",
+          "Keeping old papers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fewer objects reduced both cleaning and searching time."
+      },
+      {
+        "question": "How did the process change her shopping?",
+        "options": [
+          "She buys every item on sale",
+          "She shops only once a year",
+          "She asks friends to choose",
+          "She thinks about future use before buying"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now asks whether she will still want an item in six months."
+      },
+      {
+        "question": "What is Lila’s purpose in the podcast?",
+        "options": [
+          "To sell storage furniture",
+          "To describe her new apartment",
+          "To ask listeners for old clothes",
+          "To give a simple way to start"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her advice helps an overwhelmed listener begin with one small space."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; interview format gives concrete steps for reducing household clutter",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-daily-04",
@@ -123,39 +471,156 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dara", "gender": "female" },
-      { "name": "Mother", "gender": "female" }
+      {
+        "name": "Dara",
+        "gender": "female"
+      },
+      {
+        "name": "Mother",
+        "gender": "female"
+      }
     ],
     "script": [
       "Dara: [cheerful] Hi Mom, I finally have a free evening, so I thought I'd call and tell you about the apartment.",
       "Mother: [warmly] I was hoping you'd call. How is everything going with the move?",
       "Dara: [tired but happy] Mostly good. Boxes are still everywhere, but I found my favorite pan yesterday, so that felt like a small victory.",
-      "Mother: [laughing] That's how it always is. You unpack the kitchen last but need it first.",
-      "Dara: [amused] Exactly. I've been eating a lot of simple meals, rice and eggs mostly, until things settle down.",
-      "Mother: [curious] Have you set up a routine yet, or is it still chaos every day?",
-      "Dara: [thoughtful] Getting there. I wake up earlier now because the commute is longer than my old place.",
+      "Mother: That's how it always is. You unpack the kitchen last but need it first.",
+      "Dara: Exactly. I've been eating a lot of simple meals, rice and eggs mostly, until things settle down.",
+      "Mother: Have you set up a routine yet, or is it still chaos every day?",
+      "Dara: Getting there. I wake up earlier now because the commute is longer than my old place.",
       "Mother: [concerned] How much longer exactly? I don't want you exhausted every single day.",
-      "Dara: [reassuring] About twenty minutes more, so it's manageable. I actually use the extra time to plan my day.",
-      "Mother: [interested] What about the neighborhood? Do you like it so far?",
+      "Dara: About twenty minutes more, so it's manageable. I actually use the extra time to plan my day.",
+      "Mother: What about the neighborhood? Do you like it so far?",
       "Dara: [warmly] I really do. There's a small market nearby, and I've already started buying vegetables there instead of the big store.",
-      "Mother: [pleased] That sounds lovely. Fresh food always makes a place feel more like home.",
-      "Dara: [smiling] It does. I also met one neighbor, an older woman who waters plants in the hallway every morning.",
-      "Mother: [curious] Did you talk to her much?",
-      "Dara: [warmly] A little. She told me where the good bakery is, and I already went there twice this week.",
+      "Mother: That sounds lovely. Fresh food always makes a place feel more like home.",
+      "Dara: It does. I also met one neighbor, an older woman who waters plants in the hallway every morning.",
+      "Mother: Did you talk to her much?",
+      "Dara: A little. She told me where the good bakery is, and I already went there twice this week.",
       "Mother: [teasing] Twice in one week? Some things about you never change.",
-      "Dara: [laughing] Guilty. Anyway, I'm slowly making it feel like my own space, one box at a time.",
-      "Mother: [gently] That takes time, sweetheart. Don't rush it. A home is built slowly, not all at once.",
-      "Dara: [softly] That's a nice way to think about it. I'll call again once the living room is finally organized.",
-      "Mother: [warmly] I'll hold you to that. I love you, and I'm proud of you for handling this on your own.",
+      "Dara: Guilty. Anyway, I'm slowly making it feel like my own space, one box at a time.",
+      "Mother: That takes time, sweetheart. Don't rush it. A home is built slowly, not all at once.",
+      "Dara: [gently] That's a nice way to think about it. I'll call again once the living room is finally organized.",
+      "Mother: I'll hold you to that. I love you, and I'm proud of you for handling this on your own.",
       "Dara: [warmly] Love you too, Mom. Talk soon."
     ],
     "quiz": [
-      { "question": "Why does Dara call her mother?", "options": ["To ask for money", "To share how the apartment move is going", "To complain about her job", "To plan a trip together"], "correctIndex": 1, "explanation": "Dara calls to tell her mother about the new apartment and how the move is going." },
-      { "question": "What did Dara find yesterday that felt like a small victory?", "options": ["Her keys", "Her favorite pan", "Her phone charger", "Her shoes"], "correctIndex": 1, "explanation": "Dara mentions finding her favorite pan among the boxes." },
-      { "question": "How much longer is Dara's new commute?", "options": ["One hour longer", "About twenty minutes longer", "The same as before", "Ten minutes shorter"], "correctIndex": 1, "explanation": "Dara says the commute is about twenty minutes longer than before." },
-      { "question": "What did the older neighbor tell Dara about?", "options": ["A good bakery nearby", "The building's rules", "A local school", "The bus schedule"], "correctIndex": 0, "explanation": "The neighbor told Dara where the good bakery is." },
-      { "question": "What does Dara's mother say about building a home?", "options": ["It happens all at once", "It is built slowly, not all at once", "It requires expensive furniture", "It doesn't matter how it feels"], "correctIndex": 1, "explanation": "The mother says a home is built slowly, not all at once, and tells Dara not to rush." }
-    ]
+      {
+        "question": "Why does Dara call her mother?",
+        "options": [
+          "To share how the apartment move is going",
+          "To ask for money",
+          "To complain about her job",
+          "To plan a trip together"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dara calls to tell her mother about the new apartment and how the move is going."
+      },
+      {
+        "question": "What did Dara find yesterday that felt like a small victory?",
+        "options": [
+          "Her keys",
+          "Her phone charger",
+          "Her favorite pan",
+          "Her shoes"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dara mentions finding her favorite pan among the boxes."
+      },
+      {
+        "question": "How much longer is Dara's new commute?",
+        "options": [
+          "One hour longer",
+          "About twenty minutes longer",
+          "The same as before",
+          "Ten minutes shorter"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dara says the commute is about twenty minutes longer than before."
+      },
+      {
+        "question": "What did the older neighbor tell Dara about?",
+        "options": [
+          "A good bakery nearby",
+          "The building's rules",
+          "A local school",
+          "The bus schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "The neighbor told Dara where the good bakery is."
+      },
+      {
+        "question": "What does Dara's mother say about building a home?",
+        "options": [
+          "It happens all at once",
+          "It is built slowly, not all at once",
+          "It requires expensive furniture",
+          "It doesn't matter how it feels"
+        ],
+        "correctIndex": 1,
+        "explanation": "The mother says a home is built slowly, not all at once, and tells Dara not to rush."
+      },
+      {
+        "question": "Why is Dara eating simple meals?",
+        "options": [
+          "The market has no food",
+          "Her mother asked her to",
+          "The bakery is closed",
+          "Many kitchen things are still in boxes"
+        ],
+        "correctIndex": 3,
+        "explanation": "She is still unpacking and has only recently found her pan."
+      },
+      {
+        "question": "What does “manageable” mean here?",
+        "options": [
+          "Impossible to continue",
+          "Shorter than before",
+          "Free from all tiredness",
+          "Not too difficult to handle"
+        ],
+        "correctIndex": 3,
+        "explanation": "The extra twenty minutes is inconvenient but still possible for Dara."
+      },
+      {
+        "question": "What does Dara do during the longer commute?",
+        "options": [
+          "She calls the bakery",
+          "She waters hallway plants",
+          "She plans her day",
+          "She unpacks boxes"
+        ],
+        "correctIndex": 2,
+        "explanation": "She uses the extra travel time to organize her day."
+      },
+      {
+        "question": "What helped Dara learn about the neighborhood?",
+        "options": [
+          "A message from her manager",
+          "A map from her mother",
+          "A conversation with an older neighbor",
+          "A note inside a box"
+        ],
+        "correctIndex": 2,
+        "explanation": "The neighbor told her about a good local bakery."
+      },
+      {
+        "question": "How does Dara’s mother support her?",
+        "options": [
+          "She tells Dara to move back",
+          "She offers to unpack everything",
+          "She gives patient and loving advice",
+          "She complains about the commute"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her mother says creating a home takes time and expresses pride."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; natural family phone call with setting, routine, and emotional support",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-daily-05",
@@ -164,38 +629,155 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Bima", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Bima",
+        "gender": "male"
+      }
     ],
     "script": [
       "Nadia: [practical] Before we go shopping, let's actually plan the week. We keep buying random things and wasting food.",
       "Bima: [agreeing] You're right, half the fridge went bad last week. What should we cook on Monday?",
-      "Nadia: [thinking] Something quick, since we both work late. Maybe fried rice with whatever vegetables we already have.",
-      "Bima: [nodding] Good idea, that uses up the leftover carrots too. What about Tuesday?",
-      "Nadia: [suggesting] Chicken soup. It's easy, and we can make enough for two days if we cook a bigger pot.",
-      "Bima: [pleased] I like that. Less cooking on Wednesday sounds great after a long day.",
-      "Nadia: [continuing] For Wednesday, let's do something new. There's that noodle recipe you saved a few weeks ago.",
-      "Bima: [excited] Oh, the spicy noodles? Yes, let's finally try that. We keep saying we will and never do.",
-      "Nadia: [laughing] Exactly, this week we actually commit. Thursday, maybe something simple again, like grilled fish.",
-      "Bima: [agreeing] Fish is good. We haven't had it in a while, and it's fast to cook after work.",
-      "Nadia: [thoughtful] Friday, let's just order something. We deserve a break by the end of the week.",
-      "Bima: [smiling] Agreed, no cooking on Friday, that's basically a rule now.",
-      "Nadia: [organizing] Okay, so for the shopping list, we need rice, vegetables, chicken, noodles, and fish.",
-      "Bima: [adding] Don't forget the spices for the noodles. We're missing at least two of them.",
-      "Nadia: [writing] Right, adding those now. Should we also buy fruit for snacks, so we stop buying chips constantly?",
-      "Bima: [laughing] Please, yes. I've been eating way too many chips lately, and I know it.",
-      "Nadia: [warmly] Same here, honestly. Fruit is easier when it's already washed and ready in the fridge.",
-      "Bima: [agreeing] Let's wash everything as soon as we get home then, so it's actually easy to grab.",
-      "Nadia: [satisfied] Good plan. I think this week will feel less chaotic than usual.",
-      "Bima: [smiling] Definitely. Planning ten minutes now saves us from ordering food every single night."
+      "Nadia: Something quick, since we both work late. Maybe fried rice with whatever vegetables we already have.",
+      "Bima: Good idea, that uses up the leftover carrots too. What about Tuesday?",
+      "Nadia: Chicken soup. It's easy, and we can make enough for two days if we cook a bigger pot.",
+      "Bima: I like that. Less cooking on Wednesday sounds great after a long day.",
+      "Nadia: [excited] For Wednesday, let's do something new. There's that noodle recipe you saved a few weeks ago.",
+      "Bima: Oh, the spicy noodles? Yes, let's finally try that. We keep saying we will and never do.",
+      "Nadia: Exactly, this week we actually commit. Thursday, maybe something simple again, like grilled fish.",
+      "Bima: Fish is good. We haven't had it in a while, and it's fast to cook after work.",
+      "Nadia: [relieved] Friday, let's just order something. We deserve a break by the end of the week.",
+      "Bima: Agreed, no cooking on Friday, that's basically a rule now.",
+      "Nadia: Okay, so for the shopping list, we need rice, vegetables, chicken, noodles, and fish.",
+      "Bima: Don't forget the spices for the noodles. We're missing at least two of them.",
+      "Nadia: [thoughtful] Right, adding those now. Should we also buy fruit for snacks, so we stop buying chips constantly?",
+      "Bima: Please, yes. I've been eating way too many chips lately, and I know it.",
+      "Nadia: Same here, honestly. Fruit is easier when it's already washed and ready in the fridge.",
+      "Bima: Let's wash everything as soon as we get home then, so it's actually easy to grab.",
+      "Nadia: Good plan. I think this week will feel less chaotic than usual.",
+      "Bima: [satisfied] Definitely. Planning ten minutes now saves us from ordering food every single night."
     ],
     "quiz": [
-      { "question": "Why does Nadia want to plan meals before shopping?", "options": ["To save time cooking", "Because they keep wasting food buying random things", "Because Bima asked her to", "To try new restaurants"], "correctIndex": 1, "explanation": "Nadia says they keep buying random things and wasting food." },
-      { "question": "What do they plan to cook on Monday?", "options": ["Grilled fish", "Fried rice with vegetables they already have", "Spicy noodles", "Chicken soup"], "correctIndex": 1, "explanation": "They plan fried rice with whatever vegetables they already have on Monday." },
-      { "question": "What new recipe are they finally trying this week?", "options": ["Fried rice", "Spicy noodles Bima saved weeks ago", "Chicken soup", "Grilled fish"], "correctIndex": 1, "explanation": "They decide to finally try the spicy noodle recipe Bima saved a few weeks ago." },
-      { "question": "What is their plan for Friday?", "options": ["Cook a big feast", "Order food instead of cooking", "Eat leftovers only", "Go grocery shopping again"], "correctIndex": 1, "explanation": "They agree to order food on Friday as a break from cooking." },
-      { "question": "What do they decide to buy so they stop eating chips?", "options": ["More noodles", "Fruit for snacks", "More rice", "Ice cream"], "correctIndex": 1, "explanation": "Nadia suggests buying fruit for snacks so they stop buying chips constantly." }
-    ]
+      {
+        "question": "Why does Nadia want to plan meals before shopping?",
+        "options": [
+          "To save time cooking",
+          "Because Bima asked her to",
+          "To try new restaurants",
+          "Because they keep wasting food buying random things"
+        ],
+        "correctIndex": 3,
+        "explanation": "Nadia says they keep buying random things and wasting food."
+      },
+      {
+        "question": "What do they plan to cook on Monday?",
+        "options": [
+          "Grilled fish",
+          "Fried rice with vegetables they already have",
+          "Spicy noodles",
+          "Chicken soup"
+        ],
+        "correctIndex": 1,
+        "explanation": "They plan fried rice with whatever vegetables they already have on Monday."
+      },
+      {
+        "question": "What new recipe are they finally trying this week?",
+        "options": [
+          "Fried rice",
+          "Spicy noodles Bima saved weeks ago",
+          "Chicken soup",
+          "Grilled fish"
+        ],
+        "correctIndex": 1,
+        "explanation": "They decide to finally try the spicy noodle recipe Bima saved a few weeks ago."
+      },
+      {
+        "question": "What is their plan for Friday?",
+        "options": [
+          "Cook a big feast",
+          "Eat leftovers only",
+          "Order food instead of cooking",
+          "Go grocery shopping again"
+        ],
+        "correctIndex": 2,
+        "explanation": "They agree to order food on Friday as a break from cooking."
+      },
+      {
+        "question": "What do they decide to buy so they stop eating chips?",
+        "options": [
+          "More noodles",
+          "More rice",
+          "Ice cream",
+          "Fruit for snacks"
+        ],
+        "correctIndex": 3,
+        "explanation": "Nadia suggests buying fruit for snacks so they stop buying chips constantly."
+      },
+      {
+        "question": "Why do they make a large pot of soup?",
+        "options": [
+          "They have too many bowls",
+          "They can eat it for two days",
+          "They invited many guests",
+          "They want soup on Friday"
+        ],
+        "correctIndex": 1,
+        "explanation": "A larger amount means less cooking the next day."
+      },
+      {
+        "question": "What does “leftover” mean?",
+        "options": [
+          "Food that remains from before",
+          "Food bought for guests",
+          "Food that is too expensive",
+          "Food cooked in a restaurant"
+        ],
+        "correctIndex": 0,
+        "explanation": "The carrots are still available from an earlier meal or purchase."
+      },
+      {
+        "question": "Which meal needs extra spices?",
+        "options": [
+          "The fried rice",
+          "The spicy noodles",
+          "The chicken soup",
+          "The grilled fish"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bima says they are missing two spices for the noodle recipe."
+      },
+      {
+        "question": "Why will they wash the fruit at once?",
+        "options": [
+          "It will last for many months",
+          "It will replace every meal",
+          "It will be easy to take as a snack",
+          "It will make chips cheaper"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ready fruit is more convenient when they want a quick snack."
+      },
+      {
+        "question": "How does planning help the couple?",
+        "options": [
+          "It reduces waste and last-minute orders",
+          "It removes all cooking",
+          "It makes Friday busier",
+          "It fills the fridge with random food"
+        ],
+        "correctIndex": 0,
+        "explanation": "A short plan gives each ingredient and day a purpose."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; practical meal-planning dialogue with simple sequence and food vocabulary",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-daily-06",
@@ -204,34 +786,148 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [content] For years, my weekends felt wasted. I would sleep too late, scroll my phone for hours, and suddenly it was Sunday night.",
-      "Narrator: [reflective] I always felt disappointed, like the free time had slipped through my fingers without me noticing.",
-      "Narrator: [thoughtful] A few months ago, I decided to try something different, a simple weekend routine instead of no plan at all.",
-      "Narrator: [warmly] Saturday morning, I wake up early, not for work, but because I actually enjoy the quiet house before anyone else is up.",
-      "Narrator: [gently] I make coffee slowly, sit by the window, and just exist for twenty minutes without my phone nearby.",
+      "Narrator: [disappointed] For years, my weekends felt wasted. I would sleep too late, scroll my phone for hours, and suddenly it was Sunday night.",
+      "Narrator: I always felt disappointed, like the free time had disappeared before I noticed.",
+      "Narrator: A few months ago, I decided to try something different, a simple weekend routine instead of no plan at all.",
+      "Narrator: [peacefully] Saturday morning, I wake up early, not for work, but because I actually enjoy the quiet house before anyone else is up.",
+      "Narrator: I make coffee slowly, sit by the window, and just exist for twenty minutes without my phone nearby.",
       "Narrator: [practical] Then I do one small task around the house, maybe laundry, maybe cleaning the kitchen, just one thing, not everything.",
-      "Narrator: [pleased] After that task, the rest of the morning feels lighter, because something useful is already finished.",
-      "Narrator: [warmly] I usually go for a walk after breakfast, no destination, just moving and noticing the street around me.",
-      "Narrator: [honestly] Saturday afternoon is unplanned on purpose. Sometimes I read, sometimes I call a friend, sometimes I nap without guilt.",
+      "Narrator: After that task, the rest of the morning feels lighter, because something useful is already finished.",
+      "Narrator: I usually go for a walk after breakfast, no destination, just moving and noticing the street around me.",
+      "Narrator: [relaxed] Saturday afternoon is unplanned on purpose. Sometimes I read, sometimes I call a friend, sometimes I nap without guilt.",
       "Narrator: [thoughtful] Sunday looks different. I use the morning to prepare for the week, checking my calendar and planning simple meals.",
-      "Narrator: [practical] I also pack my bag for Monday on Sunday night, so my morning doesn't feel rushed the next day.",
-      "Narrator: [reflective] This routine isn't strict or complicated. It's really just a few small anchors in an otherwise open weekend.",
-      "Narrator: [warmly] What surprised me most is how much calmer Sunday evenings feel now, compared to before.",
-      "Narrator: [honestly] I used to feel a heavy dread on Sunday night, thinking about everything I didn't do that weekend.",
-      "Narrator: [peacefully] Now I feel more like I actually lived the two days, instead of just watching them disappear.",
-      "Narrator: [smiling] It's a small routine, nothing impressive really, but it changed how my whole week begins.",
-      "Narrator: [warmly] If your weekends feel like they vanish too fast, maybe you just need one or two small anchors, not a full schedule."
+      "Narrator: I also pack my bag for Monday on Sunday night, so my morning doesn't feel rushed the next day.",
+      "Narrator: This routine isn't strict or complicated. It's really just a few fixed habits in an open weekend.",
+      "Narrator: What surprised me most is how much calmer Sunday evenings feel now, compared to before.",
+      "Narrator: [relieved] I used to feel strong worry on Sunday night, thinking about everything I didn't do that weekend.",
+      "Narrator: Now I feel more like I actually lived the two days, instead of just watching them disappear.",
+      "Narrator: It's a small routine, nothing impressive really, but it changed how my whole week begins.",
+      "Narrator: [encouraging] If your weekends feel like they vanish too fast, maybe you just need one or two small fixed habits, not a full schedule."
     ],
     "quiz": [
-      { "question": "How did the narrator's weekends used to feel?", "options": ["Productive and organized", "Wasted, with too much sleep and phone scrolling", "Too busy with events", "Exactly the same as weekdays"], "correctIndex": 1, "explanation": "He says his weekends felt wasted, spent sleeping late and scrolling his phone." },
-      { "question": "What does he do first thing on Saturday morning?", "options": ["Goes straight to work", "Wakes early and enjoys quiet coffee by the window", "Cleans the whole house", "Sleeps until noon"], "correctIndex": 1, "explanation": "He wakes early to enjoy the quiet house and coffee by the window." },
-      { "question": "How does he approach household tasks on Saturday?", "options": ["He does everything at once", "He does just one small task, not everything", "He skips tasks entirely", "He hires help"], "correctIndex": 1, "explanation": "He does one small task, like laundry or cleaning the kitchen, not everything at once." },
-      { "question": "What does he do Sunday night to prepare for Monday?", "options": ["Nothing, he leaves it for the morning", "Packs his bag so the morning isn't rushed", "Stays up late working", "Plans a trip"], "correctIndex": 1, "explanation": "He packs his bag for Monday on Sunday night so his morning doesn't feel rushed." },
-      { "question": "How do his Sunday evenings feel now compared to before?", "options": ["Exactly the same", "Calmer, instead of the heavy dread he used to feel", "Even more stressful", "He no longer notices Sundays"], "correctIndex": 1, "explanation": "He says Sunday evenings feel calmer now, compared to the heavy dread he used to feel." }
-    ]
+      {
+        "question": "How did the narrator's weekends used to feel?",
+        "options": [
+          "Productive and organized",
+          "Too busy with events",
+          "Wasted, with too much sleep and phone scrolling",
+          "Exactly the same as weekdays"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says his weekends felt wasted, spent sleeping late and scrolling his phone."
+      },
+      {
+        "question": "What does he do first thing on Saturday morning?",
+        "options": [
+          "Goes straight to work",
+          "Cleans the whole house",
+          "Sleeps until noon",
+          "Wakes early and enjoys quiet coffee by the window"
+        ],
+        "correctIndex": 3,
+        "explanation": "He wakes early to enjoy the quiet house and coffee by the window."
+      },
+      {
+        "question": "How does he approach household tasks on Saturday?",
+        "options": [
+          "He does everything at once",
+          "He does just one small task, not everything",
+          "He skips tasks entirely",
+          "He hires help"
+        ],
+        "correctIndex": 1,
+        "explanation": "He does one small task, like laundry or cleaning the kitchen, not everything at once."
+      },
+      {
+        "question": "What does he do Sunday night to prepare for Monday?",
+        "options": [
+          "Packs his bag so the morning isn't rushed",
+          "Nothing, he leaves it for the morning",
+          "Stays up late working",
+          "Plans a trip"
+        ],
+        "correctIndex": 0,
+        "explanation": "He packs his bag for Monday on Sunday night so his morning doesn't feel rushed."
+      },
+      {
+        "question": "How do his Sunday evenings feel now compared to before?",
+        "options": [
+          "Calmer, instead of the heavy dread he used to feel",
+          "Exactly the same",
+          "Even more stressful",
+          "He no longer notices Sundays"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says Sunday evenings feel calmer now, compared to the heavy dread he used to feel."
+      },
+      {
+        "question": "What is the first useful task on Saturday?",
+        "options": [
+          "One small household job",
+          "A full day of cleaning",
+          "Packing the Monday bag",
+          "Planning every meal"
+        ],
+        "correctIndex": 0,
+        "explanation": "He chooses only one task such as laundry or the kitchen."
+      },
+      {
+        "question": "What does “unplanned on purpose” mean?",
+        "options": [
+          "He chooses to leave the time open",
+          "He forgot to make a plan",
+          "His friends canceled everything",
+          "He must work that afternoon"
+        ],
+        "correctIndex": 0,
+        "explanation": "Saturday afternoon is intentionally free for reading, rest, or friends."
+      },
+      {
+        "question": "How are Saturday and Sunday different?",
+        "options": [
+          "Saturday is for work; Sunday has no plan",
+          "Both days follow a strict schedule",
+          "Both days are spent on the phone",
+          "Saturday has rest; Sunday prepares for the week"
+        ],
+        "correctIndex": 3,
+        "explanation": "The two days have different simple purposes."
+      },
+      {
+        "question": "Why is Sunday evening calmer now?",
+        "options": [
+          "Monday has been canceled",
+          "He sleeps through the evening",
+          "Important preparation is already finished",
+          "The house is always empty"
+        ],
+        "correctIndex": 2,
+        "explanation": "Checking the calendar and packing his bag reduce worry."
+      },
+      {
+        "question": "What kind of routine does he recommend?",
+        "options": [
+          "A plan for every minute",
+          "A few simple habits, not a full schedule",
+          "No useful activity at all",
+          "The same routine as a workday"
+        ],
+        "correctIndex": 1,
+        "explanation": "His routine works because it provides direction while leaving free time."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep routine; simplify figurative and abstract words",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-daily-07",
@@ -240,39 +936,597 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good morning, listeners! Today we're talking about commuting stress. We have a caller on the line. Hello there!",
-      "Caller: [a little tired] Hello! Thanks for taking my call, I'm actually calling from my car right now, stuck in traffic.",
-      "Radio Host: [warmly] Perfect timing then. What does your commute usually look like?",
-      "Caller: [sighing] About fifty minutes each way, sometimes longer if there's an accident somewhere on the highway.",
-      "Radio Host: [sympathetically] That's a lot of time every single day. How has that affected you?",
-      "Caller: [honestly] I used to arrive at work already tense, and I'd come home too tired to do anything else.",
-      "Radio Host: [curious] Did you try changing anything about the commute itself?",
-      "Caller: [thoughtful] Yes, actually. I started listening to podcasts instead of the news, and that alone helped my mood a lot.",
-      "Radio Host: [interested] What kind of podcasts do you listen to now?",
-      "Caller: [smiling] Mostly calm ones, storytelling shows, nothing stressful. The news just added more tension I didn't need in traffic.",
-      "Radio Host: [curious] Have you changed your schedule at all, to avoid the worst traffic?",
-      "Caller: [nodding] I leave fifteen minutes earlier now. It's a small change, but I hit much less traffic that way.",
-      "Radio Host: [interested] Does leaving earlier feel worth it, even though you're sacrificing sleep?",
-      "Caller: [honestly] Completely worth it. Less traffic means less stress, and honestly, better sleep because I'm calmer at night too.",
-      "Radio Host: [curious] Any other small habits that help you during the drive?",
-      "Caller: [gently] I keep water and a small snack in the car. Being hungry in traffic makes everything feel worse somehow.",
-      "Radio Host: [smiling] That makes sense. Small comforts really do matter during a long commute.",
-      "Caller: [warmly] They really do. I also remind myself this time is just transition time, not wasted time.",
-      "Radio Host: [understanding] That's a healthy way to reframe it. Would you recommend these changes to other listeners?",
-      "Caller: [determined] Definitely. Leave a little earlier, choose calmer audio, and keep a snack nearby. Small things, real difference.",
-      "Radio Host: [warmly] Thank you so much for calling in this morning, even from the middle of traffic.",
-      "Caller: [laughing] Anytime. At least the call made this traffic feel a little shorter today."
+      "Caller: [tired] Hello! Thanks for taking my call, I'm actually calling from the bus right now, stuck in traffic.",
+      "Radio Host: Perfect timing then. What does your commute usually look like?",
+      "Caller: About fifty minutes each way, sometimes longer if there's an accident somewhere on the highway.",
+      "Radio Host: That's a lot of time every single day. How has that affected you?",
+      "Caller: [stressed] I used to arrive at work already tense, and I'd come home too tired to do anything else.",
+      "Radio Host: Did you try changing anything about the commute itself?",
+      "Caller: Yes, actually. I started listening to podcasts instead of the news, and that alone helped my mood a lot.",
+      "Radio Host: [relieved] What kind of podcasts do you listen to now?",
+      "Caller: Mostly calm ones, storytelling shows, nothing stressful. The news just added more tension I didn't need in traffic.",
+      "Radio Host: Have you changed your schedule at all, to avoid the worst traffic?",
+      "Caller: I leave fifteen minutes earlier now. It's a small change, but I hit much less traffic that way.",
+      "Radio Host: [calmly] Does leaving earlier feel worth it, even though you're sacrificing sleep?",
+      "Caller: Completely worth it. Less traffic means less stress, and honestly, better sleep because I'm calmer at night too.",
+      "Radio Host: Any other small habits that help you during the trip?",
+      "Caller: I keep water and a small snack in my bag. Being hungry in traffic makes everything feel worse somehow.",
+      "Radio Host: That makes sense. Small comforts really do matter during a long commute.",
+      "Caller: They really do. I also remind myself this time is just transition time, not wasted time.",
+      "Radio Host: That's a healthy way to reframe it. Would you recommend these changes to other listeners?",
+      "Caller: Definitely. Leave a little earlier, choose calmer audio, and keep a snack nearby. Small things, real difference.",
+      "Radio Host: [encouraging] Thank you so much for calling in this morning, even from the middle of traffic.",
+      "Caller: Anytime. At least the call made this traffic feel a little shorter today."
     ],
     "quiz": [
-      { "question": "Where is the caller calling from?", "options": ["His office", "His car, stuck in traffic", "His home", "A coffee shop"], "correctIndex": 1, "explanation": "The caller says he's calling from his car, stuck in traffic." },
-      { "question": "How long is the caller's commute each way?", "options": ["About fifty minutes", "Ten minutes", "Two hours", "Twenty minutes"], "correctIndex": 0, "explanation": "The caller says his commute is about fifty minutes each way, sometimes longer." },
-      { "question": "What did the caller start listening to instead of the news?", "options": ["Music only", "Calm storytelling podcasts", "Nothing at all", "Talk radio debates"], "correctIndex": 1, "explanation": "He started listening to calm storytelling podcasts instead of the news, which added tension." },
-      { "question": "What schedule change did the caller make?", "options": ["He leaves fifteen minutes earlier", "He leaves an hour later", "He changed his route only", "He started working from home"], "correctIndex": 0, "explanation": "The caller now leaves fifteen minutes earlier to hit less traffic." },
-      { "question": "What does the caller keep in his car to help during the drive?", "options": ["Extra clothes", "Water and a small snack", "A blanket", "Books"], "correctIndex": 1, "explanation": "He keeps water and a small snack in the car, since being hungry makes traffic feel worse." }
-    ]
+      {
+        "question": "Where is the caller speaking from?",
+        "options": [
+          "A quiet office",
+          "A train station",
+          "A bus in traffic",
+          "A parked bicycle"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller is traveling by bus during slow traffic."
+      },
+      {
+        "question": "How long is the commute each way?",
+        "options": [
+          "About fifty minutes",
+          "About fifteen minutes",
+          "Almost two hours",
+          "Only five minutes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The caller normally spends around fifty minutes on each trip."
+      },
+      {
+        "question": "What replaced the news during the trip?",
+        "options": [
+          "Calm storytelling podcasts",
+          "Work phone calls",
+          "Loud music",
+          "Language tests"
+        ],
+        "correctIndex": 0,
+        "explanation": "Calmer audio improved the caller’s mood."
+      },
+      {
+        "question": "What schedule change reduced traffic?",
+        "options": [
+          "Leaving one hour later",
+          "Working only at night",
+          "Leaving fifteen minutes earlier",
+          "Taking a different job"
+        ],
+        "correctIndex": 2,
+        "explanation": "A small earlier start avoids part of the busiest traffic."
+      },
+      {
+        "question": "What does the caller keep in the bag?",
+        "options": [
+          "A coffee machine",
+          "A large meal",
+          "A second phone",
+          "Water and a small snack"
+        ],
+        "correctIndex": 3,
+        "explanation": "Water and food make a long trip more comfortable."
+      },
+      {
+        "question": "How did the old commute affect work?",
+        "options": [
+          "The caller arrived too early",
+          "The caller arrived feeling tense",
+          "The caller missed every meeting",
+          "The caller worked on the bus"
+        ],
+        "correctIndex": 1,
+        "explanation": "Traffic stress was already present at the start of the workday."
+      },
+      {
+        "question": "What does “transition time” mean here?",
+        "options": [
+          "Time used only for news",
+          "Time when the bus is empty",
+          "Time for changing a ticket",
+          "Time between home and work"
+        ],
+        "correctIndex": 3,
+        "explanation": "The caller sees commuting as a bridge between two parts of the day."
+      },
+      {
+        "question": "Why did news audio make the trip harder?",
+        "options": [
+          "It was too quiet to hear",
+          "It ended before work",
+          "It changed the bus route",
+          "It added more tension"
+        ],
+        "correctIndex": 3,
+        "explanation": "Stressful news increased an already tense feeling."
+      },
+      {
+        "question": "Which two changes directly support a calmer mood?",
+        "options": [
+          "A longer route and less sleep",
+          "Earlier travel and calmer audio",
+          "More news and no snack",
+          "Later travel and more traffic"
+        ],
+        "correctIndex": 1,
+        "explanation": "The caller combines a schedule change with different listening."
+      },
+      {
+        "question": "What is the radio segment trying to offer?",
+        "options": [
+          "A way to avoid all travel",
+          "A review of bus companies",
+          "A plan for buying a car",
+          "Small ways to reduce commute stress"
+        ],
+        "correctIndex": 3,
+        "explanation": "The caller shares realistic habits for a difficult daily trip."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "revise unsafe car-call setting to a bus commute; preserve the radio advice",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-daily-08",
+    "title": "The Fifteen-Minute Evening Reset",
+    "level": "A1",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [frustrated] My apartment used to become messy very quickly during the working week. Shoes stayed near the door, cups filled my desk, and papers covered the table.",
+      "Narrator: I usually ignored everything until Saturday. Then I spent half the day cleaning and felt angry about losing my weekend.",
+      "Narrator: [curious] A friend suggested a fifteen-minute evening reset. The idea sounded too small, but I decided to try it.",
+      "Narrator: [practical] Every night after dinner, I set a timer. First, I return objects to their places and put dirty clothes in the basket.",
+      "Narrator: Next, I wash the cups and plates I used that day. I do not clean every shelf or start a large job.",
+      "Narrator: During the last five minutes, I prepare for tomorrow. I fill my water bottle, check my bag, and choose simple clothes.",
+      "Narrator: [firmly] When the timer rings, I stop. This is important because the routine should feel light enough to repeat.",
+      "Narrator: On the first night, the apartment was not perfect. After four evenings, however, the difference was easy to see.",
+      "Narrator: [relieved] My mornings became calmer because my keys and bag were ready. Saturday also became a real day off instead of a cleaning day.",
+      "Narrator: Sometimes I miss the reset because I come home late. I do not punish myself or try to do thirty minutes the next night.",
+      "Narrator: [gently] I simply begin again the following evening. A useful routine should support life, not become another reason for guilt.",
+      "Narrator: The best part is the feeling when I wake up. The room is quiet, the table is clear, and I can start without searching for things.",
+      "Narrator: Fifteen minutes cannot solve every household problem, but it can stop small messes from growing.",
+      "Narrator: [satisfied] For me, a short daily habit works better than one exhausting cleaning session each week."
+    ],
+    "quiz": [
+      {
+        "question": "When did the narrator previously do most cleaning?",
+        "options": [
+          "Every morning",
+          "On Saturday",
+          "During lunch",
+          "Only once a month"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator used to leave the mess until Saturday."
+      },
+      {
+        "question": "How long is the evening reset?",
+        "options": [
+          "Five minutes",
+          "Fifteen minutes",
+          "Thirty minutes",
+          "One hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "The routine uses a fifteen-minute timer."
+      },
+      {
+        "question": "What happens during the last five minutes?",
+        "options": [
+          "The narrator watches television",
+          "The narrator cleans every shelf",
+          "The narrator prepares for the next day",
+          "The narrator cooks dinner"
+        ],
+        "correctIndex": 2,
+        "explanation": "The last part is used to prepare clothes, a bag, and water."
+      },
+      {
+        "question": "What does the narrator do after missing one evening?",
+        "options": [
+          "Stops the routine forever",
+          "Cleans for two hours",
+          "Calls a friend to clean",
+          "Begins again the following evening"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator restarts without punishment or guilt."
+      },
+      {
+        "question": "What is the main benefit?",
+        "options": [
+          "The apartment never needs cleaning",
+          "The narrator buys fewer clothes",
+          "Small messes no longer become a large weekend job",
+          "Work begins later"
+        ],
+        "correctIndex": 2,
+        "explanation": "A short repeated habit prevents a large cleaning session."
+      },
+      {
+        "question": "What happens first during the reset?",
+        "options": [
+          "Tomorrow’s clothes are chosen",
+          "The timer is stopped",
+          "Things return to their places",
+          "Every shelf is cleaned"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator begins by putting away objects and dirty clothes."
+      },
+      {
+        "question": "What does “reset” mean in this routine?",
+        "options": [
+          "A complete apartment repair",
+          "A new Saturday schedule",
+          "A longer night of work",
+          "A short time to put the home in order"
+        ],
+        "correctIndex": 3,
+        "explanation": "The fifteen minutes restore basic order without deep cleaning."
+      },
+      {
+        "question": "Why does the narrator stop when the timer rings?",
+        "options": [
+          "The apartment is always perfect",
+          "There are no more dishes",
+          "The habit must stay easy to repeat",
+          "A friend calls every night"
+        ],
+        "correctIndex": 2,
+        "explanation": "A limited task is easier to continue daily."
+      },
+      {
+        "question": "Why does the narrator avoid thirty minutes after a missed day?",
+        "options": [
+          "The routine is not a punishment",
+          "The timer cannot count longer",
+          "Saturday cleaning is required",
+          "The apartment has no mess"
+        ],
+        "correctIndex": 0,
+        "explanation": "Restarting gently supports consistency without guilt."
+      },
+      {
+        "question": "Which result affects the narrator’s mornings?",
+        "options": [
+          "Important things are ready and easy to find",
+          "Breakfast is cooked every night",
+          "Work begins later",
+          "The apartment becomes larger"
+        ],
+        "correctIndex": 0,
+        "explanation": "A clear table, bag, and keys reduce morning searching."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; clear step-by-step routine with realistic limits and restart behavior",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-daily-09",
+    "title": "Lunch From Home for One Month",
+    "level": "A1",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [concerned] At the beginning of May, I checked my bank account and wondered where my money had gone. The answer was sitting in my office bin.",
+      "Narrator: Every workday, I bought lunch, a drink, and sometimes a snack. Each purchase seemed small, but together they cost a lot.",
+      "Narrator: [determined] I decided to bring lunch from home for one month. I did not plan beautiful meals or buy special boxes.",
+      "Narrator: On Sunday, I cooked rice, chicken, and vegetables for two days. On other evenings, I packed part of our family dinner.",
+      "Narrator: [frustrated] The first week was difficult because I often forgot the box in the refrigerator. I placed a note beside my front door.",
+      "Narrator: The note said, “Lunch, keys, phone.” It looked silly, but it worked. I also kept a spoon at my desk.",
+      "Narrator: [relieved] By the second week, packing lunch felt normal. I tried simple changes, such as adding fruit, soup, or a boiled egg.",
+      "Narrator: I still ate with my coworkers. Bringing food did not mean sitting alone or refusing every invitation.",
+      "Narrator: On one Friday, we visited a small restaurant together. I enjoyed it because it was a planned choice, not a daily habit.",
+      "Narrator: [cheerful] At the end of the month, I compared my spending. I had saved enough to pay an important bill without worry.",
+      "Narrator: [satisfied] There was another benefit. My afternoon energy was better because I chose lighter food and knew what was inside it.",
+      "Narrator: I learned that saving money did not require a perfect budget. One clear daily change made a visible difference.",
+      "Narrator: I now buy lunch once a week and bring it on the other days. This balance is realistic for me.",
+      "Narrator: [warmly] The small box in my bag is now part of my morning routine, and my bank account is calmer too."
+    ],
+    "quiz": [
+      {
+        "question": "What was using much of the narrator’s money?",
+        "options": [
+          "Paying bus tickets",
+          "Buying lunch, drinks, and snacks at work",
+          "Buying new clothes",
+          "Ordering books"
+        ],
+        "correctIndex": 1,
+        "explanation": "Daily food and drink purchases were adding up."
+      },
+      {
+        "question": "What reminder did he put by the door?",
+        "options": [
+          "“Call your manager”",
+          "“Lunch, keys, phone”",
+          "“Buy a new box”",
+          "“Leave work early”"
+        ],
+        "correctIndex": 1,
+        "explanation": "The note reminded him to take lunch, keys, and phone."
+      },
+      {
+        "question": "Did he stop eating with coworkers?",
+        "options": [
+          "Yes, for the whole month",
+          "Only on Mondays",
+          "No, he still joined them",
+          "He ate in his car"
+        ],
+        "correctIndex": 2,
+        "explanation": "He brought food but continued eating socially with coworkers."
+      },
+      {
+        "question": "What did he do on one Friday?",
+        "options": [
+          "Forgot lunch and skipped eating",
+          "Cooked in the office",
+          "Ate at a restaurant as a planned choice",
+          "Bought lunch for everyone"
+        ],
+        "correctIndex": 2,
+        "explanation": "He deliberately joined coworkers at a restaurant once."
+      },
+      {
+        "question": "What balance does he follow now?",
+        "options": [
+          "He buys lunch once a week and brings it on other days",
+          "He never buys food",
+          "He buys lunch every day",
+          "He cooks only on weekends"
+        ],
+        "correctIndex": 0,
+        "explanation": "His lasting routine includes one bought lunch each week."
+      },
+      {
+        "question": "Why did the door note help?",
+        "options": [
+          "It showed the lunch recipe",
+          "It recorded his spending",
+          "It told coworkers to wait",
+          "It reminded him before he left"
+        ],
+        "correctIndex": 3,
+        "explanation": "The note was placed where he would see it while leaving home."
+      },
+      {
+        "question": "What does “planned choice” mean for Friday lunch?",
+        "options": [
+          "A meal bought by accident",
+          "A decision made before spending",
+          "A lunch chosen by coworkers",
+          "Food left on the counter"
+        ],
+        "correctIndex": 1,
+        "explanation": "The restaurant meal was intentional, unlike his old daily habit."
+      },
+      {
+        "question": "What changed by the second week?",
+        "options": [
+          "Packing lunch felt normal",
+          "He stopped eating lunch",
+          "He bought more special boxes",
+          "His coworkers ate alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "Repeating the action made it part of his routine."
+      },
+      {
+        "question": "What two benefits did he notice?",
+        "options": [
+          "More snacks and a larger bill",
+          "More savings and better afternoon energy",
+          "Less food and longer work",
+          "More restaurants and less time"
+        ],
+        "correctIndex": 1,
+        "explanation": "Home food helped both his budget and how he felt after lunch."
+      },
+      {
+        "question": "Why is his final plan realistic?",
+        "options": [
+          "It bans every social meal",
+          "It requires perfect cooking",
+          "It changes every family dinner",
+          "It allows one bought lunch each week"
+        ],
+        "correctIndex": 3,
+        "explanation": "The balance saves money without removing all restaurant meals."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; adult budgeting story uses concrete food choices and a realistic balance",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-daily-10",
+    "title": "My First Week Without Snoozing",
+    "level": "A1",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [tired] My alarm used to ring at six, but I rarely stood up before half past six. I pressed the snooze button again and again.",
+      "Narrator: Those extra minutes did not make me feel rested. They made me rushed, and I often left home without breakfast.",
+      "Narrator: [determined] Last week, I tested a simple change. I put my phone on a shelf across the room before sleeping.",
+      "Narrator: When the alarm rang, I had to leave the bed to stop it. On the first morning, I nearly climbed back under the blanket.",
+      "Narrator: [tempted] Instead, I opened the curtains and drank the glass of water beside my desk. The light helped me wake up.",
+      "Narrator: I had prepared my clothes and bag the night before. Because of that, I did not need to make many decisions.",
+      "Narrator: [relieved] The second morning was still hard, but I had time to eat eggs and toast. I arrived at work ten minutes early.",
+      "Narrator: By Thursday, I noticed that my evenings also needed to change. Waking early is difficult when I watch videos until midnight.",
+      "Narrator: [thoughtful] I began charging my phone outside the bedroom at ten thirty. Then I read a few pages of a book and slept.",
+      "Narrator: On Friday morning, I woke a minute before the alarm. That felt surprising after years of fighting the snooze button.",
+      "Narrator: [surprised] One week does not mean the habit is permanent. I know there will be cold mornings when the bed feels especially comfortable.",
+      "Narrator: Still, I now understand that the solution is not stronger motivation at six o'clock. It is better preparation the night before.",
+      "Narrator: A distant phone, ready clothes, water, and an earlier bedtime make the morning choice easier.",
+      "Narrator: [calmly] My goal is not to become a perfect morning person. I simply want to begin the day without panic."
+    ],
+    "quiz": [
+      {
+        "question": "What was the narrator’s old alarm habit?",
+        "options": [
+          "Pressing snooze repeatedly",
+          "Waking before the alarm",
+          "Turning off the phone",
+          "Going for a run"
+        ],
+        "correctIndex": 0,
+        "explanation": "He repeatedly used the snooze button."
+      },
+      {
+        "question": "Where did he place his phone?",
+        "options": [
+          "Under his pillow",
+          "On a shelf across the room",
+          "In the kitchen drawer",
+          "Beside the bed"
+        ],
+        "correctIndex": 1,
+        "explanation": "The phone was placed far enough away that he had to stand."
+      },
+      {
+        "question": "What helped him wake after leaving bed?",
+        "options": [
+          "Watching a video",
+          "Calling a friend",
+          "Taking a bus",
+          "Opening the curtains and drinking water"
+        ],
+        "correctIndex": 3,
+        "explanation": "Light and water helped him become alert."
+      },
+      {
+        "question": "What evening change did he make?",
+        "options": [
+          "He worked until midnight",
+          "He drank more coffee",
+          "He charged the phone outside and slept earlier",
+          "He prepared breakfast at midnight"
+        ],
+        "correctIndex": 2,
+        "explanation": "He reduced late videos and moved the phone outside the room."
+      },
+      {
+        "question": "What is his real morning goal?",
+        "options": [
+          "To become a famous morning person",
+          "To start without panic",
+          "To wake at four",
+          "To stop using alarms forever"
+        ],
+        "correctIndex": 1,
+        "explanation": "He wants a calm start, not a perfect identity."
+      },
+      {
+        "question": "Why does the phone stay across the room?",
+        "options": [
+          "It charges faster there",
+          "The shelf is near breakfast",
+          "The bedroom has no table",
+          "He must stand to stop the alarm"
+        ],
+        "correctIndex": 3,
+        "explanation": "Distance makes pressing snooze from bed impossible."
+      },
+      {
+        "question": "What does “snooze” do?",
+        "options": [
+          "Turns on the room light",
+          "Prepares clothes for work",
+          "Moves the phone away",
+          "Delays the alarm for a short time"
+        ],
+        "correctIndex": 3,
+        "explanation": "Repeated snoozing kept him in bed until he was rushed."
+      },
+      {
+        "question": "Which preparation reduced morning decisions?",
+        "options": [
+          "Eggs and toast at work",
+          "A book beside the phone",
+          "A later alarm time",
+          "Ready clothes and a packed bag"
+        ],
+        "correctIndex": 3,
+        "explanation": "He had already chosen and packed important things."
+      },
+      {
+        "question": "Why did he change his evening videos?",
+        "options": [
+          "Late watching made early waking harder",
+          "The videos stopped working",
+          "He wanted to read at work",
+          "The alarm was too loud"
+        ],
+        "correctIndex": 0,
+        "explanation": "An earlier bedtime supports the morning plan."
+      },
+      {
+        "question": "What does the narrator understand after one week?",
+        "options": [
+          "One week makes a habit permanent",
+          "Motivation alone solves everything",
+          "The night before shapes the morning",
+          "Breakfast is the only important change"
+        ],
+        "correctIndex": 2,
+        "explanation": "Several evening choices make the early action easier."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "daily",
+      "scriptDecision": "keep; strong habit story connecting evening preparation with morning results",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

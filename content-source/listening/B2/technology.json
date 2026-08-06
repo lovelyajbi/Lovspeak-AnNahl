@@ -6,30 +6,144 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] I used to boast that I only opened my social feed for five minutes at a time, which, in hindsight, was a fairly generous estimate of my own self-control.",
-      "Narrator: [reflective] What I hadn't accounted for was that the feed wasn't neutral; it had been quietly studying me for years, learning exactly which images made my thumb pause mid-scroll.",
-      "Narrator: [candid] Outrage, it turns out, is remarkably efficient. A clip of a stranger behaving badly could hold my attention far longer than anything genuinely useful ever managed to.",
-      "Narrator: [unsettled] Had someone told me a decade ago that I'd spend an evening furious at a person I'd never met, over a controversy that would be forgotten by morning, I'd have laughed them off.",
-      "Narrator: [thoughtful] Yet there I was, night after night, feeling as though I were staying informed, when in reality I was simply being fed whatever kept me twitching my thumb.",
-      "Narrator: [honest] The turning point came when I noticed I could recall dozens of arguments I'd witnessed online, yet almost nothing I'd read in the book gathering dust on my nightstand.",
-      "Narrator: [determined] So I did something deliberately inconvenient: I deleted the app and left only the browser version, which loads slowly enough that my irritation usually wins before the outrage does.",
-      "Narrator: [wry] The first week felt like withdrawal, which sounds dramatic until you consider how deliberately these feeds are engineered to make withdrawal feel exactly like that.",
-      "Narrator: [reflective] Gradually, though, I noticed my thoughts slowing down, becoming less reactive, less inclined to assume the worst about strangers based on fifteen seconds of context.",
-      "Narrator: [thoughtful] I've since realized that being informed and being provoked are two entirely different sensations that the algorithm is happy to let me confuse indefinitely.",
-      "Narrator: [warm] Nowadays, if something online makes my pulse spike within seconds, I treat that reaction as a warning label rather than a reason to keep scrolling.",
-      "Narrator: [candid] I'm under no illusion that I've escaped it entirely; the pull is still there, quieter now, waiting patiently for the moment my guard slips.",
-      "Narrator: [with a small smile] But at least these days, when my attention gets hijacked, I notice it happening, which apparently counts as progress in this particular battle."
+      "Narrator: [thoughtful] I used to boast that I only opened my social feed for five minutes at a time, which, in hindsight, was a fairly generous estimate of my own self-control.",
+      "Narrator: What I hadn't accounted for was that the feed wasn't neutral; it had been quietly studying me for years, learning exactly which images made my thumb pause mid-scroll.",
+      "Narrator: [carefully] Outrage, it turns out, is remarkably efficient. A clip of a stranger behaving badly could hold my attention far longer than anything genuinely useful ever managed to.",
+      "Narrator: Had someone told me a decade ago that I'd spend an evening furious at a person I'd never met, over a controversy that would be forgotten by morning, I'd have laughed them off.",
+      "Narrator: [reflective] Yet there I was, night after night, feeling as though I were staying informed, when in reality I was simply being fed whatever kept me twitching my thumb.",
+      "Narrator: The turning point came when I noticed I could recall dozens of arguments I'd witnessed online, yet almost nothing I'd read in the book gathering dust on my nightstand.",
+      "Narrator: [honestly] So I did something deliberately inconvenient: I deleted the app and left only the browser version, which loads slowly enough that my irritation usually wins before the outrage does.",
+      "Narrator: The first week felt like withdrawal, which sounds dramatic until you consider how deliberately these feeds are engineered to make withdrawal feel exactly like that.",
+      "Narrator: [gently] Gradually, though, I noticed my thoughts slowing down, becoming less reactive, less inclined to assume the worst about strangers based on fifteen seconds of context.",
+      "Narrator: I've since realized that being informed and being provoked are two entirely different sensations that the algorithm is happy to let me confuse indefinitely.",
+      "Narrator: [calmly] Nowadays, if something online makes my pulse spike within seconds, I treat that reaction as a warning label rather than a reason to keep scrolling.",
+      "Narrator: I'm under no illusion that I've escaped it entirely; the pull is still there, quieter now, waiting patiently for the moment my guard slips.",
+      "Narrator: [encouraging] But at least these days, when my attention gets hijacked, I notice it happening, which apparently counts as progress in this particular battle."
     ],
     "quiz": [
-      { "question": "What does the narrator realize the feed had been doing for years?", "options": ["Recommending books to her", "Quietly studying her to learn what made her pause while scrolling", "Sending her advertisements only", "Blocking content she disliked"], "correctIndex": 1, "explanation": "She realizes the feed had been quietly studying her to learn exactly which images made her thumb pause mid-scroll." },
-      { "question": "What does the narrator say is remarkably efficient at holding attention?", "options": ["Educational videos", "Outrage, such as a clip of a stranger behaving badly", "Music playlists", "Weather updates"], "correctIndex": 1, "explanation": "She says outrage is remarkably efficient, giving the example of a clip of a stranger behaving badly." },
-      { "question": "What was the turning point that made her reconsider her habits?", "options": ["She lost her phone", "She noticed she recalled online arguments but almost nothing from the book by her bed", "A friend confronted her", "She ran out of storage space"], "correctIndex": 1, "explanation": "She noticed she could recall dozens of online arguments but almost nothing from the book gathering dust on her nightstand." },
-      { "question": "What deliberately inconvenient step did she take?", "options": ["She bought a new phone", "She deleted the app and kept only the slower-loading browser version", "She gave her phone to a friend", "She stopped using the internet entirely"], "correctIndex": 1, "explanation": "She deleted the app and left only the browser version, which loads slowly enough that irritation often wins before outrage does." },
-      { "question": "How does she now treat a sudden spike in her pulse while scrolling?", "options": ["As a sign to keep scrolling faster", "As a warning label rather than a reason to keep scrolling", "As proof the content is trustworthy", "She ignores the feeling completely"], "correctIndex": 1, "explanation": "She now treats a fast pulse as a warning label rather than a reason to keep scrolling." }
-    ]
+      {
+        "question": "What does the narrator realize the feed had been doing for years?",
+        "options": [
+          "Quietly studying her to learn what made her pause while scrolling",
+          "Recommending books to her",
+          "Sending her advertisements only",
+          "Blocking content she disliked"
+        ],
+        "correctIndex": 0,
+        "explanation": "She realizes the feed had been quietly studying her to learn exactly which images made her thumb pause mid-scroll."
+      },
+      {
+        "question": "What does the narrator say is remarkably efficient at holding attention?",
+        "options": [
+          "Educational videos",
+          "Outrage, such as a clip of a stranger behaving badly",
+          "Music playlists",
+          "Weather updates"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says outrage is remarkably efficient, giving the example of a clip of a stranger behaving badly."
+      },
+      {
+        "question": "What was the turning point that made her reconsider her habits?",
+        "options": [
+          "She lost her phone",
+          "She noticed she recalled online arguments but almost nothing from the book by her bed",
+          "A friend confronted her",
+          "She ran out of storage space"
+        ],
+        "correctIndex": 1,
+        "explanation": "She noticed she could recall dozens of online arguments but almost nothing from the book gathering dust on her nightstand."
+      },
+      {
+        "question": "What deliberately inconvenient step did she take?",
+        "options": [
+          "She bought a new phone",
+          "She gave her phone to a friend",
+          "She stopped using the internet entirely",
+          "She deleted the app and kept only the slower-loading browser version"
+        ],
+        "correctIndex": 3,
+        "explanation": "She deleted the app and left only the browser version, which loads slowly enough that irritation often wins before outrage does."
+      },
+      {
+        "question": "How does she now treat a sudden spike in her pulse while scrolling?",
+        "options": [
+          "As a sign to keep scrolling faster",
+          "As proof the content is trustworthy",
+          "As a warning label rather than a reason to keep scrolling",
+          "She ignores the feeling completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now treats a fast pulse as a warning label rather than a reason to keep scrolling."
+      },
+      {
+        "question": "What imbalance in the narrator's memory exposes the feed's influence?",
+        "options": [
+          "No more queuing for twenty minutes with everyone's tickets on their phones",
+          "Today's guest designs apps for a living",
+          "Online arguments remained vivid while the unread book offered almost nothing.",
+          "I checked my bank app immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Online arguments remained vivid while the unread book offered almost nothing."
+      },
+      {
+        "question": "Why does the narrator replace the app with its slower browser version?",
+        "options": [
+          "Extra friction interrupts automatic scrolling before outrage takes control.",
+          "Once biometric data has been collected, it can't simply be reissued like a stolen password",
+          "I once gave up trying to cancel something out of sheer exhaustion",
+          "An unpaid customs fee preventing delivery"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Extra friction interrupts automatic scrolling before outrage takes control."
+      },
+      {
+        "question": "How does the narrator's thinking change during the second week?",
+        "options": [
+          "An opt-in system changes the calculation completely",
+          "Were you ever asked to build something like that yourself",
+          "That the link led to a domain merely resembling the courier's actual website",
+          "The narrator becomes less reactive and judges strangers less quickly."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The narrator becomes less reactive and judges strangers less quickly."
+      },
+      {
+        "question": "Which two sensations had the algorithm encouraged the narrator to confuse?",
+        "options": [
+          "Feeling informed and feeling provoked had seemed identical.",
+          "I'd been picturing this as purely a technical upgrade, not something with consent built into it",
+          "Once you can name the trick, it loses a surprising amount of its power over you",
+          "He remembered he hadn't ordered anything requiring international shipping that week"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Feeling informed and feeling provoked had seemed identical."
+      },
+      {
+        "question": "How does the narrator now interpret an immediate spike in anger online?",
+        "options": [
+          "I still think the queue itself was borderline inhumane last summer",
+          "I hope a few people cancel something they've been meaning to cancel for months",
+          "His bank flagged the larger charge as suspicious and froze it before it cleared",
+          "It is a warning to pause rather than continue scrolling."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It is a warning to pause rather than continue scrolling."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-technology-02",
@@ -38,33 +152,150 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dara", "gender": "male" },
-      { "name": "Wulan", "gender": "female" }
+      {
+        "name": "Dara",
+        "gender": "male"
+      },
+      {
+        "name": "Wulan",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Dara: [enthusiastic] Wulan, did you see the venue is trialing facial recognition for entry next month? No more queuing for twenty minutes with everyone's tickets on their phones.",
-      "Wulan: [skeptical] I saw it, and honestly, my first thought wasn't convenience, it was wondering where exactly my face ends up once it's been scanned and stored.",
-      "Dara: [reasonable] They claim the data gets deleted within twenty-four hours. That seems worth it, especially compared to the chaos of last year's entrance.",
-      "Wulan: [pointed] Claims are easy to make, though. What recourse would we have if that promise turned out to be loosely interpreted?",
-      "Dara: [considering] That's fair, I suppose. I hadn't really questioned whether the policy was enforceable or just something printed on a website nobody reads.",
-      "Wulan: [firm] Exactly my concern. Once biometric data has been collected, it can't simply be reissued like a stolen password. There's no starting over with a new face.",
-      "Dara: [thoughtful] I see your point, although there's a difference between reasonable caution and assuming the worst of every organization adopting new technology.",
-      "Wulan: [measured] I'm not assuming malice, just asking whether convenience justifies handing over something that permanent for something that trivial, saving fifteen minutes at a gate.",
-      "Dara: [curious] Would you feel differently if attendance were entirely optional, and people could still queue the traditional way if they preferred?",
-      "Wulan: [warming] Genuinely, yes. An opt-in system changes the calculation completely, because then it's a choice rather than something quietly imposed on everyone who wants to get inside.",
-      "Dara: [reflective] That distinction hadn't occurred to me before. I'd been picturing this as purely a technical upgrade, not something with consent built into it.",
-      "Wulan: [warm] It's rarely just technical, is it? Every convenience seems to come with a quiet question attached: convenient for whom, and at what eventual cost?",
-      "Dara: [amused] Now I feel slightly guilty for being excited about skipping a queue. Though I still think the queue itself was borderline inhumane last summer.",
-      "Wulan: [smiling] It absolutely was. I'm not opposed to solving that problem, I just want the solution to ask permission before it recognizes my face.",
-      "Dara: [determined] Fair enough. I'll email the organizers about making it opt-in and see if enough of us can push them to reconsider."
+      "Dara: [thoughtful] Wulan, did you see the venue is trialing facial recognition for entry next month? No more queuing for twenty minutes with everyone's tickets on their phones.",
+      "Wulan: I saw it, and honestly, my first thought wasn't convenience, it was wondering where exactly my face ends up once it's been scanned and stored.",
+      "Dara: [carefully] They claim the data gets deleted within twenty-four hours. That seems worth it, especially compared to the chaos of last year's entrance.",
+      "Wulan: Claims are easy to make, though. What recourse would we have if that promise turned out to be loosely interpreted?",
+      "Dara: [reflective] That's fair, I suppose. I hadn't really questioned whether the policy was enforceable or just something printed on a website nobody reads.",
+      "Wulan: Exactly my concern. Once biometric data has been collected, it can't simply be reissued like a stolen password. There's no starting over with a new face.",
+      "Dara: [honestly] I see your point, although there's a difference between reasonable caution and assuming the worst of every organization adopting new technology.",
+      "Wulan: I'm not assuming malice, just asking whether convenience justifies handing over something that permanent for something that trivial, saving fifteen minutes at a gate.",
+      "Dara: [gently] Would you feel differently if attendance were entirely optional, and people could still queue the traditional way if they preferred?",
+      "Wulan: Genuinely, yes. An opt-in system changes the calculation completely, because then it's a choice rather than something quietly imposed on everyone who wants to get inside.",
+      "Dara: [calmly] That distinction hadn't occurred to me before. I'd been picturing this as purely a technical upgrade, not something with consent built into it.",
+      "Wulan: It's rarely just technical, is it? Every convenience seems to come with a quiet question attached: convenient for whom, and at what eventual cost?",
+      "Dara: [encouraging] Now I feel slightly guilty for being excited about skipping a queue. Though I still think the queue itself was borderline inhumane last summer.",
+      "Wulan: It absolutely was. I'm not opposed to solving that problem, I just want the solution to ask permission before it recognizes my face.",
+      "Dara: [seriously] Fair enough. I'll email the organizers about making it opt-in and see if enough of us can push them to reconsider."
     ],
     "quiz": [
-      { "question": "What is the venue trialing for entry next month?", "options": ["A new ticketing app", "Facial recognition to speed up entry", "Fingerprint scanners", "A lottery system for tickets"], "correctIndex": 1, "explanation": "Dara mentions the venue is trialing facial recognition for entry next month." },
-      { "question": "What is Wulan's first concern when she hears about it?", "options": ["The cost of the technology", "Where her face data ends up once it's scanned and stored", "That it will be too slow", "That she'll miss the show"], "correctIndex": 1, "explanation": "Her first thought is wondering where her face ends up once it has been scanned and stored, not convenience." },
-      { "question": "Why does Wulan say biometric data is different from a stolen password?", "options": ["It's cheaper to replace", "It can't simply be reissued; there's no starting over with a new face", "It expires automatically", "It's less accurate"], "correctIndex": 1, "explanation": "She argues that unlike a password, biometric data can't be reissued because there's no starting over with a new face." },
-      { "question": "Under what condition would Wulan feel differently about the system?", "options": ["If it were free for everyone", "If attendance were opt-in, with the traditional queue still available", "If celebrities used it too", "If it were only used once a year"], "correctIndex": 1, "explanation": "She says an opt-in system, where people could still queue traditionally, would change the calculation completely." },
-      { "question": "What does Dara decide to do at the end of the conversation?", "options": ["Boycott the venue entirely", "Email the organizers about making the system opt-in", "Ignore Wulan's concerns", "Cancel his own ticket"], "correctIndex": 1, "explanation": "Dara decides to email the organizers about making it opt-in, hoping enough people pushing will make them reconsider." }
-    ]
+      {
+        "question": "What is the venue trialing for entry next month?",
+        "options": [
+          "A new ticketing app",
+          "Facial recognition to speed up entry",
+          "Fingerprint scanners",
+          "A lottery system for tickets"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dara mentions the venue is trialing facial recognition for entry next month."
+      },
+      {
+        "question": "What is Wulan's first concern when she hears about it?",
+        "options": [
+          "The cost of the technology",
+          "That it will be too slow",
+          "That she'll miss the show",
+          "Where her face data ends up once it's scanned and stored"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her first thought is wondering where her face ends up once it has been scanned and stored, not convenience."
+      },
+      {
+        "question": "Why does Wulan say biometric data is different from a stolen password?",
+        "options": [
+          "It's cheaper to replace",
+          "It expires automatically",
+          "It's less accurate",
+          "It can't simply be reissued; there's no starting over with a new face"
+        ],
+        "correctIndex": 3,
+        "explanation": "She argues that unlike a password, biometric data can't be reissued because there's no starting over with a new face."
+      },
+      {
+        "question": "Under what condition would Wulan feel differently about the system?",
+        "options": [
+          "If it were free for everyone",
+          "If celebrities used it too",
+          "If it were only used once a year",
+          "If attendance were opt-in, with the traditional queue still available"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says an opt-in system, where people could still queue traditionally, would change the calculation completely."
+      },
+      {
+        "question": "What does Dara decide to do at the end of the conversation?",
+        "options": [
+          "Boycott the venue entirely",
+          "Ignore Wulan's concerns",
+          "Cancel his own ticket",
+          "Email the organizers about making the system opt-in"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dara decides to email the organizers about making it opt-in, hoping enough people pushing will make them reconsider."
+      },
+      {
+        "question": "Why does Wulan view biometric data differently from a password?",
+        "options": [
+          "A face cannot simply be replaced after misuse.",
+          "Today's guest designs apps for a living",
+          "I checked my bank app immediately",
+          "Bram, Sari's been asking our brother for an account on that app all her classmates use"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A face cannot simply be replaced after misuse."
+      },
+      {
+        "question": "What weakness does Dara notice in the venue's deletion promise?",
+        "options": [
+          "I once gave up trying to cancel something out of sheer exhaustion",
+          "An unpaid customs fee preventing delivery",
+          "A website policy may not be enforceable in practice.",
+          "That's the real dilemma, isn't it"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A website policy may not be enforceable in practice."
+      },
+      {
+        "question": "Why does saving fifteen minutes seem insufficient to Wulan?",
+        "options": [
+          "Were you ever asked to build something like that yourself",
+          "The convenience is minor compared with surrendering permanent biometric data.",
+          "That the link led to a domain merely resembling the courier's actual website",
+          "I like that better than an outright ban"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The convenience is minor compared with surrendering permanent biometric data."
+      },
+      {
+        "question": "What change would make facial recognition more acceptable to her?",
+        "options": [
+          "Once you can name the trick, it loses a surprising amount of its power over you",
+          "He remembered he hadn't ordered anything requiring international shipping that week",
+          "Visitors could opt in while retaining a normal ticket queue.",
+          "It teaches her to navigate it with support, instead of either total exposure or total prohibition"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Visitors could opt in while retaining a normal ticket queue."
+      },
+      {
+        "question": "What action does Dara decide to take after the discussion?",
+        "options": [
+          "She will ask organisers to make the system optional.",
+          "I hope a few people cancel something they've been meaning to cancel for months",
+          "His bank flagged the larger charge as suspicious and froze it before it cleared",
+          "We'll call him this weekend, present it calmly"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She will ask organisers to make the system optional."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-technology-03",
@@ -73,36 +304,153 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warm] Today's guest designs apps for a living, and he's here to explain how our habits get quietly engineered against us. Welcome, Yusuf.",
-      "Guest: [wry] Thanks for having me, though I should warn listeners this episode might make them slightly paranoid about their own phones by the end.",
-      "Host: [curious] Let's start with the term. What exactly is a dark pattern, for anyone who hasn't encountered the phrase before?",
-      "Guest: [explaining] It's a design choice built to steer users toward decisions that benefit the company, decisions they might not make if the choice were presented neutrally.",
-      "Host: [interested] Can you give us an example most people would immediately recognize once you describe it?",
-      "Guest: [wry] The cancel button that's practically invisible, buried under three confirmation screens, while the button to keep subscribing is bright, obvious, and one click away.",
-      "Host: [amused] I have absolutely fallen for that. I once gave up trying to cancel something out of sheer exhaustion.",
-      "Guest: [knowing] That exhaustion is the point, honestly. It's called a roach motel: easy to check in, deliberately punishing to check out of.",
-      "Host: [thoughtful] Were you ever asked to build something like that yourself, and how did you handle it?",
-      "Guest: [candid] Once, early on. I pushed back, and the honest response was that it boosted retention numbers, which mattered more to that company than user goodwill.",
-      "Host: [curious] Did you comply, or did that experience change your career path afterward?",
-      "Guest: [reflective] I complied that time, reluctantly, and it's bothered me since. These days I only work with teams willing to have that argument openly, even if it costs revenue.",
-      "Host: [interested] What would you tell listeners who feel trapped by an app but can't quite explain why leaving feels so difficult?",
-      "Guest: [advising] Trust that difficulty. If quitting requires more effort than joining did, that imbalance was almost certainly deliberate, not accidental.",
-      "Host: [curious] Any final thought before we wrap up today's conversation?",
-      "Guest: [warm] Just that awareness genuinely helps. Once you can name the trick, it loses a surprising amount of its power over you.",
-      "Host: [smiling] A fitting note to end on. Thank you for pulling back the curtain for us today, Yusuf.",
-      "Guest: [warm] My pleasure. I hope a few people cancel something they've been meaning to cancel for months."
+      "Host: [thoughtful] Today's guest designs apps for a living, and he's here to explain how our habits get quietly engineered against us. Welcome, Yusuf.",
+      "Guest: Thanks for having me, though I should warn listeners this episode might make them slightly paranoid about their own phones by the end.",
+      "Host: [carefully] Let's start with the term. What exactly is a dark pattern, for anyone who hasn't encountered the phrase before?",
+      "Guest: It's a design choice built to steer users toward decisions that benefit the company, decisions they might not make if the choice were presented neutrally.",
+      "Host: [reflective] Can you give us an example most people would immediately recognize once you describe it?",
+      "Guest: The cancel button that's practically invisible, buried under three confirmation screens, while the button to keep subscribing is bright, obvious, and one click away.",
+      "Host: [honestly] I have absolutely fallen for that. I once gave up trying to cancel something out of sheer exhaustion.",
+      "Guest: That exhaustion is the point, honestly. It's called a roach motel: easy to check in, deliberately punishing to check out of.",
+      "Host: [gently] Were you ever asked to build something like that yourself, and how did you handle it?",
+      "Guest: Once, early on. I pushed back, and the honest response was that it boosted retention numbers, which mattered more to that company than user goodwill.",
+      "Host: [calmly] Did you comply, or did that experience change your career path afterward?",
+      "Guest: I complied that time, reluctantly, and it's bothered me since. These days I only work with teams willing to have that argument openly, even if it costs revenue.",
+      "Host: [encouraging] What would you tell listeners who feel trapped by an app but can't quite explain why leaving feels so difficult?",
+      "Guest: Trust that difficulty. If quitting requires more effort than joining did, that imbalance was almost certainly deliberate, not accidental.",
+      "Host: [seriously] Any final thought before we wrap up today's conversation?",
+      "Guest: Just that awareness genuinely helps. Once you can name the trick, it loses a surprising amount of its power over you.",
+      "Host: A fitting note to end on. Thank you for pulling back the curtain for us today, Yusuf.",
+      "Guest: My pleasure. I hope a few people cancel something they've been meaning to cancel for months."
     ],
     "quiz": [
-      { "question": "How does Yusuf define a dark pattern?", "options": ["A type of computer virus", "A design choice built to steer users toward decisions that benefit the company", "A bug in an app's code", "A style of graphic design using dark colors"], "correctIndex": 1, "explanation": "He defines it as a design choice built specifically to steer users toward decisions that benefit the company." },
-      { "question": "What example does Yusuf give of a common dark pattern?", "options": ["A slow loading screen", "A hidden cancel button buried under confirmation screens, while the subscribe button is obvious", "A free trial with no strings attached", "A simple sign-up form"], "correctIndex": 1, "explanation": "He describes a cancel button that's practically invisible under three confirmation screens, while the subscribe button is obvious." },
-      { "question": "What does Yusuf call the pattern where it's easy to join but hard to leave?", "options": ["A trap door", "A roach motel", "A dead end", "A revolving door"], "correctIndex": 1, "explanation": "He calls it a roach motel: easy to check in, deliberately punishing to check out of." },
-      { "question": "What happened when Yusuf pushed back on building such a feature early in his career?", "options": ["He was praised and promoted", "He was told it boosted retention numbers, which mattered more to the company than user goodwill", "The company removed the feature immediately", "Nothing happened at all"], "correctIndex": 1, "explanation": "He was told the feature boosted retention numbers, which the company valued more than user goodwill." },
-      { "question": "What advice does Yusuf give listeners who feel trapped by an app?", "options": ["Delete their phone entirely", "Trust that difficulty leaving is almost certainly deliberate, not accidental", "Contact customer service repeatedly", "Ignore the feeling completely"], "correctIndex": 1, "explanation": "He advises that if quitting requires more effort than joining did, that imbalance was almost certainly deliberate." }
-    ]
+      {
+        "question": "How does Yusuf define a dark pattern?",
+        "options": [
+          "A type of computer virus",
+          "A design choice built to steer users toward decisions that benefit the company",
+          "A bug in an app's code",
+          "A style of graphic design using dark colors"
+        ],
+        "correctIndex": 1,
+        "explanation": "He defines it as a design choice built specifically to steer users toward decisions that benefit the company."
+      },
+      {
+        "question": "What example does Yusuf give of a common dark pattern?",
+        "options": [
+          "A hidden cancel button buried under confirmation screens, while the subscribe button is obvious",
+          "A slow loading screen",
+          "A free trial with no strings attached",
+          "A simple sign-up form"
+        ],
+        "correctIndex": 0,
+        "explanation": "He describes a cancel button that's practically invisible under three confirmation screens, while the subscribe button is obvious."
+      },
+      {
+        "question": "What does Yusuf call the pattern where it's easy to join but hard to leave?",
+        "options": [
+          "A roach motel",
+          "A trap door",
+          "A dead end",
+          "A revolving door"
+        ],
+        "correctIndex": 0,
+        "explanation": "He calls it a roach motel: easy to check in, deliberately punishing to check out of."
+      },
+      {
+        "question": "What happened when Yusuf pushed back on building such a feature early in his career?",
+        "options": [
+          "He was praised and promoted",
+          "The company removed the feature immediately",
+          "Nothing happened at all",
+          "He was told it boosted retention numbers, which mattered more to the company than user goodwill"
+        ],
+        "correctIndex": 3,
+        "explanation": "He was told the feature boosted retention numbers, which the company valued more than user goodwill."
+      },
+      {
+        "question": "What advice does Yusuf give listeners who feel trapped by an app?",
+        "options": [
+          "Delete their phone entirely",
+          "Contact customer service repeatedly",
+          "Trust that difficulty leaving is almost certainly deliberate, not accidental",
+          "Ignore the feeling completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "He advises that if quitting requires more effort than joining did, that imbalance was almost certainly deliberate."
+      },
+      {
+        "question": "What design example illustrates a digital “roach motel”?",
+        "options": [
+          "I checked my bank app immediately",
+          "Joining takes one click while cancellation is hidden behind obstacles.",
+          "Bram, Sari's been asking our brother for an account on that app all her classmates use",
+          "Last week, my phone rang from an unfamiliar number"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Joining takes one click while cancellation is hidden behind obstacles."
+      },
+      {
+        "question": "Why did the company prefer the difficult cancellation process?",
+        "options": [
+          "An unpaid customs fee preventing delivery",
+          "That's the real dilemma, isn't it",
+          "Higher retention numbers mattered more than user goodwill.",
+          "He claimed he'd been in an accident, that his phone was damaged"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Higher retention numbers mattered more than user goodwill."
+      },
+      {
+        "question": "What regret changed Yusuf's later choice of employers?",
+        "options": [
+          "That the link led to a domain merely resembling the courier's actual website",
+          "I like that better than an outright ban",
+          "What disturbs me most isn't the technology itself",
+          "He once implemented manipulative design despite his objections."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He once implemented manipulative design despite his objections."
+      },
+      {
+        "question": "What clue suggests that leaving an app was deliberately made difficult?",
+        "options": [
+          "He remembered he hadn't ordered anything requiring international shipping that week",
+          "It teaches her to navigate it with support, instead of either total exposure or total prohibition",
+          "Quitting requires far more effort than joining.",
+          "It feels almost absurd, verifying my own brother like he's a stranger at the door"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Quitting requires far more effort than joining."
+      },
+      {
+        "question": "How can naming a dark pattern help a user?",
+        "options": [
+          "His bank flagged the larger charge as suspicious and froze it before it cleared",
+          "Recognising the manipulation reduces its power over decisions.",
+          "We'll call him this weekend, present it calmly",
+          "My brother, for his part, finds the whole ordeal hilarious"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Recognising the manipulation reduces its power over decisions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-technology-04",
@@ -111,30 +459,144 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [candid] I've always considered myself reasonably sharp about scams, which made what happened last month all the more humbling to admit out loud.",
-      "Narrator: [recalling] A text arrived claiming my package couldn't be delivered because of an unpaid customs fee, a small amount, barely worth questioning at a glance.",
-      "Narrator: [honest] What I didn't notice, distracted as I was between meetings, was that the link led to a domain that merely resembled the courier's actual website.",
-      "Narrator: [tense] I typed in my card details without a second thought, the way you'd sign a delivery slip without reading it, because the whole process felt utterly routine.",
-      "Narrator: [uneasy] It wasn't until an hour later, scrolling absentmindedly, that something nagged at me: I hadn't actually ordered anything requiring international shipping that week.",
-      "Narrator: [urgent] I checked my bank app immediately, and there it was, a transaction I hadn't authorized, already pending, for considerably more than the fee I'd supposedly paid.",
-      "Narrator: [relieved] Thankfully, my bank flagged the second, larger charge as suspicious and froze it before it cleared, which spared me a genuinely painful conversation with myself.",
-      "Narrator: [reflective] Looking back, every warning sign had been sitting there in plain view: the mismatched link, the vague wording, the urgency designed to override careful thinking.",
-      "Narrator: [wry] Scammers, it turns out, are far less interested in fooling your intelligence than in exploiting the thirty seconds when you're too rushed to use it.",
-      "Narrator: [determined] Since then, I've made a rule for myself: any message demanding immediate payment gets closed, and I contact the company directly through channels I already trust.",
-      "Narrator: [thoughtful] I've also started warning my parents, who I suspect are targeted more often precisely because they're less inclined to question anything official-looking.",
-      "Narrator: [warm] My mother laughed when I explained it, then admitted she'd nearly clicked something similar herself the week before, which sobered us both considerably.",
-      "Narrator: [with a small smile] These days, whenever an urgent text arrives claiming disaster is imminent unless I act within minutes, I treat that urgency itself as the clearest red flag of all."
+      "Narrator: [thoughtful] I've always considered myself reasonably sharp about scams, which made what happened last month all the more humbling to admit out loud.",
+      "Narrator: A text arrived claiming my package couldn't be delivered because of an unpaid customs fee, a small amount, barely worth questioning at a glance.",
+      "Narrator: [carefully] What I didn't notice, distracted as I was between meetings, was that the link led to a domain that merely resembled the courier's actual website.",
+      "Narrator: I typed in my card details without a second thought, the way you'd sign a delivery slip without reading it, because the whole process felt utterly routine.",
+      "Narrator: [reflective] It wasn't until an hour later, scrolling absentmindedly, that something nagged at me: I hadn't actually ordered anything requiring international shipping that week.",
+      "Narrator: I checked my bank app immediately, and there it was, a transaction I hadn't authorized, already pending, for considerably more than the fee I'd supposedly paid.",
+      "Narrator: [honestly] Thankfully, my bank flagged the second, larger charge as suspicious and froze it before it cleared, which spared me a genuinely painful conversation with myself.",
+      "Narrator: Looking back, every warning sign had been sitting there in plain view: the mismatched link, the vague wording, the urgency designed to override careful thinking.",
+      "Narrator: [gently] Scammers, it turns out, are far less interested in fooling your intelligence than in exploiting the thirty seconds when you're too rushed to use it.",
+      "Narrator: Since then, I've made a rule for myself: any message demanding immediate payment gets closed, and I contact the company directly through channels I already trust.",
+      "Narrator: [calmly] I've also started warning my parents, who I suspect are targeted more often precisely because they're less inclined to question anything official-looking.",
+      "Narrator: My mother laughed when I explained it, then admitted she'd nearly clicked something similar herself the week before, which sobered us both considerably.",
+      "Narrator: [encouraging] These days, whenever an urgent text arrives claiming disaster is imminent unless I act within minutes, I treat that urgency itself as the clearest red flag of all."
     ],
     "quiz": [
-      { "question": "What did the text message claim was the problem?", "options": ["A lost package", "An unpaid customs fee preventing delivery", "A cancelled order", "A wrong address"], "correctIndex": 1, "explanation": "The text claimed his package couldn't be delivered because of an unpaid customs fee." },
-      { "question": "What did the narrator fail to notice while distracted between meetings?", "options": ["The amount of money requested", "That the link led to a domain merely resembling the courier's actual website", "The sender's phone number", "The time the message was sent"], "correctIndex": 1, "explanation": "He didn't notice the link led to a domain that only resembled the courier's real website." },
-      { "question": "What made him realize something was wrong an hour later?", "options": ["His phone battery died", "He remembered he hadn't ordered anything requiring international shipping that week", "A friend warned him", "His bank called him"], "correctIndex": 1, "explanation": "He realized he hadn't actually ordered anything requiring international shipping that week." },
-      { "question": "What saved him from losing a larger amount of money?", "options": ["He called the police in time", "His bank flagged the larger charge as suspicious and froze it before it cleared", "He cancelled his card himself first", "The scammers refunded him"], "correctIndex": 1, "explanation": "His bank flagged the second, larger charge as suspicious and froze it before it cleared." },
-      { "question": "What rule has the narrator made for himself since the incident?", "options": ["Never shop online again", "Close any message demanding immediate payment and contact the company through trusted channels", "Delete all text messages immediately", "Only use cash for purchases"], "correctIndex": 1, "explanation": "He now closes any message demanding immediate payment and contacts the company directly through channels he already trusts." }
-    ]
+      {
+        "question": "What did the text message claim was the problem?",
+        "options": [
+          "A lost package",
+          "An unpaid customs fee preventing delivery",
+          "A cancelled order",
+          "A wrong address"
+        ],
+        "correctIndex": 1,
+        "explanation": "The text claimed his package couldn't be delivered because of an unpaid customs fee."
+      },
+      {
+        "question": "What did the narrator fail to notice while distracted between meetings?",
+        "options": [
+          "The amount of money requested",
+          "That the link led to a domain merely resembling the courier's actual website",
+          "The sender's phone number",
+          "The time the message was sent"
+        ],
+        "correctIndex": 1,
+        "explanation": "He didn't notice the link led to a domain that only resembled the courier's real website."
+      },
+      {
+        "question": "What made him realize something was wrong an hour later?",
+        "options": [
+          "His phone battery died",
+          "He remembered he hadn't ordered anything requiring international shipping that week",
+          "A friend warned him",
+          "His bank called him"
+        ],
+        "correctIndex": 1,
+        "explanation": "He realized he hadn't actually ordered anything requiring international shipping that week."
+      },
+      {
+        "question": "What saved him from losing a larger amount of money?",
+        "options": [
+          "He called the police in time",
+          "He cancelled his card himself first",
+          "The scammers refunded him",
+          "His bank flagged the larger charge as suspicious and froze it before it cleared"
+        ],
+        "correctIndex": 3,
+        "explanation": "His bank flagged the second, larger charge as suspicious and froze it before it cleared."
+      },
+      {
+        "question": "What rule has the narrator made for himself since the incident?",
+        "options": [
+          "Close any message demanding immediate payment and contact the company through trusted channels",
+          "Never shop online again",
+          "Delete all text messages immediately",
+          "Only use cash for purchases"
+        ],
+        "correctIndex": 0,
+        "explanation": "He now closes any message demanding immediate payment and contacts the company directly through channels he already trusts."
+      },
+      {
+        "question": "Which overlooked fact finally made the delivery message suspicious?",
+        "options": [
+          "Bram, Sari's been asking our brother for an account on that app all her classmates use",
+          "Last week, my phone rang from an unfamiliar number",
+          "The narrator had ordered nothing requiring international shipping.",
+          "Our caller has strong feelings on this"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The narrator had ordered nothing requiring international shipping."
+      },
+      {
+        "question": "What did the bank app reveal after the narrator checked?",
+        "options": [
+          "That's the real dilemma, isn't it",
+          "He claimed he'd been in an accident, that his phone was damaged",
+          "That's a sobering way to reach clarity",
+          "A much larger unauthorised transaction was already pending."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: A much larger unauthorised transaction was already pending."
+      },
+      {
+        "question": "Which warning signs became obvious in retrospect?",
+        "options": [
+          "The false domain, vague language, and forced urgency.",
+          "I like that better than an outright ban",
+          "What disturbs me most isn't the technology itself",
+          "A few assumed I'd become less committed, which stung initially"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The false domain, vague language, and forced urgency."
+      },
+      {
+        "question": "What rule now governs messages demanding immediate payment?",
+        "options": [
+          "It teaches her to navigate it with support, instead of either total exposure or total prohibition",
+          "It feels almost absurd, verifying my own brother like he's a stranger at the door",
+          "Close the message and contact the company through a trusted channel.",
+          "A shared rule protects those who'd never dare raise the issue alone"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Close the message and contact the company through a trusted channel."
+      },
+      {
+        "question": "Why does the narrator treat urgency itself as a red flag?",
+        "options": [
+          "We'll call him this weekend, present it calmly",
+          "My brother, for his part, finds the whole ordeal hilarious",
+          "I hope someone finally silences their notifications after we finish talking tonight",
+          "Scammers use time pressure to prevent careful verification."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Scammers use time pressure to prevent careful verification."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-technology-05",
@@ -143,33 +605,150 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ayu", "gender": "female" },
-      { "name": "Bram", "gender": "male" }
+      {
+        "name": "Ayu",
+        "gender": "female"
+      },
+      {
+        "name": "Bram",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ayu: [concerned] Bram, Sari's been asking our brother for an account on that app all her classmates use, and he's asked us what we honestly think.",
-      "Bram: [thoughtful] Thirteen feels young to me, though I'm aware that argument alone won't get us very far, given how normal it's become at that age.",
-      "Ayu: [reasonable] It's not really about age in isolation, is it? It's whether she's equipped to handle comparing her ordinary life to everyone else's carefully edited highlights.",
-      "Bram: [agreeing] True. At that age, I imagine every filtered photo would have felt like undeniable proof that everyone else's life was simply better than mine.",
-      "Ayu: [firm] Exactly what worries me. Adults struggle with that comparison trap, and we've had decades to build up some resistance to it.",
-      "Bram: [considering] Should we just tell him to refuse outright, then? Or would that risk making the whole thing more tempting, something she'll pursue secretly instead?",
-      "Ayu: [thoughtful] That's the real dilemma, isn't it. Forbidding it entirely rarely eliminates the desire; it just removes any chance of guiding her through it.",
-      "Bram: [reflective] Maybe a private account then, visible only to people she actually knows, with him following along rather than snooping from a distance.",
-      "Ayu: [warming] I like that better than an outright ban. It teaches her to navigate it with support, instead of either total exposure or total prohibition.",
-      "Bram: [thoughtful] We should probably suggest he talk with her directly too, about what's real versus staged, before she starts scrolling unsupervised.",
-      "Ayu: [agreeing] Absolutely. If she understands early that a photo represents someone's best five seconds, not their entire existence, that alone might soften the comparison.",
-      "Bram: [considering] Should we mention what happened to our cousin's daughter, the one who deleted everything after feeling awful for months?",
-      "Ayu: [gentle] Perhaps, though carefully. We want him informed, not so alarmed that he swings to the opposite extreme and bans it in a panic.",
-      "Bram: [determined] Fair point. Let's write down a few concrete suggestions rather than just voicing worries, since worries alone rarely help anyone decide anything.",
-      "Ayu: [warm] Agreed. We'll call him this weekend, present it calmly, and trust that he'll make the right call for his own daughter."
+      "Ayu: [thoughtful] Bram, Sari's been asking our brother for an account on that app all her classmates use, and he's asked us what we honestly think.",
+      "Bram: Thirteen feels young to me, though I'm aware that argument alone won't get us very far, given how normal it's become at that age.",
+      "Ayu: [carefully] It's not really about age in isolation, is it? It's whether she's equipped to handle comparing her ordinary life to everyone else's carefully edited highlights.",
+      "Bram: True. At that age, I imagine every filtered photo would have felt like undeniable proof that everyone else's life was simply better than mine.",
+      "Ayu: [reflective] Exactly what worries me. Adults struggle with that comparison trap, and we've had decades to build up some resistance to it.",
+      "Bram: Should we just tell him to refuse outright, then? Or would that risk making the whole thing more tempting, something she'll pursue secretly instead?",
+      "Ayu: [honestly] That's the real dilemma, isn't it. Forbidding it entirely rarely eliminates the desire; it just removes any chance of guiding her through it.",
+      "Bram: Maybe a private account then, visible only to people she actually knows, with him following along rather than snooping from a distance.",
+      "Ayu: [gently] I like that better than an outright ban. It teaches her to navigate it with support, instead of either total exposure or total prohibition.",
+      "Bram: We should probably suggest he talk with her directly too, about what's real versus staged, before she starts scrolling unsupervised.",
+      "Ayu: [calmly] Absolutely. If she understands early that a photo represents someone's best five seconds, not their entire existence, that alone might soften the comparison.",
+      "Bram: Should we mention what happened to our cousin's daughter, the one who deleted everything after feeling awful for months?",
+      "Ayu: [encouraging] Perhaps, though carefully. We want him informed, not so alarmed that he swings to the opposite extreme and bans it in a panic.",
+      "Bram: Fair point. Let's write down a few concrete suggestions rather than just voicing worries, since worries alone rarely help anyone decide anything.",
+      "Ayu: [seriously] Agreed. We'll call him this weekend, present it calmly, and trust that he'll make the right call for his own daughter."
     ],
     "quiz": [
-      { "question": "Why has their brother asked Ayu and Bram for their opinion?", "options": ["He wants to buy Sari a phone", "Sari has been asking for a social media account and he wants their honest opinion", "Sari broke a rule already", "He is moving to a new city"], "correctIndex": 1, "explanation": "Sari has been asking for an account on the app her classmates use, and their brother asked what they think." },
-      { "question": "What does Ayu say the real concern is, beyond age alone?", "options": ["The cost of the app", "Whether Sari is equipped to handle comparing her ordinary life to others' edited highlights", "Whether the app is popular enough", "Whether Sari has enough friends already"], "correctIndex": 1, "explanation": "Ayu says it's not just about age, but whether Sari can handle comparing her life to everyone else's edited highlights." },
-      { "question": "What risk does Bram raise about simply forbidding the account outright?", "options": ["It might make Sari angry at them specifically", "It could make the whole thing more tempting and lead her to pursue it secretly", "It would cost extra money", "It would upset their brother"], "correctIndex": 1, "explanation": "Bram worries an outright refusal might make it more tempting, something she pursues secretly instead." },
-      { "question": "What compromise do Ayu and Bram settle on?", "options": ["A public account with no restrictions", "A private account visible only to people she knows, with her father following along", "No account until she turns eighteen", "An account managed entirely by her father"], "correctIndex": 1, "explanation": "They suggest a private account visible only to people she actually knows, with her father following along rather than snooping." },
-      { "question": "What do they decide to do instead of just voicing worries to their brother?", "options": ["Say nothing at all", "Write down a few concrete suggestions to present calmly", "Tell their brother he must ban the app", "Ask Sari directly to decide for herself"], "correctIndex": 1, "explanation": "They decide to write down concrete suggestions rather than just voicing worries, and present it calmly this weekend." }
-    ]
+      {
+        "question": "Why has their brother asked Ayu and Bram for their opinion?",
+        "options": [
+          "He wants to buy Sari a phone",
+          "Sari broke a rule already",
+          "Sari has been asking for a social media account and he wants their honest opinion",
+          "He is moving to a new city"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sari has been asking for an account on the app her classmates use, and their brother asked what they think."
+      },
+      {
+        "question": "What does Ayu say the real concern is, beyond age alone?",
+        "options": [
+          "The cost of the app",
+          "Whether Sari is equipped to handle comparing her ordinary life to others' edited highlights",
+          "Whether the app is popular enough",
+          "Whether Sari has enough friends already"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ayu says it's not just about age, but whether Sari can handle comparing her life to everyone else's edited highlights."
+      },
+      {
+        "question": "What risk does Bram raise about simply forbidding the account outright?",
+        "options": [
+          "It might make Sari angry at them specifically",
+          "It would cost extra money",
+          "It would upset their brother",
+          "It could make the whole thing more tempting and lead her to pursue it secretly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bram worries an outright refusal might make it more tempting, something she pursues secretly instead."
+      },
+      {
+        "question": "What compromise do Ayu and Bram settle on?",
+        "options": [
+          "A public account with no restrictions",
+          "No account until she turns eighteen",
+          "A private account visible only to people she knows, with her father following along",
+          "An account managed entirely by her father"
+        ],
+        "correctIndex": 2,
+        "explanation": "They suggest a private account visible only to people she actually knows, with her father following along rather than snooping."
+      },
+      {
+        "question": "What do they decide to do instead of just voicing worries to their brother?",
+        "options": [
+          "Write down a few concrete suggestions to present calmly",
+          "Say nothing at all",
+          "Tell their brother he must ban the app",
+          "Ask Sari directly to decide for herself"
+        ],
+        "correctIndex": 0,
+        "explanation": "They decide to write down concrete suggestions rather than just voicing worries, and present it calmly this weekend."
+      },
+      {
+        "question": "Why is age alone an incomplete measure of Sari's readiness?",
+        "options": [
+          "Last week, my phone rang from an unfamiliar number",
+          "Our caller has strong feelings on this",
+          "Whether facial recognition was necessary for attendance at all.",
+          "Her ability to handle comparison and edited images matters more."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Her ability to handle comparison and edited images matters more."
+      },
+      {
+        "question": "What risk could an absolute social-media ban create?",
+        "options": [
+          "She might use the platform secretly without adult guidance.",
+          "He claimed he'd been in an accident, that his phone was damaged",
+          "That's a sobering way to reach clarity",
+          "They learned their options, storage period, and review route."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She might use the platform secretly without adult guidance."
+      },
+      {
+        "question": "Which compromise balances supervision with some independence?",
+        "options": [
+          "What disturbs me most isn't the technology itself",
+          "Use a private account with supportive parental involvement.",
+          "A few assumed I'd become less committed, which stung initially",
+          "Her case was not campaign material without her consent."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Use a private account with supportive parental involvement."
+      },
+      {
+        "question": "What should her father explain about attractive online images?",
+        "options": [
+          "They show selected moments rather than a person's whole life.",
+          "It feels almost absurd, verifying my own brother like he's a stranger at the door",
+          "A shared rule protects those who'd never dare raise the issue alone",
+          "A machine's output carried more authority than a student's account."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: They show selected moments rather than a person's whole life."
+      },
+      {
+        "question": "Why do Ayu and Bram prepare concrete suggestions before calling?",
+        "options": [
+          "My brother, for his part, finds the whole ordeal hilarious",
+          "Specific safeguards will help more than fear-based warnings.",
+          "I hope someone finally silences their notifications after we finish talking tonight",
+          "Human review, limited data, and accessible correction must be built in."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Specific safeguards will help more than fear-based warnings."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-technology-06",
@@ -178,30 +757,144 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [shaken] Last week, my phone rang from an unfamiliar number, and the voice on the other end was, unmistakably, my younger brother's, panic and all.",
-      "Narrator: [recalling] He claimed he'd been in an accident, that his phone was damaged, and that he urgently needed money transferred before the hospital would treat him.",
-      "Narrator: [tense] Every inflection matched him perfectly, the way he stumbles slightly over certain words when he's genuinely upset, details I couldn't imagine anyone faking convincingly.",
-      "Narrator: [honest] My hands were already reaching for my banking app before some small, stubborn part of my brain insisted on pausing for just one moment.",
-      "Narrator: [thoughtful] I remembered an article I'd skimmed months earlier about voices being cloned from mere seconds of audio, pulled from something as ordinary as a public video.",
-      "Narrator: [urgent] So instead of transferring anything, I hung up and called my brother's actual number, the one saved in my phone for years, not the one that had just called me.",
-      "Narrator: [relieved] He answered from his couch, utterly confused, having no idea any of this was happening, watching television exactly where he was supposed to be.",
-      "Narrator: [unsettled] It shook me more than I expected. If I hadn't paused, if that stubborn instinct had lost that particular argument, I'd have sent money to a stranger wearing my brother's voice.",
-      "Narrator: [reflective] What disturbs me most isn't the technology itself, but how effortlessly it exploits something as intimate as recognizing someone you love by sound alone.",
-      "Narrator: [determined] Now our whole family has agreed on a private question, something only we would know, to ask whenever a call like that arrives unexpectedly.",
-      "Narrator: [wry] It feels almost absurd, verifying my own brother like he's a stranger at the door, yet apparently that's simply where things stand now.",
-      "Narrator: [warm] I've told this story to nearly everyone I know since, partly as a warning, partly because saying it aloud still helps me process how close I came.",
-      "Narrator: [with a small smile] My brother, for his part, finds the whole ordeal hilarious, though he's agreed to the secret question without a single objection."
+      "Narrator: [thoughtful] Last week, my phone rang from an unfamiliar number, and the voice on the other end was, unmistakably, my younger brother's, panic and all.",
+      "Narrator: He claimed he'd been in an accident, that his phone was damaged, and that he urgently needed money transferred before the hospital would treat him.",
+      "Narrator: [carefully] Every inflection matched him perfectly, the way he stumbles slightly over certain words when he's genuinely upset, details I couldn't imagine anyone faking convincingly.",
+      "Narrator: My hands were already reaching for my banking app before some small, stubborn part of my brain insisted on pausing for just one moment.",
+      "Narrator: [reflective] I remembered an article I'd skimmed months earlier about voices being cloned from mere seconds of audio, pulled from something as ordinary as a public video.",
+      "Narrator: So instead of transferring anything, I hung up and called my brother's actual number, the one saved in my phone for years, not the one that had just called me.",
+      "Narrator: [honestly] He answered from his couch, utterly confused, having no idea any of this was happening, watching television exactly where he was supposed to be.",
+      "Narrator: It shook me more than I expected. If I hadn't paused, if that stubborn instinct had lost that particular argument, I'd have sent money to a stranger wearing my brother's voice.",
+      "Narrator: [gently] What disturbs me most isn't the technology itself, but how effortlessly it exploits something as intimate as recognizing someone you love by sound alone.",
+      "Narrator: Now our whole family has agreed on a private question, something only we would know, to ask whenever a call like that arrives unexpectedly.",
+      "Narrator: [calmly] It feels almost absurd, verifying my own brother like he's a stranger at the door, yet apparently that's simply where things stand now.",
+      "Narrator: I've told this story to nearly everyone I know since, partly as a warning, partly because saying it aloud still helps me process how close I came.",
+      "Narrator: [encouraging] My brother, for his part, finds the whole ordeal hilarious, though he's agreed to the secret question without a single objection."
     ],
     "quiz": [
-      { "question": "What did the caller claim had happened to the narrator's brother?", "options": ["He lost his job", "He'd been in an accident and urgently needed money for hospital treatment", "He was traveling abroad", "He forgot his wallet"], "correctIndex": 1, "explanation": "The caller claimed her brother had been in an accident and needed money transferred urgently before the hospital would treat him." },
-      { "question": "What made the narrator pause before transferring money?", "options": ["Her phone battery died", "She remembered an article about voices being cloned from seconds of audio", "A friend called her at the same time", "The caller asked for too much money"], "correctIndex": 1, "explanation": "She remembered an article about voices being cloned from mere seconds of audio, pulled from something like a public video." },
-      { "question": "What did she do instead of transferring the money?", "options": ["She called the police immediately", "She hung up and called her brother's actual saved number", "She sent a smaller amount instead", "She ignored the call completely"], "correctIndex": 1, "explanation": "She hung up and called her brother's actual number saved in her phone, not the number that had just called her." },
-      { "question": "Where was her brother when she actually reached him?", "options": ["In a hospital", "On his couch, watching television, with no idea what was happening", "Traveling in another country", "At work in a meeting"], "correctIndex": 1, "explanation": "He answered from his couch, confused, watching television exactly where he was supposed to be." },
-      { "question": "What has the whole family agreed on since the incident?", "options": ["To stop answering unknown calls entirely", "A private question only they would know, to ask during suspicious calls", "To change all their phone numbers", "To never discuss money over the phone again"], "correctIndex": 1, "explanation": "The family agreed on a private question, something only they would know, to ask whenever a suspicious call arrives." }
-    ]
+      {
+        "question": "What did the caller claim had happened to the narrator's brother?",
+        "options": [
+          "He lost his job",
+          "He was traveling abroad",
+          "He forgot his wallet",
+          "He'd been in an accident and urgently needed money for hospital treatment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The caller claimed her brother had been in an accident and needed money transferred urgently before the hospital would treat him."
+      },
+      {
+        "question": "What made the narrator pause before transferring money?",
+        "options": [
+          "Her phone battery died",
+          "She remembered an article about voices being cloned from seconds of audio",
+          "A friend called her at the same time",
+          "The caller asked for too much money"
+        ],
+        "correctIndex": 1,
+        "explanation": "She remembered an article about voices being cloned from mere seconds of audio, pulled from something like a public video."
+      },
+      {
+        "question": "What did she do instead of transferring the money?",
+        "options": [
+          "She called the police immediately",
+          "She sent a smaller amount instead",
+          "She ignored the call completely",
+          "She hung up and called her brother's actual saved number"
+        ],
+        "correctIndex": 3,
+        "explanation": "She hung up and called her brother's actual number saved in her phone, not the number that had just called her."
+      },
+      {
+        "question": "Where was her brother when she actually reached him?",
+        "options": [
+          "In a hospital",
+          "Traveling in another country",
+          "On his couch, watching television, with no idea what was happening",
+          "At work in a meeting"
+        ],
+        "correctIndex": 2,
+        "explanation": "He answered from his couch, confused, watching television exactly where he was supposed to be."
+      },
+      {
+        "question": "What has the whole family agreed on since the incident?",
+        "options": [
+          "To stop answering unknown calls entirely",
+          "To change all their phone numbers",
+          "To never discuss money over the phone again",
+          "A private question only they would know, to ask during suspicious calls"
+        ],
+        "correctIndex": 3,
+        "explanation": "The family agreed on a private question, something only they would know, to ask whenever a suspicious call arrives."
+      },
+      {
+        "question": "What memory made the narrator pause before transferring money?",
+        "options": [
+          "An article had explained that public audio can train voice clones.",
+          "Our caller has strong feelings on this",
+          "Whether facial recognition was necessary for attendance at all.",
+          "They documented deletion periods and restricted access to stored copies."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: An article had explained that public audio can train voice clones."
+      },
+      {
+        "question": "How did the narrator verify whether the emergency was genuine?",
+        "options": [
+          "That's a sobering way to reach clarity",
+          "He ended the call and rang his brother's saved number.",
+          "They learned their options, storage period, and review route.",
+          "More test users completed the application."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He ended the call and rang his brother's saved number."
+      },
+      {
+        "question": "Where was the real brother during the supposed accident?",
+        "options": [
+          "He was safely at home watching television.",
+          "A few assumed I'd become less committed, which stung initially",
+          "Her case was not campaign material without her consent.",
+          "Detailed notice cannot justify collecting data without a purpose."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: He was safely at home watching television."
+      },
+      {
+        "question": "What safeguard does the family adopt after the attempted fraud?",
+        "options": [
+          "A shared rule protects those who'd never dare raise the issue alone",
+          "A machine's output carried more authority than a student's account.",
+          "Unexpected callers must answer a private family question.",
+          "Users gained plain-language options for download, correction, and deletion."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Unexpected callers must answer a private family question."
+      },
+      {
+        "question": "Why was the cloned voice especially effective?",
+        "options": [
+          "I hope someone finally silences their notifications after we finish talking tonight",
+          "It exploited intimate trust in a loved one's familiar speech.",
+          "Human review, limited data, and accessible correction must be built in.",
+          "The team chose not to collect several unnecessary data points."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It exploited intimate trust in a loved one's familiar speech."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-technology-07",
@@ -210,35 +903,587 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [engaged] Tonight we're discussing whether employees should be legally protected for ignoring work messages after hours. Our caller has strong feelings on this. Welcome!",
-      "Caller: [determined] Thank you. I'll say upfront, I've lived both sides of this, and the difference nearly cost me my health at one point.",
-      "Radio Host: [curious] Take us back to when this started affecting you personally. What did that period actually look like?",
-      "Caller: [recalling] Messages arrived at all hours, framed as merely urgent suggestions, never explicit demands, which somehow made them harder to refuse than an actual order would have been.",
-      "Radio Host: [interested] Why harder, exactly? Wouldn't a polite request be easier to decline than a direct command?",
-      "Caller: [explaining] Because declining an unspoken expectation feels like reading malice into someone's innocent question, so you comply anyway, just to avoid seeming difficult.",
-      "Radio Host: [probing] What eventually pushed you to draw an actual boundary around that expectation?",
-      "Caller: [honest] I collapsed from exhaustion during a family dinner, quite literally, which finally made the invisible cost of those messages impossible to ignore any longer.",
-      "Radio Host: [sympathetic] That's a sobering way to reach clarity. What changed for you after that moment?",
-      "Caller: [firm] I stopped replying after seven, without apology or lengthy explanation. If something is truly an emergency, a phone call exists for precisely that purpose.",
-      "Radio Host: [curious] Did that boundary cost you anything professionally, or did colleagues simply adjust without much friction?",
-      "Caller: [candid] A few assumed I'd become less committed, which stung initially, though my actual output during working hours hadn't suffered whatsoever.",
-      "Radio Host: [interested] Do you believe this should be regulated by law, rather than negotiated individually between employees and their managers?",
-      "Caller: [reasoning] Individually, the imbalance of power makes negotiation nearly impossible for most people. A shared rule protects those who'd never dare raise the issue alone.",
-      "Radio Host: [curious] What would you tell a listener currently answering messages at midnight, afraid that stopping might jeopardize their position?",
-      "Caller: [warm] Start smaller than I did. Delay one reply by an hour, then two. Notice the building rarely collapses in your absence.",
-      "Radio Host: [warm] Powerful advice, and a conversation I suspect plenty of listeners needed tonight. Thank you for calling in.",
-      "Caller: [sincere] Thank you for having me. I hope someone finally silences their notifications after we finish talking tonight."
+      "Radio Host: [thoughtful] Tonight we're discussing whether employees should be legally protected for ignoring work messages after hours. Our caller has strong feelings on this. Welcome!",
+      "Caller: Thank you. I'll say upfront, I've lived both sides of this, and the difference nearly cost me my health at one point.",
+      "Radio Host: [carefully] Take us back to when this started affecting you personally. What did that period actually look like?",
+      "Caller: Messages arrived at all hours, framed as merely urgent suggestions, never explicit demands, which somehow made them harder to refuse than an actual order would have been.",
+      "Radio Host: [reflective] Why harder, exactly? Wouldn't a polite request be easier to decline than a direct command?",
+      "Caller: Because declining an unspoken expectation feels like reading malice into someone's innocent question, so you comply anyway, just to avoid seeming difficult.",
+      "Radio Host: [honestly] What eventually pushed you to draw an actual boundary around that expectation?",
+      "Caller: I collapsed from exhaustion during a family dinner, quite literally, which finally made the invisible cost of those messages impossible to ignore any longer.",
+      "Radio Host: [gently] That's a sobering way to reach clarity. What changed for you after that moment?",
+      "Caller: I stopped replying after seven, without apology or lengthy explanation. If something is truly an emergency, a phone call exists for precisely that purpose.",
+      "Radio Host: [calmly] Did that boundary cost you anything professionally, or did colleagues simply adjust without much friction?",
+      "Caller: A few assumed I'd become less committed, which stung initially, though my actual output during working hours hadn't suffered whatsoever.",
+      "Radio Host: [encouraging] Do you believe this should be regulated by law, rather than negotiated individually between employees and their managers?",
+      "Caller: Individually, the imbalance of power makes negotiation nearly impossible for most people. A shared rule protects those who'd never dare raise the issue alone.",
+      "Radio Host: [seriously] What would you tell a listener currently answering messages at midnight, afraid that stopping might jeopardize their position?",
+      "Caller: Start smaller than I did. Delay one reply by an hour, then two. Notice the building rarely collapses in your absence.",
+      "Radio Host: Powerful advice, and a conversation I suspect plenty of listeners needed tonight. Thank you for calling in.",
+      "Caller: Thank you for having me. I hope someone finally silences their notifications after we finish talking tonight."
     ],
     "quiz": [
-      { "question": "What topic is being debated on tonight's radio show?", "options": ["Remote work salaries", "Whether employees should be legally protected for ignoring work messages after hours", "The best messaging apps", "Office dress codes"], "correctIndex": 1, "explanation": "The host introduces tonight's topic as whether employees should be legally protected for ignoring after-hours work messages." },
-      { "question": "Why did the caller find the after-hours messages harder to refuse than direct orders?", "options": ["They came from her family", "They were framed as urgent suggestions rather than explicit demands, making refusal feel like reading malice into an innocent question", "They were sent in a foreign language", "They were sent by her closest friend"], "correctIndex": 1, "explanation": "She explains that declining an unspoken expectation feels like assuming malice in an innocent question, so she complied to avoid seeming difficult." },
-      { "question": "What finally pushed the caller to set a real boundary?", "options": ["She was fired from her job", "She collapsed from exhaustion during a family dinner", "Her manager suggested it", "She read an article about burnout"], "correctIndex": 1, "explanation": "She collapsed from exhaustion during a family dinner, which made the cost of the messages impossible to ignore." },
-      { "question": "What did some colleagues assume when she stopped replying after seven?", "options": ["That she had quit", "That she had become less committed, even though her output hadn't suffered", "That she was on vacation", "That she had a new job"], "correctIndex": 1, "explanation": "A few colleagues assumed she'd become less committed, even though her actual output during working hours hadn't suffered." },
-      { "question": "What advice does the caller give listeners afraid to stop answering late-night messages?", "options": ["Quit their job immediately", "Start smaller by delaying one reply by an hour, then two", "Turn off their phone permanently", "Confront their manager directly and demand change"], "correctIndex": 1, "explanation": "She advises starting smaller than she did, delaying one reply by an hour, then two, and noticing things rarely collapse." }
-    ]
+      {
+        "question": "What topic is being debated on tonight's radio show?",
+        "options": [
+          "Whether employees should be legally protected for ignoring work messages after hours",
+          "Remote work salaries",
+          "The best messaging apps",
+          "Office dress codes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces tonight's topic as whether employees should be legally protected for ignoring after-hours work messages."
+      },
+      {
+        "question": "Why did the caller find the after-hours messages harder to refuse than direct orders?",
+        "options": [
+          "They came from her family",
+          "They sounded optional, but refusing them felt like accusing the sender of bad intentions",
+          "They were sent in a foreign language",
+          "They were sent by her closest friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains that declining an unspoken expectation feels like assuming malice in an innocent question, so she complied to avoid seeming difficult."
+      },
+      {
+        "question": "What finally pushed the caller to set a real boundary?",
+        "options": [
+          "She was fired from her job",
+          "Her manager suggested it",
+          "She collapsed from exhaustion during a family dinner",
+          "She read an article about burnout"
+        ],
+        "correctIndex": 2,
+        "explanation": "She collapsed from exhaustion during a family dinner, which made the cost of the messages impossible to ignore."
+      },
+      {
+        "question": "What did some colleagues assume when she stopped replying after seven?",
+        "options": [
+          "That she had quit",
+          "That she was on vacation",
+          "That she had a new job",
+          "That she had become less committed, even though her output hadn't suffered"
+        ],
+        "correctIndex": 3,
+        "explanation": "A few colleagues assumed she'd become less committed, even though her actual output during working hours hadn't suffered."
+      },
+      {
+        "question": "What advice does the caller give listeners afraid to stop answering late-night messages?",
+        "options": [
+          "Start smaller by delaying one reply by an hour, then two",
+          "Quit their job immediately",
+          "Turn off their phone permanently",
+          "Confront their manager directly and demand change"
+        ],
+        "correctIndex": 0,
+        "explanation": "She advises starting smaller than she did, delaying one reply by an hour, then two, and noticing things rarely collapse."
+      },
+      {
+        "question": "Why did after-hours suggestions feel harder to refuse than direct orders?",
+        "options": [
+          "Whether facial recognition was necessary for attendance at all.",
+          "They documented deletion periods and restricted access to stored copies.",
+          "Refusal seemed likely to make the employee appear difficult.",
+          "Use safeguards appropriate to sensitive grant data."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Refusal seemed likely to make the employee appear difficult."
+      },
+      {
+        "question": "What event made the hidden health cost impossible to ignore?",
+        "options": [
+          "They learned their options, storage period, and review route.",
+          "The caller collapsed from exhaustion during a family dinner.",
+          "More test users completed the application.",
+          "Reviewers need enough time, authority, and information to intervene."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The caller collapsed from exhaustion during a family dinner."
+      },
+      {
+        "question": "Which boundary did the caller establish after the collapse?",
+        "options": [
+          "Her case was not campaign material without her consent.",
+          "Detailed notice cannot justify collecting data without a purpose.",
+          "They need to know data use and how to correct errors.",
+          "No message replies after seven unless a true emergency requires calling."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: No message replies after seven unless a true emergency requires calling."
+      },
+      {
+        "question": "Why does the caller favour a shared legal rule?",
+        "options": [
+          "A machine's output carried more authority than a student's account.",
+          "Users gained plain-language options for download, correction, and deletion.",
+          "Power differences prevent many employees from negotiating safely alone.",
+          "Collect only data necessary and lawful for the stated purpose."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Power differences prevent many employees from negotiating safely alone."
+      },
+      {
+        "question": "What gradual first step is suggested to an anxious employee?",
+        "options": [
+          "Human review, limited data, and accessible correction must be built in.",
+          "The team chose not to collect several unnecessary data points.",
+          "Minor prediction benefits do not automatically justify greater privacy risk.",
+          "Delay replies progressively and observe that work continues."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Delay replies progressively and observe that work continues."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-technology-08",
+    "title": "The Day the Attendance Bot Marked Her Absent",
+    "level": "B2",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [concerned] Our training centre introduced an automated attendance tool that recognised participants at the classroom door. During the first week, the dashboard looked efficient: green for present, grey for absent, and no paper list to enter.",
+      "Narrator: Then Mariam received a warning for missing three sessions she had attended. The coordinator initially trusted the dashboard because it appeared objective. Mariam had to find classmates and time-stamped assignments to prove she was there.",
+      "Narrator: [carefully] A review showed that the camera performed poorly when people stood near a bright window. It also produced more uncertain matches for some head coverings and angles, but the system converted uncertainty into absence without asking a human to check.",
+      "Narrator: We suspended disciplinary use while keeping a manual register. The vendor provided confidence scores, and we changed the interface so low-confidence results created a review task rather than a negative judgment.",
+      "Narrator: [thoughtful] The centre also examined whether facial recognition was necessary at all. A simple check-in code could meet the attendance need with less sensitive data. Participants were informed about the options, storage period, and process for correcting records.",
+      "Narrator: Mariam's warning was removed, and the centre apologised directly. Her case was not used in publicity, and access to the disputed images was restricted.",
+      "Narrator: [reflective] The failure was not only a technical bug. We had designed a process where a machine's output carried authority, while the affected person carried the burden of proof.",
+      "Narrator: Automation can reduce routine work, but it should not hide uncertainty or remove appeal. A responsible system makes human review, data limits, and correction visible before a wrong label affects someone's education."
+    ],
+    "quiz": [
+      {
+        "question": "What did the attendance dashboard's colours appear to offer?",
+        "options": [
+          "A simple visual record of who was present or absent.",
+          "It happened two days before the mentoring app's planned launch.",
+          "Software would rank applicants for emergency financial grants.",
+          "Online arguments remained vivid while the unread book offered almost nothing."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A simple visual record of who was present or absent."
+      },
+      {
+        "question": "What incorrect consequence did Mariam receive from the system?",
+        "options": [
+          "Most collected details had no clear role in matching mentors.",
+          "She was warned for missing three sessions she had attended.",
+          "Consider impact, data quality, and the possibility of human review.",
+          "Extra friction interrupts automatic scrolling before outrage takes control."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She was warned for missing three sessions she had attended."
+      },
+      {
+        "question": "Why was disproving the automated record burdensome for Mariam?",
+        "options": [
+          "The team removed home address and photograph requirements.",
+          "Past records may contain exclusion and inconsistent judgment.",
+          "She had to gather classmates and time-stamped work as evidence.",
+          "The narrator becomes less reactive and judges strangers less quickly."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: She had to gather classmates and time-stamped work as evidence."
+      },
+      {
+        "question": "Which technical condition contributed to the false absence?",
+        "options": [
+          "Sensitive stories exceeded what simple mentor matching required.",
+          "Efficiency does not make inherited unfairness acceptable.",
+          "Feeling informed and feeling provoked had seemed identical.",
+          "Bright window light reduced the camera's performance."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Bright window light reduced the camera's performance."
+      },
+      {
+        "question": "What temporary safeguard followed the review?",
+        "options": [
+          "Disciplinary use stopped while staff kept a manual register.",
+          "Their information remained inside an analytics export.",
+          "Accuracy, missing-data behaviour, and false rejection rates.",
+          "It is a warning to pause rather than continue scrolling."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Disciplinary use stopped while staff kept a manual register."
+      },
+      {
+        "question": "Which broader question did the centre ask beyond improving accuracy?",
+        "options": [
+          "They documented deletion periods and restricted access to stored copies.",
+          "Whether facial recognition was necessary for attendance at all.",
+          "Use safeguards appropriate to sensitive grant data.",
+          "Online arguments remained vivid while the unread book offered almost nothing."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Whether facial recognition was necessary for attendance at all."
+      },
+      {
+        "question": "What information did participants receive about the revised process?",
+        "options": [
+          "More test users completed the application.",
+          "Reviewers need enough time, authority, and information to intervene.",
+          "They learned their options, storage period, and review route.",
+          "Extra friction interrupts automatic scrolling before outrage takes control."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: They learned their options, storage period, and review route."
+      },
+      {
+        "question": "Why was Mariam excluded from publicity about the correction?",
+        "options": [
+          "Detailed notice cannot justify collecting data without a purpose.",
+          "They need to know data use and how to correct errors.",
+          "The narrator becomes less reactive and judges strangers less quickly.",
+          "Her case was not campaign material without her consent."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Her case was not campaign material without her consent."
+      },
+      {
+        "question": "What power imbalance had the original process created?",
+        "options": [
+          "A machine's output carried more authority than a student's account.",
+          "Users gained plain-language options for download, correction, and deletion.",
+          "Collect only data necessary and lawful for the stated purpose.",
+          "Feeling informed and feeling provoked had seemed identical."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A machine's output carried more authority than a student's account."
+      },
+      {
+        "question": "Which protections define a responsible attendance system?",
+        "options": [
+          "The team chose not to collect several unnecessary data points.",
+          "Human review, limited data, and accessible correction must be built in.",
+          "Minor prediction benefits do not automatically justify greater privacy risk.",
+          "It is a warning to pause rather than continue scrolling."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Human review, limited data, and accessible correction must be built in."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-technology-09",
+    "title": "A Privacy Check Before Launch",
+    "level": "B2",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [analytical] Two days before launching our mentoring app, we held a privacy review. The registration form asked for full date of birth, home address, employer, emergency contact, profile photograph, and a paragraph about personal difficulties.",
+      "Narrator: The product team had copied fields from several other platforms. Nobody could explain why most of them were necessary for matching adults with study mentors.",
+      "Narrator: [carefully] We tested each field with one question: what feature fails if we do not collect this? The answer removed the home address, photograph, and employer. An age range was enough for programme eligibility, and location could be limited to time zone.",
+      "Narrator: The paragraph about difficulties required more thought. Mentors needed learning goals, not a detailed history. We replaced the open box with optional categories and a short note warning users not to submit medical, financial, or identifying details.",
+      "Narrator: [thoughtful] We also discovered that deleted accounts remained in an analytics export. The engineers changed the process, documented retention periods, and restricted who could access backups.",
+      "Narrator: Launch was delayed by one week. Marketing disliked the change, but the review also simplified registration. More test users completed the shorter form, and fewer asked why we wanted private information.",
+      "Narrator: [reflective] Consent is not meaningful when people must surrender irrelevant data to use a basic feature. A long policy cannot rescue collection that has no clear purpose.",
+      "Narrator: Before release, we added plain-language controls for download, correction, and deletion, plus a contact for privacy concerns. The best data protection decision we made was not a stronger password or a longer notice. It was choosing not to collect several pieces of data at all."
+    ],
+    "quiz": [
+      {
+        "question": "When did the team conduct its privacy review?",
+        "options": [
+          "It happened two days before the mentoring app's planned launch.",
+          "Software would rank applicants for emergency financial grants.",
+          "Online arguments remained vivid while the unread book offered almost nothing.",
+          "A face cannot simply be replaced after misuse."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: It happened two days before the mentoring app's planned launch."
+      },
+      {
+        "question": "What problem appeared when reviewers questioned the requested fields?",
+        "options": [
+          "Consider impact, data quality, and the possibility of human review.",
+          "Most collected details had no clear role in matching mentors.",
+          "Extra friction interrupts automatic scrolling before outrage takes control.",
+          "A website policy may not be enforceable in practice."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Most collected details had no clear role in matching mentors."
+      },
+      {
+        "question": "Which personal fields were removed from the application form?",
+        "options": [
+          "Past records may contain exclusion and inconsistent judgment.",
+          "The narrator becomes less reactive and judges strangers less quickly.",
+          "The team removed home address and photograph requirements.",
+          "The convenience is minor compared with surrendering permanent biometric data."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The team removed home address and photograph requirements."
+      },
+      {
+        "question": "Why did the question about personal difficulties require special care?",
+        "options": [
+          "Efficiency does not make inherited unfairness acceptable.",
+          "Feeling informed and feeling provoked had seemed identical.",
+          "Visitors could opt in while retaining a normal ticket queue.",
+          "Sensitive stories exceeded what simple mentor matching required."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Sensitive stories exceeded what simple mentor matching required."
+      },
+      {
+        "question": "What hidden retention problem affected supposedly deleted accounts?",
+        "options": [
+          "Their information remained inside an analytics export.",
+          "Accuracy, missing-data behaviour, and false rejection rates.",
+          "It is a warning to pause rather than continue scrolling.",
+          "She will ask organisers to make the system optional."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Their information remained inside an analytics export."
+      },
+      {
+        "question": "How did engineers correct the backup and retention process?",
+        "options": [
+          "Use safeguards appropriate to sensitive grant data.",
+          "They documented deletion periods and restricted access to stored copies.",
+          "Online arguments remained vivid while the unread book offered almost nothing.",
+          "A face cannot simply be replaced after misuse."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: They documented deletion periods and restricted access to stored copies."
+      },
+      {
+        "question": "What happened after the form became shorter?",
+        "options": [
+          "Reviewers need enough time, authority, and information to intervene.",
+          "Extra friction interrupts automatic scrolling before outrage takes control.",
+          "More test users completed the application.",
+          "A website policy may not be enforceable in practice."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: More test users completed the application."
+      },
+      {
+        "question": "Why could a long privacy policy not solve the core problem?",
+        "options": [
+          "They need to know data use and how to correct errors.",
+          "The narrator becomes less reactive and judges strangers less quickly.",
+          "The convenience is minor compared with surrendering permanent biometric data.",
+          "Detailed notice cannot justify collecting data without a purpose."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Detailed notice cannot justify collecting data without a purpose."
+      },
+      {
+        "question": "Which controls were added before the app went live?",
+        "options": [
+          "Users gained plain-language options for download, correction, and deletion.",
+          "Collect only data necessary and lawful for the stated purpose.",
+          "Feeling informed and feeling provoked had seemed identical.",
+          "Visitors could opt in while retaining a normal ticket queue."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Users gained plain-language options for download, correction, and deletion."
+      },
+      {
+        "question": "What was the review's most important privacy decision?",
+        "options": [
+          "Minor prediction benefits do not automatically justify greater privacy risk.",
+          "The team chose not to collect several unnecessary data points.",
+          "It is a warning to pause rather than continue scrolling.",
+          "She will ask organisers to make the system optional."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The team chose not to collect several unnecessary data points."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-technology-10",
+    "title": "Should This Decision Be Automated?",
+    "level": "B2",
+    "themeId": "technology",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [curious] A charity wants software to rank applications for emergency grants. Is faster processing enough reason to automate?",
+      "Guest: No. Start with the decision's impact, the available data, and whether meaningful human review is possible. Speed matters, but so do fairness and error.",
+      "Host: The developer says the model learned from five years of past decisions.",
+      "Guest: [carefully] Historical data may contain earlier exclusions or inconsistent judgments. Reproducing them efficiently would not make them fair.",
+      "Host: What should the charity test?",
+      "Guest: Accuracy across relevant groups, missing-data behaviour, false rejection rates, and whether explanations help staff detect mistakes. Testing should use appropriate safeguards for applicants' data.",
+      "Host: Can staff simply override the score?",
+      "Guest: Only if they have time, authority, and evidence. A human button is not meaningful oversight when employees are pressured to accept every recommendation.",
+      "Host: [thoughtful] Should applicants know software is involved?",
+      "Guest: Yes, in clear language. They should understand what information is used, how to correct it, and how to request review without being punished.",
+      "Host: What data should never be included?",
+      "Guest: Collect only what is necessary and lawful for the stated purpose. Sensitive information should not be added because it might improve prediction slightly.",
+      "Host: Could the system still be useful?",
+      "Guest: It might organise documents, flag incomplete forms, or support scheduling while final eligibility remains with trained staff. Those narrower uses can save time without allowing one uncertain score to decide whether a family receives urgent support.",
+      "Host: Your decision test?",
+      "Guest: If errors can seriously harm people, explanations are weak, or appeal is unrealistic, reduce the tool's role. Automation should support accountable human judgment, not make responsibility disappear from the organisation."
+    ],
+    "quiz": [
+      {
+        "question": "What high-impact choice is the charity considering automating?",
+        "options": [
+          "Software would rank applicants for emergency financial grants.",
+          "Online arguments remained vivid while the unread book offered almost nothing.",
+          "A face cannot simply be replaced after misuse.",
+          "Joining takes one click while cancellation is hidden behind obstacles."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Software would rank applicants for emergency financial grants."
+      },
+      {
+        "question": "Which factors should be examined before pursuing speed?",
+        "options": [
+          "Extra friction interrupts automatic scrolling before outrage takes control.",
+          "Consider impact, data quality, and the possibility of human review.",
+          "A website policy may not be enforceable in practice.",
+          "Higher retention numbers mattered more than user goodwill."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Consider impact, data quality, and the possibility of human review."
+      },
+      {
+        "question": "Why might five years of historical decisions be unsafe training data?",
+        "options": [
+          "The narrator becomes less reactive and judges strangers less quickly.",
+          "The convenience is minor compared with surrendering permanent biometric data.",
+          "Past records may contain exclusion and inconsistent judgment.",
+          "He once implemented manipulative design despite his objections."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Past records may contain exclusion and inconsistent judgment."
+      },
+      {
+        "question": "What does faster reproduction fail to prove about past decisions?",
+        "options": [
+          "Feeling informed and feeling provoked had seemed identical.",
+          "Visitors could opt in while retaining a normal ticket queue.",
+          "Quitting requires far more effort than joining.",
+          "Efficiency does not make inherited unfairness acceptable."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Efficiency does not make inherited unfairness acceptable."
+      },
+      {
+        "question": "Which performance measures should the charity compare across groups?",
+        "options": [
+          "Accuracy, missing-data behaviour, and false rejection rates.",
+          "It is a warning to pause rather than continue scrolling.",
+          "She will ask organisers to make the system optional.",
+          "Recognising the manipulation reduces its power over decisions."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Accuracy, missing-data behaviour, and false rejection rates."
+      },
+      {
+        "question": "How should applicant information be protected during testing?",
+        "options": [
+          "Online arguments remained vivid while the unread book offered almost nothing.",
+          "Use safeguards appropriate to sensitive grant data.",
+          "A face cannot simply be replaced after misuse.",
+          "Joining takes one click while cancellation is hidden behind obstacles."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Use safeguards appropriate to sensitive grant data."
+      },
+      {
+        "question": "When would staff overrides provide meaningful human review?",
+        "options": [
+          "Extra friction interrupts automatic scrolling before outrage takes control.",
+          "A website policy may not be enforceable in practice.",
+          "Reviewers need enough time, authority, and information to intervene.",
+          "Higher retention numbers mattered more than user goodwill."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Reviewers need enough time, authority, and information to intervene."
+      },
+      {
+        "question": "What should applicants understand about automated assessment?",
+        "options": [
+          "The narrator becomes less reactive and judges strangers less quickly.",
+          "The convenience is minor compared with surrendering permanent biometric data.",
+          "He once implemented manipulative design despite his objections.",
+          "They need to know data use and how to correct errors."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: They need to know data use and how to correct errors."
+      },
+      {
+        "question": "Which rule should limit the model's input fields?",
+        "options": [
+          "Collect only data necessary and lawful for the stated purpose.",
+          "Feeling informed and feeling provoked had seemed identical.",
+          "Visitors could opt in while retaining a normal ticket queue.",
+          "Quitting requires far more effort than joining."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Collect only data necessary and lawful for the stated purpose."
+      },
+      {
+        "question": "Why should sensitive data not be added for a small accuracy gain?",
+        "options": [
+          "It is a warning to pause rather than continue scrolling.",
+          "Minor prediction benefits do not automatically justify greater privacy risk.",
+          "She will ask organisers to make the system optional.",
+          "Recognising the manipulation reduces its power over decisions."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Minor prediction benefits do not automatically justify greater privacy risk."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

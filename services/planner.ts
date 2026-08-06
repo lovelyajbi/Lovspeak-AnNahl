@@ -152,11 +152,44 @@ export const generateDailyTasks = (
   const listeningItems = pickDistinctItems(listeningPoolForTheme, goals.listeningCount, relativePlanDay + 3);
   const primaryListeningItem = listeningItems[0] || null;
 
-  // Match Shadowing — pick multiple sentences based on intensity
-  const categoryShadowing = SHADOWING_DATA.filter(t => t.category === (hasIslamic ? 'Islamic' : 'General'));
-  const allShadowTasks = categoryShadowing.flatMap(theme => theme.tasks.map(task => ({ ...task, themeTitle: theme.title })));
-  const shuffledShadow = [...allShadowTasks].sort(() => 0.5 - Math.random());
-  const pickedShadowSentences = shuffledShadow.slice(0, goals.shadowingSentences);
+  // Rotate through all four real Shadowing entry points. The selection is
+  // deterministic for a plan day, so reopening a task never changes it.
+  const shadowingModes = ['daily', 'idioms', 'slang', 'roleplay'] as const;
+  const shadowingMode = shadowingModes[relativePlanDay % shadowingModes.length];
+  const preferredShadowSubcategory = hasIslamic ? 'Islamic' : 'General';
+  const shadowDifficulty = level === 'A1' || level === 'A2'
+    ? new Set(['Easy'])
+    : level === 'B1'
+      ? new Set(['Easy', 'Medium'])
+      : new Set(['Medium', 'Hard']);
+  const getShadowingMainCategory = (theme: typeof SHADOWING_DATA[number]) => {
+    if (theme.mainCategory) return theme.mainCategory;
+    if (theme.category === 'Idioms & Slang') return 'Idioms';
+    if (theme.category === 'Slang') return 'Slang';
+    return 'Daily Conversations';
+  };
+  const getShadowingSubcategory = (theme: typeof SHADOWING_DATA[number]) =>
+    theme.subCategory || (theme.category === 'Islamic' ? 'Islamic' : 'General');
+  const modeCategory: Record<Exclude<typeof shadowingMode, 'roleplay'>, string> = {
+    daily: 'Daily Conversations',
+    idioms: 'Idioms',
+    slang: 'Slang'
+  };
+  const shadowThemes = shadowingMode === 'roleplay'
+    ? []
+    : SHADOWING_DATA.filter(theme =>
+      getShadowingMainCategory(theme) === modeCategory[shadowingMode]
+      && getShadowingSubcategory(theme) === preferredShadowSubcategory
+    );
+  const allShadowTasks = shadowThemes.flatMap(theme => theme.tasks
+    .filter(task => shadowDifficulty.has(task.difficulty))
+    .map(task => ({ ...task, themeTitle: theme.title })));
+  const usableShadowTasks = allShadowTasks.length > 0
+    ? allShadowTasks
+    : SHADOWING_DATA.flatMap(theme => theme.tasks.map(task => ({ ...task, themeTitle: theme.title })));
+  const pickedShadowSentences = shadowingMode === 'roleplay'
+    ? []
+    : pickDistinctItems(usableShadowTasks, goals.shadowingSentences, relativePlanDay);
   const shadowSentenceIds = pickedShadowSentences.map(s => s.id);
   const primaryShadow = pickedShadowSentences[0];
 
@@ -251,18 +284,30 @@ export const generateDailyTasks = (
       minScore: 80, xpReward: goals.xpPerTask, intensityId
     },
     
-    primaryShadow
-      ? { 
+    shadowingMode === 'roleplay'
+      ? {
+          moduleView: AppView.SHADOWING, icon: 'fa-masks-theater',
+          title: 'Shadow: Dialogue Roleplay',
+          description: `Complete a guided roleplay. Goal: ${goals.minShadowingScore}% average score.`,
+          shadowingMode: 'roleplay' as const,
+          shadowingTheme: dailyTheme,
+          minScore: goals.minShadowingScore, xpReward: goals.xpPerTask, intensityId
+        }
+      : primaryShadow
+      ? {
           moduleView: AppView.SHADOWING, icon: 'fa-wave-square', 
           title: `Shadow: ${primaryShadow.themeTitle || dailyTheme}`, 
           description: `${goals.shadowingSentences} sentences, min score ${goals.minShadowingScore}%`,
-          shadowingTaskId: primaryShadow.id, shadowingSentenceIds: shadowSentenceIds,
+          shadowingTaskId: primaryShadow.id, shadowingSentenceIds: shadowSentenceIds, shadowingMode,
+          shadowingTheme: dailyTheme,
           minScore: goals.minShadowingScore, xpReward: goals.xpPerTask, intensityId
         }
       : { 
           moduleView: AppView.SHADOWING, icon: 'fa-wave-square', 
           title: `Shadow: ${dailyTheme}`, 
           description: `${goals.shadowingSentences} sentences about ${dailyTheme}`,
+          shadowingMode,
+          shadowingTheme: dailyTheme,
           minScore: goals.minShadowingScore, xpReward: goals.xpPerTask, intensityId
         }
   ];
@@ -313,6 +358,10 @@ export const generateDailyTasks = (
       targetLessonId: t.targetLessonId,
       shadowingTaskId: t.shadowingTaskId,
       shadowingSentenceIds: t.shadowingSentenceIds,
+      shadowingMode: t.shadowingMode,
+      shadowingTheme: t.shadowingTheme,
+      shadowingScenarioId: t.shadowingScenarioId,
+      shadowingRole: t.shadowingRole,
       bridgeId: t.bridgeId,
       bridgeIds: t.bridgeIds,
       vocabWordIds: t.vocabWordIds,

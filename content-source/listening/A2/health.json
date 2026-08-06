@@ -6,37 +6,151 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [reflective] Three months ago, I tore a ligament in my knee while playing football with friends on a Saturday afternoon.",
-      "Narrator: [honest] The pain was so sharp that I thought I had broken something, although the doctor later explained it was different.",
-      "Narrator: [thoughtful] Surgery was scheduled quickly, because waiting too long can make ligament injuries harder to repair properly.",
-      "Narrator: [weak] When I woke up after the operation, my leg felt heavy and strange, almost like it belonged to someone else.",
+      "Narrator: The pain was so sharp that I thought I had broken something, although the doctor later explained it was different.",
+      "Narrator: [thoughtful] My specialist recommended surgery after examining the injury and explaining the options for my case.",
+      "Narrator: When I woke up after the operation, my leg felt heavy and strange, almost like it belonged to someone else.",
       "Narrator: [tired] The first week was hardest, because I could not walk without crutches, and even sitting up hurt.",
-      "Narrator: [warmly] My physiotherapist, a patient woman named Dewi, visited twice a week to guide me through small exercises.",
-      "Narrator: [honest] At first, she only asked me to bend my knee slightly, which felt embarrassing for someone who used to run daily.",
-      "Narrator: [frustrated] I remember feeling frustrated, because before the injury, I could sprint across a field without thinking twice.",
+      "Narrator: My physiotherapist, a patient woman named Dewi, visited twice a week to guide me through small exercises.",
+      "Narrator: [honestly] At first, she only asked me to bend my knee slightly, which felt embarrassing for someone who used to run daily.",
+      "Narrator: I remember feeling frustrated, because before the injury, I could sprint across a field without thinking twice.",
       "Narrator: [gently] Dewi reminded me that healing is not a race, although my impatience disagreed with her completely.",
-      "Narrator: [hopeful] Slowly, I progressed from crutches to a cane, and then finally to walking unaided.",
-      "Narrator: [proud] Each stage felt like a small victory, even though walking normally seems like nothing special to others.",
-      "Narrator: [thoughtful] By the second month, I started light exercises in a pool, since water reduces pressure on the joints.",
+      "Narrator: Slowly, I progressed from crutches to a cane, and then finally to walking unaided.",
+      "Narrator: [hopeful] Each stage felt like a small victory, even though walking normally seems like nothing special to others.",
+      "Narrator: By the second month, I started light exercises in a pool, since water reduces pressure on the joints.",
       "Narrator: [relieved] The water felt cool and supportive, and for the first time since the injury, moving did not hurt.",
-      "Narrator: [grateful] My family stayed patient with me too, even when I complained about how slow everything felt.",
-      "Narrator: [warmly] My brother drove me to every appointment, and never once made me feel like a burden.",
-      "Narrator: [amazed] Now, three months later, I can walk thirty minutes without pain, although running is still not allowed.",
-      "Narrator: [hopeful] My doctor says I might return to light jogging next month, if my knee keeps improving steadily.",
-      "Narrator: [reflective] I used to take walking for granted, the way most people never think about breathing.",
+      "Narrator: My family stayed patient with me too, even when I complained about how slow everything felt.",
+      "Narrator: [grateful] My brother drove me to every appointment, and never once made me feel like a burden.",
+      "Narrator: Now, three months later, I can walk thirty minutes without pain, although running is still not allowed.",
+      "Narrator: [carefully] My doctor says I might return to light jogging next month, if my knee keeps improving steadily.",
+      "Narrator: I used to take walking for granted, the way most people never think about breathing.",
       "Narrator: [warmly] This injury taught me that recovery needs patience, consistency, and people who believe in you when you cannot believe in yourself.",
-      "Narrator: [determined] Next week, I start using light resistance bands, a small but exciting step toward running again."
+      "Narrator: Next week, if my physiotherapist confirms it, I start using light resistance bands, a small but exciting step toward running again."
     ],
     "quiz": [
-      { "question": "How did the narrator injure her knee?", "options": ["In a car accident", "Playing football with friends", "Falling down stairs", "During a swimming lesson"], "correctIndex": 1, "explanation": "She tore a ligament in her knee while playing football with friends on a Saturday afternoon." },
-      { "question": "Why was surgery scheduled quickly?", "options": ["It was not urgent at all", "Waiting too long can make ligament injuries harder to repair", "The hospital was closing", "She requested it be delayed"], "correctIndex": 1, "explanation": "Surgery was scheduled quickly because waiting too long can make ligament injuries much harder to repair properly." },
-      { "question": "What did the physiotherapist Dewi first ask her to do?", "options": ["Run across a field", "Bend her knee slightly", "Swim laps in a pool", "Lift heavy weights"], "correctIndex": 1, "explanation": "At first, Dewi only asked her to bend her knee slightly, which felt difficult at the time." },
-      { "question": "Why did she start exercising in a pool during the second month?", "options": ["It was more fun", "Water reduces pressure on the joints", "Her physiotherapist stopped visiting", "She could not use crutches anymore"], "correctIndex": 1, "explanation": "She started pool exercises since water reduces pressure on the joints, making movement less painful." },
-      { "question": "What is the narrator's next step in her recovery?", "options": ["Returning to full contact football", "Using light resistance bands", "Stopping all exercise", "Having a second surgery"], "correctIndex": 1, "explanation": "She plans to start using light resistance bands next week as a step toward running again." }
-    ]
+      {
+        "question": "How did the narrator injure her knee?",
+        "options": [
+          "Playing football with friends",
+          "In a car accident",
+          "Falling down stairs",
+          "During a swimming lesson"
+        ],
+        "correctIndex": 0,
+        "explanation": "She tore a ligament in her knee while playing football with friends on a Saturday afternoon."
+      },
+      {
+        "question": "Why was surgery scheduled quickly?",
+        "options": [
+          "It was not urgent at all",
+          "Waiting too long can make ligament injuries harder to repair",
+          "The hospital was closing",
+          "She requested it be delayed"
+        ],
+        "correctIndex": 1,
+        "explanation": "Surgery was scheduled quickly because waiting too long can make ligament injuries much harder to repair properly."
+      },
+      {
+        "question": "What did the physiotherapist Dewi first ask her to do?",
+        "options": [
+          "Run across a field",
+          "Swim laps in a pool",
+          "Lift heavy weights",
+          "Bend her knee slightly"
+        ],
+        "correctIndex": 3,
+        "explanation": "At first, Dewi only asked her to bend her knee slightly, which felt difficult at the time."
+      },
+      {
+        "question": "Why did she start exercising in a pool during the second month?",
+        "options": [
+          "Water reduces pressure on the joints",
+          "It was more fun",
+          "Her physiotherapist stopped visiting",
+          "She could not use crutches anymore"
+        ],
+        "correctIndex": 0,
+        "explanation": "She started pool exercises since water reduces pressure on the joints, making movement less painful."
+      },
+      {
+        "question": "What is the narrator's next step in her recovery?",
+        "options": [
+          "Returning to full contact football",
+          "Stopping all exercise",
+          "Having a second surgery",
+          "Using light resistance bands"
+        ],
+        "correctIndex": 3,
+        "explanation": "She plans to start using light resistance bands next week as a step toward running again."
+      },
+      {
+        "question": "Why did bending the knee feel emotionally difficult?",
+        "options": [
+          "The physiotherapist criticized her",
+          "The small movement contrasted with the narrator’s former athletic ability",
+          "The surgery had failed",
+          "Her family expected running"
+        ],
+        "correctIndex": 1,
+        "explanation": "The comparison made an appropriate first step feel embarrassing."
+      },
+      {
+        "question": "What did the move from crutches to cane show?",
+        "options": [
+          "Walking aids were chosen at random",
+          "Pain had disappeared permanently",
+          "Progress occurred in stages under guidance",
+          "Running could begin immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "The sequence reflects graded rehabilitation."
+      },
+      {
+        "question": "Why was pool exercise chosen?",
+        "options": [
+          "Water repairs every ligament",
+          "The care team judged supported movement suitable at that stage",
+          "The narrator disliked land exercises",
+          "Family members preferred swimming"
+        ],
+        "correctIndex": 1,
+        "explanation": "Its use belongs to the individual treatment plan."
+      },
+      {
+        "question": "What boundary remains after thirty-minute walks?",
+        "options": [
+          "Appointments are no longer needed",
+          "Running is still not allowed",
+          "Resistance work is finished",
+          "The doctor guarantees jogging next month"
+        ],
+        "correctIndex": 1,
+        "explanation": "One ability does not mean full recovery."
+      },
+      {
+        "question": "What makes the next step safe?",
+        "options": [
+          "The narrator feels impatient",
+          "A friend recommends bands",
+          "It follows professional review and steady response",
+          "Three months have passed"
+        ],
+        "correctIndex": 2,
+        "explanation": "Timing depends on clinical progress, not a fixed calendar alone."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "keep with medical-context wording; personal rehabilitation remains directed by surgeon and physiotherapist rather than copied as a universal plan",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-health-02",
@@ -45,40 +159,157 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nutritionist Sari", "gender": "female" },
-      { "name": "Yusuf", "gender": "male" }
+      {
+        "name": "Nutritionist Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nutritionist Sari: [welcoming] Hello Yusuf, please come in and sit down. What made you decide to see a nutritionist this month?",
-      "Yusuf: [a bit embarrassed] Honestly, my doctor suggested it after my last blood test showed higher sugar levels than normal.",
-      "Nutritionist Sari: [attentive] I see. Can you describe what you typically eat during a normal day?",
-      "Yusuf: [thoughtful] I usually skip breakfast, then drink a sweet coffee around ten, and eat fast food for lunch most days.",
-      "Nutritionist Sari: [gently] And in the evening, what does dinner usually look like for you?",
-      "Yusuf: [honest] Dinner is often rice with fried chicken, and afterward, I admit I eat dessert almost every single night.",
-      "Nutritionist Sari: [caring] That pattern explains a lot, because sugar adds up quickly when it hides in coffee, sauces, and desserts together.",
-      "Yusuf: [surprised] I never really thought about sugar hiding in sauces. I assumed only desserts were the problem.",
-      "Nutritionist Sari: [informative] Many sauces contain more sugar than people expect, so reading labels can be genuinely eye-opening.",
-      "Yusuf: [curious] So what should I actually change, since I clearly cannot continue eating this way forever?",
-      "Nutritionist Sari: [encouraging] Let's start small. First, try eating breakfast, because skipping it often leads to overeating sugar later in the day.",
-      "Yusuf: [thoughtful] That makes sense, actually. By lunchtime, I'm always starving and grab whatever is fastest.",
-      "Nutritionist Sari: [warmly] Second, replace your sweet coffee with unsweetened tea, or coffee with less sugar than usual.",
-      "Yusuf: [uncertain] That sounds difficult. I've had sweet coffee every morning since university.",
-      "Nutritionist Sari: [reassuring] Change your habits gradually, rather than all at once, so your taste buds have time to adjust.",
-      "Yusuf: [nodding] Okay, I can try reducing it slowly instead of stopping completely tomorrow.",
-      "Nutritionist Sari: [caring] Third, save dessert for special occasions only, instead of eating it as part of every dinner.",
-      "Yusuf: [determined] That will be the hardest change for me, but I understand why it matters for my health.",
+      "Nutritionist Sari: [reflective] Hello Yusuf, please come in and sit down. What made you decide to see a nutritionist this month?",
+      "Yusuf: Honestly, my doctor suggested it after my last blood test needed medical follow-up; the result alone was not explained as a diagnosis.",
+      "Nutritionist Sari: [thoughtful] I see. Can you describe what you typically eat during a normal day?",
+      "Yusuf: I usually skip breakfast, then drink a sweet coffee around ten, and eat fast food for lunch most days.",
+      "Nutritionist Sari: [tired] And in the evening, what does dinner usually look like for you?",
+      "Yusuf: Dinner is often rice with fried chicken, and afterward, I admit I eat dessert almost every single night.",
+      "Nutritionist Sari: [honestly] That pattern explains a lot, because sugar adds up quickly when it hides in coffee, sauces, and desserts together.",
+      "Yusuf: I never really thought about sugar hiding in sauces. I assumed only desserts were the problem.",
+      "Nutritionist Sari: [gently] Many sauces contain more sugar than people expect, so reading labels can be genuinely eye-opening.",
+      "Yusuf: So what should I actually change, since I clearly cannot continue eating this way forever?",
+      "Nutritionist Sari: [hopeful] Let's start small. First, try eating breakfast, because in your diary, skipping it is followed by intense hunger and fast choices at lunch.",
+      "Yusuf: That makes sense, actually. By lunchtime, I'm always starving and grab whatever is fastest.",
+      "Nutritionist Sari: [relieved] Second, replace your sweet coffee with unsweetened tea, or coffee with less sugar than usual.",
+      "Yusuf: That sounds difficult. I've had sweet coffee every morning since university.",
+      "Nutritionist Sari: [grateful] Change your habits gradually, rather than all at once, so your taste buds have time to adjust.",
+      "Yusuf: Okay, I can try reducing it slowly instead of stopping completely tomorrow.",
+      "Nutritionist Sari: [carefully] Third, agree on a realistic dessert frequency and portion that fits the plan from your health team.",
+      "Yusuf: That will be the hardest change for me, but I understand why it matters for my health.",
       "Nutritionist Sari: [warmly] You don't need to be perfect, Yusuf. Small, consistent changes matter more than one dramatic week.",
-      "Yusuf: [relieved] That's reassuring to hear. I was worried you would ask me to change everything immediately.",
-      "Nutritionist Sari: [smiling] Not at all. Let's meet again in one month and see how your new habits are working.",
+      "Yusuf: That's reassuring to hear. I was worried you would ask me to change everything immediately.",
+      "Nutritionist Sari: Not at all. Let’s meet again in one month, and continue the medical follow-up your doctor recommended.",
       "Yusuf: [smiling] Thank you. I actually feel motivated now, instead of overwhelmed like I expected to feel."
     ],
     "quiz": [
-      { "question": "Why did Yusuf decide to see a nutritionist?", "options": ["He wanted to lose weight quickly", "His doctor suggested it after a blood test showed high sugar levels", "A friend recommended it", "He read an article online"], "correctIndex": 1, "explanation": "His doctor suggested it after his last blood test showed higher sugar levels than normal." },
-      { "question": "What surprised Yusuf about sugar?", "options": ["That desserts contain no sugar", "That sugar hides in sauces, not just desserts", "That coffee never contains sugar", "That fast food has no sugar"], "correctIndex": 1, "explanation": "He was surprised to learn that many sauces contain more sugar than people expect." },
-      { "question": "Why does the nutritionist recommend eating breakfast?", "options": ["It has no real benefit", "Skipping it often leads to overeating sugar later in the day", "It replaces the need for lunch", "It is required by law"], "correctIndex": 1, "explanation": "She explains that skipping breakfast often leads to overeating sugar later in the day." },
-      { "question": "How does the nutritionist suggest Yusuf change his coffee habit?", "options": ["Stop drinking coffee completely today", "Replace sweet coffee with unsweetened tea or less sugar, gradually", "Drink more sweet coffee", "Only drink coffee at night"], "correctIndex": 1, "explanation": "She suggests replacing sweet coffee with unsweetened tea or less sugar, changing gradually." },
-      { "question": "What does the nutritionist say about being perfect?", "options": ["Perfection is required immediately", "Small, consistent changes matter more than one dramatic week", "He must change everything today", "Dessert should be eaten daily"], "correctIndex": 1, "explanation": "She tells him he doesn't need to be perfect, and small consistent changes matter more than one dramatic week." }
-    ]
+      {
+        "question": "Why did Yusuf decide to see a nutritionist?",
+        "options": [
+          "His doctor suggested it after a blood test showed high sugar levels",
+          "He wanted to lose weight quickly",
+          "A friend recommended it",
+          "He read an article online"
+        ],
+        "correctIndex": 0,
+        "explanation": "His doctor suggested it after his last blood test showed higher sugar levels than normal."
+      },
+      {
+        "question": "What surprised Yusuf about sugar?",
+        "options": [
+          "That desserts contain no sugar",
+          "That sugar hides in sauces, not just desserts",
+          "That coffee never contains sugar",
+          "That fast food has no sugar"
+        ],
+        "correctIndex": 1,
+        "explanation": "He was surprised to learn that many sauces contain more sugar than people expect."
+      },
+      {
+        "question": "Why does the nutritionist recommend eating breakfast?",
+        "options": [
+          "Skipping it often leads to overeating sugar later in the day",
+          "It has no real benefit",
+          "It replaces the need for lunch",
+          "It is required by law"
+        ],
+        "correctIndex": 0,
+        "explanation": "She explains that skipping breakfast often leads to overeating sugar later in the day."
+      },
+      {
+        "question": "How does the nutritionist suggest Yusuf change his coffee habit?",
+        "options": [
+          "Stop drinking coffee completely today",
+          "Drink more sweet coffee",
+          "Replace sweet coffee with unsweetened tea or less sugar, gradually",
+          "Only drink coffee at night"
+        ],
+        "correctIndex": 2,
+        "explanation": "She suggests replacing sweet coffee with unsweetened tea or less sugar, changing gradually."
+      },
+      {
+        "question": "What does the nutritionist say about being perfect?",
+        "options": [
+          "Small, consistent changes matter more than one dramatic week",
+          "Perfection is required immediately",
+          "He must change everything today",
+          "Dessert should be eaten daily"
+        ],
+        "correctIndex": 0,
+        "explanation": "She tells him he doesn't need to be perfect, and small consistent changes matter more than one dramatic week."
+      },
+      {
+        "question": "What does the blood test lead to?",
+        "options": [
+          "Further support and follow-up, not a diagnosis by itself",
+          "A guaranteed diabetes diagnosis",
+          "An immediate ban on all sugar",
+          "A gym prescription"
+        ],
+        "correctIndex": 0,
+        "explanation": "The nutrition visit forms part of a broader medical response."
+      },
+      {
+        "question": "Why does Sari ask for a normal-day description?",
+        "options": [
+          "She wants to judge his discipline",
+          "Every patient receives the same breakfast",
+          "Advice should respond to Yusuf’s actual pattern",
+          "Food labels replace history"
+        ],
+        "correctIndex": 2,
+        "explanation": "Context comes before changes."
+      },
+      {
+        "question": "What hidden source surprises Yusuf?",
+        "options": [
+          "Sugar in plain water",
+          "Sugar in every rice dish",
+          "Sugar in unsweetened tea",
+          "Sugar in sauces"
+        ],
+        "correctIndex": 3,
+        "explanation": "Labels reveal sources beyond obvious desserts."
+      },
+      {
+        "question": "How will they evaluate the plan?",
+        "options": [
+          "Count only dessert-free days",
+          "Assume one month cures the issue",
+          "Compare Yusuf with other clients",
+          "Review habits and medical follow-up rather than demand perfection"
+        ],
+        "correctIndex": 3,
+        "explanation": "The process is gradual and monitored."
+      },
+      {
+        "question": "Why is the revised dessert advice stronger?",
+        "options": [
+          "It labels all dessert morally bad",
+          "It uses frequency and portion goals chosen for Yusuf",
+          "It allows unlimited portions",
+          "It ignores the blood result"
+        ],
+        "correctIndex": 1,
+        "explanation": "A specific personal target is more sustainable than a universal special-occasion rule."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "revise; turn broad nutrition rules into an individualized plan linked to medical follow-up and remove moralized dessert restriction",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-health-03",
@@ -87,35 +318,149 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] For almost two years, I told myself therapy was only for people with serious problems, not for someone like me.",
-      "Narrator: [honest] Meanwhile, I was barely sleeping, snapping at coworkers, and feeling numb during moments that should have made me happy.",
-      "Narrator: [reflective] My sister noticed before I did. She said I sounded exhausted in every phone call, even when I insisted I was fine.",
-      "Narrator: [honest] I brushed off her concern several times, although deep down, I knew something in me had quietly stopped working properly.",
-      "Narrator: [determined] Finally, after a difficult week at work, I searched online and booked an appointment with a therapist named Rian.",
-      "Narrator: [nervous] Walking into his office the first time, my hands were shaking, and I almost turned around at the door.",
-      "Narrator: [honest] He asked simple questions first, like how I was sleeping, and whether I still enjoyed things I used to love.",
-      "Narrator: [reflective] I answered honestly, and saying the words out loud felt strange, since I had never described my feelings so directly before.",
-      "Narrator: [thoughtful] He explained that burnout often disguises itself as laziness or bad mood, when really the mind is overwhelmed.",
-      "Narrator: [relieved] Hearing that made me cry a little, although I quickly apologized, embarrassed by my own reaction in front of a stranger.",
-      "Narrator: [warmly] He told me crying in that room was normal, and probably overdue after two years of pretending.",
-      "Narrator: [thoughtful] We talked about setting boundaries at work, since I had been answering emails late at night without resting.",
-      "Narrator: [determined] So I started turning off notifications after seven, even though my manager questioned it that first week.",
-      "Narrator: [hopeful] Slowly, my sleep improved, and I noticed myself laughing genuinely again, something I had almost forgotten how to do.",
-      "Narrator: [grateful] My sister was right all along, although I needed to reach my own breaking point before I could truly hear her.",
-      "Narrator: [warmly] Now I see Rian every two weeks, not because something is broken, but because maintenance matters for the mind too.",
-      "Narrator: [reflective] I used to believe asking for help meant weakness, but I understand now it required real courage.",
-      "Narrator: [peacefully] If someone told me a year ago that therapy would change my life this much, I would not have believed them."
+      "Narrator: [reflective] For almost two years, I told myself therapy was only for people with serious problems, not for someone like me.",
+      "Narrator: Meanwhile, I was barely sleeping, snapping at coworkers, and feeling numb during moments that should have made me happy.",
+      "Narrator: [thoughtful] My sister noticed before I did. She said I sounded exhausted in every phone call, even when I insisted I was fine.",
+      "Narrator: I brushed off her concern several times, although deep down, I knew something in me had quietly stopped working properly.",
+      "Narrator: [tired] Finally, after a difficult week at work, I checked qualified providers, verified Rian’s professional credentials, and booked an assessment.",
+      "Narrator: Walking into his office the first time, my hands were shaking, and I almost turned around at the door.",
+      "Narrator: [honestly] He asked simple questions first, like how I was sleeping, and whether I still enjoyed things I used to love.",
+      "Narrator: I answered honestly, and saying the words out loud felt strange, since I had never described my feelings so directly before.",
+      "Narrator: [gently] He said several conditions can look like exhaustion or low mood, so we should understand the full pattern instead of diagnosing it from one sign.",
+      "Narrator: Hearing that made me cry a little, although I quickly apologized, embarrassed by my own reaction in front of a stranger.",
+      "Narrator: [hopeful] He told me crying in that room was normal, and probably overdue after two years of pretending.",
+      "Narrator: We talked about setting boundaries at work, since I had been answering emails late at night without resting.",
+      "Narrator: [relieved] So I started turning off notifications after seven, even though my manager questioned it that first week.",
+      "Narrator: Slowly, my sleep improved, and I noticed myself laughing genuinely again, something I had almost forgotten how to do.",
+      "Narrator: [grateful] My sister was right all along, although I needed time before I could hear her.",
+      "Narrator: Now I see Rian every two weeks, not because something is broken, but because maintenance matters for the mind too.",
+      "Narrator: [carefully] I used to believe asking for help meant weakness, but I understand now it required real courage.",
+      "Narrator: Qualified support helped me. Anyone at immediate risk should seek urgent local help, not wait for routine care."
     ],
     "quiz": [
-      { "question": "What did the narrator believe about therapy for almost two years?", "options": ["That everyone needed it", "That it was only for people with serious problems, not him", "That it was too expensive", "That it worked instantly"], "correctIndex": 1, "explanation": "He told himself therapy was only for people with serious problems, not for someone like him." },
-      { "question": "Who first noticed something was wrong?", "options": ["His manager", "His sister", "His therapist", "A coworker"], "correctIndex": 1, "explanation": "His sister noticed before he did, saying he sounded exhausted in every phone call." },
-      { "question": "How did the narrator feel walking into the therapist's office the first time?", "options": ["Completely calm", "Nervous, with shaking hands, and almost turned around", "Excited and confident", "Bored"], "correctIndex": 1, "explanation": "His hands were shaking, and he almost turned around at the door." },
-      { "question": "What did the therapist say burnout often disguises itself as?", "options": ["A physical illness", "Laziness or bad mood, when the mind is overwhelmed", "A sleeping disorder", "Nothing significant"], "correctIndex": 1, "explanation": "The therapist explained that burnout often disguises itself as laziness or bad mood." },
-      { "question": "What change did the narrator make at work?", "options": ["He quit his job", "He started turning off notifications after seven", "He stopped talking to his manager", "He worked even later at night"], "correctIndex": 1, "explanation": "He started turning off notifications after seven, even though his manager questioned it at first." }
-    ]
+      {
+        "question": "What did the narrator believe about therapy for almost two years?",
+        "options": [
+          "That everyone needed it",
+          "That it was only for people with serious problems, not him",
+          "That it was too expensive",
+          "That it worked instantly"
+        ],
+        "correctIndex": 1,
+        "explanation": "He told himself therapy was only for people with serious problems, not for someone like him."
+      },
+      {
+        "question": "Who first noticed something was wrong?",
+        "options": [
+          "His manager",
+          "His therapist",
+          "A coworker",
+          "His sister"
+        ],
+        "correctIndex": 3,
+        "explanation": "His sister noticed before he did, saying he sounded exhausted in every phone call."
+      },
+      {
+        "question": "How did the narrator feel walking into the therapist's office the first time?",
+        "options": [
+          "Nervous, with shaking hands, and almost turned around",
+          "Completely calm",
+          "Excited and confident",
+          "Bored"
+        ],
+        "correctIndex": 0,
+        "explanation": "His hands were shaking, and he almost turned around at the door."
+      },
+      {
+        "question": "What did the therapist say burnout often disguises itself as?",
+        "options": [
+          "A physical illness",
+          "A sleeping disorder",
+          "Laziness or bad mood, when the mind is overwhelmed",
+          "Nothing significant"
+        ],
+        "correctIndex": 2,
+        "explanation": "The therapist explained that burnout often disguises itself as laziness or bad mood."
+      },
+      {
+        "question": "What change did the narrator make at work?",
+        "options": [
+          "He quit his job",
+          "He stopped talking to his manager",
+          "He started turning off notifications after seven",
+          "He worked even later at night"
+        ],
+        "correctIndex": 2,
+        "explanation": "He started turning off notifications after seven, even though his manager questioned it at first."
+      },
+      {
+        "question": "Which changes suggested that support was needed?",
+        "options": [
+          "One difficult meeting",
+          "Poor sleep, irritability, and loss of enjoyment",
+          "A single late email",
+          "The sister’s opinion alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Several areas of daily life had changed over time."
+      },
+      {
+        "question": "Why did the therapist ask about sleep and enjoyment?",
+        "options": [
+          "To understand the pattern before reaching conclusions",
+          "To prove burnout immediately",
+          "To criticize work habits",
+          "To avoid hearing feelings"
+        ],
+        "correctIndex": 0,
+        "explanation": "Assessment begins with questions, not a label."
+      },
+      {
+        "question": "What did the narrator verify before booking?",
+        "options": [
+          "Online popularity only",
+          "A promise of quick recovery",
+          "The sister’s appointment",
+          "The provider’s professional credentials and service information"
+        ],
+        "correctIndex": 3,
+        "explanation": "Safe care requires a legitimate qualified provider."
+      },
+      {
+        "question": "What does improved sleep show carefully?",
+        "options": [
+          "Turning off notifications cures all distress",
+          "The therapist’s first explanation was a diagnosis",
+          "Work was the only problem",
+          "The combined support and changes helped, without proving one cause"
+        ],
+        "correctIndex": 3,
+        "explanation": "Personal improvement should not become a universal claim."
+      },
+      {
+        "question": "When is urgent help mentioned?",
+        "options": [
+          "Only after two years",
+          "When a manager questions boundaries",
+          "Never during therapy",
+          "If safety is at risk or severe symptoms appear"
+        ],
+        "correctIndex": 3,
+        "explanation": "Routine therapy does not replace crisis support."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "revise; preserve help-seeking while avoiding self-diagnosed burnout, adding credential checks and urgent-support boundaries",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-health-04",
@@ -124,38 +469,155 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ilham", "gender": "male" },
-      { "name": "Putri", "gender": "female" }
+      {
+        "name": "Ilham",
+        "gender": "male"
+      },
+      {
+        "name": "Farhan",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ilham: [excited] Putri, I finally signed up for a gym membership yesterday. I'm starting tomorrow morning before work.",
-      "Putri: [teasing] Really? Didn't you say the same thing last January, and then quit after two weeks?",
-      "Ilham: [a bit embarrassed] Fair point, although this time feels different, because my doctor actually warned me about my cholesterol.",
-      "Putri: [concerned] Oh, that's serious. What exactly did she say during your appointment?",
-      "Ilham: [honest] She said if I don't start exercising regularly, I might need medication within a year or two.",
-      "Putri: [thoughtful] That would definitely motivate me too. So what's your plan this time, so it actually sticks?",
-      "Ilham: [determined] I'm going three mornings a week, before I have time to talk myself out of it.",
-      "Putri: [curious] Smart, honestly, because evenings always disappear once work and errands take over completely.",
-      "Ilham: [nodding] Exactly what happened last time. By six in the evening, I was too tired to change clothes, let alone exercise.",
-      "Putri: [supportive] Do you want a workout partner? I've been thinking about joining a gym too, although I keep delaying it.",
-      "Ilham: [pleased] That would actually help enormously, because I'm more likely to show up if someone is waiting for me.",
-      "Putri: [thoughtful] Same here, honestly. Accountability matters more than motivation, at least according to everything I've read.",
-      "Ilham: [curious] What's stopping you from joining, though? You mentioned wanting to for months now.",
-      "Putri: [honest] Mostly nervousness. I've never exercised regularly, and I worry everyone there will already know what they're doing.",
-      "Ilham: [reassuring] Nobody starts as an expert, Putri. Trust me, I looked completely lost during my first visit too.",
-      "Putri: [smiling] That's oddly comforting to hear. Okay, let's go together tomorrow morning, before I change my mind again.",
-      "Ilham: [warmly] Perfect. I'll pick you up at six, and we can figure out the machines together, step by step.",
-      "Putri: [determined] Deal. And if I complain about being sore afterward, please remind me why we're doing this.",
-      "Ilham: [laughing] I will, although honestly, I'll probably be complaining just as loudly as you are.",
-      "Putri: [warmly] At least we'll be tired and sore together, instead of separately regretting our old habits."
+      "Ilham: [reflective] Farhan, I finally signed up for a gym membership yesterday. I'm starting tomorrow morning before work.",
+      "Farhan: Really? Didn't you say the same thing last January, and then quit after two weeks?",
+      "Ilham: [thoughtful] Fair point, although this time feels different, because my doctor actually warned me about my cholesterol.",
+      "Farhan: Oh, that's serious. What exactly did she say during your appointment?",
+      "Ilham: [tired] She discussed my cholesterol results, other health factors, and an activity plan suitable for me, with follow-up.",
+      "Farhan: That would definitely motivate me too. So what's your plan this time, so it actually sticks?",
+      "Ilham: [honestly] I'm going three mornings a week, before I have time to talk myself out of it.",
+      "Farhan: Smart, honestly, because evenings always disappear once work and errands take over completely.",
+      "Ilham: [gently] Exactly what happened last time. By six in the evening, I was too tired to change clothes, let alone exercise.",
+      "Farhan: Do you want a workout partner? I've been thinking about joining a gym too, although I keep delaying it.",
+      "Ilham: [hopeful] That would actually help enormously, because I'm more likely to show up if someone is waiting for me.",
+      "Farhan: Same here, honestly. Accountability matters more than motivation, at least according to everything I've read.",
+      "Ilham: [relieved] What's stopping you from joining, though? You mentioned wanting to for months now.",
+      "Farhan: Mostly nervousness. I've never exercised regularly, and I worry everyone there will already know what they're doing.",
+      "Ilham: [grateful] Nobody starts as an expert, Farhan. Trust me, I looked completely lost during my first visit too.",
+      "Farhan: That's oddly comforting to hear. Okay, let's go together tomorrow morning, before I change my mind again.",
+      "Ilham: [carefully] Perfect. I'll pick you up at six, and we can ask the gym staff for a beginner orientation before using the machines.",
+      "Farhan: Deal. And if either of us has unusual pain or concerning symptoms, we stop and get appropriate advice.",
+      "Ilham: [warmly] I will, although honestly, I'll probably be complaining just as loudly as you are.",
+      "Farhan: At least we'll be tired and sore together, instead of separately regretting our old habits."
     ],
     "quiz": [
-      { "question": "Why did Ilham join a gym this time?", "options": ["For fun with friends", "His doctor warned him about his cholesterol", "His job required it", "He won a free membership"], "correctIndex": 1, "explanation": "His doctor warned that without regular exercise, he might need medication within a year or two." },
-      { "question": "What happened when Ilham tried exercising last January?", "options": ["He never actually joined a gym", "He quit after two weeks", "He exercised for a full year", "He hired a personal trainer"], "correctIndex": 1, "explanation": "Putri reminds him he said the same thing last January and quit after two weeks." },
-      { "question": "Why does Ilham plan to exercise in the mornings this time?", "options": ["Mornings are cheaper at the gym", "Evenings always disappear with work and errands", "He prefers the morning crowd", "The gym is closed in the evening"], "correctIndex": 1, "explanation": "He explains that evenings always disappear once work and errands take over, so he chose mornings instead." },
-      { "question": "Why has Putri been delaying joining a gym?", "options": ["She cannot afford it", "She feels nervous, worrying everyone will already know what they're doing", "She has no free time at all", "She dislikes Ilham's gym"], "correctIndex": 1, "explanation": "She admits she feels nervous because she has never exercised regularly and worries about looking lost." },
-      { "question": "What do Ilham and Putri decide to do?", "options": ["Exercise separately", "Go to the gym together as workout partners", "Cancel their gym plans", "Wait until next year"], "correctIndex": 1, "explanation": "They agree to go to the gym together the next morning, becoming workout partners for accountability." }
-    ]
+      {
+        "question": "Why did Ilham join a gym this time?",
+        "options": [
+          "His doctor warned him about his cholesterol",
+          "For fun with friends",
+          "His job required it",
+          "He won a free membership"
+        ],
+        "correctIndex": 0,
+        "explanation": "His doctor warned that without regular exercise, he might need medication within a year or two."
+      },
+      {
+        "question": "What happened when Ilham tried exercising last January?",
+        "options": [
+          "He never actually joined a gym",
+          "He exercised for a full year",
+          "He quit after two weeks",
+          "He hired a personal trainer"
+        ],
+        "correctIndex": 2,
+        "explanation": "Putri reminds him he said the same thing last January and quit after two weeks."
+      },
+      {
+        "question": "Why does Ilham plan to exercise in the mornings this time?",
+        "options": [
+          "Mornings are cheaper at the gym",
+          "He prefers the morning crowd",
+          "Evenings always disappear with work and errands",
+          "The gym is closed in the evening"
+        ],
+        "correctIndex": 2,
+        "explanation": "He explains that evenings always disappear once work and errands take over, so he chose mornings instead."
+      },
+      {
+        "question": "Why has Putri been delaying joining a gym?",
+        "options": [
+          "She cannot afford it",
+          "She has no free time at all",
+          "She dislikes Ilham's gym",
+          "She feels nervous, worrying everyone will already know what they're doing"
+        ],
+        "correctIndex": 3,
+        "explanation": "She admits she feels nervous because she has never exercised regularly and worries about looking lost."
+      },
+      {
+        "question": "What do Ilham and Putri decide to do?",
+        "options": [
+          "Exercise separately",
+          "Go to the gym together as workout partners",
+          "Cancel their gym plans",
+          "Wait until next year"
+        ],
+        "correctIndex": 1,
+        "explanation": "They agree to go to the gym together the next morning, becoming workout partners for accountability."
+      },
+      {
+        "question": "What medical information motivates Ilham?",
+        "options": [
+          "Medication is guaranteed in one year",
+          "A friend diagnosed him",
+          "His doctor discussed cholesterol and a suitable activity plan",
+          "The gym offered a blood test"
+        ],
+        "correctIndex": 2,
+        "explanation": "The change begins after professional review."
+      },
+      {
+        "question": "Why did the previous evening plan fail?",
+        "options": [
+          "The gym closed every evening",
+          "Work and errands left little energy",
+          "Farhan refused to join",
+          "Exercise caused high cholesterol"
+        ],
+        "correctIndex": 1,
+        "explanation": "The new time addresses a known barrier."
+      },
+      {
+        "question": "What does a partner provide?",
+        "options": [
+          "Planned accountability and mutual encouragement",
+          "Medical supervision",
+          "A guarantee they never stop",
+          "Competition over pain"
+        ],
+        "correctIndex": 0,
+        "explanation": "Another person can support attendance without replacing expertise."
+      },
+      {
+        "question": "Why will they request an orientation?",
+        "options": [
+          "Everyone else already knows them",
+          "The doctor chose each machine",
+          "Soreness proves a workout is safe",
+          "They are beginners who need safe use of equipment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Instruction reduces avoidable injury."
+      },
+      {
+        "question": "What should they do with unusual pain or concerning symptoms?",
+        "options": [
+          "Complain but continue",
+          "Copy another member’s routine",
+          "Stop and seek appropriate professional advice",
+          "Wait until the next month"
+        ],
+        "correctIndex": 2,
+        "explanation": "Accountability should never pressure unsafe exercise."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "revise; make gym partners same-gender, remove a medication prediction, and add professional exercise orientation",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-health-05",
@@ -164,35 +626,149 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [reflective] When my father was diagnosed with diabetes last spring, our entire family kitchen changed almost overnight.",
-      "Narrator: [honest] He had ignored his tiredness and constant thirst for months, assuming it was simply age catching up with him.",
-      "Narrator: [worried] The diagnosis frightened all of us, especially because my grandfather had suffered serious complications from the same illness years earlier.",
-      "Narrator: [determined] So my mother and I decided we would learn about diabetes properly, instead of relying on rumors or guesswork.",
-      "Narrator: [thoughtful] We met with a dietitian who explained that managing diabetes is about balance, not eliminating every enjoyable food completely.",
-      "Narrator: [warmly] She taught us to read food labels carefully, and to notice how rice, bread, and sugary drinks affect blood levels.",
-      "Narrator: [honest] At first, my father resisted the changes, insisting he had eaten the same way his entire life without any problems.",
-      "Narrator: [gently] I understood his frustration, although I reminded him gently that his body was clearly asking for something different now.",
-      "Narrator: [thoughtful] We started cooking smaller portions of rice, adding more vegetables, and replacing sugary tea with unsweetened versions instead.",
-      "Narrator: [honest] He complained loudly the first week, joking that our food had lost all its personality along with the sugar.",
-      "Narrator: [warmly] Slowly, though, his energy improved, and he stopped needing an afternoon nap just to survive the rest of the day.",
-      "Narrator: [proud] He also started walking every evening after dinner, something he had never bothered doing before his diagnosis.",
-      "Narrator: [reflective] Checking his blood sugar became part of our daily routine, and honestly, it stopped feeling frightening after a few weeks.",
-      "Narrator: [grateful] My mother learned to cook meals that were both healthy and genuinely delicious, which made the whole transition much easier.",
-      "Narrator: [thoughtful] I used to think illness only brought hardship, but this experience also brought our family closer together somehow.",
-      "Narrator: [warmly] We now eat dinner together every night, something we rarely did before, when everyone ate separately in front of screens.",
-      "Narrator: [peacefully] My father's recent test results showed real improvement, and his doctor seemed genuinely pleased during their last appointment.",
-      "Narrator: [with a small smile] He still misses his old sugary tea sometimes, but he admits, quietly, that he actually feels better than he has in years."
+      "Narrator: He had ignored his tiredness and constant thirst for months, assuming it was simply age catching up with him.",
+      "Narrator: [thoughtful] The diagnosis frightened all of us, especially because my grandfather had suffered serious complications from the same illness years earlier.",
+      "Narrator: With my father’s agreement, our family decided to learn from his health team, instead of relying on rumors or guesswork.",
+      "Narrator: [tired] We met with a dietitian who explained that managing diabetes is about balance, not eliminating every enjoyable food completely.",
+      "Narrator: She taught us to read food labels carefully, and to notice how rice, bread, and sugary drinks affect blood levels.",
+      "Narrator: [honestly] At first, my father resisted the changes, insisting he had eaten the same way his entire life without any problems.",
+      "Narrator: I understood his frustration, although I reminded him gently that his body was clearly asking for something different now.",
+      "Narrator: [gently] Following his individual plan, we started cooking measured portions of rice, adding more vegetables, and replacing sugary tea with unsweetened versions instead.",
+      "Narrator: He complained loudly the first week, joking that our food had lost all its personality along with the sugar.",
+      "Narrator: [hopeful] Slowly, though, his energy improved, and he stopped needing an afternoon nap just to survive the rest of the day.",
+      "Narrator: He also started walking every evening after dinner, something he had never bothered doing before his diagnosis.",
+      "Narrator: [relieved] He checked his blood sugar as instructed, managed any prescribed medicine, and kept follow-up appointments, and honestly, it stopped feeling frightening after a few weeks.",
+      "Narrator: My mother learned to cook meals that were both healthy and genuinely delicious, which made the whole transition much easier.",
+      "Narrator: [grateful] I used to think illness only brought hardship, but supporting his choices also encouraged more shared family meals.",
+      "Narrator: We now eat dinner together every night, something we rarely did before, when everyone ate separately in front of screens.",
+      "Narrator: [carefully] My father's recent test results showed real improvement, and his doctor seemed genuinely pleased during their last appointment.",
+      "Narrator: He still misses his old sugary tea sometimes, but he admits, quietly, that he actually feels better than he has in years."
     ],
     "quiz": [
-      { "question": "What symptoms had the father ignored before his diagnosis?", "options": ["Chest pain", "Tiredness and constant thirst", "A broken bone", "Vision loss"], "correctIndex": 1, "explanation": "He had ignored his tiredness and constant thirst for months, assuming it was age." },
-      { "question": "Why did the diagnosis especially frighten the family?", "options": ["No one else in the family had health issues", "The grandfather had suffered serious complications from the same illness", "The father refused all treatment", "Diabetes had no known treatment"], "correctIndex": 1, "explanation": "The grandfather had suffered serious complications from diabetes years earlier, which frightened the family." },
-      { "question": "What did the dietitian explain about managing diabetes?", "options": ["It requires eliminating every enjoyable food", "It is about balance, not eliminating every enjoyable food completely", "It cannot be managed through diet", "Only medication matters"], "correctIndex": 1, "explanation": "The dietitian explained that managing diabetes is about balance, not eliminating every enjoyable food." },
-      { "question": "What new habit did the father start after his diagnosis?", "options": ["Sleeping more during the day", "Walking every evening after dinner", "Eating larger portions of rice", "Avoiding all vegetables"], "correctIndex": 1, "explanation": "He started walking every evening after dinner, something he had never done before his diagnosis." },
-      { "question": "What unexpected benefit came from the father's diagnosis?", "options": ["The family grew more distant", "The family started eating dinner together every night", "The family stopped cooking at home", "Nothing positive happened"], "correctIndex": 1, "explanation": "The narrator says they now eat dinner together every night, which brought the family closer together." }
-    ]
+      {
+        "question": "What symptoms had the father ignored before his diagnosis?",
+        "options": [
+          "Tiredness and constant thirst",
+          "Chest pain",
+          "A broken bone",
+          "Vision loss"
+        ],
+        "correctIndex": 0,
+        "explanation": "He had ignored his tiredness and constant thirst for months, assuming it was age."
+      },
+      {
+        "question": "Why did the diagnosis especially frighten the family?",
+        "options": [
+          "No one else in the family had health issues",
+          "The father refused all treatment",
+          "Diabetes had no known treatment",
+          "The grandfather had suffered serious complications from the same illness"
+        ],
+        "correctIndex": 3,
+        "explanation": "The grandfather had suffered serious complications from diabetes years earlier, which frightened the family."
+      },
+      {
+        "question": "What did the dietitian explain about managing diabetes?",
+        "options": [
+          "It requires eliminating every enjoyable food",
+          "It is about balance, not eliminating every enjoyable food completely",
+          "It cannot be managed through diet",
+          "Only medication matters"
+        ],
+        "correctIndex": 1,
+        "explanation": "The dietitian explained that managing diabetes is about balance, not eliminating every enjoyable food."
+      },
+      {
+        "question": "What new habit did the father start after his diagnosis?",
+        "options": [
+          "Sleeping more during the day",
+          "Eating larger portions of rice",
+          "Walking every evening after dinner",
+          "Avoiding all vegetables"
+        ],
+        "correctIndex": 2,
+        "explanation": "He started walking every evening after dinner, something he had never done before his diagnosis."
+      },
+      {
+        "question": "What unexpected benefit came from the father's diagnosis?",
+        "options": [
+          "The family grew more distant",
+          "The family started eating dinner together every night",
+          "The family stopped cooking at home",
+          "Nothing positive happened"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator says they now eat dinner together every night, which brought the family closer together."
+      },
+      {
+        "question": "Why were family rumors a poor guide?",
+        "options": [
+          "Every family member had the same illness",
+          "Diabetes care needs individualized professional information",
+          "The grandfather’s treatment was current",
+          "Food labels provide complete treatment"
+        ],
+        "correctIndex": 1,
+        "explanation": "Shared experience cannot replace the father’s care team."
+      },
+      {
+        "question": "How did the dietitian frame food?",
+        "options": [
+          "Sugar was the only issue",
+          "Balanced patterns rather than total removal of enjoyment",
+          "Rice was permanently forbidden",
+          "Every family meal had to be identical"
+        ],
+        "correctIndex": 1,
+        "explanation": "The plan avoided punishment-style eating."
+      },
+      {
+        "question": "Whose decisions remain central?",
+        "options": [
+          "The father’s choices made with his health professionals",
+          "The narrator’s rules",
+          "The grandfather’s old routine",
+          "The mother’s preferences only"
+        ],
+        "correctIndex": 0,
+        "explanation": "Family support should not take control from the adult patient."
+      },
+      {
+        "question": "What does blood-sugar checking not replace?",
+        "options": [
+          "Family dinner",
+          "Food labels",
+          "Evening walks",
+          "Medication and clinical follow-up in the care plan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Monitoring supplies information but is not the whole treatment."
+      },
+      {
+        "question": "Why was the shared change easier?",
+        "options": [
+          "Everyone received the same medical prescription",
+          "The family guaranteed improved tests",
+          "The father was supported instead of isolated with a punishment meal",
+          "Dessert disappeared overnight"
+        ],
+        "correctIndex": 2,
+        "explanation": "Belonging supported adherence without claiming identical needs."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "revise; keep supportive family change while protecting the father’s autonomy and placing diet, activity, monitoring, and medicine under his health plan",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-health-06",
@@ -201,38 +777,155 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Dr. Lestari", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Dr. Lestari",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good evening, listeners. Tonight we're joined by Dr. Lestari, a sleep specialist, to talk about screens and sleep. Welcome!",
-      "Dr. Lestari: [warmly] Thank you for inviting me. This topic affects almost everyone who owns a phone these days.",
-      "Radio Host: [curious] Let's start simply. Why exactly does looking at a screen before bed affect our sleep so much?",
-      "Dr. Lestari: [informative] Screens emit blue light, which tricks the brain into thinking it's still daytime, delaying the release of sleep hormones.",
-      "Radio Host: [surprised] So our brain literally believes the sun is still up, even at midnight?",
-      "Dr. Lestari: [nodding] Essentially, yes. That confusion makes falling asleep harder, even when our body feels physically exhausted.",
-      "Radio Host: [interested] Does it matter what we're actually doing on the screen, or is the light itself the whole problem?",
-      "Dr. Lestari: [thoughtful] Both matter. Scrolling through stressful news or arguments online also keeps the mind alert, when it should be calming down.",
-      "Radio Host: [curious] What would you recommend to someone who scrolls in bed every single night out of habit?",
-      "Dr. Lestari: [gently] Start by charging your phone outside the bedroom, so picking it up simply isn't convenient anymore.",
-      "Radio Host: [laughing] That sounds simple, although I imagine it's harder in practice than it sounds.",
-      "Dr. Lestari: [understanding] It is, at first. Most patients tell me the first week feels strange, almost like losing a habit they didn't know they had.",
-      "Radio Host: [curious] What can someone do instead, during those quiet minutes before sleeping?",
-      "Dr. Lestari: [warmly] Reading a physical book works well, or simply lying quietly and reflecting on the day without any screen nearby.",
-      "Radio Host: [interested] Does the amount of sleep we lose really matter that much, if we still function during the day?",
-      "Dr. Lestari: [serious] Absolutely, because poor sleep affects memory, mood, and even how our body manages hunger and stress over time.",
-      "Radio Host: [curious] Is there an ideal time to stop using screens before bed?",
-      "Dr. Lestari: [informative] Ideally, one hour before sleeping, although even thirty minutes without a screen makes a noticeable difference for most people.",
-      "Radio Host: [smiling] That's very practical advice. Any final thought for our listeners tonight?",
-      "Dr. Lestari: [warmly] Sleep isn't a luxury, it's basic maintenance for your whole body, so protecting it deserves real effort, not guilt."
+      "Radio Host: [reflective] Good evening, listeners. Tonight we're joined by Dr. Lestari, a sleep specialist, to talk about screens and sleep. Welcome!",
+      "Dr. Lestari: Thank you for inviting me. This topic affects almost everyone who owns a phone these days.",
+      "Radio Host: [thoughtful] Let's start simply. Why exactly does looking at a screen before bed affect our sleep so much?",
+      "Dr. Lestari: Bright screen light near bedtime can affect the body clock, while content and repeated checking can also delay sleep.",
+      "Radio Host: [tired] So light is one signal, but not the whole explanation?",
+      "Dr. Lestari: Exactly. The effect varies between people, but light and stimulation can make sleep harder, even when our body feels physically exhausted.",
+      "Radio Host: [honestly] Does it matter what we're actually doing on the screen, or is the light itself the whole problem?",
+      "Dr. Lestari: Both matter. Scrolling through stressful news or arguments online also keeps the mind alert, when it should be calming down.",
+      "Radio Host: [gently] What would you recommend to someone who scrolls in bed every single night out of habit?",
+      "Dr. Lestari: Start by charging your phone outside the bedroom, so picking it up simply isn't convenient anymore.",
+      "Radio Host: [hopeful] That sounds simple, although I imagine it's harder in practice than it sounds.",
+      "Dr. Lestari: It is, at first. Most patients tell me the first week feels strange, almost like losing a habit they didn't know they had.",
+      "Radio Host: [relieved] What can someone do instead, during those quiet minutes before sleeping?",
+      "Dr. Lestari: Reading a physical book works well, or simply lying quietly and reflecting on the day without any screen nearby.",
+      "Radio Host: [grateful] Does the amount of sleep we lose really matter that much, if we still function during the day?",
+      "Dr. Lestari: Absolutely, because poor sleep affects memory, mood, and even how our body manages hunger and stress over time.",
+      "Radio Host: [carefully] Is there an ideal time to stop using screens before bed?",
+      "Dr. Lestari: Try a realistic screen-free period before bed and observe the result. If poor sleep continues or affects daytime safety, seek appropriate health advice.",
+      "Radio Host: [warmly] That's very practical advice. Any final thought for our listeners tonight?",
+      "Dr. Lestari: Sleep isn't a luxury, it's basic maintenance for your whole body, so protecting it deserves real effort, not guilt."
     ],
     "quiz": [
-      { "question": "Why does screen light before bed affect sleep?", "options": ["It has no real effect", "Blue light delays the release of sleep hormones", "It only affects children", "It makes people hungry"], "correctIndex": 1, "explanation": "Dr. Lestari explains that blue light tricks the brain into thinking it's still daytime, delaying sleep hormones." },
-      { "question": "According to Dr. Lestari, what else affects sleep besides the light itself?", "options": ["Nothing else matters", "What we're doing on the screen, like scrolling stressful content", "The color of the phone case", "The size of the screen"], "correctIndex": 1, "explanation": "She says scrolling through stressful news or arguments online also keeps the mind alert instead of calming down." },
-      { "question": "What is her first suggestion for someone who scrolls in bed?", "options": ["Buy a new phone", "Charge the phone outside the bedroom", "Sleep during the day instead", "Turn off the internet completely"], "correctIndex": 1, "explanation": "She suggests charging the phone outside the bedroom so picking it up isn't convenient anymore." },
-      { "question": "What does she recommend doing instead of using a screen before sleep?", "options": ["Watching television instead", "Reading a physical book or reflecting quietly", "Exercising vigorously", "Calling friends"], "correctIndex": 1, "explanation": "She recommends reading a physical book or simply lying quietly and reflecting on the day." },
-      { "question": "What is Dr. Lestari's final message to listeners?", "options": ["Sleep is unimportant", "Sleep is basic maintenance for the whole body and deserves real effort", "Screens are completely harmless", "Only children need good sleep"], "correctIndex": 1, "explanation": "She says sleep isn't a luxury, it's basic maintenance for the whole body, deserving real effort, not guilt." }
-    ]
+      {
+        "question": "Why does screen light before bed affect sleep?",
+        "options": [
+          "It has no real effect",
+          "It only affects children",
+          "Blue light delays the release of sleep hormones",
+          "It makes people hungry"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dr. Lestari explains that blue light tricks the brain into thinking it's still daytime, delaying sleep hormones."
+      },
+      {
+        "question": "According to Dr. Lestari, what else affects sleep besides the light itself?",
+        "options": [
+          "What we're doing on the screen, like scrolling stressful content",
+          "Nothing else matters",
+          "The color of the phone case",
+          "The size of the screen"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says scrolling through stressful news or arguments online also keeps the mind alert instead of calming down."
+      },
+      {
+        "question": "What is her first suggestion for someone who scrolls in bed?",
+        "options": [
+          "Buy a new phone",
+          "Charge the phone outside the bedroom",
+          "Sleep during the day instead",
+          "Turn off the internet completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "She suggests charging the phone outside the bedroom so picking it up isn't convenient anymore."
+      },
+      {
+        "question": "What does she recommend doing instead of using a screen before sleep?",
+        "options": [
+          "Watching television instead",
+          "Exercising vigorously",
+          "Calling friends",
+          "Reading a physical book or reflecting quietly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She recommends reading a physical book or simply lying quietly and reflecting on the day."
+      },
+      {
+        "question": "What is Dr. Lestari's final message to listeners?",
+        "options": [
+          "Sleep is unimportant",
+          "Screens are completely harmless",
+          "Only children need good sleep",
+          "Sleep is basic maintenance for the whole body and deserves real effort"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says sleep isn't a luxury, it's basic maintenance for the whole body, deserving real effort, not guilt."
+      },
+      {
+        "question": "Why can screens affect sleep in more than one way?",
+        "options": [
+          "Light, engaging content, timing, and habits may all contribute",
+          "Only blue color matters",
+          "Every screen causes the same response",
+          "Physical tiredness blocks all effects"
+        ],
+        "correctIndex": 0,
+        "explanation": "The revision uses several interacting factors."
+      },
+      {
+        "question": "What does moving a phone change?",
+        "options": [
+          "It adds friction to an automatic checking habit",
+          "It medically treats insomnia",
+          "It removes every notification forever",
+          "It guarantees an hour more sleep"
+        ],
+        "correctIndex": 0,
+        "explanation": "The environment can support behavior without promising an outcome."
+      },
+      {
+        "question": "Why might stressful content matter?",
+        "options": [
+          "It changes the room temperature",
+          "It can keep attention and emotion active near bedtime",
+          "It removes sleep hormones completely",
+          "It affects only news reporters"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mental stimulation is separate from light exposure."
+      },
+      {
+        "question": "What should someone do if poor sleep persists?",
+        "options": [
+          "Keep increasing screen restrictions alone",
+          "Assume hunger is the cause",
+          "Discuss it with an appropriate health professional",
+          "Ignore daytime impairment"
+        ],
+        "correctIndex": 2,
+        "explanation": "Persistent problems may have causes beyond phone use."
+      },
+      {
+        "question": "What is the careful timing advice?",
+        "options": [
+          "Try a realistic screen-free period and observe personal response",
+          "Exactly one hour works for everyone",
+          "Thirty minutes always creates a noticeable change",
+          "Screens must never enter a home"
+        ],
+        "correctIndex": 0,
+        "explanation": "The experiment should fit the person rather than act as a guarantee."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "revise; correct oversimplified screen-light claims and avoid guaranteeing a result from a fixed screen-free period",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-health-07",
@@ -241,37 +934,607 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Tia", "gender": "female" },
-      { "name": "Bagus", "gender": "male" }
+      {
+        "name": "Tia",
+        "gender": "female"
+      },
+      {
+        "name": "Bagus",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Tia: [caring] Bagus, hi! I heard your surgery went well yesterday. How are you feeling today?",
-      "Bagus: [tired but calm] Hi Tia, thanks for calling. Honestly, sore and groggy, although the doctor says everything went as planned.",
-      "Tia: [relieved] That's such good news. I was worried all morning, since you seemed nervous about it last week.",
-      "Bagus: [honest] I was terrified, actually, more than I let anyone see, although the anesthesia made the actual moment disappear completely.",
-      "Tia: [gently] That's understandable. Appendix surgery isn't small, even though doctors treat it as fairly routine these days.",
-      "Bagus: [thoughtful] The nurse said I'll need about two weeks before I can lift anything heavy or return to work fully.",
-      "Tia: [supportive] Don't worry about work at all. I already told our manager you'll need proper time to recover.",
-      "Bagus: [grateful] Thank you, Tia, honestly. I was already stressing about my project deadline before you called.",
-      "Tia: [warmly] Stressing about deadlines is exactly what your body doesn't need right now, so please just rest.",
-      "Bagus: [honest] Easier said than done. I've never been good at sitting still for long, even when I clearly should.",
-      "Tia: [teasing] I remember. You answered emails from a hospital bed once, after your last minor procedure.",
-      "Bagus: [laughing softly] That's true, although laughing right now actually hurts my stitches, so please stop being funny.",
-      "Tia: [gently] Sorry, sorry. Is someone staying with you this week, or are you managing completely alone?",
-      "Bagus: [honest] My mother arrived this morning. She's already cooking more food than I could possibly eat in a month.",
-      "Tia: [warmly] That sounds perfect, honestly. Mothers always know exactly what recovering bodies actually need.",
-      "Bagus: [softly] She does. Although she also keeps reminding me to rest, which I clearly needed to hear from someone.",
-      "Tia: [caring] Listen carefully to her, then. Do you need anything from outside, groceries or anything else useful?",
-      "Bagus: [touched] That's kind of you to offer, but honestly, between my mother and the neighbors, I'm well taken care of.",
+      "Tia: [reflective] Bagus, hi! I heard your surgery went well yesterday. How are you feeling today?",
+      "Bagus: Hi Tia, thanks for calling. Honestly, sore and groggy, although the doctor says everything went as planned.",
+      "Tia: [thoughtful] That's such good news. I was worried all morning, since you seemed nervous about it last week.",
+      "Bagus: I was terrified, actually, more than I let anyone see, although the anesthesia made the actual moment disappear completely.",
+      "Tia: [tired] That's understandable. Appendix surgery isn't small, even though doctors treat it as fairly routine these days.",
+      "Bagus: My discharge instructions restrict heavy lifting for now, and follow-up will guide my return to work.",
+      "Tia: [honestly] Don't worry about work at all. With your permission, I gave our manager only the work update you approved.",
+      "Bagus: Thank you, Tia, honestly. I was already stressing about my project deadline before you called.",
+      "Tia: [gently] Stressing about deadlines is exactly what your body doesn't need right now, so please just rest.",
+      "Bagus: Easier said than done. I've never been good at sitting still for long, even when I clearly should.",
+      "Tia: [hopeful] I remember. You answered emails from a hospital bed once, after your last minor procedure.",
+      "Bagus: That's true, although laughing right now actually hurts my stitches, so please stop being funny.",
+      "Tia: [relieved] Sorry, sorry. Is someone staying with you this week, or are you managing completely alone?",
+      "Bagus: My mother arrived this morning. She's already cooking more food than I could possibly eat in a month.",
+      "Tia: [grateful] That sounds perfect, honestly. Family support helps most when it follows the discharge instructions and asks what the patient needs.",
+      "Bagus: She does. Although she also keeps reminding me to rest, which I clearly needed to hear from someone.",
+      "Tia: [carefully] Listen carefully to her, then. Do you need anything from outside, groceries or anything else useful?",
+      "Bagus: That's kind of you to offer, but honestly, between my mother and the neighbors, I'm well taken care of.",
       "Tia: [warmly] Good. Just focus on healing properly, and call me if that changes even slightly during the week.",
-      "Bagus: [grateful] I will. Thank you for checking on me, Tia. It genuinely means more than you probably realize."
+      "Bagus: I will. Thank you for checking on me, Tia. It genuinely means more than you probably realize."
     ],
     "quiz": [
-      { "question": "What surgery did Bagus have?", "options": ["Knee surgery", "Appendix surgery", "Eye surgery", "Dental surgery"], "correctIndex": 1, "explanation": "Tia mentions it isn't small, even though doctors treat appendix surgery as fairly routine these days." },
-      { "question": "How long does the nurse say Bagus needs before lifting anything heavy?", "options": ["Two days", "About two weeks", "Six months", "One day"], "correctIndex": 1, "explanation": "The nurse said he'll need about two weeks before he can lift anything heavy or return to work fully." },
-      { "question": "What did Tia already do for Bagus regarding work?", "options": ["Nothing yet", "Told their manager he needs proper time to recover", "Finished his project herself", "Asked him to work from the hospital"], "correctIndex": 1, "explanation": "Tia already told their manager that Bagus will need proper time to recover." },
-      { "question": "Who is staying with Bagus this week?", "options": ["No one", "His mother", "His manager", "A nurse"], "correctIndex": 1, "explanation": "His mother arrived that morning and is cooking food for him while he recovers." },
-      { "question": "What does Tia offer to do for Bagus?", "options": ["Bring him to work early", "Get groceries or anything useful from outside", "Cancel his mother's visit", "Perform his surgery follow-up"], "correctIndex": 1, "explanation": "Tia offers to bring groceries or anything else useful, though Bagus says he is already well taken care of." }
-    ]
+      {
+        "question": "What surgery did Bagus have?",
+        "options": [
+          "Knee surgery",
+          "Eye surgery",
+          "Dental surgery",
+          "Appendix surgery"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tia mentions it isn't small, even though doctors treat appendix surgery as fairly routine these days."
+      },
+      {
+        "question": "How long does the nurse say Bagus needs before lifting anything heavy?",
+        "options": [
+          "About two weeks",
+          "Two days",
+          "Six months",
+          "One day"
+        ],
+        "correctIndex": 0,
+        "explanation": "The nurse said he'll need about two weeks before he can lift anything heavy or return to work fully."
+      },
+      {
+        "question": "What did Tia already do for Bagus regarding work?",
+        "options": [
+          "Nothing yet",
+          "Finished his project herself",
+          "Told their manager he needs proper time to recover",
+          "Asked him to work from the hospital"
+        ],
+        "correctIndex": 2,
+        "explanation": "Tia already told their manager that Bagus will need proper time to recover."
+      },
+      {
+        "question": "Who is staying with Bagus this week?",
+        "options": [
+          "No one",
+          "His manager",
+          "His mother",
+          "A nurse"
+        ],
+        "correctIndex": 2,
+        "explanation": "His mother arrived that morning and is cooking food for him while he recovers."
+      },
+      {
+        "question": "What does Tia offer to do for Bagus?",
+        "options": [
+          "Bring him to work early",
+          "Get groceries or anything useful from outside",
+          "Cancel his mother's visit",
+          "Perform his surgery follow-up"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tia offers to bring groceries or anything else useful, though Bagus says he is already well taken care of."
+      },
+      {
+        "question": "How did Tia learn what could be shared with work?",
+        "options": [
+          "She told the manager without asking",
+          "His mother posted the surgery",
+          "The nurse called the office",
+          "Bagus gave permission for a limited update"
+        ],
+        "correctIndex": 3,
+        "explanation": "Health privacy remains with Bagus."
+      },
+      {
+        "question": "What controls lifting and return-to-work timing?",
+        "options": [
+          "Tia’s estimate",
+          "A fixed two weeks for everyone",
+          "Bagus’s project deadline",
+          "Discharge instructions and follow-up advice"
+        ],
+        "correctIndex": 3,
+        "explanation": "Recovery dates must remain individualized."
+      },
+      {
+        "question": "Why should Bagus avoid working from bed?",
+        "options": [
+          "Email is forbidden after surgery",
+          "Rest and a clear handover are more useful than weak participation",
+          "The manager removed him from the team",
+          "Laughter damages every wound"
+        ],
+        "correctIndex": 1,
+        "explanation": "The advice follows the recovery plan rather than proving commitment."
+      },
+      {
+        "question": "What is the mother’s appropriate role?",
+        "options": [
+          "Practical support that follows medical instructions",
+          "Choosing treatment herself",
+          "Knowing automatically what the body needs",
+          "Reporting symptoms to coworkers"
+        ],
+        "correctIndex": 0,
+        "explanation": "Family care supports, but does not replace, the health team."
+      },
+      {
+        "question": "How does Tia offer help respectfully?",
+        "options": [
+          "She arrives without asking",
+          "She shares Bagus’s condition widely",
+          "She insists on buying medicine",
+          "She asks what is useful and accepts that current support is enough"
+        ],
+        "correctIndex": 3,
+        "explanation": "The patient can accept, decline, or update the request."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "revise; preserve a supportive coworker call while correcting privacy, recovery, and family-care assumptions",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-health-08",
+    "title": "The Headache Diary",
+    "level": "A2",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] I began having headaches several afternoons each week. I blamed my computer, then coffee, then the weather, but I had no clear evidence.",
+      "Narrator: A doctor asked me to keep a diary for three weeks. She said not to diagnose myself or test extreme changes.",
+      "Narrator: [thoughtful] I recorded when each headache started, how strong it felt, what I had eaten, sleep, water, screen breaks, and any medicine used.",
+      "Narrator: The first week looked random. During the second week, I noticed that headaches often appeared on days when I skipped lunch and attended long online meetings.",
+      "Narrator: [tired] Another pattern involved sleep. After nights with less than six hours, even a normal workday felt harder.",
+      "Narrator: The diary did not prove that one habit caused every headache. It gave the doctor useful information for a safer discussion.",
+      "Narrator: [honestly] She checked my symptoms, asked about warning signs, and explained when urgent medical care would be necessary.",
+      "Narrator: For my situation, we agreed on regular meals, more water, scheduled screen breaks, and a follow-up appointment.",
+      "Narrator: [gently] I also adjusted the monitor position and used the correct glasses prescribed for computer work.",
+      "Narrator: Over the next month, the headaches became less frequent. Two still happened on days when I had slept and eaten well.",
+      "Narrator: [hopeful] Because I kept recording, I could describe those events accurately instead of saying, “It happens all the time.”",
+      "Narrator: The diary helped me become observant without becoming frightened by every sensation.",
+      "Narrator: [relieved] It also prevented me from copying a treatment from someone online whose headache might have a different cause.",
+      "Narrator: Health records do not replace professional care. They improve the conversation by showing timing and context.",
+      "Narrator: [grateful] Now I bring the short diary to appointments. Clear details help the doctor and remind me that symptoms deserve attention, not guessing."
+    ],
+    "quiz": [
+      {
+        "question": "How often were headaches occurring?",
+        "options": [
+          "Several afternoons each week",
+          "Once every ten years",
+          "Only during holidays",
+          "Every minute"
+        ],
+        "correctIndex": 0,
+        "explanation": "The repeated afternoon pattern led to medical advice."
+      },
+      {
+        "question": "What did the doctor ask for?",
+        "options": [
+          "An extreme diet",
+          "A new job",
+          "A three-week symptom diary",
+          "No further attention"
+        ],
+        "correctIndex": 2,
+        "explanation": "The diary would collect context safely."
+      },
+      {
+        "question": "What patterns appeared?",
+        "options": [
+          "Only rainy weather",
+          "Eating breakfast and resting",
+          "Skipped meals, long meetings, and short sleep",
+          "Walking outdoors"
+        ],
+        "correctIndex": 2,
+        "explanation": "Several daily conditions were associated with symptoms."
+      },
+      {
+        "question": "Did the diary prove one cause?",
+        "options": [
+          "Yes, it proved every cause",
+          "No, because it was empty",
+          "Yes, without a doctor",
+          "No, it supported a better medical discussion"
+        ],
+        "correctIndex": 3,
+        "explanation": "Patterns are useful without being a diagnosis."
+      },
+      {
+        "question": "What is the broader lesson?",
+        "options": [
+          "Copy treatments from strangers",
+          "Ignore repeated symptoms",
+          "Change many things dangerously",
+          "Record details and seek professional guidance"
+        ],
+        "correctIndex": 3,
+        "explanation": "Observation should support, not replace, qualified care."
+      },
+      {
+        "question": "Why were early guesses unreliable?",
+        "options": [
+          "They changed without recorded evidence",
+          "Computers never affect symptoms",
+          "Coffee was already ruled out",
+          "Weather records were missing"
+        ],
+        "correctIndex": 0,
+        "explanation": "Several plausible ideas existed without a pattern."
+      },
+      {
+        "question": "Why record medicine use?",
+        "options": [
+          "The diary should prescribe a dose",
+          "The doctor needs timing and treatment context",
+          "Medicine proves the headache cause",
+          "Online readers need the information"
+        ],
+        "correctIndex": 1,
+        "explanation": "Complete context supports safer clinical review."
+      },
+      {
+        "question": "What does the second headache pattern prevent?",
+        "options": [
+          "Continuing the diary",
+          "Using prescribed glasses",
+          "Assuming meals and sleep explained every event",
+          "Scheduling follow-up"
+        ],
+        "correctIndex": 2,
+        "explanation": "Exceptions preserve uncertainty."
+      },
+      {
+        "question": "How did the diary improve language at appointments?",
+        "options": [
+          "The narrator gave a diagnosis",
+          "Specific events replaced the vague phrase “all the time”",
+          "Every headache received a name",
+          "The doctor no longer asked questions"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accurate frequency and context improve communication."
+      },
+      {
+        "question": "Why avoid copying online treatment?",
+        "options": [
+          "All online information is false",
+          "The diary already cured the headaches",
+          "Similar symptoms may have different causes and risks",
+          "Only screen position matters"
+        ],
+        "correctIndex": 2,
+        "explanation": "A personal record belongs in professional assessment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "keep; exemplary symptom-diary script distinguishes patterns from causes and explicitly includes warning signs, follow-up, and professional care",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-health-09",
+    "title": "Cooking With Less Salt, Not Less Flavor",
+    "level": "A2",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] After my father's blood-pressure check, a health professional advised our family to reduce salt. Our first meals tasted flat, and everyone complained.",
+      "Narrator: We had simply removed salt without changing anything else. My mother suggested learning how flavor actually works.",
+      "Narrator: [thoughtful] We began with one soup recipe. We used onions, garlic, ginger, pepper, tomato, and fresh herbs to build flavor slowly.",
+      "Narrator: We also read labels on stock cubes and bottled sauces. Some contained more sodium than we expected, even when the food did not taste very salty.",
+      "Narrator: [tired] Instead of changing every meal at once, we adjusted familiar dishes one by one. This made the new routine easier to accept.",
+      "Narrator: We measured salt with a spoon rather than pouring from the container. The amount became visible and consistent.",
+      "Narrator: [honestly] Lemon juice added brightness to fish, while toasted spices improved vegetables. Texture also mattered, so we added roasted seeds to one salad.",
+      "Narrator: My father still followed the advice given for his own health. We did not treat one family recipe as medical treatment for every person.",
+      "Narrator: [gently] After several weeks, our taste adjusted. Foods that once seemed normal sometimes tasted extremely salty outside the home.",
+      "Narrator: We kept a few practical rules: taste before adding salt, compare product labels, and place no salt container on the dining table.",
+      "Narrator: [hopeful] The goal was not a completely salt-free diet. It was a realistic reduction made with professional guidance.",
+      "Narrator: The process improved our cooking because we stopped depending on one ingredient to create all flavor.",
+      "Narrator: [relieved] It also became a shared family change, so my father did not feel that he was eating a separate punishment meal.",
+      "Narrator: Healthier food became sustainable when it remained enjoyable, familiar, and flexible.",
+      "Narrator: [grateful] We learned that reducing one ingredient works better when curiosity replaces complaint and the whole family helps."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the family reduce salt?",
+        "options": [
+          "A professional advised it after the father’s check",
+          "They ran out of food",
+          "A restaurant closed",
+          "They wanted sweeter meals"
+        ],
+        "correctIndex": 0,
+        "explanation": "Blood-pressure guidance began the change."
+      },
+      {
+        "question": "Why did the first meals taste flat?",
+        "options": [
+          "They used too many herbs",
+          "The food was frozen",
+          "They removed salt without building other flavor",
+          "Nobody cooked it"
+        ],
+        "correctIndex": 2,
+        "explanation": "Simple removal did not replace flavor functions."
+      },
+      {
+        "question": "What hidden sources did they notice?",
+        "options": [
+          "Fresh lemons",
+          "Plain water",
+          "Raw onions only",
+          "Stock cubes and bottled sauces"
+        ],
+        "correctIndex": 3,
+        "explanation": "Packaged seasonings could contain substantial sodium."
+      },
+      {
+        "question": "How did they make salt use visible?",
+        "options": [
+          "They measured it with a spoon",
+          "They guessed with closed eyes",
+          "They removed every label",
+          "They poured directly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Measurement improved awareness and consistency."
+      },
+      {
+        "question": "Why was the routine sustainable?",
+        "options": [
+          "The father ate alone",
+          "Meals stayed enjoyable and the family changed together",
+          "They followed no guidance",
+          "Every dish became unfamiliar"
+        ],
+        "correctIndex": 1,
+        "explanation": "Shared flexible changes supported long-term use."
+      },
+      {
+        "question": "Why did simply removing salt fail at first?",
+        "options": [
+          "The family used too many herbs",
+          "No other flavor-building method replaced it",
+          "The father refused professional advice",
+          "Labels showed no sodium"
+        ],
+        "correctIndex": 1,
+        "explanation": "Subtraction alone made meals feel flat."
+      },
+      {
+        "question": "What surprised the family about sodium?",
+        "options": [
+          "Fresh herbs contained the most",
+          "High amounts could appear in products that did not taste very salty",
+          "All stock cubes had identical labels",
+          "Salt was present only at the table"
+        ],
+        "correctIndex": 1,
+        "explanation": "Taste alone was not a reliable measure."
+      },
+      {
+        "question": "Why change dishes one at a time?",
+        "options": [
+          "The professional allowed only soup",
+          "The family had one recipe",
+          "Gradual adjustment was easier to accept and evaluate",
+          "Blood pressure changes daily"
+        ],
+        "correctIndex": 2,
+        "explanation": "A staged process improved sustainability."
+      },
+      {
+        "question": "What boundary protects listeners?",
+        "options": [
+          "Lemon works for every condition",
+          "A salt-free diet is the goal",
+          "The father no longer needs follow-up",
+          "One family recipe is not medical treatment for everyone"
+        ],
+        "correctIndex": 3,
+        "explanation": "The script keeps food ideas inside individualized advice."
+      },
+      {
+        "question": "How did shared meals protect dignity?",
+        "options": [
+          "Everyone received the same diagnosis",
+          "The father did not receive a separate punishment plate",
+          "The family removed every flexible choice",
+          "No one discussed flavor"
+        ],
+        "correctIndex": 1,
+        "explanation": "Support was integrated into enjoyable family food."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "keep; strong salt-reduction story uses professional guidance, label comparison, gradual adaptation, flavor techniques, and individual limits",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-health-10",
+    "title": "A Sick Day Without Guilt",
+    "level": "A2",
+    "themeId": "health",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Maya",
+        "gender": "female"
+      },
+      {
+        "name": "Lukman",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Maya: [reflective] Lukman, you sound worse than yesterday. Are you still planning to come to the office?",
+      "Lukman: I was. We have the client call, and I do not want the team to think I am unreliable.",
+      "Maya: [thoughtful] You have a fever and a strong cough. Working in the shared room could also affect other people.",
+      "Lukman: I know, but calling in sick always makes me feel guilty.",
+      "Maya: [tired] Being responsible includes knowing when rest and medical advice are needed. Have you checked the company policy?",
+      "Lukman: It says I should inform the manager before eight and move urgent tasks to a teammate.",
+      "Maya: [honestly] Then do that now. I can lead the client call if you send me the latest note.",
+      "Lukman: The note is in the shared folder. I need to add one pricing question and the client's new deadline.",
+      "Maya: [gently] Send those details, but do not spend two hours making the document perfect.",
+      "Lukman: You are right. I will write a short handover and message the manager.",
+      "Maya: [hopeful] Do you have someone who can help if you need medicine or food?",
+      "Lukman: My brother lives nearby. I will ask him, and I will contact the clinic if the fever continues or warning symptoms appear.",
+      "Maya: [relieved] Good. Please do not join the call from bed just to prove commitment.",
+      "Lukman: I was thinking about that. It would probably delay my recovery and make the call difficult.",
+      "Maya: [grateful] Exactly. A clear handover is more useful than being present without enough strength.",
+      "Lukman: I will turn off work notifications after the manager confirms.",
+      "Maya: [carefully] The team can handle one day. When someone else is sick, you would want them to recover too.",
+      "Lukman: That is true. I do not judge coworkers for using sick leave, only myself.",
+      "Maya: [warmly] Then apply the same fairness to yourself.",
+      "Lukman: All right. I will send the handover, seek appropriate care, and rest without pretending that illness is a moral failure."
+    ],
+    "quiz": [
+      {
+        "question": "What symptoms does Lukman have?",
+        "options": [
+          "A broken arm",
+          "Only hunger",
+          "No symptoms",
+          "Fever and a strong cough"
+        ],
+        "correctIndex": 3,
+        "explanation": "Maya hears and names clear illness signs."
+      },
+      {
+        "question": "Why does he want to work?",
+        "options": [
+          "He enjoys spreading illness",
+          "He forgot the sick policy",
+          "He fears appearing unreliable",
+          "The office has medicine"
+        ],
+        "correctIndex": 2,
+        "explanation": "Guilt and reputation are influencing him."
+      },
+      {
+        "question": "What does the policy require?",
+        "options": [
+          "Notify the manager and hand over urgent work",
+          "Attend every call",
+          "Hide all symptoms",
+          "Work extra hours later"
+        ],
+        "correctIndex": 0,
+        "explanation": "The workplace has a clear absence process."
+      },
+      {
+        "question": "Who can lead the client call?",
+        "options": [
+          "Lukman’s brother",
+          "The clinic",
+          "Nobody",
+          "Maya"
+        ],
+        "correctIndex": 3,
+        "explanation": "Maya offers practical team coverage."
+      },
+      {
+        "question": "What does Lukman decide?",
+        "options": [
+          "Join from bed",
+          "Ignore the fever",
+          "Write a perfect report all day",
+          "Send a short handover, seek care, and rest"
+        ],
+        "correctIndex": 3,
+        "explanation": "Responsible absence protects recovery and coworkers."
+      },
+      {
+        "question": "Why is office attendance not only a personal choice?",
+        "options": [
+          "A shared room could expose coworkers",
+          "The client requires a video call",
+          "The manager dislikes coughing",
+          "The note is unfinished"
+        ],
+        "correctIndex": 0,
+        "explanation": "Illness may affect others as well as Lukman."
+      },
+      {
+        "question": "What makes Maya’s help operationally useful?",
+        "options": [
+          "She diagnoses the fever",
+          "She can lead the call using current shared notes",
+          "She promises the client a new price",
+          "She writes two hours of detail"
+        ],
+        "correctIndex": 1,
+        "explanation": "The urgent task transfers clearly."
+      },
+      {
+        "question": "Why should the handover remain short?",
+        "options": [
+          "The client needs less information",
+          "Pricing is unimportant",
+          "Managers reject long documents",
+          "Recovery should not be delayed by perfectionism"
+        ],
+        "correctIndex": 3,
+        "explanation": "Only decision-critical details are needed."
+      },
+      {
+        "question": "What health boundary does Lukman set?",
+        "options": [
+          "Ask Maya to choose medicine",
+          "Work until symptoms become severe",
+          "Contact the clinic if fever continues or warning signs appear",
+          "Assume one rest day is enough"
+        ],
+        "correctIndex": 2,
+        "explanation": "The plan includes qualified care and escalation."
+      },
+      {
+        "question": "What unfair double standard does Lukman notice?",
+        "options": [
+          "He expects Maya to work while ill",
+          "He accepts coworkers’ sick leave but judges his own",
+          "He gives clients more time",
+          "He applies policy only to managers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Maya helps him apply the same fairness inward."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "health",
+      "scriptDecision": "keep; excellent sick-leave dialogue combines infection concerns, policy, concise handover, support, warning signs, and self-fairness",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

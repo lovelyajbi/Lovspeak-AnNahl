@@ -6,29 +6,143 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] The first rejection stung, but the second one, arriving almost exactly a year later, felt disproportionately worse, as though I hadn't grown at all in the interim.",
-      "Narrator: [reflective] I'd spent that year overhauling my research proposal, incorporating feedback I'd practically begged a reviewer to give me, and still it wasn't enough.",
-      "Narrator: [honestly] For a few weeks afterward, I genuinely considered abandoning the whole idea, telling myself that some doors are closed for a reason, however tempting that explanation was.",
-      "Narrator: [thoughtful] What eventually pulled me out of that spiral wasn't encouragement, oddly enough, but irritation, the sense that I was letting one committee's opinion define my entire trajectory.",
+      "Narrator: [thoughtful] The first rejection stung, but the second one, arriving almost exactly a year later, felt disproportionately worse, as though I hadn't grown at all in the interim.",
+      "Narrator: I'd spent that year overhauling my research proposal, incorporating feedback I'd practically begged a reviewer to give me, and still it wasn't enough.",
+      "Narrator: [carefully] For a few weeks afterward, I genuinely considered abandoning the whole idea, telling myself that some doors are closed for a reason, however tempting that explanation was.",
+      "Narrator: What eventually pulled me out of that spiral wasn't encouragement, oddly enough, but irritation, the sense that I was letting one committee's opinion define my entire trajectory.",
       "Narrator: [reflective] So I did something I probably should have done the first time: I emailed three professors whose work I actually understood, rather than simply admired from a distance.",
-      "Narrator: [with feeling] One of them, to my surprise, replied within a day and pointed out that my proposal had been trying to answer three questions at once, which is rarely well received by an admissions committee.",
+      "Narrator: One of them, to my surprise, replied within a day and pointed out that my proposal had been trying to answer three questions at once, which is rarely well received by an admissions committee.",
       "Narrator: [honestly] It's humbling to be told, essentially, that your ambition was mistaken for a lack of focus, though I suppose that's precisely what had happened.",
-      "Narrator: [determined] I narrowed the proposal down to a single, tightly argued question, even though it meant discarding months of work I'd grown attached to.",
-      "Narrator: [thoughtful] Whether this version gets accepted remains to be seen, but I no longer feel like I'm gambling on something vague and unexamined.",
-      "Narrator: [reflective] I've also stopped conflating rejection with unworthiness, a distinction that sounds obvious until you're the one sitting with the actual letter.",
-      "Narrator: [warmly] A mentor once told me that being overlooked twice doesn't make a person any less capable, only less lucky in timing, and I've come to believe she was right.",
-      "Narrator: [peacefully] Whatever happens with this application, the process has forced me to articulate, precisely, what I actually want to spend the next five years investigating, and that alone feels like it was worth the discomfort."
+      "Narrator: I narrowed the proposal down to a single, tightly argued question, even though it meant discarding months of work I'd grown attached to.",
+      "Narrator: [gently] Whether this version gets accepted remains to be seen, but I no longer feel like I'm gambling on something vague and unexamined.",
+      "Narrator: I've also stopped conflating rejection with unworthiness, a distinction that sounds obvious until you're the one sitting with the actual letter.",
+      "Narrator: [calmly] A mentor once told me that being overlooked twice doesn't make a person any less capable, only less lucky in timing, and I've come to believe she was right.",
+      "Narrator: Whatever happens with this application, the process has forced me to articulate, precisely, what I actually want to spend the next five years investigating, and that alone feels like it was worth the discomfort."
     ],
     "quiz": [
-      { "question": "Why did the second rejection feel worse than the first?", "options": ["It arrived with no explanation", "It felt disproportionately worse, as though she hadn't grown at all", "It came from a different university", "It was announced publicly"], "correctIndex": 1, "explanation": "She says the second rejection felt disproportionately worse, as though she hadn't grown at all in the interim." },
-      { "question": "What pulled the narrator out of her spiral of self-doubt?", "options": ["A friend's encouragement", "Irritation at letting one committee's opinion define her trajectory", "A new scholarship offer", "Advice from her family"], "correctIndex": 1, "explanation": "She says it wasn't encouragement but irritation at letting one committee's opinion define her entire trajectory." },
-      { "question": "What flaw did the professor identify in her original proposal?", "options": ["It was too short", "It tried to answer three questions at once", "It had grammar mistakes", "It lacked a bibliography"], "correctIndex": 1, "explanation": "The professor pointed out her proposal had been trying to answer three questions at once, which admissions committees rarely favor." },
-      { "question": "What did the narrator do in response to that feedback?", "options": ["She gave up on reapplying", "She narrowed the proposal to a single, tightly argued question", "She submitted the same proposal again", "She switched universities entirely"], "correctIndex": 1, "explanation": "She narrowed the proposal down to a single, tightly argued question, discarding months of attached work." },
-      { "question": "What distinction does the narrator say she has stopped making?", "options": ["Between hard work and luck", "Between rejection and unworthiness", "Between ambition and arrogance", "Between mentors and professors"], "correctIndex": 1, "explanation": "She says she has stopped conflating rejection with unworthiness." }
-    ]
+      {
+        "question": "Why did the second rejection feel worse than the first?",
+        "options": [
+          "It felt disproportionately worse, as though she hadn't grown at all",
+          "It arrived with no explanation",
+          "It came from a different university",
+          "It was announced publicly"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says the second rejection felt disproportionately worse, as though she hadn't grown at all in the interim."
+      },
+      {
+        "question": "What pulled the narrator out of her spiral of self-doubt?",
+        "options": [
+          "A friend's encouragement",
+          "Irritation at letting one committee's opinion define her trajectory",
+          "A new scholarship offer",
+          "Advice from her family"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says it wasn't encouragement but irritation at letting one committee's opinion define her entire trajectory."
+      },
+      {
+        "question": "What flaw did the professor identify in her original proposal?",
+        "options": [
+          "It was too short",
+          "It had grammar mistakes",
+          "It tried to answer three questions at once",
+          "It lacked a bibliography"
+        ],
+        "correctIndex": 2,
+        "explanation": "The professor pointed out her proposal had been trying to answer three questions at once, which admissions committees rarely favor."
+      },
+      {
+        "question": "What did the narrator do in response to that feedback?",
+        "options": [
+          "She gave up on reapplying",
+          "She submitted the same proposal again",
+          "She switched universities entirely",
+          "She narrowed the proposal to a single, tightly argued question"
+        ],
+        "correctIndex": 3,
+        "explanation": "She narrowed the proposal down to a single, tightly argued question, discarding months of attached work."
+      },
+      {
+        "question": "What distinction does the narrator say she has stopped making?",
+        "options": [
+          "Between hard work and luck",
+          "Between ambition and arrogance",
+          "Between mentors and professors",
+          "Between rejection and unworthiness"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says she has stopped conflating rejection with unworthiness."
+      },
+      {
+        "question": "Why did rejection begin to feel like a judgment of the narrator?",
+        "options": [
+          "She had linked the committee's decision to her personal worth",
+          "The letter criticised her character",
+          "Three professors rejected her email",
+          "Her mentor withdrew support"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that she had linked the committee's decision to her personal worth."
+      },
+      {
+        "question": "Why did she contact professors whose work she understood?",
+        "options": [
+          "They controlled the admissions committee",
+          "They promised to accept her",
+          "They could give relevant, informed feedback",
+          "They had written the rejection"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they could give relevant, informed feedback."
+      },
+      {
+        "question": "What did narrowing the proposal require?",
+        "options": [
+          "Changing to an unrelated field",
+          "Discarding months of attached work",
+          "Adding two more research questions",
+          "Ignoring the professor's advice"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that discarding months of attached work."
+      },
+      {
+        "question": "How is the new application different?",
+        "options": [
+          "It contains no research question",
+          "It depends mainly on luck",
+          "It repeats the earlier version",
+          "It centres on one clearly argued question"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that it centres on one clearly argued question."
+      },
+      {
+        "question": "What value remains even if admission is denied?",
+        "options": [
+          "The committee must refund her",
+          "She has clarified what she wants to investigate",
+          "The old proposal will be published",
+          "The professors will offer employment"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that she has clarified what she wants to investigate."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-education-02",
@@ -37,32 +151,149 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Aisyah", "gender": "female" },
-      { "name": "Bagas", "gender": "male" }
+      {
+        "name": "Aisyah",
+        "gender": "female"
+      },
+      {
+        "name": "Bagas",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Aisyah: [frustrated] I just got my results back, and honestly, I don't think a three-hour multiple-choice exam captures anything meaningful about what I actually know.",
-      "Bagas: [measured] I sympathize, but isn't the alternative even messier? At least a standardized test can be compared fairly across thousands of applicants.",
-      "Aisyah: [skeptical] Fair to whom, though? Someone who's been coached since childhood has an obvious advantage over someone sitting for the first time with no preparation.",
-      "Bagas: [conceding] That's a legitimate point, and I won't pretend the playing field is level, because it clearly isn't.",
-      "Aisyah: [pressing] So why do universities keep relying on a system they privately admit is flawed?",
-      "Bagas: [thoughtful] Partly inertia, I'd guess, and partly because the alternatives, portfolios, interviews, essays, are harder to standardize and easier to game in different ways.",
-      "Aisyah: [conceding] I hadn't considered that essays could be gamed too, though I suppose wealthier applicants can afford better editors.",
-      "Bagas: [nodding] Exactly, which suggests the problem isn't really the test itself, it's that advantage finds a way through whichever door is left open.",
-      "Aisyah: [reflective] Maybe what bothers me most is being reduced to a single number, as if three hours could summarize years of effort.",
-      "Bagas: [gently] I understand that, though for what it's worth, most admissions officers claim the score is only ever one factor among several.",
-      "Aisyah: [doubtful] Claim being the operative word. It's hard not to suspect that, when applications pile up, the number becomes a convenient shortcut.",
-      "Bagas: [thoughtful] Probably true under pressure, yes, though I'd rather universities be transparent about that shortcut than pretend it doesn't happen.",
-      "Aisyah: [determined] Agreed. If the number's going to matter this much, the least they owe us is honesty about how much it actually matters.",
-      "Bagas: [warmly] On that, at least, we're in complete agreement."
+      "Aisyah: [thoughtful] I just got my results back, and honestly, I don't think a three-hour multiple-choice exam captures anything meaningful about what I actually know.",
+      "Bagas: I sympathize, but isn't the alternative even messier? At least a standardized test can be compared fairly across thousands of applicants.",
+      "Aisyah: [carefully] Fair to whom, though? Someone who's been coached since childhood has an obvious advantage over someone sitting for the first time with no preparation.",
+      "Bagas: That's a legitimate point, and I won't pretend the playing field is level, because it clearly isn't.",
+      "Aisyah: [reflective] So why do universities keep relying on a system they privately admit is flawed?",
+      "Bagas: Partly inertia, I'd guess, and partly because the alternatives, portfolios, interviews, essays, are harder to standardize and easier to game in different ways.",
+      "Aisyah: [honestly] I hadn't considered that essays could be gamed too, though I suppose wealthier applicants can afford better editors.",
+      "Bagas: Exactly, which suggests the problem isn't really the test itself, it's that advantage finds a way through whichever door is left open.",
+      "Aisyah: [gently] Maybe what bothers me most is being reduced to a single number, as if three hours could summarize years of effort.",
+      "Bagas: I understand that, though for what it's worth, most admissions officers claim the score is only ever one factor among several.",
+      "Aisyah: [calmly] Claim being the operative word. It's hard not to suspect that, when applications pile up, the number becomes a convenient shortcut.",
+      "Bagas: Probably true under pressure, yes, though I'd rather universities be transparent about that shortcut than pretend it doesn't happen.",
+      "Aisyah: [encouraging] Agreed. If the number's going to matter this much, the least they owe us is honesty about how much it actually matters.",
+      "Bagas: On that, at least, we're in complete agreement."
     ],
     "quiz": [
-      { "question": "What is Aisyah's main complaint about the exam?", "options": ["It was too long", "It doesn't capture anything meaningful about what she actually knows", "It was cancelled twice", "The questions were too easy"], "correctIndex": 1, "explanation": "Aisyah says a three-hour multiple-choice exam doesn't capture anything meaningful about what she actually knows." },
-      { "question": "What advantage does Aisyah point out in the testing system?", "options": ["Everyone has equal preparation", "Someone coached since childhood has an obvious advantage over a first-time test taker", "Older students perform worse", "Test locations are unfair"], "correctIndex": 1, "explanation": "She points out that someone coached since childhood has an obvious advantage over someone sitting for the first time." },
-      { "question": "Why does Bagas say alternatives like essays and portfolios are still used cautiously?", "options": ["They are too expensive", "They are harder to standardize and easier to game in different ways", "Students dislike writing them", "They take too long to grade"], "correctIndex": 1, "explanation": "Bagas says alternatives are harder to standardize and easier to game in different ways than a standardized test." },
-      { "question": "What does Bagas conclude the real problem is?", "options": ["The test itself is useless", "Advantage finds a way through whichever door is left open", "Universities don't care about fairness", "Essays are always better"], "correctIndex": 1, "explanation": "Bagas concludes the problem isn't really the test itself, since advantage finds a way through whichever door is left open." },
-      { "question": "What do Aisyah and Bagas ultimately agree universities owe applicants?", "options": ["Free retakes", "Honesty about how much the score actually matters", "Shorter exams", "Guaranteed admission"], "correctIndex": 1, "explanation": "Aisyah says if the number matters this much, universities owe honesty about how much it actually matters, and Bagas agrees." }
-    ]
+      {
+        "question": "What is Aisyah's main complaint about the exam?",
+        "options": [
+          "It was too long",
+          "It was cancelled twice",
+          "The questions were too easy",
+          "It doesn't capture anything meaningful about what she actually knows"
+        ],
+        "correctIndex": 3,
+        "explanation": "Aisyah says a three-hour multiple-choice exam doesn't capture anything meaningful about what she actually knows."
+      },
+      {
+        "question": "What advantage does Aisyah point out in the testing system?",
+        "options": [
+          "Someone coached since childhood has an obvious advantage over a first-time test taker",
+          "Everyone has equal preparation",
+          "Older students perform worse",
+          "Test locations are unfair"
+        ],
+        "correctIndex": 0,
+        "explanation": "She points out that someone coached since childhood has an obvious advantage over someone sitting for the first time."
+      },
+      {
+        "question": "Why does Bagas say alternatives like essays and portfolios are still used cautiously?",
+        "options": [
+          "They are too expensive",
+          "Students dislike writing them",
+          "They are harder to standardize and easier to game in different ways",
+          "They take too long to grade"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bagas says alternatives are harder to standardize and easier to game in different ways than a standardized test."
+      },
+      {
+        "question": "What does Bagas conclude the real problem is?",
+        "options": [
+          "The test itself is useless",
+          "Advantage finds a way through whichever door is left open",
+          "Universities don't care about fairness",
+          "Essays are always better"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bagas concludes the problem isn't really the test itself, since advantage finds a way through whichever door is left open."
+      },
+      {
+        "question": "What do Aisyah and Bagas ultimately agree universities owe applicants?",
+        "options": [
+          "Free retakes",
+          "Honesty about how much the score actually matters",
+          "Shorter exams",
+          "Guaranteed admission"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aisyah says if the number matters this much, universities owe honesty about how much it actually matters, and Bagas agrees."
+      },
+      {
+        "question": "Why does Bagas defend standardised tests?",
+        "options": [
+          "They allow comparison across many applicants",
+          "They remove all social advantage",
+          "They assess every useful skill",
+          "They cannot be coached"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that they allow comparison across many applicants."
+      },
+      {
+        "question": "How does Aisyah challenge the idea of fairness?",
+        "options": [
+          "Exam rooms use different clocks",
+          "Applicants receive different questions",
+          "Universities ignore every score",
+          "Preparation opportunities are distributed unequally"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that preparation opportunities are distributed unequally."
+      },
+      {
+        "question": "Why are essays not a perfect alternative?",
+        "options": [
+          "Essays contain only multiple choice",
+          "They cannot show reasoning",
+          "Wealth can purchase stronger editing support",
+          "Universities never read them"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that wealth can purchase stronger editing support."
+      },
+      {
+        "question": "What concern do application pressures create?",
+        "options": [
+          "Tests become longer each year",
+          "Applicants stop submitting essays",
+          "Officers disclose private results",
+          "Scores may become convenient shortcuts"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that scores may become convenient shortcuts."
+      },
+      {
+        "question": "What policy would address their shared concern?",
+        "options": [
+          "Remove every admissions criterion",
+          "Publish how much each measure influences decisions",
+          "Guarantee entry above one score",
+          "Keep weighting rules confidential"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that publish how much each measure influences decisions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-education-03",
@@ -71,35 +302,152 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Professor Wibowo", "gender": "male" },
-      { "name": "Larasati", "gender": "female" }
+      {
+        "name": "Professor Wibowo",
+        "gender": "male"
+      },
+      {
+        "name": "Larasati",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Professor Wibowo: [measured] Larasati, I need to talk to you about your essay. Several paragraphs closely mirror a source that isn't cited anywhere in your bibliography.",
-      "Larasati: [alarmed] What? I promise I didn't copy anything deliberately, I must have paraphrased too closely without realizing it.",
-      "Professor Wibowo: [calmly] I believe you, actually, which is precisely why I wanted to speak with you privately rather than report it immediately.",
-      "Larasati: [relieved] Thank you for that. I genuinely thought I'd reworded those sections enough.",
-      "Professor Wibowo: [gently] That's a common mistake, changing a few words while keeping the original sentence structure intact, which technically still counts as plagiarism, even unintentionally.",
-      "Larasati: [worried] Does intention matter at all here, or am I going to be treated the same as someone who copied on purpose?",
-      "Professor Wibowo: [thoughtful] Intention matters enormously to me, though I won't pretend every colleague would draw that same distinction.",
-      "Larasati: [anxious] So what happens now?",
-      "Professor Wibowo: [reassuring] You'll revise those paragraphs and resubmit by Friday, properly cited this time, and I'll adjust your grade rather than fail the assignment outright.",
-      "Larasati: [grateful] That's far more understanding than I expected, honestly.",
-      "Professor Wibowo: [firmly] Don't mistake understanding for indifference, though. If this happens again, I won't be able to justify the same leniency to the department.",
-      "Larasati: [determined] It won't happen again. I'll start using citation software instead of trusting my memory of what I've paraphrased.",
-      "Professor Wibowo: [warmly] That's a sensible habit to build now, before the stakes get considerably higher in graduate work.",
-      "Larasati: [thoughtful] Can I ask something? How do you usually tell the difference between carelessness and someone who's genuinely trying to deceive you?",
-      "Professor Wibowo: [reflective] Mostly by what happens after I raise it. Panic and a willingness to fix things honestly usually look quite different from excuses.",
-      "Larasati: [smiling] Well, I suppose panic was exactly what you got from me a few minutes ago.",
-      "Professor Wibowo: [smiling] It was, and it told me everything I needed to know."
+      "Professor Wibowo: [thoughtful] Larasati, I need to talk to you about your essay. Several paragraphs closely mirror a source that isn't cited anywhere in your bibliography.",
+      "Larasati: What? I promise I didn't copy anything deliberately, I must have paraphrased too closely without realizing it.",
+      "Professor Wibowo: [carefully] I believe you, actually, which is precisely why I wanted to speak with you privately rather than report it immediately.",
+      "Larasati: Thank you for that. I genuinely thought I'd reworded those sections enough.",
+      "Professor Wibowo: [reflective] That's a common mistake, changing a few words while keeping the original sentence structure intact, which technically still counts as plagiarism, even unintentionally.",
+      "Larasati: Does intention matter at all here, or am I going to be treated the same as someone who copied on purpose?",
+      "Professor Wibowo: [honestly] Intention matters enormously to me, though I won't pretend every colleague would draw that same distinction.",
+      "Larasati: So what happens now?",
+      "Professor Wibowo: [gently] You'll revise those paragraphs and resubmit by Friday, properly cited this time, and I'll adjust your grade rather than fail the assignment outright.",
+      "Larasati: That's far more understanding than I expected, honestly.",
+      "Professor Wibowo: [calmly] Don't mistake understanding for indifference, though. If this happens again, I won't be able to justify the same leniency to the department.",
+      "Larasati: It won't happen again. I'll start using citation software instead of trusting my memory of what I've paraphrased.",
+      "Professor Wibowo: [encouraging] That's a sensible habit to build now, before the stakes get considerably higher in graduate work.",
+      "Larasati: Can I ask something? How do you usually tell the difference between carelessness and someone who's genuinely trying to deceive you?",
+      "Professor Wibowo: [seriously] Mostly by what happens after I raise it. Panic and a willingness to fix things honestly usually look quite different from excuses.",
+      "Larasati: Well, I suppose panic was exactly what you got from me a few minutes ago.",
+      "Professor Wibowo: It was, and it told me everything I needed to know."
     ],
     "quiz": [
-      { "question": "What did Professor Wibowo notice in Larasati's essay?", "options": ["Missing page numbers", "Paragraphs closely mirroring an uncited source", "A wrong word count", "Late submission"], "correctIndex": 1, "explanation": "He tells her several paragraphs closely mirror a source that isn't cited anywhere in her bibliography." },
-      { "question": "Why did Professor Wibowo choose to speak with her privately first?", "options": ["He didn't believe her", "He believed her and wanted to avoid reporting it immediately", "It was required by policy", "She requested it"], "correctIndex": 1, "explanation": "He says he believed her, which is precisely why he wanted to speak with her privately rather than report it immediately." },
-      { "question": "What mistake does the professor explain is common?", "options": ["Forgetting a title page", "Changing a few words while keeping the original sentence structure intact", "Writing too many citations", "Submitting early"], "correctIndex": 1, "explanation": "He explains that changing a few words while keeping the original sentence structure intact still counts as plagiarism." },
-      { "question": "What resolution does the professor offer?", "options": ["An automatic failing grade", "Revising the paragraphs and resubmitting by Friday with an adjusted grade", "Reporting her to the department immediately", "No consequence at all"], "correctIndex": 1, "explanation": "He tells her to revise the paragraphs and resubmit by Friday, properly cited, and he'll adjust her grade rather than fail the assignment." },
-      { "question": "How does the professor say he usually distinguishes carelessness from deliberate deception?", "options": ["By checking submission timestamps", "By what happens after he raises it, since panic looks different from excuses", "By comparing grades over time", "He cannot tell the difference"], "correctIndex": 1, "explanation": "He says he tells the difference mostly by what happens after he raises it, since honest panic looks different from excuses." }
-    ]
+      {
+        "question": "What did Professor Wibowo notice in Larasati's essay?",
+        "options": [
+          "Missing page numbers",
+          "A wrong word count",
+          "Late submission",
+          "Paragraphs closely mirroring an uncited source"
+        ],
+        "correctIndex": 3,
+        "explanation": "He tells her several paragraphs closely mirror a source that isn't cited anywhere in her bibliography."
+      },
+      {
+        "question": "Why did Professor Wibowo choose to speak with her privately first?",
+        "options": [
+          "He believed her and wanted to avoid reporting it immediately",
+          "He didn't believe her",
+          "It was required by policy",
+          "She requested it"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says he believed her, which is precisely why he wanted to speak with her privately rather than report it immediately."
+      },
+      {
+        "question": "What mistake does the professor explain is common?",
+        "options": [
+          "Changing a few words while keeping the original sentence structure intact",
+          "Forgetting a title page",
+          "Writing too many citations",
+          "Submitting early"
+        ],
+        "correctIndex": 0,
+        "explanation": "He explains that changing a few words while keeping the original sentence structure intact still counts as plagiarism."
+      },
+      {
+        "question": "What resolution does the professor offer?",
+        "options": [
+          "An automatic failing grade",
+          "Revising the paragraphs and resubmitting by Friday with an adjusted grade",
+          "Reporting her to the department immediately",
+          "No consequence at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "He tells her to revise the paragraphs and resubmit by Friday, properly cited, and he'll adjust her grade rather than fail the assignment."
+      },
+      {
+        "question": "How does the professor say he usually distinguishes carelessness from deliberate deception?",
+        "options": [
+          "By checking submission timestamps",
+          "By comparing grades over time",
+          "By what happens after he raises it, since panic looks different from excuses",
+          "He cannot tell the difference"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says he tells the difference mostly by what happens after he raises it, since honest panic looks different from excuses."
+      },
+      {
+        "question": "Why was Larasati's paraphrase still plagiarism?",
+        "options": [
+          "It included too many citations",
+          "It kept the source's sentence structure too closely",
+          "It used her own argument",
+          "It appeared only in notes"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that it kept the source's sentence structure too closely."
+      },
+      {
+        "question": "What consequence shows the professor is not indifferent?",
+        "options": [
+          "He cancels the essay permanently",
+          "He reports her immediately",
+          "He removes citation requirements",
+          "A repeat offence will not receive the same leniency"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that a repeat offence will not receive the same leniency."
+      },
+      {
+        "question": "How will citation software help Larasati?",
+        "options": [
+          "It will write her paragraphs",
+          "It will guarantee original ideas",
+          "It will track sources instead of relying on memory",
+          "It will choose her grade"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that it will track sources instead of relying on memory."
+      },
+      {
+        "question": "Why does the professor focus on her response?",
+        "options": [
+          "Panic proves every claim false",
+          "Excuses always improve grades",
+          "Intention never matters",
+          "Willingness to repair can indicate honest error"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that willingness to repair can indicate honest error."
+      },
+      {
+        "question": "Which revision would solve the stated problem?",
+        "options": [
+          "Change a few more adjectives",
+          "Rewrite genuinely and cite the source",
+          "Delete the bibliography",
+          "Keep the structure uncredited"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that rewrite genuinely and cite the source."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-education-04",
@@ -108,29 +456,143 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [wry] Sitting in a beginner's class at thirty-four, surrounded by people a decade younger, was more humbling than I expected an evening hobby to be.",
-      "Narrator: [honestly] I'd assumed adulthood would make learning faster, somehow, as though experience alone could compensate for a brain that no longer absorbs new sounds effortlessly.",
-      "Narrator: [reflective] Instead, I mispronounced the same words week after week, watching nineteen-year-olds pick up the accent as though it required no conscious effort at all.",
-      "Narrator: [with feeling] There was one class where I genuinely considered quitting, convinced that starting something new at my age was simply vanity dressed up as ambition.",
-      "Narrator: [thoughtful] What stopped me wasn't a burst of confidence, it was noticing that the younger students weren't actually effortless, they just recovered from mistakes faster than I let myself.",
-      "Narrator: [honestly] I was the one treating every mispronunciation as evidence of failure, while they treated theirs as a normal, unremarkable part of speaking.",
-      "Narrator: [determined] So I tried adopting their indifference, deliberately mangling sentences on purpose in low-stakes conversations, just to prove to myself that nothing catastrophic would follow.",
-      "Narrator: [reflective] It felt absurd at first, almost childish, mimicking a carelessness I didn't naturally have.",
-      "Narrator: [warmly] Gradually, though, something shifted; I started speaking before I'd fully translated the sentence in my head, trusting that imperfect words were still communication.",
-      "Narrator: [thoughtful] I still can't roll certain sounds the way native speakers do, and at this point, I suspect I never fully will.",
-      "Narrator: [peacefully] What I've gained instead is a strange kind of patience with my own limitations, one I never developed as a more naturally gifted student in school.",
-      "Narrator: [warmly] I used to think fluency was the whole point of learning a language later in life; now I think the humility might have been the actual lesson."
+      "Narrator: [thoughtful] Sitting in a beginner's class at thirty-four, surrounded by people a decade younger, was more humbling than I expected an evening hobby to be.",
+      "Narrator: I'd assumed adulthood would make learning faster, somehow, as though experience alone could compensate for a brain that no longer absorbs new sounds effortlessly.",
+      "Narrator: [carefully] Instead, I mispronounced the same words week after week, watching nineteen-year-olds pick up the accent as though it required no conscious effort at all.",
+      "Narrator: There was one class where I genuinely considered quitting, convinced that starting something new at my age was simply vanity dressed up as ambition.",
+      "Narrator: [reflective] What stopped me wasn't a burst of confidence, it was noticing that the younger students weren't actually effortless, they just recovered from mistakes faster than I let myself.",
+      "Narrator: I was the one treating every mispronunciation as evidence of failure, while they treated theirs as a normal, unremarkable part of speaking.",
+      "Narrator: [honestly] So I tried adopting their indifference, deliberately mangling sentences on purpose in low-stakes conversations, just to prove to myself that nothing catastrophic would follow.",
+      "Narrator: It felt absurd at first, almost childish, mimicking a carelessness I didn't naturally have.",
+      "Narrator: [gently] Gradually, though, something shifted; I started speaking before I'd fully translated the sentence in my head, trusting that imperfect words were still communication.",
+      "Narrator: I still can't roll certain sounds the way native speakers do, and at this point, I suspect I never fully will.",
+      "Narrator: [calmly] What I've gained instead is a strange kind of patience with my own limitations, one I never developed as a more naturally gifted student in school.",
+      "Narrator: I used to think fluency was the whole point of learning a language later in life; now I think the humility might have been the actual lesson."
     ],
     "quiz": [
-      { "question": "What surprised the narrator about learning a language as an adult?", "options": ["It was easier than expected", "It was more humbling than he expected an evening hobby to be", "Nobody else attended the class", "The class was cancelled quickly"], "correctIndex": 1, "explanation": "He says sitting in a beginner's class at thirty-four, surrounded by younger people, was more humbling than expected." },
-      { "question": "What almost made the narrator quit the class?", "options": ["The cost of tuition", "Feeling that starting something new at his age was vanity dressed up as ambition", "A scheduling conflict", "Disagreement with the teacher"], "correctIndex": 1, "explanation": "He considered quitting, convinced that starting something new at his age was simply vanity dressed up as ambition." },
-      { "question": "What realization stopped him from quitting?", "options": ["He got a better grade", "The younger students weren't effortless, they just recovered from mistakes faster", "The teacher offered a discount", "He found an easier class"], "correctIndex": 1, "explanation": "He noticed the younger students weren't actually effortless, they just recovered from mistakes faster than he let himself." },
-      { "question": "What strategy did the narrator deliberately try?", "options": ["Studying alone only", "Mangling sentences on purpose in low-stakes conversations", "Memorizing grammar rules exclusively", "Avoiding speaking until fluent"], "correctIndex": 1, "explanation": "He tried deliberately mangling sentences on purpose in low-stakes conversations to prove nothing catastrophic would follow." },
-      { "question": "What does the narrator now believe was the actual lesson of learning later in life?", "options": ["Achieving perfect fluency", "The humility of patience with his own limitations", "Proving he was smarter than younger students", "Avoiding mistakes entirely"], "correctIndex": 1, "explanation": "He concludes that fluency wasn't the whole point; the humility of patience with his own limitations might have been the actual lesson." }
-    ]
+      {
+        "question": "What surprised the narrator about learning a language as an adult?",
+        "options": [
+          "It was easier than expected",
+          "Nobody else attended the class",
+          "The class was cancelled quickly",
+          "It was more humbling than he expected an evening hobby to be"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says sitting in a beginner's class at thirty-four, surrounded by younger people, was more humbling than expected."
+      },
+      {
+        "question": "What almost made the narrator quit the class?",
+        "options": [
+          "The cost of tuition",
+          "Feeling that starting something new at his age was vanity dressed up as ambition",
+          "A scheduling conflict",
+          "Disagreement with the teacher"
+        ],
+        "correctIndex": 1,
+        "explanation": "He considered quitting, convinced that starting something new at his age was simply vanity dressed up as ambition."
+      },
+      {
+        "question": "What realization stopped him from quitting?",
+        "options": [
+          "He got a better grade",
+          "The younger students weren't effortless, they just recovered from mistakes faster",
+          "The teacher offered a discount",
+          "He found an easier class"
+        ],
+        "correctIndex": 1,
+        "explanation": "He noticed the younger students weren't actually effortless, they just recovered from mistakes faster than he let himself."
+      },
+      {
+        "question": "What strategy did the narrator deliberately try?",
+        "options": [
+          "Studying alone only",
+          "Memorizing grammar rules exclusively",
+          "Avoiding speaking until fluent",
+          "Mangling sentences on purpose in low-stakes conversations"
+        ],
+        "correctIndex": 3,
+        "explanation": "He tried deliberately mangling sentences on purpose in low-stakes conversations to prove nothing catastrophic would follow."
+      },
+      {
+        "question": "What does the narrator now believe was the actual lesson of learning later in life?",
+        "options": [
+          "The humility of patience with his own limitations",
+          "Achieving perfect fluency",
+          "Proving he was smarter than younger students",
+          "Avoiding mistakes entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes that fluency wasn't the whole point; the humility of patience with his own limitations might have been the actual lesson."
+      },
+      {
+        "question": "What did younger learners do differently after mistakes?",
+        "options": [
+          "They never mispronounced words",
+          "They translated every sentence first",
+          "They recovered without treating errors as disasters",
+          "They avoided speaking"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they recovered without treating errors as disasters."
+      },
+      {
+        "question": "Why did deliberate mistakes help the narrator?",
+        "options": [
+          "They improved pronunciation instantly",
+          "They impressed native speakers",
+          "They showed imperfect speech had manageable consequences",
+          "They replaced regular practice"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they showed imperfect speech had manageable consequences."
+      },
+      {
+        "question": "What changed as anxiety decreased?",
+        "options": [
+          "He spoke before translating everything mentally",
+          "He stopped attending class",
+          "He mastered every sound",
+          "He studied only grammar"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that he spoke before translating everything mentally."
+      },
+      {
+        "question": "Which limitation does he accept?",
+        "options": [
+          "He cannot learn new vocabulary",
+          "Adults cannot communicate",
+          "Classes offer no benefit",
+          "Some sounds may never become fully native-like"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that some sounds may never become fully native-like."
+      },
+      {
+        "question": "What is the central lesson about adult learning?",
+        "options": [
+          "Age makes practice unnecessary",
+          "Humility can matter as much as fluency",
+          "Talent guarantees confidence",
+          "Errors should remain private"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that humility can matter as much as fluency."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-education-05",
@@ -139,34 +601,151 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] My guest today left an engineering scholarship to study philosophy, a decision that baffled nearly everyone around him. Welcome, Reza.",
-      "Reza: [smiling] Thanks for having me. And yes, my parents still bring it up at every family gathering.",
-      "Host: [curious] Walk us through it. Why abandon something so obviously employable for something so, let's say, harder to justify on a resume?",
-      "Reza: [thoughtful] Honestly, employability was never the metric that kept me up at night, it was the sense that I'd be solving problems I didn't actually care about for the next forty years.",
-      "Host: [pressing] Sure, but plenty of people would argue that passion is a luxury, and that vocational training gets you a stable income far faster.",
-      "Reza: [conceding] That argument isn't wrong, and I don't dismiss it, especially for someone supporting a family who can't afford four years of uncertain payoff.",
-      "Host: [interested] So where does that leave your choice, then? Was it simply a privilege you happened to have?",
-      "Reza: [honestly] Partly, yes, I won't pretend otherwise. But I'd also argue the distinction gets overstated, as though philosophy graduates never find work and welders never think deeply.",
-      "Host: [curious] What do you say to critics who claim a philosophy degree teaches nothing practical?",
-      "Reza: [firmly] I'd say they've confused practical with immediately billable. Learning to construct an argument, or notice when one is being manipulated, turns out to be relentlessly useful, just not in a way that fits neatly on a job posting.",
-      "Host: [thoughtful] Do you regret not having a more direct path into a career?",
-      "Reza: [reflective] Some weeks, certainly, particularly when a former classmate mentions his salary and I do the mental math.",
-      "Host: [curious] And on the weeks you don't regret it?",
-      "Reza: [warmly] Those are the weeks I remember that the questions I was trained to ask haven't stopped being useful, regardless of what field I eventually end up in.",
-      "Host: [smiling] A refreshingly honest answer. Thanks for coming on, Reza.",
-      "Reza: [warmly] Anytime. Tell my parents I said the scholarship offer is still a sore subject."
+      "Host: [thoughtful] My guest today left an engineering scholarship to study philosophy, a decision that baffled nearly everyone around him. Welcome, Reza.",
+      "Reza: Thanks for having me. And yes, my parents still bring it up at every family gathering.",
+      "Host: [carefully] Walk us through it. Why abandon something so obviously employable for something so, let's say, harder to justify on a resume?",
+      "Reza: Honestly, employability was never the metric that kept me up at night, it was the sense that I'd be solving problems I didn't actually care about for the next forty years.",
+      "Host: [reflective] Sure, but plenty of people would argue that passion is a luxury, and that vocational training gets you a stable income far faster.",
+      "Reza: That argument isn't wrong, and I don't dismiss it, especially for someone supporting a family who can't afford four years of uncertain payoff.",
+      "Host: [honestly] So where does that leave your choice, then? Was it simply a privilege you happened to have?",
+      "Reza: Partly, yes, I won't pretend otherwise. But I'd also argue the distinction gets overstated, as though philosophy graduates never find work and welders never think deeply.",
+      "Host: [gently] What do you say to critics who claim a philosophy degree teaches nothing practical?",
+      "Reza: I'd say they've confused practical with immediately billable. Learning to construct an argument, or notice when one is being manipulated, turns out to be relentlessly useful, just not in a way that fits neatly on a job posting.",
+      "Host: [calmly] Do you regret not having a more direct path into a career?",
+      "Reza: Some weeks, certainly, particularly when a former classmate mentions his salary and I do the mental math.",
+      "Host: [encouraging] And on the weeks you don't regret it?",
+      "Reza: Those are the weeks I remember that the questions I was trained to ask haven't stopped being useful, regardless of what field I eventually end up in.",
+      "Host: [seriously] A refreshingly honest answer. Thanks for coming on, Reza.",
+      "Reza: Anytime. Tell my parents I said the scholarship offer is still a sore subject."
     ],
     "quiz": [
-      { "question": "What decision does Reza's family still bring up at gatherings?", "options": ["Moving abroad", "Leaving an engineering scholarship to study philosophy", "Dropping out entirely", "Changing his name"], "correctIndex": 1, "explanation": "He left an engineering scholarship to study philosophy, a decision that baffled nearly everyone around him." },
-      { "question": "What does Reza say was never the metric that kept him up at night?", "options": ["Grades", "Employability", "Friendship", "Sleep schedule"], "correctIndex": 1, "explanation": "He says employability was never the metric that kept him up at night; it was solving problems he actually cared about." },
-      { "question": "What does Reza concede about the passion-versus-stability argument?", "options": ["It is completely wrong", "It isn't wrong, especially for someone who can't afford four years of uncertain payoff", "Passion never matters", "Vocational training is useless"], "correctIndex": 1, "explanation": "He concedes the argument isn't wrong, especially for someone supporting a family who can't afford uncertain payoff." },
-      { "question": "How does Reza respond to critics who call philosophy impractical?", "options": ["He agrees completely", "He says they've confused practical with immediately billable", "He refuses to answer", "He says philosophy is only for the wealthy"], "correctIndex": 1, "explanation": "He says critics have confused practical with immediately billable, since constructing arguments is relentlessly useful." },
-      { "question": "When does Reza say he regrets his choice?", "options": ["Never", "Some weeks, particularly when a former classmate mentions his salary", "Every single day", "Only during holidays"], "correctIndex": 1, "explanation": "He says some weeks, certainly, particularly when a former classmate mentions his salary and he does the mental math." }
-    ]
+      {
+        "question": "What decision does Reza's family still bring up at gatherings?",
+        "options": [
+          "Leaving an engineering scholarship to study philosophy",
+          "Moving abroad",
+          "Dropping out entirely",
+          "Changing his name"
+        ],
+        "correctIndex": 0,
+        "explanation": "He left an engineering scholarship to study philosophy, a decision that baffled nearly everyone around him."
+      },
+      {
+        "question": "What does Reza say was never the metric that kept him up at night?",
+        "options": [
+          "Grades",
+          "Friendship",
+          "Employability",
+          "Sleep schedule"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says employability was never the metric that kept him up at night; it was solving problems he actually cared about."
+      },
+      {
+        "question": "What does Reza concede about the passion-versus-stability argument?",
+        "options": [
+          "It is completely wrong",
+          "Passion never matters",
+          "Vocational training is useless",
+          "It isn't wrong, especially for someone who can't afford four years of uncertain payoff"
+        ],
+        "correctIndex": 3,
+        "explanation": "He concedes the argument isn't wrong, especially for someone supporting a family who can't afford uncertain payoff."
+      },
+      {
+        "question": "How does Reza respond to critics who call philosophy impractical?",
+        "options": [
+          "He agrees completely",
+          "He refuses to answer",
+          "He says philosophy is only for the wealthy",
+          "He says they've confused practical with immediately billable"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says critics have confused practical with immediately billable, since constructing arguments is relentlessly useful."
+      },
+      {
+        "question": "When does Reza say he regrets his choice?",
+        "options": [
+          "Never",
+          "Every single day",
+          "Some weeks, particularly when a former classmate mentions his salary",
+          "Only during holidays"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says some weeks, certainly, particularly when a former classmate mentions his salary and he does the mental math."
+      },
+      {
+        "question": "Why does Reza partly call his choice a privilege?",
+        "options": [
+          "Philosophy tuition was free",
+          "He could accept an uncertain career payoff",
+          "Engineering had no jobs",
+          "His family chose the degree"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that he could accept an uncertain career payoff."
+      },
+      {
+        "question": "What false contrast does Reza criticise?",
+        "options": [
+          "Stable work and income can coexist",
+          "Practical workers and deep thinkers are separate groups",
+          "Degrees require sustained study",
+          "Families worry about finances"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that practical workers and deep thinkers are separate groups."
+      },
+      {
+        "question": "What skill makes philosophy useful to him?",
+        "options": [
+          "Recognising how arguments are built or manipulated",
+          "Repairing industrial machines",
+          "Guaranteeing a high salary",
+          "Avoiding every career decision"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that recognising how arguments are built or manipulated."
+      },
+      {
+        "question": "Why does Reza sometimes regret leaving engineering?",
+        "options": [
+          "He dislikes philosophical questions",
+          "His scholarship remains available",
+          "Engineering requires no thought",
+          "Former classmates' salaries trigger comparison"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that former classmates' salaries trigger comparison."
+      },
+      {
+        "question": "Which judgment best reflects his position?",
+        "options": [
+          "Passion should always defeat stability",
+          "Education choices depend partly on responsibilities and resources",
+          "Vocational study lacks intellectual value",
+          "Every degree has equal financial outcomes"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that education choices depend partly on responsibilities and resources."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-education-06",
@@ -175,29 +754,143 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [weary] By my sixth year of teaching, I'd stopped recognizing the enthusiasm I used to feel walking into my own classroom.",
-      "Narrator: [honestly] Grading had become mechanical, lesson plans recycled without much thought, and I started resenting students for problems that weren't remotely their fault.",
-      "Narrator: [reflective] I remember grading an essay so carelessly that I nearly missed a line where a student had written about her father's illness, buried in an otherwise ordinary paragraph about resilience.",
-      "Narrator: [with feeling] That line stopped me completely, partly from guilt, realizing how close I'd come to skimming past something a teenager had trusted me enough to write.",
-      "Narrator: [honestly] I called her aside the next day, not to discuss grammar, but to ask how she was actually doing, and she looked almost startled that anyone had noticed.",
-      "Narrator: [thoughtful] That conversation didn't fix my burnout overnight, obviously, exhaustion doesn't dissolve because of one meaningful exchange.",
-      "Narrator: [reflective] But it did remind me why I'd chosen this profession in the first place, before the grading and the meetings had buried the reason under logistics.",
-      "Narrator: [determined] I started, deliberately, reading every essay as though it might contain something worth noticing, even on the nights I was running on no sleep.",
-      "Narrator: [honestly] Some nights I still fail at that, and I've made peace with the fact that perfection was never a realistic standard to hold myself to.",
-      "Narrator: [warmly] What changed, mostly, is that I stopped treating burnout as a personal failing and started treating it as information, a sign that something in how I worked needed to shift.",
-      "Narrator: [peacefully] I still get tired, some semesters more than others, but I no longer mistake tiredness for having lost the thing that brought me here.",
-      "Narrator: [warmly] These days, I tell newer teachers that the profession will hollow you out if you let grading replace noticing, and that the noticing was always the actual job."
+      "Narrator: [thoughtful] By my sixth year of teaching, I'd stopped recognizing the enthusiasm I used to feel walking into my own classroom.",
+      "Narrator: Grading had become mechanical, lesson plans recycled without much thought, and I started resenting students for problems that weren't remotely their fault.",
+      "Narrator: [carefully] I remember grading an essay so carelessly that I nearly missed a line where a student had written about her father's illness, buried in an otherwise ordinary paragraph about resilience.",
+      "Narrator: That line stopped me completely, partly from guilt, realizing how close I'd come to skimming past something a teenager had trusted me enough to write.",
+      "Narrator: [reflective] I called her aside the next day, not to discuss grammar, but to ask how she was actually doing, and she looked almost startled that anyone had noticed.",
+      "Narrator: That conversation didn't fix my burnout overnight, obviously, exhaustion doesn't dissolve because of one meaningful exchange.",
+      "Narrator: [honestly] But it did remind me why I'd chosen this profession in the first place, before the grading and the meetings had buried the reason under logistics.",
+      "Narrator: I started, deliberately, reading every essay as though it might contain something worth noticing, even on the nights I was running on no sleep.",
+      "Narrator: [gently] Some nights I still fail at that, and I've made peace with the fact that perfection was never a realistic standard to hold myself to.",
+      "Narrator: What changed, mostly, is that I stopped treating burnout as a personal failing and started treating it as information, a sign that something in how I worked needed to shift.",
+      "Narrator: [calmly] I still get tired, some semesters more than others, but I no longer mistake tiredness for having lost the thing that brought me here.",
+      "Narrator: These days, I tell newer teachers that the profession will hollow you out if you let grading replace noticing, and that the noticing was always the actual job."
     ],
     "quiz": [
-      { "question": "What had happened to the narrator's grading by her sixth year of teaching?", "options": ["It had become more careful", "It had become mechanical, done without much thought", "She had stopped grading entirely", "She had switched subjects"], "correctIndex": 1, "explanation": "She says grading had become mechanical, lesson plans recycled without much thought." },
-      { "question": "What did the narrator nearly miss while grading carelessly?", "options": ["A spelling error", "A line about a student's father's illness, buried in a paragraph about resilience", "A missing citation", "A late submission note"], "correctIndex": 1, "explanation": "She nearly missed a line where a student had written about her father's illness, buried in an ordinary paragraph." },
-      { "question": "Why did the narrator call the student aside the next day?", "options": ["To discuss grammar mistakes", "To ask how she was actually doing", "To assign extra homework", "To report her to the principal"], "correctIndex": 1, "explanation": "She called her aside not to discuss grammar, but to ask how she was actually doing." },
-      { "question": "What does the narrator say she stopped treating burnout as?", "options": ["A medical condition", "A personal failing, instead treating it as information", "A reason to quit teaching", "Something to hide from colleagues"], "correctIndex": 1, "explanation": "She stopped treating burnout as a personal failing and started treating it as information about how she worked." },
-      { "question": "What does the narrator tell newer teachers?", "options": ["To grade faster", "That the profession will hollow you out if grading replaces noticing", "To avoid emotional involvement with students", "To take fewer breaks"], "correctIndex": 1, "explanation": "She tells newer teachers that the profession will hollow you out if you let grading replace noticing." }
-    ]
+      {
+        "question": "What had happened to the narrator's grading by her sixth year of teaching?",
+        "options": [
+          "It had become mechanical, done without much thought",
+          "It had become more careful",
+          "She had stopped grading entirely",
+          "She had switched subjects"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says grading had become mechanical, lesson plans recycled without much thought."
+      },
+      {
+        "question": "What did the narrator nearly miss while grading carelessly?",
+        "options": [
+          "A spelling error",
+          "A missing citation",
+          "A line about a student's father's illness, buried in a paragraph about resilience",
+          "A late submission note"
+        ],
+        "correctIndex": 2,
+        "explanation": "She nearly missed a line where a student had written about her father's illness, buried in an ordinary paragraph."
+      },
+      {
+        "question": "Why did the narrator call the student aside the next day?",
+        "options": [
+          "To discuss grammar mistakes",
+          "To ask how she was actually doing",
+          "To assign extra homework",
+          "To report her to the principal"
+        ],
+        "correctIndex": 1,
+        "explanation": "She called her aside not to discuss grammar, but to ask how she was actually doing."
+      },
+      {
+        "question": "What does the narrator say she stopped treating burnout as?",
+        "options": [
+          "A medical condition",
+          "A reason to quit teaching",
+          "Something to hide from colleagues",
+          "A personal failing, instead treating it as information"
+        ],
+        "correctIndex": 3,
+        "explanation": "She stopped treating burnout as a personal failing and started treating it as information about how she worked."
+      },
+      {
+        "question": "What does the narrator tell newer teachers?",
+        "options": [
+          "To grade faster",
+          "To avoid emotional involvement with students",
+          "That the profession will hollow you out if grading replaces noticing",
+          "To take fewer breaks"
+        ],
+        "correctIndex": 2,
+        "explanation": "She tells newer teachers that the profession will hollow you out if you let grading replace noticing."
+      },
+      {
+        "question": "Why did the student's sentence stop the teacher?",
+        "options": [
+          "It revealed trust she had nearly skimmed past",
+          "It contained a grading complaint",
+          "It proved the essay was copied",
+          "It described another teacher"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that it revealed trust she had nearly skimmed past."
+      },
+      {
+        "question": "What did the teacher ask about privately?",
+        "options": [
+          "Why the grammar was weak",
+          "Whether the essay was late",
+          "Which grade she expected",
+          "How the student was actually coping"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that how the student was actually coping."
+      },
+      {
+        "question": "Why was one conversation not a complete solution?",
+        "options": [
+          "The student refused support",
+          "Burnout does not disappear through one meaningful moment",
+          "The teacher changed careers",
+          "The essay required no response"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that burnout does not disappear through one meaningful moment."
+      },
+      {
+        "question": "How did her view of burnout change?",
+        "options": [
+          "She considered it a moral failure",
+          "She denied feeling tired",
+          "She blamed students entirely",
+          "She treated it as information about needed work changes"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that she treated it as information about needed work changes."
+      },
+      {
+        "question": "What does “grading replace noticing” warn against?",
+        "options": [
+          "Essays should never receive grades",
+          "Administrative tasks can obscure attention to learners",
+          "Teachers must know every private detail",
+          "Students should write only personal stories"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that administrative tasks can obscure attention to learners."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-education-07",
@@ -206,32 +899,584 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dian", "gender": "female" },
-      { "name": "Teguh", "gender": "male" }
+      {
+        "name": "Dian",
+        "gender": "female"
+      },
+      {
+        "name": "Teguh",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dian: [frustrated] Teguh, I need to say this directly: you submitted your section twelve hours before the deadline, and it clearly hadn't been proofread once.",
-      "Teguh: [defensive] I know, and I'm not trying to make excuses, but work genuinely swallowed my entire week.",
-      "Dian: [firmly] I understand things come up, but the rest of us restructured our schedules around this deadline, and now the whole group's grade is at risk because of one section.",
-      "Teguh: [ashamed] You're right, and I don't have a good counterargument for that, honestly.",
-      "Dian: [measured] I'm not trying to pile on you, I promise, I just don't think it's fair that we all get evaluated as though the work was distributed evenly.",
-      "Teguh: [considering] Would it help if I rewrote it tonight, properly this time, and you looked it over before we submit the final version?",
-      "Dian: [relieved] It would help enormously, actually, provided you're not just telling me what I want to hear right now.",
-      "Teguh: [sincerely] I'm not. I genuinely didn't grasp how much the delay would affect everyone else until you laid it out just now.",
-      "Dian: [thoughtful] That's part of the problem with group work generally, isn't it? Consequences land on people who had nothing to do with causing them.",
-      "Teguh: [reflective] Fair, though I'd argue the alternative, working entirely alone, would rob us of learning how to actually rely on other people.",
-      "Dian: [conceding] That's true, even if right now it feels like a fairly expensive lesson to be learning under deadline pressure.",
-      "Teguh: [determined] Give me until midnight. I'll send you the revised section, and if it's still not good enough, I'll tell the professor the shortcoming was mine alone, not the group's.",
-      "Dian: [warmly] I appreciate you offering that, though hopefully it won't come to needing it.",
-      "Teguh: [warmly] Hopefully not. And Dian, thank you for saying something instead of just quietly resenting me through the whole presentation.",
-      "Dian: [smiling] Believe me, quiet resentment was very much on the table an hour ago."
+      "Dian: [thoughtful] Teguh, I need to say this directly: you submitted your section twelve hours before the deadline, and it clearly hadn't been proofread once.",
+      "Teguh: I know, and I'm not trying to make excuses, but work genuinely swallowed my entire week.",
+      "Dian: [carefully] I understand things come up, but the rest of us restructured our schedules around this deadline, and now the whole group's grade is at risk because of one section.",
+      "Teguh: You're right, and I don't have a good counterargument for that, honestly.",
+      "Dian: [reflective] I'm not trying to pile on you, I promise, I just don't think it's fair that we all get evaluated as though the work was distributed evenly.",
+      "Teguh: Would it help if I rewrote it tonight, properly this time, and you looked it over before we submit the final version?",
+      "Dian: [honestly] It would help enormously, actually, provided you're not just telling me what I want to hear right now.",
+      "Teguh: I'm not. I genuinely didn't grasp how much the delay would affect everyone else until you laid it out just now.",
+      "Dian: [gently] That's part of the problem with group work generally, isn't it? Consequences land on people who had nothing to do with causing them.",
+      "Teguh: Fair, though I'd argue the alternative, working entirely alone, would rob us of learning how to actually rely on other people.",
+      "Dian: [calmly] That's true, even if right now it feels like a fairly expensive lesson to be learning under deadline pressure.",
+      "Teguh: Give me until midnight. I'll send you the revised section, and if it's still not good enough, I'll tell the professor the shortcoming was mine alone, not the group's.",
+      "Dian: [encouraging] I appreciate you offering that, though hopefully it won't come to needing it.",
+      "Teguh: Hopefully not. And Dian, thank you for saying something instead of just quietly resenting me through the whole presentation.",
+      "Dian: [seriously] Believe me, quiet resentment was very much on the table an hour ago."
     ],
     "quiz": [
-      { "question": "What was Dian's complaint about Teguh's submission?", "options": ["It was too long", "It was submitted twelve hours before the deadline and clearly unproofread", "It was submitted late", "It was written in the wrong format"], "correctIndex": 1, "explanation": "Dian says his section was submitted twelve hours before the deadline and clearly hadn't been proofread once." },
-      { "question": "What does Dian say is at risk because of the unfinished section?", "options": ["Her own individual grade only", "The whole group's grade", "Their friendship only", "The professor's approval rating"], "correctIndex": 1, "explanation": "Dian says the whole group's grade is at risk because of one section." },
-      { "question": "What does Teguh offer to do to fix the situation?", "options": ["Drop out of the group", "Rewrite the section that night, properly, before submission", "Ask for a deadline extension", "Blame another group member"], "correctIndex": 1, "explanation": "Teguh offers to rewrite it that night, properly this time, with Dian reviewing it before final submission." },
-      { "question": "What does Teguh argue is a benefit of group work despite its problems?", "options": ["It guarantees higher grades", "It teaches people how to actually rely on other people", "It eliminates all conflict", "It requires less effort overall"], "correctIndex": 1, "explanation": "Teguh argues that working entirely alone would rob them of learning how to actually rely on other people." },
-      { "question": "What does Teguh thank Dian for at the end?", "options": ["Doing his part of the work", "Saying something instead of quietly resenting him through the presentation", "Extending the deadline", "Covering for him with the professor"], "correctIndex": 1, "explanation": "Teguh thanks Dian for saying something instead of just quietly resenting him through the whole presentation." }
-    ]
+      {
+        "question": "What was Dian's complaint about Teguh's submission?",
+        "options": [
+          "It was too long",
+          "It was submitted twelve hours before the deadline and clearly unproofread",
+          "It was submitted late",
+          "It was written in the wrong format"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dian says his section was submitted twelve hours before the deadline and clearly hadn't been proofread once."
+      },
+      {
+        "question": "What does Dian say is at risk because of the unfinished section?",
+        "options": [
+          "Her own individual grade only",
+          "Their friendship only",
+          "The whole group's grade",
+          "The professor's approval rating"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dian says the whole group's grade is at risk because of one section."
+      },
+      {
+        "question": "What does Teguh offer to do to fix the situation?",
+        "options": [
+          "Rewrite the section that night, properly, before submission",
+          "Drop out of the group",
+          "Ask for a deadline extension",
+          "Blame another group member"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teguh offers to rewrite it that night, properly this time, with Dian reviewing it before final submission."
+      },
+      {
+        "question": "What does Teguh argue is a benefit of group work despite its problems?",
+        "options": [
+          "It guarantees higher grades",
+          "It eliminates all conflict",
+          "It teaches people how to actually rely on other people",
+          "It requires less effort overall"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teguh argues that working entirely alone would rob them of learning how to actually rely on other people."
+      },
+      {
+        "question": "What does Teguh thank Dian for at the end?",
+        "options": [
+          "Doing his part of the work",
+          "Extending the deadline",
+          "Covering for him with the professor",
+          "Saying something instead of quietly resenting him through the presentation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teguh thanks Dian for saying something instead of just quietly resenting him through the whole presentation."
+      },
+      {
+        "question": "Why does Dian doubt Teguh's first offer?",
+        "options": [
+          "Deadline pressure may produce another empty promise",
+          "She wants to write his section",
+          "The professor banned revisions",
+          "Teguh denied the delay"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that deadline pressure may produce another empty promise."
+      },
+      {
+        "question": "What makes group consequences feel unfair?",
+        "options": [
+          "Each member receives a separate deadline",
+          "Only Teguh gives the presentation",
+          "Dian chose the topic alone",
+          "Everyone's grade can suffer from one member's failure"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that everyone's grade can suffer from one member's failure."
+      },
+      {
+        "question": "How does Teguh accept accountability if revision fails?",
+        "options": [
+          "He will blame his employer",
+          "He will identify the shortcoming as his own",
+          "He will withdraw the whole group",
+          "He will change the deadline"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that he will identify the shortcoming as his own."
+      },
+      {
+        "question": "What benefit of group work does Teguh defend?",
+        "options": [
+          "Avoiding all individual effort",
+          "Receiving identical skills",
+          "Removing academic assessment",
+          "Learning to rely on other people"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that learning to rely on other people."
+      },
+      {
+        "question": "What is the immediate repair plan?",
+        "options": [
+          "Submit the weak draft early",
+          "Rewrite by midnight and let Dian review it",
+          "Ask another group to help",
+          "Request a new semester"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that rewrite by midnight and let dian review it."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-education-08",
+    "title": "Back in Class After Eight Years",
+    "level": "B2",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [nervously] On my first evening back at college, I chose a seat near the door. Everyone seemed younger, faster with the learning platform, and already familiar with academic vocabulary. I had spent eight years working in retail, and even opening the digital library felt like a test.",
+      "Narrator: The lecturer asked us to discuss an article in pairs. I understood the main idea, but my notes were a collection of disconnected sentences. My partner, Hana, had highlighted only four lines. For a moment, I assumed she was naturally better at studying.",
+      "Narrator: [curious] After class, I asked how she chose what to record. She showed me a simple system: one sentence for the author's claim, two pieces of evidence, and one question. She had learned it in a study-support workshop, not through talent.",
+      "Narrator: I attended the next workshop and brought an article from my course. The tutor did not rewrite my notes. He asked me to explain each paragraph aloud, then helped me separate examples from arguments.",
+      "Narrator: [reflective] Progress was slower than I wanted. During the first month, I needed twice as long as some classmates to prepare. But my years at work gave me strengths too: I could manage a deadline, ask practical questions, and connect theories to customer behaviour.",
+      "Narrator: I formed a small study group with Hana and another returning student. We agreed not to exchange finished answers. Instead, we compared outlines and explained confusing terms in our own words.",
+      "Narrator: [confidently] By midterm, the library no longer felt like a locked room. I still asked for help, but the questions became more precise.",
+      "Narrator: Returning to education did not require me to pretend the gap had never happened. It required a method, regular practice, and enough humility to learn skills that others had already been taught."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator sit near the door?",
+        "options": [
+          "She felt uncertain about returning to college",
+          "She expected the class to end early",
+          "The lecturer assigned the seat",
+          "The library was beside it"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that she felt uncertain about returning to college."
+      },
+      {
+        "question": "What problem affected her first article notes?",
+        "options": [
+          "They contained no words",
+          "They copied Hana's highlights",
+          "They lacked a connected structure",
+          "They focused only on customers"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they lacked a connected structure."
+      },
+      {
+        "question": "What changed her assumption about Hana's skill?",
+        "options": [
+          "Hana admitted guessing",
+          "Hana had learned a method in a workshop",
+          "The lecturer wrote her notes",
+          "Hana had studied the article before"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that hana had learned a method in a workshop."
+      },
+      {
+        "question": "Which four-part method did Hana use?",
+        "options": [
+          "Title, date, author, and grade",
+          "Definition, picture, quote, and link",
+          "Three examples and a conclusion",
+          "Claim, two pieces of evidence, and one question"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that claim, two pieces of evidence, and one question."
+      },
+      {
+        "question": "Why did the tutor ask for oral explanations?",
+        "options": [
+          "To reveal understanding before reorganising notes",
+          "To test pronunciation",
+          "To replace the written article",
+          "To record a public lecture"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that to reveal understanding before reorganising notes."
+      },
+      {
+        "question": "What strength came from retail work?",
+        "options": [
+          "Using the digital library",
+          "Knowing academic vocabulary",
+          "Writing research citations",
+          "Connecting theory to customer behaviour"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that connecting theory to customer behaviour."
+      },
+      {
+        "question": "Why did the study group avoid finished answers?",
+        "options": [
+          "They disliked comparing outlines",
+          "They wanted collaboration without copying work",
+          "They had different assignments",
+          "The tutor forbade conversation"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that they wanted collaboration without copying work."
+      },
+      {
+        "question": "What changed about the narrator's requests for help?",
+        "options": [
+          "They stopped completely",
+          "They concerned only deadlines",
+          "They became more precise",
+          "They were sent anonymously"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they became more precise."
+      },
+      {
+        "question": "What does the locked-room image describe?",
+        "options": [
+          "Her earlier sense that academic tools were inaccessible",
+          "A library closure",
+          "A missing student card",
+          "A study-group meeting place"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that her earlier sense that academic tools were inaccessible."
+      },
+      {
+        "question": "Which factor best explains her progress?",
+        "options": [
+          "Pretending the gap never happened",
+          "Method, practice, and willingness to learn",
+          "Natural talent alone",
+          "Avoiding younger classmates"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that method, practice, and willingness to learn."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-education-09",
+    "title": "Why Our Study Circle Changed Its Method",
+    "level": "B2",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [analytical] Our weekend study circle had a loyal group of twelve learners, yet participation was falling. People arrived with good intentions, listened to a forty-minute explanation, and left with several pages of notes. A week later, few could explain the main point.",
+      "Narrator: We first blamed busy schedules. Then we asked members anonymously what was happening. Their answers were specific: the sessions moved too quickly, unfamiliar terms were not defined, and nobody knew what to prepare.",
+      "Narrator: [thoughtful] For one month, we tested a different structure. Two days before each meeting, we sent a short reading and three guiding questions. During the session, the facilitator spoke for ten minutes, then learners compared examples in small groups.",
+      "Narrator: We also added a “muddiest point” card. Before leaving, everyone wrote one idea that remained unclear. The facilitator used those cards to plan the next opening, without attaching names or embarrassing anyone.",
+      "Narrator: [carefully] The change did not make every session easier. Some topics genuinely required patient explanation, and group discussion sometimes produced confident mistakes. We therefore kept a reliable reference text open and marked questions that needed a qualified teacher rather than guessing.",
+      "Narrator: After four weeks, attendance had not dramatically increased, but preparation had. More importantly, learners could summarise the argument and identify where their understanding was uncertain.",
+      "Narrator: [reflective] We learned that engagement is not the same as entertainment. The goal was not constant activity; it was active thinking supported by trustworthy material and responsible correction.",
+      "Narrator: Our final adjustment was simple. At the start of each month, members now choose one skill to practise—summarising, asking questions, or checking evidence. The circle still values listening, but it no longer treats silent note-taking as the only sign of learning."
+    ],
+    "quiz": [
+      {
+        "question": "What evidence showed the old format was ineffective?",
+        "options": [
+          "Learners could not explain the main point later",
+          "Attendance had doubled",
+          "Notes were too short",
+          "The facilitator missed meetings"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that learners could not explain the main point later."
+      },
+      {
+        "question": "How did organisers learn the specific problems?",
+        "options": [
+          "They guessed from attendance",
+          "They consulted only teachers",
+          "They collected anonymous member feedback",
+          "They reviewed examination scores"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they collected anonymous member feedback."
+      },
+      {
+        "question": "When did learners receive preparation material?",
+        "options": [
+          "At the end of the month",
+          "Two days before each meeting",
+          "During the final ten minutes",
+          "After the discussion"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that two days before each meeting."
+      },
+      {
+        "question": "How did the facilitator's role change?",
+        "options": [
+          "The facilitator stopped attending",
+          "Lectures became longer",
+          "Members received finished answers",
+          "A short explanation preceded group comparison"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that a short explanation preceded group comparison."
+      },
+      {
+        "question": "What did the “muddiest point” card collect?",
+        "options": [
+          "One idea each learner still found unclear",
+          "Votes for the next facilitator",
+          "Personal identity details",
+          "Scores for other members"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that one idea each learner still found unclear."
+      },
+      {
+        "question": "Why was anonymity useful?",
+        "options": [
+          "It prevented lesson planning",
+          "It guaranteed correct answers",
+          "It replaced reliable sources",
+          "It exposed confusion without embarrassing individuals"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that it exposed confusion without embarrassing individuals."
+      },
+      {
+        "question": "What risk arose during group discussion?",
+        "options": [
+          "Nobody spoke at all",
+          "Learners could repeat confident mistakes",
+          "Every topic became easy",
+          "Reference texts disappeared"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that learners could repeat confident mistakes."
+      },
+      {
+        "question": "How did the circle handle questions beyond its ability?",
+        "options": [
+          "Chose the most popular answer",
+          "Removed them from the notes",
+          "Marked them for a qualified teacher",
+          "Asked members to improvise"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that marked them for a qualified teacher."
+      },
+      {
+        "question": "What improved more clearly than attendance?",
+        "options": [
+          "Preparation and awareness of uncertainty",
+          "The size of the venue",
+          "The number of facilitators",
+          "The length of lectures"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that preparation and awareness of uncertainty."
+      },
+      {
+        "question": "What does engagement mean in the episode?",
+        "options": [
+          "Constant entertainment",
+          "Active thought supported by evidence and correction",
+          "Silent note-taking only",
+          "Frequent activity without purpose"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that active thought supported by evidence and correction."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-education-10",
+    "title": "Feedback Without Losing Confidence",
+    "level": "B2",
+    "themeId": "education",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [welcoming] A tutor returns your essay covered in comments. Your first thought is, “I am not good enough for this course.” What should happen next?",
+      "Guest: First, separate the work from the person. The comments describe this draft, not my permanent ability or worth.",
+      "Host: Easy to say, but difficult when the mark is disappointing.",
+      "Guest: [honestly] I agree. I give myself time to feel disappointed, then I sort the feedback into categories: argument, evidence, structure, and language. A page of comments becomes a smaller set of skills.",
+      "Host: What if some advice is unclear?",
+      "Guest: I prepare a specific question. Instead of asking, “Why is this bad?” I ask, “Could you show me where the connection between these two paragraphs becomes unclear?”",
+      "Host: [curious] Should students follow every comment without question?",
+      "Guest: They should understand the reason behind it. If two tutors suggest different approaches, the student can ask about the assignment criteria and make an informed choice.",
+      "Host: How do you protect confidence while still accepting criticism?",
+      "Guest: By using evidence. I compare drafts, keep examples of improvements, and notice which problems no longer appear. Confidence grows more reliably from progress than from praise alone.",
+      "Host: What role can classmates play?",
+      "Guest: A useful peer describes their reading experience: “I expected evidence here,” or “This example changed my understanding.” They should not take over the writing.",
+      "Host: [reflective] And when feedback feels harsh?",
+      "Guest: Focus first on any usable information. If the language is disrespectful or the marking seems inconsistent, raise the concern through the proper academic process and keep the original record.",
+      "Host: Give us one final rule.",
+      "Guest: Turn feedback into one next action. Revision becomes manageable when “improve everything” changes into “rewrite the claim and add one reliable source.”"
+    ],
+    "quiz": [
+      {
+        "question": "What should a student separate after receiving comments?",
+        "options": [
+          "The current draft from personal worth",
+          "Evidence from every argument",
+          "Grades from course rules",
+          "Language from all structure"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that the current draft from personal worth."
+      },
+      {
+        "question": "Why sort comments into categories?",
+        "options": [
+          "It removes the tutor's authority",
+          "It guarantees a higher mark",
+          "It turns a page of criticism into manageable skills",
+          "It avoids revising the essay"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that it turns a page of criticism into manageable skills."
+      },
+      {
+        "question": "Which question is most useful for unclear feedback?",
+        "options": [
+          "Why is everything bad?",
+          "Where does the link between these paragraphs break?",
+          "Can you remove every comment?",
+          "Do you dislike my topic?"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that where does the link between these paragraphs break?."
+      },
+      {
+        "question": "Why should students understand a comment's reason?",
+        "options": [
+          "Every comment is optional",
+          "Criteria never matter",
+          "Students must debate every word",
+          "Different tutors may recommend conflicting approaches"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that different tutors may recommend conflicting approaches."
+      },
+      {
+        "question": "What evidence can build reliable confidence?",
+        "options": [
+          "Comparison showing problems no longer recur",
+          "General praise alone",
+          "One high mark without revision",
+          "Ignoring disappointing drafts"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that comparison showing problems no longer recur."
+      },
+      {
+        "question": "What should a peer describe?",
+        "options": [
+          "A replacement essay",
+          "The writer's personality",
+          "The tutor's private motives",
+          "Their reading experience at specific points"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that their reading experience at specific points."
+      },
+      {
+        "question": "What boundary applies to peer support?",
+        "options": [
+          "Peers cannot mention evidence",
+          "Peers should not take over the writing",
+          "Classmates must agree",
+          "Feedback must stay positive"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that peers should not take over the writing."
+      },
+      {
+        "question": "What if marking appears inconsistent or disrespectful?",
+        "options": [
+          "Delete the original feedback",
+          "Confront the tutor publicly",
+          "Keep records and use the proper academic process",
+          "Ignore all useful feedback"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that keep records and use the proper academic process."
+      },
+      {
+        "question": "Why focus first on usable information?",
+        "options": [
+          "Useful revision guidance may remain despite harsh delivery",
+          "Disrespect is always acceptable",
+          "Marks cannot be questioned",
+          "Feelings have no place in learning"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that useful revision guidance may remain despite harsh delivery."
+      },
+      {
+        "question": "What final strategy makes revision concrete?",
+        "options": [
+          "Rewrite the entire essay immediately",
+          "Convert broad criticism into one next action",
+          "Wait for confidence to return",
+          "Collect more comments without acting"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that convert broad criticism into one next action."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "education",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

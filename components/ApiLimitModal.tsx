@@ -95,7 +95,7 @@ export const ApiLimitModal: React.FC<ApiLimitModalProps> = ({ onNavigateToSettin
                                     </li>
                                     <li className="text-[10px] text-gray-600 dark:text-gray-400 font-medium flex items-start gap-2">
                                         <span className="text-amber-500 mt-0.5">•</span>
-                                        Buat API Key baru di <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-lovelya-600 underline font-bold">Google AI Studio</a>
+                                        Buat API Key baru di <a href="https://aistudio.google.com/app/apikey" target="_blank" rel="noreferrer" className="text-lovelya-600 underline font-bold">halaman pembuatan API Key</a>
                                     </li>
                                     <li className="text-[10px] text-gray-600 dark:text-gray-400 font-medium flex items-start gap-2">
                                         <span className="text-amber-500 mt-0.5">•</span>

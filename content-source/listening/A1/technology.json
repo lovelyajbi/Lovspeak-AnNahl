@@ -6,33 +6,147 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] Last year, my screen-time report said nine hours a day. Nine hours, just looking at my phone.",
-      "Narrator: [surprised] I did not believe it at first. I thought the app was broken, so I checked it again the next week.",
-      "Narrator: [thoughtful] It was not broken. I really was spending most of my free time scrolling, without even choosing to.",
-      "Narrator: [reflective] I would open one app to check the time, and forty minutes later, I was still there, watching random videos.",
+      "Narrator: [warmly] Last year, my screen-time report said nine hours a day. Nine hours, just looking at my phone.",
+      "Narrator: I did not believe it at first. I thought the app was broken, so I checked it again the next week.",
+      "Narrator: [curious] It was not broken. I really was spending most of my free time scrolling, without even choosing to.",
+      "Narrator: I would open one app to check the time, and forty minutes later, I was still there, watching random videos.",
       "Narrator: [honestly] My sleep got worse too. I checked messages in bed, and then I could not fall asleep for an hour.",
-      "Narrator: [determined] So I decided to make small changes, nothing extreme, just small rules I could actually follow.",
-      "Narrator: [thoughtful] First, I moved my most-used apps off my home screen, into a folder on the second page.",
-      "Narrator: [gently] That tiny change made a real difference. I stopped opening them without thinking, out of pure habit.",
-      "Narrator: [warmly] Second, I bought a cheap alarm clock, so my phone could finally stay outside my bedroom at night.",
-      "Narrator: [honestly] The first few nights felt strange, almost uncomfortable, like something important was missing from the room.",
-      "Narrator: [peacefully] But after about a week, I started falling asleep faster, and waking up without immediately reaching for my phone.",
-      "Narrator: [thoughtful] Third, I turned off most notifications, except messages from close family and a few important work apps.",
-      "Narrator: [warmly] My phone became quiet, and honestly, my mind became quieter too, in a way I had not expected.",
-      "Narrator: [reflective] I still use my phone every day, for work, for messages, for useful things. That has not changed.",
-      "Narrator: [gently] What changed is that I choose when to open it now, instead of it constantly pulling my attention away.",
-      "Narrator: [with a small smile] My screen-time report now says about three hours a day. I finally believe that number is real."
+      "Narrator: So I decided to make small changes, nothing extreme, just small rules I could actually follow.",
+      "Narrator: [carefully] First, I moved my most-used apps off my home screen, into a folder on the second page.",
+      "Narrator: That tiny change made a real difference. I stopped opening them without thinking, out of pure habit.",
+      "Narrator: [thoughtful] Second, I bought a cheap alarm clock, so my phone could finally stay outside my bedroom at night.",
+      "Narrator: The first few nights felt strange, almost uncomfortable, like something important was missing from the room.",
+      "Narrator: [practically] But after about a week, I started falling asleep faster, and waking up without immediately reaching for my phone.",
+      "Narrator: Third, I turned off most notifications, except messages from close family and a few important work apps.",
+      "Narrator: [reflective] My phone became quiet, and honestly, my mind became quieter too, in a way I had not expected.",
+      "Narrator: I still use my phone every day, for work, for messages, for useful things. That has not changed.",
+      "Narrator: [encouraging] What changed is that I choose when to open it now, instead of it constantly pulling my attention away.",
+      "Narrator: My screen-time report now says about three hours a day. I finally believe that number is real."
     ],
     "quiz": [
-      { "question": "What did the narrator's screen-time report first show?", "options": ["Three hours a day", "Nine hours a day", "One hour a day", "Twelve hours a day"], "correctIndex": 1, "explanation": "The narrator says her screen-time report said nine hours a day." },
-      { "question": "What happened to her sleep because of her phone habit?", "options": ["It improved", "It got worse; she checked messages in bed", "Nothing changed", "She slept too much"], "correctIndex": 1, "explanation": "She says her sleep got worse because she checked messages in bed and could not fall asleep." },
-      { "question": "What was the first small change she made?", "options": ["Deleting all her apps", "Moving her most-used apps off her home screen into a folder", "Buying a new phone", "Turning off her phone completely"], "correctIndex": 1, "explanation": "She moved her most-used apps off her home screen into a folder on the second page." },
-      { "question": "Why did she buy a cheap alarm clock?", "options": ["To wake up earlier for work", "So her phone could stay outside her bedroom at night", "Her old alarm broke", "To replace her phone entirely"], "correctIndex": 1, "explanation": "She bought a cheap alarm clock so her phone could finally stay outside her bedroom at night." },
-      { "question": "What is true about her screen-time report now?", "options": ["It still shows nine hours", "It shows about three hours a day", "She stopped checking it", "It shows twelve hours"], "correctIndex": 1, "explanation": "She says her screen-time report now shows about three hours a day, and she believes it." }
-    ]
+      {
+        "question": "What did the narrator's screen-time report first show?",
+        "options": [
+          "Nine hours a day",
+          "Three hours a day",
+          "One hour a day",
+          "Twelve hours a day"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator says her screen-time report said nine hours a day."
+      },
+      {
+        "question": "What happened to her sleep because of her phone habit?",
+        "options": [
+          "It improved",
+          "Nothing changed",
+          "It got worse; she checked messages in bed",
+          "She slept too much"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says her sleep got worse because she checked messages in bed and could not fall asleep."
+      },
+      {
+        "question": "What was the first small change she made?",
+        "options": [
+          "Deleting all her apps",
+          "Buying a new phone",
+          "Turning off her phone completely",
+          "Moving her most-used apps off her home screen into a folder"
+        ],
+        "correctIndex": 3,
+        "explanation": "She moved her most-used apps off her home screen into a folder on the second page."
+      },
+      {
+        "question": "Why did she buy a cheap alarm clock?",
+        "options": [
+          "To wake up earlier for work",
+          "Her old alarm broke",
+          "So her phone could stay outside her bedroom at night",
+          "To replace her phone entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "She bought a cheap alarm clock so her phone could finally stay outside her bedroom at night."
+      },
+      {
+        "question": "What is true about her screen-time report now?",
+        "options": [
+          "It shows about three hours a day",
+          "It still shows nine hours",
+          "She stopped checking it",
+          "It shows twelve hours"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says her screen-time report now shows about three hours a day, and she believes it."
+      },
+      {
+        "question": "When did the narrator use the phone at night?",
+        "options": [
+          "Only before dinner",
+          "Until falling asleep",
+          "Never in bed",
+          "Once a week"
+        ],
+        "correctIndex": 1,
+        "explanation": "The screen stayed in bed with the narrator."
+      },
+      {
+        "question": "What app type was removed first?",
+        "options": [
+          "The alarm clock",
+          "The most-used social app",
+          "The screen-time report",
+          "A banking app"
+        ],
+        "correctIndex": 1,
+        "explanation": "One focused removal began the change."
+      },
+      {
+        "question": "Why was the phone kept outside the bedroom?",
+        "options": [
+          "To protect sleep and reduce checking",
+          "To improve the camera",
+          "To charge it faster",
+          "To answer more messages"
+        ],
+        "correctIndex": 0,
+        "explanation": "An alarm clock replaced its nighttime job."
+      },
+      {
+        "question": "Was the change immediate?",
+        "options": [
+          "Yes, nine hours ended in one day",
+          "No, the report never changed",
+          "Yes, the phone was discarded",
+          "No, it happened through small steps"
+        ],
+        "correctIndex": 3,
+        "explanation": "The script describes several habits over time."
+      },
+      {
+        "question": "What is the current personal result?",
+        "options": [
+          "About three hours of screen time",
+          "No screen use",
+          "Nine hours again",
+          "Three minutes a day"
+        ],
+        "correctIndex": 0,
+        "explanation": "The report fell without claiming a universal target."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "keep; personal screen-time change uses gradual steps, sleep boundaries, and a realistic nonzero goal",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-technology-02",
@@ -41,36 +155,153 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Mira, who uses AI tools every day at her job. Thanks for joining me, Mira.",
-      "Guest: [pleasantly] Thank you for having me. I'm happy to talk about this, since so many people ask me about it.",
+      "Guest: Thank you for having me. I'm happy to talk about this, since so many people ask me about it.",
       "Host: [curious] Let's start simple. What kind of AI tools do you actually use during a normal work day?",
-      "Guest: [thoughtful] Mostly writing tools. I use one to help me organize my ideas before I write an email or a report.",
-      "Host: [interested] Does it write everything for you, or do you still do most of the work yourself?",
-      "Guest: [honestly] I still do most of the thinking. The tool helps me start faster, but I always change the words myself.",
-      "Host: [curious] What about mistakes? Have you ever trusted it too much and regretted it?",
-      "Guest: [reflective] Yes, actually. Once it gave me a wrong date for a meeting, and I almost sent it without checking.",
-      "Host: [sympathetically] That sounds stressful. What did you learn from that?",
-      "Guest: [warmly] I learned to always check facts and numbers myself, even when the answer looks confident and correct.",
-      "Host: [curious] Do you think AI tools make people lazier, or more productive?",
-      "Guest: [thoughtful] Honestly, both, depending on how you use them. Used carelessly, they can replace real thinking, not support it.",
-      "Host: [interested] How do you personally avoid that problem?",
-      "Guest: [gently] I ask myself one question before using it: am I saving time, or avoiding effort I actually need?",
-      "Host: [curious] What would you tell someone who is nervous about using these tools at work?",
-      "Guest: [encouraging] Start small. Use it for boring, repetitive tasks first, and keep your judgment for the important decisions.",
-      "Host: [smiling] That's excellent advice, Mira. Thank you so much for sharing your experience with us today.",
+      "Guest: Mostly writing tools. I use one to help me organize my ideas before I write an email or a report.",
+      "Host: [honestly] Does it write everything for you, or do you still do most of the work yourself?",
+      "Guest: I still do most of the thinking. The tool helps me start faster, but I always change the words myself.",
+      "Host: [carefully] What about mistakes? Have you ever trusted it too much and regretted it?",
+      "Guest: Yes, actually. Once it gave me a wrong date for a meeting, and I almost sent it without checking.",
+      "Host: [thoughtful] That sounds stressful. What did you learn from that?",
+      "Guest: I learned to always check facts and numbers myself, even when the answer looks confident and correct.",
+      "Host: [practically] Do you think AI tools make people lazier, or more productive?",
+      "Guest: Honestly, both, depending on how you use them. Used carelessly, they can replace real thinking, not support it.",
+      "Host: [reflective] How do you personally avoid that problem?",
+      "Guest: I first check workplace rules and never paste private client or company information. Then I ask whether I am saving time or avoiding needed thinking.",
+      "Host: [encouraging] What would you tell someone who is nervous about using these tools at work?",
+      "Guest: Start with a non-sensitive repetitive task. Check every result, follow workplace policy, and keep human judgment for important decisions.",
+      "Host: That's excellent advice, Mira. Thank you so much for sharing your experience with us today.",
       "Guest: [warmly] Thank you for listening. I hope it helps someone feel less nervous about trying these tools."
     ],
     "quiz": [
-      { "question": "What does Mira mainly use AI tools for at work?", "options": ["Cooking", "Organizing ideas before writing emails or reports", "Driving", "Cleaning her office"], "correctIndex": 1, "explanation": "Mira says she uses AI tools to organize her ideas before writing an email or a report." },
-      { "question": "Does the AI tool write everything for Mira?", "options": ["Yes, completely", "No, she still does most of the thinking and changes the words herself", "She never uses it", "It only reads her messages"], "correctIndex": 1, "explanation": "Mira says she still does most of the thinking and always changes the words herself." },
-      { "question": "What mistake did the AI tool once make?", "options": ["It deleted her files", "It gave her a wrong date for a meeting", "It crashed her computer", "It sent a message to the wrong person"], "correctIndex": 1, "explanation": "Mira explains the tool once gave her a wrong date for a meeting." },
-      { "question": "What question does Mira ask herself before using an AI tool?", "options": ["Is this tool expensive?", "Am I saving time, or avoiding effort I actually need?", "Will my boss find out?", "Is this tool popular?"], "correctIndex": 1, "explanation": "She asks herself whether she is saving time or avoiding effort she actually needs." },
-      { "question": "What advice does Mira give to someone nervous about using AI tools?", "options": ["Avoid them completely", "Start small, using them for boring, repetitive tasks first", "Use them for every decision immediately", "Only use them at home"], "correctIndex": 1, "explanation": "Mira advises starting small, using the tools for boring, repetitive tasks first." }
-    ]
+      {
+        "question": "What does Mira mainly use AI tools for at work?",
+        "options": [
+          "Organizing ideas before writing emails or reports",
+          "Cooking",
+          "Driving",
+          "Cleaning her office"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mira says she uses AI tools to organize her ideas before writing an email or a report."
+      },
+      {
+        "question": "Does the AI tool write everything for Mira?",
+        "options": [
+          "Yes, completely",
+          "She never uses it",
+          "It only reads her messages",
+          "No, she still does most of the thinking and changes the words herself"
+        ],
+        "correctIndex": 3,
+        "explanation": "Mira says she still does most of the thinking and always changes the words herself."
+      },
+      {
+        "question": "What mistake did the AI tool once make?",
+        "options": [
+          "It deleted her files",
+          "It gave her a wrong date for a meeting",
+          "It crashed her computer",
+          "It sent a message to the wrong person"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mira explains the tool once gave her a wrong date for a meeting."
+      },
+      {
+        "question": "What question does Mira ask herself before using an AI tool?",
+        "options": [
+          "Am I saving time, or avoiding effort I actually need?",
+          "Is this tool expensive?",
+          "Will my boss find out?",
+          "Is this tool popular?"
+        ],
+        "correctIndex": 0,
+        "explanation": "She asks herself whether she is saving time or avoiding effort she actually needs."
+      },
+      {
+        "question": "What advice does Mira give to someone nervous about using AI tools?",
+        "options": [
+          "Avoid them completely",
+          "Start small, using them for boring, repetitive tasks first",
+          "Use them for every decision immediately",
+          "Only use them at home"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mira advises starting small, using the tools for boring, repetitive tasks first."
+      },
+      {
+        "question": "Who still does most of the thinking?",
+        "options": [
+          "The AI tool",
+          "Mira",
+          "The podcast host",
+          "Mira’s manager"
+        ],
+        "correctIndex": 1,
+        "explanation": "The tool supports a human process."
+      },
+      {
+        "question": "What almost went into an email?",
+        "options": [
+          "A private password",
+          "A wrong meeting date",
+          "A correct salary",
+          "A new policy"
+        ],
+        "correctIndex": 1,
+        "explanation": "The confident-looking output still contained an error."
+      },
+      {
+        "question": "What must Mira check?",
+        "options": [
+          "Only grammar",
+          "Nothing after generation",
+          "Facts and numbers",
+          "Whether the answer is long"
+        ],
+        "correctIndex": 2,
+        "explanation": "Human verification is required."
+      },
+      {
+        "question": "What information should not be pasted?",
+        "options": [
+          "A public idea",
+          "A common greeting",
+          "Private or confidential work data",
+          "A blank outline"
+        ],
+        "correctIndex": 2,
+        "explanation": "Policy and privacy come before convenience."
+      },
+      {
+        "question": "What task is a safer small start?",
+        "options": [
+          "A final important decision",
+          "Sharing client records",
+          "Replacing all judgment",
+          "A non-sensitive repetitive task"
+        ],
+        "correctIndex": 3,
+        "explanation": "The advice limits risk while learning."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "revise; add confidentiality and workplace-policy safeguards while keeping human review and fact checking central",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-technology-03",
@@ -79,38 +310,155 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dewi: [frustrated] Fajar, I cannot focus today. My phone keeps buzzing every few minutes, and I lose my train of thought.",
-      "Fajar: [calmly] What kind of notifications are you getting? Maybe some of them are not even necessary.",
-      "Dewi: [sighing] Everything. Messages, app updates, news alerts, even a game I barely play anymore.",
-      "Fajar: [gently] Can I suggest something? I turned off almost all my notifications a few months ago.",
-      "Dewi: [surprised] All of them? Aren't you worried about missing something important?",
-      "Fajar: [smiling] I kept messages and calls, since those are usually urgent. Everything else, I turned off completely.",
-      "Dewi: [thoughtful] What happened after you did that?",
-      "Fajar: [warmly] Honestly, it was quiet, in a good way. I stopped picking up my phone every few minutes.",
-      "Dewi: [curious] Did you check the apps less, or did you just check them at different times?",
-      "Fajar: [explaining] Different times. Now I open news and social apps twice a day, on purpose, instead of constantly.",
-      "Dewi: [considering] I never thought about choosing when to check things. I just react whenever my phone makes noise.",
-      "Fajar: [encouraging] Try it for one week. Turn off everything except messages and calls, and see how it feels.",
-      "Dewi: [thoughtful] I'm a little nervous, honestly. What if my team needs me urgently for something?",
-      "Fajar: [reassuring] You can always keep work messages on. The goal is removing the small, unimportant interruptions, not everything.",
-      "Dewi: [determined] Okay, I'll try it this afternoon. I'm curious how different my focus will feel tomorrow.",
-      "Fajar: [warmly] Let me know how it goes. It genuinely changed how calm my work days feel now.",
-      "Dewi: [thoughtful] I also want to try putting my phone in my bag during meetings, instead of on the table.",
-      "Fajar: [agreeing] That helps a lot too. Just seeing the screen light up can pull your attention away instantly.",
-      "Dewi: [smiling] Between the notifications and the meetings, I think I'll actually finish my reports on time this week.",
-      "Fajar: [warmly] That's the goal. Small changes like this add up more than people expect."
+      "Dewi: [warmly] Fajar, I cannot focus today. My phone keeps buzzing every few minutes, and I lose my train of thought.",
+      "Fajar: What kind of notifications are you getting? Maybe some of them are not even necessary.",
+      "Dewi: [curious] Everything. Messages, app updates, news alerts, even a game I barely play anymore.",
+      "Fajar: Can I suggest something? I turned off almost all my notifications a few months ago.",
+      "Dewi: [honestly] All of them? Aren't you worried about missing something important?",
+      "Fajar: I kept messages and calls, since those are usually urgent. Everything else, I turned off completely.",
+      "Dewi: [carefully] What happened after you did that?",
+      "Fajar: Honestly, it was quiet, in a good way. I stopped picking up my phone every few minutes.",
+      "Dewi: [thoughtful] Did you check the apps less, or did you just check them at different times?",
+      "Fajar: Different times. Now I open news and social apps twice a day, on purpose, instead of constantly.",
+      "Dewi: [practically] I never thought about choosing when to check things. I just react whenever my phone makes noise.",
+      "Fajar: Try it for one week. Turn off everything except messages and calls, and see how it feels.",
+      "Dewi: [reflective] I'm a little nervous, honestly. What if my team needs me urgently for something?",
+      "Fajar: You can always keep work messages on. The goal is removing the small, unimportant interruptions, not everything.",
+      "Dewi: [encouraging] Okay, I'll try it this afternoon. I'm curious how different my focus will feel tomorrow.",
+      "Fajar: Let me know how it goes. It genuinely changed how calm my work days feel now.",
+      "Dewi: I also want to try putting my phone in my bag during meetings, instead of on the table.",
+      "Fajar: [warmly] That helps a lot too. Just seeing the screen light up can pull your attention away instantly.",
+      "Dewi: Between the notifications and the meetings, I think I'll actually finish my reports on time this week.",
+      "Fajar: That's the goal. Small changes like this add up more than people expect."
     ],
     "quiz": [
-      { "question": "Why can't Dewi focus today?", "options": ["She is tired", "Her phone keeps buzzing with notifications", "The office is too loud", "She has a headache"], "correctIndex": 1, "explanation": "Dewi says her phone keeps buzzing every few minutes, breaking her concentration." },
-      { "question": "What did Fajar do a few months ago?", "options": ["He bought a new phone", "He turned off almost all his notifications", "He deleted all his apps", "He stopped using his phone completely"], "correctIndex": 1, "explanation": "Fajar says he turned off almost all his notifications a few months ago." },
-      { "question": "Which notifications did Fajar keep?", "options": ["News alerts", "Messages and calls", "Game notifications", "App updates"], "correctIndex": 1, "explanation": "Fajar kept messages and calls, since those are usually urgent." },
-      { "question": "How does Fajar now check news and social apps?", "options": ["Constantly, all day", "Twice a day, on purpose", "Never", "Only on weekends"], "correctIndex": 1, "explanation": "Fajar says he now opens news and social apps twice a day, on purpose." },
-      { "question": "What does Fajar suggest Dewi try?", "options": ["Buying a new phone", "Turning off everything except messages and calls for one week", "Quitting social media forever", "Working without her phone entirely"], "correctIndex": 1, "explanation": "Fajar suggests she try turning off everything except messages and calls for one week." }
-    ]
+      {
+        "question": "Why can't Dewi focus today?",
+        "options": [
+          "She is tired",
+          "The office is too loud",
+          "She has a headache",
+          "Her phone keeps buzzing with notifications"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dewi says her phone keeps buzzing every few minutes, breaking her concentration."
+      },
+      {
+        "question": "What did Fajar do a few months ago?",
+        "options": [
+          "He bought a new phone",
+          "He deleted all his apps",
+          "He turned off almost all his notifications",
+          "He stopped using his phone completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fajar says he turned off almost all his notifications a few months ago."
+      },
+      {
+        "question": "Which notifications did Fajar keep?",
+        "options": [
+          "Messages and calls",
+          "News alerts",
+          "Game notifications",
+          "App updates"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fajar kept messages and calls, since those are usually urgent."
+      },
+      {
+        "question": "How does Fajar now check news and social apps?",
+        "options": [
+          "Twice a day, on purpose",
+          "Constantly, all day",
+          "Never",
+          "Only on weekends"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fajar says he now opens news and social apps twice a day, on purpose."
+      },
+      {
+        "question": "Which notification change does Fajar recommend to Dewi?",
+        "options": [
+          "Buying a new phone",
+          "Turning off everything except messages and calls for one week",
+          "Quitting social media forever",
+          "Working without her phone entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar suggests she try turning off everything except messages and calls for one week."
+      },
+      {
+        "question": "What does buzzing interrupt?",
+        "options": [
+          "The office internet",
+          "Fajar’s lunch",
+          "Dewi’s train of thought",
+          "A phone call"
+        ],
+        "correctIndex": 2,
+        "explanation": "Repeated alerts break concentration."
+      },
+      {
+        "question": "When did Fajar change settings?",
+        "options": [
+          "That morning",
+          "A few months ago",
+          "Last year at school",
+          "After the conversation"
+        ],
+        "correctIndex": 1,
+        "explanation": "His experience supports the suggestion."
+      },
+      {
+        "question": "Which alerts remain?",
+        "options": [
+          "Every social reaction",
+          "All news updates",
+          "Calls from close family and work needs",
+          "Game messages"
+        ],
+        "correctIndex": 2,
+        "explanation": "Important contact stays possible."
+      },
+      {
+        "question": "How are other apps checked?",
+        "options": [
+          "Whenever they make noise",
+          "Only once a year",
+          "During meetings",
+          "At chosen times"
+        ],
+        "correctIndex": 3,
+        "explanation": "The person, not the notification, chooses."
+      },
+      {
+        "question": "What is Dewi’s first experiment?",
+        "options": [
+          "Delete every app",
+          "Buy another phone",
+          "Turn off nonessential alerts for an afternoon",
+          "Ignore urgent calls"
+        ],
+        "correctIndex": 2,
+        "explanation": "The trial is small and reversible."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "keep; practical notification dialogue distinguishes urgent contacts from optional alerts and gives the user control over checking time",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-technology-04",
@@ -119,32 +467,146 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [warmly] My father repaired radios for a living, back when people still fixed things instead of throwing them away.",
-      "Narrator: [thoughtful] As a boy, I sat next to him for hours, watching him open old machines and find the broken piece.",
-      "Narrator: [reflective] I once asked him, why not just buy a new radio? It seemed faster and easier to me then.",
-      "Narrator: [gently] He looked at me and said, anyone can throw something away. Understanding why it broke, that takes patience.",
+      "Narrator: As a boy, I sat next to him for hours, watching him open old machines and find the broken piece.",
+      "Narrator: [curious] I once asked him, why not just buy a new radio? It seemed faster and easier to me then.",
+      "Narrator: He looked at me and said, anyone can throw something away. Understanding why it broke, that takes patience.",
       "Narrator: [honestly] I did not fully understand his answer at the time. I just wanted to go outside and play.",
-      "Narrator: [softly] Years later, I became an engineer, working with computers instead of radios, but his lesson stayed with me.",
-      "Narrator: [with feeling] When my laptop crashed last year, right before an important deadline, I remembered watching him stay calm and patient.",
-      "Narrator: [thoughtful] Instead of panicking, I sat down and tried to understand exactly what had gone wrong, piece by piece.",
-      "Narrator: [warmly] It took two hours, but I found the problem myself, a small setting that had changed without my knowledge.",
-      "Narrator: [reflective] My father never learned to use a computer well, but somehow, he taught me how to think about one.",
-      "Narrator: [gently] He always said technology changes, but curiosity does not. That idea stays useful in almost any situation.",
-      "Narrator: [warmly] Now I try to teach my own daughter the same thing, whenever her tablet stops working properly.",
-      "Narrator: [softly] Instead of fixing it immediately for her, I ask her to look closely first and guess what happened.",
-      "Narrator: [peacefully] She gets frustrated sometimes, just like I did as a boy, but I see the same patience slowly growing in her.",
-      "Narrator: [with a small smile] My father passed away five years ago, but his old habit of asking why still lives in our family."
+      "Narrator: Years later, I became an engineer, working with computers instead of radios, but his lesson stayed with me.",
+      "Narrator: [carefully] When my laptop crashed last year, right before an important deadline, I remembered watching him stay calm and patient.",
+      "Narrator: Instead of panicking, I sat down and tried to understand exactly what had gone wrong, piece by piece.",
+      "Narrator: [thoughtful] It took two hours, but I found the problem myself, a small setting that had changed without my knowledge.",
+      "Narrator: My father never learned to use a computer well, but somehow, he taught me how to think about one.",
+      "Narrator: [practically] He always said technology changes, but curiosity does not. That idea stays useful in almost any situation.",
+      "Narrator: Now I try to teach my own daughter the same thing, whenever her tablet stops working properly.",
+      "Narrator: [reflective] Instead of fixing it immediately for her, I ask her to look closely first and guess what happened.",
+      "Narrator: She gets frustrated sometimes, just like I did as a boy, but I see the same patience slowly growing in her.",
+      "Narrator: [encouraging] My father passed away five years ago, but his old habit of asking why still lives in our family."
     ],
     "quiz": [
-      { "question": "What was the narrator's father's job?", "options": ["Teacher", "Radio repairman", "Doctor", "Farmer"], "correctIndex": 1, "explanation": "The narrator says his father repaired radios for a living." },
-      { "question": "What did the father say instead of buying a new radio?", "options": ["Buying new is always better", "Understanding why something broke takes patience", "Radios cannot be fixed", "Anyone can fix anything quickly"], "correctIndex": 1, "explanation": "The father said anyone can throw something away, but understanding why it broke takes patience." },
-      { "question": "What happened to the narrator's laptop last year?", "options": ["It was stolen", "It crashed right before an important deadline", "He sold it", "He upgraded it"], "correctIndex": 1, "explanation": "The narrator's laptop crashed right before an important deadline." },
-      { "question": "How did the narrator fix his laptop problem?", "options": ["He bought a new laptop immediately", "He calmly found the problem himself, piece by piece", "He called his father", "He gave up on the deadline"], "correctIndex": 1, "explanation": "He calmly sat down and found the problem himself, a small changed setting, after two hours." },
-      { "question": "What does the narrator now do when his daughter's tablet stops working?", "options": ["He fixes it immediately for her", "He asks her to look closely first and guess what happened", "He throws it away", "He ignores the problem"], "correctIndex": 1, "explanation": "Instead of fixing it immediately, he asks her to look closely first and guess what happened." }
-    ]
+      {
+        "question": "What was the narrator's father's job?",
+        "options": [
+          "Teacher",
+          "Radio repairman",
+          "Doctor",
+          "Farmer"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator says his father repaired radios for a living."
+      },
+      {
+        "question": "What did the father say instead of buying a new radio?",
+        "options": [
+          "Buying new is always better",
+          "Radios cannot be fixed",
+          "Anyone can fix anything quickly",
+          "Understanding why something broke takes patience"
+        ],
+        "correctIndex": 3,
+        "explanation": "The father said anyone can throw something away, but understanding why it broke takes patience."
+      },
+      {
+        "question": "What happened to the narrator's laptop last year?",
+        "options": [
+          "It crashed right before an important deadline",
+          "It was stolen",
+          "He sold it",
+          "He upgraded it"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator's laptop crashed right before an important deadline."
+      },
+      {
+        "question": "How did the narrator fix his laptop problem?",
+        "options": [
+          "He bought a new laptop immediately",
+          "He called his father",
+          "He gave up on the deadline",
+          "He calmly found the problem himself, piece by piece"
+        ],
+        "correctIndex": 3,
+        "explanation": "He calmly sat down and found the problem himself, a small changed setting, after two hours."
+      },
+      {
+        "question": "What does the narrator now do when his daughter's tablet stops working?",
+        "options": [
+          "He fixes it immediately for her",
+          "He throws it away",
+          "He asks her to look closely first and guess what happened",
+          "He ignores the problem"
+        ],
+        "correctIndex": 2,
+        "explanation": "Instead of fixing it immediately, he asks her to look closely first and guess what happened."
+      },
+      {
+        "question": "What question did the father ask?",
+        "options": [
+          "Why did it stop working?",
+          "How much is a new one?",
+          "Who broke every radio?",
+          "Where is the shop?"
+        ],
+        "correctIndex": 0,
+        "explanation": "He began with the cause."
+      },
+      {
+        "question": "What device later failed?",
+        "options": [
+          "A market phone",
+          "A station screen",
+          "A work radio",
+          "The narrator’s laptop"
+        ],
+        "correctIndex": 3,
+        "explanation": "The earlier method guided a modern problem."
+      },
+      {
+        "question": "How was the laptop fixed?",
+        "options": [
+          "By immediately replacing it",
+          "By finding the problem step by step",
+          "By ignoring the error",
+          "By guessing a password"
+        ],
+        "correctIndex": 1,
+        "explanation": "Diagnosis came before action."
+      },
+      {
+        "question": "Who now learns the same habit?",
+        "options": [
+          "A hotel clerk",
+          "A coworker",
+          "The narrator’s daughter",
+          "The father’s manager"
+        ],
+        "correctIndex": 2,
+        "explanation": "The lesson continues in the family."
+      },
+      {
+        "question": "What does the story value?",
+        "options": [
+          "Keeping unsafe devices open",
+          "Repairing without skill",
+          "Never asking for help",
+          "Understanding before replacing"
+        ],
+        "correctIndex": 3,
+        "explanation": "Curiosity is useful within safe limits."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "keep; warm repair story teaches diagnosis, patience, and safe understanding rather than automatic replacement",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-technology-05",
@@ -153,36 +615,153 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rafi", "gender": "male" },
-      { "name": "Sister", "gender": "female" }
+      {
+        "name": "Rafi",
+        "gender": "male"
+      },
+      {
+        "name": "Sister",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Rafi: [panicked] Kak, someone took my phone at the market. I turned around for one second, and it was gone.",
-      "Sister: [calmly] Okay, breathe first. Are you safe? That matters more than the phone right now.",
-      "Rafi: [shaken] Yes, I'm safe, just shocked. I don't even know what to do first.",
-      "Sister: [steady] Good. First, use my phone to log into your account online, and lock the device remotely.",
-      "Rafi: [worried] Can someone really open my apps and see my messages, my banking app, everything?",
-      "Sister: [reassuring] Not easily, if your screen has a passcode. That's why locking it now matters so much.",
-      "Rafi: [regretful] I never set up that remote-lock feature. I always meant to, but I kept putting it off.",
-      "Sister: [gently] Many people never do until something like this happens. Let's set it up on your new phone later.",
+      "Rafi: [warmly] Kak, someone took my phone at the market. I turned around for one second, and it was gone.",
+      "Sister: Okay, breathe first. Are you safe? That matters more than the phone right now.",
+      "Rafi: [curious] Yes, I'm safe, just shocked. I don't even know what to do first.",
+      "Sister: Good. First, use my phone to log into your account online, and lock the device remotely.",
+      "Rafi: [honestly] Can someone really open my apps and see my messages, my banking app, everything?",
+      "Sister: Not easily, if your screen has a passcode. That's why locking it now matters so much.",
+      "Rafi: [carefully] I never set up that remote-lock feature. I always meant to, but I kept putting it off.",
+      "Sister: Many people never do until something like this happens. Let's set it up on your new phone later.",
       "Rafi: [thoughtful] What else should I do right now, before I go to the police?",
-      "Sister: [explaining] Change your important passwords, starting with your email and your banking app, just to be careful.",
-      "Rafi: [nervous] I'm trying to remember what was saved on that phone. Photos, messages, my whole calendar.",
-      "Sister: [warmly] Most of that is probably backed up somewhere, if your cloud backup was turned on.",
-      "Rafi: [relieved] I think it was, actually. I remember a message about backup completing last week.",
-      "Sister: [encouraging] Good. That's genuinely good news. Photos and contacts are usually the hardest things to lose.",
-      "Rafi: [determined] Okay. I'll report it to the police first, then go buy a simple new phone tomorrow.",
-      "Sister: [warmly] I'll come with you tomorrow. And next time, please turn on that remote-lock feature immediately.",
-      "Rafi: [with a small laugh] I promise. Today taught me that lesson the hard way.",
-      "Sister: [gently] These things happen. What matters is you're safe, and we'll sort the rest out together."
+      "Sister: Use official apps or websites to secure your email and financial accounts. Contact the mobile carrier to block the SIM too.",
+      "Rafi: [practically] I'm trying to remember what was saved on that phone. Photos, messages, my whole calendar.",
+      "Sister: Most of that is probably backed up somewhere, if your cloud backup was turned on.",
+      "Rafi: [reflective] I think it was, actually. I remember a message about backup completing last week.",
+      "Sister: Good. That's genuinely good news. Photos and contacts are usually the hardest things to lose.",
+      "Rafi: [encouraging] Okay. I’ll report it to the police, call the carrier and bank through official numbers, and watch for unusual account activity.",
+      "Sister: I'll come with you tomorrow. And next time, please turn on that remote-lock feature immediately.",
+      "Rafi: I promise. Today taught me that lesson the hard way.",
+      "Sister: [warmly] These things happen. What matters is you're safe, and we'll sort the rest out together."
     ],
     "quiz": [
-      { "question": "What happened to Rafi at the market?", "options": ["He lost his wallet", "Someone took his phone", "He broke his phone", "He forgot his phone at home"], "correctIndex": 1, "explanation": "Rafi says someone took his phone at the market when he turned around for one second." },
-      { "question": "What does the sister ask Rafi to do first?", "options": ["Buy a new phone immediately", "Use her phone to log in and lock the device remotely", "Call the police first", "Ignore it and go home"], "correctIndex": 1, "explanation": "The sister tells him to use her phone to log into his account and lock the device remotely." },
-      { "question": "What feature did Rafi never set up?", "options": ["A passcode", "The remote-lock feature", "A backup app", "A new email"], "correctIndex": 1, "explanation": "Rafi admits he never set up the remote-lock feature, though he always meant to." },
-      { "question": "What does the sister advise Rafi to change?", "options": ["His phone number", "His important passwords, starting with email and banking", "His home address", "His name"], "correctIndex": 1, "explanation": "She advises him to change his important passwords, starting with his email and banking app." },
-      { "question": "Why is Rafi relieved about his photos and contacts?", "options": ["He printed all his photos", "His cloud backup was turned on", "He never saved anything important", "The thief returned the phone"], "correctIndex": 1, "explanation": "Rafi remembers a message about backup completing last week, so his data is likely saved." }
-    ]
+      {
+        "question": "What happened to Rafi at the market?",
+        "options": [
+          "He lost his wallet",
+          "Someone took his phone",
+          "He broke his phone",
+          "He forgot his phone at home"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rafi says someone took his phone at the market when he turned around for one second."
+      },
+      {
+        "question": "What does the sister ask Rafi to do first?",
+        "options": [
+          "Buy a new phone immediately",
+          "Call the police first",
+          "Use her phone to log in and lock the device remotely",
+          "Ignore it and go home"
+        ],
+        "correctIndex": 2,
+        "explanation": "The sister tells him to use her phone to log into his account and lock the device remotely."
+      },
+      {
+        "question": "What feature did Rafi never set up?",
+        "options": [
+          "The remote-lock feature",
+          "A passcode",
+          "A backup app",
+          "A new email"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rafi admits he never set up the remote-lock feature, though he always meant to."
+      },
+      {
+        "question": "What does the sister advise Rafi to change?",
+        "options": [
+          "His phone number",
+          "His home address",
+          "His important passwords, starting with email and banking",
+          "His name"
+        ],
+        "correctIndex": 2,
+        "explanation": "She advises him to change his important passwords, starting with his email and banking app."
+      },
+      {
+        "question": "Why is Rafi relieved about his photos and contacts?",
+        "options": [
+          "His cloud backup was turned on",
+          "He printed all his photos",
+          "He never saved anything important",
+          "The thief returned the phone"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rafi remembers a message about backup completing last week, so his data is likely saved."
+      },
+      {
+        "question": "What matters before the device?",
+        "options": [
+          "Rafi’s physical safety",
+          "Buying a new phone",
+          "Saving the calendar",
+          "Finding the thief alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "His sister checks whether he is safe."
+      },
+      {
+        "question": "Where should account changes happen?",
+        "options": [
+          "Through links in random messages",
+          "On a stranger’s phone without logout",
+          "By replying to the thief",
+          "Through official apps or websites"
+        ],
+        "correctIndex": 3,
+        "explanation": "Official access reduces another security risk."
+      },
+      {
+        "question": "Why contact the mobile carrier?",
+        "options": [
+          "To recover photos",
+          "To block the SIM",
+          "To buy a camera",
+          "To call the market"
+        ],
+        "correctIndex": 1,
+        "explanation": "A stolen SIM may receive codes."
+      },
+      {
+        "question": "Who should be told about suspicious bank activity?",
+        "options": [
+          "The bank through an official channel",
+          "A public social group",
+          "Only the phone shop",
+          "Nobody"
+        ],
+        "correctIndex": 0,
+        "explanation": "Financial accounts need prompt protection."
+      },
+      {
+        "question": "What records the theft?",
+        "options": [
+          "A cloud backup",
+          "A new password",
+          "A screen lock",
+          "A police report"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reporting creates an official record."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "revise; improve stolen-phone response with personal safety, official account access, carrier contact, financial monitoring, and police reporting",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-technology-06",
@@ -191,33 +770,147 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] A few months ago, a close friend of mine almost lost access to her email account completely.",
-      "Narrator: [reflective] Someone had guessed her password, because it was simple, just her name and her birth year.",
-      "Narrator: [gently] That story scared me enough to finally fix my own online habits, which honestly were not much better.",
-      "Narrator: [thoughtful] First, I stopped using the same password for every single account, which I had done for years.",
+      "Narrator: [warmly] A few months ago, a close friend of mine almost lost access to her email account completely.",
+      "Narrator: Someone had guessed her password, because it was simple, just her name and her birth year.",
+      "Narrator: [curious] That story scared me enough to finally fix my own online habits, which honestly were not much better.",
+      "Narrator: First, I stopped using the same password for every single account, which I had done for years.",
       "Narrator: [honestly] It felt overwhelming at first, remembering different passwords for banking, email, and social media accounts.",
-      "Narrator: [warmly] So I started using a password manager, an app that remembers strong passwords for me, safely.",
-      "Narrator: [calm] Second, I turned on something called two-factor login, wherever it was available on my accounts.",
-      "Narrator: [explaining] This means even if someone guesses my password, they also need a code sent to my own phone.",
+      "Narrator: So I started using a password manager, an app that remembers strong passwords for me, safely.",
+      "Narrator: [carefully] Second, I turned on something called two-factor login, wherever it was available on my accounts.",
+      "Narrator: This adds another check, such as an authenticator app, security key, or one-time code.",
       "Narrator: [thoughtful] Third, I became more careful about links in messages, especially ones asking me to click quickly, right now.",
-      "Narrator: [gently] If a message feels urgent or scary, that is usually exactly when I should slow down and check carefully.",
-      "Narrator: [reflective] I also started checking who sent an email, not just the name shown, but the actual address itself.",
-      "Narrator: [warmly] Real companies rarely ask for your password directly through email. That small fact has saved me twice already.",
-      "Narrator: [honestly] None of these habits are complicated or expensive. They simply require a little attention and a little patience.",
-      "Narrator: [peacefully] My friend eventually got her account back, but it took weeks of frustrating phone calls and forms.",
-      "Narrator: [warmly] I would rather spend ten minutes today than weeks later, trying to fix something that already went wrong.",
-      "Narrator: [with a small smile] Online safety is not about fear. It is simply about a few small, steady habits."
+      "Narrator: If a message feels urgent or scary, that is usually exactly when I should slow down and check carefully.",
+      "Narrator: [practically] I also started checking who sent an email, not just the name shown, but the actual address itself.",
+      "Narrator: A legitimate service will not ask for my full password by email. I open its official app or website directly instead of using a message link.",
+      "Narrator: [reflective] None of these habits are complicated or expensive. They simply require a little attention and a little patience.",
+      "Narrator: My friend eventually got her account back, but it took weeks of frustrating phone calls and forms.",
+      "Narrator: [encouraging] I would rather spend ten minutes today than weeks later, trying to fix something that already went wrong.",
+      "Narrator: Online safety is not about fear. It is simply about a few small, steady habits."
     ],
     "quiz": [
-      { "question": "What almost happened to the narrator's friend?", "options": ["She lost her phone", "She almost lost access to her email account", "She broke her laptop", "She forgot her name"], "correctIndex": 1, "explanation": "The narrator's friend almost lost access to her email account because her password was easy to guess." },
-      { "question": "What was wrong with the friend's password?", "options": ["It was too long", "It was simple, just her name and birth year", "It had too many numbers", "She never used one"], "correctIndex": 1, "explanation": "Someone guessed the password because it was simple, just her name and her birth year." },
-      { "question": "What did the narrator start using to manage passwords?", "options": ["A notebook", "A password manager app", "Her memory only", "A shared spreadsheet"], "correctIndex": 1, "explanation": "She started using a password manager, an app that remembers strong passwords for her safely." },
-      { "question": "What is two-factor login, according to the narrator?", "options": ["Using two different phones", "Needing a code sent to your phone even if the password is guessed", "Having two email accounts", "Logging in twice a day"], "correctIndex": 1, "explanation": "She explains that even if someone guesses the password, they also need a code sent to her phone." },
-      { "question": "What does the narrator say about urgent-feeling messages?", "options": ["They should always be clicked quickly", "That is usually exactly when she should slow down and check carefully", "They are always safe", "They should be ignored completely"], "correctIndex": 1, "explanation": "She says if a message feels urgent or scary, that is when she should slow down and check carefully." }
-    ]
+      {
+        "question": "What almost happened to the narrator's friend?",
+        "options": [
+          "She lost her phone",
+          "She broke her laptop",
+          "She forgot her name",
+          "She almost lost access to her email account"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator's friend almost lost access to her email account because her password was easy to guess."
+      },
+      {
+        "question": "What was wrong with the friend's password?",
+        "options": [
+          "It was too long",
+          "It was simple, just her name and birth year",
+          "It had too many numbers",
+          "She never used one"
+        ],
+        "correctIndex": 1,
+        "explanation": "Someone guessed the password because it was simple, just her name and her birth year."
+      },
+      {
+        "question": "What did the narrator start using to manage passwords?",
+        "options": [
+          "A notebook",
+          "A password manager app",
+          "Her memory only",
+          "A shared spreadsheet"
+        ],
+        "correctIndex": 1,
+        "explanation": "She started using a password manager, an app that remembers strong passwords for her safely."
+      },
+      {
+        "question": "What is two-factor login, according to the narrator?",
+        "options": [
+          "Using two different phones",
+          "Having two email accounts",
+          "Needing a code sent to your phone even if the password is guessed",
+          "Logging in twice a day"
+        ],
+        "correctIndex": 2,
+        "explanation": "She explains that even if someone guesses the password, they also need a code sent to her phone."
+      },
+      {
+        "question": "What does the narrator say about urgent-feeling messages?",
+        "options": [
+          "They should always be clicked quickly",
+          "They are always safe",
+          "That is usually exactly when she should slow down and check carefully",
+          "They should be ignored completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says if a message feels urgent or scary, that is when she should slow down and check carefully."
+      },
+      {
+        "question": "Why was the friend’s password weak?",
+        "options": [
+          "It was stored in a manager",
+          "It had too many random words",
+          "It changed daily",
+          "It used a name and birth year"
+        ],
+        "correctIndex": 3,
+        "explanation": "Personal details were easy to guess."
+      },
+      {
+        "question": "Why use different passwords?",
+        "options": [
+          "One leak should not open every account",
+          "They are easier to post publicly",
+          "Two-factor login needs one password",
+          "Companies ask for all of them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Unique credentials limit damage."
+      },
+      {
+        "question": "What may provide a second factor?",
+        "options": [
+          "The displayed sender name",
+          "An authenticator, security key, or code",
+          "An urgent email link",
+          "A birth year"
+        ],
+        "correctIndex": 1,
+        "explanation": "More than one safe method exists."
+      },
+      {
+        "question": "How should an urgent request be checked?",
+        "options": [
+          "Open the official app or site directly",
+          "Click its link quickly",
+          "Reply with a password",
+          "Trust the logo alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "A separate official route avoids a fake link."
+      },
+      {
+        "question": "What will a legitimate service not request by email?",
+        "options": [
+          "Your account name",
+          "Your full password",
+          "A public help page",
+          "A normal notice"
+        ],
+        "correctIndex": 1,
+        "explanation": "Passwords should never be sent through email."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "revise lightly; strengthen phishing advice and allow safer second-factor methods without overclaiming company behavior",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-technology-07",
@@ -226,35 +919,603 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good morning, listeners! Today we are talking about weekend digital detox. We have a caller on the line. Hello!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this morning.",
-      "Radio Host: [warmly] Of course! Tell us, what made you decide to try a digital detox weekend?",
-      "Caller: [thoughtful] Honestly, I noticed I was spending Saturdays just scrolling, and Sunday nights, I felt like the weekend never happened.",
-      "Radio Host: [curious] So what exactly did you change? Did you delete every app completely?",
-      "Caller: [explaining] Not that extreme. I just turned off my phone from Saturday morning until Sunday evening, once a month.",
-      "Radio Host: [surprised] A whole day and a half? That sounds difficult for a lot of people, myself included.",
-      "Caller: [honestly] The first time, it was genuinely uncomfortable. I kept reaching for my pocket, out of pure habit.",
-      "Radio Host: [interested] What did you do instead, with all that extra time?",
-      "Caller: [warmly] I read an actual book, cooked a full meal slowly, and visited my parents without checking messages the whole time.",
-      "Radio Host: [curious] Did your family notice anything different about you that weekend?",
-      "Caller: [smiling] Yes, actually. My mother said I listened better than usual, without glancing at my phone every few minutes.",
-      "Radio Host: [understanding] That's a powerful observation. What changed for you personally, after doing this a few times?",
-      "Caller: [reflective] I started noticing how tired scrolling actually makes me, even though it feels relaxing while I'm doing it.",
-      "Radio Host: [curious] Would you recommend this to other listeners, even people with busy work schedules?",
-      "Caller: [encouraging] Definitely, even just one afternoon. It doesn't need to be a whole weekend to make a difference.",
-      "Radio Host: [warmly] Thank you so much for sharing this with us this morning. It's a wonderful reminder for all of us.",
-      "Caller: [sincerely] Thank you for listening. I hope someone tries it this weekend, even for just a few hours."
+      "Radio Host: [warmly] Good morning, listeners! Today we are talking about weekend digital detox. We have a caller on the line. Hello!",
+      "Caller: Hello! Thank you for taking my call this morning.",
+      "Radio Host: [curious] Of course! Tell us, what made you decide to try a digital detox weekend?",
+      "Caller: Honestly, I noticed I was spending Saturdays just scrolling, and Sunday nights, I felt like the weekend never happened.",
+      "Radio Host: [honestly] So what exactly did you change? Did you delete every app completely?",
+      "Caller: Not that extreme. I plan offline hours once a month, while allowing urgent calls from trusted family and checking any work duty first.",
+      "Radio Host: [carefully] A whole day and a half? That sounds difficult for a lot of people, myself included.",
+      "Caller: The first time, it was genuinely uncomfortable. I kept reaching for my pocket, out of pure habit.",
+      "Radio Host: [thoughtful] What did you do instead, with all that extra time?",
+      "Caller: I read an actual book, cooked a full meal slowly, and visited my parents without checking messages the whole time.",
+      "Radio Host: [practically] Did your family notice anything different about you that weekend?",
+      "Caller: Yes, actually. My mother said I listened better than usual, without glancing at my phone every few minutes.",
+      "Radio Host: [reflective] That's a powerful observation. What changed for you personally, after doing this a few times?",
+      "Caller: I started noticing how tired scrolling actually makes me, even though it feels relaxing while I'm doing it.",
+      "Radio Host: [encouraging] Would you recommend this to other listeners, even people with busy work schedules?",
+      "Caller: A few planned hours may help. Keep emergency contact available and choose a time that does not ignore family or work duties.",
+      "Radio Host: Thank you so much for sharing this with us this morning. It's a wonderful reminder for all of us.",
+      "Caller: [warmly] Thank you for listening. I hope someone tries it this weekend, even for just a few hours."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Cooking tips", "Weekend digital detox", "Traffic updates", "Sports news"], "correctIndex": 1, "explanation": "The host introduces today's topic as weekend digital detox." },
-      { "question": "What did the caller notice about his Saturdays before the change?", "options": ["He worked too much", "He spent them just scrolling, and Sundays felt like the weekend never happened", "He slept all day", "He traveled too often"], "correctIndex": 1, "explanation": "He noticed he spent Saturdays scrolling, and Sunday nights felt like the weekend had not happened." },
-      { "question": "What exactly does the caller do during his digital detox?", "options": ["Deletes every app completely", "Turns off his phone from Saturday morning until Sunday evening, once a month", "Stops using electricity", "Leaves his house for a week"], "correctIndex": 1, "explanation": "He turns off his phone from Saturday morning until Sunday evening, once a month." },
-      { "question": "What did the caller do instead of using his phone that weekend?", "options": ["Nothing at all", "Read a book, cooked a full meal, and visited his parents", "Watched more television", "Slept the entire time"], "correctIndex": 1, "explanation": "He read a book, cooked a full meal slowly, and visited his parents without checking messages." },
-      { "question": "What did the caller's mother say about him that weekend?", "options": ["He seemed distracted", "He listened better than usual, without glancing at his phone", "He was too quiet", "She didn't notice anything"], "correctIndex": 1, "explanation": "His mother said he listened better than usual, without glancing at his phone every few minutes." }
-    ]
+      {
+        "question": "Which weekend phone habit is the radio segment exploring?",
+        "options": [
+          "Weekend digital detox",
+          "Cooking tips",
+          "Traffic updates",
+          "Sports news"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces today's topic as weekend digital detox."
+      },
+      {
+        "question": "What did the caller notice about his Saturdays before the change?",
+        "options": [
+          "He worked too much",
+          "He spent them just scrolling, and Sundays felt like the weekend never happened",
+          "He slept all day",
+          "He traveled too often"
+        ],
+        "correctIndex": 1,
+        "explanation": "He noticed he spent Saturdays scrolling, and Sunday nights felt like the weekend had not happened."
+      },
+      {
+        "question": "What exactly does the caller do during his digital detox?",
+        "options": [
+          "Deletes every app completely",
+          "Turns off his phone from Saturday morning until Sunday evening, once a month",
+          "Stops using electricity",
+          "Leaves his house for a week"
+        ],
+        "correctIndex": 1,
+        "explanation": "He turns off his phone from Saturday morning until Sunday evening, once a month."
+      },
+      {
+        "question": "What did the caller do instead of using his phone that weekend?",
+        "options": [
+          "Nothing at all",
+          "Watched more television",
+          "Read a book, cooked a full meal, and visited his parents",
+          "Slept the entire time"
+        ],
+        "correctIndex": 2,
+        "explanation": "He read a book, cooked a full meal slowly, and visited his parents without checking messages."
+      },
+      {
+        "question": "What did the caller's mother say about him that weekend?",
+        "options": [
+          "He seemed distracted",
+          "He was too quiet",
+          "She didn't notice anything",
+          "He listened better than usual, without glancing at his phone"
+        ],
+        "correctIndex": 3,
+        "explanation": "His mother said he listened better than usual, without glancing at his phone every few minutes."
+      },
+      {
+        "question": "What problem did the caller notice?",
+        "options": [
+          "The phone was stolen",
+          "Parents stopped visiting",
+          "Weekends disappeared into scrolling",
+          "Books felt too long"
+        ],
+        "correctIndex": 2,
+        "explanation": "Screen use left little memory of rest."
+      },
+      {
+        "question": "How is urgent contact preserved?",
+        "options": [
+          "The phone has no battery",
+          "Every app stays open",
+          "Trusted family can call through emergency settings",
+          "Nobody can reach the caller"
+        ],
+        "correctIndex": 2,
+        "explanation": "Offline time should not block real needs."
+      },
+      {
+        "question": "What activities replaced scrolling?",
+        "options": [
+          "Reading, cooking, and visiting parents",
+          "More office work",
+          "Shopping for phones",
+          "Watching notifications"
+        ],
+        "correctIndex": 0,
+        "explanation": "The alternative activities were present and slow."
+      },
+      {
+        "question": "What did the mother notice?",
+        "options": [
+          "The caller arrived late",
+          "The meal was faster",
+          "The caller listened better",
+          "Messages increased"
+        ],
+        "correctIndex": 2,
+        "explanation": "Less glancing improved conversation."
+      },
+      {
+        "question": "Must the break last a whole weekend?",
+        "options": [
+          "Yes, exactly two days",
+          "No, one minute only",
+          "Yes, the phone must be discarded",
+          "No, a few planned hours can help"
+        ],
+        "correctIndex": 3,
+        "explanation": "The advice is flexible and responsible."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "revise; keep intentional offline time while preserving emergency access and duties",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-technology-08",
+    "title": "The Update I Almost Ignored",
+    "level": "A1",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] My phone showed the same software-update message for nearly two weeks. Each time, I pressed “later” because I was busy.",
+      "Narrator: I thought updates only changed colors or added features I did not need. Then a friend explained that many updates also repair security problems.",
+      "Narrator: [curious] That evening, I decided to update. First, I checked that the message came from the phone's settings, not from a link in a random text.",
+      "Narrator: I backed up important photos and notes. I connected to my home internet, charged the battery, and read the official instructions.",
+      "Narrator: [honestly] The process took about twenty minutes. The phone restarted twice, and I left it alone instead of pressing buttons.",
+      "Narrator: Afterward, one banking app asked me to sign in again. I used my password manager and did not share the login code with anyone.",
+      "Narrator: [carefully] The phone looked almost the same, but the security page showed a newer date. That small detail mattered more than a new icon.",
+      "Narrator: I then checked my laptop and found that automatic updates had been turned off months earlier.",
+      "Narrator: [thoughtful] I enabled important security updates and chose a time when the laptop is usually connected to power.",
+      "Narrator: Updating does not remove every online risk. I still need strong passwords, careful links, and backups.",
+      "Narrator: [practically] However, ignoring trusted updates can leave known weaknesses open longer than necessary.",
+      "Narrator: Now I treat update notices like maintenance on a door lock. The work is not exciting, but it helps protect what is behind the door.",
+      "Narrator: [reflective] I also learned not to trust every pop-up that uses the word “update.” I open the device or app settings directly.",
+      "Narrator: A safe routine is simple: verify the source, back up data, use power and trusted internet, then allow enough time to finish."
+    ],
+    "quiz": [
+      {
+        "question": "Why had the narrator delayed updating?",
+        "options": [
+          "The phone was lost",
+          "Updates were forbidden",
+          "He thought it was unimportant and was busy",
+          "The screen was broken"
+        ],
+        "correctIndex": 2,
+        "explanation": "He repeatedly pressed “later.”"
+      },
+      {
+        "question": "What important purpose can updates have?",
+        "options": [
+          "Increasing food prices",
+          "Repairing security problems",
+          "Changing the weather",
+          "Calling friends automatically"
+        ],
+        "correctIndex": 1,
+        "explanation": "Updates may close known security weaknesses."
+      },
+      {
+        "question": "How did he verify the update?",
+        "options": [
+          "He clicked a random message",
+          "He asked for a stranger’s code",
+          "He disabled the battery",
+          "He opened the phone settings directly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Trusted device settings were used instead of an unknown link."
+      },
+      {
+        "question": "What happened after the update?",
+        "options": [
+          "Every photo disappeared",
+          "The phone became a laptop",
+          "The internet ended",
+          "A banking app requested a new sign-in"
+        ],
+        "correctIndex": 3,
+        "explanation": "One secure app needed authentication again."
+      },
+      {
+        "question": "What routine does he recommend?",
+        "options": [
+          "Verify, back up, connect safely, and allow time",
+          "Click every pop-up quickly",
+          "Share login codes",
+          "Avoid all maintenance"
+        ],
+        "correctIndex": 0,
+        "explanation": "The steps reduce risk during a legitimate update."
+      },
+      {
+        "question": "How long was the message delayed?",
+        "options": [
+          "Two hours",
+          "One month",
+          "One day",
+          "Nearly two weeks"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator repeatedly pressed later."
+      },
+      {
+        "question": "Why can an update matter?",
+        "options": [
+          "It always adds games",
+          "It may fix security problems",
+          "It removes backups",
+          "It changes every password"
+        ],
+        "correctIndex": 1,
+        "explanation": "Security is more important than visible features."
+      },
+      {
+        "question": "How was the source checked?",
+        "options": [
+          "Through a random message",
+          "By calling a stranger",
+          "By opening an advertisement",
+          "Through the device’s official settings"
+        ],
+        "correctIndex": 3,
+        "explanation": "Built-in settings confirmed legitimacy."
+      },
+      {
+        "question": "What was found on the laptop?",
+        "options": [
+          "The battery was missing",
+          "All files were gone",
+          "Automatic updates were off",
+          "The screen was broken"
+        ],
+        "correctIndex": 2,
+        "explanation": "Another device needed attention too."
+      },
+      {
+        "question": "Why allow enough time?",
+        "options": [
+          "An update should finish without interruption",
+          "It makes internet public",
+          "It removes the need for power",
+          "It guarantees no future bug"
+        ],
+        "correctIndex": 0,
+        "explanation": "Safe completion is part of the routine."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "keep; excellent update procedure uses official verification, backup, power, trusted internet, and enough completion time",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-technology-09",
+    "title": "A Family Video Call That Finally Worked",
+    "level": "A1",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] Our extended family tried to hold a video call every month, but the first three calls were confusing.",
+      "Narrator: People joined through different links, microphones stayed open, and my uncle's voice arrived several seconds late.",
+      "Narrator: [curious] Before the next call, I wrote a one-page guide with pictures. It showed which link to use and how to mute the microphone.",
+      "Narrator: I sent the guide two days early, not five minutes before the call. My cousin tested it with our grandparents.",
+      "Narrator: [honestly] We also chose one host. The host welcomed people, explained the order, and helped anyone who became disconnected.",
+      "Narrator: At the beginning, everyone kept cameras off for a minute while the connection settled. Then each household greeted the group.",
+      "Narrator: [carefully] We did not ask elderly relatives to solve problems while everyone watched. My cousin called them privately on another phone when help was needed.",
+      "Narrator: The new structure made the conversation calmer. Children shared school news, adults gave family updates, and our grandmother made dua for everyone.",
+      "Narrator: [thoughtful] We kept the call to forty minutes because long online meetings can become tiring. People who wanted more conversation stayed afterward.",
+      "Narrator: One relative could not use video because her internet was weak. She joined by ordinary phone audio and was still included.",
+      "Narrator: [practically] The call was not perfect. A child pressed a funny filter, and one person forgot to unmute.",
+      "Narrator: But small mistakes no longer controlled the whole meeting. Clear instructions and patient help gave the technology a useful place.",
+      "Narrator: [reflective] I learned that digital access is not only sending a link. We must think about different devices, skills, internet quality, and comfort.",
+      "Narrator: Good technology should support family connection, while kindness helps people cross the technical gaps."
+    ],
+    "quiz": [
+      {
+        "question": "What made the first calls confusing?",
+        "options": [
+          "Nobody had relatives",
+          "The calls were in person",
+          "Every device was identical",
+          "Different links, open microphones, and delayed sound"
+        ],
+        "correctIndex": 3,
+        "explanation": "Several technical problems disrupted the early meetings."
+      },
+      {
+        "question": "What did the narrator create?",
+        "options": [
+          "A new video app",
+          "A one-page picture guide",
+          "A long family history",
+          "A private password list"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guide explained the link and mute button."
+      },
+      {
+        "question": "How did they help older relatives?",
+        "options": [
+          "They tested early and offered private support",
+          "They corrected them publicly",
+          "They removed them from the call",
+          "They bought every person a laptop"
+        ],
+        "correctIndex": 0,
+        "explanation": "Support avoided public pressure."
+      },
+      {
+        "question": "How long was the main call?",
+        "options": [
+          "Four hours",
+          "Ten minutes",
+          "Forty minutes",
+          "All day"
+        ],
+        "correctIndex": 2,
+        "explanation": "A limited time reduced online tiredness."
+      },
+      {
+        "question": "What did the narrator learn about access?",
+        "options": [
+          "Sending a link is always enough",
+          "It includes devices, skills, connection, and comfort",
+          "Only video users count",
+          "Technical mistakes should end a meeting"
+        ],
+        "correctIndex": 1,
+        "explanation": "Inclusive planning goes beyond the link itself."
+      },
+      {
+        "question": "Why were early calls difficult?",
+        "options": [
+          "Nobody wanted contact",
+          "The family had no devices",
+          "People spoke together and had technical trouble",
+          "Grandmother refused dua"
+        ],
+        "correctIndex": 2,
+        "explanation": "The format needed structure and support."
+      },
+      {
+        "question": "What did the narrator prepare?",
+        "options": [
+          "A simple call plan",
+          "A public photo",
+          "A password list",
+          "A travel booking"
+        ],
+        "correctIndex": 0,
+        "explanation": "Roles and timing made participation clearer."
+      },
+      {
+        "question": "How were older relatives helped?",
+        "options": [
+          "A new account for every app",
+          "A longer main meeting",
+          "Written exams",
+          "A short practice call"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rehearsal reduced technical stress."
+      },
+      {
+        "question": "Why was the main call limited?",
+        "options": [
+          "To keep it manageable",
+          "To end family contact",
+          "To exclude children",
+          "To avoid all updates"
+        ],
+        "correctIndex": 0,
+        "explanation": "A clear length helped attention."
+      },
+      {
+        "question": "What if video access is difficult?",
+        "options": [
+          "Offer another way to join",
+          "Assume everyone has the same access",
+          "Remove the person",
+          "Share private login details"
+        ],
+        "correctIndex": 0,
+        "explanation": "Technology should not become a barrier."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "keep; inclusive family-call story addresses roles, rehearsal, older relatives, time limits, and access alternatives",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-technology-10",
+    "title": "Before We Share the Group Photo",
+    "level": "A1",
+    "themeId": "technology",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Rina",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Rina: [warmly] Yusuf, the volunteer-day photo looks wonderful. May I post it on our public page?",
+      "Yusuf: Please wait. Did everyone in the picture agree to a public post?",
+      "Rina: [curious] I asked whether we could take a group photo, and nobody said no.",
+      "Yusuf: Agreeing to a photo is not always the same as agreeing to put it online.",
+      "Rina: [honestly] You are right. Two children are visible near the front as well.",
+      "Yusuf: Then we need permission from their parents or guardians. It may be easier to use another photo without children.",
+      "Rina: [carefully] I have one picture of the supplies table and volunteers' hands. No faces are visible.",
+      "Yusuf: That could show the event without creating a privacy problem.",
+      "Rina: [thoughtful] What about the group photo? I still want to send it to the volunteers.",
+      "Yusuf: Ask the adults first and explain where you want to share it. A private group is different from a public page.",
+      "Rina: [practically] Should I tag the location too?",
+      "Yusuf: The exact location may reveal more than we need, especially because the project supports families privately.",
+      "Rina: [reflective] I had focused on how happy everyone looked, not on the information inside the image.",
+      "Yusuf: Photos can include faces, names on badges, house numbers, screens, and other details.",
+      "Rina: [encouraging] I can crop the background and check it carefully before sharing anything.",
+      "Yusuf: Good. Also remove the phone's location data if the platform does not do that automatically.",
+      "Rina: I will post the supplies photo publicly and ask permission before using the group photo privately.",
+      "Yusuf: [warmly] That respects the event and the people who made it possible.",
+      "Rina: Thank you for slowing me down without making me feel foolish.",
+      "Yusuf: We all learn. A ten-second privacy check can prevent a picture from traveling farther than someone wanted."
+    ],
+    "quiz": [
+      {
+        "question": "What does Rina want to post?",
+        "options": [
+          "A private document",
+          "A school exam",
+          "A payment receipt",
+          "A volunteer group photo"
+        ],
+        "correctIndex": 3,
+        "explanation": "She considers a public social-media post."
+      },
+      {
+        "question": "Why is taking-photo consent not enough?",
+        "options": [
+          "The camera is broken",
+          "Online sharing is a separate choice",
+          "Nobody is visible",
+          "Public pages have no photos"
+        ],
+        "correctIndex": 1,
+        "explanation": "People may accept a photo but not publication."
+      },
+      {
+        "question": "Who needs special permission?",
+        "options": [
+          "The supplies table",
+          "The weather service",
+          "Parents or guardians of visible children",
+          "The bus driver"
+        ],
+        "correctIndex": 2,
+        "explanation": "Children’s images require guardian consent."
+      },
+      {
+        "question": "What safer public image is available?",
+        "options": [
+          "A close-up of every child",
+          "A list of family names",
+          "Supplies and hands without faces",
+          "A visible house address"
+        ],
+        "correctIndex": 2,
+        "explanation": "The alternative shows the work without identifying people."
+      },
+      {
+        "question": "What should Rina check in an image?",
+        "options": [
+          "Only the colors",
+          "Only the number of likes",
+          "Faces, badges, addresses, screens, and location data",
+          "Only the file size"
+        ],
+        "correctIndex": 2,
+        "explanation": "A privacy review includes hidden identifying details."
+      },
+      {
+        "question": "What is different from taking-photo consent?",
+        "options": [
+          "Permission to attend volunteering",
+          "Permission to use a camera",
+          "Permission to post publicly",
+          "Permission to stand together"
+        ],
+        "correctIndex": 2,
+        "explanation": "Public distribution reaches a wider audience."
+      },
+      {
+        "question": "Whose image needs special care?",
+        "options": [
+          "A child’s",
+          "Only the photographer’s",
+          "The empty room’s",
+          "The page manager’s"
+        ],
+        "correctIndex": 0,
+        "explanation": "A guardian must approve the child’s image."
+      },
+      {
+        "question": "What safer image exists?",
+        "options": [
+          "A photo of supplies without faces",
+          "A closer child portrait",
+          "A tagged home address",
+          "An unedited group photo"
+        ],
+        "correctIndex": 0,
+        "explanation": "The alternative tells the story with less privacy risk."
+      },
+      {
+        "question": "What background detail should be checked?",
+        "options": [
+          "Only wall color",
+          "Names, badges, documents, and screens",
+          "The weather",
+          "Camera brand"
+        ],
+        "correctIndex": 1,
+        "explanation": "Private information may appear accidentally."
+      },
+      {
+        "question": "Why avoid a location tag?",
+        "options": [
+          "It always lowers quality",
+          "The app has no maps",
+          "Volunteers requested advertisements",
+          "It can reveal where people are"
+        ],
+        "correctIndex": 3,
+        "explanation": "Location can expose more than intended."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "technology",
+      "scriptDecision": "keep; excellent photo-consent dialogue separates taking, posting, child permission, metadata, background details, and public reach",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -6,29 +6,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] Decades separate the well into which Yusuf was lowered from the palace hall in which his brothers, unrecognizing, eventually stood before him, and that distance is precisely the point.",
-      "Narrator: [reflective] He had every instrument of retribution available by then: the authority of Egypt, their evident poverty, and the irony of their ignorance of who governed the grain they needed.",
-      "Narrator: [thoughtful] Instead, he orchestrated a slow, theatrical unveiling, testing them not out of cruelty but, one suspects, to discover whether the men who had betrayed him still existed inside these older faces.",
-      "Narrator: [firm] When he finally disclosed himself, the sentence he offered wasn't absolution dressed as magnanimity; it was strikingly specific: no blame will be upon you today, a phrase that names the wrong rather than dissolving it into vague forgiveness.",
+      "Narrator: [thoughtful] Decades separate the well into which Yusuf was lowered from the palace hall in which his brothers, unrecognizing, eventually stood before him, and that distance is precisely the point.",
+      "Narrator: He had every instrument of retribution available by then: the authority of Egypt, their evident poverty, and the irony of their ignorance of who governed the grain they needed.",
+      "Narrator: [carefully] Instead, he orchestrated a slow, theatrical unveiling, testing them not out of cruelty but, one suspects, to discover whether the men who had betrayed him still existed inside these older faces.",
+      "Narrator: When he finally disclosed himself, the sentence he offered wasn't absolution dressed as magnanimity; it was strikingly specific: no blame will be upon you today, a phrase that names the wrong rather than dissolving it into vague forgiveness.",
       "Narrator: [reflective] That specificity matters enormously. He doesn't pretend the well never happened, or that grief hadn't aged his father blind with weeping; he simply declines to let that history dictate what happens next.",
-      "Narrator: [thoughtful] Consider, too, what preceded this moment: years of imprisonment on a false accusation, years he could easily have narrated as proof that decency accomplishes nothing in an indifferent world.",
-      "Narrator: [warm] He might reasonably have concluded that integrity is a poor investment, given how consistently it earned him wells, prisons, and slander rather than reward.",
-      "Narrator: [reflective] Instead, each trial seems to have refined rather than embittered him, so that by the time forgiveness becomes possible, it emerges not as reluctant concession but as settled character.",
-      "Narrator: [thoughtful] There's also his father, Ya'qub, whose grief across those decades was never portrayed as excessive or embarrassing, weeping until his eyes clouded, holding out hope long after hope seemed reasonable.",
-      "Narrator: [warm] The reunion, when it arrives, restores not merely a lost son but a father's stubborn, unfashionable insistence that patience beautifully borne is never ultimately wasted.",
-      "Narrator: [reflective] What lingers with me isn't the forgiveness alone but its architecture: specific naming of harm, followed by a deliberate, undramatic refusal to let that harm write the remaining chapters.",
-      "Narrator: [peacefully] Betrayal, this story insists, doesn't have to be the final authority on how a relationship, or a person, eventually turns out."
+      "Narrator: Consider, too, what preceded this moment: years of imprisonment on a false accusation, years he could easily have narrated as proof that decency accomplishes nothing in an indifferent world.",
+      "Narrator: [honestly] He might reasonably have concluded that integrity is a poor investment, given how consistently it earned him wells, prisons, and slander rather than reward.",
+      "Narrator: Instead, each trial seems to have refined rather than embittered him, so that by the time forgiveness becomes possible, it emerges not as reluctant concession but as settled character.",
+      "Narrator: [gently] There's also his father, Ya'qub, whose grief across those decades was never portrayed as excessive or embarrassing, weeping until his eyes clouded, holding out hope long after hope seemed reasonable.",
+      "Narrator: The reunion, when it arrives, restores not merely a lost son but a father's stubborn, unfashionable insistence that patience beautifully borne is never ultimately wasted.",
+      "Narrator: [calmly] What lingers with me isn't the forgiveness alone but its architecture: specific naming of harm, followed by a deliberate, undramatic refusal to let that harm write the remaining chapters.",
+      "Narrator: Betrayal, this story insists, doesn't have to be the final authority on how a relationship, or a person, eventually turns out."
     ],
     "quiz": [
-      { "question": "What material advantages did Yusuf have over his brothers when they finally stood before him?", "options": ["None at all", "The authority of Egypt, their poverty, and their ignorance of who governed the grain", "Only his physical strength", "A written confession from them"], "correctIndex": 1, "explanation": "He had the authority of Egypt, their evident poverty, and the irony of their ignorance of who controlled the grain they needed." },
-      { "question": "What was the exact nature of Yusuf's declaration to his brothers?", "options": ["A vague statement that nothing had ever happened", "A specific phrase naming the wrong while declining to let it dictate the future", "A demand for repayment first", "A refusal to forgive them at all"], "correctIndex": 1, "explanation": "His phrase, 'no blame will be upon you today,' names the wrong specifically rather than dissolving it into vague forgiveness." },
-      { "question": "What had Yusuf endured before this moment of reunion?", "options": ["A comfortable life free of hardship", "Years of imprisonment on a false accusation, in addition to being sold and enslaved", "Only a brief period of difficulty", "Exile from Egypt entirely"], "correctIndex": 1, "explanation": "He had endured years of imprisonment on a false accusation, on top of being sold into slavery by his brothers." },
-      { "question": "How does the narrator describe the effect of Yusuf's trials on his character?", "options": ["They embittered him permanently", "Each trial seems to have refined rather than embittered him", "They had no noticeable effect", "They made him seek revenge eventually"], "correctIndex": 1, "explanation": "The narrator says each trial seems to have refined rather than embittered him, so forgiveness emerged as settled character." },
-      { "question": "What does the narrator identify as the 'architecture' of Yusuf's forgiveness?", "options": ["Pretending nothing happened, followed by silence", "Specific naming of harm, followed by a deliberate refusal to let that harm write the remaining chapters", "Public punishment followed by private forgiveness", "Demanding an apology before forgiving"], "correctIndex": 1, "explanation": "The narrator describes it as specific naming of harm, followed by a deliberate, undramatic refusal to let that harm dictate what comes next." }
-    ]
+      {
+        "question": "What material advantages did Yusuf have over his brothers when they finally stood before him?",
+        "options": [
+          "The authority of Egypt, their poverty, and their ignorance of who governed the grain",
+          "None at all",
+          "Only his physical strength",
+          "A written confession from them"
+        ],
+        "correctIndex": 0,
+        "explanation": "He had the authority of Egypt, their evident poverty, and the irony of their ignorance of who controlled the grain they needed."
+      },
+      {
+        "question": "What was the exact nature of Yusuf's declaration to his brothers?",
+        "options": [
+          "A vague statement that nothing had ever happened",
+          "A specific phrase naming the wrong while declining to let it dictate the future",
+          "A demand for repayment first",
+          "A refusal to forgive them at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "His phrase, 'no blame will be upon you today,' names the wrong specifically rather than dissolving it into vague forgiveness."
+      },
+      {
+        "question": "What had Yusuf endured before this moment of reunion?",
+        "options": [
+          "A comfortable life free of hardship",
+          "Only a brief period of difficulty",
+          "Years of imprisonment on a false accusation, in addition to being sold and enslaved",
+          "Exile from Egypt entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "He had endured years of imprisonment on a false accusation, on top of being sold into slavery by his brothers."
+      },
+      {
+        "question": "How does the narrator describe the effect of Yusuf's trials on his character?",
+        "options": [
+          "They embittered him permanently",
+          "They had no noticeable effect",
+          "They made him seek revenge eventually",
+          "Each trial seems to have refined rather than embittered him"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator says each trial seems to have refined rather than embittered him, so forgiveness emerged as settled character."
+      },
+      {
+        "question": "What does the narrator identify as the 'architecture' of Yusuf's forgiveness?",
+        "options": [
+          "Specific naming of harm, followed by a deliberate refusal to let that harm write the remaining chapters",
+          "Pretending nothing happened, followed by silence",
+          "Public punishment followed by private forgiveness",
+          "Demanding an apology before forgiving"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator describes it as specific naming of harm, followed by a deliberate, undramatic refusal to let that harm dictate what comes next."
+      },
+      {
+        "question": "What central claim does “Yusuf's Astonishing Sentence to the Brothers Who Sold Him” develop?",
+        "options": [
+          "Learning may require patience with knowledge not immediately explained.",
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Repentance begins with owning error rather than transferring blame.",
+          "Judgment requires hearing what an initial appearance may conceal."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Yusuf's Astonishing Sentence to the Brothers Who Sold Him”?",
+        "options": [
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "Adam’s response is contrasted with evasion after a mistake.",
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "The visitors’ dispute exposes a conclusion reached too quickly."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Yusuf's Astonishing Sentence to the Brothers Who Sold Him”?",
+        "options": [
+          "Narrative lessons do not license certainty about unseen causes today.",
+          "A moral lesson cannot establish another person’s private sincerity.",
+          "Historical retelling must distinguish reliable detail from embellishment.",
+          "A sacred account should not be expanded with invented motives."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “Yusuf's Astonishing Sentence to the Brothers Who Sold Him”?",
+        "options": [
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The account is approached through recognised sources and qualified teaching.",
+          "The discussion draws principle without inventing details beyond the text.",
+          "The account cautions listeners against confident verdicts without full evidence."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “Yusuf's Astonishing Sentence to the Brothers Who Sold Him”?",
+        "options": [
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Accountability is strengthened when explanation does not become excuse.",
+          "Justice depends on revisable reasoning rather than first impressions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-prophets-02",
@@ -37,32 +151,149 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Amira", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Amira",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Amira: [curious] The story of Musa and Khidr unsettles me every time, Fajar, precisely because Musa is meant to be the more accomplished prophet of the two.",
-      "Fajar: [thoughtful] Which makes the premise deliberately uncomfortable. He's told there's knowledge he lacks, held by someone whose actions he'll be forbidden to question, on pain of the arrangement ending.",
-      "Amira: [pointed] And he agrees anyway, which strikes me as its own quiet act of humility, admitting a gap in understanding despite considerable stature.",
-      "Fajar: [nodding] Then, almost immediately, he fails the condition. Khidr damages a boat belonging to poor fishermen, and Musa, appalled, objects before he can stop himself.",
+      "Amira: [thoughtful] The story of Musa and Khidr unsettles me every time, Fajar, precisely because Musa is meant to be the more accomplished prophet of the two.",
+      "Fajar: Which makes the premise deliberately uncomfortable. He's told there's knowledge he lacks, held by someone whose actions he'll be forbidden to question, on pain of the arrangement ending.",
+      "Amira: [carefully] And he agrees anyway, which strikes me as its own quiet act of humility, admitting a gap in understanding despite considerable stature.",
+      "Fajar: Then, almost immediately, he fails the condition. Khidr damages a boat belonging to poor fishermen, and Musa, appalled, objects before he can stop himself.",
       "Amira: [reflective] It's such a human failure, though. Watching an apparently senseless act of destruction and staying silent requires a discipline most of us simply don't possess.",
-      "Fajar: [considering] Khidr forgives the lapse once, reminding him of the agreement, and they continue, only for Musa to object again when Khidr kills a young boy without warning.",
-      "Amira: [somber] That one is genuinely difficult to sit with. The apparent cruelty of it resists easy explanation in the moment.",
-      "Fajar: [reflective] Which is exactly the point. Musa is reacting to what's visible, the immediate, undeniable wrongness of it, while Khidr operates from knowledge Musa simply doesn't possess yet.",
-      "Amira: [curious] And the explanations, once they arrive, do they actually satisfy you, or just relocate the discomfort somewhere else?",
-      "Fajar: [honestly] Somewhat both. The boat was damaged to protect it from a king seizing usable vessels; the boy would have grieved his righteous parents through cruelty and disbelief.",
-      "Amira: [thoughtful] So mercy, in both cases, was disguised as harm, legible only from a vantage point neither of them could occupy simultaneously.",
-      "Fajar: [warm] Exactly, and I think that's the real instruction here, not a lesson about specific miracles, but about the limits of judging events solely by their visible surface.",
-      "Amira: [reflective] It's humbling rather than comforting, honestly. It doesn't promise every senseless-looking hardship has a tidy explanation; it just insists our vantage point is narrower than we assume.",
-      "Fajar: [gently] Which is perhaps why Musa, of all people, needed this particular lesson. Confidence in one's own perception is exactly what such an episode is designed to unsettle."
+      "Fajar: Khidr forgives the lapse once, reminding him of the agreement, and they continue, only for Musa to object again when Khidr kills a young boy without warning.",
+      "Amira: [honestly] That one is genuinely difficult to sit with. The apparent cruelty of it resists easy explanation in the moment.",
+      "Fajar: Which is exactly the point. Musa is reacting to what's visible, the immediate, undeniable wrongness of it, while Khidr operates from knowledge Musa simply doesn't possess yet.",
+      "Amira: [gently] And the explanations, once they arrive, do they actually satisfy you, or just relocate the discomfort somewhere else?",
+      "Fajar: Somewhat both. The boat was damaged to protect it from a king seizing usable vessels; the boy would have grieved his righteous parents through cruelty and disbelief.",
+      "Amira: [calmly] So mercy, in both cases, was disguised as harm, legible only from a vantage point neither of them could occupy simultaneously.",
+      "Fajar: Exactly, and I think that's the real instruction here, not a lesson about specific miracles, but about the limits of judging events solely by their visible surface.",
+      "Amira: [encouraging] It's humbling rather than comforting, honestly. It doesn't promise every senseless-looking hardship has a tidy explanation; it just insists our vantage point is narrower than we assume.",
+      "Fajar: Which is perhaps why Musa, of all people, needed this particular lesson. Confidence in one's own perception is exactly what such an episode is designed to unsettle."
     ],
     "quiz": [
-      { "question": "What condition does Musa agree to before traveling with Khidr?", "options": ["To pay for the journey himself", "To not question Khidr's actions, on pain of the arrangement ending", "To remain silent the entire journey", "To bring provisions for both of them"], "correctIndex": 1, "explanation": "Musa agrees not to question Khidr's actions, with the arrangement ending if he does." },
-      { "question": "What is the first action of Khidr's that Musa objects to?", "options": ["Killing a young boy", "Damaging a boat belonging to poor fishermen", "Building a wall for no payment", "Refusing to share food"], "correctIndex": 1, "explanation": "Khidr damages a boat belonging to poor fishermen, and Musa objects before he can stop himself." },
-      { "question": "What reason is eventually given for damaging the boat?", "options": ["It was old and needed replacing", "To protect it from a king who was seizing usable vessels", "Khidr disliked the fishermen", "It was an accident"], "correctIndex": 1, "explanation": "The boat was damaged to protect it from a king seizing usable vessels." },
-      { "question": "What does Fajar say is the real instruction of the story?", "options": ["That Musa was a poor prophet", "The limits of judging events solely by their visible surface", "That miracles should never be questioned", "That killing is always justified"], "correctIndex": 1, "explanation": "Fajar says the real instruction is about the limits of judging events solely by their visible surface, not a lesson about specific miracles." },
-      { "question": "How does Amira describe the effect of the story on the reader?", "options": ["Comforting, since every hardship gets explained", "Humbling, since it shows our vantage point is narrower than we assume", "Irrelevant to modern life", "Frightening without any purpose"], "correctIndex": 1, "explanation": "Amira says the story is humbling rather than comforting, insisting our vantage point is narrower than we assume." }
-    ]
+      {
+        "question": "What condition does Musa agree to before traveling with Khidr?",
+        "options": [
+          "To not question Khidr's actions, on pain of the arrangement ending",
+          "To pay for the journey himself",
+          "To remain silent the entire journey",
+          "To bring provisions for both of them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Musa agrees not to question Khidr's actions, with the arrangement ending if he does."
+      },
+      {
+        "question": "What is the first action of Khidr's that Musa objects to?",
+        "options": [
+          "Killing a young boy",
+          "Damaging a boat belonging to poor fishermen",
+          "Building a wall for no payment",
+          "Refusing to share food"
+        ],
+        "correctIndex": 1,
+        "explanation": "Khidr damages a boat belonging to poor fishermen, and Musa objects before he can stop himself."
+      },
+      {
+        "question": "What reason is eventually given for damaging the boat?",
+        "options": [
+          "It was old and needed replacing",
+          "Khidr disliked the fishermen",
+          "To protect it from a king who was seizing usable vessels",
+          "It was an accident"
+        ],
+        "correctIndex": 2,
+        "explanation": "The boat was damaged to protect it from a king seizing usable vessels."
+      },
+      {
+        "question": "What does Fajar say is the real instruction of the story?",
+        "options": [
+          "That Musa was a poor prophet",
+          "That miracles should never be questioned",
+          "That killing is always justified",
+          "The limits of judging events solely by their visible surface"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fajar says the real instruction is about the limits of judging events solely by their visible surface, not a lesson about specific miracles."
+      },
+      {
+        "question": "How does Amira describe the effect of the story on the reader?",
+        "options": [
+          "Humbling, since it shows our vantage point is narrower than we assume",
+          "Comforting, since every hardship gets explained",
+          "Irrelevant to modern life",
+          "Frightening without any purpose"
+        ],
+        "correctIndex": 0,
+        "explanation": "Amira says the story is humbling rather than comforting, insisting our vantage point is narrower than we assume."
+      },
+      {
+        "question": "What central claim does “What Musa Learned From a Teacher Who Wouldn't Explain Himself” develop?",
+        "options": [
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Learning may require patience with knowledge not immediately explained.",
+          "Repentance begins with owning error rather than transferring blame.",
+          "Judgment requires hearing what an initial appearance may conceal."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “What Musa Learned From a Teacher Who Wouldn't Explain Himself”?",
+        "options": [
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "Adam’s response is contrasted with evasion after a mistake.",
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "The visitors’ dispute exposes a conclusion reached too quickly."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “What Musa Learned From a Teacher Who Wouldn't Explain Himself”?",
+        "options": [
+          "A sacred account should not be expanded with invented motives.",
+          "A moral lesson cannot establish another person’s private sincerity.",
+          "Historical retelling must distinguish reliable detail from embellishment.",
+          "Narrative lessons do not license certainty about unseen causes today."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “What Musa Learned From a Teacher Who Wouldn't Explain Himself”?",
+        "options": [
+          "The account is approached through recognised sources and qualified teaching.",
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The discussion draws principle without inventing details beyond the text.",
+          "The account cautions listeners against confident verdicts without full evidence."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “What Musa Learned From a Teacher Who Wouldn't Explain Himself”?",
+        "options": [
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Accountability is strengthened when explanation does not become excuse.",
+          "Justice depends on revisable reasoning rather than first impressions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-prophets-03",
@@ -71,29 +302,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] It's worth noticing what Adam and Hawwa did not say, in that garden, once the fruit of the forbidden tree had already been tasted and the consequence had already begun unfolding.",
-      "Narrator: [reflective] There was no elaborate justification offered, no reference to the whisperer who had engineered the moment, no attempt to distribute the fault evenly across every available party.",
-      "Narrator: [firm] Their recorded words are almost startling in their economy: our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will certainly be among the losers.",
-      "Narrator: [thoughtful] Compare that grammar carefully to another well-known refusal in the same narrative, where a different response to failure took an entirely different shape altogether.",
+      "Narrator: There was no elaborate justification offered, no reference to the whisperer who had engineered the moment, no attempt to distribute the fault evenly across every available party.",
+      "Narrator: [carefully] Their recorded words are almost startling in their economy: our Lord, we have wronged ourselves, and if You do not forgive us and have mercy upon us, we will certainly be among the losers.",
+      "Narrator: Compare that grammar carefully to another well-known refusal in the same narrative, where a different response to failure took an entirely different shape altogether.",
       "Narrator: [reflective] When pride was confronted with its own error, it argued, it compared itself favorably to what it had been asked to honor, it treated the correction as an insult rather than information.",
-      "Narrator: [firm] Adam's response contains no such comparison, no appeal to circumstance, no insistence that the fault belonged elsewhere; only a direct admission, addressed upward rather than outward.",
-      "Narrator: [warm] What strikes me is how immediately mercy follows that particular grammar, as though the sincerity of the admission itself, more than the severity of the offense, determined what came next.",
-      "Narrator: [thoughtful] This doesn't mean consequence vanished entirely; a garden was, after all, exchanged for an earth requiring labor, hardship, and eventual return to dust.",
-      "Narrator: [reflective] But exile accompanied by accepted repentance is an entirely different inheritance than exile accompanied by unrepented pride, even when the physical departure looks, from a distance, identical.",
-      "Narrator: [warm] I find something quietly instructive in the fact that the very first human error is met not with permanent estrangement but with words offered specifically to be received.",
-      "Narrator: [thoughtful] It suggests that repentance was built into the architecture of being human from its earliest chapter, not appended later as a grudging concession to inevitable failure.",
-      "Narrator: [peacefully] Every mistake since has had, available to it, that same original grammar: no elaborate defense, simply an honest admission, addressed to the one actually capable of answering it."
+      "Narrator: Adam's response contains no such comparison, no appeal to circumstance, no insistence that the fault belonged elsewhere; only a direct admission, addressed upward rather than outward.",
+      "Narrator: [honestly] What strikes me is how immediately mercy follows that particular grammar, as though the sincerity of the admission itself, more than the severity of the offense, determined what came next.",
+      "Narrator: This doesn't mean consequence vanished entirely; a garden was, after all, exchanged for an earth requiring labor, hardship, and eventual return to dust.",
+      "Narrator: [gently] But exile accompanied by accepted repentance is an entirely different inheritance than exile accompanied by unrepented pride, even when the physical departure looks, from a distance, identical.",
+      "Narrator: I find something quietly instructive in the fact that the very first human error is met not with permanent estrangement but with words offered specifically to be received.",
+      "Narrator: [calmly] It suggests that repentance was built into the architecture of being human from its earliest chapter, not appended later as a grudging concession to inevitable failure.",
+      "Narrator: Every mistake since has had, available to it, that same original grammar: no elaborate defense, simply an honest admission, addressed to the one actually capable of answering it."
     ],
     "quiz": [
-      { "question": "What did Adam and Hawwa NOT do after eating from the forbidden tree, according to the narrator?", "options": ["They did not feel any regret", "They did not offer elaborate justification or attempt to distribute blame elsewhere", "They did not speak to Allah at all", "They did not leave the garden"], "correctIndex": 1, "explanation": "They offered no elaborate justification and made no attempt to distribute the fault across other parties." },
-      { "question": "What was the essential content of Adam and Hawwa's recorded words?", "options": ["A demand for a second chance without admission", "An admission that they had wronged themselves, appealing for forgiveness and mercy", "A complaint about being tempted unfairly", "A request to stay in the garden regardless"], "correctIndex": 1, "explanation": "Their words were: our Lord, we have wronged ourselves, and if You do not forgive us we will be among the losers." },
-      { "question": "How does the narrator contrast this response with the other refusal in the same narrative?", "options": ["Both responses were identical", "The other response argued, compared itself favorably, and treated correction as an insult", "The other response also admitted fault immediately", "There is no other response mentioned"], "correctIndex": 1, "explanation": "The contrasting response argued, compared itself favorably to what it had been asked to honor, and treated correction as an insult rather than information." },
-      { "question": "What does the narrator say determined what came next after Adam's admission?", "options": ["The severity of the offense alone", "The sincerity of the admission itself, more than the severity of the offense", "Nothing determined the outcome", "A lengthy period of punishment first"], "correctIndex": 1, "explanation": "The narrator suggests the sincerity of the admission, more than the severity of the offense, determined what followed." },
-      { "question": "What broader idea does the narrator draw about repentance from this story?", "options": ["Repentance was added later as a concession", "Repentance was built into the architecture of being human from its earliest chapter", "Repentance is only for prophets", "Repentance guarantees no consequences at all"], "correctIndex": 1, "explanation": "The narrator concludes repentance was built into the architecture of being human from its earliest chapter, not appended later." }
-    ]
+      {
+        "question": "What did Adam and Hawwa NOT do after eating from the forbidden tree, according to the narrator?",
+        "options": [
+          "They did not offer elaborate justification or attempt to distribute blame elsewhere",
+          "They did not feel any regret",
+          "They did not speak to Allah at all",
+          "They did not leave the garden"
+        ],
+        "correctIndex": 0,
+        "explanation": "They offered no elaborate justification and made no attempt to distribute the fault across other parties."
+      },
+      {
+        "question": "What was the essential content of Adam and Hawwa's recorded words?",
+        "options": [
+          "A demand for a second chance without admission",
+          "An admission that they had wronged themselves, appealing for forgiveness and mercy",
+          "A complaint about being tempted unfairly",
+          "A request to stay in the garden regardless"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their words were: our Lord, we have wronged ourselves, and if You do not forgive us we will be among the losers."
+      },
+      {
+        "question": "How does the narrator contrast this response with the other refusal in the same narrative?",
+        "options": [
+          "Both responses were identical",
+          "The other response also admitted fault immediately",
+          "The other response argued, compared itself favorably, and treated correction as an insult",
+          "There is no other response mentioned"
+        ],
+        "correctIndex": 2,
+        "explanation": "The contrasting response argued, compared itself favorably to what it had been asked to honor, and treated correction as an insult rather than information."
+      },
+      {
+        "question": "What does the narrator say determined what came next after Adam's admission?",
+        "options": [
+          "The severity of the offense alone",
+          "Nothing determined the outcome",
+          "A lengthy period of punishment first",
+          "The sincerity of the admission itself, more than the severity of the offense"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator suggests the sincerity of the admission, more than the severity of the offense, determined what followed."
+      },
+      {
+        "question": "What broader idea does the narrator draw about repentance from this story?",
+        "options": [
+          "Repentance was built into the architecture of being human from its earliest chapter",
+          "Repentance was added later as a concession",
+          "Repentance is only for prophets",
+          "Repentance guarantees no consequences at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator concludes repentance was built into the architecture of being human from its earliest chapter, not appended later."
+      },
+      {
+        "question": "What central claim does “Adam's Repentance and the Grammar of Owning a Mistake” develop?",
+        "options": [
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Repentance begins with owning error rather than transferring blame.",
+          "Learning may require patience with knowledge not immediately explained.",
+          "Judgment requires hearing what an initial appearance may conceal."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Adam's Repentance and the Grammar of Owning a Mistake”?",
+        "options": [
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "Adam’s response is contrasted with evasion after a mistake.",
+          "The visitors’ dispute exposes a conclusion reached too quickly."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Adam's Repentance and the Grammar of Owning a Mistake”?",
+        "options": [
+          "A sacred account should not be expanded with invented motives.",
+          "Narrative lessons do not license certainty about unseen causes today.",
+          "Historical retelling must distinguish reliable detail from embellishment.",
+          "A moral lesson cannot establish another person’s private sincerity."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “Adam's Repentance and the Grammar of Owning a Mistake”?",
+        "options": [
+          "The discussion draws principle without inventing details beyond the text.",
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The account is approached through recognised sources and qualified teaching.",
+          "The account cautions listeners against confident verdicts without full evidence."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “Adam's Repentance and the Grammar of Owning a Mistake”?",
+        "options": [
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Accountability is strengthened when explanation does not become excuse.",
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Justice depends on revisable reasoning rather than first impressions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-prophets-04",
@@ -102,33 +447,150 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Ustadzah Rina", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Ustadzah Rina",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [curious] Ustadzah Rina, the story of the two disputants who scaled the wall of Dawud's private chamber is such an odd, almost theatrical way to deliver a lesson. What's actually happening there?",
-      "Ustadzah Rina: [pleasant] It is theatrical, deliberately so. Two figures appear where visitors shouldn't be able to reach him, and Dawud, understandably startled, assumes some kind of intrusion or threat.",
-      "Host: [interested] But they reassure him quickly, don't they, before presenting what seems like an ordinary property dispute?",
-      "Ustadzah Rina: [nodding] Yes, one claims ninety-nine ewes to the other's single ewe, and insists his brother wants to fold that lone ewe into his own already considerable flock.",
-      "Host: [thoughtful] A fairly mundane grievance, on the surface, hardly worthy of such an elaborate entrance.",
-      "Ustadzah Rina: [firm] And that's precisely what makes Dawud's instant reaction so revealing. He rules immediately, without hearing the second party at all, that the request is indeed unjust.",
-      "Host: [surprised] He rules without hearing both sides properly? That seems like a striking lapse for someone renowned for wisdom and judgment.",
-      "Ustadzah Rina: [warm] It is, and the text doesn't soften that fact for our comfort. Dawud himself immediately senses he has been tested, and the response is instant, unhesitating repentance.",
-      "Host: [curious] What exactly had he been tested on, if the ruling itself was arguably correct on its face?",
-      "Ustadzah Rina: [reflective] Not the content of the ruling, but the procedure behind it. Even a familiar-sounding grievance deserves both parties heard, deliberation rather than reflexive certainty.",
-      "Ustadzah Rina: [thoughtful] There's also a broader resonance: Dawud himself possessed considerable wealth and wives, and the parable gestures, gently but unmistakably, toward questions of desire and sufficiency.",
-      "Host: [thoughtful] So the wall-scaling visitors weren't really about sheep at all.",
-      "Ustadzah Rina: [warm] Not primarily, no. They were a mirror, held up abruptly enough that reflexive judgment couldn't dress itself up as careful wisdom before he'd examined it honestly.",
-      "Host: [reflective] And his response to being caught in that reflex is itself instructive.",
-      "Ustadzah Rina: [gently] Precisely. He fell in prostration and sought forgiveness immediately, without excuse, and that unhesitating humility is arguably the actual point of the whole episode."
+      "Host: [thoughtful] Ustadzah Rina, the story of the two disputants who scaled the wall of Dawud's private chamber is such an odd, almost theatrical way to deliver a lesson. What's actually happening there?",
+      "Ustadzah Rina: It is theatrical, deliberately so. Two figures appear where visitors shouldn't be able to reach him, and Dawud, understandably startled, assumes some kind of intrusion or threat.",
+      "Host: [carefully] But they reassure him quickly, don't they, before presenting what seems like an ordinary property dispute?",
+      "Ustadzah Rina: Yes, one claims ninety-nine ewes to the other's single ewe, and insists his brother wants to fold that lone ewe into his own already considerable flock.",
+      "Host: [reflective] A fairly mundane grievance, on the surface, hardly worthy of such an elaborate entrance.",
+      "Ustadzah Rina: And that's precisely what makes Dawud's instant reaction so revealing. He rules immediately, without hearing the second party at all, that the request is indeed unjust.",
+      "Host: [honestly] He rules without hearing both sides properly? That seems like a striking lapse for someone renowned for wisdom and judgment.",
+      "Ustadzah Rina: It is, and the text doesn't soften that fact for our comfort. Dawud himself immediately senses he has been tested, and the response is instant, unhesitating repentance.",
+      "Host: [gently] What exactly had he been tested on, if the ruling itself was arguably correct on its face?",
+      "Ustadzah Rina: Not the content of the ruling, but the procedure behind it. Even a familiar-sounding grievance deserves both parties heard, deliberation rather than reflexive certainty.",
+      "Ustadzah Rina: [calmly] There's also a broader resonance: Dawud himself possessed considerable wealth and wives, and the parable gestures, gently but unmistakably, toward questions of desire and sufficiency.",
+      "Host: So the wall-scaling visitors weren't really about sheep at all.",
+      "Ustadzah Rina: [encouraging] Not primarily, no. They were a mirror, held up abruptly enough that reflexive judgment couldn't dress itself up as careful wisdom before he'd examined it honestly.",
+      "Host: And his response to being caught in that reflex is itself instructive.",
+      "Ustadzah Rina: [seriously] Precisely. He fell in prostration and sought forgiveness immediately, without excuse, and that unhesitating humility is arguably the actual point of the whole episode."
     ],
     "quiz": [
-      { "question": "How did the two disputants reach Dawud?", "options": ["Through the front gate with an appointment", "By scaling the wall of his private chamber", "By sending a written letter", "Through a public court session"], "correctIndex": 1, "explanation": "Two figures appeared by scaling the wall of Dawud's private chamber, where visitors shouldn't have been able to reach him." },
-      { "question": "What was the dispute the two men presented?", "options": ["A dispute over land ownership", "One claimed ninety-nine ewes while accusing the other, who had one ewe, of wanting it added to his flock", "A dispute over a debt", "A disagreement about inheritance"], "correctIndex": 1, "explanation": "One claimed ninety-nine ewes and said his brother wanted to fold the other's single ewe into an already large flock." },
-      { "question": "What mistake did Dawud make in his initial ruling?", "options": ["He ruled in favor of the wrong party entirely", "He ruled immediately without hearing the second party at all", "He refused to rule on the matter", "He asked for a bribe before ruling"], "correctIndex": 1, "explanation": "He ruled immediately that the request was unjust without hearing the second party at all." },
-      { "question": "According to Ustadzah Rina, what was Dawud actually being tested on?", "options": ["The correctness of the ruling's content", "The procedure behind the ruling, since even familiar grievances deserve both parties heard", "His wealth and generosity", "His physical courage"], "correctIndex": 1, "explanation": "She explains he was tested on the procedure, not the content, since deliberation was needed rather than reflexive certainty." },
-      { "question": "How did Dawud respond once he realized he had been tested?", "options": ["He denied any wrongdoing", "He fell in prostration and sought forgiveness immediately, without excuse", "He questioned the two visitors further", "He punished the visitors for intruding"], "correctIndex": 1, "explanation": "He fell in prostration and sought forgiveness immediately, without excuse, which is presented as the point of the episode." }
-    ]
+      {
+        "question": "How did the two disputants reach Dawud?",
+        "options": [
+          "By scaling the wall of his private chamber",
+          "Through the front gate with an appointment",
+          "By sending a written letter",
+          "Through a public court session"
+        ],
+        "correctIndex": 0,
+        "explanation": "Two figures appeared by scaling the wall of Dawud's private chamber, where visitors shouldn't have been able to reach him."
+      },
+      {
+        "question": "Why does the account caution against an immediate judgment?",
+        "options": [
+          "Every historical dispute has the same legal answer.",
+          "The initial appearance omits facts needed for a just conclusion.",
+          "Listening to both parties always removes uncertainty.",
+          "Source criticism makes moral lessons impossible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account highlights the need to revisit an initial conclusion when relevant facts were not yet heard."
+      },
+      {
+        "question": "What mistake did Dawud make in his initial ruling?",
+        "options": [
+          "He ruled in favor of the wrong party entirely",
+          "He refused to rule on the matter",
+          "He ruled immediately without hearing the second party at all",
+          "He asked for a bribe before ruling"
+        ],
+        "correctIndex": 2,
+        "explanation": "He ruled immediately that the request was unjust without hearing the second party at all."
+      },
+      {
+        "question": "According to Ustadzah Rina, what was Dawud actually being tested on?",
+        "options": [
+          "The correctness of the ruling's content",
+          "His wealth and generosity",
+          "His physical courage",
+          "The procedure behind the ruling, since even familiar grievances deserve both parties heard"
+        ],
+        "correctIndex": 3,
+        "explanation": "She explains he was tested on the procedure, not the content, since deliberation was needed rather than reflexive certainty."
+      },
+      {
+        "question": "How did Dawud respond once he realized he had been tested?",
+        "options": [
+          "He fell in prostration and sought forgiveness immediately, without excuse",
+          "He denied any wrongdoing",
+          "He questioned the two visitors further",
+          "He punished the visitors for intruding"
+        ],
+        "correctIndex": 0,
+        "explanation": "He fell in prostration and sought forgiveness immediately, without excuse, which is presented as the point of the episode."
+      },
+      {
+        "question": "What central claim does “Two Visitors, a Scaled Wall, and a Judgment Dawud Nearly Missed” develop?",
+        "options": [
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Judgment requires hearing what an initial appearance may conceal.",
+          "Learning may require patience with knowledge not immediately explained.",
+          "Repentance begins with owning error rather than transferring blame."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Two Visitors, a Scaled Wall, and a Judgment Dawud Nearly Missed”?",
+        "options": [
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "The visitors’ dispute exposes a conclusion reached too quickly.",
+          "Adam’s response is contrasted with evasion after a mistake."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Two Visitors, a Scaled Wall, and a Judgment Dawud Nearly Missed”?",
+        "options": [
+          "A sacred account should not be expanded with invented motives.",
+          "Narrative lessons do not license certainty about unseen causes today.",
+          "A moral lesson cannot establish another person’s private sincerity.",
+          "Historical retelling must distinguish reliable detail from embellishment."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “Two Visitors, a Scaled Wall, and a Judgment Dawud Nearly Missed”?",
+        "options": [
+          "The account cautions listeners against confident verdicts without full evidence.",
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The account is approached through recognised sources and qualified teaching.",
+          "The discussion draws principle without inventing details beyond the text."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “Two Visitors, a Scaled Wall, and a Judgment Dawud Nearly Missed”?",
+        "options": [
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Justice depends on revisable reasoning rather than first impressions.",
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Accountability is strengthened when explanation does not become excuse."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-prophets-05",
@@ -137,29 +599,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] Long before the fire, before the catapult and the miraculous coolness that followed it, Ibrahim's rebellion against his community began with something far quieter: a question asked, apparently, in genuine curiosity.",
-      "Narrator: [reflective] He asked his father why he devoted himself to carved objects that could neither hear a request nor answer one, a question so simple it barely qualifies as confrontation.",
-      "Narrator: [thoughtful] Rebuffed, he escalated methodically rather than dramatically, reasoning through celestial bodies one by one, testing each candidate for worship against a single, ruthless criterion: does it endure?",
-      "Narrator: [firm] A star, admired at dusk, disappeared by dawn, disqualifying itself simply by vanishing. The moon followed the same pattern, luminous and then, predictably, gone.",
+      "Narrator: [thoughtful] Long before the fire, before the catapult and the miraculous coolness that followed it, Ibrahim's rebellion against his community began with something far quieter: a question asked, apparently, in genuine curiosity.",
+      "Narrator: He asked his father why he devoted himself to carved objects that could neither hear a request nor answer one, a question so simple it barely qualifies as confrontation.",
+      "Narrator: [carefully] Rebuffed, he escalated methodically rather than dramatically, reasoning through celestial bodies one by one, testing each candidate for worship against a single, ruthless criterion: does it endure?",
+      "Narrator: A star, admired at dusk, disappeared by dawn, disqualifying itself simply by vanishing. The moon followed the same pattern, luminous and then, predictably, gone.",
       "Narrator: [reflective] Even the sun, grander than either, submitted to the identical logic; magnificence that sets is magnificence still ultimately governed by something greater than itself.",
-      "Narrator: [thoughtful] Only then did he arrive at his actual conclusion, that his devotion belonged to whoever had originated the heavens and earth entirely, a reasoning built from observation rather than merely inherited assumption.",
-      "Narrator: [wry] The idols themselves he later dismantled physically, smashing every one except the largest, upon whose shoulder he hung the axe, inviting his community to interrogate the survivor.",
-      "Narrator: [dry] Brought before the assembly, he suggested, with an almost audible straight face, that they simply ask the largest idol what had happened, since it was, after all, standing right there.",
-      "Narrator: [firm] The crowd's own logic collapsed under the question; they knew perfectly well stone doesn't speak, and yet condemning him required momentarily pretending it might.",
-      "Narrator: [somber] Unable to answer the argument, the empire answered instead with fire, constructing a blaze large enough that ordinary methods of ignition proved insufficient for the task.",
-      "Narrator: [warm] The famous instruction that followed, that the fire be coolness and safety for him, doesn't erase the flames; it simply reminds us that the one who kindles need not be the one who governs.",
-      "Narrator: [peacefully] What endures from that episode isn't chiefly the miracle, remarkable as it is, but the method preceding it: patient, escalating reasoning, offered to people who preferred inherited certainty to any actual scrutiny."
+      "Narrator: Only then did he arrive at his actual conclusion, that his devotion belonged to whoever had originated the heavens and earth entirely, a reasoning built from observation rather than merely inherited assumption.",
+      "Narrator: [honestly] The idols themselves he later dismantled physically, smashing every one except the largest, upon whose shoulder he hung the axe, inviting his community to interrogate the survivor.",
+      "Narrator: Brought before the assembly, he suggested, with an almost audible straight face, that they simply ask the largest idol what had happened, since it was, after all, standing right there.",
+      "Narrator: [gently] The crowd's own logic collapsed under the question; they knew perfectly well stone doesn't speak, and yet condemning him required momentarily pretending it might.",
+      "Narrator: Unable to answer the argument, the empire answered instead with fire, constructing a blaze large enough that ordinary methods of ignition proved insufficient for the task.",
+      "Narrator: [calmly] The famous instruction that followed, that the fire be coolness and safety for him, doesn't erase the flames; it simply reminds us that the one who kindles need not be the one who governs.",
+      "Narrator: What endures from that episode isn't chiefly the miracle, remarkable as it is, but the method preceding it: patient, escalating reasoning, offered to people who preferred inherited certainty to any actual scrutiny."
     ],
     "quiz": [
-      { "question": "How did Ibrahim's rebellion against his community begin, according to the narrator?", "options": ["With an act of violence against the idols", "With a quiet question asked in apparent genuine curiosity", "With a public speech to the whole town", "With a direct confrontation with the king"], "correctIndex": 1, "explanation": "It began with a quiet question to his father about why he worshipped carved objects that could neither hear nor answer." },
-      { "question": "What criterion did Ibrahim use to test the star, moon, and sun as objects of worship?", "options": ["Their brightness", "Whether they endured, since each one eventually set or disappeared", "Their size", "Their color"], "correctIndex": 1, "explanation": "He tested each against whether it endured; the star, moon, and sun all disqualified themselves by setting or disappearing." },
-      { "question": "What did Ibrahim do to the idols, leaving one exception?", "options": ["He hid them all", "He smashed every one except the largest, hanging the axe on its shoulder", "He painted over them", "He sold them"], "correctIndex": 1, "explanation": "He smashed every idol except the largest, upon whose shoulder he hung the axe." },
-      { "question": "What suggestion did Ibrahim make to the assembled crowd?", "options": ["That they rebuild the idols immediately", "That they simply ask the largest idol what had happened, since it was standing right there", "That they punish him without question", "That they abandon idol worship immediately"], "correctIndex": 1, "explanation": "He suggested they ask the largest idol what happened, since it was right there, exposing the absurdity of their belief." },
-      { "question": "What does the narrator say endures most from this episode?", "options": ["Only the miracle of the fire becoming cool", "The method of patient, escalating reasoning offered to people who preferred inherited certainty", "The destruction of the idols alone", "The size of the fire built against him"], "correctIndex": 1, "explanation": "The narrator says what endures is chiefly the method of patient, escalating reasoning, not merely the miracle of the fire." }
-    ]
+      {
+        "question": "How did Ibrahim's rebellion against his community begin, according to the narrator?",
+        "options": [
+          "With a quiet question asked in apparent genuine curiosity",
+          "With an act of violence against the idols",
+          "With a public speech to the whole town",
+          "With a direct confrontation with the king"
+        ],
+        "correctIndex": 0,
+        "explanation": "It began with a quiet question to his father about why he worshipped carved objects that could neither hear nor answer."
+      },
+      {
+        "question": "What criterion did Ibrahim use to test the star, moon, and sun as objects of worship?",
+        "options": [
+          "Their brightness",
+          "Whether they endured, since each one eventually set or disappeared",
+          "Their size",
+          "Their color"
+        ],
+        "correctIndex": 1,
+        "explanation": "He tested each against whether it endured; the star, moon, and sun all disqualified themselves by setting or disappearing."
+      },
+      {
+        "question": "What did Ibrahim do to the idols, leaving one exception?",
+        "options": [
+          "He hid them all",
+          "He painted over them",
+          "He smashed every one except the largest, hanging the axe on its shoulder",
+          "He sold them"
+        ],
+        "correctIndex": 2,
+        "explanation": "He smashed every idol except the largest, upon whose shoulder he hung the axe."
+      },
+      {
+        "question": "What suggestion did Ibrahim make to the assembled crowd?",
+        "options": [
+          "That they rebuild the idols immediately",
+          "That they punish him without question",
+          "That they abandon idol worship immediately",
+          "That they simply ask the largest idol what had happened, since it was standing right there"
+        ],
+        "correctIndex": 3,
+        "explanation": "He suggested they ask the largest idol what happened, since it was right there, exposing the absurdity of their belief."
+      },
+      {
+        "question": "What does the narrator say endures most from this episode?",
+        "options": [
+          "The method of patient, escalating reasoning offered to people who preferred inherited certainty",
+          "Only the miracle of the fire becoming cool",
+          "The destruction of the idols alone",
+          "The size of the fire built against him"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator says what endures is chiefly the method of patient, escalating reasoning, not merely the miracle of the fire."
+      },
+      {
+        "question": "What central claim does “Ibrahim's Argument With an Empire That Worshipped Itself” develop?",
+        "options": [
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Tawhid challenges power that treats itself as ultimate.",
+          "Learning may require patience with knowledge not immediately explained.",
+          "Repentance begins with owning error rather than transferring blame."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Ibrahim's Argument With an Empire That Worshipped Itself”?",
+        "options": [
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "Ibrahim’s reasoning exposes the limits of an empire’s self-worship.",
+          "Adam’s response is contrasted with evasion after a mistake."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Ibrahim's Argument With an Empire That Worshipped Itself”?",
+        "options": [
+          "A sacred account should not be expanded with invented motives.",
+          "Narrative lessons do not license certainty about unseen causes today.",
+          "A moral lesson cannot establish another person’s private sincerity.",
+          "The narrative should not be used to declare hidden motives in living people."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “Ibrahim's Argument With an Empire That Worshipped Itself”?",
+        "options": [
+          "Source-aware teaching separates clear principle from modern political analogy.",
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The account is approached through recognised sources and qualified teaching.",
+          "The discussion draws principle without inventing details beyond the text."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “Ibrahim's Argument With an Empire That Worshipped Itself”?",
+        "options": [
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Faithful critique can oppose false absolutes without careless judgment.",
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Accountability is strengthened when explanation does not become excuse."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-prophets-06",
@@ -168,34 +744,151 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Pak Darmawan", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Pak Darmawan",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [curious] Pak Darmawan, when people imagine a conquering army entering a city that had exiled and warred against its leader for years, they imagine reprisal. Mecca offers something quite different.",
-      "Pak Darmawan: [thoughtful] It does, and that difference is precisely why the episode rewards close attention rather than a quick, congratulatory summary.",
-      "Host: [interested] Remind our listeners of the history briefly. These weren't strangers to Muhammad; this was the city that had boycotted, tortured, and driven out his followers.",
-      "Pak Darmawan: [measured] Exactly, and some of the very people now facing him at the gates of their own defeated city had orchestrated or celebrated those earlier cruelties directly.",
-      "Host: [pointed] So there was ample precedent, even by the standards of the era, for a punitive entrance.",
-      "Pak Darmawan: [nodding] Ample precedent, and considerable expectation of it, too. Many in Mecca braced for exactly that outcome, having calculated the odds and prepared accordingly for the worst.",
-      "Host: [curious] What happened instead?",
-      "Pak Darmawan: [warm] He entered, by most accounts, in a posture of humility rather than triumph, and when the city was fully secured, he asked the assembled Meccans what they expected of him.",
-      "Host: [interested] And their answer?",
-      "Pak Darmawan: [reflective] They answered, tellingly, that they expected good, invoking the memory of him as a noble brother and a noble nephew, appealing to a relationship rather than a right.",
-      "Host: [thoughtful] What was his reply?",
-      "Pak Darmawan: [firm] Go, for you are free, echoing almost precisely the words Yusuf once offered his own brothers centuries earlier, a deliberate, unmistakable allusion for anyone who knew the older story.",
-      "Host: [reflective] That's a striking parallel, forgiveness at the height of power, extended to people who had shown him none.",
-      "Pak Darmawan: [thoughtful] It is, and I think the parallel is intentional rather than coincidental, given how thoroughly that earlier story would have been known to everyone listening that day.",
-      "Host: [warm] What does that restraint actually communicate, in your view, beyond simple mercy?",
-      "Pak Darmawan: [warm] That power exercised without cruelty isn't weakness pretending otherwise; it's often the clearest demonstration available of what real strength was for in the first place."
+      "Host: [thoughtful] Pak Darmawan, when people imagine a conquering army entering a city that had exiled and warred against its leader for years, they imagine reprisal. Mecca offers something quite different.",
+      "Pak Darmawan: It does, and that difference is precisely why the episode rewards close attention rather than a quick, congratulatory summary.",
+      "Host: [carefully] Remind our listeners of the history briefly. These weren't strangers to Muhammad; this was the city that had boycotted, tortured, and driven out his followers.",
+      "Pak Darmawan: Exactly, and some of the very people now facing him at the gates of their own defeated city had orchestrated or celebrated those earlier cruelties directly.",
+      "Host: [reflective] So there was ample precedent, even by the standards of the era, for a punitive entrance.",
+      "Pak Darmawan: Ample precedent, and considerable expectation of it, too. Many in Mecca braced for exactly that outcome, having calculated the odds and prepared accordingly for the worst.",
+      "Host: [honestly] What happened instead?",
+      "Pak Darmawan: He entered, by most accounts, in a posture of humility rather than triumph, and when the city was fully secured, he asked the assembled Meccans what they expected of him.",
+      "Host: [gently] And their answer?",
+      "Pak Darmawan: They answered, tellingly, that they expected good, invoking the memory of him as a noble brother and a noble nephew, appealing to a relationship rather than a right.",
+      "Host: [calmly] What was his reply?",
+      "Pak Darmawan: Go, for you are free, echoing almost precisely the words Yusuf once offered his own brothers centuries earlier, a deliberate, unmistakable allusion for anyone who knew the older story.",
+      "Host: [encouraging] That's a striking parallel, forgiveness at the height of power, extended to people who had shown him none.",
+      "Pak Darmawan: It is, and I think the parallel is intentional rather than coincidental, given how thoroughly that earlier story would have been known to everyone listening that day.",
+      "Host: [seriously] What does that restraint actually communicate, in your view, beyond simple mercy?",
+      "Pak Darmawan: That power exercised without cruelty isn't weakness pretending otherwise; it's often the clearest demonstration available of what real strength was for in the first place."
     ],
     "quiz": [
-      { "question": "What history did Mecca have with Muhammad before the conquest, according to the discussion?", "options": ["A peaceful, uneventful relationship", "The city had boycotted, tortured, and driven out his followers", "They had always been allies", "There was no prior conflict"], "correctIndex": 1, "explanation": "Mecca was the city that had boycotted, tortured, and driven out his followers, with some now facing him at the gates." },
-      { "question": "What did many in Mecca expect when the city was defeated?", "options": ["A peaceful welcome", "A punitive entrance, given ample historical precedent", "Immediate exile of all citizens", "No consequences at all"], "correctIndex": 1, "explanation": "Many in Mecca braced for a punitive entrance, having calculated the odds and prepared for the worst." },
-      { "question": "How did Muhammad enter the city, according to Pak Darmawan?", "options": ["In a posture of triumph and celebration", "In a posture of humility rather than triumph", "Accompanied by a punitive display of force", "Secretly, avoiding public attention"], "correctIndex": 1, "explanation": "By most accounts, he entered in a posture of humility rather than triumph." },
-      { "question": "What answer did the Meccans give when asked what they expected of him?", "options": ["They expected punishment", "They expected good, invoking his memory as a noble brother and nephew", "They refused to answer", "They demanded he leave the city"], "correctIndex": 1, "explanation": "They answered that they expected good, invoking the memory of him as a noble brother and a noble nephew." },
-      { "question": "What earlier story does Muhammad's reply, 'Go, for you are free,' deliberately echo?", "options": ["The story of Musa and Pharaoh", "Yusuf's words to the brothers who had wronged him", "The story of Nuh's flood", "There is no intended echo"], "correctIndex": 1, "explanation": "The reply echoes almost precisely the words Yusuf once offered his own brothers, a deliberate allusion." }
-    ]
+      {
+        "question": "What history did Mecca have with Muhammad before the conquest, according to the discussion?",
+        "options": [
+          "The city had boycotted, tortured, and driven out his followers",
+          "A peaceful, uneventful relationship",
+          "They had always been allies",
+          "There was no prior conflict"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mecca was the city that had boycotted, tortured, and driven out his followers, with some now facing him at the gates."
+      },
+      {
+        "question": "What did many in Mecca expect when the city was defeated?",
+        "options": [
+          "A peaceful welcome",
+          "A punitive entrance, given ample historical precedent",
+          "Immediate exile of all citizens",
+          "No consequences at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "Many in Mecca braced for a punitive entrance, having calculated the odds and prepared for the worst."
+      },
+      {
+        "question": "How did Muhammad enter the city, according to Pak Darmawan?",
+        "options": [
+          "In a posture of triumph and celebration",
+          "Accompanied by a punitive display of force",
+          "In a posture of humility rather than triumph",
+          "Secretly, avoiding public attention"
+        ],
+        "correctIndex": 2,
+        "explanation": "By most accounts, he entered in a posture of humility rather than triumph."
+      },
+      {
+        "question": "What answer did the Meccans give when asked what they expected of him?",
+        "options": [
+          "They expected punishment",
+          "They refused to answer",
+          "They demanded he leave the city",
+          "They expected good, invoking his memory as a noble brother and nephew"
+        ],
+        "correctIndex": 3,
+        "explanation": "They answered that they expected good, invoking the memory of him as a noble brother and a noble nephew."
+      },
+      {
+        "question": "What earlier story does Muhammad's reply, 'Go, for you are free,' deliberately echo?",
+        "options": [
+          "Yusuf's words to the brothers who had wronged him",
+          "The story of Musa and Pharaoh",
+          "The story of Nuh's flood",
+          "There is no intended echo"
+        ],
+        "correctIndex": 0,
+        "explanation": "The reply echoes almost precisely the words Yusuf once offered his own brothers, a deliberate allusion."
+      },
+      {
+        "question": "What central claim does “The Conquest That Chose Not to Look Like One” develop?",
+        "options": [
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Mercy in victory can carry more force than spectacle.",
+          "Learning may require patience with knowledge not immediately explained.",
+          "Repentance begins with owning error rather than transferring blame."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Conquest That Chose Not to Look Like One”?",
+        "options": [
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "The conquest account contrasts restraint with expected domination.",
+          "Adam’s response is contrasted with evasion after a mistake."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “The Conquest That Chose Not to Look Like One”?",
+        "options": [
+          "A sacred account should not be expanded with invented motives.",
+          "Narrative lessons do not license certainty about unseen causes today.",
+          "A moral lesson cannot establish another person’s private sincerity.",
+          "Retelling should not add dramatic speech not established by sources."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “The Conquest That Chose Not to Look Like One”?",
+        "options": [
+          "The lesson encourages mercy without issuing personal rulings from history.",
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The account is approached through recognised sources and qualified teaching.",
+          "The discussion draws principle without inventing details beyond the text."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “The Conquest That Chose Not to Look Like One”?",
+        "options": [
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Sacred history is honoured through accuracy as well as inspiration.",
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Accountability is strengthened when explanation does not become excuse."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-prophets-07",
@@ -204,28 +897,593 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Sulaiman's story is often remembered for its scale, kingdoms, jinn, winds commanded at will, and it's easy, amid all that grandeur, to overlook the moment involving a single, unremarkable ant.",
-      "Narrator: [thoughtful] Marching his considerable army through a valley, he heard, or was made to understand, an ant instructing its colony to retreat quickly, lest Sulaiman's forces crush them without ever noticing.",
-      "Narrator: [warm] What happened next is the detail worth sitting with: he smiled, genuinely amused and moved, and immediately halted an army of extraordinary scale for the sake of insects he'd never otherwise have registered.",
-      "Narrator: [reflective] Power of that magnitude rarely pauses for anything so small; empires are built, historically, on the assumption that smallness simply doesn't register on the ledger of consequence.",
-      "Narrator: [firm] Yet Sulaiman's response wasn't merely tolerance; it was gratitude, praying explicitly to be kept thankful for blessings that included, apparently, the very capacity to overhear an ant's warning at all.",
-      "Narrator: [thoughtful] That gratitude is instructive precisely because it wasn't directed at the grand blessings alone, the throne, the command of wind and jinn, but at something almost comically minor by comparison.",
-      "Narrator: [reflective] Elsewhere in his story, a similarly humbling posture recurs: the hoopoe bird's report of a queen ruling a prosperous kingdom that worshipped the sun rather than its actual originator.",
-      "Narrator: [thoughtful] Sulaiman didn't dismiss information arriving from something so unlikely as a bird; he verified it carefully, then acted through invitation and diplomacy rather than immediate, overwhelming force.",
-      "Narrator: [warm] The letter he sent the queen was notably restrained in tone, an invitation to consider truth rather than a demand issued from unquestionable strength.",
-      "Narrator: [reflective] She, for her part, responded with unusual political shrewdness, testing his intentions with gifts before ultimately visiting him and recognizing, on her own reasoning, where true sovereignty actually resided.",
-      "Narrator: [thoughtful] What connects the ant and the queen, oddly enough, is the same quality: a ruler secure enough in real power to listen carefully to voices far beneath his evident station.",
-      "Narrator: [peacefully] Sulaiman's kingdom is remembered for its vastness, certainly, but perhaps it should be remembered equally for how attentively that vastness bent down to notice what was small."
+      "Narrator: [thoughtful] Sulaiman's story is often remembered for its scale, kingdoms, jinn, winds commanded at will, and it's easy, amid all that grandeur, to overlook the moment involving a single, unremarkable ant.",
+      "Narrator: Marching his considerable army through a valley, he heard, or was made to understand, an ant instructing its colony to retreat quickly, lest Sulaiman's forces crush them without ever noticing.",
+      "Narrator: [carefully] What happened next is the detail worth sitting with: he smiled, genuinely amused and moved, and immediately halted an army of extraordinary scale for the sake of insects he'd never otherwise have registered.",
+      "Narrator: Power of that magnitude rarely pauses for anything so small; empires are built, historically, on the assumption that smallness simply doesn't register on the ledger of consequence.",
+      "Narrator: [reflective] Yet Sulaiman's response wasn't merely tolerance; it was gratitude, praying explicitly to be kept thankful for blessings that included, apparently, the very capacity to overhear an ant's warning at all.",
+      "Narrator: That gratitude is instructive precisely because it wasn't directed at the grand blessings alone, the throne, the command of wind and jinn, but at something almost comically minor by comparison.",
+      "Narrator: [honestly] Elsewhere in his story, a similarly humbling posture recurs: the hoopoe bird's report of a queen ruling a prosperous kingdom that worshipped the sun rather than its actual originator.",
+      "Narrator: Sulaiman didn't dismiss information arriving from something so unlikely as a bird; he verified it carefully, then acted through invitation and diplomacy rather than immediate, overwhelming force.",
+      "Narrator: [gently] The letter he sent the queen was notably restrained in tone, an invitation to consider truth rather than a demand issued from unquestionable strength.",
+      "Narrator: She, for her part, responded with unusual political shrewdness, testing his intentions with gifts before ultimately visiting him and recognizing, on her own reasoning, where true sovereignty actually resided.",
+      "Narrator: [calmly] What connects the ant and the queen, oddly enough, is the same quality: a ruler secure enough in real power to listen carefully to voices far beneath his evident station.",
+      "Narrator: Sulaiman's kingdom is remembered for its vastness, certainly, but perhaps it should be remembered equally for how attentively that vastness bent down to notice what was small."
     ],
     "quiz": [
-      { "question": "What did the ant instruct its colony to do as Sulaiman's army approached?", "options": ["To attack the army", "To retreat quickly so they would not be crushed unnoticed", "To hide underground permanently", "To ignore the army completely"], "correctIndex": 1, "explanation": "The ant instructed its colony to retreat quickly, lest Sulaiman's forces crush them without ever noticing." },
-      { "question": "How did Sulaiman respond upon hearing the ant's warning?", "options": ["He ignored it and continued marching", "He smiled, was genuinely moved, and halted his army for the sake of the ants", "He punished the ant for speaking", "He ordered the valley destroyed"], "correctIndex": 1, "explanation": "He smiled, genuinely amused and moved, and immediately halted his extraordinary army for the ants' sake." },
-      { "question": "What did Sulaiman pray for after this encounter?", "options": ["A larger kingdom", "To be kept thankful for his blessings, including the capacity to overhear the ant's warning", "Victory over all his enemies", "Longer life"], "correctIndex": 1, "explanation": "He prayed explicitly to be kept thankful for blessings that included the capacity to overhear an ant's warning at all." },
-      { "question": "What information did the hoopoe bird bring to Sulaiman?", "options": ["News of an approaching storm", "A report of a queen ruling a prosperous kingdom that worshipped the sun", "News of a hidden treasure", "A request for help from another kingdom"], "correctIndex": 1, "explanation": "The hoopoe reported a queen ruling a prosperous kingdom that worshipped the sun rather than its actual originator." },
-      { "question": "What quality does the narrator say connects the ant episode and the queen episode?", "options": ["Sulaiman's wealth", "A ruler secure enough in real power to listen carefully to voices far beneath his station", "Sulaiman's military strength", "The size of his kingdom alone"], "correctIndex": 1, "explanation": "The narrator says both episodes show a ruler secure enough in real power to listen carefully to voices far beneath his evident station." }
-    ]
+      {
+        "question": "What did the ant instruct its colony to do as Sulaiman's army approached?",
+        "options": [
+          "To retreat quickly so they would not be crushed unnoticed",
+          "To attack the army",
+          "To hide underground permanently",
+          "To ignore the army completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "The ant instructed its colony to retreat quickly, lest Sulaiman's forces crush them without ever noticing."
+      },
+      {
+        "question": "How did Sulaiman respond upon hearing the ant's warning?",
+        "options": [
+          "He ignored it and continued marching",
+          "He smiled, was genuinely moved, and halted his army for the sake of the ants",
+          "He punished the ant for speaking",
+          "He ordered the valley destroyed"
+        ],
+        "correctIndex": 1,
+        "explanation": "He smiled, genuinely amused and moved, and immediately halted his extraordinary army for the ants' sake."
+      },
+      {
+        "question": "What did Sulaiman pray for after this encounter?",
+        "options": [
+          "A larger kingdom",
+          "Victory over all his enemies",
+          "To be kept thankful for his blessings, including the capacity to overhear the ant's warning",
+          "Longer life"
+        ],
+        "correctIndex": 2,
+        "explanation": "He prayed explicitly to be kept thankful for blessings that included the capacity to overhear an ant's warning at all."
+      },
+      {
+        "question": "What information did the hoopoe bird bring to Sulaiman?",
+        "options": [
+          "News of an approaching storm",
+          "News of a hidden treasure",
+          "A request for help from another kingdom",
+          "A report of a queen ruling a prosperous kingdom that worshipped the sun"
+        ],
+        "correctIndex": 3,
+        "explanation": "The hoopoe reported a queen ruling a prosperous kingdom that worshipped the sun rather than its actual originator."
+      },
+      {
+        "question": "What quality does the narrator say connects the ant episode and the queen episode?",
+        "options": [
+          "A ruler secure enough in real power to listen carefully to voices far beneath his station",
+          "Sulaiman's wealth",
+          "Sulaiman's military strength",
+          "The size of his kingdom alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator says both episodes show a ruler secure enough in real power to listen carefully to voices far beneath his evident station."
+      },
+      {
+        "question": "What central claim does “Sulaiman, the Ant, and an Army That Learned to Listen” develop?",
+        "options": [
+          "Forgiveness can reject revenge without denying the wrong.",
+          "Attentive leadership notices voices easily dismissed as small.",
+          "Learning may require patience with knowledge not immediately explained.",
+          "Repentance begins with owning error rather than transferring blame."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Sulaiman, the Ant, and an Army That Learned to Listen”?",
+        "options": [
+          "Yusuf’s response interrupts the brothers’ expected retribution.",
+          "Musa’s questions reveal the tension between appearance and later understanding.",
+          "The ant narrative highlights listening within the movement of an army.",
+          "Adam’s response is contrasted with evasion after a mistake."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Sulaiman, the Ant, and an Army That Learned to Listen”?",
+        "options": [
+          "A sacred account should not be expanded with invented motives.",
+          "Narrative lessons do not license certainty about unseen causes today.",
+          "A moral lesson cannot establish another person’s private sincerity.",
+          "A concise account should not be inflated into unsupported detail."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "Which source-aware response best expresses the stance in “Sulaiman, the Ant, and an Army That Learned to Listen”?",
+        "options": [
+          "The lesson invites care for consequences without claims about unseen intentions.",
+          "The lesson invites mercy without judging modern people’s inner states.",
+          "The account is approached through recognised sources and qualified teaching.",
+          "The discussion draws principle without inventing details beyond the text."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      },
+      {
+        "question": "What implication follows most clearly from “Sulaiman, the Ant, and an Army That Learned to Listen”?",
+        "options": [
+          "Source-aware reflection resists turning a narrative into a slogan.",
+          "Authority becomes more trustworthy when it remains responsive to the vulnerable.",
+          "Humility includes admitting what a text does not settle for a new case.",
+          "Accountability is strengthened when explanation does not become excuse."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account while preserving the limits of source and inference."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-prophets-08",
+    "title": "Reading Prophetic Narratives Without Turning Them into Slogans",
+    "level": "C2",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] At a study circle, someone asked why familiar prophetic narratives sometimes feel less challenging after years of hearing short inspirational extracts from them.",
+      "Narrator: The question was not disrespectful. It recognised that a brief quotation can be memorable while leaving out setting, sequence, interpretation, and the limits of what the source actually states.",
+      "Narrator: Our teacher suggested a different practice. Before drawing a lesson, we identified the passage, noted the broader account, and distinguished the text from later commentary about it.",
+      "Narrator: This slowed the discussion. It also prevented us from using a revered narrative as a quick answer to every modern problem.",
+      "Narrator: For example, a story involving patience may invite reflection on endurance, trust, and ethical conduct. It does not automatically settle a person’s medical decision, employment dispute, or family circumstance.",
+      "Narrator: The group compared several recognised sources with the help of a qualified teacher. Where reports differed in detail, we did not invent certainty to make the lesson sound smoother.",
+      "Narrator: That restraint strengthened rather than weakened the learning. It taught us that reverence includes accuracy: not adding dialogue, motives, or dramatic details because they would make a better recording.",
+      "Narrator: We also discussed audience. A powerful lesson can become harmful if it is used to pressure someone to endure abuse, ignore safety, or avoid seeking appropriate help.",
+      "Narrator: The enduring value of these narratives is not that they provide a script for judging strangers. They orient believers toward worship, truthfulness, courage, justice, and reliance upon Allah within the boundaries of sound knowledge.",
+      "Narrator: I left with a quieter habit: return to the source, ask what it clearly supports, and let qualified scholarship guide questions that require more than a moving summary."
+    ],
+    "quiz": [
+      {
+        "question": "Which value does the speaker place at the centre of the familiar prophetic extract?",
+        "options": [
+          "Prophetic narratives need context and source discipline, not decorative extracts.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that prophetic narratives require context and source discipline so familiar extracts remain morally demanding rather than decorative."
+      },
+      {
+        "question": "What evidence from the familiar prophetic extract requires the listener to revise an easy conclusion?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Short inspirational extracts can omit setting, sequence, interpretation, and source limits.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that short inspirational extracts can omit setting, sequence, interpretation, and source limits."
+      },
+      {
+        "question": "What caution should accompany a confident response to the familiar prophetic extract?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A memorable quotation may be useful without supporting every lesson later attached to it.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a memorable quotation may be useful without supporting every lesson later attached to it."
+      },
+      {
+        "question": "Which action translates the reasoning of the familiar prophetic extract into practice?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Return to reliable sources and distinguish what the text establishes from later reflection."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that return to reliable sources and distinguish what the text establishes from later reflection."
+      },
+      {
+        "question": "What does the familiar prophetic extract show is a misleading habit?",
+        "options": [
+          "treating a brief quotation as a complete account.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that treating a brief quotation as a complete account"
+      },
+      {
+        "question": "Why should listeners pause before deciding what the familiar prophetic extract means?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A memorable quotation may be useful without supporting every lesson later attached to it.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a memorable quotation may be useful without supporting every lesson later attached to it."
+      },
+      {
+        "question": "What important distinction disappears when the familiar prophetic extract is handled badly?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Prophetic narratives need context and source discipline, not decorative extracts.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that prophetic narratives require context and source discipline so familiar extracts remain morally demanding rather than decorative."
+      },
+      {
+        "question": "Which approach is least consistent with the account of the familiar prophetic extract?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "treating a brief quotation as a complete account."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that treating a brief quotation as a complete account"
+      },
+      {
+        "question": "What does acting responsibly mean in the case of the familiar prophetic extract?",
+        "options": [
+          "Return to reliable sources and distinguish what the text establishes from later reflection.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that return to reliable sources and distinguish what the text establishes from later reflection."
+      },
+      {
+        "question": "What is the account ultimately asking listeners to preserve in the familiar prophetic extract?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prophetic narratives need context and source discipline, not decorative extracts.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that prophetic narratives require context and source discipline so familiar extracts remain morally demanding rather than decorative."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-prophets-09",
+    "title": "How Should a Museum Present Sacred History?",
+    "level": "C2",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] A museum is preparing an exhibition on early Islamic history. What is its first responsibility when it presents material connected with prophets?",
+      "Analyst: To be clear about source and status. It should distinguish Qur’anic text, soundly transmitted material, later historical writing, artistic interpretation, and modern speculation rather than placing them on one flat shelf.",
+      "Interviewer: Why is that distinction so important?",
+      "Analyst: Visitors may assume that a vivid label or image carries the same authority as revelation. Good curation prevents confidence of presentation from being mistaken for certainty of evidence.",
+      "Interviewer: Can an exhibition still be engaging without dramatising protected figures?",
+      "Analyst: Certainly. It can use maps, manuscripts, social context, calligraphy, timelines, and scholarly explanation. Engagement does not require invented speech or visual portrayal of prophets.",
+      "Interviewer: How should disputed reports be handled?",
+      "Analyst: With transparent language: some historians report this, the evidence is limited, or scholars differ. The museum should not manufacture agreement merely to keep the story simple.",
+      "Interviewer: What about visitors who want direct life advice?",
+      "Analyst: An exhibition can invite reflection, but it should not issue personal rulings or claim to resolve sensitive religious questions. It can point people to reliable learning and qualified teachers.",
+      "Interviewer: What makes the result respectful?",
+      "Analyst: Accuracy, restraint, and an awareness that sacred history is not raw material for entertainment. The aim is understanding, not emotional spectacle.",
+      "Interviewer: So careful framing is part of reverence?",
+      "Analyst: Yes. It honours both the sources and the audience by refusing to make more certain than the evidence allows.",
+      "Interviewer: How can educators respond when visitors repeat a doubtful detail?",
+      "Analyst: Thank them for the question, explain the evidence carefully, and show that correcting a report is not diminishing love or respect; it is a way of guarding both.",
+      "Interviewer: What should never drive the design?",
+      "Analyst: The search for a viral moment that rewards excitement over truthful representation."
+    ],
+    "quiz": [
+      {
+        "question": "What principle should guide a reading of the museum exhibition on sacred history?",
+        "options": [
+          "Sacred history should distinguish revelation, reports, art, and speculation.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that sacred history should show the status of its sources rather than placing revelation, reports, art, and speculation on one level."
+      },
+      {
+        "question": "Which observation makes the case in the museum exhibition on sacred history less straightforward?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The museum separates revelation, reports, history, art, and modern speculation.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the museum plans to distinguish Qur’anic text, sound transmission, historical writing, artistic interpretation, and modern speculation."
+      },
+      {
+        "question": "Which restraint prevents the museum exhibition on sacred history from being oversimplified?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Clear labels do not make weak material strong; they make its status intelligible.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that clear labels do not make weak material strong; they make its status intelligible."
+      },
+      {
+        "question": "What would a proportionate response to the museum exhibition on sacred history look like?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Organise exhibits so visitors can see both the source and its evidentiary standing."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that organise exhibits so visitors can see both the source and its evidentiary standing."
+      },
+      {
+        "question": "Which instinct does the speaker ask listeners to resist in the museum exhibition on sacred history?",
+        "options": [
+          "using visual confidence to blur different kinds of evidence.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that using visual confidence to blur different kinds of evidence"
+      },
+      {
+        "question": "What makes the speaker treat the museum exhibition on sacred history with caution rather than certainty?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Clear labels do not make weak material strong; they make its status intelligible.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that clear labels do not make weak material strong; they make its status intelligible."
+      },
+      {
+        "question": "What harm may follow from ignoring the lesson of the museum exhibition on sacred history?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Sacred history should distinguish revelation, reports, art, and speculation.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that sacred history should show the status of its sources rather than placing revelation, reports, art, and speculation on one level."
+      },
+      {
+        "question": "What would repeat the very mistake highlighted by the museum exhibition on sacred history?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "using visual confidence to blur different kinds of evidence."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that using visual confidence to blur different kinds of evidence"
+      },
+      {
+        "question": "How should a listener weigh the issue raised by the museum exhibition on sacred history?",
+        "options": [
+          "Organise exhibits so visitors can see both the source and its evidentiary standing.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that organise exhibits so visitors can see both the source and its evidentiary standing."
+      },
+      {
+        "question": "Which takeaway best reflects the reasoning developed through the museum exhibition on sacred history?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Sacred history should distinguish revelation, reports, art, and speculation.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that sacred history should show the status of its sources rather than placing revelation, reports, art, and speculation on one level."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-prophets-10",
+    "title": "What Can a Study Circle Safely Infer?",
+    "level": "C2",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] A listener says her group often moves from a prophetic account to strong claims about other people’s faith or motives. What should make them pause?",
+      "Analyst: They should pause when a lesson about a principle becomes a verdict about a particular person. We may discuss conduct and evidence; inner states and definitive personal judgments are not ours to announce casually.",
+      "Interviewer: How can a facilitator redirect the discussion?",
+      "Analyst: Ask: What does the text explicitly say? What is an interpretation? What relevant context might we be missing? And who is qualified to address a detailed ruling?",
+      "Interviewer: Does this caution make study vague?",
+      "Analyst: No. It makes it disciplined. A group can still examine language, compare recognised commentary, and consider ethical implications without overreaching into authority it does not possess.",
+      "Interviewer: What about applying lessons to contemporary life?",
+      "Analyst: Application is valuable when it is humble. We can ask how truthfulness or perseverance might shape our choices, while acknowledging that a modern case may contain facts the narrative does not address.",
+      "Interviewer: Why does this matter socially?",
+      "Analyst: Because sacred language carries force. Used carelessly, it can silence questions, excuse unfairness, or place impossible burdens on someone who needs practical support.",
+      "Interviewer: What does a good closing sound like?",
+      "Analyst: We have learned a clear principle here; for the details of this situation, let us seek sound knowledge and the appropriate qualified guidance.",
+      "Interviewer: That is not a retreat?",
+      "Analyst: It is a form of trustworthiness: giving the source its due and giving people advice only within the limits of our knowledge.",
+      "Interviewer: What if someone wants an immediate answer to a personal problem?",
+      "Analyst: Offer the clear moral encouragement the text supports, then help them identify the right qualified person or trustworthy resource for the facts that the group does not know."
+    ],
+    "quiz": [
+      {
+        "question": "What larger claim is the account making through the study circle drawing personal verdicts?",
+        "options": [
+          "A study circle may draw principles from prophetic accounts but must not turn them into verdicts.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that a study circle may draw principles from prophetic accounts but must not turn them into verdicts about people’s inner faith."
+      },
+      {
+        "question": "Which part of the study circle drawing personal verdicts most complicates the first impression?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The speaker separates observable conduct from claims about hidden motives.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the speaker separates discussion of conduct and evidence from claims about hidden motives or definitive personal judgement."
+      },
+      {
+        "question": "Where does the speaker draw a limit in the study circle drawing personal verdicts?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A sound lesson does not authorize certainty about a named person’s inner state.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a sound lesson does not authorize certainty about a named person’s inner state."
+      },
+      {
+        "question": "If this happened again, what would the speaker advise in light of the study circle drawing personal verdicts?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Discuss the principle and observable conduct while leaving unseen matters to Allah."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that discuss the principle and observable conduct while leaving unseen matters to Allah."
+      },
+      {
+        "question": "What error would repeat the failure described in the study circle drawing personal verdicts?",
+        "options": [
+          "using a narrative lesson to pronounce on another person’s faith.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that using a narrative lesson to pronounce on another person’s faith"
+      },
+      {
+        "question": "What complexity in the study circle drawing personal verdicts resists an immediate answer?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A sound lesson does not authorize certainty about a named person’s inner state.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a sound lesson does not authorize certainty about a named person’s inner state."
+      },
+      {
+        "question": "What risk does the speaker identify if the study circle drawing personal verdicts is treated carelessly?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A study circle may draw principles from prophetic accounts but must not turn them into verdicts.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a study circle may draw principles from prophetic accounts but must not turn them into verdicts about people’s inner faith."
+      },
+      {
+        "question": "What response would undo the care urged by the study circle drawing personal verdicts?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "using a narrative lesson to pronounce on another person’s faith."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that using a narrative lesson to pronounce on another person’s faith"
+      },
+      {
+        "question": "Which discipline of judgement is required by the study circle drawing personal verdicts?",
+        "options": [
+          "Discuss the principle and observable conduct while leaving unseen matters to Allah.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that discuss the principle and observable conduct while leaving unseen matters to Allah."
+      },
+      {
+        "question": "Which final judgement is most faithful to the study circle drawing personal verdicts?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A study circle may draw principles from prophetic accounts but must not turn them into verdicts.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a study circle may draw principles from prophetic accounts but must not turn them into verdicts about people’s inner faith."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -6,31 +6,145 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] When the promotion I had quietly been counting on went to a colleague who'd joined two years after me, my first instinct was to assume I'd been overlooked out of pure carelessness.",
-      "Narrator: [bitter] For a week or so, I nursed a fairly ugly resentment, replaying every project I'd delivered as though the sheer effort should have spoken for itself.",
-      "Narrator: [reflective] It was only when a mentor pointed out that visibility isn't the same thing as competence that I began to question my own version of events.",
-      "Narrator: [honestly] I had, admittedly, spent years assuming solid work would simply be noticed, as though recognition arrived automatically rather than something you occasionally have to advocate for.",
-      "Narrator: [thoughtful] My colleague, meanwhile, had been routinely summarising her contributions to leadership, not out of vanity, but so her impact wasn't buried under everyone else's noise.",
-      "Narrator: [conceding] Once I admitted that, the disappointment became harder to dismiss as simple unfairness, however tempting that explanation had initially seemed.",
-      "Narrator: [determined] So instead of sulking, which frankly would have been easier, I asked my director for a candid conversation about what the next cycle would actually require of me.",
-      "Narrator: [surprised] She was refreshingly blunt, explaining I'd been perceived as reliable but somewhat invisible outside my immediate team, a description that stung precisely because it was accurate.",
-      "Narrator: [determined] Over the following months, I made a point of presenting updates myself, and speaking up in meetings I'd previously sat through in silence.",
-      "Narrator: [honestly] It felt uncomfortably self-promotional at first, as though I were performing a confidence I hadn't fully grown into.",
-      "Narrator: [reflective] Gradually, it stopped feeling like performance and started feeling like simply telling the truth about work I'd already done.",
-      "Narrator: [warmly] When the next opportunity came around, I didn't get it either, but the feedback was specific rather than vague, which told me something had genuinely shifted.",
-      "Narrator: [peacefully] I still think, had the process been more transparent, I would have wasted less energy resenting a colleague who had done nothing wrong.",
-      "Narrator: [reflective] What I've taken from it is that being overlooked isn't always evidence of injustice; sometimes it's simply evidence nobody could see what you'd never shown them."
+      "Narrator: [thoughtful] When the promotion I had quietly been counting on went to a colleague who'd joined two years after me, my first instinct was to assume I'd been overlooked out of pure carelessness.",
+      "Narrator: For a week or so, I nursed a fairly ugly resentment, replaying every project I'd delivered as though the sheer effort should have spoken for itself.",
+      "Narrator: [carefully] It was only when a mentor pointed out that visibility isn't the same thing as competence that I began to question my own version of events.",
+      "Narrator: I had, admittedly, spent years assuming solid work would simply be noticed, as though recognition arrived automatically rather than something you occasionally have to advocate for.",
+      "Narrator: [reflective] My colleague, meanwhile, had been routinely summarising her contributions to leadership, not out of vanity, but so her impact wasn't buried under everyone else's noise.",
+      "Narrator: Once I admitted that, the disappointment became harder to dismiss as simple unfairness, however tempting that explanation had initially seemed.",
+      "Narrator: [honestly] So instead of sulking, which frankly would have been easier, I asked my director for a candid conversation about what the next cycle would actually require of me.",
+      "Narrator: She was refreshingly blunt, explaining I'd been perceived as reliable but somewhat invisible outside my immediate team, a description that stung precisely because it was accurate.",
+      "Narrator: [gently] Over the following months, I made a point of presenting updates myself, and speaking up in meetings I'd previously sat through in silence.",
+      "Narrator: It felt uncomfortably self-promotional at first, as though I were performing a confidence I hadn't fully grown into.",
+      "Narrator: [calmly] Gradually, it stopped feeling like performance and started feeling like simply telling the truth about work I'd already done.",
+      "Narrator: When the next opportunity came around, I didn't get it either, but the feedback was specific rather than vague, which told me something had genuinely shifted.",
+      "Narrator: [encouraging] I still think, had the process been more transparent, I would have wasted less energy resenting a colleague who had done nothing wrong.",
+      "Narrator: What I've taken from it is that being overlooked isn't always evidence of injustice; sometimes it's simply evidence nobody could see what you'd never shown them."
     ],
     "quiz": [
-      { "question": "What was the narrator's first reaction to being passed over for promotion?", "options": ["Relief", "She assumed she'd been overlooked out of carelessness and felt bitter resentment", "Immediate acceptance", "She resigned that day"], "correctIndex": 1, "explanation": "She says her first instinct was to assume she'd been overlooked out of carelessness, and admits she nursed an ugly resentment." },
-      { "question": "What did the mentor point out to her?", "options": ["That she should quit", "That visibility isn't the same thing as competence", "That the company was unfair", "That she needed more training"], "correctIndex": 1, "explanation": "A mentor gently pointed out that visibility isn't the same thing as competence, which made her question her assumptions." },
-      { "question": "What had her colleague been doing differently?", "options": ["Working longer hours secretly", "Routinely summarising her contributions to leadership", "Taking credit for others' work", "Avoiding meetings entirely"], "correctIndex": 1, "explanation": "Her colleague had been routinely summarising her contributions to leadership so her impact wasn't buried." },
-      { "question": "What did the director tell her when she asked for candid feedback?", "options": ["That she was underqualified", "That she was seen as reliable but somewhat invisible outside her immediate team", "That she talked too much in meetings", "That there were no more promotions available"], "correctIndex": 1, "explanation": "The director explained she'd been perceived as reliable but somewhat invisible outside her immediate team." },
-      { "question": "What does the narrator conclude at the end?", "options": ["Being overlooked always means injustice", "Being overlooked sometimes just means nobody can see what you've never shown them", "Promotions are always unfair", "She should never speak up again"], "correctIndex": 1, "explanation": "She concludes that being overlooked isn't always injustice; sometimes it's evidence nobody could see what she'd never shown them." }
-    ]
+      {
+        "question": "What was the narrator's first reaction to being passed over for promotion?",
+        "options": [
+          "Relief",
+          "Immediate acceptance",
+          "She resigned that day",
+          "She assumed she'd been overlooked out of carelessness and felt bitter resentment"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says her first instinct was to assume she'd been overlooked out of carelessness, and admits she nursed an ugly resentment."
+      },
+      {
+        "question": "What did the mentor point out to her?",
+        "options": [
+          "That she should quit",
+          "That the company was unfair",
+          "That she needed more training",
+          "That visibility isn't the same thing as competence"
+        ],
+        "correctIndex": 3,
+        "explanation": "A mentor gently pointed out that visibility isn't the same thing as competence, which made her question her assumptions."
+      },
+      {
+        "question": "What had her colleague been doing differently?",
+        "options": [
+          "Working longer hours secretly",
+          "Taking credit for others' work",
+          "Routinely summarising her contributions to leadership",
+          "Avoiding meetings entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her colleague had been routinely summarising her contributions to leadership so her impact wasn't buried."
+      },
+      {
+        "question": "What did the director tell her when she asked for candid feedback?",
+        "options": [
+          "That she was underqualified",
+          "That she talked too much in meetings",
+          "That there were no more promotions available",
+          "That she was seen as reliable but somewhat invisible outside her immediate team"
+        ],
+        "correctIndex": 3,
+        "explanation": "The director explained she'd been perceived as reliable but somewhat invisible outside her immediate team."
+      },
+      {
+        "question": "What does the narrator conclude at the end?",
+        "options": [
+          "Being overlooked sometimes just means nobody can see what you've never shown them",
+          "Being overlooked always means injustice",
+          "Promotions are always unfair",
+          "She should never speak up again"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that being overlooked isn't always injustice; sometimes it's evidence nobody could see what she'd never shown them."
+      },
+      {
+        "question": "What did the promoted colleague do that the narrator had avoided?",
+        "options": [
+          "I need to talk through something awkward",
+          "She regularly made her contributions visible to leadership.",
+          "Giving critical feedback has never troubled me much when the recipient is new",
+          "Anton, I need someone to talk me out of overthinking this, or into it"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She regularly made her contributions visible to leadership."
+      },
+      {
+        "question": "How did the manager describe the narrator's professional reputation?",
+        "options": [
+          "It's specifically about managing Danu, who was my closest friend at work right up until three weeks ago",
+          "Yusuf had been at the company for fifteen years",
+          "Reliable within the team but nearly invisible beyond it.",
+          "If I'd been offered this two years ago, I wouldn't have hesitated for a second"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Reliable within the team but nearly invisible beyond it."
+      },
+      {
+        "question": "Why did presenting personal updates initially feel uncomfortable?",
+        "options": [
+          "That's not fair to Danu either, ironically",
+          "The narrator confused useful visibility with vanity.",
+          "For a moment he said nothing",
+          "Assumptions like that are worth testing before they quietly shape a decision this big"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The narrator confused useful visibility with vanity."
+      },
+      {
+        "question": "What showed progress even after another promotion was missed?",
+        "options": [
+          "The feedback became specific rather than vague.",
+          "Have the professional one about deadlines clearly and specifically",
+          "Instead, he exhaled and admitted he'd suspected as much",
+          "Companies negotiate more than people expect, particularly for roles they've struggled to fill"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The feedback became specific rather than vague."
+      },
+      {
+        "question": "What lesson does the narrator draw from being overlooked?",
+        "options": [
+          "Lead with specifics rather than feelings",
+          "Respect, I've since decided, isn't protected by silence",
+          "Unseen work cannot always influence decisions, even when it is excellent.",
+          "I'll ask about a hybrid arrangement before I say yes or no to anything permanent"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Unseen work cannot always influence decisions, even when it is excellent."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-work-02",
@@ -39,34 +153,151 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bayu", "gender": "male" },
-      { "name": "Sinta", "gender": "female" }
+      {
+        "name": "Bayu",
+        "gender": "male"
+      },
+      {
+        "name": "Sinta",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Bayu: [tense] Sinta, have you got a minute? I need to talk through something awkward, and I'd rather not let it fester any longer.",
-      "Sinta: [attentive] Of course. You've seemed distracted since you got promoted. Is it about managing the team now?",
-      "Bayu: [uneasy] Partly. It's specifically about managing Danu, who was my closest friend at work right up until three weeks ago.",
-      "Sinta: [understanding] Ah. That's a genuinely difficult transition. What's actually going wrong between you two?",
-      "Bayu: [frustrated] His deadlines have been slipping, and I keep putting off saying anything, because it feels like betraying a friendship rather than doing my job.",
-      "Sinta: [gently] Would you have hesitated this long if the underperforming person weren't someone you used to grab lunch with every day?",
+      "Bayu: [thoughtful] Sinta, have you got a minute? I need to talk through something awkward, and I'd rather not let it fester any longer.",
+      "Sinta: Of course. You've seemed distracted since you got promoted. Is it about managing the team now?",
+      "Bayu: [carefully] Partly. It's specifically about managing Danu, who was my closest friend at work right up until three weeks ago.",
+      "Sinta: Ah. That's a genuinely difficult transition. What's actually going wrong between you two?",
+      "Bayu: [reflective] His deadlines have been slipping, and I keep putting off saying anything, because it feels like betraying a friendship rather than doing my job.",
+      "Sinta: Would you have hesitated this long if the underperforming person weren't someone you used to grab lunch with every day?",
       "Bayu: [honestly] Probably not, and that's exactly what's been eating at me. I'm essentially letting our friendship excuse behaviour I'd challenge in anyone else.",
-      "Sinta: [thoughtful] That's not fair to Danu either, ironically. If everyone else is being held to a standard he's quietly exempt from, he'll never know there's a problem.",
-      "Bayu: [conceding] When you put it that way, my silence looks less like kindness and more like avoidance dressed up as loyalty.",
-      "Sinta: [encouraging] So separate the two conversations. Have the professional one about deadlines clearly and specifically, and let the friendship exist outside of work hours.",
-      "Bayu: [nervous] What if he thinks the promotion has changed how I see him, or assumes I'm punishing him somehow for something unrelated?",
-      "Sinta: [reassuring] He might feel that initially, but avoiding the conversation would confirm something worse: that you can't be trusted to manage fairly.",
-      "Bayu: [determined] Fine. I'll ask him for coffee this afternoon, somewhere neutral, and address it directly instead of circling around it indefinitely.",
-      "Sinta: [warmly] Good. Lead with specifics rather than feelings, so it doesn't come across as a personal complaint dressed up as management.",
-      "Bayu: [reflective] I suppose I assumed being promoted would feel like gaining authority, not losing the easy comfort of being someone's equal.",
-      "Sinta: [kindly] That discomfort usually fades once people see you're being consistent, not once you stop caring about them personally."
+      "Sinta: That's not fair to Danu either, ironically. If everyone else is being held to a standard he's quietly exempt from, he'll never know there's a problem.",
+      "Bayu: [gently] When you put it that way, my silence looks less like kindness and more like avoidance dressed up as loyalty.",
+      "Sinta: So separate the two conversations. Have the professional one about deadlines clearly and specifically, and let the friendship exist outside of work hours.",
+      "Bayu: [calmly] What if he thinks the promotion has changed how I see him, or assumes I'm punishing him somehow for something unrelated?",
+      "Sinta: He might feel that initially, but avoiding the conversation would confirm something worse: that you can't be trusted to manage fairly.",
+      "Bayu: [encouraging] Fine. I'll ask him for coffee this afternoon, somewhere neutral, and address it directly instead of circling around it indefinitely.",
+      "Sinta: Good. Lead with specifics rather than feelings, so it doesn't come across as a personal complaint dressed up as management.",
+      "Bayu: [seriously] I suppose I assumed being promoted would feel like gaining authority, not losing the easy comfort of being someone's equal.",
+      "Sinta: That discomfort usually fades once people see you're being consistent, not once you stop caring about them personally."
     ],
     "quiz": [
-      { "question": "What is Bayu's dilemma?", "options": ["He was demoted unfairly", "He was promoted and now has to manage Danu, his close friend, whose deadlines are slipping", "He wants to quit his job", "He is being managed by his friend"], "correctIndex": 1, "explanation": "Bayu was promoted and now must manage Danu, his close friend at work, whose deadlines have been slipping." },
-      { "question": "Why has Bayu been avoiding the conversation?", "options": ["He doesn't know Danu well", "It feels like betraying a friendship rather than doing his job", "He has no evidence of the problem", "He is planning to fire Danu instead"], "correctIndex": 1, "explanation": "Bayu says addressing the slipping deadlines feels like betraying a friendship rather than doing his job." },
-      { "question": "What point does Sinta make about fairness to Danu?", "options": ["Danu should be fired immediately", "If Danu is quietly exempt from the standard others follow, he'll never know there's a problem", "Danu deserves special treatment", "Fairness doesn't matter at work"], "correctIndex": 1, "explanation": "Sinta argues that letting Danu slide unfairly means he'll never realize there's an issue, since everyone else follows a stricter standard." },
-      { "question": "What advice does Sinta give for the upcoming conversation?", "options": ["Avoid mentioning deadlines at all", "Lead with specifics rather than feelings", "Fire Danu without discussion", "Ask someone else to handle it"], "correctIndex": 1, "explanation": "Sinta advises Bayu to lead with specifics rather than feelings so it doesn't come across as a personal complaint." },
-      { "question": "What does Bayu realize about what promotion actually feels like?", "options": ["It feels exactly as he expected", "It means losing the easy comfort of being someone's equal, not just gaining authority", "It changes nothing about relationships", "It only brings more money"], "correctIndex": 1, "explanation": "Bayu reflects that he assumed promotion meant gaining authority, not losing the easy comfort of being someone's equal." }
-    ]
+      {
+        "question": "What is Bayu's dilemma?",
+        "options": [
+          "He was demoted unfairly",
+          "He was promoted and now has to manage Danu, his close friend, whose deadlines are slipping",
+          "He wants to quit his job",
+          "He is being managed by his friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bayu was promoted and now must manage Danu, his close friend at work, whose deadlines have been slipping."
+      },
+      {
+        "question": "Why has Bayu been avoiding the conversation?",
+        "options": [
+          "He doesn't know Danu well",
+          "It feels like betraying a friendship rather than doing his job",
+          "He has no evidence of the problem",
+          "He is planning to fire Danu instead"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bayu says addressing the slipping deadlines feels like betraying a friendship rather than doing his job."
+      },
+      {
+        "question": "What point does Sinta make about fairness to Danu?",
+        "options": [
+          "If Danu is quietly exempt from the standard others follow, he'll never know there's a problem",
+          "Danu should be fired immediately",
+          "Danu deserves special treatment",
+          "Fairness doesn't matter at work"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sinta argues that letting Danu slide unfairly means he'll never realize there's an issue, since everyone else follows a stricter standard."
+      },
+      {
+        "question": "What advice does Sinta give for the upcoming conversation?",
+        "options": [
+          "Avoid mentioning deadlines at all",
+          "Fire Danu without discussion",
+          "Lead with specifics rather than feelings",
+          "Ask someone else to handle it"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sinta advises Bayu to lead with specifics rather than feelings so it doesn't come across as a personal complaint."
+      },
+      {
+        "question": "What does Bayu realize about what promotion actually feels like?",
+        "options": [
+          "It feels exactly as he expected",
+          "It changes nothing about relationships",
+          "It means losing the easy comfort of being someone's equal, not just gaining authority",
+          "It only brings more money"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bayu reflects that he assumed promotion meant gaining authority, not losing the easy comfort of being someone's equal."
+      },
+      {
+        "question": "Why has the new manager delayed addressing Danu's missed deadlines?",
+        "options": [
+          "Giving critical feedback has never troubled me much when the recipient is new",
+          "Anton, I need someone to talk me out of overthinking this, or into it",
+          "I hadn't meant to erase their contribution deliberately",
+          "Professional feedback feels like a betrayal of their friendship."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Professional feedback feels like a betrayal of their friendship."
+      },
+      {
+        "question": "How does avoiding feedback also disadvantage Danu?",
+        "options": [
+          "Yusuf had been at the company for fifteen years",
+          "If I'd been offered this two years ago, I wouldn't have hesitated for a second",
+          "I'd simply told the story the way it existed in my own memory, which flattered me by default",
+          "He cannot correct a problem nobody states clearly."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He cannot correct a problem nobody states clearly."
+      },
+      {
+        "question": "What separation does Sinta recommend for the two relationships?",
+        "options": [
+          "Discuss deadlines professionally while keeping friendship outside that conversation.",
+          "For a moment he said nothing",
+          "Assumptions like that are worth testing before they quietly shape a decision this big",
+          "Instead, the client simply thanked me for the clarification"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Discuss deadlines professionally while keeping friendship outside that conversation."
+      },
+      {
+        "question": "What risk does special treatment create for the manager?",
+        "options": [
+          "Instead, he exhaled and admitted he'd suspected as much",
+          "The team may reasonably doubt whether standards are applied fairly.",
+          "Companies negotiate more than people expect, particularly for roles they've struggled to fill",
+          "I don't think I'm a fundamentally dishonest person"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The team may reasonably doubt whether standards are applied fairly."
+      },
+      {
+        "question": "How should the manager begin the difficult conversation?",
+        "options": [
+          "Use specific missed deadlines rather than personal feelings.",
+          "Respect, I've since decided, isn't protected by silence",
+          "I'll ask about a hybrid arrangement before I say yes or no to anything permanent",
+          "Wina and I still work together closely"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Use specific missed deadlines rather than personal feelings."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-work-03",
@@ -75,31 +306,145 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [measured] Giving critical feedback has never troubled me much when the recipient is new, but doing so with someone who trained me a decade ago is an entirely different matter.",
-      "Narrator: [reflective] Yusuf had been at the company for fifteen years, and his methods, while once cutting-edge, had quietly fallen behind the systems everyone else had since adopted.",
-      "Narrator: [honestly] I'd noticed it for months, but kept telling myself it wasn't my place to say anything, given how much I owed him professionally.",
-      "Narrator: [thoughtful] The problem was that his outdated approach had started slowing down two other teams, whose complaints were reaching me rather than him directly.",
-      "Narrator: [uneasy] I dreaded the conversation for a full week, rehearsing sentences in the shower that all sounded either condescending or unbearably vague.",
-      "Narrator: [determined] Eventually, I decided vagueness would be the greater disrespect, so I asked him to meet somewhere quiet, away from the rest of the floor.",
-      "Narrator: [explaining] I opened by acknowledging what he'd taught me, then explained specifically how his current process was creating bottlenecks for people downstream of his work.",
-      "Narrator: [nervous] For a moment he said nothing, and I genuinely thought I'd damaged something between us that wouldn't be repaired easily.",
-      "Narrator: [surprised] Instead, he exhaled and admitted he'd suspected as much, but had been too proud, or perhaps too tired, to ask anyone to walk him through the newer tools.",
-      "Narrator: [relieved] That admission changed the entire tone of the conversation, from correction into something closer to collaboration.",
-      "Narrator: [warmly] We spent the next hour mapping out which parts of his workflow could be updated without discarding the judgment his experience actually provided.",
-      "Narrator: [reflective] What struck me afterward was how much unnecessary suffering the delay had caused, both to him and to the teams quietly frustrated behind his back.",
-      "Narrator: [thoughtful] Respect, I've since decided, isn't protected by silence; if anything, silence eventually corrodes it, since problems left unspoken rarely resolve themselves.",
-      "Narrator: [peacefully] These days, whenever I catch myself avoiding a difficult conversation out of deference, I remind myself that Yusuf, given the choice, would rather have heard it sooner."
+      "Narrator: [thoughtful] Giving critical feedback has never troubled me much when the recipient is new, but doing so with someone who trained me a decade ago is an entirely different matter.",
+      "Narrator: Yusuf had been at the company for fifteen years, and his methods, while once cutting-edge, had quietly fallen behind the systems everyone else had since adopted.",
+      "Narrator: [carefully] I'd noticed it for months, but kept telling myself it wasn't my place to say anything, given how much I owed him professionally.",
+      "Narrator: The problem was that his outdated approach had started slowing down two other teams, whose complaints were reaching me rather than him directly.",
+      "Narrator: [reflective] I dreaded the conversation for a full week, rehearsing sentences in the shower that all sounded either condescending or unbearably vague.",
+      "Narrator: Eventually, I decided vagueness would be the greater disrespect, so I asked him to meet somewhere quiet, away from the rest of the floor.",
+      "Narrator: [honestly] I opened by acknowledging what he'd taught me, then explained specifically how his current process was creating bottlenecks for people downstream of his work.",
+      "Narrator: For a moment he said nothing, and I genuinely thought I'd damaged something between us that wouldn't be repaired easily.",
+      "Narrator: [gently] Instead, he exhaled and admitted he'd suspected as much, but had been too proud, or perhaps too tired, to ask anyone to walk him through the newer tools.",
+      "Narrator: That admission changed the entire tone of the conversation, from correction into something closer to collaboration.",
+      "Narrator: [calmly] We spent the next hour mapping out which parts of his workflow could be updated without discarding the judgment his experience actually provided.",
+      "Narrator: What struck me afterward was how much unnecessary suffering the delay had caused, both to him and to the teams quietly frustrated behind his back.",
+      "Narrator: [encouraging] Respect, I've since decided, isn't protected by silence; if anything, silence eventually corrodes it, since problems left unspoken rarely resolve themselves.",
+      "Narrator: These days, whenever I catch myself avoiding a difficult conversation out of deference, I remind myself that Yusuf, given the choice, would rather have heard it sooner."
     ],
     "quiz": [
-      { "question": "Why was the narrator especially uneasy about giving Yusuf feedback?", "options": ["Yusuf was his boss", "Yusuf had trained him a decade ago and had fifteen years at the company", "Yusuf had never made a mistake before", "The narrator disliked Yusuf personally"], "correctIndex": 1, "explanation": "The narrator explains Yusuf trained him a decade ago and had fifteen years at the company, making the feedback feel different." },
-      { "question": "What problem had Yusuf's outdated methods caused?", "options": ["Nothing significant", "They were slowing down two other teams, whose complaints reached the narrator instead of Yusuf", "They caused a financial loss", "Yusuf had been fired already"], "correctIndex": 1, "explanation": "Yusuf's outdated approach had started slowing down two other teams, and their complaints reached the narrator rather than Yusuf directly." },
-      { "question": "How did the narrator open the conversation with Yusuf?", "options": ["By listing complaints immediately", "By acknowledging what Yusuf had taught him before explaining the bottlenecks", "By threatening to report him", "By avoiding the topic entirely"], "correctIndex": 1, "explanation": "He opened by acknowledging what Yusuf had taught him, then explained specifically how the process was creating bottlenecks." },
-      { "question": "Why had Yusuf not asked for help with newer tools sooner?", "options": ["He didn't know they existed", "He was too proud, or perhaps too tired, to ask anyone to walk him through them", "He was planning to retire", "He thought the old system was better"], "correctIndex": 1, "explanation": "Yusuf admitted he had been too proud, or perhaps too tired, to ask anyone to walk him through the newer tools." },
-      { "question": "What conclusion does the narrator reach about respect and silence?", "options": ["Silence always protects respect", "Silence eventually corrodes respect, since unspoken problems rarely resolve themselves", "Respect doesn't matter at work", "Feedback should always be avoided with senior staff"], "correctIndex": 1, "explanation": "He concludes that silence eventually corrodes respect, since problems left unspoken rarely resolve themselves." }
-    ]
+      {
+        "question": "Why was the narrator especially uneasy about giving Yusuf feedback?",
+        "options": [
+          "Yusuf was his boss",
+          "Yusuf had never made a mistake before",
+          "The narrator disliked Yusuf personally",
+          "Yusuf had trained him a decade ago and had fifteen years at the company"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator explains Yusuf trained him a decade ago and had fifteen years at the company, making the feedback feel different."
+      },
+      {
+        "question": "What problem had Yusuf's outdated methods caused?",
+        "options": [
+          "Nothing significant",
+          "They were slowing down two other teams, whose complaints reached the narrator instead of Yusuf",
+          "They caused a financial loss",
+          "Yusuf had been fired already"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yusuf's outdated approach had started slowing down two other teams, and their complaints reached the narrator rather than Yusuf directly."
+      },
+      {
+        "question": "How did the narrator open the conversation with Yusuf?",
+        "options": [
+          "By listing complaints immediately",
+          "By threatening to report him",
+          "By acknowledging what Yusuf had taught him before explaining the bottlenecks",
+          "By avoiding the topic entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "He opened by acknowledging what Yusuf had taught him, then explained specifically how the process was creating bottlenecks."
+      },
+      {
+        "question": "Why had Yusuf not asked for help with newer tools sooner?",
+        "options": [
+          "He was too proud, or perhaps too tired, to ask anyone to walk him through them",
+          "He didn't know they existed",
+          "He was planning to retire",
+          "He thought the old system was better"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf admitted he had been too proud, or perhaps too tired, to ask anyone to walk him through the newer tools."
+      },
+      {
+        "question": "What conclusion does the narrator reach about respect and silence?",
+        "options": [
+          "Silence always protects respect",
+          "Silence eventually corrodes respect, since unspoken problems rarely resolve themselves",
+          "Respect doesn't matter at work",
+          "Feedback should always be avoided with senior staff"
+        ],
+        "correctIndex": 1,
+        "explanation": "He concludes that silence eventually corrodes respect, since problems left unspoken rarely resolve themselves."
+      },
+      {
+        "question": "Why did giving Yusuf feedback feel harder than correcting a new employee?",
+        "options": [
+          "He had trained the narrator and possessed far more experience.",
+          "Anton, I need someone to talk me out of overthinking this, or into it",
+          "I hadn't meant to erase their contribution deliberately",
+          "Ratna, I've been staring at these expense reports for an hour"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: He had trained the narrator and possessed far more experience."
+      },
+      {
+        "question": "What did Yusuf admit after hearing the specific concern?",
+        "options": [
+          "If I'd been offered this two years ago, I wouldn't have hesitated for a second",
+          "I'd simply told the story the way it existed in my own memory, which flattered me by default",
+          "He knew his skills had fallen behind but felt unable to ask.",
+          "That's a fairly specific inconsistency to stumble across by accident"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He knew his skills had fallen behind but felt unable to ask."
+      },
+      {
+        "question": "How did that admission change the conversation?",
+        "options": [
+          "Assumptions like that are worth testing before they quietly shape a decision this big",
+          "Instead, the client simply thanked me for the clarification",
+          "If I raise it and I'm wrong, I've damaged a relationship over nothing",
+          "Correction became a collaborative plan for learning newer tools."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Correction became a collaborative plan for learning newer tools."
+      },
+      {
+        "question": "Who had been harmed while the narrator delayed speaking?",
+        "options": [
+          "Companies negotiate more than people expect, particularly for roles they've struggled to fill",
+          "I don't think I'm a fundamentally dishonest person",
+          "Yusuf and the teams frustrated by avoidable problems.",
+          "It's just a decision dressed up as caution"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Yusuf and the teams frustrated by avoidable problems."
+      },
+      {
+        "question": "What principle now guides the narrator's difficult feedback?",
+        "options": [
+          "I'll ask about a hybrid arrangement before I say yes or no to anything permanent",
+          "Respect requires timely honesty, not protective silence.",
+          "Wina and I still work together closely",
+          "I'm not condemning anyone, just refusing to pretend I didn't notice"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Respect requires timely honesty, not protective silence."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-work-04",
@@ -108,34 +453,151 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Mira", "gender": "female" },
-      { "name": "Anton", "gender": "male" }
+      {
+        "name": "Mira",
+        "gender": "female"
+      },
+      {
+        "name": "Anton",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Mira: [conflicted] Anton, I need someone to talk me out of overthinking this, or into it. They've offered me the regional lead role, but it means relocating within six months.",
-      "Anton: [interested] That's a significant offer. What's actually giving you pause, given how long you've wanted something like this?",
-      "Mira: [honestly] If I'd been offered this two years ago, I wouldn't have hesitated for a second. Now my parents are older, and my sister's just had her first child.",
-      "Anton: [understanding] So it's less about the job itself and more about what you'd be stepping away from while it happens.",
-      "Mira: [thoughtful] Exactly. I keep imagining missing things I can't get back, in exchange for a title that, however impressive, wouldn't fill that particular gap.",
-      "Anton: [considering] Have you asked whether the role could be done remotely, at least partially, or whether relocation is genuinely non-negotiable?",
-      "Mira: [surprised] I hadn't actually asked directly. I assumed relocation was fixed, mostly because that's how the previous regional lead did it.",
-      "Anton: [gently] Assumptions like that are worth testing before they quietly shape a decision this big. Companies negotiate more than people expect, particularly for roles they've struggled to fill.",
-      "Mira: [considering] That's fair. Though even if they agreed to flexibility, I'd still be wondering whether I'm choosing ambition over family out of habit rather than genuine conviction.",
-      "Anton: [thoughtful] Would staying, though, actually guarantee more time with them, or would you simply be present without necessarily being available?",
-      "Mira: [honestly] That's uncomfortably accurate. I work long hours regardless of which city I'm in, if I'm being completely honest with myself.",
-      "Anton: [encouraging] Then maybe the real question isn't proximity, it's whether you'd resent turning this down five years from now, wherever you happened to be living.",
-      "Mira: [reflective] I think I would, actually. Quietly, but persistently, in the way regrets tend to surface during otherwise unrelated moments.",
-      "Anton: [warmly] Then negotiate the terms first, rather than deciding based on an assumption nobody's actually confirmed yet.",
-      "Mira: [determined] Alright. I'll ask about a hybrid arrangement before I say yes or no to anything permanent.",
-      "Anton: [smiling] That sounds like the version of this decision you won't regret making, regardless of which answer you eventually get."
+      "Mira: [thoughtful] Anton, I need someone to talk me out of overthinking this, or into it. They've offered me the regional lead role, but it means relocating within six months.",
+      "Anton: That's a significant offer. What's actually giving you pause, given how long you've wanted something like this?",
+      "Mira: [carefully] If I'd been offered this two years ago, I wouldn't have hesitated for a second. Now my parents are older, and my sister's just had her first child.",
+      "Anton: So it's less about the job itself and more about what you'd be stepping away from while it happens.",
+      "Mira: [reflective] Exactly. I keep imagining missing things I can't get back, in exchange for a title that, however impressive, wouldn't fill that particular gap.",
+      "Anton: Have you asked whether the role could be done remotely, at least partially, or whether relocation is genuinely non-negotiable?",
+      "Mira: [honestly] I hadn't actually asked directly. I assumed relocation was fixed, mostly because that's how the previous regional lead did it.",
+      "Anton: Assumptions like that are worth testing before they quietly shape a decision this big. Companies negotiate more than people expect, particularly for roles they've struggled to fill.",
+      "Mira: [gently] That's fair. Though even if they agreed to flexibility, I'd still be wondering whether I'm choosing ambition over family out of habit rather than genuine conviction.",
+      "Anton: Would staying, though, actually guarantee more time with them, or would you simply be present without necessarily being available?",
+      "Mira: [calmly] That's uncomfortably accurate. I work long hours regardless of which city I'm in, if I'm being completely honest with myself.",
+      "Anton: Then maybe the real question isn't proximity, it's whether you'd resent turning this down five years from now, wherever you happened to be living.",
+      "Mira: [encouraging] I think I would, actually. Quietly, but persistently, in the way regrets tend to surface during otherwise unrelated moments.",
+      "Anton: Then negotiate the terms first, rather than deciding based on an assumption nobody's actually confirmed yet.",
+      "Mira: [seriously] Alright. I'll ask about a hybrid arrangement before I say yes or no to anything permanent.",
+      "Anton: That sounds like the version of this decision you won't regret making, regardless of which answer you eventually get."
     ],
     "quiz": [
-      { "question": "What has Mira been offered?", "options": ["A pay cut with a smaller role", "A regional lead role requiring relocation within six months", "A part-time position", "A transfer she didn't request"], "correctIndex": 1, "explanation": "Mira has been offered the regional lead role, which requires relocating within six months." },
-      { "question": "Why is Mira hesitant now, when she wouldn't have been two years ago?", "options": ["She dislikes the new role", "Her parents are older and her sister just had her first child", "The salary is lower", "She has no interest in leadership"], "correctIndex": 1, "explanation": "Mira explains her parents are older now and her sister just had her first child, changing what she'd be stepping away from." },
-      { "question": "What assumption does Anton challenge?", "options": ["That the job pays well", "That relocation is genuinely non-negotiable", "That Mira wants the job", "That her family needs her"], "correctIndex": 1, "explanation": "Anton points out Mira assumed relocation was fixed without actually asking whether it was negotiable." },
-      { "question": "What uncomfortable point does Anton make about staying?", "options": ["Staying guarantees more family time", "Staying wouldn't necessarily mean being more available, since she works long hours regardless", "Staying is always the wrong choice", "Staying would end her career"], "correctIndex": 1, "explanation": "Anton asks whether staying would actually guarantee more time with family, and Mira admits she works long hours regardless of city." },
-      { "question": "What does Mira decide to do at the end?", "options": ["Reject the offer immediately", "Accept relocation without question", "Ask about a hybrid arrangement before deciding", "Quit her job entirely"], "correctIndex": 2, "explanation": "Mira decides to ask about a hybrid arrangement before saying yes or no to anything permanent." }
-    ]
+      {
+        "question": "What has Mira been offered?",
+        "options": [
+          "A regional lead role requiring relocation within six months",
+          "A pay cut with a smaller role",
+          "A part-time position",
+          "A transfer she didn't request"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mira has been offered the regional lead role, which requires relocating within six months."
+      },
+      {
+        "question": "Why is Mira hesitant now, when she wouldn't have been two years ago?",
+        "options": [
+          "Her parents are older and her sister just had her first child",
+          "She dislikes the new role",
+          "The salary is lower",
+          "She has no interest in leadership"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mira explains her parents are older now and her sister just had her first child, changing what she'd be stepping away from."
+      },
+      {
+        "question": "What assumption does Anton challenge?",
+        "options": [
+          "That the job pays well",
+          "That Mira wants the job",
+          "That her family needs her",
+          "That relocation is genuinely non-negotiable"
+        ],
+        "correctIndex": 3,
+        "explanation": "Anton points out Mira assumed relocation was fixed without actually asking whether it was negotiable."
+      },
+      {
+        "question": "What uncomfortable point does Anton make about staying?",
+        "options": [
+          "Staying guarantees more family time",
+          "Staying is always the wrong choice",
+          "Staying wouldn't necessarily mean being more available, since she works long hours regardless",
+          "Staying would end her career"
+        ],
+        "correctIndex": 2,
+        "explanation": "Anton asks whether staying would actually guarantee more time with family, and Mira admits she works long hours regardless of city."
+      },
+      {
+        "question": "What does Mira decide to do at the end?",
+        "options": [
+          "Ask about a hybrid arrangement before deciding",
+          "Reject the offer immediately",
+          "Accept relocation without question",
+          "Quit her job entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mira decides to ask about a hybrid arrangement before saying yes or no to anything permanent."
+      },
+      {
+        "question": "Which family changes complicate the promotion's relocation requirement?",
+        "options": [
+          "I hadn't meant to erase their contribution deliberately",
+          "Ageing parents and a new niece make distance feel costly.",
+          "Ratna, I've been staring at these expense reports for an hour",
+          "I nearly cried in a meeting yesterday"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Ageing parents and a new niece make distance feel costly."
+      },
+      {
+        "question": "What crucial job condition had the employee merely assumed?",
+        "options": [
+          "I'd simply told the story the way it existed in my own memory, which flattered me by default",
+          "That's a fairly specific inconsistency to stumble across by accident",
+          "Here, someone just said the report was disorganized, full stop",
+          "Relocation seemed fixed although nobody had confirmed it."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Relocation seemed fixed although nobody had confirmed it."
+      },
+      {
+        "question": "Why should that assumption be tested before refusing the role?",
+        "options": [
+          "Instead, the client simply thanked me for the clarification",
+          "Employers may negotiate terms for difficult-to-fill positions.",
+          "If I raise it and I'm wrong, I've damaged a relationship over nothing",
+          "It could just as easily be a lack of consideration for how comments land on the receiving end"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Employers may negotiate terms for difficult-to-fill positions."
+      },
+      {
+        "question": "What question separates physical proximity from meaningful availability?",
+        "options": [
+          "I don't think I'm a fundamentally dishonest person",
+          "It's just a decision dressed up as caution",
+          "Would staying actually create more time with family?",
+          "When you separate it that way, it does land differently"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Would staying actually create more time with family?"
+      },
+      {
+        "question": "What should happen before the employee makes a final decision?",
+        "options": [
+          "Wina and I still work together closely",
+          "I'm not condemning anyone, just refusing to pretend I didn't notice",
+          "I'll try responding to the content next time instead of reacting to the delivery immediately",
+          "Ask whether relocation or working arrangements can be negotiated."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Ask whether relocation or working arrangements can be negotiated."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-work-05",
@@ -144,31 +606,145 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [uneasy] It took an uncomfortable comment from a junior colleague to make me realize I'd been unintentionally taking credit for work that wasn't entirely mine.",
-      "Narrator: [reflective] During a client presentation, I described a strategy as something I had developed, when in reality it had emerged from a brainstorm with two other people.",
-      "Narrator: [honestly] I hadn't meant to erase their contribution deliberately; I'd simply told the story the way it existed in my own memory, which flattered me by default.",
-      "Narrator: [thoughtful] Afterward, Wina, who had contributed the original idea, mentioned quietly that she'd noticed her name hadn't come up once during the entire meeting.",
-      "Narrator: [defensive] My immediate reaction was to explain myself, insisting it hadn't been intentional, as though intention were the only thing that mattered here.",
-      "Narrator: [reflective] But sitting with it overnight, I recognized that impact matters regardless of intention, and the impact on Wina had been real, even if unintended.",
+      "Narrator: [thoughtful] It took an uncomfortable comment from a junior colleague to make me realize I'd been unintentionally taking credit for work that wasn't entirely mine.",
+      "Narrator: During a client presentation, I described a strategy as something I had developed, when in reality it had emerged from a brainstorm with two other people.",
+      "Narrator: [carefully] I hadn't meant to erase their contribution deliberately; I'd simply told the story the way it existed in my own memory, which flattered me by default.",
+      "Narrator: Afterward, Wina, who had contributed the original idea, mentioned quietly that she'd noticed her name hadn't come up once during the entire meeting.",
+      "Narrator: [reflective] My immediate reaction was to explain myself, insisting it hadn't been intentional, as though intention were the only thing that mattered here.",
+      "Narrator: But sitting with it overnight, I recognized that impact matters regardless of intention, and the impact on Wina had been real, even if unintended.",
       "Narrator: [honestly] I'd been the one presenting, the one visible in every meeting, so naturally the story kept collapsing into a version where I was the sole author.",
-      "Narrator: [determined] The next morning, I emailed the client directly, correcting the record and naming both colleagues as co-authors of the strategy we'd pitched.",
-      "Narrator: [nervous] It felt oddly exposing to admit publicly that I'd gotten something wrong, as though correcting it drew even more attention to the original mistake.",
-      "Narrator: [surprised] Instead, the client simply thanked me for the clarification, and Wina later told me it meant more to her than I probably realized at the time.",
-      "Narrator: [thoughtful] Since then, I've started deliberately naming contributors before presentations even begin, rather than trusting memory to distribute credit fairly on its own.",
-      "Narrator: [reflective] It turns out memory is a fairly self-serving narrator, quietly editing out whoever wasn't standing at the front of the room.",
-      "Narrator: [warmly] I don't think I'm a fundamentally dishonest person, but I've learned that fairness sometimes requires deliberate correction, not just good intentions left unexamined.",
-      "Narrator: [peacefully] Wina and I still work together closely, and if anything, the correction seemed to deepen her trust rather than damage my credibility."
+      "Narrator: The next morning, I emailed the client directly, correcting the record and naming both colleagues as co-authors of the strategy we'd pitched.",
+      "Narrator: [gently] It felt oddly exposing to admit publicly that I'd gotten something wrong, as though correcting it drew even more attention to the original mistake.",
+      "Narrator: Instead, the client simply thanked me for the clarification, and Wina later told me it meant more to her than I probably realized at the time.",
+      "Narrator: [calmly] Since then, I've started deliberately naming contributors before presentations even begin, rather than trusting memory to distribute credit fairly on its own.",
+      "Narrator: It turns out memory is a fairly self-serving narrator, quietly editing out whoever wasn't standing at the front of the room.",
+      "Narrator: [encouraging] I don't think I'm a fundamentally dishonest person, but I've learned that fairness sometimes requires deliberate correction, not just good intentions left unexamined.",
+      "Narrator: Wina and I still work together closely, and if anything, the correction seemed to deepen her trust rather than damage my credibility."
     ],
     "quiz": [
-      { "question": "What triggered the narrator's realization?", "options": ["A performance review", "An uncomfortable comment from a junior colleague, Wina, about being uncredited", "A client complaint", "A formal investigation"], "correctIndex": 1, "explanation": "An uncomfortable comment from Wina, noting her name hadn't come up in the meeting, triggered the realization." },
-      { "question": "What had the narrator done during the client presentation?", "options": ["Refused to present at all", "Described a strategy as her own creation when it had come from a brainstorm with others", "Blamed Wina for a mistake", "Cancelled the meeting"], "correctIndex": 1, "explanation": "She described the strategy as something she had developed, when it actually emerged from a brainstorm with two other people." },
-      { "question": "What was the narrator's first reaction when Wina mentioned it?", "options": ["Immediate apology", "Defensively explaining that it hadn't been intentional", "Ignoring the comment completely", "Firing Wina"], "correctIndex": 1, "explanation": "Her immediate reaction was to explain herself defensively, insisting it hadn't been intentional." },
-      { "question": "What did the narrator do the next morning?", "options": ["Nothing changed", "Emailed the client to correct the record and name both colleagues as co-authors", "Apologized privately but said nothing to the client", "Asked Wina to stay quiet"], "correctIndex": 1, "explanation": "She emailed the client directly, correcting the record and naming both colleagues as co-authors of the strategy." },
-      { "question": "What has the narrator changed going forward?", "options": ["She avoids presenting entirely", "She deliberately names contributors before presentations rather than trusting memory", "She stopped working with Wina", "She lets others take all the credit"], "correctIndex": 1, "explanation": "She now deliberately names contributors before presentations begin, rather than trusting memory to distribute credit fairly." }
-    ]
+      {
+        "question": "What triggered the narrator's realization?",
+        "options": [
+          "An uncomfortable comment from a junior colleague, Wina, about being uncredited",
+          "A performance review",
+          "A client complaint",
+          "A formal investigation"
+        ],
+        "correctIndex": 0,
+        "explanation": "An uncomfortable comment from Wina, noting her name hadn't come up in the meeting, triggered the realization."
+      },
+      {
+        "question": "What had the narrator done during the client presentation?",
+        "options": [
+          "Refused to present at all",
+          "Described a strategy as her own creation when it had come from a brainstorm with others",
+          "Blamed Wina for a mistake",
+          "Cancelled the meeting"
+        ],
+        "correctIndex": 1,
+        "explanation": "She described the strategy as something she had developed, when it actually emerged from a brainstorm with two other people."
+      },
+      {
+        "question": "What was the narrator's first reaction when Wina mentioned it?",
+        "options": [
+          "Immediate apology",
+          "Ignoring the comment completely",
+          "Defensively explaining that it hadn't been intentional",
+          "Firing Wina"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her immediate reaction was to explain herself defensively, insisting it hadn't been intentional."
+      },
+      {
+        "question": "What did the narrator do the next morning?",
+        "options": [
+          "Nothing changed",
+          "Apologized privately but said nothing to the client",
+          "Asked Wina to stay quiet",
+          "Emailed the client to correct the record and name both colleagues as co-authors"
+        ],
+        "correctIndex": 3,
+        "explanation": "She emailed the client directly, correcting the record and naming both colleagues as co-authors of the strategy."
+      },
+      {
+        "question": "What has the narrator changed going forward?",
+        "options": [
+          "She avoids presenting entirely",
+          "She stopped working with Wina",
+          "She lets others take all the credit",
+          "She deliberately names contributors before presentations rather than trusting memory"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now deliberately names contributors before presentations begin, rather than trusting memory to distribute credit fairly."
+      },
+      {
+        "question": "Why did the narrator's memory overstate personal ownership of the strategy?",
+        "options": [
+          "Ratna, I've been staring at these expense reports for an hour",
+          "I nearly cried in a meeting yesterday",
+          "Being the visible presenter made other contributions easier to forget.",
+          "Correct orders, inform customers, and equip support staff."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Being the visible presenter made other contributions easier to forget."
+      },
+      {
+        "question": "What did the narrator do after recognising the impact on Wina?",
+        "options": [
+          "The client received a correction naming both colleagues as co-authors.",
+          "That's a fairly specific inconsistency to stumble across by accident",
+          "Here, someone just said the report was disorganized, full stop",
+          "It recorded evidence, actions, ownership, and corrective commitments."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The client received a correction naming both colleagues as co-authors."
+      },
+      {
+        "question": "How did the client respond to the corrected attribution?",
+        "options": [
+          "If I raise it and I'm wrong, I've damaged a relationship over nothing",
+          "The client accepted the clarification without questioning credibility.",
+          "It could just as easily be a lack of consideration for how comments land on the receiving end",
+          "Blame did not replace analysis of the system."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The client accepted the clarification without questioning credibility."
+      },
+      {
+        "question": "What does the narrator learn about good intentions and fairness?",
+        "options": [
+          "Fair outcomes sometimes require deliberate correction, not innocent motives.",
+          "It's just a decision dressed up as caution",
+          "When you separate it that way, it does land differently",
+          "The review had not turned her into the symbol of failure."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Fair outcomes sometimes require deliberate correction, not innocent motives."
+      },
+      {
+        "question": "How did acknowledging shared credit affect trust with Wina?",
+        "options": [
+          "I'm not condemning anyone, just refusing to pretend I didn't notice",
+          "The correction strengthened their working relationship.",
+          "I'll try responding to the content next time instead of reacting to the delivery immediately",
+          "Ask why one ordinary error travelled so far undetected."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The correction strengthened their working relationship."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-work-06",
@@ -177,34 +753,151 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Galih", "gender": "male" },
-      { "name": "Ratna", "gender": "female" }
+      {
+        "name": "Galih",
+        "gender": "male"
+      },
+      {
+        "name": "Ratna",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Galih: [hesitant] Ratna, I've been staring at these expense reports for an hour, and I genuinely don't know whether I'm overreacting to what I'm seeing.",
-      "Ratna: [curious] What did you notice? You've had that face since this morning.",
-      "Galih: [uneasy] Pak Dedi's client dinners have crept up considerably over the past quarter, and a couple of the restaurants listed don't quite match the cities he claims to have visited.",
-      "Ratna: [surprised] That's a fairly specific inconsistency to stumble across by accident. Are you certain it isn't simply a data entry error somewhere?",
-      "Galih: [firmly] I cross-checked the dates against his travel calendar twice, precisely because I wanted to be wrong about this.",
-      "Ratna: [thoughtful] Even if the amounts are relatively small, the pattern itself is what worries me more than any individual receipt.",
-      "Galih: [conflicted] That's exactly my dilemma. He's senior, well-liked, and this could easily be dismissed as an honest mix-up rather than something deliberate.",
-      "Ratna: [gently] Which is precisely why it tends to go unquestioned. Nobody wants to be the person who accused a respected colleague over what might be a rounding mistake.",
-      "Galih: [worried] If I raise it and I'm wrong, I've damaged a relationship over nothing. If I stay quiet and I'm right, I've effectively looked away from something dishonest.",
-      "Ratna: [understanding] Framed like that, silence isn't really neutral, is it? It's just a decision dressed up as caution.",
-      "Galih: [sighing] I hate that you're right. Though I keep telling myself it isn't my place, since I'm not even his direct report.",
-      "Ratna: [firmly] It became your place the moment you noticed it and understood what you were looking at.",
-      "Galih: [determined] Fine. I'll flag it to finance as a discrepancy requiring clarification, rather than framing it as an accusation I can't fully substantiate.",
-      "Ratna: [supportive] That's the right approach. Let the process determine intent; your job is simply to surface what doesn't add up.",
-      "Galih: [relieved] That reframing actually helps enormously. I'm not condemning anyone, just refusing to pretend I didn't notice.",
-      "Ratna: [warmly] Exactly. And if it turns out to be nothing, you've lost very little by asking a careful, professional question."
+      "Galih: [thoughtful] Ratna, I've been staring at these expense reports for an hour, and I genuinely don't know whether I'm overreacting to what I'm seeing.",
+      "Ratna: What did you notice? You've had that face since this morning.",
+      "Galih: [carefully] Pak Dedi's client dinners have crept up considerably over the past quarter, and a couple of the restaurants listed don't quite match the cities he claims to have visited.",
+      "Ratna: That's a fairly specific inconsistency to stumble across by accident. Are you certain it isn't simply a data entry error somewhere?",
+      "Galih: [reflective] I cross-checked the dates against his travel calendar twice, precisely because I wanted to be wrong about this.",
+      "Ratna: Even if the amounts are relatively small, the pattern itself is what worries me more than any individual receipt.",
+      "Galih: [honestly] That's exactly my dilemma. He's senior, well-liked, and this could easily be dismissed as an honest mix-up rather than something deliberate.",
+      "Ratna: Which is precisely why it tends to go unquestioned. Nobody wants to be the person who accused a respected colleague over what might be a rounding mistake.",
+      "Galih: [gently] If I raise it and I'm wrong, I've damaged a relationship over nothing. If I stay quiet and I'm right, I've effectively looked away from something dishonest.",
+      "Ratna: Framed like that, silence isn't really neutral, is it? It's just a decision dressed up as caution.",
+      "Galih: [calmly] I hate that you're right. Though I keep telling myself it isn't my place, since I'm not even his direct report.",
+      "Ratna: It became your place the moment you noticed it and understood what you were looking at.",
+      "Galih: [encouraging] Fine. I'll flag it to finance as a discrepancy requiring clarification, rather than framing it as an accusation I can't fully substantiate.",
+      "Ratna: That's the right approach. Let the process determine intent; your job is simply to surface what doesn't add up.",
+      "Galih: [seriously] That reframing actually helps enormously. I'm not condemning anyone, just refusing to pretend I didn't notice.",
+      "Ratna: Exactly. And if it turns out to be nothing, you've lost very little by asking a careful, professional question."
     ],
     "quiz": [
-      { "question": "What did Galih notice in Pak Dedi's expense reports?", "options": ["Missing receipts entirely", "Client dinners had increased, and some restaurant locations didn't match his claimed travel cities", "Duplicate payments to himself", "A missing signature"], "correctIndex": 1, "explanation": "Galih noticed the client dinners had crept up and some restaurants didn't match the cities Pak Dedi claimed to have visited." },
-      { "question": "What did Galih do to verify his suspicion?", "options": ["Asked Pak Dedi directly", "Cross-checked the dates against the travel calendar twice", "Ignored it and hoped it was nothing", "Reported it immediately without checking"], "correctIndex": 1, "explanation": "Galih cross-checked the dates against Pak Dedi's travel calendar twice, wanting to be wrong about it." },
-      { "question": "What is Galih's central dilemma?", "options": ["Whether to quit his job", "Whether raising it could wrongly damage a relationship, or staying silent means ignoring something dishonest", "Whether he'll get a bonus", "Whether Pak Dedi will be fired regardless"], "correctIndex": 1, "explanation": "Galih fears damaging a relationship if he's wrong, but also fears looking away from dishonesty if he stays quiet and is right." },
-      { "question": "What does Ratna say about staying silent?", "options": ["Silence is always the safest choice", "Silence isn't really neutral, it's a decision dressed up as caution", "Silence protects everyone equally", "Silence is required by policy"], "correctIndex": 1, "explanation": "Ratna points out that silence isn't neutral, it's a decision dressed up as caution." },
-      { "question": "What approach does Galih decide to take?", "options": ["Publicly accuse Pak Dedi", "Flag it to finance as a discrepancy requiring clarification, not as an accusation", "Confront Pak Dedi directly himself", "Delete the reports and say nothing"], "correctIndex": 1, "explanation": "Galih decides to flag it to finance as a discrepancy requiring clarification, letting the process determine intent." }
-    ]
+      {
+        "question": "What did Galih notice in Pak Dedi's expense reports?",
+        "options": [
+          "Missing receipts entirely",
+          "Duplicate payments to himself",
+          "Client dinners had increased, and some restaurant locations didn't match his claimed travel cities",
+          "A missing signature"
+        ],
+        "correctIndex": 2,
+        "explanation": "Galih noticed the client dinners had crept up and some restaurants didn't match the cities Pak Dedi claimed to have visited."
+      },
+      {
+        "question": "What did Galih do to verify his suspicion?",
+        "options": [
+          "Asked Pak Dedi directly",
+          "Cross-checked the dates against the travel calendar twice",
+          "Ignored it and hoped it was nothing",
+          "Reported it immediately without checking"
+        ],
+        "correctIndex": 1,
+        "explanation": "Galih cross-checked the dates against Pak Dedi's travel calendar twice, wanting to be wrong about it."
+      },
+      {
+        "question": "What is Galih's central dilemma?",
+        "options": [
+          "Whether to quit his job",
+          "Whether he'll get a bonus",
+          "Whether raising it could wrongly damage a relationship, or staying silent means ignoring something dishonest",
+          "Whether Pak Dedi will be fired regardless"
+        ],
+        "correctIndex": 2,
+        "explanation": "Galih fears damaging a relationship if he's wrong, but also fears looking away from dishonesty if he stays quiet and is right."
+      },
+      {
+        "question": "What does Ratna say about staying silent?",
+        "options": [
+          "Silence is always the safest choice",
+          "Silence protects everyone equally",
+          "Silence is required by policy",
+          "Silence isn't really neutral, it's a decision dressed up as caution"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratna points out that silence isn't neutral, it's a decision dressed up as caution."
+      },
+      {
+        "question": "What approach does Galih decide to take?",
+        "options": [
+          "Flag it to finance as a discrepancy requiring clarification, not as an accusation",
+          "Publicly accuse Pak Dedi",
+          "Confront Pak Dedi directly himself",
+          "Delete the reports and say nothing"
+        ],
+        "correctIndex": 0,
+        "explanation": "Galih decides to flag it to finance as a discrepancy requiring clarification, letting the process determine intent."
+      },
+      {
+        "question": "What evidence makes the expense entries more than a vague suspicion?",
+        "options": [
+          "Restaurant locations conflict with the employee's documented travel dates.",
+          "I nearly cried in a meeting yesterday",
+          "Correct orders, inform customers, and equip support staff.",
+          "The department's future hiring plan remained unsettled."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Restaurant locations conflict with the employee's documented travel dates."
+      },
+      {
+        "question": "Why are colleagues reluctant to question a respected employee's claims?",
+        "options": [
+          "Here, someone just said the report was disorganized, full stop",
+          "It recorded evidence, actions, ownership, and corrective commitments.",
+          "It included budget tasks, monthly feedback, and a review date.",
+          "They fear damaging a relationship over a possible error."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: They fear damaging a relationship over a possible error."
+      },
+      {
+        "question": "How does Ratna reframe silence about the inconsistency?",
+        "options": [
+          "It could just as easily be a lack of consideration for how comments land on the receiving end",
+          "Remaining silent is also a consequential decision.",
+          "Blame did not replace analysis of the system.",
+          "Both people would retain the same record of commitments."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Remaining silent is also a consequential decision."
+      },
+      {
+        "question": "What becomes the observer's responsibility after noticing the mismatch?",
+        "options": [
+          "When you separate it that way, it does land differently",
+          "Report the evidence through the proper review process.",
+          "The review had not turned her into the symbol of failure.",
+          "A fair review is due, but promotion is not guaranteed."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Report the evidence through the proper review process."
+      },
+      {
+        "question": "Who should determine whether the inconsistency was intentional?",
+        "options": [
+          "I'll try responding to the content next time instead of reacting to the delivery immediately",
+          "Ask why one ordinary error travelled so far undetected.",
+          "The formal process should assess intent after facts are surfaced.",
+          "The narrator gained clear evidence targets and a decision date."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The formal process should assess intent after facts are surfaced."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-work-07",
@@ -213,33 +906,585 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Aisyah", "gender": "female" },
-      { "name": "Mentor", "gender": "male" }
+      {
+        "name": "Aisyah",
+        "gender": "female"
+      },
+      {
+        "name": "Mentor",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Aisyah: [frustrated] Can I be honest? I nearly cried in a meeting yesterday, and it wasn't even really about the criticism itself.",
-      "Mentor: [gently] I heard it was a fairly direct review. What specifically threw you off about how it was delivered?",
-      "Aisyah: [honestly] At my last company, feedback was always softened, cushioned with compliments first. Here, someone just said the report was disorganized, full stop.",
-      "Mentor: [understanding] That bluntness can feel jarring at first, particularly if you're used to feedback being wrapped in reassurance before the actual point arrives.",
-      "Aisyah: [thoughtful] It felt personal, even though logically I know it probably wasn't meant that way at all.",
-      "Mentor: [explaining] Here, directness is generally treated as a form of respect, believe it or not. It assumes you're capable of hearing something plainly without needing it softened.",
-      "Aisyah: [skeptical] That's a generous interpretation. It could just as easily be a lack of consideration for how comments land on the receiving end.",
-      "Mentor: [conceding] That's fair, and honestly, some people here do lean too far into bluntness without much tact. Not every direct comment is delivered thoughtfully.",
-      "Aisyah: [considering] So how do I tell the difference between genuinely useful directness and someone simply being careless with their words?",
-      "Mentor: [thoughtful] Ask yourself whether the comment addressed the work specifically, or whether it characterized you as a person. Yesterday's comment, from what you've described, targeted the report, not you.",
-      "Aisyah: [reflective] When you separate it that way, it does land differently. I think I'd folded the two together without realizing it.",
-      "Mentor: [encouraging] Most people here would rather hear the blunt version early than a polite version too late to actually fix anything.",
-      "Aisyah: [honestly] I suppose I've been treating politeness as proof that someone cares, when maybe directness here means exactly the same thing, just expressed differently.",
-      "Mentor: [warmly] Precisely. Give it another month before deciding whether the culture suits you; first impressions of tone are notoriously unreliable.",
-      "Aisyah: [determined] Alright. I'll try responding to the content next time instead of reacting to the delivery immediately.",
-      "Mentor: [smiling] That single shift alone will probably change how comfortable you feel here far more than the culture itself will."
+      "Aisyah: [thoughtful] Can I be honest? I nearly cried in a meeting yesterday, and it wasn't even really about the criticism itself.",
+      "Mentor: I heard it was a fairly direct review. What specifically threw you off about how it was delivered?",
+      "Aisyah: [carefully] At my last company, feedback was always softened, cushioned with compliments first. Here, someone just said the report was disorganized, full stop.",
+      "Mentor: That bluntness can feel jarring at first, particularly if you're used to feedback being wrapped in reassurance before the actual point arrives.",
+      "Aisyah: [reflective] It felt personal, even though logically I know it probably wasn't meant that way at all.",
+      "Mentor: Here, directness is generally treated as a form of respect, believe it or not. It assumes you're capable of hearing something plainly without needing it softened.",
+      "Aisyah: [honestly] That's a generous interpretation. It could just as easily be a lack of consideration for how comments land on the receiving end.",
+      "Mentor: That's fair, and honestly, some people here do lean too far into bluntness without much tact. Not every direct comment is delivered thoughtfully.",
+      "Aisyah: [gently] So how do I tell the difference between genuinely useful directness and someone simply being careless with their words?",
+      "Mentor: Ask yourself whether the comment addressed the work specifically, or whether it characterized you as a person. Yesterday's comment, from what you've described, targeted the report, not you.",
+      "Aisyah: [calmly] When you separate it that way, it does land differently. I think I'd folded the two together without realizing it.",
+      "Mentor: Most people here would rather hear the blunt version early than a polite version too late to actually fix anything.",
+      "Aisyah: [encouraging] I suppose I've been treating politeness as proof that someone cares, when maybe directness here means exactly the same thing, just expressed differently.",
+      "Mentor: Precisely. Give it another month before deciding whether the culture suits you; first impressions of tone are notoriously unreliable.",
+      "Aisyah: [seriously] Alright. I'll try responding to the content next time instead of reacting to the delivery immediately.",
+      "Mentor: That single shift alone will probably change how comfortable you feel here far more than the culture itself will."
     ],
     "quiz": [
-      { "question": "What upset Aisyah in the meeting?", "options": ["Being ignored completely", "Direct, unsoftened feedback that her report was disorganized", "Losing a project", "Being publicly praised incorrectly"], "correctIndex": 1, "explanation": "Aisyah was upset by direct feedback saying the report was disorganized, with no softening or compliments first." },
-      { "question": "How does the mentor explain the workplace's directness?", "options": ["As a sign of disrespect", "As generally being treated as a form of respect, assuming people can hear things plainly", "As something unique to Aisyah's team", "As a rule nobody actually follows"], "correctIndex": 1, "explanation": "The mentor explains directness here is generally treated as a form of respect, assuming people can handle plain feedback." },
-      { "question": "What does Aisyah push back on?", "options": ["That directness always means respect; it could just be a lack of consideration", "That feedback should never be given", "That her report actually was well organized", "That the mentor is wrong about everything"], "correctIndex": 0, "explanation": "Aisyah points out that bluntness could also just reflect a lack of consideration for how comments land, not necessarily respect." },
-      { "question": "What test does the mentor suggest for judging feedback?", "options": ["Whether it was said loudly", "Whether the comment addressed the work specifically or characterized her as a person", "Whether it came from a manager", "Whether it was written or spoken"], "correctIndex": 1, "explanation": "The mentor suggests checking whether the comment targeted the work itself or characterized her as a person." },
-      { "question": "What does Aisyah decide to try going forward?", "options": ["Quit the job", "Respond to the content of feedback rather than reacting to its delivery", "Avoid all future feedback", "Report her colleague to HR"], "correctIndex": 1, "explanation": "Aisyah decides to try responding to the content next time instead of reacting to the delivery immediately." }
-    ]
+      {
+        "question": "What upset Aisyah in the meeting?",
+        "options": [
+          "Direct, unsoftened feedback that her report was disorganized",
+          "Being ignored completely",
+          "Losing a project",
+          "Being publicly praised incorrectly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Aisyah was upset by direct feedback saying the report was disorganized, with no softening or compliments first."
+      },
+      {
+        "question": "How does the mentor explain the workplace's directness?",
+        "options": [
+          "As a sign of disrespect",
+          "As something unique to Aisyah's team",
+          "As a rule nobody actually follows",
+          "As generally being treated as a form of respect, assuming people can hear things plainly"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mentor explains directness here is generally treated as a form of respect, assuming people can handle plain feedback."
+      },
+      {
+        "question": "What does Aisyah push back on?",
+        "options": [
+          "That feedback should never be given",
+          "That directness always means respect; it could just be a lack of consideration",
+          "That her report actually was well organized",
+          "That the mentor is wrong about everything"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aisyah points out that bluntness could also just reflect a lack of consideration for how comments land, not necessarily respect."
+      },
+      {
+        "question": "What test does the mentor suggest for judging feedback?",
+        "options": [
+          "Whether it was said loudly",
+          "Whether it came from a manager",
+          "Whether it was written or spoken",
+          "Whether the comment addressed the work specifically or characterized her as a person"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mentor suggests checking whether the comment targeted the work itself or characterized her as a person."
+      },
+      {
+        "question": "What does Aisyah decide to try going forward?",
+        "options": [
+          "Quit the job",
+          "Respond to the content of feedback rather than reacting to its delivery",
+          "Avoid all future feedback",
+          "Report her colleague to HR"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aisyah decides to try responding to the content next time instead of reacting to the delivery immediately."
+      },
+      {
+        "question": "Why did direct criticism of the report initially feel personal?",
+        "options": [
+          "Correct orders, inform customers, and equip support staff.",
+          "The department's future hiring plan remained unsettled.",
+          "The employee came from a culture where feedback was softened first.",
+          "An employee says a colleague presented her idea without credit."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The employee came from a culture where feedback was softened first."
+      },
+      {
+        "question": "What limitation does the colleague admit about workplace bluntness?",
+        "options": [
+          "Some direct comments lack tact and thoughtful delivery.",
+          "It recorded evidence, actions, ownership, and corrective commitments.",
+          "It included budget tasks, monthly feedback, and a review date.",
+          "Evidence is needed before confirming wrongdoing or assuming jealousy."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Some direct comments lack tact and thoughtful delivery."
+      },
+      {
+        "question": "How can the employee distinguish feedback from a personal attack?",
+        "options": [
+          "Blame did not replace analysis of the system.",
+          "Both people would retain the same record of commitments.",
+          "Check whether it describes the work or the person's character.",
+          "Name the action and responsibility without defining the person's character."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Check whether it describes the work or the person's character."
+      },
+      {
+        "question": "Why do coworkers often prefer clear criticism delivered early?",
+        "options": [
+          "The review had not turned her into the symbol of failure.",
+          "A fair review is due, but promotion is not guaranteed.",
+          "It leaves enough time to improve the work.",
+          "Document decisions, ideas, and owners while work is happening."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It leaves enough time to improve the work."
+      },
+      {
+        "question": "What period does the colleague suggest before judging the culture?",
+        "options": [
+          "Ask why one ordinary error travelled so far undetected.",
+          "The narrator gained clear evidence targets and a decision date.",
+          "Recognition affects promotion, pay, and access to future assignments.",
+          "Observe it for another month before deciding whether it fits."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Observe it for another month before deciding whether it fits."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-work-08",
+    "title": "The Post-Mortem Without a Scapegoat",
+    "level": "B2",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [serious] Our product launch failed on a Tuesday morning. Customers could place orders, but confirmation emails displayed the wrong delivery dates. Support received hundreds of messages before we disabled the checkout.",
+      "Narrator: The first meeting began badly. One manager asked who had approved the final template, and everyone looked towards a junior developer. She had made the last edit, but the question implied that the failure belonged to one person.",
+      "Narrator: [carefully] We rebuilt the timeline instead. The template change had passed review, yet the test environment used a different date setting. The release checklist did not include a confirmation-email test, and the launch schedule left no time for a staged rollout.",
+      "Narrator: The developer's edit was part of the chain, not the whole explanation. She described what she had seen without being forced to defend her character. Operations, testing, and management each identified decisions they controlled.",
+      "Narrator: [analytical] We separated immediate repair from long-term learning. First, we corrected affected orders, informed customers clearly, and gave support staff an approved response. Then we added an automated test, a smaller initial release, and a named owner for rollback decisions.",
+      "Narrator: The report did not avoid accountability. It recorded actions, evidence, and ownership. What it avoided was using blame as a substitute for understanding the system.",
+      "Narrator: [reflective] Two weeks later, the junior developer presented the new test herself. That would have been unlikely if the first meeting had turned her into the public symbol of failure.",
+      "Narrator: A useful post-mortem asks not only who touched the last step, but why one ordinary error could travel so far without being detected. Fairness and technical accuracy pointed towards the same question."
+    ],
+    "quiz": [
+      {
+        "question": "What customer-facing error caused the product launch to fail?",
+        "options": [
+          "Confirmation emails displayed incorrect delivery dates.",
+          "She feared the question would sound entitled.",
+          "General praise hides differences in individual contributions.",
+          "She regularly made her contributions visible to leadership."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Confirmation emails displayed incorrect delivery dates."
+      },
+      {
+        "question": "Why did the first review meeting unfairly focus on a junior developer?",
+        "options": [
+          "It did not define the requirements of the next role.",
+          "A manager asked who made the final template edit.",
+          "The most visible person may receive credit for quieter work.",
+          "Reliable within the team but nearly invisible beyond it."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: A manager asked who made the final template edit."
+      },
+      {
+        "question": "What fact showed that the edit was not an unchecked individual action?",
+        "options": [
+          "Projects, measurable results, and current responsibilities.",
+          "Documented contributions should matter more than popularity.",
+          "The template change had already passed review.",
+          "The narrator confused useful visibility with vanity."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The template change had already passed review."
+      },
+      {
+        "question": "Which missing test allowed the defect to reach customers?",
+        "options": [
+          "She lacked demonstrated experience managing a full budget.",
+          "Collaborative results may depend on several people's work.",
+          "The feedback became specific rather than vague.",
+          "The checklist omitted a confirmation-email test."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The checklist omitted a confirmation-email test."
+      },
+      {
+        "question": "How did rebuilding the timeline affect the developer's participation?",
+        "options": [
+          "She could explain evidence without defending her character.",
+          "Vague claims became questions about criteria and evidence.",
+          "Some contributions should be acknowledged privately with consent.",
+          "Unseen work cannot always influence decisions, even when it is excellent."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She could explain evidence without defending her character."
+      },
+      {
+        "question": "What immediate repairs came before long-term process changes?",
+        "options": [
+          "The department's future hiring plan remained unsettled.",
+          "Correct orders, inform customers, and equip support staff.",
+          "An employee says a colleague presented her idea without credit.",
+          "She regularly made her contributions visible to leadership."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Correct orders, inform customers, and equip support staff."
+      },
+      {
+        "question": "Why was the final report still an accountability document?",
+        "options": [
+          "It included budget tasks, monthly feedback, and a review date.",
+          "Evidence is needed before confirming wrongdoing or assuming jealousy.",
+          "It recorded evidence, actions, ownership, and corrective commitments.",
+          "Reliable within the team but nearly invisible beyond it."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It recorded evidence, actions, ownership, and corrective commitments."
+      },
+      {
+        "question": "What did the review avoid using as a substitute for understanding?",
+        "options": [
+          "Both people would retain the same record of commitments.",
+          "Name the action and responsibility without defining the person's character.",
+          "The narrator confused useful visibility with vanity.",
+          "Blame did not replace analysis of the system."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Blame did not replace analysis of the system."
+      },
+      {
+        "question": "Why could the developer later present the new test confidently?",
+        "options": [
+          "The review had not turned her into the symbol of failure.",
+          "A fair review is due, but promotion is not guaranteed.",
+          "Document decisions, ideas, and owners while work is happening.",
+          "The feedback became specific rather than vague."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The review had not turned her into the symbol of failure."
+      },
+      {
+        "question": "Which diagnostic question joins fairness with technical accuracy?",
+        "options": [
+          "The narrator gained clear evidence targets and a decision date.",
+          "Ask why one ordinary error travelled so far undetected.",
+          "Recognition affects promotion, pay, and access to future assignments.",
+          "Unseen work cannot always influence decisions, even when it is excellent."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Ask why one ordinary error travelled so far undetected."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-work-09",
+    "title": "A Promotion Conversation I Had to Rehearse",
+    "level": "B2",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [nervously] I postponed asking about promotion for four months. My manager often praised my work, but praise did not explain what the next role required, and I worried that raising the subject would sound entitled.",
+      "Narrator: I prepared by reviewing the published role description. I listed projects I had led, measurable results, and responsibilities I was already handling. I also noted gaps, including a budgeting skill I had not yet demonstrated.",
+      "Narrator: [carefully] Before the meeting, a mentor helped me replace vague claims with questions. Instead of saying, “I deserve more,” I planned to ask, “Which criteria am I meeting, which am I not, and what evidence would show readiness?”",
+      "Narrator: The conversation was less dramatic than I feared. My manager agreed that my client work matched the next level but said I lacked experience supervising a full project budget. She could not promise a promotion date because the department's hiring plan was unsettled.",
+      "Narrator: [thoughtful] We created a six-month development plan with two budget tasks, monthly feedback, and a formal review date. I asked for the agreement in writing so that both of us would remember the same commitments.",
+      "Narrator: I also asked how salary bands were set and who approved changes. The answers were not perfect, but they made the process more visible.",
+      "Narrator: [honestly] A development plan is not a guarantee. Business conditions can change, and meeting criteria should lead to a fair review, not an automatic promise that no manager is authorised to make.",
+      "Narrator: I left without a new title, yet with something useful: specific evidence to build and a date when the decision could no longer be postponed through general compliments."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator delay asking about promotion for four months?",
+        "options": [
+          "She feared the question would sound entitled.",
+          "General praise hides differences in individual contributions.",
+          "She regularly made her contributions visible to leadership.",
+          "Professional feedback feels like a betrayal of their friendship."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She feared the question would sound entitled."
+      },
+      {
+        "question": "Why was general praise insufficient preparation for advancement?",
+        "options": [
+          "The most visible person may receive credit for quieter work.",
+          "It did not define the requirements of the next role.",
+          "Reliable within the team but nearly invisible beyond it.",
+          "He cannot correct a problem nobody states clearly."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It did not define the requirements of the next role."
+      },
+      {
+        "question": "What evidence did the narrator gather before meeting the manager?",
+        "options": [
+          "Documented contributions should matter more than popularity.",
+          "The narrator confused useful visibility with vanity.",
+          "Projects, measurable results, and current responsibilities.",
+          "Discuss deadlines professionally while keeping friendship outside that conversation."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Projects, measurable results, and current responsibilities."
+      },
+      {
+        "question": "Which readiness gap did the narrator identify personally?",
+        "options": [
+          "Collaborative results may depend on several people's work.",
+          "The feedback became specific rather than vague.",
+          "The team may reasonably doubt whether standards are applied fairly.",
+          "She lacked demonstrated experience managing a full budget."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: She lacked demonstrated experience managing a full budget."
+      },
+      {
+        "question": "How did a mentor improve the planned promotion conversation?",
+        "options": [
+          "Vague claims became questions about criteria and evidence.",
+          "Some contributions should be acknowledged privately with consent.",
+          "Unseen work cannot always influence decisions, even when it is excellent.",
+          "Use specific missed deadlines rather than personal feelings."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Vague claims became questions about criteria and evidence."
+      },
+      {
+        "question": "Why could the manager not promise a promotion date?",
+        "options": [
+          "An employee says a colleague presented her idea without credit.",
+          "The department's future hiring plan remained unsettled.",
+          "She regularly made her contributions visible to leadership.",
+          "Professional feedback feels like a betrayal of their friendship."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The department's future hiring plan remained unsettled."
+      },
+      {
+        "question": "What made the six-month plan measurable?",
+        "options": [
+          "Evidence is needed before confirming wrongdoing or assuming jealousy.",
+          "Reliable within the team but nearly invisible beyond it.",
+          "It included budget tasks, monthly feedback, and a review date.",
+          "He cannot correct a problem nobody states clearly."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It included budget tasks, monthly feedback, and a review date."
+      },
+      {
+        "question": "Why did the narrator request the agreement in writing?",
+        "options": [
+          "Name the action and responsibility without defining the person's character.",
+          "The narrator confused useful visibility with vanity.",
+          "Discuss deadlines professionally while keeping friendship outside that conversation.",
+          "Both people would retain the same record of commitments."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Both people would retain the same record of commitments."
+      },
+      {
+        "question": "What limitation applies even after every development task is completed?",
+        "options": [
+          "A fair review is due, but promotion is not guaranteed.",
+          "Document decisions, ideas, and owners while work is happening.",
+          "The feedback became specific rather than vague.",
+          "The team may reasonably doubt whether standards are applied fairly."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A fair review is due, but promotion is not guaranteed."
+      },
+      {
+        "question": "What useful outcome replaced an immediate new title?",
+        "options": [
+          "Recognition affects promotion, pay, and access to future assignments.",
+          "The narrator gained clear evidence targets and a decision date.",
+          "Unseen work cannot always influence decisions, even when it is excellent.",
+          "Use specific missed deadlines rather than personal feelings."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The narrator gained clear evidence targets and a decision date."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-work-10",
+    "title": "What Does Fair Credit Sound Like?",
+    "level": "B2",
+    "themeId": "work",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [thoughtful] A project succeeds, and the manager says, “Great work, everyone.” Why might that not be enough?",
+      "Guest: General praise can hide unequal contributions. It may also allow the most visible person to receive credit for work done quietly by others.",
+      "Host: How can a manager recognise people fairly?",
+      "Guest: [carefully] Name specific contributions: who identified the risk, who tested the solution, who supported the client, and who coordinated the handover. Use documented work rather than popularity.",
+      "Host: What if several people contributed to the same result?",
+      "Guest: Say so. Shared credit is more accurate than forcing one hero into a collaborative story.",
+      "Host: [curious] Should every contribution be announced publicly?",
+      "Guest: Not automatically. Ask about preferences, especially when publicity includes personal details. Some recognition can be private or recorded in performance feedback.",
+      "Host: An employee says her idea was presented by a colleague without acknowledgement. What should the manager do?",
+      "Guest: Review meeting notes, drafts, and messages; hear both accounts; then correct the record at an appropriate level. Do not treat the complaint as proof or dismiss it as jealousy.",
+      "Host: How should mistakes be discussed alongside credit?",
+      "Guest: Apply similar precision. Name the action and responsibility without turning one error into a permanent character judgment.",
+      "Host: [reflective] Can fair credit affect more than morale?",
+      "Guest: Yes. Promotion, pay, and future assignments often depend on visible evidence. Inaccurate recognition can create material inequality.",
+      "Host: What habit would improve the next project?",
+      "Guest: Record decisions and owners as work happens. Fair credit is easier when evidence exists before success makes everyone's memory convenient. At the final review, invite corrections and make sure overlooked support work appears in the official record."
+    ],
+    "quiz": [
+      {
+        "question": "Why can “great work, everyone” conceal unfair recognition?",
+        "options": [
+          "General praise hides differences in individual contributions.",
+          "She regularly made her contributions visible to leadership.",
+          "Professional feedback feels like a betrayal of their friendship.",
+          "He had trained the narrator and possessed far more experience."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: General praise hides differences in individual contributions."
+      },
+      {
+        "question": "Who often benefits when contributions are not named precisely?",
+        "options": [
+          "Reliable within the team but nearly invisible beyond it.",
+          "The most visible person may receive credit for quieter work.",
+          "He cannot correct a problem nobody states clearly.",
+          "He knew his skills had fallen behind but felt unable to ask."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The most visible person may receive credit for quieter work."
+      },
+      {
+        "question": "What evidence should guide a manager's recognition decisions?",
+        "options": [
+          "The narrator confused useful visibility with vanity.",
+          "Discuss deadlines professionally while keeping friendship outside that conversation.",
+          "Documented contributions should matter more than popularity.",
+          "Correction became a collaborative plan for learning newer tools."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Documented contributions should matter more than popularity."
+      },
+      {
+        "question": "Why is shared credit sometimes more accurate than naming one star?",
+        "options": [
+          "The feedback became specific rather than vague.",
+          "The team may reasonably doubt whether standards are applied fairly.",
+          "Yusuf and the teams frustrated by avoidable problems.",
+          "Collaborative results may depend on several people's work."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Collaborative results may depend on several people's work."
+      },
+      {
+        "question": "How should publicity preferences affect employee recognition?",
+        "options": [
+          "Some contributions should be acknowledged privately with consent.",
+          "Unseen work cannot always influence decisions, even when it is excellent.",
+          "Use specific missed deadlines rather than personal feelings.",
+          "Respect requires timely honesty, not protective silence."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Some contributions should be acknowledged privately with consent."
+      },
+      {
+        "question": "What complaint requires the manager to examine records and hear both sides?",
+        "options": [
+          "She regularly made her contributions visible to leadership.",
+          "An employee says a colleague presented her idea without credit.",
+          "Professional feedback feels like a betrayal of their friendship.",
+          "He had trained the narrator and possessed far more experience."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: An employee says a colleague presented her idea without credit."
+      },
+      {
+        "question": "Why should the manager neither accept nor dismiss that complaint immediately?",
+        "options": [
+          "Reliable within the team but nearly invisible beyond it.",
+          "He cannot correct a problem nobody states clearly.",
+          "Evidence is needed before confirming wrongdoing or assuming jealousy.",
+          "He knew his skills had fallen behind but felt unable to ask."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Evidence is needed before confirming wrongdoing or assuming jealousy."
+      },
+      {
+        "question": "How should mistakes be described alongside contributions?",
+        "options": [
+          "The narrator confused useful visibility with vanity.",
+          "Discuss deadlines professionally while keeping friendship outside that conversation.",
+          "Correction became a collaborative plan for learning newer tools.",
+          "Name the action and responsibility without defining the person's character."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Name the action and responsibility without defining the person's character."
+      },
+      {
+        "question": "What record-keeping habit makes later attribution more reliable?",
+        "options": [
+          "Document decisions, ideas, and owners while work is happening.",
+          "The feedback became specific rather than vague.",
+          "The team may reasonably doubt whether standards are applied fairly.",
+          "Yusuf and the teams frustrated by avoidable problems."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Document decisions, ideas, and owners while work is happening."
+      },
+      {
+        "question": "How can fair credit influence more than team morale?",
+        "options": [
+          "Unseen work cannot always influence decisions, even when it is excellent.",
+          "Recognition affects promotion, pay, and access to future assignments.",
+          "Use specific missed deadlines rather than personal feelings.",
+          "Respect requires timely honesty, not protective silence."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Recognition affects promotion, pay, and access to future assignments."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "work",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

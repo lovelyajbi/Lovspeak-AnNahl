@@ -6,137 +6,612 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Even though Adam was the very first human being Allah created, his story is not really about being perfect from the start; it is about what happens after a mistake.",
-      "Narrator: [reflective] Adam and his wife Hawwa lived in Paradise, free to enjoy almost everything around them, except for one single tree that Allah told them clearly to avoid.",
-      "Narrator: [honestly] Despite that clear warning, Shaytan approached them patiently, whispering that the tree offered something they were missing, some kind of eternal life they did not yet have.",
-      "Narrator: [with tension] If Shaytan had simply commanded them outright, they probably would have refused immediately; instead, he used doubt and desire, slowly wearing down their resolve.",
+      "Narrator: Adam and his wife Hawwa lived in Paradise, free to enjoy almost everything around them, except for one single tree that Allah told them clearly to avoid.",
+      "Narrator: [carefully] Despite that clear warning, Shaytan approached them patiently, whispering that the tree offered something they were missing, some kind of eternal life they did not yet have.",
+      "Narrator: The Quran describes Shaytan whispering and deceiving them. We need not invent a detailed psychological process beyond the revealed account.",
       "Narrator: [reflective] Eventually, both Adam and Hawwa ate from the tree, and almost immediately, they became aware of a shame they had never experienced before.",
-      "Narrator: [softly] They tried covering themselves with leaves, realizing, perhaps for the first time, how deeply a single choice can change how a person sees themselves.",
-      "Narrator: [thoughtful] What strikes me most, however, is not the mistake itself, but what Adam did the moment he understood what had happened.",
-      "Narrator: [with feeling] He did not blame Hawwa, and he did not blame Shaytan, even though both had clearly played a role in what occurred.",
+      "Narrator: They tried covering themselves with leaves, realizing, perhaps for the first time, how deeply a single choice can change how a person sees themselves.",
+      "Narrator: [seriously] What strikes me most, however, is not the mistake itself, but what Adam did the moment he understood what had happened.",
+      "Narrator: The Quran presents both Adam and his wife acknowledging that they had wronged themselves; it does not place the first human sin on Hawwa alone.",
       "Narrator: [honestly] Instead, Adam turned directly to Allah, admitting his fault openly, and asking sincerely for forgiveness, without excuses or delay.",
-      "Narrator: [gently] Allah taught him specific words of repentance, words that acknowledged the wrong completely while still expressing hope for mercy.",
-      "Narrator: [warmly] As a result of that honest repentance, Allah forgave him, though Adam and Hawwa were still sent down to live on earth.",
-      "Narrator: [reflective] In spite of losing Paradise temporarily, Adam was not abandoned; instead, he was given guidance to carry with him into this new, difficult world.",
-      "Narrator: [thoughtful] I think that sequence matters enormously: mistake, honest admission, sincere repentance, and then mercy, rather than endless shame or hopeless despair.",
-      "Narrator: [with a small smile] If Adam, the very first human, could make a mistake and still find his way back through humility, then so, honestly, can any of us."
+      "Narrator: Allah taught him specific words of repentance, words that acknowledged the wrong completely while still expressing hope for mercy.",
+      "Narrator: [gently] As a result of that honest repentance, Allah forgave him, though Adam and Hawwa were still sent down to live on earth.",
+      "Narrator: In spite of losing Paradise temporarily, Adam was not abandoned; instead, he was given guidance to carry with him into this new, difficult world.",
+      "Narrator: [encouraging] I think that sequence matters enormously: mistake, honest admission, sincere repentance, and then mercy, rather than endless shame or hopeless despair.",
+      "Narrator: The account teaches hope in repentance, while harms involving other people may also require returning rights, apologizing, and repairing what is possible."
     ],
     "quiz": [
-      { "question": "What were Adam and Hawwa told to avoid in Paradise?", "options": ["A river", "One specific tree", "A mountain", "A garden gate"], "correctIndex": 1, "explanation": "They were free to enjoy Paradise except for one single tree that Allah told them to avoid." },
-      { "question": "How did Shaytan convince them, according to the narrator?", "options": ["By commanding them outright", "By using doubt and desire patiently, rather than direct force", "By threatening them", "By ignoring them completely"], "correctIndex": 1, "explanation": "Shaytan used doubt and desire, slowly wearing down their resolve, instead of commanding them outright." },
-      { "question": "What did Adam do after eating from the tree?", "options": ["He blamed Hawwa", "He turned to Allah, admitted his fault, and asked for forgiveness", "He blamed Shaytan entirely", "He hid from Allah forever"], "correctIndex": 1, "explanation": "Adam turned directly to Allah, admitting his fault openly and asking sincerely for forgiveness." },
-      { "question": "What happened as a result of Adam's honest repentance?", "options": ["Nothing changed", "Allah forgave him, though he was still sent to live on earth", "He returned to Paradise immediately", "He was punished further"], "correctIndex": 1, "explanation": "Allah forgave him as a result of that honest repentance, though Adam and Hawwa were still sent down to earth." },
-      { "question": "What sequence does the narrator say matters enormously?", "options": ["Mistake, punishment, and silence", "Mistake, honest admission, sincere repentance, and then mercy", "Denial, blame, and forgetting", "Perfection without any mistakes"], "correctIndex": 1, "explanation": "The narrator highlights mistake, honest admission, sincere repentance, and then mercy as the important sequence." }
-    ]
+      {
+        "question": "What were Adam and Hawwa told to avoid in Paradise?",
+        "options": [
+          "One specific tree",
+          "A river",
+          "A mountain",
+          "A garden gate"
+        ],
+        "correctIndex": 0,
+        "explanation": "They were free to enjoy Paradise except for one single tree that Allah told them to avoid."
+      },
+      {
+        "question": "How did Shaytan convince them, according to the narrator?",
+        "options": [
+          "By commanding them outright",
+          "By using doubt and desire patiently, rather than direct force",
+          "By threatening them",
+          "By ignoring them completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Shaytan used doubt and desire, slowly wearing down their resolve, instead of commanding them outright."
+      },
+      {
+        "question": "What did Adam do after eating from the tree?",
+        "options": [
+          "He blamed Hawwa",
+          "He blamed Shaytan entirely",
+          "He turned to Allah, admitted his fault, and asked for forgiveness",
+          "He hid from Allah forever"
+        ],
+        "correctIndex": 2,
+        "explanation": "Adam turned directly to Allah, admitting his fault openly and asking sincerely for forgiveness."
+      },
+      {
+        "question": "What happened as a result of Adam's honest repentance?",
+        "options": [
+          "Allah forgave him, though he was still sent to live on earth",
+          "Nothing changed",
+          "He returned to Paradise immediately",
+          "He was punished further"
+        ],
+        "correctIndex": 0,
+        "explanation": "Allah forgave him as a result of that honest repentance, though Adam and Hawwa were still sent down to earth."
+      },
+      {
+        "question": "What sequence does the narrator say matters enormously?",
+        "options": [
+          "Mistake, punishment, and silence",
+          "Denial, blame, and forgetting",
+          "Perfection without any mistakes",
+          "Mistake, honest admission, sincere repentance, and then mercy"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator highlights mistake, honest admission, sincere repentance, and then mercy as the important sequence."
+      },
+      {
+        "question": "Why does the narrator focus on the response after sin?",
+        "options": [
+          "Repentance shows how a person returns after failure",
+          "The prohibition was unimportant",
+          "Adam never made a choice",
+          "Earth removed accountability"
+        ],
+        "correctIndex": 0,
+        "explanation": "The discourse centers recovery rather than perfection."
+      },
+      {
+        "question": "What contrast is made between repentance and shame?",
+        "options": [
+          "Shame is always required forever",
+          "Hope removes responsibility",
+          "Repentance accepts fault with hope, while hopeless shame blocks return",
+          "Both deny the mistake"
+        ],
+        "correctIndex": 2,
+        "explanation": "The sequence joins admission and mercy."
+      },
+      {
+        "question": "Why are imagined tactics of Shaytan reduced?",
+        "options": [
+          "Shaytan did not whisper",
+          "The Quranic warning is sufficient without invented psychological stages",
+          "Desire never affects choices",
+          "The tree was unnamed"
+        ],
+        "correctIndex": 1,
+        "explanation": "Source discipline avoids narrative overreach."
+      },
+      {
+        "question": "What remained after forgiveness?",
+        "options": [
+          "A return to the tree",
+          "No responsibility",
+          "Permanent abandonment",
+          "Earthly consequences and divine guidance"
+        ],
+        "correctIndex": 3,
+        "explanation": "Forgiveness did not erase every consequence."
+      },
+      {
+        "question": "Which application best fits the account?",
+        "options": [
+          "Admit wrongdoing, seek forgiveness, repair what can be repaired, and follow guidance",
+          "Blame another person first",
+          "Wait until shame disappears",
+          "Assume repentance cancels human rights"
+        ],
+        "correctIndex": 0,
+        "explanation": "The lesson includes both worship and responsibility."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "revise; keep Quranic repentance while removing invented psychology and imprecise claims about blame",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-prophets-02",
-    "title": "Ibrahim Faces the Priests After the Idols Were Broken",
+    "title": "Ibrahim and the Argument His People Could Not Answer",
     "level": "B1",
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ibrahim", "gender": "male" },
-      { "name": "Marwan", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Dr. Hamid",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Marwan: [furious] Ibrahim, tell us honestly, were you the one who smashed every idol in this temple except the largest one?",
-      "Ibrahim: [calmly] Why not ask the largest one yourself? Perhaps he grew jealous of the smaller idols receiving so much attention.",
-      "Marwan: [frustrated] You know perfectly well these idols cannot speak, let alone move an axe.",
-      "Ibrahim: [thoughtful] Exactly my point. If they cannot even defend themselves, how could they possibly protect you, or answer your prayers?",
-      "Marwan: [defensive] Our fathers worshipped these idols for generations; that tradition alone gives them value, regardless of what you claim.",
-      "Ibrahim: [gently] Even though tradition feels comforting, doesn't it trouble you that nobody has ever questioned whether these statues deserve that devotion?",
-      "Marwan: [uncertain] Questioning it changes nothing. We were raised this way, and our whole community depends on these rituals continuing unchanged.",
-      "Ibrahim: [earnestly] I understand the fear of losing something familiar; however, following something falsely, simply because it is familiar, cannot make it true.",
-      "Marwan: [angry] So you admit you broke them. That crime alone deserves punishment, whatever clever argument you offer us today.",
-      "Ibrahim: [firmly] I am not afraid of that punishment, because I would rather face fire for truth than live comfortably inside a lie.",
-      "Marwan: [quieter] Do you truly believe one unseen God could matter more than the gods our ancestors carved with their own hands?",
-      "Ibrahim: [warmly] I believe the God who created the sun, the moon, and every star deserves more trust than something a person shaped from stone.",
-      "Marwan: [reflective] Nobody has spoken to me this directly before, not even the elders who trained me for this role.",
-      "Ibrahim: [gently] Then maybe it is worth asking yourself honestly, tonight, whether you serve these idols out of conviction, or simply out of habit.",
-      "Marwan: [thoughtful] I do not have an answer for you yet, Ibrahim, though I admit your question will stay with me.",
-      "Ibrahim: [with hope] That is enough for now. Even a single honest question can eventually lead someone toward the truth."
+      "Host: [thoughtful] Today we are examining the Quranic account in which Ibrahim, peace be upon him, challenged his people’s idols. How should we present it?",
+      "Dr. Hamid: Begin with what the Quran states and avoid writing a theatrical exchange with a named priest or invented private reactions.",
+      "Host: [carefully] What action did Ibrahim take?",
+      "Dr. Hamid: He broke the idols except the largest and directed the people to ask it, if it could speak. The argument forced them to face their own knowledge.",
+      "Host: They admitted that the idols could not speak. What follows from that admission?",
+      "Dr. Hamid: [reflective] An object unable to speak, defend itself, create, or benefit anyone cannot deserve worship. Their own answer exposed the contradiction.",
+      "Host: Was Ibrahim claiming that the large idol truly acted?",
+      "Dr. Hamid: The statement belongs to an argument that reveals the idols’ helplessness. It should not be separated from the people’s admission that they could not speak.",
+      "Host: [seriously] Some versions create a long conversation about community customs.",
+      "Dr. Hamid: The broader Quranic account does challenge inherited worship, but exact invented speeches should not be placed in sacred history. Tradition alone cannot turn falsehood into truth.",
+      "Host: What happened when the people could not answer the reasoning?",
+      "Dr. Hamid: [honestly] They moved toward punishment and called for Ibrahim to be burned. Allah made the fire cool and safe for him.",
+      "Host: Can a learner copy the destruction of other people’s property as a modern method?",
+      "Dr. Hamid: No. This was a prophetic event in its revealed context. Ordinary Muslims follow Islamic law, wisdom, lawful authority, and the rules governing conduct.",
+      "Host: [encouraging] Then what can be applied?",
+      "Dr. Hamid: Examine claims honestly, do not worship created things, and do not let inherited habit replace evidence and revelation.",
+      "Host: The source-aware version is less dramatic but more trustworthy.",
+      "Dr. Hamid: [sincere] And the Quranic reasoning is already forceful enough without fictional dialogue."
     ],
     "quiz": [
-      { "question": "What did Ibrahim leave untouched in the temple?", "options": ["A small idol near the door", "The largest idol", "The temple entrance", "Nothing was left untouched"], "correctIndex": 1, "explanation": "Ibrahim smashed every idol except the largest one, then told the priests to ask it what happened." },
-      { "question": "What is Ibrahim's main argument to Marwan?", "options": ["The idols are too heavy to worship", "If idols cannot defend themselves, they cannot protect anyone either", "Tradition alone proves the idols are true", "The idols are simply too old"], "correctIndex": 1, "explanation": "Ibrahim argues that if the idols cannot even defend themselves, they could not possibly protect anyone or answer prayers." },
-      { "question": "What reason does Marwan first give for keeping the idols?", "options": ["They are beautiful", "Their fathers worshipped them for generations, so tradition gives them value", "They are inexpensive to maintain", "No one has ever questioned them before"], "correctIndex": 1, "explanation": "Marwan says their fathers worshipped these idols for generations, and that tradition alone gives them value." },
-      { "question": "Why does Ibrahim say he is not afraid of punishment?", "options": ["He believes he can escape easily", "He would rather face fire for truth than live comfortably inside a lie", "He does not believe punishment is real", "He has powerful friends protecting him"], "correctIndex": 1, "explanation": "Ibrahim states he would rather face fire for truth than live comfortably inside a lie." },
-      { "question": "How does Marwan react by the end of the conversation?", "options": ["He punishes Ibrahim immediately and dismisses him", "He admits he has no answer yet, though Ibrahim's question will stay with him", "He agrees to worship the unseen God at once", "He refuses to think about it further"], "correctIndex": 1, "explanation": "Marwan admits he does not have an answer yet, though he acknowledges the question will stay with him." }
-    ]
+      {
+        "question": "What did Ibrahim leave unbroken?",
+        "options": [
+          "Every small idol",
+          "The temple door",
+          "The largest idol",
+          "A stone altar"
+        ],
+        "correctIndex": 2,
+        "explanation": "The largest remained for the argument."
+      },
+      {
+        "question": "What did he tell the people to do?",
+        "options": [
+          "Build another temple",
+          "Ask the largest idol if it could speak",
+          "Question a named priest",
+          "Leave the town immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "The request exposed inability."
+      },
+      {
+        "question": "What was their own answer?",
+        "options": [
+          "The idol admitted guilt",
+          "The idols could not speak",
+          "The axe belonged to them",
+          "Ibrahim had no argument"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their knowledge contradicted worship."
+      },
+      {
+        "question": "How was Ibrahim protected?",
+        "options": [
+          "The crowd canceled the fire",
+          "A priest hid him",
+          "Rain destroyed the town",
+          "Allah made the fire cool and safe"
+        ],
+        "correctIndex": 3,
+        "explanation": "The Quran attributes protection to Allah."
+      },
+      {
+        "question": "What presentation method is rejected?",
+        "options": [
+          "Explaining Quranic reasoning",
+          "Inventing named characters and exact speeches",
+          "Mentioning inherited worship",
+          "Separating fact from application"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sacred history must not become fiction."
+      },
+      {
+        "question": "What reasoning does Ibrahim expose?",
+        "options": [
+          "Every old practice is correct",
+          "Objects unable to act or speak cannot deserve worship",
+          "The largest statue created the others",
+          "Fire proves idols are alive"
+        ],
+        "correctIndex": 1,
+        "explanation": "The event challenges powerless objects."
+      },
+      {
+        "question": "Why is an invented priest named Marwan removed?",
+        "options": [
+          "The Quran does not supply that character or private conversation",
+          "Priests never existed",
+          "Names are forbidden in audio",
+          "The event has no audience"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dramatization had created false certainty."
+      },
+      {
+        "question": "What did the people admit about the idols?",
+        "options": [
+          "They knew the idols could not speak",
+          "They had heard the largest idol answer",
+          "The idols made the axe",
+          "They did not know Ibrahim"
+        ],
+        "correctIndex": 0,
+        "explanation": "Their admission exposes the contradiction."
+      },
+      {
+        "question": "What happened after argument failed?",
+        "options": [
+          "They immediately all believed",
+          "They repaired the idols peacefully",
+          "They turned toward punishment by fire",
+          "They asked Ibrahim to leave"
+        ],
+        "correctIndex": 2,
+        "explanation": "Power replaced reasoned response."
+      },
+      {
+        "question": "How should tradition be evaluated?",
+        "options": [
+          "By popularity only",
+          "By family loyalty only",
+          "By emotional comfort",
+          "By truth and revelation, not age alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "Inheritance does not prove correctness."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "replace; remove invented prophet role-play and distinguish Quranic wording from dramatic additions",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-prophets-03",
-    "title": "Musa and Harun Prepare to Face Pharaoh",
+    "title": "Preparing Musa and Harun for Pharaoh",
     "level": "B1",
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Musa", "gender": "male" },
-      { "name": "Harun", "gender": "male" }
+      {
+        "name": "Presenter",
+        "gender": "male"
+      },
+      {
+        "name": "Teacher Amina",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Musa: [anxious] Harun, Allah has commanded me to speak to Pharaoh, yet I still stumble over my words whenever I feel nervous.",
-      "Harun: [reassuring] That is exactly why Allah paired us together, brother. Where your tongue struggles, mine can carry the message clearly.",
-      "Musa: [worried] Even with your help, how can two men simply walk into the palace of someone who considers himself a living god?",
-      "Harun: [thoughtful] I keep reminding myself that Allah, who has already promised to protect us throughout this journey, has never once broken a promise.",
-      "Musa: [reflective] I grew up inside that palace, Harun. I know exactly how Pharaoh reacts when someone challenges his authority publicly.",
-      "Harun: [gently] Despite that history, you are not the frightened man who fled Egypt years ago; you return now carrying a message far greater than yourself.",
-      "Musa: [honestly] If he refuses to listen, and I suspect he will, what should our approach be then, anger or patience?",
-      "Harun: [calmly] Allah instructed us to speak gently, even to someone as arrogant as Pharaoh, in case he still reflects or feels afraid.",
-      "Musa: [surprised] Gently? After everything he has done to our people, enslaving them for generations, gentleness seems almost impossible to offer him.",
-      "Harun: [wisely] I understand that difficulty completely; however, our task is delivering the message clearly, not deciding how he responds to it.",
-      "Musa: [determined] You are right. Whether he accepts guidance or not, we are still responsible only for speaking the truth honestly.",
-      "Harun: [warmly] Exactly, and if he demands proof, remember the signs Allah has already given you, the staff and your glowing hand.",
-      "Musa: [thoughtful] I keep returning to that moment by the fire, when Allah told me not to fear, in spite of what lay ahead.",
-      "Harun: [encouraging] Hold on to that memory today, Musa. Whatever happens inside that palace, we are walking toward it together, not alone.",
-      "Musa: [with resolve] Then let us go now, before my fear grows any louder than the mission Allah has entrusted to us."
+      "Presenter: [thoughtful] Musa and Harun, peace be upon them, were sent to Pharaoh together. Why should an audio avoid acting out their private preparation?",
+      "Teacher Amina: Because revelation gives us the essential words and sequence. Fictional dialogue can make invented emotions sound like transmitted history.",
+      "Presenter: [carefully] What concern did Musa express?",
+      "Teacher Amina: He feared rejection and referred to difficulty in speech. He asked Allah to expand his chest, ease his task, loosen the knot in his tongue, and appoint Harun as support.",
+      "Presenter: That sounds like trust joined with practical preparation.",
+      "Teacher Amina: [reflective] Exactly. Asking for help does not contradict tawakkul. Musa knew the mission came from Allah and still requested support suited to the task.",
+      "Presenter: What instruction did both prophets receive about speaking to Pharaoh?",
+      "Teacher Amina: They were told to speak gently so that he might take heed or fear Allah. Gentleness did not mean approving tyranny or hiding the truth.",
+      "Presenter: [seriously] They also said they feared that Pharaoh might act harshly against them.",
+      "Teacher Amina: Allah answered that they should not fear and that He was with them, hearing and seeing. The reassurance concerned divine knowledge and support, not a promise of an effortless meeting.",
+      "Presenter: Why is that distinction important?",
+      "Teacher Amina: [honestly] People sometimes treat trust as certainty that nothing painful will occur. Prophetic accounts show obedient action despite danger, while outcomes remain with Allah.",
+      "Presenter: What can an ordinary person apply without comparing a workplace conversation to prophethood?",
+      "Teacher Amina: Prepare evidence, ask for suitable help, speak truthfully without unnecessary harshness, and recognize the limits of one’s responsibility.",
+      "Presenter: [encouraging] So courage is not the absence of fear.",
+      "Teacher Amina: It can be responsible movement through fear under clear guidance.",
+      "Presenter: And the invented dialogue is unnecessary.",
+      "Teacher Amina: [sincere] Yes. The revealed duas and commands already teach preparation, teamwork, gentleness, and reliance."
     ],
     "quiz": [
-      { "question": "Why was Harun paired with Musa for this mission?", "options": ["Harun was older and more experienced", "Harun could carry the message clearly where Musa's tongue struggled", "Harun knew Pharaoh personally", "Harun had more physical strength"], "correctIndex": 1, "explanation": "Harun explains that where Musa's tongue struggles, his own can carry the message clearly." },
-      { "question": "How did Musa know Pharaoh so well?", "options": ["He had studied him from a distance", "He grew up inside that same palace", "He had defeated him in battle before", "He had never met Pharaoh"], "correctIndex": 1, "explanation": "Musa says he grew up inside that palace, so he knows exactly how Pharaoh reacts to challenges." },
-      { "question": "What approach did Allah instruct them to take with Pharaoh?", "options": ["Speak with anger and force", "Speak gently, in case he reflects or feels afraid", "Ignore him completely", "Threaten him with punishment"], "correctIndex": 1, "explanation": "Harun explains that Allah instructed them to speak gently, even to someone as arrogant as Pharaoh." },
-      { "question": "According to Harun, what is their actual responsibility?", "options": ["Forcing Pharaoh to believe", "Delivering the message clearly, not deciding how he responds", "Predicting Pharaoh's reaction", "Avoiding the palace entirely"], "correctIndex": 1, "explanation": "Harun says their task is delivering the message clearly, not deciding how Pharaoh responds to it." },
-      { "question": "What memory does Musa return to for encouragement?", "options": ["His childhood in the palace", "The moment by the fire when Allah told him not to fear", "A conversation with his father", "A previous meeting with Pharaoh"], "correctIndex": 1, "explanation": "Musa says he keeps returning to the moment by the fire, when Allah told him not to fear." }
-    ]
+      {
+        "question": "Who was appointed to support Musa?",
+        "options": [
+          "Harun",
+          "Yusuf",
+          "Nuh",
+          "Dawud"
+        ],
+        "correctIndex": 0,
+        "explanation": "Musa asked for his brother’s support."
+      },
+      {
+        "question": "What speech-related request did Musa make?",
+        "options": [
+          "That Pharaoh remain silent",
+          "That Harun speak alone",
+          "That the knot in his tongue be loosened",
+          "That nobody ask questions"
+        ],
+        "correctIndex": 2,
+        "explanation": "The dua seeks understandable speech."
+      },
+      {
+        "question": "How were they told to address Pharaoh?",
+        "options": [
+          "With invented praise",
+          "With gentle speech",
+          "With silence",
+          "With public ridicule"
+        ],
+        "correctIndex": 1,
+        "explanation": "Gentleness was commanded."
+      },
+      {
+        "question": "What did they fear?",
+        "options": [
+          "They would forget the palace location",
+          "Harun would leave",
+          "Pharaoh might act harshly or exceed limits",
+          "The signs would disappear"
+        ],
+        "correctIndex": 2,
+        "explanation": "The mission involved real danger."
+      },
+      {
+        "question": "What does the teacher reject?",
+        "options": [
+          "The Quranic duas",
+          "Harun’s support",
+          "Fictional private dialogue between prophets",
+          "The command for gentleness"
+        ],
+        "correctIndex": 2,
+        "explanation": "Source boundaries shape the audio."
+      },
+      {
+        "question": "What does Musa’s dua show about preparation?",
+        "options": [
+          "Fear cancels prophethood",
+          "Harun controlled the outcome",
+          "Speech skill removes reliance",
+          "Trust can include asking for clarity and qualified support"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reliance and preparation are joined."
+      },
+      {
+        "question": "Why is gentle speech significant?",
+        "options": [
+          "It guaranteed Pharaoh’s belief",
+          "It removed the need for truth",
+          "It was commanded even toward a tyrant without approving his tyranny",
+          "It made oppression minor"
+        ],
+        "correctIndex": 2,
+        "explanation": "Method and moral judgment remain distinct."
+      },
+      {
+        "question": "What false detail is avoided about Harun?",
+        "options": [
+          "Invented reassurance and private predictions inside a dialogue",
+          "That he was Musa’s brother",
+          "That he joined the mission",
+          "That Allah heard their concern"
+        ],
+        "correctIndex": 0,
+        "explanation": "The Quran does not give the scripted exchange."
+      },
+      {
+        "question": "What did Allah promise them regarding awareness?",
+        "options": [
+          "They would face no difficulty",
+          "He would be with them, hearing and seeing",
+          "Pharaoh would accept immediately",
+          "The palace would be empty"
+        ],
+        "correctIndex": 1,
+        "explanation": "Divine support did not equal an easy outcome."
+      },
+      {
+        "question": "What B1 inference follows from the account?",
+        "options": [
+          "Courage requires no fear",
+          "Gentleness means surrender",
+          "Support removes personal duty",
+          "Courage may mean acting responsibly while fear remains"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mission proceeds with acknowledged fear."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "replace; remove role-play of Musa and Harun and retain the Quranic sequence of fear, dua, gentle speech, and mission",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-prophets-04",
-    "title": "Yusuf Reveals Himself to His Brothers in Egypt",
+    "title": "When Yusuf’s Brothers Finally Recognized Him",
     "level": "B1",
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Eldest Brother", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Ustadh Karim",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Yusuf: [holding back tears] Do you still remember what you did to your brother Yusuf, and to his younger brother, all those years ago in that distant land?",
-      "Eldest Brother: [confused] Wait, how do you know that story? Are you mocking us, or testing us with a stranger's cruel curiosity?",
-      "Yusuf: [gently] I am Yusuf, and this man beside me is my brother Bunyamin. Allah has been generous with us both, despite everything you once did.",
-      "Eldest Brother: [stunned] Yusuf? That cannot be true. We left you at the bottom of a well decades ago, certain we would never see you again.",
-      "Yusuf: [warmly] It is true, even though I understand why disbelief is your first reaction after so many years of silence between us.",
-      "Eldest Brother: [ashamed] We treated you terribly out of jealousy, because our father loved you more openly than he loved the rest of us.",
-      "Yusuf: [reflective] I will not deny that those years were painful; however, holding onto that pain forever would not have helped either of us today.",
-      "Eldest Brother: [nervous] Do you intend to punish us now, since you clearly hold more power in Egypt than any of us could imagine?",
-      "Yusuf: [firmly] No blame will be placed on you today. Allah has forgiven greater wrongs than this, and I choose to forgive you as well.",
-      "Eldest Brother: [emotional] I do not know how to accept mercy so easily, after carrying this guilt quietly for so many years.",
-      "Yusuf: [gently] Accepting mercy does not erase what happened; it simply means we refuse to let the past decide our entire future together.",
-      "Eldest Brother: [hopeful] What should we tell our father? He has grieved for you every single day since you disappeared.",
-      "Yusuf: [warmly] Take my shirt back to him, and place it over his eyes; Allah will restore his sight, just as he restores what feels permanently lost.",
-      "Eldest Brother: [with relief] Then let us go quickly, Yusuf, because our father has waited far too long already for news like this.",
-      "Yusuf: [with hope] Go in peace, brother. Whatever separated our family once will not define what happens between us from now on."
+      "Host: [thoughtful] The recognition scene between Yusuf and his brothers is emotionally powerful. Why should we resist turning it into a modern dramatic script?",
+      "Ustadh Karim: Because the Quran already gives key statements. Adding tears, private motives, or therapeutic language can blur the boundary between revelation and imagination.",
+      "Host: [carefully] How did Yusuf disclose his identity?",
+      "Ustadh Karim: He asked whether they knew what they had done to Yusuf and his brother when they were ignorant. They then asked whether he was truly Yusuf.",
+      "Host: What did he answer?",
+      "Ustadh Karim: [reflective] He identified himself and his brother and connected their preservation with taqwa and patience, stating that Allah does not allow the reward of those who do good to be lost.",
+      "Host: How did the brothers respond?",
+      "Ustadh Karim: They acknowledged that Allah had favored Yusuf over them and admitted that they had been sinners.",
+      "Host: [seriously] Then comes the famous declaration of mercy.",
+      "Ustadh Karim: Yusuf said there would be no blame upon them that day and asked Allah to forgive them. We should let that Quranic statement carry its own weight.",
+      "Host: Does forgiveness mean that their earlier actions were described as harmless?",
+      "Ustadh Karim: [honestly] No. Their wrongdoing is named throughout the surah. Mercy follows truth; it does not require rewriting the past.",
+      "Host: What happened next?",
+      "Ustadh Karim: Yusuf sent his shirt and instructed them to place it over his father’s face, then bring the family. The restoration occurs by Allah’s permission.",
+      "Host: [gently] Can every family conflict use this scene as pressure for immediate reunion?",
+      "Ustadh Karim: No. Ordinary cases may involve safety, rights, evidence, and gradual repair. A victim should not be forced by someone else’s simplified use of the story.",
+      "Host: [encouraging] What application is still valid?",
+      "Ustadh Karim: Admit wrongdoing, avoid revenge when mercy is appropriate, seek Allah’s forgiveness, and rebuild with truth rather than denial.",
+      "Host: [sincere] Accuracy protects both the sacred account and people applying it.",
+      "Ustadh Karim: Exactly. The Quran provides mercy without sentimental invention."
     ],
     "quiz": [
-      { "question": "How does the eldest brother first react to Yusuf's question?", "options": ["He immediately recognizes him", "He is confused and suspects mockery or a stranger's curiosity", "He laughs it off", "He walks away silently"], "correctIndex": 1, "explanation": "He is confused, asking how Yusuf knows the story and suspecting mockery or cruel curiosity." },
-      { "question": "Why does the eldest brother admit they treated Yusuf terribly?", "options": ["Because of a misunderstanding", "Out of jealousy, since their father loved Yusuf more openly", "Because Yusuf disobeyed their father", "Because Yusuf had stolen from them"], "correctIndex": 1, "explanation": "He admits they treated Yusuf terribly out of jealousy, because their father loved him more openly." },
-      { "question": "What does Yusuf decide regarding punishment?", "options": ["He punishes them severely", "No blame will be placed on them; he chooses to forgive", "He asks the ruler to decide", "He delays his decision indefinitely"], "correctIndex": 1, "explanation": "Yusuf says no blame will be placed on them today, and that he chooses to forgive them." },
-      { "question": "What does Yusuf ask his brothers to bring back to their father?", "options": ["A letter explaining everything", "His shirt, to place over their father's eyes", "A gift of gold", "Nothing at all"], "correctIndex": 1, "explanation": "Yusuf tells them to take his shirt back and place it over their father's eyes so Allah will restore his sight." },
-      { "question": "What is Yusuf's final message to his brother?", "options": ["That the past will always define their relationship", "That whatever separated them once will not define their future together", "That he still holds a grudge", "That they should never return"], "correctIndex": 1, "explanation": "Yusuf says whatever separated their family once will not define what happens between them from now on." }
-    ]
+      {
+        "question": "What did Yusuf ask his brothers about?",
+        "options": [
+          "What they had done to Yusuf and his brother",
+          "Their next harvest",
+          "A palace appointment",
+          "Their travel documents"
+        ],
+        "correctIndex": 0,
+        "explanation": "The question opened recognition."
+      },
+      {
+        "question": "What quality is linked with preserved reward?",
+        "options": [
+          "Taqwa and patience",
+          "Family rank",
+          "Political power",
+          "Silence alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf names moral perseverance."
+      },
+      {
+        "question": "What did the brothers admit?",
+        "options": [
+          "They had acted correctly",
+          "They did not know Yusuf",
+          "They had been sinners",
+          "They owned Egypt"
+        ],
+        "correctIndex": 2,
+        "explanation": "Their confession precedes mercy."
+      },
+      {
+        "question": "What did Yusuf declare?",
+        "options": [
+          "A permanent prison term",
+          "No family reunion",
+          "A new test of grain",
+          "No blame upon them that day"
+        ],
+        "correctIndex": 3,
+        "explanation": "The statement communicates mercy."
+      },
+      {
+        "question": "What caution applies today?",
+        "options": [
+          "Every conflict is identical",
+          "Do not pressure unsafe or harmed people into instant reunion",
+          "Forgiveness erases facts",
+          "Rights never matter"
+        ],
+        "correctIndex": 1,
+        "explanation": "Application must respect ordinary duties and safety."
+      },
+      {
+        "question": "What question led the brothers to recognize Yusuf?",
+        "options": [
+          "He asked about grain prices",
+          "He named their father first",
+          "He showed them a royal order",
+          "He referred to what they had done to Yusuf and his brother"
+        ],
+        "correctIndex": 3,
+        "explanation": "Recognition followed his disclosure."
+      },
+      {
+        "question": "What did the brothers acknowledge?",
+        "options": [
+          "They had protected Yusuf",
+          "The well never existed",
+          "They deserved authority",
+          "Allah had favored Yusuf over them and they had sinned"
+        ],
+        "correctIndex": 3,
+        "explanation": "Their answer contains confession."
+      },
+      {
+        "question": "How does forgiveness appear in the Quranic scene?",
+        "options": [
+          "The past is denied",
+          "Every consequence is explained",
+          "The brothers forgive themselves",
+          "Yusuf declares no blame upon them that day and prays for forgiveness"
+        ],
+        "correctIndex": 3,
+        "explanation": "Mercy follows acknowledgment."
+      },
+      {
+        "question": "Why is “I choose to forgive” treated carefully?",
+        "options": [
+          "Yusuf did not show mercy",
+          "Choice never matters",
+          "The exact Quranic wording should guide the account rather than modern invented phrasing",
+          "Translations cannot be used"
+        ],
+        "correctIndex": 2,
+        "explanation": "Precision matters for sacred speech."
+      },
+      {
+        "question": "What does the shirt lead toward?",
+        "options": [
+          "A new Egyptian office",
+          "News and relief for Yaqub by Allah’s permission",
+          "Punishment of the brothers",
+          "Proof of royal wealth"
+        ],
+        "correctIndex": 1,
+        "explanation": "The family reunion proceeds through the shirt."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "replace; remove dramatized speech and keep Yusuf’s forgiveness within the exact Quranic account without therapeutic invention",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-prophets-05",
@@ -145,66 +620,300 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Long before Isa ever preached to crowds or healed anyone publicly, his very first miracle happened while he was still a newborn infant.",
-      "Narrator: [reflective] Maryam, his mother, had withdrawn alone to a distant place, because she knew people would question a child born without a father.",
-      "Narrator: [with tension] When she finally returned carrying him, her community reacted exactly as she feared, accusing her instantly of something shameful and impossible to explain.",
-      "Narrator: [honestly] If she had tried defending herself with words alone, it probably would not have satisfied anyone gathered around her that day.",
-      "Narrator: [softly] Instead, Maryam simply pointed toward the infant in her arms, trusting Allah completely rather than arguing with people who had already judged her.",
-      "Narrator: [amazed] To everyone's astonishment, the baby spoke clearly, saying he was a servant of Allah, given scripture and appointed as a prophet.",
-      "Narrator: [thoughtful] He explained further that he had been commanded to establish prayer and give charity for as long as he remained alive.",
-      "Narrator: [reflective] Even though he was only a newborn, his words carried the weight and clarity of someone far beyond his years.",
-      "Narrator: [warmly] In spite of how impossible it seemed, the crowd could not deny what they had just witnessed with their own ears.",
-      "Narrator: [thoughtful] Years later, as an adult, Isa continued performing signs that pointed people back toward Allah rather than toward himself.",
-      "Narrator: [honestly] He healed the sick, and according to tradition, even gave sight back to those born blind, always crediting Allah for every result.",
-      "Narrator: [gently] What moves me most, however, remains that very first miracle, spoken not by a grown prophet, but by a defenseless newborn child.",
-      "Narrator: [reflective] It reminds me that Allah's help does not always arrive the way we expect it, or through the person we assume must defend us.",
-      "Narrator: [with a small smile] Sometimes, if we simply trust and wait, help arrives from the most unexpected voice imaginable, even one that has not yet learned to walk."
+      "Narrator: Maryam, his mother, had withdrawn alone to a distant place, because she knew people would question a child born without a father.",
+      "Narrator: [carefully] When she finally returned carrying him, her community reacted exactly as she feared, accusing her instantly of something shameful and impossible to explain.",
+      "Narrator: If she had tried defending herself with words alone, it probably would not have satisfied anyone gathered around her that day.",
+      "Narrator: [reflective] Instead, Maryam simply pointed toward the infant in her arms, trusting Allah completely rather than arguing with people who had already judged her.",
+      "Narrator: To everyone's astonishment, the baby spoke clearly, saying he was a servant of Allah, given scripture and appointed as a prophet.",
+      "Narrator: [seriously] He explained further that he had been commanded to establish prayer and give charity for as long as he remained alive.",
+      "Narrator: Even though he was only a newborn, his words carried the weight and clarity of someone far beyond his years.",
+      "Narrator: [honestly] The Quran records the infant’s clear testimony, but it does not narrate every listener’s later response, so we should not invent one.",
+      "Narrator: Years later, as an adult, Isa continued performing signs that pointed people back toward Allah rather than toward himself.",
+      "Narrator: [gently] The Quran describes him healing the blind and the leper and bringing the dead to life by Allah’s permission; the permission is central, not an optional detail.",
+      "Narrator: What moves me most, however, remains that very first miracle, spoken not by a grown prophet, but by a defenseless newborn child.",
+      "Narrator: [encouraging] It reminds me that Allah's help does not always arrive the way we expect it, or through the person we assume must defend us.",
+      "Narrator: The event was a unique prophetic sign. We trust Allah while using lawful means, but we do not promise that every accusation will receive a miraculous public defense."
     ],
     "quiz": [
-      { "question": "Why had Maryam withdrawn alone to a distant place?", "options": ["She wanted privacy for travel", "She knew people would question a child born without a father", "She was avoiding her family for other reasons", "She was ill"], "correctIndex": 1, "explanation": "She withdrew because she knew people would question a child born without a father." },
-      { "question": "How did Maryam respond to the accusations against her?", "options": ["She argued loudly with the crowd", "She simply pointed toward the infant, trusting Allah rather than arguing", "She ran away from the community", "She ignored everyone completely"], "correctIndex": 1, "explanation": "Instead of arguing, Maryam pointed toward the infant in her arms, trusting Allah completely." },
-      { "question": "What did the infant say about himself?", "options": ["Nothing at all", "That he was a servant of Allah, given scripture and appointed as a prophet", "That he was a king", "That he needed food"], "correctIndex": 1, "explanation": "The baby spoke clearly, saying he was a servant of Allah, given scripture and appointed as a prophet." },
-      { "question": "What did Isa do as an adult, according to the narrator?", "options": ["He avoided performing any signs", "He performed signs that pointed people back toward Allah, including healing the sick", "He claimed credit for his own miracles", "He stopped speaking to people"], "correctIndex": 1, "explanation": "As an adult, he continued performing signs that pointed people back toward Allah, including healing the sick." },
-      { "question": "What lesson does the narrator draw from this story?", "options": ["Help always arrives exactly as expected", "Help sometimes arrives through the most unexpected voice imaginable", "Miracles only happen to adults", "Trust is unnecessary when facing accusations"], "correctIndex": 1, "explanation": "She reflects that help sometimes arrives from the most unexpected voice imaginable, even a newborn's." }
-    ]
+      {
+        "question": "Why had Maryam withdrawn alone to a distant place?",
+        "options": [
+          "She knew people would question a child born without a father",
+          "She wanted privacy for travel",
+          "She was avoiding her family for other reasons",
+          "She was ill"
+        ],
+        "correctIndex": 0,
+        "explanation": "She withdrew because she knew people would question a child born without a father."
+      },
+      {
+        "question": "How did Maryam respond to the accusations against her?",
+        "options": [
+          "She argued loudly with the crowd",
+          "She simply pointed toward the infant, trusting Allah rather than arguing",
+          "She ran away from the community",
+          "She ignored everyone completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Instead of arguing, Maryam pointed toward the infant in her arms, trusting Allah completely."
+      },
+      {
+        "question": "What did the infant say about himself?",
+        "options": [
+          "That he was a servant of Allah, given scripture and appointed as a prophet",
+          "Nothing at all",
+          "That he was a king",
+          "That he needed food"
+        ],
+        "correctIndex": 0,
+        "explanation": "The baby spoke clearly, saying he was a servant of Allah, given scripture and appointed as a prophet."
+      },
+      {
+        "question": "What did Isa do as an adult, according to the narrator?",
+        "options": [
+          "He avoided performing any signs",
+          "He claimed credit for his own miracles",
+          "He performed signs that pointed people back toward Allah, including healing the sick",
+          "He stopped speaking to people"
+        ],
+        "correctIndex": 2,
+        "explanation": "As an adult, he continued performing signs that pointed people back toward Allah, including healing the sick."
+      },
+      {
+        "question": "Why is Isa's first miracle a reminder about unexpected help?",
+        "options": [
+          "Help always arrives exactly as expected",
+          "Miracles only happen to adults",
+          "Help sometimes arrives through the most unexpected voice imaginable",
+          "Trust is unnecessary when facing accusations"
+        ],
+        "correctIndex": 2,
+        "explanation": "She reflects that help sometimes arrives from the most unexpected voice imaginable, even a newborn's."
+      },
+      {
+        "question": "Why does Maryam point rather than argue?",
+        "options": [
+          "She has forgotten language",
+          "The crowd asks for silence",
+          "Isa is already an adult",
+          "Allah’s sign answers an accusation she cannot resolve through ordinary explanation"
+        ],
+        "correctIndex": 3,
+        "explanation": "The action precedes the miracle."
+      },
+      {
+        "question": "What identity does Isa state first?",
+        "options": [
+          "He controls divine power",
+          "He is a servant of Allah",
+          "He is the son of Allah",
+          "He is a community elder"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tawhid frames the speech."
+      },
+      {
+        "question": "Why is “the crowd could not deny” removed?",
+        "options": [
+          "No crowd was present",
+          "The speech was secret",
+          "Everyone immediately believed",
+          "The Quran reports the sign without narrating every listener’s later response"
+        ],
+        "correctIndex": 3,
+        "explanation": "Unknown reactions should not be invented."
+      },
+      {
+        "question": "How are later miracles correctly qualified?",
+        "options": [
+          "They occurred by Allah’s permission",
+          "They came from independent power",
+          "They are only tradition",
+          "They happened before birth"
+        ],
+        "correctIndex": 0,
+        "explanation": "The qualification protects tawhid."
+      },
+      {
+        "question": "What application avoids overclaiming?",
+        "options": [
+          "Trust Allah while using lawful means, without predicting a miraculous defense",
+          "Remain silent in every accusation",
+          "Expect an infant to speak",
+          "Reject evidence and process"
+        ],
+        "correctIndex": 0,
+        "explanation": "A prophetic miracle is not a repeatable personal promise."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "revise; keep Quranic speech of Isa as an infant while removing speculation about the crowd and unsupported tradition wording",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-prophets-06",
-    "title": "Inside the Cave of Thawr During the Hijra",
+    "title": "What Is Reliably Known About the Cave of Thawr",
     "level": "B1",
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Muhammad", "gender": "male" },
-      { "name": "Abu Bakr", "gender": "male" }
+      {
+        "name": "Presenter",
+        "gender": "male"
+      },
+      {
+        "name": "Dr. Safiya",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Abu Bakr: [whispering, afraid] They are so close now, I can hear their footsteps just outside this cave. If one of them simply looks down, they will see us instantly.",
-      "Muhammad: [calmly] Do not grieve, Abu Bakr. Allah is with us, even here, even now, whether or not those men ever notice us.",
-      "Abu Bakr: [trembling] I am not afraid for myself; I am afraid for you. If anything happened to you, the entire message would be in danger.",
-      "Muhammad: [gently] That fear is understandable, and it shows your loyalty clearly; however, trust that Allah's plan is larger than what either of us can see right now.",
-      "Abu Bakr: [anxious] A spider has somehow built a web across this entrance, and birds are nesting just above it. Doesn't that make our hiding place look untouched?",
-      "Muhammad: [warmly] Perhaps that is precisely the point. What looks like an accident to us may be exactly the protection Allah has arranged.",
-      "Abu Bakr: [softly] I keep imagining what would happen if they simply pushed the branches aside and looked inside this cave.",
-      "Muhammad: [reassuring] Even then, remember, there are only two of us they can see; the third is Allah, and He is never absent from any difficulty.",
-      "Abu Bakr: [quietly] I have followed you for years, Muhammad, through mockery, through danger, through every kind of loss our people threatened us with.",
-      "Muhammad: [with gratitude] And I have never doubted your loyalty, not once, despite every risk you have accepted simply by staying close to me.",
-      "Abu Bakr: [reflective] Do you think we will ever return to Makkah, or has tonight closed that door for us permanently?",
-      "Muhammad: [thoughtful] I believe we will return one day, though I cannot say when; for now, our task is simply reaching Madinah safely.",
-      "Abu Bakr: [calmer] Listening to you now, I notice my fear softening slightly, even though the danger outside has not actually changed at all.",
-      "Muhammad: [gently] That is what trust does, Abu Bakr. It does not remove the danger; it simply changes how heavily we carry it.",
-      "Abu Bakr: [with resolve] Then let us wait here quietly, as long as we must, and trust the rest completely to Allah."
+      "Presenter: [thoughtful] Many audio retellings act out a conversation inside the Cave of Thawr. What does the Quran itself establish?",
+      "Dr. Safiya: It says that when the two were in the cave and one spoke to his companion, the Prophet reassured Abu Bakr: do not grieve; Allah is with us.",
+      "Presenter: [carefully] Some stories add a spider’s web and birds nesting at the entrance.",
+      "Dr. Safiya: Those details are extremely popular, but their reports should not be presented with the same certainty as the Quranic verse and sound accounts.",
+      "Presenter: What does “Allah is with us” mean?",
+      "Dr. Safiya: [reflective] It expresses Allah’s knowledge, care, aid, and support. It does not make Allah a physical third traveler located inside creation.",
+      "Presenter: Was the journey simply a moment of waiting for supernatural rescue?",
+      "Dr. Safiya: No. The Hijrah involved careful means: timing, a less expected route, a skilled guide, provisions, information, concealment, and trusted people performing distinct roles.",
+      "Presenter: [seriously] Then reliance did not replace preparation.",
+      "Dr. Safiya: Correct. The Prophet used lawful planning with excellence while the heart relied upon Allah rather than upon the plan as an independent power.",
+      "Presenter: What can we responsibly say about Abu Bakr’s concern?",
+      "Dr. Safiya: [honestly] Sound reports indicate his concern that discovery would endanger the Prophet. We need not invent trembling, imagined future speeches, or exact private emotional stages.",
+      "Presenter: Does divine support mean the danger was unreal?",
+      "Dr. Safiya: No. The pursuit was real, and migration carried serious risk. Reassurance changed the believers’ relationship to fear, not the historical existence of danger.",
+      "Presenter: [encouraging] What should a learner take from this?",
+      "Dr. Safiya: Use lawful expertise, protect information, assign roles, prepare alternatives, and remember that outcomes remain with Allah.",
+      "Presenter: And when a familiar detail has weak support?",
+      "Dr. Safiya: [sincere] Label it honestly or leave it out. The Quranic lesson of companionship and trust needs no decoration."
     ],
     "quiz": [
-      { "question": "Why is Abu Bakr afraid, according to the dialogue?", "options": ["He fears for himself only", "He fears for Muhammad, because the message would be in danger if something happened to him", "He fears the cave will collapse", "He fears losing their supplies"], "correctIndex": 1, "explanation": "Abu Bakr says he is not afraid for himself, but for Muhammad, since the entire message would be in danger." },
-      { "question": "What natural signs does Abu Bakr notice at the cave entrance?", "options": ["Fresh footprints", "A spider's web and nesting birds", "Broken branches", "Smoke from a fire"], "correctIndex": 1, "explanation": "He notices a spider's web built across the entrance and birds nesting just above it." },
-      { "question": "What does Muhammad say about their situation to reassure Abu Bakr?", "options": ["That they are truly alone", "That there are only two of them visible, but Allah is a third who is never absent", "That the search will end soon", "That they should leave the cave immediately"], "correctIndex": 1, "explanation": "Muhammad reassures him that there are only two of them the searchers can see, but Allah is never absent from any difficulty." },
-      { "question": "What does Muhammad say about returning to Makkah?", "options": ["They will never return", "He believes they will return one day, though he cannot say when", "He refuses to discuss it", "He is certain it will happen within days"], "correctIndex": 1, "explanation": "Muhammad says he believes they will return one day, though he cannot say when." },
-      { "question": "What does Muhammad say trust actually does?", "options": ["It removes all danger completely", "It does not remove the danger, but changes how heavily it is carried", "It has no real effect", "It guarantees an easy outcome"], "correctIndex": 1, "explanation": "Muhammad explains that trust does not remove the danger; it simply changes how heavily they carry it." }
-    ]
+      {
+        "question": "Who was the Prophet’s companion in the cave?",
+        "options": [
+          "Umar",
+          "Ali",
+          "Abu Bakr",
+          "Uthman"
+        ],
+        "correctIndex": 2,
+        "explanation": "The Quranic context and sound reports identify Abu Bakr."
+      },
+      {
+        "question": "What reassurance is quoted?",
+        "options": [
+          "The birds will hide us",
+          "Do not grieve; Allah is with us",
+          "The road is empty",
+          "Makkah is already safe"
+        ],
+        "correctIndex": 1,
+        "explanation": "The verse centers divine support."
+      },
+      {
+        "question": "What popular image is treated cautiously?",
+        "options": [
+          "A spider web and nesting birds",
+          "The existence of the cave",
+          "The migration to Madinah",
+          "The pursuers’ search"
+        ],
+        "correctIndex": 0,
+        "explanation": "Its evidence is not equal to the verse."
+      },
+      {
+        "question": "What human means were used?",
+        "options": [
+          "No planning at all",
+          "Only a public map",
+          "A military escort",
+          "Planning, guidance, supplies, secrecy, and assigned roles"
+        ],
+        "correctIndex": 3,
+        "explanation": "Preparation was detailed."
+      },
+      {
+        "question": "What does the speaker avoid inventing?",
+        "options": [
+          "The Quranic reassurance",
+          "Private emotional dialogue and predictions",
+          "The role of Abu Bakr",
+          "The danger of pursuit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Source-conscious narration stops at evidence."
+      },
+      {
+        "question": "What Quranic reassurance belongs to the cave?",
+        "options": [
+          "A spider will protect us",
+          "Do not grieve; Allah is with us",
+          "We will return tomorrow",
+          "No one is outside"
+        ],
+        "correctIndex": 1,
+        "explanation": "The verse supplies the central wording."
+      },
+      {
+        "question": "Why are the web and nesting birds excluded?",
+        "options": [
+          "Animals never enter caves",
+          "The pursuers saw them clearly",
+          "Abu Bakr removed them",
+          "Their reports are not strong enough to present as certain Quranic detail"
+        ],
+        "correctIndex": 3,
+        "explanation": "Popular imagery needs source grading."
+      },
+      {
+        "question": "What practical preparation supported the Hijrah?",
+        "options": [
+          "Waiting without action",
+          "A public announcement",
+          "Route planning, a guide, supplies, secrecy, and trusted roles",
+          "Random travel"
+        ],
+        "correctIndex": 2,
+        "explanation": "Tawakkul included extensive means."
+      },
+      {
+        "question": "What does companionship with Allah mean here?",
+        "options": [
+          "A visible person inside the cave",
+          "Divine knowledge, aid, and support—not that Allah is a physical third traveler",
+          "An angel named in the verse",
+          "The cave itself is divine"
+        ],
+        "correctIndex": 1,
+        "explanation": "The explanation avoids spatial misunderstanding."
+      },
+      {
+        "question": "What broader lesson emerges?",
+        "options": [
+          "Careful planning and reliance can operate together under danger",
+          "Trust removes every danger",
+          "Planning shows weak faith",
+          "Popular details are required"
+        ],
+        "correctIndex": 0,
+        "explanation": "The Hijrah joins means with tawakkul."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "replace; remove role-play of the Prophet and Abu Bakr plus unsupported spider-web and birds presented as fact",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-prophets-07",
@@ -213,30 +922,598 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Among all the sorrows Nuh experienced during his long life, few compare to the moment the flood finally arrived and his own son refused to board the ark.",
-      "Narrator: [reflective] For nearly a lifetime, Nuh had called his people toward Allah, and even inside his own household, belief was not something everyone shared equally.",
-      "Narrator: [honestly] When the water began rising rapidly, Nuh spotted his son standing apart from the family, watching the chaos from a nearby hill instead of running toward the ship.",
-      "Narrator: [with feeling] Desperate, Nuh called out to him directly, urging him to climb aboard immediately, warning that no one outside would survive what was coming.",
-      "Narrator: [softly] His son answered confidently, insisting he would simply climb a mountain himself, convinced its height alone could protect him from any flood.",
-      "Narrator: [with tension] Nuh reminded him urgently that nothing could shelter anyone that day except Allah's mercy, regardless of how tall or strong that mountain seemed.",
-      "Narrator: [dramatically] Even as the words left his mouth, an enormous wave rose between them, and Nuh watched helplessly as his son was swept away completely.",
-      "Narrator: [reflective] Heartbroken, Nuh turned to Allah afterward, asking honestly why his own son had not been included among those who were saved that day.",
-      "Narrator: [gently] Allah reminded him that family bonds alone do not guarantee salvation; what truly matters is righteous conduct and sincere belief, not bloodline or reputation.",
-      "Narrator: [thoughtful] Nuh accepted this answer with humility, admitting he had asked out of love rather than doubt, and asking forgiveness for that momentary grief.",
-      "Narrator: [warmly] Despite losing his son, Nuh did not lose his faith; instead, he continued trusting Allah's wisdom, even in a decision that clearly caused him pain.",
-      "Narrator: [reflective] I find this part of the story difficult, honestly, because it resists the comfortable idea that righteous parents always produce righteous children automatically.",
-      "Narrator: [thoughtful] Instead, it teaches something harder: that every person, regardless of family, ultimately chooses their own relationship with Allah, for better or worse.",
-      "Narrator: [with a small smile] Even a prophet as devoted as Nuh could not save someone who refused, until the very last moment, to reach for the rope offered to him."
+      "Narrator: For nearly a lifetime, Nuh had called his people toward Allah, and even inside his own household, belief was not something everyone shared equally.",
+      "Narrator: [carefully] When the water began rising rapidly, Nuh spotted his son standing apart from the family, standing apart and relying on a mountain, as the Quran describes without supplying every visual detail.",
+      "Narrator: Desperate, Nuh called out to him directly, urging him to climb aboard immediately, warning that no one outside would survive what was coming.",
+      "Narrator: [reflective] His son answered confidently, insisting he would simply climb a mountain himself, convinced its height alone could protect him from any flood.",
+      "Narrator: Nuh reminded him urgently that nothing could shelter anyone that day except Allah's mercy, regardless of how tall or strong that mountain seemed.",
+      "Narrator: [seriously] Even as the words left his mouth, an enormous wave rose between them, and Nuh watched helplessly as his son was swept away completely.",
+      "Narrator: Heartbroken, Nuh turned to Allah afterward, asking honestly why his own son had not been included among those who were saved that day.",
+      "Narrator: [honestly] Allah reminded him that family bonds alone do not guarantee salvation; what truly matters is righteous conduct and sincere belief, not bloodline or reputation.",
+      "Narrator: Nuh sought refuge in Allah from asking about what he lacked knowledge of and asked for forgiveness and mercy. We should use the Quranic wording rather than invent his private motive.",
+      "Narrator: [gently] Despite losing his son, Nuh did not lose his faith; instead, he continued trusting Allah's wisdom, even in a decision that clearly caused him pain.",
+      "Narrator: I find this part of the story difficult, honestly, because it resists the comfortable idea that righteous parents always produce righteous children automatically.",
+      "Narrator: [encouraging] It teaches that lineage cannot guarantee salvation. People remain accountable for belief and action, while guidance and salvation are ultimately by Allah’s will and mercy.",
+      "Narrator: A prophet conveys and calls, but cannot independently place guidance in a heart or override Allah’s judgment. The account warns against trusting lineage or created protection."
     ],
     "quiz": [
-      { "question": "What did Nuh see as the flood water began rising?", "options": ["His son already on the ark", "His son standing apart from the family, watching from a nearby hill", "His son helping other people board", "His son had already left the area"], "correctIndex": 1, "explanation": "Nuh spotted his son standing apart from the family, watching the chaos from a nearby hill." },
-      { "question": "Why did the son refuse to board the ark?", "options": ["He did not believe the flood was real", "He believed climbing a mountain would protect him instead", "He was too far away to reach it", "He wanted to help other people first"], "correctIndex": 1, "explanation": "His son insisted he would climb a mountain himself, believing its height alone could protect him." },
-      { "question": "What did Nuh ask Allah after losing his son?", "options": ["Why the flood happened at all", "Why his own son had not been included among those saved", "For a new son", "For the flood to stop"], "correctIndex": 1, "explanation": "Heartbroken, Nuh asked Allah why his own son had not been included among those who were saved." },
-      { "question": "How did Allah respond to Nuh's question?", "options": ["By blaming Nuh for the loss", "By explaining that righteous conduct and sincere belief matter more than family bonds", "By refusing to answer", "By promising to save the son later"], "correctIndex": 1, "explanation": "Allah reminded him that family bonds alone do not guarantee salvation; righteous conduct and sincere belief matter most." },
-      { "question": "What lesson does the narrator draw from this story?", "options": ["Righteous parents always produce righteous children", "Every person ultimately chooses their own relationship with Allah, regardless of family", "Family bonds guarantee salvation", "Prophets can save anyone regardless of their choices"], "correctIndex": 1, "explanation": "She concludes that every person, regardless of family, ultimately chooses their own relationship with Allah." }
-    ]
+      {
+        "question": "What did Nuh see as the flood water began rising?",
+        "options": [
+          "His son already on the ark",
+          "His son helping other people board",
+          "His son standing apart from the family, watching from a nearby hill",
+          "His son had already left the area"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nuh spotted his son standing apart from the family, watching the chaos from a nearby hill."
+      },
+      {
+        "question": "Why did the son refuse to board the ark?",
+        "options": [
+          "He did not believe the flood was real",
+          "He was too far away to reach it",
+          "He believed climbing a mountain would protect him instead",
+          "He wanted to help other people first"
+        ],
+        "correctIndex": 2,
+        "explanation": "His son insisted he would climb a mountain himself, believing its height alone could protect him."
+      },
+      {
+        "question": "What did Nuh ask Allah after losing his son?",
+        "options": [
+          "Why the flood happened at all",
+          "Why his own son had not been included among those saved",
+          "For a new son",
+          "For the flood to stop"
+        ],
+        "correctIndex": 1,
+        "explanation": "Heartbroken, Nuh asked Allah why his own son had not been included among those who were saved."
+      },
+      {
+        "question": "How did Allah respond to Nuh's question?",
+        "options": [
+          "By blaming Nuh for the loss",
+          "By refusing to answer",
+          "By promising to save the son later",
+          "By explaining that righteous conduct and sincere belief matter more than family bonds"
+        ],
+        "correctIndex": 3,
+        "explanation": "Allah reminded him that family bonds alone do not guarantee salvation; righteous conduct and sincere belief matter most."
+      },
+      {
+        "question": "What lesson does the narrator draw from this story?",
+        "options": [
+          "Every person ultimately chooses their own relationship with Allah, regardless of family",
+          "Righteous parents always produce righteous children",
+          "Family bonds guarantee salvation",
+          "Prophets can save anyone regardless of their choices"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that every person, regardless of family, ultimately chooses their own relationship with Allah."
+      },
+      {
+        "question": "What does the son rely upon?",
+        "options": [
+          "The ark and revelation",
+          "A group of believers",
+          "A mountain he believes will protect him",
+          "A second ship"
+        ],
+        "correctIndex": 2,
+        "explanation": "Created height is treated as security."
+      },
+      {
+        "question": "What interrupts the exchange?",
+        "options": [
+          "A wave comes between father and son",
+          "The ark returns",
+          "The rain stops",
+          "Another prophet arrives"
+        ],
+        "correctIndex": 0,
+        "explanation": "The separation becomes final."
+      },
+      {
+        "question": "Why is “nearby hill” removed?",
+        "options": [
+          "No land existed",
+          "The son was on the ark",
+          "The Quran mentions a mountain but does not supply that staging detail",
+          "Nuh never saw him"
+        ],
+        "correctIndex": 2,
+        "explanation": "Visual narration had exceeded the text."
+      },
+      {
+        "question": "How is Nuh corrected?",
+        "options": [
+          "He is blamed for the flood",
+          "He is told family never matters",
+          "He is ordered to leave the ark",
+          "He is told not to ask without knowledge about the promised family"
+        ],
+        "correctIndex": 3,
+        "explanation": "The response defines the limit of his request."
+      },
+      {
+        "question": "What nuance should replace “everyone simply chooses”?",
+        "options": [
+          "Family guarantees salvation",
+          "Humans are accountable, while guidance and salvation remain by Allah’s will and mercy",
+          "People create their own guidance independently",
+          "Parents control belief"
+        ],
+        "correctIndex": 1,
+        "explanation": "Theology must include both responsibility and divine guidance."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "revise; correct unsupported location imagery, avoid simplifying salvation into autonomous choice, and preserve Nuh’s corrected request",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-prophets-08",
+    "title": "Dawud and the Judgment That Required Reflection",
+    "level": "B1",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] The Quran presents Prophet Dawud, peace be upon him, as a ruler given wisdom, clear speech, and responsibility for judgment.",
+      "Narrator: In one account, two disputants entered his place unexpectedly. Their arrival alarmed him, but they told him not to fear and asked for a fair decision.",
+      "Narrator: [carefully] One man said that his brother had ninety-nine ewes while he had only one. The brother wanted to add that single ewe to his own flock.",
+      "Narrator: Dawud said that demanding the ewe was an injustice. Then he recognized that the encounter was a test and turned to Allah in repentance.",
+      "Narrator: [reflective] The passage is brief, which means a teacher should be cautious about supplying a complete courtroom story, hidden identities, or motives not stated in the text.",
+      "Narrator: Its brevity does not make the moral reasoning weak. Great power and experience do not remove a judge’s need for patience, full evidence, and self-examination.",
+      "Narrator: [seriously] The account also warns against allowing a stronger party to use confidence or numbers to overwhelm someone with less power.",
+      "Narrator: At the same time, modern listeners should not copy one detail into legal advice. Real disputes require hearing all relevant parties, applying valid law, and using qualified authority.",
+      "Narrator: [honestly] Repentance here is not presented as humiliation that destroys leadership. It demonstrates that authority remains answerable to Allah.",
+      "Narrator: A leader may recognize an error, seek forgiveness, correct the process, and become more careful rather than defending every first response.",
+      "Narrator: [gently] That lesson applies to managers, parents, teachers, and community organizers who make decisions affecting people with less influence.",
+      "Narrator: Before deciding, they should identify missing facts, conflicts of interest, and whether each person had a real chance to speak.",
+      "Narrator: [encouraging] After deciding, they should remain open to reliable evidence that shows a correction is needed.",
+      "Narrator: Dawud’s prophetic rank is unique, and ordinary decisions cannot be compared with revelation. Yet the ethical warning is accessible: power must not make a person unteachable.",
+      "Narrator: [sincere] A trustworthy judge combines knowledge with humility, because fairness depends not only on speaking firmly but also on listening completely."
+    ],
+    "quiz": [
+      {
+        "question": "What did one disputant possess?",
+        "options": [
+          "Ninety-nine horses",
+          "A field of wheat",
+          "No property",
+          "One ewe"
+        ],
+        "correctIndex": 3,
+        "explanation": "The contrast concerned one ewe and a large flock."
+      },
+      {
+        "question": "What did the other man demand?",
+        "options": [
+          "A royal title",
+          "The single ewe",
+          "A written apology",
+          "A travel permit"
+        ],
+        "correctIndex": 1,
+        "explanation": "The stronger party wanted to add it to his flock."
+      },
+      {
+        "question": "What did Dawud recognize afterward?",
+        "options": [
+          "The men were merchants",
+          "The flock was imaginary",
+          "The event was a test",
+          "No judgment was needed"
+        ],
+        "correctIndex": 2,
+        "explanation": "Recognition led him to repentance."
+      },
+      {
+        "question": "Why does the narrator avoid a full courtroom story?",
+        "options": [
+          "Courts did not exist",
+          "The moral is unclear",
+          "Dawud never judged",
+          "The Quranic account is brief and does not supply every detail"
+        ],
+        "correctIndex": 3,
+        "explanation": "Restraint prevents invented history."
+      },
+      {
+        "question": "What leadership lesson is emphasized?",
+        "options": [
+          "Power removes the need to listen",
+          "A first decision cannot change",
+          "Firm speech alone creates justice",
+          "Authority must remain teachable and accountable"
+        ],
+        "correctIndex": 3,
+        "explanation": "Humility supports fair judgment."
+      },
+      {
+        "question": "Why can a large flock create a power imbalance?",
+        "options": [
+          "Numbers prove legal truth",
+          "Small owners cannot speak",
+          "Every request becomes theft",
+          "Its owner may pressure the person who has only one ewe"
+        ],
+        "correctIndex": 3,
+        "explanation": "The case illustrates unequal influence."
+      },
+      {
+        "question": "What must a real judge hear?",
+        "options": [
+          "Only the most confident person",
+          "A single summary online",
+          "All relevant parties and evidence under valid law",
+          "The first speaker only"
+        ],
+        "correctIndex": 2,
+        "explanation": "Modern application requires due process."
+      },
+      {
+        "question": "How is repentance related to leadership?",
+        "options": [
+          "It removes all authority automatically",
+          "It can lead a leader to correct process rather than defend error",
+          "It makes review unnecessary",
+          "It proves the first decision was perfect"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accountability can strengthen responsible service."
+      },
+      {
+        "question": "Which roles may use the ethical warning?",
+        "options": [
+          "Managers, parents, teachers, and organizers",
+          "Prophets only with no general principle",
+          "Judges who ignore law",
+          "People with no decisions"
+        ],
+        "correctIndex": 0,
+        "explanation": "Many ordinary roles affect people with less power."
+      },
+      {
+        "question": "What makes a trustworthy decision?",
+        "options": [
+          "Knowledge, full listening, humility, and willingness to correct",
+          "Firm volume alone",
+          "Seniority alone",
+          "Speed without evidence"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fairness combines competence and character."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "keep; new source-conscious judgment analysis distinguishes Quranic fact, inference, legal application, and leadership accountability",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-prophets-09",
+    "title": "Zakariyya’s Private Dua and Responsible Hope",
+    "level": "B1",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] The opening of Surah Maryam describes Prophet Zakariyya, peace be upon him, calling upon Allah privately.",
+      "Narrator: He acknowledged his old age, physical weakness, and concern about what would happen after him. His words did not pretend that the situation was easy.",
+      "Narrator: [carefully] He asked Allah for an heir who would continue a righteous responsibility, not merely for a child who would increase his social status.",
+      "Narrator: Allah answered with news of Yahya, a name described as specially given, although the circumstances appeared beyond ordinary expectation.",
+      "Narrator: [reflective] Zakariyya asked how this could occur when he was old and his wife had been unable to bear children. The question sought understanding; it was not presented as rejection of Allah’s power.",
+      "Narrator: The answer directed him back to creation itself: Allah had created him before, when he had been nothing.",
+      "Narrator: [seriously] This account gives hope, but it should not be used to promise every person the same worldly outcome.",
+      "Narrator: A couple facing infertility may make dua while also seeking qualified medical assessment, discussing ethical treatment, and protecting one another from blame.",
+      "Narrator: [honestly] People around them should avoid using Zakariyya’s miracle as pressure, as though continued hardship proves weak faith or insufficient prayer.",
+      "Narrator: Prophetic miracles belong to Allah’s wisdom and are not formulas controlled by the listener.",
+      "Narrator: [gently] The account also shows that hope can speak honestly about age, weakness, and fear. Faith does not require hiding difficult facts.",
+      "Narrator: At B1 level, listeners can notice the argument’s movement: limitation is named, a sincere request is made, divine power is recalled, and the response remains with Allah.",
+      "Narrator: [encouraging] A modern application should preserve that structure without claiming revelation for personal choices.",
+      "Narrator: We name the real need, ask Allah with humility, use lawful means, and accept that the timing and form of an answer are not ours to command.",
+      "Narrator: [sincere] Zakariyya’s dua teaches hopeful dependence, while its responsible teaching protects people from false guarantees and insensitive comparisons."
+    ],
+    "quiz": [
+      {
+        "question": "How did Zakariyya call upon Allah?",
+        "options": [
+          "Privately",
+          "Through a public debate",
+          "Only in writing",
+          "Through another prophet"
+        ],
+        "correctIndex": 0,
+        "explanation": "The surah emphasizes a private call."
+      },
+      {
+        "question": "What concern did he express?",
+        "options": [
+          "A lost business contract",
+          "What would continue after him",
+          "A journey to Egypt",
+          "A military defeat"
+        ],
+        "correctIndex": 1,
+        "explanation": "His request involved righteous continuity."
+      },
+      {
+        "question": "Who was announced to him?",
+        "options": [
+          "Yahya",
+          "Yusuf",
+          "Harun",
+          "Ismail"
+        ],
+        "correctIndex": 0,
+        "explanation": "Allah gave news of Yahya."
+      },
+      {
+        "question": "What does his question show?",
+        "options": [
+          "A refusal to believe",
+          "A demand for social status",
+          "A plan to avoid responsibility",
+          "A request for understanding, not denial of Allah’s power"
+        ],
+        "correctIndex": 3,
+        "explanation": "The context preserves faith while naming impossibility."
+      },
+      {
+        "question": "What misuse does the narrator warn against?",
+        "options": [
+          "Making dua privately",
+          "Seeking medical assessment",
+          "Promising every person the same outcome",
+          "Naming a difficult fact"
+        ],
+        "correctIndex": 2,
+        "explanation": "A miracle is not a controllable formula."
+      },
+      {
+        "question": "What distinguishes Zakariyya’s request from status seeking?",
+        "options": [
+          "He asks for righteous continuity after him",
+          "He wants public admiration",
+          "He requests greater wealth",
+          "He competes with another family"
+        ],
+        "correctIndex": 0,
+        "explanation": "The purpose is service and inheritance of responsibility."
+      },
+      {
+        "question": "How does the answer address apparent impossibility?",
+        "options": [
+          "It denies his old age",
+          "It blames his wife",
+          "It recalls that Allah created Zakariyya from nothing",
+          "It gives a medical formula"
+        ],
+        "correctIndex": 2,
+        "explanation": "Creation demonstrates divine power."
+      },
+      {
+        "question": "Why may a person mention weakness in dua?",
+        "options": [
+          "Weakness cancels trust",
+          "Faithful hope does not require denying difficult facts",
+          "Only easy needs may be named",
+          "Private prayer needs no honesty"
+        ],
+        "correctIndex": 1,
+        "explanation": "The prophetic dua joins limitation and hope."
+      },
+      {
+        "question": "What support may accompany dua for infertility?",
+        "options": [
+          "Qualified care, ethical discussion, and freedom from blame",
+          "A guaranteed miracle schedule",
+          "Public pressure",
+          "Abandoning all treatment"
+        ],
+        "correctIndex": 0,
+        "explanation": "Lawful means and worship can coexist."
+      },
+      {
+        "question": "What B1 discourse sequence is identified?",
+        "options": [
+          "Victory, wealth, travel, and fame",
+          "Argument, insult, escape, and silence",
+          "Diagnosis, guarantee, cure, and celebration",
+          "Limitation, request, reminder of divine power, and response with Allah"
+        ],
+        "correctIndex": 3,
+        "explanation": "The listener follows how the reflection develops."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "keep; new theological reflection offers hope without guaranteeing fertility outcomes or replacing qualified care",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-prophets-10",
+    "title": "Teaching the People of Ad Without Invented Ruins",
+    "level": "B1",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Researcher Salim",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [thoughtful] Salim, many documentaries show enormous ruined palaces and say they know exactly where the people of Ad lived. How certain is that?",
+      "Researcher Salim: The Quran identifies Ad and describes their strength, their prophet Hud, and their rejection. Modern archaeological claims need separate evidence and should not be treated as revelation.",
+      "Host: [carefully] What central error did Hud challenge?",
+      "Researcher Salim: He called them to worship Allah alone. They responded with arrogance and trusted their exceptional strength.",
+      "Host: [reflective] The Quran records the question, “Who is stronger than us?” What is wrong with that reasoning?",
+      "Researcher Salim: They treated a created ability as if it made them independent, forgetting that Allah who created them was greater in strength.",
+      "Host: [seriously] Does the lesson condemn strength, engineering, or large buildings themselves?",
+      "Researcher Salim: No. Ability can be used gratefully and justly. The problem is pride, denial, and using power without accountability.",
+      "Host: [honestly] How should we describe the punishment?",
+      "Researcher Salim: Use the Quranic language carefully: a fierce wind was sent upon them for appointed days. Avoid turning suffering into entertainment with invented eyewitness scenes.",
+      "Host: [gently] Can we say a modern storm proves Allah is punishing a particular community for the same reason?",
+      "Researcher Salim: No. We cannot claim knowledge of Allah’s specific decree without revelation. We may discuss general moral warnings and practical disaster safety.",
+      "Host: [encouraging] What kind of question would suit a B1 listener?",
+      "Researcher Salim: Ask how the argument develops: strength becomes pride, pride supports rejection, and the assumed source of security cannot protect them.",
+      "Host: [sincere] That requires inference rather than only remembering a place name.",
+      "Researcher Salim: Exactly. It also teaches source awareness: a vivid image can be memorable while still being historically uncertain.",
+      "Host: What modern application stays within the evidence?",
+      "Researcher Salim: Use skill with gratitude, protect people from abuse of power, accept accountability, and never treat technology or status as independence from the Creator.",
+      "Host: So the story can address modern confidence without claiming that every civilization is another Ad.",
+      "Researcher Salim: Yes. Analogy should illuminate a principle, not declare unseen judgments about named people.",
+      "Host: Thank you. The account becomes stronger when the Quranic message and archaeological uncertainty are kept in their proper places."
+    ],
+    "quiz": [
+      {
+        "question": "What did the people of Ad trust proudly?",
+        "options": [
+          "A foreign army",
+          "A written treaty",
+          "Their exceptional strength",
+          "A small flock"
+        ],
+        "correctIndex": 2,
+        "explanation": "Their strength fed a sense of independence."
+      },
+      {
+        "question": "What did Hud call them toward?",
+        "options": [
+          "Building larger ruins",
+          "Leaving every city",
+          "Rejecting all engineering",
+          "Worshiping Allah alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tawhid was the central call."
+      },
+      {
+        "question": "How is the punishment described?",
+        "options": [
+          "A flood from an oven",
+          "A single earthquake only",
+          "A fierce wind over appointed days",
+          "A human invasion"
+        ],
+        "correctIndex": 2,
+        "explanation": "The dialogue follows Quranic language."
+      },
+      {
+        "question": "Why are exact ruins treated cautiously?",
+        "options": [
+          "No ancient buildings exist",
+          "The Quran names every coordinate",
+          "Documentaries cannot use images",
+          "Archaeological claims require evidence separate from revelation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Different evidence types must not be merged."
+      },
+      {
+        "question": "What modern claim is rejected?",
+        "options": [
+          "Discussing accountability",
+          "Using strength gratefully",
+          "Calling a specific disaster divine punishment without revelation",
+          "Preparing for storms"
+        ],
+        "correctIndex": 2,
+        "explanation": "The unseen decree cannot be assigned by guess."
+      },
+      {
+        "question": "What does “Who is stronger than us?” reveal?",
+        "options": [
+          "Created ability has become arrogant self-reliance",
+          "The people lack physical power",
+          "Hud praises their independence",
+          "Buildings create faith"
+        ],
+        "correctIndex": 0,
+        "explanation": "The question exposes pride."
+      },
+      {
+        "question": "Why are strength and engineering not condemned themselves?",
+        "options": [
+          "They have no social effect",
+          "Abilities can be used gratefully and justly",
+          "Only weak societies worship Allah",
+          "The Quran opposes all construction"
+        ],
+        "correctIndex": 1,
+        "explanation": "The moral problem lies in denial and abuse."
+      },
+      {
+        "question": "What should an audio avoid when describing punishment?",
+        "options": [
+          "The Quranic mention of wind",
+          "Serious moral context",
+          "Invented eyewitness scenes designed as entertainment",
+          "Careful wording"
+        ],
+        "correctIndex": 2,
+        "explanation": "Suffering should not become spectacle."
+      },
+      {
+        "question": "How does a B1 question go beyond recall?",
+        "options": [
+          "It asks how strength becomes pride and supports rejection",
+          "It asks only for a name",
+          "It repeats one sentence",
+          "It avoids all inference"
+        ],
+        "correctIndex": 0,
+        "explanation": "Relationship between ideas raises the level."
+      },
+      {
+        "question": "What is the proper role of analogy?",
+        "options": [
+          "Identify every ruin with certainty",
+          "Illuminate a principle without declaring a modern people condemned",
+          "Reveal Allah’s specific decree",
+          "Replace source evidence"
+        ],
+        "correctIndex": 1,
+        "explanation": "An analogy has a clear epistemic limit."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "prophets",
+      "scriptDecision": "keep; new source-aware discussion separates Quranic claims, archaeology, general warning, and forbidden unseen judgment",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

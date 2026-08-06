@@ -6,30 +6,144 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [weary] I've taken to recording these memos to myself whenever the anxiety surrounding the dissertation becomes too diffuse to simply sit with, and tonight is apparently one of those nights.",
-      "Narrator: [wry] It's absurd, honestly, how a single document can loom this large over someone who otherwise considers herself reasonably competent.",
-      "Narrator: [reflective] My supervisor keeps insisting that this imposter feeling is practically a rite of passage among doctoral candidates, which I believe intellectually, yet the reassurance evaporates the instant I open the file and confront three years of footnotes.",
-      "Narrator: [candid] What unsettles me most isn't the writing itself but the nagging suspicion that I've spent this entire process performing scholarship rather than genuinely producing it.",
-      "Narrator: [honest] I keep waiting for the moment everything clicks into coherence, and it simply hasn't arrived, which makes me wonder whether I'm not cut out for research at this level after all.",
-      "Narrator: [surprised] And yet, when I reread the chapter I finished last month, it isn't incoherent at all; it's careful, even original in places, though I can barely recognize it as something I wrote under this fog of self-doubt.",
-      "Narrator: [thoughtful] Maybe that's the trick nobody tells you about serious scholarship, that the anxiety and the competence coexist, and neither one is proof of the other.",
-      "Narrator: [determined] What I actually need tonight isn't reassurance but a smaller, more tractable task, something achievable before sunrise rather than a whole redeemed dissertation.",
-      "Narrator: [resolved] So I'm going to outline just the introduction to the next chapter and leave the larger argument for daylight, when I'll presumably trust myself again.",
-      "Narrator: [gently] I suspect future-me will listen back to this recording and find it faintly embarrassing, all this drama over a subordinate clause I couldn't get right.",
-      "Narrator: [wry] But there's something clarifying about hearing your own panic spoken aloud rather than just replayed silently in your head at three times the volume.",
-      "Narrator: [calm] It shrinks, somehow, once it has a voice and a timestamp instead of just occupying the whole of my chest.",
-      "Narrator: [with quiet resolve] Tomorrow, one paragraph. That's the entire ambition. Everything else can wait its turn."
+      "Narrator: [thoughtful] I've taken to recording these memos to myself whenever the anxiety surrounding the dissertation becomes too diffuse to simply sit with, and tonight is apparently one of those nights.",
+      "Narrator: It's absurd, honestly, how a single document can loom this large over someone who otherwise considers herself reasonably competent.",
+      "Narrator: [carefully] My supervisor keeps insisting that this imposter feeling is practically a rite of passage among doctoral candidates, which I believe intellectually, yet the reassurance evaporates the instant I open the file and confront three years of footnotes.",
+      "Narrator: What unsettles me most isn't the writing itself but the nagging suspicion that I've spent this entire process performing scholarship rather than genuinely producing it.",
+      "Narrator: [reflective] I keep waiting for the moment everything clicks into coherence, and it simply hasn't arrived, which makes me wonder whether I'm not cut out for research at this level after all.",
+      "Narrator: And yet, when I reread the chapter I finished last month, it isn't incoherent at all; it's careful, even original in places, though I can barely recognize it as something I wrote under this fog of self-doubt.",
+      "Narrator: [honestly] Maybe that's the trick nobody tells you about serious scholarship, that the anxiety and the competence coexist, and neither one is proof of the other.",
+      "Narrator: What I actually need tonight isn't reassurance but a smaller, more tractable task, something achievable before sunrise rather than a whole redeemed dissertation.",
+      "Narrator: [gently] So I'm going to outline just the introduction to the next chapter and leave the larger argument for daylight, when I'll presumably trust myself again.",
+      "Narrator: I suspect future-me will listen back to this recording and find it faintly embarrassing, all this drama over a subordinate clause I couldn't get right.",
+      "Narrator: [calmly] But there's something clarifying about hearing your own panic spoken aloud rather than just replayed silently in your head at three times the volume.",
+      "Narrator: It shrinks, somehow, once it has a voice and a timestamp instead of just occupying the whole of my chest.",
+      "Narrator: [encouraging] Tomorrow, one paragraph. That's the entire ambition. Everything else can wait its turn."
     ],
     "quiz": [
-      { "question": "Why does the narrator record voice memos to herself?", "options": ["To rehearse a presentation", "Because the anxiety around her dissertation becomes too diffuse to simply sit with", "To practice a foreign language", "Because her supervisor requires it"], "correctIndex": 1, "explanation": "She says she records memos whenever the anxiety becomes too diffuse to simply sit with." },
-      { "question": "What has her supervisor told her about the imposter feeling?", "options": ["That it means she should quit", "That it's practically a rite of passage among doctoral candidates", "That only weak students feel it", "That it will disappear after graduation"], "correctIndex": 1, "explanation": "Her supervisor calls the imposter feeling a rite of passage among doctoral candidates." },
-      { "question": "What unsettles her most about the writing process?", "options": ["The length of the document", "The suspicion that she has been performing scholarship rather than genuinely producing it", "Her supervisor's criticism", "A lack of available sources"], "correctIndex": 1, "explanation": "She says what unsettles her most is the suspicion of performing rather than producing scholarship." },
-      { "question": "What does she discover when she rereads last month's chapter?", "options": ["It is incoherent and needs rewriting", "It is careful and even original, despite her self-doubt", "It was written by someone else", "It contains major factual errors"], "correctIndex": 1, "explanation": "She finds the chapter careful, even original, though she can barely recognize it under her fog of self-doubt." },
-      { "question": "What does she decide to do before sunrise?", "options": ["Rewrite the entire dissertation", "Outline just the introduction to the next chapter", "Call her supervisor", "Abandon the project temporarily"], "correctIndex": 1, "explanation": "She decides to outline just the introduction to the next chapter, leaving the rest for daylight." }
-    ]
+      {
+        "question": "Why does the narrator record voice memos to herself?",
+        "options": [
+          "To rehearse a presentation",
+          "To practice a foreign language",
+          "Because the anxiety around her dissertation becomes too diffuse to simply sit with",
+          "Because her supervisor requires it"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says she records memos whenever the anxiety becomes too diffuse to simply sit with."
+      },
+      {
+        "question": "What has her supervisor told her about the imposter feeling?",
+        "options": [
+          "That it means she should quit",
+          "That it's practically a rite of passage among doctoral candidates",
+          "That only weak students feel it",
+          "That it will disappear after graduation"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her supervisor calls the imposter feeling a rite of passage among doctoral candidates."
+      },
+      {
+        "question": "What unsettles her most about the writing process?",
+        "options": [
+          "The length of the document",
+          "Her supervisor's criticism",
+          "The suspicion that she has been performing scholarship rather than genuinely producing it",
+          "A lack of available sources"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says what unsettles her most is the suspicion of performing rather than producing scholarship."
+      },
+      {
+        "question": "What does she discover when she rereads last month's chapter?",
+        "options": [
+          "It is incoherent and needs rewriting",
+          "It was written by someone else",
+          "It is careful and even original, despite her self-doubt",
+          "It contains major factual errors"
+        ],
+        "correctIndex": 2,
+        "explanation": "She finds the chapter careful, even original, though she can barely recognize it under her fog of self-doubt."
+      },
+      {
+        "question": "What does she decide to do before sunrise?",
+        "options": [
+          "Outline just the introduction to the next chapter",
+          "Rewrite the entire dissertation",
+          "Call her supervisor",
+          "Abandon the project temporarily"
+        ],
+        "correctIndex": 0,
+        "explanation": "She decides to outline just the introduction to the next chapter, leaving the rest for daylight."
+      },
+      {
+        "question": "What evidence destabilises the narrator's fear of merely performing scholarship?",
+        "options": [
+          "It often signals persistence and institutional conformity more reliably than mastery.",
+          "Recognition feels familiar without requiring reconstruction of the argument.",
+          "His performance is adequate, but the original reasons no longer persuade him.",
+          "A completed chapter remains careful and partly original when reread."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: A completed chapter remains careful and partly original when reread."
+      },
+      {
+        "question": "How does the narrator separate anxiety from actual competence?",
+        "options": [
+          "She acknowledges that structure sustains deep learning for many people.",
+          "It exposes missing knowledge that passive review conceals.",
+          "Inertia could commit decades to work chosen mainly for social approval.",
+          "The two coexist, so neither feeling proves the quality of the work."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: The two coexist, so neither feeling proves the quality of the work."
+      },
+      {
+        "question": "Why is reassurance less useful than choosing a smaller task that night?",
+        "options": [
+          "Mentorship, challenging peers, and otherwise inaccessible resources.",
+          "A bounded action addresses paralysis without requiring confidence first.",
+          "It strengthens memory by revisiting material near the point of forgetting.",
+          "A second change could signal recurring flight from commitment."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: A bounded action addresses paralysis without requiring confidence first."
+      },
+      {
+        "question": "What psychological effect comes from recording the panic aloud?",
+        "options": [
+          "A named and timestamped fear occupies less total mental space.",
+          "It tests usable understanding rather than rehearsed reproduction.",
+          "Personal inability to reconstruct the chapter makes the illusion undeniable.",
+          "Yusuf researched careers and spoke with practitioners before deciding."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: A named and timestamped fear occupies less total mental space."
+      },
+      {
+        "question": "How does the final one-paragraph ambition revise the dissertation problem?",
+        "options": [
+          "Universities must demonstrate educational value rather than assume permanent relevance.",
+          "They mark material for later retrieval rather than substitute for it.",
+          "He prefers an examined risk to an unexamined but convenient path.",
+          "Progress becomes sequential work rather than immediate mastery of the whole."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Progress becomes sequential work rather than immediate mastery of the whole."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-education-02",
@@ -38,34 +152,151 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Professor Amina", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Professor Amina",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. My guest today has spent two decades studying how people actually learn, rather than how institutions claim they do. Amina, thank you for joining us.",
-      "Professor Amina: [wry] Happy to be here, though I suspect I'm about to say something unpopular within the first five minutes.",
-      "Host: [curious] Go on, then. What's the unpopular claim?",
-      "Professor Amina: [measured] That the degree itself is increasingly a proxy, a credential that signals persistence and conformity to institutional expectations far more reliably than it signals mastery of the subject in question.",
-      "Host: [challenging] But surely mastery and persistence aren't mutually exclusive. Couldn't the credential reward both?",
-      "Professor Amina: [conceding] In principle, yes, and I don't want to romanticize the autodidact who abandons formal study entirely. Most people underestimate how much structure they need to sustain deep learning over years.",
-      "Host: [thoughtful] So where does that leave someone deciding whether university is worth the debt?",
-      "Professor Amina: [candid] I'd ask what the institution is actually providing beyond the certificate: mentorship, a cohort of peers who push back on your thinking, access to equipment or archives you couldn't replicate alone.",
-      "Host: [probing] And if none of that applies, say, to a self-taught programmer?",
-      "Professor Amina: [direct] Then the degree is arguably signalling rather than teaching, and the honest thing to do is admit that, rather than pretending every credential represents equivalent learning.",
-      "Host: [curious] Does that admission worry you, given your own position within that system?",
-      "Professor Amina: [reflective] It should worry all of us in academia, frankly. We're not entitled to relevance simply because we've historically held a monopoly on certification.",
-      "Host: [interested] What would change your mind, or reassure you the system still earns its keep?",
-      "Professor Amina: [firm] Evidence that graduates can actually transfer what they learned into unfamiliar situations, not merely reproduce it on an exam they were coached to anticipate.",
-      "Host: [wry] That sounds like a considerably harder thing to measure than a diploma.",
-      "Professor Amina: [smiling] Precisely. Which is probably why nobody has seriously tried."
+      "Host: [thoughtful] Welcome back to the show. My guest today has spent two decades studying how people actually learn, rather than how institutions claim they do. Amina, thank you for joining us.",
+      "Professor Amina: Happy to be here, though I suspect I'm about to say something unpopular within the first five minutes.",
+      "Host: [carefully] Go on, then. What's the unpopular claim?",
+      "Professor Amina: That the degree itself is increasingly a proxy, a credential that signals persistence and conformity to institutional expectations far more reliably than it signals mastery of the subject in question.",
+      "Host: [reflective] But surely mastery and persistence aren't mutually exclusive. Couldn't the credential reward both?",
+      "Professor Amina: In principle, yes, and I don't want to romanticize the autodidact who abandons formal study entirely. Most people underestimate how much structure they need to sustain deep learning over years.",
+      "Host: [honestly] So where does that leave someone deciding whether university is worth the debt?",
+      "Professor Amina: I'd ask what the institution is actually providing beyond the certificate: mentorship, a cohort of peers who push back on your thinking, access to equipment or archives you couldn't replicate alone.",
+      "Host: [gently] And if none of that applies, say, to a self-taught programmer?",
+      "Professor Amina: Then the degree is arguably signalling rather than teaching, and the honest thing to do is admit that, rather than pretending every credential represents equivalent learning.",
+      "Host: [calmly] Does that admission worry you, given your own position within that system?",
+      "Professor Amina: It should worry all of us in academia, frankly. We're not entitled to relevance simply because we've historically held a monopoly on certification.",
+      "Host: [encouraging] What would change your mind, or reassure you the system still earns its keep?",
+      "Professor Amina: Evidence that graduates can actually transfer what they learned into unfamiliar situations, not merely reproduce it on an exam they were coached to anticipate.",
+      "Host: [seriously] That sounds like a considerably harder thing to measure than a diploma.",
+      "Professor Amina: Precisely. Which is probably why nobody has seriously tried."
     ],
     "quiz": [
-      { "question": "What does Professor Amina claim about degrees early in the conversation?", "options": ["They are worthless entirely", "They increasingly signal persistence and conformity rather than mastery", "They guarantee employment", "They are becoming more affordable"], "correctIndex": 1, "explanation": "She says the degree is increasingly a proxy signalling persistence and conformity rather than mastery." },
-      { "question": "What does Amina say about the autodidact who abandons formal study?", "options": ["She fully endorses that path for everyone", "She warns most people underestimate how much structure they need", "She says it's illegal in most fields", "She has never considered the option"], "correctIndex": 1, "explanation": "She says she doesn't want to romanticize the autodidact and that most people underestimate how much structure sustained learning requires." },
-      { "question": "What does she suggest someone weighing university debt should ask?", "options": ["Whether the campus is attractive", "What the institution provides beyond the certificate itself", "How long the degree takes", "Whether professors are famous"], "correctIndex": 1, "explanation": "She suggests asking what the institution provides beyond the certificate, like mentorship or peer challenge." },
-      { "question": "How does Amina describe academia's claim to relevance?", "options": ["Guaranteed and permanent", "Not something it is entitled to simply from historically holding certification", "Completely secure", "Irrelevant to the discussion"], "correctIndex": 1, "explanation": "She says academia isn't entitled to relevance just because it has historically monopolized certification." },
-      { "question": "What would reassure Amina that the system still earns its keep?", "options": ["Higher enrollment numbers", "Evidence graduates can transfer learning into unfamiliar situations, not just reproduce it on exams", "More prestigious rankings", "Lower tuition costs"], "correctIndex": 1, "explanation": "She wants evidence of transferable learning, not just reproduction on exams students were coached to anticipate." }
-    ]
+      {
+        "question": "What does Professor Amina claim about degrees early in the conversation?",
+        "options": [
+          "They increasingly signal persistence and conformity rather than mastery",
+          "They are worthless entirely",
+          "They guarantee employment",
+          "They are becoming more affordable"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says the degree is increasingly a proxy signalling persistence and conformity rather than mastery."
+      },
+      {
+        "question": "What does Amina say about the autodidact who abandons formal study?",
+        "options": [
+          "She fully endorses that path for everyone",
+          "She says it's illegal in most fields",
+          "She has never considered the option",
+          "She warns most people underestimate how much structure they need"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says she doesn't want to romanticize the autodidact and that most people underestimate how much structure sustained learning requires."
+      },
+      {
+        "question": "What does she suggest someone weighing university debt should ask?",
+        "options": [
+          "Whether the campus is attractive",
+          "What the institution provides beyond the certificate itself",
+          "How long the degree takes",
+          "Whether professors are famous"
+        ],
+        "correctIndex": 1,
+        "explanation": "She suggests asking what the institution provides beyond the certificate, like mentorship or peer challenge."
+      },
+      {
+        "question": "How does Amina describe academia's claim to relevance?",
+        "options": [
+          "Guaranteed and permanent",
+          "Completely secure",
+          "Not something it is entitled to simply from historically holding certification",
+          "Irrelevant to the discussion"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says academia isn't entitled to relevance just because it has historically monopolized certification."
+      },
+      {
+        "question": "What would reassure Amina that the system still earns its keep?",
+        "options": [
+          "Higher enrollment numbers",
+          "More prestigious rankings",
+          "Lower tuition costs",
+          "Evidence graduates can transfer learning into unfamiliar situations, not just reproduce it on exams"
+        ],
+        "correctIndex": 3,
+        "explanation": "She wants evidence of transferable learning, not just reproduction on exams students were coached to anticipate."
+      },
+      {
+        "question": "Why does Amina call a degree a proxy rather than direct proof?",
+        "options": [
+          "Recognition feels familiar without requiring reconstruction of the argument.",
+          "His performance is adequate, but the original reasons no longer persuade him.",
+          "It often signals persistence and institutional conformity more reliably than mastery.",
+          "A workplace report activates the rigorous internal editor she cultivated."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: It often signals persistence and institutional conformity more reliably than mastery."
+      },
+      {
+        "question": "What prevents her critique from becoming an argument against formal education?",
+        "options": [
+          "It exposes missing knowledge that passive review conceals.",
+          "She acknowledges that structure sustains deep learning for many people.",
+          "Inertia could commit decades to work chosen mainly for social approval.",
+          "It assumes students are capable of producing substantially stronger work."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: She acknowledges that structure sustains deep learning for many people."
+      },
+      {
+        "question": "Which institutional benefits could justify university beyond certification?",
+        "options": [
+          "Mentorship, challenging peers, and otherwise inaccessible resources.",
+          "It strengthens memory by revisiting material near the point of forgetting.",
+          "A second change could signal recurring flight from commitment.",
+          "Untested confidence collapsed when it encountered genuine resistance."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Mentorship, challenging peers, and otherwise inaccessible resources."
+      },
+      {
+        "question": "Why does transfer to unfamiliar problems provide stronger evidence than an exam?",
+        "options": [
+          "Personal inability to reconstruct the chapter makes the illusion undeniable.",
+          "It tests usable understanding rather than rehearsed reproduction.",
+          "Yusuf researched careers and spoke with practitioners before deciding.",
+          "The long-term gift felt indistinguishable from cruelty at the time."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It tests usable understanding rather than rehearsed reproduction."
+      },
+      {
+        "question": "What institutional implication follows from losing a monopoly on certification?",
+        "options": [
+          "Universities must demonstrate educational value rather than assume permanent relevance.",
+          "They mark material for later retrieval rather than substitute for it.",
+          "He prefers an examined risk to an unexamined but convenient path.",
+          "Being taken seriously proved more valuable than being continually comforted."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Universities must demonstrate educational value rather than assume permanent relevance."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-education-03",
@@ -74,28 +305,142 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [confident] I spent my entire undergraduate degree convinced that a fluorescent highlighter was a genuine study aid, when in fact it was mostly a ritual that made me feel productive without demanding much cognitive effort at all.",
-      "Narrator: [wry] Rereading a highlighted paragraph creates a seductive illusion of familiarity, and familiarity gets mistaken, disastrously, for actual understanding.",
-      "Narrator: [explanatory] The research on this is fairly unambiguous, if somewhat deflating to anyone who's built an entire study routine around colored pens.",
-      "Narrator: [informative] Passive review, rereading notes, underlining, skimming a textbook a second time, consistently underperforms techniques that force you to retrieve information rather than merely recognize it.",
-      "Narrator: [thoughtful] Retrieval practice, closing the book and attempting to reconstruct the argument from memory, feels considerably more uncomfortable, precisely because it exposes the gaps that passive rereading conveniently papers over.",
-      "Narrator: [conversational] Spaced repetition compounds that effect, since revisiting material just as you're on the verge of forgetting it strengthens the memory far more than cramming everything into a single exhausting session.",
-      "Narrator: [reflective] What finally convinced me wasn't a study, though, but a fairly embarrassing personal experiment: I quizzed myself on a chapter I'd highlighted extensively and could barely reconstruct half of it.",
-      "Narrator: [determined] So I switched entirely, closing books after a first read and forcing myself to write a rough summary from memory before checking what I'd missed.",
-      "Narrator: [honest] It was slower initially, and considerably more frustrating, since you're constantly confronted with your own forgetting rather than sheltered from it.",
-      "Narrator: [satisfied] But months later, the material was still there, retrievable without prompting, which the highlighted pages had never managed to achieve.",
-      "Narrator: [wry] I still own the highlighters, incidentally. I just use them now for marking pages I intend to quiz myself on later, which feels like a small, belated redemption."
+      "Narrator: [thoughtful] I spent my entire undergraduate degree convinced that a fluorescent highlighter was a genuine study aid, when in fact it was mostly a ritual that made me feel productive without demanding much cognitive effort at all.",
+      "Narrator: Rereading a highlighted paragraph creates a seductive illusion of familiarity, and familiarity gets mistaken, disastrously, for actual understanding.",
+      "Narrator: [carefully] The research on this is fairly unambiguous, if somewhat deflating to anyone who's built an entire study routine around colored pens.",
+      "Narrator: Passive review, rereading notes, underlining, skimming a textbook a second time, consistently underperforms techniques that force you to retrieve information rather than merely recognize it.",
+      "Narrator: [reflective] Retrieval practice, closing the book and attempting to reconstruct the argument from memory, feels considerably more uncomfortable, precisely because it exposes the gaps that passive rereading conveniently papers over.",
+      "Narrator: Spaced repetition compounds that effect, since revisiting material just as you're on the verge of forgetting it strengthens the memory far more than cramming everything into a single exhausting session.",
+      "Narrator: [honestly] What finally convinced me wasn't a study, though, but a fairly embarrassing personal experiment: I quizzed myself on a chapter I'd highlighted extensively and could barely reconstruct half of it.",
+      "Narrator: So I switched entirely, closing books after a first read and forcing myself to write a rough summary from memory before checking what I'd missed.",
+      "Narrator: [gently] It was slower initially, and considerably more frustrating, since you're constantly confronted with your own forgetting rather than sheltered from it.",
+      "Narrator: But months later, the material was still there, retrievable without prompting, which the highlighted pages had never managed to achieve.",
+      "Narrator: [calmly] I still own the highlighters, incidentally. I just use them now for marking pages I intend to quiz myself on later, which feels like a small, belated redemption."
     ],
     "quiz": [
-      { "question": "What did the narrator believe about highlighting during his undergraduate degree?", "options": ["That it was a waste of time", "That it was a genuine study aid, though it mostly felt productive without requiring much effort", "That it should be banned in libraries", "That only certain colors worked"], "correctIndex": 1, "explanation": "He believed highlighting was a genuine study aid, though it was mostly a ritual demanding little cognitive effort." },
-      { "question": "What illusion does rereading a highlighted paragraph create?", "options": ["An illusion of boredom", "A seductive illusion of familiarity mistaken for understanding", "An illusion of forgetting", "An illusion of speed"], "correctIndex": 1, "explanation": "He says it creates an illusion of familiarity that gets mistaken for actual understanding." },
-      { "question": "What does research say about passive review compared to retrieval practice?", "options": ["Passive review is always superior", "Passive review consistently underperforms techniques that force retrieval rather than recognition", "There is no measurable difference", "Retrieval practice only works for languages"], "correctIndex": 1, "explanation": "Passive review consistently underperforms retrieval-based techniques according to the research he cites." },
-      { "question": "What personal experiment convinced the narrator to change his approach?", "options": ["A formal university study", "Quizzing himself on a heavily highlighted chapter and barely reconstructing half of it", "A conversation with a professor", "Reading a book about memory"], "correctIndex": 1, "explanation": "He quizzed himself on an extensively highlighted chapter and could barely reconstruct half of it." },
-      { "question": "How does the narrator use highlighters now?", "options": ["He no longer uses them at all", "For marking pages he intends to quiz himself on later", "Only for decorating his notes", "For color-coding his calendar"], "correctIndex": 1, "explanation": "He now uses highlighters to mark pages he intends to quiz himself on later." }
-    ]
+      {
+        "question": "What did the narrator believe about highlighting during his undergraduate degree?",
+        "options": [
+          "That it was a waste of time",
+          "That it should be banned in libraries",
+          "That only certain colors worked",
+          "That it was a genuine study aid, though it mostly felt productive without requiring much effort"
+        ],
+        "correctIndex": 3,
+        "explanation": "He believed highlighting was a genuine study aid, though it was mostly a ritual demanding little cognitive effort."
+      },
+      {
+        "question": "What illusion does rereading a highlighted paragraph create?",
+        "options": [
+          "An illusion of boredom",
+          "A seductive illusion of familiarity mistaken for understanding",
+          "An illusion of forgetting",
+          "An illusion of speed"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says it creates an illusion of familiarity that gets mistaken for actual understanding."
+      },
+      {
+        "question": "What does research say about passive review compared to retrieval practice?",
+        "options": [
+          "Passive review is always superior",
+          "There is no measurable difference",
+          "Passive review consistently underperforms techniques that force retrieval rather than recognition",
+          "Retrieval practice only works for languages"
+        ],
+        "correctIndex": 2,
+        "explanation": "Passive review consistently underperforms retrieval-based techniques according to the research he cites."
+      },
+      {
+        "question": "What personal experiment convinced the narrator to change his approach?",
+        "options": [
+          "A formal university study",
+          "A conversation with a professor",
+          "Quizzing himself on a heavily highlighted chapter and barely reconstructing half of it",
+          "Reading a book about memory"
+        ],
+        "correctIndex": 2,
+        "explanation": "He quizzed himself on an extensively highlighted chapter and could barely reconstruct half of it."
+      },
+      {
+        "question": "How does the narrator use highlighters now?",
+        "options": [
+          "For marking pages he intends to quiz himself on later",
+          "He no longer uses them at all",
+          "Only for decorating his notes",
+          "For color-coding his calendar"
+        ],
+        "correctIndex": 0,
+        "explanation": "He now uses highlighters to mark pages he intends to quiz himself on later."
+      },
+      {
+        "question": "Why does highlighting create a misleading sense of learning?",
+        "options": [
+          "Recognition feels familiar without requiring reconstruction of the argument.",
+          "His performance is adequate, but the original reasons no longer persuade him.",
+          "A workplace report activates the rigorous internal editor she cultivated.",
+          "He tries to compensate publicly for not completing a degree."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Recognition feels familiar without requiring reconstruction of the argument."
+      },
+      {
+        "question": "What makes retrieval practice productively uncomfortable?",
+        "options": [
+          "Inertia could commit decades to work chosen mainly for social approval.",
+          "It exposes missing knowledge that passive review conceals.",
+          "It assumes students are capable of producing substantially stronger work.",
+          "Theoretical gaps must be repaired alone under practical pressure."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It exposes missing knowledge that passive review conceals."
+      },
+      {
+        "question": "How does spaced repetition differ from a single cramming session?",
+        "options": [
+          "A second change could signal recurring flight from commitment.",
+          "Untested confidence collapsed when it encountered genuine resistance.",
+          "Strong theory left her underprepared for workplace practice.",
+          "It strengthens memory by revisiting material near the point of forgetting."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It strengthens memory by revisiting material near the point of forgetting."
+      },
+      {
+        "question": "Why is the narrator's failed self-quiz decisive despite existing research?",
+        "options": [
+          "Yusuf researched careers and spoke with practitioners before deciding.",
+          "The long-term gift felt indistinguishable from cruelty at the time.",
+          "Personal inability to reconstruct the chapter makes the illusion undeniable.",
+          "Formal study built endurance with difficult unresolved problems."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Personal inability to reconstruct the chapter makes the illusion undeniable."
+      },
+      {
+        "question": "What new role preserves limited value for the highlighters?",
+        "options": [
+          "He prefers an examined risk to an unexamined but convenient path.",
+          "They mark material for later retrieval rather than substitute for it.",
+          "Being taken seriously proved more valuable than being continually comforted.",
+          "Each should borrow the strengths missing from their own path."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: They mark material for later retrieval rather than substitute for it."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-education-04",
@@ -104,32 +449,149 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Father", "gender": "male" }
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      },
+      {
+        "name": "Father",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Yusuf: [hesitant] Dad, before you say anything, I want to explain properly this time, not just blurt it out like I did with the last change.",
-      "Father: [wary] Alright. I'm listening, though I'll admit my stomach dropped a little when you called instead of texting.",
-      "Yusuf: [earnest] I'm switching out of engineering. Not because I'm struggling, my grades are fine, but because I've realized I chose it for reasons that don't actually hold up anymore.",
-      "Father: [measured] What reasons were those, exactly?",
-      "Yusuf: [candid] Mostly that it seemed sensible, stable, the kind of thing that wouldn't provoke an argument at dinner. I never sat down and asked whether I actually wanted to spend forty years doing it.",
-      "Father: [concerned] And economics, of all things? That feels like trading one narrow path for an even narrower one.",
-      "Yusuf: [patient] I understand the concern, genuinely, but it's less narrow than it looks from the outside. It opens into policy work, research, even data analysis, fields I've actually stayed up late reading about voluntarily.",
-      "Father: [skeptical] Voluntarily reading about something and building a stable career from it aren't quite the same undertaking, son.",
-      "Yusuf: [steady] No, they're not, and I'm not pretending this is risk-free. But staying in engineering out of inertia felt like a slower, quieter kind of risk that nobody was naming out loud.",
-      "Father: [softening] I suppose I worry less about the subject itself and more about watching you switch course a second time and wondering if a third change is coming.",
-      "Yusuf: [honest] That's a fair worry, and I can't promise certainty. What I can promise is that this decision came from actually examining what I want, not from panic or boredom.",
-      "Father: [thoughtful] That distinction matters to me more than you might realize. Your uncle switched fields three times chasing whatever seemed easiest, and it cost him years.",
-      "Yusuf: [firm] I know his story. It's partly why I've been so deliberate about this, talking to people already working in the field before committing to anything.",
-      "Father: [relenting] Alright. I still have reservations, but I'd rather you pursue something examined than something merely convenient. Walk me through the transfer requirements."
+      "Yusuf: [thoughtful] Dad, before you say anything, I want to explain properly this time, not just blurt it out like I did with the last change.",
+      "Father: Alright. I'm listening, though I'll admit my stomach dropped a little when you called instead of texting.",
+      "Yusuf: [carefully] I'm switching out of engineering. Not because I'm struggling, my grades are fine, but because I've realized I chose it for reasons that don't actually hold up anymore.",
+      "Father: What reasons were those, exactly?",
+      "Yusuf: [reflective] Mostly that it seemed sensible, stable, the kind of thing that wouldn't provoke an argument at dinner. I never sat down and asked whether I actually wanted to spend forty years doing it.",
+      "Father: And economics, of all things? That feels like trading one narrow path for an even narrower one.",
+      "Yusuf: [honestly] I understand the concern, genuinely, but it's less narrow than it looks from the outside. It opens into policy work, research, even data analysis, fields I've actually stayed up late reading about voluntarily.",
+      "Father: Voluntarily reading about something and building a stable career from it aren't quite the same undertaking, son.",
+      "Yusuf: [gently] No, they're not, and I'm not pretending this is risk-free. But staying in engineering out of inertia felt like a slower, quieter kind of risk that nobody was naming out loud.",
+      "Father: I suppose I worry less about the subject itself and more about watching you switch course a second time and wondering if a third change is coming.",
+      "Yusuf: [calmly] That's a fair worry, and I can't promise certainty. What I can promise is that this decision came from actually examining what I want, not from panic or boredom.",
+      "Father: That distinction matters to me more than you might realize. Your uncle switched fields three times chasing whatever seemed easiest, and it cost him years.",
+      "Yusuf: [encouraging] I know his story. It's partly why I've been so deliberate about this, talking to people already working in the field before committing to anything.",
+      "Father: Alright. I still have reservations, but I'd rather you pursue something examined than something merely convenient. Walk me through the transfer requirements."
     ],
     "quiz": [
-      { "question": "Why is Yusuf switching out of engineering?", "options": ["He is failing his courses", "He realizes he chose it for reasons that no longer hold up, not because he is struggling", "His father demanded it", "He wants an easier workload"], "correctIndex": 1, "explanation": "Yusuf clarifies his grades are fine but he chose engineering for reasons that don't hold up anymore." },
-      { "question": "What reason does Yusuf originally give for choosing engineering?", "options": ["A childhood dream", "It seemed sensible and stable, avoiding an argument at dinner", "A teacher recommended it", "It paid the most immediately"], "correctIndex": 1, "explanation": "He admits he chose it mainly because it seemed sensible and stable and wouldn't provoke an argument." },
-      { "question": "What field is Yusuf switching to?", "options": ["Medicine", "Economics", "Law", "Architecture"], "correctIndex": 1, "explanation": "Yusuf says he is switching to economics, which he has been reading about voluntarily." },
-      { "question": "What does the father compare Yusuf's situation to?", "options": ["His own career change", "His uncle, who switched fields three times chasing what seemed easiest and lost years", "A famous entrepreneur's story", "Nothing specific"], "correctIndex": 1, "explanation": "The father brings up Yusuf's uncle, who switched fields three times and lost years pursuing convenience." },
-      { "question": "What ultimately makes the father more accepting of the decision?", "options": ["Yusuf's guaranteed job offer", "That the decision came from careful examination rather than panic or boredom", "A promise never to change majors again", "His wife's opinion"], "correctIndex": 1, "explanation": "The father says the distinction between an examined decision and one from panic or boredom matters to him." }
-    ]
+      {
+        "question": "Why is Yusuf switching out of engineering?",
+        "options": [
+          "He realizes he chose it for reasons that no longer hold up, not because he is struggling",
+          "He is failing his courses",
+          "His father demanded it",
+          "He wants an easier workload"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf clarifies his grades are fine but he chose engineering for reasons that don't hold up anymore."
+      },
+      {
+        "question": "What reason does Yusuf originally give for choosing engineering?",
+        "options": [
+          "A childhood dream",
+          "A teacher recommended it",
+          "It paid the most immediately",
+          "It seemed sensible and stable, avoiding an argument at dinner"
+        ],
+        "correctIndex": 3,
+        "explanation": "He admits he chose it mainly because it seemed sensible and stable and wouldn't provoke an argument."
+      },
+      {
+        "question": "What field is Yusuf switching to?",
+        "options": [
+          "Medicine",
+          "Law",
+          "Architecture",
+          "Economics"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf says he is switching to economics, which he has been reading about voluntarily."
+      },
+      {
+        "question": "What does the father compare Yusuf's situation to?",
+        "options": [
+          "His own career change",
+          "His uncle, who switched fields three times chasing what seemed easiest and lost years",
+          "A famous entrepreneur's story",
+          "Nothing specific"
+        ],
+        "correctIndex": 1,
+        "explanation": "The father brings up Yusuf's uncle, who switched fields three times and lost years pursuing convenience."
+      },
+      {
+        "question": "What ultimately makes the father more accepting of the decision?",
+        "options": [
+          "Yusuf's guaranteed job offer",
+          "That the decision came from careful examination rather than panic or boredom",
+          "A promise never to change majors again",
+          "His wife's opinion"
+        ],
+        "correctIndex": 1,
+        "explanation": "The father says the distinction between an examined decision and one from panic or boredom matters to him."
+      },
+      {
+        "question": "Why does Yusuf reject poor grades as the explanation for changing majors?",
+        "options": [
+          "A workplace report activates the rigorous internal editor she cultivated.",
+          "He tries to compensate publicly for not completing a degree.",
+          "His performance is adequate, but the original reasons no longer persuade him.",
+          "A stable life had been optimised at the expense of curiosity."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: His performance is adequate, but the original reasons no longer persuade him."
+      },
+      {
+        "question": "What risk does he identify in remaining with engineering?",
+        "options": [
+          "It assumes students are capable of producing substantially stronger work.",
+          "Theoretical gaps must be repaired alone under practical pressure.",
+          "Inertia could commit decades to work chosen mainly for social approval.",
+          "She fears younger students will treat her as an outsider."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Inertia could commit decades to work chosen mainly for social approval."
+      },
+      {
+        "question": "Why does his father fear a pattern rather than economics itself?",
+        "options": [
+          "A second change could signal recurring flight from commitment.",
+          "Untested confidence collapsed when it encountered genuine resistance.",
+          "Strong theory left her underprepared for workplace practice.",
+          "They value her experience and begin seeking informal mentorship."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: A second change could signal recurring flight from commitment."
+      },
+      {
+        "question": "What evidence distinguishes this decision from panic or boredom?",
+        "options": [
+          "The long-term gift felt indistinguishable from cruelty at the time.",
+          "Formal study built endurance with difficult unresolved problems.",
+          "Sustained academic concentration is physically exhausting after years away.",
+          "Yusuf researched careers and spoke with practitioners before deciding."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Yusuf researched careers and spoke with practitioners before deciding."
+      },
+      {
+        "question": "What shift leads the father to discuss transfer requirements?",
+        "options": [
+          "Being taken seriously proved more valuable than being continually comforted.",
+          "Each should borrow the strengths missing from their own path.",
+          "He prefers an examined risk to an unexamined but convenient path.",
+          "Life experience now gives the material meaning her younger self lacked."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: He prefers an examined risk to an unexamined but convenient path."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-education-05",
@@ -138,27 +600,141 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [nostalgic] Mrs. Herrera was, by any conventional metric, an unpopular teacher, the kind students traded warnings about before ever setting foot in her classroom.",
-      "Narrator: [thoughtful] She returned essays covered in a shade of red ink so dense it looked less like feedback than an indictment, and she refused, categorically, to round a grade up out of sympathy.",
-      "Narrator: [honest] I resented her thoroughly for most of that year, convinced she simply enjoyed watching seventeen-year-olds squirm under the weight of her impossible standards.",
-      "Narrator: [reflective] It wasn't until years later, drafting a report at my first real job, that I noticed my own internal editor sounded suspiciously like her, dismantling a weak argument before anyone else had the chance to.",
-      "Narrator: [wry] I'd absorbed, apparently without consenting to it, an entire framework for interrogating my own thinking that no amount of gentler feedback had ever managed to install.",
-      "Narrator: [with feeling] What I hadn't understood as a teenager was that her severity wasn't indifference; it was a kind of respect, an assumption that we were capable of more than we were currently producing.",
-      "Narrator: [candid] The teachers who praised everything indiscriminately, by contrast, left me with a vague, untested confidence that dissolved the moment it met any real resistance.",
-      "Narrator: [thoughtful] I've since tried to write her a letter twice, and abandoned it twice, uncertain how to convey gratitude for something that felt, at the time, indistinguishable from cruelty.",
-      "Narrator: [determined] I think what I'd actually say, if I ever finish the letter, is that she taught me the difference between being comforted and being taken seriously.",
-      "Narrator: [warmly] And that the second one, however unpleasant it felt at seventeen, turned out to matter considerably more in the long run."
+      "Narrator: [thoughtful] Mrs. Herrera was, by any conventional metric, an unpopular teacher, the kind students traded warnings about before ever setting foot in her classroom.",
+      "Narrator: She returned essays covered in a shade of red ink so dense it looked less like feedback than an indictment, and she refused, categorically, to round a grade up out of sympathy.",
+      "Narrator: [carefully] I resented her thoroughly for most of that year, convinced she simply enjoyed watching seventeen-year-olds squirm under the weight of her impossible standards.",
+      "Narrator: It wasn't until years later, drafting a report at my first real job, that I noticed my own internal editor sounded suspiciously like her, dismantling a weak argument before anyone else had the chance to.",
+      "Narrator: [reflective] I'd absorbed, apparently without consenting to it, an entire framework for interrogating my own thinking that no amount of gentler feedback had ever managed to install.",
+      "Narrator: What I hadn't understood as a teenager was that her severity wasn't indifference; it was a kind of respect, an assumption that we were capable of more than we were currently producing.",
+      "Narrator: [honestly] The teachers who praised everything indiscriminately, by contrast, left me with a vague, untested confidence that dissolved the moment it met any real resistance.",
+      "Narrator: I've since tried to write her a letter twice, and abandoned it twice, uncertain how to convey gratitude for something that felt, at the time, indistinguishable from cruelty.",
+      "Narrator: [gently] I think what I'd actually say, if I ever finish the letter, is that she taught me the difference between being comforted and being taken seriously.",
+      "Narrator: And that the second one, however unpleasant it felt at seventeen, turned out to matter considerably more in the long run."
     ],
     "quiz": [
-      { "question": "How was Mrs. Herrera regarded by students?", "options": ["Universally beloved", "Unpopular, the kind students traded warnings about", "Rarely noticed", "Considered too lenient"], "correctIndex": 1, "explanation": "The narrator describes her as unpopular, someone students traded warnings about before her class." },
-      { "question": "How did the narrator feel about Mrs. Herrera during that school year?", "options": ["Grateful and admiring", "Resentful, believing she enjoyed watching students struggle", "Indifferent", "Afraid of losing her approval"], "correctIndex": 1, "explanation": "The narrator says she resented Mrs. Herrera, convinced she enjoyed watching students squirm." },
-      { "question": "When did the narrator recognize Mrs. Herrera's lasting influence?", "options": ["Immediately after graduating", "Years later, drafting a report at her first real job", "During a college reunion", "She never recognized it"], "correctIndex": 1, "explanation": "She noticed it years later while drafting a report at her first job, hearing Mrs. Herrera's voice in her own editing." },
-      { "question": "What does the narrator say about teachers who praised everything indiscriminately?", "options": ["They were the most helpful", "They left her with a vague, untested confidence that dissolved under real resistance", "They should be the model for all teaching", "She never had such teachers"], "correctIndex": 1, "explanation": "She contrasts them with Mrs. Herrera, saying their indiscriminate praise left an untested confidence that dissolved easily." },
-      { "question": "What does the narrator believe Mrs. Herrera's severity actually represented?", "options": ["Simple indifference", "A kind of respect, assuming students were capable of more", "A personal grudge against students", "A requirement from the school administration"], "correctIndex": 1, "explanation": "She concludes the severity was a form of respect, an assumption students were capable of more than they produced." }
-    ]
+      {
+        "question": "How was Mrs. Herrera regarded by students?",
+        "options": [
+          "Universally beloved",
+          "Unpopular, the kind students traded warnings about",
+          "Rarely noticed",
+          "Considered too lenient"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator describes her as unpopular, someone students traded warnings about before her class."
+      },
+      {
+        "question": "How did the narrator feel about Mrs. Herrera during that school year?",
+        "options": [
+          "Grateful and admiring",
+          "Indifferent",
+          "Resentful, believing she enjoyed watching students struggle",
+          "Afraid of losing her approval"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator says she resented Mrs. Herrera, convinced she enjoyed watching students squirm."
+      },
+      {
+        "question": "When did the narrator recognize Mrs. Herrera's lasting influence?",
+        "options": [
+          "Immediately after graduating",
+          "During a college reunion",
+          "She never recognized it",
+          "Years later, drafting a report at her first real job"
+        ],
+        "correctIndex": 3,
+        "explanation": "She noticed it years later while drafting a report at her first job, hearing Mrs. Herrera's voice in her own editing."
+      },
+      {
+        "question": "What does the narrator say about teachers who praised everything indiscriminately?",
+        "options": [
+          "They were the most helpful",
+          "They should be the model for all teaching",
+          "They left her with a vague, untested confidence that dissolved under real resistance",
+          "She never had such teachers"
+        ],
+        "correctIndex": 2,
+        "explanation": "She contrasts them with Mrs. Herrera, saying their indiscriminate praise left an untested confidence that dissolved easily."
+      },
+      {
+        "question": "What does the narrator believe Mrs. Herrera's severity actually represented?",
+        "options": [
+          "Simple indifference",
+          "A kind of respect, assuming students were capable of more",
+          "A personal grudge against students",
+          "A requirement from the school administration"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes the severity was a form of respect, an assumption students were capable of more than they produced."
+      },
+      {
+        "question": "What later experience changes the narrator's judgment of Mrs. Herrera?",
+        "options": [
+          "A workplace report activates the rigorous internal editor she cultivated.",
+          "He tries to compensate publicly for not completing a degree.",
+          "A stable life had been optimised at the expense of curiosity.",
+          "Each definition is paired with a question about its analytical effect."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: A workplace report activates the rigorous internal editor she cultivated."
+      },
+      {
+        "question": "Why can severe feedback represent respect in the narrator's revised view?",
+        "options": [
+          "It assumes students are capable of producing substantially stronger work.",
+          "Theoretical gaps must be repaired alone under practical pressure.",
+          "She fears younger students will treat her as an outsider.",
+          "Attempt the reading, identify the precise gap, and avoid irrelevant display."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It assumes students are capable of producing substantially stronger work."
+      },
+      {
+        "question": "What weakness resulted from teachers who praised indiscriminately?",
+        "options": [
+          "Strong theory left her underprepared for workplace practice.",
+          "They value her experience and begin seeking informal mentorship.",
+          "Silence protects appearance while permitting misunderstanding to continue.",
+          "Untested confidence collapsed when it encountered genuine resistance."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Untested confidence collapsed when it encountered genuine resistance."
+      },
+      {
+        "question": "Why is the unfinished thank-you letter difficult to compose?",
+        "options": [
+          "The long-term gift felt indistinguishable from cruelty at the time.",
+          "Formal study built endurance with difficult unresolved problems.",
+          "Sustained academic concentration is physically exhausting after years away.",
+          "Publicly acknowledging a precise gap need not become self-humiliation."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: The long-term gift felt indistinguishable from cruelty at the time."
+      },
+      {
+        "question": "Which contrast captures the narrator's final evaluation of teaching?",
+        "options": [
+          "Each should borrow the strengths missing from their own path.",
+          "Being taken seriously proved more valuable than being continually comforted.",
+          "Life experience now gives the material meaning her younger self lacked.",
+          "Recognise when pretending to know has begun obstructing knowledge."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Being taken seriously proved more valuable than being continually comforted."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-education-06",
@@ -167,32 +743,149 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sari", "gender": "female" },
-      { "name": "Bimo", "gender": "male" }
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Bimo",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Sari: [pointed] I saw you reading another article about self-taught developers outearning graduates. You're building a case, aren't you?",
-      "Bimo: [amused] Maybe. I never finished my degree, and it still bothers me that people assume that means I cut corners somewhere.",
-      "Sari: [gentle] Nobody here thinks that, Bimo. You're one of the sharpest engineers on this floor.",
-      "Bimo: [candid] I appreciate that, but I still catch myself overcompensating in meetings, citing sources unnecessarily, as if I need to prove I did the reading nobody assigned me.",
-      "Sari: [thoughtful] That's a strange kind of pressure, proving competence you've already demonstrated a hundred times over.",
-      "Bimo: [reflective] It is. Though I'll admit there are gaps. Theoretical foundations I've had to backfill clumsily on my own, usually at midnight, usually under deadline pressure.",
-      "Sari: [honest] I had the opposite problem. Four years of theory and comparatively little practice, so my first year here felt like relearning the entire job from scratch.",
-      "Bimo: [curious] Do you think the degree was worth it, given that gap?",
-      "Sari: [measured] Mostly, yes, though not for reasons the university advertised. The actual value was learning how to sit with a hard, unresolved problem for months without abandoning it.",
-      "Bimo: [interested] That's not something you can easily fake your way into through tutorials alone.",
-      "Sari: [agreeing] Exactly, and I don't think self-teaching is inherently inferior, just differently shaped. You build resilience under deadline pressure that classroom learning rarely demands.",
-      "Bimo: [wry] We've essentially each spent years compensating for what the other one got for free.",
-      "Sari: [smiling] Which probably means the ideal path involves stealing shamelessly from both approaches rather than defending either one too rigidly.",
-      "Bimo: [conceding] Fair enough. I'll stop reading those articles as ammunition and start reading them as, I don't know, an actual map of what I'm missing."
+      "Sari: [thoughtful] I saw you reading another article about self-taught developers outearning graduates. You're building a case, aren't you?",
+      "Bimo: Maybe. I never finished my degree, and it still bothers me that people assume that means I cut corners somewhere.",
+      "Sari: [carefully] Nobody here thinks that, Bimo. You're one of the sharpest engineers on this floor.",
+      "Bimo: I appreciate that, but I still catch myself overcompensating in meetings, citing sources unnecessarily, as if I need to prove I did the reading nobody assigned me.",
+      "Sari: [reflective] That's a strange kind of pressure, proving competence you've already demonstrated a hundred times over.",
+      "Bimo: It is. Though I'll admit there are gaps. Theoretical foundations I've had to backfill clumsily on my own, usually at midnight, usually under deadline pressure.",
+      "Sari: [honestly] I had the opposite problem. Four years of theory and comparatively little practice, so my first year here felt like relearning the entire job from scratch.",
+      "Bimo: Do you think the degree was worth it, given that gap?",
+      "Sari: [gently] Mostly, yes, though not for reasons the university advertised. The actual value was learning how to sit with a hard, unresolved problem for months without abandoning it.",
+      "Bimo: That's not something you can easily fake your way into through tutorials alone.",
+      "Sari: [calmly] Exactly, and I don't think self-teaching is inherently inferior, just differently shaped. You build resilience under deadline pressure that classroom learning rarely demands.",
+      "Bimo: We've essentially each spent years compensating for what the other one got for free.",
+      "Sari: [encouraging] Which probably means the ideal path involves stealing shamelessly from both approaches rather than defending either one too rigidly.",
+      "Bimo: Fair enough. I'll stop reading those articles as ammunition and start reading them as, I don't know, an actual map of what I'm missing."
     ],
     "quiz": [
-      { "question": "What has Bimo been reading, prompting Sari's comment?", "options": ["News about the company", "Articles about self-taught developers outearning graduates", "A novel", "A cooking blog"], "correctIndex": 1, "explanation": "Sari notices Bimo reading another article about self-taught developers outearning graduates." },
-      { "question": "What does Bimo admit he does in meetings?", "options": ["He avoids speaking entirely", "He overcompensates by citing sources unnecessarily to prove he did the reading", "He dominates every discussion", "He refuses to answer questions"], "correctIndex": 1, "explanation": "Bimo admits he overcompensates, citing sources unnecessarily as if proving he did reading nobody assigned him." },
-      { "question": "What gap does Bimo say he has had to backfill?", "options": ["Communication skills", "Theoretical foundations, usually clumsily and under deadline pressure", "Basic computer skills", "Team management experience"], "correctIndex": 1, "explanation": "Bimo says he has had to backfill theoretical foundations clumsily on his own, often at midnight under deadline." },
-      { "question": "According to Sari, what was the actual value of her degree?", "options": ["The prestige of the university name", "Learning to sit with a hard, unresolved problem for months without abandoning it", "The size of her alumni network", "Free access to software"], "correctIndex": 1, "explanation": "Sari says the real value was learning to sit with a hard, unresolved problem for months without giving up." },
-      { "question": "What do Sari and Bimo conclude about the ideal learning path?", "options": ["University is always superior", "Self-teaching is always superior", "The ideal path involves borrowing from both approaches rather than defending either rigidly", "Neither approach has any value"], "correctIndex": 2, "explanation": "Sari suggests stealing shamelessly from both approaches rather than defending either one too rigidly." }
-    ]
+      {
+        "question": "What has Bimo been reading, prompting Sari's comment?",
+        "options": [
+          "News about the company",
+          "Articles about self-taught developers outearning graduates",
+          "A novel",
+          "A cooking blog"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sari notices Bimo reading another article about self-taught developers outearning graduates."
+      },
+      {
+        "question": "What does Bimo admit he does in meetings?",
+        "options": [
+          "He avoids speaking entirely",
+          "He dominates every discussion",
+          "He overcompensates by citing sources unnecessarily to prove he did the reading",
+          "He refuses to answer questions"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bimo admits he overcompensates, citing sources unnecessarily as if proving he did reading nobody assigned him."
+      },
+      {
+        "question": "What gap does Bimo say he has had to backfill?",
+        "options": [
+          "Theoretical foundations, usually clumsily and under deadline pressure",
+          "Communication skills",
+          "Basic computer skills",
+          "Team management experience"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bimo says he has had to backfill theoretical foundations clumsily on his own, often at midnight under deadline."
+      },
+      {
+        "question": "According to Sari, what was the actual value of her degree?",
+        "options": [
+          "The prestige of the university name",
+          "The size of her alumni network",
+          "Learning to sit with a hard, unresolved problem for months without abandoning it",
+          "Free access to software"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sari says the real value was learning to sit with a hard, unresolved problem for months without giving up."
+      },
+      {
+        "question": "What do Sari and Bimo conclude about the ideal learning path?",
+        "options": [
+          "University is always superior",
+          "The ideal path involves borrowing from both approaches rather than defending either rigidly",
+          "Self-teaching is always superior",
+          "Neither approach has any value"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sari suggests stealing shamelessly from both approaches rather than defending either one too rigidly."
+      },
+      {
+        "question": "Why does Bimo cite sources excessively despite demonstrated competence?",
+        "options": [
+          "A stable life had been optimised at the expense of curiosity.",
+          "Each definition is paired with a question about its analytical effect.",
+          "It protects uncertainty from being filled by confident improvisation.",
+          "He tries to compensate publicly for not completing a degree."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: He tries to compensate publicly for not completing a degree."
+      },
+      {
+        "question": "Which genuine limitation complicates his defence of self-teaching?",
+        "options": [
+          "She fears younger students will treat her as an outsider.",
+          "Attempt the reading, identify the precise gap, and avoid irrelevant display.",
+          "Members can represent the argument fairly before disagreeing.",
+          "Theoretical gaps must be repaired alone under practical pressure."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Theoretical gaps must be repaired alone under practical pressure."
+      },
+      {
+        "question": "How does Sari's degree create the opposite imbalance?",
+        "options": [
+          "Strong theory left her underprepared for workplace practice.",
+          "They value her experience and begin seeking informal mentorship.",
+          "Silence protects appearance while permitting misunderstanding to continue.",
+          "They distinguish the author's evidence from their own examples."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Strong theory left her underprepared for workplace practice."
+      },
+      {
+        "question": "What educational value does Sari find beyond advertised job preparation?",
+        "options": [
+          "Sustained academic concentration is physically exhausting after years away.",
+          "Formal study built endurance with difficult unresolved problems.",
+          "Publicly acknowledging a precise gap need not become self-humiliation.",
+          "Attention, memory, evidence, and revision become the measures of progress."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Formal study built endurance with difficult unresolved problems."
+      },
+      {
+        "question": "What synthesis replaces their competition between learning routes?",
+        "options": [
+          "Life experience now gives the material meaning her younger self lacked.",
+          "Recognise when pretending to know has begun obstructing knowledge.",
+          "Each should borrow the strengths missing from their own path.",
+          "It supplies diagnostic information rather than judging the learner's worth."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Each should borrow the strengths missing from their own path."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-education-07",
@@ -201,32 +894,584 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Rina", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Rina",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] This morning we're speaking with Rina, who returned to university at forty-one after nearly two decades away from formal study. Rina, welcome.",
-      "Rina: [a little nervous] Thank you. It still feels strange to say out loud, that I'm technically a student again.",
-      "Radio Host: [curious] What finally prompted the decision, after so many years?",
-      "Rina: [thoughtful] Honestly, a kind of quiet dissatisfaction that had been accumulating for years, the sense that I'd optimized my life for stability at the expense of curiosity.",
-      "Radio Host: [interested] Was the classroom itself intimidating, sitting among students young enough to be your children?",
-      "Rina: [candid] Terrifying, initially. I assumed they'd see me as an oddity, and for the first few weeks I overprepared for every seminar just to compensate for that fear.",
-      "Radio Host: [amused] Did that fear turn out to be justified?",
-      "Rina: [warmly] Not remotely. If anything, they were curious about my experience rather than dismissive of it, and I found myself mentoring several of them informally by the second semester.",
-      "Radio Host: [probing] What's proven hardest, practically speaking, balancing coursework against everything else in your life?",
-      "Rina: [honest] The cognitive stamina, surprisingly. I'd forgotten how physically draining sustained concentration can be when you're no longer accustomed to three-hour lectures.",
-      "Rina: [reflective] But there's also something my younger classmates don't have yet, a much sharper sense of why I'm doing this, which makes the exhaustion easier to justify.",
-      "Radio Host: [curious] Any regret about not doing this sooner?",
-      "Rina: [measured] Occasionally, late at night. But I've also come to believe the version of me at twenty-three wouldn't have appreciated this material the way I do now, with actual lived context to attach it to.",
-      "Radio Host: [warmly] That's a generous way to frame a delay most people would call regret.",
-      "Rina: [smiling] Maybe. Though I'd rather call it timing than failure. The learning arrived exactly when I was finally ready to actually use it."
+      "Radio Host: [thoughtful] This morning we're speaking with Rina, who returned to university at forty-one after nearly two decades away from formal study. Rina, welcome.",
+      "Rina: Thank you. It still feels strange to say out loud, that I'm technically a student again.",
+      "Radio Host: [carefully] What finally prompted the decision, after so many years?",
+      "Rina: Honestly, a kind of quiet dissatisfaction that had been accumulating for years, the sense that I'd optimized my life for stability at the expense of curiosity.",
+      "Radio Host: [reflective] Was the classroom itself intimidating, sitting among students young enough to be your children?",
+      "Rina: Terrifying, initially. I assumed they'd see me as an oddity, and for the first few weeks I overprepared for every seminar just to compensate for that fear.",
+      "Radio Host: [honestly] Did that fear turn out to be justified?",
+      "Rina: Not remotely. If anything, they were curious about my experience rather than dismissive of it, and I found myself mentoring several of them informally by the second semester.",
+      "Radio Host: [gently] What's proven hardest, practically speaking, balancing coursework against everything else in your life?",
+      "Rina: The cognitive stamina, surprisingly. I'd forgotten how physically draining sustained concentration can be when you're no longer accustomed to three-hour lectures.",
+      "Rina: [calmly] But there's also something my younger classmates don't have yet, a much sharper sense of why I'm doing this, which makes the exhaustion easier to justify.",
+      "Radio Host: Any regret about not doing this sooner?",
+      "Rina: [encouraging] Occasionally, late at night. But I've also come to believe the version of me at twenty-three wouldn't have appreciated this material the way I do now, with actual lived context to attach it to.",
+      "Radio Host: That's a generous way to frame a delay most people would call regret.",
+      "Rina: [seriously] Maybe. Though I'd rather call it timing than failure. The learning arrived exactly when I was finally ready to actually use it."
     ],
     "quiz": [
-      { "question": "At what age did Rina return to university?", "options": ["Twenty-three", "Forty-one", "Thirty-five", "Fifty"], "correctIndex": 1, "explanation": "The host introduces Rina as having returned to university at forty-one." },
-      { "question": "What prompted Rina's decision to return to formal study?", "options": ["A job requirement", "A quiet dissatisfaction that she had optimized her life for stability over curiosity", "Family pressure", "A scholarship offer she couldn't refuse"], "correctIndex": 1, "explanation": "Rina describes a quiet, accumulating dissatisfaction about optimizing her life for stability at curiosity's expense." },
-      { "question": "How did Rina initially feel about being among much younger classmates?", "options": ["Completely comfortable", "Terrified, assuming they would see her as an oddity", "Angry at the university", "Indifferent"], "correctIndex": 1, "explanation": "She admits feeling terrified initially, assuming her younger classmates would see her as an oddity." },
-      { "question": "What did Rina find surprisingly difficult about returning to study?", "options": ["Making friends", "Cognitive stamina, since sustained concentration felt physically draining", "Understanding the course material", "Paying tuition"], "correctIndex": 1, "explanation": "She says the cognitive stamina surprised her, having forgotten how draining sustained concentration can be." },
-      { "question": "How does Rina ultimately frame the delay in returning to school?", "options": ["As a complete failure", "As timing rather than failure, since she can now use the material with lived context", "As something she deeply regrets", "As entirely her family's fault"], "correctIndex": 1, "explanation": "Rina says she'd rather call it timing than failure, since the learning arrived when she was ready to use it." }
-    ]
+      {
+        "question": "At what age did Rina return to university?",
+        "options": [
+          "Forty-one",
+          "Twenty-three",
+          "Thirty-five",
+          "Fifty"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces Rina as having returned to university at forty-one."
+      },
+      {
+        "question": "What prompted Rina's decision to return to formal study?",
+        "options": [
+          "A job requirement",
+          "Family pressure",
+          "A scholarship offer she couldn't refuse",
+          "A quiet dissatisfaction that she had optimized her life for stability over curiosity"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rina describes a quiet, accumulating dissatisfaction about optimizing her life for stability at curiosity's expense."
+      },
+      {
+        "question": "How did Rina initially feel about being among much younger classmates?",
+        "options": [
+          "Terrified, assuming they would see her as an oddity",
+          "Completely comfortable",
+          "Angry at the university",
+          "Indifferent"
+        ],
+        "correctIndex": 0,
+        "explanation": "She admits feeling terrified initially, assuming her younger classmates would see her as an oddity."
+      },
+      {
+        "question": "What did Rina find surprisingly difficult about returning to study?",
+        "options": [
+          "Cognitive stamina, since sustained concentration felt physically draining",
+          "Making friends",
+          "Understanding the course material",
+          "Paying tuition"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says the cognitive stamina surprised her, having forgotten how draining sustained concentration can be."
+      },
+      {
+        "question": "How does Rina ultimately frame the delay in returning to school?",
+        "options": [
+          "As timing rather than failure, since she can now use the material with lived context",
+          "As a complete failure",
+          "As something she deeply regrets",
+          "As entirely her family's fault"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rina says she'd rather call it timing than failure, since the learning arrived when she was ready to use it."
+      },
+      {
+        "question": "What dissatisfaction ultimately motivates Rina's return to university?",
+        "options": [
+          "Each definition is paired with a question about its analytical effect.",
+          "It protects uncertainty from being filled by confident improvisation.",
+          "A stable life had been optimised at the expense of curiosity.",
+          "Experience may repeat poor methods without reflective improvement."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: A stable life had been optimised at the expense of curiosity."
+      },
+      {
+        "question": "Why does she initially overprepare for every seminar?",
+        "options": [
+          "Attempt the reading, identify the precise gap, and avoid irrelevant display.",
+          "She fears younger students will treat her as an outsider.",
+          "Members can represent the argument fairly before disagreeing.",
+          "Ask for decisions, results, examples, and reflection on mistakes."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: She fears younger students will treat her as an outsider."
+      },
+      {
+        "question": "What evidence overturns her assumptions about classmates?",
+        "options": [
+          "Silence protects appearance while permitting misunderstanding to continue.",
+          "They value her experience and begin seeking informal mentorship.",
+          "They distinguish the author's evidence from their own examples.",
+          "Collect and secure only information relevant to the job."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: They value her experience and begin seeking informal mentorship."
+      },
+      {
+        "question": "Which challenge surprises Rina more than social difference?",
+        "options": [
+          "Publicly acknowledging a precise gap need not become self-humiliation.",
+          "Attention, memory, evidence, and revision become the measures of progress.",
+          "Sustained academic concentration is physically exhausting after years away.",
+          "It substitutes access to recognised institutions for direct evidence of competence."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Sustained academic concentration is physically exhausting after years away."
+      },
+      {
+        "question": "Why does she reframe delay as timing rather than failure?",
+        "options": [
+          "Recognise when pretending to know has begun obstructing knowledge.",
+          "It supplies diagnostic information rather than judging the learner's worth.",
+          "They are one evidence source, not a complete professional identity.",
+          "Life experience now gives the material meaning her younger self lacked."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Life experience now gives the material meaning her younger self lacked."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-education-08",
+    "title": "The Seminar Question I Was Afraid to Ask",
+    "level": "C1",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [nervously] During a postgraduate seminar, the lecturer used the phrase “selection bias” as though everyone had known it since childhood. Several classmates nodded. I wrote the term in my notebook and decided to search for it later.",
+      "Narrator: Ten minutes on, every argument depended on that concept. I could still follow individual sentences, but not the logic connecting them. When the lecturer invited questions, I lowered my eyes.",
+      "Narrator: [honestly] My fear was not simply ignorance. I worried that the question would reveal I did not belong in the room. That fear encouraged a strange performance: preserving the appearance of understanding while allowing actual understanding to disappear.",
+      "Narrator: I finally asked, “Could you show us how selection bias changes the conclusion in this study?” The lecturer returned to the sample and explained that people who volunteered were systematically different from those who did not.",
+      "Narrator: [surprised] Three classmates added questions of their own. One had understood the definition but not its effect; another knew the concept under a different term. The nodding had concealed several kinds of uncertainty.",
+      "Narrator: After class, I changed my preparation method. I marked unfamiliar terms before the seminar, attempted a definition, and wrote one question about how each concept affected evidence. This prevented vocabulary from becoming a decorative list.",
+      "Narrator: [reflective] Asking questions still requires judgment. I try the reading first, avoid using discussion time to display unrelated knowledge, and formulate the precise gap. But waiting for perfect confidence is not a responsible learning strategy.",
+      "Narrator: The most important result was not that the lecturer praised my question. It was discovering that intellectual humility can be public without becoming self-humiliation. A serious learner does not need to know everything; they need to recognise when pretending to know has begun blocking the work of knowing."
+    ],
+    "quiz": [
+      {
+        "question": "Why does the undefined term eventually block more than vocabulary?",
+        "options": [
+          "Later arguments depend on a concept whose logical effect remains unclear.",
+          "Members remembered titles but could not reconstruct authors' arguments.",
+          "Their relevance depends on the competencies and regulation governing the role.",
+          "Because the anxiety around her dissertation becomes too diffuse to simply sit with"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Later arguments depend on a concept whose logical effect remains unclear."
+      },
+      {
+        "question": "What identity fear drives the narrator to avoid asking?",
+        "options": [
+          "They distribute attention across claims, evidence, terms, and objections.",
+          "The question might expose the narrator as someone who does not belong.",
+          "The employer must define the actual competencies required.",
+          "That it's practically a rite of passage among doctoral candidates"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: The question might expose the narrator as someone who does not belong."
+      },
+      {
+        "question": "How does apparent understanding undermine actual learning?",
+        "options": [
+          "Structure develops varied skills without assigning permanent learner identities.",
+          "It may reward familiarity with a particular institution's language.",
+          "Protecting the performance allows the conceptual gap to expand.",
+          "The suspicion that she has been performing scholarship rather than genuinely producing it"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Protecting the performance allows the conceptual gap to expand."
+      },
+      {
+        "question": "Why is the eventual question stronger than asking for a definition alone?",
+        "options": [
+          "It traces usage across passages and consults a reliable reference.",
+          "Law, safety, or professional regulation requires them.",
+          "It is careful and even original, despite her self-doubt",
+          "It asks how selection bias changes the study's conclusion."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It asks how selection bias changes the study's conclusion."
+      },
+      {
+        "question": "What do the classmates' follow-up questions reveal about visible agreement?",
+        "options": [
+          "Nodding had concealed several distinct forms of uncertainty.",
+          "It gives objections a precise assumption and evidential target.",
+          "Examine its issuer, demonstrated work, verification, and currency.",
+          "Outline just the introduction to the next chapter"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Nodding had concealed several distinct forms of uncertainty."
+      },
+      {
+        "question": "How does the revised preparation method connect terminology to evidence?",
+        "options": [
+          "It protects uncertainty from being filled by confident improvisation.",
+          "Each definition is paired with a question about its analytical effect.",
+          "Experience may repeat poor methods without reflective improvement.",
+          "A completed chapter remains careful and partly original when reread."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Each definition is paired with a question about its analytical effect."
+      },
+      {
+        "question": "What limits make public questioning intellectually responsible?",
+        "options": [
+          "Members can represent the argument fairly before disagreeing.",
+          "Ask for decisions, results, examples, and reflection on mistakes.",
+          "Attempt the reading, identify the precise gap, and avoid irrelevant display.",
+          "The two coexist, so neither feeling proves the quality of the work."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Attempt the reading, identify the precise gap, and avoid irrelevant display."
+      },
+      {
+        "question": "Why is waiting for perfect confidence rejected as a learning strategy?",
+        "options": [
+          "They distinguish the author's evidence from their own examples.",
+          "Collect and secure only information relevant to the job.",
+          "A bounded action addresses paralysis without requiring confidence first.",
+          "Silence protects appearance while permitting misunderstanding to continue."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Silence protects appearance while permitting misunderstanding to continue."
+      },
+      {
+        "question": "What model of humility emerges from the seminar?",
+        "options": [
+          "Publicly acknowledging a precise gap need not become self-humiliation.",
+          "Attention, memory, evidence, and revision become the measures of progress.",
+          "It substitutes access to recognised institutions for direct evidence of competence.",
+          "A named and timestamped fear occupies less total mental space."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Publicly acknowledging a precise gap need not become self-humiliation."
+      },
+      {
+        "question": "What responsibility defines a serious learner in the final claim?",
+        "options": [
+          "It supplies diagnostic information rather than judging the learner's worth.",
+          "Recognise when pretending to know has begun obstructing knowledge.",
+          "They are one evidence source, not a complete professional identity.",
+          "Progress becomes sequential work rather than immediate mastery of the whole."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Recognise when pretending to know has begun obstructing knowledge."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-education-09",
+    "title": "An Experiment in Slow Reading",
+    "level": "C1",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [analytical] Our reading group was completing one book every fortnight and remembering almost nothing beyond the titles. We could claim impressive volume, yet discussions drifted towards personal reactions because few of us could reconstruct the author's argument.",
+      "Narrator: We tried a six-week slow-reading experiment with a single demanding book. Each person received a different task: map the main claim, test the evidence, define key terms, identify a counterargument, or connect one chapter to an earlier section.",
+      "Narrator: [carefully] The roles were not fixed. A confident speaker sometimes became the summariser, while a quieter member opened the discussion with a written question. We wanted structure without turning learners into permanent types.",
+      "Narrator: During the second week, we discovered that three of us had interpreted the same term differently. Instead of voting on the most popular meaning, we traced how the author used it across several passages and consulted a reliable reference.",
+      "Narrator: [thoughtful] Slow reading did not mean accepting every sentence respectfully. It gave criticism a firmer object. When one member challenged the conclusion, she could identify the assumption and explain which evidence failed to support it.",
+      "Narrator: We also kept a “not resolved” page. Questions that required specialist knowledge were marked for later rather than answered through confident improvisation.",
+      "Narrator: [reflective] At the final meeting, nobody claimed complete mastery. We could, however, summarise the argument fairly before disagreeing, distinguish the author's evidence from our examples, and name where uncertainty remained.",
+      "Narrator: The experiment changed our measure of progress. Finishing pages still mattered, but speed no longer served as the main proof of seriousness. Reading became a conversation between attention, memory, evidence, and revision—a process in which difficulty was information rather than an accusation against the learner."
+    ],
+    "quiz": [
+      {
+        "question": "What evidence shows that rapid completion was not producing understanding?",
+        "options": [
+          "Members remembered titles but could not reconstruct authors' arguments.",
+          "Their relevance depends on the competencies and regulation governing the role.",
+          "Because the anxiety around her dissertation becomes too diffuse to simply sit with",
+          "They increasingly signal persistence and conformity rather than mastery"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Members remembered titles but could not reconstruct authors' arguments."
+      },
+      {
+        "question": "Why are different analytical roles assigned during slow reading?",
+        "options": [
+          "The employer must define the actual competencies required.",
+          "They distribute attention across claims, evidence, terms, and objections.",
+          "That it's practically a rite of passage among doctoral candidates",
+          "She warns most people underestimate how much structure they need"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: They distribute attention across claims, evidence, terms, and objections."
+      },
+      {
+        "question": "What purpose is served by rotating rather than fixing the roles?",
+        "options": [
+          "It may reward familiarity with a particular institution's language.",
+          "The suspicion that she has been performing scholarship rather than genuinely producing it",
+          "Structure develops varied skills without assigning permanent learner identities.",
+          "What the institution provides beyond the certificate itself"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Structure develops varied skills without assigning permanent learner identities."
+      },
+      {
+        "question": "How does the group resolve conflicting interpretations of one term?",
+        "options": [
+          "Law, safety, or professional regulation requires them.",
+          "It is careful and even original, despite her self-doubt",
+          "Not something it is entitled to simply from historically holding certification",
+          "It traces usage across passages and consults a reliable reference."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It traces usage across passages and consults a reliable reference."
+      },
+      {
+        "question": "Why does slow reading strengthen rather than discourage criticism?",
+        "options": [
+          "It gives objections a precise assumption and evidential target.",
+          "Examine its issuer, demonstrated work, verification, and currency.",
+          "Outline just the introduction to the next chapter",
+          "Evidence graduates can transfer learning into unfamiliar situations, not just reproduce it on exams"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It gives objections a precise assumption and evidential target."
+      },
+      {
+        "question": "What function does the “not resolved” page perform?",
+        "options": [
+          "Experience may repeat poor methods without reflective improvement.",
+          "It protects uncertainty from being filled by confident improvisation.",
+          "A completed chapter remains careful and partly original when reread.",
+          "It often signals persistence and institutional conformity more reliably than mastery."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It protects uncertainty from being filled by confident improvisation."
+      },
+      {
+        "question": "Which achievement counts despite the absence of complete mastery?",
+        "options": [
+          "Ask for decisions, results, examples, and reflection on mistakes.",
+          "The two coexist, so neither feeling proves the quality of the work.",
+          "Members can represent the argument fairly before disagreeing.",
+          "She acknowledges that structure sustains deep learning for many people."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Members can represent the argument fairly before disagreeing."
+      },
+      {
+        "question": "How do participants separate the text from their response?",
+        "options": [
+          "Collect and secure only information relevant to the job.",
+          "A bounded action addresses paralysis without requiring confidence first.",
+          "Mentorship, challenging peers, and otherwise inaccessible resources.",
+          "They distinguish the author's evidence from their own examples."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: They distinguish the author's evidence from their own examples."
+      },
+      {
+        "question": "What replaces speed as the main proof of serious reading?",
+        "options": [
+          "Attention, memory, evidence, and revision become the measures of progress.",
+          "It substitutes access to recognised institutions for direct evidence of competence.",
+          "A named and timestamped fear occupies less total mental space.",
+          "It tests usable understanding rather than rehearsed reproduction."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Attention, memory, evidence, and revision become the measures of progress."
+      },
+      {
+        "question": "How is difficulty reinterpreted at the end of the experiment?",
+        "options": [
+          "They are one evidence source, not a complete professional identity.",
+          "It supplies diagnostic information rather than judging the learner's worth.",
+          "Progress becomes sequential work rather than immediate mastery of the whole.",
+          "Universities must demonstrate educational value rather than assume permanent relevance."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It supplies diagnostic information rather than judging the learner's worth."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-education-10",
+    "title": "Does a Certificate Prove Competence?",
+    "level": "C1",
+    "themeId": "education",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [serious] An employer receives two applications. One candidate has an impressive certificate; the other has years of practical experience. Which evidence should matter more?",
+      "Guest: The answer depends on the role. A certificate may show structured study or regulated eligibility, but it does not automatically demonstrate current performance in every task.",
+      "Moderator: How can the employer assess both candidates fairly?",
+      "Guest: [carefully] Define the competencies first, then gather relevant evidence: work samples, structured interviews, verified experience, and an appropriate practical exercise. Avoid designing a test that rewards familiarity with one institution's language.",
+      "Moderator: Are certificates ever essential?",
+      "Guest: Certainly, especially where law, safety, or professional regulation requires recognised qualifications. An informal assessment must not pretend to replace those standards.",
+      "Moderator: [curious] What about online micro-credentials?",
+      "Guest: Examine who issued them, what learners had to demonstrate, how identity and assessment were verified, and whether the content remains current. The label alone reveals little.",
+      "Moderator: Can practical experience also be misleading?",
+      "Guest: Yes. Years in a role do not prove that good methods were used. Ask for specific examples, decisions, results, and reflection on mistakes.",
+      "Moderator: How should candidates' privacy be protected?",
+      "Guest: Collect only job-relevant information, secure assessment records, and avoid asking for unnecessary personal or medical details. Accommodations should be handled through an appropriate process.",
+      "Moderator: [reflective] What is the danger of relying on prestige?",
+      "Guest: Prestige can become a shortcut that reproduces access inequalities while hiding weak evidence. It may also cause employers to overlook strong candidates from unfamiliar routes.",
+      "Moderator: Your final recommendation?",
+      "Guest: Treat credentials as one form of evidence, not a complete identity. A fair process makes the required competence visible and gives each candidate a reasonable way to demonstrate it."
+    ],
+    "quiz": [
+      {
+        "question": "Why can neither a certificate nor experience automatically decide the hiring choice?",
+        "options": [
+          "Their relevance depends on the competencies and regulation governing the role.",
+          "Because the anxiety around her dissertation becomes too diffuse to simply sit with",
+          "They increasingly signal persistence and conformity rather than mastery",
+          "That it was a genuine study aid, though it mostly felt productive without requiring much effort"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Their relevance depends on the competencies and regulation governing the role."
+      },
+      {
+        "question": "What should precede choosing assessment evidence?",
+        "options": [
+          "That it's practically a rite of passage among doctoral candidates",
+          "The employer must define the actual competencies required.",
+          "She warns most people underestimate how much structure they need",
+          "A seductive illusion of familiarity mistaken for understanding"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: The employer must define the actual competencies required."
+      },
+      {
+        "question": "How can a practical exercise inadvertently favour one educational route?",
+        "options": [
+          "The suspicion that she has been performing scholarship rather than genuinely producing it",
+          "What the institution provides beyond the certificate itself",
+          "It may reward familiarity with a particular institution's language.",
+          "Passive review consistently underperforms techniques that force retrieval rather than recognition"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: It may reward familiarity with a particular institution's language."
+      },
+      {
+        "question": "When must recognised qualifications remain non-negotiable?",
+        "options": [
+          "It is careful and even original, despite her self-doubt",
+          "Not something it is entitled to simply from historically holding certification",
+          "Quizzing himself on a heavily highlighted chapter and barely reconstructing half of it",
+          "Law, safety, or professional regulation requires them."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Law, safety, or professional regulation requires them."
+      },
+      {
+        "question": "Which questions make an online credential evidentially meaningful?",
+        "options": [
+          "Examine its issuer, demonstrated work, verification, and currency.",
+          "Outline just the introduction to the next chapter",
+          "Evidence graduates can transfer learning into unfamiliar situations, not just reproduce it on exams",
+          "For marking pages he intends to quiz himself on later"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Examine its issuer, demonstrated work, verification, and currency."
+      },
+      {
+        "question": "Why can many years in a role still be weak evidence?",
+        "options": [
+          "A completed chapter remains careful and partly original when reread.",
+          "Experience may repeat poor methods without reflective improvement.",
+          "It often signals persistence and institutional conformity more reliably than mastery.",
+          "Recognition feels familiar without requiring reconstruction of the argument."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Experience may repeat poor methods without reflective improvement."
+      },
+      {
+        "question": "How should employers test the quality of practical experience?",
+        "options": [
+          "The two coexist, so neither feeling proves the quality of the work.",
+          "She acknowledges that structure sustains deep learning for many people.",
+          "Ask for decisions, results, examples, and reflection on mistakes.",
+          "It exposes missing knowledge that passive review conceals."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Ask for decisions, results, examples, and reflection on mistakes."
+      },
+      {
+        "question": "What privacy boundary applies during competency assessment?",
+        "options": [
+          "A bounded action addresses paralysis without requiring confidence first.",
+          "Mentorship, challenging peers, and otherwise inaccessible resources.",
+          "It strengthens memory by revisiting material near the point of forgetting.",
+          "Collect and secure only information relevant to the job."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Collect and secure only information relevant to the job."
+      },
+      {
+        "question": "How can prestige reproduce inequality while seeming efficient?",
+        "options": [
+          "It substitutes access to recognised institutions for direct evidence of competence.",
+          "A named and timestamped fear occupies less total mental space.",
+          "It tests usable understanding rather than rehearsed reproduction.",
+          "Personal inability to reconstruct the chapter makes the illusion undeniable."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It substitutes access to recognised institutions for direct evidence of competence."
+      },
+      {
+        "question": "What final role should credentials occupy in a fair process?",
+        "options": [
+          "Progress becomes sequential work rather than immediate mastery of the whole.",
+          "They are one evidence source, not a complete professional identity.",
+          "Universities must demonstrate educational value rather than assume permanent relevance.",
+          "They mark material for later retrieval rather than substitute for it."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: They are one evidence source, not a complete professional identity."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "education",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

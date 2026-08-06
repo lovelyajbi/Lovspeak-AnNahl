@@ -3,7 +3,7 @@ import { Level, ModuleProps, AppView, ModuleContext, QuizQuestion, Theme } from 
 import { LEVELS, THEMES, AVATAR_ICONS } from '../constants';
 import { generateListeningTitles, generateListeningContent, generateListeningScript, generateListeningQuiz, generateTTSAudio, generateSingleListeningTitle, translateText, TranslationResult } from '../services/gemini';
 import { saveProgress, getCachedTitles, setCachedTitles, getCachedContent, setCachedContent, logActivity, saveVocab, completeRoadmapUnit, saveCustomCategory, getCustomCategories, CustomCategory, getActivityLogs } from '../services/storage';
-import { getStaticListeningIndex, getStaticListeningItem } from '../services/listeningContent';
+import { getStaticListeningIndex, getStaticListeningItem, getStaticListeningLibrarySummary } from '../services/listeningContent';
 import { audioService } from '../services/audioService';
 import { base64ToUint8Array, pcmToWav, cacheAudioBlob, getCachedAudioBlob } from '../utils/audio';
 import { motion, AnimatePresence } from 'motion/react';
@@ -18,6 +18,12 @@ const getTextCacheKey = (text: string) => {
     hash = ((hash << 5) - hash + text.charCodeAt(i)) | 0;
   }
   return Math.abs(hash).toString(36);
+};
+
+const getMissionKey = (context?: ModuleContext | null) => {
+  if (context?.taskId) return `daily:${context.taskId}`;
+  if (context?.stepId) return `roadmap:${context.stepId}`;
+  return `manual:${context?.title || ''}`;
 };
 
 const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
@@ -178,20 +184,27 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     let cancelled = false;
     setLibraryLoading(true);
     (async () => {
-      const entries = await Promise.all(
-        THEMES.map(async (t) => {
-          const items = await getStaticListeningIndex(level as Level, t);
-          return [t.id, items || []] as const;
-        })
-      );
       if (cancelled) return;
       const counts: Record<string, { total: number; completed: number }> = {};
       const titleThemeMap: Record<string, string> = {};
-      entries.forEach(([tId, items]) => {
-        const completed = items.filter(it => !!completedTitlesData[it.title]).length;
-        counts[tId] = { total: items.length, completed };
-        items.forEach(it => { titleThemeMap[it.title] = tId; });
-      });
+      const summary = await getStaticListeningLibrarySummary(level as Level);
+      if (summary) {
+        THEMES.forEach((theme) => {
+          const themeSummary = summary.themes[theme.id];
+          const titles = themeSummary?.titles || [];
+          counts[theme.id] = { total: themeSummary?.total || 0, completed: titles.filter(title => !!completedTitlesData[title]).length };
+          titles.forEach(title => { titleThemeMap[title] = theme.id; });
+        });
+      } else {
+        const entries = await Promise.all(
+          THEMES.map(async (t) => [t.id, await getStaticListeningIndex(level as Level, t) || []] as const)
+        );
+        entries.forEach(([tId, items]) => {
+          const completed = items.filter(it => !!completedTitlesData[it.title]).length;
+          counts[tId] = { total: items.length, completed };
+          items.forEach(it => { titleThemeMap[it.title] = tId; });
+        });
+      }
       setThemeCounts(counts);
       setLibraryLoading(false);
 
@@ -239,6 +252,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   useEffect(() => {
     const stateToSave = {
       initialTitle: initialContext?.title,
+      missionKey: getMissionKey(initialContext),
       step, level, type, accent, themeId, selectedTitle, isCustomMode,
       themeCategory, customTopic, customTitle, titles, script, quiz, speakers, currentPage,
       missionTopicIndex,
@@ -275,7 +289,12 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     if (savedStateStr) {
       try {
         const state = JSON.parse(savedStateStr);
-        if (state.initialTitle === ctx.title && state.step !== 'setup' && state.script) {
+        const contextKey = getMissionKey(ctx);
+        const isMissionContext = Boolean(ctx.taskId || ctx.stepId);
+        const isSameSavedTask = state.missionKey
+          ? state.missionKey === contextKey
+          : !isMissionContext && state.initialTitle === ctx.title;
+        if (isSameSavedTask && state.step !== 'setup' && state.script) {
           // Same task with script cached — only regenerate audio
           // NOTE: Always resume to 'player', never to 'result', to prevent
           // stale completion state when the same title appears on different days
@@ -283,7 +302,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
             regenerateAudioOnly(state.script, state.type || 'monologue', state.speakers || []);
           }
           return;
-        } else if (state.initialTitle !== ctx.title) {
+        } else if (!isSameSavedTask) {
           // Different task — clear old state to prevent cross-contamination
           localStorage.removeItem('lovspeak_state_listening');
           setStep('setup');
@@ -870,16 +889,23 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     const finalScore = quiz.length > 0 ? Math.round((correctCount / quiz.length) * 100) : 0;
     setScore(finalScore);
 
+    const targetMinScore = initialContext?.minScore || 80;
     logActivity({
       type: AppView.LISTENING,
       date: new Date().toISOString(),
       durationSeconds: Math.round(duration),
       score: finalScore,
       accuracy: finalScore,
-      details: `${selectedTitle} (${type})`
+      details: `${selectedTitle} (${type})`,
+      metadata: {
+        completed: finalScore >= targetMinScore,
+        planTaskId: initialContext?.taskId,
+        stepId: initialContext?.stepId,
+        materialId: initialContext?.targetLessonId,
+        materialTitle: selectedTitle,
+        source: initialContext?.type || 'manual'
+      }
     });
-
-    const targetMinScore = initialContext?.minScore || 80;
 
     if (initialContext?.stepId && finalScore >= targetMinScore) {
       completeRoadmapUnit(initialContext.stepId);
@@ -1492,11 +1518,11 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         </div>
       ) : (
         <div className="space-y-3">
-          {/* Completion is routed to the source lane: Daily Plan or Roadmap. */}
+          {/* Complete Task button for daily tasks */}
           {initialContext?.autoStart && score >= (initialContext?.minScore || 80) && (
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleComplete}
               className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-sm shadow-lg uppercase tracking-widest">
-              <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Selesaikan Langkah Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
+                <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
             </motion.button>
           )}
           {initialContext?.autoStart && score < (initialContext?.minScore || 80) && (

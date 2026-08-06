@@ -6,33 +6,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [tense] Something about my landing card must have caught the officer's eye, because I was pulled from the queue and led to a side room without explanation.",
-      "Narrator: [anxious] Nobody had done anything wrong, as far as I could tell, yet the mere act of being singled out made me feel instantly, irrationally guilty.",
-      "Narrator: [reflective] I sat there rehearsing my own itinerary in my head, as though I might somehow forget why I'd come, or where I was even staying.",
-      "Narrator: [observant] Across the room, an elderly man was being questioned far more thoroughly than I was, his passport passed between three different officials.",
-      "Narrator: [thoughtful] It occurred to me that the randomness of these checks is rarely as random as the system likes to claim.",
-      "Narrator: [honest] I'd never once been stopped like this on my other passport, the one issued by a wealthier, more trusted country.",
-      "Narrator: [wry] Privilege, I realised, isn't only about money; it's also about which document you happen to be holding at a border.",
-      "Narrator: [calm] When the officer finally called my name, she asked a handful of routine questions, then apologised for the delay almost as an afterthought.",
-      "Narrator: [measured] I wanted to be angry, and part of me was, but another part recognised that her apology cost her nothing while my hour had cost me plenty.",
-      "Narrator: [reflective] Walking out, I passed the elderly man again, still waiting, his shoulders slightly stooped under the fluorescent lights.",
-      "Narrator: [warm] I caught his eye and offered a small, useless smile, the only gesture available to a stranger in that particular room.",
-      "Narrator: [thoughtful] Later, on the train into the city, I found myself wondering how many trips are quietly reshaped by moments like that one.",
-      "Narrator: [honest] Not ruined, exactly, but tilted, coloured by a reminder that borders were never designed to treat every traveller equally.",
-      "Narrator: [determined] I don't have a tidy conclusion, only a resolve to notice, next time, whose passport lets them walk straight through.",
-      "Narrator: [reflective] Travel teaches you as much about the systems you move through as it does about the places you're heading to.",
-      "Narrator: [with a small smile] I still travel constantly, and I still love it, but I no longer pretend the process is neutral for everyone."
+      "Narrator: [thoughtful] Something about my landing card must have caught the officer's eye, because I was pulled from the queue and led to a side room without explanation.",
+      "Narrator: Nobody had done anything wrong, as far as I could tell, yet the mere act of being singled out made me feel instantly, irrationally guilty.",
+      "Narrator: [carefully] I sat there rehearsing my own itinerary in my head, as though I might somehow forget why I'd come, or where I was even staying.",
+      "Narrator: Across the room, an elderly man was being questioned far more thoroughly than I was, his passport passed between three different officials.",
+      "Narrator: [reflective] It occurred to me that the randomness of these checks is rarely as random as the system likes to claim.",
+      "Narrator: I'd never once been stopped like this on my other passport, the one issued by a wealthier, more trusted country.",
+      "Narrator: [honestly] Privilege, I realised, isn't only about money; it's also about which document you happen to be holding at a border.",
+      "Narrator: When the officer finally called my name, she asked a handful of routine questions, then apologised for the delay almost as an afterthought.",
+      "Narrator: [gently] I wanted to be angry, and part of me was, but another part recognised that her apology cost her nothing while my hour had cost me plenty.",
+      "Narrator: Walking out, I passed the elderly man again, still waiting, his shoulders slightly stooped under the fluorescent lights.",
+      "Narrator: [calmly] I caught his eye and offered a small, useless smile, the only gesture available to a stranger in that particular room.",
+      "Narrator: Later, on the train into the city, I found myself wondering how many trips are quietly reshaped by moments like that one.",
+      "Narrator: [encouraging] Not ruined, exactly, but tilted, coloured by a reminder that borders were never designed to treat every traveller equally.",
+      "Narrator: I don't have a tidy conclusion, only a resolve to notice, next time, whose passport lets them walk straight through.",
+      "Narrator: [seriously] Travel teaches you as much about the systems you move through as it does about the places you're heading to.",
+      "Narrator: I still travel constantly, and I still love it, but I no longer pretend the process is neutral for everyone."
     ],
     "quiz": [
-      { "question": "Why was the narrator pulled from the queue at the border?", "options": ["She was carrying prohibited items", "The reason was never explained to her", "She had the wrong visa", "She argued with an officer"], "correctIndex": 1, "explanation": "She was led to a side room without explanation, and never learns exactly why she was singled out." },
-      { "question": "What does the narrator notice about the elderly man across the room?", "options": ["He was released immediately", "He was questioned far more thoroughly than she was", "He was travelling with her", "He refused to answer questions"], "correctIndex": 1, "explanation": "She observes that his passport was passed between three different officials, far more scrutiny than her own." },
-      { "question": "What realization does the narrator have about her other passport?", "options": ["It had expired", "She had never been stopped like this on her passport from a wealthier country", "It was fake", "She had lost it once before"], "correctIndex": 1, "explanation": "She reflects that she was never stopped this way when travelling on her other, more trusted passport." },
-      { "question": "How does the officer behave once she finally calls the narrator's name?", "options": ["She is hostile and accusatory", "She asks routine questions and apologises almost as an afterthought", "She refuses to explain anything", "She detains her further"], "correctIndex": 1, "explanation": "The officer asks a handful of routine questions, then apologises for the delay almost as an afterthought." },
-      { "question": "What conclusion does the narrator reach about travel and borders?", "options": ["Border checks are always fair and random", "Borders were never designed to treat every traveller equally", "She will stop travelling entirely", "Only wealthy travellers face delays"], "correctIndex": 1, "explanation": "She concludes that the experience was a reminder that borders were never designed to treat every traveller equally." }
-    ]
+      {
+        "question": "Why was the narrator pulled from the queue at the border?",
+        "options": [
+          "The reason was never explained to her",
+          "She was carrying prohibited items",
+          "She had the wrong visa",
+          "She argued with an officer"
+        ],
+        "correctIndex": 0,
+        "explanation": "She was led to a side room without explanation, and never learns exactly why she was singled out."
+      },
+      {
+        "question": "What does the narrator notice about the elderly man across the room?",
+        "options": [
+          "He was released immediately",
+          "He was questioned far more thoroughly than she was",
+          "He was travelling with her",
+          "He refused to answer questions"
+        ],
+        "correctIndex": 1,
+        "explanation": "She observes that his passport was passed between three different officials, far more scrutiny than her own."
+      },
+      {
+        "question": "What realization does the narrator have about her other passport?",
+        "options": [
+          "It had expired",
+          "It was fake",
+          "She had never been stopped like this on her passport from a wealthier country",
+          "She had lost it once before"
+        ],
+        "correctIndex": 2,
+        "explanation": "She reflects that she was never stopped this way when travelling on her other, more trusted passport."
+      },
+      {
+        "question": "How does the officer behave once she finally calls the narrator's name?",
+        "options": [
+          "She asks routine questions and apologises almost as an afterthought",
+          "She is hostile and accusatory",
+          "She refuses to explain anything",
+          "She detains her further"
+        ],
+        "correctIndex": 0,
+        "explanation": "The officer asks a handful of routine questions, then apologises for the delay almost as an afterthought."
+      },
+      {
+        "question": "What conclusion does the narrator reach about travel and borders?",
+        "options": [
+          "Borders were never designed to treat every traveller equally",
+          "Border checks are always fair and random",
+          "She will stop travelling entirely",
+          "Only wealthy travellers face delays"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that the experience was a reminder that borders were never designed to treat every traveller equally."
+      },
+      {
+        "question": "What thought challenges the official claim that border checks are random?",
+        "options": [
+          "I've been told more than once that mixing leisure with work trips looks unprofessional to some managers",
+          "I booked this room three months ago and paid in full",
+          "Within months, that single photograph had been shared thousands of times",
+          "The narrator notices that certain passports attract repeated scrutiny."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The narrator notices that certain passports attract repeated scrutiny."
+      },
+      {
+        "question": "Why does the officer's brief apology feel insufficient?",
+        "options": [
+          "Once the conference starts, neither of us will have a spare moment to see anything beyond the hotel",
+          "I can have the driver waiting within ten minutes",
+          "A fisherman I'd spoken to years earlier recognised me",
+          "It costs her nothing while the delay substantially changes his journey."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It costs her nothing while the delay substantially changes his journey."
+      },
+      {
+        "question": "What sight follows the narrator as he leaves the side room?",
+        "options": [
+          "Just don't schedule anything that requires early mornings",
+          "Provided the room tomorrow is actually available, unlike tonight's, I suppose that works",
+          "An elderly traveller remains waiting beneath the harsh lights.",
+          "I asked him whether he wished I'd never taken the picture"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: An elderly traveller remains waiting beneath the harsh lights."
+      },
+      {
+        "question": "How does the experience change the narrator's understanding of privilege?",
+        "options": [
+          "Now that's a trip I'd actually look forward to, rather than merely tolerate",
+          "Documents can shape freedom of movement as powerfully as money.",
+          "I'll text you the confirmation and the driver's details right away",
+          "I still photograph places I love"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Documents can shape freedom of movement as powerfully as money."
+      },
+      {
+        "question": "What resolve replaces a simple conclusion about the incident?",
+        "options": [
+          "Let's just hope the client doesn't reschedule the whole conference on us again",
+          "I'd rather trust you than the booking system, honestly",
+          "The village will keep changing regardless of what I do",
+          "He will notice whose passport allows effortless passage."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He will notice whose passport allows effortless passage."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-travel-02",
@@ -41,36 +155,153 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Sarah", "gender": "female" }
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      },
+      {
+        "name": "Sarah",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Yusuf: [practical] If we fly out Thursday instead of Friday, we could squeeze in a couple of personal days before the conference even starts.",
-      "Sarah: [considering] That depends on whether the client's happy to have us there unsupervised for two extra days, which I honestly doubt.",
-      "Yusuf: [reasoning] We wouldn't be unsupervised, we'd just be exploring the city, which is a fairly normal thing to do on a business trip.",
-      "Sarah: [skeptical] Normal for you, maybe. I've been told more than once that mixing leisure with work trips looks unprofessional to some managers.",
-      "Yusuf: [gently] Provided we're clear about which days are annual leave, I don't see how anyone could reasonably object.",
-      "Sarah: [thoughtful] Fair enough. Though if the flights get changed at the last minute, we'd be the ones absorbing the extra cost, not the company.",
-      "Yusuf: [conceding] True, that's a real risk. Though the fare difference is fairly small, given how far in advance we're booking.",
-      "Sarah: [curious] What would we even do with two spare days in a city neither of us has visited before?",
-      "Yusuf: [enthusiastic] I've read that the old quarter is best explored on foot, ideally before the summer crowds descend on it.",
-      "Sarah: [warming up] That does sound appealing, especially since we'll otherwise be stuck in conference rooms for four straight days.",
-      "Yusuf: [practical] Exactly. Once the conference starts, neither of us will have a spare moment to see anything beyond the hotel.",
-      "Sarah: [considering] Alright, let's request the extra leave, though I'd rather ask before booking than risk being refused afterwards.",
-      "Yusuf: [agreeing] Sensible. I'll draft the request tonight, and we can adjust the flights once it's been approved.",
-      "Sarah: [amused] Just don't schedule anything that requires early mornings. If I'm using leave, I intend to sleep in.",
-      "Yusuf: [laughing] Noted. Late starts, long walks, and absolutely no spreadsheets until Monday.",
-      "Sarah: [warmly] Now that's a trip I'd actually look forward to, rather than merely tolerate.",
-      "Yusuf: [decisive] Then it's settled. I'll send the request first thing tomorrow, before anyone changes their mind.",
-      "Sarah: [smiling] Deal. Let's just hope the client doesn't reschedule the whole conference on us again."
+      "Yusuf: [thoughtful] If we fly out Thursday instead of Friday, we could squeeze in a couple of personal days before the conference even starts.",
+      "Sarah: That depends on whether the client's happy to have us there unsupervised for two extra days, which I honestly doubt.",
+      "Yusuf: [carefully] We wouldn't be unsupervised, we'd just be exploring the city, which is a fairly normal thing to do on a business trip.",
+      "Sarah: Normal for you, maybe. I've been told more than once that mixing leisure with work trips looks unprofessional to some managers.",
+      "Yusuf: [reflective] Provided we're clear about which days are annual leave, I don't see how anyone could reasonably object.",
+      "Sarah: Fair enough. Though if the flights get changed at the last minute, we'd be the ones absorbing the extra cost, not the company.",
+      "Yusuf: [honestly] True, that's a real risk. Though the fare difference is fairly small, given how far in advance we're booking.",
+      "Sarah: What would we even do with two spare days in a city neither of us has visited before?",
+      "Yusuf: [gently] I've read that the old quarter is best explored on foot, ideally before the summer crowds descend on it.",
+      "Sarah: That does sound appealing, especially since we'll otherwise be stuck in conference rooms for four straight days.",
+      "Yusuf: [calmly] Exactly. Once the conference starts, neither of us will have a spare moment to see anything beyond the hotel.",
+      "Sarah: Alright, let's request the extra leave, though I'd rather ask before booking than risk being refused afterwards.",
+      "Yusuf: [encouraging] Sensible. I'll draft the request tonight, and we can adjust the flights once it's been approved.",
+      "Sarah: Just don't schedule anything that requires early mornings. If I'm using leave, I intend to sleep in.",
+      "Yusuf: [seriously] Noted. Late starts, long walks, and absolutely no spreadsheets until Monday.",
+      "Sarah: Now that's a trip I'd actually look forward to, rather than merely tolerate.",
+      "Yusuf: Then it's settled. I'll send the request first thing tomorrow, before anyone changes their mind.",
+      "Sarah: Deal. Let's just hope the client doesn't reschedule the whole conference on us again."
     ],
     "quiz": [
-      { "question": "What does Yusuf propose about the flight schedule?", "options": ["Flying home a day early", "Flying out Thursday instead of Friday to add two personal days", "Cancelling the conference trip", "Booking a different airline"], "correctIndex": 1, "explanation": "Yusuf suggests flying out Thursday instead of Friday to fit in a couple of personal days before the conference." },
-      { "question": "Why is Sarah initially hesitant about the plan?", "options": ["She dislikes the destination", "She worries mixing leisure with work trips looks unprofessional to some managers", "She cannot afford the extra days", "She has another trip planned"], "correctIndex": 1, "explanation": "Sarah says she has been told that mixing leisure with work trips can look unprofessional to some managers." },
-      { "question": "What financial risk does Sarah point out?", "options": ["The hotel might be overbooked", "If flights change last minute, they would absorb the extra cost themselves", "The conference fee might increase", "The company might cancel the trip"], "correctIndex": 1, "explanation": "Sarah notes that if the flights are changed at the last minute, they would be the ones covering the extra cost, not the company." },
-      { "question": "What do they decide to do about requesting the extra days?", "options": ["Book the flights first, then ask permission", "Request the extra leave before booking, to avoid being refused afterwards", "Not ask at all", "Ask a colleague to request it for them"], "correctIndex": 1, "explanation": "Sarah suggests asking for the extra leave before booking, rather than risking a refusal after booking." },
-      { "question": "What condition does Sarah set for the personal days?", "options": ["No sightseeing allowed", "No early mornings, since she wants to sleep in", "Only visiting museums", "Working half days"], "correctIndex": 1, "explanation": "Sarah says not to schedule anything requiring early mornings, since she intends to sleep in during her leave." }
-    ]
+      {
+        "question": "What does Yusuf propose about the flight schedule?",
+        "options": [
+          "Flying home a day early",
+          "Cancelling the conference trip",
+          "Booking a different airline",
+          "Flying out Thursday instead of Friday to add two personal days"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf suggests flying out Thursday instead of Friday to fit in a couple of personal days before the conference."
+      },
+      {
+        "question": "Why is Sarah initially hesitant about the plan?",
+        "options": [
+          "She dislikes the destination",
+          "She worries mixing leisure with work trips looks unprofessional to some managers",
+          "She cannot afford the extra days",
+          "She has another trip planned"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sarah says she has been told that mixing leisure with work trips can look unprofessional to some managers."
+      },
+      {
+        "question": "What financial risk does Sarah point out?",
+        "options": [
+          "If flights change last minute, they would absorb the extra cost themselves",
+          "The hotel might be overbooked",
+          "The conference fee might increase",
+          "The company might cancel the trip"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sarah notes that if the flights are changed at the last minute, they would be the ones covering the extra cost, not the company."
+      },
+      {
+        "question": "What do they decide to do about requesting the extra days?",
+        "options": [
+          "Book the flights first, then ask permission",
+          "Request the extra leave before booking, to avoid being refused afterwards",
+          "Not ask at all",
+          "Ask a colleague to request it for them"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sarah suggests asking for the extra leave before booking, rather than risking a refusal after booking."
+      },
+      {
+        "question": "What condition does Sarah set for the personal days?",
+        "options": [
+          "No sightseeing allowed",
+          "Only visiting museums",
+          "No early mornings, since she wants to sleep in",
+          "Working half days"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sarah says not to schedule anything requiring early mornings, since she intends to sleep in during her leave."
+      },
+      {
+        "question": "What condition makes adding personal days professionally acceptable?",
+        "options": [
+          "I booked this room three months ago and paid in full",
+          "Within months, that single photograph had been shared thousands of times",
+          "My guest today has visited over ninety countries",
+          "Annual leave and business expenses must remain clearly separated."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Annual leave and business expenses must remain clearly separated."
+      },
+      {
+        "question": "Which financial risk do the colleagues acknowledge before changing flights?",
+        "options": [
+          "I can have the driver waiting within ten minutes",
+          "A fisherman I'd spoken to years earlier recognised me",
+          "A later return could create extra fare costs.",
+          "I realised I could describe fifteen airports in vivid detail"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A later return could create extra fare costs."
+      },
+      {
+        "question": "Why do two leisure days appeal after the conference?",
+        "options": [
+          "The work schedule otherwise leaves no time beyond the hotel.",
+          "Provided the room tomorrow is actually available, unlike tonight's, I suppose that works",
+          "I asked him whether he wished I'd never taken the picture",
+          "Fewer destinations per trip, for a start"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The work schedule otherwise leaves no time beyond the hotel."
+      },
+      {
+        "question": "What approval will they obtain before making bookings?",
+        "options": [
+          "I'll text you the confirmation and the driver's details right away",
+          "They will request the additional leave before changing flights.",
+          "I still photograph places I love",
+          "Missing something is preferable to remembering nothing clearly"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: They will request the additional leave before changing flights."
+      },
+      {
+        "question": "Which boundary marks the personal portion of the trip?",
+        "options": [
+          "No spreadsheets or compulsory early starts during leave.",
+          "I'd rather trust you than the booking system, honestly",
+          "The village will keep changing regardless of what I do",
+          "Thank you for joining us today"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: No spreadsheets or compulsory early starts during leave."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-travel-03",
@@ -79,36 +310,153 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Guest", "gender": "male" },
-      { "name": "Receptionist", "gender": "female" }
+      {
+        "name": "Guest",
+        "gender": "male"
+      },
+      {
+        "name": "Receptionist",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Guest: [frustrated] I booked this room three months ago and paid in full. How exactly does a hotel run out of rooms that were already reserved?",
-      "Receptionist: [apologetic] I completely understand your frustration, and I'm sorry this has happened. Occasionally more rooms are reserved than we actually have available.",
-      "Guest: [incredulous] That sounds like a problem you created, not one I should be expected to solve at eleven at night.",
-      "Receptionist: [calm] You're right, and it isn't your responsibility. What I can offer is a suite at a partner hotel two streets away, at no extra cost.",
-      "Guest: [wary] A suite sounds like compensation dressed up as generosity. What's actually included, and how do I get there at this hour?",
-      "Receptionist: [reassuring] Breakfast, late checkout, and a taxi, all arranged and paid for by us. I can have the driver waiting within ten minutes.",
-      "Guest: [softening] That's more reasonable than I expected, though I'd still like something for tomorrow, given the inconvenience tonight.",
-      "Receptionist: [accommodating] Understandably so. I can credit one night's stay back onto your original reservation once you return here tomorrow.",
-      "Guest: [considering] Provided the room tomorrow is actually available, unlike tonight's, I suppose that works.",
-      "Receptionist: [honest] I've personally confirmed it this time, rather than relying on the system, precisely because I don't want a repeat of this.",
-      "Guest: [wry] I appreciate the honesty. It's more than most people offer when something's gone wrong on their end.",
-      "Receptionist: [warmly] For what it's worth, this isn't how we like guests to be treated, and I've flagged it for the manager already.",
-      "Guest: [relenting] Alright. I'll take the taxi and the suite, and we'll call it resolved, provided tomorrow goes smoothly.",
-      "Receptionist: [grateful] Thank you for your patience. I'll text you the confirmation and the driver's details right away.",
-      "Guest: [half-joking] Just make sure the suite actually exists, unlike this room apparently didn't.",
-      "Receptionist: [smiling] I promise it does. I checked myself, twice, after tonight's mix-up.",
-      "Guest: [warming] Good. I'd rather trust you than the booking system, honestly.",
-      "Receptionist: [warmly] A wise choice tonight. Safe trip across town, and I'll see you tomorrow."
+      "Guest: [thoughtful] I booked this room three months ago and paid in full. How exactly does a hotel run out of rooms that were already reserved?",
+      "Receptionist: I completely understand your frustration, and I'm sorry this has happened. Occasionally more rooms are reserved than we actually have available.",
+      "Guest: [carefully] That sounds like a problem you created, not one I should be expected to solve at eleven at night.",
+      "Receptionist: You're right, and it isn't your responsibility. What I can offer is a suite at a partner hotel two streets away, at no extra cost.",
+      "Guest: [reflective] A suite sounds like compensation dressed up as generosity. What's actually included, and how do I get there at this hour?",
+      "Receptionist: Breakfast, late checkout, and a taxi, all arranged and paid for by us. I can have the driver waiting within ten minutes.",
+      "Guest: [honestly] That's more reasonable than I expected, though I'd still like something for tomorrow, given the inconvenience tonight.",
+      "Receptionist: Understandably so. I can credit one night's stay back onto your original reservation once you return here tomorrow.",
+      "Guest: [gently] Provided the room tomorrow is actually available, unlike tonight's, I suppose that works.",
+      "Receptionist: I've personally confirmed it this time, rather than relying on the system, precisely because I don't want a repeat of this.",
+      "Guest: [calmly] I appreciate the honesty. It's more than most people offer when something's gone wrong on their end.",
+      "Receptionist: For what it's worth, this isn't how we like guests to be treated, and I've flagged it for the manager already.",
+      "Guest: [encouraging] Alright. I'll take the taxi and the suite, and we'll call it resolved, provided tomorrow goes smoothly.",
+      "Receptionist: Thank you for your patience. I'll text you the confirmation and the driver's details right away.",
+      "Guest: [seriously] Just make sure the suite actually exists, unlike this room apparently didn't.",
+      "Receptionist: I promise it does. I checked myself, twice, after tonight's mix-up.",
+      "Guest: Good. I'd rather trust you than the booking system, honestly.",
+      "Receptionist: A wise choice tonight. Safe trip across town, and I'll see you tomorrow."
     ],
     "quiz": [
-      { "question": "What problem does the guest discover at check-in?", "options": ["His card was declined", "The hotel has no room for him despite his reservation", "He booked the wrong dates", "The hotel is under renovation"], "correctIndex": 1, "explanation": "Despite booking and paying three months in advance, the hotel has run out of available rooms, a case of overbooking." },
-      { "question": "Why does the receptionist say the overbooking happened?", "options": ["A computer virus deleted bookings", "Occasionally more rooms are reserved than the hotel actually has available", "The guest arrived too late", "Another guest refused to leave"], "correctIndex": 1, "explanation": "She explains that occasionally more rooms end up reserved than the hotel actually has available." },
-      { "question": "What does the receptionist offer as a solution for tonight?", "options": ["A refund only", "A suite at a partner hotel with breakfast, late checkout, and a paid taxi", "A discount voucher for next time", "A room to share with another guest"], "correctIndex": 1, "explanation": "She offers a suite at a nearby partner hotel, with breakfast, late checkout, and a taxi all arranged and paid for." },
-      { "question": "What does the receptionist do differently to reassure the guest about tomorrow's room?", "options": ["She upgrades him permanently", "She personally confirmed the room herself, rather than relying on the system", "She calls the manager to apologise", "She offers a full refund instead"], "correctIndex": 1, "explanation": "She says she personally confirmed tomorrow's room herself, rather than relying on the system, to avoid a repeat of the problem." },
-      { "question": "How does the guest's attitude change by the end of the conversation?", "options": ["He remains angry and demands a refund", "He softens and agrees to the arrangement, trusting the receptionist over the booking system", "He cancels his stay entirely", "He asks to speak to the manager"], "correctIndex": 1, "explanation": "By the end, the guest relents, accepting the arrangement and saying he'd rather trust her than the booking system." }
-    ]
+      {
+        "question": "What problem does the guest discover at check-in?",
+        "options": [
+          "His card was declined",
+          "He booked the wrong dates",
+          "The hotel has no room for him despite his reservation",
+          "The hotel is under renovation"
+        ],
+        "correctIndex": 2,
+        "explanation": "Despite booking and paying three months in advance, the hotel has run out of available rooms, a case of overbooking."
+      },
+      {
+        "question": "Why does the receptionist say the overbooking happened?",
+        "options": [
+          "A computer virus deleted bookings",
+          "Occasionally more rooms are reserved than the hotel actually has available",
+          "The guest arrived too late",
+          "Another guest refused to leave"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains that occasionally more rooms end up reserved than the hotel actually has available."
+      },
+      {
+        "question": "What does the receptionist offer as a solution for tonight?",
+        "options": [
+          "A refund only",
+          "A suite at a partner hotel with breakfast, late checkout, and a paid taxi",
+          "A discount voucher for next time",
+          "A room to share with another guest"
+        ],
+        "correctIndex": 1,
+        "explanation": "She offers a suite at a nearby partner hotel, with breakfast, late checkout, and a taxi all arranged and paid for."
+      },
+      {
+        "question": "What does the receptionist do differently to reassure the guest about tomorrow's room?",
+        "options": [
+          "She upgrades him permanently",
+          "She calls the manager to apologise",
+          "She offers a full refund instead",
+          "She personally confirmed the room herself, rather than relying on the system"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says she personally confirmed tomorrow's room herself, rather than relying on the system, to avoid a repeat of the problem."
+      },
+      {
+        "question": "How does the guest's attitude change by the end of the conversation?",
+        "options": [
+          "He remains angry and demands a refund",
+          "He cancels his stay entirely",
+          "He asks to speak to the manager",
+          "He softens and agrees to the arrangement, trusting the receptionist over the booking system"
+        ],
+        "correctIndex": 3,
+        "explanation": "By the end, the guest relents, accepting the arrangement and saying he'd rather trust her than the booking system."
+      },
+      {
+        "question": "Why does the guest reject the partner hotel's suite as enough by itself?",
+        "options": [
+          "Transport and practical access still matter late at night.",
+          "Within months, that single photograph had been shared thousands of times",
+          "My guest today has visited over ninety countries",
+          "He waved it off, saying he'd missed enough trains himself to know exactly how that particular panic feels"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Transport and practical access still matter late at night."
+      },
+      {
+        "question": "What immediate arrangement does the receptionist make?",
+        "options": [
+          "The hotel pays for a taxi arriving within ten minutes.",
+          "A fisherman I'd spoken to years earlier recognised me",
+          "I realised I could describe fifteen airports in vivid detail",
+          "Hospitals and trains, he said, both strip away pretence"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The hotel pays for a taxi arriving within ten minutes."
+      },
+      {
+        "question": "Which compensation addresses the disruption beyond relocation?",
+        "options": [
+          "I asked him whether he wished I'd never taken the picture",
+          "Fewer destinations per trip, for a start",
+          "One night will be credited back to the reservation.",
+          "He texted a month later, simply to say his father had recovered"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: One night will be credited back to the reservation."
+      },
+      {
+        "question": "How does the receptionist reduce the risk of another failed booking?",
+        "options": [
+          "I still photograph places I love",
+          "Missing something is preferable to remembering nothing clearly",
+          "She personally confirms the replacement room instead of trusting the system.",
+          "I got the job, as it happens"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: She personally confirms the replacement room instead of trusting the system."
+      },
+      {
+        "question": "What information will the guest receive before leaving?",
+        "options": [
+          "The village will keep changing regardless of what I do",
+          "A written confirmation and the driver's details.",
+          "Thank you for joining us today",
+          "A stranger wedged his bag into the door gap and held it until she caught up"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: A written confirmation and the driver's details."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-travel-04",
@@ -117,33 +465,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Three years ago, I photographed a quiet fishing village and posted it online, never imagining many people would see it.",
-      "Narrator: [uneasy] Within months, that single photograph had been shared thousands of times, and the village became a fixture on every influencer's itinerary.",
-      "Narrator: [observant] When I returned last year, the harbour I remembered was lined with tour buses, and a queue had formed for the exact spot I'd once photographed alone.",
-      "Narrator: [honest] I felt a strange, uncomfortable pride mixed with something closer to guilt, as though I'd accidentally sold a place I never owned.",
-      "Narrator: [thoughtful] A fisherman I'd spoken to years earlier recognised me, and told me the extra visitors had brought money, but also noise, litter, and rising rents.",
-      "Narrator: [nuanced] His family could finally afford repairs to their boat, yet his daughter could no longer afford to live in the house she grew up in.",
-      "Narrator: [reflective] It wasn't a simple story of harm or benefit; it was both, tangled together in ways no single photograph could ever capture.",
-      "Narrator: [honest] I asked him whether he wished I'd never taken the picture, and he paused for a long moment before answering.",
-      "Narrator: [with feeling] He said the village would have changed eventually anyway, though perhaps not this quickly, and not entirely on its own terms.",
-      "Narrator: [thoughtful] That answer has stayed with me since, unresolved in a way I've had to learn to sit with rather than fix.",
-      "Narrator: [honest] I still photograph places I love, though I now think harder about whether sharing them serves the place or merely serves me.",
-      "Narrator: [reflective] Sometimes I choose not to tag the location, a small, imperfect gesture that probably changes very little in the end.",
-      "Narrator: [thoughtful] What strikes me most is how easily a traveller becomes part of a story they never intended to write.",
-      "Narrator: [honest] I don't regret visiting, or even photographing it, but I regret how little I considered what happens after the shutter clicks.",
-      "Narrator: [with a small smile] These days, I try to leave places lighter than a single viral image ever could, a quieter kind of impact.",
-      "Narrator: [reflective] The village will keep changing regardless of what I do, and perhaps the most honest thing is simply admitting that."
+      "Narrator: [thoughtful] Three years ago, I photographed a quiet fishing village and posted it online, never imagining many people would see it.",
+      "Narrator: Within months, that single photograph had been shared thousands of times, and the village became a fixture on every influencer's itinerary.",
+      "Narrator: [carefully] When I returned last year, the harbour I remembered was lined with tour buses, and a queue had formed for the exact spot I'd once photographed alone.",
+      "Narrator: I felt a strange, uncomfortable pride mixed with something closer to guilt, as though I'd accidentally sold a place I never owned.",
+      "Narrator: [reflective] A fisherman I'd spoken to years earlier recognised me, and told me the extra visitors had brought money, but also noise, litter, and rising rents.",
+      "Narrator: His family could finally afford repairs to their boat, yet his daughter could no longer afford to live in the house she grew up in.",
+      "Narrator: [honestly] It wasn't a simple story of harm or benefit; it was both, tangled together in ways no single photograph could ever capture.",
+      "Narrator: I asked him whether he wished I'd never taken the picture, and he paused for a long moment before answering.",
+      "Narrator: [gently] He said the village would have changed eventually anyway, though perhaps not this quickly, and not entirely on its own terms.",
+      "Narrator: That answer has stayed with me since, unresolved in a way I've had to learn to sit with rather than fix.",
+      "Narrator: [calmly] I still photograph places I love, though I now think harder about whether sharing them serves the place or merely serves me.",
+      "Narrator: Sometimes I choose not to tag the location, a small, imperfect gesture that probably changes very little in the end.",
+      "Narrator: [encouraging] What strikes me most is how easily a traveller becomes part of a story they never intended to write.",
+      "Narrator: I don't regret visiting, or even photographing it, but I regret how little I considered what happens after the shutter clicks.",
+      "Narrator: [seriously] These days, I try to leave places lighter than a single viral image ever could, a quieter kind of impact.",
+      "Narrator: The village will keep changing regardless of what I do, and perhaps the most honest thing is simply admitting that."
     ],
     "quiz": [
-      { "question": "What happened after the narrator posted his photo of the fishing village?", "options": ["Nothing changed", "It was shared thousands of times and the village became a popular destination", "The photo was deleted", "The village banned tourists"], "correctIndex": 1, "explanation": "The photograph was shared thousands of times, and the village became a fixture on influencers' itineraries." },
-      { "question": "What mixed effects did the increased tourism have on the fisherman's family?", "options": ["Only positive effects", "His family could afford boat repairs, but his daughter could no longer afford to live there", "Only negative effects", "No effect at all"], "correctIndex": 1, "explanation": "The extra visitors brought money for boat repairs, but also rising rents that priced out his daughter." },
-      { "question": "How does the fisherman respond when asked if he wished the photo had never been taken?", "options": ["He says he wishes it had never happened", "He says the village would have changed eventually anyway, just perhaps not as quickly", "He refuses to answer", "He blames the narrator entirely"], "correctIndex": 1, "explanation": "He says the village would have changed eventually anyway, though perhaps not this quickly or on its own terms." },
-      { "question": "What has the narrator started doing differently when sharing photos now?", "options": ["He stopped taking photos entirely", "He thinks harder about whether sharing serves the place or merely himself, and sometimes omits the location", "He only photographs empty places", "He charges money for his photos"], "correctIndex": 1, "explanation": "He now thinks harder about the impact of sharing and sometimes chooses not to tag the location." },
-      { "question": "What is the narrator's overall conclusion about the experience?", "options": ["Tourism is always harmful", "The situation is complicated, mixing both harm and benefit in ways no photo could capture", "He regrets ever visiting the village", "Social media should be banned for travellers"], "correctIndex": 1, "explanation": "He concludes it wasn't a simple story of harm or benefit, but both, tangled together in complex ways." }
-    ]
+      {
+        "question": "What happened after the narrator posted his photo of the fishing village?",
+        "options": [
+          "Nothing changed",
+          "It was shared thousands of times and the village became a popular destination",
+          "The photo was deleted",
+          "The village banned tourists"
+        ],
+        "correctIndex": 1,
+        "explanation": "The photograph was shared thousands of times, and the village became a fixture on influencers' itineraries."
+      },
+      {
+        "question": "What mixed effects did the increased tourism have on the fisherman's family?",
+        "options": [
+          "His family could afford boat repairs, but his daughter could no longer afford to live there",
+          "Only positive effects",
+          "Only negative effects",
+          "No effect at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "The extra visitors brought money for boat repairs, but also rising rents that priced out his daughter."
+      },
+      {
+        "question": "How does the fisherman respond when asked if he wished the photo had never been taken?",
+        "options": [
+          "He says the village would have changed eventually anyway, just perhaps not as quickly",
+          "He says he wishes it had never happened",
+          "He refuses to answer",
+          "He blames the narrator entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says the village would have changed eventually anyway, though perhaps not this quickly or on its own terms."
+      },
+      {
+        "question": "What has the narrator started doing differently when sharing photos now?",
+        "options": [
+          "He stopped taking photos entirely",
+          "He only photographs empty places",
+          "He charges money for his photos",
+          "He thinks harder about whether sharing serves the place or merely himself, and sometimes omits the location"
+        ],
+        "correctIndex": 3,
+        "explanation": "He now thinks harder about the impact of sharing and sometimes chooses not to tag the location."
+      },
+      {
+        "question": "What is the narrator's overall conclusion about the experience?",
+        "options": [
+          "Tourism is always harmful",
+          "He regrets ever visiting the village",
+          "Social media should be banned for travellers",
+          "The situation is complicated, mixing both harm and benefit in ways no photo could capture"
+        ],
+        "correctIndex": 3,
+        "explanation": "He concludes it wasn't a simple story of harm or benefit, but both, tangled together in complex ways."
+      },
+      {
+        "question": "What mixed effects did the returning photographer hear from a fisherman?",
+        "options": [
+          "My guest today has visited over ninety countries",
+          "He waved it off, saying he'd missed enough trains himself to know exactly how that particular panic feels",
+          "Tourism brought income while increasing noise, litter, and housing costs.",
+          "Tonight we're discussing awkward cultural misunderstandings abroad"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Tourism brought income while increasing noise, litter, and housing costs."
+      },
+      {
+        "question": "How did the fisherman's family experience both benefit and loss?",
+        "options": [
+          "I realised I could describe fifteen airports in vivid detail",
+          "Hospitals and trains, he said, both strip away pretence",
+          "Boat repairs became affordable, but his daughter lost local housing access.",
+          "So, on the last day of a walking tour, I handed our guide a fairly generous tip"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Boat repairs became affordable, but his daughter lost local housing access."
+      },
+      {
+        "question": "Why can no single photograph explain the village's transformation?",
+        "options": [
+          "Fewer destinations per trip, for a start",
+          "Economic gains and social costs are tangled together.",
+          "He texted a month later, simply to say his father had recovered",
+          "I'd assumed generosity was generosity, regardless of how it was delivered, which turned out to be naive"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Economic gains and social costs are tangled together."
+      },
+      {
+        "question": "What imperfect precaution does the narrator sometimes use now?",
+        "options": [
+          "Missing something is preferable to remembering nothing clearly",
+          "I got the job, as it happens",
+          "Thanks so much for sharing it with us",
+          "The narrator withholds precise location tags from some photographs."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The narrator withholds precise location tags from some photographs."
+      },
+      {
+        "question": "What does the photographer regret more than taking the image itself?",
+        "options": [
+          "Thank you for joining us today",
+          "A stranger wedged his bag into the door gap and held it until she caught up",
+          "He failed to consider what mass attention might cause afterward.",
+          "Hopefully it saves someone else an awkward moment on their own trip"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He failed to consider what mass attention might cause afterward."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-travel-05",
@@ -152,36 +614,153 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] My guest today has visited over ninety countries, yet argues that most of us are travelling entirely the wrong way. Explain that.",
-      "Guest: [wry] Gladly, though it'll sound hypocritical coming from someone with a passport this full. I used to collect countries like trophies.",
-      "Host: [curious] What changed your thinking?",
-      "Guest: [reflective] I realised I could describe fifteen airports in vivid detail, yet barely remember a single conversation I'd had with a local person.",
-      "Host: [interested] So the volume of places was, in some sense, crowding out the depth of the experience?",
-      "Guest: [thoughtful] Exactly. Ticking off a bucket list rewards speed, whereas actually understanding a place demands the opposite, patience.",
-      "Host: [challenging] Isn't that a fairly comfortable philosophy for someone who's already ticked off ninety countries, though?",
-      "Guest: [conceding] That's a fair criticism, and I've heard it before. I'm not saying bucket lists are worthless, only that they were never the whole point.",
-      "Host: [curious] What does slow travel actually look like in practice, for someone with limited holiday time?",
-      "Guest: [practical] Fewer destinations per trip, for a start. I'd rather spend a week in one neighbourhood than a day each in seven cities.",
-      "Host: [skeptical] Doesn't that risk missing places you might genuinely regret never seeing?",
-      "Guest: [honest] Possibly, and I've made peace with that trade-off. Missing something is preferable to remembering nothing clearly.",
-      "Host: [curious] Has slow travel changed how locals respond to you, compared with your earlier trips?",
-      "Guest: [warmly] Enormously. Staying longer means shopkeepers start recognising you, which opens conversations a rushed itinerary never could.",
-      "Host: [thoughtful] What would you tell someone planning their very first big trip?",
-      "Guest: [encouraging] Choose fewer places than you think you want, since the version of the trip you imagine rarely matches what actually enriches you.",
-      "Host: [smiling] Practical, if slightly uncomfortable, advice. Thank you for joining us today.",
-      "Guest: [warmly] Thank you for having me, and for indulging a reformed country-collector."
+      "Host: [thoughtful] My guest today has visited over ninety countries, yet argues that most of us are travelling entirely the wrong way. Explain that.",
+      "Guest: Gladly, though it'll sound hypocritical coming from someone with a passport this full. I used to collect countries like trophies.",
+      "Host: [carefully] What changed your thinking?",
+      "Guest: I realised I could describe fifteen airports in vivid detail, yet barely remember a single conversation I'd had with a local person.",
+      "Host: [reflective] So the volume of places was, in some sense, crowding out the depth of the experience?",
+      "Guest: Exactly. Ticking off a bucket list rewards speed, whereas actually understanding a place demands the opposite, patience.",
+      "Host: [honestly] Isn't that a fairly comfortable philosophy for someone who's already ticked off ninety countries, though?",
+      "Guest: That's a fair criticism, and I've heard it before. I'm not saying bucket lists are worthless, only that they were never the whole point.",
+      "Host: [gently] What does slow travel actually look like in practice, for someone with limited holiday time?",
+      "Guest: Fewer destinations per trip, for a start. I'd rather spend a week in one neighbourhood than a day each in seven cities.",
+      "Host: [calmly] Doesn't that risk missing places you might genuinely regret never seeing?",
+      "Guest: Possibly, and I've made peace with that trade-off. Missing something is preferable to remembering nothing clearly.",
+      "Host: [encouraging] Has slow travel changed how locals respond to you, compared with your earlier trips?",
+      "Guest: Enormously. Staying longer means shopkeepers start recognising you, which opens conversations a rushed itinerary never could.",
+      "Host: [seriously] What would you tell someone planning their very first big trip?",
+      "Guest: Choose fewer places than you think you want, since the version of the trip you imagine rarely matches what actually enriches you.",
+      "Host: Practical, if slightly uncomfortable, advice. Thank you for joining us today.",
+      "Guest: Thank you for having me, and for indulging a reformed country-collector."
     ],
     "quiz": [
-      { "question": "What claim does the guest make despite having visited over ninety countries?", "options": ["Everyone should visit as many countries as possible", "Most people are travelling the wrong way", "Bucket lists are the best way to travel", "Airports are the most interesting part of travel"], "correctIndex": 1, "explanation": "Despite his extensive travel, the guest argues that most people are travelling entirely the wrong way." },
-      { "question": "What realization made the guest reconsider his approach to travel?", "options": ["He ran out of money", "He could describe airports vividly but barely remembered conversations with local people", "He got lost too often", "He disliked flying"], "correctIndex": 1, "explanation": "He realized he could describe fifteen airports in detail but barely remembered a single conversation with a local person." },
-      { "question": "How does the host challenge the guest's philosophy?", "options": ["She says slow travel is too expensive", "She points out it's a comfortable philosophy for someone who's already visited ninety countries", "She says he is lying about his travels", "She refuses to discuss the topic further"], "correctIndex": 1, "explanation": "The host challenges him, noting his philosophy is easy to hold once he's already ticked off ninety countries." },
-      { "question": "What trade-off does the guest accept with slow travel?", "options": ["Spending more money per trip", "Possibly missing places he might regret never seeing, in exchange for clearer memories", "Never travelling again", "Only visiting one country in his life"], "correctIndex": 1, "explanation": "He accepts that he might miss places he'd regret not seeing, but prefers that to remembering nothing clearly." },
-      { "question": "What advice does the guest give for someone planning their first big trip?", "options": ["Visit as many countries as possible in one trip", "Choose fewer places than you think you want", "Only travel with a tour group", "Avoid talking to locals"], "correctIndex": 1, "explanation": "He advises choosing fewer places than you think you want, since the imagined trip rarely matches what actually enriches you." }
-    ]
+      {
+        "question": "What claim does the guest make despite having visited over ninety countries?",
+        "options": [
+          "Most people are travelling the wrong way",
+          "Everyone should visit as many countries as possible",
+          "Bucket lists are the best way to travel",
+          "Airports are the most interesting part of travel"
+        ],
+        "correctIndex": 0,
+        "explanation": "Despite his extensive travel, the guest argues that most people are travelling entirely the wrong way."
+      },
+      {
+        "question": "What realization made the guest reconsider his approach to travel?",
+        "options": [
+          "He ran out of money",
+          "He got lost too often",
+          "He could describe airports vividly but barely remembered conversations with local people",
+          "He disliked flying"
+        ],
+        "correctIndex": 2,
+        "explanation": "He realized he could describe fifteen airports in detail but barely remembered a single conversation with a local person."
+      },
+      {
+        "question": "How does the host challenge the guest's philosophy?",
+        "options": [
+          "She points out it's a comfortable philosophy for someone who's already visited ninety countries",
+          "She says slow travel is too expensive",
+          "She says he is lying about his travels",
+          "She refuses to discuss the topic further"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host challenges him, noting his philosophy is easy to hold once he's already ticked off ninety countries."
+      },
+      {
+        "question": "What trade-off does the guest accept with slow travel?",
+        "options": [
+          "Spending more money per trip",
+          "Never travelling again",
+          "Only visiting one country in his life",
+          "Possibly missing places he might regret never seeing, in exchange for clearer memories"
+        ],
+        "correctIndex": 3,
+        "explanation": "He accepts that he might miss places he'd regret not seeing, but prefers that to remembering nothing clearly."
+      },
+      {
+        "question": "What advice does the guest give for someone planning their first big trip?",
+        "options": [
+          "Visit as many countries as possible in one trip",
+          "Only travel with a tour group",
+          "Choose fewer places than you think you want",
+          "Avoid talking to locals"
+        ],
+        "correctIndex": 2,
+        "explanation": "He advises choosing fewer places than you think you want, since the imagined trip rarely matches what actually enriches you."
+      },
+      {
+        "question": "What did the traveller realise after visiting more than ninety countries?",
+        "options": [
+          "He waved it off, saying he'd missed enough trains himself to know exactly how that particular panic feels",
+          "He remembered airports better than conversations with local people.",
+          "Tonight we're discussing awkward cultural misunderstandings abroad",
+          "She saw where it would appear and excluded her child."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He remembered airports better than conversations with local people."
+      },
+      {
+        "question": "Why can a bucket list reduce the depth of travel?",
+        "options": [
+          "Hospitals and trains, he said, both strip away pretence",
+          "It rewards speed while understanding requires patience.",
+          "So, on the last day of a walking tour, I handed our guide a fairly generous tip",
+          "Short stays increased water use, rubbish, and unrealistic demands."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It rewards speed while understanding requires patience."
+      },
+      {
+        "question": "What does slower travel look like in his current practice?",
+        "options": [
+          "He texted a month later, simply to say his father had recovered",
+          "I'd assumed generosity was generosity, regardless of how it was delivered, which turned out to be naive",
+          "The impacts were collective and larger than one visitor's choices.",
+          "He spends longer in fewer neighbourhoods instead of racing between cities."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He spends longer in fewer neighbourhoods instead of racing between cities."
+      },
+      {
+        "question": "Which trade-off has he accepted in changing his style?",
+        "options": [
+          "Missing some destinations is preferable to remembering none clearly.",
+          "I got the job, as it happens",
+          "Thanks so much for sharing it with us",
+          "They included signs of the community rather than an empty private stage."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Missing some destinations is preferable to remembering none clearly."
+      },
+      {
+        "question": "How does staying longer improve contact with residents?",
+        "options": [
+          "A stranger wedged his bag into the door gap and held it until she caught up",
+          "Repeated encounters allow recognition and more meaningful conversation.",
+          "Hopefully it saves someone else an awkward moment on their own trip",
+          "Paths, roofs, and cultivated land showed the lived environment."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Repeated encounters allow recognition and more meaningful conversation."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-travel-06",
@@ -190,33 +769,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [breathless] I sprinted across the platform with maybe ninety seconds to spare, convinced the doors would close before I ever reached them.",
-      "Narrator: [honest] They didn't, but only because a stranger wedged his bag into the gap and held the door until I'd caught up.",
-      "Narrator: [grateful] I collapsed into the seat beside him, apologising between breaths for a delay that was entirely my own fault.",
-      "Narrator: [warm] He waved it off, saying he'd missed enough trains himself to know exactly how that particular panic feels.",
-      "Narrator: [curious] We got talking, the way strangers sometimes do when adrenaline has already stripped away the usual small talk.",
-      "Narrator: [reflective] He was heading to his father's hospital bedside, a journey he'd apparently made every fortnight for the past year.",
-      "Narrator: [honest] I admitted my own journey was comparatively trivial, a job interview I'd nearly slept through that morning.",
-      "Narrator: [thoughtful] Rather than making me feel foolish, he asked genuine questions about the interview, as though my nerves mattered just as much as his grief.",
-      "Narrator: [with feeling] Somewhere around the second hour, he mentioned that these regular trips had taught him to talk to strangers more freely.",
-      "Narrator: [reflective] Hospitals and trains, he said, both strip away pretence, since nobody has the energy left to perform politeness.",
-      "Narrator: [warm] By the time my stop arrived, I genuinely didn't want to get off, which surprised me more than anything else that day.",
-      "Narrator: [honest] I gave him my number before I left, half expecting never to hear from him again, the way these encounters usually go.",
-      "Narrator: [with feeling] He texted a month later, simply to say his father had recovered, and that he'd remembered my interview and wanted to know how it went.",
-      "Narrator: [reflective] I got the job, as it happens, though that felt like a smaller story next to the one he'd just told me.",
-      "Narrator: [thoughtful] We still message occasionally, two people bound by nothing more than a held door and ninety unlikely seconds.",
-      "Narrator: [warmly] I've since stopped assuming that the most meaningful part of a journey happens at the destination rather than somewhere along the way."
+      "Narrator: [thoughtful] I sprinted across the platform with maybe ninety seconds to spare, convinced the doors would close before I ever reached them.",
+      "Narrator: They didn't, but only because a stranger wedged his bag into the gap and held the door until I'd caught up.",
+      "Narrator: [carefully] I collapsed into the seat beside him, apologising between breaths for a delay that was entirely my own fault.",
+      "Narrator: He waved it off, saying he'd missed enough trains himself to know exactly how that particular panic feels.",
+      "Narrator: [reflective] We got talking, the way strangers sometimes do when adrenaline has already stripped away the usual small talk.",
+      "Narrator: He was heading to his father's hospital bedside, a journey he'd apparently made every fortnight for the past year.",
+      "Narrator: [honestly] I admitted my own journey was comparatively trivial, a job interview I'd nearly slept through that morning.",
+      "Narrator: Rather than making me feel foolish, he asked genuine questions about the interview, as though my nerves mattered just as much as his grief.",
+      "Narrator: [gently] Somewhere around the second hour, he mentioned that these regular trips had taught him to talk to strangers more freely.",
+      "Narrator: Hospitals and trains, he said, both strip away pretence, since nobody has the energy left to perform politeness.",
+      "Narrator: [calmly] By the time my stop arrived, I genuinely didn't want to get off, which surprised me more than anything else that day.",
+      "Narrator: I gave him my number before I left, half expecting never to hear from him again, the way these encounters usually go.",
+      "Narrator: [encouraging] He texted a month later, simply to say his father had recovered, and that he'd remembered my interview and wanted to know how it went.",
+      "Narrator: I got the job, as it happens, though that felt like a smaller story next to the one he'd just told me.",
+      "Narrator: [seriously] We still message occasionally, two people bound by nothing more than a held door and ninety unlikely seconds.",
+      "Narrator: I've since stopped assuming that the most meaningful part of a journey happens at the destination rather than somewhere along the way."
     ],
     "quiz": [
-      { "question": "How did the narrator manage to catch the train?", "options": ["She bought a faster ticket", "A stranger wedged his bag into the door gap and held it until she caught up", "The train was delayed", "She used a staff shortcut"], "correctIndex": 1, "explanation": "A stranger held the train door by wedging his bag into the gap until she caught up." },
-      { "question": "Why was the stranger travelling that day?", "options": ["He was going on holiday", "He was heading to his father's hospital bedside, a trip he made every fortnight", "He was commuting to work", "He was meeting a friend"], "correctIndex": 1, "explanation": "He was travelling to visit his father in hospital, something he had done every fortnight for the past year." },
-      { "question": "What does the narrator admit about her own journey?", "options": ["She was travelling for a wedding", "It was comparatively trivial, just a job interview she'd nearly slept through", "She was moving cities permanently", "She had no particular reason to travel"], "correctIndex": 1, "explanation": "She admits her journey was comparatively trivial compared to his, just a job interview she'd nearly overslept for." },
-      { "question": "What did the stranger say hospitals and trains have in common?", "options": ["They are both stressful and expensive", "They both strip away pretence, since nobody has energy left to perform politeness", "They are both places people avoid", "They both require tickets"], "correctIndex": 1, "explanation": "He said both hospitals and trains strip away pretence because people have no energy left to perform politeness." },
-      { "question": "What did the stranger's text a month later say?", "options": ["He asked to meet again", "His father had recovered, and he asked how her interview had gone", "He was moving away", "He had missed another train"], "correctIndex": 1, "explanation": "He texted to say his father had recovered and that he remembered her interview, asking how it went." }
-    ]
+      {
+        "question": "How did the narrator manage to catch the train?",
+        "options": [
+          "A stranger wedged his bag into the door gap and held it until she caught up",
+          "She bought a faster ticket",
+          "The train was delayed",
+          "She used a staff shortcut"
+        ],
+        "correctIndex": 0,
+        "explanation": "A stranger held the train door by wedging his bag into the gap until she caught up."
+      },
+      {
+        "question": "Why was the stranger travelling that day?",
+        "options": [
+          "He was going on holiday",
+          "He was heading to his father's hospital bedside, a trip he made every fortnight",
+          "He was commuting to work",
+          "He was meeting a friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "He was travelling to visit his father in hospital, something he had done every fortnight for the past year."
+      },
+      {
+        "question": "What does the narrator admit about her own journey?",
+        "options": [
+          "She was travelling for a wedding",
+          "It was comparatively trivial, just a job interview she'd nearly slept through",
+          "She was moving cities permanently",
+          "She had no particular reason to travel"
+        ],
+        "correctIndex": 1,
+        "explanation": "She admits her journey was comparatively trivial compared to his, just a job interview she'd nearly overslept for."
+      },
+      {
+        "question": "What did the stranger say hospitals and trains have in common?",
+        "options": [
+          "They are both stressful and expensive",
+          "They are both places people avoid",
+          "They both strip away pretence, since nobody has energy left to perform politeness",
+          "They both require tickets"
+        ],
+        "correctIndex": 2,
+        "explanation": "He said both hospitals and trains strip away pretence because people have no energy left to perform politeness."
+      },
+      {
+        "question": "What did the stranger's text a month later say?",
+        "options": [
+          "He asked to meet again",
+          "He was moving away",
+          "His father had recovered, and he asked how her interview had gone",
+          "He had missed another train"
+        ],
+        "correctIndex": 2,
+        "explanation": "He texted to say his father had recovered and that he remembered her interview, asking how it went."
+      },
+      {
+        "question": "What small action allowed the narrator to catch the last train?",
+        "options": [
+          "Tonight we're discussing awkward cultural misunderstandings abroad",
+          "She saw where it would appear and excluded her child.",
+          "Heavy rain delayed the train by forty minutes.",
+          "A stranger held the door open with his bag."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: A stranger held the door open with his bag."
+      },
+      {
+        "question": "Why did conversation begin unusually quickly between the strangers?",
+        "options": [
+          "So, on the last day of a walking tour, I handed our guide a fairly generous tip",
+          "Short stays increased water use, rubbish, and unrealistic demands.",
+          "They visited a covered market and followed respectful photography practices.",
+          "Shared adrenaline removed the usual layers of small talk."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Shared adrenaline removed the usual layers of small talk."
+      },
+      {
+        "question": "How did the stranger respond to hearing about the job interview?",
+        "options": [
+          "He treated the narrator's nerves seriously despite his own family crisis.",
+          "I'd assumed generosity was generosity, regardless of how it was delivered, which turned out to be naive",
+          "The impacts were collective and larger than one visitor's choices.",
+          "It reduced pressure and made changes easier to communicate."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: He treated the narrator's nerves seriously despite his own family crisis."
+      },
+      {
+        "question": "What later message continued their brief connection?",
+        "options": [
+          "Thanks so much for sharing it with us",
+          "The stranger reported his father's recovery and asked about the interview.",
+          "They included signs of the community rather than an empty private stage.",
+          "Fixed duties, access needs, verified information, and limited priorities."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The stranger reported his father's recovery and asked about the interview."
+      },
+      {
+        "question": "Why does getting the job feel like the smaller story?",
+        "options": [
+          "Hopefully it saves someone else an awkward moment on their own trip",
+          "Paths, roofs, and cultivated land showed the lived environment.",
+          "The encounter created unexpected care between two strangers.",
+          "It realistically expects conditions and human needs to change."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The encounter created unexpected care between two strangers."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-travel-07",
@@ -225,35 +918,587 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Tonight we're discussing awkward cultural misunderstandings abroad, and our caller has a story about nearly offending his tour guide. Go ahead.",
-      "Caller: [sheepish] Hi. So, on the last day of a walking tour, I handed our guide a fairly generous tip, and he looked genuinely uncomfortable.",
-      "Radio Host: [curious] Uncomfortable how, exactly? Did he refuse it outright?",
-      "Caller: [thoughtful] Not quite refuse, but he hesitated for a long moment before accepting, which made me instantly worried I'd done something wrong.",
-      "Radio Host: [interested] Did you ask him directly what the issue was?",
-      "Caller: [honest] Eventually, yes, though it took me a while to work up the nerve, since I didn't want to make things more awkward.",
-      "Radio Host: [curious] What did he tell you?",
-      "Caller: [reflective] He explained that in his culture, tipping openly in front of the whole group can look like you're implying he needs charity.",
-      "Radio Host: [surprised] I'd never have guessed that. So what would have been the more appropriate approach?",
-      "Caller: [informative] Apparently, tipping privately, folded discreetly into a handshake, is considered far more respectful than handing over cash publicly.",
-      "Radio Host: [understanding] That's such a subtle distinction, easy to miss if nobody's ever explained it to you.",
-      "Caller: [agreeing] Completely. I'd assumed generosity was generosity, regardless of how it was delivered, which turned out to be naive.",
-      "Radio Host: [curious] Did you manage to fix the situation before you left?",
-      "Caller: [warmly] I did, actually. I apologised, and he laughed it off once he realised I genuinely hadn't meant any disrespect.",
-      "Radio Host: [curious] Has that experience changed how you tip on trips since then?",
-      "Caller: [determined] Completely. Now I research local customs around tipping before I even land, rather than assuming my own habits translate everywhere.",
-      "Radio Host: [warmly] That's a valuable lesson, and a generous one at that. Thanks so much for sharing it with us.",
-      "Caller: [smiling] Thanks for listening. Hopefully it saves someone else an awkward moment on their own trip."
+      "Radio Host: [thoughtful] Tonight we're discussing awkward cultural misunderstandings abroad, and our caller has a story about nearly offending his tour guide. Go ahead.",
+      "Caller: Hi. So, on the last day of a walking tour, I handed our guide a fairly generous tip, and he looked genuinely uncomfortable.",
+      "Radio Host: [carefully] Uncomfortable how, exactly? Did he refuse it outright?",
+      "Caller: Not quite refuse, but he hesitated for a long moment before accepting, which made me instantly worried I'd done something wrong.",
+      "Radio Host: [reflective] Did you ask him directly what the issue was?",
+      "Caller: Eventually, yes, though it took me a while to work up the nerve, since I didn't want to make things more awkward.",
+      "Radio Host: [honestly] What did he tell you?",
+      "Caller: He explained that in his culture, tipping openly in front of the whole group can look like you're implying he needs charity.",
+      "Radio Host: [gently] I'd never have guessed that. So what would have been the more appropriate approach?",
+      "Caller: Apparently, tipping privately, folded discreetly into a handshake, is considered far more respectful than handing over cash publicly.",
+      "Radio Host: [calmly] That's such a subtle distinction, easy to miss if nobody's ever explained it to you.",
+      "Caller: Completely. I'd assumed generosity was generosity, regardless of how it was delivered, which turned out to be naive.",
+      "Radio Host: [encouraging] Did you manage to fix the situation before you left?",
+      "Caller: I did, actually. I apologised, and he laughed it off once he realised I genuinely hadn't meant any disrespect.",
+      "Radio Host: [seriously] Has that experience changed how you tip on trips since then?",
+      "Caller: Completely. Now I research local customs around tipping before I even land, rather than assuming my own habits translate everywhere.",
+      "Radio Host: That's a valuable lesson, and a generous one at that. Thanks so much for sharing it with us.",
+      "Caller: Thanks for listening. Hopefully it saves someone else an awkward moment on their own trip."
     ],
     "quiz": [
-      { "question": "What made the caller worried during the walking tour?", "options": ["The guide got lost", "The guide looked genuinely uncomfortable after being handed a generous tip", "The tour ran late", "The guide refused to speak to him"], "correctIndex": 1, "explanation": "The guide hesitated and looked uncomfortable after being handed a generous tip in front of the group." },
-      { "question": "What did the guide explain about tipping in his culture?", "options": ["Tipping is never accepted", "Tipping openly in front of the group can look like implying he needs charity", "Tips must be given in a specific currency", "Tipping is only for hotel staff"], "correctIndex": 1, "explanation": "He explained that tipping openly in front of the whole group can look like the giver is implying he needs charity." },
-      { "question": "What is the more respectful way to tip, according to the guide?", "options": ["Sending money after the trip", "Tipping privately, folded discreetly into a handshake", "Leaving cash on the ground", "Giving a gift instead of money"], "correctIndex": 1, "explanation": "Tipping privately, folded discreetly into a handshake, is considered far more respectful than handing over cash publicly." },
-      { "question": "How did the caller resolve the awkward situation?", "options": ["He ignored it and left", "He apologised, and the guide laughed it off once he realised there was no disrespect intended", "He asked for his tip back", "He complained to the tour company"], "correctIndex": 1, "explanation": "The caller apologised, and the guide laughed it off once he understood no disrespect was meant." },
-      { "question": "How has the caller changed his behavior on trips since then?", "options": ["He no longer tips at all", "He researches local tipping customs before he lands, rather than assuming his habits translate everywhere", "He only tips in private always regardless of country", "He avoids tour guides entirely"], "correctIndex": 1, "explanation": "He now researches local customs around tipping before landing, rather than assuming his own habits apply everywhere." }
-    ]
+      {
+        "question": "What made the caller worried during the walking tour?",
+        "options": [
+          "The guide looked genuinely uncomfortable after being handed a generous tip",
+          "The guide got lost",
+          "The tour ran late",
+          "The guide refused to speak to him"
+        ],
+        "correctIndex": 0,
+        "explanation": "The guide hesitated and looked uncomfortable after being handed a generous tip in front of the group."
+      },
+      {
+        "question": "What did the guide explain about tipping in his culture?",
+        "options": [
+          "Tipping is never accepted",
+          "Tips must be given in a specific currency",
+          "Tipping is only for hotel staff",
+          "Tipping openly in front of the group can look like implying he needs charity"
+        ],
+        "correctIndex": 3,
+        "explanation": "He explained that tipping openly in front of the whole group can look like the giver is implying he needs charity."
+      },
+      {
+        "question": "What is the more respectful way to tip, according to the guide?",
+        "options": [
+          "Sending money after the trip",
+          "Tipping privately, folded discreetly into a handshake",
+          "Leaving cash on the ground",
+          "Giving a gift instead of money"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tipping privately, folded discreetly into a handshake, is considered far more respectful than handing over cash publicly."
+      },
+      {
+        "question": "How did the caller resolve the awkward situation?",
+        "options": [
+          "He ignored it and left",
+          "He asked for his tip back",
+          "He complained to the tour company",
+          "He apologised, and the guide laughed it off once he realised there was no disrespect intended"
+        ],
+        "correctIndex": 3,
+        "explanation": "The caller apologised, and the guide laughed it off once he understood no disrespect was meant."
+      },
+      {
+        "question": "How has the caller changed his behavior on trips since then?",
+        "options": [
+          "He no longer tips at all",
+          "He researches local tipping customs before he lands, rather than assuming his habits translate everywhere",
+          "He only tips in private always regardless of country",
+          "He avoids tour guides entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "He now researches local customs around tipping before landing, rather than assuming his own habits apply everywhere."
+      },
+      {
+        "question": "Why did the guide hesitate before accepting the public tip?",
+        "options": [
+          "She saw where it would appear and excluded her child.",
+          "Heavy rain delayed the train by forty minutes.",
+          "Public cash could imply that he needed charity.",
+          "Move immediately, then seek clarification politely if needed."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Public cash could imply that he needed charity."
+      },
+      {
+        "question": "What culturally respectful method did the guide describe?",
+        "options": [
+          "Offer the tip privately and discreetly during a handshake.",
+          "Short stays increased water use, rubbish, and unrealistic demands.",
+          "They visited a covered market and followed respectful photography practices.",
+          "Keeping access usable matters more than proving public rights."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Offer the tip privately and discreetly during a handshake."
+      },
+      {
+        "question": "Which assumption caused the traveller's mistake?",
+        "options": [
+          "The impacts were collective and larger than one visitor's choices.",
+          "It reduced pressure and made changes easier to communicate.",
+          "He believed generosity communicated the same meaning in every form.",
+          "Credit local guidance, discourage trespass, and show less crowded alternatives."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He believed generosity communicated the same meaning in every form."
+      },
+      {
+        "question": "How did the guide respond after hearing the traveller's apology?",
+        "options": [
+          "They included signs of the community rather than an empty private stage.",
+          "Fixed duties, access needs, verified information, and limited priorities.",
+          "He laughed off the mistake once he understood the intention.",
+          "Ask who earns, cleans, loses access, and has a voice."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He laughed off the mistake once he understood the intention."
+      },
+      {
+        "question": "What practical lesson follows from the misunderstanding?",
+        "options": [
+          "Paths, roofs, and cultivated land showed the lived environment.",
+          "It realistically expects conditions and human needs to change.",
+          "Enjoyment never transfers ownership of someone else's daily environment.",
+          "Ask how appreciation is expressed locally instead of assuming."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Ask how appreciation is expressed locally instead of assuming."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-travel-08",
+    "title": "The Guesthouse Behind the Perfect Photo",
+    "level": "B2",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [curious] I booked the mountain guesthouse because of one photograph: a wooden balcony above green rice fields, with no other building in sight. The picture was accurate, but it showed only one direction.",
+      "Narrator: On arrival, I discovered that the property stood inside a working village. Motorbikes passed before dawn, farmers used the path beside the balcony, and the nearest shop closed early. None of this was a defect; it was daily life that the advertisement had edited out.",
+      "Narrator: [reflective] My first mistake was treating the view as a private stage. I placed a camera near the path and almost recorded two residents without asking. The owner stopped me and explained that guests often photographed people at work as though they were part of the scenery.",
+      "Narrator: I changed the frame and later asked permission before taking a portrait of a craft seller. She agreed only after seeing where the image would appear, and I respected her request not to include her child.",
+      "Narrator: [thoughtful] The owner also described pressure created by short visits. Some guests used excessive water, left rubbish, and demanded imported food while paying little attention to local services.",
+      "Narrator: I could not solve tourism's impact through one weekend, but I could make practical choices. I carried a refillable bottle, followed waste instructions, bought from businesses recommended by residents, and kept noise low around prayer and sleeping times.",
+      "Narrator: [honestly] My final photographs were less empty than the advertisement. They showed paths, roofs, cultivated land, and signs of ordinary work.",
+      "Narrator: Travel became more meaningful when I stopped asking how the village could complete my picture and began asking how to be a considerate temporary guest in someone else's home."
+    ],
+    "quiz": [
+      {
+        "question": "What did the advertisement omit about the guesthouse's setting?",
+        "options": [
+          "The property operated inside an active working village.",
+          "The train was scheduled for eleven on Friday morning.",
+          "It turns everyday homes into a stage for visitors.",
+          "The narrator notices that certain passports attract repeated scrutiny."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The property operated inside an active working village."
+      },
+      {
+        "question": "Which morning activities contradicted the image of total isolation?",
+        "options": [
+          "The narrator checked routes, opening times, and prayer arrangements.",
+          "Motorbikes passed and farmers used the path beside the balcony.",
+          "Blocked doors, intrusive photographs, noise, and rubbish disrupt daily life.",
+          "It costs her nothing while the delay substantially changes his journey."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Motorbikes passed and farmers used the path beside the balcony."
+      },
+      {
+        "question": "Why did the narrator refuse to call village activity a defect?",
+        "options": [
+          "Parking, museum hours, and the main bus route had changed.",
+          "Fragile sites and small communities may need protection from crowds.",
+          "The sounds and movement were ordinary community life.",
+          "An elderly traveller remains waiting beneath the harsh lights."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The sounds and movement were ordinary community life."
+      },
+      {
+        "question": "What privacy mistake nearly occurred beside the path?",
+        "options": [
+          "It moved to Saturday while luggage was stored at the hotel.",
+          "Include conduct guidance and current local restrictions.",
+          "Documents can shape freedom of movement as powerfully as money.",
+          "A camera almost recorded two residents without permission."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: A camera almost recorded two residents without permission."
+      },
+      {
+        "question": "How did the narrator handle the craft seller's portrait differently?",
+        "options": [
+          "The frame changed and the seller approved the intended use.",
+          "They arranged accessible transport without demanding private medical details.",
+          "Limit groups, brief guests, and coordinate schedules with the community.",
+          "He will notice whose passport allows effortless passage."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The frame changed and the seller approved the intended use."
+      },
+      {
+        "question": "What condition did the seller set before agreeing to the photograph?",
+        "options": [
+          "Heavy rain delayed the train by forty minutes.",
+          "She saw where it would appear and excluded her child.",
+          "Move immediately, then seek clarification politely if needed.",
+          "The narrator notices that certain passports attract repeated scrutiny."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She saw where it would appear and excluded her child."
+      },
+      {
+        "question": "Which tourism pressures did the owner describe?",
+        "options": [
+          "They visited a covered market and followed respectful photography practices.",
+          "Keeping access usable matters more than proving public rights.",
+          "Short stays increased water use, rubbish, and unrealistic demands.",
+          "It costs her nothing while the delay substantially changes his journey."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Short stays increased water use, rubbish, and unrealistic demands."
+      },
+      {
+        "question": "Why could one considerate weekend not solve the village's tourism problems?",
+        "options": [
+          "It reduced pressure and made changes easier to communicate.",
+          "Credit local guidance, discourage trespass, and show less crowded alternatives.",
+          "An elderly traveller remains waiting beneath the harsh lights.",
+          "The impacts were collective and larger than one visitor's choices."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The impacts were collective and larger than one visitor's choices."
+      },
+      {
+        "question": "How did the final photographs differ from the advertisement?",
+        "options": [
+          "They included signs of the community rather than an empty private stage.",
+          "Fixed duties, access needs, verified information, and limited priorities.",
+          "Ask who earns, cleans, loses access, and has a voice.",
+          "Documents can shape freedom of movement as powerfully as money."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: They included signs of the community rather than an empty private stage."
+      },
+      {
+        "question": "What elements made the final images more honest?",
+        "options": [
+          "It realistically expects conditions and human needs to change.",
+          "Paths, roofs, and cultivated land showed the lived environment.",
+          "Enjoyment never transfers ownership of someone else's daily environment.",
+          "He will notice whose passport allows effortless passage."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Paths, roofs, and cultivated land showed the lived environment."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-travel-09",
+    "title": "A Friday Route with Room to Change",
+    "level": "B2",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [organised] Our train was due to reach the coastal city at eleven on Friday morning. I had planned lunch, a museum visit, and a sunset walk, but I had not checked prayer arrangements or the distance from the station.",
+      "Narrator: Two days before departure, I reviewed the route. The mosque near our hotel had limited nearby parking, the museum closed earlier on Fridays, and road construction affected the main bus. My beautiful schedule depended on three assumptions that were already false.",
+      "Narrator: [carefully] I moved the museum to Saturday, stored the luggage at the hotel, and allowed enough time to reach the mosque without rushing. We also agreed on a meeting point in case the group became separated.",
+      "Narrator: One friend was recovering from a minor injury and could not comfortably manage the long walk. We checked an accessible transport option rather than expecting him to explain his private health details to everyone.",
+      "Narrator: [thoughtful] On the day, heavy rain delayed the train by forty minutes. Because the plan had margin, we still arrived calmly. After prayer, we ate at a nearby family restaurant and cancelled the sunset walk.",
+      "Narrator: Nobody called the afternoon wasted. We explored a covered market, asked before photographing stalls, and learned which path would be safer if the rain continued.",
+      "Narrator: [reflective] Planning had not controlled the weather or guaranteed a perfect trip. It had reduced avoidable pressure and made changes easier to communicate.",
+      "Narrator: I now build travel plans around fixed responsibilities, access needs, reliable opening information, and one or two priorities. A flexible route is not an incomplete plan. It is a plan honest enough to expect real life."
+    ],
+    "quiz": [
+      {
+        "question": "When was the group expected to reach the coastal city?",
+        "options": [
+          "The train was scheduled for eleven on Friday morning.",
+          "It turns everyday homes into a stage for visitors.",
+          "The narrator notices that certain passports attract repeated scrutiny.",
+          "Annual leave and business expenses must remain clearly separated."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The train was scheduled for eleven on Friday morning."
+      },
+      {
+        "question": "What planning step occurred two days before departure?",
+        "options": [
+          "Blocked doors, intrusive photographs, noise, and rubbish disrupt daily life.",
+          "The narrator checked routes, opening times, and prayer arrangements.",
+          "It costs her nothing while the delay substantially changes his journey.",
+          "A later return could create extra fare costs."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The narrator checked routes, opening times, and prayer arrangements."
+      },
+      {
+        "question": "Which three assumptions in the original itinerary were already wrong?",
+        "options": [
+          "Fragile sites and small communities may need protection from crowds.",
+          "An elderly traveller remains waiting beneath the harsh lights.",
+          "Parking, museum hours, and the main bus route had changed.",
+          "The work schedule otherwise leaves no time beyond the hotel."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Parking, museum hours, and the main bus route had changed."
+      },
+      {
+        "question": "How was the museum visit adjusted to protect Friday priorities?",
+        "options": [
+          "Include conduct guidance and current local restrictions.",
+          "Documents can shape freedom of movement as powerfully as money.",
+          "They will request the additional leave before changing flights.",
+          "It moved to Saturday while luggage was stored at the hotel."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It moved to Saturday while luggage was stored at the hotel."
+      },
+      {
+        "question": "How did the group accommodate a friend's minor injury respectfully?",
+        "options": [
+          "They arranged accessible transport without demanding private medical details.",
+          "Limit groups, brief guests, and coordinate schedules with the community.",
+          "He will notice whose passport allows effortless passage.",
+          "No spreadsheets or compulsory early starts during leave."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: They arranged accessible transport without demanding private medical details."
+      },
+      {
+        "question": "What unexpected delay tested the revised itinerary?",
+        "options": [
+          "Move immediately, then seek clarification politely if needed.",
+          "Heavy rain delayed the train by forty minutes.",
+          "The narrator notices that certain passports attract repeated scrutiny.",
+          "Annual leave and business expenses must remain clearly separated."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Heavy rain delayed the train by forty minutes."
+      },
+      {
+        "question": "How did the group adapt after cancelling the sunset walk?",
+        "options": [
+          "Keeping access usable matters more than proving public rights.",
+          "It costs her nothing while the delay substantially changes his journey.",
+          "They visited a covered market and followed respectful photography practices.",
+          "A later return could create extra fare costs."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: They visited a covered market and followed respectful photography practices."
+      },
+      {
+        "question": "What did adding margin accomplish during disruption?",
+        "options": [
+          "Credit local guidance, discourage trespass, and show less crowded alternatives.",
+          "An elderly traveller remains waiting beneath the harsh lights.",
+          "The work schedule otherwise leaves no time beyond the hotel.",
+          "It reduced pressure and made changes easier to communicate."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It reduced pressure and made changes easier to communicate."
+      },
+      {
+        "question": "Which factors now organise the narrator's travel plans?",
+        "options": [
+          "Fixed duties, access needs, verified information, and limited priorities.",
+          "Ask who earns, cleans, loses access, and has a voice.",
+          "Documents can shape freedom of movement as powerfully as money.",
+          "They will request the additional leave before changing flights."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Fixed duties, access needs, verified information, and limited priorities."
+      },
+      {
+        "question": "Why is a flexible route still a complete plan?",
+        "options": [
+          "Enjoyment never transfers ownership of someone else's daily environment.",
+          "It realistically expects conditions and human needs to change.",
+          "He will notice whose passport allows effortless passage.",
+          "No spreadsheets or compulsory early starts during leave."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It realistically expects conditions and human needs to change."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-travel-10",
+    "title": "Whose Street Is It?",
+    "level": "B2",
+    "themeId": "travel",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [welcoming] A travel video recommends a narrow residential street as the city's “secret photo spot.” What could go wrong?",
+      "Guest: Popularity can turn an ordinary home area into a stage. Visitors may block doors, photograph residents, create noise, or leave rubbish.",
+      "Host: The street is public. Do travellers still need permission?",
+      "Guest: [carefully] Public access does not erase courtesy or privacy. Photographing architecture from an appropriate place differs from pointing a camera into a home or capturing identifiable people without consent.",
+      "Host: Should creators avoid sharing locations entirely?",
+      "Guest: Sometimes a general area is enough, especially for fragile sites or small communities. If a precise location is shared, include conduct guidance and local restrictions.",
+      "Host: [curious] What responsibility belongs to tour companies?",
+      "Guest: Limit group size, brief visitors, coordinate with residents where appropriate, and avoid schedules that repeatedly disrupt prayer, school, or rest.",
+      "Host: What if local sellers benefit from the visitors?",
+      "Guest: Economic benefit matters, but it does not cancel other costs. Ask who earns, who cleans, who loses access, and whether residents have a voice.",
+      "Host: How should a traveller respond when a resident asks them to move?",
+      "Guest: Move first, then clarify politely if necessary. Winning an argument is not more important than leaving a doorway usable.",
+      "Host: [reflective] Can social media be part of the solution?",
+      "Guest: Yes. Creators can model respectful framing, credit local guidance, discourage trespass, and show alternatives to overcrowded sites. They can also update old posts when access rules or local conditions change.",
+      "Host: Your shortest principle?",
+      "Guest: A destination is somebody's everyday environment. Enjoy it without behaving as though a beautiful view has transferred ownership of the place to you."
+    ],
+    "quiz": [
+      {
+        "question": "How can online popularity transform a residential street?",
+        "options": [
+          "It turns everyday homes into a stage for visitors.",
+          "The narrator notices that certain passports attract repeated scrutiny.",
+          "Annual leave and business expenses must remain clearly separated.",
+          "Transport and practical access still matter late at night."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: It turns everyday homes into a stage for visitors."
+      },
+      {
+        "question": "Which visitor behaviours directly burden residents?",
+        "options": [
+          "It costs her nothing while the delay substantially changes his journey.",
+          "Blocked doors, intrusive photographs, noise, and rubbish disrupt daily life.",
+          "A later return could create extra fare costs.",
+          "The hotel pays for a taxi arriving within ten minutes."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Blocked doors, intrusive photographs, noise, and rubbish disrupt daily life."
+      },
+      {
+        "question": "When might a creator share only a general location?",
+        "options": [
+          "An elderly traveller remains waiting beneath the harsh lights.",
+          "The work schedule otherwise leaves no time beyond the hotel.",
+          "Fragile sites and small communities may need protection from crowds.",
+          "One night will be credited back to the reservation."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Fragile sites and small communities may need protection from crowds."
+      },
+      {
+        "question": "What should accompany a precise location in a travel post?",
+        "options": [
+          "Documents can shape freedom of movement as powerfully as money.",
+          "They will request the additional leave before changing flights.",
+          "She personally confirms the replacement room instead of trusting the system.",
+          "Include conduct guidance and current local restrictions."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Include conduct guidance and current local restrictions."
+      },
+      {
+        "question": "How can tour companies reduce disruption to residents?",
+        "options": [
+          "Limit groups, brief guests, and coordinate schedules with the community.",
+          "He will notice whose passport allows effortless passage.",
+          "No spreadsheets or compulsory early starts during leave.",
+          "A written confirmation and the driver's details."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Limit groups, brief guests, and coordinate schedules with the community."
+      },
+      {
+        "question": "What should a traveller do when asked to clear a doorway?",
+        "options": [
+          "The narrator notices that certain passports attract repeated scrutiny.",
+          "Move immediately, then seek clarification politely if needed.",
+          "Annual leave and business expenses must remain clearly separated.",
+          "Transport and practical access still matter late at night."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Move immediately, then seek clarification politely if needed."
+      },
+      {
+        "question": "Why is winning an argument with a resident the wrong priority?",
+        "options": [
+          "It costs her nothing while the delay substantially changes his journey.",
+          "A later return could create extra fare costs.",
+          "Keeping access usable matters more than proving public rights.",
+          "The hotel pays for a taxi arriving within ten minutes."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Keeping access usable matters more than proving public rights."
+      },
+      {
+        "question": "How can creators model responsible tourism online?",
+        "options": [
+          "An elderly traveller remains waiting beneath the harsh lights.",
+          "The work schedule otherwise leaves no time beyond the hotel.",
+          "One night will be credited back to the reservation.",
+          "Credit local guidance, discourage trespass, and show less crowded alternatives."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Credit local guidance, discourage trespass, and show less crowded alternatives."
+      },
+      {
+        "question": "Which questions reveal whether tourism's economic gains are fairly shared?",
+        "options": [
+          "Ask who earns, cleans, loses access, and has a voice.",
+          "Documents can shape freedom of movement as powerfully as money.",
+          "They will request the additional leave before changing flights.",
+          "She personally confirms the replacement room instead of trusting the system."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Ask who earns, cleans, loses access, and has a voice."
+      },
+      {
+        "question": "What principle limits a traveller's claim over a beautiful place?",
+        "options": [
+          "He will notice whose passport allows effortless passage.",
+          "Enjoyment never transfers ownership of someone else's daily environment.",
+          "No spreadsheets or compulsory early starts during leave.",
+          "A written confirmation and the driver's details."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Enjoyment never transfers ownership of someone else's daily environment."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

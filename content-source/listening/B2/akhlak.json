@@ -6,30 +6,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] Three weeks ago, I stumbled across a discrepancy in the quarterly audit that nobody else on my team seemed to have noticed, or perhaps had simply chosen not to mention.",
-      "Narrator: [uneasy] A set of figures had been quietly adjusted so that a failed vendor inspection looked, on paper, as though it had passed without complications.",
-      "Narrator: [reflective] My first instinct, which I am not proud of, was to convince myself that this was above my pay grade and therefore none of my concern.",
-      "Narrator: [honestly] After all, the person responsible was my direct supervisor, someone whose approval I would need for every promotion I might hope for in the years ahead.",
-      "Narrator: [thoughtful] Had I stayed quiet, nothing would have traced back to me, and the whole matter would likely have been buried under the next fiscal quarter's paperwork.",
-      "Narrator: [conflicted] Yet the longer I sat with that comfortable silence, the more it curdled into something that felt uncomfortably close to complicity.",
-      "Narrator: [determined] So I requested a private meeting, not with my supervisor directly, but with the compliance officer, whose role exists precisely for situations like this one.",
-      "Narrator: [nervous] Walking into that office, I half expected to be dismissed as overreacting, or worse, quietly punished for raising an inconvenient question.",
-      "Narrator: [surprised] Instead, she thanked me for coming forward and explained that a similar irregularity had been flagged elsewhere in the company only months earlier.",
-      "Narrator: [reflective] What followed was an uncomfortable few weeks, during which my supervisor was placed under review while an independent audit was carried out.",
-      "Narrator: [honestly] Some colleagues assumed I had acted out of ambition, hoping to climb over someone else, which could not have been further from what actually motivated me.",
-      "Narrator: [thoughtful] Integrity, I have come to realize, rarely announces itself with fanfare; more often it looks like an inconvenient decision made quietly, without an audience.",
-      "Narrator: [peacefully] The investigation eventually confirmed what I had suspected, and though the fallout was awkward, I have not once regretted refusing to look the other way."
+      "Narrator: [thoughtful] Three weeks ago, I stumbled across a discrepancy in the quarterly audit that nobody else on my team seemed to have noticed, or perhaps had simply chosen not to mention.",
+      "Narrator: A set of figures had been quietly adjusted so that a failed vendor inspection looked, on paper, as though it had passed without complications.",
+      "Narrator: [carefully] My first instinct, which I am not proud of, was to convince myself that this was above my pay grade and therefore none of my concern.",
+      "Narrator: After all, the person responsible was my direct supervisor, someone whose approval I would need for every promotion I might hope for in the years ahead.",
+      "Narrator: [reflective] Had I stayed quiet, nothing would have traced back to me, and the whole matter would likely have been buried under the next fiscal quarter's paperwork.",
+      "Narrator: Yet the longer I sat with that comfortable silence, the more it curdled into something that felt uncomfortably close to complicity.",
+      "Narrator: [honestly] So I requested a private meeting, not with my supervisor directly, but with the compliance officer, whose role exists precisely for situations like this one.",
+      "Narrator: Walking into that office, I half expected to be dismissed as overreacting, or worse, quietly punished for raising an inconvenient question.",
+      "Narrator: [gently] Instead, she thanked me for coming forward and explained that a similar irregularity had been flagged elsewhere in the company only months earlier.",
+      "Narrator: What followed was an uncomfortable few weeks, during which my supervisor was placed under review while an independent audit was carried out.",
+      "Narrator: [calmly] Some colleagues assumed I had acted out of ambition, hoping to climb over someone else, which could not have been further from what actually motivated me.",
+      "Narrator: Integrity, I have come to realize, rarely announces itself with fanfare; more often it looks like an inconvenient decision made quietly, without an audience.",
+      "Narrator: [encouraging] The investigation eventually confirmed what I had suspected, and though the fallout was awkward, I have not once regretted refusing to look the other way."
     ],
     "quiz": [
-      { "question": "What did the narrator discover in the quarterly audit?", "options": ["A missing invoice", "Figures that had been adjusted to hide a failed vendor inspection", "A duplicate payment", "An unsigned contract"], "correctIndex": 1, "explanation": "She found that figures had been quietly adjusted so a failed vendor inspection looked as though it had passed." },
-      { "question": "Why was the narrator initially reluctant to say anything?", "options": ["She did not understand the report", "The person responsible was her supervisor, whose approval she needed for future promotions", "She was too busy", "She thought it was illegal to report it"], "correctIndex": 1, "explanation": "She hesitated because the person responsible was her direct supervisor, whose approval she would need for promotions." },
-      { "question": "Who did the narrator ultimately decide to speak with?", "options": ["Her supervisor directly", "The compliance officer", "A journalist", "Nobody, she stayed silent"], "correctIndex": 1, "explanation": "She requested a private meeting with the compliance officer rather than confronting her supervisor directly." },
-      { "question": "What did the compliance officer reveal during that meeting?", "options": ["That the narrator was overreacting", "That a similar irregularity had been flagged elsewhere in the company months earlier", "That the audit was fake", "That she would be fired"], "correctIndex": 1, "explanation": "The compliance officer explained that a similar irregularity had already been flagged elsewhere in the company." },
-      { "question": "What does the narrator conclude about integrity?", "options": ["It always brings public praise", "It often looks like an inconvenient decision made quietly, without an audience", "It is only necessary in serious crimes", "It requires ambition to act"], "correctIndex": 1, "explanation": "She concludes integrity rarely announces itself with fanfare and often looks like a quiet, inconvenient decision." }
-    ]
+      {
+        "question": "What did the narrator discover in the quarterly audit?",
+        "options": [
+          "A missing invoice",
+          "Figures that had been adjusted to hide a failed vendor inspection",
+          "A duplicate payment",
+          "An unsigned contract"
+        ],
+        "correctIndex": 1,
+        "explanation": "She found that figures had been quietly adjusted so a failed vendor inspection looked as though it had passed."
+      },
+      {
+        "question": "Why was the narrator initially reluctant to say anything?",
+        "options": [
+          "The person responsible was her supervisor, whose approval she needed for future promotions",
+          "She did not understand the report",
+          "She was too busy",
+          "She thought it was illegal to report it"
+        ],
+        "correctIndex": 0,
+        "explanation": "She hesitated because the person responsible was her direct supervisor, whose approval she would need for promotions."
+      },
+      {
+        "question": "Who did the narrator ultimately decide to speak with?",
+        "options": [
+          "The compliance officer",
+          "Her supervisor directly",
+          "A journalist",
+          "Nobody, she stayed silent"
+        ],
+        "correctIndex": 0,
+        "explanation": "She requested a private meeting with the compliance officer rather than confronting her supervisor directly."
+      },
+      {
+        "question": "What did the compliance officer reveal during that meeting?",
+        "options": [
+          "That the narrator was overreacting",
+          "That a similar irregularity had been flagged elsewhere in the company months earlier",
+          "That the audit was fake",
+          "That she would be fired"
+        ],
+        "correctIndex": 1,
+        "explanation": "The compliance officer explained that a similar irregularity had already been flagged elsewhere in the company."
+      },
+      {
+        "question": "What does the narrator conclude about integrity?",
+        "options": [
+          "It always brings public praise",
+          "It is only necessary in serious crimes",
+          "It often looks like an inconvenient decision made quietly, without an audience",
+          "It requires ambition to act"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes integrity rarely announces itself with fanfare and often looks like a quiet, inconvenient decision."
+      },
+      {
+        "question": "Why did silence begin to feel like complicity?",
+        "options": [
+          "The audit was already public",
+          "Her supervisor had resigned",
+          "The vendor requested secrecy",
+          "The altered figures could conceal a failed inspection"
+        ],
+        "correctIndex": 3,
+        "explanation": "Remaining silent would help the false report remain unchallenged."
+      },
+      {
+        "question": "Why did the narrator approach compliance instead of the supervisor?",
+        "options": [
+          "The supervisor was travelling abroad",
+          "Compliance controlled promotions",
+          "The vendor demanded that route",
+          "Compliance was the proper independent channel"
+        ],
+        "correctIndex": 3,
+        "explanation": "The officer's role covered suspected reporting irregularities."
+      },
+      {
+        "question": "What happened after the concern was reported?",
+        "options": [
+          "The narrator edited the figures",
+          "The vendor cancelled every contract",
+          "An independent audit reviewed the supervisor",
+          "The team ignored the discrepancy"
+        ],
+        "correctIndex": 2,
+        "explanation": "The company initiated review and confirmed the concern."
+      },
+      {
+        "question": "Why were colleagues' assumptions unfair?",
+        "options": [
+          "They thought the audit was quarterly",
+          "They believed the vendor had passed",
+          "They knew who changed the figures",
+          "They mistook integrity for personal ambition"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator's motive was preventing concealment, not gaining status."
+      },
+      {
+        "question": "Which action best reflects the episode's lesson?",
+        "options": [
+          "Share suspicions publicly before checking",
+          "Use an authorised channel when evidence suggests misconduct",
+          "Ignore issues above one's pay grade",
+          "Alter records to protect the team"
+        ],
+        "correctIndex": 1,
+        "explanation": "Quiet, evidence-based reporting demonstrates integrity."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-akhlak-02",
@@ -38,33 +152,150 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Amelia", "gender": "female" }
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      },
+      {
+        "name": "Amelia",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Yusuf: [restrained] Amelia, when we signed this partnership, you assured me the supplier contract would remain exclusive to us for at least two years.",
-      "Amelia: [defensive] Circumstances changed, Yusuf. The market shifted, and holding onto exclusivity would have cost us more than either of us anticipated at the time.",
-      "Yusuf: [firm] That may well be true, but you renegotiated with them behind my back instead of raising it with me first, which was the actual agreement.",
-      "Amelia: [uncomfortable] I was going to tell you, I just wanted to have a solution ready rather than presenting you with a problem I couldn't yet fix.",
-      "Yusuf: [tired] Amelia, a promise that gets quietly revised the moment it becomes inconvenient was never really a promise, it was a preference dressed up as one.",
-      "Amelia: [chastened] When you put it like that, I can hear how it sounds, even though that was never my intention going in.",
-      "Yusuf: [reflective] Intentions matter less to me right now than the fact that our investors trusted us partly because of the terms you personally guaranteed them.",
-      "Amelia: [regretful] You're right, and I should have looped you in the moment the supplier first approached me with a better offer elsewhere.",
-      "Yusuf: [questioning] Would you have told me at all, had this not eventually come out through the accountant reviewing our contracts?",
-      "Amelia: [honestly] I would like to believe so, but I genuinely cannot promise that with total certainty, and pretending otherwise wouldn't help either of us.",
-      "Yusuf: [softening] That admission, oddly enough, reassures me more than a confident denial would have, because at least it's honest.",
-      "Amelia: [determined] Going forward, I will bring every material decision to you before it's finalized, even the ones I think I can handle alone.",
-      "Yusuf: [thoughtful] I'm willing to continue this partnership, but trust that's been stretched thin doesn't simply snap back the moment someone apologizes.",
-      "Amelia: [sincerely] I understand, and I won't ask you to pretend otherwise. I'll let my actions rebuild what my silence damaged.",
-      "Yusuf: [warmly] Good. Let's start with something small, then, transparency on this quarter's numbers, before either of us discusses anything bigger."
+      "Yusuf: [thoughtful] Amelia, when we signed this partnership, you assured me the supplier contract would remain exclusive to us for at least two years.",
+      "Amelia: Circumstances changed, Yusuf. The market shifted, and holding onto exclusivity would have cost us more than either of us anticipated at the time.",
+      "Yusuf: [carefully] That may well be true, but you renegotiated with them behind my back instead of raising it with me first, which was the actual agreement.",
+      "Amelia: I was going to tell you, I just wanted to have a solution ready rather than presenting you with a problem I couldn't yet fix.",
+      "Yusuf: [reflective] Amelia, a promise that gets quietly revised the moment it becomes inconvenient was never really a promise, it was a preference dressed up as one.",
+      "Amelia: When you put it like that, I can hear how it sounds, even though that was never my intention going in.",
+      "Yusuf: [honestly] Intentions matter less to me right now than the fact that our investors trusted us partly because of the terms you personally guaranteed them.",
+      "Amelia: You're right, and I should have looped you in the moment the supplier first approached me with a better offer elsewhere.",
+      "Yusuf: [gently] Would you have told me at all, had this not eventually come out through the accountant reviewing our contracts?",
+      "Amelia: I would like to believe so, but I genuinely cannot promise that with total certainty, and pretending otherwise wouldn't help either of us.",
+      "Yusuf: [calmly] That admission, oddly enough, reassures me more than a confident denial would have, because at least it's honest.",
+      "Amelia: Going forward, I will bring every material decision to you before it's finalized, even the ones I think I can handle alone.",
+      "Yusuf: [encouraging] I'm willing to continue this partnership, but trust that's been stretched thin doesn't simply snap back the moment someone apologizes.",
+      "Amelia: I understand, and I won't ask you to pretend otherwise. I'll let my actions rebuild what my silence damaged.",
+      "Yusuf: [seriously] Good. Let's start with something small, then, transparency on this quarter's numbers, before either of us discusses anything bigger."
     ],
     "quiz": [
-      { "question": "What had Amelia assured Yusuf about the supplier contract?", "options": ["It would be cancelled soon", "It would remain exclusive to them for at least two years", "It would double in price", "It would be reviewed monthly"], "correctIndex": 1, "explanation": "Amelia had assured Yusuf the supplier contract would remain exclusive to them for at least two years." },
-      { "question": "What did Amelia actually do?", "options": ["She kept the contract exclusive as promised", "She renegotiated with the supplier without raising it with Yusuf first", "She cancelled the partnership entirely", "She told Yusuf immediately"], "correctIndex": 1, "explanation": "She renegotiated with the supplier behind Yusuf's back instead of raising it with him first." },
-      { "question": "How does Yusuf describe a promise that gets revised when inconvenient?", "options": ["A strong commitment", "A preference dressed up as a promise", "The most honest kind of promise", "Something everyone should expect"], "correctIndex": 1, "explanation": "Yusuf says a promise revised the moment it becomes inconvenient was never really a promise, just a preference disguised as one." },
-      { "question": "How did Yusuf ultimately find out about the renegotiation?", "options": ["Amelia told him right away", "Through the accountant reviewing their contracts", "A supplier called him directly", "He read it in the news"], "correctIndex": 1, "explanation": "Yusuf asks whether Amelia would have told him at all had it not come out through the accountant reviewing their contracts." },
-      { "question": "What does Amelia promise going forward?", "options": ["To end the partnership", "To bring every material decision to Yusuf before finalizing it", "To hide fewer major decisions but keep small ones secret", "To hire a new accountant"], "correctIndex": 1, "explanation": "Amelia promises to bring every material decision to Yusuf before it's finalized, even ones she thinks she can handle alone." }
-    ]
+      {
+        "question": "What had Amelia assured Yusuf about the supplier contract?",
+        "options": [
+          "It would remain exclusive to them for at least two years",
+          "It would be cancelled soon",
+          "It would double in price",
+          "It would be reviewed monthly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Amelia had assured Yusuf the supplier contract would remain exclusive to them for at least two years."
+      },
+      {
+        "question": "What did Amelia actually do?",
+        "options": [
+          "She kept the contract exclusive as promised",
+          "She renegotiated with the supplier without raising it with Yusuf first",
+          "She cancelled the partnership entirely",
+          "She told Yusuf immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "She renegotiated with the supplier behind Yusuf's back instead of raising it with him first."
+      },
+      {
+        "question": "How does Yusuf describe a promise that gets revised when inconvenient?",
+        "options": [
+          "A strong commitment",
+          "A preference dressed up as a promise",
+          "The most honest kind of promise",
+          "Something everyone should expect"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yusuf says a promise revised the moment it becomes inconvenient was never really a promise, just a preference disguised as one."
+      },
+      {
+        "question": "How did Yusuf ultimately find out about the renegotiation?",
+        "options": [
+          "Amelia told him right away",
+          "A supplier called him directly",
+          "He read it in the news",
+          "Through the accountant reviewing their contracts"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf asks whether Amelia would have told him at all had it not come out through the accountant reviewing their contracts."
+      },
+      {
+        "question": "What does Amelia promise going forward?",
+        "options": [
+          "To end the partnership",
+          "To hide fewer major decisions but keep small ones secret",
+          "To bring every material decision to Yusuf before finalizing it",
+          "To hire a new accountant"
+        ],
+        "correctIndex": 2,
+        "explanation": "Amelia promises to bring every material decision to Yusuf before it's finalized, even ones she thinks she can handle alone."
+      },
+      {
+        "question": "Why did Amelia delay telling Yusuf?",
+        "options": [
+          "She wanted to present a solution with the problem",
+          "She forgot the partnership existed",
+          "The supplier forbade disclosure",
+          "Investors had approved the change"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she tried to solve the issue before raising it."
+      },
+      {
+        "question": "Why does Yusuf value Amelia's uncertain admission?",
+        "options": [
+          "It guarantees the contract will return",
+          "It removes the investors' concerns",
+          "It proves the accountant was mistaken",
+          "It sounds more honest than a confident denial"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her unwillingness to make another false assurance rebuilds some credibility."
+      },
+      {
+        "question": "What does Yusuf say trust cannot do immediately?",
+        "options": [
+          "Survive any business change",
+          "Depend on financial records",
+          "Return fully as soon as someone apologises",
+          "Include honest disagreement"
+        ],
+        "correctIndex": 2,
+        "explanation": "He needs consistent actions, not a single apology."
+      },
+      {
+        "question": "What first step do they choose for repair?",
+        "options": [
+          "Renegotiate every supplier contract",
+          "Dismiss the accountant",
+          "Seek new investors",
+          "Share this quarter's numbers transparently"
+        ],
+        "correctIndex": 3,
+        "explanation": "They begin with a small, verifiable act of openness."
+      },
+      {
+        "question": "What is the main cause of the conflict?",
+        "options": [
+          "The market never changed",
+          "A material decision was hidden from a partner",
+          "Yusuf rejected all solutions",
+          "Investors demanded exclusivity forever"
+        ],
+        "correctIndex": 1,
+        "explanation": "The secrecy, rather than change alone, broke the agreement."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-akhlak-03",
@@ -73,33 +304,150 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bagas", "gender": "male" },
-      { "name": "Nadia", "gender": "female" }
+      {
+        "name": "Bagas",
+        "gender": "male"
+      },
+      {
+        "name": "Nadia",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Nadia: [hesitant] Bagas, can I be honest about something, even if it might be a bit uncomfortable to hear right after your promotion?",
-      "Bagas: [open] Of course. I would rather hear it from you than have people quietly resent me without saying why.",
-      "Nadia: [careful] Since you became team lead, the way you explain things to us has started to feel a little condescending, like we've suddenly forgotten how to do our jobs.",
-      "Bagas: [surprised] I hadn't noticed that at all. If anything, I've been trying harder to make sure everyone understands each task clearly.",
-      "Nadia: [gently] I believe that's your intention, but explaining every basic step to people who've done this work for years can come across as doubting our competence.",
-      "Bagas: [defensive] I suppose I've been anxious about being blamed if something goes wrong under my supervision, so I've been over-explaining out of nervousness.",
-      "Nadia: [understanding] That makes sense, but from where we're standing, it doesn't read as nervousness, it reads as someone who thinks a title suddenly made him wiser than everyone else.",
-      "Bagas: [humbled] That's a hard thing to hear, mostly because there's probably some truth buried underneath the part I want to dismiss.",
-      "Nadia: [warmly] I'm not saying this to embarrass you, Bagas. I'm saying it because I'd rather you hear it from a colleague than lose the team's trust slowly without knowing why.",
-      "Bagas: [reflective] Thank you for that, honestly. It would have been easier for you to stay quiet and just complain to someone else instead.",
-      "Nadia: [sincerely] It would have, but silence never actually fixes anything, it just lets resentment build until it explodes over something unrelated.",
-      "Bagas: [determined] Going forward, I'll try asking questions instead of giving instructions people never asked for, and trust that this team already knows what it's doing.",
+      "Nadia: [thoughtful] Bagas, can I be honest about something, even if it might be a bit uncomfortable to hear right after your promotion?",
+      "Bagas: Of course. I would rather hear it from you than have people quietly resent me without saying why.",
+      "Nadia: [carefully] Since you became team lead, the way you explain things to us has started to feel a little condescending, like we've suddenly forgotten how to do our jobs.",
+      "Bagas: I hadn't noticed that at all. If anything, I've been trying harder to make sure everyone understands each task clearly.",
+      "Nadia: [reflective] I believe that's your intention, but explaining every basic step to people who've done this work for years can come across as doubting our competence.",
+      "Bagas: I suppose I've been anxious about being blamed if something goes wrong under my supervision, so I've been over-explaining out of nervousness.",
+      "Nadia: [honestly] That makes sense, but from where we're standing, it doesn't read as nervousness, it reads as someone who thinks a title suddenly made him wiser than everyone else.",
+      "Bagas: That's a hard thing to hear, mostly because there's probably some truth buried underneath the part I want to dismiss.",
+      "Nadia: [gently] I'm not saying this to embarrass you, Bagas. I'm saying it because I'd rather you hear it from a colleague than lose the team's trust slowly without knowing why.",
+      "Bagas: Thank you for that, honestly. It would have been easier for you to stay quiet and just complain to someone else instead.",
+      "Nadia: [calmly] It would have, but silence never actually fixes anything, it just lets resentment build until it explodes over something unrelated.",
+      "Bagas: Going forward, I'll try asking questions instead of giving instructions people never asked for, and trust that this team already knows what it's doing.",
       "Nadia: [encouraging] That would help a lot. Nobody expects you to have all the answers immediately just because you have a new title.",
-      "Bagas: [grateful] I appreciate you telling me directly rather than letting me find out the hard way, months from now.",
-      "Nadia: [smiling] That's what colleagues who actually respect each other are supposed to do."
+      "Bagas: I appreciate you telling me directly rather than letting me find out the hard way, months from now.",
+      "Nadia: [seriously] That's what colleagues who actually respect each other are supposed to do."
     ],
     "quiz": [
-      { "question": "What does Nadia want to talk to Bagas about?", "options": ["A missed deadline", "The way he has started sounding condescending since becoming team lead", "His promotion being unfair", "A mistake in a report"], "correctIndex": 1, "explanation": "Nadia tells Bagas that since becoming team lead, the way he explains things has started to feel condescending." },
-      { "question": "Why does Bagas say he has been over-explaining tasks?", "options": ["He thinks the team is incompetent", "He's been anxious about being blamed if something goes wrong under his supervision", "He was told to by his manager", "He enjoys repeating instructions"], "correctIndex": 1, "explanation": "Bagas admits he's been anxious about being blamed if something goes wrong, so he's been over-explaining out of nervousness." },
-      { "question": "How does Nadia say his behavior actually reads to the team?", "options": ["As genuine care for the team", "As someone who thinks a title made him wiser than everyone else", "As excessive laziness", "As complete indifference"], "correctIndex": 1, "explanation": "Nadia tells him it reads as someone who thinks a title suddenly made him wiser than everyone else, not as nervousness." },
-      { "question": "Why does Nadia say she chose to tell Bagas directly?", "options": ["She wanted to embarrass him", "She'd rather he hear it from a colleague than lose the team's trust slowly without knowing why", "Her manager told her to", "She wanted a promotion herself"], "correctIndex": 1, "explanation": "She says she'd rather he hear it from a colleague than lose the team's trust slowly without knowing why." },
-      { "question": "What does Bagas decide to do differently going forward?", "options": ["Stop leading the team", "Ask questions instead of giving unnecessary instructions and trust the team's competence", "Explain tasks even more thoroughly", "Avoid talking to the team altogether"], "correctIndex": 1, "explanation": "Bagas decides to try asking questions instead of giving instructions nobody asked for, trusting the team already knows its work." }
-    ]
+      {
+        "question": "What does Nadia want to talk to Bagas about?",
+        "options": [
+          "The way he has started sounding condescending since becoming team lead",
+          "A missed deadline",
+          "His promotion being unfair",
+          "A mistake in a report"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nadia tells Bagas that since becoming team lead, the way he explains things has started to feel condescending."
+      },
+      {
+        "question": "Why does Bagas say he has been over-explaining tasks?",
+        "options": [
+          "He thinks the team is incompetent",
+          "He's been anxious about being blamed if something goes wrong under his supervision",
+          "He was told to by his manager",
+          "He enjoys repeating instructions"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bagas admits he's been anxious about being blamed if something goes wrong, so he's been over-explaining out of nervousness."
+      },
+      {
+        "question": "How does Nadia say his behavior actually reads to the team?",
+        "options": [
+          "As genuine care for the team",
+          "As someone who thinks a title made him wiser than everyone else",
+          "As excessive laziness",
+          "As complete indifference"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nadia tells him it reads as someone who thinks a title suddenly made him wiser than everyone else, not as nervousness."
+      },
+      {
+        "question": "Why does Nadia say she chose to tell Bagas directly?",
+        "options": [
+          "She'd rather he hear it from a colleague than lose the team's trust slowly without knowing why",
+          "She wanted to embarrass him",
+          "Her manager told her to",
+          "She wanted a promotion herself"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she'd rather he hear it from a colleague than lose the team's trust slowly without knowing why."
+      },
+      {
+        "question": "What does Bagas decide to do differently going forward?",
+        "options": [
+          "Stop leading the team",
+          "Explain tasks even more thoroughly",
+          "Ask questions instead of giving unnecessary instructions and trust the team's competence",
+          "Avoid talking to the team altogether"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bagas decides to try asking questions instead of giving instructions nobody asked for, trusting the team already knows its work."
+      },
+      {
+        "question": "Why does Bagas initially over-explain?",
+        "options": [
+          "He thinks nobody can read",
+          "He wants longer meetings",
+          "He was told to retrain everyone",
+          "He fears being blamed for team mistakes"
+        ],
+        "correctIndex": 3,
+        "explanation": "His new responsibility makes him anxious about failures."
+      },
+      {
+        "question": "What makes Nadia's feedback constructive?",
+        "options": [
+          "She shares complaints anonymously",
+          "She questions his promotion",
+          "She refuses to hear his reasons",
+          "She describes impact and explains why she is speaking"
+        ],
+        "correctIndex": 3,
+        "explanation": "She aims to preserve trust rather than embarrass him."
+      },
+      {
+        "question": "What does Bagas admit after hearing the criticism?",
+        "options": [
+          "The team lacks basic skills",
+          "His title should be withdrawn",
+          "Part of it is probably true",
+          "Nadia misunderstood every instruction"
+        ],
+        "correctIndex": 2,
+        "explanation": "He resists dismissal and acknowledges uncomfortable evidence."
+      },
+      {
+        "question": "How will asking questions improve his leadership?",
+        "options": [
+          "It removes his responsibility",
+          "It prevents all project errors",
+          "It makes instructions unnecessary",
+          "It lets experienced colleagues show what they know"
+        ],
+        "correctIndex": 3,
+        "explanation": "He plans to trust the team's existing competence."
+      },
+      {
+        "question": "Which outcome does Nadia hope to prevent?",
+        "options": [
+          "Bagas receiving another promotion",
+          "Quiet resentment growing into lost trust",
+          "The team finishing early",
+          "Colleagues asking for guidance"
+        ],
+        "correctIndex": 1,
+        "explanation": "She speaks before frustration becomes more damaging."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-akhlak-04",
@@ -108,30 +456,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [tense] This morning, a driver cut sharply into my lane without signaling, forcing me to brake so hard that my coffee spilled across the passenger seat.",
-      "Narrator: [irritated] When we both stopped at the next light, he rolled down his window and shouted that I should learn how to drive, as though the fault had somehow been mine.",
-      "Narrator: [honestly] For a few seconds, every instinct in me wanted to shout something equally sharp back, something that would wound rather than merely respond.",
-      "Narrator: [reflective] I noticed my hands tightening on the wheel, my jaw clenching, that familiar heat rising up the back of my neck before words even form.",
-      "Narrator: [thoughtful] What stopped me wasn't some sudden burst of saintliness; it was remembering how rarely, if ever, shouting back has actually resolved anything for me.",
-      "Narrator: [determined] So instead, I rolled my window down only halfway, and simply said that I hoped the rest of his morning went more smoothly than this moment had.",
-      "Narrator: [surprised] He looked genuinely thrown off, as if he had been braced for a fight and had no idea what to do with something other than one.",
-      "Narrator: [reflective] The light changed, he drove off without another word, and I sat there for a moment, oddly proud of a sentence that cost me almost nothing to say.",
-      "Narrator: [honestly] Had I matched his anger, that exchange might have escalated into something neither of us could have taken back, over a spilled cup of coffee.",
-      "Narrator: [thoughtful] It occurred to me later that his morning had probably already gone wrong before he ever reached my lane, and that his outburst likely had little to do with me.",
-      "Narrator: [warmly] Anger, I've noticed, often gets displaced onto whoever happens to be nearest, regardless of who actually deserves it.",
-      "Narrator: [peacefully] Restraint isn't about pretending the provocation didn't sting; it's choosing not to let someone else's bad morning dictate how the rest of mine unfolds.",
-      "Narrator: [with a small smile] I bought a new coffee on the way to work, and honestly, that small inconvenience barely crossed my mind by the time I arrived."
+      "Narrator: [thoughtful] This morning, a driver cut sharply into my lane without signaling, forcing me to brake so hard that my coffee spilled across the passenger seat.",
+      "Narrator: When we both stopped at the next light, he rolled down his window and shouted that I should learn how to drive, as though the fault had somehow been mine.",
+      "Narrator: [carefully] For a few seconds, every instinct in me wanted to shout something equally sharp back, something that would wound rather than merely respond.",
+      "Narrator: I noticed my hands tightening on the wheel, my jaw clenching, that familiar heat rising up the back of my neck before words even form.",
+      "Narrator: [reflective] What stopped me wasn't some sudden burst of saintliness; it was remembering how rarely, if ever, shouting back has actually resolved anything for me.",
+      "Narrator: So instead, I rolled my window down only halfway, and simply said that I hoped the rest of his morning went more smoothly than this moment had.",
+      "Narrator: [honestly] He looked genuinely thrown off, as if he had been braced for a fight and had no idea what to do with something other than one.",
+      "Narrator: The light changed, he drove off without another word, and I sat there for a moment, oddly proud of a sentence that cost me almost nothing to say.",
+      "Narrator: [gently] Had I matched his anger, that exchange might have escalated into something neither of us could have taken back, over a spilled cup of coffee.",
+      "Narrator: It occurred to me later that his morning had probably already gone wrong before he ever reached my lane, and that his outburst likely had little to do with me.",
+      "Narrator: [calmly] Anger, I've noticed, often gets displaced onto whoever happens to be nearest, regardless of who actually deserves it.",
+      "Narrator: Restraint isn't about pretending the provocation didn't sting; it's choosing not to let someone else's bad morning dictate how the rest of mine unfolds.",
+      "Narrator: [encouraging] I bought a new coffee on the way to work, and honestly, that small inconvenience barely crossed my mind by the time I arrived."
     ],
     "quiz": [
-      { "question": "What did the other driver do this morning?", "options": ["He waved politely", "He cut sharply into the narrator's lane without signaling", "He stopped to help", "He apologized immediately"], "correctIndex": 1, "explanation": "A driver cut sharply into the narrator's lane without signaling, forcing him to brake hard." },
-      { "question": "What did the driver shout at the next light?", "options": ["An apology", "That the narrator should learn how to drive", "A request for directions", "Nothing at all"], "correctIndex": 1, "explanation": "The driver shouted that the narrator should learn how to drive, as if the fault had been his." },
-      { "question": "What stopped the narrator from shouting back?", "options": ["He was too scared", "He remembered that shouting back rarely resolves anything", "A police officer intervened", "He didn't hear the man"], "correctIndex": 1, "explanation": "He recalls that it wasn't sudden saintliness but remembering how rarely shouting back actually resolves anything." },
-      { "question": "What did the narrator actually say to the man?", "options": ["Nothing at all", "That he hoped the rest of his morning went more smoothly", "An insult back", "A threat to call the police"], "correctIndex": 1, "explanation": "He said he hoped the rest of the man's morning went more smoothly than that moment had." },
-      { "question": "What does the narrator conclude about restraint?", "options": ["It means pretending provocation doesn't sting", "It means choosing not to let someone else's bad morning dictate the rest of his own", "It is a sign of weakness", "It only works with strangers"], "correctIndex": 1, "explanation": "He concludes restraint isn't pretending the provocation didn't sting, but choosing not to let someone else's bad morning dictate his own." }
-    ]
+      {
+        "question": "What did the other driver do this morning?",
+        "options": [
+          "He waved politely",
+          "He stopped to help",
+          "He apologized immediately",
+          "He cut sharply into the narrator's lane without signaling"
+        ],
+        "correctIndex": 3,
+        "explanation": "A driver cut sharply into the narrator's lane without signaling, forcing him to brake hard."
+      },
+      {
+        "question": "What did the driver shout at the next light?",
+        "options": [
+          "That the narrator should learn how to drive",
+          "An apology",
+          "A request for directions",
+          "Nothing at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "The driver shouted that the narrator should learn how to drive, as if the fault had been his."
+      },
+      {
+        "question": "What stopped the narrator from shouting back?",
+        "options": [
+          "He was too scared",
+          "A police officer intervened",
+          "He didn't hear the man",
+          "He remembered that shouting back rarely resolves anything"
+        ],
+        "correctIndex": 3,
+        "explanation": "He recalls that it wasn't sudden saintliness but remembering how rarely shouting back actually resolves anything."
+      },
+      {
+        "question": "What did the narrator actually say to the man?",
+        "options": [
+          "Nothing at all",
+          "An insult back",
+          "That he hoped the rest of his morning went more smoothly",
+          "A threat to call the police"
+        ],
+        "correctIndex": 2,
+        "explanation": "He said he hoped the rest of the man's morning went more smoothly than that moment had."
+      },
+      {
+        "question": "What does the narrator conclude about restraint?",
+        "options": [
+          "It means pretending provocation doesn't sting",
+          "It means choosing not to let someone else's bad morning dictate the rest of his own",
+          "It is a sign of weakness",
+          "It only works with strangers"
+        ],
+        "correctIndex": 1,
+        "explanation": "He concludes restraint isn't pretending the provocation didn't sting, but choosing not to let someone else's bad morning dictate his own."
+      },
+      {
+        "question": "What physical signs showed the narrator's anger?",
+        "options": [
+          "Tight hands, a clenched jaw, and rising heat",
+          "Tears and shaking knees",
+          "A headache and blurred sight",
+          "A calm voice and relaxed shoulders"
+        ],
+        "correctIndex": 0,
+        "explanation": "He notices anger in his body before speaking."
+      },
+      {
+        "question": "Why was the other driver surprised?",
+        "options": [
+          "He recognised the narrator",
+          "The traffic light stayed red",
+          "He expected an equally aggressive response",
+          "His own window would not close"
+        ],
+        "correctIndex": 2,
+        "explanation": "The restrained sentence interrupted the expected fight."
+      },
+      {
+        "question": "What escalation did the narrator avoid?",
+        "options": [
+          "A formal police investigation",
+          "A conflict neither driver could easily undo",
+          "A delayed business meeting",
+          "A damaged traffic signal"
+        ],
+        "correctIndex": 1,
+        "explanation": "Matching anger could have turned a minor incident serious."
+      },
+      {
+        "question": "How does he interpret the driver's outburst later?",
+        "options": [
+          "It was carefully planned",
+          "It concerned the spilled coffee",
+          "It proved the narrator drove badly",
+          "It may have been displaced from earlier frustration"
+        ],
+        "correctIndex": 3,
+        "explanation": "He suspects the anger began before their encounter."
+      },
+      {
+        "question": "What did restraint allow the narrator to protect?",
+        "options": [
+          "The original cup of coffee",
+          "The rest of his own morning",
+          "The other driver's licence",
+          "The traffic schedule"
+        ],
+        "correctIndex": 1,
+        "explanation": "He refused to let another person's anger control his day."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-akhlak-05",
@@ -140,37 +602,154 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Today's guest, Ratih, has written about a mentor who shaped her early career and then, by her own account, betrayed her trust rather badly. Welcome, Ratih.",
-      "Guest: [composed] Thank you for having me. It's still a strange thing to discuss openly, even years after it happened.",
-      "Host: [curious] Without reliving every detail, could you sketch out what actually happened between the two of you?",
-      "Guest: [measured] She mentored me for nearly four years, then submitted my unpublished research under her own name to a competitive grant committee.",
-      "Host: [surprised] That's a serious breach, particularly given how much trust mentorship usually requires in the first place.",
-      "Guest: [reflective] It was, and what made it sting more was that I had genuinely admired her, which made the betrayal feel less like theft and more like grief.",
-      "Host: [gently] How did you initially respond once you discovered what she had done?",
-      "Guest: [honestly] I considered exposing her publicly, and part of me still believes that would have been justified, given how blatant it was.",
-      "Guest: [thoughtful] Instead, I confronted her privately first, mostly because I wanted to understand whether there was any explanation I hadn't considered.",
-      "Host: [interested] Was there one, in the end?",
-      "Guest: [wry] Not really. She admitted she'd been under pressure to secure funding and had convinced herself I would eventually be credited later.",
-      "Host: [curious] So how did you arrive at forgiveness, if that's even the right word for where you landed?",
-      "Guest: [reflective] Forgiveness, for me, wasn't excusing what she did or pretending the harm hadn't been real and lasting.",
-      "Guest: [warmly] It was releasing the need to see her punished before I could move forward with my own work and peace of mind.",
-      "Host: [thoughtful] Do you still work in the same field as her now?",
-      "Guest: [calmly] Occasionally our paths cross at conferences, and I've found I can be civil without pretending we're close, which feels like the honest middle ground.",
-      "Host: [curious] Would you say the experience changed how you mentor others now?",
-      "Guest: [sincerely] Considerably. I credit every collaborator explicitly now, sometimes more generously than necessary, because I remember what its absence felt like.",
-      "Host: [warmly] That's a grounded way to have processed something so painful. Thank you for sharing it, Ratih."
+      "Host: [thoughtful] Today's guest, Ratih, has written about a mentor who shaped her early career and then, by her own account, betrayed her trust rather badly. Welcome, Ratih.",
+      "Guest: Thank you for having me. It's still a strange thing to discuss openly, even years after it happened.",
+      "Host: [carefully] Without reliving every detail, could you sketch out what actually happened between the two of you?",
+      "Guest: She mentored me for nearly four years, then submitted my unpublished research under her own name to a competitive grant committee.",
+      "Host: [reflective] That's a serious breach, particularly given how much trust mentorship usually requires in the first place.",
+      "Guest: It was, and what made it sting more was that I had genuinely admired her, which made the betrayal feel less like theft and more like grief.",
+      "Host: [honestly] How did you initially respond once you discovered what she had done?",
+      "Guest: I considered exposing her publicly, and part of me still believes that would have been justified, given how blatant it was.",
+      "Guest: [gently] Instead, I confronted her privately first, mostly because I wanted to understand whether there was any explanation I hadn't considered.",
+      "Host: Was there one, in the end?",
+      "Guest: [calmly] Not really. She admitted she'd been under pressure to secure funding and had convinced herself I would eventually be credited later.",
+      "Host: So how did you arrive at forgiveness, if that's even the right word for where you landed?",
+      "Guest: [encouraging] Forgiveness, for me, wasn't excusing what she did or pretending the harm hadn't been real and lasting.",
+      "Guest: It was releasing the need to see her punished before I could move forward with my own work and peace of mind.",
+      "Host: [seriously] Do you still work in the same field as her now?",
+      "Guest: Occasionally our paths cross at conferences, and I've found I can be civil without pretending we're close, which feels like the honest middle ground.",
+      "Host: Would you say the experience changed how you mentor others now?",
+      "Guest: Considerably. I credit every collaborator explicitly now, sometimes more generously than necessary, because I remember what its absence felt like.",
+      "Host: That's a grounded way to have processed something so painful. Thank you for sharing it, Ratih."
     ],
     "quiz": [
-      { "question": "What did Ratih's mentor do that betrayed her trust?", "options": ["She fired her without warning", "She submitted Ratih's unpublished research under her own name to a grant committee", "She refused to write a recommendation letter", "She publicly criticized her work"], "correctIndex": 1, "explanation": "The mentor submitted Ratih's unpublished research under her own name to a competitive grant committee." },
-      { "question": "Why did the betrayal feel especially painful to Ratih?", "options": ["She had never respected the mentor", "She had genuinely admired her, making it feel more like grief than theft", "It happened publicly", "She lost her job because of it"], "correctIndex": 1, "explanation": "Ratih says she had genuinely admired the mentor, which made the betrayal feel less like theft and more like grief." },
-      { "question": "What explanation did the mentor give when confronted?", "options": ["She denied everything", "She was under pressure to secure funding and convinced herself Ratih would be credited later", "She said it was a clerical mistake", "She blamed the grant committee"], "correctIndex": 1, "explanation": "The mentor admitted she'd been under pressure to secure funding and had convinced herself Ratih would eventually be credited." },
-      { "question": "How does Ratih define forgiveness in this context?", "options": ["Excusing what happened completely", "Releasing the need to see the mentor punished before she could move forward", "Forgetting the incident entirely", "Publicly reconciling with the mentor"], "correctIndex": 1, "explanation": "She describes forgiveness as releasing the need to see her punished before she could move forward with her own peace of mind." },
-      { "question": "How has the experience changed how Ratih mentors others now?", "options": ["She avoids mentoring anyone", "She credits every collaborator explicitly, sometimes more generously than necessary", "She no longer trusts any colleague", "She refuses to work with mentors again"], "correctIndex": 1, "explanation": "She now credits every collaborator explicitly, sometimes more generously than strictly necessary, remembering what its absence felt like." }
-    ]
+      {
+        "question": "What did Ratih's mentor do that betrayed her trust?",
+        "options": [
+          "She fired her without warning",
+          "She refused to write a recommendation letter",
+          "She publicly criticized her work",
+          "She submitted Ratih's unpublished research under her own name to a grant committee"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mentor submitted Ratih's unpublished research under her own name to a competitive grant committee."
+      },
+      {
+        "question": "Why did the betrayal feel especially painful to Ratih?",
+        "options": [
+          "She had genuinely admired her, making it feel more like grief than theft",
+          "She had never respected the mentor",
+          "It happened publicly",
+          "She lost her job because of it"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ratih says she had genuinely admired the mentor, which made the betrayal feel less like theft and more like grief."
+      },
+      {
+        "question": "What explanation did the mentor give when confronted?",
+        "options": [
+          "She was under pressure to secure funding and convinced herself Ratih would be credited later",
+          "She denied everything",
+          "She said it was a clerical mistake",
+          "She blamed the grant committee"
+        ],
+        "correctIndex": 0,
+        "explanation": "The mentor admitted she'd been under pressure to secure funding and had convinced herself Ratih would eventually be credited."
+      },
+      {
+        "question": "How does Ratih define forgiveness in this context?",
+        "options": [
+          "Excusing what happened completely",
+          "Forgetting the incident entirely",
+          "Publicly reconciling with the mentor",
+          "Releasing the need to see the mentor punished before she could move forward"
+        ],
+        "correctIndex": 3,
+        "explanation": "She describes forgiveness as releasing the need to see her punished before she could move forward with her own peace of mind."
+      },
+      {
+        "question": "How has the experience changed how Ratih mentors others now?",
+        "options": [
+          "She avoids mentoring anyone",
+          "She no longer trusts any colleague",
+          "She credits every collaborator explicitly, sometimes more generously than necessary",
+          "She refuses to work with mentors again"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now credits every collaborator explicitly, sometimes more generously than strictly necessary, remembering what its absence felt like."
+      },
+      {
+        "question": "Why did Ratih confront the mentor privately first?",
+        "options": [
+          "She planned to hide the research theft",
+          "She wanted to hear any explanation she had missed",
+          "The grant committee required it",
+          "She hoped to collaborate again"
+        ],
+        "correctIndex": 1,
+        "explanation": "Private contact came before deciding on further accountability."
+      },
+      {
+        "question": "What does Ratih refuse to equate with forgiveness?",
+        "options": [
+          "Remaining civil at conferences",
+          "Continuing her own research",
+          "Excusing the misconduct or denying its harm",
+          "Crediting collaborators clearly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her forgiveness does not rewrite the wrongdoing."
+      },
+      {
+        "question": "Why can she be civil without being close?",
+        "options": [
+          "They now work at the same university",
+          "Boundaries and forgiveness can coexist",
+          "The mentor returned the grant",
+          "No professional harm occurred"
+        ],
+        "correctIndex": 1,
+        "explanation": "Civil contact does not require restored intimacy."
+      },
+      {
+        "question": "What lesson shaped Ratih's mentoring practice?",
+        "options": [
+          "Avoid all competitive grants",
+          "Publish research without partners",
+          "Keep ideas out of writing",
+          "Give collaborators explicit credit"
+        ],
+        "correctIndex": 3,
+        "explanation": "She responds to the harm by recognising others carefully."
+      },
+      {
+        "question": "What simple inference follows from Ratih's account?",
+        "options": [
+          "Trust was completely restored",
+          "Moving forward did not depend on seeing punishment",
+          "Public exposure was impossible",
+          "The mentor's pressure justified theft"
+        ],
+        "correctIndex": 1,
+        "explanation": "She released the need for punishment before reclaiming peace."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-akhlak-06",
@@ -179,30 +758,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [gentle] My grandfather asks me the same question roughly a dozen times a day now, ever since his memory began slipping away more noticeably last year.",
-      "Narrator: [honestly] In the beginning, I answered him warmly the first few times, and then, almost against my will, my tone would sharpen by the fifth or sixth repetition.",
-      "Narrator: [ashamed] I remember snapping at him once, asking why he couldn't simply remember what I had just told him, and the hurt confusion on his face still haunts me.",
-      "Narrator: [reflective] He wasn't being difficult on purpose; his mind was genuinely incapable of retaining what mine takes entirely for granted.",
-      "Narrator: [thoughtful] That moment forced me to confront something uncomfortable about my own patience, which I had always assumed was a fairly solid trait of mine.",
-      "Narrator: [honestly] It turns out my patience had simply never been tested by something this relentless, something offering no visible finish line to work toward.",
-      "Narrator: [determined] So I started treating each repeated question as though it were being asked for the very first time, rather than the twentieth.",
-      "Narrator: [gently] It required deliberately slowing my own thinking down, letting go of the assumption that a conversation should move forward rather than circle endlessly.",
-      "Narrator: [reflective] Some days I still fail at this, especially when I'm exhausted, and I have to quietly apologize to him afterward, even though he rarely remembers the sharpness anyway.",
-      "Narrator: [warmly] What surprised me most was discovering that his questions, repeated as they were, often carried a flicker of real curiosity each time, as though newly arriving.",
-      "Narrator: [thoughtful] I've started answering him with small variations now, adding a new detail each time, which somehow makes the repetition feel less like a burden and more like a ritual.",
-      "Narrator: [peacefully] Patience with him, I've realized, isn't a single decision made once, but a muscle I have to keep choosing to exercise, conversation after conversation.",
-      "Narrator: [with a small smile] Yesterday he asked me the same question four times before lunch, and for once, I meant it equally each time I answered."
+      "Narrator: [thoughtful] My grandfather asks me the same question roughly a dozen times a day now, ever since his memory began slipping away more noticeably last year.",
+      "Narrator: In the beginning, I answered him warmly the first few times, and then, almost against my will, my tone would sharpen by the fifth or sixth repetition.",
+      "Narrator: [carefully] I remember snapping at him once, asking why he couldn't simply remember what I had just told him, and the hurt confusion on his face still haunts me.",
+      "Narrator: He wasn't being difficult on purpose; his mind was genuinely incapable of retaining what mine takes entirely for granted.",
+      "Narrator: [reflective] That moment forced me to confront something uncomfortable about my own patience, which I had always assumed was a fairly solid trait of mine.",
+      "Narrator: It turns out my patience had simply never been tested by something this relentless, something offering no visible finish line to work toward.",
+      "Narrator: [honestly] So I started treating each repeated question as though it were being asked for the very first time, rather than the twentieth.",
+      "Narrator: It required deliberately slowing my own thinking down, letting go of the assumption that a conversation should move forward rather than circle endlessly.",
+      "Narrator: [gently] Some days I still fail at this, especially when I'm exhausted, and I have to quietly apologize to him afterward, even though he rarely remembers the sharpness anyway.",
+      "Narrator: What surprised me most was discovering that his questions, repeated as they were, often carried a flicker of real curiosity each time, as though newly arriving.",
+      "Narrator: [calmly] I've started answering him with small variations now, adding a new detail each time, which somehow makes the repetition feel less like a burden and more like a ritual.",
+      "Narrator: Patience with him, I've realized, isn't a single decision made once, but a muscle I have to keep choosing to exercise, conversation after conversation.",
+      "Narrator: [encouraging] Yesterday he asked me the same question four times before lunch, and for once, I meant it equally each time I answered."
     ],
     "quiz": [
-      { "question": "Why does the grandfather ask the same question repeatedly?", "options": ["He is testing the narrator", "His memory has been slipping away noticeably since last year", "He enjoys repeating himself", "He is hard of hearing"], "correctIndex": 1, "explanation": "His memory began slipping away more noticeably last year, causing him to repeat the same question often." },
-      { "question": "What happened once that the narrator regrets?", "options": ["She ignored him completely", "She snapped at him, asking why he couldn't remember what she'd just told him", "She stopped visiting him", "She wrote him an angry letter"], "correctIndex": 1, "explanation": "She once snapped at him, asking why he couldn't remember, and the hurt confusion on his face still haunts her." },
-      { "question": "What did that moment force the narrator to confront?", "options": ["That her grandfather was being deliberately difficult", "That her patience had never really been tested by something this relentless", "That she needed a new job", "That memory loss is not a real condition"], "correctIndex": 1, "explanation": "It forced her to realize her patience had never been tested by something this relentless, with no visible finish line." },
-      { "question": "What approach did the narrator start taking with his repeated questions?", "options": ["Ignoring the questions entirely", "Treating each repeated question as though it were being asked for the first time", "Writing the answers down instead of speaking", "Asking someone else to answer instead"], "correctIndex": 1, "explanation": "She started treating each repeated question as though it were being asked for the very first time." },
-      { "question": "What does the narrator conclude about patience by the end?", "options": ["It is a single decision made once", "It is a muscle she has to keep choosing to exercise, conversation after conversation", "It becomes unnecessary with practice", "It only matters with strangers, not family"], "correctIndex": 1, "explanation": "She concludes patience isn't a single decision made once, but a muscle she must keep choosing to exercise." }
-    ]
+      {
+        "question": "Why does the grandfather ask the same question repeatedly?",
+        "options": [
+          "His memory has been slipping away noticeably since last year",
+          "He is testing the narrator",
+          "He enjoys repeating himself",
+          "He is hard of hearing"
+        ],
+        "correctIndex": 0,
+        "explanation": "His memory began slipping away more noticeably last year, causing him to repeat the same question often."
+      },
+      {
+        "question": "What happened once that the narrator regrets?",
+        "options": [
+          "She ignored him completely",
+          "She snapped at him, asking why he couldn't remember what she'd just told him",
+          "She stopped visiting him",
+          "She wrote him an angry letter"
+        ],
+        "correctIndex": 1,
+        "explanation": "She once snapped at him, asking why he couldn't remember, and the hurt confusion on his face still haunts her."
+      },
+      {
+        "question": "What did that moment force the narrator to confront?",
+        "options": [
+          "That her grandfather was being deliberately difficult",
+          "That her patience had never really been tested by something this relentless",
+          "That she needed a new job",
+          "That memory loss is not a real condition"
+        ],
+        "correctIndex": 1,
+        "explanation": "It forced her to realize her patience had never been tested by something this relentless, with no visible finish line."
+      },
+      {
+        "question": "What approach did the narrator start taking with his repeated questions?",
+        "options": [
+          "Ignoring the questions entirely",
+          "Treating each repeated question as though it were being asked for the first time",
+          "Writing the answers down instead of speaking",
+          "Asking someone else to answer instead"
+        ],
+        "correctIndex": 1,
+        "explanation": "She started treating each repeated question as though it were being asked for the very first time."
+      },
+      {
+        "question": "What does the narrator conclude about patience by the end?",
+        "options": [
+          "It is a single decision made once",
+          "It is a muscle she has to keep choosing to exercise, conversation after conversation",
+          "It becomes unnecessary with practice",
+          "It only matters with strangers, not family"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes patience isn't a single decision made once, but a muscle she must keep choosing to exercise."
+      },
+      {
+        "question": "Why did the grandfather look hurt and confused?",
+        "options": [
+          "He had asked about another person",
+          "He remembered an earlier argument",
+          "He could not understand why repetition caused anger",
+          "He wanted to end the visit"
+        ],
+        "correctIndex": 2,
+        "explanation": "His memory condition made the question new to him."
+      },
+      {
+        "question": "What did the narrator learn about previous patience?",
+        "options": [
+          "It was stronger when exhausted",
+          "It depended on public praise",
+          "It never required deliberate effort",
+          "It had not faced such relentless repetition"
+        ],
+        "correctIndex": 3,
+        "explanation": "The situation exposed an untested limit."
+      },
+      {
+        "question": "Why does the narrator vary the answers now?",
+        "options": [
+          "It tests the grandfather's memory",
+          "It avoids answering accurately",
+          "It shortens every conversation",
+          "It makes repeated exchanges feel more meaningful"
+        ],
+        "correctIndex": 3,
+        "explanation": "Small new details turn repetition into a shared ritual."
+      },
+      {
+        "question": "What does apologising after sharpness show?",
+        "options": [
+          "The grandfather demands formal apologies",
+          "Memory loss removes every consequence",
+          "The narrator accepts responsibility despite imperfect care",
+          "Fatigue excuses unkind speech"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator repairs failures even when they may be forgotten."
+      },
+      {
+        "question": "Which claim is most consistent with the story?",
+        "options": [
+          "Patience is renewed in each difficult interaction",
+          "Patience becomes automatic after one decision",
+          "Caregivers should never feel tired",
+          "Repeated questions should be ignored"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator describes patience as a repeatedly exercised muscle."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-akhlak-07",
@@ -211,33 +904,585 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Client", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Client",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Client: [pleasant] Farah, before we finalize this order, is there anything I should know about the new batch that isn't already covered in the specifications?",
-      "Farah: [hesitant] Actually, yes, and I'd rather tell you now than have you discover it after the shipment has already left our warehouse.",
-      "Client: [attentive] That sounds serious. Go ahead, I'm listening.",
-      "Farah: [honestly] Our quality team found that roughly two percent of this batch has a minor stitching defect that likely wouldn't be noticed during a routine inspection.",
-      "Client: [concerned] Two percent isn't negligible, given the size of this order. Why wasn't this flagged in the report you sent me yesterday?",
-      "Farah: [regretful] The report was finalized before the defect was discovered this morning, and I could have simply stayed quiet, since the margin falls within what's technically an acceptable industry threshold.",
-      "Client: [firm] But you're telling me anyway.",
-      "Farah: [sincerely] I am, because you've trusted us with three years of business based on transparency, and staying silent now would be trading that trust for one easy shipment.",
-      "Client: [thoughtful] I appreciate that more than you probably realize. Most suppliers would have shipped it and hoped nobody noticed.",
-      "Farah: [practical] We can either replace the flawed units before shipping, which would delay delivery by four days, or ship as planned with a documented discount reflecting the defect rate.",
-      "Client: [considering] If our roles were reversed, which option would you choose?",
-      "Farah: [honestly] Honestly, I'd rather wait the four days. A discount fixes the invoice, but it doesn't fix a customer opening a box and finding something wrong.",
-      "Client: [decided] Let's do that, then. Delay the shipment and replace the flawed units properly.",
-      "Farah: [relieved] I'll confirm that with production this afternoon and send you an updated timeline before the day is out.",
-      "Client: [warmly] Farah, this is exactly why we've stayed with your company this long, even when competitors quote us lower prices.",
-      "Farah: [sincerely] That means a great deal to hear, and it's honestly the whole reason I brought it up rather than letting it slide."
+      "Client: [thoughtful] Farah, before we finalize this order, is there anything I should know about the new batch that isn't already covered in the specifications?",
+      "Farah: Actually, yes, and I'd rather tell you now than have you discover it after the shipment has already left our warehouse.",
+      "Client: [carefully] That sounds serious. Go ahead, I'm listening.",
+      "Farah: Our quality team found that roughly two percent of this batch has a minor stitching defect that likely wouldn't be noticed during a routine inspection.",
+      "Client: [reflective] Two percent isn't negligible, given the size of this order. Why wasn't this flagged in the report you sent me yesterday?",
+      "Farah: The report was finalized before the defect was discovered this morning, and I could have simply stayed quiet, since the margin falls within what's technically an acceptable industry threshold.",
+      "Client: [honestly] But you're telling me anyway.",
+      "Farah: I am, because you've trusted us with three years of business based on transparency, and staying silent now would be trading that trust for one easy shipment.",
+      "Client: [gently] I appreciate that more than you probably realize. Most suppliers would have shipped it and hoped nobody noticed.",
+      "Farah: We can either replace the flawed units before shipping, which would delay delivery by four days, or ship as planned with a documented discount reflecting the defect rate.",
+      "Client: [calmly] If our roles were reversed, which option would you choose?",
+      "Farah: Honestly, I'd rather wait the four days. A discount fixes the invoice, but it doesn't fix a customer opening a box and finding something wrong.",
+      "Client: [encouraging] Let's do that, then. Delay the shipment and replace the flawed units properly.",
+      "Farah: I'll confirm that with production this afternoon and send you an updated timeline before the day is out.",
+      "Client: [seriously] Farah, this is exactly why we've stayed with your company this long, even when competitors quote us lower prices.",
+      "Farah: That means a great deal to hear, and it's honestly the whole reason I brought it up rather than letting it slide."
     ],
     "quiz": [
-      { "question": "What defect did Farah's quality team discover in the new batch?", "options": ["A color mismatch", "A minor stitching defect in roughly two percent of the batch", "A missing label", "A packaging error"], "correctIndex": 1, "explanation": "The quality team found that roughly two percent of the batch has a minor stitching defect." },
-      { "question": "Why wasn't the defect included in the report sent the day before?", "options": ["Farah forgot to mention it", "The report was finalized before the defect was discovered that morning", "The client didn't ask for details", "It was intentionally hidden"], "correctIndex": 1, "explanation": "The report was finalized before the defect was discovered that morning, though Farah chose to disclose it anyway." },
-      { "question": "Why does Farah decide to tell the client despite the defect being within an acceptable threshold?", "options": ["She was required to by law", "Staying silent would mean trading three years of trust for one easy shipment", "The client already knew", "She wanted a bonus"], "correctIndex": 1, "explanation": "Farah says staying silent now would be trading the client's trust, built over three years, for one easy shipment." },
-      { "question": "What two options does Farah offer the client?", "options": ["Cancel the order or double the price", "Replace the flawed units with a four-day delay, or ship as planned with a documented discount", "Ship immediately with no changes, or refund everything", "Switch suppliers or accept the defect silently"], "correctIndex": 1, "explanation": "She offers either replacing the flawed units with a four-day delay, or shipping as planned with a documented discount." },
-      { "question": "Which option does Farah say she would personally choose, and why?", "options": ["The discount, because it's faster", "Waiting the four days, because a discount doesn't fix a customer finding something wrong", "Neither, she has no opinion", "Cancelling the order entirely"], "correctIndex": 1, "explanation": "Farah says she'd rather wait the four days, since a discount fixes the invoice but not a customer finding a flaw." }
-    ]
+      {
+        "question": "What defect did Farah's quality team discover in the new batch?",
+        "options": [
+          "A color mismatch",
+          "A minor stitching defect in roughly two percent of the batch",
+          "A missing label",
+          "A packaging error"
+        ],
+        "correctIndex": 1,
+        "explanation": "The quality team found that roughly two percent of the batch has a minor stitching defect."
+      },
+      {
+        "question": "Why wasn't the defect included in the report sent the day before?",
+        "options": [
+          "Farah forgot to mention it",
+          "The client didn't ask for details",
+          "The report was finalized before the defect was discovered that morning",
+          "It was intentionally hidden"
+        ],
+        "correctIndex": 2,
+        "explanation": "The report was finalized before the defect was discovered that morning, though Farah chose to disclose it anyway."
+      },
+      {
+        "question": "Why does Farah decide to tell the client despite the defect being within an acceptable threshold?",
+        "options": [
+          "She was required to by law",
+          "The client already knew",
+          "Staying silent would mean trading three years of trust for one easy shipment",
+          "She wanted a bonus"
+        ],
+        "correctIndex": 2,
+        "explanation": "Farah says staying silent now would be trading the client's trust, built over three years, for one easy shipment."
+      },
+      {
+        "question": "What two options does Farah offer the client?",
+        "options": [
+          "Cancel the order or double the price",
+          "Ship immediately with no changes, or refund everything",
+          "Replace the flawed units with a four-day delay, or ship as planned with a documented discount",
+          "Switch suppliers or accept the defect silently"
+        ],
+        "correctIndex": 2,
+        "explanation": "She offers either replacing the flawed units with a four-day delay, or shipping as planned with a documented discount."
+      },
+      {
+        "question": "Which option does Farah say she would personally choose, and why?",
+        "options": [
+          "The discount, because it's faster",
+          "Neither, she has no opinion",
+          "Cancelling the order entirely",
+          "Waiting the four days, because a discount doesn't fix a customer finding something wrong"
+        ],
+        "correctIndex": 3,
+        "explanation": "Farah says she'd rather wait the four days, since a discount fixes the invoice but not a customer finding a flaw."
+      },
+      {
+        "question": "Why could Farah technically have stayed silent?",
+        "options": [
+          "The defect rate met an accepted industry threshold",
+          "The client had cancelled the order",
+          "The report already listed the flaw",
+          "Production had replaced every unit"
+        ],
+        "correctIndex": 0,
+        "explanation": "The small rate gave her a convenient excuse not to disclose."
+      },
+      {
+        "question": "What value would silence have placed at risk?",
+        "options": [
+          "The warehouse's opening hours",
+          "Three years of trust built through transparency",
+          "The client's product specifications",
+          "The quality team's employment"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah refuses to trade long-term trust for easy shipment."
+      },
+      {
+        "question": "Why does Farah prefer replacement over a discount?",
+        "options": [
+          "Customers would still receive flawed products",
+          "The discount would delay delivery longer",
+          "Replacement costs the client nothing",
+          "The invoice cannot be changed"
+        ],
+        "correctIndex": 0,
+        "explanation": "A lower price does not correct the product itself."
+      },
+      {
+        "question": "What does the client's final comment imply?",
+        "options": [
+          "Competitors never inspect products",
+          "The client dislikes faster delivery",
+          "Farah's company has exclusive rights",
+          "Honesty matters more than the lowest price"
+        ],
+        "correctIndex": 3,
+        "explanation": "Transparency explains loyalty despite cheaper alternatives."
+      },
+      {
+        "question": "What happens immediately after the client chooses?",
+        "options": [
+          "The client requests a larger discount",
+          "Farah will confirm production and update the timeline",
+          "The quality team cancels the batch",
+          "The shipment leaves that afternoon"
+        ],
+        "correctIndex": 1,
+        "explanation": "She turns the decision into a documented next step."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-akhlak-08",
+    "title": "The Refund No One Would Have Noticed",
+    "level": "B2",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] The customer had already left when I noticed that our payment system had charged her twice. The second amount was small, and the receipt had printed only once, so she probably would not discover it until checking her bank statement.",
+      "Narrator: Our shop was having a difficult month. A broken refrigerator had ruined stock, rent was due, and I was tired of calculating which bill could wait. For a few seconds, the extra payment looked less like an error and more like relief.",
+      "Narrator: [honestly] No colleague had seen the screen. I could have closed the transaction and blamed the software later. Instead, I saved the record, called the number on the order form, and explained exactly what had happened without asking for unnecessary personal information.",
+      "Narrator: She sounded cautious, which was reasonable. I told her not to share any code or password and invited her to contact the payment provider through its official channel. Meanwhile, I submitted the refund from our side and sent a reference number.",
+      "Narrator: [thoughtful] My business partner was not pleased. He asked why I had returned money before the customer complained. I answered that ownership does not change simply because the owner has not noticed a loss.",
+      "Narrator: We reviewed the day's transactions and found two more duplicates. That discovery cost us more in the short term, but it also revealed a faulty setting before dozens of customers were affected.",
+      "Narrator: [calmly] The experience made honesty feel less like an inspiring slogan and more like an ordinary decision made when secrecy is available. Character is often tested by choices too small to attract praise.",
+      "Narrator: We later added a daily reconciliation check and trained two staff members to process refunds. I still worry about the shop's finances, but I no longer confuse financial pressure with permission to keep what is not ours."
+    ],
+    "quiz": [
+      {
+        "question": "What error did the payment system make?",
+        "options": [
+          "It charged one customer twice",
+          "It refunded every purchase",
+          "It printed two correct receipts",
+          "It rejected all card payments"
+        ],
+        "correctIndex": 0,
+        "explanation": "The customer left after a duplicate charge."
+      },
+      {
+        "question": "Why was keeping the extra money tempting?",
+        "options": [
+          "The customer had complained before",
+          "The partner approved it",
+          "The shop was under financial pressure",
+          "The payment provider requested it"
+        ],
+        "correctIndex": 2,
+        "explanation": "Damaged stock and rent made the money look like relief."
+      },
+      {
+        "question": "What security advice did the narrator give the customer?",
+        "options": [
+          "Send a photograph of her card",
+          "Do not share codes or passwords",
+          "Call from a public phone",
+          "Provide her full banking history"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator directed her to official channels without requesting secrets."
+      },
+      {
+        "question": "How did the narrator support the refund?",
+        "options": [
+          "Promised cash without a record",
+          "Deleted the original order",
+          "Asked the customer to visit privately",
+          "Sent a transaction reference number"
+        ],
+        "correctIndex": 3,
+        "explanation": "A reference let the customer verify the process."
+      },
+      {
+        "question": "What did the transaction review uncover?",
+        "options": [
+          "Two more duplicate charges",
+          "A dishonest customer account",
+          "Three missing staff members",
+          "An unpaid supplier invoice"
+        ],
+        "correctIndex": 0,
+        "explanation": "Checking the day revealed a wider system problem."
+      },
+      {
+        "question": "Why did the short-term loss prevent greater harm?",
+        "options": [
+          "It allowed rent to be delayed",
+          "It closed the shop temporarily",
+          "It removed the payment provider",
+          "It exposed a faulty setting before more customers were charged"
+        ],
+        "correctIndex": 3,
+        "explanation": "The refunds prompted discovery before the fault spread."
+      },
+      {
+        "question": "What principle answers the partner's objection?",
+        "options": [
+          "Small errors need no correction",
+          "Unnoticed property still belongs to its owner",
+          "Business pressure changes ownership",
+          "Customers must request every refund"
+        ],
+        "correctIndex": 1,
+        "explanation": "The customer's lack of awareness did not transfer the money."
+      },
+      {
+        "question": "Why does secrecy matter in the narrator's reflection?",
+        "options": [
+          "Private transactions are always suspicious",
+          "Software errors should never be reported",
+          "Integrity is tested when wrongdoing could remain hidden",
+          "Customers prefer anonymous shops"
+        ],
+        "correctIndex": 2,
+        "explanation": "No colleague had seen the duplicate charge."
+      },
+      {
+        "question": "Which control was added afterward?",
+        "options": [
+          "A daily reconciliation check",
+          "A ban on card payments",
+          "A second receipt for every item",
+          "A public customer list"
+        ],
+        "correctIndex": 0,
+        "explanation": "The shop created routine detection and trained refund staff."
+      },
+      {
+        "question": "What is the narrator's final distinction?",
+        "options": [
+          "Honesty eliminates every business loss",
+          "Financial difficulty does not permit keeping another's money",
+          "Refunds should wait for complaints",
+          "Small charges require less care"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pressure explains temptation but does not create permission."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-akhlak-09",
+    "title": "Seven Days Without Public Praise",
+    "level": "B2",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] For one week, our volunteer team tried an unusual experiment: nobody would post photographs of their own contribution. We could report what the project needed, but we would not turn every donated meal or packed box into personal publicity.",
+      "Narrator: I expected the rule to feel simple. By the second day, I understood how much I had depended on visible appreciation. When friends asked what I was doing after work, I wanted to show them proof that my time mattered.",
+      "Narrator: [reflective] The absence of praise also exposed a second problem. We had been choosing tasks that looked impressive on camera while avoiding quiet jobs such as checking expiry dates, cleaning containers, and updating the delivery list.",
+      "Narrator: On Wednesday, I spent two hours correcting addresses. Nobody applauded, but three drivers later said the revised list prevented wasted journeys. The usefulness of the task had not changed; only its visibility had.",
+      "Narrator: [carefully] Our coordinator reminded us that hidden service is not automatically sincere, and visible service is not automatically wrong. Intentions belong to the person and are known fully only to Allah. The exercise was simply a way to examine our habits without judging one another.",
+      "Narrator: By Friday, we had begun thanking people for specific contributions in private. The messages felt more meaningful than a general post because they named the care behind the work.",
+      "Narrator: [thoughtful] When the week ended, we did publish one update—with consent, no identifying details about recipients, and a focus on the remaining need rather than on our faces.",
+      "Narrator: I learned that good character grows through repeated choices: doing necessary work, protecting people's dignity, and accepting that not every valuable action needs an audience."
+    ],
+    "quiz": [
+      {
+        "question": "What rule did volunteers follow for one week?",
+        "options": [
+          "They avoided posting photographs of their own service",
+          "They stopped reporting project needs",
+          "They worked without coordinators",
+          "They accepted no new donations"
+        ],
+        "correctIndex": 0,
+        "explanation": "The experiment removed personal publicity, not useful reporting."
+      },
+      {
+        "question": "What did the narrator discover by day two?",
+        "options": [
+          "The project had no remaining needs",
+          "Friends disliked volunteer work",
+          "Visible appreciation had become personally important",
+          "Photography improved every task"
+        ],
+        "correctIndex": 2,
+        "explanation": "The urge to show proof revealed dependence on praise."
+      },
+      {
+        "question": "Which work had volunteers been avoiding?",
+        "options": [
+          "Driving every delivery",
+          "Quiet tasks such as checking dates and addresses",
+          "Speaking with donors",
+          "Buying new cameras"
+        ],
+        "correctIndex": 1,
+        "explanation": "Less visible maintenance had received less attention."
+      },
+      {
+        "question": "How did corrected addresses help?",
+        "options": [
+          "Recipients received public recognition",
+          "The team gained more followers",
+          "Expiry dates became unnecessary",
+          "Drivers avoided wasted journeys"
+        ],
+        "correctIndex": 3,
+        "explanation": "The unseen task improved delivery efficiency."
+      },
+      {
+        "question": "Why did the coordinator reject judging intentions?",
+        "options": [
+          "Only Allah fully knows what is in a person's heart",
+          "No volunteer had any intention",
+          "Public service is always insincere",
+          "Hidden work is always superior"
+        ],
+        "correctIndex": 0,
+        "explanation": "The exercise examined habits without claiming inner knowledge."
+      },
+      {
+        "question": "What kind of thanks replaced general public praise?",
+        "options": [
+          "Anonymous financial rewards",
+          "Daily public rankings",
+          "Certificates for every task",
+          "Specific private messages"
+        ],
+        "correctIndex": 3,
+        "explanation": "Private thanks named particular care without performance."
+      },
+      {
+        "question": "How did the final public update protect recipients?",
+        "options": [
+          "It showed every recipient's face",
+          "It used consent and omitted identifying details",
+          "It described individual hardships",
+          "It published delivery addresses"
+        ],
+        "correctIndex": 1,
+        "explanation": "The update focused on need rather than exposure."
+      },
+      {
+        "question": "What balance does the narrator recognise?",
+        "options": [
+          "All publicity destroys sincerity",
+          "Hidden tasks need no coordination",
+          "Visible service is not automatically wrong",
+          "Donors should never see progress"
+        ],
+        "correctIndex": 2,
+        "explanation": "Visibility alone cannot establish a person's intention."
+      },
+      {
+        "question": "Which action best fits the experiment's lesson?",
+        "options": [
+          "Complete necessary work even when nobody sees it",
+          "Choose tasks with the best photographs",
+          "Refuse all acknowledgement",
+          "Assume quiet volunteers are more sincere"
+        ],
+        "correctIndex": 0,
+        "explanation": "Value should not depend on an audience."
+      },
+      {
+        "question": "What broader quality does the week cultivate?",
+        "options": [
+          "Popularity through constant updates",
+          "Character through repeated, dignified choices",
+          "Efficiency through removing privacy",
+          "Certainty about other people's motives"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator links good character to service, privacy, and consistency."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-akhlak-10",
+    "title": "When a Supplier Offers a Favour",
+    "level": "B2",
+    "themeId": "akhlak",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [serious] You manage purchasing for a small bakery, and a flour supplier offers you a free weekend trip. He says it is only a thank-you. What makes that difficult?",
+      "Guest: The timing. We are about to renew a large contract, so the gift could influence me or make others reasonably doubt my independence.",
+      "Host: What if you genuinely believe it would not change your decision?",
+      "Guest: [carefully] Personal confidence is not enough. Fairness also depends on transparent processes. I should follow the company's gift policy, disclose the offer, and remove myself from the decision if required.",
+      "Host: Some listeners may think refusing is rude.",
+      "Guest: I can refuse politely: “Thank you for the gesture, but I cannot accept personal benefits connected to a purchasing decision.” That respects the supplier without creating a hidden obligation.",
+      "Host: Suppose the bakery has no written policy.",
+      "Guest: Then the gap should be fixed. Until it is, I would document the offer and ask another responsible person to review the bids using agreed criteria such as quality, reliability, and total cost.",
+      "Host: [curious] Could the supplier donate something to the whole staff instead?",
+      "Guest: Possibly, but only if leadership approves and it cannot distort the tender. Changing the recipient does not automatically remove the conflict.",
+      "Host: What if his flour is genuinely the best option?",
+      "Guest: The bakery may still choose it, but the evidence should be clear enough that the decision stands without the gift.",
+      "Host: [reflective] So integrity is not simply rejecting one trip.",
+      "Guest: Exactly. It means building a process where relationships, pressure, and private benefits cannot quietly replace evidence.",
+      "Host: And how should the supplier be described to colleagues?",
+      "Guest: Factually. Report the offer and its context; do not claim to know his intention. We can address a risky action without declaring what is inside another person's heart."
+    ],
+    "quiz": [
+      {
+        "question": "Why is the supplier's trip a conflict risk?",
+        "options": [
+          "It is offered before a major contract renewal",
+          "The bakery is closed on weekends",
+          "The trip includes no flour",
+          "The supplier lives abroad"
+        ],
+        "correctIndex": 0,
+        "explanation": "Timing could influence or appear to influence purchasing."
+      },
+      {
+        "question": "Why is personal confidence insufficient?",
+        "options": [
+          "Managers cannot travel",
+          "All gifts are legally forbidden",
+          "Others need a transparent basis for the decision",
+          "Confidence reduces product quality"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fair process matters beyond the buyer's self-assessment."
+      },
+      {
+        "question": "What should the buyer do first?",
+        "options": [
+          "Accept before telling colleagues",
+          "Disclose the offer and follow gift policy",
+          "Ask the supplier for cash",
+          "Remove every bidder"
+        ],
+        "correctIndex": 1,
+        "explanation": "Disclosure allows the organisation to manage the conflict."
+      },
+      {
+        "question": "How can the refusal remain courteous?",
+        "options": [
+          "Accuse him of attempted bribery",
+          "Ignore every future message",
+          "Publish his private offer",
+          "Thank the supplier while naming the professional boundary"
+        ],
+        "correctIndex": 3,
+        "explanation": "The suggested wording is clear without claiming bad intent."
+      },
+      {
+        "question": "What if the bakery lacks a policy?",
+        "options": [
+          "Document the offer and arrange independent bid review",
+          "Accept gifts until rules exist",
+          "Cancel the flour contract",
+          "Let the supplier write the rules"
+        ],
+        "correctIndex": 0,
+        "explanation": "An evidence-based review can manage the immediate gap."
+      },
+      {
+        "question": "Why might a staff-wide donation still be problematic?",
+        "options": [
+          "Staff cannot receive shared items",
+          "Donations always lower flour quality",
+          "Leadership must remain uninformed",
+          "Changing recipients may not remove influence"
+        ],
+        "correctIndex": 3,
+        "explanation": "The benefit could still distort the tender."
+      },
+      {
+        "question": "When could the bakery still select this supplier?",
+        "options": [
+          "Only after accepting the trip",
+          "When evidence shows the bid is best without the gift",
+          "When no criteria are recorded",
+          "If the supplier apologises publicly"
+        ],
+        "correctIndex": 1,
+        "explanation": "The contract decision must stand independently."
+      },
+      {
+        "question": "What criteria should another reviewer use?",
+        "options": [
+          "Friendship, travel, and gratitude",
+          "Popularity, packaging, and promises",
+          "Quality, reliability, and total cost",
+          "Seniority, secrecy, and speed"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guest names objective purchasing factors."
+      },
+      {
+        "question": "Why avoid describing the supplier's intention?",
+        "options": [
+          "The action can be reported without claiming inner motives",
+          "Intentions never affect ethics",
+          "Colleagues already know his thoughts",
+          "The offer must remain secret"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fact-based reporting avoids unsupported character judgment."
+      },
+      {
+        "question": "What does integrity require beyond refusing one gift?",
+        "options": [
+          "Rejecting every supplier relationship",
+          "A process that prevents private benefits replacing evidence",
+          "Choosing the cheapest bid automatically",
+          "Keeping offers between two people"
+        ],
+        "correctIndex": 1,
+        "explanation": "System design protects fair decisions over time."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

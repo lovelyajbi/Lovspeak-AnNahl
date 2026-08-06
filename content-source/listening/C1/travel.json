@@ -6,32 +6,146 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] There is a particular vanity in believing you have found the real version of a city, as though authenticity were a hidden room only you had discovered.",
-      "Narrator: [wry] I used to pride myself on avoiding anywhere mentioned in a guidebook, as if obscurity were itself a form of virtue.",
-      "Narrator: [thoughtful] It took me embarrassingly long to notice the flaw in that logic: the moment a place becomes known for being undiscovered, it has already stopped being so.",
-      "Narrator: [honest] Every hidden gem I ever found had, of course, been found by someone else first, usually several someones, all quietly congratulating themselves on the same discovery.",
+      "Narrator: [thoughtful] There is a particular vanity in believing you have found the real version of a city, as though authenticity were a hidden room only you had discovered.",
+      "Narrator: I used to pride myself on avoiding anywhere mentioned in a guidebook, as if obscurity were itself a form of virtue.",
+      "Narrator: [carefully] It took me embarrassingly long to notice the flaw in that logic: the moment a place becomes known for being undiscovered, it has already stopped being so.",
+      "Narrator: Every hidden gem I ever found had, of course, been found by someone else first, usually several someones, all quietly congratulating themselves on the same discovery.",
       "Narrator: [reflective] What I was really chasing wasn't authenticity at all, but the feeling of being exempt from the crowd I was, in every practical sense, still part of.",
-      "Narrator: [thoughtful] I don't think this impulse is shameful exactly, only a little self-deceiving, a way of dressing ordinary tourism in the costume of pilgrimage.",
-      "Narrator: [honest] The turn for me came at a market stall run by a woman who had clearly performed the same authentic transaction a thousand times that week alone.",
-      "Narrator: [reflective] She wasn't unwelcoming, just tired, and her performance of hospitality was as calculated, and as reasonable, as any transaction anywhere else.",
-      "Narrator: [thoughtful] I realized authenticity was never really a property of places, but a demand tourists place on people, one that flattens their labour into scenery.",
-      "Narrator: [honest] Once I stopped hunting for the real version of anywhere, travel got considerably less exhausting, and, oddly, rather more interesting.",
-      "Narrator: [reflective] I began asking what a place actually needed from its visitors, rather than what it might be persuaded to perform for them.",
-      "Narrator: [wry] It's a smaller, less flattering kind of travel, admittedly, one without the satisfaction of having discovered anything remarkable at all.",
-      "Narrator: [thoughtful] But it leaves less residue behind, both for the place itself and for whatever remains of my own self-regard.",
-      "Narrator: [with a small smile] These days I visit the places every guidebook already lists, and simply try to be a decent, unremarkable guest while I'm there.",
-      "Narrator: [reflective] That, it turns out, is a far harder standard to meet than finding somewhere no one else has ever been."
+      "Narrator: I don't think this impulse is shameful exactly, only a little self-deceiving, a way of dressing ordinary tourism in the costume of pilgrimage.",
+      "Narrator: [honestly] The turn for me came at a market stall run by a woman who had clearly performed the same authentic transaction a thousand times that week alone.",
+      "Narrator: She wasn't unwelcoming, just tired, and her performance of hospitality was as calculated, and as reasonable, as any transaction anywhere else.",
+      "Narrator: [gently] I realized authenticity was never really a property of places, but a demand tourists place on people, one that flattens their labour into scenery.",
+      "Narrator: Once I stopped hunting for the real version of anywhere, travel got considerably less exhausting, and, oddly, rather more interesting.",
+      "Narrator: [calmly] I began asking what a place actually needed from its visitors, rather than what it might be persuaded to perform for them.",
+      "Narrator: It's a smaller, less flattering kind of travel, admittedly, one without the satisfaction of having discovered anything remarkable at all.",
+      "Narrator: [encouraging] But it leaves less residue behind, both for the place itself and for whatever remains of my own self-regard.",
+      "Narrator: These days I visit the places every guidebook already lists, and simply try to be a decent, unremarkable guest while I'm there.",
+      "Narrator: [seriously] That, it turns out, is a far harder standard to meet than finding somewhere no one else has ever been."
     ],
     "quiz": [
-      { "question": "What flaw does the narrator eventually notice in her earlier approach to travel?", "options": ["Guidebooks were always wrong", "The moment a place becomes known as undiscovered, it has already stopped being so", "Obscure places were too expensive", "She was too shy to explore alone"], "correctIndex": 1, "explanation": "She realizes that a place's undiscovered reputation collapses the instant it becomes known for being undiscovered." },
-      { "question": "What does the narrator say about the woman at the market stall?", "options": ["She refused to serve tourists", "Her performance of hospitality was as calculated, and as reasonable, as any transaction elsewhere", "She was rude to the narrator", "She gave the narrator a discount"], "correctIndex": 1, "explanation": "The narrator observes that the woman's hospitality was a tired, calculated performance, no different from any other transaction." },
-      { "question": "What does the narrator conclude authenticity actually is?", "options": ["A fixed property of certain places", "A demand tourists place on people, flattening their labour into scenery", "Something only found in guidebooks", "An outdated concept with no real meaning"], "correctIndex": 1, "explanation": "She concludes authenticity is a demand placed on people rather than a quality inherent to places." },
-      { "question": "How does the narrator describe her travel now compared to before?", "options": ["Identical to how it always was", "Smaller and less flattering, without the satisfaction of discovering something remarkable", "More expensive and elaborate", "Focused entirely on famous landmarks only"], "correctIndex": 1, "explanation": "She calls her current approach smaller and less flattering, lacking the old thrill of discovery." },
-      { "question": "What is the narrator's new standard for travel?", "options": ["Finding places no one else has visited", "Being a decent, unremarkable guest at well-known places", "Avoiding all guidebook locations", "Photographing empty streets"], "correctIndex": 1, "explanation": "She now aims simply to be a decent, unremarkable guest at places already listed in every guidebook." }
-    ]
+      {
+        "question": "What flaw does the narrator eventually notice in her earlier approach to travel?",
+        "options": [
+          "The moment a place becomes known as undiscovered, it has already stopped being so",
+          "Guidebooks were always wrong",
+          "Obscure places were too expensive",
+          "She was too shy to explore alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "She realizes that a place's undiscovered reputation collapses the instant it becomes known for being undiscovered."
+      },
+      {
+        "question": "What does the narrator say about the woman at the market stall?",
+        "options": [
+          "She refused to serve tourists",
+          "Her performance of hospitality was as calculated, and as reasonable, as any transaction elsewhere",
+          "She was rude to the narrator",
+          "She gave the narrator a discount"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator observes that the woman's hospitality was a tired, calculated performance, no different from any other transaction."
+      },
+      {
+        "question": "What does the narrator conclude authenticity actually is?",
+        "options": [
+          "A fixed property of certain places",
+          "Something only found in guidebooks",
+          "A demand tourists place on people, flattening their labour into scenery",
+          "An outdated concept with no real meaning"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes authenticity is a demand placed on people rather than a quality inherent to places."
+      },
+      {
+        "question": "How does the narrator describe her travel now compared to before?",
+        "options": [
+          "Smaller and less flattering, without the satisfaction of discovering something remarkable",
+          "Identical to how it always was",
+          "More expensive and elaborate",
+          "Focused entirely on famous landmarks only"
+        ],
+        "correctIndex": 0,
+        "explanation": "She calls her current approach smaller and less flattering, lacking the old thrill of discovery."
+      },
+      {
+        "question": "What is the narrator's new standard for travel?",
+        "options": [
+          "Being a decent, unremarkable guest at well-known places",
+          "Finding places no one else has visited",
+          "Avoiding all guidebook locations",
+          "Photographing empty streets"
+        ],
+        "correctIndex": 0,
+        "explanation": "She now aims simply to be a decent, unremarkable guest at places already listed in every guidebook."
+      },
+      {
+        "question": "What false confidence is exposed by the market-stall encounter?",
+        "options": [
+          "Authenticity is a demand visitors place on workers, not a hidden property of places.",
+          "Finding an unknown place makes a traveller exempt from ordinary tourism.",
+          "A tired market seller revealed the labour behind a tourist’s desired experience.",
+          "The narrator replaces personal distinction with attention to what a place needs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the market-stall encounter function as evidence for the speaker’s point?",
+        "options": [
+          "Authenticity is a demand visitors place on workers, not a hidden property of places.",
+          "A tired market seller revealed the labour behind a tourist’s desired experience.",
+          "The narrator replaces personal distinction with attention to what a place needs.",
+          "Avoiding guidebooks does not remove a traveller from the crowd or its effects."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What caution does the market-stall encounter place on the speaker’s conclusion?",
+        "options": [
+          "Authenticity is a demand visitors place on workers, not a hidden property of places.",
+          "A tired market seller revealed the labour behind a tourist’s desired experience.",
+          "The narrator replaces personal distinction with attention to what a place needs.",
+          "Avoiding guidebooks does not remove a traveller from the crowd or its effects."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What harm might follow if the lesson of the market-stall encounter is ignored?",
+        "options": [
+          "Authenticity is a demand visitors place on workers, not a hidden property of places.",
+          "A tired market seller revealed the labour behind a tourist’s desired experience.",
+          "The narrator replaces personal distinction with attention to what a place needs.",
+          "Avoiding guidebooks does not remove a traveller from the crowd or its effects."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which next step would honour what the market-stall encounter teaches?",
+        "options": [
+          "Authenticity is a demand visitors place on workers, not a hidden property of places.",
+          "A tired market seller revealed the labour behind a tourist’s desired experience.",
+          "The narrator replaces personal distinction with attention to what a place needs.",
+          "Visit openly popular places as a considerate guest, not an exclusive discoverer."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-travel-02",
@@ -40,36 +154,153 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Maya", "gender": "female" },
-      { "name": "Idris", "gender": "male" }
+      {
+        "name": "Maya",
+        "gender": "female"
+      },
+      {
+        "name": "Idris",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Maya: [surprised] Apparently there's been a mix-up and only one of us has been upgraded, which is going to make the next nine hours slightly uncomfortable.",
-      "Idris: [amused] Uncomfortable for you, you mean. I intend to enjoy every reclined inch of business class with a perfectly clear conscience.",
-      "Maya: [dry] Naturally. Nothing sharpens someone's conscience quite like the seat already belonging to them.",
-      "Idris: [reasonable] To be fair, I didn't request this. The gate agent simply handed me a new boarding pass and wished me a pleasant flight.",
-      "Maya: [teasing] And you didn't think to mention that your travelling companion was still stuck back in row forty-two?",
-      "Idris: [sheepish] I considered it, briefly, somewhere between the words pleasant and flight.",
-      "Maya: [laughing] So chivalry survived roughly four seconds before self-interest quietly took over.",
-      "Idris: [wry] I prefer to think of it as pragmatism. Someone has to accept the upgrade, and refusing it wouldn't have moved you forward a single row.",
-      "Maya: [conceding] That's an infuriatingly reasonable point, which is exactly the sort of thing that makes it hard to stay annoyed at you.",
-      "Idris: [gently] I did ask whether they could move you too. Apparently the flight's fully booked back there, so this was the only seat available.",
-      "Maya: [softening] Alright, that redeems you slightly. Though I expect a full report on the champagne, purely for research purposes.",
-      "Idris: [smiling] I'll smuggle you a warm towel at the very least, assuming they let economy passengers receive contraband.",
-      "Maya: [amused] Nine hours of you describing legroom while I negotiate elbow space with a total stranger. Wonderful.",
-      "Idris: [thoughtful] For what it's worth, I'll feel slightly ridiculous the entire flight, knowing you're two curtains away in considerably less comfort.",
-      "Maya: [wry] Good. Guilt is the least you owe me, since apparently the champagne is entirely off the table.",
-      "Idris: [warmly] Next trip, the upgrade is yours if it happens, no argument whatsoever. I'll even practice looking appropriately guilty in coach.",
-      "Maya: [laughing] I'll hold you to that, generously and in writing. Enjoy your curtain of privilege, Idris.",
-      "Idris: [grinning] I intend to, quite shamelessly, for at least the first hour."
+      "Maya: [thoughtful] Apparently there's been a mix-up and only one of us has been upgraded, which is going to make the next nine hours slightly uncomfortable.",
+      "Idris: Uncomfortable for you, you mean. I intend to enjoy every reclined inch of business class with a perfectly clear conscience.",
+      "Maya: [carefully] Naturally. Nothing sharpens someone's conscience quite like the seat already belonging to them.",
+      "Idris: To be fair, I didn't request this. The gate agent simply handed me a new boarding pass and wished me a pleasant flight.",
+      "Maya: [reflective] And you didn't think to mention that your travelling companion was still stuck back in row forty-two?",
+      "Idris: I considered it, briefly, somewhere between the words pleasant and flight.",
+      "Maya: [honestly] So chivalry survived roughly four seconds before self-interest quietly took over.",
+      "Idris: I prefer to think of it as pragmatism. Someone has to accept the upgrade, and refusing it wouldn't have moved you forward a single row.",
+      "Maya: [gently] That's an infuriatingly reasonable point, which is exactly the sort of thing that makes it hard to stay annoyed at you.",
+      "Idris: I did ask whether they could move you too. Apparently the flight's fully booked back there, so this was the only seat available.",
+      "Maya: [calmly] Alright, that redeems you slightly. Though I expect a full report on the champagne, purely for research purposes.",
+      "Idris: I'll smuggle you a warm towel at the very least, assuming they let economy passengers receive contraband.",
+      "Maya: [encouraging] Nine hours of you describing legroom while I negotiate elbow space with a total stranger. Wonderful.",
+      "Idris: For what it's worth, I'll feel slightly ridiculous the entire flight, knowing you're two curtains away in considerably less comfort.",
+      "Maya: [seriously] Good. Guilt is the least you owe me, since apparently the champagne is entirely off the table.",
+      "Idris: Next trip, the upgrade is yours if it happens, no argument whatsoever. I'll even practice looking appropriately guilty in coach.",
+      "Maya: I'll hold you to that, generously and in writing. Enjoy your curtain of privilege, Idris.",
+      "Idris: I intend to, quite shamelessly, for at least the first hour."
     ],
     "quiz": [
-      { "question": "What has happened with the seating arrangement?", "options": ["Both were upgraded", "Only Idris has been upgraded to business class", "Both lost their seats", "Maya was upgraded instead"], "correctIndex": 1, "explanation": "The gate agent mistakenly upgraded only Idris, leaving Maya in economy." },
-      { "question": "How does Idris justify accepting the upgrade?", "options": ["He fought hard to get it", "He didn't request it, and refusing it wouldn't have moved Maya forward a row", "He paid extra for it", "He didn't know about the mix-up"], "correctIndex": 1, "explanation": "Idris argues that accepting the upgrade was pragmatic since declining it wouldn't have helped Maya." },
-      { "question": "Why couldn't Maya also be moved to business class?", "options": ["She refused to pay", "The economy section is fully booked, so her seat was the only one available", "She didn't want to sit with Idris", "The airline ran out of boarding passes"], "correctIndex": 1, "explanation": "Idris explains he asked, but the flight was fully booked, meaning her seat was fixed." },
-      { "question": "What does Maya ask Idris to do during the flight?", "options": ["Switch seats with her secretly", "Give a full report on the champagne, purely for research purposes", "Complain to the airline on her behalf", "Sleep the entire flight"], "correctIndex": 1, "explanation": "Maya jokingly asks for a full report on the champagne for research purposes." },
-      { "question": "What does Idris promise for their next trip?", "options": ["He will never fly with Maya again", "The upgrade is hers if it happens, without argument", "He will buy her a business class ticket", "He will always choose economy"], "correctIndex": 1, "explanation": "Idris promises that on the next trip, any upgrade will go to Maya without argument." }
-    ]
+      {
+        "question": "What has happened with the seating arrangement?",
+        "options": [
+          "Both were upgraded",
+          "Only Idris has been upgraded to business class",
+          "Both lost their seats",
+          "Maya was upgraded instead"
+        ],
+        "correctIndex": 1,
+        "explanation": "The gate agent mistakenly upgraded only Idris, leaving Maya in economy."
+      },
+      {
+        "question": "How does Idris justify accepting the upgrade?",
+        "options": [
+          "He fought hard to get it",
+          "He didn't request it, and refusing it wouldn't have moved Maya forward a row",
+          "He paid extra for it",
+          "He didn't know about the mix-up"
+        ],
+        "correctIndex": 1,
+        "explanation": "Idris argues that accepting the upgrade was pragmatic since declining it wouldn't have helped Maya."
+      },
+      {
+        "question": "Why couldn't Maya also be moved to business class?",
+        "options": [
+          "She refused to pay",
+          "She didn't want to sit with Idris",
+          "The economy section is fully booked, so her seat was the only one available",
+          "The airline ran out of boarding passes"
+        ],
+        "correctIndex": 2,
+        "explanation": "Idris explains he asked, but the flight was fully booked, meaning her seat was fixed."
+      },
+      {
+        "question": "What does Maya ask Idris to do during the flight?",
+        "options": [
+          "Switch seats with her secretly",
+          "Complain to the airline on her behalf",
+          "Sleep the entire flight",
+          "Give a full report on the champagne, purely for research purposes"
+        ],
+        "correctIndex": 3,
+        "explanation": "Maya jokingly asks for a full report on the champagne for research purposes."
+      },
+      {
+        "question": "What does Idris promise for their next trip?",
+        "options": [
+          "The upgrade is hers if it happens, without argument",
+          "He will never fly with Maya again",
+          "He will buy her a business class ticket",
+          "He will always choose economy"
+        ],
+        "correctIndex": 0,
+        "explanation": "Idris promises that on the next trip, any upgrade will go to Maya without argument."
+      },
+      {
+        "question": "Which assumption becomes untenable after the unexpected upgrade on a full flight?",
+        "options": [
+          "An unexpected benefit makes consideration for a companion unnecessary.",
+          "An accidental upgrade can be accepted while still recognising its awkward imbalance.",
+          "He asked to move his companion too, but the flight had no second seat.",
+          "Their irritation becomes playful negotiation rather than a moral accusation."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the unexpected upgrade on a full flight add to the speaker’s case?",
+        "options": [
+          "He asked to move his companion too, but the flight had no second seat.",
+          "An accidental upgrade can be accepted while still recognising its awkward imbalance.",
+          "Their irritation becomes playful negotiation rather than a moral accusation.",
+          "Unequal comfort can strain companionship even when nobody caused the situation."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What limit does the unexpected upgrade on a full flight keep the speaker from ignoring?",
+        "options": [
+          "An accidental upgrade can be accepted while still recognising its awkward imbalance.",
+          "Their irritation becomes playful negotiation rather than a moral accusation.",
+          "He asked to move his companion too, but the flight had no second seat.",
+          "Unequal comfort can strain companionship even when nobody caused the situation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What becomes more likely when people dismiss the concern raised by the unexpected upgrade on a full flight?",
+        "options": [
+          "An accidental upgrade can be accepted while still recognising its awkward imbalance.",
+          "He asked to move his companion too, but the flight had no second seat.",
+          "Unequal comfort can strain companionship even when nobody caused the situation.",
+          "Their irritation becomes playful negotiation rather than a moral accusation."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What decision would best put the lesson from the unexpected upgrade on a full flight into practice?",
+        "options": [
+          "An accidental upgrade can be accepted while still recognising its awkward imbalance.",
+          "He asked to move his companion too, but the flight had no second seat.",
+          "Their irritation becomes playful negotiation rather than a moral accusation.",
+          "Acknowledge the imbalance and offer fair reciprocity on a future journey."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-travel-03",
@@ -78,33 +309,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I bought a guidebook for every trip I took in my twenties, thick paperbacks annotated in pencil, dog-eared before I'd even boarded the plane.",
-      "Narrator: [honest] I rarely consulted them once I'd actually arrived; the planning itself seemed to satisfy whatever anxiety had prompted the purchase in the first place.",
-      "Narrator: [thoughtful] There's a comfort in overpreparing that has very little to do with the trip you're actually about to take.",
-      "Narrator: [wry] It's really a way of pretending the unknown can be domesticated in advance, filed neatly under tidy chapter headings.",
+      "Narrator: [thoughtful] I bought a guidebook for every trip I took in my twenties, thick paperbacks annotated in pencil, dog-eared before I'd even boarded the plane.",
+      "Narrator: I rarely consulted them once I'd actually arrived; the planning itself seemed to satisfy whatever anxiety had prompted the purchase in the first place.",
+      "Narrator: [carefully] There's a comfort in overpreparing that has very little to do with the trip you're actually about to take.",
+      "Narrator: It's really a way of pretending the unknown can be domesticated in advance, filed neatly under tidy chapter headings.",
       "Narrator: [reflective] On one trip, my only guidebook was left behind at security, and I decided, mostly out of laziness, not to replace it.",
-      "Narrator: [honest] The first day was genuinely disorienting; I wandered without any agenda for hours and accomplished, by any conventional measure, almost nothing.",
-      "Narrator: [thoughtful] But somewhere in that aimlessness, I started noticing things a guidebook would never have flagged, a bakery's queue, a stranger's argument, a market slowly closing.",
-      "Narrator: [reflective] None of it was significant exactly, yet all of it felt more genuinely mine than any recommended landmark ever had.",
-      "Narrator: [honest] I still got lost twice, missed a museum I'd have regretted missing on any other trip, and ate mediocre food more than once.",
-      "Narrator: [wry] The trip was, by any objective standard, less efficient than any I had planned meticulously beforehand.",
-      "Narrator: [thoughtful] And yet it's the one I remember most vividly, precisely because nothing about it had already been decided for me in advance.",
-      "Narrator: [reflective] I don't think planning itself is the enemy; I think certainty is, the illusion that a trip can be fully known before it's actually lived.",
-      "Narrator: [honest] These days I still research a little, mostly logistics, trains and visas, things that genuinely require some forethought.",
-      "Narrator: [thoughtful] But I leave the rest deliberately unplanned now, a gap left on purpose, where the actual travelling can still happen.",
-      "Narrator: [with a small smile] The guidebooks still pile up on my shelf, mostly unread, small monuments to trips I planned far more than I ever lived.",
-      "Narrator: [reflective] I keep them anyway, less as reference material now than as evidence of a habit I'm still, slowly, unlearning."
+      "Narrator: The first day was genuinely disorienting; I wandered without any agenda for hours and accomplished, by any conventional measure, almost nothing.",
+      "Narrator: [honestly] But somewhere in that aimlessness, I started noticing things a guidebook would never have flagged, a bakery's queue, a stranger's argument, a market slowly closing.",
+      "Narrator: None of it was significant exactly, yet all of it felt more genuinely mine than any recommended landmark ever had.",
+      "Narrator: [gently] I still got lost twice, missed a museum I'd have regretted missing on any other trip, and ate mediocre food more than once.",
+      "Narrator: The trip was, by any objective standard, less efficient than any I had planned meticulously beforehand.",
+      "Narrator: [calmly] And yet it's the one I remember most vividly, precisely because nothing about it had already been decided for me in advance.",
+      "Narrator: I don't think planning itself is the enemy; I think certainty is, the illusion that a trip can be fully known before it's actually lived.",
+      "Narrator: [encouraging] These days I still research a little, mostly logistics, trains and visas, things that genuinely require some forethought.",
+      "Narrator: But I leave the rest deliberately unplanned now, a gap left on purpose, where the actual travelling can still happen.",
+      "Narrator: [seriously] The guidebooks still pile up on my shelf, mostly unread, small monuments to trips I planned far more than I ever lived.",
+      "Narrator: I keep them anyway, less as reference material now than as evidence of a habit I'm still, slowly, unlearning."
     ],
     "quiz": [
-      { "question": "What did the narrator typically do with guidebooks in his twenties?", "options": ["He memorized them completely", "He annotated them heavily but rarely consulted them once he actually arrived", "He never bought any", "He gave them to friends"], "correctIndex": 1, "explanation": "He bought and annotated guidebooks obsessively but rarely used them once on the trip itself." },
-      { "question": "What happened on the trip where he left his guidebook behind?", "options": ["He bought a new one immediately", "He wandered without agenda and accomplished little by conventional measures", "He cancelled the rest of the trip", "He hired a professional tour guide"], "correctIndex": 1, "explanation": "Without a guidebook, he spent the first day wandering aimlessly, accomplishing little in conventional terms." },
-      { "question": "What did the narrator start noticing during that aimless first day?", "options": ["Only famous landmarks", "Small unremarkable things like a bakery's queue or a market closing", "Nothing at all", "Other tourists' guidebooks"], "correctIndex": 1, "explanation": "He began noticing small, unlisted details like a bakery queue, a stranger's argument, and a closing market." },
-      { "question": "What does the narrator conclude planning's real enemy is?", "options": ["Guidebooks themselves", "Certainty, the illusion that a trip can be fully known before it's lived", "Spending too much money", "Travelling alone"], "correctIndex": 1, "explanation": "He concludes that certainty, not planning itself, is the real problem, since it pretends a trip can be known in advance." },
-      { "question": "What does the narrator still research before a trip today?", "options": ["Nothing at all", "Mostly logistics, like trains and visas", "Every restaurant recommendation", "Every historical landmark"], "correctIndex": 1, "explanation": "He still researches practical logistics, such as trains and visas, but leaves the rest deliberately open." }
-    ]
+      {
+        "question": "What did the narrator typically do with guidebooks in his twenties?",
+        "options": [
+          "He annotated them heavily but rarely consulted them once he actually arrived",
+          "He memorized them completely",
+          "He never bought any",
+          "He gave them to friends"
+        ],
+        "correctIndex": 0,
+        "explanation": "He bought and annotated guidebooks obsessively but rarely used them once on the trip itself."
+      },
+      {
+        "question": "What happened on the trip where he left his guidebook behind?",
+        "options": [
+          "He bought a new one immediately",
+          "He wandered without agenda and accomplished little by conventional measures",
+          "He cancelled the rest of the trip",
+          "He hired a professional tour guide"
+        ],
+        "correctIndex": 1,
+        "explanation": "Without a guidebook, he spent the first day wandering aimlessly, accomplishing little in conventional terms."
+      },
+      {
+        "question": "What did the narrator start noticing during that aimless first day?",
+        "options": [
+          "Only famous landmarks",
+          "Nothing at all",
+          "Small unremarkable things like a bakery's queue or a market closing",
+          "Other tourists' guidebooks"
+        ],
+        "correctIndex": 2,
+        "explanation": "He began noticing small, unlisted details like a bakery queue, a stranger's argument, and a closing market."
+      },
+      {
+        "question": "What does the narrator conclude planning's real enemy is?",
+        "options": [
+          "Guidebooks themselves",
+          "Spending too much money",
+          "Travelling alone",
+          "Certainty, the illusion that a trip can be fully known before it's lived"
+        ],
+        "correctIndex": 3,
+        "explanation": "He concludes that certainty, not planning itself, is the real problem, since it pretends a trip can be known in advance."
+      },
+      {
+        "question": "What does the narrator still research before a trip today?",
+        "options": [
+          "Nothing at all",
+          "Every restaurant recommendation",
+          "Mostly logistics, like trains and visas",
+          "Every historical landmark"
+        ],
+        "correctIndex": 2,
+        "explanation": "He still researches practical logistics, such as trains and visas, but leaves the rest deliberately open."
+      },
+      {
+        "question": "What mistaken belief does the abandoned guidebook overturn?",
+        "options": [
+          "A detailed itinerary can fully contain an unfamiliar place.",
+          "Planning helps with constraints, but certainty can prevent a trip from being lived.",
+          "Without a guidebook, the narrator noticed ordinary scenes no itinerary would flag.",
+          "She still plans trains and visas while leaving the experience deliberately open."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why is the abandoned guidebook more persuasive than an abstract claim alone?",
+        "options": [
+          "Without a guidebook, the narrator noticed ordinary scenes no itinerary would flag.",
+          "Planning helps with constraints, but certainty can prevent a trip from being lived.",
+          "She still plans trains and visas while leaving the experience deliberately open.",
+          "Overplanning can make travel efficient yet less personally memorable."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does the abandoned guidebook prevent an overly simple solution?",
+        "options": [
+          "Planning helps with constraints, but certainty can prevent a trip from being lived.",
+          "She still plans trains and visas while leaving the experience deliberately open.",
+          "Without a guidebook, the narrator noticed ordinary scenes no itinerary would flag.",
+          "Overplanning can make travel efficient yet less personally memorable."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why is indifference to the abandoned guidebook risky?",
+        "options": [
+          "Planning helps with constraints, but certainty can prevent a trip from being lived.",
+          "Overplanning can make travel efficient yet less personally memorable.",
+          "Without a guidebook, the narrator noticed ordinary scenes no itinerary would flag.",
+          "She still plans trains and visas while leaving the experience deliberately open."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How could someone act on the insight gained from the abandoned guidebook?",
+        "options": [
+          "Planning helps with constraints, but certainty can prevent a trip from being lived.",
+          "Without a guidebook, the narrator noticed ordinary scenes no itinerary would flag.",
+          "She still plans trains and visas while leaving the experience deliberately open.",
+          "Research logistics, then protect unplanned time for genuine observation."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-travel-04",
@@ -113,36 +458,153 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] My guest today refuses to travel anywhere without first learning basic conversational phrases, even for a stay of just four days. Why bother, for something so short?",
-      "Guest: [thoughtful] Because the alternative is moving through a place entirely on the terms of a translation app, which flattens every interaction into a transaction.",
-      "Host: [curious] Isn't that overstating it slightly? A translated conversation is still, technically, a conversation.",
-      "Guest: [conceding] It is, technically, though something gets lost in the gap between speaking and being spoken through a screen.",
-      "Host: [interested] What exactly gets lost, in your view?",
-      "Guest: [reflective] Timing, mostly. Humour, hesitation, the small imperfections that make an exchange feel like it's between two people rather than two devices.",
-      "Host: [challenging] Realistically, though, most travellers can't become fluent in a language for a trip lasting only a few days.",
-      "Guest: [agreeing] Absolutely not, and I'm not suggesting fluency. I'm talking about a dozen phrases, learned properly, rather than outsourced entirely.",
-      "Host: [curious] Give me an example of where that's actually mattered for you.",
-      "Guest: [warmly] In a small shop once, I mangled the local word for thank you so badly the owner laughed for a full minute.",
-      "Host: [amused] That sounds more embarrassing than genuinely useful.",
-      "Guest: [wry] It was both, honestly, and the laughter opened a conversation no app ever could have. We talked for twenty minutes after that.",
-      "Host: [thoughtful] So the fumbling itself became the connection, rather than something to be carefully avoided.",
-      "Guest: [agreeing] Precisely. Competence isn't actually what invites people in; visible effort is, almost every time.",
-      "Host: [curious] What would you say to someone who finds language learning genuinely intimidating before a trip?",
-      "Guest: [encouraging] Learn to sound foolish gracefully. That skill matters more than vocabulary ever will, and it travels with you everywhere.",
-      "Host: [smiling] Sound foolish gracefully. I like that considerably more than any phrasebook I've ever owned.",
-      "Guest: [warmly] It's cheaper too, and it never needs charging at the airport."
+      "Host: [thoughtful] My guest today refuses to travel anywhere without first learning basic conversational phrases, even for a stay of just four days. Why bother, for something so short?",
+      "Guest: Because the alternative is moving through a place entirely on the terms of a translation app, which flattens every interaction into a transaction.",
+      "Host: [carefully] Isn't that overstating it slightly? A translated conversation is still, technically, a conversation.",
+      "Guest: It is, technically, though something gets lost in the gap between speaking and being spoken through a screen.",
+      "Host: [reflective] What exactly gets lost, in your view?",
+      "Guest: Timing, mostly. Humour, hesitation, the small imperfections that make an exchange feel like it's between two people rather than two devices.",
+      "Host: [honestly] Realistically, though, most travellers can't become fluent in a language for a trip lasting only a few days.",
+      "Guest: Absolutely not, and I'm not suggesting fluency. I'm talking about a dozen phrases, learned properly, rather than outsourced entirely.",
+      "Host: [gently] Give me an example of where that's actually mattered for you.",
+      "Guest: In a small shop once, I mangled the local word for thank you so badly the owner laughed for a full minute.",
+      "Host: [calmly] That sounds more embarrassing than genuinely useful.",
+      "Guest: It was both, honestly, and the laughter opened a conversation no app ever could have. We talked for twenty minutes after that.",
+      "Host: [encouraging] So the fumbling itself became the connection, rather than something to be carefully avoided.",
+      "Guest: Precisely. Competence isn't actually what invites people in; visible effort is, almost every time.",
+      "Host: [seriously] What would you say to someone who finds language learning genuinely intimidating before a trip?",
+      "Guest: Learn to sound foolish gracefully. That skill matters more than vocabulary ever will, and it travels with you everywhere.",
+      "Host: Sound foolish gracefully. I like that considerably more than any phrasebook I've ever owned.",
+      "Guest: It's cheaper too, and it never needs charging at the airport."
     ],
     "quiz": [
-      { "question": "Why does the guest insist on learning phrases even for short trips?", "options": ["Translation apps are unreliable technically", "Relying entirely on an app flattens interactions into mere transactions", "It is required by law in some countries", "He dislikes using his phone"], "correctIndex": 1, "explanation": "He argues that relying solely on translation apps reduces interactions to flat transactions, losing timing and humour." },
-      { "question": "What does the guest say gets lost when using a translation app instead of speaking directly?", "options": ["Grammar accuracy", "Timing, humour, and small imperfections that make an exchange feel human", "Battery life", "Nothing significant"], "correctIndex": 1, "explanation": "He says timing, humour, and small imperfections are lost when communication is mediated entirely through a screen." },
-      { "question": "What happened when the guest mangled the local word for thank you?", "options": ["The shop owner became offended", "The shop owner laughed, and it opened a twenty-minute conversation", "He was asked to leave the shop", "Nothing happened at all"], "correctIndex": 1, "explanation": "His mistake made the shop owner laugh, which led to a genuine twenty-minute conversation afterward." },
-      { "question": "According to the guest, what actually invites people into conversation?", "options": ["Perfect grammar and vocabulary", "Visible effort, more than competence", "Expensive gifts", "Speaking loudly and slowly"], "correctIndex": 1, "explanation": "He states that visible effort, not competence, is what genuinely invites people into conversation." },
-      { "question": "What advice does the guest give to intimidated travellers?", "options": ["Avoid speaking the local language entirely", "Learn to sound foolish gracefully", "Only use translation apps", "Hire a translator for every trip"], "correctIndex": 1, "explanation": "He advises travellers to learn to sound foolish gracefully, calling it more valuable than vocabulary." }
-    ]
+      {
+        "question": "Why does the guest insist on learning phrases even for short trips?",
+        "options": [
+          "Relying entirely on an app flattens interactions into mere transactions",
+          "Translation apps are unreliable technically",
+          "It is required by law in some countries",
+          "He dislikes using his phone"
+        ],
+        "correctIndex": 0,
+        "explanation": "He argues that relying solely on translation apps reduces interactions to flat transactions, losing timing and humour."
+      },
+      {
+        "question": "What does the guest say gets lost when using a translation app instead of speaking directly?",
+        "options": [
+          "Timing, humour, and small imperfections that make an exchange feel human",
+          "Grammar accuracy",
+          "Battery life",
+          "Nothing significant"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says timing, humour, and small imperfections are lost when communication is mediated entirely through a screen."
+      },
+      {
+        "question": "What happened when the guest mangled the local word for thank you?",
+        "options": [
+          "The shop owner became offended",
+          "The shop owner laughed, and it opened a twenty-minute conversation",
+          "He was asked to leave the shop",
+          "Nothing happened at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "His mistake made the shop owner laugh, which led to a genuine twenty-minute conversation afterward."
+      },
+      {
+        "question": "According to the guest, what actually invites people into conversation?",
+        "options": [
+          "Perfect grammar and vocabulary",
+          "Expensive gifts",
+          "Speaking loudly and slowly",
+          "Visible effort, more than competence"
+        ],
+        "correctIndex": 3,
+        "explanation": "He states that visible effort, not competence, is what genuinely invites people into conversation."
+      },
+      {
+        "question": "What advice does the guest give to intimidated travellers?",
+        "options": [
+          "Avoid speaking the local language entirely",
+          "Only use translation apps",
+          "Learn to sound foolish gracefully",
+          "Hire a translator for every trip"
+        ],
+        "correctIndex": 2,
+        "explanation": "He advises travellers to learn to sound foolish gracefully, calling it more valuable than vocabulary."
+      },
+      {
+        "question": "Which idea does the speaker ask listeners to reconsider through the awkward attempt to say thank you?",
+        "options": [
+          "Only fluent speakers can form a meaningful local connection.",
+          "Basic language effort can create connection without requiring fluency.",
+          "A badly pronounced thank-you opened a twenty-minute conversation with a shop owner.",
+          "Visible effort matters more than polished competence in a short visit."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the awkward attempt to say thank you support the conclusion the speaker reaches?",
+        "options": [
+          "Basic language effort can create connection without requiring fluency.",
+          "A badly pronounced thank-you opened a twenty-minute conversation with a shop owner.",
+          "Visible effort matters more than polished competence in a short visit.",
+          "Relying entirely on an app can reduce encounters to functional transactions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What restraint is built into the speaker’s view of the awkward attempt to say thank you?",
+        "options": [
+          "Basic language effort can create connection without requiring fluency.",
+          "Visible effort matters more than polished competence in a short visit.",
+          "A badly pronounced thank-you opened a twenty-minute conversation with a shop owner.",
+          "Relying entirely on an app can reduce encounters to functional transactions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What damage can follow from overlooking the awkward attempt to say thank you?",
+        "options": [
+          "Basic language effort can create connection without requiring fluency.",
+          "A badly pronounced thank-you opened a twenty-minute conversation with a shop owner.",
+          "Relying entirely on an app can reduce encounters to functional transactions.",
+          "Visible effort matters more than polished competence in a short visit."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What would a careful response after the awkward attempt to say thank you involve?",
+        "options": [
+          "Basic language effort can create connection without requiring fluency.",
+          "A badly pronounced thank-you opened a twenty-minute conversation with a shop owner.",
+          "Visible effort matters more than polished competence in a short visit.",
+          "Learn a few phrases and accept minor mistakes gracefully."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-travel-05",
@@ -151,32 +613,146 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Sleeper compartments have a strange intimacy to them, four strangers folded into a space barely large enough for their luggage, let alone their inhibitions.",
-      "Narrator: [observant] The man in the upper bunk had brought a battered chess set, insisting almost immediately that we play before either of us had said much else.",
-      "Narrator: [wry] I lost within eleven moves, a fact he seemed determined to mention at every subsequent stop the train made that night.",
-      "Narrator: [thoughtful] There's something disarming about sharing a small space with people you'll never see again, a kind of freedom in the sheer impermanence of it.",
-      "Narrator: [honest] I told him things I hadn't told close friends, not because he was owed them, but because the conversation had nowhere permanent to land.",
-      "Narrator: [reflective] He mentioned, almost in passing, that he'd been laid off that week and was travelling simply because the ticket was already booked.",
-      "Narrator: [observant] Neither of us made much of the confession; it sat between us the way ordinary weather might, acknowledged, then quietly set aside.",
-      "Narrator: [thoughtful] I've noticed this pattern on every long train journey since, a peculiar honesty that daylight and permanence usually discourage entirely.",
-      "Narrator: [reflective] Perhaps it's the darkness outside the window, or the shared discomfort of narrow bunks, that dissolves the usual caution.",
-      "Narrator: [honest] By morning, we'd exchanged almost nothing practical, no numbers, no addresses, just a rematch he insisted on winning properly this time.",
-      "Narrator: [wry] He won, decisively, and seemed considerably more satisfied by that than by anything either of us had confessed the night before.",
-      "Narrator: [thoughtful] We parted at a platform neither of us had planned to visit, and I've thought about him more than most people I've actually kept in touch with.",
-      "Narrator: [reflective] There's a particular kind of relationship, I've decided, that only exists because it was never meant to last beyond one single journey.",
-      "Narrator: [with a small smile] I still don't know his surname, only that he plays a patient, slightly merciless game of chess.",
-      "Narrator: [reflective] Some encounters aren't meant to continue; they're meant to be entirely themselves, briefly, and then, quite deliberately, over."
+      "Narrator: [thoughtful] Sleeper compartments have a strange intimacy to them, four strangers folded into a space barely large enough for their luggage, let alone their inhibitions.",
+      "Narrator: The man in the upper bunk had brought a battered chess set, insisting almost immediately that we play before either of us had said much else.",
+      "Narrator: [carefully] I lost within eleven moves, a fact he seemed determined to mention at every subsequent stop the train made that night.",
+      "Narrator: There's something disarming about sharing a small space with people you'll never see again, a kind of freedom in the sheer impermanence of it.",
+      "Narrator: [reflective] I told him things I hadn't told close friends, not because he was owed them, but because the conversation had nowhere permanent to land.",
+      "Narrator: He mentioned, almost in passing, that he'd been laid off that week and was travelling simply because the ticket was already booked.",
+      "Narrator: [honestly] Neither of us made much of the confession; it sat between us the way ordinary weather might, acknowledged, then quietly set aside.",
+      "Narrator: I've noticed this pattern on every long train journey since, a peculiar honesty that daylight and permanence usually discourage entirely.",
+      "Narrator: [gently] Perhaps it's the darkness outside the window, or the shared discomfort of narrow bunks, that dissolves the usual caution.",
+      "Narrator: By morning, we'd exchanged almost nothing practical, no numbers, no addresses, just a rematch he insisted on winning properly this time.",
+      "Narrator: [calmly] He won, decisively, and seemed considerably more satisfied by that than by anything either of us had confessed the night before.",
+      "Narrator: We parted at a platform neither of us had planned to visit, and I've thought about him more than most people I've actually kept in touch with.",
+      "Narrator: [encouraging] There's a particular kind of relationship, I've decided, that only exists because it was never meant to last beyond one single journey.",
+      "Narrator: I still don't know his surname, only that he plays a patient, slightly merciless game of chess.",
+      "Narrator: [seriously] Some encounters aren't meant to continue; they're meant to be entirely themselves, briefly, and then, quite deliberately, over."
     ],
     "quiz": [
-      { "question": "What does the man in the upper bunk insist on doing almost immediately?", "options": ["Sharing his food", "Playing a game of chess before they had said much else", "Reading a book aloud", "Sleeping right away"], "correctIndex": 1, "explanation": "He insists on playing chess with the narrator almost as soon as the journey begins." },
-      { "question": "Why does the narrator find herself confiding in a stranger?", "options": ["He was a trained counselor", "The conversation had nowhere permanent to land, unlike with close friends", "She was forced to by the train staff", "She had known him for years already"], "correctIndex": 1, "explanation": "She explains she shared things with him precisely because the exchange had no lasting consequences." },
-      { "question": "What does the man reveal about his week before the trip?", "options": ["He had just gotten married", "He had been laid off and was travelling because the ticket was already booked", "He was moving permanently abroad", "He had won a large sum of money"], "correctIndex": 1, "explanation": "He mentions almost in passing that he'd lost his job and was travelling only because the ticket was pre-booked." },
-      { "question": "What happens with the chess rematch by morning?", "options": ["The narrator wins this time", "He wins decisively and seems more satisfied by that than by the night's confessions", "They never finish the game", "They both agree to a draw"], "correctIndex": 1, "explanation": "He wins the rematch decisively and appears more pleased by that than by anything confessed the night before." },
-      { "question": "What is the narrator's final reflection on this kind of encounter?", "options": ["She regrets not exchanging contact information", "Some encounters are meant to be entirely themselves briefly, then deliberately over", "She plans to find him again someday", "Train journeys are generally unpleasant"], "correctIndex": 1, "explanation": "She concludes that some relationships exist only to be brief and complete in themselves, never meant to continue." }
-    ]
+      {
+        "question": "What does the man in the upper bunk insist on doing almost immediately?",
+        "options": [
+          "Sharing his food",
+          "Reading a book aloud",
+          "Playing a game of chess before they had said much else",
+          "Sleeping right away"
+        ],
+        "correctIndex": 2,
+        "explanation": "He insists on playing chess with the narrator almost as soon as the journey begins."
+      },
+      {
+        "question": "Why does the narrator find herself confiding in a stranger?",
+        "options": [
+          "He was a trained counselor",
+          "She was forced to by the train staff",
+          "The conversation had nowhere permanent to land, unlike with close friends",
+          "She had known him for years already"
+        ],
+        "correctIndex": 2,
+        "explanation": "She explains she shared things with him precisely because the exchange had no lasting consequences."
+      },
+      {
+        "question": "What does the man reveal about his week before the trip?",
+        "options": [
+          "He had been laid off and was travelling because the ticket was already booked",
+          "He had just gotten married",
+          "He was moving permanently abroad",
+          "He had won a large sum of money"
+        ],
+        "correctIndex": 0,
+        "explanation": "He mentions almost in passing that he'd lost his job and was travelling only because the ticket was pre-booked."
+      },
+      {
+        "question": "What happens with the chess rematch by morning?",
+        "options": [
+          "The narrator wins this time",
+          "He wins decisively and seems more satisfied by that than by the night's confessions",
+          "They never finish the game",
+          "They both agree to a draw"
+        ],
+        "correctIndex": 1,
+        "explanation": "He wins the rematch decisively and appears more pleased by that than by anything confessed the night before."
+      },
+      {
+        "question": "What is the narrator's final reflection on this kind of encounter?",
+        "options": [
+          "She regrets not exchanging contact information",
+          "Some encounters are meant to be entirely themselves briefly, then deliberately over",
+          "She plans to find him again someday",
+          "Train journeys are generally unpleasant"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes that some relationships exist only to be brief and complete in themselves, never meant to continue."
+      },
+      {
+        "question": "What expectation does the overnight chess game prove too simple?",
+        "options": [
+          "A conversation only matters if it produces a lasting connection.",
+          "A temporary journey can invite honesty because it carries no lasting social obligation.",
+          "A chess companion casually disclosed losing his job, and neither forced a solution.",
+          "A brief encounter may matter deeply without becoming an ongoing relationship."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the overnight chess game allow the speaker to demonstrate?",
+        "options": [
+          "A chess companion casually disclosed losing his job, and neither forced a solution.",
+          "A temporary journey can invite honesty because it carries no lasting social obligation.",
+          "A brief encounter may matter deeply without becoming an ongoing relationship.",
+          "Impermanence can lower the caution that usually shapes everyday conversation."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which qualification matters when judging the overnight chess game?",
+        "options": [
+          "A temporary journey can invite honesty because it carries no lasting social obligation.",
+          "A brief encounter may matter deeply without becoming an ongoing relationship.",
+          "A chess companion casually disclosed losing his job, and neither forced a solution.",
+          "Impermanence can lower the caution that usually shapes everyday conversation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the speaker fear will persist if the overnight chess game is not taken seriously?",
+        "options": [
+          "A temporary journey can invite honesty because it carries no lasting social obligation.",
+          "A chess companion casually disclosed losing his job, and neither forced a solution.",
+          "A brief encounter may matter deeply without becoming an ongoing relationship.",
+          "Impermanence can lower the caution that usually shapes everyday conversation."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which choice shows the speaker’s point has been understood?",
+        "options": [
+          "A temporary journey can invite honesty because it carries no lasting social obligation.",
+          "A chess companion casually disclosed losing his job, and neither forced a solution.",
+          "A brief encounter may matter deeply without becoming an ongoing relationship.",
+          "Be present in a brief encounter without forcing it to continue afterward."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-travel-06",
@@ -185,34 +761,151 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Omar", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Omar",
+        "gender": "male"
+      }
     ],
     "script": [
       "Farah: [thoughtful] I keep seeing people online celebrating how cheap it is to live here as a remote worker, and something about it quietly unsettles me.",
-      "Omar: [curious] Unsettles you how, exactly? Cheap is cheap, presumably good news for whoever's spending it.",
-      "Farah: [reflective] Good news for them, certainly. Less obviously good news for the people whose rent doubled because their salary happens to be in a stronger currency.",
-      "Omar: [considering] I hadn't thought about it in quite those terms, though the arithmetic is fairly straightforward once you say it aloud like that.",
-      "Farah: [honest] It's not that anyone's doing anything wrong exactly, just working remotely from somewhere pleasant, which sounds harmless enough on its own.",
-      "Omar: [thoughtful] But multiplied by enough people making that same harmless choice, it stops being harmless in aggregate rather quickly.",
-      "Farah: [agreeing] Exactly. No single visitor causes the shift, and yet the shift happens anyway, quietly, one lease renewal at a time.",
-      "Omar: [challenging] Isn't that true of almost any economic change, though? Someone always absorbs the cost of someone else's convenience.",
-      "Farah: [conceding] That's fair, and I don't have a clean answer for it. I'm not sure refusing to travel here solves anything either.",
-      "Omar: [curious] So what would you actually change, then, if not simply staying home altogether?",
-      "Farah: [thoughtful] Maybe paying attention to where the money actually goes, choosing neighbourhoods and landlords less aggressively marketed toward people like us.",
-      "Omar: [considering] That sounds reasonable, if slightly like rearranging furniture in a house that's still, structurally, unequal underneath.",
-      "Farah: [honest] It probably is exactly that. I'm not claiming it fixes the underlying problem, only that pretending there isn't one feels considerably worse.",
-      "Omar: [thoughtful] I suppose the least useful response is deciding it's all too complicated to think about at all.",
-      "Farah: [warmly] Right. Complicated doesn't mean unexamined, it just means the easy answers were never actually available to begin with.",
-      "Omar: [agreeing] Fair enough. I'll at least start asking questions I've been comfortably avoiding for a while now."
+      "Omar: Unsettles you how, exactly? Cheap is cheap, presumably good news for whoever's spending it.",
+      "Farah: [carefully] Good news for them, certainly. Less obviously good news for the people whose rent doubled because their salary happens to be in a stronger currency.",
+      "Omar: I hadn't thought about it in quite those terms, though the arithmetic is fairly straightforward once you say it aloud like that.",
+      "Farah: [reflective] It's not that anyone's doing anything wrong exactly, just working remotely from somewhere pleasant, which sounds harmless enough on its own.",
+      "Omar: But multiplied by enough people making that same harmless choice, it stops being harmless in aggregate rather quickly.",
+      "Farah: [honestly] Exactly. No single visitor causes the shift, and yet the shift happens anyway, quietly, one lease renewal at a time.",
+      "Omar: Isn't that true of almost any economic change, though? Someone always absorbs the cost of someone else's convenience.",
+      "Farah: [gently] That's fair, and I don't have a clean answer for it. I'm not sure refusing to travel here solves anything either.",
+      "Omar: So what would you actually change, then, if not simply staying home altogether?",
+      "Farah: [calmly] Maybe paying attention to where the money actually goes, choosing neighbourhoods and landlords less aggressively marketed toward people like us.",
+      "Omar: That sounds reasonable, if slightly like rearranging furniture in a house that's still, structurally, unequal underneath.",
+      "Farah: [encouraging] It probably is exactly that. I'm not claiming it fixes the underlying problem, only that pretending there isn't one feels considerably worse.",
+      "Omar: I suppose the least useful response is deciding it's all too complicated to think about at all.",
+      "Farah: [seriously] Right. Complicated doesn't mean unexamined, it just means the easy answers were never actually available to begin with.",
+      "Omar: Fair enough. I'll at least start asking questions I've been comfortably avoiding for a while now."
     ],
     "quiz": [
-      { "question": "What unsettles Farah about people celebrating cheap remote-work living?", "options": ["The internet connection is often poor", "Local rent rises for residents because visitors' salaries are in a stronger currency", "It is illegal in most countries", "She dislikes remote work herself"], "correctIndex": 1, "explanation": "Farah points out that rising rents from stronger foreign salaries burden local residents, even though no individual visitor intends harm." },
-      { "question": "How does Farah describe the collective effect of many remote workers making the same choice?", "options": ["It has no measurable effect", "It stops being harmless in aggregate, even though no single visitor causes the shift", "It only affects tourists, not locals", "It always benefits both groups equally"], "correctIndex": 1, "explanation": "She explains that while one person's choice seems harmless, the combined effect of many people doing the same thing is not." },
-      { "question": "What point does Omar raise as a challenge to Farah's concern?", "options": ["That her data is wrong", "That someone always absorbs the cost of someone else's convenience in almost any economic change", "That remote work should be banned", "That rent never actually changes"], "correctIndex": 1, "explanation": "Omar challenges her by noting this pattern applies to nearly any economic change, not just remote work." },
-      { "question": "What practical suggestion does Farah offer?", "options": ["Never travel to affordable countries", "Pay attention to where money goes, choosing neighborhoods less aggressively marketed to outsiders", "Only stay in luxury hotels", "Avoid all remote work entirely"], "correctIndex": 1, "explanation": "She suggests being more mindful of where money is spent, rather than avoiding travel altogether." },
-      { "question": "What is Farah's final view on the complexity of the issue?", "options": ["It is too complicated to think about at all", "Complicated doesn't mean unexamined; easy answers were never really available", "There is a simple solution everyone is ignoring", "The problem will resolve itself naturally"], "correctIndex": 1, "explanation": "Farah concludes that complexity doesn't excuse avoidance, since no easy answer ever existed to begin with." }
-    ]
+      {
+        "question": "What unsettles Farah about people celebrating cheap remote-work living?",
+        "options": [
+          "The internet connection is often poor",
+          "Local rent rises for residents because visitors' salaries are in a stronger currency",
+          "It is illegal in most countries",
+          "She dislikes remote work herself"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah points out that rising rents from stronger foreign salaries burden local residents, even though no individual visitor intends harm."
+      },
+      {
+        "question": "How does Farah describe the collective effect of many remote workers making the same choice?",
+        "options": [
+          "It has no measurable effect",
+          "It stops being harmless in aggregate, even though no single visitor causes the shift",
+          "It only affects tourists, not locals",
+          "It always benefits both groups equally"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains that while one person's choice seems harmless, the combined effect of many people doing the same thing is not."
+      },
+      {
+        "question": "What point does Omar raise as a challenge to Farah's concern?",
+        "options": [
+          "That her data is wrong",
+          "That someone always absorbs the cost of someone else's convenience in almost any economic change",
+          "That remote work should be banned",
+          "That rent never actually changes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Omar challenges her by noting this pattern applies to nearly any economic change, not just remote work."
+      },
+      {
+        "question": "What practical suggestion does Farah offer?",
+        "options": [
+          "Never travel to affordable countries",
+          "Only stay in luxury hotels",
+          "Avoid all remote work entirely",
+          "Pay attention to where money goes, choosing neighborhoods less aggressively marketed to outsiders"
+        ],
+        "correctIndex": 3,
+        "explanation": "She suggests being more mindful of where money is spent, rather than avoiding travel altogether."
+      },
+      {
+        "question": "What is Farah's final view on the complexity of the issue?",
+        "options": [
+          "It is too complicated to think about at all",
+          "There is a simple solution everyone is ignoring",
+          "Complicated doesn't mean unexamined; easy answers were never really available",
+          "The problem will resolve itself naturally"
+        ],
+        "correctIndex": 2,
+        "explanation": "Farah concludes that complexity doesn't excuse avoidance, since no easy answer ever existed to begin with."
+      },
+      {
+        "question": "Which belief is challenged when remote work and rising local rents is taken seriously?",
+        "options": [
+          "No one has responsibility when each person’s contribution seems small.",
+          "Remote workers should examine how their spending affects local residents.",
+          "Rents rose for residents whose income could not match stronger foreign currencies.",
+          "No individual choice is wholly blameworthy, yet repeated choices create aggregate harm."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does the argument need remote work and rising local rents?",
+        "options": [
+          "Rents rose for residents whose income could not match stronger foreign currencies.",
+          "Remote workers should examine how their spending affects local residents.",
+          "No individual choice is wholly blameworthy, yet repeated choices create aggregate harm.",
+          "Treating complexity as an excuse leaves structural pressure unexamined."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does remote work and rising local rents keep the argument measured?",
+        "options": [
+          "No individual choice is wholly blameworthy, yet repeated choices create aggregate harm.",
+          "Remote workers should examine how their spending affects local residents.",
+          "Rents rose for residents whose income could not match stronger foreign currencies.",
+          "Treating complexity as an excuse leaves structural pressure unexamined."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How can ignoring remote work and rising local rents worsen the wider situation?",
+        "options": [
+          "Remote workers should examine how their spending affects local residents.",
+          "Rents rose for residents whose income could not match stronger foreign currencies.",
+          "Treating complexity as an excuse leaves structural pressure unexamined.",
+          "No individual choice is wholly blameworthy, yet repeated choices create aggregate harm."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What should change after learning from remote work and rising local rents?",
+        "options": [
+          "Remote workers should examine how their spending affects local residents.",
+          "Rents rose for residents whose income could not match stronger foreign currencies.",
+          "No individual choice is wholly blameworthy, yet repeated choices create aggregate harm.",
+          "Ask where money goes and avoid markets built around privileged visitors."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-travel-07",
@@ -221,35 +914,587 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] Tonight's guest researches the souvenir trade, and he claims most of what tourists buy as authentic craft isn't made anywhere near where it's sold. Explain that.",
-      "Guest: [wry] Gladly, though it tends to disappoint people who've just bought three of the item in question. Much of it is mass-produced elsewhere entirely.",
-      "Radio Host: [surprised] Elsewhere meaning another country altogether?",
-      "Guest: [informative] Often, yes. A carving sold as regional heritage might be manufactured in bulk on a completely different continent, then shipped in for the tourist season.",
-      "Radio Host: [curious] Does that mean the local craft has essentially disappeared by now?",
-      "Guest: [thoughtful] Not disappeared exactly, but marginalised. Genuine artisans can rarely compete on price with imported imitations of their own tradition.",
-      "Radio Host: [reflective] That's a strange kind of irony, a craft displaced by cheaper copies of itself.",
-      "Guest: [agreeing] Precisely, and most buyers have no real way of telling the difference, nor much incentive to look closely in the first place.",
-      "Radio Host: [curious] Should travellers simply stop buying souvenirs entirely, then, to avoid the problem?",
-      "Guest: [measured] I wouldn't go that far. Refusing to buy anything doesn't help the artisans either; it just removes the market completely.",
-      "Radio Host: [interested] So what would you actually recommend instead?",
-      "Guest: [practical] Asking who made something, and where, before purchasing. It's a small question, but it forces a moment of accountability into the transaction.",
-      "Radio Host: [challenging] Realistically, how many tourists are going to interrogate a market stall over a simple keychain?",
-      "Guest: [conceding] Very few, honestly, and I don't expect that to change overnight. But even a small shift in demand eventually reaches producers.",
-      "Radio Host: [thoughtful] It sounds like the real issue isn't the souvenir itself, but how little anyone thinks about its actual origin.",
-      "Guest: [warmly] That's the heart of it, really. We've become remarkably comfortable buying objects we know almost nothing about.",
-      "Radio Host: [smiling] A useful, if slightly uncomfortable, thing to consider before the next trip. Thank you for joining us tonight.",
-      "Guest: [warmly] Thank you for having me, and for asking the question most buyers never actually do."
+      "Radio Host: [thoughtful] Tonight's guest researches the souvenir trade, and he claims most of what tourists buy as authentic craft isn't made anywhere near where it's sold. Explain that.",
+      "Guest: Gladly, though it tends to disappoint people who've just bought three of the item in question. Much of it is mass-produced elsewhere entirely.",
+      "Radio Host: [carefully] Elsewhere meaning another country altogether?",
+      "Guest: Often, yes. A carving sold as regional heritage might be manufactured in bulk on a completely different continent, then shipped in for the tourist season.",
+      "Radio Host: [reflective] Does that mean the local craft has essentially disappeared by now?",
+      "Guest: Not disappeared exactly, but marginalised. Genuine artisans can rarely compete on price with imported imitations of their own tradition.",
+      "Radio Host: [honestly] That's a strange kind of irony, a craft displaced by cheaper copies of itself.",
+      "Guest: Precisely, and most buyers have no real way of telling the difference, nor much incentive to look closely in the first place.",
+      "Radio Host: [gently] Should travellers simply stop buying souvenirs entirely, then, to avoid the problem?",
+      "Guest: I wouldn't go that far. Refusing to buy anything doesn't help the artisans either; it just removes the market completely.",
+      "Radio Host: [calmly] So what would you actually recommend instead?",
+      "Guest: Asking who made something, and where, before purchasing. It's a small question, but it forces a moment of accountability into the transaction.",
+      "Radio Host: [encouraging] Realistically, how many tourists are going to interrogate a market stall over a simple keychain?",
+      "Guest: Very few, honestly, and I don't expect that to change overnight. But even a small shift in demand eventually reaches producers.",
+      "Radio Host: [seriously] It sounds like the real issue isn't the souvenir itself, but how little anyone thinks about its actual origin.",
+      "Guest: That's the heart of it, really. We've become remarkably comfortable buying objects we know almost nothing about.",
+      "Radio Host: A useful, if slightly uncomfortable, thing to consider before the next trip. Thank you for joining us tonight.",
+      "Guest: Thank you for having me, and for asking the question most buyers never actually do."
     ],
     "quiz": [
-      { "question": "What does the guest claim about most souvenirs sold as authentic craft?", "options": ["They are always handmade locally", "Much of it is mass-produced elsewhere and shipped in for tourist season", "They are illegal to sell", "They are more expensive than genuine crafts"], "correctIndex": 1, "explanation": "The guest explains that much souvenir merchandise is manufactured in bulk elsewhere and imported for tourists." },
-      { "question": "What happens to genuine local artisans as a result of imported imitations?", "options": ["They receive government subsidies", "They are marginalised, unable to compete on price with imported copies of their own tradition", "They export their goods instead", "Nothing changes for them"], "correctIndex": 1, "explanation": "Genuine artisans struggle to compete on price against mass-produced imitations of their own traditional craft." },
-      { "question": "Does the guest recommend that travellers stop buying souvenirs altogether?", "options": ["Yes, entirely", "No, since refusing to buy anything would simply remove the market completely", "Yes, but only in certain countries", "He refuses to give an opinion"], "correctIndex": 1, "explanation": "He explicitly says he wouldn't go that far, since removing the market doesn't help artisans either." },
-      { "question": "What small action does the guest suggest travellers take before purchasing?", "options": ["Bargain aggressively for a lower price", "Ask who made something and where, forcing a moment of accountability", "Only buy from large chain stores", "Avoid speaking to sellers entirely"], "correctIndex": 1, "explanation": "He recommends asking about an item's maker and origin as a small but meaningful act of accountability." },
-      { "question": "What does the guest identify as the real underlying issue?", "options": ["Souvenirs being too expensive", "How little anyone thinks about an object's actual origin", "Tourists not buying enough souvenirs", "Artisans refusing to sell to tourists"], "correctIndex": 1, "explanation": "He concludes the core issue is that buyers are comfortable knowing almost nothing about what they purchase." }
-    ]
+      {
+        "question": "What does the guest claim about most souvenirs sold as authentic craft?",
+        "options": [
+          "They are always handmade locally",
+          "Much of it is mass-produced elsewhere and shipped in for tourist season",
+          "They are illegal to sell",
+          "They are more expensive than genuine crafts"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest explains that much souvenir merchandise is manufactured in bulk elsewhere and imported for tourists."
+      },
+      {
+        "question": "What happens to genuine local artisans as a result of imported imitations?",
+        "options": [
+          "They receive government subsidies",
+          "They export their goods instead",
+          "They are marginalised, unable to compete on price with imported copies of their own tradition",
+          "Nothing changes for them"
+        ],
+        "correctIndex": 2,
+        "explanation": "Genuine artisans struggle to compete on price against mass-produced imitations of their own traditional craft."
+      },
+      {
+        "question": "Does the guest recommend that travellers stop buying souvenirs altogether?",
+        "options": [
+          "Yes, entirely",
+          "Yes, but only in certain countries",
+          "No, since refusing to buy anything would simply remove the market completely",
+          "He refuses to give an opinion"
+        ],
+        "correctIndex": 2,
+        "explanation": "He explicitly says he wouldn't go that far, since removing the market doesn't help artisans either."
+      },
+      {
+        "question": "What small action does the guest suggest travellers take before purchasing?",
+        "options": [
+          "Bargain aggressively for a lower price",
+          "Only buy from large chain stores",
+          "Avoid speaking to sellers entirely",
+          "Ask who made something and where, forcing a moment of accountability"
+        ],
+        "correctIndex": 3,
+        "explanation": "He recommends asking about an item's maker and origin as a small but meaningful act of accountability."
+      },
+      {
+        "question": "What does the guest identify as the real underlying issue?",
+        "options": [
+          "How little anyone thinks about an object's actual origin",
+          "Souvenirs being too expensive",
+          "Tourists not buying enough souvenirs",
+          "Artisans refusing to sell to tourists"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes the core issue is that buyers are comfortable knowing almost nothing about what they purchase."
+      },
+      {
+        "question": "What does the imported souvenir trade show people cannot safely assume?",
+        "options": [
+          "An authentic-looking souvenir must have been locally made.",
+          "Souvenir ethics depends on tracing origin, not merely on buying or refusing to buy.",
+          "Imported imitations undercut artisans producing the traditions they supposedly represent.",
+          "A total boycott can harm artisans, so informed purchasing is the better response."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the imported souvenir trade turn the concern into something concrete?",
+        "options": [
+          "Imported imitations undercut artisans producing the traditions they supposedly represent.",
+          "Souvenir ethics depends on tracing origin, not merely on buying or refusing to buy.",
+          "A total boycott can harm artisans, so informed purchasing is the better response.",
+          "Small changes in buyer demand can eventually influence what producers supply."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the imported souvenir trade show the listener should not overstate?",
+        "options": [
+          "Souvenir ethics depends on tracing origin, not merely on buying or refusing to buy.",
+          "A total boycott can harm artisans, so informed purchasing is the better response.",
+          "Imported imitations undercut artisans producing the traditions they supposedly represent.",
+          "Small changes in buyer demand can eventually influence what producers supply."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What risk lies in treating the imported souvenir trade as insignificant?",
+        "options": [
+          "Souvenir ethics depends on tracing origin, not merely on buying or refusing to buy.",
+          "Small changes in buyer demand can eventually influence what producers supply.",
+          "Imported imitations undercut artisans producing the traditions they supposedly represent.",
+          "A total boycott can harm artisans, so informed purchasing is the better response."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How can the listener apply the lesson of the imported souvenir trade?",
+        "options": [
+          "Souvenir ethics depends on tracing origin, not merely on buying or refusing to buy.",
+          "Imported imitations undercut artisans producing the traditions they supposedly represent.",
+          "A total boycott can harm artisans, so informed purchasing is the better response.",
+          "Ask who made an item and where it was produced before purchasing."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-travel-08",
+    "title": "The Itinerary That Left Space for the Place Itself",
+    "level": "C1",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] I used to plan travel by collecting landmarks. The fuller the map became, the more successful the trip seemed. Then a local guide asked us, What do you think this town is for when visitors are not here?",
+      "Narrator: The question revealed how easily a visitor can treat another community as a backdrop. Our schedule ignored market hours, quiet streets, prayer spaces, transport limits, and the fact that popular viewpoints were close to people’s homes.",
+      "Narrator: We changed the plan. We chose fewer places, allowed more time, learned basic local etiquette, and asked before photographing people, private homes, or sensitive spaces.",
+      "Narrator: The slower journey gave us more, not less. A conversation with a bookseller explained why a street became crowded at certain hours. A museum visit gave context to a building we had first treated as scenery.",
+      "Narrator: Responsible travel does not mean romanticising poverty or searching for authenticity through intrusion. It means recognising that visitors create economic and social effects even when they intend only to enjoy themselves.",
+      "Narrator: We also prepared practical matters: current entry requirements, local guidance, safety information, prayer arrangements, and respectful clothing expectations. Preparation is part of courtesy, not an enemy of spontaneity.",
+      "Narrator: At one point, we decided not to visit a location that had become overwhelmed by online attention. The decision felt small, but it reminded us that wanting to see something does not create a right to go there.",
+      "Narrator: The trip became less about proving that we had seen everything. It became more about moving through unfamiliar places with gratitude, restraint, and curiosity enough to let residents describe their own home."
+    ],
+    "quiz": [
+      {
+        "question": "What does an itinerary shaped around residents’ daily life show about the issue under discussion?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it.",
+          "Ignoring local limits can disturb residents and overwhelm sensitive places."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What insight comes from an itinerary shaped around residents’ daily life?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it.",
+          "Ignoring local limits can disturb residents and overwhelm sensitive places."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What nuance does an itinerary shaped around residents’ daily life add to the discussion?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it.",
+          "Ignoring local limits can disturb residents and overwhelm sensitive places."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What broader problem can an itinerary shaped around residents’ daily life produce?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it.",
+          "Ignoring local limits can disturb residents and overwhelm sensitive places."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What practice would show that someone understood an itinerary shaped around residents’ daily life?",
+        "options": [
+          "Check current guidance, respect boundaries, and choose fewer places with more care.",
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What familiar idea does an itinerary shaped around residents’ daily life place in doubt?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Wanting to see a location automatically gives a visitor a right to enter.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What part of the reasoning does an itinerary shaped around residents’ daily life substantiate?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Preparation and restraint increase spontaneity instead of eliminating it.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Ignoring local limits can disturb residents and overwhelm sensitive places."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does an itinerary shaped around residents’ daily life require a balanced response?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Ignoring local limits can disturb residents and overwhelm sensitive places.",
+          "Preparation and restraint increase spontaneity instead of eliminating it."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What negative outcome does an itinerary shaped around residents’ daily life help explain?",
+        "options": [
+          "Ignoring local limits can disturb residents and overwhelm sensitive places.",
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which practical step follows from an itinerary shaped around residents’ daily life?",
+        "options": [
+          "Responsible travel treats communities as homes rather than visitor backdrops.",
+          "Check current guidance, respect boundaries, and choose fewer places with more care.",
+          "Local explanations turned crowded streets and museums into meaningful context.",
+          "Preparation and restraint increase spontaneity instead of eliminating it."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-travel-09",
+    "title": "A Travel Recommendation Is Not a Permission Slip",
+    "level": "C1",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] A popular travel video promised a hidden local experience in every city. It showed quiet lanes, a small place of worship, and a family-run café, all presented as if the viewer had discovered a secret.",
+      "Narrator: The video was attractive, but it made me ask what happens when a recommendation reaches millions of people without any thought for the people who live and work there.",
+      "Narrator: Travel advice can become outdated quickly. Prices, access rules, safety conditions, transport schedules, and community wishes all change. A careful traveller treats an online post as a starting point, not a guarantee.",
+      "Narrator: Local knowledge is valuable, but one person does not speak for an entire place. We should compare current official information with more than one perspective and be ready to adjust after arrival.",
+      "Narrator: This matters especially when a guide invites visitors into residential areas or sensitive spaces. Sharing a location can bring income, but it can also create noise, crowding, and pressure that the original creator never experiences.",
+      "Narrator: I now look for signs of care in a recommendation: clear dates, honest sponsorship, advice about local rules, and an awareness of what should not be photographed or widely shared.",
+      "Narrator: The same care applies to safety. One pleasant trip does not prove that every visitor will have the same experience, and one problem does not justify broad claims about a whole population.",
+      "Narrator: Good travel research does not make a journey less adventurous. It makes it more respectful. It prepares us to arrive as guests rather than as people who expect a community to absorb every consequence of our plans."
+    ],
+    "quiz": [
+      {
+        "question": "Which larger view does the speaker build from a viral recommendation for a supposedly hidden place?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community.",
+          "Viral recommendations can create noise and pressure that creators never experience."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why is a viral recommendation for a supposedly hidden place a telling detail in the argument?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community.",
+          "Viral recommendations can create noise and pressure that creators never experience."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does a viral recommendation for a supposedly hidden place challenge a one-sided response?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community.",
+          "Viral recommendations can create noise and pressure that creators never experience."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does a viral recommendation for a supposedly hidden place affect more than the person at its centre?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community.",
+          "Viral recommendations can create noise and pressure that creators never experience."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What is the most faithful next step after a viral recommendation for a supposedly hidden place?",
+        "options": [
+          "Compare current official guidance with several local perspectives before visiting.",
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which premise does a viral recommendation for a supposedly hidden place make harder to defend?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "A popular recommendation remains suitable simply because it once worked.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does a viral recommendation for a supposedly hidden place strengthen the speaker’s conclusion?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "One local perspective is valuable but cannot represent an entire community.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "Viral recommendations can create noise and pressure that creators never experience."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What boundary does the speaker preserve around a viral recommendation for a supposedly hidden place?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "Viral recommendations can create noise and pressure that creators never experience.",
+          "One local perspective is valuable but cannot represent an entire community."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why would neglecting a viral recommendation for a supposedly hidden place be costly?",
+        "options": [
+          "Viral recommendations can create noise and pressure that creators never experience.",
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What conduct would reflect the speaker’s reasoning about a viral recommendation for a supposedly hidden place?",
+        "options": [
+          "Online travel advice is a starting point, not permission or a permanent guarantee.",
+          "Compare current official guidance with several local perspectives before visiting.",
+          "Rules, prices, safety conditions, and community wishes can change rapidly.",
+          "One local perspective is valuable but cannot represent an entire community."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-travel-10",
+    "title": "What Does It Mean to Be a Good Guest When Plans Fail?",
+    "level": "C1",
+    "themeId": "travel",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] Your train was delayed before you were due to stay with a host family. Why did that become a lesson in travel conduct?",
+      "Guest: Because my first impulse was to send increasingly frustrated messages, as though my inconvenience gave me the right to make people I had just met reorganise their whole evening.",
+      "Moderator: What did you do instead?",
+      "Guest: I sent confirmed information, acknowledged that the time was uncertain, asked what would be least disruptive for them, and made a backup plan for a nearby place to wait if necessary.",
+      "Moderator: That sounds like ordinary politeness.",
+      "Guest: Ordinary politeness matters most when a plan fails. Travel can make us tired and anxious, and then we may treat unfamiliar systems as incompetent simply because they are not arranged around us.",
+      "Moderator: How can a traveller prepare for that moment?",
+      "Guest: Keep documents accessible, check legitimate transport updates, carry important contact information, and avoid posting complaints that identify staff or fellow travellers without context.",
+      "Moderator: What if a person needs help urgently?",
+      "Guest: Ask clearly and seek local assistance through appropriate channels. Courtesy does not mean staying silent about a safety concern; it means speaking firmly without treating other people as servants.",
+      "Moderator: How does this connect to cultural respect?",
+      "Guest: We can ask questions and make requests without assuming difference is deficiency. A guest learns the place rather than demanding that the place become familiar immediately.",
+      "Moderator: What stayed with you after the delay?",
+      "Guest: A journey tests character in small inconveniences long before it tests it in dramatic adventures.",
+      "Moderator: What should a traveller remember when frustration rises?",
+      "Guest: Verify the facts, protect their own safety, communicate early, and recognise that other people may be managing real constraints too. Clear requests are possible without turning anxiety into accusation."
+    ],
+    "quiz": [
+      {
+        "question": "What central judgement follows from the delayed arrival at a host family’s home?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants.",
+          "Unverified complaints can turn anxiety into unfair accusations against others."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the delayed arrival at a host family’s home demonstrate about the speaker’s concern?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants.",
+          "Unverified complaints can turn anxiety into unfair accusations against others."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What contrast does the delayed arrival at a host family’s home make important?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants.",
+          "Unverified complaints can turn anxiety into unfair accusations against others."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What result does the speaker warn could follow from the delayed arrival at a host family’s home?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants.",
+          "Unverified complaints can turn anxiety into unfair accusations against others."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How should the speaker’s lesson from the delayed arrival at a host family’s home shape conduct?",
+        "options": [
+          "Verify facts, communicate early, make a backup plan, and seek proper help.",
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What misconception lies behind the problem revealed by the delayed arrival at a host family’s home?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "A traveller’s inconvenience entitles them to demand immediate accommodation.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the delayed arrival at a host family’s home show the issue operating in practice?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "Courtesy permits firm safety requests but rejects treating people as servants.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Unverified complaints can turn anxiety into unfair accusations against others."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the delayed arrival at a host family’s home guard against an extreme interpretation?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Unverified complaints can turn anxiety into unfair accusations against others.",
+          "Courtesy permits firm safety requests but rejects treating people as servants."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the speaker suggest could go wrong without attention to the delayed arrival at a host family’s home?",
+        "options": [
+          "Unverified complaints can turn anxiety into unfair accusations against others.",
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How should someone proceed in light of the delayed arrival at a host family’s home?",
+        "options": [
+          "Travel problems test character through clear, respectful responses to inconvenience.",
+          "Verify facts, communicate early, make a backup plan, and seek proper help.",
+          "The guest sent confirmed information and asked what would disrupt the host least.",
+          "Courtesy permits firm safety requests but rejects treating people as servants."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "travel",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

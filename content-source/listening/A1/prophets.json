@@ -6,32 +6,146 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Father", "gender": "male" }
+      {
+        "name": "Father",
+        "gender": "male"
+      }
     ],
     "script": [
       "Father: [warmly] Let me tell you something my own father told me, about the very first man, Adam.",
-      "Father: [thoughtful] Allah created Adam from clay and breathed life into him, then taught him the names of many things.",
+      "Father: Allah created Adam from clay and gave him life, then taught him the names of many things.",
       "Father: [gently] Allah placed Adam and his wife Hawa in a beautiful garden and told them to eat freely from almost anything there.",
-      "Father: [reflective] There was only one tree they were told to avoid, just one, out of everything around them.",
-      "Father: [softly] For a while, they lived happily, walking freely, eating whatever they wished, close to their Lord.",
-      "Father: [honestly] But shaytan whispered to them quietly, saying that tree held something wonderful they were missing.",
-      "Father: [thoughtful] Slowly, the whispering worked on them. Adam and Hawa forgot the warning and ate from that one tree.",
-      "Father: [gently] Right away, they felt something change inside them. A quiet shame arrived, and they understood they had made a mistake.",
-      "Father: [reflective] They did not hide from Allah forever, though. Instead, they turned back to Him immediately, asking for forgiveness with honest hearts.",
-      "Father: [warmly] Allah accepted their repentance, because they admitted the mistake fully, without excuses and without blaming each other.",
+      "Father: There was only one tree they were told to avoid, just one, out of everything around them.",
+      "Father: For a while, they lived happily, walking freely, eating whatever they wished, with Allah’s guidance.",
+      "Father: [cautiously] But shaytan whispered to them quietly, saying that tree held something wonderful they were missing.",
+      "Father: Slowly, the whispering worked on them. Adam and Hawa forgot the warning and ate from that one tree.",
+      "Father: [sadly] Right away, they felt something change inside them. A quiet shame arrived, and they understood they had made a mistake.",
+      "Father: [hopeful] They did not hide from Allah forever, though. Instead, they turned back to Him immediately, asking for forgiveness with honest hearts.",
+      "Father: Allah accepted their repentance, after they admitted their wrong and asked Him for mercy.",
       "Father: [thoughtful] Still, they had to leave the garden and begin a new life on earth, learning, working, and raising a family here.",
-      "Father: [with feeling] I always remember this part of the story: even the very first man made a mistake, and even he needed to ask forgiveness.",
-      "Father: [warmly] That tells me something important, something I want you to carry with you too. Mistakes are part of being human.",
-      "Father: [gently] What matters most is what happens after the mistake, whether we turn back honestly or stay hidden in our shame.",
-      "Father: [with a small smile] Adam turned back, and Allah welcomed him with mercy. That same door stays open for us today, my child."
+      "Father: I always remember this part of the story: even the very first man made a mistake, and even he needed to ask forgiveness.",
+      "Father: That tells me something important, something I want you to carry with you too. Mistakes are part of being human.",
+      "Father: What matters most is what happens after the mistake, whether we turn back honestly or stay hidden in our shame.",
+      "Father: [warmly] Adam turned back, and Allah welcomed him with mercy. Allah teaches us not to lose hope in His mercy, my child."
     ],
     "quiz": [
-      { "question": "What did Allah teach Adam after creating him from clay?", "options": ["How to farm", "The names of many things", "How to build a house", "A new language only"], "correctIndex": 1, "explanation": "The father explains Allah taught Adam the names of many things after creating him." },
-      { "question": "What were Adam and Hawa told about the garden?", "options": ["They could eat freely except from one tree", "They could not eat anything at all", "They had to leave immediately", "They could only drink water"], "correctIndex": 0, "explanation": "They were told to eat freely from almost everything, except one specific tree." },
-      { "question": "What convinced Adam and Hawa to eat from the forbidden tree?", "options": ["Hunger", "Shaytan's quiet whispering", "A command from Allah", "A dream they had"], "correctIndex": 1, "explanation": "Shaytan whispered to them that the tree held something wonderful they were missing." },
-      { "question": "What did Adam and Hawa do after realizing their mistake?", "options": ["They hid forever", "They blamed each other", "They turned back to Allah and asked forgiveness honestly", "They ignored what happened"], "correctIndex": 2, "explanation": "They turned back to Allah immediately, asking for forgiveness with honest hearts, without excuses." },
-      { "question": "What is the father's main lesson for his child?", "options": ["Never make mistakes", "Mistakes are human, and turning back honestly matters most", "Stay hidden after a mistake", "Blame others when you fail"], "correctIndex": 1, "explanation": "He concludes that mistakes are part of being human, and what matters is turning back honestly afterward." }
-    ]
+      {
+        "question": "What did Allah teach Adam after creating him from clay?",
+        "options": [
+          "The names of many things",
+          "How to farm",
+          "How to build a house",
+          "A new language only"
+        ],
+        "correctIndex": 0,
+        "explanation": "The father explains Allah taught Adam the names of many things after creating him."
+      },
+      {
+        "question": "What were Adam and Hawa told about the garden?",
+        "options": [
+          "They could not eat anything at all",
+          "They could eat freely except from one tree",
+          "They had to leave immediately",
+          "They could only drink water"
+        ],
+        "correctIndex": 1,
+        "explanation": "They were told to eat freely from almost everything, except one specific tree."
+      },
+      {
+        "question": "What convinced Adam and Hawa to eat from the forbidden tree?",
+        "options": [
+          "Hunger",
+          "A command from Allah",
+          "A dream they had",
+          "Shaytan's quiet whispering"
+        ],
+        "correctIndex": 3,
+        "explanation": "Shaytan whispered to them that the tree held something wonderful they were missing."
+      },
+      {
+        "question": "What did Adam and Hawa do after realizing their mistake?",
+        "options": [
+          "They hid forever",
+          "They blamed each other",
+          "They turned back to Allah and asked forgiveness honestly",
+          "They ignored what happened"
+        ],
+        "correctIndex": 2,
+        "explanation": "They turned back to Allah immediately, asking for forgiveness with honest hearts, without excuses."
+      },
+      {
+        "question": "What is the father's main lesson for his child?",
+        "options": [
+          "Never make mistakes",
+          "Stay hidden after a mistake",
+          "Blame others when you fail",
+          "Mistakes are human, and turning back honestly matters most"
+        ],
+        "correctIndex": 3,
+        "explanation": "He concludes that mistakes are part of being human, and what matters is turning back honestly afterward."
+      },
+      {
+        "question": "What did Allah teach Adam?",
+        "options": [
+          "How to build a ship",
+          "The names of many things",
+          "How to make armor",
+          "The meaning of a dream"
+        ],
+        "correctIndex": 1,
+        "explanation": "The father mentions this near the beginning."
+      },
+      {
+        "question": "What did shaytan do?",
+        "options": [
+          "Asked Adam to leave the garden",
+          "Taught the names of animals",
+          "Whispered about the forbidden tree",
+          "Offered Adam a new home"
+        ],
+        "correctIndex": 2,
+        "explanation": "The whisper made the forbidden choice seem attractive."
+      },
+      {
+        "question": "How did Adam and Hawa respond after the mistake?",
+        "options": [
+          "They blamed the garden",
+          "They forgot Allah completely",
+          "They returned to the tree",
+          "They asked Allah for forgiveness"
+        ],
+        "correctIndex": 3,
+        "explanation": "They turned back with honest repentance."
+      },
+      {
+        "question": "What does “repentance” mean here?",
+        "options": [
+          "Returning to Allah after doing wrong",
+          "Hiding a mistake forever",
+          "Living in a garden",
+          "Learning a family skill"
+        ],
+        "correctIndex": 0,
+        "explanation": "The story connects repentance with admitting wrong and asking mercy."
+      },
+      {
+        "question": "What does the father want the child to remember?",
+        "options": [
+          "People never make mistakes",
+          "Every warning is difficult",
+          "Life on earth has no work",
+          "Do not lose hope after a mistake"
+        ],
+        "correctIndex": 3,
+        "explanation": "The final lesson centers on honest return and Allah’s mercy."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "revise lightly; preserve the repentance lesson while avoiding unsupported detail and simplifying abstract language",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-prophets-02",
@@ -40,36 +154,153 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Imam Yusuf, and we're talking about Prophet Nuh. Thank you for joining me.",
-      "Guest: [pleasantly] Thank you for having me. Nuh's story is one I return to often myself.",
-      "Host: [curious] For listeners who don't know the story well, can you give us a short summary?",
+      "Guest: Thank you for having me. Nuh's story is one I return to often myself.",
+      "Host: For listeners who don't know the story well, can you give us a short summary?",
       "Guest: [thoughtful] Of course. Allah sent Nuh to call his people away from worshipping idols and back toward Allah alone.",
-      "Host: [surprised] I read that he called them for a very long time. Is that true?",
-      "Guest: [gently] Yes, nearly nine hundred and fifty years, according to the Quran. Most people still refused to listen.",
-      "Host: [amazed] Nine hundred and fifty years. That's an incredible amount of patience.",
-      "Guest: [warmly] It truly is. He was mocked, ignored, and even his own son and wife did not believe him.",
-      "Host: [sympathetically] That must have been painful, being rejected by his own family like that.",
-      "Guest: [reflective] Deeply painful, yes. Yet Nuh kept calling people gently, night and day, never giving up completely.",
-      "Host: [curious] What happened in the end?",
-      "Guest: [thoughtful] Allah commanded Nuh to build a large ship, and a great flood came, saving only Nuh and the believers with him.",
-      "Host: [interested] What lesson do you think this story holds for us today?",
+      "Host: I read that he called them for a very long time. Is that true?",
+      "Guest: [carefully] The Quran says he remained among his people for nine hundred and fifty years. Most still refused his call.",
+      "Host: Nine hundred and fifty years. That's an incredible amount of patience.",
+      "Guest: [sadly] It truly is. He was mocked, ignored, and even his own son and wife did not believe him.",
+      "Host: That must have been painful, being rejected by his own family like that.",
+      "Guest: [reflective] Deeply painful, yes. Yet Nuh kept calling people gently, night and day, continuing his call with patience.",
+      "Host: What happened in the end?",
+      "Guest: [seriously] Allah commanded Nuh to build a large ship, and a great flood came, and Allah saved Nuh and the believers who were with him.",
+      "Host: What lesson do you think this story holds for us today?",
       "Guest: [warmly] Patience does not always bring quick results. Sometimes it simply means staying faithful, even when almost nobody listens.",
-      "Host: [thoughtful] That's a hard truth for people today, who expect fast answers to everything.",
-      "Guest: [gently] Exactly. Nuh teaches us that our job is to keep trying sincerely, and the results belong to Allah alone.",
-      "Host: [smiling] Thank you for explaining that so clearly, Imam Yusuf.",
-      "Guest: [warmly] Thank you for having me. I hope this reminds someone to keep trying, even when it feels slow."
+      "Host: That's a hard truth for people today, who expect fast answers to everything.",
+      "Guest: Exactly. Nuh teaches us that our job is to keep trying sincerely, and the results belong to Allah alone.",
+      "Host: Thank you for explaining that so clearly, Imam Yusuf.",
+      "Guest: [hopeful] Thank you for having me. I hope this reminds someone to keep trying, even when it feels slow."
     ],
     "quiz": [
-      { "question": "What did Allah send Nuh to call his people toward?", "options": ["A new city", "Away from idols and back toward Allah alone", "A different language", "Farming techniques"], "correctIndex": 1, "explanation": "Nuh was sent to call his people away from worshipping idols and back toward Allah alone." },
-      { "question": "About how long did Nuh call his people, according to the guest?", "options": ["Ten years", "One hundred years", "Nearly nine hundred and fifty years", "Fifty years"], "correctIndex": 2, "explanation": "The guest says Nuh called his people for nearly nine hundred and fifty years." },
-      { "question": "Who among Nuh's own family did not believe him?", "options": ["His parents", "His son and wife", "His brothers", "His daughter"], "correctIndex": 1, "explanation": "The guest mentions that even Nuh's own son and wife did not believe him." },
-      { "question": "What did Allah command Nuh to build?", "options": ["A large ship", "A temple", "A well", "A wall"], "correctIndex": 0, "explanation": "Allah commanded Nuh to build a large ship before the flood came." },
-      { "question": "What lesson does the guest draw from Nuh's story?", "options": ["Patience always brings quick results", "Our job is to try sincerely; results belong to Allah alone", "Giving up quickly is wise", "Family always believes you eventually"], "correctIndex": 1, "explanation": "The guest concludes that our job is to keep trying sincerely, and the results belong to Allah alone." }
-    ]
+      {
+        "question": "What did Allah send Nuh to call his people toward?",
+        "options": [
+          "A new city",
+          "A different language",
+          "Away from idols and back toward Allah alone",
+          "Farming techniques"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nuh was sent to call his people away from worshipping idols and back toward Allah alone."
+      },
+      {
+        "question": "About how long did Nuh call his people, according to the guest?",
+        "options": [
+          "Ten years",
+          "Nearly nine hundred and fifty years",
+          "One hundred years",
+          "Fifty years"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest says Nuh called his people for nearly nine hundred and fifty years."
+      },
+      {
+        "question": "Who among Nuh's own family did not believe him?",
+        "options": [
+          "His son and wife",
+          "His parents",
+          "His brothers",
+          "His daughter"
+        ],
+        "correctIndex": 0,
+        "explanation": "The guest mentions that even Nuh's own son and wife did not believe him."
+      },
+      {
+        "question": "What did Allah command Nuh to build?",
+        "options": [
+          "A temple",
+          "A well",
+          "A large ship",
+          "A wall"
+        ],
+        "correctIndex": 2,
+        "explanation": "Allah commanded Nuh to build a large ship before the flood came."
+      },
+      {
+        "question": "What lesson does the guest draw from Nuh's story?",
+        "options": [
+          "Patience always brings quick results",
+          "Giving up quickly is wise",
+          "Family always believes you eventually",
+          "Our job is to try sincerely; results belong to Allah alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "The guest concludes that our job is to keep trying sincerely, and the results belong to Allah alone."
+      },
+      {
+        "question": "What did Nuh call his people to leave?",
+        "options": [
+          "The worship of idols",
+          "Their homes at night",
+          "Work near the sea",
+          "A large city"
+        ],
+        "correctIndex": 0,
+        "explanation": "His message called them back to worshipping Allah alone."
+      },
+      {
+        "question": "How did many people treat Nuh?",
+        "options": [
+          "They immediately followed him",
+          "They helped build from the first day",
+          "They made him their king",
+          "They mocked or ignored him"
+        ],
+        "correctIndex": 3,
+        "explanation": "The dialogue describes long rejection."
+      },
+      {
+        "question": "What did Allah tell Nuh to build?",
+        "options": [
+          "A high wall",
+          "A stone house",
+          "A large ship",
+          "A metal bridge"
+        ],
+        "correctIndex": 2,
+        "explanation": "The ship was built before the flood."
+      },
+      {
+        "question": "What does “faithful” mean in this lesson?",
+        "options": [
+          "Receiving fast results",
+          "Remaining true to Allah",
+          "Never feeling pain",
+          "Winning every argument"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest separates faithfulness from quick success."
+      },
+      {
+        "question": "Who controls the final result of sincere effort?",
+        "options": [
+          "The podcast host",
+          "The largest group",
+          "Allah",
+          "The person who speaks longest"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guest says people try sincerely while results belong to Allah."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "revise; correct the Quranic time statement and keep the podcast focused on patient, sincere effort",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-prophets-03",
@@ -78,36 +309,153 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Bilal", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Bilal",
+        "gender": "male"
+      }
     ],
     "script": [
       "Nadia: [curious] Bilal, I've been reading about Prophet Ibrahim lately. His trust in Allah amazes me.",
-      "Bilal: [nodding] Same here. Which part are you thinking about right now?",
+      "Bilal: Same here. Which part are you thinking about right now?",
       "Nadia: [thoughtful] The part where he was still young, and he broke the idols his own people worshipped.",
-      "Bilal: [smiling] Right, and then he calmly told them to ask the biggest idol what happened, knowing it couldn't speak.",
-      "Nadia: [laughing] That takes real courage, standing alone against everyone's beliefs like that.",
-      "Bilal: [warmly] It does. He wasn't afraid to question something everyone around him accepted without thinking.",
-      "Nadia: [reflective] I also think about later, when Allah tested him by asking him to leave Hajar and baby Ismail in the desert.",
-      "Bilal: [gently] That part is hard to imagine. Yet Hajar trusted Allah too, asking simply if Allah had commanded it.",
+      "Bilal: Right, and then he calmly told them to ask the biggest idol what happened, knowing it couldn't speak.",
+      "Nadia: [amazed] That takes real courage, standing alone against everyone's beliefs like that.",
+      "Bilal: It does. He wasn't afraid to question something everyone around him accepted without thinking.",
+      "Nadia: [serious] I also think about later, when Allah tested him by asking him to leave Hajar and baby Ismail in the desert.",
+      "Bilal: That part is hard to imagine. Yet Hajar trusted Allah too, asking simply if Allah had commanded it.",
       "Nadia: [softly] When Ibrahim said yes, she said then Allah will not abandon us. That line stays with me.",
-      "Bilal: [thoughtful] And Allah didn't abandon them. The well of Zamzam appeared right there, exactly when they needed water.",
-      "Nadia: [amazed] It still exists today, doesn't it? People drink from it during pilgrimage.",
-      "Bilal: [warmly] Yes, millions of people still drink from that same well every single year.",
+      "Bilal: [relieved] And Allah didn't abandon them. The well of Zamzam appeared right there, exactly when they needed water.",
+      "Nadia: It still exists today, doesn't it? People drink from it during pilgrimage.",
+      "Bilal: Yes, pilgrims still drink Zamzam water today.",
       "Nadia: [reflective] What strikes me most is that Ibrahim kept trusting Allah through every single test, one after another.",
-      "Bilal: [gently] True trust isn't tested once. It gets tested repeatedly, in different ways, throughout a whole life.",
-      "Nadia: [warmly] That's a good reminder for me honestly. My own trust gets shaky after just one hard week.",
-      "Bilal: [encouraging] Mine too, if I'm honest. Maybe that's why we keep returning to his story, again and again.",
-      "Nadia: [thoughtful] I think that's exactly why these old stories still matter for people living completely different lives today.",
-      "Bilal: [warmly] Agreed. The situations change, but the choice between fear and trust stays the same for all of us."
+      "Bilal: Trust in Allah may be needed many times and in different tests.",
+      "Nadia: That's a good reminder for me honestly. My own trust gets shaky after just one hard week.",
+      "Bilal: Mine too, if I'm honest. Maybe that's why we keep returning to his story, again and again.",
+      "Nadia: I think that's exactly why these old stories still matter for people living completely different lives today.",
+      "Bilal: [warmly] Agreed. Our lives are different, but we still need courage and trust in Allah."
     ],
     "quiz": [
-      { "question": "What did the young Ibrahim do to his people's idols?", "options": ["He worshipped them more", "He broke them", "He sold them", "He painted them"], "correctIndex": 1, "explanation": "Nadia mentions that Ibrahim, while still young, broke the idols his people worshipped." },
-      { "question": "What did Ibrahim tell his people to do afterward?", "options": ["Ask the biggest idol what happened", "Build new idols immediately", "Leave the city forever", "Forget the whole event"], "correctIndex": 0, "explanation": "Bilal explains Ibrahim calmly told them to ask the biggest idol, knowing it could not speak." },
-      { "question": "What did Hajar say when Ibrahim told her Allah commanded him to leave her and Ismail?", "options": ["She refused to stay", "She said Allah will not abandon us", "She asked him to stay instead", "She said nothing at all"], "correctIndex": 1, "explanation": "Hajar said that if Allah commanded it, then Allah will not abandon them." },
-      { "question": "What appeared to help Hajar and Ismail in the desert?", "options": ["A traveling caravan", "The well of Zamzam", "A nearby village", "Rainfall"], "correctIndex": 1, "explanation": "The well of Zamzam appeared exactly when Hajar and Ismail needed water." },
-      { "question": "What do Nadia and Bilal conclude about trust?", "options": ["It is tested only once in life", "It gets tested repeatedly throughout a whole life", "It never gets tested", "It only matters for prophets"], "correctIndex": 1, "explanation": "They conclude that true trust isn't tested once, but repeatedly, in different ways, throughout a whole life." }
-    ]
+      {
+        "question": "What did the young Ibrahim do to his people's idols?",
+        "options": [
+          "He broke them",
+          "He worshipped them more",
+          "He sold them",
+          "He painted them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nadia mentions that Ibrahim, while still young, broke the idols his people worshipped."
+      },
+      {
+        "question": "What did Ibrahim tell his people to do afterward?",
+        "options": [
+          "Build new idols immediately",
+          "Ask the biggest idol what happened",
+          "Leave the city forever",
+          "Forget the whole event"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bilal explains Ibrahim calmly told them to ask the biggest idol, knowing it could not speak."
+      },
+      {
+        "question": "What did Hajar say when Ibrahim told her Allah commanded him to leave her and Ismail?",
+        "options": [
+          "She refused to stay",
+          "She asked him to stay instead",
+          "She said nothing at all",
+          "She said Allah will not abandon us"
+        ],
+        "correctIndex": 3,
+        "explanation": "Hajar said that if Allah commanded it, then Allah will not abandon them."
+      },
+      {
+        "question": "What appeared to help Hajar and Ismail in the desert?",
+        "options": [
+          "A traveling caravan",
+          "A nearby village",
+          "The well of Zamzam",
+          "Rainfall"
+        ],
+        "correctIndex": 2,
+        "explanation": "The well of Zamzam appeared exactly when Hajar and Ismail needed water."
+      },
+      {
+        "question": "What do Nadia and Bilal conclude about trust?",
+        "options": [
+          "It is tested only once in life",
+          "It gets tested repeatedly throughout a whole life",
+          "It never gets tested",
+          "It only matters for prophets"
+        ],
+        "correctIndex": 1,
+        "explanation": "They conclude that true trust isn't tested once, but repeatedly, in different ways, throughout a whole life."
+      },
+      {
+        "question": "Why did Ibrahim tell the people to ask the largest idol?",
+        "options": [
+          "To learn who made the idols",
+          "To show that an idol could not speak",
+          "To ask for water",
+          "To find Hajar and Ismail"
+        ],
+        "correctIndex": 1,
+        "explanation": "The question showed the idol’s lack of power."
+      },
+      {
+        "question": "Who asked whether Allah had commanded the desert journey?",
+        "options": [
+          "Nadia",
+          "Bilal",
+          "A pilgrim",
+          "Hajar"
+        ],
+        "correctIndex": 3,
+        "explanation": "Hajar’s question led to her statement of trust."
+      },
+      {
+        "question": "What appeared in the desert?",
+        "options": [
+          "A large ship",
+          "A garden of tomatoes",
+          "The well of Zamzam",
+          "A wall of water"
+        ],
+        "correctIndex": 2,
+        "explanation": "Water came when Hajar and Ismail needed it."
+      },
+      {
+        "question": "What does “shaky” mean when Nadia describes her trust?",
+        "options": [
+          "Loud and confident",
+          "Not strong or steady",
+          "Easy to explain",
+          "Ready for travel"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says one difficult week can weaken her confidence."
+      },
+      {
+        "question": "Why do the friends return to Ibrahim’s story?",
+        "options": [
+          "It reminds them to trust Allah in tests",
+          "They want to count old idols",
+          "They are planning a mountain trip",
+          "They need a coffee recipe"
+        ],
+        "correctIndex": 0,
+        "explanation": "They connect his example with challenges in their own lives."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "revise lightly; retain Quranic and established account while removing a changing numerical claim and simplifying the final comparison",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-prophets-04",
@@ -116,32 +464,146 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [warmly] Long ago, a boy named Yusuf had a dream about eleven stars and the sun bowing down to him.",
-      "Narrator: [thoughtful] His father, Prophet Yaqub, understood the dream meant something great, and told Yusuf to keep it quiet.",
+      "Narrator: His father, Prophet Yaqub, understood the dream meant something great, and told Yusuf to keep it quiet.",
       "Narrator: [sadly] Yusuf's own brothers grew jealous of him, because their father loved him deeply and openly.",
       "Narrator: [with sorrow] One day, driven by jealousy, the brothers threw Yusuf into a deep well and left him there alone.",
-      "Narrator: [reflective] A passing caravan found him and, sadly, sold him into slavery far away, in the land of Egypt.",
-      "Narrator: [thoughtful] Yusuf faced many hardships there, even being falsely accused and thrown into prison for years he did not deserve.",
-      "Narrator: [warmly] But Allah gave Yusuf the ability to interpret dreams, and this gift eventually reached the king himself.",
-      "Narrator: [with hope] Yusuf interpreted a dream about a coming famine, and his wise advice saved all of Egypt from starvation.",
-      "Narrator: [amazed] He rose from prisoner to a powerful position, trusted completely by the king to manage the entire land.",
-      "Narrator: [reflective] Years later, during that same famine, his brothers traveled to Egypt seeking food, not knowing who stood before them.",
-      "Narrator: [softly] Yusuf recognized them immediately, though they did not recognize him after so many years apart.",
-      "Narrator: [with feeling] Finally, Yusuf revealed himself, and his brothers froze in fear, remembering exactly what they had done to him.",
-      "Narrator: [gently] But Yusuf did not punish them. He said simply, no blame upon you today. Allah will forgive you.",
-      "Narrator: [warmly] That forgiveness, after everything he suffered, remains one of the most moving moments in his entire story.",
-      "Narrator: [with a small smile] Yusuf's patience through hardship, and his mercy afterward, still teaches us both endurance and forgiveness today."
+      "Narrator: A traveling group found him, and he was later sold in Egypt.",
+      "Narrator: [seriously] Yusuf faced many hardships there, even being falsely accused and thrown into prison for years he did not deserve.",
+      "Narrator: But Allah gave Yusuf the ability to interpret dreams, and this gift eventually reached the king himself.",
+      "Narrator: [hopeful] Yusuf interpreted a dream about a coming famine, and his wise plan helped Egypt prepare for the years of famine.",
+      "Narrator: He rose from prisoner to a powerful position, given an important position to manage the food stores.",
+      "Narrator: [thoughtful] Years later, during that same famine, his brothers traveled to Egypt seeking food, not knowing who stood before them.",
+      "Narrator: Yusuf recognized them immediately, though they did not recognize him after so many years apart.",
+      "Narrator: [tense] Finally, Yusuf revealed himself, and his brothers became afraid, remembering exactly what they had done to him.",
+      "Narrator: [mercifully] But Yusuf did not punish them. He said simply, no blame upon you today. Allah will forgive you.",
+      "Narrator: That forgiveness, after everything he suffered, remains one of the most moving moments in his entire story.",
+      "Narrator: [warmly] Yusuf's patience through hardship, and his mercy afterward, still teaches us both endurance and forgiveness today."
     ],
     "quiz": [
-      { "question": "What did young Yusuf dream about?", "options": ["A flood covering the land", "Eleven stars and the sun bowing down to him", "A journey across the sea", "A tall mountain"], "correctIndex": 1, "explanation": "Yusuf dreamed of eleven stars and the sun bowing down to him." },
-      { "question": "Why did Yusuf's brothers grow jealous of him?", "options": ["He was wealthier than them", "Their father loved him deeply and openly", "He was older than them", "He never worked"], "correctIndex": 1, "explanation": "The brothers grew jealous because their father, Yaqub, loved Yusuf deeply and openly." },
-      { "question": "What did the brothers do to Yusuf?", "options": ["They sent him to school abroad", "They threw him into a deep well", "They gave him a gift", "They asked him to leave home"], "correctIndex": 1, "explanation": "Driven by jealousy, the brothers threw Yusuf into a deep well and left him there." },
-      { "question": "How did Yusuf rise to a powerful position in Egypt?", "options": ["He married the king's daughter", "His ability to interpret dreams helped save Egypt from famine", "He bought his way to power", "He led an army"], "correctIndex": 1, "explanation": "Yusuf's ability to interpret dreams, including one about a coming famine, led to his rise to power." },
-      { "question": "What did Yusuf say to his brothers when he revealed himself?", "options": ["He punished them severely", "No blame upon you today, Allah will forgive you", "He refused to speak to them", "He sent them away immediately"], "correctIndex": 1, "explanation": "Yusuf forgave them, saying no blame upon you today, Allah will forgive you." }
-    ]
+      {
+        "question": "What did young Yusuf dream about?",
+        "options": [
+          "Eleven stars and the sun bowing down to him",
+          "A flood covering the land",
+          "A journey across the sea",
+          "A tall mountain"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf dreamed of eleven stars and the sun bowing down to him."
+      },
+      {
+        "question": "Why did Yusuf's brothers grow jealous of him?",
+        "options": [
+          "He was wealthier than them",
+          "He was older than them",
+          "Their father loved him deeply and openly",
+          "He never worked"
+        ],
+        "correctIndex": 2,
+        "explanation": "The brothers grew jealous because their father, Yaqub, loved Yusuf deeply and openly."
+      },
+      {
+        "question": "What did the brothers do to Yusuf?",
+        "options": [
+          "They sent him to school abroad",
+          "They gave him a gift",
+          "They asked him to leave home",
+          "They threw him into a deep well"
+        ],
+        "correctIndex": 3,
+        "explanation": "Driven by jealousy, the brothers threw Yusuf into a deep well and left him there."
+      },
+      {
+        "question": "How did Yusuf rise to a powerful position in Egypt?",
+        "options": [
+          "His ability to interpret dreams helped save Egypt from famine",
+          "He married the king's daughter",
+          "He bought his way to power",
+          "He led an army"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf's ability to interpret dreams, including one about a coming famine, led to his rise to power."
+      },
+      {
+        "question": "What did Yusuf say to his brothers when he revealed himself?",
+        "options": [
+          "No blame upon you today, Allah will forgive you",
+          "He punished them severely",
+          "He refused to speak to them",
+          "He sent them away immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf forgave them, saying no blame upon you today, Allah will forgive you."
+      },
+      {
+        "question": "Why did Yaqub tell Yusuf to keep the dream quiet?",
+        "options": [
+          "The dream had an important meaning",
+          "The stars were difficult to count",
+          "Yusuf needed more sleep",
+          "The family was traveling"
+        ],
+        "correctIndex": 0,
+        "explanation": "His father understood that the dream was special."
+      },
+      {
+        "question": "What caused the brothers to harm Yusuf?",
+        "options": [
+          "Hunger",
+          "Jealousy",
+          "Fear of Egypt",
+          "A king’s order"
+        ],
+        "correctIndex": 1,
+        "explanation": "They were jealous of their father’s love for him."
+      },
+      {
+        "question": "What ability did Allah give Yusuf?",
+        "options": [
+          "Splitting the sea",
+          "Understanding dreams",
+          "Making armor",
+          "Building a ship"
+        ],
+        "correctIndex": 1,
+        "explanation": "This gift later brought his knowledge to the ruler."
+      },
+      {
+        "question": "Why did the brothers travel to Egypt?",
+        "options": [
+          "To visit Yusuf in prison",
+          "To sell a caravan",
+          "To learn about stars",
+          "To find food during famine"
+        ],
+        "correctIndex": 3,
+        "explanation": "The shortage brought them before Yusuf years later."
+      },
+      {
+        "question": "How did Yusuf treat his brothers at the end?",
+        "options": [
+          "He left them in a well",
+          "He sent them to prison",
+          "He forgave them",
+          "He refused to speak"
+        ],
+        "correctIndex": 2,
+        "explanation": "His mercy is the final focus of the story."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "revise; keep the Quranic story sequence but narrow claims about Egypt and simplify difficult wording",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-prophets-05",
@@ -150,34 +612,151 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Teacher", "gender": "male" },
-      { "name": "Student", "gender": "female" }
+      {
+        "name": "Teacher",
+        "gender": "male"
+      },
+      {
+        "name": "Student",
+        "gender": "female"
+      }
     ],
     "script": [
       "Teacher: [warmly] Today, let's talk briefly about Prophet Musa, and then you can ask me questions afterward.",
-      "Teacher: [thoughtful] Musa was born during a dangerous time, when Pharaoh ordered newborn boys among his people to be killed.",
+      "Teacher: [seriously] Musa was born during a dangerous time, when Pharaoh ordered newborn boys among his people to be killed.",
       "Teacher: [gently] His mother placed baby Musa in a basket on the river, trusting Allah to protect him.",
-      "Teacher: [warmly] Strangely, Pharaoh's own household found and raised Musa, without knowing who he truly was at first.",
+      "Teacher: Strangely, Pharaoh's own household found and raised Musa, while he was still a baby.",
       "Teacher: [thoughtful] Years later, as a grown man, Allah chose Musa as a prophet and sent him back to Pharaoh with a clear message.",
       "Teacher: [firmly] The message was simple: release the Israelites from slavery, and stop oppressing them.",
-      "Teacher: [reflective] Pharaoh refused again and again, even after seeing signs and miracles that proved Musa's message was true.",
-      "Teacher: [with tension] Eventually, Musa led his people out of Egypt, but Pharaoh's army chased them all the way to the sea.",
+      "Teacher: Pharaoh refused again and again, even after seeing signs and miracles that supported Musa’s message.",
+      "Teacher: [tense] Eventually, Musa led his people out of Egypt, but Pharaoh's army chased them all the way to the sea.",
       "Teacher: [dramatically] With the sea ahead and the army behind, Allah commanded Musa to strike the water with his staff.",
       "Teacher: [amazed] The sea split apart, and Musa's people crossed safely on dry ground between two walls of water.",
-      "Teacher: [seriously] When Pharaoh's army tried to follow, the sea closed again, and the army did not survive.",
-      "Teacher: [warmly] Now, what would you like to ask me about this story?",
+      "Teacher: When Pharaoh's army tried to follow, the sea closed again, and the army did not survive.",
+      "Teacher: Now, what would you like to ask me about this story?",
       "Student: [curious] Why do you think Pharaoh kept refusing, even after seeing real miracles happen?",
-      "Teacher: [thoughtful] Pride, mostly. He believed himself too powerful to obey anyone, even after clear proof stood right before him.",
-      "Student: [reflective] That's sad, honestly. He had every chance to change and simply refused each time.",
-      "Teacher: [gently] Exactly. The story reminds us that pride can blind a person, even when the truth is completely obvious."
+      "Teacher: Pride, mostly. He believed himself too powerful to obey anyone, even after clear proof stood right before him.",
+      "Student: That's sad, honestly. He had every chance to change and simply refused each time.",
+      "Teacher: [sadly] Exactly. The story reminds us that pride can make a person refuse the truth even after clear signs."
     ],
     "quiz": [
-      { "question": "Why was Musa's mother worried when he was born?", "options": ["He was sick", "Pharaoh ordered newborn boys to be killed", "There was a famine", "The family had no home"], "correctIndex": 1, "explanation": "Musa was born when Pharaoh had ordered newborn boys among his people to be killed." },
-      { "question": "Where did Musa's mother place him as a baby?", "options": ["In a cave", "In a basket on the river", "In a market", "In a temple"], "correctIndex": 1, "explanation": "His mother placed baby Musa in a basket on the river, trusting Allah to protect him." },
-      { "question": "What message did Allah send Musa to give Pharaoh?", "options": ["Build a new palace", "Release the Israelites and stop oppressing them", "Give Musa gold", "Move the capital city"], "correctIndex": 1, "explanation": "The message was to release the Israelites from slavery and stop oppressing them." },
-      { "question": "What happened when Musa struck the sea with his staff?", "options": ["The sea rose higher", "The sea split apart for his people to cross", "Nothing happened", "The staff broke"], "correctIndex": 1, "explanation": "The sea split apart, allowing Musa's people to cross safely on dry ground." },
-      { "question": "According to the teacher, why did Pharaoh keep refusing the message?", "options": ["He never saw any signs", "Pride made him believe he was too powerful to obey", "He agreed with Musa secretly", "He forgot the message"], "correctIndex": 1, "explanation": "The teacher says pride made Pharaoh believe himself too powerful to obey, even after clear proof." }
-    ]
+      {
+        "question": "Why was Musa's mother worried when he was born?",
+        "options": [
+          "He was sick",
+          "Pharaoh ordered newborn boys to be killed",
+          "There was a famine",
+          "The family had no home"
+        ],
+        "correctIndex": 1,
+        "explanation": "Musa was born when Pharaoh had ordered newborn boys among his people to be killed."
+      },
+      {
+        "question": "Where did Musa's mother place him as a baby?",
+        "options": [
+          "In a cave",
+          "In a market",
+          "In a temple",
+          "In a basket on the river"
+        ],
+        "correctIndex": 3,
+        "explanation": "His mother placed baby Musa in a basket on the river, trusting Allah to protect him."
+      },
+      {
+        "question": "What message did Allah send Musa to give Pharaoh?",
+        "options": [
+          "Release the Israelites and stop oppressing them",
+          "Build a new palace",
+          "Give Musa gold",
+          "Move the capital city"
+        ],
+        "correctIndex": 0,
+        "explanation": "The message was to release the Israelites from slavery and stop oppressing them."
+      },
+      {
+        "question": "What happened when Musa struck the sea with his staff?",
+        "options": [
+          "The sea rose higher",
+          "Nothing happened",
+          "The staff broke",
+          "The sea split apart for his people to cross"
+        ],
+        "correctIndex": 3,
+        "explanation": "The sea split apart, allowing Musa's people to cross safely on dry ground."
+      },
+      {
+        "question": "According to the teacher, why did Pharaoh keep refusing the message?",
+        "options": [
+          "Pride made him believe he was too powerful to obey",
+          "He never saw any signs",
+          "He agreed with Musa secretly",
+          "He forgot the message"
+        ],
+        "correctIndex": 0,
+        "explanation": "The teacher says pride made Pharaoh believe himself too powerful to obey, even after clear proof."
+      },
+      {
+        "question": "How did Musa’s mother place him on the river?",
+        "options": [
+          "On a wooden ship",
+          "Behind a wall",
+          "With an army",
+          "Inside a basket"
+        ],
+        "correctIndex": 3,
+        "explanation": "She trusted Allah while protecting her baby."
+      },
+      {
+        "question": "Where did Musa grow up?",
+        "options": [
+          "Inside a prison",
+          "Beside the sea",
+          "In a farming village",
+          "In Pharaoh’s household"
+        ],
+        "correctIndex": 3,
+        "explanation": "The same ruling household later raised him."
+      },
+      {
+        "question": "What message did Musa give Pharaoh?",
+        "options": [
+          "Build a larger palace",
+          "Release the oppressed Israelites",
+          "Send the army to sea",
+          "Raise Musa as a child"
+        ],
+        "correctIndex": 1,
+        "explanation": "Musa called for an end to slavery and oppression."
+      },
+      {
+        "question": "What did Musa strike the sea with?",
+        "options": [
+          "A basket",
+          "A metal ring",
+          "His staff",
+          "A stone idol"
+        ],
+        "correctIndex": 2,
+        "explanation": "Allah commanded him to use his staff."
+      },
+      {
+        "question": "Why did Pharaoh continue refusing?",
+        "options": [
+          "He did not hear Musa",
+          "He wanted to cross first",
+          "His pride",
+          "The student stopped asking"
+        ],
+        "correctIndex": 2,
+        "explanation": "The teacher names pride as the main reason."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "keep with light simplification; chronological classroom account clearly connects Musa’s rescue, mission, and Pharaoh’s pride",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-prophets-06",
@@ -186,68 +765,752 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [softly] Before I sleep tonight, I want to sit quietly with a story that always moves me, the story of Maryam and her son Isa.",
-      "Narrator: [gently] Maryam was a devoted young woman, known for her purity, who spent much of her time in worship alone.",
-      "Narrator: [with wonder] One day, an angel came to her with astonishing news: she would give birth to a son, by Allah's command alone.",
-      "Narrator: [thoughtful] Maryam was afraid and confused, wondering how this could happen without any husband at all.",
-      "Narrator: [warmly] The angel told her not to worry, that this child would be a sign and a mercy for all people.",
-      "Narrator: [reflective] When people later accused her, doubting her purity completely, Maryam simply pointed toward her newborn son.",
-      "Narrator: [amazed] And baby Isa spoke from the cradle, defending his mother's honor, saying he was a servant of Allah, given the scripture.",
-      "Narrator: [softly] Imagine that moment, a newborn baby speaking clearly, silencing an entire crowd of doubters in an instant.",
-      "Narrator: [warmly] As Isa grew, Allah gave him the ability to heal the sick and speak with wisdom beyond his years.",
-      "Narrator: [thoughtful] Yet through every miracle, Isa never claimed power for himself. He always pointed people back toward worshipping Allah alone.",
-      "Narrator: [gently] That part stays with me most, honestly, more than any single miracle in the whole story.",
-      "Narrator: [peacefully] A person given such great gifts, yet remaining humble, always redirecting praise toward his Lord instead of himself.",
-      "Narrator: [with a small smile] Tonight, before I close my eyes, I want to remember that humility, even in my own small, ordinary life.",
-      "Narrator: [softly] Whatever gifts I have been given, however small, they are not truly mine to boast about."
+      "Narrator: Maryam was a devoted young woman, known for her purity, who spent much of her time in worship alone.",
+      "Narrator: [amazed] One day, an angel came to her with astonishing news: she would give birth to a son, by Allah's command alone.",
+      "Narrator: [confused] Maryam was afraid and confused, wondering how this could happen without any husband at all.",
+      "Narrator: The angel told her not to worry, that this child would be a sign and a mercy from Allah.",
+      "Narrator: [sadly] When people later accused her, doubting her purity completely, Maryam simply pointed toward her newborn son.",
+      "Narrator: [with wonder] And baby Isa spoke from the cradle, defending his mother's honor, saying he was a servant of Allah, given the scripture.",
+      "Narrator: Imagine that moment, a newborn baby speaking clearly, silencing an entire crowd of doubters in an instant.",
+      "Narrator: [thoughtful] As Isa grew, Allah allowed him to heal the sick by His permission.",
+      "Narrator: [firmly] Isa was Allah’s servant and messenger, and he called people to worship Allah alone.",
+      "Narrator: That part stays with me most, honestly, more than any single miracle in the whole story.",
+      "Narrator: A person given such great gifts, yet remaining humble, remaining a servant and messenger of Allah.",
+      "Narrator: [peacefully] Tonight, before I close my eyes, I want to remember that humility, even in my own small, ordinary life.",
+      "Narrator: Whatever gifts I have been given, however small, they are not truly mine to boast about."
     ],
     "quiz": [
-      { "question": "What news did the angel bring to Maryam?", "options": ["That she would travel far away", "That she would give birth to a son by Allah's command", "That her family would move", "That she would become wealthy"], "correctIndex": 1, "explanation": "The angel told Maryam she would give birth to a son by Allah's command alone." },
-      { "question": "How did Maryam respond when people accused her and doubted her purity?", "options": ["She argued loudly with them", "She simply pointed toward her newborn son", "She ran away and hid", "She ignored them completely"], "correctIndex": 1, "explanation": "When accused, Maryam simply pointed toward her newborn son to answer them." },
-      { "question": "What did baby Isa do from the cradle?", "options": ["He cried loudly", "He spoke, defending his mother and saying he was a servant of Allah", "He slept through everything", "He smiled only"], "correctIndex": 1, "explanation": "Baby Isa spoke from the cradle, defending his mother's honor and saying he was a servant of Allah." },
-      { "question": "What ability did Allah give Isa as he grew?", "options": ["The ability to build ships", "The ability to heal the sick and speak with wisdom", "The ability to control weather", "The ability to read minds"], "correctIndex": 1, "explanation": "As Isa grew, Allah gave him the ability to heal the sick and speak with wisdom beyond his years." },
-      { "question": "What does the narrator say Isa did despite his miracles?", "options": ["He claimed the power for himself", "He always pointed people back toward worshipping Allah alone", "He stopped performing them", "He asked to be worshipped"], "correctIndex": 1, "explanation": "Despite every miracle, Isa never claimed power for himself and always redirected people toward worshipping Allah alone." }
-    ]
+      {
+        "question": "What news did the angel bring to Maryam?",
+        "options": [
+          "That she would travel far away",
+          "That she would give birth to a son by Allah's command",
+          "That her family would move",
+          "That she would become wealthy"
+        ],
+        "correctIndex": 1,
+        "explanation": "The angel told Maryam she would give birth to a son by Allah's command alone."
+      },
+      {
+        "question": "How did Maryam respond when people accused her and doubted her purity?",
+        "options": [
+          "She argued loudly with them",
+          "She ran away and hid",
+          "She simply pointed toward her newborn son",
+          "She ignored them completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "When accused, Maryam simply pointed toward her newborn son to answer them."
+      },
+      {
+        "question": "What did baby Isa do from the cradle?",
+        "options": [
+          "He cried loudly",
+          "He slept through everything",
+          "He smiled only",
+          "He spoke, defending his mother and saying he was a servant of Allah"
+        ],
+        "correctIndex": 3,
+        "explanation": "Baby Isa spoke from the cradle, defending his mother's honor and saying he was a servant of Allah."
+      },
+      {
+        "question": "What ability did Allah give Isa as he grew?",
+        "options": [
+          "The ability to build ships",
+          "The ability to control weather",
+          "The ability to read minds",
+          "The ability to heal the sick and speak with wisdom"
+        ],
+        "correctIndex": 3,
+        "explanation": "As Isa grew, Allah gave him the ability to heal the sick and speak with wisdom beyond his years."
+      },
+      {
+        "question": "What does the narrator say Isa did despite his miracles?",
+        "options": [
+          "He claimed the power for himself",
+          "He stopped performing them",
+          "He always pointed people back toward worshipping Allah alone",
+          "He asked to be worshipped"
+        ],
+        "correctIndex": 2,
+        "explanation": "Despite every miracle, Isa never claimed power for himself and always redirected people toward worshipping Allah alone."
+      },
+      {
+        "question": "What news did the angel bring Maryam?",
+        "options": [
+          "She would travel to Egypt",
+          "She would build a place of worship",
+          "She would have a son",
+          "She would meet a king"
+        ],
+        "correctIndex": 2,
+        "explanation": "The birth would happen by Allah’s command."
+      },
+      {
+        "question": "Why was Maryam confused?",
+        "options": [
+          "She had no husband",
+          "She did not know the angel",
+          "She was already old",
+          "She could not speak"
+        ],
+        "correctIndex": 0,
+        "explanation": "She wondered how the promised birth could happen."
+      },
+      {
+        "question": "How did baby Isa defend his mother?",
+        "options": [
+          "He spoke from the cradle",
+          "He wrote a letter",
+          "He called another angel",
+          "He left the crowd"
+        ],
+        "correctIndex": 0,
+        "explanation": "His speech was a sign from Allah."
+      },
+      {
+        "question": "By whose permission did Isa heal?",
+        "options": [
+          "His own independent power",
+          "The crowd’s permission",
+          "Allah’s permission",
+          "Maryam’s medicine"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised script makes the source of the miracle clear."
+      },
+      {
+        "question": "What personal lesson does the narrator take?",
+        "options": [
+          "Hide every useful skill",
+          "Use gifts with humility",
+          "Ask people for praise",
+          "Stop learning new things"
+        ],
+        "correctIndex": 1,
+        "explanation": "The reflection connects blessings with humble service."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "revise; preserve the Quranic account while stating that Isa’s miracles occurred only by Allah’s permission",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-prophets-07",
-    "title": "A Phone Call About the Prophet's Mercy in Mecca",
+    "title": "A Phone Call About Mercy After Ta’if",
     "level": "A1",
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Amir", "gender": "male" },
-      { "name": "Laila", "gender": "female" }
+      {
+        "name": "Amir",
+        "gender": "male"
+      },
+      {
+        "name": "Laila",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Amir: [excited] Laila, I just finished reading about the conquest of Mecca. I couldn't stop thinking about it, so I called you.",
-      "Laila: [curious] Oh, tell me. Which part stood out to you the most?",
-      "Amir: [thoughtful] The part where Prophet Muhammad finally returned to Mecca, after years of being forced to leave and being persecuted there.",
-      "Laila: [reflective] Right, the same people who had hurt him and his followers for years.",
-      "Amir: [with feeling] Exactly. And when he entered the city with his army, everyone expected punishment, maybe even revenge.",
-      "Laila: [curious] What did he do instead?",
-      "Amir: [warmly] He asked the people gathered there, what do you expect me to do with you now?",
-      "Laila: [thoughtful] That's a heavy question after everything they had done to him.",
-      "Amir: [softly] They said, we expect goodness from you, brother and son of a noble brother.",
-      "Laila: [curious] And how did he respond to that?",
-      "Amir: [with emotion] He said, go, for you are free. No blame will be on you today.",
-      "Laila: [amazed] After everything, he chose complete forgiveness, at the height of his own power.",
-      "Amir: [thoughtful] That's what struck me most. He had every reason and every ability to punish them, and he simply forgave.",
-      "Laila: [gently] It reminds me of Yusuf forgiving his brothers, almost the exact same words, actually.",
-      "Amir: [warmly] I noticed that too. Real mercy shows itself clearest when someone finally holds power over those who wronged them.",
-      "Laila: [reflective] It makes me think about grudges I still carry over much smaller things, honestly.",
-      "Amir: [gently] Same here. If he could forgive an entire city, I think I can let go of my smaller frustrations too.",
-      "Laila: [warmly] Thank you for calling and sharing this. I needed this reminder tonight, more than you know."
+      "Amir: [thoughtful] Laila, I read a report about the Prophet Muhammad after his difficult visit to Ta’if.",
+      "Laila: What happened during that visit?",
+      "Amir: He invited the people to worship Allah, but they rejected him and treated him cruelly.",
+      "Laila: [sadly] He must have felt deep pain after leaving the city.",
+      "Amir: Yes. Later, the angel of the mountains came with an offer to crush the people between two mountains.",
+      "Laila: That was a moment when punishment was possible. How did the Prophet respond?",
+      "Amir: [gently] He did not ask for their destruction. He hoped that their descendants would worship Allah alone.",
+      "Laila: He hoped for good from families whose people had just harmed him?",
+      "Amir: Exactly. His mercy looked beyond his own pain and beyond that one terrible day.",
+      "Laila: [reflective] Mercy is much harder when a person has the power to answer harm with harm.",
+      "Amir: That is why this account stayed with me. He did not call cruelty good, but he still wanted guidance for them.",
+      "Laila: So forgiveness does not mean saying that the wrong action was acceptable.",
+      "Amir: [carefully] Right. We can name a wrong, protect people from harm, and still avoid personal revenge.",
+      "Laila: How can we use that lesson in an ordinary disagreement?",
+      "Amir: We can pause before answering, choose fair words, and ask Allah to guide everyone involved.",
+      "Laila: [honestly] I often prepare a sharp reply before I think about what it may cause.",
+      "Amir: I do too. The story gives us a higher example, even if our own problems are much smaller.",
+      "Laila: It also reminds me that another person may change later.",
+      "Amir: [hopeful] Yes. We should not close the door to guidance because of one painful moment.",
+      "Laila: Thank you for calling. This is a clear lesson in mercy, truth, and self-control."
     ],
     "quiz": [
-      { "question": "What event was Amir reading about when he called Laila?", "options": ["The Battle of Badr", "The conquest of Mecca", "The migration to Medina", "The building of a mosque"], "correctIndex": 1, "explanation": "Amir explains he was reading about the conquest of Mecca." },
-      { "question": "What did people expect when Prophet Muhammad entered Mecca with his army?", "options": ["A celebration", "Punishment or revenge", "A new market", "Nothing in particular"], "correctIndex": 1, "explanation": "Everyone expected punishment, maybe even revenge, given the years of persecution." },
-      { "question": "What did the Prophet ask the people gathered in Mecca?", "options": ["Where they lived", "What do you expect me to do with you now?", "How much wealth they had", "Why they stayed in the city"], "correctIndex": 1, "explanation": "He asked them what they expected him to do with them now." },
-      { "question": "What did the Prophet say to the people of Mecca?", "options": ["Go, for you are free, no blame will be on you today", "You must leave the city forever", "You will be punished tomorrow", "Nothing was said"], "correctIndex": 0, "explanation": "He told them, go, for you are free, no blame will be on you today." },
-      { "question": "What connection does Laila notice in the conversation?", "options": ["A connection to a different religion entirely", "That his words echo Yusuf forgiving his brothers", "That the story has no historical basis", "That mercy was never mentioned before"], "correctIndex": 1, "explanation": "Laila notices the Prophet's words echo Yusuf forgiving his brothers, almost the exact same phrasing." }
-    ]
+      {
+        "question": "Where had the Prophet Muhammad visited?",
+        "options": [
+          "Ta’if",
+          "Egypt",
+          "A mountain campsite",
+          "A farm"
+        ],
+        "correctIndex": 0,
+        "explanation": "The phone call discusses his difficult visit to Ta’if."
+      },
+      {
+        "question": "How did the people respond to his message?",
+        "options": [
+          "They all accepted at once",
+          "They gave him a ship",
+          "They asked him to rule",
+          "They rejected and harmed him"
+        ],
+        "correctIndex": 3,
+        "explanation": "The visit ended with painful rejection."
+      },
+      {
+        "question": "What did the angel of the mountains offer?",
+        "options": [
+          "To guide a caravan",
+          "To punish the people severely",
+          "To build a safe house",
+          "To bring food"
+        ],
+        "correctIndex": 1,
+        "explanation": "Punishment was possible after the harm."
+      },
+      {
+        "question": "What did the Prophet hope for?",
+        "options": [
+          "The city would become empty",
+          "Nobody would return there",
+          "Their descendants would worship Allah",
+          "His pain would be praised"
+        ],
+        "correctIndex": 2,
+        "explanation": "He chose hope for future guidance."
+      },
+      {
+        "question": "What did he refuse to seek?",
+        "options": [
+          "Fair protection from harm",
+          "Guidance from Allah",
+          "Personal destruction of the people",
+          "Truth about the wrong"
+        ],
+        "correctIndex": 2,
+        "explanation": "Mercy did not require pretending the harm was right."
+      },
+      {
+        "question": "What does “descendants” mean?",
+        "options": [
+          "People living on mountains",
+          "Travelers from another city",
+          "Angels offering help",
+          "Children and later family generations"
+        ],
+        "correctIndex": 3,
+        "explanation": "The Prophet hoped for faith among later generations."
+      },
+      {
+        "question": "What does Laila learn about forgiveness?",
+        "options": [
+          "It requires calling harm good",
+          "It does not make a wrong action acceptable",
+          "It removes every safety step",
+          "It means never speaking honestly"
+        ],
+        "correctIndex": 1,
+        "explanation": "Truth and mercy can exist together."
+      },
+      {
+        "question": "What practical action does Amir suggest?",
+        "options": [
+          "Answer harm immediately",
+          "Pause before giving a sharp reply",
+          "Repeat private news",
+          "End every relationship"
+        ],
+        "correctIndex": 1,
+        "explanation": "A pause supports fair words and self-control."
+      },
+      {
+        "question": "Why should the door to guidance stay open?",
+        "options": [
+          "A person may change later",
+          "Every action is already correct",
+          "Pain is never real",
+          "Disagreements always end quickly"
+        ],
+        "correctIndex": 0,
+        "explanation": "The conversation looks beyond one bad moment."
+      },
+      {
+        "question": "What is the main focus of the phone call?",
+        "options": [
+          "Travel directions to Ta’if",
+          "Mercy while still recognizing wrong",
+          "The size of two mountains",
+          "A debate about family names"
+        ],
+        "correctIndex": 1,
+        "explanation": "The friends connect a prophetic example with daily self-control."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "replace; remove a disputed popular conquest quotation and use the well-established account of mercy after Ta’if",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-prophets-08",
+    "title": "A Lesson From Dawud and the Armor",
+    "level": "A1",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] In our weekend class, the teacher spoke about Prophet Dawud, peace be upon him. He was a prophet and a leader, yet he also worked with his hands.",
+      "Narrator: The Quran tells us that Allah taught him to make armor. The teacher showed us a picture of linked metal rings so we could understand the craft.",
+      "Narrator: [carefully] Each ring had to connect correctly. If one part was weak or careless, the armor could fail when someone needed protection.",
+      "Narrator: This detail made me think about skill, patience, and honest work. Important service is often built from many small actions done well.",
+      "Narrator: [thoughtful] Our teacher also explained that earning through lawful work has dignity. A high position does not make useful work unimportant.",
+      "Narrator: After class, I looked at the people around my neighborhood differently. A tailor checked every line of a shirt. A mechanic tested a brake twice.",
+      "Narrator: [respectfully] Their work was not famous, but families depended on its quality. Careful hands protected other people every day.",
+      "Narrator: [honestly] The story also changed my attitude toward learning a skill. I often wanted quick results and became frustrated by repeated practice.",
+      "Narrator: Armor cannot be made from one careless movement. In the same way, strong ability grows through correct steps repeated with patience.",
+      "Narrator: I chose one practical goal: repair a loose shelf with my uncle instead of immediately buying a new one.",
+      "Narrator: [carefully] He taught me to measure first, choose the right tool, and check whether the shelf was safe before using it.",
+      "Narrator: The small project took longer than I expected, but finishing it carefully felt different from rushing.",
+      "Narrator: [reflective] From Prophet Dawud's example, I learned that faith, responsibility, and skilled work belong together.",
+      "Narrator: We honor the lesson by doing our own lawful work sincerely, accurately, and for a useful purpose."
+    ],
+    "quiz": [
+      {
+        "question": "What craft did Allah teach Prophet Dawud?",
+        "options": [
+          "Building ships",
+          "Growing wheat",
+          "Writing maps",
+          "Making armor"
+        ],
+        "correctIndex": 3,
+        "explanation": "The lesson focused on Prophet Dawud making armor."
+      },
+      {
+        "question": "Why did the teacher show linked rings?",
+        "options": [
+          "To sell jewelry",
+          "To explain how armor is carefully built",
+          "To decorate the classroom",
+          "To begin a game"
+        ],
+        "correctIndex": 1,
+        "explanation": "The image helped students understand the craft."
+      },
+      {
+        "question": "What did the narrator notice in the neighborhood?",
+        "options": [
+          "Ordinary skilled work protects and serves people",
+          "Every shop was closed",
+          "Nobody used tools",
+          "Only famous work mattered"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tailors and mechanics showed the value of careful skill."
+      },
+      {
+        "question": "What project did the narrator choose?",
+        "options": [
+          "Making metal armor",
+          "Opening a shop",
+          "Repairing a loose shelf with an uncle",
+          "Painting the classroom"
+        ],
+        "correctIndex": 2,
+        "explanation": "He applied the lesson through a small useful repair."
+      },
+      {
+        "question": "What does Dawud's example teach about skilled work?",
+        "options": [
+          "Leadership removes the need to work",
+          "Lawful skilled work should be patient and responsible",
+          "Fast work is always best",
+          "Useful jobs need no care"
+        ],
+        "correctIndex": 1,
+        "explanation": "The story joins dignity, patience, and responsibility in work."
+      },
+      {
+        "question": "What material did the class picture show?",
+        "options": [
+          "Linked metal rings",
+          "Wooden shelves",
+          "River baskets",
+          "Farm tools"
+        ],
+        "correctIndex": 0,
+        "explanation": "The rings helped students understand armor making."
+      },
+      {
+        "question": "Why did every ring need care?",
+        "options": [
+          "One weak part could reduce protection",
+          "The rings were only decoration",
+          "Dawud wanted quick results",
+          "The teacher planned to sell them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Armor depends on correctly connected parts."
+      },
+      {
+        "question": "Which workers did the narrator notice?",
+        "options": [
+          "A farmer and a doctor",
+          "A host and a guest",
+          "A king and a guard",
+          "A tailor and a mechanic"
+        ],
+        "correctIndex": 3,
+        "explanation": "Both examples show quiet care in useful work."
+      },
+      {
+        "question": "What did the uncle teach before repairing?",
+        "options": [
+          "Measure and choose the right tool",
+          "Buy a new shelf immediately",
+          "Hide the loose part",
+          "Work without checking safety"
+        ],
+        "correctIndex": 0,
+        "explanation": "Preparation came before using the shelf."
+      },
+      {
+        "question": "What connects faith and skilled work?",
+        "options": [
+          "Fame for every worker",
+          "Finishing before everyone",
+          "Sincere, accurate, useful service",
+          "Avoiding repeated practice"
+        ],
+        "correctIndex": 2,
+        "explanation": "The final lesson values lawful work done responsibly."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "keep; well-grounded practical reflection connects Dawud’s armor craft with lawful, careful service",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-prophets-09",
+    "title": "The Dua of Zakariyya",
+    "level": "A1",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] One night, I read the Quranic account of Prophet Zakariyya, peace be upon him. He asked Allah for a righteous child when he was already old.",
+      "Narrator: His situation looked impossible by normal human measures. Still, he called upon Allah with humility and hope.",
+      "Narrator: [carefully] What touched me was not a promise that every wish arrives in the exact form we expect. The lesson was about whom we ask and how we ask.",
+      "Narrator: [humbly] Prophet Zakariyya knew his weakness and Allah's complete power. His dua was sincere, private, and full of trust.",
+      "Narrator: Allah answered him with the good news of Yahya. This answer was a sign of mercy and power beyond ordinary expectation.",
+      "Narrator: [reflective] At that time, I was waiting for an answer about a training program. My own matter was small compared with his test.",
+      "Narrator: [restless] I had become restless. I checked my email many times each day and imagined that a delay meant the door was closed.",
+      "Narrator: [determined] The story reminded me to make dua while also doing what I could. I checked my documents, prepared another application, and continued my work.",
+      "Narrator: Trust did not mean sitting without action. It meant acting responsibly without believing that the result was completely in my hands.",
+      "Narrator: [disappointed] A week later, the first program rejected me. I felt disappointed, but I did not think my dua had been wasted.",
+      "Narrator: The preparation helped me apply to a better program, and that one accepted me a month later.",
+      "Narrator: [honestly] I cannot claim to know why every delay happens. I only know that the story corrected my impatient heart.",
+      "Narrator: Prophet Zakariyya's dua teaches hope without pride and effort without panic.",
+      "Narrator: [hopeful] When a path seems unlikely, a believer continues to ask Allah, takes lawful steps, and accepts that Allah knows the best answer."
+    ],
+    "quiz": [
+      {
+        "question": "What did Prophet Zakariyya ask Allah for?",
+        "options": [
+          "A large house",
+          "A new kingdom",
+          "A long journey",
+          "A righteous child"
+        ],
+        "correctIndex": 3,
+        "explanation": "He prayed for a righteous child despite old age."
+      },
+      {
+        "question": "How is his dua described?",
+        "options": [
+          "Humble, sincere, and hopeful",
+          "Proud and public",
+          "Angry and careless",
+          "Short and meaningless"
+        ],
+        "correctIndex": 0,
+        "explanation": "The account shows humility and trust."
+      },
+      {
+        "question": "What was the narrator waiting for?",
+        "options": [
+          "A medical appointment",
+          "A travel ticket",
+          "A training-program decision",
+          "A house repair"
+        ],
+        "correctIndex": 2,
+        "explanation": "The modern reflection concerns an application."
+      },
+      {
+        "question": "What action did the narrator take?",
+        "options": [
+          "Stopped all work",
+          "Sent angry messages",
+          "Ignored every deadline",
+          "Checked documents and prepared another application"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dua was joined with responsible effort."
+      },
+      {
+        "question": "What does Zakariyya's dua teach the narrator about trust?",
+        "options": [
+          "Every wish arrives immediately",
+          "Trust means lawful effort without panic over results",
+          "A rejection ends every path",
+          "Planning shows weak faith"
+        ],
+        "correctIndex": 1,
+        "explanation": "The lesson balances dua, action, and acceptance."
+      },
+      {
+        "question": "Why did Zakariyya’s situation look impossible to people?",
+        "options": [
+          "He had stopped making dua",
+          "He was already old",
+          "He needed a training place",
+          "He lived beside a closed road"
+        ],
+        "correctIndex": 1,
+        "explanation": "His age made the request seem beyond normal expectation."
+      },
+      {
+        "question": "What unhelpful habit did the narrator develop?",
+        "options": [
+          "Forgetting all documents",
+          "Sleeping through every morning",
+          "Checking email many times a day",
+          "Asking other students for money"
+        ],
+        "correctIndex": 2,
+        "explanation": "Restless waiting became repeated checking."
+      },
+      {
+        "question": "What happened with the first program?",
+        "options": [
+          "It accepted the narrator immediately",
+          "It lost every document",
+          "It closed for one day",
+          "It rejected the application"
+        ],
+        "correctIndex": 3,
+        "explanation": "The first answer was disappointing."
+      },
+      {
+        "question": "How did earlier preparation help later?",
+        "options": [
+          "It supported an application to a better program",
+          "It changed the first rejection",
+          "It removed the need for effort",
+          "It guaranteed every future result"
+        ],
+        "correctIndex": 0,
+        "explanation": "Responsible action remained useful after the first answer."
+      },
+      {
+        "question": "What does the narrator refuse to claim?",
+        "options": [
+          "Having received a rejection",
+          "Applying to a second program",
+          "Learning from the story",
+          "Knowing why every delay happens"
+        ],
+        "correctIndex": 3,
+        "explanation": "The reflection keeps humility about Allah’s reasons."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "keep; careful dua reflection avoids promising every requested outcome and combines trust with lawful action",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-prophets-10",
+    "title": "Why the Story of Ayyub Is Not a Slogan",
+    "level": "A1",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Huda",
+        "gender": "female"
+      },
+      {
+        "name": "Teacher Imran",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Huda: [concerned] Teacher Imran, people often mention Prophet Ayyub when someone is ill. Sometimes the words feel too easy.",
+      "Teacher Imran: [understanding] I understand. A short sentence can sound cold when a person is living with real pain.",
+      "Huda: What should we learn from his story without using it to silence someone?",
+      "Teacher Imran: [carefully] We learn that Prophet Ayyub, peace be upon him, remained faithful through a severe test and turned to Allah.",
+      "Huda: Does patience mean a sick person should never speak about pain or seek treatment?",
+      "Teacher Imran: [firmly] No. Patience is not pretending that suffering does not exist. Making dua and seeking lawful treatment are both responsible actions.",
+      "Huda: Then what should I say when I visit my friend in hospital?",
+      "Teacher Imran: [gently] Begin by listening. Ask what help is useful, make a sincere dua, and avoid giving medical advice you are not qualified to give.",
+      "Huda: Should I tell her that other people have harder tests?",
+      "Teacher Imran: [thoughtful] Comparing pain rarely comforts a person. Her experience deserves care without a competition.",
+      "Huda: I was planning to give a long speech about patience.",
+      "Teacher Imran: [practical] A gentle reminder may help if she welcomes it, but your presence and practical support may speak more clearly.",
+      "Huda: Her sister needs someone to bring dinner tomorrow. I can do that.",
+      "Teacher Imran: That is a good action. You can also ask before sharing news about her health with other people.",
+      "Huda: Yes, privacy matters. I had not thought about that.",
+      "Teacher Imran: [seriously] The story of Ayyub should increase our mercy, not make us judge how another person handles illness.",
+      "Huda: So patience includes faith, honest struggle, treatment, and respectful support from the community.",
+      "Teacher Imran: Exactly. We honor the prophetic lesson when our words are true and our behavior is compassionate.",
+      "Huda: [determined] I will visit briefly, listen, and arrange the meal with her sister.",
+      "Teacher Imran: That sounds wise. Sometimes the most helpful lesson is carried through quiet service."
+    ],
+    "quiz": [
+      {
+        "question": "Why does Huda feel concerned?",
+        "options": [
+          "She missed a class",
+          "People use Prophet Ayyub’s story too easily around illness",
+          "She lost a book",
+          "Her friend dislikes history"
+        ],
+        "correctIndex": 1,
+        "explanation": "She worries that simple slogans can sound cold."
+      },
+      {
+        "question": "Does patience mean hiding all pain?",
+        "options": [
+          "Yes, always",
+          "Only during hospital visits",
+          "Only for adults",
+          "No, pain can be acknowledged and treatment sought"
+        ],
+        "correctIndex": 3,
+        "explanation": "The teacher separates patience from pretending."
+      },
+      {
+        "question": "What should Huda do first during the visit?",
+        "options": [
+          "Give medical instructions",
+          "Listen and ask what help is useful",
+          "Compare different illnesses",
+          "Share private news"
+        ],
+        "correctIndex": 1,
+        "explanation": "Respectful listening comes before advice."
+      },
+      {
+        "question": "What practical help can Huda provide?",
+        "options": [
+          "Bring dinner for the family",
+          "Choose the medicine",
+          "Post hospital photos",
+          "Cancel the visit for everyone"
+        ],
+        "correctIndex": 0,
+        "explanation": "The family needs a meal the next day."
+      },
+      {
+        "question": "How should Ayyub’s story affect believers?",
+        "options": [
+          "It should make them judge sick people",
+          "It should replace treatment",
+          "It should increase mercy and faithful support",
+          "It should end all discussion"
+        ],
+        "correctIndex": 2,
+        "explanation": "The prophetic lesson should produce compassion and responsible action."
+      },
+      {
+        "question": "Why can a short reminder sound cold?",
+        "options": [
+          "The story has no lesson",
+          "Hospital visits are always long",
+          "Patience is only a slogan",
+          "The listener may be living with real pain"
+        ],
+        "correctIndex": 3,
+        "explanation": "Words need care when someone is suffering."
+      },
+      {
+        "question": "What does patience not require?",
+        "options": [
+          "Turning to Allah",
+          "Pretending pain does not exist",
+          "Seeking lawful treatment",
+          "Accepting helpful support"
+        ],
+        "correctIndex": 1,
+        "explanation": "The teacher clearly rejects hiding or denying suffering."
+      },
+      {
+        "question": "What should Huda do first at the hospital?",
+        "options": [
+          "Give medical instructions",
+          "Listen and ask what help is useful",
+          "Compare her friend with others",
+          "Share the health news"
+        ],
+        "correctIndex": 1,
+        "explanation": "Respectful support begins with the patient’s needs."
+      },
+      {
+        "question": "Why should Huda ask before sharing news?",
+        "options": [
+          "The friend’s privacy matters",
+          "The meal is a secret",
+          "The teacher needs permission",
+          "The visit must be longer"
+        ],
+        "correctIndex": 0,
+        "explanation": "Health information belongs to the person affected."
+      },
+      {
+        "question": "How will Huda give practical support?",
+        "options": [
+          "Choose a treatment herself",
+          "Deliver a long speech",
+          "Arrange dinner with the sister",
+          "Ask many private questions"
+        ],
+        "correctIndex": 2,
+        "explanation": "The planned meal is useful help within a safe boundary."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "prophets",
+      "scriptDecision": "keep; unusually strong and responsible discussion prevents prophetic patience from becoming harmful medical or social advice",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

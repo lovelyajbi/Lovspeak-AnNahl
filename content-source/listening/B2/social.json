@@ -6,30 +6,144 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [candidly] For as long as I can remember, I've been the one who initiates contact, chasing down friends whose replies arrive, if at all, weeks after I've sent them.",
-      "Narrator: [reflective] It never used to bother me; I told myself that some people simply express affection differently, through presence rather than words, and that texting wasn't everyone's strong suit.",
-      "Narrator: [honestly] Lately, though, I've noticed a pattern that's harder to excuse: the friendships that thrive are, without exception, the ones where the effort is mutual rather than one-sided.",
-      "Narrator: [thoughtful] Take Wulan, a friend I'd known since university, whom I used to credit with being 'just busy,' even as months went by without a single message from her side.",
+      "Narrator: [thoughtful] For as long as I can remember, I've been the one who initiates contact, chasing down friends whose replies arrive, if at all, weeks after I've sent them.",
+      "Narrator: It never used to bother me; I told myself that some people simply express affection differently, through presence rather than words, and that texting wasn't everyone's strong suit.",
+      "Narrator: [carefully] Lately, though, I've noticed a pattern that's harder to excuse: the friendships that thrive are, without exception, the ones where the effort is mutual rather than one-sided.",
+      "Narrator: Take Wulan, a friend I'd known since university, whom I used to credit with being 'just busy,' even as months went by without a single message from her side.",
       "Narrator: [reflective] When we finally met up again, I realized the warmth I'd been imagining in her silence simply wasn't there; she'd drifted, and I had been the only one keeping the rope taut.",
-      "Narrator: [honestly] That realization stung more than I expected, partly because it meant admitting some relationships had already ended, quietly, long before I was willing to acknowledge it.",
-      "Narrator: [determined] So I decided to run a small, admittedly uncomfortable experiment: for two months, I would stop reaching out first to anyone, and simply observe who reached back.",
-      "Narrator: [reflective] The results were humbling. Of the dozen or so people I considered close friends, only four got in touch unprompted, and I won't pretend that didn't hurt.",
-      "Narrator: [thoughtful] What surprised me more was who those four turned out to be, not necessarily the friends I saw most often, but the ones whose care had never depended on my initiating it.",
-      "Narrator: [honestly] I've since let a few friendships fade, not out of resentment, but because energy that isn't reciprocated is, frankly, better spent elsewhere.",
-      "Narrator: [warmly] With the friends who remained, something shifted; conversations felt less like performances and more like genuine exchanges, since neither of us was carrying the relationship alone anymore.",
-      "Narrator: [peacefully] I no longer measure friendship by how much I'm willing to give, but by whether what's given is ever met with something in return.",
-      "Narrator: [with a small smile] It's a smaller circle now, admittedly, but everyone in it would notice, and mind, if I simply disappeared."
+      "Narrator: That realization stung more than I expected, partly because it meant admitting some relationships had already ended, quietly, long before I was willing to acknowledge it.",
+      "Narrator: [honestly] So I decided to run a small, admittedly uncomfortable experiment: for two months, I would stop reaching out first to anyone, and simply observe who reached back.",
+      "Narrator: The results were humbling. Of the dozen or so people I considered close friends, only four got in touch unprompted, and I won't pretend that didn't hurt.",
+      "Narrator: [gently] What surprised me more was who those four turned out to be, not necessarily the friends I saw most often, but the ones whose care had never depended on my initiating it.",
+      "Narrator: I've since let a few friendships fade, not out of resentment, but because energy that isn't reciprocated is, frankly, better spent elsewhere.",
+      "Narrator: [calmly] With the friends who remained, something shifted; conversations felt less like performances and more like genuine exchanges, since neither of us was carrying the relationship alone anymore.",
+      "Narrator: I no longer measure friendship by how much I'm willing to give, but by whether what's given is ever met with something in return.",
+      "Narrator: [encouraging] It's a smaller circle now, admittedly, but everyone in it would notice, and mind, if I simply disappeared."
     ],
     "quiz": [
-      { "question": "What pattern does the narrator notice about friendships that thrive?", "options": ["They require no communication at all", "The effort is mutual rather than one-sided", "They only survive if people live nearby", "They depend entirely on shared hobbies"], "correctIndex": 1, "explanation": "She notices the friendships that thrive are, without exception, the ones where the effort is mutual rather than one-sided." },
-      { "question": "What did the narrator realize when she finally met up with Wulan again?", "options": ["Wulan had been secretly busy with a good reason", "The warmth she had imagined in Wulan's silence wasn't actually there", "Wulan had moved to another city", "Nothing had changed between them"], "correctIndex": 1, "explanation": "She realized the warmth she'd been imagining in Wulan's silence simply wasn't there, and that she alone had been sustaining the friendship." },
-      { "question": "What experiment did the narrator decide to run?", "options": ["Contacting everyone she knew every day", "Stopping herself from reaching out first, to see who reached back", "Deleting all her social media accounts", "Asking friends directly why they were distant"], "correctIndex": 1, "explanation": "For two months she stopped reaching out first to anyone, simply observing who reached back unprompted." },
-      { "question": "How many of her close friends got in touch unprompted during the experiment?", "options": ["All of them", "Only four", "None of them", "Exactly half"], "correctIndex": 1, "explanation": "Of the dozen or so people she considered close friends, only four got in touch unprompted." },
-      { "question": "How does the narrator now measure friendship?", "options": ["By how much she is willing to give", "By whether what's given is ever met with something in return", "By how long she has known someone", "By how often they see each other in person"], "correctIndex": 1, "explanation": "She concludes she no longer measures friendship by how much she gives, but by whether it is met with something in return." }
-    ]
+      {
+        "question": "What pattern does the narrator notice about friendships that thrive?",
+        "options": [
+          "The effort is mutual rather than one-sided",
+          "They require no communication at all",
+          "They only survive if people live nearby",
+          "They depend entirely on shared hobbies"
+        ],
+        "correctIndex": 0,
+        "explanation": "She notices the friendships that thrive are, without exception, the ones where the effort is mutual rather than one-sided."
+      },
+      {
+        "question": "What did the narrator realize when she finally met up with Wulan again?",
+        "options": [
+          "Wulan had been secretly busy with a good reason",
+          "Wulan had moved to another city",
+          "The warmth she had imagined in Wulan's silence wasn't actually there",
+          "Nothing had changed between them"
+        ],
+        "correctIndex": 2,
+        "explanation": "She realized the warmth she'd been imagining in Wulan's silence simply wasn't there, and that she alone had been sustaining the friendship."
+      },
+      {
+        "question": "What experiment did the narrator decide to run?",
+        "options": [
+          "Contacting everyone she knew every day",
+          "Stopping herself from reaching out first, to see who reached back",
+          "Deleting all her social media accounts",
+          "Asking friends directly why they were distant"
+        ],
+        "correctIndex": 1,
+        "explanation": "For two months she stopped reaching out first to anyone, simply observing who reached back unprompted."
+      },
+      {
+        "question": "How many of her close friends got in touch unprompted during the experiment?",
+        "options": [
+          "All of them",
+          "None of them",
+          "Exactly half",
+          "Only four"
+        ],
+        "correctIndex": 3,
+        "explanation": "Of the dozen or so people she considered close friends, only four got in touch unprompted."
+      },
+      {
+        "question": "How does the narrator now measure friendship?",
+        "options": [
+          "By how much she is willing to give",
+          "By how long she has known someone",
+          "By how often they see each other in person",
+          "By whether what's given is ever met with something in return"
+        ],
+        "correctIndex": 3,
+        "explanation": "She concludes she no longer measures friendship by how much she gives, but by whether it is met with something in return."
+      },
+      {
+        "question": "What meeting finally changed the narrator's view of Wulan's silence?",
+        "options": [
+          "He's turned down every invitation for nearly two months now",
+          "She realised Wulan had drifted while she alone maintained the friendship.",
+          "Step back briefly, not as punishment",
+          "I never applied for this role, exactly"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She realised Wulan had drifted while she alone maintained the friendship."
+      },
+      {
+        "question": "How did the narrator test whether her friendships were reciprocal?",
+        "options": [
+          "She stopped initiating contact for two months and observed who responded.",
+          "I don't want to intrude on something that's genuinely none of my business",
+          "Then you likely already have your answer, even if it's not the one you were hoping for",
+          "I realized then that mediating hadn't made me impartial"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She stopped initiating contact for two months and observed who responded."
+      },
+      {
+        "question": "What did only four friends doing during the experiment demonstrate?",
+        "options": [
+          "I'd just say I missed him and ask if he wanted company, no agenda attached",
+          "Thank you, Teguh, for such a candid conversation",
+          "A small number cared without depending on her constant effort.",
+          "That announcement did not go over well"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A small number cared without depending on her constant effort."
+      },
+      {
+        "question": "Why did she allow several friendships to fade without resentment?",
+        "options": [
+          "One-sided effort was draining energy better used in mutual relationships.",
+          "Two people showing up unannounced might come across as alarming rather than comforting",
+          "I hope it gives listeners something worth reflecting on",
+          "I still care deeply about their marriage"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: One-sided effort was draining energy better used in mutual relationships."
+      },
+      {
+        "question": "How does she now judge whether a friendship is healthy?",
+        "options": [
+          "Whatever happens, at least he'll know someone noticed, instead of assuming nobody did",
+          "That's a sobering thought",
+          "These days, when they call to complain about each other, I still listen",
+          "Care should be met by meaningful effort from both people."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Care should be met by meaningful effort from both people."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-social-02",
@@ -38,34 +152,151 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ayu", "gender": "female" },
-      { "name": "Bram", "gender": "male" }
+      {
+        "name": "Ayu",
+        "gender": "female"
+      },
+      {
+        "name": "Bram",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ayu: [concerned] Bram, have you noticed how withdrawn Dimas has become since the divorce was finalized? He's turned down every invitation for nearly two months now.",
-      "Bram: [thoughtful] I have, actually. Part of me assumed he just needed space, but two months is starting to feel less like space and more like avoidance.",
-      "Ayu: [hesitant] That's exactly what worries me. I don't want to intrude on something that's genuinely none of my business, but I also don't want to mistake respect for neglect.",
-      "Bram: [considering] There's a difference between giving someone room to grieve and letting them disappear because confronting it feels awkward.",
-      "Ayu: [honestly] I keep telling myself he'll reach out when he's ready, except people who are struggling the most are often the least likely to ask for help.",
-      "Bram: [curious] So what would you actually say to him, if you did reach out?",
-      "Ayu: [thoughtful] Nothing dramatic. I wouldn't mention the divorce unless he brought it up himself; I'd just say I missed him and ask if he wanted company, no agenda attached.",
-      "Bram: [agreeing] That seems wiser than a direct question about how he's coping, which might make him feel like he's being examined rather than simply visited.",
-      "Ayu: [determined] Should we go together, or would that feel more like an intervention than a friend dropping by casually?",
-      "Bram: [considering] Better if it's just one of us at first. Two people showing up unannounced might come across as alarming rather than comforting.",
-      "Ayu: [warmly] I'll go, then, since we've always been closer, and I'll let you know honestly how he seems, whether or not he wants to talk further.",
-      "Bram: [thoughtful] Fair enough. And if he does open up, don't rush him toward advice; sometimes being listened to matters far more than being fixed.",
-      "Ayu: [reflective] You're right. I've been more anxious about saying the wrong thing than about actually being present, which isn't much better than staying away entirely.",
-      "Bram: [encouraging] Just showing up will likely mean more than whatever you end up saying anyway.",
-      "Ayu: [determined] Alright. I'll stop by this weekend, and hopefully this is just a rough patch rather than something he's slowly sinking into.",
-      "Bram: [warmly] Whatever happens, at least he'll know someone noticed, instead of assuming nobody did."
+      "Ayu: [thoughtful] Bram, have you noticed how withdrawn Dimas has become since the divorce was finalized? He's turned down every invitation for nearly two months now.",
+      "Bram: I have, actually. Part of me assumed he just needed space, but two months is starting to feel less like space and more like avoidance.",
+      "Ayu: [carefully] That's exactly what worries me. I don't want to intrude on something that's genuinely none of my business, but I also don't want to mistake respect for neglect.",
+      "Bram: There's a difference between giving someone room to grieve and letting them disappear because confronting it feels awkward.",
+      "Ayu: [reflective] I keep telling myself he'll reach out when he's ready, except people who are struggling the most are often the least likely to ask for help.",
+      "Bram: So what would you actually say to him, if you did reach out?",
+      "Ayu: [honestly] Nothing dramatic. I wouldn't mention the divorce unless he brought it up himself; I'd just say I missed him and ask if he wanted company, no agenda attached.",
+      "Bram: That seems wiser than a direct question about how he's coping, which might make him feel like he's being examined rather than simply visited.",
+      "Ayu: [gently] Should we go together, or would that feel more like an intervention than a friend dropping by casually?",
+      "Bram: Better if it's just one of us at first. Two people showing up unannounced might come across as alarming rather than comforting.",
+      "Ayu: [calmly] I'll go, then, since we've always been closer, and I'll let you know honestly how he seems, whether or not he wants to talk further.",
+      "Bram: Fair enough. And if he does open up, don't rush him toward advice; sometimes being listened to matters far more than being fixed.",
+      "Ayu: [encouraging] You're right. I've been more anxious about saying the wrong thing than about actually being present, which isn't much better than staying away entirely.",
+      "Bram: Just showing up will likely mean more than whatever you end up saying anyway.",
+      "Ayu: [seriously] Alright. I'll stop by this weekend, and hopefully this is just a rough patch rather than something he's slowly sinking into.",
+      "Bram: Whatever happens, at least he'll know someone noticed, instead of assuming nobody did."
     ],
     "quiz": [
-      { "question": "Why is Ayu concerned about Dimas?", "options": ["He moved away suddenly", "He has turned down every invitation for nearly two months since his divorce", "He stopped answering phone calls only", "He got a new job"], "correctIndex": 1, "explanation": "Ayu says Dimas has turned down every invitation for nearly two months since the divorce was finalized." },
-      { "question": "What distinction does Bram draw about giving someone space?", "options": ["Space and avoidance are always the same thing", "There's a difference between giving room to grieve and letting someone disappear out of awkwardness", "Space never helps anyone", "Only family should give someone space"], "correctIndex": 1, "explanation": "Bram distinguishes between giving someone room to grieve and quietly letting them disappear because confronting the situation feels awkward." },
-      { "question": "What does Ayu plan to say to Dimas if she visits?", "options": ["Ask him directly how he is coping with the divorce", "Say she missed him and ask if he wants company, without an agenda", "Tell him he needs to see a therapist", "Avoid mentioning anything personal at all"], "correctIndex": 1, "explanation": "Ayu says she'd just say she missed him and ask if he wanted company, no agenda attached, unless he brings up the divorce himself." },
-      { "question": "Why do they decide only one of them should visit at first?", "options": ["Bram is too busy to go", "Two people arriving unannounced might feel alarming rather than comforting", "Dimas only likes Ayu", "It saves them time"], "correctIndex": 1, "explanation": "Bram suggests that two people showing up unannounced might come across as more alarming than comforting." },
-      { "question": "What advice does Bram give if Dimas does open up?", "options": ["Give him a long list of solutions immediately", "Don't rush him toward advice, since being listened to matters more than being fixed", "Change the subject quickly", "Tell him to move on from the divorce"], "correctIndex": 1, "explanation": "Bram advises not rushing Dimas toward advice, since being listened to matters far more than being fixed." }
-    ]
+      {
+        "question": "Why is Ayu concerned about Dimas?",
+        "options": [
+          "He moved away suddenly",
+          "He has turned down every invitation for nearly two months since his divorce",
+          "He stopped answering phone calls only",
+          "He got a new job"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ayu says Dimas has turned down every invitation for nearly two months since the divorce was finalized."
+      },
+      {
+        "question": "What distinction does Bram draw about giving someone space?",
+        "options": [
+          "Space and avoidance are always the same thing",
+          "Space never helps anyone",
+          "There's a difference between giving room to grieve and letting someone disappear out of awkwardness",
+          "Only family should give someone space"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bram distinguishes between giving someone room to grieve and quietly letting them disappear because confronting the situation feels awkward."
+      },
+      {
+        "question": "What does Ayu plan to say to Dimas if she visits?",
+        "options": [
+          "Ask him directly how he is coping with the divorce",
+          "Tell him he needs to see a therapist",
+          "Say she missed him and ask if he wants company, without an agenda",
+          "Avoid mentioning anything personal at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ayu says she'd just say she missed him and ask if he wanted company, no agenda attached, unless he brings up the divorce himself."
+      },
+      {
+        "question": "Why do they decide only one of them should visit at first?",
+        "options": [
+          "Bram is too busy to go",
+          "Dimas only likes Ayu",
+          "It saves them time",
+          "Two people arriving unannounced might feel alarming rather than comforting"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bram suggests that two people showing up unannounced might come across as more alarming than comforting."
+      },
+      {
+        "question": "What advice does Bram give if Dimas does open up?",
+        "options": [
+          "Give him a long list of solutions immediately",
+          "Change the subject quickly",
+          "Tell him to move on from the divorce",
+          "Don't rush him toward advice, since being listened to matters more than being fixed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bram advises not rushing Dimas toward advice, since being listened to matters far more than being fixed."
+      },
+      {
+        "question": "Why does Dimas's two-month withdrawal worry Ayu and Bram?",
+        "options": [
+          "His need for space may have become harmful isolation.",
+          "Step back briefly, not as punishment",
+          "I never applied for this role, exactly",
+          "I offered to help last week and he practically refused"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: His need for space may have become harmful isolation."
+      },
+      {
+        "question": "How will Ayu invite contact without interrogating him about the divorce?",
+        "options": [
+          "Then you likely already have your answer, even if it's not the one you were hoping for",
+          "She will say she misses him and offer company without an agenda.",
+          "I realized then that mediating hadn't made me impartial",
+          "People accept help far more easily when it doesn't feel entirely one-directional"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She will say she misses him and offer company without an agenda."
+      },
+      {
+        "question": "Why do they decide that only Ayu should visit first?",
+        "options": [
+          "Two unexpected visitors might feel like an alarming intervention.",
+          "Thank you, Teguh, for such a candid conversation",
+          "That announcement did not go over well",
+          "Let's visit him this evening, then"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Two unexpected visitors might feel like an alarming intervention."
+      },
+      {
+        "question": "What should Ayu avoid if Dimas begins describing his difficulties?",
+        "options": [
+          "I hope it gives listeners something worth reflecting on",
+          "She should not rush to give advice before listening.",
+          "I still care deeply about their marriage",
+          "If we get this right, he might actually enjoy the arrangement more than he lets on"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She should not rush to give advice before listening."
+      },
+      {
+        "question": "What is the main value of visiting even if Ayu says little?",
+        "options": [
+          "Dimas will know that a friend noticed and remained present.",
+          "That's a sobering thought",
+          "These days, when they call to complain about each other, I still listen",
+          "Most people do, honestly, regardless of how old they happen to be"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Dimas will know that a friend noticed and remained present."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-social-03",
@@ -74,36 +305,153 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Today's guest is a sociologist who studies how constant connectivity has reshaped what we expect from friendship. Welcome, Teguh.",
-      "Guest: [pleasantly] Thanks for having me. It's a subject I find endlessly fascinating, mostly because everyone assumes being more connected automatically means being closer.",
-      "Host: [curious] And that's not necessarily true, according to your research?",
-      "Guest: [thoughtful] Not at all. What we've found is that constant low-effort contact, likes, reactions, forwarded posts, can actually substitute for the deeper conversations that used to sustain friendships.",
-      "Host: [interested] So people feel connected without the relationship actually being maintained?",
-      "Guest: [nodding] Precisely. There's an illusion of closeness that comes from seeing someone's updates daily, even if you haven't had a real conversation with them in over a year.",
-      "Host: [curious] Does that illusion cause problems when people are eventually confronted with the real distance between them?",
-      "Guest: [reflective] Frequently. We interviewed people who were genuinely shocked to realize a 'close' friend hadn't been told about a major life event, simply because nobody had actually spoken in months.",
-      "Host: [thoughtful] What would you say separates a friendship that survives distance from one that quietly dissolves despite frequent digital contact?",
-      "Guest: [explaining] Reciprocity, mainly. If only one person is consistently the one initiating deeper conversations, the relationship is being sustained by effort rather than mutual investment.",
-      "Host: [curious] Can that imbalance be corrected, or is it usually too late by the time someone notices?",
-      "Guest: [encouraging] It can be corrected, provided both people are willing to name the imbalance honestly, rather than letting resentment build silently underneath the surface.",
-      "Host: [interested] Any practical advice for listeners who suspect they're the only one making an effort?",
-      "Guest: [thoughtful] Test it, gently. Step back briefly, not as punishment, but simply to observe whether the other person notices your absence at all.",
-      "Host: [curious] And if they don't?",
-      "Guest: [honestly] Then you likely already have your answer, even if it's not the one you were hoping for.",
-      "Host: [warmly] That's a sobering thought, but an important one. Thank you, Teguh, for such a candid conversation.",
-      "Guest: [warmly] My pleasure. I hope it gives listeners something worth reflecting on."
+      "Host: [thoughtful] Today's guest is a sociologist who studies how constant connectivity has reshaped what we expect from friendship. Welcome, Teguh.",
+      "Guest: Thanks for having me. It's a subject I find endlessly fascinating, mostly because everyone assumes being more connected automatically means being closer.",
+      "Host: [carefully] And that's not necessarily true, according to your research?",
+      "Guest: Not at all. What we've found is that constant low-effort contact, likes, reactions, forwarded posts, can actually substitute for the deeper conversations that used to sustain friendships.",
+      "Host: [reflective] So people feel connected without the relationship actually being maintained?",
+      "Guest: Precisely. There's an illusion of closeness that comes from seeing someone's updates daily, even if you haven't had a real conversation with them in over a year.",
+      "Host: [honestly] Does that illusion cause problems when people are eventually confronted with the real distance between them?",
+      "Guest: Frequently. We interviewed people who were genuinely shocked to realize a 'close' friend hadn't been told about a major life event, simply because nobody had actually spoken in months.",
+      "Host: [gently] What would you say separates a friendship that survives distance from one that quietly dissolves despite frequent digital contact?",
+      "Guest: Reciprocity, mainly. If only one person is consistently the one initiating deeper conversations, the relationship is being sustained by effort rather than mutual investment.",
+      "Host: [calmly] Can that imbalance be corrected, or is it usually too late by the time someone notices?",
+      "Guest: It can be corrected, provided both people are willing to name the imbalance honestly, rather than letting resentment build silently underneath the surface.",
+      "Host: [encouraging] Any practical advice for listeners who suspect they're the only one making an effort?",
+      "Guest: Test it, gently. Step back briefly, not as punishment, but simply to observe whether the other person notices your absence at all.",
+      "Host: [seriously] And if they don't?",
+      "Guest: Then you likely already have your answer, even if it's not the one you were hoping for.",
+      "Host: That's a sobering thought, but an important one. Thank you, Teguh, for such a candid conversation.",
+      "Guest: My pleasure. I hope it gives listeners something worth reflecting on."
     ],
     "quiz": [
-      { "question": "What does Teguh's research find about constant low-effort digital contact?", "options": ["It always strengthens friendships equally", "It can substitute for the deeper conversations that used to sustain friendships", "It has no effect on relationships at all", "It only matters for family relationships"], "correctIndex": 1, "explanation": "Teguh explains that constant low-effort contact can substitute for the deeper conversations that used to sustain friendships." },
-      { "question": "What surprised the people interviewed in Teguh's research?", "options": ["Their friends remembered every detail of their lives", "A 'close' friend hadn't been told about a major life event because nobody had actually spoken in months", "They had too many close friends", "Digital contact was more meaningful than expected"], "correctIndex": 1, "explanation": "Interviewees were shocked that a close friend hadn't been told about a major life event, since nobody had actually spoken in months." },
-      { "question": "What does Teguh say mainly separates surviving friendships from dissolving ones?", "options": ["How often they post online", "Reciprocity, meaning both people initiate deeper conversations rather than just one", "Living in the same city", "Having identical schedules"], "correctIndex": 1, "explanation": "Teguh says reciprocity is the main factor; if only one person initiates, the relationship is sustained by effort rather than mutual investment." },
-      { "question": "What does Teguh suggest testing if you suspect you're the only one making an effort?", "options": ["Confronting the friend angrily", "Stepping back briefly to observe whether the other person notices your absence", "Ending the friendship immediately", "Asking mutual friends to intervene"], "correctIndex": 1, "explanation": "Teguh suggests gently stepping back, not as punishment, to observe whether the other person notices your absence at all." },
-      { "question": "According to Teguh, what does it mean if the other person doesn't notice your absence?", "options": ["It means nothing significant", "You likely already have your answer about the friendship", "It means you should message them more often", "It proves they are simply very busy"], "correctIndex": 1, "explanation": "Teguh says that if they don't notice, you likely already have your answer, even if it's not the one you hoped for." }
-    ]
+      {
+        "question": "What does Teguh's research find about constant low-effort digital contact?",
+        "options": [
+          "It can substitute for the deeper conversations that used to sustain friendships",
+          "It always strengthens friendships equally",
+          "It has no effect on relationships at all",
+          "It only matters for family relationships"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teguh explains that constant low-effort contact can substitute for the deeper conversations that used to sustain friendships."
+      },
+      {
+        "question": "What surprised the people interviewed in Teguh's research?",
+        "options": [
+          "A 'close' friend hadn't been told about a major life event because nobody had actually spoken in months",
+          "Their friends remembered every detail of their lives",
+          "They had too many close friends",
+          "Digital contact was more meaningful than expected"
+        ],
+        "correctIndex": 0,
+        "explanation": "Interviewees were shocked that a close friend hadn't been told about a major life event, since nobody had actually spoken in months."
+      },
+      {
+        "question": "What does Teguh say mainly separates surviving friendships from dissolving ones?",
+        "options": [
+          "How often they post online",
+          "Living in the same city",
+          "Having identical schedules",
+          "Reciprocity, meaning both people initiate deeper conversations rather than just one"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teguh says reciprocity is the main factor; if only one person initiates, the relationship is sustained by effort rather than mutual investment."
+      },
+      {
+        "question": "What does Teguh suggest testing if you suspect you're the only one making an effort?",
+        "options": [
+          "Confronting the friend angrily",
+          "Ending the friendship immediately",
+          "Asking mutual friends to intervene",
+          "Stepping back briefly to observe whether the other person notices your absence"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teguh suggests gently stepping back, not as punishment, to observe whether the other person notices your absence at all."
+      },
+      {
+        "question": "According to Teguh, what does it mean if the other person doesn't notice your absence?",
+        "options": [
+          "It means nothing significant",
+          "It means you should message them more often",
+          "It proves they are simply very busy",
+          "You likely already have your answer about the friendship"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teguh says that if they don't notice, you likely already have your answer, even if it's not the one you hoped for."
+      },
+      {
+        "question": "How can constant online reactions create a false sense of closeness?",
+        "options": [
+          "I never applied for this role, exactly",
+          "I offered to help last week and he practically refused",
+          "They replace deeper conversations while preserving an appearance of contact.",
+          "Rian began calling not because he was in crisis"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: They replace deeper conversations while preserving an appearance of contact."
+      },
+      {
+        "question": "What discovery shocked participants in the sociologist's research?",
+        "options": [
+          "I realized then that mediating hadn't made me impartial",
+          "A supposed close friend had missed a major life event.",
+          "People accept help far more easily when it doesn't feel entirely one-directional",
+          "What began as a favor to my aunt became, unexpectedly, one of the relationships I value most"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: A supposed close friend had missed a major life event."
+      },
+      {
+        "question": "Which feature helps a friendship survive distance?",
+        "options": [
+          "That announcement did not go over well",
+          "Let's visit him this evening, then",
+          "Both people initiate meaningful contact and invest in the relationship.",
+          "I used to think mentoring meant having answers"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Both people initiate meaningful contact and invest in the relationship."
+      },
+      {
+        "question": "How can friends repair an imbalance before resentment grows?",
+        "options": [
+          "I still care deeply about their marriage",
+          "They can name the unequal effort honestly and change it together.",
+          "If we get this right, he might actually enjoy the arrangement more than he lets on",
+          "He cried, a little"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: They can name the unequal effort honestly and change it together."
+      },
+      {
+        "question": "What gentle test does Teguh suggest for a one-sided friendship?",
+        "options": [
+          "These days, when they call to complain about each other, I still listen",
+          "Step back briefly and see whether the other person notices.",
+          "Most people do, honestly, regardless of how old they happen to be",
+          "Rian graduates next year"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Step back briefly and see whether the other person notices."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-social-04",
@@ -112,30 +460,144 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [honestly] For most of my adult life, I've been the one my parents call when they're not speaking to each other, expected to translate one's grievances into terms the other might accept.",
-      "Narrator: [reflective] I never applied for this role, exactly; it was simply assumed, perhaps because I was the calmest of the three siblings, or the one least likely to take sides.",
-      "Narrator: [thoughtful] Whatever the reason, by my twenties I had become fluent in de-escalation, capable of soothing an argument before either party had fully finished raising their voice.",
-      "Narrator: [honestly] What I didn't notice, for years, was how much of my own opinion I was suppressing in order to remain useful as a neutral party.",
+      "Narrator: [thoughtful] For most of my adult life, I've been the one my parents call when they're not speaking to each other, expected to translate one's grievances into terms the other might accept.",
+      "Narrator: I never applied for this role, exactly; it was simply assumed, perhaps because I was the calmest of the three siblings, or the one least likely to take sides.",
+      "Narrator: [carefully] Whatever the reason, by my twenties I had become fluent in de-escalation, capable of soothing an argument before either party had fully finished raising their voice.",
+      "Narrator: What I didn't notice, for years, was how much of my own opinion I was suppressing in order to remain useful as a neutral party.",
       "Narrator: [reflective] I rarely said what I actually thought, since taking a side, even a justified one, would have disqualified me from the role everyone had quietly assigned me.",
-      "Narrator: [honestly] The cost of that neutrality became clear during an argument last winter, when my mother accused me of always favoring my father, simply because I hadn't defended her loudly enough.",
-      "Narrator: [thoughtful] I realized then that mediating hadn't made me impartial; it had made me invisible, since nobody actually knew what I believed about any of it.",
-      "Narrator: [determined] So, for the first time, I told them both plainly that I would no longer relay messages between two adults perfectly capable of speaking to each other directly.",
-      "Narrator: [honestly] That announcement did not go over well. My mother called it abandonment, and my father, characteristically, said very little at all.",
-      "Narrator: [reflective] It's been six months now, and although they still argue occasionally, they've been forced to resolve things without routing every complaint through me first.",
-      "Narrator: [thoughtful] Our relationship, oddly, has improved since I stopped mediating, since I finally get to be their son rather than their translator.",
-      "Narrator: [peacefully] I still care deeply about their marriage, but I've learned that caring doesn't require absorbing every unresolved conflict between two people ultimately responsible for their own relationship.",
-      "Narrator: [with a small smile] These days, when they call to complain about each other, I still listen, but I no longer feel obligated to fix what was never actually mine to fix."
+      "Narrator: The cost of that neutrality became clear during an argument last winter, when my mother accused me of always favoring my father, simply because I hadn't defended her loudly enough.",
+      "Narrator: [honestly] I realized then that mediating hadn't made me impartial; it had made me invisible, since nobody actually knew what I believed about any of it.",
+      "Narrator: So, for the first time, I told them both plainly that I would no longer relay messages between two adults perfectly capable of speaking to each other directly.",
+      "Narrator: [gently] That announcement did not go over well. My mother called it abandonment, and my father, characteristically, said very little at all.",
+      "Narrator: It's been six months now, and although they still argue occasionally, they've been forced to resolve things without routing every complaint through me first.",
+      "Narrator: [calmly] Our relationship, oddly, has improved since I stopped mediating, since I finally get to be their son rather than their translator.",
+      "Narrator: I still care deeply about their marriage, but I've learned that caring doesn't require absorbing every unresolved conflict between two people ultimately responsible for their own relationship.",
+      "Narrator: [encouraging] These days, when they call to complain about each other, I still listen, but I no longer feel obligated to fix what was never actually mine to fix."
     ],
     "quiz": [
-      { "question": "What role did the narrator take on for most of his adult life?", "options": ["Family accountant", "The one his parents call when they're not speaking, expected to translate grievances", "His parents' travel planner", "The family's official spokesperson"], "correctIndex": 1, "explanation": "He explains he's the one his parents call when not speaking, expected to translate one's grievances into terms the other might accept." },
-      { "question": "What did the narrator fail to notice for years?", "options": ["How tired his parents were", "How much of his own opinion he was suppressing to stay a neutral party", "How often his siblings visited", "How expensive family gatherings were"], "correctIndex": 1, "explanation": "He didn't notice how much of his own opinion he was suppressing in order to remain useful as a neutral party." },
-      { "question": "What triggered the narrator's realization last winter?", "options": ["His mother accused him of always favoring his father", "His parents announced their divorce", "He missed a family gathering", "His father stopped calling him"], "correctIndex": 0, "explanation": "The cost of his neutrality became clear when his mother accused him of always favoring his father." },
-      { "question": "What did the narrator finally tell his parents?", "options": ["That he was moving away", "That he would no longer relay messages between two adults capable of speaking directly", "That they should divorce", "That he agreed with his mother completely"], "correctIndex": 1, "explanation": "He told them plainly he would no longer relay messages between two adults perfectly capable of speaking to each other directly." },
-      { "question": "How has the relationship changed since he stopped mediating?", "options": ["It has gotten noticeably worse", "It has improved, since he finally gets to be their son rather than their translator", "Nothing has changed at all", "His parents stopped speaking to him entirely"], "correctIndex": 1, "explanation": "He says their relationship has oddly improved since he stopped mediating, since he finally gets to be their son rather than their translator." }
-    ]
+      {
+        "question": "What role did the narrator take on for most of his adult life?",
+        "options": [
+          "Family accountant",
+          "The one his parents call when they're not speaking, expected to translate grievances",
+          "His parents' travel planner",
+          "The family's official spokesperson"
+        ],
+        "correctIndex": 1,
+        "explanation": "He explains he's the one his parents call when not speaking, expected to translate one's grievances into terms the other might accept."
+      },
+      {
+        "question": "What did the narrator fail to notice for years?",
+        "options": [
+          "How tired his parents were",
+          "How often his siblings visited",
+          "How expensive family gatherings were",
+          "How much of his own opinion he was suppressing to stay a neutral party"
+        ],
+        "correctIndex": 3,
+        "explanation": "He didn't notice how much of his own opinion he was suppressing in order to remain useful as a neutral party."
+      },
+      {
+        "question": "What triggered the narrator's realization last winter?",
+        "options": [
+          "His mother accused him of always favoring his father",
+          "His parents announced their divorce",
+          "He missed a family gathering",
+          "His father stopped calling him"
+        ],
+        "correctIndex": 0,
+        "explanation": "The cost of his neutrality became clear when his mother accused him of always favoring his father."
+      },
+      {
+        "question": "What did the narrator finally tell his parents?",
+        "options": [
+          "That he would no longer relay messages between two adults capable of speaking directly",
+          "That he was moving away",
+          "That they should divorce",
+          "That he agreed with his mother completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "He told them plainly he would no longer relay messages between two adults perfectly capable of speaking to each other directly."
+      },
+      {
+        "question": "How has the relationship changed since he stopped mediating?",
+        "options": [
+          "It has gotten noticeably worse",
+          "Nothing has changed at all",
+          "It has improved, since he finally gets to be their son rather than their translator",
+          "His parents stopped speaking to him entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says their relationship has oddly improved since he stopped mediating, since he finally gets to be their son rather than their translator."
+      },
+      {
+        "question": "What personal cost came from always mediating between the narrator's parents?",
+        "options": [
+          "I offered to help last week and he practically refused",
+          "Rian began calling not because he was in crisis",
+          "He suppressed his own views to remain useful and neutral.",
+          "This topic matters a lot to me"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He suppressed his own views to remain useful and neutral."
+      },
+      {
+        "question": "Which accusation exposed the failure of his neutral role?",
+        "options": [
+          "People accept help far more easily when it doesn't feel entirely one-directional",
+          "What began as a favor to my aunt became, unexpectedly, one of the relationships I value most",
+          "That's an easy assumption to make, especially if it's how you were raised to host gatherings yourself",
+          "His mother claimed he favoured his father despite his mediation."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: His mother claimed he favoured his father despite his mediation."
+      },
+      {
+        "question": "What boundary did he set after recognising that pattern?",
+        "options": [
+          "Let's visit him this evening, then",
+          "He stopped carrying messages between two adults able to speak directly.",
+          "I used to think mentoring meant having answers",
+          "I'd say it's less about elaborate planning and more about paying attention"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He stopped carrying messages between two adults able to speak directly."
+      },
+      {
+        "question": "How did the boundary eventually change his relationship with his parents?",
+        "options": [
+          "If we get this right, he might actually enjoy the arrangement more than he lets on",
+          "He cried, a little",
+          "Just that hospitality isn't really about the food or the decorations",
+          "He could be their son instead of serving as their translator."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He could be their son instead of serving as their translator."
+      },
+      {
+        "question": "What does he now do when either parent complains?",
+        "options": [
+          "Most people do, honestly, regardless of how old they happen to be",
+          "Rian graduates next year",
+          "He listens with care but refuses responsibility for fixing their marriage.",
+          "I hope it encourages someone else to think a little differently about their next gathering"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He listens with care but refuses responsibility for fixing their marriage."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-social-05",
@@ -144,34 +606,151 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Laras", "gender": "female" },
-      { "name": "Yusuf", "gender": "male" }
+      {
+        "name": "Laras",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Laras: [concerned] Yusuf, have you seen how Pak Karim struggles just carrying his groceries up those stairs lately? I offered to help last week and he practically refused.",
-      "Yusuf: [thoughtful] I've noticed too. He waved me off the same way when I offered to fix his gate, insisting he could manage perfectly well on his own.",
-      "Laras: [hesitant] I understand not wanting to seem helpless, but at some point, refusing help stops being independence and starts being dangerous, especially given his knees.",
-      "Yusuf: [considering] True, though I suspect what he's really refusing isn't the help itself, but the feeling of being treated like a burden by younger neighbors.",
-      "Laras: [curious] So how do we help without it feeling like charity, or worse, like we've decided he can no longer take care of himself?",
-      "Yusuf: [explaining] What if we asked him for something in return? People accept help far more easily when it doesn't feel entirely one-directional.",
-      "Laras: [interested] Go on.",
-      "Yusuf: [thoughtful] He used to repair bicycles for a living. What if we asked him to teach a few of the younger kids on this street, in exchange for us handling his groceries and errands?",
-      "Laras: [warmly] That's clever. It reframes the whole arrangement, since he'd be contributing something valuable, rather than simply receiving favors he never asked for.",
-      "Yusuf: [determined] Exactly. Dignity matters as much as convenience, particularly for someone who spent decades being the one others relied on.",
-      "Laras: [considering] Should one of us propose it, or would it land better coming from both of us together?",
-      "Yusuf: [thoughtful] Together, I think, so it feels like a genuine community idea rather than pity dressed up as a favor.",
-      "Laras: [smiling] Let's visit him this evening, then, and frame it as us needing his expertise, not the other way around.",
-      "Yusuf: [warmly] Agreed. If we get this right, he might actually enjoy the arrangement more than he lets on.",
-      "Laras: [grateful] I hope so. He deserves to be needed, not just looked after.",
-      "Yusuf: [encouraging] Most people do, honestly, regardless of how old they happen to be."
+      "Laras: [thoughtful] Yusuf, have you seen how Pak Karim struggles just carrying his groceries up those stairs lately? I offered to help last week and he practically refused.",
+      "Yusuf: I've noticed too. He waved me off the same way when I offered to fix his gate, insisting he could manage perfectly well on his own.",
+      "Laras: [carefully] I understand not wanting to seem helpless, but at some point, refusing help stops being independence and starts being dangerous, especially given his knees.",
+      "Yusuf: True, though I suspect what he's really refusing isn't the help itself, but the feeling of being treated like a burden by younger neighbors.",
+      "Laras: [reflective] So how do we help without it feeling like charity, or worse, like we've decided he can no longer take care of himself?",
+      "Yusuf: What if we asked him for something in return? People accept help far more easily when it doesn't feel entirely one-directional.",
+      "Laras: [honestly] Go on.",
+      "Yusuf: He used to repair bicycles for a living. What if we asked him to teach a few of the younger kids on this street, in exchange for us handling his groceries and errands?",
+      "Laras: [gently] That's clever. It reframes the whole arrangement, since he'd be contributing something valuable, rather than simply receiving favors he never asked for.",
+      "Yusuf: Exactly. Dignity matters as much as convenience, particularly for someone who spent decades being the one others relied on.",
+      "Laras: [calmly] Should one of us propose it, or would it land better coming from both of us together?",
+      "Yusuf: Together, I think, so it feels like a genuine community idea rather than pity dressed up as a favor.",
+      "Laras: [encouraging] Let's visit him this evening, then, and frame it as us needing his expertise, not the other way around.",
+      "Yusuf: Agreed. If we get this right, he might actually enjoy the arrangement more than he lets on.",
+      "Laras: [seriously] I hope so. He deserves to be needed, not just looked after.",
+      "Yusuf: Most people do, honestly, regardless of how old they happen to be."
     ],
     "quiz": [
-      { "question": "What did Pak Karim do when Laras offered to help with his groceries?", "options": ["He gladly accepted", "He practically refused", "He asked for money instead", "He ignored her completely"], "correctIndex": 1, "explanation": "Laras says she offered to help last week and Pak Karim practically refused." },
-      { "question": "What does Yusuf suspect Pak Karim is really refusing?", "options": ["The help itself", "The feeling of being treated like a burden by younger neighbors", "Any conversation with neighbors", "Advice about his health"], "correctIndex": 1, "explanation": "Yusuf suspects what Pak Karim is really refusing isn't the help itself, but the feeling of being treated like a burden." },
-      { "question": "What idea does Yusuf propose to help without it feeling like charity?", "options": ["Paying him for his time", "Asking him to teach bicycle repair to younger kids in exchange for help with errands", "Hiring a professional caretaker", "Simply leaving groceries at his door anonymously"], "correctIndex": 1, "explanation": "Yusuf suggests asking Pak Karim to teach the younger kids bicycle repair in exchange for handling his groceries and errands." },
-      { "question": "Why do they decide to propose the idea together rather than separately?", "options": ["Pak Karim only trusts Yusuf", "So it feels like a genuine community idea rather than pity dressed up as a favor", "It saves them time", "Laras is too nervous to go alone"], "correctIndex": 1, "explanation": "Yusuf says together it feels like a genuine community idea rather than pity dressed up as a favor." },
-      { "question": "What does Laras say Pak Karim deserves?", "options": ["To be left completely alone", "To be needed, not just looked after", "To move to a smaller home", "To stop working with bicycles"], "correctIndex": 1, "explanation": "Laras says he deserves to be needed, not just looked after." }
-    ]
+      {
+        "question": "What did Pak Karim do when Laras offered to help with his groceries?",
+        "options": [
+          "He practically refused",
+          "He gladly accepted",
+          "He asked for money instead",
+          "He ignored her completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Laras says she offered to help last week and Pak Karim practically refused."
+      },
+      {
+        "question": "What does Yusuf suspect Pak Karim is really refusing?",
+        "options": [
+          "The help itself",
+          "Any conversation with neighbors",
+          "The feeling of being treated like a burden by younger neighbors",
+          "Advice about his health"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yusuf suspects what Pak Karim is really refusing isn't the help itself, but the feeling of being treated like a burden."
+      },
+      {
+        "question": "What idea does Yusuf propose to help without it feeling like charity?",
+        "options": [
+          "Paying him for his time",
+          "Asking him to teach bicycle repair to younger kids in exchange for help with errands",
+          "Hiring a professional caretaker",
+          "Simply leaving groceries at his door anonymously"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yusuf suggests asking Pak Karim to teach the younger kids bicycle repair in exchange for handling his groceries and errands."
+      },
+      {
+        "question": "Why do they decide to propose the idea together rather than separately?",
+        "options": [
+          "So it feels like a genuine community idea rather than pity dressed up as a favor",
+          "Pak Karim only trusts Yusuf",
+          "It saves them time",
+          "Laras is too nervous to go alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf says together it feels like a genuine community idea rather than pity dressed up as a favor."
+      },
+      {
+        "question": "What does Laras say Pak Karim deserves?",
+        "options": [
+          "To be left completely alone",
+          "To be needed, not just looked after",
+          "To move to a smaller home",
+          "To stop working with bicycles"
+        ],
+        "correctIndex": 1,
+        "explanation": "Laras says he deserves to be needed, not just looked after."
+      },
+      {
+        "question": "What does Yusuf think Pak Karim is truly resisting?",
+        "options": [
+          "Rian began calling not because he was in crisis",
+          "This topic matters a lot to me",
+          "No; it complicated the result without completely reversing it.",
+          "He fears being treated as a burden rather than disliking help itself."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He fears being treated as a burden rather than disliking help itself."
+      },
+      {
+        "question": "How does the bicycle idea make assistance more reciprocal?",
+        "options": [
+          "What began as a favor to my aunt became, unexpectedly, one of the relationships I value most",
+          "That's an easy assumption to make, especially if it's how you were raised to host gatherings yourself",
+          "Pak Karim teaches children while neighbours handle groceries and errands.",
+          "A smaller play space could be combined with trees and benches."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Pak Karim teaches children while neighbours handle groceries and errands."
+      },
+      {
+        "question": "Why is his former work relevant to the proposed arrangement?",
+        "options": [
+          "I used to think mentoring meant having answers",
+          "I'd say it's less about elaborate planning and more about paying attention",
+          "A fair process examines access, information, and affected interests.",
+          "His repair expertise lets him contribute something the community values."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: His repair expertise lets him contribute something the community values."
+      },
+      {
+        "question": "How will Laras and Yusuf present the plan without sounding pitying?",
+        "options": [
+          "They will approach together and emphasise their need for his skills.",
+          "He cried, a little",
+          "Just that hospitality isn't really about the food or the decorations",
+          "Ask who could respond, what they knew, and who bears the effects."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: They will approach together and emphasise their need for his skills."
+      },
+      {
+        "question": "What broader need does Laras identify beyond being looked after?",
+        "options": [
+          "Rian graduates next year",
+          "Older people also deserve opportunities to feel useful and needed.",
+          "I hope it encourages someone else to think a little differently about their next gathering",
+          "It can collect opinions efficiently from people able to participate."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Older people also deserve opportunities to feel useful and needed."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-social-06",
@@ -180,30 +759,144 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] When my aunt asked if I'd look after my cousin Rian while he studied in this city, I agreed mostly out of obligation, without giving much thought to what it would actually require.",
-      "Narrator: [reflective] I imagined occasional dinners and a bit of advice, not the near-weekly crises that followed: failed exams, a landlord dispute, a friendship that ended badly.",
-      "Narrator: [honestly] There were nights I resented the responsibility, wondering why I'd essentially been assigned to raise a nineteen-year-old I barely knew before he arrived.",
-      "Narrator: [thoughtful] Slowly, though, something shifted. Rian began calling not because he was in crisis, but simply to talk, which felt like an entirely different kind of trust being extended.",
+      "Narrator: [thoughtful] When my aunt asked if I'd look after my cousin Rian while he studied in this city, I agreed mostly out of obligation, without giving much thought to what it would actually require.",
+      "Narrator: I imagined occasional dinners and a bit of advice, not the near-weekly crises that followed: failed exams, a landlord dispute, a friendship that ended badly.",
+      "Narrator: [carefully] There were nights I resented the responsibility, wondering why I'd essentially been assigned to raise a nineteen-year-old I barely knew before he arrived.",
+      "Narrator: Slowly, though, something shifted. Rian began calling not because he was in crisis, but simply to talk, which felt like an entirely different kind of trust being extended.",
       "Narrator: [reflective] I started noticing how much of what I told him, I had never actually said to my own younger self, about failure, about patience, about not measuring worth by grades alone.",
-      "Narrator: [honestly] In a strange way, mentoring him forced me to examine choices I had made years earlier, ones I'd never fully questioned until I had to justify them to someone else.",
-      "Narrator: [thoughtful] When he failed a course last semester, I caught myself about to deliver exactly the lecture my own father once gave me, word for word, and I stopped myself halfway through.",
-      "Narrator: [gently] Instead, I told him what I'd actually needed to hear back then, that failure wasn't a referendum on his worth, just an uncomfortable but temporary setback.",
-      "Narrator: [warmly] He cried, a little, and admitted he'd been terrified to tell anyone, assuming disappointment was the only response available to him.",
-      "Narrator: [reflective] That conversation taught me more about family than any obligation ever had: that being trusted with someone's failure is a far greater responsibility than merely supervising their success.",
-      "Narrator: [thoughtful] Rian graduates next year, and I doubt he'll ever fully know how much this arrangement, which I once viewed as an imposition, ended up reshaping how I see my own family duties.",
-      "Narrator: [peacefully] What began as a favor to my aunt became, unexpectedly, one of the relationships I value most.",
-      "Narrator: [with a small smile] I used to think mentoring meant having answers; now I think it mostly means being willing to stay present while someone else finds theirs."
+      "Narrator: In a strange way, mentoring him forced me to examine choices I had made years earlier, ones I'd never fully questioned until I had to justify them to someone else.",
+      "Narrator: [honestly] When he failed a course last semester, I caught myself about to deliver exactly the lecture my own father once gave me, word for word, and I stopped myself halfway through.",
+      "Narrator: Instead, I told him what I'd actually needed to hear back then, that failure wasn't a referendum on his worth, just an uncomfortable but temporary setback.",
+      "Narrator: [gently] He cried, a little, and admitted he'd been terrified to tell anyone, assuming disappointment was the only response available to him.",
+      "Narrator: That conversation taught me more about family than any obligation ever had: that being trusted with someone's failure is a far greater responsibility than merely supervising their success.",
+      "Narrator: [calmly] Rian graduates next year, and I doubt he'll ever fully know how much this arrangement, which I once viewed as an imposition, ended up reshaping how I see my own family duties.",
+      "Narrator: What began as a favor to my aunt became, unexpectedly, one of the relationships I value most.",
+      "Narrator: [encouraging] I used to think mentoring meant having answers; now I think it mostly means being willing to stay present while someone else finds theirs."
     ],
     "quiz": [
-      { "question": "Why did the narrator originally agree to look after Rian?", "options": ["She wanted a roommate", "She agreed mostly out of obligation, without much thought about what it would require", "Rian offered to pay her", "She had always wanted to mentor someone"], "correctIndex": 1, "explanation": "She agreed mostly out of obligation, without giving much thought to what it would actually require." },
-      { "question": "What shift did the narrator notice in Rian's calls over time?", "options": ["He stopped calling entirely", "He began calling simply to talk, not only when in crisis", "He only called to ask for money", "He started calling his mother instead"], "correctIndex": 1, "explanation": "Rian began calling not because he was in crisis, but simply to talk, which felt like a different kind of trust." },
-      { "question": "What did the narrator catch herself about to do when Rian failed a course?", "options": ["Ignore the situation completely", "Deliver the exact same lecture her own father once gave her", "Call his mother immediately", "Tell him to drop out of school"], "correctIndex": 1, "explanation": "She caught herself about to deliver exactly the lecture her own father once gave her, word for word, and stopped halfway through." },
-      { "question": "What did the narrator tell Rian instead of that lecture?", "options": ["That he should switch universities", "That failure wasn't a referendum on his worth, just a temporary setback", "That he needed to try harder next time", "That grades don't matter at all"], "correctIndex": 1, "explanation": "She told him failure wasn't a referendum on his worth, just an uncomfortable but temporary setback." },
-      { "question": "What does the narrator conclude mentoring mostly means?", "options": ["Always having the right answers", "Being willing to stay present while someone else finds their own answers", "Supervising someone's every decision", "Avoiding difficult conversations"], "correctIndex": 1, "explanation": "She concludes mentoring mostly means being willing to stay present while someone else finds theirs, rather than having answers." }
-    ]
+      {
+        "question": "Why did the narrator originally agree to look after Rian?",
+        "options": [
+          "She wanted a roommate",
+          "She agreed mostly out of obligation, without much thought about what it would require",
+          "Rian offered to pay her",
+          "She had always wanted to mentor someone"
+        ],
+        "correctIndex": 1,
+        "explanation": "She agreed mostly out of obligation, without giving much thought to what it would actually require."
+      },
+      {
+        "question": "What shift did the narrator notice in Rian's calls over time?",
+        "options": [
+          "He stopped calling entirely",
+          "He only called to ask for money",
+          "He began calling simply to talk, not only when in crisis",
+          "He started calling his mother instead"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rian began calling not because he was in crisis, but simply to talk, which felt like a different kind of trust."
+      },
+      {
+        "question": "What did the narrator catch herself about to do when Rian failed a course?",
+        "options": [
+          "Deliver the exact same lecture her own father once gave her",
+          "Ignore the situation completely",
+          "Call his mother immediately",
+          "Tell him to drop out of school"
+        ],
+        "correctIndex": 0,
+        "explanation": "She caught herself about to deliver exactly the lecture her own father once gave her, word for word, and stopped halfway through."
+      },
+      {
+        "question": "What did the narrator tell Rian instead of that lecture?",
+        "options": [
+          "That he should switch universities",
+          "That he needed to try harder next time",
+          "That grades don't matter at all",
+          "That failure wasn't a referendum on his worth, just a temporary setback"
+        ],
+        "correctIndex": 3,
+        "explanation": "She told him failure wasn't a referendum on his worth, just an uncomfortable but temporary setback."
+      },
+      {
+        "question": "What does the narrator conclude mentoring mostly means?",
+        "options": [
+          "Always having the right answers",
+          "Supervising someone's every decision",
+          "Being willing to stay present while someone else finds their own answers",
+          "Avoiding difficult conversations"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes mentoring mostly means being willing to stay present while someone else finds theirs, rather than having answers."
+      },
+      {
+        "question": "Why did mentoring Rian initially feel heavier than expected?",
+        "options": [
+          "Weekly crises demanded far more than occasional dinners and advice.",
+          "This topic matters a lot to me",
+          "No; it complicated the result without completely reversing it.",
+          "The treasurer supplied the complete conversation with the volunteer's permission."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Weekly crises demanded far more than occasional dinners and advice."
+      },
+      {
+        "question": "What change showed that Rian's relationship with the narrator was deepening?",
+        "options": [
+          "That's an easy assumption to make, especially if it's how you were raised to host gatherings yourself",
+          "A smaller play space could be combined with trees and benches.",
+          "It replaced a public takedown demand with a documented repair process.",
+          "He began calling simply to talk rather than only during crises."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He began calling simply to talk rather than only during crises."
+      },
+      {
+        "question": "Why did the narrator stop repeating his father's old lecture?",
+        "options": [
+          "I'd say it's less about elaborate planning and more about paying attention",
+          "He recognised that Rian needed reassurance rather than inherited criticism.",
+          "A fair process examines access, information, and affected interests.",
+          "The chair reviewed conduct, recorded the repair, and addressed the real harm."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He recognised that Rian needed reassurance rather than inherited criticism."
+      },
+      {
+        "question": "What did Rian's fear of sharing failure teach the narrator?",
+        "options": [
+          "Just that hospitality isn't really about the food or the decorations",
+          "Being trusted with failure carries greater responsibility than praising success.",
+          "Ask who could respond, what they knew, and who bears the effects.",
+          "Checking evidence can confirm harm instead of dismissing it."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Being trusted with failure carries greater responsibility than praising success."
+      },
+      {
+        "question": "How has the narrator's definition of mentoring changed?",
+        "options": [
+          "I hope it encourages someone else to think a little differently about their next gathering",
+          "It can collect opinions efficiently from people able to participate.",
+          "It means staying present while another person discovers their own answers.",
+          "Establish authenticity, context, and consent before spreading or judging it."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It means staying present while another person discovers their own answers."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-social-07",
@@ -212,35 +905,587 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] Good evening, listeners. Tonight we're discussing the etiquette of hosting gatherings where guests come from noticeably different backgrounds. On the line is Farah. Welcome!",
-      "Caller: [pleasantly] Thank you for having me. This topic matters a lot to me, since our neighborhood has become far more diverse over the last few years.",
-      "Radio Host: [curious] What prompted you to think more carefully about this?",
-      "Caller: [thoughtful] I hosted a gathering last month and unintentionally left several guests feeling excluded, simply because I hadn't considered how different our expectations of hospitality actually were.",
-      "Radio Host: [interested] Can you give us an example of what went wrong?",
-      "Caller: [honestly] I assumed everyone would feel comfortable mingling freely, but some guests, particularly the older ones, seemed to expect a more formal introduction before joining any conversation.",
-      "Radio Host: [sympathetically] That's an easy assumption to make, especially if it's how you were raised to host gatherings yourself.",
-      "Caller: [reflective] Exactly. I realized afterward that treating my own habits as the universal default had, without my meaning it, made certain guests feel like outsiders in their own community.",
-      "Radio Host: [curious] What did you change for the next gathering?",
-      "Caller: [explaining] I started asking, quietly beforehand, whether guests had any preferences, rather than assuming everyone shared mine, and I made a point of personally introducing people who hadn't met.",
-      "Radio Host: [interested] Did that noticeably change the atmosphere?",
-      "Caller: [warmly] Considerably. Guests who had previously stood near the entrance the whole evening actually stayed, and several told me afterward it was the first gathering where they felt properly welcomed.",
-      "Radio Host: [curious] What would you say to hosts who worry that accommodating everyone is simply too complicated?",
-      "Caller: [encouraging] I'd say it's less about elaborate planning and more about paying attention, since most people simply want to feel noticed rather than catered to extravagantly.",
-      "Radio Host: [thoughtful] Any final thought for our listeners tonight?",
-      "Caller: [reflective] Just that hospitality isn't really about the food or the decorations; it's about whether someone unfamiliar with the room ends up feeling like they belong in it.",
-      "Radio Host: [smiling] Beautifully put, Farah. Thank you for such a thoughtful conversation tonight.",
-      "Caller: [sincerely] Thank you for having me. I hope it encourages someone else to think a little differently about their next gathering."
+      "Radio Host: [thoughtful] Good evening, listeners. Tonight we're discussing the etiquette of hosting gatherings where guests come from noticeably different backgrounds. On the line is Farah. Welcome!",
+      "Caller: Thank you for having me. This topic matters a lot to me, since our neighborhood has become far more diverse over the last few years.",
+      "Radio Host: [carefully] What prompted you to think more carefully about this?",
+      "Caller: I hosted a gathering last month and unintentionally left several guests feeling excluded, simply because I hadn't considered how different our expectations of hospitality actually were.",
+      "Radio Host: [reflective] Can you give us an example of what went wrong?",
+      "Caller: I assumed everyone would feel comfortable mingling freely, but some guests, particularly the older ones, seemed to expect a more formal introduction before joining any conversation.",
+      "Radio Host: [honestly] That's an easy assumption to make, especially if it's how you were raised to host gatherings yourself.",
+      "Caller: Exactly. I realized afterward that treating my own habits as the universal default had, without my meaning it, made certain guests feel like outsiders in their own community.",
+      "Radio Host: [gently] What did you change for the next gathering?",
+      "Caller: I started asking, quietly beforehand, whether guests had any preferences, rather than assuming everyone shared mine, and I made a point of personally introducing people who hadn't met.",
+      "Radio Host: [calmly] Did that noticeably change the atmosphere?",
+      "Caller: Considerably. Guests who had previously stood near the entrance the whole evening actually stayed, and several told me afterward it was the first gathering where they felt properly welcomed.",
+      "Radio Host: [encouraging] What would you say to hosts who worry that accommodating everyone is simply too complicated?",
+      "Caller: I'd say it's less about elaborate planning and more about paying attention, since most people simply want to feel noticed rather than catered to extravagantly.",
+      "Radio Host: [seriously] Any final thought for our listeners tonight?",
+      "Caller: Just that hospitality isn't really about the food or the decorations; it's about whether someone unfamiliar with the room ends up feeling like they belong in it.",
+      "Radio Host: Beautifully put, Farah. Thank you for such a thoughtful conversation tonight.",
+      "Caller: Thank you for having me. I hope it encourages someone else to think a little differently about their next gathering."
     ],
     "quiz": [
-      { "question": "What prompted Farah to think more carefully about hosting etiquette?", "options": ["A book she read about manners", "She unintentionally left several guests feeling excluded at a gathering last month", "A complaint from her landlord", "She attended a lecture on the topic"], "correctIndex": 1, "explanation": "Farah says she hosted a gathering last month and unintentionally left several guests feeling excluded." },
-      { "question": "What did some older guests seem to expect at Farah's gathering?", "options": ["A formal introduction before joining any conversation", "Free entertainment throughout the evening", "A seating chart", "To be served first"], "correctIndex": 0, "explanation": "Some guests, particularly the older ones, seemed to expect a more formal introduction before joining any conversation." },
-      { "question": "What realization did Farah have after the gathering?", "options": ["She had spent too much money on food", "Treating her own habits as the universal default had made certain guests feel like outsiders", "She should never host again", "Her guests preferred smaller gatherings"], "correctIndex": 1, "explanation": "She realized treating her own habits as the universal default had made certain guests feel like outsiders in their own community." },
-      { "question": "What did Farah change for her next gathering?", "options": ["She invited fewer guests", "She asked beforehand about preferences and personally introduced people who hadn't met", "She hired a professional host", "She stopped hosting gatherings at home"], "correctIndex": 1, "explanation": "She started asking quietly beforehand about preferences and made a point of personally introducing people who hadn't met." },
-      { "question": "According to Farah, what is hospitality really about?", "options": ["The food and decorations", "Whether someone unfamiliar with the room ends up feeling like they belong in it", "Following strict formal rules", "Having the largest possible guest list"], "correctIndex": 1, "explanation": "Farah concludes hospitality isn't really about the food or decorations; it's about whether someone unfamiliar ends up feeling like they belong." }
-    ]
+      {
+        "question": "What prompted Farah to think more carefully about hosting etiquette?",
+        "options": [
+          "She unintentionally left several guests feeling excluded at a gathering last month",
+          "A book she read about manners",
+          "A complaint from her landlord",
+          "She attended a lecture on the topic"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farah says she hosted a gathering last month and unintentionally left several guests feeling excluded."
+      },
+      {
+        "question": "What did some older guests seem to expect at Farah's gathering?",
+        "options": [
+          "Free entertainment throughout the evening",
+          "A seating chart",
+          "A formal introduction before joining any conversation",
+          "To be served first"
+        ],
+        "correctIndex": 2,
+        "explanation": "Some guests, particularly the older ones, seemed to expect a more formal introduction before joining any conversation."
+      },
+      {
+        "question": "What realization did Farah have after the gathering?",
+        "options": [
+          "She had spent too much money on food",
+          "Treating her own habits as the universal default had made certain guests feel like outsiders",
+          "She should never host again",
+          "Her guests preferred smaller gatherings"
+        ],
+        "correctIndex": 1,
+        "explanation": "She realized treating her own habits as the universal default had made certain guests feel like outsiders in their own community."
+      },
+      {
+        "question": "What did Farah change for her next gathering?",
+        "options": [
+          "She invited fewer guests",
+          "She hired a professional host",
+          "She asked beforehand about preferences and personally introduced people who hadn't met",
+          "She stopped hosting gatherings at home"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started asking quietly beforehand about preferences and made a point of personally introducing people who hadn't met."
+      },
+      {
+        "question": "According to Farah, what is hospitality really about?",
+        "options": [
+          "The food and decorations",
+          "Whether someone unfamiliar with the room ends up feeling like they belong in it",
+          "Following strict formal rules",
+          "Having the largest possible guest list"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah concludes hospitality isn't really about the food or decorations; it's about whether someone unfamiliar ends up feeling like they belong."
+      },
+      {
+        "question": "What assumption caused some guests to feel excluded at Farah's first gathering?",
+        "options": [
+          "No; it complicated the result without completely reversing it.",
+          "The treasurer supplied the complete conversation with the volunteer's permission.",
+          "Reasons are transparent and concerns receive serious, documented answers.",
+          "She treated informal mingling as comfortable and universal."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: She treated informal mingling as comfortable and universal."
+      },
+      {
+        "question": "Why did older guests remain outside the conversations?",
+        "options": [
+          "They expected formal introductions before joining unfamiliar groups.",
+          "A smaller play space could be combined with trees and benches.",
+          "It replaced a public takedown demand with a documented repair process.",
+          "Use documented roles and conduct rather than assumptions about character."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: They expected formal introductions before joining unfamiliar groups."
+      },
+      {
+        "question": "What preparation did Farah add before the next gathering?",
+        "options": [
+          "A fair process examines access, information, and affected interests.",
+          "The chair reviewed conduct, recorded the repair, and addressed the real harm.",
+          "Many participants accepted the flawed process, so responsibility may be shared.",
+          "She privately asked about preferences and introduced unfamiliar guests personally."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: She privately asked about preferences and introduced unfamiliar guests personally."
+      },
+      {
+        "question": "What evidence suggested that the new approach worked?",
+        "options": [
+          "Ask who could respond, what they knew, and who bears the effects.",
+          "Checking evidence can confirm harm instead of dismissing it.",
+          "Previously hesitant guests stayed and reported feeling properly welcomed.",
+          "Affected people decide when evidence is sufficient for renewed confidence."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Previously hesitant guests stayed and reported feeling properly welcomed."
+      },
+      {
+        "question": "According to Farah, what matters more than elaborate hospitality?",
+        "options": [
+          "It can collect opinions efficiently from people able to participate.",
+          "Establish authenticity, context, and consent before spreading or judging it.",
+          "Consistent inclusive conduct across several future decisions.",
+          "Attentive inclusion helps unfamiliar people feel that they belong."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Attentive inclusion helps unfamiliar people feel that they belong."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-social-08",
+    "title": "The Poll That Divided Our Committee",
+    "level": "B2",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [concerned] Our neighbourhood committee used an online poll to choose between a playground and a small public garden. When the results showed seventy percent support for the playground, we announced that the community had spoken.",
+      "Narrator: At the next meeting, an older resident asked how people without smartphones had voted. We had no answer. The poll link had circulated mainly through a parents' group, while residents of two apartment blocks had not received it at all.",
+      "Narrator: [honestly] The number was accurate for the responses collected, but our description was false. We had measured a convenient sample and called it the whole community.",
+      "Narrator: We paused the decision and mapped who had been missed. Volunteers offered paper forms at the prayer hall, local shops, and apartment entrances. We also held a short accessible meeting and provided the proposal in two commonly used languages.",
+      "Narrator: [thoughtful] The new responses did not completely reverse the result. They revealed different priorities. Parents wanted safe play space; older residents wanted shade and seating; shopkeepers worried about evening noise.",
+      "Narrator: A landscape student suggested combining a smaller play area with trees, benches, and agreed opening hours. The solution cost slightly more, so the committee published the budget and delayed one decorative feature.",
+      "Narrator: [reflective] Some people accused us of ignoring the first majority. We explained that consultation is not just counting quickly. It includes examining who could participate, what information they had, and whose burdens were absent from the question.",
+      "Narrator: The final design did not satisfy every preference, but more residents understood how it had been reached. A poll can collect opinions efficiently; it cannot decide whether the process itself was fair."
+    ],
+    "quiz": [
+      {
+        "question": "What choice was the neighbourhood poll intended to settle?",
+        "options": [
+          "Whether to build a playground or a small public garden.",
+          "It seemed to show the club treasurer insulting a volunteer.",
+          "Two groups affected by the project were excluded from discussion.",
+          "She realised Wulan had drifted while she alone maintained the friendship."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Whether to build a playground or a small public garden."
+      },
+      {
+        "question": "Why did the poll overrepresent parents' preferences?",
+        "options": [
+          "The image began halfway through the underlying conversation.",
+          "Its link circulated mainly inside a parents' messaging group.",
+          "People bearing the consequences lacked a meaningful chance to speak.",
+          "She stopped initiating contact for two months and observed who responded."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Its link circulated mainly inside a parents' messaging group."
+      },
+      {
+        "question": "In what limited sense was the original result accurate?",
+        "options": [
+          "She had only received the image from another person.",
+          "It should clearly acknowledge the exclusion instead of defending the vote.",
+          "It accurately counted responses but not the whole affected community.",
+          "A small number cared without depending on her constant effort."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It accurately counted responses but not the whole affected community."
+      },
+      {
+        "question": "What did the committee do after identifying excluded residents?",
+        "options": [
+          "The narrator contacted the treasurer privately rather than accusing him publicly.",
+          "It identifies the failure, its effect, and responsibility.",
+          "One-sided effort was draining energy better used in mutual relationships.",
+          "It paused the decision and mapped groups missing from consultation."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It paused the decision and mapped groups missing from consultation."
+      },
+      {
+        "question": "How did volunteers reach people excluded by the online poll?",
+        "options": [
+          "They offered paper forms at community locations and accessible discussions.",
+          "She described the circulating image and asked whether he knew its context.",
+          "Questions, timeline, decision authority, and possible outcomes must be stated.",
+          "Care should be met by meaningful effort from both people."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: They offered paper forms at community locations and accessible discussions."
+      },
+      {
+        "question": "Did broader consultation simply overturn the original preference?",
+        "options": [
+          "The treasurer supplied the complete conversation with the volunteer's permission.",
+          "No; it complicated the result without completely reversing it.",
+          "Reasons are transparent and concerns receive serious, documented answers.",
+          "She realised Wulan had drifted while she alone maintained the friendship."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: No; it complicated the result without completely reversing it."
+      },
+      {
+        "question": "What compromise emerged from a landscape student's suggestion?",
+        "options": [
+          "It replaced a public takedown demand with a documented repair process.",
+          "Use documented roles and conduct rather than assumptions about character.",
+          "A smaller play space could be combined with trees and benches.",
+          "She stopped initiating contact for two months and observed who responded."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A smaller play space could be combined with trees and benches."
+      },
+      {
+        "question": "Why is consultation more than counting responses quickly?",
+        "options": [
+          "The chair reviewed conduct, recorded the repair, and addressed the real harm.",
+          "Many participants accepted the flawed process, so responsibility may be shared.",
+          "A small number cared without depending on her constant effort.",
+          "A fair process examines access, information, and affected interests."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: A fair process examines access, information, and affected interests."
+      },
+      {
+        "question": "Which questions reveal whether participation was genuinely inclusive?",
+        "options": [
+          "Ask who could respond, what they knew, and who bears the effects.",
+          "Checking evidence can confirm harm instead of dismissing it.",
+          "Affected people decide when evidence is sufficient for renewed confidence.",
+          "One-sided effort was draining energy better used in mutual relationships."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Ask who could respond, what they knew, and who bears the effects."
+      },
+      {
+        "question": "What can a poll do well without resolving every fairness concern?",
+        "options": [
+          "Establish authenticity, context, and consent before spreading or judging it.",
+          "It can collect opinions efficiently from people able to participate.",
+          "Consistent inclusive conduct across several future decisions.",
+          "Care should be met by meaningful effort from both people."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It can collect opinions efficiently from people able to participate."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-social-09",
+    "title": "Three Messages Before I Pressed Send",
+    "level": "B2",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [uneasy] A friend sent me a screenshot that appeared to show our club treasurer insulting a volunteer. Within minutes, I had drafted a message for the committee: “We cannot allow someone like this to manage our funds.”",
+      "Narrator: Before sending it, I noticed that the screenshot began halfway through a conversation. There was no date, and the account name had been cropped. I wrote a second message asking the friend where it came from. She replied that she had received it from someone else.",
+      "Narrator: [carefully] My third message went privately to the treasurer. I did not attach an accusation. I said an image involving his name was circulating and asked whether he knew its context. He sent the complete exchange, with the volunteer's permission to share it with the chairperson.",
+      "Narrator: The insulting sentence was real, and it was unacceptable. The missing lines also showed that the treasurer had apologised immediately and arranged a private conversation. The volunteer confirmed that they were working through the matter and did not want the screenshot spread further.",
+      "Narrator: [reflective] The fuller context did not make the words harmless. It changed what responsible action required. Instead of publicly demanding removal, the chair reviewed the conduct, documented the repair, and clarified the club's communication standards.",
+      "Narrator: I deleted my first draft. Had I sent it, I would have combined a true fragment with an unsupported conclusion about fitness to manage money.",
+      "Narrator: [calmly] Screenshots feel like evidence because they preserve exact words, but selection can still distort meaning. Verification does not mean dismissing harm or protecting status.",
+      "Narrator: It means slowing down long enough to establish authenticity, context, consent, and the proper audience before adding another irreversible message."
+    ],
+    "quiz": [
+      {
+        "question": "What allegation appeared in the screenshot sent to the narrator?",
+        "options": [
+          "It seemed to show the club treasurer insulting a volunteer.",
+          "Two groups affected by the project were excluded from discussion.",
+          "She realised Wulan had drifted while she alone maintained the friendship.",
+          "His need for space may have become harmful isolation."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: It seemed to show the club treasurer insulting a volunteer."
+      },
+      {
+        "question": "Which visual clue made the narrator question the screenshot's completeness?",
+        "options": [
+          "People bearing the consequences lacked a meaningful chance to speak.",
+          "The image began halfway through the underlying conversation.",
+          "She stopped initiating contact for two months and observed who responded.",
+          "She will say she misses him and offer company without an agenda."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The image began halfway through the underlying conversation."
+      },
+      {
+        "question": "Why did asking the sender for the original fail to verify it?",
+        "options": [
+          "It should clearly acknowledge the exclusion instead of defending the vote.",
+          "A small number cared without depending on her constant effort.",
+          "She had only received the image from another person.",
+          "Two unexpected visitors might feel like an alarming intervention."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: She had only received the image from another person."
+      },
+      {
+        "question": "Who received the narrator's third message about the circulating image?",
+        "options": [
+          "It identifies the failure, its effect, and responsibility.",
+          "One-sided effort was draining energy better used in mutual relationships.",
+          "She should not rush to give advice before listening.",
+          "The narrator contacted the treasurer privately rather than accusing him publicly."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The narrator contacted the treasurer privately rather than accusing him publicly."
+      },
+      {
+        "question": "How did the narrator alert the treasurer without presuming guilt?",
+        "options": [
+          "She described the circulating image and asked whether he knew its context.",
+          "Questions, timeline, decision authority, and possible outcomes must be stated.",
+          "Care should be met by meaningful effort from both people.",
+          "Dimas will know that a friend noticed and remained present."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She described the circulating image and asked whether he knew its context."
+      },
+      {
+        "question": "What evidence clarified the full exchange for the chairperson?",
+        "options": [
+          "Reasons are transparent and concerns receive serious, documented answers.",
+          "The treasurer supplied the complete conversation with the volunteer's permission.",
+          "She realised Wulan had drifted while she alone maintained the friendship.",
+          "His need for space may have become harmful isolation."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The treasurer supplied the complete conversation with the volunteer's permission."
+      },
+      {
+        "question": "How did verification change the response required from the club?",
+        "options": [
+          "Use documented roles and conduct rather than assumptions about character.",
+          "She stopped initiating contact for two months and observed who responded.",
+          "It replaced a public takedown demand with a documented repair process.",
+          "She will say she misses him and offer company without an agenda."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It replaced a public takedown demand with a documented repair process."
+      },
+      {
+        "question": "What action did the chair take once the complete context was available?",
+        "options": [
+          "Many participants accepted the flawed process, so responsibility may be shared.",
+          "A small number cared without depending on her constant effort.",
+          "Two unexpected visitors might feel like an alarming intervention.",
+          "The chair reviewed conduct, recorded the repair, and addressed the real harm."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The chair reviewed conduct, recorded the repair, and addressed the real harm."
+      },
+      {
+        "question": "Why does verification not necessarily protect a powerful person?",
+        "options": [
+          "Checking evidence can confirm harm instead of dismissing it.",
+          "Affected people decide when evidence is sufficient for renewed confidence.",
+          "One-sided effort was draining energy better used in mutual relationships.",
+          "She should not rush to give advice before listening."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Checking evidence can confirm harm instead of dismissing it."
+      },
+      {
+        "question": "What three safeguards define responsible handling of a damaging screenshot?",
+        "options": [
+          "Consistent inclusive conduct across several future decisions.",
+          "Establish authenticity, context, and consent before spreading or judging it.",
+          "Care should be met by meaningful effort from both people.",
+          "Dimas will know that a friend noticed and remained present."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Establish authenticity, context, and consent before spreading or judging it."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-social-10",
+    "title": "Can Trust Return After a Bad Vote?",
+    "level": "B2",
+    "themeId": "social",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [serious] A committee approves a project after excluding two affected groups from the discussion. The vote was technically valid. Why is trust still damaged?",
+      "Guest: Because legitimacy is more than following the minimum procedure. People who carry the consequences were denied a meaningful chance to speak.",
+      "Host: Should the committee cancel the decision immediately?",
+      "Guest: [carefully] First assess what can be paused or reversed and what obligations already exist. Then acknowledge the exclusion clearly instead of defending the vote as flawless.",
+      "Host: What does a useful apology sound like?",
+      "Guest: It names the failure, its effect, and the repair: “We did not consult tenants and accessibility users; this limited the evidence; we are reopening these parts of the plan.”",
+      "Host: Some members fear that reopening debate will never end.",
+      "Guest: Consultation needs boundaries. Set the questions, timeline, decision authority, and method for reporting how input changed—or did not change—the plan.",
+      "Host: [curious] What if the final decision remains the same?",
+      "Guest: Trust may still improve if the reasons are transparent and concerns receive serious answers. Consultation does not promise that every preference wins.",
+      "Host: Should individual members be blamed publicly?",
+      "Guest: Address responsibility using documented roles and conduct. Avoid guessing motives or creating a scapegoat for a process many people accepted.",
+      "Host: [reflective] How long does repair take?",
+      "Guest: Usually longer than one meeting. The committee must keep its promises, publish updates, and make inclusion normal in later decisions.",
+      "Host: Can trust be guaranteed?",
+      "Guest: No. People may reasonably remain cautious. The committee controls the quality of its repair, not another person's timetable for confidence. Consistent, inclusive conduct over several decisions will speak more loudly than a polished statement."
+    ],
+    "quiz": [
+      {
+        "question": "What flaw undermined the committee's approval of the project?",
+        "options": [
+          "Two groups affected by the project were excluded from discussion.",
+          "She realised Wulan had drifted while she alone maintained the friendship.",
+          "His need for space may have become harmful isolation.",
+          "They replace deeper conversations while preserving an appearance of contact."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Two groups affected by the project were excluded from discussion."
+      },
+      {
+        "question": "Why was the vote procedurally unfair despite receiving enough votes?",
+        "options": [
+          "She stopped initiating contact for two months and observed who responded.",
+          "People bearing the consequences lacked a meaningful chance to speak.",
+          "She will say she misses him and offer company without an agenda.",
+          "A supposed close friend had missed a major life event."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: People bearing the consequences lacked a meaningful chance to speak."
+      },
+      {
+        "question": "What should the committee admit before attempting to rebuild trust?",
+        "options": [
+          "A small number cared without depending on her constant effort.",
+          "Two unexpected visitors might feel like an alarming intervention.",
+          "It should clearly acknowledge the exclusion instead of defending the vote.",
+          "Both people initiate meaningful contact and invest in the relationship."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It should clearly acknowledge the exclusion instead of defending the vote."
+      },
+      {
+        "question": "What makes an apology more useful than a vague expression of regret?",
+        "options": [
+          "One-sided effort was draining energy better used in mutual relationships.",
+          "She should not rush to give advice before listening.",
+          "They can name the unequal effort honestly and change it together.",
+          "It identifies the failure, its effect, and responsibility."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It identifies the failure, its effect, and responsibility."
+      },
+      {
+        "question": "Which boundaries should be clear before reopening consultation?",
+        "options": [
+          "Questions, timeline, decision authority, and possible outcomes must be stated.",
+          "Care should be met by meaningful effort from both people.",
+          "Dimas will know that a friend noticed and remained present.",
+          "Step back briefly and see whether the other person notices."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Questions, timeline, decision authority, and possible outcomes must be stated."
+      },
+      {
+        "question": "When might trust improve even if the final choice remains unpopular?",
+        "options": [
+          "She realised Wulan had drifted while she alone maintained the friendship.",
+          "Reasons are transparent and concerns receive serious, documented answers.",
+          "His need for space may have become harmful isolation.",
+          "They replace deeper conversations while preserving an appearance of contact."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Reasons are transparent and concerns receive serious, documented answers."
+      },
+      {
+        "question": "How should responsibility for the exclusion be investigated?",
+        "options": [
+          "She stopped initiating contact for two months and observed who responded.",
+          "She will say she misses him and offer company without an agenda.",
+          "Use documented roles and conduct rather than assumptions about character.",
+          "A supposed close friend had missed a major life event."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Use documented roles and conduct rather than assumptions about character."
+      },
+      {
+        "question": "Why should the committee avoid choosing one scapegoat?",
+        "options": [
+          "A small number cared without depending on her constant effort.",
+          "Two unexpected visitors might feel like an alarming intervention.",
+          "Both people initiate meaningful contact and invest in the relationship.",
+          "Many participants accepted the flawed process, so responsibility may be shared."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Many participants accepted the flawed process, so responsibility may be shared."
+      },
+      {
+        "question": "What aspect of restored trust remains outside the committee's control?",
+        "options": [
+          "Affected people decide when evidence is sufficient for renewed confidence.",
+          "One-sided effort was draining energy better used in mutual relationships.",
+          "She should not rush to give advice before listening.",
+          "They can name the unequal effort honestly and change it together."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Affected people decide when evidence is sufficient for renewed confidence."
+      },
+      {
+        "question": "What will demonstrate reform more convincingly than one polished apology?",
+        "options": [
+          "Care should be met by meaningful effort from both people.",
+          "Consistent inclusive conduct across several future decisions.",
+          "Dimas will know that a friend noticed and remained present.",
+          "Step back briefly and see whether the other person notices."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Consistent inclusive conduct across several future decisions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "social",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

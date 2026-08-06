@@ -6,31 +6,145 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] What strikes me most about Abu Bakr is not any single heroic act, but the sheer consistency of his conviction, which never seemed to waver under scrutiny.",
-      "Narrator: [reflective] When the Prophet first shared the message privately, Abu Bakr accepted it almost instantly, without demanding proof or interrogating the claim at length.",
-      "Narrator: [serious] That immediacy becomes even more remarkable when you consider the episode of the Night Journey, a claim so extraordinary that many contemporaries dismissed it outright.",
-      "Narrator: [with feeling] While others mocked the Prophet publicly, ridiculing an account of traveling to Jerusalem and beyond in a single night, Abu Bakr simply asked whether the Prophet himself had said it.",
-      "Narrator: [calm] Told that he had, Abu Bakr replied that if the Prophet said it, then it was true, a response that earned him the title al-Siddiq, the Truthful One.",
-      "Narrator: [tense] Years later, during the migration to Madinah, he accompanied the Prophet into a cramped cave while their pursuers stood dangerously close outside.",
-      "Narrator: [with feeling] Reportedly, Abu Bakr worried not for himself but entirely for his companion, fearing that any harm inflicted would fall on someone irreplaceable to the entire community.",
-      "Narrator: [thoughtful] Had a spider not woven its web across the cave's entrance that same night, historians speculate the search party might well have looked inside.",
-      "Narrator: [warmly] Later, when the Prophet passed away and grief left the community disoriented, it was Abu Bakr who addressed them with startling clarity.",
-      "Narrator: [serious] He reminded everyone that whoever worshipped Muhammad should know Muhammad had died, whereas whoever worshipped Allah should know Allah remains eternally alive.",
-      "Narrator: [reflective] That single statement, delivered under immense emotional pressure, reoriented an entire community that might otherwise have spiraled into confusion or despair.",
-      "Narrator: [with admiration] As caliph, he then confronted tribes attempting to abandon their religious obligations, refusing to compromise even when advisors urged a gentler approach.",
-      "Narrator: [thoughtful] His steadfastness was never loud or theatrical; it simply persisted, quietly and reliably, through whichever crisis happened to arrive next.",
-      "Narrator: [warmly] Whenever I feel uncertain about difficult decisions, I think of Abu Bakr's instinctive trust, and I wonder what my own hesitation is truly protecting."
+      "Narrator: When the Prophet first shared the message privately, Abu Bakr accepted it almost instantly, without demanding proof or interrogating the claim at length.",
+      "Narrator: [carefully] That immediacy becomes even more remarkable when you consider the episode of the Night Journey, a claim so extraordinary that many contemporaries dismissed it outright.",
+      "Narrator: While others mocked the Prophet publicly, ridiculing an account of traveling to Jerusalem and beyond in a single night, Abu Bakr simply asked whether the Prophet himself had said it.",
+      "Narrator: [reflective] Told that he had, Abu Bakr replied that if the Prophet said it, then it was true, a response that earned him the title al-Siddiq, the Truthful One.",
+      "Narrator: Years later, during the migration to Madinah, he accompanied the Prophet into a cramped cave while their pursuers stood dangerously close outside.",
+      "Narrator: [honestly] Reportedly, Abu Bakr worried not for himself but entirely for his companion, fearing that any harm inflicted would fall on someone irreplaceable to the entire community.",
+      "Narrator: Had a spider not woven its web across the cave's entrance that same night, historians speculate the search party might well have looked inside.",
+      "Narrator: [gently] Later, when the Prophet passed away and grief left the community disoriented, it was Abu Bakr who addressed them with startling clarity.",
+      "Narrator: He reminded everyone that whoever worshipped Muhammad should know Muhammad had died, whereas whoever worshipped Allah should know Allah remains eternally alive.",
+      "Narrator: [calmly] That single statement, delivered under immense emotional pressure, reoriented an entire community that might otherwise have spiraled into confusion or despair.",
+      "Narrator: As caliph, he then confronted tribes attempting to abandon their religious obligations, refusing to compromise even when advisors urged a gentler approach.",
+      "Narrator: [encouraging] His steadfastness was never loud or theatrical; it simply persisted, quietly and reliably, through whichever crisis happened to arrive next.",
+      "Narrator: Whenever I feel uncertain about difficult decisions, I think of Abu Bakr's instinctive trust, and I wonder what my own hesitation is truly protecting."
     ],
     "quiz": [
-      { "question": "How did Abu Bakr respond when he first heard the Prophet's message?", "options": ["He demanded extensive proof", "He accepted it almost instantly without interrogating the claim", "He rejected it outright", "He asked other tribal leaders first"], "correctIndex": 1, "explanation": "The narrator says Abu Bakr accepted the message almost instantly, without demanding proof or interrogating the claim at length." },
-      { "question": "What earned Abu Bakr the title al-Siddiq?", "options": ["His wealth", "His immediate belief in the Night Journey once told the Prophet had said it", "His military skill", "His poetry"], "correctIndex": 1, "explanation": "When told the Prophet had said it, Abu Bakr affirmed it must be true, earning him the title al-Siddiq, the Truthful One." },
-      { "question": "What did Abu Bakr worry about inside the cave?", "options": ["His own safety only", "Harm falling on the Prophet, someone he saw as irreplaceable", "Losing his belongings", "Being mocked by pursuers"], "correctIndex": 1, "explanation": "He reportedly worried not for himself but for his companion, fearing harm would fall on someone irreplaceable to the community." },
-      { "question": "What did Abu Bakr say after the Prophet's death?", "options": ["That everyone should mourn indefinitely", "That whoever worshipped Muhammad should know he had died, but Allah remains alive", "That the community should disband", "That he would refuse leadership"], "correctIndex": 1, "explanation": "He reminded the community that whoever worshipped Muhammad should know he had died, whereas Allah remains eternally alive." },
-      { "question": "How did Abu Bakr behave as caliph toward tribes abandoning their obligations?", "options": ["He ignored the issue", "He refused to compromise even under pressure from advisors", "He agreed with advisors immediately", "He resigned from leadership"], "correctIndex": 1, "explanation": "He confronted tribes attempting to abandon their obligations, refusing to compromise even when advisors urged a gentler approach." }
-    ]
+      {
+        "question": "How did Abu Bakr respond when he first heard the Prophet's message?",
+        "options": [
+          "He demanded extensive proof",
+          "He rejected it outright",
+          "He asked other tribal leaders first",
+          "He accepted it almost instantly without interrogating the claim"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator says Abu Bakr accepted the message almost instantly, without demanding proof or interrogating the claim at length."
+      },
+      {
+        "question": "What earned Abu Bakr the title al-Siddiq?",
+        "options": [
+          "His wealth",
+          "His immediate belief in the Night Journey once told the Prophet had said it",
+          "His military skill",
+          "His poetry"
+        ],
+        "correctIndex": 1,
+        "explanation": "When told the Prophet had said it, Abu Bakr affirmed it must be true, earning him the title al-Siddiq, the Truthful One."
+      },
+      {
+        "question": "What did Abu Bakr worry about inside the cave?",
+        "options": [
+          "His own safety only",
+          "Losing his belongings",
+          "Harm falling on the Prophet, someone he saw as irreplaceable",
+          "Being mocked by pursuers"
+        ],
+        "correctIndex": 2,
+        "explanation": "He reportedly worried not for himself but for his companion, fearing harm would fall on someone irreplaceable to the community."
+      },
+      {
+        "question": "What did Abu Bakr say after the Prophet's death?",
+        "options": [
+          "That everyone should mourn indefinitely",
+          "That the community should disband",
+          "That whoever worshipped Muhammad should know he had died, but Allah remains alive",
+          "That he would refuse leadership"
+        ],
+        "correctIndex": 2,
+        "explanation": "He reminded the community that whoever worshipped Muhammad should know he had died, whereas Allah remains eternally alive."
+      },
+      {
+        "question": "How did Abu Bakr behave as caliph toward tribes abandoning their obligations?",
+        "options": [
+          "He ignored the issue",
+          "He agreed with advisors immediately",
+          "He refused to compromise even under pressure from advisors",
+          "He resigned from leadership"
+        ],
+        "correctIndex": 2,
+        "explanation": "He confronted tribes attempting to abandon their obligations, refusing to compromise even when advisors urged a gentler approach."
+      },
+      {
+        "question": "How did Abu Bakr respond when challenged about the Night Journey?",
+        "options": [
+          "He trusted the Prophet's report without demanding public approval.",
+          "Today my guest is Yusuf, a historian who has spent years unpacking Umar ibn al-Khattab's transformation",
+          "Uthman ibn Affan inherited considerable wealth as a merchant",
+          "Honestly, I've wondered the same thing"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: He trusted the Prophet's report without demanding public approval."
+      },
+      {
+        "question": "What protected the travellers while they hid during the migration?",
+        "options": [
+          "He asked to read the text himself",
+          "Unsurprisingly, the owner soon sold the remaining half as well",
+          "That says something considerable about Ali's credibility",
+          "Their concealment and Allah's protection kept the searchers from finding them."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Their concealment and Allah's protection kept the searchers from finding them."
+      },
+      {
+        "question": "How did Abu Bakr steady the community after the Prophet's death?",
+        "options": [
+          "It's remarkable that a man once feared for his temper became known instead for uncompromising justice",
+          "He redirected devotion from a mortal leader to Allah, who never dies.",
+          "Uthman reportedly financed an enormous portion of that expedition himself, providing camels, horses",
+          "I imagine that period complicates any simple portrait of him"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He redirected devotion from a mortal leader to Allah, who never dies."
+      },
+      {
+        "question": "What responsibility did he defend when some tribes withdrew obligations?",
+        "options": [
+          "He upheld communal religious duties despite pressure to compromise.",
+          "That's the paradox scholars keep returning to",
+          "Uthman's story suggests that genuine generosity rarely announces itself loudly",
+          "That's exactly why the title persists"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: He upheld communal religious duties despite pressure to compromise."
+      },
+      {
+        "question": "Which quality connects the crises described throughout his life?",
+        "options": [
+          "Umar's journey really does complicate any simple story about who deserves redemption",
+          "Rebels eventually besieged his home",
+          "Knowledge without courage rarely changes anything meaningful",
+          "His conviction remained steady without becoming theatrical."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: His conviction remained steady without becoming theatrical."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-sahabah-02",
@@ -39,35 +153,152 @@
     "themeId": "sahabah",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. Today my guest is Yusuf, a historian who has spent years unpacking Umar ibn al-Khattab's transformation. Thanks for joining me.",
-      "Guest: [pleasantly] Glad to be here. Umar's story genuinely unsettles the assumption that fierce opposition can never be redirected into something constructive.",
-      "Host: [curious] He was fiercely opposed to the early Muslims, wasn't he? What actually prompted the reversal?",
-      "Guest: [thoughtful] Accounts suggest he set out one day intending to confront the Prophet directly, furious enough that violence seemed almost inevitable.",
-      "Guest: [serious] On the way, though, he learned his own sister had secretly embraced the faith, which redirected his anger toward her household instead.",
-      "Host: [surprised] So the confrontation shifted from the Prophet to his own family? That's an unexpected twist.",
-      "Guest: [nodding] Precisely. He reportedly struck his sister, yet when he saw her composure and heard verses she had been reciting, something in him faltered.",
-      "Host: [interested] Did that moment alone convert him, or was there more to it?",
-      "Guest: [explaining] He asked to read the text himself, and by most accounts, its language struck him with a force he hadn't anticipated encountering.",
-      "Host: [impressed] It's remarkable that a man once feared for his temper became known instead for uncompromising justice.",
-      "Guest: [reflective] That's the paradox scholars keep returning to. As caliph, he reportedly patrolled Madinah's streets at night, checking on citizens no one else bothered to notice.",
-      "Host: [thoughtful] Did his reputation for severity ever soften, or did it simply get redirected toward fairness?",
-      "Guest: [firmly] Redirected, mostly. He held governors accountable ruthlessly, once publicly questioning an official's extravagant clothing before the entire community.",
-      "Host: [curious] Was there resentment toward someone applying such rigorous standards to people in power?",
-      "Guest: [warmly] Some, certainly, but even his critics conceded that ordinary citizens had rarely felt so protected under any previous leadership.",
-      "Host: [smiling] Thank you, Yusuf. Umar's journey really does complicate any simple story about who deserves redemption.",
-      "Guest: [pleasantly] Exactly my point. Thanks for having me."
+      "Host: [thoughtful] Welcome back to the show. Today my guest is Yusuf, a historian who has spent years unpacking Umar ibn al-Khattab's transformation. Thanks for joining me.",
+      "Guest: Glad to be here. Umar's story genuinely unsettles the assumption that fierce opposition can never be redirected into something constructive.",
+      "Host: [carefully] He was fiercely opposed to the early Muslims, wasn't he? What actually prompted the reversal?",
+      "Guest: Accounts suggest he set out one day intending to confront the Prophet directly, furious enough that violence seemed almost inevitable.",
+      "Guest: [reflective] On the way, though, he learned his own sister had secretly embraced the faith, which redirected his anger toward her household instead.",
+      "Host: So the confrontation shifted from the Prophet to his own family? That's an unexpected twist.",
+      "Guest: [honestly] Precisely. He reportedly struck his sister, yet when he saw her composure and heard verses she had been reciting, something in him faltered.",
+      "Host: Did that moment alone convert him, or was there more to it?",
+      "Guest: [gently] He asked to read the text himself, and by most accounts, its language struck him with a force he hadn't anticipated encountering.",
+      "Host: It's remarkable that a man once feared for his temper became known instead for uncompromising justice.",
+      "Guest: [calmly] That's the paradox scholars keep returning to. As caliph, he reportedly patrolled Madinah's streets at night, checking on citizens no one else bothered to notice.",
+      "Host: Did his reputation for severity ever soften, or did it simply get redirected toward fairness?",
+      "Guest: [encouraging] Redirected, mostly. He held governors accountable ruthlessly, once publicly questioning an official's extravagant clothing before the entire community.",
+      "Host: Was there resentment toward someone applying such rigorous standards to people in power?",
+      "Guest: [seriously] Some, certainly, but even his critics conceded that ordinary citizens had rarely felt so protected under any previous leadership.",
+      "Host: Thank you, Yusuf. Umar's journey really does complicate any simple story about who deserves redemption.",
+      "Guest: Exactly my point. Thanks for having me."
     ],
     "quiz": [
-      { "question": "What was Umar originally intending to do before his transformation?", "options": ["Trade goods with the Prophet", "Confront the Prophet directly, with violence seeming almost inevitable", "Travel abroad", "Study under a teacher"], "correctIndex": 1, "explanation": "Accounts suggest he set out intending to confront the Prophet directly, with violence seeming almost inevitable." },
-      { "question": "What redirected Umar's anger toward his own household?", "options": ["A dispute over money", "Learning his sister had secretly embraced the faith", "A rumor about his family", "A public insult"], "correctIndex": 1, "explanation": "He learned his own sister had secretly embraced the faith, which redirected his anger toward her household." },
-      { "question": "What happened after Umar struck his sister?", "options": ["He left immediately without consequence", "He saw her composure and asked to read the text she had been reciting", "She stopped practicing the faith", "He apologized and forgot the incident"], "correctIndex": 1, "explanation": "Seeing her composure, he asked to read the text himself, and its language struck him with unexpected force." },
-      { "question": "What did Umar reportedly do at night as caliph?", "options": ["He slept early", "He patrolled Madinah's streets, checking on citizens no one else noticed", "He hosted banquets", "He avoided public duties"], "correctIndex": 1, "explanation": "As caliph, he reportedly patrolled Madinah's streets at night, checking on citizens no one else bothered to notice." },
-      { "question": "How did Umar treat governors and officials in power?", "options": ["He never questioned them", "He held them accountable ruthlessly, even questioning extravagant clothing publicly", "He rewarded them regardless of conduct", "He ignored complaints about them"], "correctIndex": 1, "explanation": "He held governors accountable ruthlessly, once publicly questioning an official's extravagant clothing before the community." }
-    ]
+      {
+        "question": "What was Umar originally intending to do before his transformation?",
+        "options": [
+          "Confront the Prophet directly, with violence seeming almost inevitable",
+          "Trade goods with the Prophet",
+          "Travel abroad",
+          "Study under a teacher"
+        ],
+        "correctIndex": 0,
+        "explanation": "Accounts suggest he set out intending to confront the Prophet directly, with violence seeming almost inevitable."
+      },
+      {
+        "question": "What redirected Umar's anger toward his own household?",
+        "options": [
+          "A dispute over money",
+          "A rumor about his family",
+          "A public insult",
+          "Learning his sister had secretly embraced the faith"
+        ],
+        "correctIndex": 3,
+        "explanation": "He learned his own sister had secretly embraced the faith, which redirected his anger toward her household."
+      },
+      {
+        "question": "What happened after Umar struck his sister?",
+        "options": [
+          "He left immediately without consequence",
+          "She stopped practicing the faith",
+          "He saw her composure and asked to read the text she had been reciting",
+          "He apologized and forgot the incident"
+        ],
+        "correctIndex": 2,
+        "explanation": "Seeing her composure, he asked to read the text himself, and its language struck him with unexpected force."
+      },
+      {
+        "question": "What did Umar reportedly do at night as caliph?",
+        "options": [
+          "He slept early",
+          "He hosted banquets",
+          "He patrolled Madinah's streets, checking on citizens no one else noticed",
+          "He avoided public duties"
+        ],
+        "correctIndex": 2,
+        "explanation": "As caliph, he reportedly patrolled Madinah's streets at night, checking on citizens no one else bothered to notice."
+      },
+      {
+        "question": "How did Umar treat governors and officials in power?",
+        "options": [
+          "He never questioned them",
+          "He rewarded them regardless of conduct",
+          "He ignored complaints about them",
+          "He held them accountable ruthlessly, even questioning extravagant clothing publicly"
+        ],
+        "correctIndex": 3,
+        "explanation": "He held governors accountable ruthlessly, once publicly questioning an official's extravagant clothing before the community."
+      },
+      {
+        "question": "What redirected Umar's anger from the Prophet toward his own household?",
+        "options": [
+          "Uthman ibn Affan inherited considerable wealth as a merchant",
+          "He learned that his sister had already accepted Islam.",
+          "Honestly, I've wondered the same thing",
+          "She employed him to manage a trading caravan"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He learned that his sister had already accepted Islam."
+      },
+      {
+        "question": "What affected Umar when he encountered the verses his sister had read?",
+        "options": [
+          "Unsurprisingly, the owner soon sold the remaining half as well",
+          "Their language challenged his certainty and softened his opposition.",
+          "That says something considerable about Ali's credibility",
+          "She reasoned aloud that someone so honest"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Their language challenged his certainty and softened his opposition."
+      },
+      {
+        "question": "How did his strong temperament change after accepting Islam?",
+        "options": [
+          "Its force became associated with justice and public responsibility.",
+          "Uthman reportedly financed an enormous portion of that expedition himself, providing camels, horses",
+          "I imagine that period complicates any simple portrait of him",
+          "Her story complicates any narrative that frames early believers as powerless outsiders"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Its force became associated with justice and public responsibility."
+      },
+      {
+        "question": "What did his night patrols reveal about his understanding of leadership?",
+        "options": [
+          "Uthman's story suggests that genuine generosity rarely announces itself loudly",
+          "A ruler should notice citizens whom officials might overlook.",
+          "That's exactly why the title persists",
+          "That reasoning wasn't naive comfort"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: A ruler should notice citizens whom officials might overlook."
+      },
+      {
+        "question": "Why does the guest resist describing Umar as simply severe?",
+        "options": [
+          "Severity alone ignores how his firmness was redirected toward fairness.",
+          "Rebels eventually besieged his home",
+          "Knowledge without courage rarely changes anything meaningful",
+          "As a formidable, respected merchant"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Severity alone ignores how his firmness was redirected toward fairness."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-sahabah-03",
@@ -76,31 +307,145 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Uthman ibn Affan inherited considerable wealth as a merchant, yet what defines his legacy is how readily he parted with it whenever the community faltered.",
-      "Narrator: [reflective] During a severe drought in Madinah, a well called Ruma belonged to a single owner who charged exorbitant prices for its water.",
-      "Narrator: [serious] Residents were effectively being squeezed, forced to pay whatever the owner demanded simply to survive an already brutal season.",
-      "Narrator: [with feeling] Uthman negotiated to purchase half the well, then arranged that on alternating days, the water would be given away freely to anyone in need.",
-      "Narrator: [warmly] Unsurprisingly, the owner soon sold the remaining half as well, since few customers bothered paying when free water was available every other day.",
-      "Narrator: [thoughtful] Uthman later donated the entire well permanently, an act still referenced today whenever scholars discuss sustained charitable giving rather than one-off generosity.",
-      "Narrator: [serious] A similar pattern emerged when the fledgling Muslim army, undersupplied and facing a difficult campaign, desperately needed funding it simply did not have.",
-      "Narrator: [with feeling] Uthman reportedly financed an enormous portion of that expedition himself, providing camels, horses, and money without requesting anything resembling public recognition.",
-      "Narrator: [reflective] The Prophet is said to have remarked that nothing Uthman did after that day could possibly harm him, given the magnitude of that sacrifice.",
-      "Narrator: [thoughtful] Despite this generosity, his final years as caliph grew turbulent, as political unrest gradually surrounded his household with mounting hostility.",
-      "Narrator: [tense] Rebels eventually besieged his home, yet he refused to authorize violence in his own defense, unwilling to let Muslim blood be spilled over his position.",
-      "Narrator: [sadly] He was killed while reciting the Quran, the pages reportedly stained afterward, a death his companions considered a grievous injustice.",
-      "Narrator: [with admiration] What lingers, though, isn't merely how he died but how consistently he gave, long before anyone anticipated that ending.",
-      "Narrator: [warmly] Uthman's story suggests that genuine generosity rarely announces itself loudly; it simply keeps showing up, well after the applause has faded."
+      "Narrator: During a severe drought in Madinah, a well called Ruma belonged to a single owner who charged exorbitant prices for its water.",
+      "Narrator: [carefully] Residents were effectively being squeezed, forced to pay whatever the owner demanded simply to survive an already brutal season.",
+      "Narrator: Uthman negotiated to purchase half the well, then arranged that on alternating days, the water would be given away freely to anyone in need.",
+      "Narrator: [reflective] Unsurprisingly, the owner soon sold the remaining half as well, since few customers bothered paying when free water was available every other day.",
+      "Narrator: Uthman later donated the entire well permanently, an act still referenced today whenever scholars discuss sustained charitable giving rather than one-off generosity.",
+      "Narrator: [honestly] A similar pattern emerged when the fledgling Muslim army, undersupplied and facing a difficult campaign, desperately needed funding it simply did not have.",
+      "Narrator: Uthman reportedly financed an enormous portion of that expedition himself, providing camels, horses, and money without requesting anything resembling public recognition.",
+      "Narrator: [gently] The Prophet is said to have remarked that nothing Uthman did after that day could possibly harm him, given the magnitude of that sacrifice.",
+      "Narrator: Despite this generosity, his final years as caliph grew turbulent, as political unrest gradually surrounded his household with mounting hostility.",
+      "Narrator: [calmly] Rebels eventually besieged his home, yet he refused to authorize violence in his own defense, unwilling to let Muslim blood be spilled over his position.",
+      "Narrator: He was killed while reciting the Quran, the pages reportedly stained afterward, a death his companions considered a grievous injustice.",
+      "Narrator: [encouraging] What lingers, though, isn't merely how he died but how consistently he gave, long before anyone anticipated that ending.",
+      "Narrator: Uthman's story suggests that genuine generosity rarely announces itself loudly; it simply keeps showing up, well after the applause has faded."
     ],
     "quiz": [
-      { "question": "What problem existed with the well called Ruma during the drought?", "options": ["It had dried up completely", "A single owner charged exorbitant prices for its water", "It was located too far from Madinah", "It belonged to the Prophet"], "correctIndex": 1, "explanation": "The well belonged to a single owner who charged exorbitant prices for its water during the severe drought." },
-      { "question": "What did Uthman arrange after purchasing half the well?", "options": ["He raised the prices further", "Water would be given away freely on alternating days", "He closed the well entirely", "He sold his share immediately"], "correctIndex": 1, "explanation": "He arranged that on alternating days, the water would be given away freely to anyone in need." },
-      { "question": "What did the Prophet reportedly say about Uthman's funding of the campaign?", "options": ["That it was insufficient", "That nothing Uthman did after that day could possibly harm him", "That he should have given more", "That the sacrifice was unnecessary"], "correctIndex": 1, "explanation": "The Prophet reportedly remarked that nothing Uthman did after that day could possibly harm him, given the sacrifice's magnitude." },
-      { "question": "How did Uthman respond to the rebels besieging his home?", "options": ["He ordered a violent defense", "He refused to authorize violence, unwilling to let Muslim blood be spilled", "He fled the city", "He negotiated to surrender power immediately"], "correctIndex": 1, "explanation": "He refused to authorize violence in his own defense, unwilling to let Muslim blood be spilled over his position." },
-      { "question": "How was Uthman killed?", "options": ["In open battle", "While reciting the Quran at home", "While traveling abroad", "During a public trial"], "correctIndex": 1, "explanation": "He was killed while reciting the Quran, a death his companions considered a grievous injustice." }
-    ]
+      {
+        "question": "What problem existed with the well called Ruma during the drought?",
+        "options": [
+          "It had dried up completely",
+          "A single owner charged exorbitant prices for its water",
+          "It was located too far from Madinah",
+          "It belonged to the Prophet"
+        ],
+        "correctIndex": 1,
+        "explanation": "The well belonged to a single owner who charged exorbitant prices for its water during the severe drought."
+      },
+      {
+        "question": "What did Uthman arrange after purchasing half the well?",
+        "options": [
+          "Water would be given away freely on alternating days",
+          "He raised the prices further",
+          "He closed the well entirely",
+          "He sold his share immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "He arranged that on alternating days, the water would be given away freely to anyone in need."
+      },
+      {
+        "question": "What did the Prophet reportedly say about Uthman's funding of the campaign?",
+        "options": [
+          "That nothing Uthman did after that day could possibly harm him",
+          "That it was insufficient",
+          "That he should have given more",
+          "That the sacrifice was unnecessary"
+        ],
+        "correctIndex": 0,
+        "explanation": "The Prophet reportedly remarked that nothing Uthman did after that day could possibly harm him, given the sacrifice's magnitude."
+      },
+      {
+        "question": "How did Uthman respond to the rebels besieging his home?",
+        "options": [
+          "He refused to authorize violence, unwilling to let Muslim blood be spilled",
+          "He ordered a violent defense",
+          "He fled the city",
+          "He negotiated to surrender power immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "He refused to authorize violence in his own defense, unwilling to let Muslim blood be spilled over his position."
+      },
+      {
+        "question": "How was Uthman killed?",
+        "options": [
+          "In open battle",
+          "While traveling abroad",
+          "While reciting the Quran at home",
+          "During a public trial"
+        ],
+        "correctIndex": 2,
+        "explanation": "He was killed while reciting the Quran, a death his companions considered a grievous injustice."
+      },
+      {
+        "question": "How did Uthman's purchase of the well benefit the wider community?",
+        "options": [
+          "Honestly, I've wondered the same thing",
+          "She employed him to manage a trading caravan",
+          "Tonight we're exploring Bilal ibn Rabah's story with a caller who researches early Islamic history",
+          "He made its water freely available instead of preserving private profit."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He made its water freely available instead of preserving private profit."
+      },
+      {
+        "question": "What support did he provide when the community needed an expedition equipped?",
+        "options": [
+          "That says something considerable about Ali's credibility",
+          "She reasoned aloud that someone so honest",
+          "He supplied substantial money, camels, and horses without seeking recognition.",
+          "Bilal's endurance is honestly one of the most sobering accounts from that entire period"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He supplied substantial money, camels, and horses without seeking recognition."
+      },
+      {
+        "question": "How did political unrest eventually affect Uthman's household?",
+        "options": [
+          "I imagine that period complicates any simple portrait of him",
+          "Her story complicates any narrative that frames early believers as powerless outsiders",
+          "I understand Bilal later became known for something beyond his suffering entirely",
+          "Opponents besieged his home during his final period as caliph."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Opponents besieged his home during his final period as caliph."
+      },
+      {
+        "question": "What does the narrator emphasise about Uthman's repeated generosity?",
+        "options": [
+          "That's exactly why the title persists",
+          "It continued whenever need arose rather than depending on applause.",
+          "That reasoning wasn't naive comfort",
+          "Welcome to the show"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It continued whenever need arose rather than depending on applause."
+      },
+      {
+        "question": "Which modern habit best reflects the lesson drawn from his giving?",
+        "options": [
+          "Knowledge without courage rarely changes anything meaningful",
+          "As a formidable, respected merchant",
+          "Support useful work consistently without making recognition the main reward.",
+          "He dragged him into the desert heat with a heavy stone on his chest"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Support useful work consistently without making recognition the main reward."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-sahabah-04",
@@ -109,33 +454,150 @@
     "themeId": "sahabah",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
       "Dewi: [thoughtful] Fajar, I keep encountering the phrase 'gate of the city of knowledge' whenever Ali ibn Abi Talib comes up. What's the reasoning behind that title?",
-      "Fajar: [curious] Honestly, I've wondered the same thing. Was it purely about his memory, or something more layered than that?",
-      "Dewi: [reflective] From what I've read, it's less about memorization and more about his capacity to interpret situations others found genuinely ambiguous.",
-      "Fajar: [thoughtful] Can you give me an example? Abstract praise like that never quite convinces me on its own.",
-      "Dewi: [explaining] Sure. During disputes Umar himself couldn't resolve, he reportedly consulted Ali, whose reasoning would clarify matters everyone else found hopelessly tangled.",
-      "Fajar: [surprised] Umar, who was famously decisive, deferred to someone else's judgment? That says something considerable about Ali's credibility.",
-      "Dewi: [nodding] Exactly, and it goes back even earlier, to the night of the migration, when Ali agreed to sleep in the Prophet's bed as a decoy.",
-      "Fajar: [wincing] That sounds terrifying, considering assassins were reportedly surrounding the house, ready to strike whoever they found inside.",
-      "Dewi: [thoughtful] It was, yet he accepted without visible hesitation, prioritizing the Prophet's escape over his own considerable risk.",
-      "Fajar: [interested] So his reputation rests on both intellectual sharpness and this almost unshakable composure under threat?",
-      "Dewi: [warmly] Precisely, and later, as caliph himself, he inherited a fractured community, having to navigate civil conflict that would have overwhelmed a less measured leader.",
-      "Fajar: [reflective] I imagine that period complicates any simple portrait of him, since leadership during turmoil rarely satisfies everyone involved.",
-      "Dewi: [thoughtful] It does, and scholars still debate his decisions during that unrest, but few dispute his sincerity or his depth of understanding.",
-      "Fajar: [smiling] It's rare that intellect and courage get bundled together so consistently in one person's biography.",
-      "Dewi: [warmly] That's exactly why the title persists. Knowledge without courage rarely changes anything meaningful."
+      "Fajar: Honestly, I've wondered the same thing. Was it purely about his memory, or something more layered than that?",
+      "Dewi: [carefully] From what I've read, it's less about memorization and more about his capacity to interpret situations others found genuinely ambiguous.",
+      "Fajar: Can you give me an example? Abstract praise like that never quite convinces me on its own.",
+      "Dewi: [reflective] Sure. During disputes Umar himself couldn't resolve, he reportedly consulted Ali, whose reasoning would clarify matters everyone else found hopelessly tangled.",
+      "Fajar: Umar, who was famously decisive, deferred to someone else's judgment? That says something considerable about Ali's credibility.",
+      "Dewi: [honestly] Exactly, and it goes back even earlier, to the night of the migration, when Ali agreed to sleep in the Prophet's bed as a decoy.",
+      "Fajar: That sounds terrifying, considering assassins were reportedly surrounding the house, ready to strike whoever they found inside.",
+      "Dewi: [gently] It was, yet he accepted without visible hesitation, prioritizing the Prophet's escape over his own considerable risk.",
+      "Fajar: So his reputation rests on both intellectual sharpness and this almost unshakable composure under threat?",
+      "Dewi: [calmly] Precisely, and later, as caliph himself, he inherited a fractured community, having to navigate civil conflict that would have overwhelmed a less measured leader.",
+      "Fajar: I imagine that period complicates any simple portrait of him, since leadership during turmoil rarely satisfies everyone involved.",
+      "Dewi: [encouraging] It does, and scholars still debate his decisions during that unrest, but few dispute his sincerity or his depth of understanding.",
+      "Fajar: It's rare that intellect and courage get bundled together so consistently in one person's biography.",
+      "Dewi: [seriously] That's exactly why the title persists. Knowledge without courage rarely changes anything meaningful."
     ],
     "quiz": [
-      { "question": "What does Dewi say the title 'gate of the city of knowledge' actually reflects?", "options": ["His memorization skills alone", "His capacity to interpret situations others found genuinely ambiguous", "His wealth", "His military rank"], "correctIndex": 1, "explanation": "Dewi explains it's less about memorization and more about his capacity to interpret ambiguous situations." },
-      { "question": "What did Umar reportedly do regarding disputes he couldn't resolve?", "options": ["He ignored them", "He consulted Ali, whose reasoning clarified tangled matters", "He asked the community to vote", "He postponed all decisions"], "correctIndex": 1, "explanation": "During disputes Umar couldn't resolve, he reportedly consulted Ali, whose reasoning clarified matters others found tangled." },
-      { "question": "What did Ali do on the night of the migration?", "options": ["He fled with the Prophet", "He agreed to sleep in the Prophet's bed as a decoy", "He stayed home and hid", "He warned the assassins"], "correctIndex": 1, "explanation": "Ali agreed to sleep in the Prophet's bed as a decoy while assassins reportedly surrounded the house." },
-      { "question": "What challenge did Ali inherit as caliph?", "options": ["An empty treasury", "A fractured community and civil conflict", "No support from the population", "A foreign invasion"], "correctIndex": 1, "explanation": "As caliph, he inherited a fractured community, having to navigate civil conflict." },
-      { "question": "What do scholars generally agree on regarding Ali's leadership during unrest?", "options": ["That his decisions were universally condemned", "That few dispute his sincerity or depth of understanding, despite debate over decisions", "That he abandoned his responsibilities", "That he had no relevant experience"], "correctIndex": 1, "explanation": "Scholars still debate his decisions during that unrest, but few dispute his sincerity or his depth of understanding." }
-    ]
+      {
+        "question": "What does Dewi say the title 'gate of the city of knowledge' actually reflects?",
+        "options": [
+          "His capacity to interpret situations others found genuinely ambiguous",
+          "His memorization skills alone",
+          "His wealth",
+          "His military rank"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dewi explains it's less about memorization and more about his capacity to interpret ambiguous situations."
+      },
+      {
+        "question": "What did Umar reportedly do regarding disputes he couldn't resolve?",
+        "options": [
+          "He ignored them",
+          "He asked the community to vote",
+          "He postponed all decisions",
+          "He consulted Ali, whose reasoning clarified tangled matters"
+        ],
+        "correctIndex": 3,
+        "explanation": "During disputes Umar couldn't resolve, he reportedly consulted Ali, whose reasoning clarified matters others found tangled."
+      },
+      {
+        "question": "What did Ali do on the night of the migration?",
+        "options": [
+          "He fled with the Prophet",
+          "He agreed to sleep in the Prophet's bed as a decoy",
+          "He stayed home and hid",
+          "He warned the assassins"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ali agreed to sleep in the Prophet's bed as a decoy while assassins reportedly surrounded the house."
+      },
+      {
+        "question": "What challenge did Ali inherit as caliph?",
+        "options": [
+          "An empty treasury",
+          "No support from the population",
+          "A foreign invasion",
+          "A fractured community and civil conflict"
+        ],
+        "correctIndex": 3,
+        "explanation": "As caliph, he inherited a fractured community, having to navigate civil conflict."
+      },
+      {
+        "question": "What do scholars generally agree on regarding Ali's leadership during unrest?",
+        "options": [
+          "That his decisions were universally condemned",
+          "That he abandoned his responsibilities",
+          "That few dispute his sincerity or depth of understanding, despite debate over decisions",
+          "That he had no relevant experience"
+        ],
+        "correctIndex": 2,
+        "explanation": "Scholars still debate his decisions during that unrest, but few dispute his sincerity or his depth of understanding."
+      },
+      {
+        "question": "Why did Umar's consultation of Ali carry special significance?",
+        "options": [
+          "She employed him to manage a trading caravan",
+          "A famously decisive leader trusted Ali's judgment on difficult disputes.",
+          "Tonight we're exploring Bilal ibn Rabah's story with a caller who researches early Islamic history",
+          "Every detail matched what the dying monks had described"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: A famously decisive leader trusted Ali's judgment on difficult disputes."
+      },
+      {
+        "question": "What danger did Ali accept during the Prophet's departure from Makkah?",
+        "options": [
+          "She reasoned aloud that someone so honest",
+          "Bilal's endurance is honestly one of the most sobering accounts from that entire period",
+          "He remained in the Prophet's bed while attackers surrounded the house.",
+          "What moves me isn't merely his eventual arrival at faith"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He remained in the Prophet's bed while attackers surrounded the house."
+      },
+      {
+        "question": "Which two qualities shape the colleagues' view of Ali?",
+        "options": [
+          "Intellectual depth and composure under serious threat.",
+          "Her story complicates any narrative that frames early believers as powerless outsiders",
+          "I understand Bilal later became known for something beyond his suffering entirely",
+          "A household devoted to fire-worship in Persia"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Intellectual depth and composure under serious threat."
+      },
+      {
+        "question": "Why does the period of political turmoil resist a simple portrait?",
+        "options": [
+          "That reasoning wasn't naive comfort",
+          "Welcome to the show",
+          "He was betrayed and sold into slavery",
+          "Leadership during conflict involved disputed choices and competing expectations."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Leadership during conflict involved disputed choices and competing expectations."
+      },
+      {
+        "question": "How should a learner discuss Ali's contested decisions respectfully?",
+        "options": [
+          "As a formidable, respected merchant",
+          "He dragged him into the desert heat with a heavy stone on his chest",
+          "Acknowledge scholarly debate without inventing motives or denying his sincerity.",
+          "He offered charity first, since prophets reportedly wouldn't consume it personally"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Acknowledge scholarly debate without inventing motives or denying his sincerity."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-sahabah-05",
@@ -144,31 +606,145 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Long before revelation reached Muhammad, Khadijah had already established herself as a formidable merchant, respected in a marketplace that rarely extended women such standing.",
-      "Narrator: [reflective] She employed him to manage a trading caravan, and his conduct impressed her enough that she eventually proposed marriage herself, an unusually direct move for the era.",
-      "Narrator: [warmly] Their partnership, by most accounts, was genuinely affectionate, built on mutual respect rather than the transactional arrangements common among their contemporaries.",
-      "Narrator: [tense] Everything shifted, however, the night he returned from the cave trembling, convinced something overwhelming and possibly dangerous had just occurred to him.",
-      "Narrator: [with feeling] Rather than doubting him or dismissing his fear as delusion, she wrapped him in a cloak and reassured him steadily until the trembling subsided.",
-      "Narrator: [calm] She reasoned aloud that someone so honest, so generous toward the poor, and so reliable in his dealings would never be abandoned by God to face something malevolent.",
-      "Narrator: [thoughtful] That reasoning wasn't naive comfort; it reflected years of firsthand observation, since she, more than anyone, understood his character intimately.",
-      "Narrator: [with wonder] She then consulted her cousin, a scholar familiar with earlier scriptures, who confirmed that what had occurred matched descriptions of genuine prophecy.",
-      "Narrator: [serious] From that moment, Khadijah became the first person to believe, embracing a claim that would soon cost their family considerable social and financial standing.",
-      "Narrator: [reflective] During the subsequent boycott, when the clan was confined and deliberately starved of trade, she spent her own remaining wealth sustaining the besieged community.",
-      "Narrator: [thoughtful] If she had hesitated even briefly that first night, historians suggest the entire trajectory of those early, fragile years might have unfolded very differently.",
-      "Narrator: [warmly] The Prophet reportedly never stopped praising her, even years after her death, occasionally unsettling his later wife by comparing her favorably to Khadijah's memory.",
-      "Narrator: [with admiration] Her story complicates any narrative that frames early believers as powerless outsiders, since she entered this faith from a position of genuine influence.",
-      "Narrator: [warmly] Whenever generosity feels risky to me, I remember that Khadijah's wealth meant considerably less to her than the truth she'd chosen to protect."
+      "Narrator: She employed him to manage a trading caravan, and his conduct impressed her enough that she eventually proposed marriage herself, an unusually direct move for the era.",
+      "Narrator: [carefully] Their partnership, by most accounts, was genuinely affectionate, built on mutual respect rather than the transactional arrangements common among their contemporaries.",
+      "Narrator: Everything shifted, however, the night he returned from the cave trembling, convinced something overwhelming and possibly dangerous had just occurred to him.",
+      "Narrator: [reflective] Rather than doubting him or dismissing his fear as delusion, she wrapped him in a cloak and reassured him steadily until the trembling subsided.",
+      "Narrator: She reasoned aloud that someone so honest, so generous toward the poor, and so reliable in his dealings would never be abandoned by God to face something malevolent.",
+      "Narrator: [honestly] That reasoning wasn't naive comfort; it reflected years of firsthand observation, since she, more than anyone, understood his character intimately.",
+      "Narrator: She then consulted her cousin, a scholar familiar with earlier scriptures, who confirmed that what had occurred matched descriptions of genuine prophecy.",
+      "Narrator: [gently] From that moment, Khadijah became the first person to believe, embracing a claim that would soon cost their family considerable social and financial standing.",
+      "Narrator: During the subsequent boycott, when the clan was confined and deliberately starved of trade, she spent her own remaining wealth sustaining the besieged community.",
+      "Narrator: [calmly] If she had hesitated even briefly that first night, historians suggest the entire trajectory of those early, fragile years might have unfolded very differently.",
+      "Narrator: The Prophet reportedly never stopped praising her, even years after her death, occasionally unsettling his later wife by comparing her favorably to Khadijah's memory.",
+      "Narrator: [encouraging] Her story complicates any narrative that frames early believers as powerless outsiders, since she entered this faith from a position of genuine influence.",
+      "Narrator: Whenever generosity feels risky to me, I remember that Khadijah's wealth meant considerably less to her than the truth she'd chosen to protect."
     ],
     "quiz": [
-      { "question": "How was Khadijah established before revelation reached Muhammad?", "options": ["As a poet", "As a formidable, respected merchant", "As a religious scholar", "As a farmer"], "correctIndex": 1, "explanation": "She had already established herself as a formidable merchant, respected in a marketplace that rarely extended women such standing." },
-      { "question": "How did Khadijah react when Muhammad returned trembling from the cave?", "options": ["She doubted and dismissed his fear", "She wrapped him in a cloak and reassured him steadily", "She left immediately for help", "She grew angry with him"], "correctIndex": 1, "explanation": "Rather than doubting him, she wrapped him in a cloak and reassured him steadily until the trembling subsided." },
-      { "question": "What reasoning did Khadijah offer to reassure him?", "options": ["That dreams meant nothing", "That someone so honest and generous would never be abandoned to face something malevolent", "That he should ignore the experience", "That she needed to consult strangers first"], "correctIndex": 1, "explanation": "She reasoned that someone so honest, generous, and reliable would never be abandoned by God to face something malevolent." },
-      { "question": "What did Khadijah do during the boycott of her clan?", "options": ["She abandoned the community", "She spent her own remaining wealth sustaining the besieged community", "She demanded compensation", "She remained uninvolved"], "correctIndex": 1, "explanation": "During the boycott, she spent her own remaining wealth sustaining the besieged community." },
-      { "question": "How did the Prophet reportedly speak of Khadijah after her death?", "options": ["He rarely mentioned her", "He never stopped praising her, sometimes comparing his later wife to her favorably", "He avoided the topic entirely", "He said she was easily replaced"], "correctIndex": 1, "explanation": "He reportedly never stopped praising her, even occasionally unsettling his later wife by comparing her favorably to Khadijah's memory." }
-    ]
+      {
+        "question": "How was Khadijah established before revelation reached Muhammad?",
+        "options": [
+          "As a poet",
+          "As a formidable, respected merchant",
+          "As a religious scholar",
+          "As a farmer"
+        ],
+        "correctIndex": 1,
+        "explanation": "She had already established herself as a formidable merchant, respected in a marketplace that rarely extended women such standing."
+      },
+      {
+        "question": "How did Khadijah react when Muhammad returned trembling from the cave?",
+        "options": [
+          "She doubted and dismissed his fear",
+          "She wrapped him in a cloak and reassured him steadily",
+          "She left immediately for help",
+          "She grew angry with him"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rather than doubting him, she wrapped him in a cloak and reassured him steadily until the trembling subsided."
+      },
+      {
+        "question": "What reasoning did Khadijah offer to reassure him?",
+        "options": [
+          "That dreams meant nothing",
+          "That he should ignore the experience",
+          "That someone so honest and generous would never be abandoned to face something malevolent",
+          "That she needed to consult strangers first"
+        ],
+        "correctIndex": 2,
+        "explanation": "She reasoned that someone so honest, generous, and reliable would never be abandoned by God to face something malevolent."
+      },
+      {
+        "question": "What did Khadijah do during the boycott of her clan?",
+        "options": [
+          "She abandoned the community",
+          "She demanded compensation",
+          "She remained uninvolved",
+          "She spent her own remaining wealth sustaining the besieged community"
+        ],
+        "correctIndex": 3,
+        "explanation": "During the boycott, she spent her own remaining wealth sustaining the besieged community."
+      },
+      {
+        "question": "How did the Prophet reportedly speak of Khadijah after her death?",
+        "options": [
+          "He rarely mentioned her",
+          "He avoided the topic entirely",
+          "He never stopped praising her, sometimes comparing his later wife to her favorably",
+          "He said she was easily replaced"
+        ],
+        "correctIndex": 2,
+        "explanation": "He reportedly never stopped praising her, even occasionally unsettling his later wife by comparing her favorably to Khadijah's memory."
+      },
+      {
+        "question": "How did Khadijah respond when the Prophet returned trembling?",
+        "options": [
+          "She comforted him and reasoned from the trustworthy character she knew.",
+          "Tonight we're exploring Bilal ibn Rabah's story with a caller who researches early Islamic history",
+          "Every detail matched what the dying monks had described",
+          "Use respectful language, avoid role-play, and identify meaningful scholarly disagreement."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She comforted him and reasoned from the trustworthy character she knew."
+      },
+      {
+        "question": "Why did she consult her learned cousin after hearing the account?",
+        "options": [
+          "She sought informed confirmation rather than relying only on emotion.",
+          "Bilal's endurance is honestly one of the most sobering accounts from that entire period",
+          "What moves me isn't merely his eventual arrival at faith",
+          "The speaker refused to invent a Companion's hypothetical political judgment."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She sought informed confirmation rather than relying only on emotion."
+      },
+      {
+        "question": "How did Khadijah use her wealth during the boycott?",
+        "options": [
+          "I understand Bilal later became known for something beyond his suffering entirely",
+          "A household devoted to fire-worship in Persia",
+          "Listeners asked stronger questions about reports, evidence, and uncertainty.",
+          "She sustained the besieged community despite mounting personal cost."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: She sustained the besieged community despite mounting personal cost."
+      },
+      {
+        "question": "What did the Prophet's continued praise after her death demonstrate?",
+        "options": [
+          "Her early faith and support remained deeply significant to him.",
+          "Welcome to the show",
+          "He was betrayed and sold into slavery",
+          "Admiration does not justify circulating claims that are not established."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Her early faith and support remained deeply significant to him."
+      },
+      {
+        "question": "What broader lesson does the narrator draw from Khadijah's influence?",
+        "options": [
+          "He dragged him into the desert heat with a heavy stone on his chest",
+          "Resources gain value when they protect truth and vulnerable people.",
+          "He offered charity first, since prophets reportedly wouldn't consume it personally",
+          "State what is established and withhold claims the evidence cannot support."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Resources gain value when they protect truth and vulnerable people."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-sahabah-06",
@@ -177,34 +753,151 @@
     "themeId": "sahabah",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] Good evening, listeners. Tonight we're exploring Bilal ibn Rabah's story with a caller who researches early Islamic history. Welcome to the show.",
-      "Caller: [pleasantly] Thank you for having me. Bilal's endurance is honestly one of the most sobering accounts from that entire period.",
-      "Radio Host: [curious] For listeners unfamiliar, can you summarize what he actually endured before his eventual freedom?",
-      "Caller: [thoughtful] Certainly. As an enslaved man whose owner despised his newfound faith, he was dragged into the desert heat, a heavy stone pressed onto his chest.",
-      "Radio Host: [tense] That sounds unbearable. Was he offered any way to end that suffering?",
-      "Caller: [serious] Repeatedly. His tormentors demanded he renounce his belief and invoke their idols instead, promising immediate relief if he simply complied.",
-      "Radio Host: [surprised] And he refused, even under something that extreme?",
-      "Caller: [firmly] Every time. He reportedly kept repeating a single word affirming God's oneness, as though the torment couldn't reach whatever conviction anchored him.",
-      "Radio Host: [moved] What eventually changed his circumstances?",
-      "Caller: [warmly] Abu Bakr negotiated his purchase and immediately freed him, an act that cost considerable wealth but apparently mattered little to him by comparison.",
-      "Radio Host: [interested] I understand Bilal later became known for something beyond his suffering entirely.",
-      "Caller: [reflective] Yes, his voice. He was chosen to deliver the call to prayer, becoming essentially the first person to perform that role publicly in Islam.",
-      "Radio Host: [thoughtful] There's something poetic about a formerly enslaved man's voice becoming the sound that summoned an entire growing community.",
-      "Caller: [nodding] Exactly, and after the Prophet's death, Bilal reportedly found it too painful to continue delivering that call, since it evoked memories almost unbearably vivid.",
-      "Radio Host: [reflective] That detail humanizes him considerably, showing grief alongside the resilience everyone usually emphasizes.",
-      "Caller: [warmly] Precisely. Endurance and heartbreak coexisted in him, which is what makes his story feel genuinely complete rather than merely inspirational."
+      "Radio Host: [thoughtful] Good evening, listeners. Tonight we're exploring Bilal ibn Rabah's story with a caller who researches early Islamic history. Welcome to the show.",
+      "Caller: Thank you for having me. Bilal's endurance is honestly one of the most sobering accounts from that entire period.",
+      "Radio Host: [carefully] For listeners unfamiliar, can you summarize what he actually endured before his eventual freedom?",
+      "Caller: Certainly. As an enslaved man whose owner despised his newfound faith, he was dragged into the desert heat, a heavy stone pressed onto his chest.",
+      "Radio Host: [reflective] That sounds unbearable. Was he offered any way to end that suffering?",
+      "Caller: Repeatedly. His tormentors demanded he renounce his belief and invoke their idols instead, promising immediate relief if he simply complied.",
+      "Radio Host: [honestly] And he refused, even under something that extreme?",
+      "Caller: Every time. He reportedly kept repeating a single word affirming God's oneness, as though the torment couldn't reach whatever conviction anchored him.",
+      "Radio Host: [gently] What eventually changed his circumstances?",
+      "Caller: Abu Bakr negotiated his purchase and immediately freed him, an act that cost considerable wealth but apparently mattered little to him by comparison.",
+      "Radio Host: [calmly] I understand Bilal later became known for something beyond his suffering entirely.",
+      "Caller: Yes, his voice. He was chosen to deliver the call to prayer, becoming essentially the first person to perform that role publicly in Islam.",
+      "Radio Host: [encouraging] There's something poetic about a formerly enslaved man's voice becoming the sound that summoned an entire growing community.",
+      "Caller: Exactly, and after the Prophet's death, Bilal reportedly found it too painful to continue delivering that call, since it evoked memories almost unbearably vivid.",
+      "Radio Host: [seriously] That detail humanizes him considerably, showing grief alongside the resilience everyone usually emphasizes.",
+      "Caller: Precisely. Endurance and heartbreak coexisted in him, which is what makes his story feel genuinely complete rather than merely inspirational."
     ],
     "quiz": [
-      { "question": "What did Bilal's owner do to punish him for his faith?", "options": ["He imprisoned him indoors", "He dragged him into the desert heat with a heavy stone on his chest", "He exiled him from the city", "He confiscated his belongings"], "correctIndex": 1, "explanation": "He was dragged into the desert heat, with a heavy stone pressed onto his chest, because his owner despised his faith." },
-      { "question": "What did his tormentors repeatedly demand?", "options": ["That he pay a fine", "That he renounce his belief and invoke their idols", "That he leave the city", "That he work harder"], "correctIndex": 1, "explanation": "His tormentors repeatedly demanded he renounce his belief and invoke their idols instead, promising relief if he complied." },
-      { "question": "What did Bilal reportedly keep repeating during the torment?", "options": ["A plea for mercy", "A single word affirming God's oneness", "The names of his tormentors", "A promise to comply"], "correctIndex": 1, "explanation": "He reportedly kept repeating a single word affirming God's oneness throughout the torment." },
-      { "question": "How did Bilal gain his freedom?", "options": ["He escaped on his own", "Abu Bakr negotiated his purchase and immediately freed him", "His owner released him voluntarily", "He was traded for goods"], "correctIndex": 1, "explanation": "Abu Bakr negotiated his purchase and immediately freed him, at considerable personal cost." },
-      { "question": "Why did Bilal find it painful to continue the call to prayer after the Prophet's death?", "options": ["He lost his voice permanently", "It evoked memories almost unbearably vivid", "He was forbidden from continuing", "He moved to another city"], "correctIndex": 1, "explanation": "He reportedly found it too painful to continue, since delivering the call evoked memories almost unbearably vivid." }
-    ]
+      {
+        "question": "What did Bilal's owner do to punish him for his faith?",
+        "options": [
+          "He imprisoned him indoors",
+          "He exiled him from the city",
+          "He dragged him into the desert heat with a heavy stone on his chest",
+          "He confiscated his belongings"
+        ],
+        "correctIndex": 2,
+        "explanation": "He was dragged into the desert heat, with a heavy stone pressed onto his chest, because his owner despised his faith."
+      },
+      {
+        "question": "What did his tormentors repeatedly demand?",
+        "options": [
+          "That he pay a fine",
+          "That he leave the city",
+          "That he renounce his belief and invoke their idols",
+          "That he work harder"
+        ],
+        "correctIndex": 2,
+        "explanation": "His tormentors repeatedly demanded he renounce his belief and invoke their idols instead, promising relief if he complied."
+      },
+      {
+        "question": "What did Bilal reportedly keep repeating during the torment?",
+        "options": [
+          "A plea for mercy",
+          "A single word affirming God's oneness",
+          "The names of his tormentors",
+          "A promise to comply"
+        ],
+        "correctIndex": 1,
+        "explanation": "He reportedly kept repeating a single word affirming God's oneness throughout the torment."
+      },
+      {
+        "question": "How did Bilal gain his freedom?",
+        "options": [
+          "He escaped on his own",
+          "Abu Bakr negotiated his purchase and immediately freed him",
+          "His owner released him voluntarily",
+          "He was traded for goods"
+        ],
+        "correctIndex": 1,
+        "explanation": "Abu Bakr negotiated his purchase and immediately freed him, at considerable personal cost."
+      },
+      {
+        "question": "Why did Bilal find it painful to continue the call to prayer after the Prophet's death?",
+        "options": [
+          "He lost his voice permanently",
+          "He was forbidden from continuing",
+          "He moved to another city",
+          "It evoked memories almost unbearably vivid"
+        ],
+        "correctIndex": 3,
+        "explanation": "He reportedly found it too painful to continue, since delivering the call evoked memories almost unbearably vivid."
+      },
+      {
+        "question": "What did Bilal continue affirming while being tortured?",
+        "options": [
+          "He repeated Allah's oneness rather than surrendering his belief.",
+          "Every detail matched what the dying monks had described",
+          "Use respectful language, avoid role-play, and identify meaningful scholarly disagreement.",
+          "Explain the disagreement only to the depth learners genuinely need."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: He repeated Allah's oneness rather than surrendering his belief."
+      },
+      {
+        "question": "How did Abu Bakr change Bilal's immediate circumstances?",
+        "options": [
+          "What moves me isn't merely his eventual arrival at faith",
+          "The speaker refused to invent a Companion's hypothetical political judgment.",
+          "When the lesson collapses if that nonessential detail changes.",
+          "He purchased Bilal's freedom and released him from enslavement."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He purchased Bilal's freedom and released him from enslavement."
+      },
+      {
+        "question": "Why was Bilal's appointment as caller to prayer especially meaningful?",
+        "options": [
+          "A formerly enslaved man's voice publicly summoned the growing community.",
+          "A household devoted to fire-worship in Persia",
+          "Listeners asked stronger questions about reports, evidence, and uncertainty.",
+          "Reliable reports should shape the lesson rather than serve a preferred message."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A formerly enslaved man's voice publicly summoned the growing community."
+      },
+      {
+        "question": "Why did Bilal reportedly stop giving the call after the Prophet's death?",
+        "options": [
+          "He was betrayed and sold into slavery",
+          "The words awakened grief that had become too painful.",
+          "Admiration does not justify circulating claims that are not established.",
+          "Good aims can encourage teachers to overstate evidence or flatten complexity."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The words awakened grief that had become too painful."
+      },
+      {
+        "question": "What does the account of his grief add to his remembered resilience?",
+        "options": [
+          "He offered charity first, since prophets reportedly wouldn't consume it personally",
+          "State what is established and withhold claims the evidence cannot support.",
+          "It presents him as emotionally human as well as steadfast.",
+          "Build each lesson around reliable evidence, limited claims, and respectful context."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It presents him as emotionally human as well as steadfast."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-sahabah-07",
@@ -213,30 +906,591 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Salman al-Farisi's journey toward faith spanned so many years and so much distance that it reads almost like an extended pilgrimage rather than a single conversion.",
-      "Narrator: [reflective] Born in Persia into a household devoted to fire-worship, he grew disillusioned early, sensing that something essential remained missing from those rigid rituals.",
-      "Narrator: [serious] After encountering a Christian congregation whose devotion struck him as more genuine, he abandoned his family entirely, choosing exile over spiritual stagnation.",
-      "Narrator: [thoughtful] He studied under several successive monks across different regions, each one, before dying, directing him toward yet another teacher rumored to hold deeper understanding.",
-      "Narrator: [with feeling] The final monk told him a prophet was soon expected in Arabia, one who would bear specific signs, including a distinctive mark between his shoulders.",
-      "Narrator: [tense] Determined to find this figure, Salman joined a caravan heading south, only to be betrayed and sold into slavery along the way.",
-      "Narrator: [calm] For years, he served various owners in Arabia, quietly enduring servitude while never abandoning the hope that had propelled his entire journey.",
-      "Narrator: [with wonder] When he eventually heard of the Prophet's arrival nearby, he tested the claims cautiously, offering charity first, since prophets reportedly wouldn't personally consume it.",
-      "Narrator: [warmly] Every detail matched what the dying monks had described, and upon seeing the mark himself, Salman finally embraced what he'd spent decades pursuing.",
-      "Narrator: [serious] His most celebrated contribution came later, during a siege, when he proposed digging a defensive trench, a tactic unfamiliar to Arabian warfare at the time.",
-      "Narrator: [reflective] The strategy, borrowed from Persian military tradition, ultimately stalled the attacking forces long enough to save the entire besieged community.",
-      "Narrator: [with admiration] The Prophet reportedly declared that Salman belonged to his own household, dissolving whatever tribal boundaries might otherwise have defined his belonging.",
-      "Narrator: [thoughtful] What moves me isn't merely his eventual arrival at faith, but his willingness to keep searching, decade after decade, without any guarantee of finding it.",
-      "Narrator: [warmly] Salman's story reminds me that sincere seeking, however prolonged or circuitous, rarely goes entirely unanswered in the end."
+      "Narrator: Born in Persia into a household devoted to fire-worship, he grew disillusioned early, sensing that something essential remained missing from those rigid rituals.",
+      "Narrator: [carefully] After encountering a Christian congregation whose devotion struck him as more genuine, he abandoned his family entirely, choosing exile over spiritual stagnation.",
+      "Narrator: He studied under several successive monks across different regions, each one, before dying, directing him toward yet another teacher rumored to hold deeper understanding.",
+      "Narrator: [reflective] The final monk told him a prophet was soon expected in Arabia, one who would bear specific signs, including a distinctive mark between his shoulders.",
+      "Narrator: Determined to find this figure, Salman joined a caravan heading south, only to be betrayed and sold into slavery along the way.",
+      "Narrator: [honestly] For years, he served various owners in Arabia, quietly enduring servitude while never abandoning the hope that had propelled his entire journey.",
+      "Narrator: When he eventually heard of the Prophet's arrival nearby, he tested the claims cautiously, offering charity first, since prophets reportedly wouldn't personally consume it.",
+      "Narrator: [gently] Every detail matched what the dying monks had described, and upon seeing the mark himself, Salman finally embraced what he'd spent decades pursuing.",
+      "Narrator: His most celebrated contribution came later, during a siege, when he proposed digging a defensive trench, a tactic unfamiliar to Arabian warfare at the time.",
+      "Narrator: [calmly] The strategy, borrowed from Persian military tradition, ultimately stalled the attacking forces long enough to save the entire besieged community.",
+      "Narrator: The Prophet reportedly declared that Salman belonged to his own household, dissolving whatever tribal boundaries might otherwise have defined his belonging.",
+      "Narrator: [encouraging] What moves me isn't merely his eventual arrival at faith, but his willingness to keep searching, decade after decade, without any guarantee of finding it.",
+      "Narrator: Salman's story reminds me that sincere seeking, however prolonged or circuitous, rarely goes entirely unanswered in the end."
     ],
     "quiz": [
-      { "question": "What household was Salman born into?", "options": ["A Christian family", "A household devoted to fire-worship in Persia", "A Jewish family", "A wealthy trading family"], "correctIndex": 1, "explanation": "He was born in Persia into a household devoted to fire-worship." },
-      { "question": "What happened to Salman while traveling with a caravan toward Arabia?", "options": ["He arrived safely and quickly", "He was betrayed and sold into slavery", "He returned home immediately", "He joined the army"], "correctIndex": 1, "explanation": "He joined a caravan heading south, only to be betrayed and sold into slavery along the way." },
-      { "question": "How did Salman first test whether the Prophet matched the descriptions he'd been given?", "options": ["He asked him directly", "He offered charity first, since prophets reportedly wouldn't consume it personally", "He challenged him to a debate", "He waited for others to confirm it"], "correctIndex": 1, "explanation": "He tested the claims cautiously, offering charity first, since prophets reportedly wouldn't personally consume it." },
-      { "question": "What strategy did Salman propose during the siege?", "options": ["A surprise night attack", "Digging a defensive trench, unfamiliar to Arabian warfare", "Negotiating surrender", "Building higher walls"], "correctIndex": 1, "explanation": "He proposed digging a defensive trench, a tactic borrowed from Persian military tradition and unfamiliar to Arabian warfare." },
-      { "question": "What did the Prophet reportedly declare about Salman?", "options": ["That he should return to Persia", "That Salman belonged to his own household", "That he could not be trusted", "That he should remain enslaved"], "correctIndex": 1, "explanation": "The Prophet reportedly declared that Salman belonged to his own household, dissolving tribal boundaries." }
-    ]
+      {
+        "question": "What household was Salman born into?",
+        "options": [
+          "A Christian family",
+          "A Jewish family",
+          "A wealthy trading family",
+          "A household devoted to fire-worship in Persia"
+        ],
+        "correctIndex": 3,
+        "explanation": "He was born in Persia into a household devoted to fire-worship."
+      },
+      {
+        "question": "What happened to Salman while traveling with a caravan toward Arabia?",
+        "options": [
+          "He arrived safely and quickly",
+          "He returned home immediately",
+          "He was betrayed and sold into slavery",
+          "He joined the army"
+        ],
+        "correctIndex": 2,
+        "explanation": "He joined a caravan heading south, only to be betrayed and sold into slavery along the way."
+      },
+      {
+        "question": "How did Salman first test whether the Prophet matched the descriptions he'd been given?",
+        "options": [
+          "He asked him directly",
+          "He offered charity first, since prophets reportedly wouldn't consume it personally",
+          "He challenged him to a debate",
+          "He waited for others to confirm it"
+        ],
+        "correctIndex": 1,
+        "explanation": "He tested the claims cautiously, offering charity first, since prophets reportedly wouldn't personally consume it."
+      },
+      {
+        "question": "What strategy did Salman propose during the siege?",
+        "options": [
+          "Digging a defensive trench, unfamiliar to Arabian warfare",
+          "A surprise night attack",
+          "Negotiating surrender",
+          "Building higher walls"
+        ],
+        "correctIndex": 0,
+        "explanation": "He proposed digging a defensive trench, a tactic borrowed from Persian military tradition and unfamiliar to Arabian warfare."
+      },
+      {
+        "question": "What did the Prophet reportedly declare about Salman?",
+        "options": [
+          "That Salman belonged to his own household",
+          "That he should return to Persia",
+          "That he could not be trusted",
+          "That he should remain enslaved"
+        ],
+        "correctIndex": 0,
+        "explanation": "The Prophet reportedly declared that Salman belonged to his own household, dissolving tribal boundaries."
+      },
+      {
+        "question": "What information guided Salman's search toward Arabia?",
+        "options": [
+          "Use respectful language, avoid role-play, and identify meaningful scholarly disagreement.",
+          "Explain the disagreement only to the depth learners genuinely need.",
+          "A teacher described an expected prophet and signs by which to recognise him.",
+          "Avoid sensationalism, invented motives, and entertainment-driven verdicts."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A teacher described an expected prophet and signs by which to recognise him."
+      },
+      {
+        "question": "How did Salman cautiously test the claim when the Prophet arrived?",
+        "options": [
+          "The speaker refused to invent a Companion's hypothetical political judgment.",
+          "He compared the Prophet's response to charity, gifts, and the described mark.",
+          "When the lesson collapses if that nonessential detail changes.",
+          "Correct the transcript and notes and clearly identify the change."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: He compared the Prophet's response to charity, gifts, and the described mark."
+      },
+      {
+        "question": "What military idea did Salman contribute during the siege of Madinah?",
+        "options": [
+          "Listeners asked stronger questions about reports, evidence, and uncertainty.",
+          "Reliable reports should shape the lesson rather than serve a preferred message.",
+          "The false version may continue circulating without a visible clarification.",
+          "He proposed a defensive trench unfamiliar in local warfare."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He proposed a defensive trench unfamiliar in local warfare."
+      },
+      {
+        "question": "What did the Prophet's statement about Salman's belonging challenge?",
+        "options": [
+          "Admiration does not justify circulating claims that are not established.",
+          "Good aims can encourage teachers to overstate evidence or flatten complexity.",
+          "It placed faith and character above narrow tribal boundaries.",
+          "Reliable evidence can still support careful lessons about the broader account."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: It placed faith and character above narrow tribal boundaries."
+      },
+      {
+        "question": "What makes Salman's long journey valuable to a modern seeker?",
+        "options": [
+          "State what is established and withhold claims the evidence cannot support.",
+          "Build each lesson around reliable evidence, limited claims, and respectful context.",
+          "Verify before dramatising and separate historical report from interpretation.",
+          "Sincere searching can remain patient, careful, and hopeful through uncertainty."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Sincere searching can remain patient, careful, and hopeful through uncertainty."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-sahabah-08",
+    "title": "What Source Notes Changed in My Talk",
+    "level": "B2",
+    "themeId": "sahabah",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] I had prepared a short talk about one of the Companions, may Allah be pleased with them. My draft contained a memorable scene: a dramatic conversation, an exact age, and a final sentence that seemed perfect for social media.",
+      "Narrator: Before presenting it, I checked the footnotes in the book I had used. The dramatic conversation had no clear reference. The exact age was reported differently, and the popular final sentence could not be confidently attributed to the Companion.",
+      "Narrator: [carefully] Removing those details felt like weakening the talk. In fact, it gave me a better structure. I centred the account on events supported by reliable sources and clearly separated the author's explanation from the historical report.",
+      "Narrator: I also stopped using one episode as a complete personality profile. A person can show courage in a particular moment without becoming a simple symbol who never experienced difficulty, learning, or change.",
+      "Narrator: [thoughtful] A teacher reviewed my revised notes. She reminded me to use respectful language, avoid role-playing the Companion's voice, and say when scholars differ over a detail that affects the lesson.",
+      "Narrator: During the session, a listener asked whether the Companion would approve of a modern political campaign. I said I could not assign a hypothetical judgment to a person from history. We could discuss established principles, but contemporary rulings require evidence and qualified guidance.",
+      "Narrator: [calmly] The final talk had fewer dramatic lines, yet the audience asked better questions. They wanted to know how reports are assessed and why honest uncertainty matters.",
+      "Narrator: Respect for the Companions is not shown by repeating every attractive story. It is shown by speaking truthfully about what is established, withholding what is not, and learning without turning a rich life into a slogan."
+    ],
+    "quiz": [
+      {
+        "question": "What kind of material made the speaker's first draft memorable?",
+        "options": [
+          "It used dramatic dialogue, an exact age, and a quotable final sentence.",
+          "One life should not be forced to answer every modern question.",
+          "The phrase shows listeners that historical reports carry different certainty levels.",
+          "He trusted the Prophet's report without demanding public approval."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: It used dramatic dialogue, an exact age, and a quotable final sentence."
+      },
+      {
+        "question": "What did checking the book's footnotes reveal about those details?",
+        "options": [
+          "A contextual event becomes an oversimplified universal technique.",
+          "Their sourcing was missing, disputed, or too weak for confident attribution.",
+          "Listeners can distinguish established events from disputed or weak details.",
+          "Their concealment and Allah's protection kept the searchers from finding them."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Their sourcing was missing, disputed, or too weak for confident attribution."
+      },
+      {
+        "question": "Why was the dramatic conversation removed from the talk?",
+        "options": [
+          "Invented dialogue and unsupported motives can make a lesson more dramatic.",
+          "Find a traceable source and assess whether the attribution is supportable.",
+          "The speaker could not locate a clear supporting reference.",
+          "He redirected devotion from a mortal leader to Allah, who never dies."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The speaker could not locate a clear supporting reference."
+      },
+      {
+        "question": "How did removing uncertain material improve the presentation?",
+        "options": [
+          "Select a well-supported episode and define a limited learning goal.",
+          "Usefulness does not authorise invented words or actions.",
+          "He upheld communal religious duties despite pressure to compromise.",
+          "It created room for reliable events and clearer source distinctions."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It created room for reliable events and clearer source distinctions."
+      },
+      {
+        "question": "Why did the speaker stop treating one episode as a complete character portrait?",
+        "options": [
+          "One courageous moment cannot represent every difficulty, lesson, or change.",
+          "Role-play risks inventing speech and representing the Companion without evidence.",
+          "Do not place unsupported speech into another person's history.",
+          "His conviction remained steady without becoming theatrical."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: One courageous moment cannot represent every difficulty, lesson, or change."
+      },
+      {
+        "question": "What guidance did the reviewing teacher add to the revised notes?",
+        "options": [
+          "Explain the disagreement only to the depth learners genuinely need.",
+          "Use respectful language, avoid role-play, and identify meaningful scholarly disagreement.",
+          "Avoid sensationalism, invented motives, and entertainment-driven verdicts.",
+          "He trusted the Prophet's report without demanding public approval."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Use respectful language, avoid role-play, and identify meaningful scholarly disagreement."
+      },
+      {
+        "question": "How did the speaker answer a question about a modern political campaign?",
+        "options": [
+          "When the lesson collapses if that nonessential detail changes.",
+          "Correct the transcript and notes and clearly identify the change.",
+          "The speaker refused to invent a Companion's hypothetical political judgment.",
+          "Their concealment and Allah's protection kept the searchers from finding them."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The speaker refused to invent a Companion's hypothetical political judgment."
+      },
+      {
+        "question": "What changed in the audience response after the dramatic lines disappeared?",
+        "options": [
+          "Reliable reports should shape the lesson rather than serve a preferred message.",
+          "The false version may continue circulating without a visible clarification.",
+          "He redirected devotion from a mortal leader to Allah, who never dies.",
+          "Listeners asked stronger questions about reports, evidence, and uncertainty."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Listeners asked stronger questions about reports, evidence, and uncertainty."
+      },
+      {
+        "question": "Why can repeating an attractive story fail to honour a Companion?",
+        "options": [
+          "Admiration does not justify circulating claims that are not established.",
+          "Good aims can encourage teachers to overstate evidence or flatten complexity.",
+          "Reliable evidence can still support careful lessons about the broader account.",
+          "He upheld communal religious duties despite pressure to compromise."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Admiration does not justify circulating claims that are not established."
+      },
+      {
+        "question": "What practice best expresses respectful historical learning?",
+        "options": [
+          "Build each lesson around reliable evidence, limited claims, and respectful context.",
+          "State what is established and withhold claims the evidence cannot support.",
+          "Verify before dramatising and separate historical report from interpretation.",
+          "His conviction remained steady without becoming theatrical."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: State what is established and withhold claims the evidence cannot support."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-sahabah-09",
+    "title": "Can One Biography Carry Every Lesson?",
+    "level": "B2",
+    "themeId": "sahabah",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [welcoming] A youth programme wants to use one Companion's biography to teach leadership, finance, family life, courage, and conflict resolution. Is that a good idea?",
+      "Guest: The intention may be good, but one biography should not be forced to answer every modern question. We need to respect both the sources and the complexity of the person's life.",
+      "Host: What usually goes wrong?",
+      "Guest: [carefully] Teachers select one famous event, remove its context, and turn it into a universal technique. Sometimes they also add dialogue or motives that are not established.",
+      "Host: How would you design the programme differently?",
+      "Guest: Choose a well-supported episode, identify what the source actually reports, and set a limited learning goal. Then compare scholarly explanation rather than claiming that our preferred interpretation is the only possible one.",
+      "Host: Can learners perform a dramatic scene?",
+      "Guest: We should not role-play a Companion or invent speech for them. Learners could instead present a source review, a narrated timeline, or a discussion between modern researchers.",
+      "Host: [curious] What if two respected books give different details?",
+      "Guest: State the disagreement at the level learners need. If the detail is not essential, avoid building the entire lesson upon it.",
+      "Host: How do we connect history to adult life today?",
+      "Guest: Discuss a principle carefully—such as responsibility, sacrifice, consultation, or honesty—then ask what evidence and context are needed before applying it.",
+      "Host: [reflective] So admiration should not remove critical reading.",
+      "Guest: Correct. Critical reading here means checking transmission and interpretation with respect, not approaching the Companions with suspicion or casual judgment.",
+      "Host: One sentence for the programme team?",
+      "Guest: Let the reliable account shape the lesson; do not reshape the account until it delivers every lesson we hoped to teach."
+    ],
+    "quiz": [
+      {
+        "question": "Why is one Companion's biography unsuitable for every programme topic?",
+        "options": [
+          "One life should not be forced to answer every modern question.",
+          "The phrase shows listeners that historical reports carry different certainty levels.",
+          "He trusted the Prophet's report without demanding public approval.",
+          "He learned that his sister had already accepted Islam."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: One life should not be forced to answer every modern question."
+      },
+      {
+        "question": "What happens when teachers isolate a famous event from its setting?",
+        "options": [
+          "Listeners can distinguish established events from disputed or weak details.",
+          "A contextual event becomes an oversimplified universal technique.",
+          "Their concealment and Allah's protection kept the searchers from finding them.",
+          "Their language challenged his certainty and softened his opposition."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: A contextual event becomes an oversimplified universal technique."
+      },
+      {
+        "question": "Which additions can quietly distort a historical account?",
+        "options": [
+          "Find a traceable source and assess whether the attribution is supportable.",
+          "He redirected devotion from a mortal leader to Allah, who never dies.",
+          "Invented dialogue and unsupported motives can make a lesson more dramatic.",
+          "Its force became associated with justice and public responsibility."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Invented dialogue and unsupported motives can make a lesson more dramatic."
+      },
+      {
+        "question": "How should the programme choose material for a focused lesson?",
+        "options": [
+          "Usefulness does not authorise invented words or actions.",
+          "He upheld communal religious duties despite pressure to compromise.",
+          "A ruler should notice citizens whom officials might overlook.",
+          "Select a well-supported episode and define a limited learning goal."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Select a well-supported episode and define a limited learning goal."
+      },
+      {
+        "question": "Why should learners avoid acting as a Companion in a dramatic scene?",
+        "options": [
+          "Role-play risks inventing speech and representing the Companion without evidence.",
+          "Do not place unsupported speech into another person's history.",
+          "His conviction remained steady without becoming theatrical.",
+          "Severity alone ignores how his firmness was redirected toward fairness."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Role-play risks inventing speech and representing the Companion without evidence."
+      },
+      {
+        "question": "How should differing details in respected books be presented?",
+        "options": [
+          "Avoid sensationalism, invented motives, and entertainment-driven verdicts.",
+          "Explain the disagreement only to the depth learners genuinely need.",
+          "He trusted the Prophet's report without demanding public approval.",
+          "He learned that his sister had already accepted Islam."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Explain the disagreement only to the depth learners genuinely need."
+      },
+      {
+        "question": "When is a disputed detail too weak to carry the lesson?",
+        "options": [
+          "Correct the transcript and notes and clearly identify the change.",
+          "Their concealment and Allah's protection kept the searchers from finding them.",
+          "When the lesson collapses if that nonessential detail changes.",
+          "Their language challenged his certainty and softened his opposition."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: When the lesson collapses if that nonessential detail changes."
+      },
+      {
+        "question": "What should control the programme's interpretation of an event?",
+        "options": [
+          "The false version may continue circulating without a visible clarification.",
+          "He redirected devotion from a mortal leader to Allah, who never dies.",
+          "Its force became associated with justice and public responsibility.",
+          "Reliable reports should shape the lesson rather than serve a preferred message."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Reliable reports should shape the lesson rather than serve a preferred message."
+      },
+      {
+        "question": "How can an admirable intention still produce poor history teaching?",
+        "options": [
+          "Good aims can encourage teachers to overstate evidence or flatten complexity.",
+          "Reliable evidence can still support careful lessons about the broader account.",
+          "He upheld communal religious duties despite pressure to compromise.",
+          "A ruler should notice citizens whom officials might overlook."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Good aims can encourage teachers to overstate evidence or flatten complexity."
+      },
+      {
+        "question": "What concise advice should guide the programme team?",
+        "options": [
+          "Verify before dramatising and separate historical report from interpretation.",
+          "Build each lesson around reliable evidence, limited claims, and respectful context.",
+          "His conviction remained steady without becoming theatrical.",
+          "Severity alone ignores how his firmness was redirected toward fairness."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Build each lesson around reliable evidence, limited claims, and respectful context."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-sahabah-10",
+    "title": "Respectful History, Honest Uncertainty",
+    "level": "B2",
+    "themeId": "sahabah",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [thoughtful] Listeners often ask why a history podcast says “it is reported” instead of simply telling the story. Does that language make the episode weak?",
+      "Guest: It makes the level of certainty visible. Reports about the Companions do not all have equal strength, and responsible narration should not hide that difference.",
+      "Host: Must every episode become a technical lecture on chains of transmission?",
+      "Guest: [carefully] No. The language can remain clear: “This event is well established,” “sources differ about the date,” or “this detail is widely repeated but not relied upon here.”",
+      "Host: What about a beautiful quotation shared online?",
+      "Guest: Search for a traceable source before attributing it. If it cannot be verified, share the meaning in your own words without attaching the Companion's name—or leave it out.",
+      "Host: [curious] Some people argue that a beneficial message justifies a weak story.",
+      "Guest: Benefit does not give us permission to place words or actions into another person's history. Reliable material already offers abundant lessons.",
+      "Host: How should a podcast discuss disputes involving Companions?",
+      "Guest: With knowledge, restraint, and recognised scholarship. It should avoid sensational language, invented inner motives, and casual verdicts made for entertainment.",
+      "Host: Can the host acknowledge a mistake from an earlier episode?",
+      "Guest: Absolutely. Correct the transcript and audio notes, identify what changed, and explain the stronger evidence. Quietly editing without notice can leave the false claim circulating.",
+      "Host: [reflective] What is the educational value of saying “we do not know”?",
+      "Guest: It teaches that faith and historical honesty belong together. Uncertainty about one detail does not erase what reliable sources establish.",
+      "Host: Final advice for writers?",
+      "Guest: Verify before dramatising, distinguish report from interpretation, and ask a qualified teacher or specialist to review sensitive conclusions."
+    ],
+    "quiz": [
+      {
+        "question": "Why does the podcast sometimes introduce an event with “it is reported”?",
+        "options": [
+          "The phrase shows listeners that historical reports carry different certainty levels.",
+          "He trusted the Prophet's report without demanding public approval.",
+          "He learned that his sister had already accepted Islam.",
+          "He made its water freely available instead of preserving private profit."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The phrase shows listeners that historical reports carry different certainty levels."
+      },
+      {
+        "question": "What benefit comes from making certainty visible?",
+        "options": [
+          "Their concealment and Allah's protection kept the searchers from finding them.",
+          "Listeners can distinguish established events from disputed or weak details.",
+          "Their language challenged his certainty and softened his opposition.",
+          "He supplied substantial money, camels, and horses without seeking recognition."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Listeners can distinguish established events from disputed or weak details."
+      },
+      {
+        "question": "What should a producer do before attributing an online quotation?",
+        "options": [
+          "He redirected devotion from a mortal leader to Allah, who never dies.",
+          "Its force became associated with justice and public responsibility.",
+          "Find a traceable source and assess whether the attribution is supportable.",
+          "Opponents besieged his home during his final period as caliph."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Find a traceable source and assess whether the attribution is supportable."
+      },
+      {
+        "question": "Why is a beneficial message insufficient reason to repeat a weak story?",
+        "options": [
+          "He upheld communal religious duties despite pressure to compromise.",
+          "A ruler should notice citizens whom officials might overlook.",
+          "It continued whenever need arose rather than depending on applause.",
+          "Usefulness does not authorise invented words or actions."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Usefulness does not authorise invented words or actions."
+      },
+      {
+        "question": "What ethical boundary applies when a quotation cannot be verified?",
+        "options": [
+          "Do not place unsupported speech into another person's history.",
+          "His conviction remained steady without becoming theatrical.",
+          "Severity alone ignores how his firmness was redirected toward fairness.",
+          "Support useful work consistently without making recognition the main reward."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Do not place unsupported speech into another person's history."
+      },
+      {
+        "question": "How should disputes involving Companions be narrated for a general audience?",
+        "options": [
+          "He trusted the Prophet's report without demanding public approval.",
+          "Avoid sensationalism, invented motives, and entertainment-driven verdicts.",
+          "He learned that his sister had already accepted Islam.",
+          "He made its water freely available instead of preserving private profit."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Avoid sensationalism, invented motives, and entertainment-driven verdicts."
+      },
+      {
+        "question": "What should the podcast do after discovering a mistaken attribution?",
+        "options": [
+          "Their concealment and Allah's protection kept the searchers from finding them.",
+          "Their language challenged his certainty and softened his opposition.",
+          "Correct the transcript and notes and clearly identify the change.",
+          "He supplied substantial money, camels, and horses without seeking recognition."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Correct the transcript and notes and clearly identify the change."
+      },
+      {
+        "question": "Why is an unannounced edit an incomplete correction?",
+        "options": [
+          "He redirected devotion from a mortal leader to Allah, who never dies.",
+          "Its force became associated with justice and public responsibility.",
+          "Opponents besieged his home during his final period as caliph.",
+          "The false version may continue circulating without a visible clarification."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The false version may continue circulating without a visible clarification."
+      },
+      {
+        "question": "What remains possible when one historical detail is uncertain?",
+        "options": [
+          "Reliable evidence can still support careful lessons about the broader account.",
+          "He upheld communal religious duties despite pressure to compromise.",
+          "A ruler should notice citizens whom officials might overlook.",
+          "It continued whenever need arose rather than depending on applause."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Reliable evidence can still support careful lessons about the broader account."
+      },
+      {
+        "question": "Which editorial rule balances engaging storytelling with honesty?",
+        "options": [
+          "His conviction remained steady without becoming theatrical.",
+          "Verify before dramatising and separate historical report from interpretation.",
+          "Severity alone ignores how his firmness was redirected toward fairness.",
+          "Support useful work consistently without making recognition the main reward."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Verify before dramatising and separate historical report from interpretation."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

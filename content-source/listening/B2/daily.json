@@ -6,35 +6,152 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ratna", "gender": "female" },
-      { "name": "Pak Joko", "gender": "male" }
+      {
+        "name": "Ratna",
+        "gender": "female"
+      },
+      {
+        "name": "Pak Joko",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ratna: [composed but wary] Pak Joko, thank you for making time. I wanted to talk before the lease renewal notice arrives, rather than scrambling once it does.",
-      "Pak Joko: [businesslike] Of course. I assume this is about the rent increase mentioned in the email my agent sent last week.",
-      "Ratna: [direct] It is. A twelve percent rise feels steep, especially given that the building's maintenance has been rather inconsistent lately.",
-      "Pak Joko: [defensive] Property taxes have gone up considerably, and honestly, I've been absorbing those costs myself for the past two years.",
-      "Ratna: [acknowledging] I don't doubt that costs have risen for you too, but the leaking pipe in the hallway was reported three months ago and still hasn't been fixed.",
-      "Pak Joko: [slightly embarrassed] That's a fair point, and I'll admit it should have been dealt with sooner than it was.",
-      "Ratna: [measured] What I'm proposing is this: a smaller increase, say six percent, contingent on outstanding repairs being completed within a month.",
-      "Pak Joko: [considering] That's not unreasonable, provided you're willing to sign for two years rather than the usual twelve months.",
-      "Ratna: [thoughtful] A longer commitment in exchange for a fairer rate does make sense, assuming the repairs actually happen this time.",
-      "Pak Joko: [reassuring] I'll have the plumber come this week, and I'll put the six percent figure in writing before you commit to anything.",
-      "Ratna: [firm] I'd also appreciate a clause stating future increases won't exceed inflation, so we're not renegotiating from scratch every year.",
-      "Pak Joko: [reluctant but agreeing] That's a reasonable safeguard, even if it limits my flexibility somewhat down the line.",
-      "Ratna: [warmer] I've genuinely enjoyed living here, which is precisely why I'd rather resolve this than start apartment hunting all over again.",
-      "Pak Joko: [relieved] I'd rather keep a tenant who reports problems calmly than deal with the uncertainty of an empty unit.",
-      "Ratna: [pragmatic] Then it seems we both have an incentive to make this arrangement work smoothly for once.",
-      "Pak Joko: [conclusive] Agreed. I'll draft the updated contract by Friday, with the repair clause and the capped increases both spelled out clearly.",
-      "Ratna: [satisfied] That works for me. I'd rather have this slightly uncomfortable conversation now than resent a decision made under pressure later."
+      "Ratna: [thoughtful] Pak Joko, thank you for making time. I wanted to talk before the lease renewal notice arrives, rather than scrambling once it does.",
+      "Pak Joko: Of course. I assume this is about the rent increase mentioned in the email my agent sent last week.",
+      "Ratna: [carefully] It is. A twelve percent rise feels steep, especially given that the building's maintenance has been rather inconsistent lately.",
+      "Pak Joko: Property taxes have gone up considerably, and honestly, I've been absorbing those costs myself for the past two years.",
+      "Ratna: [reflective] I don't doubt that costs have risen for you too, but the leaking pipe in the hallway was reported three months ago and still hasn't been fixed.",
+      "Pak Joko: That's a fair point, and I'll admit it should have been dealt with sooner than it was.",
+      "Ratna: [honestly] What I'm proposing is this: a smaller increase, say six percent, contingent on outstanding repairs being completed within a month.",
+      "Pak Joko: That's not unreasonable, provided you're willing to sign for two years rather than the usual twelve months.",
+      "Ratna: [gently] A longer commitment in exchange for a fairer rate does make sense, assuming the repairs actually happen this time.",
+      "Pak Joko: I'll have the plumber come this week, and I'll put the six percent figure in writing before you commit to anything.",
+      "Ratna: [calmly] I'd also appreciate a clause stating future increases won't exceed inflation, so we're not renegotiating from scratch every year.",
+      "Pak Joko: That's a reasonable safeguard, even if it limits my flexibility somewhat down the line.",
+      "Ratna: [encouraging] I've genuinely enjoyed living here, which is precisely why I'd rather resolve this than start apartment hunting all over again.",
+      "Pak Joko: I'd rather keep a tenant who reports problems calmly than deal with the uncertainty of an empty unit.",
+      "Ratna: [seriously] Then it seems we both have an incentive to make this arrangement work smoothly for once.",
+      "Pak Joko: Agreed. I'll draft the updated contract by Friday, with the repair clause and the capped increases both spelled out clearly.",
+      "Ratna: That works for me. I'd rather have this slightly uncomfortable conversation now than resent a decision made under pressure later."
     ],
     "quiz": [
-      { "question": "Why did Ratna want to speak with Pak Joko before the renewal notice arrived?", "options": ["To move out immediately", "To avoid scrambling once the formal notice arrived", "To ask for a shorter lease", "To report a noise complaint"], "correctIndex": 1, "explanation": "Ratna says she wanted to talk before the notice arrives rather than scrambling once it does." },
-      { "question": "What specific problem does Ratna cite as evidence of poor maintenance?", "options": ["Broken elevator", "A leaking pipe in the hallway reported three months ago and still unfixed", "No hot water", "A broken door lock"], "correctIndex": 1, "explanation": "She mentions the leaking pipe reported three months earlier that still hasn't been repaired." },
-      { "question": "What compromise does Ratna propose regarding the rent increase?", "options": ["No increase at all", "A smaller six percent increase, contingent on repairs being completed within a month", "Paying the full twelve percent immediately", "Moving to a smaller unit"], "correctIndex": 1, "explanation": "She proposes a six percent increase conditional on the outstanding repairs being finished within a month." },
-      { "question": "What does Pak Joko want in exchange for the lower increase?", "options": ["A higher deposit", "A two-year commitment instead of the usual twelve months", "Ratna finding a new tenant", "Cash payment upfront"], "correctIndex": 1, "explanation": "Pak Joko asks for a two-year lease rather than the usual one-year term." },
-      { "question": "What additional clause does Ratna request for future years?", "options": ["A rent freeze forever", "That future increases won't exceed inflation", "The right to sublet freely", "Free parking"], "correctIndex": 1, "explanation": "Ratna asks for a clause capping future increases at the rate of inflation." }
-    ]
+      {
+        "question": "Why did Ratna want to speak with Pak Joko before the renewal notice arrived?",
+        "options": [
+          "To avoid scrambling once the formal notice arrived",
+          "To move out immediately",
+          "To ask for a shorter lease",
+          "To report a noise complaint"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ratna says she wanted to talk before the notice arrives rather than scrambling once it does."
+      },
+      {
+        "question": "What specific problem does Ratna cite as evidence of poor maintenance?",
+        "options": [
+          "Broken elevator",
+          "No hot water",
+          "A broken door lock",
+          "A leaking pipe in the hallway reported three months ago and still unfixed"
+        ],
+        "correctIndex": 3,
+        "explanation": "She mentions the leaking pipe reported three months earlier that still hasn't been repaired."
+      },
+      {
+        "question": "What compromise does Ratna propose regarding the rent increase?",
+        "options": [
+          "No increase at all",
+          "A smaller six percent increase, contingent on repairs being completed within a month",
+          "Paying the full twelve percent immediately",
+          "Moving to a smaller unit"
+        ],
+        "correctIndex": 1,
+        "explanation": "She proposes a six percent increase conditional on the outstanding repairs being finished within a month."
+      },
+      {
+        "question": "What does Pak Joko want in exchange for the lower increase?",
+        "options": [
+          "A higher deposit",
+          "Ratna finding a new tenant",
+          "A two-year commitment instead of the usual twelve months",
+          "Cash payment upfront"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pak Joko asks for a two-year lease rather than the usual one-year term."
+      },
+      {
+        "question": "What additional clause does Ratna request for future years?",
+        "options": [
+          "A rent freeze forever",
+          "The right to sublet freely",
+          "That future increases won't exceed inflation",
+          "Free parking"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ratna asks for a clause capping future increases at the rate of inflation."
+      },
+      {
+        "question": "Why does Ratna link the rent increase to repairs?",
+        "options": [
+          "She wants higher costs matched by better maintenance",
+          "She plans to leave immediately",
+          "She caused the hallway leak",
+          "She opposes every rent increase"
+        ],
+        "correctIndex": 0,
+        "explanation": "The unresolved leak weakens the case for a twelve-percent rise."
+      },
+      {
+        "question": "What makes the two-year lease useful to Pak Joko?",
+        "options": [
+          "It removes repair duties",
+          "It allows unlimited increases",
+          "It transfers property taxes",
+          "It gives him a reliable long-term tenant"
+        ],
+        "correctIndex": 3,
+        "explanation": "Longer occupancy balances the lower increase."
+      },
+      {
+        "question": "Why will Pak Joko put the terms in writing?",
+        "options": [
+          "The plumber requested a contract",
+          "Ratna should see firm conditions before committing",
+          "The agent cannot send email",
+          "Verbal agreements are forbidden"
+        ],
+        "correctIndex": 1,
+        "explanation": "Written terms make the repair and rent promises verifiable."
+      },
+      {
+        "question": "What shared interest helps them reach agreement?",
+        "options": [
+          "Selling the building quickly",
+          "Ending maintenance reports",
+          "Changing the tenant's job",
+          "Avoiding the costs and uncertainty of replacement"
+        ],
+        "correctIndex": 3,
+        "explanation": "Both benefit from a stable, workable tenancy."
+      },
+      {
+        "question": "Which action occurs before the new contract is drafted?",
+        "options": [
+          "Ratna pays two years in advance",
+          "A plumber is scheduled for the leak",
+          "The agent withdraws the notice",
+          "Taxes are reduced"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pak Joko promises repair action that week."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-daily-02",
@@ -43,31 +160,145 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] For years I wore busyness like a badge, as though a packed schedule were proof that my life mattered somehow.",
-      "Narrator: [reflective] Every conversation seemed to circle back to how little time I had, which, looking back, was a peculiar thing to boast about.",
-      "Narrator: [honest] What unsettled me was a weekend I spent entirely alone, with no obligations, and I genuinely didn't know what to do with myself.",
-      "Narrator: [thoughtful] I'd filled every hour for so long that unstructured time felt less like rest and more like an ambush.",
-      "Narrator: [analytical] So I started tracking my actual hours, rather than my perceived ones, and the results were quietly humbling.",
-      "Narrator: [wry] A great deal of what I'd labelled essential turned out to be scrolling disguised as research, or errands that could easily have waited.",
-      "Narrator: [honest] I wasn't as overwhelmed as I'd assumed; I was simply avoiding stillness, because stillness left room for questions I hadn't wanted to answer.",
-      "Narrator: [reflective] Once I admitted that, the busyness lost its usual disguise, and I could finally see it for what it was: a distraction dressed up as productivity.",
-      "Narrator: [determined] I began blocking out two unscheduled hours each week, which sounds trivial, yet initially felt almost transgressive to protect.",
-      "Narrator: [honest] The first few attempts were uncomfortable. I'd hover near my phone, itching for something, anything, to fill the silence.",
-      "Narrator: [warmly] Gradually, though, that discomfort softened into something closer to relief, as if I'd finally been given permission to simply exist.",
-      "Narrator: [thoughtful] I've since noticed how many people around me perform busyness the same way I used to, wearing exhaustion as a kind of credential.",
-      "Narrator: [gentle] I no longer envy that version of myself, constantly in motion yet strangely unable to say what any of it was actually for.",
-      "Narrator: [encouraging] If your calendar is full but your reasons for filling it are vague, it might be worth asking what you're actually avoiding."
+      "Narrator: [thoughtful] For years I wore busyness like a badge, as though a packed schedule were proof that my life mattered somehow.",
+      "Narrator: Every conversation seemed to circle back to how little time I had, which, looking back, was a peculiar thing to boast about.",
+      "Narrator: [carefully] What unsettled me was a weekend I spent entirely alone, with no obligations, and I genuinely didn't know what to do with myself.",
+      "Narrator: I'd filled every hour for so long that unstructured time felt less like rest and more like an ambush.",
+      "Narrator: [reflective] So I started tracking my actual hours, rather than my perceived ones, and the results were quietly humbling.",
+      "Narrator: A great deal of what I'd labelled essential turned out to be scrolling disguised as research, or errands that could easily have waited.",
+      "Narrator: [honestly] I wasn't as overwhelmed as I'd assumed; I was simply avoiding stillness, because stillness left room for questions I hadn't wanted to answer.",
+      "Narrator: Once I admitted that, the busyness lost its usual disguise, and I could finally see it for what it was: a distraction dressed up as productivity.",
+      "Narrator: [gently] I began blocking out two unscheduled hours each week, which sounds trivial, yet initially felt almost transgressive to protect.",
+      "Narrator: The first few attempts were uncomfortable. I'd hover near my phone, itching for something, anything, to fill the silence.",
+      "Narrator: [calmly] Gradually, though, that discomfort softened into something closer to relief, as if I'd finally been given permission to simply exist.",
+      "Narrator: I've since noticed how many people around me perform busyness the same way I used to, wearing exhaustion as a kind of credential.",
+      "Narrator: [encouraging] I no longer envy that version of myself, constantly in motion yet strangely unable to say what any of it was actually for.",
+      "Narrator: If your calendar is full but your reasons for filling it are vague, it might be worth asking what you're actually avoiding."
     ],
     "quiz": [
-      { "question": "How did the narrator use to treat busyness?", "options": ["As something to avoid entirely", "As a badge, proof that her life mattered", "As a sign of failure", "As something to hide from others"], "correctIndex": 1, "explanation": "She says she wore busyness like a badge, as proof that her life mattered." },
-      { "question": "What experience first unsettled her?", "options": ["Losing her job", "A weekend entirely alone with no obligations, not knowing what to do", "A doctor's warning", "A friend's criticism"], "correctIndex": 1, "explanation": "A weekend spent alone with no obligations left her not knowing what to do with herself." },
-      { "question": "What did she discover when she tracked her actual hours?", "options": ["She had no free time at all", "Much of what she called essential was scrolling or errands that could have waited", "She was working too little", "Her schedule was perfectly efficient"], "correctIndex": 1, "explanation": "She found that much of her supposedly essential time was scrolling disguised as research or unnecessary errands." },
-      { "question": "What does the narrator conclude she was actually avoiding through busyness?", "options": ["Other people", "Stillness, because it left room for questions she hadn't wanted to answer", "Physical exercise", "Her job responsibilities"], "correctIndex": 1, "explanation": "She realizes she was avoiding stillness because it left room for uncomfortable questions." },
-      { "question": "What change did she eventually make?", "options": ["She quit her job", "She began blocking out two unscheduled hours each week", "She deleted all her apps permanently", "She moved to a new city"], "correctIndex": 1, "explanation": "She started deliberately protecting two unscheduled hours each week." }
-    ]
+      {
+        "question": "How did the narrator use to treat busyness?",
+        "options": [
+          "As something to avoid entirely",
+          "As a badge, proof that her life mattered",
+          "As a sign of failure",
+          "As something to hide from others"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she wore busyness like a badge, as proof that her life mattered."
+      },
+      {
+        "question": "What experience first unsettled her?",
+        "options": [
+          "Losing her job",
+          "A weekend entirely alone with no obligations, not knowing what to do",
+          "A doctor's warning",
+          "A friend's criticism"
+        ],
+        "correctIndex": 1,
+        "explanation": "A weekend spent alone with no obligations left her not knowing what to do with herself."
+      },
+      {
+        "question": "What did she discover when she tracked her actual hours?",
+        "options": [
+          "Much of what she called essential was scrolling or errands that could have waited",
+          "She had no free time at all",
+          "She was working too little",
+          "Her schedule was perfectly efficient"
+        ],
+        "correctIndex": 0,
+        "explanation": "She found that much of her supposedly essential time was scrolling disguised as research or unnecessary errands."
+      },
+      {
+        "question": "What does the narrator conclude she was actually avoiding through busyness?",
+        "options": [
+          "Other people",
+          "Physical exercise",
+          "Her job responsibilities",
+          "Stillness, because it left room for questions she hadn't wanted to answer"
+        ],
+        "correctIndex": 3,
+        "explanation": "She realizes she was avoiding stillness because it left room for uncomfortable questions."
+      },
+      {
+        "question": "What change did she eventually make?",
+        "options": [
+          "She quit her job",
+          "She deleted all her apps permanently",
+          "She began blocking out two unscheduled hours each week",
+          "She moved to a new city"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started deliberately protecting two unscheduled hours each week."
+      },
+      {
+        "question": "Why did free time feel threatening to the narrator?",
+        "options": [
+          "It exposed questions hidden by constant activity",
+          "She disliked weekends alone",
+          "Her work required notifications",
+          "She had forgotten her hobbies"
+        ],
+        "correctIndex": 0,
+        "explanation": "Busyness had protected her from stillness and reflection."
+      },
+      {
+        "question": "What did time tracking reveal about “research”?",
+        "options": [
+          "It required more hours than expected",
+          "It replaced every errand",
+          "It was her most valuable task",
+          "Some of it was ordinary scrolling"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her labels made avoidable activity sound essential."
+      },
+      {
+        "question": "Why were two unscheduled hours initially difficult?",
+        "options": [
+          "They conflicted with employment",
+          "Her friends demanded plans",
+          "She felt compelled to fill the silence",
+          "She lacked a calendar"
+        ],
+        "correctIndex": 2,
+        "explanation": "The habit of stimulation remained after the schedule opened."
+      },
+      {
+        "question": "How did her response to stillness change?",
+        "options": [
+          "Relief became greater anxiety",
+          "She returned to constant motion",
+          "Silence remained intolerable",
+          "Discomfort gradually became relief"
+        ],
+        "correctIndex": 3,
+        "explanation": "Repeated practice made unstructured time restorative."
+      },
+      {
+        "question": "What question does the narrator recommend?",
+        "options": [
+          "How can every hour earn money?",
+          "What might a full calendar be helping you avoid?",
+          "Which app creates more tasks?",
+          "Why should rest be removed?"
+        ],
+        "correctIndex": 1,
+        "explanation": "She invites listeners to examine the purpose behind busyness."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-daily-03",
@@ -76,34 +307,151 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Farah: [trying to stay calm] Reza, can we talk about your cousin? He's been sleeping on our sofa for nearly three weeks now.",
-      "Reza: [guarded] He's between places, Farah. I didn't think it would be such an issue, given how flexible you usually are.",
-      "Farah: [firm] Flexibility has limits, and this one's been reached. The shared costs alone have quietly crept up since he arrived.",
-      "Reza: [surprised] I hadn't really considered the costs, to be honest. He barely eats here, from what I've noticed.",
-      "Farah: [pointed] It's not just food. Water, electricity, the extra laundry loads — none of that was factored into what we agreed to split.",
-      "Reza: [defensive] I could cover a bit more this month, if that would settle things between us.",
-      "Farah: [softening slightly] It's not primarily about money, although that's part of it. It's that I was never actually asked before he moved in.",
-      "Reza: [apologetic] That's fair. I assumed you wouldn't mind, which, admittedly, wasn't my decision to make unilaterally.",
-      "Farah: [reasoning] Exactly. Had you asked, I might well have said yes, but being informed after the fact felt dismissive of my say in this place.",
-      "Reza: [thoughtful] I didn't intend to be dismissive. I suppose I underestimated how much this affects you too, not just me.",
-      "Farah: [practical] Going forward, could we agree that any guest staying beyond a few nights gets discussed first, regardless of how urgent it seems?",
-      "Reza: [agreeing] That seems entirely reasonable. I'll talk to him this weekend about finding somewhere more permanent.",
-      "Farah: [relieved] Thank you. I don't dislike him, honestly, I just need this to still feel like my home too.",
-      "Reza: [warmly] I get that now. I'll set a clearer timeline with him, something concrete rather than 'a few more days.'",
-      "Farah: [appreciative] I'd appreciate that. And next time, just ask me directly, even if you're fairly sure I'll agree.",
-      "Reza: [sincere] Understood. I'd rather have this conversation upfront than have you quietly resenting me over a sofa."
+      "Farah: [thoughtful] Reza, can we talk about your cousin? He's been sleeping on our sofa for nearly three weeks now.",
+      "Reza: He's between places, Farah. I didn't think it would be such an issue, given how flexible you usually are.",
+      "Farah: [carefully] Flexibility has limits, and this one's been reached. The shared costs alone have quietly crept up since he arrived.",
+      "Reza: I hadn't really considered the costs, to be honest. He barely eats here, from what I've noticed.",
+      "Farah: [reflective] It's not just food. Water, electricity, the extra laundry loads — none of that was factored into what we agreed to split.",
+      "Reza: I could cover a bit more this month, if that would settle things between us.",
+      "Farah: [honestly] It's not primarily about money, although that's part of it. It's that I was never actually asked before he moved in.",
+      "Reza: That's fair. I assumed you wouldn't mind, which, admittedly, wasn't my decision to make unilaterally.",
+      "Farah: [gently] Exactly. Had you asked, I might well have said yes, but being informed after the fact felt dismissive of my say in this place.",
+      "Reza: I didn't intend to be dismissive. I suppose I underestimated how much this affects you too, not just me.",
+      "Farah: [calmly] Going forward, could we agree that any guest staying beyond a few nights gets discussed first, regardless of how urgent it seems?",
+      "Reza: That seems entirely reasonable. I'll talk to him this weekend about finding somewhere more permanent.",
+      "Farah: [encouraging] Thank you. I don't dislike him, honestly, I just need this to still feel like my home too.",
+      "Reza: I get that now. I'll set a clearer timeline with him, something concrete rather than 'a few more days.'",
+      "Farah: [seriously] I'd appreciate that. And next time, just ask me directly, even if you're fairly sure I'll agree.",
+      "Reza: Understood. I'd rather have this conversation upfront than have you quietly resenting me over a sofa."
     ],
     "quiz": [
-      { "question": "What is Farah's initial complaint to Reza?", "options": ["Reza never cleans", "Reza's cousin has been sleeping on their sofa for nearly three weeks", "Reza is too loud at night", "Reza never pays rent"], "correctIndex": 1, "explanation": "Farah raises the issue of the cousin sleeping on the sofa for nearly three weeks." },
-      { "question": "What financial concern does Farah raise?", "options": ["The cousin owes her money directly", "Shared costs like water, electricity, and laundry have quietly increased", "Reza stopped paying rent entirely", "The cousin damaged furniture"], "correctIndex": 1, "explanation": "Farah points out that shared costs such as water, electricity, and laundry have crept up since the cousin arrived." },
-      { "question": "What does Farah say is the deeper issue beyond money?", "options": ["She dislikes the cousin personally", "She was never actually asked before he moved in", "She wants Reza to move out", "She wants a new roommate"], "correctIndex": 1, "explanation": "Farah explains it's not primarily about money but about never being asked before he moved in." },
-      { "question": "What agreement do they reach about future guests?", "options": ["No guests are ever allowed again", "Any guest staying beyond a few nights should be discussed first", "Reza can decide alone from now on", "Guests must pay rent immediately"], "correctIndex": 1, "explanation": "They agree that guests staying beyond a few nights should be discussed first, regardless of urgency." },
-      { "question": "What does Reza commit to doing about his cousin?", "options": ["Kicking him out immediately", "Talking to him about finding somewhere more permanent, with a clearer timeline", "Ignoring the situation entirely", "Moving out himself"], "correctIndex": 1, "explanation": "Reza agrees to talk to his cousin about finding a permanent place and setting a clearer timeline." }
-    ]
+      {
+        "question": "What is Farah's initial complaint to Reza?",
+        "options": [
+          "Reza's cousin has been sleeping on their sofa for nearly three weeks",
+          "Reza never cleans",
+          "Reza is too loud at night",
+          "Reza never pays rent"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farah raises the issue of the cousin sleeping on the sofa for nearly three weeks."
+      },
+      {
+        "question": "What financial concern does Farah raise?",
+        "options": [
+          "The cousin owes her money directly",
+          "Shared costs like water, electricity, and laundry have quietly increased",
+          "Reza stopped paying rent entirely",
+          "The cousin damaged furniture"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah points out that shared costs such as water, electricity, and laundry have crept up since the cousin arrived."
+      },
+      {
+        "question": "What does Farah say is the deeper issue beyond money?",
+        "options": [
+          "She dislikes the cousin personally",
+          "She was never actually asked before he moved in",
+          "She wants Reza to move out",
+          "She wants a new roommate"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah explains it's not primarily about money but about never being asked before he moved in."
+      },
+      {
+        "question": "What agreement do they reach about future guests?",
+        "options": [
+          "No guests are ever allowed again",
+          "Reza can decide alone from now on",
+          "Guests must pay rent immediately",
+          "Any guest staying beyond a few nights should be discussed first"
+        ],
+        "correctIndex": 3,
+        "explanation": "They agree that guests staying beyond a few nights should be discussed first, regardless of urgency."
+      },
+      {
+        "question": "What does Reza commit to doing about his cousin?",
+        "options": [
+          "Kicking him out immediately",
+          "Ignoring the situation entirely",
+          "Moving out himself",
+          "Talking to him about finding somewhere more permanent, with a clearer timeline"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reza agrees to talk to his cousin about finding a permanent place and setting a clearer timeline."
+      },
+      {
+        "question": "Why is paying extra not a complete solution?",
+        "options": [
+          "The cousin refuses all food",
+          "Utility bills cannot change",
+          "Farah was excluded from the decision about her home",
+          "Reza cannot afford the sofa"
+        ],
+        "correctIndex": 2,
+        "explanation": "Consent and shared space matter beyond costs."
+      },
+      {
+        "question": "What does Reza admit about his assumption?",
+        "options": [
+          "Farah had already approved",
+          "The cousin owned the apartment",
+          "It was not his decision to make alone",
+          "Urgency removed all boundaries"
+        ],
+        "correctIndex": 2,
+        "explanation": "He recognises that likely agreement is not actual consent."
+      },
+      {
+        "question": "Why does Farah want a concrete timeline?",
+        "options": [
+          "“A few more days” has remained indefinite",
+          "She wants to charge daily rent",
+          "The sofa needs replacement",
+          "The cousin found permanent housing"
+        ],
+        "correctIndex": 0,
+        "explanation": "A clear date prevents the temporary stay drifting onward."
+      },
+      {
+        "question": "What future rule do they establish?",
+        "options": [
+          "Ban every family visit",
+          "Divide all bills equally",
+          "Ask the landlord about dinner guests",
+          "Discuss guests who stay beyond a few nights"
+        ],
+        "correctIndex": 3,
+        "explanation": "Longer stays require prior shared agreement."
+      },
+      {
+        "question": "Which concern best captures Farah's position?",
+        "options": [
+          "She dislikes Reza's cousin personally",
+          "She needs equal say in the place she lives",
+          "She wants to move apartments",
+          "She refuses to share utilities"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her main issue is agency in a shared home."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-daily-04",
@@ -112,30 +460,144 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [candid] Somewhere along the way, shopping stopped being a means to an end and quietly became the end in itself.",
-      "Narrator: [reflective] I noticed it most clearly during a routine errand, standing in an aisle debating between two nearly identical kitchen gadgets I didn't need at all.",
-      "Narrator: [honest] What struck me wasn't the purchase itself, but how automatic the whole ritual had become, almost bypassing thought entirely.",
-      "Narrator: [analytical] So I set myself a modest challenge: nothing bought on impulse would be kept unless it was still wanted after a full week.",
-      "Narrator: [wry] The results were more revealing than I'd anticipated. Most items, once removed from that dopamine-soaked moment of checkout, simply lost their appeal.",
-      "Narrator: [thoughtful] It made me wonder how much of daily consumption is driven not by need but by a fleeting discomfort we're trying to soothe.",
-      "Narrator: [honest] Boredom, stress, even mild loneliness — I'd been quietly outsourcing all of it to a shopping cart, without ever naming the pattern.",
-      "Narrator: [reflective] None of this makes me anti-consumption, exactly; I still buy things, sometimes for no reason beyond genuine enjoyment.",
-      "Narrator: [nuanced] The difference now is that the decision is deliberate, rather than something that happens to me while I'm barely paying attention.",
-      "Narrator: [practical] I've also started asking a second question: could this be borrowed, repaired, or found secondhand before it's bought new?",
-      "Narrator: [honest] That question alone has saved me a surprising amount, though admittedly it's slower and occasionally more inconvenient than one-click ordering.",
-      "Narrator: [warmly] What I hadn't expected was how much calmer my errands feel now, freed from the low hum of constant, unexamined wanting.",
+      "Narrator: [thoughtful] Somewhere along the way, shopping stopped being a means to an end and quietly became the end in itself.",
+      "Narrator: I noticed it most clearly during a routine errand, standing in an aisle debating between two nearly identical kitchen gadgets I didn't need at all.",
+      "Narrator: [carefully] What struck me wasn't the purchase itself, but how automatic the whole ritual had become, almost bypassing thought entirely.",
+      "Narrator: So I set myself a modest challenge: nothing bought on impulse would be kept unless it was still wanted after a full week.",
+      "Narrator: [reflective] The results were more revealing than I'd anticipated. Most items, once removed from that dopamine-soaked moment of checkout, simply lost their appeal.",
+      "Narrator: It made me wonder how much of daily consumption is driven not by need but by a fleeting discomfort we're trying to soothe.",
+      "Narrator: [honestly] Boredom, stress, even mild loneliness — I'd been quietly outsourcing all of it to a shopping cart, without ever naming the pattern.",
+      "Narrator: None of this makes me anti-consumption, exactly; I still buy things, sometimes for no reason beyond genuine enjoyment.",
+      "Narrator: [gently] The difference now is that the decision is deliberate, rather than something that happens to me while I'm barely paying attention.",
+      "Narrator: I've also started asking a second question: could this be borrowed, repaired, or found secondhand before it's bought new?",
+      "Narrator: [calmly] That question alone has saved me a surprising amount, though admittedly it's slower and occasionally more inconvenient than one-click ordering.",
+      "Narrator: What I hadn't expected was how much calmer my errands feel now, freed from the low hum of constant, unexamined wanting.",
       "Narrator: [encouraging] I'm not suggesting anyone swear off shopping altogether, only that it's worth noticing what a purchase is quietly standing in for."
     ],
     "quiz": [
-      { "question": "What moment made the narrator first notice his shopping habits?", "options": ["A financial crisis", "Standing in an aisle debating between two nearly identical gadgets he didn't need", "Losing his job", "A conversation with a friend"], "correctIndex": 1, "explanation": "He describes standing in an aisle debating between two nearly identical kitchen gadgets he didn't need." },
-      { "question": "What challenge did he set for himself?", "options": ["Never buying anything again", "Keeping impulse purchases only if still wanted after a full week", "Only buying secondhand items", "Spending a fixed budget each month"], "correctIndex": 1, "explanation": "He set a rule that impulse purchases would only be kept if still wanted after a full week." },
-      { "question": "What did he conclude was often driving his consumption?", "options": ["Genuine need", "Fleeting discomfort like boredom, stress, or loneliness", "Peer pressure from friends", "Advertising alone"], "correctIndex": 1, "explanation": "He realized much of his consumption was driven by fleeting discomfort he was trying to soothe, not real need." },
-      { "question": "What second question did he start asking before buying something new?", "options": ["Is it on sale?", "Could this be borrowed, repaired, or found secondhand first?", "Will my friends approve?", "Is it the cheapest option?"], "correctIndex": 1, "explanation": "He now asks whether the item could be borrowed, repaired, or found secondhand before buying new." },
-      { "question": "How does the narrator describe his overall stance now?", "options": ["Completely against shopping", "Not anti-consumption, but more deliberate about what a purchase is standing in for", "Unchanged from before", "Focused only on saving money"], "correctIndex": 1, "explanation": "He clarifies he isn't anti-consumption, just more aware of what purchases are quietly standing in for." }
-    ]
+      {
+        "question": "What moment made the narrator first notice his shopping habits?",
+        "options": [
+          "Standing in an aisle debating between two nearly identical gadgets he didn't need",
+          "A financial crisis",
+          "Losing his job",
+          "A conversation with a friend"
+        ],
+        "correctIndex": 0,
+        "explanation": "He describes standing in an aisle debating between two nearly identical kitchen gadgets he didn't need."
+      },
+      {
+        "question": "What challenge did he set for himself?",
+        "options": [
+          "Never buying anything again",
+          "Keeping impulse purchases only if still wanted after a full week",
+          "Only buying secondhand items",
+          "Spending a fixed budget each month"
+        ],
+        "correctIndex": 1,
+        "explanation": "He set a rule that impulse purchases would only be kept if still wanted after a full week."
+      },
+      {
+        "question": "What did he conclude was often driving his consumption?",
+        "options": [
+          "Genuine need",
+          "Peer pressure from friends",
+          "Fleeting discomfort like boredom, stress, or loneliness",
+          "Advertising alone"
+        ],
+        "correctIndex": 2,
+        "explanation": "He realized much of his consumption was driven by fleeting discomfort he was trying to soothe, not real need."
+      },
+      {
+        "question": "What second question did he start asking before buying something new?",
+        "options": [
+          "Could this be borrowed, repaired, or found secondhand first?",
+          "Is it on sale?",
+          "Will my friends approve?",
+          "Is it the cheapest option?"
+        ],
+        "correctIndex": 0,
+        "explanation": "He now asks whether the item could be borrowed, repaired, or found secondhand before buying new."
+      },
+      {
+        "question": "How does the narrator describe his overall stance now?",
+        "options": [
+          "Not anti-consumption, but more deliberate about what a purchase is standing in for",
+          "Completely against shopping",
+          "Unchanged from before",
+          "Focused only on saving money"
+        ],
+        "correctIndex": 0,
+        "explanation": "He clarifies he isn't anti-consumption, just more aware of what purchases are quietly standing in for."
+      },
+      {
+        "question": "Why did the kitchen-gadget choice matter?",
+        "options": [
+          "Both gadgets were defective",
+          "The shop refused returns",
+          "She needed new equipment",
+          "It revealed how automatic shopping had become"
+        ],
+        "correctIndex": 3,
+        "explanation": "The unnecessary decision exposed an unexamined ritual."
+      },
+      {
+        "question": "What happened after impulse items left the checkout setting?",
+        "options": [
+          "They became more valuable",
+          "They were always unavailable",
+          "Most quickly lost their appeal",
+          "Friends requested them"
+        ],
+        "correctIndex": 2,
+        "explanation": "Distance from the immediate reward changed desire."
+      },
+      {
+        "question": "Which feelings had shopping sometimes soothed?",
+        "options": [
+          "Hunger, excitement, and pride",
+          "Boredom, stress, and loneliness",
+          "Fear, illness, and anger",
+          "Curiosity, gratitude, and hope"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator names discomforts hidden beneath consumption."
+      },
+      {
+        "question": "Why is borrowing or repairing less attractive?",
+        "options": [
+          "It is always more expensive",
+          "It creates more waste",
+          "It requires buying two items",
+          "It is slower and sometimes inconvenient"
+        ],
+        "correctIndex": 3,
+        "explanation": "Convenience had supported automatic new purchases."
+      },
+      {
+        "question": "What balanced position does the narrator reach?",
+        "options": [
+          "Never purchase non-essential items",
+          "Return every item after a week",
+          "Buy deliberately rather than reject all enjoyment",
+          "Treat shopping as emotional care"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator is not anti-consumption, but seeks conscious decisions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-daily-05",
@@ -144,33 +606,150 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Mira", "gender": "female" },
-      { "name": "Ibu Tuti", "gender": "female" }
+      {
+        "name": "Mira",
+        "gender": "female"
+      },
+      {
+        "name": "Ibu Tuti",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Mira: [gentle but firm] Mom, I know you mean well, but rearranging my kitchen while I'm at work isn't something I asked for.",
-      "Ibu Tuti: [wounded] I was only trying to help. Everything seemed so disorganized, and it took no time at all to fix.",
-      "Mira: [patient] I understand the intention, truly, but it wasn't disorganized to me, it simply worked differently than your system does.",
-      "Ibu Tuti: [defensive] In my day, a tidy kitchen meant everything had its proper place, visible and easy to reach.",
-      "Mira: [thoughtful] I don't disagree with that in principle, I just need to be the one deciding where things belong in my own home.",
-      "Ibu Tuti: [quieter] I suppose I still think of this as somewhat my responsibility, even though you've had your own place for years now.",
-      "Mira: [warm] That habit makes sense, given how long you looked after everything for all of us growing up.",
-      "Ibu Tuti: [honest] It's difficult, letting go of that role. Helping felt like the one thing I could still offer easily.",
-      "Mira: [reassuring] You offer plenty, Mom, just not necessarily by rearranging cupboards without mentioning it first.",
-      "Ibu Tuti: [half-laughing] Fair enough. What would you actually welcome, then, if not reorganizing your kitchen?",
-      "Mira: [thoughtful] Honestly, just visiting, cooking together sometimes, or even just telling me your ideas instead of implementing them while I'm out.",
-      "Ibu Tuti: [considering] I could do that. Ask first, rather than assume you'd be grateful for the surprise.",
-      "Mira: [smiling] Exactly. And who knows, sometimes I might actually agree with your ideas, once I've had a say in them.",
-      "Ibu Tuti: [warmly] Deal, then. Though I reserve the right to gently mention the spice rack every so often.",
-      "Mira: [laughing] Mention away. Just don't rearrange it before I've had my coffee."
+      "Mira: [thoughtful] Mom, I know you mean well, but rearranging my kitchen while I'm at work isn't something I asked for.",
+      "Ibu Tuti: I was only trying to help. Everything seemed so disorganized, and it took no time at all to fix.",
+      "Mira: [carefully] I understand the intention, truly, but it wasn't disorganized to me, it simply worked differently than your system does.",
+      "Ibu Tuti: In my day, a tidy kitchen meant everything had its proper place, visible and easy to reach.",
+      "Mira: [reflective] I don't disagree with that in principle, I just need to be the one deciding where things belong in my own home.",
+      "Ibu Tuti: I suppose I still think of this as somewhat my responsibility, even though you've had your own place for years now.",
+      "Mira: [honestly] That habit makes sense, given how long you looked after everything for all of us growing up.",
+      "Ibu Tuti: It's difficult, letting go of that role. Helping felt like the one thing I could still offer easily.",
+      "Mira: [gently] You offer plenty, Mom, just not necessarily by rearranging cupboards without mentioning it first.",
+      "Ibu Tuti: Fair enough. What would you actually welcome, then, if not reorganizing your kitchen?",
+      "Mira: [calmly] Honestly, just visiting, cooking together sometimes, or even just telling me your ideas instead of implementing them while I'm out.",
+      "Ibu Tuti: I could do that. Ask first, rather than assume you'd be grateful for the surprise.",
+      "Mira: [encouraging] Exactly. And who knows, sometimes I might actually agree with your ideas, once I've had a say in them.",
+      "Ibu Tuti: Deal, then. Though I reserve the right to gently mention the spice rack every so often.",
+      "Mira: [seriously] Mention away. Just don't rearrange it before I've had my coffee."
     ],
     "quiz": [
-      { "question": "What specifically bothered Mira about her mother's visit?", "options": ["Her mother criticized her cooking", "Her mother rearranged her kitchen while she was at work, without asking", "Her mother stayed too long", "Her mother invited guests over"], "correctIndex": 1, "explanation": "Mira explains her mother rearranged the kitchen while she was at work without being asked." },
-      { "question": "How does Ibu Tuti initially justify her actions?", "options": ["She was bored", "The kitchen seemed disorganized and it took no time to fix", "Mira had asked her to do it", "She wanted to surprise Mira for a birthday"], "correctIndex": 1, "explanation": "Ibu Tuti says the kitchen seemed disorganized and that rearranging it took no time at all." },
-      { "question": "What deeper reason does Ibu Tuti admit for wanting to help?", "options": ["She has nothing else to do", "Helping felt like the one thing she could still offer easily after her caretaking role ended", "She dislikes Mira's decorating taste", "She wants to move in with Mira"], "correctIndex": 1, "explanation": "Ibu Tuti admits helping felt like the one thing she could still easily offer, tied to her old caretaking role." },
-      { "question": "What does Mira say she would actually welcome from her mother?", "options": ["More frequent kitchen reorganizing", "Visiting, cooking together, or sharing ideas instead of acting on them unasked", "Financial help", "Less contact overall"], "correctIndex": 1, "explanation": "Mira says she'd welcome visiting, cooking together, or her mother sharing ideas rather than implementing them unasked." },
-      { "question": "What compromise do they reach by the end?", "options": ["Ibu Tuti will never comment on the kitchen again", "Ibu Tuti will ask first instead of assuming, and may still gently mention the spice rack", "Mira will let her mother reorganize monthly", "They will hire a professional organizer"], "correctIndex": 1, "explanation": "Ibu Tuti agrees to ask first rather than assume, while keeping the right to gently mention things like the spice rack." }
-    ]
+      {
+        "question": "What specifically bothered Mira about her mother's visit?",
+        "options": [
+          "Her mother rearranged her kitchen while she was at work, without asking",
+          "Her mother criticized her cooking",
+          "Her mother stayed too long",
+          "Her mother invited guests over"
+        ],
+        "correctIndex": 0,
+        "explanation": "Mira explains her mother rearranged the kitchen while she was at work without being asked."
+      },
+      {
+        "question": "How does Ibu Tuti initially justify her actions?",
+        "options": [
+          "She was bored",
+          "Mira had asked her to do it",
+          "The kitchen seemed disorganized and it took no time to fix",
+          "She wanted to surprise Mira for a birthday"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ibu Tuti says the kitchen seemed disorganized and that rearranging it took no time at all."
+      },
+      {
+        "question": "What deeper reason does Ibu Tuti admit for wanting to help?",
+        "options": [
+          "She has nothing else to do",
+          "She dislikes Mira's decorating taste",
+          "Helping felt like the one thing she could still offer easily after her caretaking role ended",
+          "She wants to move in with Mira"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ibu Tuti admits helping felt like the one thing she could still easily offer, tied to her old caretaking role."
+      },
+      {
+        "question": "What does Mira say she would actually welcome from her mother?",
+        "options": [
+          "More frequent kitchen reorganizing",
+          "Financial help",
+          "Less contact overall",
+          "Visiting, cooking together, or sharing ideas instead of acting on them unasked"
+        ],
+        "correctIndex": 3,
+        "explanation": "Mira says she'd welcome visiting, cooking together, or her mother sharing ideas rather than implementing them unasked."
+      },
+      {
+        "question": "What compromise do they reach by the end?",
+        "options": [
+          "Ibu Tuti will never comment on the kitchen again",
+          "Ibu Tuti will ask first instead of assuming, and may still gently mention the spice rack",
+          "Mira will let her mother reorganize monthly",
+          "They will hire a professional organizer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ibu Tuti agrees to ask first rather than assume, while keeping the right to gently mention things like the spice rack."
+      },
+      {
+        "question": "Why did Ibu Tuti see the kitchen as her responsibility?",
+        "options": [
+          "Caregiving had defined her role for many years",
+          "Mira had asked for daily help",
+          "The kitchen belonged to her",
+          "She managed the building"
+        ],
+        "correctIndex": 0,
+        "explanation": "Letting go of a long family role felt difficult."
+      },
+      {
+        "question": "What distinction does Mira make about organisation?",
+        "options": [
+          "Visible items are always untidy",
+          "Parents should design every kitchen",
+          "Coffee determines cupboard order",
+          "A different system is not necessarily disorder"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her arrangement worked even if it differed from her mother's."
+      },
+      {
+        "question": "Why does Mira acknowledge her mother's intention?",
+        "options": [
+          "She agrees the kitchen was disorganised",
+          "She wants a boundary without rejecting the relationship",
+          "She plans to move home",
+          "She needs housekeeping lessons"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mira validates care while protecting authority over her home."
+      },
+      {
+        "question": "What kind of help would respect Mira's autonomy?",
+        "options": [
+          "Rearrange cupboards during work",
+          "Replace every spice container",
+          "Visit only when invited to clean",
+          "Offer ideas and wait for permission"
+        ],
+        "correctIndex": 3,
+        "explanation": "Asking first turns surprise action into collaboration."
+      },
+      {
+        "question": "What does the spice-rack joke show at the end?",
+        "options": [
+          "The conflict remains unresolved",
+          "They can keep warmth while holding the boundary",
+          "Ibu Tuti refuses to change",
+          "Mira dislikes all advice"
+        ],
+        "correctIndex": 1,
+        "explanation": "Humour follows a clear agreement to ask before acting."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-daily-06",
@@ -179,30 +758,144 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [candid] Everyone talks about starting a habit, far fewer people talk honestly about the tedious middle stretch where motivation has already evaporated.",
-      "Narrator: [reflective] I've started early mornings, cold showers, and reading routines more times than I can comfortably admit, each one abandoned within a fortnight.",
-      "Narrator: [analytical] What finally shifted things wasn't a burst of willpower, but a rather unglamorous realization: I'd been relying on motivation to do work that discipline was meant for.",
-      "Narrator: [honest] Motivation, it turns out, is fickle. It shows up conveniently when a habit is new and exciting, then vanishes the moment novelty wears off.",
-      "Narrator: [thoughtful] Discipline, by contrast, doesn't care how I feel on a given morning, which initially sounded bleak but turned out to be oddly liberating.",
-      "Narrator: [wry] I stopped waiting to feel ready and instead built a routine so small it would have been embarrassing to skip.",
-      "Narrator: [honest] Ten push-ups, not fifty. One page, not a chapter. The smallness felt almost insulting to my ambition, yet it's precisely why it stuck.",
-      "Narrator: [reflective] There's a particular kind of boredom that comes with genuine consistency, one that no motivational speech ever quite prepares you for.",
-      "Narrator: [thoughtful] Some mornings the routine felt pointless, mechanical even, and I did it anyway, which is a sentence I never expected to say with any pride.",
-      "Narrator: [warmly] Slowly, without any dramatic turning point I could point to later, the routine stopped requiring negotiation with myself entirely.",
-      "Narrator: [honest] I still have days I'd rather skip it, that hasn't disappeared and probably never fully will, no matter how consistent I become.",
-      "Narrator: [practical] What's changed is that showing up no longer depends on whether I feel inspired, only on whether the routine has already begun.",
+      "Narrator: [thoughtful] Everyone talks about starting a habit, far fewer people talk honestly about the tedious middle stretch where motivation has already evaporated.",
+      "Narrator: I've started early mornings, cold showers, and reading routines more times than I can comfortably admit, each one abandoned within a fortnight.",
+      "Narrator: [carefully] What finally shifted things wasn't a burst of willpower, but a rather unglamorous realization: I'd been relying on motivation to do work that discipline was meant for.",
+      "Narrator: Motivation, it turns out, is fickle. It shows up conveniently when a habit is new and exciting, then vanishes the moment novelty wears off.",
+      "Narrator: [reflective] Discipline, by contrast, doesn't care how I feel on a given morning, which initially sounded bleak but turned out to be oddly liberating.",
+      "Narrator: I stopped waiting to feel ready and instead built a routine so small it would have been embarrassing to skip.",
+      "Narrator: [honestly] Ten push-ups, not fifty. One page, not a chapter. The smallness felt almost insulting to my ambition, yet it's precisely why it stuck.",
+      "Narrator: There's a particular kind of boredom that comes with genuine consistency, one that no motivational speech ever quite prepares you for.",
+      "Narrator: [gently] Some mornings the routine felt pointless, mechanical even, and I did it anyway, which is a sentence I never expected to say with any pride.",
+      "Narrator: Slowly, without any dramatic turning point I could point to later, the routine stopped requiring negotiation with myself entirely.",
+      "Narrator: [calmly] I still have days I'd rather skip it, that hasn't disappeared and probably never fully will, no matter how consistent I become.",
+      "Narrator: What's changed is that showing up no longer depends on whether I feel inspired, only on whether the routine has already begun.",
       "Narrator: [encouraging] If your habits keep collapsing after a promising start, the problem likely isn't your willpower, it's that you're still waiting to feel like it."
     ],
     "quiz": [
-      { "question": "What does the narrator say most people fail to discuss about habits?", "options": ["How to start them", "The tedious middle stretch after motivation has evaporated", "Where to find motivation", "How expensive habits can be"], "correctIndex": 1, "explanation": "He says few people talk about the tedious middle stretch where motivation has already disappeared." },
-      { "question": "What key realization finally shifted his approach?", "options": ["He needed more willpower", "He'd been relying on motivation for work that discipline was meant for", "He needed a personal trainer", "He should wake up earlier"], "correctIndex": 1, "explanation": "He realized he was relying on motivation to do work that discipline should have been handling." },
-      { "question": "How does the narrator describe the difference between motivation and discipline?", "options": ["They are the same thing", "Motivation is fickle and disappears after novelty wears off, while discipline doesn't depend on feelings", "Discipline is easier to develop", "Motivation lasts longer than discipline"], "correctIndex": 1, "explanation": "He explains motivation is fickle and vanishes once novelty fades, while discipline doesn't care how he feels." },
-      { "question": "What strategy did he use to make the routine stick?", "options": ["Making the routine as ambitious as possible", "Shrinking the routine so small it would be embarrassing to skip", "Rewarding himself with treats", "Telling everyone about his goals publicly"], "correctIndex": 1, "explanation": "He built a routine so small, like ten push-ups instead of fifty, that skipping it felt embarrassing." },
-      { "question": "According to the narrator, what is the real problem when habits collapse after a promising start?", "options": ["Not having enough time", "Still waiting to feel like doing it, rather than just starting", "Poor genetics", "Lack of money for equipment"], "correctIndex": 1, "explanation": "He concludes the real problem is waiting to feel inspired instead of simply beginning regardless of mood." }
-    ]
+      {
+        "question": "What does the narrator say most people fail to discuss about habits?",
+        "options": [
+          "The tedious middle stretch after motivation has evaporated",
+          "How to start them",
+          "Where to find motivation",
+          "How expensive habits can be"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says few people talk about the tedious middle stretch where motivation has already disappeared."
+      },
+      {
+        "question": "What key realization finally shifted his approach?",
+        "options": [
+          "He needed more willpower",
+          "He'd been relying on motivation for work that discipline was meant for",
+          "He needed a personal trainer",
+          "He should wake up earlier"
+        ],
+        "correctIndex": 1,
+        "explanation": "He realized he was relying on motivation to do work that discipline should have been handling."
+      },
+      {
+        "question": "How does the narrator describe the difference between motivation and discipline?",
+        "options": [
+          "They are the same thing",
+          "Discipline is easier to develop",
+          "Motivation is fickle and disappears after novelty wears off, while discipline doesn't depend on feelings",
+          "Motivation lasts longer than discipline"
+        ],
+        "correctIndex": 2,
+        "explanation": "He explains motivation is fickle and vanishes once novelty fades, while discipline doesn't care how he feels."
+      },
+      {
+        "question": "What strategy did he use to make the routine stick?",
+        "options": [
+          "Shrinking the routine so small it would be embarrassing to skip",
+          "Making the routine as ambitious as possible",
+          "Rewarding himself with treats",
+          "Telling everyone about his goals publicly"
+        ],
+        "correctIndex": 0,
+        "explanation": "He built a routine so small, like ten push-ups instead of fifty, that skipping it felt embarrassing."
+      },
+      {
+        "question": "According to the narrator, what is the real problem when habits collapse after a promising start?",
+        "options": [
+          "Not having enough time",
+          "Poor genetics",
+          "Lack of money for equipment",
+          "Still waiting to feel like doing it, rather than just starting"
+        ],
+        "correctIndex": 3,
+        "explanation": "He concludes the real problem is waiting to feel inspired instead of simply beginning regardless of mood."
+      },
+      {
+        "question": "Why did the narrator's earlier habits collapse?",
+        "options": [
+          "They were too inexpensive",
+          "They depended on fading motivation",
+          "They lasted several years",
+          "They had no clear benefit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Novelty vanished before a stable routine formed."
+      },
+      {
+        "question": "What made the smaller routine effective?",
+        "options": [
+          "It produced immediate major results",
+          "It required public accountability",
+          "It removed every difficult day",
+          "It was easy enough to repeat consistently"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tiny actions lowered the barrier to showing up."
+      },
+      {
+        "question": "Why did small goals initially feel insulting?",
+        "options": [
+          "They required unfamiliar equipment",
+          "They were suggested by a stranger",
+          "They seemed beneath the narrator's ambition",
+          "They took longer than chapters"
+        ],
+        "correctIndex": 2,
+        "explanation": "The scale looked unimpressive despite being sustainable."
+      },
+      {
+        "question": "What change occurred without a dramatic turning point?",
+        "options": [
+          "Motivation became permanent",
+          "Boredom disappeared completely",
+          "Every goal expanded automatically",
+          "The routine stopped requiring constant self-negotiation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Consistency gradually reduced daily debate."
+      },
+      {
+        "question": "Which plan best follows the narrator's advice?",
+        "options": [
+          "Wait until reading feels exciting",
+          "Read one page daily before increasing the target",
+          "Begin with five books weekly",
+          "Change the habit every fortnight"
+        ],
+        "correctIndex": 1,
+        "explanation": "A modest repeatable action builds discipline."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-daily-07",
@@ -211,33 +904,585 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sinta", "gender": "female" },
-      { "name": "Yudha", "gender": "male" }
+      {
+        "name": "Sinta",
+        "gender": "female"
+      },
+      {
+        "name": "Yudha",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Sinta: [tired but composed] Yudha, I need to bring something up, and I'd rather do it directly than let it fester any longer.",
-      "Yudha: [concerned] Of course, go ahead. You sound like something's genuinely been bothering you for a while.",
-      "Sinta: [honest] The messages after nine at night, asking me to review documents or answer questions that could easily wait until morning.",
-      "Yudha: [surprised] I hadn't realized it was landing that way. I just tend to send things the moment I think of them.",
-      "Sinta: [gentle but firm] I understand that instinct, but receiving them immediately makes it hard for me to actually switch off from work.",
-      "Yudha: [reflective] That's fair, and honestly, I wouldn't want someone doing the same to me if our positions were reversed.",
-      "Sinta: [practical] Could we agree that anything non-urgent gets scheduled to send the next morning, rather than the instant it comes to mind?",
-      "Yudha: [agreeing] That seems entirely reasonable. Most of what I send at night genuinely isn't urgent, if I'm being honest with myself.",
-      "Sinta: [appreciative] I appreciate you hearing that without getting defensive, it's not always an easy thing to bring up with a colleague.",
-      "Yudha: [thoughtful] I'd rather know directly than have you quietly dreading messages from me every evening.",
-      "Sinta: [continuing] There's also the assumption that I'll reply instantly, even outside working hours, which has quietly become the expectation somehow.",
-      "Yudha: [conceding] I can see how that builds up over time, even if no single message felt unreasonable on its own.",
-      "Sinta: [firm] Exactly, it's the accumulation that wears a person down, not any one particular request.",
-      "Yudha: [determined] Going forward, I'll use the scheduled send feature, and I'll try to actually distinguish urgent from merely convenient.",
-      "Sinta: [warmly] That would genuinely help. And if something truly can't wait, just say so explicitly, rather than leaving me to guess.",
-      "Yudha: [sincere] Understood. Thanks for trusting me enough to say this directly instead of just quietly resenting it."
+      "Sinta: [thoughtful] Yudha, I need to bring something up, and I'd rather do it directly than let it fester any longer.",
+      "Yudha: Of course, go ahead. You sound like something's genuinely been bothering you for a while.",
+      "Sinta: [carefully] The messages after nine at night, asking me to review documents or answer questions that could easily wait until morning.",
+      "Yudha: I hadn't realized it was landing that way. I just tend to send things the moment I think of them.",
+      "Sinta: [reflective] I understand that instinct, but receiving them immediately makes it hard for me to actually switch off from work.",
+      "Yudha: That's fair, and honestly, I wouldn't want someone doing the same to me if our positions were reversed.",
+      "Sinta: [honestly] Could we agree that anything non-urgent gets scheduled to send the next morning, rather than the instant it comes to mind?",
+      "Yudha: That seems entirely reasonable. Most of what I send at night genuinely isn't urgent, if I'm being honest with myself.",
+      "Sinta: [gently] I appreciate you hearing that without getting defensive, it's not always an easy thing to bring up with a colleague.",
+      "Yudha: I'd rather know directly than have you quietly dreading messages from me every evening.",
+      "Sinta: [calmly] There's also the assumption that I'll reply instantly, even outside working hours, which has quietly become the expectation somehow.",
+      "Yudha: I can see how that builds up over time, even if no single message felt unreasonable on its own.",
+      "Sinta: [encouraging] Exactly, it's the accumulation that wears a person down, not any one particular request.",
+      "Yudha: Going forward, I'll use the scheduled send feature, and I'll try to actually distinguish urgent from merely convenient.",
+      "Sinta: [seriously] That would genuinely help. And if something truly can't wait, just say so explicitly, rather than leaving me to guess.",
+      "Yudha: Understood. Thanks for trusting me enough to say this directly instead of just quietly resenting it."
     ],
     "quiz": [
-      { "question": "What specifically bothers Sinta about Yudha's behavior?", "options": ["He never replies to her messages", "He sends work messages after nine at night about things that could wait", "He talks too much in meetings", "He assigns her too many tasks"], "correctIndex": 1, "explanation": "Sinta explains that messages after nine at night asking her to review things could easily wait until morning." },
-      { "question": "Why does Yudha say he sends messages at that time?", "options": ["He wants to test her responsiveness", "He tends to send things the moment he thinks of them", "His manager requires it", "He forgets during the day"], "correctIndex": 1, "explanation": "Yudha admits he just tends to send things the moment he thinks of them, without considering the timing." },
-      { "question": "What solution does Sinta propose?", "options": ["Yudha should stop messaging her entirely", "Non-urgent messages should be scheduled to send the next morning", "She will stop checking messages after work", "They should switch to phone calls only"], "correctIndex": 1, "explanation": "Sinta proposes scheduling non-urgent messages to send the next morning instead of immediately." },
-      { "question": "What deeper issue does Sinta raise beyond the timing itself?", "options": ["Yudha's tone in messages", "The assumption that she'll reply instantly outside working hours", "Yudha's handwriting", "The number of meetings scheduled"], "correctIndex": 1, "explanation": "She raises the assumption that she'll reply instantly even outside working hours, which has become an unspoken expectation." },
-      { "question": "What does Yudha commit to doing for genuinely urgent matters?", "options": ["Calling her immediately every time", "Explicitly stating when something truly can't wait, rather than leaving her to guess", "Ignoring urgent matters until morning regardless", "Asking a manager to intervene"], "correctIndex": 1, "explanation": "Sinta asks him to say explicitly when something truly can't wait, and Yudha agrees to distinguish urgent from convenient." }
-    ]
+      {
+        "question": "What specifically bothers Sinta about Yudha's behavior?",
+        "options": [
+          "He never replies to her messages",
+          "He talks too much in meetings",
+          "He assigns her too many tasks",
+          "He sends work messages after nine at night about things that could wait"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sinta explains that messages after nine at night asking her to review things could easily wait until morning."
+      },
+      {
+        "question": "Why does Yudha say he sends messages at that time?",
+        "options": [
+          "He wants to test her responsiveness",
+          "He tends to send things the moment he thinks of them",
+          "His manager requires it",
+          "He forgets during the day"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yudha admits he just tends to send things the moment he thinks of them, without considering the timing."
+      },
+      {
+        "question": "What solution does Sinta propose?",
+        "options": [
+          "Non-urgent messages should be scheduled to send the next morning",
+          "Yudha should stop messaging her entirely",
+          "She will stop checking messages after work",
+          "They should switch to phone calls only"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sinta proposes scheduling non-urgent messages to send the next morning instead of immediately."
+      },
+      {
+        "question": "What deeper issue does Sinta raise beyond the timing itself?",
+        "options": [
+          "Yudha's tone in messages",
+          "Yudha's handwriting",
+          "The number of meetings scheduled",
+          "The assumption that she'll reply instantly outside working hours"
+        ],
+        "correctIndex": 3,
+        "explanation": "She raises the assumption that she'll reply instantly even outside working hours, which has become an unspoken expectation."
+      },
+      {
+        "question": "What does Yudha commit to doing for genuinely urgent matters?",
+        "options": [
+          "Calling her immediately every time",
+          "Explicitly stating when something truly can't wait, rather than leaving her to guess",
+          "Ignoring urgent matters until morning regardless",
+          "Asking a manager to intervene"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sinta asks him to say explicitly when something truly can't wait, and Yudha agrees to distinguish urgent from convenient."
+      },
+      {
+        "question": "Why do Yudha's messages affect Sinta even without replies?",
+        "options": [
+          "They delete her personal messages",
+          "They contain confidential data",
+          "Their arrival keeps work mentally present",
+          "They change her working hours"
+        ],
+        "correctIndex": 2,
+        "explanation": "Immediate notifications make switching off difficult."
+      },
+      {
+        "question": "What does Yudha realise about most late messages?",
+        "options": [
+          "They require instant approval",
+          "They belong to another project",
+          "They are convenient, not truly urgent",
+          "They should be sent publicly"
+        ],
+        "correctIndex": 2,
+        "explanation": "He accepts that timing reflects his habit, not necessity."
+      },
+      {
+        "question": "Why does Sinta call accumulation the problem?",
+        "options": [
+          "Many small requests create a lasting expectation",
+          "One message caused a deadline failure",
+          "Each document was very long",
+          "Yudha sends only weekly"
+        ],
+        "correctIndex": 0,
+        "explanation": "The pattern wears her down even when single messages seem minor."
+      },
+      {
+        "question": "How will scheduled sending improve the situation?",
+        "options": [
+          "Urgent work disappears",
+          "Sinta never sees documents",
+          "Yudha forgets every idea",
+          "Non-urgent requests arrive during working time"
+        ],
+        "correctIndex": 3,
+        "explanation": "The feature preserves Yudha's notes without disturbing evenings."
+      },
+      {
+        "question": "What should accompany a genuine emergency message?",
+        "options": [
+          "An assumption of immediate reply",
+          "A clear statement that it cannot wait",
+          "Several repeated notifications",
+          "A request sent without context"
+        ],
+        "correctIndex": 1,
+        "explanation": "Explicit urgency prevents Sinta from having to guess."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-daily-08",
+    "title": "My Wednesday Energy Audit",
+    "level": "B2",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [conversational] I used to plan Wednesdays as if energy were unlimited. Before work, I studied vocabulary. During lunch, I answered personal messages. After work, I exercised, attended an online class, called my parents, and prepared meals for three days. Every task was sensible; the combination was not.",
+      "Narrator: By nine o'clock, I would be staring at a saucepan with no patience left. Then I blamed myself for lacking discipline and tried to design an even stricter schedule.",
+      "Narrator: [reflective] Last month, I changed the question. Instead of asking, “How much can I fit into Wednesday?” I recorded when my concentration rose and fell. I discovered that I could handle demanding work early, but decisions became slower after a long commute.",
+      "Narrator: I moved language study to Tuesday morning, ordered groceries for collection, and made Wednesday's dinner deliberately simple. I also protected ten quiet minutes before the evening class. The timetable looked less impressive, yet I actually followed it.",
+      "Narrator: [honestly] The hardest change was leaving one empty block. At first, it felt wasteful. In practice, that space absorbed delays, prayer preparation, an unexpected call, or ordinary tiredness without destroying the rest of the evening.",
+      "Narrator: My weekly goals did not disappear. I spread them according to their importance and the kind of attention they required. Some tasks needed a deadline; others only needed a regular place.",
+      "Narrator: [calmly] I now review the schedule on Saturday, not in the middle of a stressful Wednesday. If the same task is repeatedly skipped, I either make it smaller, move it, or admit that it is not a priority this month.",
+      "Narrator: The audit taught me that a realistic routine is not an excuse for laziness. It is a promise made with honest information about time, responsibility, and human limits."
+    ],
+    "quiz": [
+      {
+        "question": "What made the original Wednesday plan unrealistic?",
+        "options": [
+          "Too many sensible tasks competed for limited energy",
+          "Every task required travel",
+          "The narrator disliked vocabulary",
+          "Work ended after midnight"
+        ],
+        "correctIndex": 0,
+        "explanation": "The problem was the combined load, not each activity."
+      },
+      {
+        "question": "How did the narrator respond to exhaustion at first?",
+        "options": [
+          "Cancelled all weekly goals",
+          "Asked others to cook",
+          "Designed an even stricter schedule",
+          "Moved work to weekends"
+        ],
+        "correctIndex": 2,
+        "explanation": "Self-blame led to more pressure rather than diagnosis."
+      },
+      {
+        "question": "What did the energy audit measure?",
+        "options": [
+          "Only the time spent exercising",
+          "Changes in concentration across the day",
+          "The cost of weekly groceries",
+          "The number of phone messages"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator tracked attention rather than task quantity."
+      },
+      {
+        "question": "When was demanding work easier?",
+        "options": [
+          "After the long commute",
+          "During late dinner",
+          "Immediately before class",
+          "Earlier in the day"
+        ],
+        "correctIndex": 3,
+        "explanation": "Concentration was strongest before travel fatigue."
+      },
+      {
+        "question": "Which task moved to Tuesday?",
+        "options": [
+          "Language study",
+          "Meal preparation",
+          "The online class",
+          "Calling parents"
+        ],
+        "correctIndex": 0,
+        "explanation": "Moving study reduced Wednesday's cognitive load."
+      },
+      {
+        "question": "Why did an empty block prove useful?",
+        "options": [
+          "It increased the number of deadlines",
+          "It prevented prayer preparation",
+          "It guaranteed perfect energy",
+          "It absorbed delays and ordinary needs"
+        ],
+        "correctIndex": 3,
+        "explanation": "Margin protected the rest of the schedule from disruption."
+      },
+      {
+        "question": "How are weekly goals organised now?",
+        "options": [
+          "In alphabetical order",
+          "By importance and required attention",
+          "Around social media reminders",
+          "Only on Wednesdays"
+        ],
+        "correctIndex": 1,
+        "explanation": "Different goals receive different kinds of time."
+      },
+      {
+        "question": "When does the narrator review the routine?",
+        "options": [
+          "Every Wednesday at nine",
+          "During the commute",
+          "On Saturday, outside the stressful day",
+          "After each skipped task"
+        ],
+        "correctIndex": 2,
+        "explanation": "Distance supports calmer adjustment."
+      },
+      {
+        "question": "What happens to a repeatedly skipped task?",
+        "options": [
+          "It is reduced, moved, or deprioritised",
+          "It automatically becomes urgent",
+          "It replaces sleep",
+          "It is assigned to family"
+        ],
+        "correctIndex": 0,
+        "explanation": "Repeated failure is treated as planning information."
+      },
+      {
+        "question": "What does the narrator mean by a realistic routine?",
+        "options": [
+          "An excuse to avoid responsibility",
+          "A commitment based on honest limits",
+          "A timetable with no empty spaces",
+          "A plan that never changes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Realism supports responsibility rather than laziness."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-daily-09",
+    "title": "The Morning the Calendar Stayed Closed",
+    "level": "B2",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [softly] On the first morning of my annual leave, I reached for my phone before I had even sat up. Three work messages were waiting, along with a calendar reminder I had forgotten to disable. My hand moved towards the reply box automatically.",
+      "Narrator: Then I remembered why I had taken the day off. My younger sister was visiting after months abroad, and we had planned breakfast with our parents. Nothing in the messages was urgent; I was simply accustomed to being available.",
+      "Narrator: [thoughtful] I turned off work notifications and left the phone in a drawer. At breakfast, I noticed details I would usually miss: my father's careful way of pouring tea, my sister translating a joke she had learned, and the long pause before my mother admitted she had been feeling lonely.",
+      "Narrator: We changed our plan for the afternoon. Instead of visiting a crowded attraction, we cooked together and walked to a nearby park. The day was ordinary, which was exactly why it mattered.",
+      "Narrator: [honestly] At four o'clock, curiosity pulled me back to the drawer. I checked once. A colleague had solved the issue without me, using the handover note I had prepared. The team had not collapsed because I was offline.",
+      "Narrator: That small discovery exposed a habit I had called responsibility. Sometimes it was responsibility; sometimes it was anxiety about being replaceable. The two feelings had been sharing the same label.",
+      "Narrator: [reflective] I cannot ignore genuine emergencies, and not every job allows complete disconnection. But clear handovers, agreed contact rules, and honest leave dates make rest possible without abandoning others.",
+      "Narrator: That evening, I reopened the calendar and added one recurring appointment: a device-free meal with family. It was not a dramatic life transformation. It was a boundary I could actually keep."
+    ],
+    "quiz": [
+      {
+        "question": "What automatic action began the narrator's leave?",
+        "options": [
+          "Reaching for work messages",
+          "Calling her sister",
+          "Opening the breakfast menu",
+          "Changing the park plan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Work availability had become a reflex."
+      },
+      {
+        "question": "Why did she decide not to reply?",
+        "options": [
+          "Her phone battery had failed",
+          "A manager cancelled the project",
+          "None of the messages was urgent",
+          "Her sister took the phone"
+        ],
+        "correctIndex": 2,
+        "explanation": "The messages did not justify interrupting leave."
+      },
+      {
+        "question": "What did the device-free breakfast reveal?",
+        "options": [
+          "Her father wanted a new phone",
+          "Her mother had been feeling lonely",
+          "Her sister planned to leave early",
+          "The family disliked the meal"
+        ],
+        "correctIndex": 1,
+        "explanation": "Greater attention made room for a meaningful admission."
+      },
+      {
+        "question": "How did the family simplify the afternoon?",
+        "options": [
+          "They visited two attractions",
+          "They returned to work",
+          "They travelled to another city",
+          "They cooked and walked nearby"
+        ],
+        "correctIndex": 3,
+        "explanation": "They replaced a crowded outing with ordinary time together."
+      },
+      {
+        "question": "What did the handover note enable?",
+        "options": [
+          "A colleague solved the issue independently",
+          "The narrator received a promotion",
+          "The team cancelled leave",
+          "Her sister answered work messages"
+        ],
+        "correctIndex": 0,
+        "explanation": "Preparation allowed work to continue without her."
+      },
+      {
+        "question": "What anxiety had been labelled responsibility?",
+        "options": [
+          "Concern about family loneliness",
+          "Worry about public transport",
+          "Uncertainty about cooking",
+          "Fear of being replaceable"
+        ],
+        "correctIndex": 3,
+        "explanation": "She sees that constant availability also served insecurity."
+      },
+      {
+        "question": "What limit does the narrator acknowledge?",
+        "options": [
+          "Leave should never include family",
+          "Some roles cannot disconnect completely",
+          "Handover notes always fail",
+          "Emergencies can wait indefinitely"
+        ],
+        "correctIndex": 1,
+        "explanation": "She avoids making her experience a universal rule."
+      },
+      {
+        "question": "Which practice makes leave more responsible?",
+        "options": [
+          "Checking every hour",
+          "Hiding the leave date",
+          "Clear handovers and agreed contact rules",
+          "Leaving tasks undocumented"
+        ],
+        "correctIndex": 2,
+        "explanation": "Boundaries work when genuine emergencies have a defined path."
+      },
+      {
+        "question": "What recurring appointment did she add?",
+        "options": [
+          "A device-free family meal",
+          "A daily work review",
+          "A crowded attraction",
+          "An evening calendar check"
+        ],
+        "correctIndex": 0,
+        "explanation": "The modest boundary was designed to last."
+      },
+      {
+        "question": "What is the main contrast in the episode?",
+        "options": [
+          "Family visits versus employment",
+          "Being available versus being responsibly prepared",
+          "Cooking versus walking",
+          "Phones versus paper calendars"
+        ],
+        "correctIndex": 1,
+        "explanation": "Preparation allowed absence without abandoning duties."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-daily-10",
+    "title": "Can a Routine Bend Without Breaking?",
+    "level": "B2",
+    "themeId": "daily",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [brightly] You have followed the same morning routine for six months. Then your work shift changes. Is the routine finished?",
+      "Guest: Only if we confuse the routine with its exact clock time. The purpose may survive even when the sequence changes.",
+      "Host: Give us an example.",
+      "Guest: I used to read for twenty minutes after dawn, then prepare breakfast. With an earlier commute, I now read on the train and prepare part of breakfast the night before.",
+      "Host: [curious] Does that make the habit weaker?",
+      "Guest: Not necessarily. I kept the essential action and changed its location. A habit becomes fragile when only one perfect set of conditions can support it.",
+      "Host: Some people respond to disruption by creating a very detailed new plan.",
+      "Guest: [carefully] Detail can help, but I begin with three anchors: prayer times, fixed responsibilities, and sleep. Then I place flexible goals around them instead of squeezing everything into the remaining minutes.",
+      "Host: What happens on a genuinely chaotic day?",
+      "Guest: I use a minimum version. Ten minutes of study may replace thirty; a simple meal may replace a new recipe. The minimum keeps continuity without pretending every day has equal capacity.",
+      "Host: Is there a danger of lowering the standard forever?",
+      "Guest: Yes, which is why I review after two weeks. If the reduced version has become permanent, I decide consciously whether to rebuild it or change the goal.",
+      "Host: [reflective] So flexibility still requires honesty.",
+      "Guest: Exactly. Flexibility is not quietly abandoning an intention. It is adapting the method while keeping the purpose visible.",
+      "Host: What is one sign that a routine needs redesign rather than more effort?",
+      "Guest: When it repeatedly creates avoidable conflict with health, worship, family duties, or essential work. A useful routine supports a life; it should not demand that life serve the spreadsheet."
+    ],
+    "quiz": [
+      {
+        "question": "Why can a routine survive a shift change?",
+        "options": [
+          "Its purpose can outlast its exact timing",
+          "Work shifts never affect habits",
+          "Every activity moves to morning",
+          "A routine requires no planning"
+        ],
+        "correctIndex": 0,
+        "explanation": "The guest separates essential action from clock time."
+      },
+      {
+        "question": "Where does the guest now read?",
+        "options": [
+          "At the office desk",
+          "During dinner",
+          "On the train",
+          "Before sleeping"
+        ],
+        "correctIndex": 2,
+        "explanation": "The location changed after the earlier commute."
+      },
+      {
+        "question": "What makes a habit fragile?",
+        "options": [
+          "Using a minimum version",
+          "Dependence on one perfect set of conditions",
+          "Reviewing it regularly",
+          "Preparing food early"
+        ],
+        "correctIndex": 1,
+        "explanation": "Flexible context supports continuity."
+      },
+      {
+        "question": "Which three anchors guide redesign?",
+        "options": [
+          "Shopping, travel, and hobbies",
+          "Messages, meetings, and exercise",
+          "Weather, money, and praise",
+          "Prayer, fixed duties, and sleep"
+        ],
+        "correctIndex": 3,
+        "explanation": "The guest places flexible goals around essential anchors."
+      },
+      {
+        "question": "What does a minimum version protect?",
+        "options": [
+          "Continuity on a difficult day",
+          "The original time target",
+          "A perfect performance record",
+          "Unlimited capacity"
+        ],
+        "correctIndex": 0,
+        "explanation": "A smaller action keeps the intention active."
+      },
+      {
+        "question": "Why review the plan after two weeks?",
+        "options": [
+          "To remove every flexible goal",
+          "To increase all targets",
+          "To avoid noticing conflict",
+          "To see whether reduction has become permanent"
+        ],
+        "correctIndex": 3,
+        "explanation": "Review prevents flexibility becoming quiet abandonment."
+      },
+      {
+        "question": "What is flexibility according to the guest?",
+        "options": [
+          "Lowering every standard indefinitely",
+          "Changing the method while preserving the purpose",
+          "Waiting for ideal conditions",
+          "Ignoring fixed responsibilities"
+        ],
+        "correctIndex": 1,
+        "explanation": "The method adapts without hiding the intention."
+      },
+      {
+        "question": "When does a routine need redesign?",
+        "options": [
+          "Whenever one day is busy",
+          "When goals feel modest",
+          "When it repeatedly conflicts with essential responsibilities",
+          "When a train is available"
+        ],
+        "correctIndex": 2,
+        "explanation": "Persistent harm to health, worship, family, or work is evidence."
+      },
+      {
+        "question": "Which adjustment follows the guest's model?",
+        "options": [
+          "Prepare breakfast earlier and keep reading elsewhere",
+          "Cancel sleep to keep the sequence",
+          "Add detail after every disruption",
+          "Abandon reading after one change"
+        ],
+        "correctIndex": 0,
+        "explanation": "It preserves actions while adapting conditions."
+      },
+      {
+        "question": "What final warning does the guest give?",
+        "options": [
+          "Routines should contain no data",
+          "Life should not be forced to serve a spreadsheet",
+          "Planning always reduces worship",
+          "Every goal needs a deadline"
+        ],
+        "correctIndex": 1,
+        "explanation": "A useful routine supports real responsibilities, not the reverse."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "daily",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

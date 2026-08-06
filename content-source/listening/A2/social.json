@@ -6,31 +6,145 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [heavy] My brother and I stopped talking three years ago, after an argument about our father's business that neither of us handled well.",
-      "Narrator: [honestly] We said things that night that we probably didn't fully mean, but once the words left our mouths, we couldn't take them back.",
-      "Narrator: [reflective] Because we were both stubborn, neither of us called first, so the silence just continued, month after month, without either of us really deciding it should.",
-      "Narrator: [thoughtful] Whenever our mother mentioned his name at dinner, I would change the subject quickly, because I wasn't ready to talk about him yet.",
-      "Narrator: [honestly] Although I missed him, admitting that felt like losing an argument I was still convinced I had won.",
-      "Narrator: [softly] Then, last month, our mother got sick, and suddenly none of that old argument seemed important anymore.",
-      "Narrator: [worried] I sat by her hospital bed and thought about how quickly a family can shrink, without anyone properly noticing until it happens.",
-      "Narrator: [determined] So I wrote my brother a letter, because calling felt too sudden, and I was afraid I would lose my courage halfway through a phone call.",
-      "Narrator: [honestly] I wrote that I was sorry, not because I thought I was completely wrong, but because our relationship mattered more than being right.",
-      "Narrator: [nervous] I almost didn't send it. I actually left it on my desk for four days, reading it again each morning before work.",
-      "Narrator: [relieved] When I finally sent it, he replied within an hour, saying he had written something similar that he never had the courage to send either.",
-      "Narrator: [warmly] We met at our mother's hospital room the next day, and although the conversation was awkward at first, we both cried a little, and that helped.",
-      "Narrator: [peacefully] We still disagree about the business, honestly, and maybe we always will, but we talk every week now, and that feels like enough.",
-      "Narrator: [with a small smile] I learned that some arguments only feel important because pride keeps them alive longer than they deserve to live."
+      "Narrator: [warmly] My brother and I stopped talking three years ago, after an argument about our father's business that neither of us handled well.",
+      "Narrator: We said things that night that we probably didn't fully mean, but once the words left our mouths, we couldn't take them back.",
+      "Narrator: [thoughtful] Because we were both stubborn, neither of us called first, so the silence just continued, month after month, without either of us really deciding it should.",
+      "Narrator: Whenever our mother mentioned his name at dinner, I would change the subject quickly, because I wasn't ready to talk about him yet.",
+      "Narrator: [carefully] Although I missed him, admitting that felt like losing an argument I was still convinced I had won.",
+      "Narrator: Then, last month, our mother got sick, and suddenly none of that old argument seemed important anymore.",
+      "Narrator: [reflective] I sat by her hospital bed and thought about how quickly a family can shrink, without anyone properly noticing until it happens.",
+      "Narrator: So I wrote my brother a letter, because calling felt too sudden, and I was afraid I would lose my courage halfway through a phone call.",
+      "Narrator: [gently] I apologized for the cruel words and the long silence. I did not use the apology to demand that he accept my view of the business.",
+      "Narrator: I almost didn't send it. I actually left it on my desk for four days, reading it again each morning before work.",
+      "Narrator: [honestly] When I finally sent it, he replied within an hour, saying he had written something similar that he never had the courage to send either.",
+      "Narrator: We met at our mother's hospital room the next day, and although the conversation was awkward at first, we both cried a little, and that helped.",
+      "Narrator: [encouraging] We talk weekly now. We agreed to review the business records separately and use a neutral adviser if the dispute becomes difficult again.",
+      "Narrator: I learned that pride can prolong harm. Reconciliation needs humility, while real financial disagreements still need a fair and careful process."
     ],
     "quiz": [
-      { "question": "Why did the narrator and his brother stop talking three years ago?", "options": ["A disagreement about their father's business", "A fight over money he borrowed", "A disagreement about their mother's health", "Because his brother moved abroad"], "correctIndex": 0, "explanation": "They stopped talking after an argument about their father's business that neither handled well." },
-      { "question": "What happened last month that changed the narrator's mind?", "options": ["He lost his job", "Their mother got sick", "His brother apologized first", "He moved to a new city"], "correctIndex": 1, "explanation": "Their mother got sick, and suddenly the old argument stopped seeming important to him." },
-      { "question": "Why did the narrator choose to write a letter instead of calling?", "options": ["His brother had no phone", "Calling felt too sudden and he feared losing his courage", "Their mother suggested it", "He wanted proof in writing"], "correctIndex": 1, "explanation": "He says calling felt too sudden, and he was afraid he would lose his courage halfway through a call." },
-      { "question": "How long did the letter sit on his desk before he sent it?", "options": ["One day", "Four days", "A month", "He sent it immediately"], "correctIndex": 1, "explanation": "He left the letter on his desk for four days, reading it again each morning." },
-      { "question": "What does the narrator conclude about the argument at the end?", "options": ["It was completely his brother's fault", "Pride kept it alive longer than it deserved", "It should never be forgiven", "Business disagreements always end friendships"], "correctIndex": 1, "explanation": "He concludes some arguments only feel important because pride keeps them alive longer than they deserve." }
-    ]
+      {
+        "question": "Why did the narrator and his brother stop talking three years ago?",
+        "options": [
+          "A disagreement about their father's business",
+          "A fight over money he borrowed",
+          "A disagreement about their mother's health",
+          "Because his brother moved abroad"
+        ],
+        "correctIndex": 0,
+        "explanation": "They stopped talking after an argument about their father's business that neither handled well."
+      },
+      {
+        "question": "What happened last month that changed the narrator's mind?",
+        "options": [
+          "He lost his job",
+          "Their mother got sick",
+          "His brother apologized first",
+          "He moved to a new city"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their mother got sick, and suddenly the old argument stopped seeming important to him."
+      },
+      {
+        "question": "Why did the narrator choose to write a letter instead of calling?",
+        "options": [
+          "His brother had no phone",
+          "Their mother suggested it",
+          "Calling felt too sudden and he feared losing his courage",
+          "He wanted proof in writing"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says calling felt too sudden, and he was afraid he would lose his courage halfway through a call."
+      },
+      {
+        "question": "How long did the letter sit on his desk before he sent it?",
+        "options": [
+          "One day",
+          "A month",
+          "He sent it immediately",
+          "Four days"
+        ],
+        "correctIndex": 3,
+        "explanation": "He left the letter on his desk for four days, reading it again each morning."
+      },
+      {
+        "question": "What does the narrator conclude about the argument at the end?",
+        "options": [
+          "It was completely his brother's fault",
+          "It should never be forgiven",
+          "Pride kept it alive longer than it deserved",
+          "Business disagreements always end friendships"
+        ],
+        "correctIndex": 2,
+        "explanation": "He concludes some arguments only feel important because pride keeps them alive longer than they deserve."
+      },
+      {
+        "question": "What kept the brothers apart after the argument?",
+        "options": [
+          "A court order",
+          "Living in different countries",
+          "Pride and neither person making the first contact",
+          "Their mother asking for silence"
+        ],
+        "correctIndex": 2,
+        "explanation": "The distance continued without a deliberate decision."
+      },
+      {
+        "question": "Why does the narrator choose a letter?",
+        "options": [
+          "His brother has no telephone",
+          "The business requires written notice",
+          "His mother writes it for him",
+          "It lets him speak carefully without losing courage"
+        ],
+        "correctIndex": 3,
+        "explanation": "The format supports a difficult first step."
+      },
+      {
+        "question": "What makes the apology responsible?",
+        "options": [
+          "He names his hurtful words without demanding immediate agreement",
+          "He says the whole dispute was unimportant",
+          "He blames their mother",
+          "He asks his brother to apologize first"
+        ],
+        "correctIndex": 0,
+        "explanation": "An apology owns conduct rather than bargaining."
+      },
+      {
+        "question": "How will they handle the business disagreement?",
+        "options": [
+          "Forget every financial issue",
+          "Let their mother decide from hospital",
+          "Discuss it separately with records and a neutral adviser if needed",
+          "Avoid the subject forever"
+        ],
+        "correctIndex": 2,
+        "explanation": "Reconciliation does not remove practical accountability."
+      },
+      {
+        "question": "What changes most by the end?",
+        "options": [
+          "One brother wins the business",
+          "They restore regular contact while accepting that disagreement remains",
+          "Their mother sells the company",
+          "The old letter disappears"
+        ],
+        "correctIndex": 1,
+        "explanation": "The relationship improves without a false perfect ending."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "revise; make reconciliation specific without pretending the unresolved business dispute no longer needs a fair process",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-social-02",
@@ -39,37 +153,154 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sari", "gender": "female" },
-      { "name": "Tomo", "gender": "male" }
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Tomo",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Sari: [concerned] Tomo, did you hear that Pak Anwar had surgery last week? He lives alone, and I don't think anyone is checking on him.",
-      "Tomo: [surprised] I didn't know that. Is he okay now? Surgery at his age sounds serious.",
-      "Sari: [worried] The doctors say he'll recover fully, but he can't cook or clean for at least a month, and his children live in another city.",
-      "Tomo: [thoughtful] That's difficult. Someone should organize help, because a month alone after surgery sounds really hard.",
-      "Sari: [determined] That's exactly why I called you. I want to organize the neighbors so we take turns bringing him dinner.",
-      "Tomo: [interested] I like that idea. How many houses were you thinking of asking?",
-      "Sari: [organized] Maybe eight or nine families, so each person only needs to cook once every couple of weeks.",
-      "Tomo: [agreeing] That sounds manageable for everyone. I can definitely take Tuesdays, since my wife already cooks extra on that day.",
-      "Sari: [grateful] Perfect, I'll put you down for Tuesdays. I'm taking Mondays myself, right after I finish work.",
-      "Tomo: [curious] Should we create a group chat, so people don't accidentally bring food on the same evening?",
-      "Sari: [nodding] Yes, definitely. I'll create it tonight and add everyone who agrees to help.",
-      "Tomo: [thoughtful] What about his medicine? Does he need help remembering when to take it?",
-      "Sari: [honestly] I'm not sure yet. I'll ask his daughter when she calls me back this afternoon.",
-      "Tomo: [warmly] Good thinking. We should ask what he actually needs, instead of just guessing on our own.",
-      "Sari: [smiling] Exactly. I want this to genuinely help him, not just make us feel like good neighbors.",
-      "Tomo: [encouraging] It will help him. Honestly, just knowing people remembered him will probably matter as much as the food itself.",
-      "Sari: [warmly] That's what I keep thinking too. Nobody should recover from surgery feeling forgotten by everyone around them.",
-      "Tomo: [determined] Send me that group chat link tonight. I'll message my sister too, since she lives two houses away from him.",
-      "Sari: [grateful] Thank you, Tomo. I feel better already, knowing we're not leaving him to manage this alone."
+      "Sari: [warmly] Tomo, did you hear that Pak Anwar had surgery last week? He lives alone, and I don't think anyone is checking on him.",
+      "Tomo: I didn't know that. Is he okay now? Surgery at his age sounds serious.",
+      "Sari: [thoughtful] He is home with discharge instructions, but I have not asked what support he wants or what food restrictions he has. His children live in another city.",
+      "Tomo: Let us first ask his permission and use one family contact. Then we can organize only the help he accepts.",
+      "Sari: [carefully] That's exactly why I called you. I want to organize the neighbors so we take turns bringing him dinner.",
+      "Tomo: I like that idea. How many houses were you thinking of asking?",
+      "Sari: [reflective] If he wants meals, perhaps eight families can cover agreed days and portions without overwhelming him.",
+      "Tomo: That sounds manageable for everyone. I can definitely take Tuesdays, since my wife already cooks extra on that day.",
+      "Sari: [gently] Perfect, I'll put you down for Tuesdays. I'm taking Mondays myself, right after I finish work.",
+      "Tomo: Should we create a group chat, so people don't accidentally bring food on the same evening?",
+      "Sari: [honestly] Yes, after consent. The chat will list tasks and allergies, not private operation details.",
+      "Tomo: What if he asks about medicine support?",
+      "Sari: [encouraging] We should not guess or discuss medicine in the group. He can follow his health team’s plan and choose whether a family contact helps.",
+      "Tomo: Good thinking. We should ask what he actually needs, instead of just guessing on our own.",
+      "Sari: [warmly] Exactly. I want this to genuinely help him, not just make us feel like good neighbors.",
+      "Tomo: It will help him. Honestly, just knowing people remembered him will probably matter as much as the food itself.",
+      "Sari: That's what I keep thinking too. Nobody should recover from surgery feeling forgotten by everyone around them.",
+      "Tomo: Send me that group chat link tonight. I'll message my sister too, since she lives two houses away from him.",
+      "Sari: Thank you, Tomo. I feel better already, knowing we're not leaving him to manage this alone."
     ],
     "quiz": [
-      { "question": "What happened to Pak Anwar last week?", "options": ["He moved away", "He had surgery", "He lost his job", "He adopted a pet"], "correctIndex": 1, "explanation": "Sari explains that Pak Anwar had surgery last week." },
-      { "question": "Why can't Pak Anwar's children help him directly right now?", "options": ["They refuse to help", "They live in another city", "They are also sick", "He doesn't want their help"], "correctIndex": 1, "explanation": "Sari says his children live in another city, so they can't check on him directly." },
-      { "question": "What plan does Sari propose to Tomo?", "options": ["Hiring a nurse", "Organizing neighbors to take turns bringing him dinner", "Moving him to a hospital", "Asking him to cook for himself"], "correctIndex": 1, "explanation": "Sari wants to organize the neighbors so they take turns bringing Pak Anwar dinner." },
-      { "question": "Why do they decide to create a group chat?", "options": ["To gossip about the neighborhood", "So people don't accidentally bring food on the same evening", "To plan a party", "To sell things to each other"], "correctIndex": 1, "explanation": "They create a group chat so people don't accidentally bring food on the same day." },
-      { "question": "What does Tomo say will probably matter as much as the food?", "options": ["The cost of the meals", "Knowing people remembered him", "The taste of the dishes", "How quickly the food arrives"], "correctIndex": 1, "explanation": "Tomo says just knowing people remembered him will probably matter as much as the food itself." }
-    ]
+      {
+        "question": "What happened to Pak Anwar last week?",
+        "options": [
+          "He moved away",
+          "He lost his job",
+          "He adopted a pet",
+          "He had surgery"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sari explains that Pak Anwar had surgery last week."
+      },
+      {
+        "question": "Why can't Pak Anwar's children help him directly right now?",
+        "options": [
+          "They refuse to help",
+          "They live in another city",
+          "They are also sick",
+          "He doesn't want their help"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sari says his children live in another city, so they can't check on him directly."
+      },
+      {
+        "question": "What plan does Sari propose to Tomo?",
+        "options": [
+          "Hiring a nurse",
+          "Moving him to a hospital",
+          "Organizing neighbors to take turns bringing him dinner",
+          "Asking him to cook for himself"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sari wants to organize the neighbors so they take turns bringing Pak Anwar dinner."
+      },
+      {
+        "question": "Why do they decide to create a group chat?",
+        "options": [
+          "To gossip about the neighborhood",
+          "To plan a party",
+          "To sell things to each other",
+          "So people don't accidentally bring food on the same evening"
+        ],
+        "correctIndex": 3,
+        "explanation": "They create a group chat so people don't accidentally bring food on the same day."
+      },
+      {
+        "question": "What does Tomo say will probably matter as much as the food?",
+        "options": [
+          "The cost of the meals",
+          "The taste of the dishes",
+          "How quickly the food arrives",
+          "Knowing people remembered him"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tomo says just knowing people remembered him will probably matter as much as the food itself."
+      },
+      {
+        "question": "What should Sari confirm before organizing meals?",
+        "options": [
+          "Whether Pak Anwar wants help and what his discharge plan allows",
+          "Which neighbor cooks the most food",
+          "Whether his children will move home",
+          "How serious every surgery is"
+        ],
+        "correctIndex": 0,
+        "explanation": "Support begins with consent and actual instructions."
+      },
+      {
+        "question": "Why should the group ask about food restrictions?",
+        "options": [
+          "Every older person eats the same diet",
+          "The neighbors want cheaper recipes",
+          "Medicine replaces all meals",
+          "His recovery plan may limit certain foods"
+        ],
+        "correctIndex": 3,
+        "explanation": "Suitable food depends on the person’s needs."
+      },
+      {
+        "question": "Who should answer medicine questions?",
+        "options": [
+          "Any neighbor in the chat",
+          "Pak Anwar and his health team, with an agreed family contact if he permits",
+          "The person cooking Tuesday dinner",
+          "His building manager"
+        ],
+        "correctIndex": 1,
+        "explanation": "Neighbors should not manage medicine by guessing."
+      },
+      {
+        "question": "What is the group chat for?",
+        "options": [
+          "Coordinating agreed tasks without sharing private health details",
+          "Publishing his operation report",
+          "Choosing new medicine",
+          "Inviting strangers to visit"
+        ],
+        "correctIndex": 0,
+        "explanation": "Coordination should use minimum necessary information."
+      },
+      {
+        "question": "What does Tomo mean by not guessing?",
+        "options": [
+          "Do nothing until recovery ends",
+          "Promise full recovery",
+          "Ask what help is wanted instead of assuming",
+          "Let one family cook every day"
+        ],
+        "correctIndex": 2,
+        "explanation": "Good intentions still require listening."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "revise; replace medical prediction and neighbor assumptions with consent, discharge instructions, food restrictions, and clear limits",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-social-03",
@@ -78,38 +309,155 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back. Today I'm speaking with Yusuf, who has mentored teenagers in his neighborhood for almost five years. Thanks for joining me.",
-      "Guest: [pleasantly] Thank you for inviting me. This topic is close to my heart, so I'm glad to talk about it.",
-      "Host: [curious] How did you first start mentoring kids in your area?",
-      "Guest: [thoughtful] Honestly, it started small. A few teenagers kept hanging around outside my shop after school, with nothing useful to do.",
-      "Host: [interested] What did you do when you noticed that?",
-      "Guest: [gently] I offered to teach three of them basic carpentry, just to keep their hands busy and their minds focused on something.",
-      "Host: [curious] Did they take the offer seriously right away?",
-      "Guest: [honestly] Not at first. Two of them stopped coming after a week, because it felt like extra homework to them.",
-      "Host: [interested] What made the ones who stayed keep coming back?",
-      "Guest: [warmly] I think they simply wanted an adult who listened without judging them, even more than they wanted to learn carpentry.",
-      "Host: [curious] Has that group grown a lot since those early days?",
-      "Guest: [smiling] Yes, now around fifteen teenagers come every weekend, and three of my earliest students help me teach the newer ones.",
-      "Host: [thoughtful] What's the hardest part of mentoring teenagers, in your experience?",
-      "Guest: [reflective] Patience, definitely. Progress is slow, and some weeks it feels like nothing is changing at all.",
-      "Host: [curious] What keeps you motivated during those slower, discouraging weeks?",
-      "Guest: [determined] I remember that one of my students, who barely spoke when he arrived, now runs his own small furniture stall.",
-      "Host: [interested] That's a wonderful outcome. What would you say to someone considering mentoring in their own neighborhood?",
-      "Guest: [encouraging] Start smaller than you think you should, and don't expect quick results. Consistency matters far more than talent or big plans.",
-      "Host: [smiling] That's excellent advice, Yusuf. Thank you for sharing your experience with our listeners today.",
-      "Guest: [warmly] Thank you for having me. I hope more people notice the teenagers waiting quietly nearby them too."
+      "Guest: Thank you for inviting me. This topic is close to my heart, so I'm glad to talk about it.",
+      "Host: [thoughtful] How did you first start mentoring kids in your area?",
+      "Guest: Honestly, it started small. A few teenagers kept hanging around outside my shop after school, with nothing useful to do.",
+      "Host: [carefully] What did you do when you noticed that?",
+      "Guest: I spoke with their families and offered a small, supervised carpentry program with clear times, safety rules, and suitable equipment.",
+      "Host: [reflective] Did they take the offer seriously right away?",
+      "Guest: Not at first. Two of them stopped coming after a week, because it felt like extra homework to them.",
+      "Host: [gently] What made the ones who stayed keep coming back?",
+      "Guest: I think they simply wanted an adult who listened without judging them, even more than they wanted to learn carpentry.",
+      "Host: [honestly] Has that group grown a lot since those early days?",
+      "Guest: Now about fifteen teenagers attend scheduled sessions. Another approved adult is always present, and experienced students assist under supervision.",
+      "Host: [encouraging] What's the hardest part of mentoring teenagers, in your experience?",
+      "Guest: Patience, definitely. Progress is slow, and some weeks it feels like nothing is changing at all.",
+      "Host: [warmly] What keeps you motivated during those slower, discouraging weeks?",
+      "Guest: I remember one quiet student who now runs a small furniture stall. I value that outcome, but not every learner needs the same result.",
+      "Host: That's a wonderful outcome. What would you say to someone considering mentoring in their own neighborhood?",
+      "Guest: Start small, involve guardians, set safeguarding and tool-safety procedures, and do not expect quick results. Consistency matters more than a large plan.",
+      "Host: That's excellent advice, Yusuf. Thank you for sharing your experience with our listeners today.",
+      "Guest: Thank you for having me. I hope more people notice the teenagers waiting quietly nearby them too."
     ],
     "quiz": [
-      { "question": "How long has Yusuf been mentoring teenagers?", "options": ["Almost five years", "One year", "Ten years", "A few months"], "correctIndex": 0, "explanation": "The host introduces Yusuf as someone who has mentored teenagers for almost five years." },
-      { "question": "What first made Yusuf start mentoring?", "options": ["A school program asked him", "Teenagers kept hanging around his shop with nothing useful to do", "He needed extra workers", "His son suggested it"], "correctIndex": 1, "explanation": "He noticed teenagers hanging around his shop after school with nothing useful to do." },
-      { "question": "What skill did Yusuf first offer to teach?", "options": ["Cooking", "Basic carpentry", "Computer skills", "Painting"], "correctIndex": 1, "explanation": "He offered to teach three teenagers basic carpentry." },
-      { "question": "Why does Yusuf think some teenagers kept coming back?", "options": ["They needed money", "They wanted an adult who listened without judging them", "They had no other option", "They were forced by their parents"], "correctIndex": 1, "explanation": "He believes they wanted an adult who listened without judging them, more than learning carpentry itself." },
-      { "question": "What advice does Yusuf give to someone considering mentoring?", "options": ["Expect fast results", "Start smaller than you think and value consistency over talent", "Only mentor talented kids", "Avoid teenagers who seem difficult"], "correctIndex": 1, "explanation": "He advises starting smaller than expected and says consistency matters more than talent or big plans." }
-    ]
+      {
+        "question": "How long has Yusuf been mentoring teenagers?",
+        "options": [
+          "Almost five years",
+          "One year",
+          "Ten years",
+          "A few months"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces Yusuf as someone who has mentored teenagers for almost five years."
+      },
+      {
+        "question": "What first made Yusuf start mentoring?",
+        "options": [
+          "Teenagers kept hanging around his shop with nothing useful to do",
+          "A school program asked him",
+          "He needed extra workers",
+          "His son suggested it"
+        ],
+        "correctIndex": 0,
+        "explanation": "He noticed teenagers hanging around his shop after school with nothing useful to do."
+      },
+      {
+        "question": "What skill did Yusuf first offer to teach?",
+        "options": [
+          "Basic carpentry",
+          "Cooking",
+          "Computer skills",
+          "Painting"
+        ],
+        "correctIndex": 0,
+        "explanation": "He offered to teach three teenagers basic carpentry."
+      },
+      {
+        "question": "Why does Yusuf think some teenagers kept coming back?",
+        "options": [
+          "They needed money",
+          "They had no other option",
+          "They wanted an adult who listened without judging them",
+          "They were forced by their parents"
+        ],
+        "correctIndex": 2,
+        "explanation": "He believes they wanted an adult who listened without judging them, more than learning carpentry itself."
+      },
+      {
+        "question": "What advice does Yusuf give to someone considering mentoring?",
+        "options": [
+          "Expect fast results",
+          "Only mentor talented kids",
+          "Start smaller than you think and value consistency over talent",
+          "Avoid teenagers who seem difficult"
+        ],
+        "correctIndex": 2,
+        "explanation": "He advises starting smaller than expected and says consistency matters more than talent or big plans."
+      },
+      {
+        "question": "Why does Yusuf start with a small group?",
+        "options": [
+          "He can teach consistently and safely before expanding",
+          "Only three teenagers need skills",
+          "The shop has no tools",
+          "He expects quick results"
+        ],
+        "correctIndex": 0,
+        "explanation": "A manageable beginning supports quality."
+      },
+      {
+        "question": "What must happen before teenagers use tools?",
+        "options": [
+          "They watch one online video",
+          "They promise never to make mistakes",
+          "They work alone after closing",
+          "Guardians agree and safety rules, supervision, and suitable equipment are in place"
+        ],
+        "correctIndex": 3,
+        "explanation": "Mentoring minors needs more than a good intention."
+      },
+      {
+        "question": "Why are two approved adults present?",
+        "options": [
+          "One adult cannot speak",
+          "It improves safeguarding and supervision",
+          "The teenagers request more homework",
+          "Parents must leave the area"
+        ],
+        "correctIndex": 1,
+        "explanation": "Clear adult oversight protects everyone."
+      },
+      {
+        "question": "What keeps some learners returning?",
+        "options": [
+          "They receive guaranteed jobs",
+          "They feel listened to and gain useful skills",
+          "They avoid all schoolwork",
+          "Yusuf judges their families"
+        ],
+        "correctIndex": 1,
+        "explanation": "Belonging and practical progress work together."
+      },
+      {
+        "question": "What advice does Yusuf give?",
+        "options": [
+          "Meet teenagers privately without records",
+          "Expand before checking capacity",
+          "Measure success in one week",
+          "Start small, set safe boundaries, and remain consistent"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised advice includes both patience and protection."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "revise; add safeguarding, guardian consent, workshop safety, and more than one responsible adult to youth mentoring",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-social-04",
@@ -118,69 +466,302 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] When Vina told me she was moving overseas for a new job, I congratulated her warmly, although inside, I felt a strange sense of panic.",
-      "Narrator: [honestly] We had been best friends since university, seeing each other almost every week, so I couldn't imagine what our friendship would become without that.",
-      "Narrator: [worried] I assumed distance would slowly kill our closeness, the way it seemed to happen with other old friendships I had watched fade.",
-      "Narrator: [thoughtful] So, before she left, we sat down together and actually planned how we wanted to stay close, instead of just hoping it would happen naturally.",
-      "Narrator: [warmly] We agreed on one video call every Sunday, no matter how busy either of us became during the week.",
-      "Narrator: [honestly] The first few calls felt forced, because we were both adjusting, and there was an odd new distance between our voices.",
-      "Narrator: [gently] But we kept showing up anyway, even on weeks when neither of us had much interesting to say.",
-      "Narrator: [reflective] Slowly, something shifted. We started sharing small details again, what we cooked, who annoyed us at work, ordinary things that used to feel too small to mention.",
-      "Narrator: [thoughtful] I also started sending short voice messages during my day, little updates that didn't need an immediate reply.",
-      "Narrator: [warmly] She began doing the same, and somehow, those small messages made the huge distance between our cities feel much smaller.",
+      "Narrator: [warmly] When Vina told me she was moving overseas for a new job, I congratulated her warmly, although inside, I felt a strange sense of panic.",
+      "Narrator: We had been best friends since university, seeing each other almost every week, so I couldn't imagine what our friendship would become without that.",
+      "Narrator: [thoughtful] I assumed distance would slowly kill our closeness, the way it seemed to happen with other old friendships I had watched fade.",
+      "Narrator: So, before she left, we sat down together and actually planned how we wanted to stay close, instead of just hoping it would happen naturally.",
+      "Narrator: [carefully] We planned a Sunday call, but agreed to move or skip it without guilt when work, health, or time zones made it difficult.",
+      "Narrator: The first few calls felt forced, because we were both adjusting, and there was an odd new distance between our voices.",
+      "Narrator: [reflective] But we kept showing up anyway, even on weeks when neither of us had much interesting to say.",
+      "Narrator: Slowly, something shifted. We started sharing small details again, what we cooked, who annoyed us at work, ordinary things that used to feel too small to mention.",
+      "Narrator: [gently] I also started sending short voice messages during my day, little updates that didn't need an immediate reply.",
+      "Narrator: She began doing the same, and somehow, those small messages made the huge distance between our cities feel much smaller.",
       "Narrator: [honestly] Last month, she visited home for two weeks, and I worried it would feel awkward seeing each other in person again.",
-      "Narrator: [relieved] It didn't. We picked up exactly where we left off, laughing within minutes, as though barely any time had passed at all.",
-      "Narrator: [peacefully] I learned that distance doesn't automatically end a friendship. It only ends the friendships that nobody chooses to protect on purpose.",
-      "Narrator: [with a small smile] Vina and I are proof that if both people show up consistently, an ocean between two cities changes very little."
+      "Narrator: It didn't. We picked up exactly where we left off, laughing within minutes, as though barely any time had passed at all.",
+      "Narrator: [encouraging] I learned that distance changes a friendship, but mutual effort and flexible expectations can keep a meaningful connection alive.",
+      "Narrator: Our friendship is one example, not a rule for everyone. We both initiate contact, respect delayed replies, and adjust the plan when life changes."
     ],
     "quiz": [
-      { "question": "How did the narrator feel when Vina announced she was moving overseas?", "options": ["Completely happy with no worries", "Congratulatory outwardly, but panicked inside", "Angry and betrayed", "Indifferent"], "correctIndex": 1, "explanation": "She congratulated Vina warmly but felt a strange sense of panic inside." },
-      { "question": "What did the narrator and Vina agree to do before Vina left?", "options": ["Never contact each other to avoid pain", "Have one video call every Sunday", "Meet only once a year", "Write formal letters monthly"], "correctIndex": 1, "explanation": "They agreed on one video call every Sunday, no matter how busy they became." },
-      { "question": "How did the first few calls feel?", "options": ["Completely natural", "Forced, with an odd new distance between their voices", "Boring and pointless", "Too short to matter"], "correctIndex": 1, "explanation": "The first few calls felt forced, with an odd new distance between their voices." },
-      { "question": "What else did the narrator start doing besides calling?", "options": ["Sending short voice messages during the day", "Writing long letters weekly", "Sending expensive gifts", "Posting publicly online"], "correctIndex": 0, "explanation": "She started sending short voice messages with little updates that didn't need an immediate reply." },
-      { "question": "What does the narrator conclude about distance and friendship?", "options": ["Distance always ends friendships eventually", "Distance only ends friendships nobody chooses to protect on purpose", "Friendship requires living in the same city", "Video calls are unnecessary for real friendship"], "correctIndex": 1, "explanation": "She concludes distance only ends the friendships that nobody chooses to protect on purpose." }
-    ]
+      {
+        "question": "How did the narrator feel when Vina announced she was moving overseas?",
+        "options": [
+          "Congratulatory outwardly, but panicked inside",
+          "Completely happy with no worries",
+          "Angry and betrayed",
+          "Indifferent"
+        ],
+        "correctIndex": 0,
+        "explanation": "She congratulated Vina warmly but felt a strange sense of panic inside."
+      },
+      {
+        "question": "What did the narrator and Vina agree to do before Vina left?",
+        "options": [
+          "Never contact each other to avoid pain",
+          "Have one video call every Sunday",
+          "Meet only once a year",
+          "Write formal letters monthly"
+        ],
+        "correctIndex": 1,
+        "explanation": "They agreed on one video call every Sunday, no matter how busy they became."
+      },
+      {
+        "question": "How did the first few calls feel?",
+        "options": [
+          "Completely natural",
+          "Boring and pointless",
+          "Too short to matter",
+          "Forced, with an odd new distance between their voices"
+        ],
+        "correctIndex": 3,
+        "explanation": "The first few calls felt forced, with an odd new distance between their voices."
+      },
+      {
+        "question": "What else did the narrator start doing besides calling?",
+        "options": [
+          "Writing long letters weekly",
+          "Sending expensive gifts",
+          "Posting publicly online",
+          "Sending short voice messages during the day"
+        ],
+        "correctIndex": 3,
+        "explanation": "She started sending short voice messages with little updates that didn't need an immediate reply."
+      },
+      {
+        "question": "What does the narrator conclude about distance and friendship?",
+        "options": [
+          "Distance only ends friendships nobody chooses to protect on purpose",
+          "Distance always ends friendships eventually",
+          "Friendship requires living in the same city",
+          "Video calls are unnecessary for real friendship"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes distance only ends the friendships that nobody chooses to protect on purpose."
+      },
+      {
+        "question": "Why do the friends plan before the move?",
+        "options": [
+          "They expect the job to fail",
+          "They want realistic ways to maintain contact",
+          "They want to end other friendships",
+          "They dislike voice messages"
+        ],
+        "correctIndex": 1,
+        "explanation": "Connection becomes easier with shared expectations."
+      },
+      {
+        "question": "What problem appears with a fixed weekly call?",
+        "options": [
+          "Neither friend owns a phone",
+          "Every call becomes too short",
+          "Work and time-zone changes sometimes make Sunday impossible",
+          "Vina refuses to speak"
+        ],
+        "correctIndex": 2,
+        "explanation": "A routine needs flexibility rather than guilt."
+      },
+      {
+        "question": "Why are small voice messages useful?",
+        "options": [
+          "They replace consent",
+          "They guarantee closeness",
+          "They share ordinary life without requiring an immediate reply",
+          "They report private work information"
+        ],
+        "correctIndex": 2,
+        "explanation": "Asynchronous contact reduces pressure."
+      },
+      {
+        "question": "What does mutual effort look like?",
+        "options": [
+          "One friend sends every message",
+          "Both initiate contact and adjust when life changes",
+          "They speak only during visits",
+          "They measure equal minutes each week"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fairness is shared but not mechanically identical."
+      },
+      {
+        "question": "What is the revised conclusion?",
+        "options": [
+          "Every distant friendship must remain close",
+          "Distance changes friendship, but flexible care can preserve it",
+          "Missed calls prove rejection",
+          "An ocean changes nothing at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "The lesson is hopeful without making a universal promise."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "revise; remove unrealistic absolutes and show flexible, mutual expectations across distance",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-social-05",
-    "title": "A Phone Call to Plan Cousin Dian's Engagement Gathering",
+    "title": "Planning Dian’s Modest Engagement Gathering",
     "level": "A2",
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Lila", "gender": "female" },
-      { "name": "Bagas", "gender": "male" }
+      {
+        "name": "Lila",
+        "gender": "female"
+      },
+      {
+        "name": "Bagas",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Lila: [excited] Bagas, Dian finally got engaged last week! The family wants to host a small gathering to celebrate before the wedding planning starts.",
-      "Bagas: [happy] That's wonderful news! When are we thinking of holding it, and where?",
-      "Lila: [thoughtful] Probably at Uncle Rudi's house, since his yard is big enough for everyone if the weather stays nice.",
-      "Bagas: [curious] How many people are we expecting? I want to know before we decide on food.",
-      "Lila: [counting] Maybe fifty people, mostly close family and a few of Dian's closest friends from work.",
-      "Bagas: [nodding] Okay, that's manageable. Should we cook ourselves, or ask a small catering service to help this time?",
-      "Lila: [considering] Since it's fifty people, I think we should ask for help with the main dishes, but the family can still make the desserts.",
-      "Bagas: [agreeing] That sounds fair. I can call a caterer I used for my own sister's gathering last year, if you'd like.",
-      "Lila: [grateful] Please do. I'm already busy enough organizing the decorations and figuring out the seating arrangement.",
-      "Bagas: [curious] Do we need a proper program, or should it stay simple and relaxed?",
-      "Lila: [thoughtful] I think simple is better, honestly. A short speech from her father, some food, and time for everyone to talk together.",
-      "Bagas: [warmly] That sounds exactly like something Dian would actually enjoy, instead of something too formal and stressful.",
-      "Lila: [laughing] Exactly. She already told me she doesn't want anything too extravagant or complicated this time.",
-      "Bagas: [thoughtful] What about music? Should we hire someone, or just play something simple from a speaker?",
-      "Lila: [deciding] Let's keep it simple, just a playlist. We can save the bigger celebration for the actual wedding later.",
-      "Bagas: [agreeing] Good plan. I'll message the caterer tonight and confirm everything with him by tomorrow evening.",
-      "Lila: [relieved] Thank you so much, Bagas. This whole thing feels much more organized now that we're planning it together.",
-      "Bagas: [warmly] Of course. Dian deserves a celebration that actually feels warm, not stressful for anyone involved."
+      "Lila: [warmly] Bagas, Dian’s family is planning a small engagement gathering. She asked us to keep it simple and not turn it into a second wedding.",
+      "Bagas: That sounds wise. Has Dian agreed on the guest list and the kind of program she is comfortable with?",
+      "Lila: [thoughtful] Yes. Close family and a few friends, about forty people. We will use Uncle Rudi’s covered hall in case it rains.",
+      "Bagas: We should remember that engagement is only a promise to marry. The couple are not yet married, so the gathering must respect normal Islamic boundaries.",
+      "Lila: Agreed. Seating and family supervision will be arranged respectfully, without isolating or embarrassing anyone.",
+      "Bagas: [carefully] What about the food?",
+      "Lila: A small caterer can prepare the main meal. Family members offered desserts, but I do not want unpaid work to become a burden.",
+      "Bagas: I can request a written quote with halal ingredients, allergy information, portions, delivery time, and the final price.",
+      "Lila: [relieved] Good. We also need drinking water, a clear prayer space, and enough time for salah without a long program.",
+      "Bagas: What will the program include?",
+      "Lila: A short welcome, a reminder that this is not nikah, dua for goodness, then the meal and family conversation. No music or wasteful display.",
+      "Bagas: [thoughtful] Shall we prepare decorations?",
+      "Lila: Reusable signs and simple flowers that the family already owns. Dian specifically asked us not to compete with social-media events.",
+      "Bagas: That will also protect the budget. Who approves any extra cost?",
+      "Lila: Dian’s father and mother will review one written list. Nobody should promise an item before checking with them.",
+      "Bagas: [encouraging] I will contact the caterer today and send the quote, not confirm it alone.",
+      "Lila: I will confirm accessibility needs and tell guests the actual start and finish times.",
+      "Bagas: Then the event can feel warm without exhausting the family or crossing boundaries.",
+      "Lila: [sincere] Exactly. The purpose is to support a lawful next step, not to impress people.",
+      "Bagas: May Allah place goodness in their decision and make the process easy."
     ],
     "quiz": [
-      { "question": "What recent event are Lila and Bagas planning to celebrate?", "options": ["A graduation", "Dian's engagement", "A new house", "A birthday"], "correctIndex": 1, "explanation": "Lila explains that Dian got engaged last week and the family wants to celebrate before wedding planning starts." },
-      { "question": "Where do they plan to hold the gathering?", "options": ["At a restaurant", "At Uncle Rudi's house", "At a hotel", "At Dian's office"], "correctIndex": 1, "explanation": "Lila suggests Uncle Rudi's house, since his yard is big enough for everyone." },
-      { "question": "How many people are they expecting at the gathering?", "options": ["About ten", "About fifty", "Over two hundred", "Only immediate family, around five people"], "correctIndex": 1, "explanation": "Lila estimates maybe fifty people, mostly close family and a few of Dian's friends." },
-      { "question": "What do they decide about the food?", "options": ["The family will cook everything alone", "They will ask a caterer for the main dishes and family makes desserts", "They will order only desserts", "They will skip food entirely"], "correctIndex": 1, "explanation": "They decide to ask for help with the main dishes from a caterer, while the family makes the desserts." },
-      { "question": "What kind of program do they agree on?", "options": ["A long formal ceremony with hired performers", "A simple gathering with a short speech, food, and time to talk", "No program at all", "A surprise with no explanation"], "correctIndex": 1, "explanation": "They agree on something simple: a short speech from her father, food, and time for everyone to talk." }
-    ]
+      {
+        "question": "How many guests are expected?",
+        "options": [
+          "About forty",
+          "About one hundred",
+          "Exactly ten",
+          "More than two hundred"
+        ],
+        "correctIndex": 0,
+        "explanation": "The revised plan has a modest guest count."
+      },
+      {
+        "question": "Where will the gathering take place?",
+        "options": [
+          "A public concert venue",
+          "Uncle Rudi’s covered hall",
+          "Dian’s workplace",
+          "A mountain hotel"
+        ],
+        "correctIndex": 1,
+        "explanation": "The covered hall also protects against rain."
+      },
+      {
+        "question": "What will the short program clarify?",
+        "options": [
+          "The wedding already happened",
+          "The engagement is not nikah",
+          "Guests must buy gifts",
+          "The couple will travel alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "The status and boundaries remain clear."
+      },
+      {
+        "question": "What decorations do they choose?",
+        "options": [
+          "A costly new stage",
+          "Fireworks",
+          "Reusable signs and flowers already owned",
+          "No decorations under any condition"
+        ],
+        "correctIndex": 2,
+        "explanation": "The choice avoids waste and competition."
+      },
+      {
+        "question": "Who approves extra costs?",
+        "options": [
+          "Any guest in the chat",
+          "The caterer alone",
+          "Bagas without review",
+          "Dian’s parents through one written list"
+        ],
+        "correctIndex": 3,
+        "explanation": "Budget authority is made clear."
+      },
+      {
+        "question": "What does Dian request for the gathering?",
+        "options": [
+          "A simple family event without extravagance",
+          "A public concert",
+          "A surprise with one hundred guests",
+          "A wedding ceremony on the same day"
+        ],
+        "correctIndex": 0,
+        "explanation": "The plan follows the person being celebrated."
+      },
+      {
+        "question": "Why do Lila and Bagas mention engagement boundaries?",
+        "options": [
+          "The families have never met",
+          "The caterer requires it",
+          "The wedding has been canceled",
+          "Engagement does not make the couple married"
+        ],
+        "correctIndex": 3,
+        "explanation": "Islamic interaction limits remain until nikah."
+      },
+      {
+        "question": "What must they confirm with the caterer?",
+        "options": [
+          "Only the color of plates",
+          "A famous performer",
+          "Halal ingredients, allergies, portions, price, and delivery details",
+          "Private guest messages"
+        ],
+        "correctIndex": 2,
+        "explanation": "The questions make food planning reliable."
+      },
+      {
+        "question": "How will they support prayer?",
+        "options": [
+          "Cancel all conversation",
+          "Serve food during every prayer",
+          "Keep the program short and prepare a clear prayer space",
+          "Ask guests to pray at home"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hospitality includes practical worship needs."
+      },
+      {
+        "question": "What does a written budget prevent?",
+        "options": [
+          "Family members helping",
+          "A simple program",
+          "Hidden costs and pressure to overspend",
+          "Weather changes"
+        ],
+        "correctIndex": 2,
+        "explanation": "The gathering should not create financial strain."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "replace; keep the engagement gathering modest, consent-led, prayer-aware, and clear that engagement is not marriage",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-social-06",
@@ -189,31 +770,145 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [honestly] Six months ago, I said something careless to my friend Andi during a stressful week, and I watched our friendship quietly change afterward.",
-      "Narrator: [thoughtful] I had criticized his business decision in front of other friends, without thinking about how embarrassing that must have felt for him.",
-      "Narrator: [reflective] He didn't yell or argue with me that night. He simply grew quieter, and something between us shifted almost immediately.",
-      "Narrator: [honestly] Afterward, he replied to my messages more slowly, and eventually, he mostly stopped replying at all.",
-      "Narrator: [thoughtful] I told myself he was probably just busy, because admitting I had hurt him felt uncomfortable and difficult to face directly.",
-      "Narrator: [gently] Meanwhile, I kept replaying that evening in my head, noticing more clearly each time how unnecessary my comment really was.",
-      "Narrator: [honestly] Pride kept stopping me from apologizing properly, because part of me still believed my original point had actually been correct.",
-      "Narrator: [reflective] But being right, I slowly realized, meant nothing if it cost me twenty years of genuine friendship in the process.",
-      "Narrator: [determined] So last week, I finally invited him for coffee, and I told him directly that I regretted embarrassing him that night.",
-      "Narrator: [nervous] My hands were actually shaking a little while I spoke, because I genuinely didn't know how he would respond to me.",
-      "Narrator: [relieved] He was quiet for a moment, and then he admitted he had been waiting for me to say exactly that, for months.",
-      "Narrator: [warmly] We talked for almost two hours after that, about the argument, about his business, about everything we had avoided discussing.",
-      "Narrator: [peacefully] I learned that apologies rarely become easier by waiting longer. They usually just become heavier, and harder to finally say out loud.",
-      "Narrator: [with a small smile] Andi and I still disagree sometimes, honestly, but now we actually talk about it, instead of quietly disappearing from each other's lives."
+      "Narrator: [warmly] Six months ago, I said something careless to my friend Andi during a stressful week, and I watched our friendship quietly change afterward.",
+      "Narrator: I had criticized his business decision in front of other friends, without thinking about how embarrassing that must have felt for him.",
+      "Narrator: [thoughtful] He didn't yell or argue with me that night. He simply grew quieter, and something between us shifted almost immediately.",
+      "Narrator: Afterward, he replied to my messages more slowly, and eventually, he mostly stopped replying at all.",
+      "Narrator: [carefully] I told myself he was probably just busy, because admitting I had hurt him felt uncomfortable and difficult to face directly.",
+      "Narrator: Meanwhile, I kept replaying that evening in my head, noticing more clearly each time how unnecessary my comment really was.",
+      "Narrator: [reflective] Pride kept stopping me from apologizing properly, because part of me still believed my original point had actually been correct.",
+      "Narrator: I realized that even a valid concern should be raised privately, with evidence and respect. Being correct would not excuse humiliating him.",
+      "Narrator: [gently] Last week, I asked to meet privately. I named what I did, apologized without excuses, and asked whether any repair would help.",
+      "Narrator: My hands were actually shaking a little while I spoke, because I genuinely didn't know how he would respond to me.",
+      "Narrator: [honestly] He was quiet for a moment, and then he admitted he had been waiting for me to say exactly that, for months.",
+      "Narrator: We discussed the business separately. I also agreed to correct the unfair impression I had created in front of our friends, without sharing his private information.",
+      "Narrator: [encouraging] I learned that apologies rarely become easier by waiting longer. They usually just become heavier, and harder to finally say out loud.",
+      "Narrator: Andi and I still disagree sometimes, honestly, but now we actually talk about it, instead of quietly disappearing from each other's lives."
     ],
     "quiz": [
-      { "question": "What did the narrator do that damaged his friendship with Andi?", "options": ["He borrowed money and didn't repay it", "He criticized Andi's business decision in front of other friends", "He forgot Andi's birthday", "He moved away without telling him"], "correctIndex": 1, "explanation": "He had criticized Andi's business decision in front of other friends, embarrassing him." },
-      { "question": "How did Andi react that night?", "options": ["He yelled and argued", "He grew quiet, and things shifted between them", "He laughed it off", "He immediately ended the friendship"], "correctIndex": 1, "explanation": "Andi didn't argue; he simply grew quieter, and something shifted between them that night." },
-      { "question": "What kept the narrator from apologizing sooner?", "options": ["He didn't know Andi's phone number", "Pride, because he still believed his original point was correct", "He forgot about the incident", "Andi asked him not to apologize"], "correctIndex": 1, "explanation": "Pride kept stopping him, since part of him still believed his original point had been correct." },
-      { "question": "How did Andi respond when the narrator finally apologized?", "options": ["He said he had been waiting to hear that for months", "He refused to accept the apology", "He said it didn't matter to him", "He ended the friendship anyway"], "correctIndex": 0, "explanation": "Andi admitted he had been waiting for the narrator to say exactly that, for months." },
-      { "question": "What does the narrator conclude about apologies at the end?", "options": ["They get easier the longer you wait", "They rarely get easier with time; they usually get heavier", "They are unnecessary between old friends", "Only the other person should apologize first"], "correctIndex": 1, "explanation": "He concludes apologies rarely become easier by waiting; they usually just become heavier and harder to say." }
-    ]
+      {
+        "question": "What did the narrator do that damaged his friendship with Andi?",
+        "options": [
+          "He borrowed money and didn't repay it",
+          "He criticized Andi's business decision in front of other friends",
+          "He forgot Andi's birthday",
+          "He moved away without telling him"
+        ],
+        "correctIndex": 1,
+        "explanation": "He had criticized Andi's business decision in front of other friends, embarrassing him."
+      },
+      {
+        "question": "How did Andi react that night?",
+        "options": [
+          "He grew quiet, and things shifted between them",
+          "He yelled and argued",
+          "He laughed it off",
+          "He immediately ended the friendship"
+        ],
+        "correctIndex": 0,
+        "explanation": "Andi didn't argue; he simply grew quieter, and something shifted between them that night."
+      },
+      {
+        "question": "What kept the narrator from apologizing sooner?",
+        "options": [
+          "He didn't know Andi's phone number",
+          "He forgot about the incident",
+          "Pride, because he still believed his original point was correct",
+          "Andi asked him not to apologize"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pride kept stopping him, since part of him still believed his original point had been correct."
+      },
+      {
+        "question": "How did Andi respond when the narrator finally apologized?",
+        "options": [
+          "He refused to accept the apology",
+          "He said he had been waiting to hear that for months",
+          "He said it didn't matter to him",
+          "He ended the friendship anyway"
+        ],
+        "correctIndex": 1,
+        "explanation": "Andi admitted he had been waiting for the narrator to say exactly that, for months."
+      },
+      {
+        "question": "What does the narrator conclude about apologies at the end?",
+        "options": [
+          "They rarely get easier with time; they usually get heavier",
+          "They get easier the longer you wait",
+          "They are unnecessary between old friends",
+          "Only the other person should apologize first"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes apologies rarely become easier by waiting; they usually just become heavier and harder to say."
+      },
+      {
+        "question": "What exactly did the narrator do wrong?",
+        "options": [
+          "He refused every business discussion",
+          "He borrowed money",
+          "He ended the friendship by letter",
+          "He criticized Andi publicly and embarrassed him"
+        ],
+        "correctIndex": 3,
+        "explanation": "The harm concerns the manner and setting."
+      },
+      {
+        "question": "Why is believing his point correct not a complete defense?",
+        "options": [
+          "Correct advice must always be public",
+          "Friends should never disagree",
+          "Business decisions need no evidence",
+          "A concern can be raised privately and respectfully"
+        ],
+        "correctIndex": 3,
+        "explanation": "Content and conduct are separate questions."
+      },
+      {
+        "question": "What does a good apology avoid?",
+        "options": [
+          "Naming the harmful action",
+          "Listening to the response",
+          "Offering repair",
+          "Excuses and pressure for immediate forgiveness"
+        ],
+        "correctIndex": 3,
+        "explanation": "An apology should not control the injured person."
+      },
+      {
+        "question": "What repair do they agree on?",
+        "options": [
+          "Never discuss work again",
+          "Publish Andi’s accounts",
+          "Correct the impression with friends and discuss business privately",
+          "Ask others to choose a winner"
+        ],
+        "correctIndex": 2,
+        "explanation": "Repair matches the public nature of the harm."
+      },
+      {
+        "question": "What is the final lesson?",
+        "options": [
+          "Friendship requires agreement",
+          "Waiting makes apologies clearer",
+          "Public criticism proves honesty",
+          "Address harm early and disagree with dignity"
+        ],
+        "correctIndex": 3,
+        "explanation": "The relationship improves through accountable communication."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "revise; make the apology specific and private while keeping room for respectful disagreement about the business",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-social-07",
@@ -222,37 +917,607 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
       "Radio Host: [warmly] Good afternoon, listeners. Tonight we're discussing how siblings can share the responsibility of caring for aging parents. We have Wulan on the line. Hello!",
-      "Caller: [pleasantly] Hello, thank you for having me. This topic feels very relevant to my life right now.",
-      "Radio Host: [curious] Tell us a little about your situation with your parents currently.",
-      "Caller: [thoughtful] My father developed health problems last year, so my two brothers and I had to figure out how to help him together.",
-      "Radio Host: [interested] Was that division of responsibility easy to arrange between the three of you?",
-      "Caller: [honestly] Not at all, actually. At first, I did almost everything myself, because I live closest, and everyone just assumed I would manage it.",
-      "Radio Host: [sympathetically] That sounds exhausting. When did that arrangement finally start to change?",
-      "Caller: [reflective] After about two months, I felt completely worn out, so I called a family meeting and explained honestly how overwhelmed I had become.",
-      "Radio Host: [curious] How did your brothers react when you explained that to them?",
-      "Caller: [warmly] Surprisingly well. They admitted they hadn't fully realized how much I was handling alone every single week.",
-      "Radio Host: [interested] What changes did you three agree on during that meeting?",
-      "Caller: [organized] We divided tasks clearly. I handle his doctor appointments, one brother manages his medication, and the other covers his finances.",
-      "Radio Host: [curious] Does that arrangement still work well for your family now?",
-      "Caller: [honestly] Mostly, although we adjust it whenever something unexpected happens, like a sudden hospital visit last month.",
-      "Radio Host: [thoughtful] What advice would you give siblings who are just starting this kind of arrangement?",
-      "Caller: [encouraging] Talk early, before someone becomes exhausted and resentful. Don't assume distance excuses anyone from contributing something meaningful.",
-      "Radio Host: [curious] Is there anything else that has genuinely surprised you through this experience?",
-      "Caller: [reflective] Honestly, caring for my father together brought my brothers and me closer than we had been in years.",
-      "Radio Host: [smiling] That's a beautiful outcome from something so difficult. Thank you for sharing your story tonight, Wulan.",
-      "Caller: [sincerely] Thank you for listening. I hope other families start these conversations before exhaustion forces them to."
+      "Caller: Hello, thank you for having me. This topic feels very relevant to my life right now.",
+      "Radio Host: [thoughtful] Tell us a little about your situation with your parents currently.",
+      "Caller: My father developed health problems last year, so my two brothers and I had to figure out how to help him together.",
+      "Radio Host: [carefully] Was that division of responsibility easy to arrange between the three of you?",
+      "Caller: Not at all, actually. At first, I did almost everything myself, because I live closest, and everyone just assumed I would manage it.",
+      "Radio Host: [reflective] That sounds exhausting. When did that arrangement finally start to change?",
+      "Caller: After about two months, I felt completely worn out, so I called a family meeting and explained honestly how overwhelmed I had become.",
+      "Radio Host: [gently] How did your brothers react when you explained that to them?",
+      "Caller: Surprisingly well. They admitted they hadn't fully realized how much I was handling alone every single week.",
+      "Radio Host: [honestly] What changes did you three agree on during that meeting?",
+      "Caller: With Father’s agreement, I coordinate appointments, one brother tracks refills according to the health team’s written plan, and the other handles authorized bills with records Father can review.",
+      "Radio Host: [encouraging] Does that arrangement still work well for your family now?",
+      "Caller: Mostly. We review it with Father because his needs and our capacity change. For medical decisions, we follow qualified advice rather than family guesses.",
+      "Radio Host: [warmly] What advice would you give siblings who are just starting this kind of arrangement?",
+      "Caller: Talk early, include the parent, record responsibilities, and plan rest. Distance changes how someone contributes, but it should not hide all responsibility.",
+      "Radio Host: Is there anything else that has genuinely surprised you through this experience?",
+      "Caller: Honestly, caring for my father together brought my brothers and me closer than we had been in years.",
+      "Radio Host: That's a beautiful outcome from something so difficult. Thank you for sharing your story tonight, Wulan.",
+      "Caller: Thank you for listening. I hope other families start these conversations before exhaustion forces them to."
     ],
     "quiz": [
-      { "question": "What happened to Wulan's father last year?", "options": ["He retired", "He developed health problems", "He moved abroad", "He started a new business"], "correctIndex": 1, "explanation": "Wulan explains her father developed health problems last year, requiring family help." },
-      { "question": "Why did Wulan end up doing almost everything herself at first?", "options": ["Her brothers refused to help", "She lives closest, and everyone assumed she would manage it", "Her father only trusted her", "Her brothers were unaware their father was sick"], "correctIndex": 1, "explanation": "She lived closest, and everyone simply assumed she would manage the care alone." },
-      { "question": "What did Wulan do after feeling worn out for two months?", "options": ["She stopped helping entirely", "She called a family meeting and explained she felt overwhelmed", "She hired a stranger to help", "She moved away"], "correctIndex": 1, "explanation": "After two months of exhaustion, she called a family meeting and explained how overwhelmed she had become." },
-      { "question": "How did they divide responsibilities after the meeting?", "options": ["They didn't divide anything", "Wulan handles appointments, one brother manages medication, the other covers finances", "Only one brother does everything now", "They hired a full-time caregiver instead"], "correctIndex": 1, "explanation": "They divided tasks clearly: appointments, medication, and finances split among the three siblings." },
-      { "question": "What does Wulan say surprised her through this experience?", "options": ["Nothing surprised her", "Caring for her father together brought her and her brothers closer", "Her father recovered instantly", "Her brothers stopped speaking to her"], "correctIndex": 1, "explanation": "She says caring for her father together brought her and her brothers closer than they had been in years." }
-    ]
+      {
+        "question": "What happened to Wulan's father last year?",
+        "options": [
+          "He developed health problems",
+          "He retired",
+          "He moved abroad",
+          "He started a new business"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wulan explains her father developed health problems last year, requiring family help."
+      },
+      {
+        "question": "Why did Wulan end up doing almost everything herself at first?",
+        "options": [
+          "She lives closest, and everyone assumed she would manage it",
+          "Her brothers refused to help",
+          "Her father only trusted her",
+          "Her brothers were unaware their father was sick"
+        ],
+        "correctIndex": 0,
+        "explanation": "She lived closest, and everyone simply assumed she would manage the care alone."
+      },
+      {
+        "question": "What did Wulan do after feeling worn out for two months?",
+        "options": [
+          "She stopped helping entirely",
+          "She called a family meeting and explained she felt overwhelmed",
+          "She hired a stranger to help",
+          "She moved away"
+        ],
+        "correctIndex": 1,
+        "explanation": "After two months of exhaustion, she called a family meeting and explained how overwhelmed she had become."
+      },
+      {
+        "question": "How did they divide responsibilities after the meeting?",
+        "options": [
+          "They didn't divide anything",
+          "Only one brother does everything now",
+          "They hired a full-time caregiver instead",
+          "Wulan handles appointments, one brother manages medication, the other covers finances"
+        ],
+        "correctIndex": 3,
+        "explanation": "They divided tasks clearly: appointments, medication, and finances split among the three siblings."
+      },
+      {
+        "question": "What does Wulan say surprised her through this experience?",
+        "options": [
+          "Caring for her father together brought her and her brothers closer",
+          "Nothing surprised her",
+          "Her father recovered instantly",
+          "Her brothers stopped speaking to her"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says caring for her father together brought her and her brothers closer than they had been in years."
+      },
+      {
+        "question": "What caused Wulan’s exhaustion?",
+        "options": [
+          "Her father refused all contact",
+          "She became the default carer without a shared plan",
+          "Her brothers lived next door",
+          "The radio show added work"
+        ],
+        "correctIndex": 1,
+        "explanation": "Unspoken assumptions concentrated the labor."
+      },
+      {
+        "question": "Who should help define the care plan?",
+        "options": [
+          "The radio audience",
+          "Only the closest child",
+          "Their father, the siblings, and qualified professionals where needed",
+          "The pharmacy cashier"
+        ],
+        "correctIndex": 2,
+        "explanation": "Care should reflect consent and actual needs."
+      },
+      {
+        "question": "What is unsafe about casually “managing medication”?",
+        "options": [
+          "Medicine never needs records",
+          "Only distant siblings can help",
+          "Appointments replace medicine",
+          "Changes and reminders need an agreed health-team plan"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised script limits family roles."
+      },
+      {
+        "question": "How can a distant sibling contribute?",
+        "options": [
+          "Make every medical decision",
+          "Avoid all responsibility",
+          "Handle agreed administration, calls, costs, or scheduled visits",
+          "Demand private reports"
+        ],
+        "correctIndex": 2,
+        "explanation": "Distance changes the task, not the need to contribute."
+      },
+      {
+        "question": "Why should the plan be reviewed?",
+        "options": [
+          "Health, capacity, and caregiver energy can change",
+          "A written plan is permanent",
+          "The father loses his voice later",
+          "Reviews prove one sibling failed"
+        ],
+        "correctIndex": 0,
+        "explanation": "Flexible review prevents hidden overload."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "revise; center the father’s consent and make medication and finance tasks properly authorized and reviewable",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-social-08",
+    "title": "The Group Chat Went Quiet",
+    "level": "A2",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] Our college-friends group chat had been active for years. Then one month, Hana stopped replying. Her messages changed from daily jokes to complete silence.",
+      "Narrator: Some friends said she was probably busy. Another person suggested that she had become unfriendly since starting a new job.",
+      "Narrator: [thoughtful] I almost agreed, but none of us had asked Hana directly. Talking about her in the group could create a story without evidence.",
+      "Narrator: I sent a private message: “I noticed you have been quiet. No pressure to reply, but I hope you are safe.”",
+      "Narrator: [carefully] She answered the next day. Her father had been ill, and she was traveling between work and the hospital.",
+      "Narrator: She did not want to explain the situation in a large chat or receive many questions. She only asked for dua and help finding a reliable home-care contact.",
+      "Narrator: [reflective] With her permission, I told the group that she was handling a family matter and preferred privacy.",
+      "Narrator: One friend knew a qualified service and sent the details privately. Others stopped tagging her in jokes that required a response.",
+      "Narrator: [gently] We also made sure not to turn her silence into a public lesson about friendship.",
+      "Narrator: Two weeks later, Hana sent a short update herself. She thanked everyone for giving her room while remaining available.",
+      "Narrator: [honestly] The experience changed how our group responds when someone disappears. We check safety privately before making interpretations.",
+      "Narrator: We offer specific low-pressure help instead of demanding a full explanation.",
+      "Narrator: [encouraging] Silence can mean many things: stress, illness, rest, limited internet, or simply a need for space.",
+      "Narrator: Friendship does not give us ownership of every private detail. Care should make it easier for a person to choose what to share.",
+      "Narrator: [warmly] A gentle message kept connection open without making Hana manage our curiosity during an already difficult time."
+    ],
+    "quiz": [
+      {
+        "question": "What change did friends notice?",
+        "options": [
+          "Hana posted more every day",
+          "Hana stopped replying in the group chat",
+          "The group was deleted",
+          "Everyone changed jobs"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her daily activity became silence."
+      },
+      {
+        "question": "What rumor began to form?",
+        "options": [
+          "She had moved countries",
+          "She had become unfriendly",
+          "She disliked college",
+          "She lost her phone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Friends interpreted silence without evidence."
+      },
+      {
+        "question": "How did the narrator check in?",
+        "options": [
+          "With a public demand",
+          "With a private low-pressure safety message",
+          "By calling her employer",
+          "By visiting without notice"
+        ],
+        "correctIndex": 1,
+        "explanation": "The message gave care and choice."
+      },
+      {
+        "question": "What help did Hana request?",
+        "options": [
+          "A public fundraiser",
+          "Daily jokes",
+          "Dua and a reliable home-care contact",
+          "A new job"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her request was specific and private."
+      },
+      {
+        "question": "What did the group learn?",
+        "options": [
+          "Silence always means anger",
+          "Friendship removes privacy",
+          "Check privately and respect control over personal details",
+          "Every absence needs a public story"
+        ],
+        "correctIndex": 2,
+        "explanation": "Care should not become curiosity."
+      },
+      {
+        "question": "Why does the narrator avoid agreeing with the group’s story?",
+        "options": [
+          "Hana has left college",
+          "The group chat is private",
+          "New jobs always end friendships",
+          "Nobody has asked Hana and there is no evidence"
+        ],
+        "correctIndex": 3,
+        "explanation": "Silence alone cannot prove a motive."
+      },
+      {
+        "question": "What makes the private message low-pressure?",
+        "options": [
+          "It expresses care without demanding an explanation or quick reply",
+          "It asks many health questions",
+          "It promises to solve the problem",
+          "It tags the whole group"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hana keeps control over response and detail."
+      },
+      {
+        "question": "What information may the narrator share?",
+        "options": [
+          "Only the limited update Hana permits",
+          "The hospital name",
+          "Her father’s condition",
+          "Her travel schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "Permission defines the boundary."
+      },
+      {
+        "question": "How does the group reduce pressure?",
+        "options": [
+          "They remove Hana permanently",
+          "They stop requiring replies and send useful information privately",
+          "They call every evening",
+          "They discuss possible causes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their behavior adapts to her capacity."
+      },
+      {
+        "question": "What does silence require first?",
+        "options": [
+          "A public warning",
+          "Immediate professional diagnosis",
+          "An end to the friendship",
+          "A gentle safety check, not a negative interpretation"
+        ],
+        "correctIndex": 3,
+        "explanation": "The lesson separates observation from assumption."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "keep; strong low-pressure check-in protects privacy, avoids rumor, and offers specific consent-based help",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-social-09",
+    "title": "The Community Meal With Name Cards",
+    "level": "A2",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] Our neighborhood held a monthly meal, but new visitors often sat together near the door and left without meeting anyone.",
+      "Narrator: Regular members were friendly with close friends, yet the room felt difficult to enter if a person came alone.",
+      "Narrator: [thoughtful] For the next meal, we tried three small changes. First, volunteers wore clear name cards and stood near the entrance.",
+      "Narrator: They greeted visitors, explained where food and prayer spaces were, and asked whether anyone needed accessibility support.",
+      "Narrator: [carefully] Second, tables had simple conversation cards. The questions were light, such as favorite local places or a skill someone wanted to learn.",
+      "Narrator: Nobody was asked about marriage, income, nationality, or other personal topics.",
+      "Narrator: [reflective] Third, each table had one host whose job was to include people, not control the conversation.",
+      "Narrator: At my table, a new resident mentioned that he repaired bicycles. An older neighbor wanted to learn how to fix a tire.",
+      "Narrator: [gently] They arranged a short session for the following weekend. Another visitor discovered a walking group near her street.",
+      "Narrator: The name cards did not create friendship by themselves. They removed the first barrier of not knowing how to address someone.",
+      "Narrator: [honestly] Conversation cards helped during quiet moments, but hosts stopped using them when natural discussion began.",
+      "Narrator: After the meal, we invited anonymous feedback. One visitor said the welcome was helpful but the room signs were too small.",
+      "Narrator: [encouraging] We printed larger bilingual signs for the next month and kept a clear path between tables for mobility devices.",
+      "Narrator: Belonging is not produced by telling newcomers to be more confident. The environment can make participation easier or harder.",
+      "Narrator: [warmly] Our meal became warmer when regular members took responsibility for the doorway, introductions, and practical access."
+    ],
+    "quiz": [
+      {
+        "question": "What problem did new visitors face?",
+        "options": [
+          "They left without connecting to people",
+          "No food was served",
+          "The event had no regular members",
+          "The door was locked"
+        ],
+        "correctIndex": 0,
+        "explanation": "The social environment was hard to enter alone."
+      },
+      {
+        "question": "What did entrance volunteers explain?",
+        "options": [
+          "Private family histories",
+          "Food, prayer space, and accessibility support",
+          "Job salaries",
+          "Only the menu price"
+        ],
+        "correctIndex": 1,
+        "explanation": "Practical orientation reduced uncertainty."
+      },
+      {
+        "question": "What topics were avoided?",
+        "options": [
+          "Local places",
+          "Useful skills",
+          "Marriage, income, nationality, and other private matters",
+          "Walking groups"
+        ],
+        "correctIndex": 2,
+        "explanation": "Conversation prompts respected boundaries."
+      },
+      {
+        "question": "What connection formed at one table?",
+        "options": [
+          "A business sale",
+          "A travel argument",
+          "A bicycle-repair learning session",
+          "A private interview"
+        ],
+        "correctIndex": 2,
+        "explanation": "A shared interest led to a future activity."
+      },
+      {
+        "question": "What changed after feedback?",
+        "options": [
+          "Name cards were removed",
+          "Visitors were turned away",
+          "Tables became closer together",
+          "Signs became larger and bilingual with clearer paths"
+        ],
+        "correctIndex": 3,
+        "explanation": "Access improved through specific visitor input."
+      },
+      {
+        "question": "Why do name cards help?",
+        "options": [
+          "They guarantee close friendship",
+          "They show each person’s income",
+          "They remove the first difficulty of knowing how to address someone",
+          "They replace table hosts"
+        ],
+        "correctIndex": 2,
+        "explanation": "A small design choice lowers an entry barrier."
+      },
+      {
+        "question": "When should hosts stop using conversation cards?",
+        "options": [
+          "After every question is answered",
+          "When natural discussion has begun",
+          "When a new visitor arrives",
+          "Before anyone speaks"
+        ],
+        "correctIndex": 1,
+        "explanation": "The tool supports rather than controls conversation."
+      },
+      {
+        "question": "Why are private topics excluded?",
+        "options": [
+          "They can pressure newcomers to reveal sensitive information",
+          "They are too easy to answer",
+          "Only hosts may ask them",
+          "They prevent bicycle repair"
+        ],
+        "correctIndex": 0,
+        "explanation": "Welcome does not require personal examination."
+      },
+      {
+        "question": "What does anonymous feedback reveal?",
+        "options": [
+          "Visitors dislike all conversation",
+          "The meal has no prayer space",
+          "Name cards should be removed",
+          "Room signs and paths still need improvement"
+        ],
+        "correctIndex": 3,
+        "explanation": "Inclusion requires iteration."
+      },
+      {
+        "question": "Who carries responsibility for belonging?",
+        "options": [
+          "Only confident visitors",
+          "Only the table host",
+          "Regular members and organizers as well as newcomers",
+          "People with mobility devices"
+        ],
+        "correctIndex": 2,
+        "explanation": "The environment shapes participation."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "keep; strong community-design lesson combines welcome, boundaries, accessibility, and feedback",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-social-10",
+    "title": "Helping After the Apartment Fire",
+    "level": "A2",
+    "themeId": "social",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Dina",
+        "gender": "female"
+      },
+      {
+        "name": "Rashid",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Dina: [warmly] Rashid, everyone wants to help the family from apartment twelve. The group chat is becoming confusing.",
+      "Rashid: I saw five people offering clothes, but nobody knows the correct sizes or where the family is staying.",
+      "Dina: [thoughtful] The building manager says they are safe in temporary housing. He asked us not to share the address.",
+      "Rashid: Good. Privacy matters, especially while they are tired and speaking with officials.",
+      "Dina: [carefully] What needs have they confirmed?",
+      "Rashid: Basic clothing in specific sizes, school supplies, phone chargers, and meal support for one week.",
+      "Dina: [reflective] Let us create one verified list and close items as they are covered.",
+      "Rashid: Who should communicate with the family?",
+      "Dina: [gently] The manager already has permission. We should use one contact instead of making them answer twenty messages.",
+      "Rashid: Several people want to send used furniture immediately.",
+      "Dina: [honestly] Storage is limited. Ask them to wait until the family knows where they will live next.",
+      "Rashid: What about cash donations?",
+      "Dina: [encouraging] Use the verified fund shared by the community center, with records and a clear closing date.",
+      "Rashid: Someone posted a photo of the damaged apartment. Should we remove it?",
+      "Dina: [warmly] Yes, if we control the post. The image includes a family name on the door and adds no useful information.",
+      "Rashid: I will ask group members not to visit the building because investigators are still working.",
+      "Dina: Good. Helpful action should not create traffic, rumors, or extra decisions for the family.",
+      "Rashid: We can publish one update each evening: covered needs, remaining needs, and official information only.",
+      "Dina: And we should stop the collection when the confirmed needs are met.",
+      "Rashid: Exactly. A coordinated response gives people a useful way to care without turning the family's emergency into public chaos."
+    ],
+    "quiz": [
+      {
+        "question": "What is confusing the helpers?",
+        "options": [
+          "Many uncoordinated offers in the group chat",
+          "A missing building",
+          "No one wants to help",
+          "The family is requesting visitors"
+        ],
+        "correctIndex": 0,
+        "explanation": "Good intentions lack one shared plan."
+      },
+      {
+        "question": "What information must remain private?",
+        "options": [
+          "The list of general needs",
+          "The temporary housing address",
+          "The fund closing date",
+          "The school-supply request"
+        ],
+        "correctIndex": 1,
+        "explanation": "The family’s current location is protected."
+      },
+      {
+        "question": "Why use one family contact?",
+        "options": [
+          "To hide every need",
+          "To stop the manager helping",
+          "To collect rumors",
+          "To avoid making them answer many messages"
+        ],
+        "correctIndex": 3,
+        "explanation": "One permitted channel reduces burden."
+      },
+      {
+        "question": "Why should furniture wait?",
+        "options": [
+          "Furniture is never useful",
+          "The family asked for ten tables",
+          "Storage and future housing are uncertain",
+          "The building has reopened"
+        ],
+        "correctIndex": 2,
+        "explanation": "Large donations need confirmed space and need."
+      },
+      {
+        "question": "What makes the response responsible?",
+        "options": [
+          "Verified needs, privacy, records, and coordination",
+          "Frequent visits and photos",
+          "Rumors and open-ended collection",
+          "Sending every offered item"
+        ],
+        "correctIndex": 0,
+        "explanation": "Structured help protects the family from added pressure."
+      },
+      {
+        "question": "Why should helpers wait before sending furniture?",
+        "options": [
+          "Furniture is never useful after fires",
+          "Only officials may own furniture",
+          "The group has no vehicles",
+          "The family lacks storage and future housing is uncertain"
+        ],
+        "correctIndex": 3,
+        "explanation": "Unrequested items can become another burden."
+      },
+      {
+        "question": "What is the purpose of one contact?",
+        "options": [
+          "Reduce repeated questions and conflicting information",
+          "Keep the family away from all help",
+          "Choose needs without consent",
+          "Control private donations"
+        ],
+        "correctIndex": 0,
+        "explanation": "Coordination protects the affected family’s energy."
+      },
+      {
+        "question": "Why should the apartment photo be removed?",
+        "options": [
+          "Every fire photo is illegal",
+          "It exposes a family name without helping the response",
+          "The building manager took it",
+          "It shows no damage"
+        ],
+        "correctIndex": 1,
+        "explanation": "Privacy risk has no useful benefit."
+      },
+      {
+        "question": "What should an evening update contain?",
+        "options": [
+          "Covered needs, remaining verified needs, and official information",
+          "Rumors about the cause",
+          "The temporary address",
+          "Private family conversations"
+        ],
+        "correctIndex": 0,
+        "explanation": "Useful updates remain limited and accurate."
+      },
+      {
+        "question": "When should collection stop?",
+        "options": [
+          "When group interest falls",
+          "After every item is doubled",
+          "When confirmed needs are met or the stated closing point arrives",
+          "Only after furniture is sent"
+        ],
+        "correctIndex": 2,
+        "explanation": "A stopping rule prevents uncontrolled surplus."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "social",
+      "scriptDecision": "keep; exemplary emergency support uses verified needs, one contact, privacy, records, and a stopping rule",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

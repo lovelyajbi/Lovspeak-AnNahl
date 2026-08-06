@@ -6,7 +6,7 @@ import { GrammarLesson, ModuleProps, GrammarResult, AppView, ModuleContext, Quiz
 import { GRAMMAR_LESSONS } from '../data/grammarLessons';
 import { audioService } from '../services/audioService';
 import { analyzeGrammar, generateGrammarTask, generateGrammarQuiz } from '../services/gemini';
-import { logActivity, completeRoadmapUnit } from '../services/storage';
+import { logActivity, completeRoadmapUnit, getActivityLogs } from '../services/storage';
 import { getLessonBank, pickQuizSet, pickPracticePrompt } from '../services/grammarContent';
 import MindMapRenderer from './MindMapRenderer';
 
@@ -22,6 +22,8 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   const [searchQuery, setSearchQuery] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [showHint, setShowHint] = useState(false);
+  const [completedLessonScores, setCompletedLessonScores] = useState<Record<string, number>>({});
+  const [step, setStep] = useState<'list' | 'lesson' | 'custom_task'>('list');
 
   // Pagination for Lessons
   const [currentPage, setCurrentPage] = useState(1);
@@ -35,6 +37,17 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   const [quizLoading, setQuizLoading] = useState(false);
 
   const startTimeRef = useRef<number>(0);
+
+  useEffect(() => {
+    const scores: Record<string, number> = {};
+    getActivityLogs().forEach(log => {
+      if (log.type === AppView.GRAMMAR && log.metadata?.completed && log.metadata?.materialId) {
+        const id = String(log.metadata.materialId);
+        scores[id] = Math.max(scores[id] || 0, log.score || 0);
+      }
+    });
+    setCompletedLessonScores(scores);
+  }, [step]);
 
   useEffect(() => {
     if (initialContext?.autoStart) {
@@ -63,8 +76,6 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       }
     }
   }, [initialContext]);
-
-  const [step, setStep] = useState<'list' | 'lesson' | 'custom_task'>('list');
 
   const handleSelectLesson = (lesson: GrammarLesson) => {
     audioService.play('nav');
@@ -144,16 +155,24 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     setQuizScore(finalScore);
     setQuizSubmitted(true);
 
+    const targetMinScore = initialContext?.minScore || 80;
     logActivity({
       type: AppView.GRAMMAR,
       date: new Date().toISOString(),
       durationSeconds: Math.round((Date.now() - startTimeRef.current) / 1000),
       score: finalScore,
       accuracy: finalScore,
-      details: `Quiz: ${selectedLesson?.title}`
+      details: `Quiz: ${selectedLesson?.title}`,
+      metadata: {
+        completed: finalScore >= targetMinScore,
+        planTaskId: initialContext?.taskId,
+        stepId: initialContext?.stepId,
+        materialId: selectedLesson?.id || initialContext?.targetLessonId,
+        materialTitle: selectedLesson?.title,
+        source: initialContext?.type || 'manual'
+      }
     });
 
-    const targetMinScore = initialContext?.minScore || 80;
     if (initialContext?.stepId && finalScore >= targetMinScore) {
       completeRoadmapUnit(initialContext.stepId);
     }
@@ -174,16 +193,24 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       const evaluation = await analyzeGrammar(userInput, grammarTask);
       setResult(evaluation);
 
+      const targetMinScore = initialContext?.minScore || 80;
       logActivity({
         type: AppView.GRAMMAR,
         date: new Date().toISOString(),
         durationSeconds: Math.round((Date.now() - startTimeRef.current) / 1000),
         score: evaluation.score,
         accuracy: evaluation.score,
-        details: `Practice: ${selectedLesson?.title || 'Custom Writing'}`
+        details: `Practice: ${selectedLesson?.title || 'Custom Writing'}`,
+        metadata: {
+          completed: evaluation.score >= targetMinScore,
+          planTaskId: initialContext?.taskId,
+          stepId: initialContext?.stepId,
+          materialId: selectedLesson?.id || initialContext?.targetLessonId,
+          materialTitle: selectedLesson?.title,
+          source: initialContext?.type || 'manual'
+        }
       });
 
-      const targetMinScore = initialContext?.minScore || 80;
       if (initialContext?.stepId && evaluation.score >= targetMinScore) {
         completeRoadmapUnit(initialContext.stepId);
       }
@@ -337,7 +364,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 onClick={() => onComplete?.()}
                 className="w-full py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-base shadow-xl uppercase tracking-widest"
               >
-                <i className="fas fa-check-circle mr-2"></i> Complete Daily Task +{initialContext?.xpReward || 15} XP
+                <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
               </button>
             ) : (
               <button 
@@ -594,7 +621,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                         onClick={() => onComplete?.()}
                         className="w-full mt-3 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-sm shadow-lg uppercase tracking-widest"
                       >
-                        <i className="fas fa-check-circle mr-2"></i> Complete Daily Task +{initialContext?.xpReward || 15} XP
+                        <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
                       </button>
                     )}
                   </div>
@@ -730,15 +757,20 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             <p className="text-xs mt-1">Coba kata kunci atau filter level lain</p>
           </div>
         )}
-        {paginatedLessons.map((lesson, idx) => (
-          <motion.button key={lesson.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.04 }} whileHover={{ scale: 1.02, y: -3 }} whileTap={{ scale: 0.98 }} onClick={() => handleSelectLesson(lesson)} className="bg-white dark:bg-gray-800 p-4 md:p-5 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-rose-300 hover:shadow-lg transition-all text-left flex flex-col h-full group">
+        {paginatedLessons.map((lesson, idx) => {
+          const completedScore = completedLessonScores[lesson.id];
+          const isCompleted = completedScore !== undefined;
+          return (
+          <motion.button key={lesson.id} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: idx * 0.04 }} whileHover={{ scale: 1.02, y: -3 }} whileTap={{ scale: 0.98 }} onClick={() => handleSelectLesson(lesson)} className={`${isCompleted ? 'bg-green-50 dark:bg-green-900/10 border-green-200 dark:border-green-800 hover:border-green-300' : 'bg-white dark:bg-gray-800 border-gray-100 dark:border-gray-700 hover:border-rose-300'} p-4 md:p-5 rounded-2xl shadow-sm border hover:shadow-lg transition-all text-left flex flex-col h-full group relative overflow-hidden`}>
+            {isCompleted && <span className="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 rounded-bl-xl text-[8px] font-black uppercase tracking-widest"><i className="fas fa-check mr-1" />{Math.round(completedScore)}%</span>}
             <div className="w-8 h-8 md:w-10 md:h-10 rounded-xl bg-gradient-to-br from-rose-50 to-pink-50 dark:from-rose-900/20 dark:to-pink-900/20 text-rose-500 flex items-center justify-center text-sm md:text-base mb-3 group-hover:scale-110 transition-transform"><i className={`fas ${lesson.icon}`}></i></div>
             <span className="text-[8px] md:text-[9px] font-black uppercase text-gray-400 tracking-widest mb-1">{lesson.level}</span>
             <h3 className="text-[11px] md:text-sm font-black text-gray-800 dark:text-white mb-1.5 leading-tight group-hover:text-rose-600 transition-colors line-clamp-2">{lesson.title}</h3>
             <p className="text-[9px] md:text-xs text-gray-400 leading-relaxed mb-3 flex-1 line-clamp-2">{lesson.description}</p>
             <div className="flex items-center gap-1.5 text-[8px] md:text-[9px] font-black uppercase tracking-widest text-rose-500 group-hover:text-rose-600">Study Now <i className="fas fa-arrow-right"></i></div>
           </motion.button>
-        ))}
+          );
+        })}
       </div>
       {totalPages > 1 && (
         <div className="flex items-center justify-center gap-3 mt-6">

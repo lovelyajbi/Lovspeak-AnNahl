@@ -6,33 +6,147 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] I'm recording this note to myself because I want to remember how today felt, before the feeling fades away completely.",
-      "Narrator: [reflective] This afternoon, I bought groceries at the small shop near my apartment, the one run by an older man named Pak Hasan.",
-      "Narrator: [honest] When I got home and counted my change, I noticed he had given me almost fifty thousand rupiah too much, probably by mistake.",
-      "Narrator: [tempted] For a moment, I actually thought about keeping it. It was such a small amount, and he probably would never notice it was missing.",
-      "Narrator: [honestly] Nobody was watching me count that money. Nobody would ever know if I simply said nothing and moved on.",
-      "Narrator: [thoughtful] But then I thought about Pak Hasan, standing behind that counter every single day, counting coins carefully to support his family.",
-      "Narrator: [determined] So I put my shoes back on and walked to the shop again, even though I was tired from a long day of work.",
-      "Narrator: [warmly] When I explained the mistake and handed him the extra money, his face changed completely, from tired to genuinely surprised.",
-      "Narrator: [gently] He told me that mistake would have cost him almost a full day of profit, money he needed for his daughter's school fees.",
-      "Narrator: [moved] I hadn't realized how much that small amount actually meant to him. It felt small to me, but it was significant to his family.",
-      "Narrator: [reflective] He thanked me many times, more than I expected for something so simple, and I felt slightly embarrassed by his gratitude.",
-      "Narrator: [honestly] Walking home, I kept thinking, honesty is easy to talk about, but it only really counts when nobody is checking whether we actually do it.",
-      "Narrator: [thoughtful] Anyone can seem honest when someone else is watching closely. Real honesty shows itself in the quiet moments nobody else ever sees.",
-      "Narrator: [peacefully] I don't think I did anything extraordinary tonight. I only returned money that was never truly mine.",
-      "Narrator: [warmly] Still, something about walking home afterward felt lighter, like a small weight I hadn't even noticed had finally lifted off my shoulders.",
-      "Narrator: [with a small smile] I'm turning off this recording now, but I wanted to remember this feeling, this quiet, ordinary kind of honesty."
+      "Narrator: [reflective] I'm recording this note to myself because I want to remember how today felt, before the feeling fades away completely.",
+      "Narrator: This afternoon, I bought groceries at the small shop near my apartment, the one run by an older man named Pak Hasan.",
+      "Narrator: When I got home and counted my change, I noticed he had given me almost fifty thousand rupiah too much, probably by mistake.",
+      "Narrator: For a moment, I actually thought about keeping it. It was such a small amount, and he probably would never notice it was missing.",
+      "Narrator: [tempted] Nobody was watching me count that money. Nobody would ever know if I simply said nothing and moved on.",
+      "Narrator: But then I thought about Pak Hasan, standing behind that counter every single day, counting coins carefully to support his family.",
+      "Narrator: So I put my shoes back on and walked to the shop again, even though I was tired from a long day of work.",
+      "Narrator: [determined] When I explained the mistake and handed him the extra money, his face changed completely, from tired to genuinely surprised.",
+      "Narrator: He told me that mistake would have cost him almost a full day of profit, money he needed for his daughter's school fees.",
+      "Narrator: I hadn't realized how much that small amount actually meant to him. It felt small to me, but it was important to his family.",
+      "Narrator: [relieved] He thanked me many times, more than I expected for something so simple, and I felt slightly embarrassed by his gratitude.",
+      "Narrator: Walking home, I kept thinking, honesty is easy to talk about, but it only really counts when nobody is checking whether we actually do it.",
+      "Narrator: Anyone can seem honest when someone else is watching closely. Real honesty shows itself in the quiet moments nobody else ever sees.",
+      "Narrator: I don't think I did anything special tonight. I only returned money that was never truly mine.",
+      "Narrator: [thoughtful] Still, something about walking home afterward felt lighter, like a small weight I hadn't even noticed had finally lifted off my shoulders.",
+      "Narrator: [warmly] I'm turning off this recording now, but I wanted to remember this feeling, this simple kind of honesty."
     ],
     "quiz": [
-      { "question": "What mistake did Pak Hasan make?", "options": ["He gave the wrong groceries", "He gave the narrator too much change", "He closed the shop early", "He forgot her order"], "correctIndex": 1, "explanation": "The narrator noticed Pak Hasan had given her almost fifty thousand rupiah too much." },
-      { "question": "What did the narrator consider doing at first?", "options": ["Calling the police", "Quietly keeping the extra money", "Complaining to Pak Hasan", "Returning all her groceries"], "correctIndex": 1, "explanation": "For a moment she thought about keeping the money since nobody was watching." },
-      { "question": "Why did the extra money matter so much to Pak Hasan?", "options": ["He was planning to retire", "It would have cost him a day of profit needed for his daughter's school fees", "He needed it to buy a new shop", "It belonged to another customer"], "correctIndex": 1, "explanation": "He told her the mistake would have cost him almost a day of profit needed for his daughter's school fees." },
-      { "question": "How did Pak Hasan react when she returned the money?", "options": ["He was angry", "He was genuinely surprised and thankful", "He didn't notice at all", "He refused to accept it"], "correctIndex": 1, "explanation": "His face changed from tired to genuinely surprised, and he thanked her many times." },
-      { "question": "What does the narrator conclude about real honesty?", "options": ["It only matters when others are watching", "It shows itself in quiet moments nobody else sees", "It is impossible to practice fully", "It is only about large amounts of money"], "correctIndex": 1, "explanation": "She concludes real honesty shows itself in the quiet moments nobody else ever sees." }
-    ]
+      {
+        "question": "What mistake did Pak Hasan make?",
+        "options": [
+          "He gave the wrong groceries",
+          "He closed the shop early",
+          "He gave the narrator too much change",
+          "He forgot her order"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator noticed Pak Hasan had given her almost fifty thousand rupiah too much."
+      },
+      {
+        "question": "What did the narrator consider doing at first?",
+        "options": [
+          "Calling the police",
+          "Complaining to Pak Hasan",
+          "Returning all her groceries",
+          "Quietly keeping the extra money"
+        ],
+        "correctIndex": 3,
+        "explanation": "For a moment she thought about keeping the money since nobody was watching."
+      },
+      {
+        "question": "Why did the extra money matter so much to Pak Hasan?",
+        "options": [
+          "He was planning to retire",
+          "It would have cost him a day of profit needed for his daughter's school fees",
+          "He needed it to buy a new shop",
+          "It belonged to another customer"
+        ],
+        "correctIndex": 1,
+        "explanation": "He told her the mistake would have cost him almost a day of profit needed for his daughter's school fees."
+      },
+      {
+        "question": "How did Pak Hasan react when she returned the money?",
+        "options": [
+          "He was angry",
+          "He didn't notice at all",
+          "He was genuinely surprised and thankful",
+          "He refused to accept it"
+        ],
+        "correctIndex": 2,
+        "explanation": "His face changed from tired to genuinely surprised, and he thanked her many times."
+      },
+      {
+        "question": "What does the narrator conclude about real honesty?",
+        "options": [
+          "It only matters when others are watching",
+          "It is impossible to practice fully",
+          "It is only about large amounts of money",
+          "It shows itself in quiet moments nobody else sees"
+        ],
+        "correctIndex": 3,
+        "explanation": "She concludes real honesty shows itself in the quiet moments nobody else ever sees."
+      },
+      {
+        "question": "Why did the narrator return to the shop?",
+        "options": [
+          "She needed more groceries",
+          "Pak Hasan called her",
+          "The money did not belong to her",
+          "She had lost her shoes"
+        ],
+        "correctIndex": 2,
+        "explanation": "She understood that keeping the extra change would be dishonest."
+      },
+      {
+        "question": "What does “profit” mean in this story?",
+        "options": [
+          "Money given by a school",
+          "Change inside a customer’s bag",
+          "Money the shop earns after its costs",
+          "The price of one coin"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pak Hasan needed the shop’s earnings for his family."
+      },
+      {
+        "question": "When was honesty most difficult for the narrator?",
+        "options": [
+          "When nobody was watching",
+          "When Pak Hasan thanked her",
+          "When she entered the shop",
+          "When she bought groceries"
+        ],
+        "correctIndex": 0,
+        "explanation": "She could have kept the money without anyone seeing her choice."
+      },
+      {
+        "question": "How did she feel while walking home?",
+        "options": [
+          "Lighter and peaceful",
+          "Angry and cheated",
+          "Afraid of the shop",
+          "Confused about the price"
+        ],
+        "correctIndex": 0,
+        "explanation": "Returning the money removed the uncomfortable feeling she had carried."
+      },
+      {
+        "question": "What is the voice memo mainly showing?",
+        "options": [
+          "A lesson about grocery prices",
+          "An honest choice made in private",
+          "A plan for school fees",
+          "A complaint about a long workday"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator records how honesty mattered when no one checked her."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep story; simplify selected abstract words",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-akhlak-02",
@@ -41,38 +155,155 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Reza", "gender": "male" },
-      { "name": "Ibu Sinta", "gender": "female" }
+      {
+        "name": "Reza",
+        "gender": "male"
+      },
+      {
+        "name": "Ibu Sinta",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Reza: [frustrated] Ibu Sinta, can I talk to you for a minute? I almost lost my temper with a customer today.",
+      "Reza: [worried] Ibu Sinta, can I talk to you for a minute? I almost lost my temper with a customer today.",
       "Ibu Sinta: [calmly] Of course, sit down. Tell me exactly what happened.",
-      "Reza: [tense] A customer shouted at me for almost twenty minutes about a delivery delay that wasn't even my fault.",
-      "Ibu Sinta: [gently] That sounds exhausting. What did you do while he was shouting at you?",
-      "Reza: [honestly] I just stood there, nodding quietly, trying hard not to say something I would regret later.",
-      "Ibu Sinta: [warmly] That already shows real self-control, Reza, even if it didn't feel that way to you in the moment.",
-      "Reza: [doubtful] It didn't feel like control at all. It felt like I was about to explode inside completely.",
-      "Ibu Sinta: [understanding] Patience isn't the absence of anger. It's choosing not to act on that anger immediately.",
-      "Reza: [curious] How do you stay so calm after twenty years of working with difficult customers here?",
-      "Ibu Sinta: [reflective] Honestly, I still get angry sometimes. But I remind myself his anger is about the delay, not really about me personally.",
-      "Reza: [thoughtful] I never thought of it that way before. I took it very personally today.",
-      "Ibu Sinta: [gently] It's natural to take it personally at first. That skill grows slowly, with practice, not overnight.",
-      "Reza: [curious] Did you ever lose your patience badly with a customer, back when you were newer here?",
-      "Ibu Sinta: [smiling] Many times. Once I actually cried in the storage room after a very difficult phone call.",
-      "Reza: [surprised] Really? You always seem so calm and steady now.",
-      "Ibu Sinta: [warmly] Calm is something you build, Reza, one difficult moment at a time. Nobody starts out already this way.",
-      "Reza: [determined] Okay. Next time, I will try to remember his frustration isn't really about me as a person.",
-      "Ibu Sinta: [encouraging] Good. And afterward, always give yourself a few quiet minutes to breathe before your next task.",
-      "Reza: [relieved] Thank you for listening, Ibu Sinta. I feel less like a failure now than I did an hour ago.",
-      "Ibu Sinta: [kindly] You're not a failure at all. You stayed patient under real pressure today, and that's genuinely worth noticing."
+      "Reza: A customer shouted at me for almost twenty minutes about a delivery delay that wasn't even my fault.",
+      "Ibu Sinta: That sounds exhausting. What did you do while he was shouting at you?",
+      "Reza: [tense] I just stood there, nodding quietly, trying hard not to say something I would regret later.",
+      "Ibu Sinta: That already shows real self-control, Reza, even if it didn't feel that way to you in the moment.",
+      "Reza: It didn't feel like control at all. It felt like I was about to explode inside completely.",
+      "Ibu Sinta: [gently] Patience isn't the absence of anger. It's choosing not to act on that anger immediately.",
+      "Reza: How do you stay so calm after twenty years of working with difficult customers here?",
+      "Ibu Sinta: Honestly, I still get angry sometimes. But I remind myself his anger is about the delay, not really about me personally.",
+      "Reza: I never thought of it that way before. I took it very personally today.",
+      "Ibu Sinta: It's natural to take it personally at first. That skill grows slowly, with practice, not overnight.",
+      "Reza: Did you ever lose your patience badly with a customer, back when you were newer here?",
+      "Ibu Sinta: Many times. Once I actually cried in the storage room after a very difficult phone call.",
+      "Reza: [reflective] Really? You always seem so calm and steady now.",
+      "Ibu Sinta: Calm is something you build, Reza, one difficult moment at a time. Nobody starts out already this way.",
+      "Reza: Okay. Next time, I will try to remember his frustration isn't really about me as a person.",
+      "Ibu Sinta: Good. And afterward, always give yourself a few quiet minutes to breathe before your next task.",
+      "Reza: Thank you for listening, Ibu Sinta. I feel less like a failure now than I did an hour ago.",
+      "Ibu Sinta: [encouraging] You're not a failure at all. You stayed patient under real pressure today, and that's genuinely worth noticing."
     ],
     "quiz": [
-      { "question": "Why was Reza upset when he spoke to Ibu Sinta?", "options": ["He was fired", "A customer shouted at him for twenty minutes about a delay that wasn't his fault", "He broke equipment", "He arrived late to work"], "correctIndex": 1, "explanation": "A customer shouted at him for almost twenty minutes about a delivery delay that wasn't his fault." },
-      { "question": "What did Reza do while the customer was shouting?", "options": ["He shouted back", "He stood quietly and nodded, avoiding saying something he'd regret", "He walked away immediately", "He called his manager to complain"], "correctIndex": 1, "explanation": "He stood there nodding quietly, trying not to say something he would regret later." },
-      { "question": "How does Ibu Sinta define patience?", "options": ["Never feeling angry", "Choosing not to act on anger immediately", "Avoiding all customers", "Always agreeing with people"], "correctIndex": 1, "explanation": "She says patience is not the absence of anger, but choosing not to act on it immediately." },
-      { "question": "What did Ibu Sinta admit about her own past?", "options": ["She never struggled with patience", "She once cried in the storage room after a difficult call", "She quit her first job", "She always stayed perfectly calm"], "correctIndex": 1, "explanation": "She admitted that once she actually cried in the storage room after a very difficult phone call." },
-      { "question": "What does Ibu Sinta advise Reza to do afterward?", "options": ["Complain to coworkers", "Give himself a few minutes to breathe before his next task", "Avoid all customers for the rest of the day", "Report the customer immediately"], "correctIndex": 1, "explanation": "She advises him to give himself a few quiet minutes to breathe before his next task." }
-    ]
+      {
+        "question": "Why was Reza upset when he spoke to Ibu Sinta?",
+        "options": [
+          "He was fired",
+          "A customer shouted at him for twenty minutes about a delay that wasn't his fault",
+          "He broke equipment",
+          "He arrived late to work"
+        ],
+        "correctIndex": 1,
+        "explanation": "A customer shouted at him for almost twenty minutes about a delivery delay that wasn't his fault."
+      },
+      {
+        "question": "What did Reza do while the customer was shouting?",
+        "options": [
+          "He shouted back",
+          "He walked away immediately",
+          "He stood quietly and nodded, avoiding saying something he'd regret",
+          "He called his manager to complain"
+        ],
+        "correctIndex": 2,
+        "explanation": "He stood there nodding quietly, trying not to say something he would regret later."
+      },
+      {
+        "question": "How does Ibu Sinta define patience?",
+        "options": [
+          "Never feeling angry",
+          "Avoiding all customers",
+          "Always agreeing with people",
+          "Choosing not to act on anger immediately"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says patience is not the absence of anger, but choosing not to act on it immediately."
+      },
+      {
+        "question": "What did Ibu Sinta admit about her own past?",
+        "options": [
+          "She never struggled with patience",
+          "She quit her first job",
+          "She always stayed perfectly calm",
+          "She once cried in the storage room after a difficult call"
+        ],
+        "correctIndex": 3,
+        "explanation": "She admitted that once she actually cried in the storage room after a very difficult phone call."
+      },
+      {
+        "question": "What does Ibu Sinta advise Reza to do afterward?",
+        "options": [
+          "Complain to coworkers",
+          "Avoid all customers for the rest of the day",
+          "Give himself a few minutes to breathe before his next task",
+          "Report the customer immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "She advises him to give himself a few quiet minutes to breathe before his next task."
+      },
+      {
+        "question": "Why did the customer shout at Reza?",
+        "options": [
+          "Reza closed the shop",
+          "A product was missing",
+          "The customer lost a phone",
+          "A delivery was late"
+        ],
+        "correctIndex": 3,
+        "explanation": "The customer was angry about a delivery delay."
+      },
+      {
+        "question": "What does “lost my temper” mean?",
+        "options": [
+          "Became very angry",
+          "Forgot the delivery time",
+          "Lost an office object",
+          "Felt too tired to work"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reza means that he nearly reacted with uncontrolled anger."
+      },
+      {
+        "question": "What helps Ibu Sinta stay calm?",
+        "options": [
+          "She leaves every customer",
+          "She remembers the anger is about the problem",
+          "She never feels angry",
+          "She ends the conversation at once"
+        ],
+        "correctIndex": 1,
+        "explanation": "She does not treat the customer’s frustration as a personal attack."
+      },
+      {
+        "question": "What should Reza do before his next task?",
+        "options": [
+          "Call the customer again",
+          "Work without a break",
+          "Explain the delay to everyone",
+          "Take a few quiet minutes"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ibu Sinta recommends time to breathe and reset."
+      },
+      {
+        "question": "What does the conversation teach about patience?",
+        "options": [
+          "It grows through practice",
+          "It removes anger immediately",
+          "It is natural from birth",
+          "It means accepting rude behavior forever"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ibu Sinta says calm reactions are built one difficult moment at a time."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep; clear mentor dialogue with concrete workplace pressure",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-akhlak-03",
@@ -81,38 +312,155 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Umar", "gender": "male" },
-      { "name": "Laila", "gender": "female" }
+      {
+        "name": "Umar",
+        "gender": "male"
+      },
+      {
+        "name": "Laila",
+        "gender": "female"
+      }
     ],
     "script": [
       "Umar: [excited] Laila, guess what? I got the promotion! I'm officially the team lead starting next month.",
-      "Laila: [thrilled] Umar, that's incredible! You worked so hard for this. I'm so proud of you.",
-      "Umar: [laughing] Thank you! Honestly, I still can't quite believe it. I keep checking the email again and again.",
-      "Laila: [warmly] You deserve it completely. But can I say something, as your slightly annoying older sister?",
-      "Umar: [smiling] Of course, you always say something anyway, whether I ask or not.",
-      "Laila: [gently] Just remember, when you start leading people, some of them are older than you or more experienced.",
-      "Umar: [thoughtful] I know. Honestly, that part already makes me a little nervous.",
-      "Laila: [reflective] Good nervousness, I think. It means you're taking it seriously instead of assuming you already know everything.",
-      "Umar: [curious] Do you remember when you became supervisor at your job? How did you handle that at first?",
-      "Laila: [honestly] I made mistakes early on. I talked too much and listened too little, and people definitely noticed.",
-      "Umar: [surprised] Really? You seem so naturally good with people now, so easy to talk to.",
-      "Laila: [smiling] It took real time. One coworker eventually told me honestly that I sounded arrogant sometimes, even without meaning to.",
-      "Umar: [thoughtful] That must have been hard to hear from someone you worked with every day.",
-      "Laila: [gently] It was, but it helped me more than any compliment ever could. I started asking questions instead of just giving instructions.",
-      "Umar: [nodding] So your advice is, ask more, and assume less about what people already understand?",
-      "Laila: [warmly] Exactly. And never let a new title make you forget the people who helped you get there.",
-      "Umar: [sincerely] You helped me get here too, you know. You always believed I could actually do this.",
-      "Laila: [touched] That means a lot, Umar. Just promise me you'll stay the same kind person, even with the new title.",
-      "Umar: [determined] I promise. Success like this is a test as much as a reward, isn't it, really?",
-      "Laila: [proudly] Exactly right. And I truly think you're going to pass that test."
+      "Laila: [warmly] Umar, that's incredible! You worked so hard for this. I'm so proud of you.",
+      "Umar: Thank you! Honestly, I still can't quite believe it. I keep checking the email again and again.",
+      "Laila: You deserve it completely. But can I say something, as your slightly annoying older sister?",
+      "Umar: Of course, you always say something anyway, whether I ask or not.",
+      "Laila: Just remember, when you start leading people, some of them are older than you or more experienced.",
+      "Umar: I know. Honestly, that part already makes me a little nervous.",
+      "Laila: [nervous] Good nervousness, I think. It means you're taking it seriously instead of assuming you already know everything.",
+      "Umar: Do you remember when you became supervisor at your job? How did you handle that at first?",
+      "Laila: I made mistakes early on. I talked too much and listened too little, and people definitely noticed.",
+      "Umar: Really? You seem so naturally good with people now, so easy to talk to.",
+      "Laila: It took real time. One coworker eventually told me honestly that I sounded arrogant sometimes, even without meaning to.",
+      "Umar: [reflective] That must have been hard to hear from someone you worked with every day.",
+      "Laila: It was, but it helped me more than any compliment ever could. I started asking questions instead of just giving instructions.",
+      "Umar: So your advice is, ask more, and assume less about what people already understand?",
+      "Laila: Exactly. And never let a new title make you forget the people who helped you get there.",
+      "Umar: You helped me get here too, you know. You always believed I could actually do this.",
+      "Laila: That means a lot, Umar. Just promise me you'll stay the same kind person, even with the new title.",
+      "Umar: [sincerely] I promise. Success like this is a test as much as a reward, isn't it, really?",
+      "Laila: [encouraging] Exactly right. And I truly think you're going to pass that test."
     ],
     "quiz": [
-      { "question": "What news does Umar share with his sister?", "options": ["He is moving abroad", "He got promoted to team lead", "He got married", "He bought a new car"], "correctIndex": 1, "explanation": "Umar tells Laila he got the promotion and is officially team lead starting next month." },
-      { "question": "What does Laila warn Umar about as he starts leading people?", "options": ["He will earn less money", "Some of his team will be older or more experienced than him", "He will have to work weekends", "He will lose his friends"], "correctIndex": 1, "explanation": "Laila reminds him some people he leads will be older or more experienced than him." },
-      { "question": "What mistake did Laila make early in her own leadership role?", "options": ["She was always late", "She talked too much and listened too little", "She refused every promotion", "She never gave instructions"], "correctIndex": 1, "explanation": "Laila admits she talked too much and listened too little when she first became supervisor." },
-      { "question": "What did a coworker once tell Laila?", "options": ["That she was too quiet", "That she sometimes sounded arrogant", "That she should quit", "That she needed more training"], "correctIndex": 1, "explanation": "A coworker honestly told her she sometimes sounded arrogant, even without meaning to." },
-      { "question": "What does Laila make Umar promise?", "options": ["To call her every day", "To stay the same kind person even with his new title", "To give her a job on his team", "To never make mistakes"], "correctIndex": 1, "explanation": "Laila asks Umar to promise he'll stay the same kind person, even with the new title." }
-    ]
+      {
+        "question": "What news does Umar share with his sister?",
+        "options": [
+          "He got promoted to team lead",
+          "He is moving abroad",
+          "He got married",
+          "He bought a new car"
+        ],
+        "correctIndex": 0,
+        "explanation": "Umar tells Laila he got the promotion and is officially team lead starting next month."
+      },
+      {
+        "question": "What does Laila warn Umar about as he starts leading people?",
+        "options": [
+          "He will earn less money",
+          "Some of his team will be older or more experienced than him",
+          "He will have to work weekends",
+          "He will lose his friends"
+        ],
+        "correctIndex": 1,
+        "explanation": "Laila reminds him some people he leads will be older or more experienced than him."
+      },
+      {
+        "question": "What mistake did Laila make early in her own leadership role?",
+        "options": [
+          "She was always late",
+          "She refused every promotion",
+          "She talked too much and listened too little",
+          "She never gave instructions"
+        ],
+        "correctIndex": 2,
+        "explanation": "Laila admits she talked too much and listened too little when she first became supervisor."
+      },
+      {
+        "question": "What did a coworker once tell Laila?",
+        "options": [
+          "That she was too quiet",
+          "That she should quit",
+          "That she needed more training",
+          "That she sometimes sounded arrogant"
+        ],
+        "correctIndex": 3,
+        "explanation": "A coworker honestly told her she sometimes sounded arrogant, even without meaning to."
+      },
+      {
+        "question": "What does Laila make Umar promise?",
+        "options": [
+          "To stay the same kind person even with his new title",
+          "To call her every day",
+          "To give her a job on his team",
+          "To never make mistakes"
+        ],
+        "correctIndex": 0,
+        "explanation": "Laila asks Umar to promise he'll stay the same kind person, even with the new title."
+      },
+      {
+        "question": "Why is Umar nervous about the new role?",
+        "options": [
+          "He does not know his job title",
+          "His sister works on the team",
+          "The promotion begins tomorrow",
+          "Some team members have more experience"
+        ],
+        "correctIndex": 3,
+        "explanation": "Leading older or more experienced people feels challenging to him."
+      },
+      {
+        "question": "What does “arrogant” mean in this conversation?",
+        "options": [
+          "Acting as if you know more than others",
+          "Feeling happy about good news",
+          "Asking people for advice",
+          "Working hard for a promotion"
+        ],
+        "correctIndex": 0,
+        "explanation": "Laila sounded too sure of herself and did not listen enough."
+      },
+      {
+        "question": "How did Laila improve as a supervisor?",
+        "options": [
+          "She gave more instructions",
+          "She asked more questions",
+          "She avoided coworkers",
+          "She changed her job title"
+        ],
+        "correctIndex": 1,
+        "explanation": "She learned to listen instead of speaking all the time."
+      },
+      {
+        "question": "Why does Laila call Umar’s nervousness good?",
+        "options": [
+          "It shows he takes the role seriously",
+          "It will make him leave the job",
+          "It proves the team is difficult",
+          "It means he needs another email"
+        ],
+        "correctIndex": 0,
+        "explanation": "His concern shows that he does not think he already knows everything."
+      },
+      {
+        "question": "What should Umar remember after the promotion?",
+        "options": [
+          "Only his new title",
+          "His old email address",
+          "The people who helped him",
+          "The date of every meeting"
+        ],
+        "correctIndex": 2,
+        "explanation": "Laila asks him to remain kind and remember other people’s support."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep; promotion topic suits adults and the dialogue gives clear context for harder words",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-akhlak-04",
@@ -121,33 +469,147 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [heavy] I've been lying here for almost an hour, unable to sleep, thinking about what happened with Bram this week.",
-      "Narrator: [hurt] I told him something private, something I only trusted a few people with, and somehow it reached half our friend group by Friday.",
+      "Narrator: [tired] I've been lying here for almost an hour, unable to sleep, thinking about what happened with Bram this week.",
+      "Narrator: I told him something private, something I only trusted a few people with, and somehow it reached half our friend group by Friday.",
       "Narrator: [angry] When I found out, I wanted to message him something harsh, something I definitely would have regretted sending later.",
-      "Narrator: [reflective] Instead, I put my phone down and just sat with the anger for a while, letting it stay there without acting on it.",
-      "Narrator: [thoughtful] I kept asking myself, why would he do that? We've been close since university, almost ten years now.",
-      "Narrator: [honestly] Maybe he didn't think carefully before speaking. Maybe he mentioned it casually without realizing how far it would travel.",
-      "Narrator: [tired] Either way, the damage was already done, and staying angry all week hadn't actually changed anything about that.",
-      "Narrator: [reflective] Today he finally called me, and his voice sounded genuinely ashamed, not defensive like I had expected it to sound.",
-      "Narrator: [softly] He said he mentioned it to one person, not realizing it would spread, and he felt terrible once he understood what happened.",
-      "Narrator: [thoughtful] Part of me still feels the sting of it, if I'm being completely honest with myself right now.",
-      "Narrator: [reflective] But another part of me remembers every time he showed up for me, especially during my father's illness two years ago.",
-      "Narrator: [gently] Nobody is perfect, not him, and certainly not me. I've made careless mistakes with other people's trust before too.",
-      "Narrator: [determined] So tonight, I decided to forgive him, not because what he did was fine, but because holding onto it was only hurting me.",
-      "Narrator: [peacefully] Forgiveness doesn't mean I'll tell him every secret again without thinking twice. It just means I'm choosing not to carry this anger forward.",
-      "Narrator: [warmly] Tomorrow, I'll message him back properly, and I think our friendship will survive this, maybe even grow stronger from it.",
-      "Narrator: [calmly] I think I can finally sleep now, with this weight put down instead of carried through another restless night."
+      "Narrator: Instead, I put my phone down and just sat with the anger for a while, letting it stay there without acting on it.",
+      "Narrator: I kept asking myself, why would he do that? We've been close since university, almost ten years now.",
+      "Narrator: Maybe he didn't think carefully before speaking. Maybe he mentioned it casually without realizing how far it would travel.",
+      "Narrator: [reflective] Either way, the damage was already done, and staying angry all week hadn't actually changed anything about that.",
+      "Narrator: Today he finally called me, and his voice sounded genuinely ashamed, not angry or full of excuses as I had expected.",
+      "Narrator: [regretfully] He said he mentioned it to one person, not realizing it would spread, and he felt terrible once he understood what happened.",
+      "Narrator: Part of me still feels the sting of it, if I'm being completely honest with myself right now.",
+      "Narrator: But another part of me remembers every time he showed up for me, especially during my father's illness two years ago.",
+      "Narrator: Nobody is perfect, not him, and certainly not me. I've made careless mistakes with other people's trust before too.",
+      "Narrator: [thoughtful] So tonight, I decided to forgive him, not because what he did was fine, but because holding onto it was only hurting me.",
+      "Narrator: Forgiveness doesn't mean I'll tell him every secret again without thinking twice. It just means I'm choosing not to stay angry every day.",
+      "Narrator: Tomorrow, I'll message him back properly, and I think our friendship will survive this, maybe even grow stronger from it.",
+      "Narrator: [peacefully] I think I can finally sleep now, because I have chosen not to carry the anger through another night."
     ],
     "quiz": [
-      { "question": "What did Bram do that hurt the narrator?", "options": ["He missed a meeting", "He shared the narrator's private secret and it spread to their friend group", "He borrowed money and didn't return it", "He forgot the narrator's birthday"], "correctIndex": 1, "explanation": "The narrator says he told Bram something private that reached half their friend group by Friday." },
-      { "question": "What did the narrator almost do when he first found out?", "options": ["Call the police", "Send a harsh message he would regret", "End the friendship immediately", "Tell everyone else about it too"], "correctIndex": 1, "explanation": "He wanted to message Bram something harsh that he definitely would have regretted sending." },
-      { "question": "What does the narrator remember about Bram from the past?", "options": ["Bram was always unreliable", "Bram showed up for him during his father's illness", "Bram never apologizes", "Bram dislikes his other friends"], "correctIndex": 1, "explanation": "He remembers Bram showing up for him especially during his father's illness two years ago." },
-      { "question": "How did Bram sound when he finally called?", "options": ["Angry and defensive", "Genuinely ashamed", "Indifferent", "Amused"], "correctIndex": 1, "explanation": "His voice sounded genuinely ashamed, not defensive like the narrator had expected." },
-      { "question": "What does the narrator decide forgiveness means?", "options": ["Pretending nothing happened", "Choosing not to carry the anger forward", "Never trusting Bram with anything again", "Telling everyone he has forgiven Bram"], "correctIndex": 1, "explanation": "He concludes forgiveness means choosing not to carry the anger forward, not blind trust again." }
-    ]
+      {
+        "question": "What did Bram do that hurt the narrator?",
+        "options": [
+          "He missed a meeting",
+          "He borrowed money and didn't return it",
+          "He forgot the narrator's birthday",
+          "He shared the narrator's private secret and it spread to their friend group"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator says he told Bram something private that reached half their friend group by Friday."
+      },
+      {
+        "question": "What did the narrator almost do when he first found out?",
+        "options": [
+          "Call the police",
+          "Send a harsh message he would regret",
+          "End the friendship immediately",
+          "Tell everyone else about it too"
+        ],
+        "correctIndex": 1,
+        "explanation": "He wanted to message Bram something harsh that he definitely would have regretted sending."
+      },
+      {
+        "question": "What does the narrator remember about Bram from the past?",
+        "options": [
+          "Bram was always unreliable",
+          "Bram showed up for him during his father's illness",
+          "Bram never apologizes",
+          "Bram dislikes his other friends"
+        ],
+        "correctIndex": 1,
+        "explanation": "He remembers Bram showing up for him especially during his father's illness two years ago."
+      },
+      {
+        "question": "How did Bram sound when he finally called?",
+        "options": [
+          "Angry and defensive",
+          "Indifferent",
+          "Genuinely ashamed",
+          "Amused"
+        ],
+        "correctIndex": 2,
+        "explanation": "His voice sounded genuinely ashamed, not defensive like the narrator had expected."
+      },
+      {
+        "question": "What does the narrator decide forgiveness means?",
+        "options": [
+          "Choosing not to carry the anger forward",
+          "Pretending nothing happened",
+          "Never trusting Bram with anything again",
+          "Telling everyone he has forgiven Bram"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes forgiveness means choosing not to carry the anger forward, not blind trust again."
+      },
+      {
+        "question": "Why could the narrator not sleep?",
+        "options": [
+          "He had worked all night",
+          "His phone kept ringing",
+          "His father was calling him",
+          "He kept thinking about Bram’s mistake"
+        ],
+        "correctIndex": 3,
+        "explanation": "The broken trust and anger stayed in his mind."
+      },
+      {
+        "question": "What does “the damage was already done” mean?",
+        "options": [
+          "The private story had already spread",
+          "The phone had stopped working",
+          "Their university had closed",
+          "Bram had lost his job"
+        ],
+        "correctIndex": 0,
+        "explanation": "People already knew information that should have stayed private."
+      },
+      {
+        "question": "Why does the narrator remember his father’s illness?",
+        "options": [
+          "Bram caused the illness",
+          "Bram supported him during that time",
+          "The secret was about a doctor",
+          "His father called that night"
+        ],
+        "correctIndex": 1,
+        "explanation": "The memory helps him see Bram as more than one mistake."
+      },
+      {
+        "question": "Does forgiveness mean full trust at once?",
+        "options": [
+          "Yes, nothing needs to change",
+          "No, he will be more careful with secrets",
+          "No, the friendship must end",
+          "Yes, Bram may share more stories"
+        ],
+        "correctIndex": 1,
+        "explanation": "He forgives Bram but keeps a sensible boundary."
+      },
+      {
+        "question": "What will the narrator probably do tomorrow?",
+        "options": [
+          "Send the harsh message",
+          "Tell the whole friend group",
+          "Reply calmly to Bram",
+          "Avoid Bram forever"
+        ],
+        "correctIndex": 2,
+        "explanation": "He plans to answer after choosing forgiveness."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep adult conflict; simplify abstract phrases about resentment and forgiveness",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-akhlak-05",
@@ -156,82 +618,311 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bu Ratna", "gender": "female" },
-      { "name": "Dimas", "gender": "male" }
+      {
+        "name": "Bu Ratna",
+        "gender": "female"
+      },
+      {
+        "name": "Dimas",
+        "gender": "male"
+      }
     ],
     "script": [
       "Bu Ratna: [gently] Dimas, do you have a few minutes? I wanted to check in after this morning's meeting.",
-      "Dimas: [tense] Sure. I'm still a little annoyed, honestly, about how that feedback was delivered in front of everyone.",
-      "Bu Ratna: [understanding] That's fair. Pak Joko could have said it more privately. I noticed you stayed quiet, though.",
-      "Dimas: [honestly] It took everything in me not to argue back right there in the meeting room.",
-      "Bu Ratna: [curious] What stopped you from arguing back in that moment?",
-      "Dimas: [thoughtful] I remembered the last time I lost my temper at work, two years ago at my old job.",
-      "Bu Ratna: [interested] What happened then, if you don't mind sharing?",
-      "Dimas: [regretfully] I snapped at my supervisor in front of clients. It damaged my reputation there for months afterward.",
-      "Bu Ratna: [gently] That sounds difficult to carry. It seems like you learned something important from it, though.",
-      "Dimas: [reflective] I learned that being right doesn't matter much if I express it in an ugly way.",
-      "Bu Ratna: [warmly] That's a mature realization. Most people take much longer to learn that lesson, if they ever do at all.",
-      "Dimas: [curious] Was Pak Joko's feedback actually fair, though? Part of it still felt exaggerated to me.",
-      "Bu Ratna: [honestly] Some of it was fair, some was probably exaggerated. But your reaction today was appropriate either way.",
-      "Dimas: [relieved] I appreciate you saying that. I was worried I looked weak by not defending myself immediately.",
-      "Bu Ratna: [firmly] Staying calm under pressure is not weakness, Dimas. It's actually one of the hardest skills to master.",
-      "Dimas: [thoughtful] I still felt angry inside the whole meeting, even though my face probably looked calm.",
-      "Bu Ratna: [gently] That's completely normal. Controlling your reaction doesn't mean the feeling disappears immediately.",
-      "Dimas: [curious] So what should I do with that leftover anger now, honestly?",
-      "Bu Ratna: [encouraging] Go for a short walk after this, and later, we can talk to Pak Joko together calmly, if you'd like.",
-      "Dimas: [grateful] I'd like that. Thank you for checking on me, and for not just telling me to get over it.",
-      "Bu Ratna: [warmly] That's what a one-on-one is for, Dimas. Anger managed well today means next time will feel a little easier."
+      "Dimas: [frustrated] Sure. I'm still a little annoyed, honestly, about how that feedback was delivered in front of everyone.",
+      "Bu Ratna: That's fair. Pak Joko could have said it more privately. I noticed you stayed quiet, though.",
+      "Dimas: It took everything in me not to argue back right there in the meeting room.",
+      "Bu Ratna: [reflective] What stopped you from arguing back in that moment?",
+      "Dimas: I remembered the last time I lost my temper at work, two years ago at my old job.",
+      "Bu Ratna: What happened then, if you don't mind sharing?",
+      "Dimas: I snapped at my supervisor in front of clients. People at work trusted me less for months afterward.",
+      "Bu Ratna: That sounds difficult to carry. It seems like you learned something important from it, though.",
+      "Dimas: I learned that being right doesn't matter much if I express it in an ugly way.",
+      "Bu Ratna: [honestly] That's a mature realization. Most people take much longer to learn that lesson, if they ever do at all.",
+      "Dimas: Was Pak Joko's feedback actually fair, though? Part of it still felt too strong to me.",
+      "Bu Ratna: Some of it was fair, some was probably too strong. But your reaction today was appropriate either way.",
+      "Dimas: I appreciate you saying that. I was worried I looked weak by not defending myself immediately.",
+      "Bu Ratna: Staying calm under pressure is not weakness, Dimas. It's actually one of the hardest skills to master.",
+      "Dimas: [reassuring] I still felt angry inside the whole meeting, even though my face probably looked calm.",
+      "Bu Ratna: That's completely normal. Controlling your reaction doesn't mean the feeling disappears immediately.",
+      "Dimas: So what should I do with that leftover anger now, honestly?",
+      "Bu Ratna: Go for a short walk after this, and later, we can talk to Pak Joko together calmly, if you'd like.",
+      "Dimas: I'd like that. Thank you for checking on me, and for not just telling me to get over it.",
+      "Bu Ratna: [encouraging] That's what a one-on-one is for, Dimas. Anger managed well today means next time will feel a little easier."
     ],
     "quiz": [
-      { "question": "Why was Dimas upset after the meeting?", "options": ["He was late for work", "Feedback was delivered harshly in front of everyone", "He lost a client", "He was denied a raise"], "correctIndex": 1, "explanation": "Dimas is annoyed about how Pak Joko's feedback was delivered in front of everyone." },
-      { "question": "What happened when Dimas lost his temper at his old job?", "options": ["He was promoted anyway", "He snapped at his supervisor in front of clients, damaging his reputation", "Nothing significant happened", "He quit immediately"], "correctIndex": 1, "explanation": "He snapped at his supervisor in front of clients, which damaged his reputation for months." },
-      { "question": "What lesson did Dimas learn from that past experience?", "options": ["Never speak in meetings", "Being right doesn't matter much if expressed in an ugly way", "Supervisors are always wrong", "Clients should never see conflict"], "correctIndex": 1, "explanation": "Dimas learned that being right doesn't matter much if he expresses it in an ugly way." },
-      { "question": "Does Bu Ratna think staying calm under pressure is weakness?", "options": ["Yes, definitely", "No, she says it's one of the hardest skills to master", "She has no opinion", "Only for new employees"], "correctIndex": 1, "explanation": "Bu Ratna firmly says staying calm under pressure is not weakness but one of the hardest skills to master." },
-      { "question": "What does Bu Ratna suggest Dimas do with his leftover anger?", "options": ["Ignore it completely", "Take a short walk, then talk to Pak Joko calmly together later", "Report Pak Joko immediately", "Avoid Pak Joko permanently"], "correctIndex": 1, "explanation": "She suggests he take a short walk, and later they can talk to Pak Joko together calmly." }
-    ]
+      {
+        "question": "Why was Dimas upset after the meeting?",
+        "options": [
+          "Feedback was delivered harshly in front of everyone",
+          "He was late for work",
+          "He lost a client",
+          "He was denied a raise"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dimas is annoyed about how Pak Joko's feedback was delivered in front of everyone."
+      },
+      {
+        "question": "What happened when Dimas lost his temper at his old job?",
+        "options": [
+          "He was promoted anyway",
+          "He snapped at his supervisor in front of clients, damaging his reputation",
+          "Nothing significant happened",
+          "He quit immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "He snapped at his supervisor in front of clients, which damaged his reputation for months."
+      },
+      {
+        "question": "What lesson did Dimas learn from that past experience?",
+        "options": [
+          "Never speak in meetings",
+          "Supervisors are always wrong",
+          "Being right doesn't matter much if expressed in an ugly way",
+          "Clients should never see conflict"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dimas learned that being right doesn't matter much if he expresses it in an ugly way."
+      },
+      {
+        "question": "Does Bu Ratna think staying calm under pressure is weakness?",
+        "options": [
+          "No, she says it's one of the hardest skills to master",
+          "Yes, definitely",
+          "She has no opinion",
+          "Only for new employees"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bu Ratna firmly says staying calm under pressure is not weakness but one of the hardest skills to master."
+      },
+      {
+        "question": "What does Bu Ratna suggest Dimas do with his leftover anger?",
+        "options": [
+          "Ignore it completely",
+          "Report Pak Joko immediately",
+          "Take a short walk, then talk to Pak Joko calmly together later",
+          "Avoid Pak Joko permanently"
+        ],
+        "correctIndex": 2,
+        "explanation": "She suggests he take a short walk, and later they can talk to Pak Joko together calmly."
+      },
+      {
+        "question": "Why did Dimas stay quiet in the meeting?",
+        "options": [
+          "He agreed with every word",
+          "He could not hear Pak Joko",
+          "He remembered an earlier angry mistake",
+          "He wanted to leave his job"
+        ],
+        "correctIndex": 2,
+        "explanation": "His past reaction taught him not to argue in front of others."
+      },
+      {
+        "question": "What does “snapped at my supervisor” mean?",
+        "options": [
+          "Asked a careful question",
+          "Spoke suddenly and angrily",
+          "Sent a polite message",
+          "Left work quietly"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dimas describes an uncontrolled angry response."
+      },
+      {
+        "question": "Did Dimas agree with all the feedback?",
+        "options": [
+          "Yes, every part was fair",
+          "No, he heard none of it",
+          "No, some parts felt too strong",
+          "Yes, he wrote it himself"
+        ],
+        "correctIndex": 2,
+        "explanation": "He accepts some feedback while questioning other parts."
+      },
+      {
+        "question": "Why does Bu Ratna offer to join the later talk?",
+        "options": [
+          "To argue with Pak Joko",
+          "To cancel the next meeting",
+          "To repeat the criticism publicly",
+          "To help Dimas speak calmly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her support can make the private follow-up more constructive."
+      },
+      {
+        "question": "What is the key difference between feeling and action?",
+        "options": [
+          "Calm behavior removes every feeling",
+          "Strong feelings must be spoken at once",
+          "Anger always proves feedback is wrong",
+          "Anger may stay while behavior remains calm"
+        ],
+        "correctIndex": 3,
+        "explanation": "The dialogue shows that self-control guides action even before feelings fade."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep workplace lesson; simplify two difficult phrases",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-akhlak-06",
-    "title": "A Talk Show Panel on Why Keeping Promises Still Matters",
+    "title": "A Talk Show Conversation on Why Keeping Promises Still Matters",
     "level": "A1",
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Mira", "gender": "female" },
-      { "name": "Pak Hendra", "gender": "male" },
-      { "name": "Yuni", "gender": "female" }
+      {
+        "name": "Mira",
+        "gender": "female"
+      },
+      {
+        "name": "Yuni",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Mira: [warmly] Welcome back to the show. Tonight we're discussing something simple but powerful, keeping our promises. Joining me are Pak Hendra and Yuni.",
-      "Pak Hendra: [pleasantly] Thank you for having me, Mira. This topic matters a lot in business, believe me.",
-      "Yuni: [smiling] Thanks for the invitation. I actually have a few personal stories about this too.",
-      "Mira: [curious] Pak Hendra, why does keeping promises matter so much in business specifically?",
-      "Pak Hendra: [thoughtful] Because trust is really the entire foundation. If I promise a client delivery on Monday and it doesn't arrive, that relationship weakens immediately.",
-      "Mira: [interested] Have you ever struggled to keep a promise?",
-      "Pak Hendra: [honestly] Yes, many times. Once I promised a deadline before checking with my team, and we almost failed to deliver.",
-      "Mira: [curious] What did you do once you realized that mistake?",
-      "Pak Hendra: [reflective] I called the client immediately, admitted the mistake, and asked for two extra days instead of hiding it.",
-      "Mira: [nodding] That's interesting, choosing honesty about a broken promise instead of silence.",
-      "Yuni: [agreeing] That matches my experience too. I once promised a friend I'd help her move apartments, then completely forgot because of work stress.",
-      "Mira: [curious] What happened once you finally remembered the promise?",
-      "Yuni: [regretfully] I felt terrible. I called her immediately, apologized honestly, and came the next morning to help unpack instead.",
-      "Mira: [curious] Did that fix things properly between the two of you?",
-      "Yuni: [warmly] Mostly, yes. She told me later that how I handled the mistake mattered more than the mistake itself.",
-      "Pak Hendra: [agreeing] That's exactly the pattern I see in business too. People forgive delays more easily than dishonesty about delays.",
-      "Mira: [thoughtful] So keeping promises isn't only about never failing, but about how we handle it when we do fail.",
-      "Yuni: [nodding] Exactly. And also about not making promises carelessly, without checking if we can truly keep them.",
-      "Pak Hendra: [firmly] Right. I've learned to promise less and deliver more, instead of promising quickly just to sound helpful.",
-      "Mira: [smiling] That's excellent advice for tonight. Thank you both for such an honest conversation about something we all struggle with sometimes.",
-      "Yuni: [warmly] Thank you for having me. I hope it reminds someone to call instead of staying silent.",
-      "Pak Hendra: [warmly] Agreed. A promise is worth more than we often realize until the moment it's broken."
+      "Mira: [warmly] Welcome back to the show. Tonight Yuni and I are talking about promises at work and in friendship.",
+      "Yuni: Thank you, Mira. Promises sound simple, but they are one of the main ways people learn to trust us.",
+      "Mira: [curious] Can you give us an example from your work?",
+      "Yuni: Last month, I promised a client that a report would be ready on Monday. I had not checked the date with my team first.",
+      "Mira: What happened when you checked?",
+      "Yuni: [regretfully] We needed two more days. I felt embarrassed because the problem came from my quick promise.",
+      "Mira: Did you wait until Monday to tell the client?",
+      "Yuni: No. I called on Friday, explained my mistake, and gave a new date that the team could truly meet.",
+      "Mira: How did the client respond?",
+      "Yuni: She was disappointed, but she thanked me for telling her early. We delivered the report on Wednesday as promised.",
+      "Mira: You also mentioned a promise to a friend.",
+      "Yuni: [thoughtful] Yes. I forgot that I had promised to help her move. I called, apologized, and helped her unpack the next morning.",
+      "Mira: Did the apology repair the friendship?",
+      "Yuni: It helped because I did more than say sorry. I gave her my time and did the work I could still do.",
+      "Mira: What have these two mistakes taught you?",
+      "Yuni: Check before saying yes. If a promise may fail, speak early, tell the truth, and offer a clear repair.",
+      "Mira: [warmly] So trust does not require a person to be perfect, but it does require honest action.",
+      "Yuni: Exactly. I now promise more slowly and work hard to do what I said."
     ],
     "quiz": [
-      { "question": "What is tonight's talk show topic?", "options": ["Career advice", "Keeping promises", "Business marketing", "Public speaking"], "correctIndex": 1, "explanation": "Mira introduces tonight's topic as keeping promises." },
-      { "question": "What happened when Pak Hendra promised a deadline without checking his team?", "options": ["Nothing changed", "They almost failed to deliver, so he asked the client for two extra days", "The client canceled the contract", "His team quit"], "correctIndex": 1, "explanation": "They almost failed to deliver, so he called the client, admitted the mistake, and asked for two extra days." },
-      { "question": "What promise did Yuni forget?", "options": ["To attend a wedding", "To help a friend move apartments", "To repay a loan", "To call her mother"], "correctIndex": 1, "explanation": "Yuni promised a friend she'd help her move apartments, then forgot because of work stress." },
-      { "question": "What did Yuni do once she remembered her forgotten promise?", "options": ["She ignored it", "She called immediately, apologized, and helped unpack the next morning", "She sent money instead", "She avoided her friend"], "correctIndex": 1, "explanation": "She called immediately, apologized honestly, and came the next morning to help unpack." },
-      { "question": "What lesson does Pak Hendra conclude about making promises?", "options": ["Never make promises at all", "Promise less and deliver more", "Promise quickly to sound helpful", "Promises don't matter in business"], "correctIndex": 1, "explanation": "He concludes he has learned to promise less and deliver more, instead of promising quickly." }
-    ]
+      {
+        "question": "What is the talk-show topic?",
+        "options": [
+          "Finding a new office",
+          "Planning a holiday",
+          "Keeping promises",
+          "Writing a radio advert"
+        ],
+        "correctIndex": 2,
+        "explanation": "Mira introduces a discussion about promises in work and friendship."
+      },
+      {
+        "question": "What mistake did Yuni make at work?",
+        "options": [
+          "She lost the client’s report",
+          "She forgot the client’s name",
+          "She promised a date before checking",
+          "She called on the wrong day"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yuni gave a Monday date before asking her team."
+      },
+      {
+        "question": "When did Yuni warn the client?",
+        "options": [
+          "On Friday",
+          "On Monday evening",
+          "After Wednesday",
+          "One month later"
+        ],
+        "correctIndex": 0,
+        "explanation": "She spoke before the missed deadline became a surprise."
+      },
+      {
+        "question": "How did Yuni repair the promise to her friend?",
+        "options": [
+          "She sent a short text only",
+          "She asked another friend to go",
+          "She avoided the next call",
+          "She apologized and helped unpack"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yuni gave an apology and practical help the next morning."
+      },
+      {
+        "question": "What does Yuni do before promising now?",
+        "options": [
+          "She always says no",
+          "She checks what is possible",
+          "She waits for a mistake",
+          "She asks the client to decide"
+        ],
+        "correctIndex": 1,
+        "explanation": "She learned to check time and ability before saying yes."
+      },
+      {
+        "question": "Why was the client disappointed?",
+        "options": [
+          "The report needed two extra days",
+          "Yuni ended the project",
+          "The team sent the wrong report",
+          "The client forgot the date"
+        ],
+        "correctIndex": 0,
+        "explanation": "The first promised date could not be met."
+      },
+      {
+        "question": "What does “repair” mean in this conversation?",
+        "options": [
+          "Fix a broken office machine",
+          "Write a new report title",
+          "Move to another house",
+          "Take action to make a mistake better"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yuni repairs trust through truth, apology, and useful action."
+      },
+      {
+        "question": "What happened after Yuni gave the new date?",
+        "options": [
+          "The client canceled the report",
+          "The report arrived on Monday",
+          "The team needed another week",
+          "The team delivered on Wednesday"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yuni kept the second, carefully checked promise."
+      },
+      {
+        "question": "Why was Yuni’s apology to her friend stronger than words alone?",
+        "options": [
+          "She called very late",
+          "She described her work stress",
+          "She made another quick promise",
+          "She also gave practical help"
+        ],
+        "correctIndex": 3,
+        "explanation": "Helping unpack showed that she wanted to correct what she could."
+      },
+      {
+        "question": "What advice would Yuni give before saying yes?",
+        "options": [
+          "Promise quickly to sound helpful",
+          "Check your time and ability",
+          "Wait until people complain",
+          "Hide possible delays"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her final lesson is to make careful promises and communicate early."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "replace; previous file mixed three-speaker remnants and wrong pronouns",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-akhlak-07",
@@ -240,37 +931,595 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dinda", "gender": "female" },
-      { "name": "Ilham", "gender": "male" }
+      {
+        "name": "Dinda",
+        "gender": "female"
+      },
+      {
+        "name": "Ilham",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dinda: [tired] Ilham, sorry for calling so late. I just need to talk to someone about work today.",
-      "Ilham: [warmly] No problem at all. What happened over there?",
-      "Dinda: [frustrated] My coworker Wulan made a huge mistake on our project, and now I really want to tell everyone about it.",
-      "Ilham: [curious] Why do you want to tell everyone specifically, do you think?",
-      "Dinda: [honestly] I don't know, maybe because I'm frustrated, or maybe because part of me wants people to know it wasn't my fault.",
-      "Ilham: [gently] That's an honest answer. But would talking about her mistake actually fix anything for the project?",
-      "Dinda: [thoughtful] No, probably not. It would just make her look bad in front of everyone at the office.",
-      "Ilham: [softly] I remember something my grandmother used to say, before you speak about someone, imagine they're standing right behind you.",
-      "Dinda: [surprised] That's actually a strong image. I definitely wouldn't say those things with Wulan standing there listening.",
-      "Ilham: [gently] Exactly. It's easy to talk about people when they can't hear us, but much harder when we imagine them present.",
-      "Dinda: [honestly] I already told two people about it this afternoon, actually, before I even thought carefully about any of this.",
-      "Ilham: [understanding] That happens to all of us sometimes. What matters now is what you decide to do next.",
-      "Dinda: [thoughtful] Maybe I should talk to Wulan directly instead, about fixing the mistake, rather than talking about her to others.",
-      "Ilham: [encouraging] That sounds much wiser. And maybe a quiet word to the two coworkers, asking them to let it stay between you all.",
-      "Dinda: [determined] Okay. Tomorrow morning, I'll talk to Wulan first, calmly, before this spreads any further around the office.",
-      "Ilham: [warmly] Good. Our tongues get us into more trouble than almost anything else we do, I honestly think.",
-      "Dinda: [reflective] I never really thought carefully about that before tonight, if I'm being honest.",
-      "Ilham: [gently] Most people don't, until a story travels somewhere it never should have gone in the first place.",
-      "Dinda: [relieved] Thank you for listening, and for not just agreeing with me out of politeness.",
-      "Ilham: [warmly] That's what old friends are for, Dinda. Call me tomorrow and tell me how it goes with Wulan."
+      "Dinda: [worried] Ilham, sorry for calling so late. I just need to talk to someone about work today.",
+      "Ilham: [calmly] No problem at all. What happened over there?",
+      "Dinda: My coworker Wulan made a huge mistake on our project, and now I really want to tell everyone about it.",
+      "Ilham: Why do you want to tell everyone specifically, do you think?",
+      "Dinda: [frustrated] I don't know, maybe because I'm frustrated, or maybe because part of me wants people to know it wasn't my fault.",
+      "Ilham: That's an honest answer. But would talking about her mistake actually fix anything for the project?",
+      "Dinda: No, probably not. It would just make her look bad in front of everyone at the office.",
+      "Ilham: I remember something my grandmother used to say, before you speak about someone, imagine they're standing right behind you.",
+      "Dinda: [reflective] That's actually a strong image. I definitely wouldn't say those things with Wulan standing there listening.",
+      "Ilham: Exactly. It's easy to talk about people when they can't hear us, but much harder when we imagine them present.",
+      "Dinda: I already told two people about it this afternoon, actually, before I even thought carefully about any of this.",
+      "Ilham: That happens to all of us sometimes. What matters now is what you decide to do next.",
+      "Dinda: [regretfully] Maybe I should talk to Wulan directly instead, about fixing the mistake, rather than talking about her to others.",
+      "Ilham: That sounds much wiser. And maybe a quiet word to the two coworkers, asking them to let it stay between you all.",
+      "Dinda: Okay. Tomorrow morning, I'll talk to Wulan first, calmly, before this spreads any further around the office.",
+      "Ilham: Good. Our careless words can cause a lot of trouble, I honestly think.",
+      "Dinda: I never really thought carefully about that before tonight, if I'm being honest.",
+      "Ilham: Most people don't, until a story travels somewhere it never should have gone in the first place.",
+      "Dinda: [grateful] Thank you for listening, and for not just agreeing with me out of politeness.",
+      "Ilham: That's what old friends are for, Dinda. Call me tomorrow and tell me how it goes with Wulan."
     ],
     "quiz": [
-      { "question": "Why does Dinda call Ilham late at night?", "options": ["To ask for a loan", "To talk about a coworker's mistake at work", "To plan a trip", "To discuss a family issue"], "correctIndex": 1, "explanation": "Dinda calls because her coworker Wulan made a huge mistake and she's frustrated." },
-      { "question": "What did Wulan do?", "options": ["She quit her job", "She made a huge mistake on their project", "She was promoted", "She missed a deadline on purpose"], "correctIndex": 1, "explanation": "Dinda says Wulan made a huge mistake on their project." },
-      { "question": "What image did Ilham's grandmother use about speaking of others?", "options": ["Imagine writing it in a letter", "Imagine the person is standing right behind you", "Imagine speaking to a mirror", "Imagine recording yourself"], "correctIndex": 1, "explanation": "Ilham shares his grandmother's saying to imagine the person is standing right behind you before speaking about them." },
-      { "question": "What had Dinda already done before calling Ilham?", "options": ["Apologized to Wulan", "Told two people about Wulan's mistake", "Reported Wulan to their manager", "Fixed the mistake herself"], "correctIndex": 1, "explanation": "Dinda admits she already told two people about the mistake that afternoon." },
-      { "question": "What does Dinda decide to do the next morning?", "options": ["Avoid Wulan completely", "Talk to Wulan directly and calmly about fixing the mistake", "Tell more coworkers", "Quit her job"], "correctIndex": 1, "explanation": "Dinda decides to talk to Wulan directly, calmly, about fixing the mistake rather than talking about her to others." }
-    ]
+      {
+        "question": "Why does Dinda call Ilham late at night?",
+        "options": [
+          "To talk about a coworker's mistake at work",
+          "To ask for a loan",
+          "To plan a trip",
+          "To discuss a family issue"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dinda calls because her coworker Wulan made a huge mistake and she's frustrated."
+      },
+      {
+        "question": "What did Wulan do?",
+        "options": [
+          "She made a huge mistake on their project",
+          "She quit her job",
+          "She was promoted",
+          "She missed a deadline on purpose"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dinda says Wulan made a huge mistake on their project."
+      },
+      {
+        "question": "What image did Ilham's grandmother use about speaking of others?",
+        "options": [
+          "Imagine writing it in a letter",
+          "Imagine the person is standing right behind you",
+          "Imagine speaking to a mirror",
+          "Imagine recording yourself"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ilham shares his grandmother's saying to imagine the person is standing right behind you before speaking about them."
+      },
+      {
+        "question": "What had Dinda already done before calling Ilham?",
+        "options": [
+          "Apologized to Wulan",
+          "Reported Wulan to their manager",
+          "Told two people about Wulan's mistake",
+          "Fixed the mistake herself"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dinda admits she already told two people about the mistake that afternoon."
+      },
+      {
+        "question": "What does Dinda decide to do the next morning?",
+        "options": [
+          "Talk to Wulan directly and calmly about fixing the mistake",
+          "Avoid Wulan completely",
+          "Tell more coworkers",
+          "Quit her job"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dinda decides to talk to Wulan directly, calmly, about fixing the mistake rather than talking about her to others."
+      },
+      {
+        "question": "Why did Dinda want others to know about the mistake?",
+        "options": [
+          "She wanted them to know it was not her fault",
+          "She wanted Wulan to get promoted",
+          "She needed help with a phone",
+          "She planned a team celebration"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her frustration made her want to protect her own image."
+      },
+      {
+        "question": "What does “gossip” mean in this situation?",
+        "options": [
+          "Asking a person for help",
+          "Correcting a project file",
+          "Calling an old friend",
+          "Talking about someone’s problem behind them"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dinda was sharing Wulan’s mistake with people who could not fix it."
+      },
+      {
+        "question": "Why does Ilham ask Dinda to imagine Wulan nearby?",
+        "options": [
+          "It helps Wulan hear the call",
+          "It makes the project easier",
+          "It tells her where Wulan works",
+          "It helps her judge her words"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dinda would speak differently if Wulan could hear her."
+      },
+      {
+        "question": "What should Dinda ask the two coworkers to do?",
+        "options": [
+          "Tell the whole office",
+          "Speak to the manager first",
+          "Keep the story from spreading",
+          "Delete the project"
+        ],
+        "correctIndex": 2,
+        "explanation": "A quiet request may limit more harm from her earlier gossip."
+      },
+      {
+        "question": "What is better than discussing Wulan with others?",
+        "options": [
+          "Waiting for another mistake",
+          "Speaking to Wulan about the solution",
+          "Calling more friends at night",
+          "Pretending the project is finished"
+        ],
+        "correctIndex": 1,
+        "explanation": "Direct respectful conversation can help repair the work."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep; simplify one figurative line while retaining the late-night advice format",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-akhlak-08",
+    "title": "The Message I Did Not Forward",
+    "level": "A1",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [concerned] One evening, a message appeared in my family group. It said a local shop was selling unsafe food.",
+      "Narrator: The message sounded serious, and it asked everyone to forward it quickly. I almost sent it to my friends.",
+      "Narrator: [thoughtful] Before touching the forward button, I noticed there was no date, no photo, and no name of an official source.",
+      "Narrator: I searched for the shop's page and found a notice from the owner. The same false story had appeared the year before.",
+      "Narrator: I also checked a local news website. There was no warning about the shop or its food.",
+      "Narrator: [relieved] I felt relieved that I had waited. A quick forward could have harmed a family business and worried many people.",
+      "Narrator: I replied to our group with the links I found. I did not call anyone foolish. I simply said the information did not seem current or reliable.",
+      "Narrator: My aunt thanked me and deleted her earlier post. My younger cousin asked how I had checked it.",
+      "Narrator: [calmly] I explained my three questions: Who shared it first? When did it happen? Is there a trusted source?",
+      "Narrator: These questions take only a few minutes. They are especially important when a message makes us angry or afraid.",
+      "Narrator: Good character is also important online. Honesty means we should not spread a claim only because it is interesting.",
+      "Narrator: It is better to wait than to damage someone's name with information we have not checked.",
+      "Narrator: Since that evening, I pause before forwarding messages. Sometimes I discover the story is true, and sometimes it is not.",
+      "Narrator: [firmly] Either way, checking first is a small act of responsibility. Our phones make sharing easy, but our character should guide our hands."
+    ],
+    "quiz": [
+      {
+        "question": "What did the family message claim?",
+        "options": [
+          "A road was closed",
+          "A cousin had a new job",
+          "A school was opening",
+          "A local shop was selling unsafe food"
+        ],
+        "correctIndex": 3,
+        "explanation": "The message accused a local shop of selling unsafe food."
+      },
+      {
+        "question": "What warning signs did the narrator notice?",
+        "options": [
+          "The message was too short",
+          "There was no date, photo, or official source",
+          "It used a blue picture",
+          "It came during dinner"
+        ],
+        "correctIndex": 1,
+        "explanation": "The claim had no date, photo, or named official source."
+      },
+      {
+        "question": "What did the shop owner explain?",
+        "options": [
+          "The shop was closing",
+          "The false story had appeared the year before",
+          "The food was free",
+          "A new manager had arrived"
+        ],
+        "correctIndex": 1,
+        "explanation": "The owner said the same false story had circulated before."
+      },
+      {
+        "question": "How did the narrator reply to the family?",
+        "options": [
+          "With an angry voice message",
+          "By leaving the group",
+          "Calmly, with links and checked information",
+          "By forwarding the claim again"
+        ],
+        "correctIndex": 2,
+        "explanation": "He shared evidence without insulting anyone."
+      },
+      {
+        "question": "What three checks does he recommend?",
+        "options": [
+          "Price, color, and length",
+          "Source, date, and trusted confirmation",
+          "Sender, emoji, and font",
+          "Time, battery, and signal"
+        ],
+        "correctIndex": 1,
+        "explanation": "He checks who shared it, when it happened, and whether a trusted source confirms it."
+      },
+      {
+        "question": "Why did the message create urgency?",
+        "options": [
+          "It offered a shop discount",
+          "It included a recent news report",
+          "It asked people to forward it quickly",
+          "It named an official worker"
+        ],
+        "correctIndex": 2,
+        "explanation": "The wording pushed readers to share before checking."
+      },
+      {
+        "question": "What does “reliable” mean here?",
+        "options": [
+          "Able to be trusted",
+          "Easy to forward",
+          "Very popular online",
+          "Written by a family member"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reliable information comes from a source that can be trusted."
+      },
+      {
+        "question": "What did the narrator check after the shop page?",
+        "options": [
+          "A local news website",
+          "A private family photo",
+          "The shop’s food prices",
+          "A friend’s old message"
+        ],
+        "correctIndex": 0,
+        "explanation": "He used another source to look for an official warning."
+      },
+      {
+        "question": "Why did the aunt delete her post?",
+        "options": [
+          "The shop had closed",
+          "Her phone was full",
+          "The narrator became angry",
+          "The claim was old and false"
+        ],
+        "correctIndex": 3,
+        "explanation": "The checked links showed that the warning was not current or true."
+      },
+      {
+        "question": "What should someone do when a message causes fear?",
+        "options": [
+          "Share it with many people",
+          "Pause and check its source and date",
+          "Remove the shop’s name",
+          "Believe it because it sounds serious"
+        ],
+        "correctIndex": 1,
+        "explanation": "Strong emotion is a reason to verify before forwarding."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep; coherent digital-literacy story with simple verification steps",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-akhlak-09",
+    "title": "Owning the Broken Cup",
+    "level": "A1",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] At my first office job, I often used a blue cup from the shared kitchen. It belonged to my coworker Sinta.",
+      "Narrator: [shocked] One afternoon, the cup slipped from my wet hand and broke on the floor. Nobody else was in the room.",
+      "Narrator: For a moment, I wanted to clean the pieces and say nothing. There were many cups, and perhaps Sinta would not notice.",
+      "Narrator: But her name was written underneath it. I remembered that she used the cup every morning and had brought it from home.",
+      "Narrator: [honestly] I swept the floor carefully, placed the broken handle in a paper bag, and went to her desk.",
+      "Narrator: I told her exactly what happened. I did not blame the wet sink or say the cup was already weak.",
+      "Narrator: [regretfully] Sinta looked surprised, then thanked me for being honest. The cup was a gift from her sister, so she felt sad about it.",
+      "Narrator: I apologized and offered to replace it. She said a new cup would not be the same, but she accepted my apology.",
+      "Narrator: That answer taught me something. Taking responsibility does not remove every result of our mistake.",
+      "Narrator: [thoughtful] Sometimes we cannot return what was lost. We can only tell the truth, say sorry, and try to repair what we can.",
+      "Narrator: The next day, I brought a simple new cup and a small note. Sinta now keeps it beside her computer.",
+      "Narrator: We later laughed about how carefully I hold every cup in the kitchen. Still, I am glad I spoke immediately.",
+      "Narrator: Hiding the accident might have protected me for one day, but it would have weakened trust between us.",
+      "Narrator: [reflective] Honesty was uncomfortable for one minute. A lie or silence could have remained much longer."
+    ],
+    "quiz": [
+      {
+        "question": "What did the narrator break?",
+        "options": [
+          "A kitchen window",
+          "Sinta’s blue cup",
+          "A coffee machine",
+          "His own phone"
+        ],
+        "correctIndex": 1,
+        "explanation": "He accidentally broke Sinta’s blue cup."
+      },
+      {
+        "question": "Why was the cup special to Sinta?",
+        "options": [
+          "It was very expensive",
+          "It was a gift from her sister",
+          "It belonged to the manager",
+          "It came from a restaurant"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sinta’s sister had given her the cup."
+      },
+      {
+        "question": "How did the narrator explain the accident?",
+        "options": [
+          "He told the truth without making excuses",
+          "He blamed another coworker",
+          "He said nothing",
+          "He wrote an anonymous message"
+        ],
+        "correctIndex": 0,
+        "explanation": "He accepted responsibility and did not blame the sink."
+      },
+      {
+        "question": "What did he bring the next day?",
+        "options": [
+          "A glass bowl",
+          "A bag of coffee",
+          "A new cup and a small note",
+          "A photo of the old cup"
+        ],
+        "correctIndex": 2,
+        "explanation": "He brought a simple replacement cup and a note."
+      },
+      {
+        "question": "What did he learn about responsibility?",
+        "options": [
+          "It always removes every problem",
+          "It is better to hide small mistakes",
+          "It may not undo harm, but it protects trust",
+          "Only expensive things matter"
+        ],
+        "correctIndex": 2,
+        "explanation": "Responsibility cannot always undo loss, but honesty protects trust."
+      },
+      {
+        "question": "Why did the narrator first think about hiding the accident?",
+        "options": [
+          "The cup belonged to him",
+          "Sinta had many blue cups",
+          "The floor was already clean",
+          "Nobody else was in the kitchen"
+        ],
+        "correctIndex": 3,
+        "explanation": "He thought he could clean the pieces without anyone knowing."
+      },
+      {
+        "question": "What does “making excuses” mean here?",
+        "options": [
+          "Offering to buy a new cup",
+          "Explaining where the cup came from",
+          "Giving reasons to avoid responsibility",
+          "Writing a note to Sinta"
+        ],
+        "correctIndex": 2,
+        "explanation": "He tells the truth without blaming the sink or the cup."
+      },
+      {
+        "question": "Why could a new cup not fully replace the old one?",
+        "options": [
+          "The old cup was a gift from Sinta’s sister",
+          "The new cup was a different color",
+          "The shop had no cups",
+          "Sinta did not drink at work"
+        ],
+        "correctIndex": 0,
+        "explanation": "The first cup had personal meaning beyond its practical use."
+      },
+      {
+        "question": "What changed between the coworkers after the apology?",
+        "options": [
+          "Sinta stopped speaking to him",
+          "The narrator left the office",
+          "They removed every kitchen cup",
+          "They kept trust and later laughed together"
+        ],
+        "correctIndex": 3,
+        "explanation": "Honesty allowed the relationship to continue after the loss."
+      },
+      {
+        "question": "What does the story show about responsibility?",
+        "options": [
+          "It always returns the lost object",
+          "It removes another person’s sadness",
+          "It starts with truth even when harm remains",
+          "It means every mistake needs punishment"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator cannot restore the gift but can be honest and try to repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep; concrete honesty story with a realistic result that cannot be fully repaired",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-akhlak-10",
+    "title": "A Quiet Win Over Anger",
+    "level": "A1",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [tired] Last Friday, I waited forty minutes for a repair worker who had promised to come at nine. I had changed my work schedule for him.",
+      "Narrator: When he finally arrived, he did not apologize. He only asked where the broken washing machine was.",
+      "Narrator: [angry] Anger rose quickly inside me. I wanted to speak sharply so he would understand that my time mattered.",
+      "Narrator: Then I noticed his hands were shaking slightly. His shirt was wet from the rain, and he looked worried.",
+      "Narrator: [concerned] I took one slow breath and asked whether everything was all right. His face changed immediately.",
+      "Narrator: He explained that his motorcycle had stopped on the road. His phone battery was dead, and he had pushed the motorcycle to a small workshop.",
+      "Narrator: He knew he should have contacted me, but he had no way to do it. He apologized and offered to return another day if I was busy.",
+      "Narrator: [understanding] I was still unhappy about the delay, yet the full story made a difference. I told him we could continue.",
+      "Narrator: He repaired the machine carefully and showed me how to prevent the same problem. Before leaving, he apologized again.",
+      "Narrator: Controlling anger did not mean pretending the delay was acceptable. I still told him that customers need information when plans change.",
+      "Narrator: [firmly] The difference was my manner. I spoke clearly without trying to hurt or shame him.",
+      "Narrator: Afterward, I felt grateful that I had paused. A harsh first reaction would not have repaired my machine or his motorcycle.",
+      "Narrator: Anger often gives us only part of a story. One calm question can open the rest.",
+      "Narrator: [reflective] That morning was a quiet win. Nobody praised me, but I left the conversation feeling calm and fair."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the narrator upset?",
+        "options": [
+          "The repair worker arrived forty minutes late",
+          "The washing machine was new",
+          "It was raining outside",
+          "He lost his work schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "The worker was forty minutes late after promising to arrive at nine."
+      },
+      {
+        "question": "What stopped the narrator from speaking harshly?",
+        "options": [
+          "He noticed the worker looked wet and worried",
+          "The worker offered money",
+          "A neighbor entered",
+          "The machine started working"
+        ],
+        "correctIndex": 0,
+        "explanation": "He paused after noticing signs that the worker had a problem."
+      },
+      {
+        "question": "What caused the delay?",
+        "options": [
+          "He forgot the address",
+          "The worker’s motorcycle stopped and his phone died",
+          "He overslept",
+          "He went to another city"
+        ],
+        "correctIndex": 1,
+        "explanation": "The worker had motorcycle trouble and could not call."
+      },
+      {
+        "question": "Did the narrator ignore the problem?",
+        "options": [
+          "Yes, he said nothing",
+          "No, he shouted at the worker",
+          "No, he explained the need for updates calmly",
+          "Yes, he paid extra"
+        ],
+        "correctIndex": 2,
+        "explanation": "He addressed the delay clearly but respectfully."
+      },
+      {
+        "question": "What lesson does the story give?",
+        "options": [
+          "Never arrange home repairs",
+          "Anger always solves delays",
+          "Pause and learn the full story before reacting",
+          "Late people need no boundaries"
+        ],
+        "correctIndex": 2,
+        "explanation": "A calm question helped him understand before responding."
+      },
+      {
+        "question": "What details made the narrator pause?",
+        "options": [
+          "The machine was already fixed",
+          "The rain had stopped",
+          "Another customer arrived",
+          "The worker was wet, shaking, and worried"
+        ],
+        "correctIndex": 3,
+        "explanation": "Those signs suggested that something difficult had happened."
+      },
+      {
+        "question": "What does “speak sharply” mean?",
+        "options": [
+          "Speak quietly and slowly",
+          "Ask a clear question",
+          "Explain a repair plan",
+          "Speak in an angry and hurtful way"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator first wanted his words to show strong anger."
+      },
+      {
+        "question": "Why could the worker not call?",
+        "options": [
+          "He did not know the number",
+          "His phone battery was dead",
+          "His hands were wet",
+          "The workshop had his phone"
+        ],
+        "correctIndex": 1,
+        "explanation": "The dead battery prevented an update during the delay."
+      },
+      {
+        "question": "Did calm behavior remove the customer’s complaint?",
+        "options": [
+          "No, he still asked for better updates",
+          "Yes, he said the delay was fine",
+          "No, he refused the repair",
+          "Yes, he paid for the motorcycle"
+        ],
+        "correctIndex": 0,
+        "explanation": "He stayed respectful while clearly naming the service problem."
+      },
+      {
+        "question": "What did one calm question provide?",
+        "options": [
+          "The missing part of the story",
+          "A faster washing machine",
+          "A new work schedule",
+          "A free repair"
+        ],
+        "correctIndex": 0,
+        "explanation": "Asking what happened helped him respond with more information."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "akhlak",
+      "scriptDecision": "keep; simplify abstract closing language and preserve the balanced anger lesson",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

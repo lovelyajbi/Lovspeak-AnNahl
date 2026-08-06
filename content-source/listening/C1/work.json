@@ -6,30 +6,144 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] There is a particular trap in being known as reliable, one that took me the better part of a decade to identify, let alone dismantle.",
-      "Narrator: [reflective] Reliability, once established as your defining trait, becomes less a compliment than a quiet mandate: you absorb whatever nobody else wants, and gratitude substitutes for actual reward.",
-      "Narrator: [honest] I noticed it first as a vague resentment I couldn't quite justify, since on paper I had no legitimate grievance, only a growing exhaustion I struggled to name.",
-      "Narrator: [analytical] The pattern, once I finally examined it, was almost embarrassingly consistent: every ambiguous task, every project nobody had properly scoped, migrated toward my desk by a kind of institutional gravity.",
-      "Narrator: [wry] Colleagues weren't being malicious. They were simply responding rationally to incentives, delegating uncertainty to whoever had never once said no to it.",
-      "Narrator: [thoughtful] What unsettled me most was realizing I'd trained everyone around me, myself included, to treat my competence as infinitely elastic, with no visible ceiling to test.",
-      "Narrator: [determined] So I began, cautiously, declining things, not dramatically, but with a specificity that made the refusal impossible to dismiss as mere unavailability.",
-      "Narrator: [nervous] The first few refusals felt disproportionately dangerous, as though I were gambling a reputation built over years on a handful of uncomfortable sentences.",
-      "Narrator: [surprised] Nothing collapsed. A few tasks simply went undone, or were redistributed, or turned out to matter considerably less than their urgency had implied.",
-      "Narrator: [reflective] What did shift, gradually, was how people approached me: with actual requests rather than assumptions, framed as questions I was genuinely free to answer.",
-      "Narrator: [thoughtful] I've since come to suspect that reliability, unaccompanied by boundaries, isn't really a virtue at all, but a form of quiet self-erasure dressed up as professionalism.",
-      "Narrator: [warmly] These days I still say yes often, but deliberately, which paradoxically seems to have made my yes worth considerably more than it ever was before.",
-      "Narrator: [peacefully] The irony, of course, is that becoming slightly less available made me, by every measure that mattered, a far more sustainable colleague to actually work alongside."
+      "Narrator: [thoughtful] There is a particular trap in being known as reliable, one that took me the better part of a decade to identify, let alone dismantle.",
+      "Narrator: Reliability, once established as your defining trait, becomes less a compliment than a quiet mandate: you absorb whatever nobody else wants, and gratitude substitutes for actual reward.",
+      "Narrator: [carefully] I noticed it first as a vague resentment I couldn't quite justify, since on paper I had no legitimate grievance, only a growing exhaustion I struggled to name.",
+      "Narrator: The pattern, once I finally examined it, was almost embarrassingly consistent: every ambiguous task, every project nobody had properly scoped, migrated toward my desk by a kind of institutional gravity.",
+      "Narrator: [reflective] Colleagues weren't being malicious. They were simply responding rationally to incentives, delegating uncertainty to whoever had never once said no to it.",
+      "Narrator: What unsettled me most was realizing I'd trained everyone around me, myself included, to treat my competence as infinitely elastic, with no visible ceiling to test.",
+      "Narrator: [honestly] So I began, cautiously, declining things, not dramatically, but with a specificity that made the refusal impossible to dismiss as mere unavailability.",
+      "Narrator: The first few refusals felt disproportionately dangerous, as though I were gambling a reputation built over years on a handful of uncomfortable sentences.",
+      "Narrator: [gently] Nothing collapsed. A few tasks simply went undone, or were redistributed, or turned out to matter considerably less than their urgency had implied.",
+      "Narrator: What did shift, gradually, was how people approached me: with actual requests rather than assumptions, framed as questions I was genuinely free to answer.",
+      "Narrator: [calmly] I've since come to suspect that reliability, unaccompanied by boundaries, isn't really a virtue at all, but a form of quiet self-erasure dressed up as professionalism.",
+      "Narrator: These days I still say yes often, but deliberately, which paradoxically seems to have made my yes worth considerably more than it ever was before.",
+      "Narrator: [encouraging] The irony, of course, is that becoming slightly less available made me, by every measure that mattered, a far more sustainable colleague to actually work alongside."
     ],
     "quiz": [
-      { "question": "What trap does the narrator describe at the start?", "options": ["Being seen as incompetent", "Being known as reliable, which becomes a quiet mandate to absorb unwanted work", "Being fired for unreliability", "Being promoted too quickly"], "correctIndex": 1, "explanation": "She describes reliability becoming a quiet mandate where she absorbs whatever nobody else wants, with gratitude substituting for reward." },
-      { "question": "What pattern did she notice once she examined it?", "options": ["Tasks were assigned randomly", "Every ambiguous, unscoped task migrated toward her desk by institutional gravity", "She was given only easy tasks", "Nobody ever asked her for help"], "correctIndex": 1, "explanation": "She noticed every ambiguous task nobody had properly scoped consistently migrated to her desk." },
-      { "question": "What does the narrator conclude about her colleagues' behavior?", "options": ["They were deliberately malicious", "They were rationally responding to incentives, delegating uncertainty to whoever never said no", "They disliked her personally", "They wanted her to fail"], "correctIndex": 1, "explanation": "She concludes colleagues weren't malicious, just rationally delegating uncertainty to someone who had never refused it." },
-      { "question": "What happened after she began declining tasks?", "options": ["Everything fell apart immediately", "Nothing collapsed; tasks went undone or turned out to matter less than assumed", "She was reprimanded by management", "Colleagues stopped speaking to her"], "correctIndex": 1, "explanation": "Nothing collapsed; some tasks simply went undone or were redistributed, and mattered less than their urgency had implied." },
-      { "question": "What does the narrator conclude about reliability without boundaries?", "options": ["It is always a pure virtue", "It isn't really a virtue, but a form of quiet self-erasure dressed as professionalism", "It guarantees promotion", "It has no real cost"], "correctIndex": 1, "explanation": "She concludes that reliability unaccompanied by boundaries is a form of quiet self-erasure dressed up as professionalism." }
-    ]
+      {
+        "question": "What trap does the narrator describe at the start?",
+        "options": [
+          "Being known as reliable, which becomes a quiet mandate to absorb unwanted work",
+          "Being seen as incompetent",
+          "Being fired for unreliability",
+          "Being promoted too quickly"
+        ],
+        "correctIndex": 0,
+        "explanation": "She describes reliability becoming a quiet mandate where she absorbs whatever nobody else wants, with gratitude substituting for reward."
+      },
+      {
+        "question": "What pattern did she notice once she examined it?",
+        "options": [
+          "Every ambiguous, unscoped task migrated toward her desk by institutional gravity",
+          "Tasks were assigned randomly",
+          "She was given only easy tasks",
+          "Nobody ever asked her for help"
+        ],
+        "correctIndex": 0,
+        "explanation": "She noticed every ambiguous task nobody had properly scoped consistently migrated to her desk."
+      },
+      {
+        "question": "What does the narrator conclude about her colleagues' behavior?",
+        "options": [
+          "They were deliberately malicious",
+          "They were rationally responding to incentives, delegating uncertainty to whoever never said no",
+          "They disliked her personally",
+          "They wanted her to fail"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes colleagues weren't malicious, just rationally delegating uncertainty to someone who had never refused it."
+      },
+      {
+        "question": "What happened after she began declining tasks?",
+        "options": [
+          "Everything fell apart immediately",
+          "She was reprimanded by management",
+          "Nothing collapsed; tasks went undone or turned out to matter less than assumed",
+          "Colleagues stopped speaking to her"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nothing collapsed; some tasks simply went undone or were redistributed, and mattered less than their urgency had implied."
+      },
+      {
+        "question": "What does the narrator conclude about reliability without boundaries?",
+        "options": [
+          "It is always a pure virtue",
+          "It guarantees promotion",
+          "It has no real cost",
+          "It isn't really a virtue, but a form of quiet self-erasure dressed as professionalism"
+        ],
+        "correctIndex": 3,
+        "explanation": "She concludes that reliability unaccompanied by boundaries is a form of quiet self-erasure dressed up as professionalism."
+      },
+      {
+        "question": "What false confidence does the colleague who always says yes expose?",
+        "options": [
+          "Being reliable requires accepting every uncertain task.",
+          "Reliability without boundaries becomes self-erasure, not sustainable professionalism.",
+          "Unscoped tasks moved to the colleague who had never said no.",
+          "Specific refusals changed assumptions without collapsing the narrator’s reputation."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the colleague who always says yes support the speaker’s point?",
+        "options": [
+          "Reliability without boundaries becomes self-erasure, not sustainable professionalism.",
+          "Unscoped tasks moved to the colleague who had never said no.",
+          "Specific refusals changed assumptions without collapsing the narrator’s reputation.",
+          "Constant availability exhausts capable workers and makes consent invisible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What caution does the colleague who always says yes place on the conclusion?",
+        "options": [
+          "Reliability without boundaries becomes self-erasure, not sustainable professionalism.",
+          "Specific refusals changed assumptions without collapsing the narrator’s reputation.",
+          "Unscoped tasks moved to the colleague who had never said no.",
+          "Constant availability exhausts capable workers and makes consent invisible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What harm follows if the colleague who always says yes is ignored?",
+        "options": [
+          "Reliability without boundaries becomes self-erasure, not sustainable professionalism.",
+          "Unscoped tasks moved to the colleague who had never said no.",
+          "Constant availability exhausts capable workers and makes consent invisible.",
+          "Specific refusals changed assumptions without collapsing the narrator’s reputation."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which step honours the colleague who always says yes’s lesson?",
+        "options": [
+          "Reliability without boundaries becomes self-erasure, not sustainable professionalism.",
+          "Unscoped tasks moved to the colleague who had never said no.",
+          "Specific refusals changed assumptions without collapsing the narrator’s reputation.",
+          "Accept work deliberately and state clear limits."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-work-02",
@@ -38,33 +152,150 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Dimas", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Dimas",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Farah: [amused] Dimas, you've been avoiding the industry mixer for three years running. At some point that stops being shyness and starts looking like principle.",
-      "Dimas: [wry] It's principle, actually. The whole enterprise strikes me as transactional affection dressed up as sociability, and I find the performance exhausting.",
-      "Farah: [challenging] That's a fairly convenient way to describe skill you simply haven't developed. Most relationships start transactional before they become genuine.",
-      "Dimas: [defensive] Maybe, but I'd rather my career advance on merit than on how charmingly I remembered someone's dog's name at a rooftop event.",
-      "Farah: [pointed] And yet merit, on its own, has never once opened a door for you that someone didn't first walk you through.",
-      "Dimas: [conceding] That's uncomfortably accurate, though I resent how effortlessly you deploy it against me.",
-      "Farah: [gentler] I'm not defending shallow schmoozing. I'm defending the unglamorous work of staying visibly present in people's minds before you actually need anything from them.",
-      "Dimas: [thoughtful] So the distinction you're drawing is between cultivating relationships and merely harvesting them the moment convenience arrives.",
-      "Farah: [warmly] Precisely that. Nobody resents a coffee that isn't immediately followed by a favour. What people resent is contact that only ever arrives with an agenda attached.",
-      "Dimas: [honest] I suppose what actually repels me is the anticipatory transaction, treating every conversation as an investment awaiting future returns.",
-      "Farah: [understanding] Then reframe it. You already do this instinctively with friends, checking in without wanting anything, remembering details because you genuinely noticed them.",
-      "Dimas: [considering] I hadn't separated the two categories quite so cleanly before. Perhaps I've been conflating networking with its most cynical, opportunistic caricature.",
+      "Farah: [thoughtful] Dimas, you've been avoiding the industry mixer for three years running. At some point that stops being shyness and starts looking like principle.",
+      "Dimas: It's principle, actually. The whole enterprise strikes me as transactional affection dressed up as sociability, and I find the performance exhausting.",
+      "Farah: [carefully] That's a fairly convenient way to describe skill you simply haven't developed. Most relationships start transactional before they become genuine.",
+      "Dimas: Maybe, but I'd rather my career advance on merit than on how charmingly I remembered someone's dog's name at a rooftop event.",
+      "Farah: [reflective] And yet merit, on its own, has never once opened a door for you that someone didn't first walk you through.",
+      "Dimas: That's uncomfortably accurate, though I resent how effortlessly you deploy it against me.",
+      "Farah: [honestly] I'm not defending shallow schmoozing. I'm defending the unglamorous work of staying visibly present in people's minds before you actually need anything from them.",
+      "Dimas: So the distinction you're drawing is between cultivating relationships and merely harvesting them the moment convenience arrives.",
+      "Farah: [gently] Precisely that. Nobody resents a coffee that isn't immediately followed by a favour. What people resent is contact that only ever arrives with an agenda attached.",
+      "Dimas: I suppose what actually repels me is the anticipatory transaction, treating every conversation as an investment awaiting future returns.",
+      "Farah: [calmly] Then reframe it. You already do this instinctively with friends, checking in without wanting anything, remembering details because you genuinely noticed them.",
+      "Dimas: I hadn't separated the two categories quite so cleanly before. Perhaps I've been conflating networking with its most cynical, opportunistic caricature.",
       "Farah: [encouraging] Most people have. The actual skill is simpler and less mercenary than its reputation suggests: consistent, low-stakes attention, sustained over years.",
-      "Dimas: [wry] Fine. I'll attend the next mixer, though I reserve the right to leave the moment anyone mentions synergy unironically.",
-      "Farah: [laughing] Deal. I'll even introduce you around, purely as an act of transactional generosity you're welcome to resent."
+      "Dimas: Fine. I'll attend the next mixer, though I reserve the right to leave the moment anyone mentions synergy unironically.",
+      "Farah: [seriously] Deal. I'll even introduce you around, purely as an act of transactional generosity you're welcome to resent."
     ],
     "quiz": [
-      { "question": "Why has Dimas been avoiding industry mixers?", "options": ["He is too busy with deadlines", "He sees networking as transactional affection dressed up as sociability", "He dislikes his colleagues", "He was never invited"], "correctIndex": 1, "explanation": "Dimas describes networking as transactional affection dressed up as sociability that he finds exhausting to perform." },
-      { "question": "What point does Farah make about merit?", "options": ["Merit alone is always sufficient", "Merit has never opened a door for him that someone didn't first walk him through", "Merit is irrelevant to careers", "Merit matters more than relationships"], "correctIndex": 1, "explanation": "Farah points out that merit alone has never opened a door for Dimas without someone first walking him through it." },
-      { "question": "What distinction does Farah draw regarding relationships?", "options": ["Between friends and coworkers", "Between cultivating relationships versus merely harvesting them when convenient", "Between introverts and extroverts", "Between junior and senior staff"], "correctIndex": 1, "explanation": "Farah distinguishes between cultivating relationships genuinely and merely harvesting them the moment convenience arrives." },
-      { "question": "What does Dimas admit actually repels him?", "options": ["Public speaking", "The anticipatory transaction of treating conversations as investments awaiting returns", "Large crowds", "Being asked personal questions"], "correctIndex": 1, "explanation": "Dimas admits what repels him is treating every conversation as an investment awaiting future returns." },
-      { "question": "What does Dimas agree to do by the end?", "options": ["Quit his job", "Attend the next mixer, while reserving the right to leave if 'synergy' is mentioned", "Stop speaking to Farah", "Avoid all future networking permanently"], "correctIndex": 1, "explanation": "Dimas agrees to attend the next mixer, jokingly reserving the right to leave if anyone mentions synergy unironically." }
-    ]
+      {
+        "question": "Why has Dimas been avoiding industry mixers?",
+        "options": [
+          "He is too busy with deadlines",
+          "He dislikes his colleagues",
+          "He sees networking as transactional affection dressed up as sociability",
+          "He was never invited"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dimas describes networking as transactional affection dressed up as sociability that he finds exhausting to perform."
+      },
+      {
+        "question": "What point does Farah make about merit?",
+        "options": [
+          "Merit alone is always sufficient",
+          "Merit is irrelevant to careers",
+          "Merit matters more than relationships",
+          "Merit has never opened a door for him that someone didn't first walk him through"
+        ],
+        "correctIndex": 3,
+        "explanation": "Farah points out that merit alone has never opened a door for Dimas without someone first walking him through it."
+      },
+      {
+        "question": "What distinction does Farah draw regarding relationships?",
+        "options": [
+          "Between friends and coworkers",
+          "Between cultivating relationships versus merely harvesting them when convenient",
+          "Between introverts and extroverts",
+          "Between junior and senior staff"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah distinguishes between cultivating relationships genuinely and merely harvesting them the moment convenience arrives."
+      },
+      {
+        "question": "What does Dimas admit actually repels him?",
+        "options": [
+          "Public speaking",
+          "Large crowds",
+          "The anticipatory transaction of treating conversations as investments awaiting returns",
+          "Being asked personal questions"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dimas admits what repels him is treating every conversation as an investment awaiting future returns."
+      },
+      {
+        "question": "What does Dimas agree to do by the end?",
+        "options": [
+          "Quit his job",
+          "Attend the next mixer, while reserving the right to leave if 'synergy' is mentioned",
+          "Stop speaking to Farah",
+          "Avoid all future networking permanently"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dimas agrees to attend the next mixer, jokingly reserving the right to leave if anyone mentions synergy unironically."
+      },
+      {
+        "question": "Which assumption fails after the disputed industry mixer?",
+        "options": [
+          "Career merit alone can open every necessary door.",
+          "Networking can be genuine relationship-building rather than cynical favour-seeking.",
+          "Sustained low-stakes attention keeps people visible before any request is needed.",
+          "Caring contact differs from only approaching people when a favour is needed."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the disputed industry mixer add to the case?",
+        "options": [
+          "Sustained low-stakes attention keeps people visible before any request is needed.",
+          "Networking can be genuine relationship-building rather than cynical favour-seeking.",
+          "Caring contact differs from only approaching people when a favour is needed.",
+          "Treating every interaction as investment can make connection feel exploitative."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What limit must not be ignored in the disputed industry mixer?",
+        "options": [
+          "Caring contact differs from only approaching people when a favour is needed.",
+          "Networking can be genuine relationship-building rather than cynical favour-seeking.",
+          "Sustained low-stakes attention keeps people visible before any request is needed.",
+          "Treating every interaction as investment can make connection feel exploitative."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What becomes likely when the disputed industry mixer is dismissed?",
+        "options": [
+          "Networking can be genuine relationship-building rather than cynical favour-seeking.",
+          "Treating every interaction as investment can make connection feel exploitative.",
+          "Sustained low-stakes attention keeps people visible before any request is needed.",
+          "Caring contact differs from only approaching people when a favour is needed."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What decision applies the lesson from the disputed industry mixer?",
+        "options": [
+          "Networking can be genuine relationship-building rather than cynical favour-seeking.",
+          "Sustained low-stakes attention keeps people visible before any request is needed.",
+          "Caring contact differs from only approaching people when a favour is needed.",
+          "Show consistent interest without attaching an immediate agenda."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-work-03",
@@ -73,30 +304,144 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [measured] Nobody prepares you for the particular discomfort of surviving layoffs alongside people who, by any honest measure, contributed more than you did.",
-      "Narrator: [reflective] When the restructuring announcement went out, I braced for my own name, having contributed relatively little of consequence that quarter, distracted as I'd been by circumstances outside work.",
-      "Narrator: [honest] Instead, it was Wulan who was let go, a colleague whose analysis had quietly underpinned half the department's decisions for two years running.",
-      "Narrator: [uneasy] I spent that first week performing an ordinary workday while privately convinced some clerical error had spared me instead of her.",
-      "Narrator: [thoughtful] What nobody discusses openly is how corrosive that guilt becomes when there's no legitimate outlet for it, no wrong to correct, only an arbitrary outcome to metabolize.",
-      "Narrator: [honest] I caught myself apologizing to her, almost compulsively, over coffee we'd arranged before either of us knew what was coming.",
-      "Narrator: [surprised] She stopped me gently, saying my survival wasn't an injustice requiring atonement, merely a decision made by people optimizing for variables neither of us fully understood.",
-      "Narrator: [reflective] That reframing helped less than I expected, since guilt, I've learned, rarely responds to logic even when the logic is sound.",
-      "Narrator: [determined] Eventually I decided the only honest response was to make my continued presence actually justify itself, rather than simply outlasting the discomfort passively.",
-      "Narrator: [thoughtful] I began advocating loudly for Wulan whenever her former projects surfaced, ensuring her contributions weren't quietly absorbed into the department's collective memory without attribution.",
-      "Narrator: [warmly] I also wrote her a reference substantial enough that a competitor hired her within a month, at a title and salary the round had never offered her here.",
-      "Narrator: [reflective] Survivor's guilt, I've since concluded, isn't really about deserving your position; almost nobody's position is fully deserved in any rigorous sense.",
-      "Narrator: [peacefully] It's about what you do with the unearned time you've been granted, and whether you spend it justifying your presence or simply wasting it."
+      "Narrator: [thoughtful] Nobody prepares you for the particular discomfort of surviving layoffs alongside people who, by any honest measure, contributed more than you did.",
+      "Narrator: When the restructuring announcement went out, I braced for my own name, having contributed relatively little of consequence that quarter, distracted as I'd been by circumstances outside work.",
+      "Narrator: [carefully] Instead, it was Wulan who was let go, a colleague whose analysis had quietly underpinned half the department's decisions for two years running.",
+      "Narrator: I spent that first week performing an ordinary workday while privately convinced some clerical error had spared me instead of her.",
+      "Narrator: [reflective] What nobody discusses openly is how corrosive that guilt becomes when there's no legitimate outlet for it, no wrong to correct, only an arbitrary outcome to metabolize.",
+      "Narrator: I caught myself apologizing to her, almost compulsively, over coffee we'd arranged before either of us knew what was coming.",
+      "Narrator: [honestly] She stopped me gently, saying my survival wasn't an injustice requiring atonement, merely a decision made by people optimizing for variables neither of us fully understood.",
+      "Narrator: That reframing helped less than I expected, since guilt, I've learned, rarely responds to logic even when the logic is sound.",
+      "Narrator: [gently] Eventually I decided the only honest response was to make my continued presence actually justify itself, rather than simply outlasting the discomfort passively.",
+      "Narrator: I began advocating loudly for Wulan whenever her former projects surfaced, ensuring her contributions weren't quietly absorbed into the department's collective memory without attribution.",
+      "Narrator: [calmly] I also wrote her a reference substantial enough that a competitor hired her within a month, at a title and salary the round had never offered her here.",
+      "Narrator: Survivor's guilt, I've since concluded, isn't really about deserving your position; almost nobody's position is fully deserved in any rigorous sense.",
+      "Narrator: [encouraging] It's about what you do with the unearned time you've been granted, and whether you spend it justifying your presence or simply wasting it."
     ],
     "quiz": [
-      { "question": "How did the narrator feel about surviving the layoffs?", "options": ["Relieved and satisfied", "Convinced some clerical error had spared him instead of a more deserving colleague", "Angry at management", "Indifferent to the outcome"], "correctIndex": 1, "explanation": "He was privately convinced some clerical error had spared him instead of Wulan, who had contributed far more." },
-      { "question": "Who was let go instead of the narrator?", "options": ["His manager", "Wulan, whose analysis had quietly underpinned department decisions for two years", "A new employee", "Nobody was let go"], "correctIndex": 1, "explanation": "Wulan, a colleague whose analysis had underpinned half the department's decisions for two years, was let go instead." },
-      { "question": "What did Wulan tell the narrator when he kept apologizing?", "options": ["That he should have been fired instead", "That his survival wasn't an injustice requiring atonement, just an arbitrary decision", "That she wanted revenge", "That she agreed with the decision"], "correctIndex": 1, "explanation": "Wulan told him his survival wasn't an injustice requiring atonement, but a decision made by people optimizing for unclear variables." },
-      { "question": "What did the narrator do to try to justify his continued presence?", "options": ["He ignored Wulan's contributions", "He advocated for Wulan's work and wrote her a strong reference", "He asked to be laid off instead", "He quit in protest"], "correctIndex": 1, "explanation": "He advocated for Wulan whenever her projects surfaced and wrote her a substantial reference that helped her get hired elsewhere." },
-      { "question": "What does the narrator conclude survivor's guilt is really about?", "options": ["Proving you deserved your position", "What you do with the unearned time you've been granted", "Avoiding all guilt entirely", "Blaming management for everything"], "correctIndex": 1, "explanation": "He concludes it's about what you do with the unearned time you've been granted, not about deserving your position." }
-    ]
+      {
+        "question": "How did the narrator feel about surviving the layoffs?",
+        "options": [
+          "Relieved and satisfied",
+          "Convinced some clerical error had spared him instead of a more deserving colleague",
+          "Angry at management",
+          "Indifferent to the outcome"
+        ],
+        "correctIndex": 1,
+        "explanation": "He was privately convinced some clerical error had spared him instead of Wulan, who had contributed far more."
+      },
+      {
+        "question": "Who was let go instead of the narrator?",
+        "options": [
+          "His manager",
+          "A new employee",
+          "Wulan, whose analysis had quietly underpinned department decisions for two years",
+          "Nobody was let go"
+        ],
+        "correctIndex": 2,
+        "explanation": "Wulan, a colleague whose analysis had underpinned half the department's decisions for two years, was let go instead."
+      },
+      {
+        "question": "What did Wulan tell the narrator when he kept apologizing?",
+        "options": [
+          "That he should have been fired instead",
+          "That his survival wasn't an injustice requiring atonement, just an arbitrary decision",
+          "That she wanted revenge",
+          "That she agreed with the decision"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wulan told him his survival wasn't an injustice requiring atonement, but a decision made by people optimizing for unclear variables."
+      },
+      {
+        "question": "What did the narrator do to try to justify his continued presence?",
+        "options": [
+          "He ignored Wulan's contributions",
+          "He asked to be laid off instead",
+          "He quit in protest",
+          "He advocated for Wulan's work and wrote her a strong reference"
+        ],
+        "correctIndex": 3,
+        "explanation": "He advocated for Wulan whenever her projects surfaced and wrote her a substantial reference that helped her get hired elsewhere."
+      },
+      {
+        "question": "What does the narrator conclude survivor's guilt is really about?",
+        "options": [
+          "Proving you deserved your position",
+          "What you do with the unearned time you've been granted",
+          "Avoiding all guilt entirely",
+          "Blaming management for everything"
+        ],
+        "correctIndex": 1,
+        "explanation": "He concludes it's about what you do with the unearned time you've been granted, not about deserving your position."
+      },
+      {
+        "question": "What mistaken belief does surviving the layoff while Wulan left overturn?",
+        "options": [
+          "A survivor must apologise until the decision feels fair.",
+          "Survivor’s guilt should lead to responsible action, not endless self-punishment.",
+          "The narrator credited Wulan’s work and wrote a reference that helped her move.",
+          "Layoff survival was arbitrary, yet it did not erase the narrator’s responsibility."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why is surviving the layoff while Wulan left persuasive evidence?",
+        "options": [
+          "The narrator credited Wulan’s work and wrote a reference that helped her move.",
+          "Survivor’s guilt should lead to responsible action, not endless self-punishment.",
+          "Layoff survival was arbitrary, yet it did not erase the narrator’s responsibility.",
+          "Ignoring an unearned opportunity turns discomfort into wasted time."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does surviving the layoff while Wulan left prevent a simple solution?",
+        "options": [
+          "Layoff survival was arbitrary, yet it did not erase the narrator’s responsibility.",
+          "Survivor’s guilt should lead to responsible action, not endless self-punishment.",
+          "The narrator credited Wulan’s work and wrote a reference that helped her move.",
+          "Ignoring an unearned opportunity turns discomfort into wasted time."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why is indifference to surviving the layoff while Wulan left risky?",
+        "options": [
+          "Survivor’s guilt should lead to responsible action, not endless self-punishment.",
+          "The narrator credited Wulan’s work and wrote a reference that helped her move.",
+          "Ignoring an unearned opportunity turns discomfort into wasted time.",
+          "Layoff survival was arbitrary, yet it did not erase the narrator’s responsibility."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How can someone act on surviving the layoff while Wulan left’s insight?",
+        "options": [
+          "Survivor’s guilt should lead to responsible action, not endless self-punishment.",
+          "The narrator credited Wulan’s work and wrote a reference that helped her move.",
+          "Layoff survival was arbitrary, yet it did not erase the narrator’s responsibility.",
+          "Use continued influence to credit and support affected colleagues."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-work-04",
@@ -105,35 +450,152 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. My guest today spent fifteen years chasing a corner office, then walked away from it entirely. Thanks for coming on, Arya.",
-      "Guest: [wry] Thanks for having me, though I should warn you, I've become somewhat insufferable about this topic since making the change.",
-      "Host: [curious] Let's start there. What actually prompted walking away from a role you'd spent over a decade pursuing?",
-      "Guest: [reflective] The honest answer is unglamorous. I got the title, and roughly six months in, I noticed the anticipated satisfaction simply hadn't arrived as promised.",
-      "Host: [interested] Was it the role itself, or something about how you'd been relating to ambition more generally?",
-      "Guest: [thoughtful] The latter, I think. I'd treated ambition as a debt that would eventually be repaid with contentment, once I'd accumulated enough achievement to cash in.",
-      "Host: [probing] And the debt never matured, essentially.",
-      "Guest: [wry] Precisely. Each summit revealed another summit, which I suppose is how ambition is designed to function, structurally incapable of delivering the arrival it implicitly promises.",
-      "Host: [curious] Do you think ambition itself is the problem, or specifically the way you'd defined success within it?",
-      "Guest: [measured] I've landed on the latter. Ambition untethered from any definition of enough becomes a treadmill dressed up as a staircase.",
-      "Host: [challenging] Some listeners will hear that as a comfortable rationalization from someone who already achieved the corner office before rejecting it.",
-      "Guest: [conceding] That's a fair challenge, and I don't fully have a rebuttal. I can't claim I'd have reached this conclusion without first climbing the thing I'm now critiquing.",
-      "Host: [thoughtful] So what would you say to someone still mid-climb, who hasn't yet reached the vantage point you're describing?",
-      "Guest: [warmly] I'd ask them to define, specifically, what achieving the goal would actually change about their daily texture, not just their title.",
-      "Guest: [reflective] If the honest answer is nothing meaningful changes, the ambition might be worth interrogating well before you've spent fifteen years finding out the hard way.",
-      "Host: [smiling] That's a sobering note to end on. Thank you, Arya, for the refreshingly unpolished honesty.",
-      "Guest: [laughing] Insufferable, as promised. Thanks for having me anyway."
+      "Host: [thoughtful] Welcome back to the show. My guest today spent fifteen years chasing a corner office, then walked away from it entirely. Thanks for coming on, Arya.",
+      "Guest: Thanks for having me, though I should warn you, I've become somewhat insufferable about this topic since making the change.",
+      "Host: [carefully] Let's start there. What actually prompted walking away from a role you'd spent over a decade pursuing?",
+      "Guest: The honest answer is unglamorous. I got the title, and roughly six months in, I noticed the anticipated satisfaction simply hadn't arrived as promised.",
+      "Host: [reflective] Was it the role itself, or something about how you'd been relating to ambition more generally?",
+      "Guest: The latter, I think. I'd treated ambition as a debt that would eventually be repaid with contentment, once I'd accumulated enough achievement to cash in.",
+      "Host: [honestly] And the debt never matured, essentially.",
+      "Guest: Precisely. Each summit revealed another summit, which I suppose is how ambition is designed to function, structurally incapable of delivering the arrival it implicitly promises.",
+      "Host: [gently] Do you think ambition itself is the problem, or specifically the way you'd defined success within it?",
+      "Guest: I've landed on the latter. Ambition untethered from any definition of enough becomes a treadmill dressed up as a staircase.",
+      "Host: [calmly] Some listeners will hear that as a comfortable rationalization from someone who already achieved the corner office before rejecting it.",
+      "Guest: That's a fair challenge, and I don't fully have a rebuttal. I can't claim I'd have reached this conclusion without first climbing the thing I'm now critiquing.",
+      "Host: [encouraging] So what would you say to someone still mid-climb, who hasn't yet reached the vantage point you're describing?",
+      "Guest: I'd ask them to define, specifically, what achieving the goal would actually change about their daily texture, not just their title.",
+      "Guest: [seriously] If the honest answer is nothing meaningful changes, the ambition might be worth interrogating well before you've spent fifteen years finding out the hard way.",
+      "Host: That's a sobering note to end on. Thank you, Arya, for the refreshingly unpolished honesty.",
+      "Guest: Insufferable, as promised. Thanks for having me anyway."
     ],
     "quiz": [
-      { "question": "What did Arya do after fifteen years of pursuing a corner office?", "options": ["He retired completely", "He walked away from the role after reaching it", "He was fired from it", "He started his own competing company"], "correctIndex": 1, "explanation": "Arya spent fifteen years chasing a corner office, then walked away from it entirely after reaching it." },
-      { "question": "What did Arya notice about six months into the role?", "options": ["The anticipated satisfaction simply hadn't arrived as promised", "He was immediately promoted further", "The salary was too low", "His colleagues resented him"], "correctIndex": 0, "explanation": "He noticed roughly six months in that the satisfaction he'd anticipated from the achievement simply hadn't arrived." },
-      { "question": "How does Arya describe how he had treated ambition?", "options": ["As a hobby with no real stakes", "As a debt that would eventually be repaid with contentment", "As something forced on him by others", "As irrelevant to his happiness"], "correctIndex": 1, "explanation": "He describes having treated ambition as a debt that would eventually be repaid with contentment once enough was achieved." },
-      { "question": "What challenge does the host raise about Arya's perspective?", "options": ["That he never actually achieved anything", "That his view might be a comfortable rationalization from someone who already achieved the goal before rejecting it", "That his podcast is inaccurate", "That ambition is always bad"], "correctIndex": 1, "explanation": "The host challenges that listeners might see his critique as a comfortable rationalization from someone who already reached the corner office." },
-      { "question": "What question does Arya suggest people mid-climb should ask themselves?", "options": ["How much money they will earn", "What achieving the goal would actually change about their daily texture, not just their title", "Whether their parents would be proud", "How long the climb will take"], "correctIndex": 1, "explanation": "Arya suggests asking specifically what achieving the goal would change about daily life, not just the title." }
-    ]
+      {
+        "question": "What did Arya do after fifteen years of pursuing a corner office?",
+        "options": [
+          "He retired completely",
+          "He walked away from the role after reaching it",
+          "He was fired from it",
+          "He started his own competing company"
+        ],
+        "correctIndex": 1,
+        "explanation": "Arya spent fifteen years chasing a corner office, then walked away from it entirely after reaching it."
+      },
+      {
+        "question": "What did Arya notice about six months into the role?",
+        "options": [
+          "The anticipated satisfaction simply hadn't arrived as promised",
+          "He was immediately promoted further",
+          "The salary was too low",
+          "His colleagues resented him"
+        ],
+        "correctIndex": 0,
+        "explanation": "He noticed roughly six months in that the satisfaction he'd anticipated from the achievement simply hadn't arrived."
+      },
+      {
+        "question": "How does Arya describe how he had treated ambition?",
+        "options": [
+          "As a debt that would eventually be repaid with contentment",
+          "As a hobby with no real stakes",
+          "As something forced on him by others",
+          "As irrelevant to his happiness"
+        ],
+        "correctIndex": 0,
+        "explanation": "He describes having treated ambition as a debt that would eventually be repaid with contentment once enough was achieved."
+      },
+      {
+        "question": "What challenge does the host raise about Arya's perspective?",
+        "options": [
+          "That he never actually achieved anything",
+          "That his podcast is inaccurate",
+          "That he critiques ambition only after benefiting from it",
+          "That ambition is always bad"
+        ],
+        "correctIndex": 2,
+        "explanation": "The host challenges that listeners might see his critique as a comfortable rationalization from someone who already reached the corner office."
+      },
+      {
+        "question": "What question does Arya suggest people mid-climb should ask themselves?",
+        "options": [
+          "How much money they will earn",
+          "What achieving the goal would actually change about their daily texture, not just their title",
+          "Whether their parents would be proud",
+          "How long the climb will take"
+        ],
+        "correctIndex": 1,
+        "explanation": "Arya suggests asking specifically what achieving the goal would change about daily life, not just the title."
+      },
+      {
+        "question": "What idea should listeners reconsider through the long pursuit of the corner office?",
+        "options": [
+          "Reaching a prestigious title automatically delivers contentment.",
+          "Ambition needs a definition of enough or it becomes an endless treadmill.",
+          "The corner office failed to change the narrator’s daily sense of contentment.",
+          "Ambition itself is not rejected; an unexamined definition of success is."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the long pursuit of the corner office support the conclusion?",
+        "options": [
+          "Ambition needs a definition of enough or it becomes an endless treadmill.",
+          "The corner office failed to change the narrator’s daily sense of contentment.",
+          "Ambition itself is not rejected; an unexamined definition of success is.",
+          "Chasing titles alone can consume years without producing the promised satisfaction."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What restraint matters when judging the long pursuit of the corner office?",
+        "options": [
+          "Ambition needs a definition of enough or it becomes an endless treadmill.",
+          "The corner office failed to change the narrator’s daily sense of contentment.",
+          "Ambition itself is not rejected; an unexamined definition of success is.",
+          "Chasing titles alone can consume years without producing the promised satisfaction."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What damage can come from overlooking the long pursuit of the corner office?",
+        "options": [
+          "Ambition needs a definition of enough or it becomes an endless treadmill.",
+          "The corner office failed to change the narrator’s daily sense of contentment.",
+          "Ambition itself is not rejected; an unexamined definition of success is.",
+          "Chasing titles alone can consume years without producing the promised satisfaction."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What would a careful response after the long pursuit of the corner office involve?",
+        "options": [
+          "Ambition needs a definition of enough or it becomes an endless treadmill.",
+          "The corner office failed to change the narrator’s daily sense of contentment.",
+          "Ambition itself is not rejected; an unexamined definition of success is.",
+          "Define what a goal would change before sacrificing years to achieve it."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-work-05",
@@ -142,29 +604,143 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [nervous] Recording this the night before I hand in my resignation, partly to have some honest record of what this actually felt like, unpolished by hindsight.",
-      "Narrator: [reflective] I've rehearsed the resignation conversation obsessively, which I recognize as a way of controlling the one variable that still feels controllable in an otherwise terrifying decision.",
-      "Narrator: [honest] Twelve years at this firm, a title most people in my field would consider a reasonable destination rather than a waypoint, and I'm abandoning it for something entirely unproven.",
-      "Narrator: [thoughtful] What's strange is that the fear isn't really about failure in the abstract, it's about the specific humiliation of failing publicly after having been so vocally certain.",
-      "Narrator: [wry] I've told everyone who'd listen, for months now, that I was doing this, which means retreat has become socially expensive in a way that's either motivating or reckless, depending on the day.",
-      "Narrator: [analytical] I keep running the financial projections again, as though a fourth recalculation might reveal certainty the first three somehow failed to produce.",
-      "Narrator: [honest] It won't. There is no spreadsheet sophisticated enough to eliminate the fundamental unknowability of whether clients will actually follow me the way they've promised they will.",
-      "Narrator: [reflective] My mentor, when I confessed this fear last week, said something that's stayed with me: that certainty isn't a precondition for competent action, merely a comfort we're rarely granted in advance.",
-      "Narrator: [thoughtful] I've spent my career being the person others trusted precisely because I seemed unshakeable, and there's something almost disorienting about being this visibly frightened now.",
-      "Narrator: [determined] But underneath the fear, when I'm honest, there's also a persistent, quiet certainty that staying would have been the more dangerous choice, just slower and less visible in its damage.",
-      "Narrator: [warmly] Twelve years of competence I no longer felt curious about, versus an uncertain year or two of building something that's actually mine. Framed that way, the decision restates itself.",
-      "Narrator: [peacefully] Tomorrow morning I'll say the words I've rehearsed, imperfectly probably, and whatever happens afterward will at least belong entirely to me."
+      "Narrator: [thoughtful] Recording this the night before I hand in my resignation, partly to have some honest record of what this actually felt like, unpolished by hindsight.",
+      "Narrator: I've rehearsed the resignation conversation obsessively, which I recognize as a way of controlling the one variable that still feels controllable in an otherwise terrifying decision.",
+      "Narrator: [carefully] Twelve years at this firm, a title most people in my field would consider a reasonable destination rather than a waypoint, and I'm abandoning it for something entirely unproven.",
+      "Narrator: What's strange is that the fear isn't really about failure in the abstract, it's about the specific humiliation of failing publicly after having been so vocally certain.",
+      "Narrator: [reflective] I've told everyone who'd listen, for months now, that I was doing this, which means retreat has become socially expensive in a way that's either motivating or reckless, depending on the day.",
+      "Narrator: I keep running the financial projections again, as though a fourth recalculation might reveal certainty the first three somehow failed to produce.",
+      "Narrator: [honestly] It won't. There is no spreadsheet sophisticated enough to eliminate the fundamental unknowability of whether clients will actually follow me the way they've promised they will.",
+      "Narrator: My mentor, when I confessed this fear last week, said something that's stayed with me: that certainty isn't a precondition for competent action, merely a comfort we're rarely granted in advance.",
+      "Narrator: [gently] I've spent my career being the person others trusted precisely because I seemed unshakeable, and there's something almost disorienting about being this visibly frightened now.",
+      "Narrator: But underneath the fear, when I'm honest, there's also a persistent, quiet certainty that staying would have been the more dangerous choice, just slower and less visible in its damage.",
+      "Narrator: [calmly] Twelve years of competence I no longer felt curious about, versus an uncertain year or two of building something that's actually mine. Framed that way, the decision restates itself.",
+      "Narrator: Tomorrow morning I'll say the words I've rehearsed, imperfectly probably, and whatever happens afterward will at least belong entirely to me."
     ],
     "quiz": [
-      { "question": "Why is the narrator recording this voice memo?", "options": ["To send it to her boss", "To have an honest record of how resigning felt, unpolished by hindsight", "As part of a work assignment", "To practice a speech for a client"], "correctIndex": 1, "explanation": "She is recording it to have an honest record of the experience, unpolished by later hindsight." },
-      { "question": "What does the narrator say the fear is really about?", "options": ["Losing her savings", "The specific humiliation of failing publicly after having been so vocally certain", "Losing her friends", "Never finding another job"], "correctIndex": 1, "explanation": "She says the fear isn't about failure in the abstract, but the specific humiliation of failing publicly after being vocally certain." },
-      { "question": "What does the narrator realize about spreadsheets and certainty?", "options": ["A fourth calculation would finally provide certainty", "No spreadsheet can eliminate the fundamental unknowability of whether clients will actually follow her", "Financial projections are unnecessary", "She has never made projections before"], "correctIndex": 1, "explanation": "She realizes there is no spreadsheet sophisticated enough to eliminate the fundamental unknowability of the outcome." },
-      { "question": "What did her mentor tell her about certainty?", "options": ["That certainty is required before acting", "That certainty isn't a precondition for competent action, just a comfort rarely granted in advance", "That she should wait until she felt certain", "That mentors are always certain"], "correctIndex": 1, "explanation": "Her mentor said certainty isn't a precondition for competent action, merely a comfort rarely granted in advance." },
-      { "question": "How does the narrator frame her final decision?", "options": ["Staying would have been the safer choice", "Staying would have been the more dangerous choice, just slower and less visible in its damage", "She has no real reason to leave", "The decision is purely financial"], "correctIndex": 1, "explanation": "She concludes that staying would have been the more dangerous choice, just slower and less visible in its damage." }
-    ]
+      {
+        "question": "Why is the narrator recording this voice memo?",
+        "options": [
+          "To have an honest record of how resigning felt, unpolished by hindsight",
+          "To send it to her boss",
+          "As part of a work assignment",
+          "To practice a speech for a client"
+        ],
+        "correctIndex": 0,
+        "explanation": "She is recording it to have an honest record of the experience, unpolished by later hindsight."
+      },
+      {
+        "question": "What does the narrator say the fear is really about?",
+        "options": [
+          "Losing her savings",
+          "Losing her friends",
+          "The specific humiliation of failing publicly after having been so vocally certain",
+          "Never finding another job"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says the fear isn't about failure in the abstract, but the specific humiliation of failing publicly after being vocally certain."
+      },
+      {
+        "question": "What does the narrator realize about spreadsheets and certainty?",
+        "options": [
+          "A fourth calculation would finally provide certainty",
+          "No spreadsheet can eliminate the fundamental unknowability of whether clients will actually follow her",
+          "Financial projections are unnecessary",
+          "She has never made projections before"
+        ],
+        "correctIndex": 1,
+        "explanation": "She realizes there is no spreadsheet sophisticated enough to eliminate the fundamental unknowability of the outcome."
+      },
+      {
+        "question": "What did her mentor tell her about certainty?",
+        "options": [
+          "That certainty is required before acting",
+          "That she should wait until she felt certain",
+          "That certainty isn't a precondition for competent action, just a comfort rarely granted in advance",
+          "That mentors are always certain"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her mentor said certainty isn't a precondition for competent action, merely a comfort rarely granted in advance."
+      },
+      {
+        "question": "How does the narrator frame her final decision?",
+        "options": [
+          "Staying would have been the more dangerous choice, just slower and less visible in its damage",
+          "Staying would have been the safer choice",
+          "She has no real reason to leave",
+          "The decision is purely financial"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that staying would have been the more dangerous choice, just slower and less visible in its damage."
+      },
+      {
+        "question": "What expectation does the decision to resign before launching a practice show is too simple?",
+        "options": [
+          "Fear proves that a well-prepared decision should be abandoned.",
+          "Competent action does not require certainty before taking a carefully considered risk.",
+          "Repeated projections could not guarantee that clients would follow the narrator.",
+          "Public confidence and private fear can coexist during a major decision."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the decision to resign before launching a practice let the speaker demonstrate?",
+        "options": [
+          "Competent action does not require certainty before taking a carefully considered risk.",
+          "Repeated projections could not guarantee that clients would follow the narrator.",
+          "Public confidence and private fear can coexist during a major decision.",
+          "Staying in a familiar role can create slower but deeper damage."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which qualification is needed for the decision to resign before launching a practice?",
+        "options": [
+          "Competent action does not require certainty before taking a carefully considered risk.",
+          "Public confidence and private fear can coexist during a major decision.",
+          "Repeated projections could not guarantee that clients would follow the narrator.",
+          "Staying in a familiar role can create slower but deeper damage."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What may persist without attention to the decision to resign before launching a practice?",
+        "options": [
+          "Competent action does not require certainty before taking a carefully considered risk.",
+          "Repeated projections could not guarantee that clients would follow the narrator.",
+          "Public confidence and private fear can coexist during a major decision.",
+          "Staying in a familiar role can create slower but deeper damage."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which choice shows the decision to resign before launching a practice was understood?",
+        "options": [
+          "Competent action does not require certainty before taking a carefully considered risk.",
+          "Repeated projections could not guarantee that clients would follow the narrator.",
+          "Public confidence and private fear can coexist during a major decision.",
+          "Act with preparation, then accept that uncertainty cannot be eliminated."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-work-06",
@@ -173,33 +749,150 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Hendra", "gender": "male" },
-      { "name": "Nadia", "gender": "female" }
+      {
+        "name": "Hendra",
+        "gender": "male"
+      },
+      {
+        "name": "Nadia",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Hendra: [candid] Nadia, can I say something that might sound strange coming from your supervisor? I think you're going to outgrow this role faster than either of us expected.",
-      "Nadia: [surprised] That's not what I expected to hear in a mentoring session, honestly. Is that meant as a warning or a compliment?",
-      "Hendra: [wry] Both, probably. It's flattering to mentor someone talented, and mildly unsettling to watch them approach the edge of what I can actually still teach them.",
-      "Nadia: [thoughtful] I hadn't considered that mentoring someone might eventually become uncomfortable for the mentor, not just the mentee.",
-      "Hendra: [honest] It rarely gets discussed, but there's a particular vanity in being needed, and a corresponding discomfort in becoming gradually less necessary.",
-      "Nadia: [gentle] I don't think you're becoming less necessary. I still rely on your judgment for anything genuinely ambiguous.",
-      "Hendra: [self-aware] Kind of you, though I suspect that reliance has an expiration date I should prepare for rather than resent when it arrives.",
-      "Nadia: [curious] What would preparing for it actually look like, in practical terms rather than abstract acceptance?",
-      "Hendra: [considering] Probably introducing you to people beyond this team, connections I've been quietly hoarding as though visibility were a finite resource I needed to ration.",
-      "Nadia: [warmly] That would mean a great deal, though I want to be clear I'm not angling to replace you or rush past this role.",
-      "Hendra: [reassuring] I know that. This isn't about insecurity regarding your intentions, it's about my own reluctance to relinquish being the most capable person in a given room.",
-      "Nadia: [reflective] That's a strangely generous thing to admit to someone you're supposed to be advising, rather than confiding in.",
-      "Hendra: [wry] Good mentorship, I've come to think, requires admitting your own limitations openly enough that the mentee stops mistaking you for a ceiling.",
-      "Nadia: [determined] Then let's start there. Introduce me to whoever you've been protectively hoarding, and I'll try not to make you regret the generosity too quickly.",
-      "Hendra: [laughing] I'll hold you to that last part. Slowly, though. I'm allowed a transition period before you fully eclipse me."
+      "Hendra: [thoughtful] Nadia, can I say something that might sound strange coming from your supervisor? I think you're going to outgrow this role faster than either of us expected.",
+      "Nadia: That's not what I expected to hear in a mentoring session, honestly. Is that meant as a warning or a compliment?",
+      "Hendra: [carefully] Both, probably. It's flattering to mentor someone talented, and mildly unsettling to watch them approach the edge of what I can actually still teach them.",
+      "Nadia: I hadn't considered that mentoring someone might eventually become uncomfortable for the mentor, not just the mentee.",
+      "Hendra: [reflective] It rarely gets discussed, but there's a particular vanity in being needed, and a corresponding discomfort in becoming gradually less necessary.",
+      "Nadia: I don't think you're becoming less necessary. I still rely on your judgment for anything genuinely ambiguous.",
+      "Hendra: [honestly] Kind of you, though I suspect that reliance has an expiration date I should prepare for rather than resent when it arrives.",
+      "Nadia: What would preparing for it actually look like, in practical terms rather than abstract acceptance?",
+      "Hendra: [gently] Probably introducing you to people beyond this team, connections I've been quietly hoarding as though visibility were a finite resource I needed to ration.",
+      "Nadia: That would mean a great deal, though I want to be clear I'm not angling to replace you or rush past this role.",
+      "Hendra: [calmly] I know that. This isn't about insecurity regarding your intentions, it's about my own reluctance to relinquish being the most capable person in a given room.",
+      "Nadia: That's a strangely generous thing to admit to someone you're supposed to be advising, rather than confiding in.",
+      "Hendra: [encouraging] Good mentorship, I've come to think, requires admitting your own limitations openly enough that the mentee stops mistaking you for a ceiling.",
+      "Nadia: Then let's start there. Introduce me to whoever you've been protectively hoarding, and I'll try not to make you regret the generosity too quickly.",
+      "Hendra: [seriously] I'll hold you to that last part. Slowly, though. I'm allowed a transition period before you fully eclipse me."
     ],
     "quiz": [
-      { "question": "What does Hendra tell Nadia at the start of the conversation?", "options": ["That she is underperforming", "That she is going to outgrow her role faster than expected", "That she will be fired", "That she needs more training"], "correctIndex": 1, "explanation": "Hendra tells Nadia he thinks she is going to outgrow her current role faster than either of them expected." },
-      { "question": "What discomfort does Hendra admit to feeling as a mentor?", "options": ["He dislikes mentoring entirely", "There is a vanity in being needed and discomfort in becoming gradually less necessary", "He thinks Nadia is untalented", "He wants to quit his job"], "correctIndex": 1, "explanation": "Hendra admits there is a particular vanity in being needed, and discomfort in gradually becoming less necessary." },
-      { "question": "What does Hendra realize he has been doing with his professional connections?", "options": ["Sharing them freely with everyone", "Quietly hoarding them as though visibility were a finite resource to ration", "Ignoring them entirely", "Giving them all to Nadia already"], "correctIndex": 1, "explanation": "Hendra realizes he has been quietly hoarding his connections as though visibility were a finite resource he needed to ration." },
-      { "question": "How does Nadia clarify her intentions?", "options": ["She wants to replace Hendra immediately", "She is not angling to replace him or rush past her current role", "She plans to leave the company soon", "She has no interest in advancing"], "correctIndex": 1, "explanation": "Nadia clarifies she is not trying to replace Hendra or rush past this role." },
-      { "question": "What does Hendra conclude good mentorship requires?", "options": ["Hiding all your weaknesses", "Admitting your own limitations openly enough that the mentee stops mistaking you for a ceiling", "Never introducing mentees to your contacts", "Staying in charge indefinitely"], "correctIndex": 1, "explanation": "Hendra concludes good mentorship requires admitting your limitations so the mentee stops mistaking you for a ceiling." }
-    ]
+      {
+        "question": "What does Hendra tell Nadia at the start of the conversation?",
+        "options": [
+          "That she is underperforming",
+          "That she will be fired",
+          "That she is going to outgrow her role faster than expected",
+          "That she needs more training"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hendra tells Nadia he thinks she is going to outgrow her current role faster than either of them expected."
+      },
+      {
+        "question": "What discomfort does Hendra admit to feeling as a mentor?",
+        "options": [
+          "He dislikes mentoring entirely",
+          "There is a vanity in being needed and discomfort in becoming gradually less necessary",
+          "He thinks Nadia is untalented",
+          "He wants to quit his job"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hendra admits there is a particular vanity in being needed, and discomfort in gradually becoming less necessary."
+      },
+      {
+        "question": "What does Hendra realize he has been doing with his professional connections?",
+        "options": [
+          "Sharing them freely with everyone",
+          "Ignoring them entirely",
+          "Giving them all to Nadia already",
+          "Quietly hoarding them as though visibility were a finite resource to ration"
+        ],
+        "correctIndex": 3,
+        "explanation": "Hendra realizes he has been quietly hoarding his connections as though visibility were a finite resource he needed to ration."
+      },
+      {
+        "question": "How does Nadia clarify her intentions?",
+        "options": [
+          "She is not angling to replace him or rush past her current role",
+          "She wants to replace Hendra immediately",
+          "She plans to leave the company soon",
+          "She has no interest in advancing"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nadia clarifies she is not trying to replace Hendra or rush past this role."
+      },
+      {
+        "question": "What does Hendra conclude good mentorship requires?",
+        "options": [
+          "Admitting your own limitations openly enough that the mentee stops mistaking you for a ceiling",
+          "Hiding all your weaknesses",
+          "Never introducing mentees to your contacts",
+          "Staying in charge indefinitely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hendra concludes good mentorship requires admitting your limitations so the mentee stops mistaking you for a ceiling."
+      },
+      {
+        "question": "Which belief does mentoring a junior colleague who may outgrow the role challenge?",
+        "options": [
+          "A mentor’s value depends on remaining the most capable person present.",
+          "Good mentorship helps a junior colleague outgrow the mentor’s immediate reach.",
+          "The supervisor offers introductions he had previously kept within his own network.",
+          "The mentor admits insecurity while choosing generosity over professional hoarding."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does the argument need mentoring a junior colleague who may outgrow the role?",
+        "options": [
+          "Good mentorship helps a junior colleague outgrow the mentor’s immediate reach.",
+          "The supervisor offers introductions he had previously kept within his own network.",
+          "The mentor admits insecurity while choosing generosity over professional hoarding.",
+          "Guarding access can turn mentorship into a ceiling for talented people."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does mentoring a junior colleague who may outgrow the role keep the argument measured?",
+        "options": [
+          "Good mentorship helps a junior colleague outgrow the mentor’s immediate reach.",
+          "The mentor admits insecurity while choosing generosity over professional hoarding.",
+          "The supervisor offers introductions he had previously kept within his own network.",
+          "Guarding access can turn mentorship into a ceiling for talented people."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How can neglect of mentoring a junior colleague who may outgrow the role worsen things?",
+        "options": [
+          "Good mentorship helps a junior colleague outgrow the mentor’s immediate reach.",
+          "The supervisor offers introductions he had previously kept within his own network.",
+          "Guarding access can turn mentorship into a ceiling for talented people.",
+          "The mentor admits insecurity while choosing generosity over professional hoarding."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What should change after mentoring a junior colleague who may outgrow the role?",
+        "options": [
+          "Good mentorship helps a junior colleague outgrow the mentor’s immediate reach.",
+          "The supervisor offers introductions he had previously kept within his own network.",
+          "The mentor admits insecurity while choosing generosity over professional hoarding.",
+          "Share connections and opportunities beyond the immediate team."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-work-07",
@@ -208,35 +901,592 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Analyst", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Analyst",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] This afternoon we're joined by an organizational analyst who studies, of all things, why workplace meetings keep multiplying despite everyone claiming to despise them. Welcome, Ibu Sri.",
-      "Analyst: [pleasant] Thank you. It's a peculiar phenomenon, genuinely, because in every interview I conduct, the meeting culture is universally blamed on somebody else.",
-      "Radio Host: [curious] So if nobody individually wants more meetings, how does the number keep climbing regardless?",
-      "Analyst: [explaining] It's essentially a coordination failure. Each meeting feels individually justified as a precaution against being blamed later for insufficient communication.",
-      "Radio Host: [interested] A precaution against blame rather than a genuine tool for decision-making, you mean?",
-      "Analyst: [nodding] Precisely that distinction. Calling a meeting has become the organizational equivalent of covering yourself, documented evidence that you raised the issue, regardless of whether resolution actually followed.",
-      "Radio Host: [skeptical] That seems like a fairly damning explanation for something companies present as collaborative and necessary.",
-      "Analyst: [measured] It can be genuinely collaborative, but the defensive variety has quietly colonized calendars originally reserved for the productive kind.",
-      "Radio Host: [curious] What does the defensive variety typically look like, compared to a meeting that actually accomplishes something?",
-      "Analyst: [thoughtful] Vague agendas, everyone tangentially relevant invited rather than only who's essential, outcomes that could've been resolved in a two-line message instead.",
-      "Radio Host: [interested] Why not simply send that message, if it would genuinely suffice?",
-      "Analyst: [wry] Because a message can be ignored without consequence, whereas a meeting invitation creates a kind of social obligation that written communication, unfortunately, doesn't replicate.",
-      "Radio Host: [curious] Is there a practical remedy, or is this simply an intractable feature of how organizations behave?",
-      "Analyst: [encouraging] The organizations that manage it successfully tend to require a stated decision, not merely a topic, before any meeting can be scheduled.",
-      "Radio Host: [interested] Meaning you have to articulate what you're actually trying to decide, not just what you'd like to discuss vaguely.",
-      "Analyst: [warmly] Exactly right. It sounds trivial, but that single requirement quietly eliminates a striking proportion of meetings that were never truly necessary.",
-      "Radio Host: [smiling] A refreshingly simple fix for something that feels, from the inside, thoroughly unfixable. Thank you, Ibu Sri.",
-      "Analyst: [smiling] My pleasure. Now, if you'll excuse me, I have three meetings to attend that almost certainly didn't need to exist."
+      "Radio Host: [thoughtful] This afternoon we're joined by an organizational analyst who studies, of all things, why workplace meetings keep multiplying despite everyone claiming to despise them. Welcome, Ibu Sri.",
+      "Analyst: Thank you. It's a peculiar phenomenon, genuinely, because in every interview I conduct, the meeting culture is universally blamed on somebody else.",
+      "Radio Host: [carefully] So if nobody individually wants more meetings, how does the number keep climbing regardless?",
+      "Analyst: It's essentially a coordination failure. Each meeting feels individually justified as a precaution against being blamed later for insufficient communication.",
+      "Radio Host: [reflective] A precaution against blame rather than a genuine tool for decision-making, you mean?",
+      "Analyst: Precisely that distinction. Calling a meeting has become the organizational equivalent of covering yourself, documented evidence that you raised the issue, regardless of whether resolution actually followed.",
+      "Radio Host: [honestly] That seems like a fairly damning explanation for something companies present as collaborative and necessary.",
+      "Analyst: It can be genuinely collaborative, but the defensive variety has quietly colonized calendars originally reserved for the productive kind.",
+      "Radio Host: [gently] What does the defensive variety typically look like, compared to a meeting that actually accomplishes something?",
+      "Analyst: Vague agendas, everyone tangentially relevant invited rather than only who's essential, outcomes that could've been resolved in a two-line message instead.",
+      "Radio Host: [calmly] Why not simply send that message, if it would genuinely suffice?",
+      "Analyst: Because a message can be ignored without consequence, whereas a meeting invitation creates a kind of social obligation that written communication, unfortunately, doesn't replicate.",
+      "Radio Host: [encouraging] Is there a practical remedy, or is this simply an intractable feature of how organizations behave?",
+      "Analyst: The organizations that manage it successfully tend to require a stated decision, not merely a topic, before any meeting can be scheduled.",
+      "Radio Host: [seriously] Meaning you have to articulate what you're actually trying to decide, not just what you'd like to discuss vaguely.",
+      "Analyst: Exactly right. It sounds trivial, but that single requirement quietly eliminates a striking proportion of meetings that were never truly necessary.",
+      "Radio Host: A refreshingly simple fix for something that feels, from the inside, thoroughly unfixable. Thank you, Ibu Sri.",
+      "Analyst: My pleasure. Now, if you'll excuse me, I have three meetings to attend that almost certainly didn't need to exist."
     ],
     "quiz": [
-      { "question": "What peculiar phenomenon does the analyst study?", "options": ["Why salaries are unequal", "Why workplace meetings keep multiplying despite everyone claiming to despise them", "Why employees quit frequently", "Why offices are poorly designed"], "correctIndex": 1, "explanation": "The analyst studies why meeting culture keeps growing even though everyone individually claims to dislike it." },
-      { "question": "How does the analyst explain the rise in meetings if nobody wants them?", "options": ["It's a deliberate management strategy", "It's a coordination failure, where each meeting feels justified as a precaution against blame", "Employees genuinely enjoy meetings secretly", "There is no real increase in meetings"], "correctIndex": 1, "explanation": "She explains it as a coordination failure, where each meeting is individually justified as a precaution against being blamed for insufficient communication." },
-      { "question": "What does the analyst say calling a meeting has become the equivalent of?", "options": ["A genuine collaborative tool only", "Covering yourself, documented evidence you raised an issue regardless of resolution", "A waste that companies actively try to eliminate", "A punishment for underperformance"], "correctIndex": 1, "explanation": "She says calling a meeting has become the organizational equivalent of covering yourself with documented evidence." },
-      { "question": "Why do people call meetings instead of sending a short message?", "options": ["Messages are technically impossible to send", "A message can be ignored without consequence, but a meeting invitation creates social obligation", "Meetings are always shorter than messages", "Nobody reads messages anymore"], "correctIndex": 1, "explanation": "She explains a message can be ignored without consequence, while a meeting invitation creates a social obligation that writing doesn't replicate." },
-      { "question": "What practical remedy does the analyst describe?", "options": ["Banning all meetings entirely", "Requiring a stated decision, not just a topic, before any meeting can be scheduled", "Making all meetings mandatory for everyone", "Replacing meetings with more emails only"], "correctIndex": 1, "explanation": "She describes requiring organizers to state an actual decision to be made, not just a topic, before scheduling a meeting." }
-    ]
+      {
+        "question": "What peculiar phenomenon does the analyst study?",
+        "options": [
+          "Why salaries are unequal",
+          "Why workplace meetings keep multiplying despite everyone claiming to despise them",
+          "Why employees quit frequently",
+          "Why offices are poorly designed"
+        ],
+        "correctIndex": 1,
+        "explanation": "The analyst studies why meeting culture keeps growing even though everyone individually claims to dislike it."
+      },
+      {
+        "question": "How does the analyst explain the rise in meetings if nobody wants them?",
+        "options": [
+          "It's a deliberate management strategy",
+          "It's a coordination failure, where each meeting feels justified as a precaution against blame",
+          "Employees genuinely enjoy meetings secretly",
+          "There is no real increase in meetings"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains it as a coordination failure, where each meeting is individually justified as a precaution against being blamed for insufficient communication."
+      },
+      {
+        "question": "What does the analyst say calling a meeting has become the equivalent of?",
+        "options": [
+          "Covering yourself, documented evidence you raised an issue regardless of resolution",
+          "A genuine collaborative tool only",
+          "A waste that companies actively try to eliminate",
+          "A punishment for underperformance"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says calling a meeting has become the organizational equivalent of covering yourself with documented evidence."
+      },
+      {
+        "question": "Why do people call meetings instead of sending a short message?",
+        "options": [
+          "Messages are technically impossible to send",
+          "Meetings are always shorter than messages",
+          "Nobody reads messages anymore",
+          "A message can be ignored without consequence, but a meeting invitation creates social obligation"
+        ],
+        "correctIndex": 3,
+        "explanation": "She explains a message can be ignored without consequence, while a meeting invitation creates a social obligation that writing doesn't replicate."
+      },
+      {
+        "question": "What practical remedy does the analyst describe?",
+        "options": [
+          "Banning all meetings entirely",
+          "Requiring a stated decision, not just a topic, before any meeting can be scheduled",
+          "Making all meetings mandatory for everyone",
+          "Replacing meetings with more emails only"
+        ],
+        "correctIndex": 1,
+        "explanation": "She describes requiring organizers to state an actual decision to be made, not just a topic, before scheduling a meeting."
+      },
+      {
+        "question": "What cannot safely be assumed after the calendar full of defensive meetings?",
+        "options": [
+          "More meetings naturally mean better communication.",
+          "Meeting overload is often a coordination failure driven by fear of blame.",
+          "People schedule meetings to prove they raised an issue, not to decide anything.",
+          "Collaborative meetings differ from defensive meetings with vague outcomes."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the calendar full of defensive meetings make the concern concrete?",
+        "options": [
+          "People schedule meetings to prove they raised an issue, not to decide anything.",
+          "Meeting overload is often a coordination failure driven by fear of blame.",
+          "Collaborative meetings differ from defensive meetings with vague outcomes.",
+          "Defensive calendars waste attention and hide the absence of real decisions."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What should not be overstated about the calendar full of defensive meetings?",
+        "options": [
+          "Meeting overload is often a coordination failure driven by fear of blame.",
+          "People schedule meetings to prove they raised an issue, not to decide anything.",
+          "Collaborative meetings differ from defensive meetings with vague outcomes.",
+          "Defensive calendars waste attention and hide the absence of real decisions."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What risk lies in treating the calendar full of defensive meetings as minor?",
+        "options": [
+          "Meeting overload is often a coordination failure driven by fear of blame.",
+          "People schedule meetings to prove they raised an issue, not to decide anything.",
+          "Defensive calendars waste attention and hide the absence of real decisions.",
+          "Collaborative meetings differ from defensive meetings with vague outcomes."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How can the listener apply the calendar full of defensive meetings?",
+        "options": [
+          "Meeting overload is often a coordination failure driven by fear of blame.",
+          "People schedule meetings to prove they raised an issue, not to decide anything.",
+          "Collaborative meetings differ from defensive meetings with vague outcomes.",
+          "Require a stated decision before scheduling a meeting."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-work-08",
+    "title": "The Pay Question Nobody Knew How to Ask",
+    "level": "C1",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] In a small organisation, staff knew their own salary but not how pay decisions were made. Nobody knew the usual range for a role, when reviews happened, or how a person could raise a concern without feeling disloyal.",
+      "Narrator: The silence produced rumours. Some people assumed favouritism, while others avoided asking questions because they were afraid of appearing ungrateful for a job they needed.",
+      "Narrator: A staff group proposed a modest change: explain role bands, publish the review process, and offer a private route to ask about a possible discrepancy without requiring anyone to reveal personal salary details.",
+      "Narrator: Management worried that transparency would create conflict. It did create difficult conversations, but they were more specific. A person could ask why a role had been placed in one band rather than making guesses about a colleague.",
+      "Narrator: The review uncovered a real problem. Two similar positions had developed different pay after a restructuring. Correcting it required planning and budget, not merely a reassuring statement about fairness.",
+      "Narrator: No policy can guarantee that every outcome will feel equal. But a clear process makes reasons visible and gives people a respectful way to challenge an error.",
+      "Narrator: We were careful about privacy. Sharing criteria is different from broadcasting individual circumstances. Nobody should have to disclose family responsibilities, debt, or health information in order to be treated consistently.",
+      "Narrator: The final policy named review dates, written criteria, and a conversation with someone outside the immediate reporting line. It was not dramatic, but it made accountability possible.",
+      "Narrator: Workplace ethics often lives in these quiet systems. Fairness becomes more believable when it is not dependent on a manager’s mood or on a worker’s willingness to remain silent."
+    ],
+    "quiz": [
+      {
+        "question": "What does the newly visible pay-review process show about the issue?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances.",
+          "Opaque pay systems create rumour and make real discrepancies harder to correct."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What insight comes from the newly visible pay-review process?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances.",
+          "Opaque pay systems create rumour and make real discrepancies harder to correct."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What nuance does the newly visible pay-review process add?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances.",
+          "Opaque pay systems create rumour and make real discrepancies harder to correct."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What broader problem can the newly visible pay-review process create?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances.",
+          "Opaque pay systems create rumour and make real discrepancies harder to correct."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What practice shows understanding of the newly visible pay-review process?",
+        "options": [
+          "Publish bands and review dates while protecting individual privacy.",
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What familiar idea does the newly visible pay-review process place in doubt?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "Transparency requires every employee to disclose their exact salary.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the newly visible pay-review process substantiate?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "Sharing process differs from exposing private personal circumstances.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Opaque pay systems create rumour and make real discrepancies harder to correct."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does the newly visible pay-review process require balance?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Opaque pay systems create rumour and make real discrepancies harder to correct.",
+          "Sharing process differs from exposing private personal circumstances."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What negative result does the newly visible pay-review process help explain?",
+        "options": [
+          "Opaque pay systems create rumour and make real discrepancies harder to correct.",
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which practical step follows from the newly visible pay-review process?",
+        "options": [
+          "Pay fairness requires visible criteria and a respectful route to challenge errors.",
+          "Publish bands and review dates while protecting individual privacy.",
+          "A review found two similar positions had drifted into different pay after restructuring.",
+          "Sharing process differs from exposing private personal circumstances."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-work-09",
+    "title": "The Project Review That Stopped Looking for One Person to Blame",
+    "level": "C1",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] When a service launch missed its target date, the first meeting was full of explanations. Design blamed late requirements, engineering blamed unstable data, and management blamed poor estimates.",
+      "Narrator: The review became useful only after we stopped asking who had caused the failure and started mapping the sequence that had made failure more likely.",
+      "Narrator: We found several smaller decisions: a rushed discovery phase, unclear ownership of an important dependency, a risk list nobody revisited, and a late change approved without checking its effect on support staff.",
+      "Narrator: None of this erased responsibility. It showed why blaming one team would have produced a satisfying but inaccurate story.",
+      "Narrator: We invited the support team because they had heard user confusion before the launch. Their notes showed that a feature described as obvious relied on knowledge many users did not have.",
+      "Narrator: The action list was deliberately short. We added a named decision owner, a check before major scope changes, earlier user testing, and a rule that a risk was not solved merely because it had been written down.",
+      "Narrator: The review also named what had gone well. Colleagues had raised concerns early, and no one had hidden the problem once it became visible. A fair process treats candour as useful, not as a career mistake.",
+      "Narrator: We avoided claiming to know motives. A delay can reveal a process weakness without proving that a particular person was lazy, dishonest, or indifferent.",
+      "Narrator: The next launch was not perfect. It was better prepared because an uncomfortable experience had become specific shared learning rather than a search for a single culprit.",
+      "Narrator: A final note from the review was kept for the next team: learn from a missed date while the details are clear, but do not let urgency turn reflection into punishment."
+    ],
+    "quiz": [
+      {
+        "question": "What larger view grows from the review after the missed launch?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions.",
+          "Blame can produce a satisfying but inaccurate account of a complex failure."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why is the review after the missed launch a telling detail?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions.",
+          "Blame can produce a satisfying but inaccurate account of a complex failure."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the review after the missed launch challenge a one-sided view?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions.",
+          "Blame can produce a satisfying but inaccurate account of a complex failure."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the review after the missed launch affect more than one person?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions.",
+          "Blame can produce a satisfying but inaccurate account of a complex failure."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What is the next step after the review after the missed launch?",
+        "options": [
+          "Name owners, test earlier, and revisit risks before major changes.",
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Which premise does the review after the missed launch weaken?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A missed launch proves one team must be solely at fault.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why does the review after the missed launch strengthen the conclusion?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "Shared learning does not erase responsibility or excuse poor decisions.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Blame can produce a satisfying but inaccurate account of a complex failure."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What boundary surrounds the review after the missed launch?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Blame can produce a satisfying but inaccurate account of a complex failure.",
+          "Shared learning does not erase responsibility or excuse poor decisions."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "Why would neglecting the review after the missed launch be costly?",
+        "options": [
+          "Blame can produce a satisfying but inaccurate account of a complex failure.",
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What conduct reflects the reasoning about the review after the missed launch?",
+        "options": [
+          "A useful project review maps system failures instead of hunting one culprit.",
+          "Name owners, test earlier, and revisit risks before major changes.",
+          "A sequence of rushed discovery, unclear ownership, and ignored risk enabled the delay.",
+          "Shared learning does not erase responsibility or excuse poor decisions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-work-10",
+    "title": "When Does Efficiency Become an Excuse?",
+    "level": "C1",
+    "themeId": "work",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A company wants to automate its first reply to customer complaints. It promises speed. What should leaders ask first?",
+      "Guest: They should ask what kind of complaint is involved, what harm a delay or wrong response could cause, and whether the system can recognise cases that need a person quickly.",
+      "Moderator: Is a fast standard reply always a problem?",
+      "Guest: No. For simple, low-risk questions it may help. The concern begins when efficiency is used to avoid listening to someone reporting a safety issue, financial loss, unfair treatment, or another serious matter.",
+      "Moderator: What does accountable design include?",
+      "Guest: Clear escalation routes, records of how cases are sorted, regular checks for errors, and a named person who remains responsible for outcomes instead of blaming the tool.",
+      "Moderator: How should frontline staff be involved?",
+      "Guest: They often know where automated language will confuse people. Leaving them out can make a system appear efficient on paper while moving hidden work onto them later.",
+      "Moderator: Should customers be told that automation is involved?",
+      "Guest: Yes, in language they can understand, along with a route to a human when the matter needs one. Hiding the process weakens trust.",
+      "Moderator: What is the main ethical test?",
+      "Guest: Whether the system saves time without making the person with the least power carry the cost of its mistakes.",
+      "Moderator: And if the evidence is uncertain?",
+      "Guest: Pilot carefully, study what actually happens, and be willing to revise or stop the system when the risk is greater than the promised gain.",
+      "Moderator: How can leaders find hidden costs?",
+      "Guest: Track repeat contacts, time to real resolution, staff corrections, and the experience of people whose cases do not match the standard route. A quick first reply may conceal a slow and unfair outcome.",
+      "Moderator: What follows from that evidence?",
+      "Guest: Correct the design, explain the change, and never call a system efficient simply because its burden has been moved out of view."
+    ],
+    "quiz": [
+      {
+        "question": "What judgement follows from the automated reply to a serious complaint?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly.",
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What does the automated reply to a serious complaint demonstrate?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly.",
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What contrast does the automated reply to a serious complaint make necessary?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly.",
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What result might the automated reply to a serious complaint produce?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly.",
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How should the automated reply to a serious complaint shape conduct?",
+        "options": [
+          "Pilot carefully, provide human escalation, and revise harmful designs.",
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What misconception lies behind the automated reply to a serious complaint?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "A quick automated reply is automatically a successful resolution.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the automated reply to a serious complaint show the issue in practice?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Automation can help low-risk questions but must escalate serious cases quickly.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies."
+        ],
+        "correctIndex": 2,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How does the automated reply to a serious complaint resist an extreme reading?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies.",
+          "Automation can help low-risk questions but must escalate serious cases quickly."
+        ],
+        "correctIndex": 3,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "What could go wrong without attention to the automated reply to a serious complaint?",
+        "options": [
+          "Unchecked systems can hide unfair outcomes behind apparently rapid replies.",
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly."
+        ],
+        "correctIndex": 0,
+        "explanation": "The script develops this point through its central argument and example."
+      },
+      {
+        "question": "How should someone proceed after the automated reply to a serious complaint?",
+        "options": [
+          "Efficiency is ethical only when it does not shift hidden costs onto vulnerable people.",
+          "Pilot carefully, provide human escalation, and revise harmful designs.",
+          "Repeat contacts and staff corrections can expose a fast response that fails users.",
+          "Automation can help low-risk questions but must escalate serious cases quickly."
+        ],
+        "correctIndex": 1,
+        "explanation": "The script develops this point through its central argument and example."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "work",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

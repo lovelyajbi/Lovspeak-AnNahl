@@ -6,33 +6,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] For years, my trips were about checklists. Five cities in five days, a photo at every famous spot, then home again, exhausted.",
-      "Narrator: [thoughtful] I never really rested during those trips. I just moved from one location to the next, tired and a little stressed.",
-      "Narrator: [reflective] Last spring, I planned a normal trip like that, but my flight was delayed by six hours at the airport.",
-      "Narrator: [sighing] At first, I was frustrated. I sat near the gate, checking the screen again and again, hoping the time would change.",
-      "Narrator: [gently] After an hour, I gave up checking and just sat there instead. I watched people walking past, hugging family, laughing quietly.",
-      "Narrator: [softly] Something in me slowed down during that wait. I was not doing anything, and for once, that felt okay.",
-      "Narrator: [thoughtful] When I finally landed, my schedule was ruined. Two planned stops were now impossible in one day.",
-      "Narrator: [determined] So I made a decision right there. I would visit only one place that day, slowly, instead of rushing through two.",
-      "Narrator: [warmly] I chose a small market near my hotel instead of a famous monument. I had no real plan, just curiosity.",
-      "Narrator: [with feeling] I talked with a fruit seller for ten minutes about nothing important, and it became my favorite memory of the whole trip.",
-      "Narrator: [reflective] I sat in a small café for two hours, just watching the street, something my old checklist self would never allow.",
-      "Narrator: [gently] Nobody photographed that afternoon, and yet it is the clearest memory I have from that entire journey.",
-      "Narrator: [honestly] I still love seeing famous places when I travel. That has not changed, and I do not think it needs to.",
-      "Narrator: [peacefully] But now, I always leave space in my plans, at least one afternoon with nothing scheduled at all.",
-      "Narrator: [warmly] Sometimes the delayed flight, the missed train, or the wrong turn becomes the actual story worth remembering.",
-      "Narrator: [with a small smile] Travel taught me that rushing sees more places, but slowing down actually sees the place you are in."
+      "Narrator: [warmly] For years, my trips were about checklists. Five cities in five days, a photo at every famous spot, then home again, exhausted.",
+      "Narrator: I never really rested during those trips. I just moved from one location to the next, tired and a little stressed.",
+      "Narrator: [thoughtful] Last spring, I planned a normal trip like that, but my flight was delayed by six hours at the airport.",
+      "Narrator: At first, I was frustrated. I sat near the gate, checking the screen again and again, hoping the time would change.",
+      "Narrator: [honestly] After an hour, I gave up checking and just sat there instead. I watched people walking past, hugging family, laughing quietly.",
+      "Narrator: Something in me slowed down during that wait. I was not doing anything, and for once, that felt okay.",
+      "Narrator: [carefully] When I finally landed, my schedule was ruined. Two planned stops were now impossible in one day.",
+      "Narrator: So I made a decision right there. I would visit only one place that day, slowly, instead of rushing through two.",
+      "Narrator: [curious] I chose a small market near my hotel instead of a famous monument. I had no real plan, just curiosity.",
+      "Narrator: I talked with a fruit seller for ten minutes about nothing important, and it became my favorite memory of the whole trip.",
+      "Narrator: [relieved] I sat in a small café for two hours, just watching the street, something my old checklist self would never allow.",
+      "Narrator: Nobody photographed that afternoon, and yet it is the clearest memory I have from that entire journey.",
+      "Narrator: [reflective] I still love seeing famous places when I travel. That has not changed, and I do not think it needs to.",
+      "Narrator: But now, I always leave space in my plans, at least one afternoon with nothing scheduled at all.",
+      "Narrator: [encouraging] Sometimes the delayed flight, the missed train, or the wrong turn becomes the actual story worth remembering.",
+      "Narrator: Travel taught me that rushing sees more places, but slowing down actually sees the place you are in."
     ],
     "quiz": [
-      { "question": "How did the narrator usually travel before this trip?", "options": ["Slowly, with no plan", "Rushing through five cities in five days", "She never traveled before", "Only by train"], "correctIndex": 1, "explanation": "She describes her old trips as five cities in five days, moving fast between famous spots." },
-      { "question": "What happened at the airport that changed her trip?", "options": ["She lost her luggage", "Her flight was delayed by six hours", "She missed her flight completely", "Her passport was stolen"], "correctIndex": 1, "explanation": "Her flight was delayed by six hours, and the long wait slowed her down." },
-      { "question": "What decision did she make after landing with a ruined schedule?", "options": ["To go home immediately", "To visit only one place that day, slowly", "To visit three places quickly", "To cancel the whole trip"], "correctIndex": 1, "explanation": "She decided to visit only one place that day, slowly, instead of rushing through two stops." },
-      { "question": "What became her favorite memory of the trip?", "options": ["A famous monument", "Talking with a fruit seller for ten minutes", "A hotel breakfast", "An airplane meal"], "correctIndex": 1, "explanation": "She says talking with a fruit seller for ten minutes became her favorite memory of the trip." },
-      { "question": "What does the narrator now always leave space for when planning trips?", "options": ["More famous monuments", "At least one afternoon with nothing scheduled", "Extra luggage", "More flights per day"], "correctIndex": 1, "explanation": "She now always leaves at least one afternoon with nothing scheduled at all." }
-    ]
+      {
+        "question": "How did the narrator usually travel before this trip?",
+        "options": [
+          "Slowly, with no plan",
+          "She never traveled before",
+          "Rushing through five cities in five days",
+          "Only by train"
+        ],
+        "correctIndex": 2,
+        "explanation": "She describes her old trips as five cities in five days, moving fast between famous spots."
+      },
+      {
+        "question": "What happened at the airport that changed her trip?",
+        "options": [
+          "She lost her luggage",
+          "Her flight was delayed by six hours",
+          "She missed her flight completely",
+          "Her passport was stolen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her flight was delayed by six hours, and the long wait slowed her down."
+      },
+      {
+        "question": "What decision did she make after landing with a ruined schedule?",
+        "options": [
+          "To go home immediately",
+          "To visit three places quickly",
+          "To visit only one place that day, slowly",
+          "To cancel the whole trip"
+        ],
+        "correctIndex": 2,
+        "explanation": "She decided to visit only one place that day, slowly, instead of rushing through two stops."
+      },
+      {
+        "question": "What became her favorite memory of the trip?",
+        "options": [
+          "A famous monument",
+          "A hotel breakfast",
+          "An airplane meal",
+          "Talking with a fruit seller for ten minutes"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says talking with a fruit seller for ten minutes became her favorite memory of the trip."
+      },
+      {
+        "question": "What does the narrator now always leave space for when planning trips?",
+        "options": [
+          "More famous monuments",
+          "Extra luggage",
+          "At least one afternoon with nothing scheduled",
+          "More flights per day"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now always leaves at least one afternoon with nothing scheduled at all."
+      },
+      {
+        "question": "How did old trips leave the narrator?",
+        "options": [
+          "Well rested",
+          "Exhausted",
+          "Ready for work",
+          "Lost without photos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Too many stops created tiredness."
+      },
+      {
+        "question": "What ruined the original schedule?",
+        "options": [
+          "A stolen bag",
+          "A closed hotel",
+          "A wrong passport",
+          "An airport delay"
+        ],
+        "correctIndex": 3,
+        "explanation": "The delay forced a change of pace."
+      },
+      {
+        "question": "Where did the narrator go instead of a monument?",
+        "options": [
+          "A small market",
+          "Another airport",
+          "A mountain trail",
+          "A work office"
+        ],
+        "correctIndex": 0,
+        "explanation": "The unplanned local visit became memorable."
+      },
+      {
+        "question": "What does “curiosity” mean?",
+        "options": [
+          "A desire to learn or notice",
+          "A need to hurry",
+          "Fear of missing a train",
+          "A fixed checklist"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator explored without a strict goal."
+      },
+      {
+        "question": "How are trips planned now?",
+        "options": [
+          "With more cities each day",
+          "Without checking safety",
+          "With open time for one place",
+          "Only around photos"
+        ],
+        "correctIndex": 2,
+        "explanation": "Flexibility supports attention."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; coherent slow-travel reflection contrasts checklist pressure with attentive local experience",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-travel-02",
@@ -41,41 +155,158 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Agent", "gender": "female" },
-      { "name": "Traveler", "gender": "male" }
+      {
+        "name": "Agent",
+        "gender": "female"
+      },
+      {
+        "name": "Traveler",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Agent: [pleasantly] Good morning! May I see your passport and booking confirmation, please?",
-      "Traveler: [a little sleepy] Good morning. Here you go. I hope I'm not too early.",
-      "Agent: [warmly] Not at all, sir. Early is good. Are you checking any luggage today?",
-      "Traveler: [thoughtful] Yes, one big suitcase. I also have this smaller bag for the cabin.",
-      "Agent: [checking screen] Perfect. Could you place your suitcase on the scale for me?",
-      "Traveler: [a little nervous] Sure. Is it under the weight limit? I packed a lot of books.",
-      "Agent: [smiling] It's exactly twenty-two kilos, so you're fine. The limit is twenty-three.",
-      "Traveler: [relieved] Oh, good. I was worried I would need to remove something at the counter.",
+      "Agent: [warmly] Good morning! May I see your passport and booking confirmation, please?",
+      "Traveler: Good morning. Here you go. I hope I'm not too early.",
+      "Agent: [thoughtful] Not at all, sir. Early is good. Are you checking any luggage today?",
+      "Traveler: Yes, one big suitcase. I also have this smaller bag for the cabin.",
+      "Agent: [honestly] Perfect. Could you place your suitcase on the scale for me?",
+      "Traveler: Sure. Is it under the weight limit? I packed a lot of books.",
+      "Agent: [carefully] It's exactly twenty-two kilos, so you're fine. The limit is twenty-three.",
+      "Traveler: Oh, good. I was worried I would need to remove something at the counter.",
       "Agent: [curious] Would you prefer a window seat or an aisle seat for this flight?",
-      "Traveler: [considering] A window seat, please. It's a long flight, and I enjoy watching the clouds.",
-      "Agent: [typing] Understood. I've given you seat fourteen A, near the front of the cabin.",
-      "Traveler: [grateful] Thank you. Does this flight have a stop, or is it direct?",
-      "Agent: [informative] It's direct, about nine hours total. Boarding starts at gate twelve in two hours.",
-      "Traveler: [curious] Is there time to eat something before boarding, do you think?",
-      "Agent: [helpfully] Definitely. There's a food court right past security, only a five-minute walk from here.",
-      "Traveler: [thankful] That's good to know. I haven't eaten since early this morning.",
-      "Agent: [kindly] Also, security can get busy around this time, so I'd recommend heading there soon after you eat.",
-      "Traveler: [nodding] Good idea. Is there anything else I should know before I head to the gate?",
-      "Agent: [informative] Just remember to keep your boarding pass ready, and arrive at the gate at least thirty minutes early.",
-      "Agent: [handing documents] Here is your passport and your boarding pass. Please keep both until you reach the gate.",
-      "Traveler: [checking papers] Got it. Thank you so much for your help today.",
-      "Agent: [warmly] You're very welcome. Have a wonderful trip, and enjoy the window view.",
-      "Traveler: [smiling] I will. Thank you again, and have a nice day."
+      "Traveler: A window seat, please. It's a long flight, and I enjoy watching the clouds.",
+      "Agent: [relieved] Understood. I've given you seat fourteen A, near the front of the cabin.",
+      "Traveler: Thank you. Does this flight have a stop, or is it direct?",
+      "Agent: [reflective] It's direct, about nine hours total. Boarding starts at gate twelve in two hours.",
+      "Traveler: Is there time to eat something before boarding, do you think?",
+      "Agent: [encouraging] Definitely. There's a food court right past security, only a five-minute walk from here.",
+      "Traveler: That's good to know. I haven't eaten since early this morning.",
+      "Agent: Also, security can get busy around this time, so I'd recommend heading there soon after you eat.",
+      "Traveler: [warmly] Good idea. Is there anything else I should know before I head to the gate?",
+      "Agent: Just remember to keep your boarding pass ready, and arrive at the gate at least thirty minutes early.",
+      "Agent: Here is your passport and your boarding pass. Please keep both until you reach the gate.",
+      "Traveler: [pleasantly] Got it. Thank you so much for your help today.",
+      "Agent: You're very welcome. Have a wonderful trip, and enjoy the window view.",
+      "Traveler: I will. Thank you again, and have a nice day."
     ],
     "quiz": [
-      { "question": "What does the agent first ask to see from the traveler?", "options": ["His ticket only", "His passport and booking confirmation", "His credit card", "His phone"], "correctIndex": 1, "explanation": "The agent asks to see his passport and booking confirmation at the start." },
-      { "question": "How much does the traveler's suitcase weigh?", "options": ["Twenty-three kilos, over the limit", "Twenty-two kilos, under the limit", "Thirty kilos", "Fifteen kilos"], "correctIndex": 1, "explanation": "The agent says the suitcase is exactly twenty-two kilos, under the twenty-three kilo limit." },
-      { "question": "What kind of seat does the traveler ask for?", "options": ["An aisle seat", "A window seat", "A middle seat", "Business class"], "correctIndex": 1, "explanation": "The traveler asks for a window seat because he enjoys watching the clouds." },
-      { "question": "How long is the flight, and does it have a stop?", "options": ["Two hours, with one stop", "Nine hours, direct", "Five hours, with two stops", "Twelve hours, direct"], "correctIndex": 1, "explanation": "The agent explains the flight is direct and about nine hours total." },
-      { "question": "Where can the traveler find food before boarding?", "options": ["Only on the plane", "At a food court a five-minute walk past security", "Outside the airport", "At the gate only"], "correctIndex": 1, "explanation": "The agent tells him there is a food court a five-minute walk past security." }
-    ]
+      {
+        "question": "What does the agent first ask to see from the traveler?",
+        "options": [
+          "His ticket only",
+          "His credit card",
+          "His passport and booking confirmation",
+          "His phone"
+        ],
+        "correctIndex": 2,
+        "explanation": "The agent asks to see his passport and booking confirmation at the start."
+      },
+      {
+        "question": "How much does the traveler's suitcase weigh?",
+        "options": [
+          "Twenty-three kilos, over the limit",
+          "Thirty kilos",
+          "Twenty-two kilos, under the limit",
+          "Fifteen kilos"
+        ],
+        "correctIndex": 2,
+        "explanation": "The agent says the suitcase is exactly twenty-two kilos, under the twenty-three kilo limit."
+      },
+      {
+        "question": "What kind of seat does the traveler ask for?",
+        "options": [
+          "An aisle seat",
+          "A window seat",
+          "A middle seat",
+          "Business class"
+        ],
+        "correctIndex": 1,
+        "explanation": "The traveler asks for a window seat because he enjoys watching the clouds."
+      },
+      {
+        "question": "How long is the flight, and does it have a stop?",
+        "options": [
+          "Two hours, with one stop",
+          "Five hours, with two stops",
+          "Twelve hours, direct",
+          "Nine hours, direct"
+        ],
+        "correctIndex": 3,
+        "explanation": "The agent explains the flight is direct and about nine hours total."
+      },
+      {
+        "question": "Where can the traveler find food before boarding?",
+        "options": [
+          "At a food court a five-minute walk past security",
+          "Only on the plane",
+          "Outside the airport",
+          "At the gate only"
+        ],
+        "correctIndex": 0,
+        "explanation": "The agent tells him there is a food court a five-minute walk past security."
+      },
+      {
+        "question": "What two documents are requested?",
+        "options": [
+          "Passport and booking confirmation",
+          "Visa and food receipt",
+          "Map and hotel key",
+          "Train ticket and ID card"
+        ],
+        "correctIndex": 0,
+        "explanation": "The check-in begins with travel records."
+      },
+      {
+        "question": "Is the suitcase over the limit?",
+        "options": [
+          "Yes, by ten kilograms",
+          "The agent does not weigh it",
+          "It has no label",
+          "No"
+        ],
+        "correctIndex": 3,
+        "explanation": "The stated weight is accepted."
+      },
+      {
+        "question": "Why does the traveler prefer an aisle?",
+        "options": [
+          "It has a larger window",
+          "It is always cheaper",
+          "It shortens the flight",
+          "It is easier to get up"
+        ],
+        "correctIndex": 3,
+        "explanation": "The request is practical."
+      },
+      {
+        "question": "What does “direct” mean?",
+        "options": [
+          "A flight with two trains",
+          "A seat near the gate",
+          "A ticket bought today",
+          "No stop before the destination"
+        ],
+        "correctIndex": 3,
+        "explanation": "The agent confirms the route."
+      },
+      {
+        "question": "When should the traveler reach the gate?",
+        "options": [
+          "After the plane leaves",
+          "Before boarding time",
+          "Only after eating",
+          "The next morning"
+        ],
+        "correctIndex": 1,
+        "explanation": "Airport instructions require time to board."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; useful airport-counter dialogue covers documents, luggage, seat, direct flight, gate, and food directions",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-travel-03",
@@ -84,38 +315,155 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Lina", "gender": "female" },
-      { "name": "Mother", "gender": "female" }
+      {
+        "name": "Lina",
+        "gender": "female"
+      },
+      {
+        "name": "Mother",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Lina: [excited] Mom, can you hear me okay? The connection here is a little weak.",
-      "Mother: [warmly] Yes, I can hear you! How is the city? Tell me everything.",
-      "Lina: [happily] It's beautiful, Mom. The streets are narrow, and there are little shops everywhere.",
-      "Mother: [curious] Have you found somewhere to stay that feels comfortable and safe?",
-      "Lina: [reassuring] Yes, my hostel is small but clean, and the owner is very friendly and helpful.",
-      "Mother: [relieved] Good. I worry about you traveling alone, even though I know you are careful.",
-      "Lina: [gently] I understand, Mom. I always message you when I arrive somewhere new, remember?",
-      "Mother: [softly] I know, and I appreciate it more than you realize. What have you seen so far?",
-      "Lina: [enthusiastic] Today I visited an old market and talked with a woman selling handmade scarves for an hour.",
-      "Mother: [smiling] That sounds lovely. Did you buy anything from her?",
-      "Lina: [laughing] Of course. A blue scarf, actually. I already thought of you when I saw the color.",
-      "Mother: [touched] You didn't have to think of me while traveling, but thank you, my dear.",
-      "Lina: [warmly] I think of you every day, Mom, even from this far away.",
-      "Mother: [curious] Is the food very different there? Are you eating enough?",
-      "Lina: [reassuring] Yes, I'm eating well. The food is different, but I'm trying something new every day.",
-      "Mother: [gently] Good. Just remember to drink enough water and rest when you feel tired.",
-      "Lina: [affectionately] I will, Mom. Tomorrow I'm taking a train to a smaller town near the coast.",
-      "Mother: [encouraging] That sounds exciting. Call me when you arrive safely, please.",
-      "Lina: [warmly] I promise I will. I love you, Mom. I'll talk to you again soon.",
-      "Mother: [with love] I love you too, Lina. Travel safely, and enjoy every moment."
+      "Lina: [warmly] Mom, can you hear me okay? The connection here is a little weak.",
+      "Mother: Yes, I can hear you! How is the city? Tell me everything.",
+      "Lina: [thoughtful] It's beautiful, Mom. The streets are narrow, and there are little shops everywhere.",
+      "Mother: Have you found somewhere to stay that feels comfortable and safe?",
+      "Lina: [honestly] Yes, my hostel is small but clean, and the owner is very friendly and helpful.",
+      "Mother: Good. I worry about you traveling alone, even though I know you are careful.",
+      "Lina: [carefully] I understand, Mom. I message you when I arrive, and you have my hostel address and tomorrow’s train details in our private chat.",
+      "Mother: I know, and I appreciate it more than you realize. What have you seen so far?",
+      "Lina: [curious] Today I visited an old market and talked with a woman selling handmade scarves for an hour.",
+      "Mother: That sounds lovely. Did you buy anything from her?",
+      "Lina: [relieved] Of course. A blue scarf, actually. I already thought of you when I saw the color.",
+      "Mother: You didn't have to think of me while traveling, but thank you, my dear.",
+      "Lina: [reflective] I think of you every day, Mom, even from this far away.",
+      "Mother: Is the food very different there? Are you eating enough?",
+      "Lina: [encouraging] Yes, I'm eating well. The food is different, but I'm trying something new every day.",
+      "Mother: Good. Just remember to drink enough water and rest when you feel tired.",
+      "Lina: I will, Mom. Tomorrow I'm taking a train to a smaller town near the coast.",
+      "Mother: [warmly] That sounds exciting. Call me when you arrive safely, please.",
+      "Lina: I promise I will. I love you, Mom. I'll talk to you again soon.",
+      "Mother: I love you too, Lina. Travel safely, and enjoy every moment."
     ],
     "quiz": [
-      { "question": "Why does Lina call her mother?", "options": ["To ask for money", "To share news about her trip", "To cancel her trip", "To complain about the hostel"], "correctIndex": 1, "explanation": "Lina calls to share what the city is like and what she has seen so far." },
-      { "question": "How does Lina describe her hostel?", "options": ["Expensive and unfriendly", "Small but clean, with a friendly owner", "Very large and noisy", "Far from the city center"], "correctIndex": 1, "explanation": "Lina describes the hostel as small but clean, with a friendly and helpful owner." },
-      { "question": "What did Lina do at the old market?", "options": ["Bought nothing", "Talked with a scarf seller for an hour and bought a scarf", "Got lost for hours", "Sold her own things"], "correctIndex": 1, "explanation": "Lina talked with a woman selling handmade scarves for an hour and bought a blue scarf." },
-      { "question": "What does the mother remind Lina to do?", "options": ["Spend more money", "Drink enough water and rest when tired", "Call every hour", "Stop traveling alone"], "correctIndex": 1, "explanation": "The mother reminds Lina to drink enough water and rest when she feels tired." },
-      { "question": "What is Lina planning to do tomorrow?", "options": ["Fly home", "Take a train to a smaller town near the coast", "Stay in the hostel all day", "Visit another market"], "correctIndex": 1, "explanation": "Lina says tomorrow she is taking a train to a smaller town near the coast." }
-    ]
+      {
+        "question": "Why does Lina call her mother?",
+        "options": [
+          "To share news about her trip",
+          "To ask for money",
+          "To cancel her trip",
+          "To complain about the hostel"
+        ],
+        "correctIndex": 0,
+        "explanation": "Lina calls to share what the city is like and what she has seen so far."
+      },
+      {
+        "question": "How does Lina describe her hostel?",
+        "options": [
+          "Small but clean, with a friendly owner",
+          "Expensive and unfriendly",
+          "Very large and noisy",
+          "Far from the city center"
+        ],
+        "correctIndex": 0,
+        "explanation": "Lina describes the hostel as small but clean, with a friendly and helpful owner."
+      },
+      {
+        "question": "What did Lina do at the old market?",
+        "options": [
+          "Talked with a scarf seller for an hour and bought a scarf",
+          "Bought nothing",
+          "Got lost for hours",
+          "Sold her own things"
+        ],
+        "correctIndex": 0,
+        "explanation": "Lina talked with a woman selling handmade scarves for an hour and bought a blue scarf."
+      },
+      {
+        "question": "What does the mother remind Lina to do?",
+        "options": [
+          "Spend more money",
+          "Call every hour",
+          "Stop traveling alone",
+          "Drink enough water and rest when tired"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mother reminds Lina to drink enough water and rest when she feels tired."
+      },
+      {
+        "question": "What is Lina planning to do tomorrow?",
+        "options": [
+          "Fly home",
+          "Stay in the hostel all day",
+          "Take a train to a smaller town near the coast",
+          "Visit another market"
+        ],
+        "correctIndex": 2,
+        "explanation": "Lina says tomorrow she is taking a train to a smaller town near the coast."
+      },
+      {
+        "question": "What does Lina do after arriving somewhere?",
+        "options": [
+          "Messages her mother",
+          "Posts her room publicly",
+          "Turns off her phone",
+          "Changes hostels immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "A check-in confirms safe arrival."
+      },
+      {
+        "question": "What travel details has she shared privately?",
+        "options": [
+          "Every photo publicly",
+          "Her bank password",
+          "Hostel address and next route",
+          "A stranger’s schedule"
+        ],
+        "correctIndex": 2,
+        "explanation": "Trusted family can follow the plan."
+      },
+      {
+        "question": "What did Lina buy?",
+        "options": [
+          "A train map",
+          "A blue scarf",
+          "A phone charger",
+          "A water bottle"
+        ],
+        "correctIndex": 1,
+        "explanation": "The color reminded her of her mother."
+      },
+      {
+        "question": "What health reminder does her mother give?",
+        "options": [
+          "Walk all night",
+          "Drink water and rest",
+          "Skip unfamiliar food",
+          "Avoid every train"
+        ],
+        "correctIndex": 1,
+        "explanation": "Basic care supports the journey."
+      },
+      {
+        "question": "What will Lina do after the next train?",
+        "options": [
+          "Wait one week",
+          "Meet an unknown driver",
+          "Post her live location publicly",
+          "Call when she arrives safely"
+        ],
+        "correctIndex": 3,
+        "explanation": "The agreed check-in continues."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "revise lightly; keep family warmth while adding specific solo-travel safety communication rather than relying only on a friendly hostel owner",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-travel-04",
@@ -124,32 +472,146 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [warmly] My father traveled for work most of his life, always with one small bag, never more.",
-      "Narrator: [thoughtful] When I was young, I asked him once why he never packed a big suitcase like other travelers.",
-      "Narrator: [gently] He smiled and said, a heavy bag makes a heavy journey. Carry only what you truly need.",
-      "Narrator: [reflective] I did not understand him then. My own first trip, at nineteen, was packed with things I never used.",
+      "Narrator: When I was young, I asked him once why he never packed a big suitcase like other travelers.",
+      "Narrator: [thoughtful] He smiled and said, a heavy bag makes a heavy journey. Carry only what you truly need.",
+      "Narrator: I did not understand him then. My own first trip, at nineteen, was packed with things I never used.",
       "Narrator: [honestly] I brought three pairs of shoes, books I never opened, and clothes for weather that never happened.",
-      "Narrator: [with feeling] By the second day, my shoulders ached, and I was tired of carrying so much unnecessary weight.",
-      "Narrator: [softly] I called my father from a train station, frustrated, and told him about my heavy, awkward bag.",
-      "Narrator: [warmly] He laughed gently and said, now you understand what I meant, without me explaining it again.",
-      "Narrator: [thoughtful] After that trip, I started packing differently. One bag, a few outfits, and only what I truly needed.",
-      "Narrator: [gently] My next trip felt completely different. I moved easily between trains, hotels, and unexpected changes of plan.",
-      "Narrator: [reflective] I realized my father's lesson was not really about luggage at all. It was about traveling with less worry too.",
-      "Narrator: [warmly] A light bag means fewer things to lose, fewer things to protect, and more attention for the actual journey.",
-      "Narrator: [peacefully] Now, before every trip, I lay out my clothes and remove half of what I planned to bring.",
-      "Narrator: [with a small smile] My father passed away two years ago, but I still hear his voice every time I pack a bag.",
-      "Narrator: [warmly] A heavy bag makes a heavy journey. Simple words, but I think about them on every single trip I take."
+      "Narrator: By the second day, my shoulders ached, and I was tired of carrying so much unnecessary weight.",
+      "Narrator: [carefully] I called my father from a train station, frustrated, and told him about my heavy, awkward bag.",
+      "Narrator: He laughed gently and said, now you understand what I meant, without me explaining it again.",
+      "Narrator: [curious] After that trip, I started packing differently. One bag, a few outfits, and only what I truly needed.",
+      "Narrator: My next trip felt completely different. I moved easily between trains, hotels, and unexpected changes of plan.",
+      "Narrator: [relieved] I realized my father's lesson was not really about luggage at all. It was about traveling with less worry too.",
+      "Narrator: A light bag means fewer things to lose, fewer things to protect, and more attention for the actual journey.",
+      "Narrator: [reflective] Now, before every trip, I lay out my clothes and remove half of what I planned to bring.",
+      "Narrator: My father passed away two years ago, but I still hear his voice every time I pack a bag.",
+      "Narrator: [encouraging] A heavy bag makes a heavy journey. Simple words, but I think about them on every single trip I take."
     ],
     "quiz": [
-      { "question": "How did the narrator's father usually travel?", "options": ["With several large suitcases", "With one small bag, never more", "He never traveled", "Only by car"], "correctIndex": 1, "explanation": "The father traveled for work always with one small bag, never more." },
-      { "question": "What did the father say about a heavy bag?", "options": ["It shows you are prepared", "A heavy bag makes a heavy journey", "It is always necessary", "It does not matter"], "correctIndex": 1, "explanation": "The father said a heavy bag makes a heavy journey, and to carry only what you truly need." },
-      { "question": "What happened on the narrator's first trip at nineteen?", "options": ["He packed almost nothing", "He packed too much and his shoulders ached", "He forgot his passport", "He lost his luggage"], "correctIndex": 1, "explanation": "He packed three pairs of shoes, unused books, and unnecessary clothes, and his shoulders ached." },
-      { "question": "What did the narrator realize his father's lesson was really about?", "options": ["Only about luggage weight", "Traveling with less worry, not just less luggage", "Saving money on bags", "Buying expensive suitcases"], "correctIndex": 1, "explanation": "He realized the lesson was about traveling with less worry too, not only about luggage." },
-      { "question": "What does the narrator do before every trip now?", "options": ["Packs as much as possible", "Lays out his clothes and removes half of what he planned to bring", "Buys a bigger suitcase", "Asks his father to pack for him"], "correctIndex": 1, "explanation": "He now lays out his clothes before every trip and removes half of what he planned to bring." }
-    ]
+      {
+        "question": "How did the narrator's father usually travel?",
+        "options": [
+          "With several large suitcases",
+          "He never traveled",
+          "Only by car",
+          "With one small bag, never more"
+        ],
+        "correctIndex": 3,
+        "explanation": "The father traveled for work always with one small bag, never more."
+      },
+      {
+        "question": "What did the father say about a heavy bag?",
+        "options": [
+          "It shows you are prepared",
+          "A heavy bag makes a heavy journey",
+          "It is always necessary",
+          "It does not matter"
+        ],
+        "correctIndex": 1,
+        "explanation": "The father said a heavy bag makes a heavy journey, and to carry only what you truly need."
+      },
+      {
+        "question": "What happened on the narrator's first trip at nineteen?",
+        "options": [
+          "He packed almost nothing",
+          "He packed too much and his shoulders ached",
+          "He forgot his passport",
+          "He lost his luggage"
+        ],
+        "correctIndex": 1,
+        "explanation": "He packed three pairs of shoes, unused books, and unnecessary clothes, and his shoulders ached."
+      },
+      {
+        "question": "What did the narrator realize his father's lesson was really about?",
+        "options": [
+          "Traveling with less worry, not just less luggage",
+          "Only about luggage weight",
+          "Saving money on bags",
+          "Buying expensive suitcases"
+        ],
+        "correctIndex": 0,
+        "explanation": "He realized the lesson was about traveling with less worry too, not only about luggage."
+      },
+      {
+        "question": "What does the narrator do before every trip now?",
+        "options": [
+          "Packs as much as possible",
+          "Buys a bigger suitcase",
+          "Lays out his clothes and removes half of what he planned to bring",
+          "Asks his father to pack for him"
+        ],
+        "correctIndex": 2,
+        "explanation": "He now lays out his clothes before every trip and removes half of what he planned to bring."
+      },
+      {
+        "question": "What did the father carry?",
+        "options": [
+          "Three suitcases",
+          "No luggage",
+          "A heavy box",
+          "One small bag"
+        ],
+        "correctIndex": 3,
+        "explanation": "His work travel stayed simple."
+      },
+      {
+        "question": "What happened at age nineteen?",
+        "options": [
+          "The narrator packed too much",
+          "The father lost a bag",
+          "A flight was canceled",
+          "The hotel closed"
+        ],
+        "correctIndex": 0,
+        "explanation": "The first independent trip tested the advice."
+      },
+      {
+        "question": "How did heavy luggage affect travel?",
+        "options": [
+          "It improved every choice",
+          "It made moving harder",
+          "It saved time",
+          "It made tickets cheaper"
+        ],
+        "correctIndex": 1,
+        "explanation": "Unneeded items became a burden."
+      },
+      {
+        "question": "What happens before packing now?",
+        "options": [
+          "Everything is packed twice",
+          "A new suitcase is bought",
+          "Each item is questioned",
+          "Clothes are chosen at random"
+        ],
+        "correctIndex": 2,
+        "explanation": "Deliberate selection replaces fear."
+      },
+      {
+        "question": "Is the final line only about weight?",
+        "options": [
+          "Yes, it is a luggage rule only",
+          "No, it also means fewer unnecessary worries",
+          "No, it means avoiding travel",
+          "Yes, it requires one exact bag"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator applies the idea more widely."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; practical packing story uses personal experience to teach lighter, deliberate choices",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-travel-05",
@@ -158,38 +620,155 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Maya, who just returned from three weeks of solo travel. Thanks for joining me, Maya.",
-      "Guest: [pleasantly] Thank you for having me. I'm still a little jet-lagged, but happy to talk about it.",
-      "Host: [curious] What made you decide to travel alone for the first time?",
-      "Guest: [thoughtful] Honestly, I kept waiting for a friend to be free at the same time, and it never happened.",
-      "Host: [interested] So you finally just booked the ticket yourself?",
-      "Guest: [smiling] Exactly. One night I got tired of waiting, and I booked a flight before I could talk myself out of it.",
-      "Host: [curious] Were you nervous before you left?",
-      "Guest: [honestly] Extremely nervous. I almost canceled the trip twice in the week before I flew.",
-      "Host: [sympathetically] What helped you get on that plane anyway?",
-      "Guest: [reflective] A friend told me, you can always come home early if you hate it. That made it feel less permanent.",
-      "Host: [curious] What surprised you most once you actually arrived?",
-      "Guest: [warmly] How easy it was to talk to strangers when nobody familiar was around. I made friends at every hostel.",
-      "Host: [interested] Did you ever feel lonely during those three weeks?",
-      "Guest: [honestly] Yes, a few evenings, especially eating dinner alone at first. That part took practice.",
-      "Host: [curious] How did you handle those lonely moments?",
-      "Guest: [gently] I started bringing a small notebook to dinner, writing about my day instead of just staring at my phone.",
-      "Host: [curious] Would you recommend solo travel to someone considering it?",
-      "Guest: [encouraging] Completely. You learn how capable you are when there's nobody else to rely on.",
-      "Host: [smiling] What's the one thing you'd tell your nervous self from before this trip?",
-      "Guest: [warmly] I'd say, book the ticket. The fear disappears the moment the plane actually takes off."
+      "Guest: Thank you for having me. I'm still a little jet-lagged, but happy to talk about it.",
+      "Host: [thoughtful] What made you decide to travel alone for the first time?",
+      "Guest: Honestly, I kept waiting for a friend to be free at the same time, and it never happened.",
+      "Host: [honestly] So you finally just booked the ticket yourself?",
+      "Guest: Exactly. I researched the route, chose reviewed accommodation, bought suitable insurance, and then booked the flight.",
+      "Host: [carefully] Were you nervous before you left?",
+      "Guest: Extremely nervous. I almost canceled the trip twice in the week before I flew.",
+      "Host: [curious] What helped you get on that plane anyway?",
+      "Guest: A friend told me, you can always come home early if you hate it. That made it feel less permanent.",
+      "Host: [relieved] What surprised you most once you actually arrived?",
+      "Guest: How much planning mattered. I kept document copies, used trusted transport, and checked in with family at agreed times.",
+      "Host: [reflective] Did you ever feel lonely during those three weeks?",
+      "Guest: Yes, a few evenings, especially eating dinner alone at first. That part took practice.",
+      "Host: [encouraging] How did you handle those lonely moments?",
+      "Guest: I started bringing a small notebook to dinner, writing about my day instead of just staring at my phone.",
+      "Host: Would you recommend solo travel to someone considering it?",
+      "Guest: [warmly] It can suit some adults, but prepare carefully, keep trusted contact, and change plans if a place feels unsafe.",
+      "Host: What's the one thing you'd tell your nervous self from before this trip?",
+      "Guest: I would say: learn the risks, make a safe plan, and know that coming home early is allowed."
     ],
     "quiz": [
-      { "question": "Why did Maya decide to finally travel alone?", "options": ["She wanted to avoid friends", "She kept waiting for a friend to be free and it never happened", "It was cheaper alone", "Her job required it"], "correctIndex": 1, "explanation": "Maya kept waiting for a friend to be free at the same time, and it never happened." },
-      { "question": "How did Maya feel before leaving on the trip?", "options": ["Completely calm", "Extremely nervous, and almost canceled twice", "Excited with no worries", "Angry"], "correctIndex": 1, "explanation": "Maya says she was extremely nervous and almost canceled the trip twice before flying." },
-      { "question": "What advice from a friend helped Maya get on the plane?", "options": ["You must finish the whole trip", "You can always come home early if you hate it", "Travel alone is always easy", "Nobody travels alone"], "correctIndex": 1, "explanation": "A friend told her she could always come home early if she hated it, which felt less permanent." },
-      { "question": "What surprised Maya most once she arrived?", "options": ["How expensive everything was", "How easy it was to talk to strangers", "How boring the trip was", "How cold the weather was"], "correctIndex": 1, "explanation": "She was surprised by how easy it was to talk to strangers, making friends at every hostel." },
-      { "question": "What did Maya start doing to handle lonely evenings?", "options": ["Calling home every night", "Bringing a notebook to dinner to write about her day", "Skipping dinner", "Going to bed early"], "correctIndex": 1, "explanation": "She started bringing a small notebook to dinner, writing about her day instead of staring at her phone." }
-    ]
+      {
+        "question": "Why did Maya decide to finally travel alone?",
+        "options": [
+          "She wanted to avoid friends",
+          "She kept waiting for a friend to be free and it never happened",
+          "It was cheaper alone",
+          "Her job required it"
+        ],
+        "correctIndex": 1,
+        "explanation": "Maya kept waiting for a friend to be free at the same time, and it never happened."
+      },
+      {
+        "question": "How did Maya feel before leaving on the trip?",
+        "options": [
+          "Completely calm",
+          "Excited with no worries",
+          "Angry",
+          "Extremely nervous, and almost canceled twice"
+        ],
+        "correctIndex": 3,
+        "explanation": "Maya says she was extremely nervous and almost canceled the trip twice before flying."
+      },
+      {
+        "question": "What advice from a friend helped Maya get on the plane?",
+        "options": [
+          "You can always come home early if you hate it",
+          "You must finish the whole trip",
+          "Travel alone is always easy",
+          "Nobody travels alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "A friend told her she could always come home early if she hated it, which felt less permanent."
+      },
+      {
+        "question": "What surprised Maya most once she arrived?",
+        "options": [
+          "How expensive everything was",
+          "How boring the trip was",
+          "How cold the weather was",
+          "How easy it was to talk to strangers"
+        ],
+        "correctIndex": 3,
+        "explanation": "She was surprised by how easy it was to talk to strangers, making friends at every hostel."
+      },
+      {
+        "question": "What did Maya start doing to handle lonely evenings?",
+        "options": [
+          "Calling home every night",
+          "Bringing a notebook to dinner to write about her day",
+          "Skipping dinner",
+          "Going to bed early"
+        ],
+        "correctIndex": 1,
+        "explanation": "She started bringing a small notebook to dinner, writing about her day instead of staring at her phone."
+      },
+      {
+        "question": "Why did Maya stop waiting?",
+        "options": [
+          "Friends were never free at the same time",
+          "She disliked all friends",
+          "The host bought a ticket",
+          "Her work required the trip"
+        ],
+        "correctIndex": 0,
+        "explanation": "Different schedules delayed her plan."
+      },
+      {
+        "question": "What safety preparation is added?",
+        "options": [
+          "No plan after booking",
+          "Talking to every stranger",
+          "Research, insurance, copies, and check-ins",
+          "Sharing live plans publicly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Solo travel needs more than courage."
+      },
+      {
+        "question": "Did Maya ever feel lonely?",
+        "options": [
+          "No, never",
+          "Only on the plane",
+          "Yes, on some evenings",
+          "Only after returning"
+        ],
+        "correctIndex": 2,
+        "explanation": "The interview includes a difficult part."
+      },
+      {
+        "question": "What helped at dinner?",
+        "options": [
+          "Canceling the trip",
+          "Calling strangers",
+          "Writing in a notebook",
+          "Skipping meals"
+        ],
+        "correctIndex": 2,
+        "explanation": "A quiet routine helped her handle the moment."
+      },
+      {
+        "question": "What is the revised advice?",
+        "options": [
+          "Fear always vanishes on takeoff",
+          "Everyone should travel alone",
+          "Plan carefully and change course if unsafe",
+          "Book before thinking"
+        ],
+        "correctIndex": 2,
+        "explanation": "Capability includes safe decisions."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "revise; preserve confidence gained from solo travel while replacing reckless booking advice with preparation, trusted check-ins, and permission to change plans",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-travel-06",
@@ -198,33 +777,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] Every traveler has a story about something going completely wrong. This one is mine.",
-      "Narrator: [reflective] Two years ago, I was traveling by train through a small country I had never visited before.",
-      "Narrator: [honestly] I was tired that morning, and I boarded the wrong train without checking the number properly.",
-      "Narrator: [worried] I only noticed my mistake thirty minutes later, when the announcement mentioned a town I did not recognize.",
-      "Narrator: [sighing] My phone had no signal, and I had no idea where this train was actually taking me.",
-      "Narrator: [nervous] For a while, I sat there feeling panicked, imagining every possible problem this mistake might cause.",
-      "Narrator: [gently] Eventually, the train stopped at a small station, and I got off, unsure what to do next.",
-      "Narrator: [surprised] An older man near the ticket window noticed my confused face and asked, gently, if I needed help.",
-      "Narrator: [warmly] I explained my situation, and instead of just giving directions, he invited me to his family's small restaurant nearby.",
-      "Narrator: [thoughtful] I hesitated at first, but something about his kindness felt genuine, so I followed him down the street.",
-      "Narrator: [with feeling] His wife made a simple soup, and his grandchildren asked me questions about my country the entire meal.",
-      "Narrator: [smiling] Nobody spoke my language well, and I barely spoke theirs, but somehow, we understood each other completely.",
+      "Narrator: [warmly] Every traveler has a story about something going completely wrong. This one is mine.",
+      "Narrator: Two years ago, I was traveling by train through a small country I had never visited before.",
+      "Narrator: [thoughtful] I was tired that morning, and I boarded the wrong train without checking the number properly.",
+      "Narrator: I only noticed my mistake thirty minutes later, when the announcement mentioned a town I did not recognize.",
+      "Narrator: [honestly] My phone had no signal, and I had no idea where this train was actually taking me.",
+      "Narrator: For a while, I sat there feeling panicked, imagining every possible problem this mistake might cause.",
+      "Narrator: [carefully] Eventually, the train stopped at a small station, and I got off, unsure what to do next.",
+      "Narrator: An older man near the ticket window noticed my confused face and asked, gently, if I needed help.",
+      "Narrator: [curious] I explained my situation, and he pointed me to station staff first. After they confirmed my next train, he mentioned his family’s busy restaurant across the public square.",
+      "Narrator: I checked that the restaurant was open and full of families, kept my bag with me, and messaged my hotel before walking across the square.",
+      "Narrator: [relieved] His wife made a simple soup, and his grandchildren asked me questions about my country the entire meal.",
+      "Narrator: Nobody spoke my language well, and I barely spoke theirs, but somehow, we understood each other completely.",
       "Narrator: [reflective] Three hours later, the man walked me to the correct platform and waited until my train actually arrived.",
-      "Narrator: [warmly] I never learned his full name, and I never saw that family again after that single afternoon.",
-      "Narrator: [peacefully] But of everything I saw on that entire trip, that unplanned meal remains the memory I return to most.",
-      "Narrator: [with a small smile] Sometimes the wrong train takes you exactly where a trip actually needed you to go."
+      "Narrator: I never learned his full name, and I never saw that family again after that single afternoon.",
+      "Narrator: [encouraging] But of everything I saw on that entire trip, that unplanned meal remains the memory I return to most.",
+      "Narrator: The wrong train brought unexpected kindness, but checking official information and keeping safe boundaries still mattered."
     ],
     "quiz": [
-      { "question": "What mistake did the narrator make that morning?", "options": ["She missed her train completely", "She boarded the wrong train without checking properly", "She lost her ticket", "She forgot her passport"], "correctIndex": 1, "explanation": "She was tired and boarded the wrong train without checking the number properly." },
-      { "question": "How did the narrator feel when she realized her mistake?", "options": ["Calm and relaxed", "Panicked, imagining possible problems", "Happy about the change", "Angry at the train staff"], "correctIndex": 1, "explanation": "She felt panicked and imagined every possible problem the mistake might cause." },
-      { "question": "Who helped the narrator at the small station?", "options": ["A police officer", "An older man near the ticket window", "A train conductor", "Another tourist"], "correctIndex": 1, "explanation": "An older man near the ticket window noticed her confused face and offered to help." },
-      { "question": "What did the man invite the narrator to do?", "options": ["Buy a new ticket immediately", "Come to his family's small restaurant nearby", "Wait alone at the station", "Call the police"], "correctIndex": 1, "explanation": "Instead of just giving directions, he invited her to his family's small restaurant nearby." },
-      { "question": "What does the narrator say about that unplanned meal now?", "options": ["It was a waste of time", "It remains the memory she returns to most from the whole trip", "She regrets accepting the invitation", "She forgot about it quickly"], "correctIndex": 1, "explanation": "She says of everything she saw on the trip, that unplanned meal remains the memory she returns to most." }
-    ]
+      {
+        "question": "What mistake did the narrator make that morning?",
+        "options": [
+          "She missed her train completely",
+          "She lost her ticket",
+          "She forgot her passport",
+          "She boarded the wrong train without checking properly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She was tired and boarded the wrong train without checking the number properly."
+      },
+      {
+        "question": "How did the narrator feel when she realized her mistake?",
+        "options": [
+          "Calm and relaxed",
+          "Happy about the change",
+          "Panicked, imagining possible problems",
+          "Angry at the train staff"
+        ],
+        "correctIndex": 2,
+        "explanation": "She felt panicked and imagined every possible problem the mistake might cause."
+      },
+      {
+        "question": "Who helped the narrator at the small station?",
+        "options": [
+          "A police officer",
+          "An older man near the ticket window",
+          "A train conductor",
+          "Another tourist"
+        ],
+        "correctIndex": 1,
+        "explanation": "An older man near the ticket window noticed her confused face and offered to help."
+      },
+      {
+        "question": "What did the man invite the narrator to do?",
+        "options": [
+          "Buy a new ticket immediately",
+          "Wait alone at the station",
+          "Call the police",
+          "Come to his family's small restaurant nearby"
+        ],
+        "correctIndex": 3,
+        "explanation": "Instead of just giving directions, he invited her to his family's small restaurant nearby."
+      },
+      {
+        "question": "What does the narrator say about that unplanned meal now?",
+        "options": [
+          "It was a waste of time",
+          "She regrets accepting the invitation",
+          "She forgot about it quickly",
+          "It remains the memory she returns to most from the whole trip"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says of everything she saw on the trip, that unplanned meal remains the memory she returns to most."
+      },
+      {
+        "question": "How did the narrator notice the mistake?",
+        "options": [
+          "A stranger took the ticket",
+          "The phone showed a map",
+          "An unfamiliar town was announced",
+          "The restaurant closed"
+        ],
+        "correctIndex": 2,
+        "explanation": "The train name did not match the plan."
+      },
+      {
+        "question": "What safe step came first at the station?",
+        "options": [
+          "Confirming directions with staff",
+          "Following the man immediately",
+          "Leaving luggage behind",
+          "Boarding another train at random"
+        ],
+        "correctIndex": 0,
+        "explanation": "Official information should guide the next move."
+      },
+      {
+        "question": "Why was the restaurant setting safer?",
+        "options": [
+          "It was hidden and empty",
+          "The narrator gave away a passport",
+          "Nobody knew the location",
+          "It was public, nearby, and open with families"
+        ],
+        "correctIndex": 3,
+        "explanation": "Visible public conditions reduced risk."
+      },
+      {
+        "question": "Who received the narrator’s location?",
+        "options": [
+          "The hotel through a message",
+          "Every stranger online",
+          "Nobody",
+          "The man’s grandchildren only"
+        ],
+        "correctIndex": 0,
+        "explanation": "A trusted contact knew the change of plan."
+      },
+      {
+        "question": "What is the balanced memory?",
+        "options": [
+          "Wrong trains always improve trips",
+          "Kindness was meaningful, but safety checks still mattered",
+          "Every stranger should be followed",
+          "Travel plans are unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "A good outcome does not remove responsible caution."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "revise; keep memorable kindness but add public verification, location sharing, and safe boundaries before following an unfamiliar person",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-travel-07",
@@ -233,37 +926,605 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good morning, listeners! Today we're collecting your funniest travel mishap stories. We have a caller on the line. Hello!",
-      "Caller: [laughing] Hello! I have a good one, actually, from a trip a few years ago.",
-      "Radio Host: [warmly] Perfect, please share it with us.",
-      "Caller: [amused] I arrived at my hotel late at night, after a very long flight, completely exhausted.",
-      "Radio Host: [curious] What happened when you got there?",
-      "Caller: [chuckling] I gave my name at the desk, and the clerk said there was no reservation under it at all.",
-      "Radio Host: [surprised] Oh no! What did you do?",
-      "Caller: [amused] I checked my email, and realized I had booked a hotel with almost the exact same name, in a different city entirely.",
-      "Radio Host: [laughing] You booked the wrong hotel completely? That's incredible.",
-      "Caller: [laughing] Completely wrong city! I was two hours away from where I actually needed to sleep that night.",
-      "Radio Host: [curious] So what happened next? Where did you end up staying?",
-      "Caller: [warmly] The kind clerk actually called around and found me a room in a nearby guesthouse for the night.",
-      "Radio Host: [interested] That was lucky. Did you eventually make it to the correct hotel?",
-      "Caller: [smiling] The next morning, yes. I took an early train and arrived just as they were serving breakfast.",
-      "Radio Host: [curious] Did the correct hotel charge you for missing the first night?",
-      "Caller: [relieved] No, luckily they were understanding once I explained the whole confusing story.",
-      "Radio Host: [amused] What did you learn from that whole experience?",
-      "Caller: [thoughtful] Now I always double-check the city name, not just the hotel name, before I click confirm.",
-      "Radio Host: [laughing] That's excellent advice for all our listeners planning trips this year.",
-      "Caller: [warmly] Definitely. Check twice, laugh later, that's my new travel motto."
+      "Radio Host: [warmly] Good morning, listeners! Today we're collecting your funniest travel mishap stories. We have a caller on the line. Hello!",
+      "Caller: Hello! I have a good one, actually, from a trip a few years ago.",
+      "Radio Host: [thoughtful] Perfect, please share it with us.",
+      "Caller: I arrived at my hotel late at night, after a very long flight, completely exhausted.",
+      "Radio Host: [honestly] What happened when you got there?",
+      "Caller: I gave my name at the desk, and the clerk said there was no reservation under it at all.",
+      "Radio Host: [carefully] Oh no! What did you do?",
+      "Caller: I checked my email, and realized I had booked a hotel with almost the exact same name, in a different city entirely.",
+      "Radio Host: [curious] You booked the wrong hotel completely? That's incredible.",
+      "Caller: Completely wrong city! I was two hours away from where I actually needed to sleep that night.",
+      "Radio Host: [relieved] So what happened next? Where did you end up staying?",
+      "Caller: The kind clerk actually called around and found me a room in a nearby guesthouse for the night.",
+      "Radio Host: [reflective] That was lucky. Did you eventually make it to the correct hotel?",
+      "Caller: The next morning, yes. I took an early train and arrived just as they were serving breakfast.",
+      "Radio Host: [encouraging] Did the correct hotel charge you for missing the first night?",
+      "Caller: No, luckily they were understanding once I explained the whole confusing story.",
+      "Radio Host: What did you learn from that whole experience?",
+      "Caller: [warmly] Now I always double-check the city name, not just the hotel name, before I click confirm.",
+      "Radio Host: That's excellent advice for all our listeners planning trips this year.",
+      "Caller: Definitely. Check twice, laugh later, that's my new travel motto."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Best travel restaurants", "Funny travel mishap stories", "Airport security rules", "Cheap flight deals"], "correctIndex": 1, "explanation": "The host introduces today's topic as collecting funny travel mishap stories." },
-      { "question": "What problem did the caller find at the hotel desk?", "options": ["The hotel was closed", "There was no reservation under his name", "His room was already taken", "He forgot his passport"], "correctIndex": 1, "explanation": "The clerk told him there was no reservation under his name at all." },
-      { "question": "What mistake had the caller actually made?", "options": ["He arrived a day early", "He booked a hotel with a similar name in a different city", "He forgot to pack anything", "He lost his booking confirmation"], "correctIndex": 1, "explanation": "He had booked a hotel with almost the exact same name, but in a different city entirely." },
-      { "question": "Where did the caller sleep that first night?", "options": ["At the airport", "A nearby guesthouse the clerk found for him", "On a train", "He did not sleep"], "correctIndex": 1, "explanation": "The kind clerk called around and found him a room in a nearby guesthouse for the night." },
-      { "question": "What lesson did the caller learn from the experience?", "options": ["Never book hotels online", "Always double-check the city name before confirming a booking", "Only travel with a group", "Avoid hotels near train stations"], "correctIndex": 1, "explanation": "He learned to always double-check the city name, not just the hotel name, before clicking confirm." }
-    ]
+      {
+        "question": "What kind of travel stories does the radio segment share?",
+        "options": [
+          "Funny travel mishap stories",
+          "Best travel restaurants",
+          "Airport security rules",
+          "Cheap flight deals"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces today's topic as collecting funny travel mishap stories."
+      },
+      {
+        "question": "What problem did the caller find at the hotel desk?",
+        "options": [
+          "There was no reservation under his name",
+          "The hotel was closed",
+          "His room was already taken",
+          "He forgot his passport"
+        ],
+        "correctIndex": 0,
+        "explanation": "The clerk told him there was no reservation under his name at all."
+      },
+      {
+        "question": "What mistake had the caller actually made?",
+        "options": [
+          "He arrived a day early",
+          "He booked a hotel with a similar name in a different city",
+          "He forgot to pack anything",
+          "He lost his booking confirmation"
+        ],
+        "correctIndex": 1,
+        "explanation": "He had booked a hotel with almost the exact same name, but in a different city entirely."
+      },
+      {
+        "question": "Where did the caller sleep that first night?",
+        "options": [
+          "At the airport",
+          "A nearby guesthouse the clerk found for him",
+          "On a train",
+          "He did not sleep"
+        ],
+        "correctIndex": 1,
+        "explanation": "The kind clerk called around and found him a room in a nearby guesthouse for the night."
+      },
+      {
+        "question": "What lesson did the caller learn from the experience?",
+        "options": [
+          "Never book hotels online",
+          "Only travel with a group",
+          "Always double-check the city name before confirming a booking",
+          "Avoid hotels near train stations"
+        ],
+        "correctIndex": 2,
+        "explanation": "He learned to always double-check the city name, not just the hotel name, before clicking confirm."
+      },
+      {
+        "question": "When did the caller reach the desk?",
+        "options": [
+          "Early at breakfast",
+          "Before booking",
+          "Late at night",
+          "At noon"
+        ],
+        "correctIndex": 2,
+        "explanation": "A long flight had left the caller tired."
+      },
+      {
+        "question": "Why was no reservation found?",
+        "options": [
+          "The email was deleted",
+          "The clerk used a wrong name",
+          "The hotel was full",
+          "The booking was in another city"
+        ],
+        "correctIndex": 3,
+        "explanation": "Similar hotel names caused the mistake."
+      },
+      {
+        "question": "Who found a nearby room?",
+        "options": [
+          "The hotel clerk",
+          "The radio host",
+          "A train driver",
+          "The correct hotel"
+        ],
+        "correctIndex": 0,
+        "explanation": "The clerk called other places."
+      },
+      {
+        "question": "How did the caller travel next morning?",
+        "options": [
+          "By late flight",
+          "On foot for two hours",
+          "By private boat",
+          "By early train"
+        ],
+        "correctIndex": 3,
+        "explanation": "The correct city was two hours away."
+      },
+      {
+        "question": "What must be checked before confirmation?",
+        "options": [
+          "The city as well as the hotel name",
+          "Only the room color",
+          "Only breakfast time",
+          "The radio schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "Location prevents a repeated error."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; light travel mishap remains realistic and ends with a concrete booking-verification habit",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-travel-08",
+    "title": "The Prayer Room Between Two Trains",
+    "level": "A1",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] On a journey to visit my aunt, I had to change trains at a large station. The timetable gave me fifty minutes between services.",
+      "Narrator: I wanted to pray during the stop, but I did not know the building. The signs showed platforms, shops, and toilets, but I saw no prayer-room sign.",
+      "Narrator: [thoughtful] Instead of walking around with my heavy bag, I asked a staff member at the information desk.",
+      "Narrator: She checked a station map and showed me a quiet multi-faith room on the upper floor. She also marked the lift because one staircase was closed.",
+      "Narrator: [honestly] I confirmed the departure platform before leaving the desk. That simple step reduced my worry about missing the train.",
+      "Narrator: The room was clean and quiet. I had already made wudu before traveling, but washing facilities were available nearby.",
+      "Narrator: [carefully] I kept my ticket and phone inside my closed bag and placed it where I could see it without disturbing anyone.",
+      "Narrator: After prayer, I still had twenty-five minutes. I returned directly to the platform and checked the electronic board.",
+      "Narrator: [curious] The platform had changed from six to eight. Because I arrived early, I could move without running.",
+      "Narrator: Another passenger looked confused by the change, so I showed him the board and pointed toward the correct bridge.",
+      "Narrator: [relieved] The stop taught me that planning worship during travel includes practical questions. We can check times, facilities, luggage, and route changes.",
+      "Narrator: Asking staff is often faster and safer than trusting an old online comment about a station.",
+      "Narrator: [reflective] I now save a station map before longer journeys and allow extra time when I can.",
+      "Narrator: The prayer room gave me a calm center in a busy trip, and careful planning helped me leave it without panic."
+    ],
+    "quiz": [
+      {
+        "question": "How long was the planned train connection?",
+        "options": [
+          "Five minutes",
+          "Fifty minutes",
+          "Two hours",
+          "One day"
+        ],
+        "correctIndex": 1,
+        "explanation": "The timetable allowed a fifty-minute stop."
+      },
+      {
+        "question": "Who helped locate the prayer room?",
+        "options": [
+          "A taxi driver",
+          "A station information worker",
+          "The narrator’s aunt",
+          "A food seller outside"
+        ],
+        "correctIndex": 1,
+        "explanation": "The staff member used a station map."
+      },
+      {
+        "question": "Why did she mark the lift?",
+        "options": [
+          "The lift required a ticket",
+          "One staircase was closed",
+          "The room was underground",
+          "The narrator had no bag"
+        ],
+        "correctIndex": 1,
+        "explanation": "The route needed to avoid a closed staircase."
+      },
+      {
+        "question": "What changed after prayer?",
+        "options": [
+          "The destination city changed",
+          "The ticket expired",
+          "The departure platform moved from six to eight",
+          "The train became a bus"
+        ],
+        "correctIndex": 2,
+        "explanation": "Checking the board revealed a platform change."
+      },
+      {
+        "question": "What travel lesson is given?",
+        "options": [
+          "Never ask station staff",
+          "Trust old comments only",
+          "Join worship plans with time and route checks",
+          "Arrive at the last minute"
+        ],
+        "correctIndex": 2,
+        "explanation": "Practical planning supported calm worship and safe travel."
+      },
+      {
+        "question": "Why did the narrator mark the lift?",
+        "options": [
+          "To store luggage",
+          "To buy a ticket",
+          "To charge a phone",
+          "To find an accessible route back"
+        ],
+        "correctIndex": 3,
+        "explanation": "The route could help another traveler too."
+      },
+      {
+        "question": "What did staff provide?",
+        "options": [
+          "A new train",
+          "A meal",
+          "A hotel room",
+          "Directions to the prayer room"
+        ],
+        "correctIndex": 3,
+        "explanation": "Asking early saved time."
+      },
+      {
+        "question": "How much time remained after prayer?",
+        "options": [
+          "Five minutes",
+          "Twenty-five minutes",
+          "Fifty minutes",
+          "One hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "There was still time to return calmly."
+      },
+      {
+        "question": "What was checked on return?",
+        "options": [
+          "The electronic board",
+          "A restaurant list",
+          "A hotel email",
+          "The weather only"
+        ],
+        "correctIndex": 0,
+        "explanation": "Updated platform information matters."
+      },
+      {
+        "question": "What two things worked together?",
+        "options": [
+          "Prayer and careful travel planning",
+          "Speed and panic",
+          "Guessing and rushing",
+          "Photos and shopping"
+        ],
+        "correctIndex": 0,
+        "explanation": "Faith practice fit safely inside the journey."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; strong faith-sensitive station story combines salah, accessibility, timing, signage, and calm return to the platform",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-travel-09",
+    "title": "A Day Trip With No Photos",
+    "level": "A1",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] My phone battery failed as I arrived in a small coastal town for a day trip. The charging cable was inside the bag I had left at home.",
+      "Narrator: At first, I felt that the journey was ruined. My ticket and return time were printed, but I could not use maps or take photos.",
+      "Narrator: [thoughtful] I went to the station desk and asked for a paper town map. The worker circled the sea path, mosque, market, and return station.",
+      "Narrator: I wrote the last train time at the top of the page. Then I put the map in my jacket and began walking.",
+      "Narrator: [honestly] Without a camera, I noticed how often I normally stop to arrange a picture. That day, I watched the fishing boats without choosing a frame.",
+      "Narrator: At the market, I asked a seller about a local bread. She explained its ingredients, and I bought one for lunch.",
+      "Narrator: [carefully] I sat near the harbor and listened to gulls, engines, and families speaking around me. I had no urge to check messages because I could not.",
+      "Narrator: The quiet felt uncomfortable for the first hour, then spacious. I remembered more faces and sounds than usual.",
+      "Narrator: [curious] I still needed practical caution. I kept track of street names and asked for directions before I became lost.",
+      "Narrator: Before Asr, I reached the mosque marked on the map. An older visitor showed me the place for wudu.",
+      "Narrator: [relieved] Later, I returned to the station forty minutes early. I used a public charging point there, but only with my own cable borrowed from the desk.",
+      "Narrator: When the phone turned on, I did not rush back through the town for pictures. The day already felt complete.",
+      "Narrator: [reflective] I took one photo of the paper map beside my ticket as a memory of the unexpected lesson.",
+      "Narrator: Technology supports travel, but attention also guides us. Losing a battery helped me meet a place without placing a screen between us."
+    ],
+    "quiz": [
+      {
+        "question": "What failed at the start of the trip?",
+        "options": [
+          "The train engine",
+          "The narrator’s phone battery",
+          "The market lights",
+          "The station clock"
+        ],
+        "correctIndex": 1,
+        "explanation": "The phone had no power and the cable was at home."
+      },
+      {
+        "question": "What did the station worker provide?",
+        "options": [
+          "A new phone",
+          "A free hotel room",
+          "A paper map with key places marked",
+          "A bicycle ticket"
+        ],
+        "correctIndex": 2,
+        "explanation": "A printed map replaced digital navigation."
+      },
+      {
+        "question": "What did the narrator notice without a camera?",
+        "options": [
+          "More sounds, faces, and direct experience",
+          "Nothing around him",
+          "Only phone shops",
+          "That the town was empty"
+        ],
+        "correctIndex": 0,
+        "explanation": "Less screen use increased attention."
+      },
+      {
+        "question": "How did he avoid getting lost?",
+        "options": [
+          "He followed strangers silently",
+          "He walked without the map",
+          "He waited for his phone all day",
+          "He tracked street names and asked early"
+        ],
+        "correctIndex": 3,
+        "explanation": "Paper information and questions supported navigation."
+      },
+      {
+        "question": "What photo did he finally take?",
+        "options": [
+          "Every fishing boat",
+          "The bread seller’s home",
+          "The paper map beside his ticket",
+          "A private prayer area"
+        ],
+        "correctIndex": 2,
+        "explanation": "One image recorded the lesson of the day."
+      },
+      {
+        "question": "What was left at home?",
+        "options": [
+          "The paper map",
+          "The charging cable",
+          "The wallet",
+          "The train ticket"
+        ],
+        "correctIndex": 1,
+        "explanation": "The phone battery could not be restored immediately."
+      },
+      {
+        "question": "Who provided useful help?",
+        "options": [
+          "A hotel manager",
+          "A radio caller",
+          "A station worker",
+          "A mountain guide"
+        ],
+        "correctIndex": 2,
+        "explanation": "A paper map and key places supported the day."
+      },
+      {
+        "question": "How did the narrator avoid getting lost?",
+        "options": [
+          "Used the map and fixed meeting points",
+          "Followed strangers",
+          "Walked without directions",
+          "Posted a live location"
+        ],
+        "correctIndex": 0,
+        "explanation": "Offline navigation was still planned."
+      },
+      {
+        "question": "What became easier to remember?",
+        "options": [
+          "App notifications",
+          "Photo filters",
+          "Charging times",
+          "Faces and sounds"
+        ],
+        "correctIndex": 3,
+        "explanation": "Attention shifted away from the camera."
+      },
+      {
+        "question": "Did the narrator remain unreachable forever?",
+        "options": [
+          "Yes, for the whole trip",
+          "No, a new phone was bought immediately",
+          "No, the phone was charged later",
+          "Yes, by choice"
+        ],
+        "correctIndex": 2,
+        "explanation": "The story values attention without rejecting useful technology."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; phone-failure story responsibly uses a paper map, meeting point, memory, and later charging rather than romanticizing being unreachable",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-travel-10",
+    "title": "Changing the Hiking Plan",
+    "level": "A1",
+    "themeId": "travel",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Ihsan",
+        "gender": "male"
+      },
+      {
+        "name": "Guide Maya",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Ihsan: [warmly] Guide Maya, the mountain looks clear from here. Are we still taking the shorter trail?",
+      "Guide Maya: Yes. Rain damaged the bridge on the longer route, so that trail is closed.",
+      "Ihsan: [thoughtful] We traveled far for the full hike. Could we walk until the bridge and decide there?",
+      "Guide Maya: No. The closure begins at the forest gate, and entering would ignore the ranger's safety order.",
+      "Ihsan: [honestly] I am disappointed, but I do not want to risk the group. What is special about the short trail?",
+      "Guide Maya: It passes a waterfall and a wide viewpoint. We can walk slowly and learn about plants along the way.",
+      "Ihsan: [carefully] How long will it take?",
+      "Guide Maya: About three hours including breaks. We will return before the afternoon clouds usually arrive.",
+      "Ihsan: [curious] I brought food for a six-hour hike. Can I leave some in the car?",
+      "Guide Maya: Keep enough water, lunch, and an emergency snack. Store the rest safely out of sight.",
+      "Ihsan: [relieved] Two people in our group are beginners. Is this route suitable for them?",
+      "Guide Maya: Yes, if we stay together. The path is steady, but some stones near the waterfall are slippery.",
+      "Ihsan: [reflective] Should the faster hikers wait at every turn?",
+      "Guide Maya: We will use one leader and one person at the back. Nobody passes the leader or walks behind the last person.",
+      "Ihsan: [encouraging] Can we stop for Dhuhr during the route?",
+      "Guide Maya: There is a dry rest area before the viewpoint. We planned enough time for prayer and lunch there.",
+      "Ihsan: I feel better now. The day is different, but it is not wasted.",
+      "Guide Maya: [warmly] Exactly. A good trip is not measured only by distance. Safe decisions let everyone return with a good memory.",
+      "Ihsan: I will tell the others why the route changed so they do not think it was random.",
+      "Guide Maya: Thank you. Clear information helps a group accept a responsible change."
+    ],
+    "quiz": [
+      {
+        "question": "Why is the long trail closed?",
+        "options": [
+          "Rain damaged a bridge",
+          "The mountain disappeared",
+          "The group arrived too early",
+          "There is no viewpoint"
+        ],
+        "correctIndex": 0,
+        "explanation": "A damaged bridge created a safety closure."
+      },
+      {
+        "question": "What does the short trail include?",
+        "options": [
+          "A city museum",
+          "A waterfall and a viewpoint",
+          "A railway station",
+          "A beach market"
+        ],
+        "correctIndex": 1,
+        "explanation": "The alternative still offers natural sights."
+      },
+      {
+        "question": "How long is the new hike?",
+        "options": [
+          "About three hours with breaks",
+          "Ten hours",
+          "Thirty minutes",
+          "Two days"
+        ],
+        "correctIndex": 0,
+        "explanation": "The guide gives a three-hour estimate."
+      },
+      {
+        "question": "How will the group stay together?",
+        "options": [
+          "Everyone chooses a separate path",
+          "Beginners walk alone",
+          "With a leader, a back person, and no passing",
+          "Fast hikers leave first"
+        ],
+        "correctIndex": 2,
+        "explanation": "A clear formation protects all hikers."
+      },
+      {
+        "question": "What does Ihsan decide to do?",
+        "options": [
+          "Explain the safety reason to the group",
+          "Enter the closed route alone",
+          "Cancel every future hike",
+          "Hide the route change"
+        ],
+        "correctIndex": 0,
+        "explanation": "Clear information will help the group accept the plan."
+      },
+      {
+        "question": "Who closed the long trail?",
+        "options": [
+          "Ihsan alone",
+          "The beginners",
+          "A hotel clerk",
+          "Park authorities"
+        ],
+        "correctIndex": 3,
+        "explanation": "The closure follows official safety information."
+      },
+      {
+        "question": "Why is the shorter route chosen?",
+        "options": [
+          "It reaches a higher summit",
+          "It avoids every rest stop",
+          "It has no guide rules",
+          "It is open and suitable for the group"
+        ],
+        "correctIndex": 3,
+        "explanation": "Conditions and group ability guide the decision."
+      },
+      {
+        "question": "What must happen at path crossings?",
+        "options": [
+          "Everyone chooses a route",
+          "The group waits and counts people",
+          "Beginners walk alone",
+          "The guide turns back"
+        ],
+        "correctIndex": 1,
+        "explanation": "Group control prevents separation."
+      },
+      {
+        "question": "What emergency support remains available?",
+        "options": [
+          "Only a social photo",
+          "A stranger’s advice",
+          "A known route and guide plan",
+          "No communication"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guide retains safety structure."
+      },
+      {
+        "question": "What does Ihsan accept?",
+        "options": [
+          "A responsible change over the original goal",
+          "Breaking the trail closure",
+          "Leaving beginners behind",
+          "Hiding information"
+        ],
+        "correctIndex": 0,
+        "explanation": "Clear reasons make the change understandable."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "travel",
+      "scriptDecision": "keep; excellent professional hiking decision uses weather closure, beginner ability, group rules, emergency access, and clear explanation",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

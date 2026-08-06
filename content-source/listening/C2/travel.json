@@ -6,29 +6,143 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] There is a particular non-place, to borrow a term I once dismissed as academic posturing, that airports occupy with unmatched thoroughness, the eight-hour layover.",
-      "Narrator: [wry] For years I regarded mine purely as forfeited time, a toll extracted before the actual journey could properly resume.",
-      "Narrator: [thoughtful] I spent them irritably, pacing terminals, resenting the architecture, treating the hours as an obstacle rather than as time that, however oddly, still belonged to me.",
-      "Narrator: [candid] The shift began during a delay so absurd it exceeded even my capacity for irritation, and something in me simply surrendered to the wait instead.",
-      "Narrator: [observant] I watched, properly watched, for the first time, the strange choreography of a terminal, families dissolving into tearful farewells beside businessmen entirely unmoved by either.",
-      "Narrator: [reflective] Nobody in that hall belonged to the place, and yet the place had, without asking permission, briefly become the only country any of us occupied.",
-      "Narrator: [analytical] It struck me that a layover is perhaps the purest form of purgatory modern life still offers, neither departure nor arrival, merely an interval nobody chose and everybody endures.",
-      "Narrator: [thoughtful] What altered wasn't the layover itself but my relationship to its uselessness, the demand that every hour justify itself through productivity or pleasure.",
-      "Narrator: [honest] I let several hours simply pass, unproductively, unpleasurably, and discovered the sky through smudged glass rather compelling once I stopped resenting it for delaying me.",
-      "Narrator: [gentle] These days I book the occasional deliberately long layover, treating it less as forfeited time than as an hour with no obligations attached to it whatsoever.",
-      "Narrator: [reflective] The strangers around me remain, as ever, entirely uninterested in my presence, which I've come to find oddly restful rather than lonely.",
-      "Narrator: [with a small smile] Perhaps that's the layover's real gift, a few honest hours belonging to nowhere, and therefore, briefly, entirely to oneself."
+      "Narrator: [thoughtful] There is a particular non-place, to borrow a term I once dismissed as academic posturing, that airports occupy with unmatched thoroughness, the eight-hour layover.",
+      "Narrator: For years I regarded mine purely as forfeited time, a toll extracted before the actual journey could properly resume.",
+      "Narrator: [carefully] I spent them irritably, pacing terminals, resenting the architecture, treating the hours as an obstacle rather than as time that, however oddly, still belonged to me.",
+      "Narrator: The shift began during a delay so absurd it exceeded even my capacity for irritation, and something in me simply surrendered to the wait instead.",
+      "Narrator: [reflective] I watched, properly watched, for the first time, the strange choreography of a terminal, families dissolving into tearful farewells beside businessmen entirely unmoved by either.",
+      "Narrator: Nobody in that hall belonged to the place, and yet the place had, without asking permission, briefly become the only country any of us occupied.",
+      "Narrator: [honestly] It struck me that a layover is perhaps the purest form of purgatory modern life still offers, neither departure nor arrival, merely an interval nobody chose and everybody endures.",
+      "Narrator: What altered wasn't the layover itself but my relationship to its uselessness, the demand that every hour justify itself through productivity or pleasure.",
+      "Narrator: [gently] I let several hours simply pass, unproductively, unpleasurably, and discovered the sky through smudged glass rather compelling once I stopped resenting it for delaying me.",
+      "Narrator: These days I book the occasional deliberately long layover, treating it less as forfeited time than as an hour with no obligations attached to it whatsoever.",
+      "Narrator: [calmly] The strangers around me remain, as ever, entirely uninterested in my presence, which I've come to find oddly restful rather than lonely.",
+      "Narrator: Perhaps that's the layover's real gift, a few honest hours belonging to nowhere, and therefore, briefly, entirely to oneself."
     ],
     "quiz": [
-      { "question": "How did the narrator originally regard her airport layovers?", "options": ["As her favorite part of travel", "As forfeited time, a toll extracted before the journey could resume", "As an opportunity for business meetings", "As time to sleep exclusively"], "correctIndex": 1, "explanation": "She initially treated layovers as wasted time, a toll paid before travel could truly continue." },
-      { "question": "What triggered her shift in attitude toward layovers?", "options": ["A free upgrade", "A delay so absurd it exceeded her capacity for irritation, causing her to surrender to the wait", "Meeting a stranger who changed her mind", "Losing her luggage"], "correctIndex": 1, "explanation": "An extraordinarily long delay pushed her past irritation into simply accepting the wait." },
-      { "question": "How does the narrator describe a layover philosophically?", "options": ["As the best part of any trip", "As perhaps the purest form of purgatory modern life still offers, neither departure nor arrival", "As a waste that should be eliminated", "As identical to actual travel"], "correctIndex": 1, "explanation": "She describes the layover as a kind of purgatory, an interval that is neither departure nor arrival." },
-      { "question": "What does the narrator say actually changed, rather than the layover itself?", "options": ["The airport's design", "Her relationship to its uselessness, the demand that every hour justify itself through productivity", "Her flight schedule", "The people around her"], "correctIndex": 1, "explanation": "She realizes what changed was her own need for every hour to be productive or pleasurable." },
-      { "question": "What does the narrator do differently with layovers now?", "options": ["She avoids them entirely", "She occasionally books a deliberately long layover, treating it as an hour with no obligations", "She always upgrades to skip them", "She spends them working intensively"], "correctIndex": 1, "explanation": "She now sometimes books long layovers deliberately, treating the time as free of obligation." }
-    ]
+      {
+        "question": "How did the narrator originally regard her airport layovers?",
+        "options": [
+          "As forfeited time, a toll extracted before the journey could resume",
+          "As her favorite part of travel",
+          "As an opportunity for business meetings",
+          "As time to sleep exclusively"
+        ],
+        "correctIndex": 0,
+        "explanation": "She initially treated layovers as wasted time, a toll paid before travel could truly continue."
+      },
+      {
+        "question": "What triggered her shift in attitude toward layovers?",
+        "options": [
+          "A free upgrade",
+          "A delay so absurd it exceeded her capacity for irritation, causing her to surrender to the wait",
+          "Meeting a stranger who changed her mind",
+          "Losing her luggage"
+        ],
+        "correctIndex": 1,
+        "explanation": "An extraordinarily long delay pushed her past irritation into simply accepting the wait."
+      },
+      {
+        "question": "How does the narrator describe a layover philosophically?",
+        "options": [
+          "As the best part of any trip",
+          "As a waste that should be eliminated",
+          "As perhaps the purest form of purgatory modern life still offers, neither departure nor arrival",
+          "As identical to actual travel"
+        ],
+        "correctIndex": 2,
+        "explanation": "She describes the layover as a kind of purgatory, an interval that is neither departure nor arrival."
+      },
+      {
+        "question": "What does the narrator say actually changed, rather than the layover itself?",
+        "options": [
+          "The airport's design",
+          "Her flight schedule",
+          "The people around her",
+          "Her relationship to its uselessness, the demand that every hour justify itself through productivity"
+        ],
+        "correctIndex": 3,
+        "explanation": "She realizes what changed was her own need for every hour to be productive or pleasurable."
+      },
+      {
+        "question": "What does the narrator do differently with layovers now?",
+        "options": [
+          "She occasionally books a deliberately long layover, treating it as an hour with no obligations",
+          "She avoids them entirely",
+          "She always upgrades to skip them",
+          "She spends them working intensively"
+        ],
+        "correctIndex": 0,
+        "explanation": "She now sometimes books long layovers deliberately, treating the time as free of obligation."
+      },
+      {
+        "question": "What central claim does “The Republic of the Layover” develop?",
+        "options": [
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "A layover exposes how transit systems shape dignity and access.",
+          "Returning home can reveal changed identity without invalidating belonging.",
+          "A beautiful view does not create entitlement to access or photographs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Republic of the Layover”?",
+        "options": [
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "The narrator’s estrangement follows time and altered expectations.",
+          "Delay affects travellers differently according to resources and mobility.",
+          "The quiet word identifies residents affected by visitors."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “The Republic of the Layover”?",
+        "options": [
+          "Flexibility should not erase accessibility or consent.",
+          "One return does not define an entire culture or diaspora.",
+          "Visitor enjoyment must be weighed against local privacy and impact.",
+          "One inconvenience cannot justify broad claims about a place."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Republic of the Layover”?",
+        "options": [
+          "The narrator seeks clear local information and proportionate help.",
+          "They revise the itinerary around shared limits.",
+          "The account seeks conversation rather than easy nostalgia.",
+          "The narrator adjusts conduct after listening to local guidance."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “The Republic of the Layover”?",
+        "options": [
+          "Good travel decisions make trade-offs explicit.",
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Belonging can be negotiated without demanding sameness.",
+          "Respect includes leaving some places unbroadcast."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-travel-02",
@@ -37,33 +151,150 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Naila", "gender": "female" },
-      { "name": "Rizky", "gender": "male" }
+      {
+        "name": "Naila",
+        "gender": "female"
+      },
+      {
+        "name": "Rizky",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Naila: [frustrated but controlled] Rizky, we've been here four days, and I have opened the itinerary exactly once, out of what I can only describe as reflexive habit.",
-      "Rizky: [easy] And has the itinerary suffered greatly from the neglect? Everything's gone rather well, as far as I can tell.",
-      "Naila: [tight] Well by your standards, certainly, since your standard appears to be whatever happens once we've simply wandered somewhere aimlessly.",
-      "Rizky: [gently teasing] Aimlessly is a touch uncharitable. I'd call it responsive, letting the day suggest itself rather than dictating it in advance.",
-      "Naila: [dry] I'd call it exhausting, honestly, never knowing until an hour beforehand whether we're seeing a museum or eating lunch for the third time that day.",
-      "Rizky: [genuinely curious] Why does the not-knowing bother you so much, though? What's actually underneath that, do you think?",
-      "Naila: [pausing] I suppose planning is how I metabolise anxiety about a place I don't yet understand. A schedule is reassurance dressed up as logistics.",
-      "Rizky: [understanding] That's fair, and I hadn't considered it might be doing emotional work rather than merely organisational work.",
-      "Naila: [honest] It is, largely. Meanwhile you seem to find the same uncertainty energising rather than threatening, which I genuinely don't understand.",
-      "Rizky: [reflective] I think structure, for me, forecloses the trip before it's happened. I'd rather discover the day than have it decided for me by a spreadsheet.",
-      "Naila: [half-smiling] A spreadsheet is a strong word for three bullet points and a museum opening time.",
-      "Rizky: [laughing] Three bullet points guarded as fiercely as state secrets, in my defence.",
-      "Naila: [conceding] Perhaps we split tomorrow, then, half planned, half genuinely open, and see which half either of us actually enjoyed more by evening.",
-      "Rizky: [warmly] I'd take that wager gladly. Though I suspect we'll both quietly prefer our own half and pretend otherwise for the sake of harmony.",
-      "Naila: [laughing] Undoubtedly. But at least we'll be insufferable about it together, rather than separately and resentfully."
+      "Naila: [thoughtful] Rizky, we've been here four days, and I have opened the itinerary exactly once, out of what I can only describe as reflexive habit.",
+      "Rizky: And has the itinerary suffered greatly from the neglect? Everything's gone rather well, as far as I can tell.",
+      "Naila: [carefully] Well by your standards, certainly, since your standard appears to be whatever happens once we've simply wandered somewhere aimlessly.",
+      "Rizky: Aimlessly is a touch uncharitable. I'd call it responsive, letting the day suggest itself rather than dictating it in advance.",
+      "Naila: [reflective] I'd call it exhausting, honestly, never knowing until an hour beforehand whether we're seeing a museum or eating lunch for the third time that day.",
+      "Rizky: Why does the not-knowing bother you so much, though? What's actually underneath that, do you think?",
+      "Naila: [honestly] I suppose planning is how I metabolise anxiety about a place I don't yet understand. A schedule is reassurance dressed up as logistics.",
+      "Rizky: That's fair, and I hadn't considered it might be doing emotional work rather than merely organisational work.",
+      "Naila: [gently] It is, largely. Meanwhile you seem to find the same uncertainty energising rather than threatening, which I genuinely don't understand.",
+      "Rizky: I think structure, for me, forecloses the trip before it's happened. I'd rather discover the day than have it decided for me by a spreadsheet.",
+      "Naila: [calmly] A spreadsheet is a strong word for three bullet points and a museum opening time.",
+      "Rizky: Three bullet points guarded as fiercely as state secrets, in my defence.",
+      "Naila: [encouraging] Perhaps we split tomorrow, then, half planned, half genuinely open, and see which half either of us actually enjoyed more by evening.",
+      "Rizky: I'd take that wager gladly. Though I suspect we'll both quietly prefer our own half and pretend otherwise for the sake of harmony.",
+      "Naila: [seriously] Undoubtedly. But at least we'll be insufferable about it together, rather than separately and resentfully."
     ],
     "quiz": [
-      { "question": "What does Naila reveal she has barely used during the trip?", "options": ["Her camera", "The itinerary, which she has opened only once out of reflexive habit", "Her phrasebook", "Her travel budget"], "correctIndex": 1, "explanation": "Naila admits she has opened the itinerary only once, despite planning it carefully." },
-      { "question": "How does Rizky describe his approach to the trip?", "options": ["Rigidly scheduled", "Responsive, letting the day suggest itself rather than dictating it in advance", "Identical to Naila's approach", "Focused entirely on museums"], "correctIndex": 1, "explanation": "Rizky describes his approach as responsive rather than aimless, letting each day unfold naturally." },
-      { "question": "What does Naila realize planning does for her emotionally?", "options": ["It bores her", "It is how she metabolises anxiety about a place she doesn't yet understand", "It has no emotional function at all", "It helps her save money"], "correctIndex": 1, "explanation": "Naila realizes planning functions as reassurance for her anxiety, not just logistics." },
-      { "question": "Why does Rizky say he resists rigid structure while travelling?", "options": ["He dislikes museums", "Structure, for him, forecloses the trip before it's happened", "He is bad at planning", "He wants to save money on tours"], "correctIndex": 1, "explanation": "Rizky explains that fixed structure prevents him from genuinely discovering the day as it unfolds." },
-      { "question": "What compromise do Naila and Rizky agree to try?", "options": ["Following the itinerary strictly from now on", "Splitting the next day between planned and genuinely open time to compare", "Abandoning all plans permanently", "Traveling separately for the rest of the trip"], "correctIndex": 1, "explanation": "They agree to split the next day between structured planning and open wandering to see what each prefers." }
-    ]
+      {
+        "question": "What does Naila reveal she has barely used during the trip?",
+        "options": [
+          "The itinerary, which she has opened only once out of reflexive habit",
+          "Her camera",
+          "Her phrasebook",
+          "Her travel budget"
+        ],
+        "correctIndex": 0,
+        "explanation": "Naila admits she has opened the itinerary only once, despite planning it carefully."
+      },
+      {
+        "question": "How does Rizky describe his approach to the trip?",
+        "options": [
+          "Rigidly scheduled",
+          "Responsive, letting the day suggest itself rather than dictating it in advance",
+          "Identical to Naila's approach",
+          "Focused entirely on museums"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rizky describes his approach as responsive rather than aimless, letting each day unfold naturally."
+      },
+      {
+        "question": "What does Naila realize planning does for her emotionally?",
+        "options": [
+          "It bores her",
+          "It has no emotional function at all",
+          "It is how she metabolises anxiety about a place she doesn't yet understand",
+          "It helps her save money"
+        ],
+        "correctIndex": 2,
+        "explanation": "Naila realizes planning functions as reassurance for her anxiety, not just logistics."
+      },
+      {
+        "question": "Why does Rizky say he resists rigid structure while travelling?",
+        "options": [
+          "He dislikes museums",
+          "He is bad at planning",
+          "He wants to save money on tours",
+          "Structure, for him, forecloses the trip before it's happened"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rizky explains that fixed structure prevents him from genuinely discovering the day as it unfolds."
+      },
+      {
+        "question": "What compromise do Naila and Rizky agree to try?",
+        "options": [
+          "Splitting the next day between planned and genuinely open time to compare",
+          "Following the itinerary strictly from now on",
+          "Abandoning all plans permanently",
+          "Traveling separately for the rest of the trip"
+        ],
+        "correctIndex": 0,
+        "explanation": "They agree to split the next day between structured planning and open wandering to see what each prefers."
+      },
+      {
+        "question": "What central claim does “The Planner and the Drifter” develop?",
+        "options": [
+          "A layover exposes how transit systems shape dignity and access.",
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "Returning home can reveal changed identity without invalidating belonging.",
+          "A beautiful view does not create entitlement to access or photographs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Planner and the Drifter”?",
+        "options": [
+          "Delay affects travellers differently according to resources and mobility.",
+          "The narrator’s estrangement follows time and altered expectations.",
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "The quiet word identifies residents affected by visitors."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “The Planner and the Drifter”?",
+        "options": [
+          "One inconvenience cannot justify broad claims about a place.",
+          "One return does not define an entire culture or diaspora.",
+          "Visitor enjoyment must be weighed against local privacy and impact.",
+          "Flexibility should not erase accessibility or consent."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Planner and the Drifter”?",
+        "options": [
+          "They revise the itinerary around shared limits.",
+          "The narrator seeks clear local information and proportionate help.",
+          "The account seeks conversation rather than easy nostalgia.",
+          "The narrator adjusts conduct after listening to local guidance."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “The Planner and the Drifter”?",
+        "options": [
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Good travel decisions make trade-offs explicit.",
+          "Belonging can be negotiated without demanding sameness.",
+          "Respect includes leaving some places unbroadcast."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-travel-03",
@@ -72,29 +303,143 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Everyone warns you about the disorientation of arriving somewhere foreign, the jet lag, the unfamiliar currency, the grammar that refuses to cooperate.",
-      "Narrator: [wry] Nobody warns you adequately about the reverse, the disorientation of arriving back somewhere that's supposed to be, unambiguously, yours.",
-      "Narrator: [honest] I landed home after four months abroad expecting relief, the comfort of a language I could finally stop translating in my head before speaking.",
-      "Narrator: [thoughtful] What I got instead was a curious estrangement, my own kitchen rearranged, apparently, by nobody, and yet somehow subtly wrong in ways I couldn't articulate.",
-      "Narrator: [analytical] I've since learned this has a name, reverse culture shock, which sounds almost too tidy for how genuinely destabilising the experience turned out to be.",
-      "Narrator: [candid] Friends asked how the trip was with the particular glazed patience reserved for answers they don't actually want in full.",
-      "Narrator: [reflective] I'd compress four months into a sentence or two, and something essential about the experience would quietly die in the compression each time.",
-      "Narrator: [honest] Worse, perhaps, was noticing how quickly the version of myself who'd existed abroad, calmer, more curious, less easily irritated, began evaporating under familiar routines.",
-      "Narrator: [thoughtful] I don't think the place had changed at all. I think I had, and the place simply refused to reflect that difference back at me.",
-      "Narrator: [wry] There's a particular loneliness in that, being altered by an experience nobody around you shared or particularly wants detailed.",
-      "Narrator: [gentle] Gradually, the estrangement thinned, though I'm not certain it ever fully resolved, only that I learned to carry it more quietly.",
-      "Narrator: [reflective] I've come to think travel doesn't only displace you abroad; its more lasting trick is displacing you, subtly and permanently, at home."
+      "Narrator: [thoughtful] Everyone warns you about the disorientation of arriving somewhere foreign, the jet lag, the unfamiliar currency, the grammar that refuses to cooperate.",
+      "Narrator: Nobody warns you adequately about the reverse, the disorientation of arriving back somewhere that's supposed to be, unambiguously, yours.",
+      "Narrator: [carefully] I landed home after four months abroad expecting relief, the comfort of a language I could finally stop translating in my head before speaking.",
+      "Narrator: What I got instead was a curious estrangement, my own kitchen rearranged, apparently, by nobody, and yet somehow subtly wrong in ways I couldn't articulate.",
+      "Narrator: [reflective] I've since learned this has a name, reverse culture shock, which sounds almost too tidy for how genuinely destabilising the experience turned out to be.",
+      "Narrator: Friends asked how the trip was with the particular glazed patience reserved for answers they don't actually want in full.",
+      "Narrator: [honestly] I'd compress four months into a sentence or two, and something essential about the experience would quietly die in the compression each time.",
+      "Narrator: Worse, perhaps, was noticing how quickly the version of myself who'd existed abroad, calmer, more curious, less easily irritated, began evaporating under familiar routines.",
+      "Narrator: [gently] I don't think the place had changed at all. I think I had, and the place simply refused to reflect that difference back at me.",
+      "Narrator: There's a particular loneliness in that, being altered by an experience nobody around you shared or particularly wants detailed.",
+      "Narrator: [calmly] Gradually, the estrangement thinned, though I'm not certain it ever fully resolved, only that I learned to carry it more quietly.",
+      "Narrator: I've come to think travel doesn't only displace you abroad; its more lasting trick is displacing you, subtly and permanently, at home."
     ],
     "quiz": [
-      { "question": "What disorientation does the narrator say nobody adequately warns you about?", "options": ["Jet lag while abroad", "The disorientation of arriving back home, which is supposed to feel unambiguously yours", "Currency exchange problems", "Language barriers abroad"], "correctIndex": 1, "explanation": "He notes people warn about disorientation abroad but not about the reverse shock of returning home." },
-      { "question": "What did the narrator expect upon landing home, and what did he get instead?", "options": ["He expected difficulty and got ease", "He expected relief but got a curious estrangement, even in his own kitchen", "He expected nothing and got exactly nothing", "He expected sadness and got joy"], "correctIndex": 1, "explanation": "He expected relief and comfort but instead felt an unsettling estrangement from familiar surroundings." },
-      { "question": "What does the narrator notice happening to the version of himself that existed abroad?", "options": ["It became permanent immediately", "It began evaporating under familiar routines back home", "It never existed in the first place", "It was documented in a journal"], "correctIndex": 1, "explanation": "He notices the calmer, more curious version of himself fading as familiar home routines resumed." },
-      { "question": "What loneliness does the narrator describe experiencing?", "options": ["Missing his travel companions", "Being altered by an experience nobody around him shared or wanted detailed", "Having no friends to talk to", "Losing contact with people abroad"], "correctIndex": 1, "explanation": "He describes the loneliness of being changed by an experience others couldn't relate to or wanted to hear about." },
-      { "question": "What does the narrator ultimately conclude about travel's lasting effect?", "options": ["It has no lasting effect at all", "Its more lasting trick is displacing you, subtly and permanently, at home", "It only affects people while abroad", "It always resolves quickly upon return"], "correctIndex": 1, "explanation": "He concludes travel's deeper displacement happens not abroad but subtly and permanently at home." }
-    ]
+      {
+        "question": "What disorientation does the narrator say nobody adequately warns you about?",
+        "options": [
+          "The disorientation of arriving back home, which is supposed to feel unambiguously yours",
+          "Jet lag while abroad",
+          "Currency exchange problems",
+          "Language barriers abroad"
+        ],
+        "correctIndex": 0,
+        "explanation": "He notes people warn about disorientation abroad but not about the reverse shock of returning home."
+      },
+      {
+        "question": "What did the narrator expect upon landing home, and what did he get instead?",
+        "options": [
+          "He expected difficulty and got ease",
+          "He expected relief but got a curious estrangement, even in his own kitchen",
+          "He expected nothing and got exactly nothing",
+          "He expected sadness and got joy"
+        ],
+        "correctIndex": 1,
+        "explanation": "He expected relief and comfort but instead felt an unsettling estrangement from familiar surroundings."
+      },
+      {
+        "question": "What does the narrator notice happening to the version of himself that existed abroad?",
+        "options": [
+          "It became permanent immediately",
+          "It never existed in the first place",
+          "It began evaporating under familiar routines back home",
+          "It was documented in a journal"
+        ],
+        "correctIndex": 2,
+        "explanation": "He notices the calmer, more curious version of himself fading as familiar home routines resumed."
+      },
+      {
+        "question": "What loneliness does the narrator describe experiencing?",
+        "options": [
+          "Missing his travel companions",
+          "Having no friends to talk to",
+          "Losing contact with people abroad",
+          "Being altered by an experience nobody around him shared or wanted detailed"
+        ],
+        "correctIndex": 3,
+        "explanation": "He describes the loneliness of being changed by an experience others couldn't relate to or wanted to hear about."
+      },
+      {
+        "question": "What does the narrator ultimately conclude about travel's lasting effect?",
+        "options": [
+          "Its more lasting trick is displacing you, subtly and permanently, at home",
+          "It has no lasting effect at all",
+          "It only affects people while abroad",
+          "It always resolves quickly upon return"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes travel's deeper displacement happens not abroad but subtly and permanently at home."
+      },
+      {
+        "question": "What central claim does “Arriving Home a Stranger” develop?",
+        "options": [
+          "A layover exposes how transit systems shape dignity and access.",
+          "Returning home can reveal changed identity without invalidating belonging.",
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "A beautiful view does not create entitlement to access or photographs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Arriving Home a Stranger”?",
+        "options": [
+          "Delay affects travellers differently according to resources and mobility.",
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "The narrator’s estrangement follows time and altered expectations.",
+          "The quiet word identifies residents affected by visitors."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Arriving Home a Stranger”?",
+        "options": [
+          "One inconvenience cannot justify broad claims about a place.",
+          "Flexibility should not erase accessibility or consent.",
+          "Visitor enjoyment must be weighed against local privacy and impact.",
+          "One return does not define an entire culture or diaspora."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Arriving Home a Stranger”?",
+        "options": [
+          "The account seeks conversation rather than easy nostalgia.",
+          "The narrator seeks clear local information and proportionate help.",
+          "They revise the itinerary around shared limits.",
+          "The narrator adjusts conduct after listening to local guidance."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “Arriving Home a Stranger”?",
+        "options": [
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Belonging can be negotiated without demanding sameness.",
+          "Good travel decisions make trade-offs explicit.",
+          "Respect includes leaving some places unbroadcast."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-travel-04",
@@ -103,33 +448,150 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Guest", "gender": "female" },
-      { "name": "Receptionist", "gender": "male" }
+      {
+        "name": "Guest",
+        "gender": "female"
+      },
+      {
+        "name": "Receptionist",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Guest: [politely firm] I don't want to make a scene about this, but the room I was given looks directly onto a ventilation shaft, not the courtyard shown in the listing.",
-      "Receptionist: [apologetic] I'm genuinely sorry to hear that. May I ask which room number, so I can look into what happened?",
-      "Guest: [measured] Room four-eleven. I'm not assuming bad faith, incidentally, only hoping there's some flexibility, given the discrepancy.",
-      "Receptionist: [checking, concerned] You're quite right, there's a discrepancy. It appears the courtyard rooms were oversold for tonight, and yours was reassigned without anyone informing you properly.",
-      "Guest: [dry] That would explain the ventilation shaft, certainly, though I confess it lacks the charm suggested by the photographs.",
-      "Receptionist: [rueful] I imagine it does, yes. Let me see what's genuinely available, rather than offering you a vague apology and nothing further.",
-      "Guest: [appreciative] I'd rather have a solution than an apology, honestly, though I don't doubt the apology is sincere.",
-      "Receptionist: [after checking] We have one courtyard room free from a late cancellation, though it's a smaller category than what you originally booked.",
-      "Guest: [considering] Smaller, but with the actual view I paid for, I take it?",
-      "Receptionist: [confirming] Precisely that, and I'd like to move you at no additional charge, along with a modest credit for tonight's inconvenience.",
-      "Guest: [warming] That's fair, and more than I expected honestly, given how these conversations sometimes go elsewhere.",
-      "Receptionist: [sincere] I'd rather resolve it properly than have you leave a review mentioning ventilation shafts, if I'm being entirely candid about my incentives.",
-      "Guest: [laughing] A refreshingly honest admission. I appreciate that more than the credit, if I'm being equally candid myself.",
-      "Receptionist: [smiling] I'll have your bags moved within the hour. And I'll flag the listing photos, since evidently they're promising rather more than the ventilation shaft delivers.",
-      "Guest: [warmly] Thank you. I'll withhold judgment on the whole stay until I've actually seen this elusive courtyard."
+      "Guest: [thoughtful] I don't want to make a scene about this, but the room I was given looks directly onto a ventilation shaft, not the courtyard shown in the listing.",
+      "Receptionist: I'm genuinely sorry to hear that. May I ask which room number, so I can look into what happened?",
+      "Guest: [carefully] Room four-eleven. I'm not assuming bad faith, incidentally, only hoping there's some flexibility, given the discrepancy.",
+      "Receptionist: You're quite right, there's a discrepancy. It appears the courtyard rooms were oversold for tonight, and yours was reassigned without anyone informing you properly.",
+      "Guest: [reflective] That would explain the ventilation shaft, certainly, though I confess it lacks the charm suggested by the photographs.",
+      "Receptionist: I imagine it does, yes. Let me see what's genuinely available, rather than offering you a vague apology and nothing further.",
+      "Guest: [honestly] I'd rather have a solution than an apology, honestly, though I don't doubt the apology is sincere.",
+      "Receptionist: We have one courtyard room free from a late cancellation, though it's a smaller category than what you originally booked.",
+      "Guest: [gently] Smaller, but with the actual view I paid for, I take it?",
+      "Receptionist: Precisely that, and I'd like to move you at no additional charge, along with a modest credit for tonight's inconvenience.",
+      "Guest: [calmly] That's fair, and more than I expected honestly, given how these conversations sometimes go elsewhere.",
+      "Receptionist: I'd rather resolve it properly than have you leave a review mentioning ventilation shafts, if I'm being entirely candid about my incentives.",
+      "Guest: [encouraging] A refreshingly honest admission. I appreciate that more than the credit, if I'm being equally candid myself.",
+      "Receptionist: I'll have your bags moved within the hour. And I'll flag the listing photos, since evidently they're promising rather more than the ventilation shaft delivers.",
+      "Guest: [seriously] Thank you. I'll withhold judgment on the whole stay until I've actually seen this elusive courtyard."
     ],
     "quiz": [
-      { "question": "What problem does the guest report about her room?", "options": ["The room is too noisy", "It looks directly onto a ventilation shaft, not the courtyard shown in the listing", "The air conditioning is broken", "The room is too small for one person"], "correctIndex": 1, "explanation": "The guest explains her room overlooks a ventilation shaft rather than the advertised courtyard." },
-      { "question": "What does the receptionist discover caused the problem?", "options": ["A booking system error unrelated to demand", "Courtyard rooms were oversold for the night, and hers was reassigned without proper notice", "The guest booked the wrong room type herself", "There was no actual problem"], "correctIndex": 1, "explanation": "He finds that courtyard rooms were oversold and her room was reassigned without informing her." },
-      { "question": "What does the guest say she would rather have than an apology?", "options": ["A refund of the entire stay", "A solution, though she doesn't doubt the apology is sincere", "A formal complaint filed", "Nothing at all"], "correctIndex": 1, "explanation": "The guest says she'd rather have a practical solution than just an apology." },
-      { "question": "What does the receptionist offer as a resolution?", "options": ["A full refund and cancellation", "A smaller courtyard room at no extra charge, plus a credit for the inconvenience", "A larger room at a higher price", "Nothing, since no rooms were available"], "correctIndex": 1, "explanation": "He offers a smaller room with the correct view at no additional cost, plus a credit for the trouble." },
-      { "question": "What honest admission does the receptionist make about his incentives?", "options": ["He wants a bigger tip", "He'd rather resolve it properly than have her leave a review mentioning ventilation shafts", "He is required to offer discounts to all guests", "He dislikes his job"], "correctIndex": 1, "explanation": "He candidly admits he wants to avoid a negative review about the ventilation shaft, which amuses the guest." }
-    ]
+      {
+        "question": "What problem does the guest report about her room?",
+        "options": [
+          "It looks directly onto a ventilation shaft, not the courtyard shown in the listing",
+          "The room is too noisy",
+          "The air conditioning is broken",
+          "The room is too small for one person"
+        ],
+        "correctIndex": 0,
+        "explanation": "The guest explains her room overlooks a ventilation shaft rather than the advertised courtyard."
+      },
+      {
+        "question": "What does the receptionist discover caused the problem?",
+        "options": [
+          "A booking system error unrelated to demand",
+          "Courtyard rooms were oversold for the night, and hers was reassigned without proper notice",
+          "The guest booked the wrong room type herself",
+          "There was no actual problem"
+        ],
+        "correctIndex": 1,
+        "explanation": "He finds that courtyard rooms were oversold and her room was reassigned without informing her."
+      },
+      {
+        "question": "What does the guest say she would rather have than an apology?",
+        "options": [
+          "A refund of the entire stay",
+          "A formal complaint filed",
+          "A solution, though she doesn't doubt the apology is sincere",
+          "Nothing at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guest says she'd rather have a practical solution than just an apology."
+      },
+      {
+        "question": "What does the receptionist offer as a resolution?",
+        "options": [
+          "A full refund and cancellation",
+          "A larger room at a higher price",
+          "Nothing, since no rooms were available",
+          "A smaller courtyard room at no extra charge, plus a credit for the inconvenience"
+        ],
+        "correctIndex": 3,
+        "explanation": "He offers a smaller room with the correct view at no additional cost, plus a credit for the trouble."
+      },
+      {
+        "question": "What honest admission does the receptionist make about his incentives?",
+        "options": [
+          "He'd rather resolve it properly than have her leave a review mentioning ventilation shafts",
+          "He wants a bigger tip",
+          "He is required to offer discounts to all guests",
+          "He dislikes his job"
+        ],
+        "correctIndex": 0,
+        "explanation": "He candidly admits he wants to avoid a negative review about the ventilation shaft, which amuses the guest."
+      },
+      {
+        "question": "What central claim does “A Quiet Word About the View” develop?",
+        "options": [
+          "A layover exposes how transit systems shape dignity and access.",
+          "A beautiful view does not create entitlement to access or photographs.",
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "Returning home can reveal changed identity without invalidating belonging."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “A Quiet Word About the View”?",
+        "options": [
+          "Delay affects travellers differently according to resources and mobility.",
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "The quiet word identifies residents affected by visitors.",
+          "The narrator’s estrangement follows time and altered expectations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “A Quiet Word About the View”?",
+        "options": [
+          "One inconvenience cannot justify broad claims about a place.",
+          "Flexibility should not erase accessibility or consent.",
+          "One return does not define an entire culture or diaspora.",
+          "Visitor enjoyment must be weighed against local privacy and impact."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “A Quiet Word About the View”?",
+        "options": [
+          "The narrator adjusts conduct after listening to local guidance.",
+          "The narrator seeks clear local information and proportionate help.",
+          "They revise the itinerary around shared limits.",
+          "The account seeks conversation rather than easy nostalgia."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “A Quiet Word About the View”?",
+        "options": [
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Respect includes leaving some places unbroadcast.",
+          "Good travel decisions make trade-offs explicit.",
+          "Belonging can be negotiated without demanding sameness."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-travel-05",
@@ -138,29 +600,143 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I used to travel with a suitcase heavy enough to require its own small negotiation with airline staff, packed against every contingency I could plausibly imagine.",
-      "Narrator: [wry] Rain I might encounter, occasions I might be invited to, versions of myself I might suddenly need to become, all of it dutifully folded and zipped shut.",
-      "Narrator: [honest] The turn came on a trip where the airline lost that suitcase entirely, and I spent a week wearing essentially the same three items, laundered nightly in hotel sinks.",
-      "Narrator: [thoughtful] I expected the deprivation to feel exactly like deprivation, and was mildly startled when it began, instead, to feel something closer to relief.",
-      "Narrator: [analytical] Fewer decisions each morning, for one thing, and fewer possessions to track, worry over, or feel vaguely responsible for throughout the day.",
-      "Narrator: [candid] I noticed, too, how much of my original packing had been armour against imagined judgment, outfits assembled for versions of the trip that never actually materialised.",
-      "Narrator: [reflective] Since then, I've travelled with one carry-on regardless of the trip's length, a discipline that initially felt like deprivation and now feels closer to clarity.",
-      "Narrator: [honest] It requires a certain relinquishing, admittedly, an acceptance that I might occasionally be underdressed, occasionally re-wear something someone's already seen.",
-      "Narrator: [wry] The world, it turns out, does not particularly notice or care, which is either humbling or liberating depending on the day.",
-      "Narrator: [thoughtful] What I've gained isn't merely lighter luggage but a kind of portable minimalism, a sense that I need considerably less than I once assumed to feel adequately myself.",
-      "Narrator: [gentle] I still occasionally miscalculate, arrive somewhere cold with nothing warm enough, and shiver through an evening I could have easily prepared for.",
-      "Narrator: [warmly] But I've come to prefer the occasional shiver to the old, heavier certainty, dragged through airports, that I might need absolutely everything, just in case."
+      "Narrator: [thoughtful] I used to travel with a suitcase heavy enough to require its own small negotiation with airline staff, packed against every contingency I could plausibly imagine.",
+      "Narrator: Rain I might encounter, occasions I might be invited to, versions of myself I might suddenly need to become, all of it dutifully folded and zipped shut.",
+      "Narrator: [carefully] The turn came on a trip where the airline lost that suitcase entirely, and I spent a week wearing essentially the same three items, laundered nightly in hotel sinks.",
+      "Narrator: I expected the deprivation to feel exactly like deprivation, and was mildly startled when it began, instead, to feel something closer to relief.",
+      "Narrator: [reflective] Fewer decisions each morning, for one thing, and fewer possessions to track, worry over, or feel vaguely responsible for throughout the day.",
+      "Narrator: I noticed, too, how much of my original packing had been armour against imagined judgment, outfits assembled for versions of the trip that never actually materialised.",
+      "Narrator: [honestly] Since then, I've travelled with one carry-on regardless of the trip's length, a discipline that initially felt like deprivation and now feels closer to clarity.",
+      "Narrator: It requires a certain relinquishing, admittedly, an acceptance that I might occasionally be underdressed, occasionally re-wear something someone's already seen.",
+      "Narrator: [gently] The world, it turns out, does not particularly notice or care, which is either humbling or liberating depending on the day.",
+      "Narrator: What I've gained isn't merely lighter luggage but a kind of portable minimalism, a sense that I need considerably less than I once assumed to feel adequately myself.",
+      "Narrator: [calmly] I still occasionally miscalculate, arrive somewhere cold with nothing warm enough, and shiver through an evening I could have easily prepared for.",
+      "Narrator: But I've come to prefer the occasional shiver to the old, heavier certainty, dragged through airports, that I might need absolutely everything, just in case."
     ],
     "quiz": [
-      { "question": "How did the narrator originally pack for trips?", "options": ["With minimal, deliberate items", "With a heavy suitcase packed against every contingency she could imagine", "She never checked luggage at all", "She borrowed clothes at her destination"], "correctIndex": 1, "explanation": "She originally packed heavily, preparing for every imaginable scenario and version of herself." },
-      { "question": "What incident changed her approach to packing?", "options": ["A friend's advice", "An airline lost her suitcase, forcing her to wear the same three items for a week", "She read a book about minimalism", "A weight limit fine at the airport"], "correctIndex": 1, "explanation": "Losing her suitcase forced her to survive on minimal clothing, which unexpectedly changed her perspective." },
-      { "question": "What did the narrator realize much of her original packing had been?", "options": ["Purely practical necessity", "Armour against imagined judgment, outfits for versions of the trip that never materialised", "Required by her employer", "A financial investment"], "correctIndex": 1, "explanation": "She realized she had packed for imagined scenarios and judgments that never actually occurred." },
-      { "question": "What discipline has the narrator adopted since then?", "options": ["Checking two large suitcases every trip", "Traveling with one carry-on regardless of the trip's length", "Buying new clothes at every destination", "Never packing warm clothing"], "correctIndex": 1, "explanation": "She now travels with a single carry-on bag no matter how long the trip is." },
-      { "question": "What does the narrator say she has gained beyond lighter luggage?", "options": ["More money saved on baggage fees only", "A kind of portable minimalism, needing considerably less to feel adequately herself", "Better relationships with airline staff", "A new career in travel writing"], "correctIndex": 1, "explanation": "She describes gaining a broader sense of needing less to feel like herself, beyond just lighter bags." }
-    ]
+      {
+        "question": "How did the narrator originally pack for trips?",
+        "options": [
+          "With a heavy suitcase packed against every contingency she could imagine",
+          "With minimal, deliberate items",
+          "She never checked luggage at all",
+          "She borrowed clothes at her destination"
+        ],
+        "correctIndex": 0,
+        "explanation": "She originally packed heavily, preparing for every imaginable scenario and version of herself."
+      },
+      {
+        "question": "What incident changed her approach to packing?",
+        "options": [
+          "A friend's advice",
+          "An airline lost her suitcase, forcing her to wear the same three items for a week",
+          "She read a book about minimalism",
+          "A weight limit fine at the airport"
+        ],
+        "correctIndex": 1,
+        "explanation": "Losing her suitcase forced her to survive on minimal clothing, which unexpectedly changed her perspective."
+      },
+      {
+        "question": "What did the narrator realize much of her original packing had been?",
+        "options": [
+          "Purely practical necessity",
+          "Required by her employer",
+          "Armour against imagined judgment, outfits for versions of the trip that never materialised",
+          "A financial investment"
+        ],
+        "correctIndex": 2,
+        "explanation": "She realized she had packed for imagined scenarios and judgments that never actually occurred."
+      },
+      {
+        "question": "What discipline has the narrator adopted since then?",
+        "options": [
+          "Checking two large suitcases every trip",
+          "Buying new clothes at every destination",
+          "Never packing warm clothing",
+          "Traveling with one carry-on regardless of the trip's length"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now travels with a single carry-on bag no matter how long the trip is."
+      },
+      {
+        "question": "What does the narrator say she has gained beyond lighter luggage?",
+        "options": [
+          "A kind of portable minimalism, needing considerably less to feel adequately herself",
+          "More money saved on baggage fees only",
+          "Better relationships with airline staff",
+          "A new career in travel writing"
+        ],
+        "correctIndex": 0,
+        "explanation": "She describes gaining a broader sense of needing less to feel like herself, beyond just lighter bags."
+      },
+      {
+        "question": "What central claim does “What Fits in One Carry-On” develop?",
+        "options": [
+          "A layover exposes how transit systems shape dignity and access.",
+          "Packing lightly can be practical without becoming a moral status symbol.",
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "Returning home can reveal changed identity without invalidating belonging."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “What Fits in One Carry-On”?",
+        "options": [
+          "Delay affects travellers differently according to resources and mobility.",
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "One carry-on reveals limits of space, care needs, and access.",
+          "The narrator’s estrangement follows time and altered expectations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “What Fits in One Carry-On”?",
+        "options": [
+          "One inconvenience cannot justify broad claims about a place.",
+          "Flexibility should not erase accessibility or consent.",
+          "One return does not define an entire culture or diaspora.",
+          "Minimal luggage is not equally available to every traveller."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “What Fits in One Carry-On”?",
+        "options": [
+          "The narrator prepares for needs rather than performing simplicity.",
+          "The narrator seeks clear local information and proportionate help.",
+          "They revise the itinerary around shared limits.",
+          "The account seeks conversation rather than easy nostalgia."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “What Fits in One Carry-On”?",
+        "options": [
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Responsible travel accounts for circumstance, not aesthetics alone.",
+          "Good travel decisions make trade-offs explicit.",
+          "Belonging can be negotiated without demanding sameness."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-travel-06",
@@ -169,33 +745,150 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Amira", "gender": "female" },
-      { "name": "Teguh", "gender": "male" }
+      {
+        "name": "Amira",
+        "gender": "female"
+      },
+      {
+        "name": "Teguh",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Amira: [provocative] Can I say something slightly heretical while we wait for this delayed flight? I'm not sure travel actually changes people, not fundamentally.",
-      "Teguh: [surprised] That's a strange thing to say to someone who's spent half his salary this year proving the opposite to himself.",
-      "Amira: [wry] Precisely why I'm saying it to you specifically. You've been everywhere, and you're still, forgive me, entirely the same person who left.",
-      "Teguh: [defensive] I'd like to think I've absorbed something from all of it, some accumulated wisdom or perspective, beyond good photographs.",
-      "Amira: [gently] Perhaps, though I suspect what actually changes people is difficulty, and travel is one delivery mechanism among several, not a guaranteed one.",
-      "Teguh: [considering] So the transformation people credit to the trip was really produced by the discomfort inside it, the getting lost, the being misunderstood.",
-      "Amira: [agreeing] Exactly that. You could presumably get equally lost, and equally humbled, without ever leaving your own city.",
-      "Teguh: [reflective] That's a slightly deflating thought, honestly, given how much romantic significance I've personally attached to departure gates.",
-      "Amira: [warmly] I don't mean to deflate it entirely. I just think we credit geography for work that discomfort, and our own willingness to sit with it, actually performed.",
-      "Teguh: [thoughtful] So travel's real function might be manufacturing discomfort efficiently, rather than delivering wisdom directly, like some kind of import.",
-      "Amira: [nodding] Something like that. Novelty forces attention in a way routine rarely does, which is useful, though not mystical.",
-      "Teguh: [half-convinced] I still think there's something about distance itself, seeing your ordinary life from far enough away to actually notice its shape.",
-      "Amira: [conceding] That part I'll grant you. Distance is genuinely useful, though I'd argue it's the distance that changes you, not the destination itself.",
-      "Teguh: [smiling] Fair enough. I'll keep travelling regardless, though perhaps with slightly less mysticism attached to the boarding pass from now on.",
-      "Amira: [laughing] Good. Save the mysticism for the delay we're currently enduring. That, at least, is building character as we speak."
+      "Amira: [thoughtful] Can I say something slightly heretical while we wait for this delayed flight? I'm not sure travel actually changes people, not fundamentally.",
+      "Teguh: That's a strange thing to say to someone who's spent half his salary this year proving the opposite to himself.",
+      "Amira: [carefully] Precisely why I'm saying it to you specifically. You've been everywhere, and you're still, forgive me, entirely the same person who left.",
+      "Teguh: I'd like to think I've absorbed something from all of it, some accumulated wisdom or perspective, beyond good photographs.",
+      "Amira: [reflective] Perhaps, though I suspect what actually changes people is difficulty, and travel is one delivery mechanism among several, not a guaranteed one.",
+      "Teguh: So the transformation people credit to the trip was really produced by the discomfort inside it, the getting lost, the being misunderstood.",
+      "Amira: [honestly] Exactly that. You could presumably get equally lost, and equally humbled, without ever leaving your own city.",
+      "Teguh: That's a slightly deflating thought, honestly, given how much romantic significance I've personally attached to departure gates.",
+      "Amira: [gently] I don't mean to deflate it entirely. I just think we credit geography for work that discomfort, and our own willingness to sit with it, actually performed.",
+      "Teguh: So travel's real function might be manufacturing discomfort efficiently, rather than delivering wisdom directly, like some kind of import.",
+      "Amira: [calmly] Something like that. Novelty forces attention in a way routine rarely does, which is useful, though not mystical.",
+      "Teguh: I still think there's something about distance itself, seeing your ordinary life from far enough away to actually notice its shape.",
+      "Amira: [encouraging] That part I'll grant you. Distance is genuinely useful, though I'd argue it's the distance that changes you, not the destination itself.",
+      "Teguh: Fair enough. I'll keep travelling regardless, though perhaps with slightly less mysticism attached to the boarding pass from now on.",
+      "Amira: [seriously] Good. Save the mysticism for the delay we're currently enduring. That, at least, is building character as we speak."
     ],
     "quiz": [
-      { "question": "What provocative claim does Amira make while waiting for the delayed flight?", "options": ["That travel is too expensive", "That travel doesn't actually change people fundamentally", "That Teguh should stop traveling", "That flights are always delayed"], "correctIndex": 1, "explanation": "Amira suggests, somewhat provocatively, that travel itself doesn't fundamentally change people." },
-      { "question": "What does Amira suggest actually changes people, rather than travel itself?", "options": ["Money and luxury", "Difficulty, with travel being one delivery mechanism among several, not a guaranteed one", "Photographs and social media", "Meeting famous people"], "correctIndex": 1, "explanation": "She argues that difficulty produces change, and travel is just one way of encountering it, not the only way." },
-      { "question": "According to Amira, what could produce equally transformative discomfort without travel?", "options": ["Watching documentaries", "Getting lost and being humbled without ever leaving one's own city", "Reading travel guidebooks", "Talking to travelers"], "correctIndex": 1, "explanation": "She argues you could experience similar humbling discomfort within your own city, without traveling at all." },
-      { "question": "What does Amira concede is genuinely useful about travel?", "options": ["Nothing at all", "Distance itself, seeing your ordinary life from far enough away to notice its shape", "The souvenirs collected", "The photographs taken"], "correctIndex": 1, "explanation": "She grants that distance from one's ordinary life has genuine value, distinct from the destination itself." },
-      { "question": "How does Teguh respond by the end of the conversation?", "options": ["He completely rejects Amira's argument", "He remains half-convinced and plans to keep traveling with less mysticism attached", "He decides to stop traveling entirely", "He becomes angry at Amira"], "correctIndex": 1, "explanation": "Teguh is only half-convinced but agrees to travel with a less mystical view of the process." }
-    ]
+      {
+        "question": "What provocative claim does Amira make while waiting for the delayed flight?",
+        "options": [
+          "That travel doesn't actually change people fundamentally",
+          "That travel is too expensive",
+          "That Teguh should stop traveling",
+          "That flights are always delayed"
+        ],
+        "correctIndex": 0,
+        "explanation": "Amira suggests, somewhat provocatively, that travel itself doesn't fundamentally change people."
+      },
+      {
+        "question": "What does Amira suggest actually changes people, rather than travel itself?",
+        "options": [
+          "Money and luxury",
+          "Difficulty, with travel being one delivery mechanism among several, not a guaranteed one",
+          "Photographs and social media",
+          "Meeting famous people"
+        ],
+        "correctIndex": 1,
+        "explanation": "She argues that difficulty produces change, and travel is just one way of encountering it, not the only way."
+      },
+      {
+        "question": "According to Amira, what could produce equally transformative discomfort without travel?",
+        "options": [
+          "Watching documentaries",
+          "Reading travel guidebooks",
+          "Getting lost and being humbled without ever leaving one's own city",
+          "Talking to travelers"
+        ],
+        "correctIndex": 2,
+        "explanation": "She argues you could experience similar humbling discomfort within your own city, without traveling at all."
+      },
+      {
+        "question": "What does Amira concede is genuinely useful about travel?",
+        "options": [
+          "Nothing at all",
+          "The souvenirs collected",
+          "The photographs taken",
+          "Distance itself, seeing your ordinary life from far enough away to notice its shape"
+        ],
+        "correctIndex": 3,
+        "explanation": "She grants that distance from one's ordinary life has genuine value, distinct from the destination itself."
+      },
+      {
+        "question": "How does Teguh respond by the end of the conversation?",
+        "options": [
+          "He remains half-convinced and plans to keep traveling with less mysticism attached",
+          "He completely rejects Amira's argument",
+          "He decides to stop traveling entirely",
+          "He becomes angry at Amira"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teguh is only half-convinced but agrees to travel with a less mystical view of the process."
+      },
+      {
+        "question": "What central claim does “Does Travel Actually Change You” develop?",
+        "options": [
+          "A layover exposes how transit systems shape dignity and access.",
+          "Travel can change perception without guaranteeing personal transformation.",
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "Returning home can reveal changed identity without invalidating belonging."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Does Travel Actually Change You”?",
+        "options": [
+          "Delay affects travellers differently according to resources and mobility.",
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "The account contrasts movement with sustained reflection.",
+          "The narrator’s estrangement follows time and altered expectations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “Does Travel Actually Change You”?",
+        "options": [
+          "One inconvenience cannot justify broad claims about a place.",
+          "Flexibility should not erase accessibility or consent.",
+          "One return does not define an entire culture or diaspora.",
+          "A trip does not authorise claims about another community."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Does Travel Actually Change You”?",
+        "options": [
+          "The narrator treats learning as ongoing after return.",
+          "The narrator seeks clear local information and proportionate help.",
+          "They revise the itinerary around shared limits.",
+          "The account seeks conversation rather than easy nostalgia."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “Does Travel Actually Change You”?",
+        "options": [
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Ethical travel resists turning places into self-improvement tools.",
+          "Good travel decisions make trade-offs explicit.",
+          "Belonging can be negotiated without demanding sameness."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-travel-07",
@@ -204,28 +897,593 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [candid] The announcement, when it finally came, informed us the train was delayed by a further two hours, met by a collective sigh so synchronised it bordered on choral.",
-      "Narrator: [reflective] My first instinct, entirely automatic, was to reach for my phone and metabolise the frustration through complaint, texts fired off to nobody who could actually help.",
-      "Narrator: [honest] Halfway through drafting one, I noticed an elderly man on the bench opposite doing something that struck me, at first, as faintly eccentric.",
-      "Narrator: [observant] Nothing at all. He simply sat, watching the platform, apparently unbothered by an interval most of us were visibly, audibly enduring.",
-      "Narrator: [thoughtful] I found myself oddly transfixed by his stillness, the sheer absence of any performance of frustration, and I wondered when waiting had become something we treated as an emergency.",
-      "Narrator: [analytical] We've engineered our lives, I suspect, to eliminate unstructured waiting almost entirely, filling every gap reflexively, as though an empty ten minutes constituted a small catastrophe.",
-      "Narrator: [candid] Somewhat sheepishly, I put the phone away and simply sat, matching his stillness as best I could, which proved considerably harder than anticipated.",
-      "Narrator: [honest] The itch to fill the silence was almost physical, a low hum of restlessness demanding some task, however trivial, to justify the passing minutes.",
-      "Narrator: [reflective] Gradually, though, something in me settled, and I began noticing the platform properly, pigeons negotiating crumbs, a child counting the rails aloud, sunlight shifting slowly across the tracks.",
-      "Narrator: [thoughtful] None of it was remarkable, and yet all of it felt, oddly, like the first genuinely unmediated attention I'd paid to anything in weeks.",
-      "Narrator: [wry] The train arrived, eventually, precisely as delayed trains always do, and the platform dissolved back into its usual efficient hurry.",
-      "Narrator: [warmly] I've since wondered whether the old man wasn't simply patient by temperament, but had, at some point, deliberately relearned an art the rest of us had quietly let atrophy."
+      "Narrator: [thoughtful] The announcement, when it finally came, informed us the train was delayed by a further two hours, met by a collective sigh so synchronised it bordered on choral.",
+      "Narrator: My first instinct, entirely automatic, was to reach for my phone and metabolise the frustration through complaint, texts fired off to nobody who could actually help.",
+      "Narrator: [carefully] Halfway through drafting one, I noticed an elderly man on the bench opposite doing something that struck me, at first, as faintly eccentric.",
+      "Narrator: Nothing at all. He simply sat, watching the platform, apparently unbothered by an interval most of us were visibly, audibly enduring.",
+      "Narrator: [reflective] I found myself oddly transfixed by his stillness, the sheer absence of any performance of frustration, and I wondered when waiting had become something we treated as an emergency.",
+      "Narrator: We've engineered our lives, I suspect, to eliminate unstructured waiting almost entirely, filling every gap reflexively, as though an empty ten minutes constituted a small catastrophe.",
+      "Narrator: [honestly] Somewhat sheepishly, I put the phone away and simply sat, matching his stillness as best I could, which proved considerably harder than anticipated.",
+      "Narrator: The itch to fill the silence was almost physical, a low hum of restlessness demanding some task, however trivial, to justify the passing minutes.",
+      "Narrator: [gently] Gradually, though, something in me settled, and I began noticing the platform properly, pigeons negotiating crumbs, a child counting the rails aloud, sunlight shifting slowly across the tracks.",
+      "Narrator: None of it was remarkable, and yet all of it felt, oddly, like the first genuinely unmediated attention I'd paid to anything in weeks.",
+      "Narrator: [calmly] The train arrived, eventually, precisely as delayed trains always do, and the platform dissolved back into its usual efficient hurry.",
+      "Narrator: I've since wondered whether the old man wasn't simply patient by temperament, but had, at some point, deliberately relearned an art the rest of us had quietly let atrophy."
     ],
     "quiz": [
-      { "question": "What was the narrator's first instinct upon hearing about the delay?", "options": ["To find another train immediately", "To reach for his phone and metabolise the frustration through complaint texts", "To fall asleep on the bench", "To speak to station staff angrily"], "correctIndex": 1, "explanation": "His automatic reaction was to reach for his phone and vent frustration through texts to no one who could help." },
-      { "question": "What did the elderly man on the opposite bench do that struck the narrator as eccentric at first?", "options": ["He read a newspaper loudly", "He simply sat, watching the platform, apparently unbothered by the wait", "He complained to everyone nearby", "He paced back and forth anxiously"], "correctIndex": 1, "explanation": "The old man simply sat still and watched the platform, seemingly unbothered by the delay, unlike everyone else." },
-      { "question": "What does the narrator suspect we've engineered our lives to eliminate?", "options": ["All forms of travel", "Unstructured waiting almost entirely, filling every gap reflexively", "Public transportation delays", "Physical exercise"], "correctIndex": 1, "explanation": "He suspects modern life is engineered to eliminate unstructured waiting, treating empty time as a problem to fill." },
-      { "question": "What did the narrator notice once he put his phone away and settled into stillness?", "options": ["Nothing changed at all", "Small details like pigeons, a child counting rails, and shifting sunlight, which felt like genuine attention", "He fell asleep immediately", "He became more anxious"], "correctIndex": 1, "explanation": "He began noticing small, unremarkable details, which felt like the first genuinely unmediated attention he'd paid in weeks." },
-      { "question": "What does the narrator wonder about the elderly man by the end?", "options": ["Whether he missed his train entirely", "Whether he had deliberately relearned an art of patience the rest of us had let atrophy", "Whether he was actually asleep the whole time", "Whether he worked for the train company"], "correctIndex": 1, "explanation": "The narrator wonders if the man had consciously relearned the art of patient waiting, rather than simply having a naturally patient temperament." }
-    ]
+      {
+        "question": "What was the narrator's first instinct upon hearing about the delay?",
+        "options": [
+          "To reach for his phone and metabolise the frustration through complaint texts",
+          "To find another train immediately",
+          "To fall asleep on the bench",
+          "To speak to station staff angrily"
+        ],
+        "correctIndex": 0,
+        "explanation": "His automatic reaction was to reach for his phone and vent frustration through texts to no one who could help."
+      },
+      {
+        "question": "What did the elderly man on the opposite bench do that struck the narrator as eccentric at first?",
+        "options": [
+          "He read a newspaper loudly",
+          "He simply sat, watching the platform, apparently unbothered by the wait",
+          "He complained to everyone nearby",
+          "He paced back and forth anxiously"
+        ],
+        "correctIndex": 1,
+        "explanation": "The old man simply sat still and watched the platform, seemingly unbothered by the delay, unlike everyone else."
+      },
+      {
+        "question": "What does the narrator suspect we've engineered our lives to eliminate?",
+        "options": [
+          "All forms of travel",
+          "Public transportation delays",
+          "Unstructured waiting almost entirely, filling every gap reflexively",
+          "Physical exercise"
+        ],
+        "correctIndex": 2,
+        "explanation": "He suspects modern life is engineered to eliminate unstructured waiting, treating empty time as a problem to fill."
+      },
+      {
+        "question": "What did the narrator notice once he put his phone away and settled into stillness?",
+        "options": [
+          "Nothing changed at all",
+          "He fell asleep immediately",
+          "He became more anxious",
+          "Small details like pigeons, a child counting rails, and shifting sunlight, which felt like genuine attention"
+        ],
+        "correctIndex": 3,
+        "explanation": "He began noticing small, unremarkable details, which felt like the first genuinely unmediated attention he'd paid in weeks."
+      },
+      {
+        "question": "What does the narrator wonder about the elderly man by the end?",
+        "options": [
+          "Whether he had deliberately relearned an art of patience the rest of us had let atrophy",
+          "Whether he missed his train entirely",
+          "Whether he was actually asleep the whole time",
+          "Whether he worked for the train company"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator wonders if the man had consciously relearned the art of patient waiting, rather than simply having a naturally patient temperament."
+      },
+      {
+        "question": "What central claim does “The Recovered Art of Waiting for a Train” develop?",
+        "options": [
+          "A layover exposes how transit systems shape dignity and access.",
+          "Waiting can become attentive time rather than wasted delay.",
+          "Planning and drifting each offer value but neither fits every traveller.",
+          "Returning home can reveal changed identity without invalidating belonging."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Recovered Art of Waiting for a Train”?",
+        "options": [
+          "Delay affects travellers differently according to resources and mobility.",
+          "The pair’s disagreement reveals different needs for certainty and openness.",
+          "The station reveals shared constraints and ordinary kindness.",
+          "The narrator’s estrangement follows time and altered expectations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which qualification prevents an overreach in “The Recovered Art of Waiting for a Train”?",
+        "options": [
+          "One inconvenience cannot justify broad claims about a place.",
+          "Flexibility should not erase accessibility or consent.",
+          "One return does not define an entire culture or diaspora.",
+          "Patience should not excuse unsafe or inaccessible transport."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Recovered Art of Waiting for a Train”?",
+        "options": [
+          "The narrator responds with preparation and respect for others.",
+          "The narrator seeks clear local information and proportionate help.",
+          "They revise the itinerary around shared limits.",
+          "The account seeks conversation rather than easy nostalgia."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      },
+      {
+        "question": "What implication follows most clearly from “The Recovered Art of Waiting for a Train”?",
+        "options": [
+          "Travel ethics includes noticing unequal burdens of waiting.",
+          "Public systems should be judged by whom delays burden most.",
+          "Good travel decisions make trade-offs explicit.",
+          "Belonging can be negotiated without demanding sameness."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s consent, access, and local-impact reasoning."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-travel-08",
+    "title": "The Itinerary That Made Room for the People Who Live There",
+    "level": "C2",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] I used to plan trips by collecting landmarks. The fuller the map became, the more successful the journey appeared. Then a resident guide in a coastal town asked us a question: What do you think this place is for when visitors are not here?",
+      "Narrator: The question exposed how easily travel can turn another community into a backdrop for our experience. Our tightly packed schedule ignored prayer spaces, market hours, residential streets, and the fact that a popular viewpoint was beside people’s homes.",
+      "Narrator: We changed the itinerary. We chose fewer sites, used local transport where appropriate, learned basic etiquette, and asked before photographing people, private homes, or sensitive spaces.",
+      "Narrator: The slower plan revealed more than the original one. A conversation with a bookseller explained why certain streets became crowded; a museum visit gave context to a building we had first treated as scenery.",
+      "Narrator: Responsible travel does not mean romanticising poverty or seeking authenticity through intrusion. It means recognising that visitors have economic and social effects, even when they intend only to enjoy themselves.",
+      "Narrator: We also checked practical matters: entry requirements, local guidance, health and safety information, prayer arrangements, and respectful clothing expectations. Preparation is part of courtesy, not a limitation on spontaneity.",
+      "Narrator: At one point we chose not to visit a location that had become overwhelmed by social-media attention. The decision felt small, but it was a reminder that desire does not create entitlement.",
+      "Narrator: The journey became less about proving we had seen everything. It became more about moving through unfamiliar places with gratitude, restraint, and enough curiosity to let residents describe their own home."
+    ],
+    "quiz": [
+      {
+        "question": "Which governing principle is tested in the tightly packed visitor itinerary?",
+        "options": [
+          "Ethical travel treats residents’ routines and dignity as part of the place.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that ethical travel treats residents’ routines and dignity as part of the place, not as obstacles to a visitor’s itinerary."
+      },
+      {
+        "question": "What detail from the tightly packed visitor itinerary prevents a simple reading?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A guide points out that a packed schedule ignored prayer spaces, market hours, homes, and local.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a guide points out that a packed schedule ignored prayer spaces, market hours, homes, and local routines."
+      },
+      {
+        "question": "Which qualification matters most when judging the tightly packed visitor itinerary?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Visitor curiosity does not justify disrupting the people who live beside an attraction.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that visitor curiosity does not justify disrupting the people who live beside an attraction."
+      },
+      {
+        "question": "Which next step best puts the lesson from the tightly packed visitor itinerary into practice?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Plan with local rhythms in mind and change the itinerary when it imposes on residents."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that plan with local rhythms in mind and change the itinerary when it imposes on residents."
+      },
+      {
+        "question": "What false move lies beneath the problem in the tightly packed visitor itinerary?",
+        "options": [
+          "using another community as scenery for a personal checklist.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that using another community as scenery for a personal checklist"
+      },
+      {
+        "question": "What makes a one-step answer inadequate for the tightly packed visitor itinerary?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Visitor curiosity does not justify disrupting the people who live beside an attraction.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that visitor curiosity does not justify disrupting the people who live beside an attraction."
+      },
+      {
+        "question": "If people repeat the criticised approach to the tightly packed visitor itinerary, what is jeopardised?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Ethical travel treats residents’ routines and dignity as part of the place.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that ethical travel treats residents’ routines and dignity as part of the place, not as obstacles to a visitor’s itinerary."
+      },
+      {
+        "question": "What would the speaker object to after reflecting on the tightly packed visitor itinerary?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "using another community as scenery for a personal checklist."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that using another community as scenery for a personal checklist"
+      },
+      {
+        "question": "What responsibility does the speaker attach to the tightly packed visitor itinerary?",
+        "options": [
+          "Plan with local rhythms in mind and change the itinerary when it imposes on residents.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that plan with local rhythms in mind and change the itinerary when it imposes on residents."
+      },
+      {
+        "question": "Which conclusion best honours the concern revealed by the tightly packed visitor itinerary?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Ethical travel treats residents’ routines and dignity as part of the place.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that ethical travel treats residents’ routines and dignity as part of the place, not as obstacles to a visitor’s itinerary."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-travel-09",
+    "title": "What Makes a Travel Recommendation Trustworthy?",
+    "level": "C2",
+    "themeId": "travel",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] A popular travel account promises hidden local experiences in every city. What should viewers be cautious about?",
+      "Analyst: They should notice whether the account explains its sources, sponsorships, dates, and limitations. A recommendation can become inaccurate quickly when prices, access rules, safety conditions, or local attitudes change.",
+      "Interviewer: Is local advice always more reliable?",
+      "Analyst: Local knowledge is valuable, but no single resident speaks for an entire place. A careful traveller compares current official information with several perspectives and remains open to correction.",
+      "Interviewer: What is an ethical way to seek less crowded places?",
+      "Analyst: Avoid presenting a resident’s quiet neighbourhood, place of worship, or private livelihood as a secret attraction to be broadcast to millions. Ask whether sharing will burden the people who live there.",
+      "Interviewer: How should travellers discuss safety?",
+      "Analyst: With specifics and humility. Describe what you observed, check official and local guidance, and avoid broad claims about whole populations based on one incident or one pleasant trip.",
+      "Interviewer: What about bargain-hunting?",
+      "Analyst: A low price is not automatically a good deal if it relies on unfair labour, deceptive tours, or pressure on small businesses. Responsible spending includes asking what our convenience costs others.",
+      "Interviewer: What is the final habit?",
+      "Analyst: Treat recommendations as starting points, not permissions. Conditions change, and respect requires attention after arrival.",
+      "Interviewer: So research is part of good travel conduct?",
+      "Analyst: Yes. It helps a visitor arrive prepared rather than expecting a community to absorb every consequence of their spontaneity.",
+      "Interviewer: How should people respond if local guidance conflicts with an old online recommendation?",
+      "Analyst: Follow current legitimate local guidance and adjust gracefully. Being inconvenienced is not a reason to insist that an earlier plan deserves priority over the place itself.",
+      "Interviewer: What is the mature travel mindset?",
+      "Analyst: Curiosity joined to restraint: learn before arrival, listen after arrival, and leave room for people to live ordinary lives."
+    ],
+    "quiz": [
+      {
+        "question": "How does the popular travel account reshape the speaker’s view of the issue?",
+        "options": [
+          "Travel advice is trustworthy only when its source, incentives, date, and local limits are transparent.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that travel advice is trustworthy only when its source, incentives, date, and local limits are transparent."
+      },
+      {
+        "question": "Where does the popular travel account expose the weakness of a quick assumption?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The account may omit sponsorships, changing prices, access rules, safety conditions, or local attitudes.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the account may omit sponsorships, changing prices, access rules, safety conditions, or local attitudes."
+      },
+      {
+        "question": "What boundary keeps the account of the popular travel account proportionate?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Even well-meant advice can become unsafe or inaccurate as conditions change.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that even well-meant advice can become unsafe or inaccurate as conditions change."
+      },
+      {
+        "question": "What practical response does the popular travel account support?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Check current local information and disclose why a recommendation is being made."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that check current local information and disclose why a recommendation is being made."
+      },
+      {
+        "question": "Which temptation is being criticised through the popular travel account?",
+        "options": [
+          "treating a popular account as permanently current local knowledge.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that treating a popular account as permanently current local knowledge"
+      },
+      {
+        "question": "Why does the speaker withhold a simple verdict on the popular travel account?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Even well-meant advice can become unsafe or inaccurate as conditions change.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that even well-meant advice can become unsafe or inaccurate as conditions change."
+      },
+      {
+        "question": "What would be obscured by mishandling the popular travel account?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Travel advice is trustworthy only when its source, incentives, date, and local limits are transparent.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that travel advice is trustworthy only when its source, incentives, date, and local limits are transparent."
+      },
+      {
+        "question": "Which proposal misunderstands the lesson of the popular travel account?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "treating a popular account as permanently current local knowledge."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that treating a popular account as permanently current local knowledge"
+      },
+      {
+        "question": "What must a careful decision-maker do in the popular travel account?",
+        "options": [
+          "Check current local information and disclose why a recommendation is being made.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that check current local information and disclose why a recommendation is being made."
+      },
+      {
+        "question": "What should remain clear after considering the popular travel account?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Travel advice is trustworthy only when its source, incentives, date, and local limits are transparent.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that travel advice is trustworthy only when its source, incentives, date, and local limits are transparent."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-travel-10",
+    "title": "A Delayed Train and the Ethics of Being a Guest",
+    "level": "C2",
+    "themeId": "travel",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] Your train was delayed on the way to stay with a host family. Why did that become a lesson about travel?",
+      "Analyst: Because my first instinct was to send increasingly frustrated messages, as though my inconvenience gave me the right to make strangers reorganise their evening around my anxiety.",
+      "Interviewer: What did you do instead?",
+      "Analyst: I sent the confirmed information, acknowledged the uncertainty, asked what would be least disruptive for them, and made a backup plan for a nearby place to wait if necessary.",
+      "Interviewer: That sounds like ordinary courtesy.",
+      "Analyst: Ordinary courtesy matters most when plans fail. Travel often magnifies our sense of entitlement because we are tired, unfamiliar with the system, and convinced that someone should solve the problem immediately.",
+      "Interviewer: Did the hosts mind the delay?",
+      "Analyst: They were gracious, but the point is not that graciousness was owed. I was a guest, and their home was not a service counter.",
+      "Interviewer: What else helped?",
+      "Analyst: Keeping documents accessible, checking legitimate transport updates, carrying essential contact information, and avoiding public complaints that name staff or fellow travellers without context.",
+      "Interviewer: What does this have to do with cultural respect?",
+      "Analyst: It reminds us that unfamiliar systems are not necessarily incompetent because they differ from ours. We can ask for help firmly without treating difference as deficiency.",
+      "Interviewer: What did you remember afterwards?",
+      "Analyst: A journey tests character in small delays long before it tests it in dramatic adventures.",
+      "Interviewer: What would you advise a traveller facing the same delay?",
+      "Analyst: Communicate early, verify information before repeating it, protect your own safety, and make requests in a way that recognises other people may also be managing real constraints.",
+      "Interviewer: Why does that matter?",
+      "Analyst: Because being a guest begins before the front door; it appears in how we speak when no plan is going our way."
+    ],
+    "quiz": [
+      {
+        "question": "What stance emerges from the delayed train to a host family?",
+        "options": [
+          "Being a guest requires managing frustration without transferring it to an innocent host.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that being a guest requires managing one’s frustration so inconvenience is not transferred to hosts who did not cause it."
+      },
+      {
+        "question": "Which evidence in the delayed train to a host family disrupts the obvious interpretation?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The delayed traveller notices an urge to make strangers reorganise their evening around personal anxiety.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the delayed traveller notices an urge to make strangers reorganise their evening around personal anxiety."
+      },
+      {
+        "question": "What does the speaker refuse to assume about the delayed train to a host family?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A genuine delay can warrant communication without making the host responsible for the disruption.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a genuine delay can warrant communication without making the host responsible for the disruption."
+      },
+      {
+        "question": "How should someone act after encountering the delayed train to a host family?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Send one clear update, apologise for the uncertainty, and adapt your own expectations."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that send one clear update, apologise for the uncertainty, and adapt your own expectations."
+      },
+      {
+        "question": "Which shortcut does the speaker reject in the delayed train to a host family?",
+        "options": [
+          "using travel stress to claim special authority over a host’s time.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that using travel stress to claim special authority over a host’s time"
+      },
+      {
+        "question": "Why does the delayed train to a host family call for slower reasoning?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A genuine delay can warrant communication without making the host responsible for the disruption.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a genuine delay can warrant communication without making the host responsible for the disruption."
+      },
+      {
+        "question": "What consequence could follow if the warning in the delayed train to a host family is missed?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Being a guest requires managing frustration without transferring it to an innocent host.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that being a guest requires managing one’s frustration so inconvenience is not transferred to hosts who did not cause it."
+      },
+      {
+        "question": "Which choice runs against the insight drawn from the delayed train to a host family?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "using travel stress to claim special authority over a host’s time."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that using travel stress to claim special authority over a host’s time"
+      },
+      {
+        "question": "How does the delayed train to a host family define sound judgement?",
+        "options": [
+          "Send one clear update, apologise for the uncertainty, and adapt your own expectations.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that send one clear update, apologise for the uncertainty, and adapt your own expectations."
+      },
+      {
+        "question": "What enduring lesson does the speaker draw from the delayed train to a host family?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Being a guest requires managing frustration without transferring it to an innocent host.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that being a guest requires managing one’s frustration so inconvenience is not transferred to hosts who did not cause it."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "travel",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

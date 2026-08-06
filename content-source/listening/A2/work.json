@@ -6,70 +6,303 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [excited] Last month, my manager called me into her office, and I thought I was in trouble because that almost never happens.",
-      "Narrator: [laughing softly] Instead, she told me I was going to become the new team leader for the marketing group. I was so surprised that I forgot to say thank you.",
+      "Narrator: [warmly] Last month, my manager called me into her office, and I thought I was in trouble because that almost never happens.",
+      "Narrator: Instead, she told me I was going to become the new team leader for the marketing group. I was so surprised that I forgot to say thank you.",
       "Narrator: [thoughtful] I had worked at that company for three years, but I never expected a promotion so soon, especially because two coworkers had been there longer than me.",
-      "Narrator: [honestly] When I told my colleagues, some of them were happy for me, but I could feel that others felt a little strange about it.",
-      "Narrator: [nervous] My first week as a leader was harder than I expected, because I had to give tasks to people who used to be my equals.",
-      "Narrator: [reflective] One coworker, Budi, seemed distant at first. He barely spoke to me during meetings, although we used to eat lunch together every day.",
-      "Narrator: [gently] So one afternoon, I asked him directly if something was wrong. He admitted that he had wanted the position too, and he needed some time to accept it.",
-      "Narrator: [warmly] I told him I understood, and that his experience was actually going to help the whole team, not just me.",
-      "Narrator: [with relief] After that conversation, things slowly improved between us, because we finally spoke honestly instead of avoiding each other.",
-      "Narrator: [thoughtful] I learned that leadership isn't about being liked immediately. It's about listening carefully, even when a conversation feels uncomfortable.",
-      "Narrator: [determined] Now, when I plan our weekly meetings, I always ask for everyone's opinion before I decide anything important.",
-      "Narrator: [warmly] Budi and I have lunch together again, and he recently helped me train a new employee, which meant a lot to me.",
-      "Narrator: [reflective] I still make mistakes as a leader, but I try to fix them quickly instead of pretending they didn't happen.",
-      "Narrator: [with a small smile] If someone had told me a year ago that I would lead this team, I probably wouldn't have believed them.",
-      "Narrator: [warmly] But here I am, and although it's difficult sometimes, I'm proud of how far I've come since that nervous day in my manager's office."
+      "Narrator: When I told my colleagues, some of them were happy for me, but I could feel that others felt a little strange about it.",
+      "Narrator: [carefully] My first week as a leader was harder than I expected, because I had to give tasks to people who used to be my equals.",
+      "Narrator: One coworker, Budi, seemed distant at first. He barely spoke to me during meetings, although we used to eat lunch together every day.",
+      "Narrator: [reflective] So one afternoon, I asked him directly if something was wrong. He admitted that he had wanted the position too, and he needed some time to accept it.",
+      "Narrator: I acknowledged his disappointment without asking him to praise the decision. We discussed his role, my expectations, and how his experience could contribute without making him responsible for my success.",
+      "Narrator: [honestly] After that conversation, things slowly improved between us, because we finally spoke honestly instead of avoiding each other.",
+      "Narrator: I learned that leadership isn't about being liked immediately. It's about listening carefully, even when a conversation feels uncomfortable.",
+      "Narrator: [gently] Now I ask for relevant input, state who decides, use clear criteria, and explain choices. Listening does not remove my responsibility to decide on time.",
+      "Narrator: Budi and I have lunch together again, and he recently helped me train a new employee, which meant a lot to me.",
+      "Narrator: [encouraging] I document key decisions, invite private and written feedback, and correct mistakes openly. I also ask my manager for coaching when the new authority feels unclear.",
+      "Narrator: If someone had told me a year ago that I would lead this team, I probably wouldn't have believed them.",
+      "Narrator: [sincere] But here I am, and although it's difficult sometimes, I'm proud of how far I've come since that nervous day in my manager's office."
     ],
     "quiz": [
-      { "question": "Why did the narrator think she was in trouble at first?", "options": ["She had made a big mistake", "Her manager rarely called her into the office", "She was late to work", "Her manager looked angry"], "correctIndex": 1, "explanation": "She says her manager almost never calls her in, so she assumed something was wrong." },
-      { "question": "How did Budi behave toward the narrator during her first week?", "options": ["He was very supportive", "He seemed distant and barely spoke to her", "He quit his job", "He asked for a promotion too"], "correctIndex": 1, "explanation": "Budi seemed distant at first, even though they used to eat lunch together." },
-      { "question": "What did Budi admit when the narrator asked him directly?", "options": ["He didn't like his job", "He had wanted the position too and needed time to accept it", "He was moving to another city", "He was planning to quit"], "correctIndex": 1, "explanation": "Budi admitted he had wanted the leadership position and needed time to accept the change." },
-      { "question": "What does the narrator now do before deciding anything important in meetings?", "options": ["She decides alone", "She asks for everyone's opinion first", "She asks only Budi", "She cancels the meeting"], "correctIndex": 1, "explanation": "She now asks for everyone's opinion before making important decisions." },
-      { "question": "What has Budi recently helped the narrator do?", "options": ["Plan a party", "Train a new employee", "Write a report", "Interview candidates"], "correctIndex": 1, "explanation": "Budi recently helped her train a new employee, which meant a lot to her." }
-    ]
+      {
+        "question": "Why did the narrator think she was in trouble at first?",
+        "options": [
+          "Her manager rarely called her into the office",
+          "She had made a big mistake",
+          "She was late to work",
+          "Her manager looked angry"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says her manager almost never calls her in, so she assumed something was wrong."
+      },
+      {
+        "question": "How did Budi behave toward the narrator during her first week?",
+        "options": [
+          "He seemed distant and barely spoke to her",
+          "He was very supportive",
+          "He quit his job",
+          "He asked for a promotion too"
+        ],
+        "correctIndex": 0,
+        "explanation": "Budi seemed distant at first, even though they used to eat lunch together."
+      },
+      {
+        "question": "What did Budi admit when the narrator asked him directly?",
+        "options": [
+          "He didn't like his job",
+          "He had wanted the position too and needed time to accept it",
+          "He was moving to another city",
+          "He was planning to quit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Budi admitted he had wanted the leadership position and needed time to accept the change."
+      },
+      {
+        "question": "What does the narrator now do before deciding anything important in meetings?",
+        "options": [
+          "She decides alone",
+          "She asks only Budi",
+          "She asks for everyone's opinion first",
+          "She cancels the meeting"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now asks for everyone's opinion before making important decisions."
+      },
+      {
+        "question": "What has Budi recently helped the narrator do?",
+        "options": [
+          "Plan a party",
+          "Write a report",
+          "Interview candidates",
+          "Train a new employee"
+        ],
+        "correctIndex": 3,
+        "explanation": "Budi recently helped her train a new employee, which meant a lot to her."
+      },
+      {
+        "question": "Why is Budi distant?",
+        "options": [
+          "He also wanted the leadership role and needs time to adjust",
+          "He plans to leave the company",
+          "The narrator removed his tasks",
+          "He dislikes marketing"
+        ],
+        "correctIndex": 0,
+        "explanation": "His behavior follows an unspoken disappointment."
+      },
+      {
+        "question": "What should the new leader not ask Budi to do?",
+        "options": [
+          "Share work knowledge",
+          "Discuss role expectations",
+          "Praise the selection or hide his disappointment",
+          "Give factual feedback"
+        ],
+        "correctIndex": 2,
+        "explanation": "Professional conduct does not require false emotion."
+      },
+      {
+        "question": "How can the narrator avoid favoritism?",
+        "options": [
+          "Give Budi every major task",
+          "Assign work using visible criteria and document important decisions",
+          "Ask friends before coworkers",
+          "Choose only popular ideas"
+        ],
+        "correctIndex": 1,
+        "explanation": "Transparent process matters after promotion among peers."
+      },
+      {
+        "question": "Why is asking every opinion not the same as shared control?",
+        "options": [
+          "The leader must listen, explain, and still own timely decisions",
+          "Employees may never speak",
+          "Every decision needs a vote",
+          "Managers know every answer"
+        ],
+        "correctIndex": 0,
+        "explanation": "Consultation has a purpose and a responsible decision-maker."
+      },
+      {
+        "question": "What evidence shows the relationship improves?",
+        "options": [
+          "Budi receives another title",
+          "The narrator cancels meetings",
+          "They never disagree again",
+          "Budi contributes to training and their work communication becomes normal"
+        ],
+        "correctIndex": 3,
+        "explanation": "Cooperation returns without pretending disappointment vanished."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "revise; turn personal tension into fair leadership through criteria, role clarity, private discussion, and accountable decisions",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-work-02",
-    "title": "Two Colleagues Disagree About a Project Plan",
+    "title": "Deciding Whether the App Is Ready to Launch",
     "level": "A2",
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sari", "gender": "female" },
-      { "name": "Bayu", "gender": "male" }
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Bayu",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Sari: [firmly] Bayu, I looked at your plan for the new app, and I don't think we should launch it in October.",
-      "Bayu: [surprised] Really? I thought October was already decided last week during the meeting.",
-      "Sari: [explaining] It was, but after I tested the app yesterday, I found three problems that we still need to fix.",
-      "Bayu: [concerned] What kind of problems are we talking about? Small ones, or something more serious?",
-      "Sari: [honestly] The login page crashes sometimes, and the payment system doesn't always save the information correctly.",
-      "Bayu: [worried] That does sound serious. If customers can't pay properly, they'll stop using the app immediately.",
-      "Sari: [calmly] Exactly, so I think we should delay the launch by three weeks, even though I know that's disappointing.",
-      "Bayu: [sighing] It is disappointing, because we already told our clients about the October date, but I understand your reasons.",
-      "Sari: [thoughtful] What if we explain the situation honestly? Clients usually respect a company more when it fixes problems before launching.",
-      "Bayu: [considering] That's true. I remember when we launched too early last year, and customers complained for months afterward.",
-      "Sari: [agreeing] Exactly, so although waiting feels frustrating now, it will probably save us a lot of trouble later.",
-      "Bayu: [determined] Okay, let's write an email to the clients today, so they have enough time to adjust their own plans.",
-      "Sari: [relieved] Thank you for understanding. I was worried you would think I was just trying to make more work for everyone.",
-      "Bayu: [warmly] Not at all. You caught these problems before our customers did, which is actually a good thing for the whole team.",
-      "Sari: [smiling] I appreciate that. Should we ask the developers to focus only on those three problems this week?",
-      "Bayu: [nodding] Yes, and I'll tell them the new deadline is in three weeks, not three days, so they don't panic.",
-      "Sari: [laughing a little] Good idea. Nobody works well when they feel panicked and rushed at the same time.",
-      "Bayu: [warmly] Agreed. Let's send that email now, and then we can plan the new testing schedule together this afternoon."
+      "Sari: [seriously] Bayu, yesterday’s test found a login crash and a payment record that sometimes fails to save. I recommend stopping the October launch.",
+      "Bayu: Those are serious. Do we know how often they occur or which users are affected?",
+      "Sari: [carefully] Not yet. We reproduced both problems, but we need logs and a wider test to understand the scope.",
+      "Bayu: Then we should not promise a new date before the technical team estimates the work.",
+      "Sari: Agreed. The payment issue is a release blocker. We must also check whether wrong data was stored and whether privacy or security is affected.",
+      "Bayu: [thoughtful] Who will own each investigation?",
+      "Sari: The login lead will study the crash. The payment lead and security reviewer will examine the transaction flow. I will coordinate testing and evidence.",
+      "Bayu: What should we tell clients today?",
+      "Sari: [honestly] State that testing found issues that could affect login and payment reliability, so the launch is paused. Explain the impact and give a time for the next update.",
+      "Bayu: We should avoid blaming developers or giving technical guesses that may change.",
+      "Sari: Yes. We can apologize for the disruption and help clients adjust any connected plans.",
+      "Bayu: [reflective] What conditions must be met before release?",
+      "Sari: Root causes understood, fixes reviewed, payment records checked, important tests passed, and responsible owners accepting any remaining documented risk.",
+      "Bayu: Should we focus the whole team on only these two defects?",
+      "Sari: Not automatically. The technical leads should protect urgent work while maintaining necessary support and review. Rushing everyone can create new errors.",
+      "Bayu: [encouraging] I will draft the client notice. You prepare the issue owners, test criteria, and tomorrow’s update meeting.",
+      "Sari: I will also preserve test evidence and use non-sensitive data in shared reports.",
+      "Bayu: Good. The previous early launch taught us that a date is not more important than a reliable product.",
+      "Sari: [relieved] Once we have evidence, we can publish a realistic plan rather than replacing one weak promise with another.",
+      "Bayu: Agreed. Pause, investigate, communicate, fix, and verify before we release."
     ],
     "quiz": [
-      { "question": "Why does Sari want to delay the app launch?", "options": ["She is on vacation in October", "She found three problems while testing the app", "The clients asked for a delay", "The team is too small"], "correctIndex": 1, "explanation": "Sari found three problems, including login and payment issues, while testing the app." },
-      { "question": "What two problems does Sari mention specifically?", "options": ["Slow loading and bad design", "The login page crashes and the payment system doesn't save information correctly", "Too many users and low storage", "Wrong colors and broken links"], "correctIndex": 1, "explanation": "She mentions the login page crashing and the payment system not saving information correctly." },
-      { "question": "What happened when they launched a product too early last year?", "options": ["Nothing bad happened", "Customers complained for months afterward", "The company made extra money", "They won an award"], "correctIndex": 1, "explanation": "Bayu remembers customers complaining for months after an early launch last year." },
-      { "question": "What do Sari and Bayu decide to do about the clients?", "options": ["Say nothing to them", "Write an honest email explaining the delay", "Cancel the project completely", "Blame the developers"], "correctIndex": 1, "explanation": "They decide to write an email explaining the situation honestly to the clients." },
-      { "question": "How long does Bayu plan to tell the developers the new deadline is?", "options": ["Three days", "Three weeks", "Three months", "One week"], "correctIndex": 1, "explanation": "Bayu says he'll tell the developers the new deadline is three weeks, not three days." }
-    ]
+      {
+        "question": "What two defects were reproduced?",
+        "options": [
+          "A slow image and dark button",
+          "A missing email and meeting",
+          "A login crash and unreliable payment saving",
+          "A price increase and broken phone"
+        ],
+        "correctIndex": 2,
+        "explanation": "Both affect core customer actions."
+      },
+      {
+        "question": "Why are logs needed?",
+        "options": [
+          "To choose the launch color",
+          "To understand scope and causes",
+          "To assign blame publicly",
+          "To write marketing slogans"
+        ],
+        "correctIndex": 1,
+        "explanation": "Investigation needs evidence."
+      },
+      {
+        "question": "Who coordinates testing?",
+        "options": [
+          "Sari",
+          "Every client",
+          "The marketing owner",
+          "The security reviewer alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "Roles are explicitly assigned."
+      },
+      {
+        "question": "What should the client notice avoid?",
+        "options": [
+          "The next update time",
+          "Unverified technical guesses and personal blame",
+          "Known customer impact",
+          "An apology"
+        ],
+        "correctIndex": 1,
+        "explanation": "Communication should remain factual."
+      },
+      {
+        "question": "What data belongs in shared test reports?",
+        "options": [
+          "Customer payment details",
+          "Non-sensitive test evidence",
+          "Personal passwords",
+          "Private employee records"
+        ],
+        "correctIndex": 1,
+        "explanation": "Investigation must also protect data."
+      },
+      {
+        "question": "Which defect is clearly a release blocker?",
+        "options": [
+          "A button color is unpopular",
+          "The meeting is in October",
+          "A client asks for email",
+          "Payment information sometimes fails to save correctly"
+        ],
+        "correctIndex": 3,
+        "explanation": "A payment failure affects transactions and trust."
+      },
+      {
+        "question": "Why can they not promise exactly three weeks yet?",
+        "options": [
+          "Clients dislike November",
+          "Developers need three days",
+          "The app has only one screen",
+          "The team must find causes, scope work, and retest before setting a credible date"
+        ],
+        "correctIndex": 3,
+        "explanation": "A date needs evidence."
+      },
+      {
+        "question": "What should they check besides visible failure?",
+        "options": [
+          "Whether incorrect data was stored and whether security or privacy is affected",
+          "Only marketing images",
+          "Employee lunch times",
+          "The old launch email font"
+        ],
+        "correctIndex": 0,
+        "explanation": "The defect may have wider consequences."
+      },
+      {
+        "question": "What will clients receive?",
+        "options": [
+          "An unverified perfect launch date",
+          "Technical blame against one developer",
+          "A factual notice, impact on their plans, and the next confirmed update time",
+          "Private test data"
+        ],
+        "correctIndex": 2,
+        "explanation": "Communication distinguishes known facts from estimates."
+      },
+      {
+        "question": "What allows release later?",
+        "options": [
+          "Three weeks pass automatically",
+          "Fixes pass defined tests and responsible owners accept the remaining risk",
+          "Customers stop asking",
+          "The team feels calmer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Quality gates rather than the calendar decide readiness."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "replace; treat payment failure as a release blocker requiring severity review, data checks, ownership, retesting, and evidence-based scheduling",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-work-03",
@@ -78,32 +311,146 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] When my company allowed remote work last year, I was thrilled, because I imagined lazy mornings and complete freedom.",
-      "Narrator: [honestly] The reality looked quite different. During my first week, I worked in pajamas until three in the afternoon, and I felt strangely unproductive.",
-      "Narrator: [reflective] Without my usual office routine, my days started blending together, and I often forgot which day of the week it actually was.",
-      "Narrator: [thoughtful] I also missed something I never expected to miss, which was simply talking to my coworkers during small breaks.",
-      "Narrator: [honestly] At home, I sometimes went a whole day without speaking to another human being, and that made me feel isolated.",
-      "Narrator: [determined] So I decided to change a few habits, even though it felt awkward to create new rules just for myself.",
-      "Narrator: [warmly] First, I started getting dressed properly every morning, as if I were actually leaving the house for the office.",
-      "Narrator: [thoughtful] It sounds small, but it helped my brain understand that work time had officially begun.",
-      "Narrator: [gently] Second, I scheduled short video calls with teammates, not always about work, just to check in and talk normally.",
-      "Narrator: [honestly] Those calls became the highlight of my day, because they reminded me that we were still a team, although we worked apart.",
-      "Narrator: [reflective] Third, I created a clear ending time for my workday, because before that, I answered messages until almost midnight.",
-      "Narrator: [warmly] Once I finished at six, I closed my laptop completely and didn't open it again until the next morning.",
-      "Narrator: [with a small smile] These changes seem simple, but together they turned a confusing situation into something I genuinely enjoy now.",
-      "Narrator: [peacefully] I still miss office life sometimes, especially the coffee machine conversations, but I've finally found a rhythm that works for me.",
-      "Narrator: [warmly] If you're struggling with remote work too, I'd say this: structure isn't boring, it's actually what makes freedom possible."
+      "Narrator: [warmly] When my company allowed remote work last year, I was thrilled, because I imagined lazy mornings and complete freedom.",
+      "Narrator: The reality looked quite different. During my first week, I worked in pajamas until three in the afternoon, and I felt strangely unproductive.",
+      "Narrator: [thoughtful] Without my usual office routine, my days started blending together, and I often forgot which day of the week it actually was.",
+      "Narrator: I also missed something I never expected to miss, which was simply talking to my coworkers during small breaks.",
+      "Narrator: [carefully] At home, I sometimes went a whole day without speaking to another human being, and that made me feel isolated.",
+      "Narrator: So I decided to change a few habits, even though it felt awkward to create new rules just for myself.",
+      "Narrator: [reflective] First, I chose a morning routine that marked the start of work. Getting dressed helped me, although another person may need a different cue.",
+      "Narrator: It sounds small, but it helped my brain understand that work time had officially begun.",
+      "Narrator: [honestly] Second, our team offered short optional check-ins and written channels. We considered time zones, access needs, and people who did not want extra video calls.",
+      "Narrator: Those calls became the highlight of my day, because they reminded me that we were still a team, although we worked apart.",
+      "Narrator: [gently] Third, my manager clarified response hours and emergency channels. I set an ending time, took breaks, and requested equipment advice for a safer workspace.",
+      "Narrator: After six I closed routine work. A true urgent issue used the agreed channel; ordinary messages waited until the next work period.",
+      "Narrator: [encouraging] These changes seem simple, but together they turned a confusing situation into something I genuinely enjoy now.",
+      "Narrator: I still miss office life sometimes, especially the coffee machine conversations, but I've finally found a rhythm that works for me.",
+      "Narrator: [sincere] If remote work is difficult, discuss workload and support rather than blaming yourself. If isolation, pain, or distress continues, seek appropriate professional help."
     ],
     "quiz": [
-      { "question": "How did the narrator feel about remote work at first?", "options": ["Worried and scared", "Thrilled, imagining lazy mornings and freedom", "Angry about the change", "Indifferent"], "correctIndex": 1, "explanation": "He was thrilled and imagined lazy mornings and complete freedom." },
-      { "question": "What did the narrator unexpectedly miss about the office?", "options": ["The parking lot", "Talking to coworkers during small breaks", "The long commute", "His old desk"], "correctIndex": 1, "explanation": "He missed simply talking to his coworkers during small breaks." },
-      { "question": "What was the first habit the narrator changed?", "options": ["Waking up later", "Getting dressed properly every morning", "Skipping breakfast", "Working from bed"], "correctIndex": 1, "explanation": "He started getting dressed properly every morning as if going to the office." },
-      { "question": "What problem existed before he created a clear ending time for his workday?", "options": ["He finished too early", "He answered messages until almost midnight", "He never worked enough hours", "He forgot to eat lunch"], "correctIndex": 1, "explanation": "Before setting a clear end time, he answered messages until almost midnight." },
-      { "question": "What is the narrator's final message to people struggling with remote work?", "options": ["Freedom means no rules at all", "Structure is what makes freedom possible", "Remote work never really works", "You should quit remote work"], "correctIndex": 1, "explanation": "He concludes that structure isn't boring, it's what makes freedom possible." }
-    ]
+      {
+        "question": "How did the narrator feel about remote work at first?",
+        "options": [
+          "Worried and scared",
+          "Angry about the change",
+          "Indifferent",
+          "Thrilled, imagining lazy mornings and freedom"
+        ],
+        "correctIndex": 3,
+        "explanation": "He was thrilled and imagined lazy mornings and complete freedom."
+      },
+      {
+        "question": "What did the narrator unexpectedly miss about the office?",
+        "options": [
+          "The parking lot",
+          "The long commute",
+          "Talking to coworkers during small breaks",
+          "His old desk"
+        ],
+        "correctIndex": 2,
+        "explanation": "He missed simply talking to his coworkers during small breaks."
+      },
+      {
+        "question": "What was the first habit the narrator changed?",
+        "options": [
+          "Waking up later",
+          "Getting dressed properly every morning",
+          "Skipping breakfast",
+          "Working from bed"
+        ],
+        "correctIndex": 1,
+        "explanation": "He started getting dressed properly every morning as if going to the office."
+      },
+      {
+        "question": "What problem existed before he created a clear ending time for his workday?",
+        "options": [
+          "He finished too early",
+          "He never worked enough hours",
+          "He answered messages until almost midnight",
+          "He forgot to eat lunch"
+        ],
+        "correctIndex": 2,
+        "explanation": "Before setting a clear end time, he answered messages until almost midnight."
+      },
+      {
+        "question": "What is the narrator's final message to people struggling with remote work?",
+        "options": [
+          "Freedom means no rules at all",
+          "Structure is what makes freedom possible",
+          "Remote work never really works",
+          "You should quit remote work"
+        ],
+        "correctIndex": 1,
+        "explanation": "He concludes that structure isn't boring, it's what makes freedom possible."
+      },
+      {
+        "question": "What makes remote work difficult first?",
+        "options": [
+          "The company removes all tasks",
+          "The narrator dislikes clothes",
+          "Missing structure, isolation, and work continuing into the night",
+          "Coworkers stop using email"
+        ],
+        "correctIndex": 2,
+        "explanation": "Several work-system problems appear together."
+      },
+      {
+        "question": "Why is getting dressed only one possible cue?",
+        "options": [
+          "Different workers may use other routines that fit their needs",
+          "Professional clothing is legally required at home",
+          "Pajamas cause every error",
+          "Cameras must stay on"
+        ],
+        "correctIndex": 0,
+        "explanation": "The habit is personal, not a universal rule."
+      },
+      {
+        "question": "How should social calls be arranged?",
+        "options": [
+          "Optional and scheduled with teammates’ availability and preferences",
+          "Daily without consent",
+          "Recorded for managers",
+          "Used to monitor attendance"
+        ],
+        "correctIndex": 0,
+        "explanation": "Connection should not add pressure."
+      },
+      {
+        "question": "What employer support is added?",
+        "options": [
+          "Messages until midnight",
+          "Private room inspection",
+          "Clear response expectations, equipment help, breaks, and accessible communication",
+          "A ban on written updates"
+        ],
+        "correctIndex": 2,
+        "explanation": "Remote work design is not only an individual duty."
+      },
+      {
+        "question": "When should the narrator seek help?",
+        "options": [
+          "Only after returning to office",
+          "Whenever a video call is missed",
+          "Never while employed",
+          "If pain, isolation, or distress continues despite adjustments"
+        ],
+        "correctIndex": 3,
+        "explanation": "Persistent health effects need appropriate support."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "revise; share responsibility between worker and employer for boundaries, communication, accessibility, and a safe workspace",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-work-04",
@@ -112,36 +459,153 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Interviewer", "gender": "female" },
-      { "name": "Candidate", "gender": "male" }
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Candidate",
+        "gender": "male"
+      }
     ],
     "script": [
       "Interviewer: [warmly] Thank you for coming in today, Dimas. Please, sit down and make yourself comfortable.",
-      "Candidate: [nervous] Thank you for having me. I'll admit, I'm a little nervous, since this is my first interview in years.",
-      "Interviewer: [kindly] That's completely understandable. Take a breath, and let's just have a normal conversation, not an interrogation.",
-      "Candidate: [smiling] That helps, thank you. I appreciate you saying that.",
-      "Interviewer: [curious] So, tell me, why did you decide to apply for this position, especially after working at the same company for six years?",
-      "Candidate: [thoughtful] Honestly, I loved my old job for a long time, but recently I stopped growing there. I wanted a new challenge.",
-      "Interviewer: [interested] What kind of challenge are you hoping to find here specifically?",
-      "Candidate: [honestly] I want to work on bigger projects, and I want to learn from a team that pushes me to improve.",
-      "Interviewer: [nodding] That's exactly the environment we try to create here. Can you describe a difficult situation you handled well?",
-      "Candidate: [reflective] Once, a major client threatened to leave because of a mistake my team made. I called them personally and fixed it within two days.",
-      "Interviewer: [impressed] That's a strong example. How did you feel during that stressful situation?",
-      "Candidate: [honestly] Terrified, if I'm being completely truthful. But I focused on solving the problem instead of worrying about how it looked.",
-      "Interviewer: [smiling] I appreciate your honesty. Many candidates pretend they never feel stressed, which frankly isn't believable.",
-      "Candidate: [laughing softly] I don't think anyone truly enjoys those moments, but they do teach you a lot about yourself.",
-      "Interviewer: [warmly] Well, Dimas, I think this conversation has been genuinely refreshing. Do you have any questions for me before we finish?",
-      "Candidate: [eagerly] Yes, actually. What do you personally enjoy most about working here?",
-      "Interviewer: [thoughtful] Honestly, the people. Even during hard weeks, this team supports each other, which isn't always common in this industry.",
-      "Candidate: [warmly] That's exactly what I was hoping to hear. Thank you again for this opportunity, and for making me feel so relaxed today."
+      "Candidate: Thank you for having me. I'll admit, I'm a little nervous, since this is my first interview in years.",
+      "Interviewer: [thoughtful] That's completely understandable. Take a breath, and let's just have a normal conversation, not an interrogation.",
+      "Candidate: That helps, thank you. I appreciate you saying that.",
+      "Interviewer: [carefully] So, tell me, why did you decide to apply for this position, especially after working at the same company for six years?",
+      "Candidate: Honestly, I loved my old job for a long time, but recently I stopped growing there. I wanted a new challenge.",
+      "Interviewer: [reflective] What kind of challenge are you hoping to find here specifically?",
+      "Candidate: I want to work on bigger projects, and I want to learn from a team that pushes me to improve.",
+      "Interviewer: [honestly] That's exactly the environment we try to create here. Can you describe a difficult situation you handled well?",
+      "Candidate: Once, a major client threatened to leave because of a mistake my team made. I called them personally and fixed it within two days.",
+      "Interviewer: [gently] That's a strong example. How did you feel during that stressful situation?",
+      "Candidate: Terrified, if I'm being completely truthful. But I focused on solving the problem instead of worrying about how it looked.",
+      "Interviewer: [encouraging] I appreciate your honesty. Many candidates pretend they never feel stressed, which frankly isn't believable.",
+      "Candidate: I don't think anyone truly enjoys those moments, but they do teach you a lot about yourself.",
+      "Interviewer: [sincere] Well, Dimas, I think this conversation has been genuinely refreshing. Do you have any questions for me before we finish?",
+      "Candidate: Yes, actually. What do you personally enjoy most about working here?",
+      "Interviewer: Honestly, the people. Even during hard weeks, this team supports each other, which isn't always common in this industry.",
+      "Candidate: That's exactly what I was hoping to hear. Thank you again for this opportunity, and for making me feel so relaxed today."
     ],
     "quiz": [
-      { "question": "Why was Dimas nervous at the start of the interview?", "options": ["He forgot the address", "It was his first interview in years", "He was late", "He didn't prepare"], "correctIndex": 1, "explanation": "Dimas admits he's nervous because it's his first interview in years." },
-      { "question": "Why did Dimas decide to leave his old job after six years?", "options": ["He was fired", "He stopped growing there and wanted a new challenge", "The company closed", "He moved to another city"], "correctIndex": 1, "explanation": "He says he loved his old job but stopped growing, so he wanted a new challenge." },
-      { "question": "What difficult situation does Dimas describe handling well?", "options": ["A power outage at the office", "A major client who threatened to leave because of a mistake", "A late delivery", "A broken computer"], "correctIndex": 1, "explanation": "He describes fixing a situation where a major client threatened to leave due to a team mistake." },
-      { "question": "How did Dimas actually feel during that stressful situation, honestly?", "options": ["Calm and confident", "Terrified, but focused on solving the problem", "Angry at his team", "Indifferent"], "correctIndex": 1, "explanation": "He admits he felt terrified but focused on solving the problem instead of worrying." },
-      { "question": "What does the interviewer say she personally enjoys most about the workplace?", "options": ["The salary", "The people and how the team supports each other", "The office building", "The short hours"], "correctIndex": 1, "explanation": "She says she enjoys the people most, since the team supports each other even during hard weeks." }
-    ]
+      {
+        "question": "Why was Dimas nervous at the start of the interview?",
+        "options": [
+          "He forgot the address",
+          "He was late",
+          "He didn't prepare",
+          "It was his first interview in years"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dimas admits he's nervous because it's his first interview in years."
+      },
+      {
+        "question": "Why did Dimas decide to leave his old job after six years?",
+        "options": [
+          "He was fired",
+          "The company closed",
+          "He moved to another city",
+          "He stopped growing there and wanted a new challenge"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says he loved his old job but stopped growing, so he wanted a new challenge."
+      },
+      {
+        "question": "What difficult situation does Dimas describe handling well?",
+        "options": [
+          "A major client who threatened to leave because of a mistake",
+          "A power outage at the office",
+          "A late delivery",
+          "A broken computer"
+        ],
+        "correctIndex": 0,
+        "explanation": "He describes fixing a situation where a major client threatened to leave due to a team mistake."
+      },
+      {
+        "question": "How did Dimas actually feel during that stressful situation, honestly?",
+        "options": [
+          "Calm and confident",
+          "Terrified, but focused on solving the problem",
+          "Angry at his team",
+          "Indifferent"
+        ],
+        "correctIndex": 1,
+        "explanation": "He admits he felt terrified but focused on solving the problem instead of worrying."
+      },
+      {
+        "question": "What does the interviewer say she personally enjoys most about the workplace?",
+        "options": [
+          "The people and how the team supports each other",
+          "The salary",
+          "The office building",
+          "The short hours"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she enjoys the people most, since the team supports each other even during hard weeks."
+      },
+      {
+        "question": "Why does the interviewer call it a conversation?",
+        "options": [
+          "The position has no requirements",
+          "Dimas already has the job",
+          "She wants to reduce unnecessary pressure while still learning about Dimas",
+          "Questions are not allowed"
+        ],
+        "correctIndex": 2,
+        "explanation": "A calmer tone can still support assessment."
+      },
+      {
+        "question": "What signals Dimas wants growth?",
+        "options": [
+          "He criticizes his old employer",
+          "He refuses difficult clients",
+          "He asks for larger projects and a team that helps him improve",
+          "He wants fewer duties"
+        ],
+        "correctIndex": 2,
+        "explanation": "His reason is forward-looking."
+      },
+      {
+        "question": "What makes the client example useful?",
+        "options": [
+          "It names the private client",
+          "It guarantees no future mistake",
+          "It hides team involvement",
+          "It describes a difficult situation and the action he took"
+        ],
+        "correctIndex": 3,
+        "explanation": "Behavioral detail supports the claim."
+      },
+      {
+        "question": "Why does admitting fear help the answer?",
+        "options": [
+          "Stress proves weak ability",
+          "It shows he can act responsibly while stressed",
+          "Candidates must enjoy crises",
+          "The interviewer dislikes confidence"
+        ],
+        "correctIndex": 1,
+        "explanation": "Emotion is separated from performance."
+      },
+      {
+        "question": "What should Dimas still verify after the interviewer’s positive answer?",
+        "options": [
+          "Whether the interviewer smiles",
+          "The client’s identity",
+          "A guaranteed promotion date",
+          "Specific examples of support, management, workload, and role terms"
+        ],
+        "correctIndex": 3,
+        "explanation": "One person’s view is useful but not complete evidence."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "keep; realistic interview dialogue shows nerves, behavioral evidence, honest emotion, and a candidate asking about workplace experience",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-work-05",
@@ -150,109 +614,912 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [amused] I want to tell you about the worst meeting of my career, because looking back now, it's actually a little funny.",
-      "Narrator: [thoughtful] It happened during my second month at a new company, when I still didn't know everyone's name.",
-      "Narrator: [honestly] I was presenting our quarterly numbers to the whole department, including the company's owner, who rarely attended these meetings.",
-      "Narrator: [nervous] I had practiced my slides the night before, so I felt reasonably confident when I walked into the room that morning.",
-      "Narrator: [embarrassed] Then, halfway through my presentation, my laptop suddenly froze, and the screen showed my personal photos instead of the report.",
-      "Narrator: [laughing softly] Everyone saw a photo of my cat wearing a tiny hat, right there on the big screen for the whole department.",
-      "Narrator: [honestly] My face turned bright red, and for a moment, I genuinely considered running out of the room and never coming back.",
-      "Narrator: [reflective] Instead, I took a breath, closed the photo app, and said, well, at least you know I have excellent taste in hats.",
-      "Narrator: [warmly] To my surprise, the room actually laughed, and even the owner smiled, which helped me relax immediately.",
-      "Narrator: [thoughtful] I finished the presentation, and afterward, several coworkers told me the cat photo made the meeting more memorable than usual.",
-      "Narrator: [honestly] Before that day, I believed a perfect presentation meant a flawless one, without any mistakes whatsoever.",
-      "Narrator: [reflective] Now I understand something different. People don't remember perfection nearly as much as they remember how you handled an awkward moment.",
-      "Narrator: [warmly] A coworker named Rani, who I barely knew then, came up afterward and said my reaction actually calmed her own nerves for later meetings.",
-      "Narrator: [with a small smile] Because of that embarrassing moment, Rani and I became close friends, and we still laugh about the cat photo today.",
-      "Narrator: [peacefully] So although I once dreaded that memory, I've learned to appreciate it. Sometimes the worst moments become the best stories later."
+      "Narrator: [warmly] I want to tell you about the worst meeting of my career, because looking back now, it's actually a little funny.",
+      "Narrator: It happened during my second month at a new company, when I still didn't know everyone's name.",
+      "Narrator: [thoughtful] I was presenting our quarterly numbers to the whole department, including the company's owner, who rarely attended these meetings.",
+      "Narrator: I had practiced my slides the night before, so I felt reasonably confident when I walked into the room that morning.",
+      "Narrator: [carefully] Then, halfway through my presentation, my laptop suddenly froze, and the screen showed my personal photos instead of the report.",
+      "Narrator: Everyone saw a photo of my cat wearing a tiny hat, right there on the big screen for the whole department.",
+      "Narrator: [reflective] My face turned bright red, and for a moment, I genuinely considered running out of the room and never coming back.",
+      "Narrator: Instead, I took a breath, closed the photo app, and said, well, at least you know I have excellent taste in hats.",
+      "Narrator: [honestly] To my surprise, the room actually laughed, and even the owner smiled, which helped me relax immediately.",
+      "Narrator: I finished the presentation. Afterward, I checked what had appeared and confirmed that no client, document, or sensitive personal image had been exposed.",
+      "Narrator: [gently] Before that day, I believed a perfect presentation meant a flawless one, without any mistakes whatsoever.",
+      "Narrator: Now I value a calm recovery, but humor does not remove a privacy incident. A mistake should also improve the next process.",
+      "Narrator: [encouraging] A coworker named Rani, who I barely knew then, came up afterward and said my reaction actually calmed her own nerves for later meetings.",
+      "Narrator: Rani later helped me test a safer setup: a work profile, closed personal apps, hidden notification previews, and only the presentation window shared.",
+      "Narrator: [sincere] I can laugh about the harmless cat image now, but the real lesson is to recover respectfully, check the impact, and prevent a more serious exposure next time."
     ],
     "quiz": [
-      { "question": "When did this embarrassing meeting happen?", "options": ["On her first day", "During her second month at a new company", "After ten years at the company", "During her last week"], "correctIndex": 1, "explanation": "It happened during her second month at a new company." },
-      { "question": "What appeared on the screen when her laptop froze?", "options": ["An error message", "A photo of her cat wearing a tiny hat", "A blank screen", "Someone else's presentation"], "correctIndex": 1, "explanation": "A photo of her cat wearing a tiny hat appeared instead of the report." },
-      { "question": "What did the narrator say after the photo appeared?", "options": ["She apologized and left the room", "She joked that at least people knew she had excellent taste in hats", "She said nothing", "She blamed her computer loudly"], "correctIndex": 1, "explanation": "She joked, saying at least everyone knew she had excellent taste in hats." },
-      { "question": "What did Rani tell the narrator afterward?", "options": ["That the presentation was bad", "That her reaction calmed Rani's own nerves for later meetings", "That she should quit", "That the owner was angry"], "correctIndex": 1, "explanation": "Rani said the narrator's calm reaction helped calm her own nerves for future meetings." },
-      { "question": "What lesson does the narrator take from this experience?", "options": ["Presentations must always be flawless", "People remember how you handle awkward moments more than perfection", "Never use a laptop again", "Meetings should be avoided"], "correctIndex": 1, "explanation": "She learns that people remember how you handle an awkward moment more than perfection." }
-    ]
+      {
+        "question": "When did this embarrassing meeting happen?",
+        "options": [
+          "During her second month at a new company",
+          "On her first day",
+          "After ten years at the company",
+          "During her last week"
+        ],
+        "correctIndex": 0,
+        "explanation": "It happened during her second month at a new company."
+      },
+      {
+        "question": "What appeared on the screen when her laptop froze?",
+        "options": [
+          "An error message",
+          "A photo of her cat wearing a tiny hat",
+          "A blank screen",
+          "Someone else's presentation"
+        ],
+        "correctIndex": 1,
+        "explanation": "A photo of her cat wearing a tiny hat appeared instead of the report."
+      },
+      {
+        "question": "What did the narrator say after the photo appeared?",
+        "options": [
+          "She apologized and left the room",
+          "She said nothing",
+          "She blamed her computer loudly",
+          "She joked that at least people knew she had excellent taste in hats"
+        ],
+        "correctIndex": 3,
+        "explanation": "She joked, saying at least everyone knew she had excellent taste in hats."
+      },
+      {
+        "question": "What did Rani tell the narrator afterward?",
+        "options": [
+          "That the presentation was bad",
+          "That she should quit",
+          "That her reaction calmed Rani's own nerves for later meetings",
+          "That the owner was angry"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rani said the narrator's calm reaction helped calm her own nerves for future meetings."
+      },
+      {
+        "question": "What lesson does the narrator take from this experience?",
+        "options": [
+          "Presentations must always be flawless",
+          "Never use a laptop again",
+          "People remember how you handle awkward moments more than perfection",
+          "Meetings should be avoided"
+        ],
+        "correctIndex": 2,
+        "explanation": "She learns that people remember how you handle an awkward moment more than perfection."
+      },
+      {
+        "question": "What creates the embarrassing moment?",
+        "options": [
+          "Personal photos appear on the presentation screen",
+          "The quarterly numbers are false",
+          "The owner cancels the meeting",
+          "Rani presents first"
+        ],
+        "correctIndex": 0,
+        "explanation": "The display exposes unrelated private content."
+      },
+      {
+        "question": "How does the narrator recover in the room?",
+        "options": [
+          "Close the photo app, acknowledge the interruption briefly, and continue",
+          "Run away",
+          "Show more pictures",
+          "Blame Rani"
+        ],
+        "correctIndex": 0,
+        "explanation": "A calm response limits disruption."
+      },
+      {
+        "question": "What should happen after the meeting?",
+        "options": [
+          "Post the cat image publicly",
+          "Delete the quarterly report",
+          "Ignore every privacy risk",
+          "Check what was exposed and report any sensitive incident through policy"
+        ],
+        "correctIndex": 3,
+        "explanation": "Humor does not replace incident review."
+      },
+      {
+        "question": "How does the narrator prevent a repeat?",
+        "options": [
+          "Never present again",
+          "Use a work profile, close apps, disable previews, and test the display",
+          "Store client files with photos",
+          "Share the full desktop"
+        ],
+        "correctIndex": 1,
+        "explanation": "Technical preparation protects private and work data."
+      },
+      {
+        "question": "What is the revised lesson?",
+        "options": [
+          "Recover calmly, then improve the system instead of romanticizing every mistake",
+          "Embarrassment always creates friendship",
+          "Perfect meetings need no testing",
+          "Personal devices should have no security"
+        ],
+        "correctIndex": 0,
+        "explanation": "Resilience includes prevention and accountability."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "revise; retain humor while treating exposed personal media as a privacy and device-separation incident",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-work-06",
-    "title": "A Performance Review With My Manager",
+    "title": "A Performance Review With a Clear Growth Plan",
     "level": "A2",
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Manager", "gender": "male" },
-      { "name": "Employee", "gender": "female" }
+      {
+        "name": "Manager",
+        "gender": "female"
+      },
+      {
+        "name": "Ratih",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Manager: [warmly] Come in, Ratih. Please sit down. This is just our regular six-month review, so there's nothing to worry about.",
-      "Employee: [slightly nervous] Thank you. I always feel a bit anxious before these meetings, even when I know they're routine.",
-      "Manager: [reassuring] That's very common. Let's start with the good news, because honestly, there's quite a lot of it.",
-      "Employee: [hopeful] Okay, I'm ready to hear it.",
-      "Manager: [pleased] Your project completion rate improved by almost thirty percent since January, which is genuinely impressive.",
-      "Employee: [smiling] That's a relief to hear. I've been trying to organize my week more carefully since our last conversation.",
-      "Manager: [interested] It clearly worked. Clients have also mentioned that you respond faster than before, and they appreciate that a lot.",
-      "Employee: [pleased] I'm glad that's noticeable. I started answering emails first thing in the morning instead of leaving them until later.",
-      "Manager: [thoughtful] Now, there's one area where I think you could grow, if you're open to hearing it.",
-      "Employee: [attentive] Of course, please tell me. I'd rather know now than find out later.",
-      "Manager: [gently] During team meetings, you rarely share your opinion, even when I know you have good ideas.",
-      "Employee: [honestly] That's true. I sometimes worry my ideas aren't developed enough to share out loud.",
-      "Manager: [encouraging] Your ideas don't need to be perfect before you share them. Half-formed ideas often become the best ones through discussion.",
-      "Employee: [thoughtful] I never thought about it that way. I suppose I've always waited until I felt completely certain.",
-      "Manager: [warmly] Try speaking up even when you're only seventy percent sure. The team values your perspective more than you realize.",
-      "Employee: [determined] Okay, I'll practice that, starting with tomorrow's planning meeting, even if it feels uncomfortable at first.",
-      "Manager: [smiling] That's exactly the attitude I like to see. Overall, this has been a strong six months for you.",
-      "Employee: [grateful] Thank you for the honest feedback, and for noticing the effort I've been putting in lately.",
-      "Manager: [warmly] Keep it up, Ratih. I'm looking forward to seeing how much you grow before our next review."
+      "Manager: [warmly] Ratih, this six-month review will cover results, support, and one development goal. You may ask for clarification at any point.",
+      "Ratih: Thank you. I prepared notes because review meetings make me nervous.",
+      "Manager: [thoughtful] Your completion rate improved, and client feedback says your responses are clearer and faster. The report shows the period and project types we measured.",
+      "Ratih: I am glad the new weekly planning system helped.",
+      "Manager: One area I want to understand is participation in planning meetings. You often send useful ideas afterward rather than during discussion.",
+      "Ratih: [honestly] I need time to organize my thoughts, and fast group conversations make me worry that an unfinished idea will sound careless.",
+      "Manager: That is useful context. The goal is not speaking for its own sake. We need your knowledge before decisions close.",
+      "Ratih: Could agendas include the main questions earlier?",
+      "Manager: [encouraging] Yes. I will send decision questions one day ahead where possible. You can add written input before the meeting.",
+      "Ratih: I would also like the chair to invite me on the topic I prepared, rather than expecting me to interrupt.",
+      "Manager: That is reasonable. For urgent or safety-related claims, bring evidence or say what still needs checking. We will not use an arbitrary rule such as speaking when “seventy percent sure.”",
+      "Ratih: [reflective] What would improvement look like over the next month?",
+      "Manager: Contribute to two relevant planning decisions, verbally or in writing, and record what support helped. Quality matters more than a word count.",
+      "Ratih: Can we review it after four weeks instead of waiting six months?",
+      "Manager: [warmly] Yes. I also want feedback on whether the meeting format gives everyone a fair chance to contribute.",
+      "Ratih: Then the plan addresses both my skill and the team environment.",
+      "Manager: Exactly. Development should not mean forcing one communication style on every employee.",
+      "Ratih: [determined] I will prepare for tomorrow’s agenda and add one written question this afternoon.",
+      "Manager: Good. I will send you the performance data and our agreed actions so you can correct anything I recorded inaccurately.",
+      "Ratih: [sincere] Thank you. Specific evidence and a clear follow-up make the feedback feel useful, not vague."
     ],
     "quiz": [
-      { "question": "By how much did Ratih's project completion rate improve since January?", "options": ["Ten percent", "Almost thirty percent", "Fifty percent", "It didn't improve"], "correctIndex": 1, "explanation": "Her project completion rate improved by almost thirty percent since January." },
-      { "question": "What have clients mentioned about Ratih recently?", "options": ["That she is too slow", "That she responds faster than before", "That she is rude", "That she never answers"], "correctIndex": 1, "explanation": "Clients mentioned that Ratih responds faster than before and appreciate it." },
-      { "question": "What area does the manager say Ratih could grow in?", "options": ["Arriving on time", "Sharing her opinion during team meetings", "Writing reports", "Answering the phone"], "correctIndex": 1, "explanation": "The manager notes she rarely shares her opinion during team meetings, despite having good ideas." },
-      { "question": "Why has Ratih been staying quiet in meetings?", "options": ["She dislikes her coworkers", "She worries her ideas aren't developed enough to share", "She is too busy", "She doesn't attend meetings"], "correctIndex": 1, "explanation": "She admits she worries her ideas aren't developed enough to share out loud." },
-      { "question": "What advice does the manager give about sharing ideas?", "options": ["Only share when completely certain", "Speak up even when only seventy percent sure", "Never share opinions in meetings", "Write ideas down instead of speaking"], "correctIndex": 1, "explanation": "The manager encourages her to speak up even when she's only seventy percent sure." }
-    ]
+      {
+        "question": "What preparation does Ratih bring?",
+        "options": [
+          "A resignation form",
+          "Client passwords",
+          "A finished speech",
+          "Notes for the review meeting"
+        ],
+        "correctIndex": 3,
+        "explanation": "Preparation helps manage anxiety."
+      },
+      {
+        "question": "When does Ratih often send ideas?",
+        "options": [
+          "Before receiving an agenda",
+          "After planning meetings",
+          "Only to clients",
+          "During lunch with no record"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her knowledge arrives too late for some decisions."
+      },
+      {
+        "question": "What change will the manager make?",
+        "options": [
+          "Require surprise speeches",
+          "Remove written input",
+          "Send main decision questions earlier when possible",
+          "Cancel all meetings"
+        ],
+        "correctIndex": 2,
+        "explanation": "Advance questions support preparation."
+      },
+      {
+        "question": "How many relevant decisions form the practice goal?",
+        "options": [
+          "Two",
+          "Ten",
+          "None",
+          "Every decision"
+        ],
+        "correctIndex": 0,
+        "explanation": "The development target is specific and modest."
+      },
+      {
+        "question": "What record will the manager send?",
+        "options": [
+          "Other employees’ reviews",
+          "A private client list",
+          "An automatic promotion",
+          "Performance data and agreed actions"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratih can check the accuracy of the review record."
+      },
+      {
+        "question": "What evidence supports Ratih’s strong performance?",
+        "options": [
+          "The manager likes her personality",
+          "Completion data and client feedback have improved",
+          "She attends every meeting",
+          "She answers messages at night"
+        ],
+        "correctIndex": 1,
+        "explanation": "The praise is tied to observable work."
+      },
+      {
+        "question": "Why does Ratih stay quiet?",
+        "options": [
+          "She has no project knowledge",
+          "She fears her ideas are not developed enough",
+          "The manager forbids questions",
+          "Clients attend every meeting"
+        ],
+        "correctIndex": 1,
+        "explanation": "The barrier is confidence and meeting design."
+      },
+      {
+        "question": "Why is “speak when seventy percent sure” removed?",
+        "options": [
+          "Ratih must be completely silent",
+          "Ideas should never be tested",
+          "Some topics require evidence, and a percentage is unclear and arbitrary",
+          "Only managers can be uncertain"
+        ],
+        "correctIndex": 2,
+        "explanation": "Advice should fit risk and purpose."
+      },
+      {
+        "question": "What options will help Ratih contribute?",
+        "options": [
+          "Agenda questions, preparation time, written input, and an invited speaking point",
+          "A surprise presentation",
+          "Longer workdays",
+          "Anonymous client data"
+        ],
+        "correctIndex": 0,
+        "explanation": "Multiple channels reduce one narrow performance demand."
+      },
+      {
+        "question": "How will progress be reviewed?",
+        "options": [
+          "By counting every word",
+          "With examples of contributions and a follow-up meeting",
+          "Only at the next annual review",
+          "Through coworker rumors"
+        ],
+        "correctIndex": 1,
+        "explanation": "The plan uses behavior and timely support."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "replace; make feedback measurable and create safe contribution options instead of telling an employee to speak at seventy-percent certainty",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-work-07",
-    "title": "Planning the Office Farewell Party",
+    "title": "Planning Pak Anton’s Modest Office Farewell",
     "level": "A2",
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Yusuf", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [energetic] Yusuf, we only have four days before Pak Anton's last day, and we haven't planned anything for his farewell yet.",
-      "Yusuf: [surprised] Really? I thought someone from HR was organizing it already.",
-      "Nadia: [sighing] Apparently not. I asked this morning, and they said it wasn't officially their responsibility this time.",
-      "Yusuf: [determined] Okay, then let's plan it ourselves, because Pak Anton has worked here for twelve years. He deserves a proper send-off.",
-      "Nadia: [thoughtful] Agreed. Should we do something simple, like cake in the meeting room, or something bigger?",
-      "Yusuf: [considering] I think simple is better, since we don't have much time to organize a big event anyway.",
-      "Nadia: [nodding] That makes sense. I'll order a cake tomorrow morning, so it's ready in time.",
-      "Yusuf: [helpful] I can collect money from everyone for a gift, although some people might already be traveling this week.",
-      "Nadia: [thoughtful] True, but even a small collection is better than nothing. What gift are you thinking of?",
-      "Yusuf: [smiling] He mentioned once that he wants to start gardening after retirement, so maybe gardening tools?",
-      "Nadia: [pleased] That's actually perfect. He talks about his future garden almost every week during lunch.",
-      "Yusuf: [thoughtful] Should we also ask people to write short messages? He always says he'll miss the team the most.",
-      "Nadia: [warmly] Yes, let's create a card and pass it around the office quietly, so it's a surprise on his last day.",
-      "Yusuf: [practical] I'll handle the card, and you handle the cake and the gift, since you already started that.",
-      "Nadia: [confirming] Sounds good. What time should the party start on Friday?",
-      "Yusuf: [thoughtful] Maybe around four in the afternoon, right before people usually start leaving for the weekend.",
-      "Nadia: [agreeing] Perfect timing. I'll send a quiet message to everyone except Pak Anton, obviously.",
-      "Yusuf: [warmly] This is going to mean a lot to him, even if it's small. Twelve years deserves at least a proper goodbye.",
-      "Nadia: [smiling] Definitely. Let's meet again tomorrow morning to check everything is ready before Friday arrives."
+      "Nadia: [warmly] Yusuf, Pak Anton leaves on Friday. HR checked with him, and he is comfortable with a short farewell, not a large surprise.",
+      "Yusuf: Good. What did he say he would enjoy?",
+      "Nadia: Tea, simple food, and written messages from the team. He does not want a long speech or public video.",
+      "Yusuf: [thoughtful] Then we should respect that. How will food be arranged?",
+      "Nadia: We can order from an approved halal supplier and ask privately about allergies and other dietary needs. There should be suitable options, not only cake.",
+      "Yusuf: What about a gift? He often mentions gardening.",
+      "Nadia: [carefully] Let us not buy tools without asking. He may own them already, and some tools may not suit him. A general gift card from a suitable shop may give him choice.",
+      "Yusuf: We could collect money, but people may feel pressured at work.",
+      "Nadia: Contributions must be optional and private, with no minimum. The card is open to everyone even if they give no money.",
+      "Yusuf: [relieved] Good. Managers should not receive a list of who contributed.",
+      "Nadia: Agreed. We also need approval for the meeting-room time and clarity about whether company funds cover food.",
+      "Yusuf: If they do not, we keep the plan within voluntary personal contributions and do not use another project budget.",
+      "Nadia: [thoughtful] The gathering can begin at four and finish in thirty minutes so people with transport or care duties may leave on time.",
+      "Yusuf: Attendance should be optional too. We can send Pak Anton the written messages afterward.",
+      "Nadia: No music or embarrassing games. One short thank-you from the team, then time for appropriate conversation.",
+      "Yusuf: [encouraging] I will prepare an accessible digital card and a paper version. People can choose either format.",
+      "Nadia: I will confirm food, room access, and the approved budget. We should avoid sharing retirement details beyond what he has allowed.",
+      "Yusuf: That covers consent, privacy, food, time, and money.",
+      "Nadia: [sincere] A respectful goodbye should make him feel valued, not turn his last day into a performance he must manage.",
+      "Yusuf: Exactly. Simple, warm, and based on what he actually wants."
     ],
     "quiz": [
-      { "question": "How many days do Nadia and Yusuf have before Pak Anton's last day?", "options": ["One day", "Four days", "Two weeks", "One month"], "correctIndex": 1, "explanation": "Nadia says they only have four days before Pak Anton's last day." },
-      { "question": "How long has Pak Anton worked at the company?", "options": ["Two years", "Twelve years", "Five years", "Twenty years"], "correctIndex": 1, "explanation": "Yusuf mentions Pak Anton has worked at the company for twelve years." },
-      { "question": "What gift idea does Yusuf suggest?", "options": ["A watch", "Gardening tools", "A new phone", "A book"], "correctIndex": 1, "explanation": "Yusuf suggests gardening tools because Pak Anton wants to start gardening after retirement." },
-      { "question": "What does Nadia want to create in addition to cake and a gift?", "options": ["A photo album", "A card with short messages from the team", "A video", "A speech"], "correctIndex": 1, "explanation": "Nadia suggests creating a card and passing it around for people to write short messages." },
-      { "question": "What time do they plan to start the party on Friday?", "options": ["Nine in the morning", "Around four in the afternoon", "At noon", "After everyone leaves"], "correctIndex": 1, "explanation": "They plan to start the party around four in the afternoon, before people leave for the weekend." }
-    ]
+      {
+        "question": "How long has Pak Anton worked there?",
+        "options": [
+          "Four days",
+          "Thirty years",
+          "Twelve years",
+          "One month"
+        ],
+        "correctIndex": 2,
+        "explanation": "His service length explains the wish to acknowledge him."
+      },
+      {
+        "question": "What does Pak Anton not want?",
+        "options": [
+          "Written messages",
+          "Simple food",
+          "A long speech or public video",
+          "A short farewell"
+        ],
+        "correctIndex": 2,
+        "explanation": "His stated preferences define the event."
+      },
+      {
+        "question": "What gift gives him personal choice?",
+        "options": [
+          "Unchecked tools",
+          "A suitable gardening-shop gift card",
+          "An expensive watch",
+          "A public donation in his name"
+        ],
+        "correctIndex": 1,
+        "explanation": "The gift avoids assumptions about equipment."
+      },
+      {
+        "question": "How long should the gathering last?",
+        "options": [
+          "All afternoon",
+          "Four days",
+          "Until every worker speaks",
+          "About thirty minutes"
+        ],
+        "correctIndex": 3,
+        "explanation": "The schedule respects other duties."
+      },
+      {
+        "question": "What information should remain limited?",
+        "options": [
+          "Retirement details he has not allowed them to share",
+          "The approved start time",
+          "The halal supplier",
+          "The card formats"
+        ],
+        "correctIndex": 0,
+        "explanation": "A farewell does not remove privacy."
+      },
+      {
+        "question": "What does HR first check with Pak Anton?",
+        "options": [
+          "Which expensive gift he expects",
+          "Who should be forced to attend",
+          "Whether the event can be secret",
+          "Whether he wants a farewell and what kind feels comfortable"
+        ],
+        "correctIndex": 3,
+        "explanation": "A celebration should not ignore the person’s preference."
+      },
+      {
+        "question": "How does the gift collection work?",
+        "options": [
+          "It is optional, private, and has no suggested minimum",
+          "Every worker pays equally",
+          "Managers see the names of non-donors",
+          "It uses company expenses secretly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Voluntary giving avoids workplace pressure."
+      },
+      {
+        "question": "Why do they avoid gardening tools?",
+        "options": [
+          "Gardening is not useful",
+          "Gifts are never allowed",
+          "He may already own them and some tools may not suit his needs",
+          "The shop is closed"
+        ],
+        "correctIndex": 2,
+        "explanation": "A guessed hobby is not enough to choose personal equipment."
+      },
+      {
+        "question": "What food checks are needed?",
+        "options": [
+          "Only cake color",
+          "Halal source, allergies, dietary needs, and fair options",
+          "Employee salaries",
+          "The retirement date"
+        ],
+        "correctIndex": 1,
+        "explanation": "Inclusive hospitality needs verified details."
+      },
+      {
+        "question": "What makes the event modest?",
+        "options": [
+          "A surprise concert",
+          "A large unpaid workload",
+          "A short approved gathering, sincere messages, clear budget, and no wasteful display",
+          "A mandatory speech"
+        ],
+        "correctIndex": 2,
+        "explanation": "Warmth does not require extravagance."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "replace; make the farewell voluntary, consent-led, modest, inclusive, and free from pressure around money or diet",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-work-08",
+    "title": "The Meeting I Declined With an Alternative",
+    "level": "A2",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] A project manager invited me to a planning meeting scheduled during the only two hours I had reserved for finishing a required report.",
+      "Narrator: My first reaction was to accept. In our office, declining a meeting can feel like saying the topic is unimportant.",
+      "Narrator: [thoughtful] Then I read the agenda. Only one item needed my technical input, and the remaining discussion concerned another team.",
+      "Narrator: I wrote to the manager that I could not attend the full hour without risking the report deadline.",
+      "Narrator: [carefully] Instead of stopping there, I offered three alternatives: answer the technical question in writing, join the first fifteen minutes, or speak with her before lunch.",
+      "Narrator: She chose a short call before lunch. We solved the question in twelve minutes, and she copied the decision into the meeting notes.",
+      "Narrator: [reflective] During the main meeting, the team could continue without waiting for me. I finished the report on time.",
+      "Narrator: The experience taught me that protecting focused work does not require ignoring colleagues.",
+      "Narrator: [honestly] A useful decline explains the conflict briefly and offers an option that still serves the shared goal.",
+      "Narrator: I did not describe every task on my calendar or claim that my work was more important than theirs.",
+      "Narrator: [gently] I also checked that I truly was not needed for a decision. Sometimes attendance is part of the job, even when the timing is inconvenient.",
+      "Narrator: Afterward, the manager added “required decision-makers” beside each agenda item. Other invited people could decide whether their presence was useful.",
+      "Narrator: [encouraging] Our meeting attendance became smaller, and written updates became more common.",
+      "Narrator: Saying yes to every invitation had made me look available while quietly delaying promised work.",
+      "Narrator: [sincere] Now I respond based on purpose, role, and deadlines. A respectful no with a workable alternative can be more reliable than an automatic yes."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the meeting time create a problem?",
+        "options": [
+          "The office was closed",
+          "The meeting had no manager",
+          "The narrator was on holiday",
+          "It used protected report-writing time"
+        ],
+        "correctIndex": 3,
+        "explanation": "Attendance threatened another required deadline."
+      },
+      {
+        "question": "How much of the agenda needed his input?",
+        "options": [
+          "Every item",
+          "One item",
+          "No item at all",
+          "Twenty items"
+        ],
+        "correctIndex": 1,
+        "explanation": "His role was limited to one technical decision."
+      },
+      {
+        "question": "What alternatives did he offer?",
+        "options": [
+          "Written input, fifteen minutes, or an earlier call",
+          "Cancel the whole project",
+          "Ignore the invitation",
+          "Delay every deadline"
+        ],
+        "correctIndex": 0,
+        "explanation": "He protected work while remaining helpful."
+      },
+      {
+        "question": "What system change followed?",
+        "options": [
+          "Meetings lost all agendas",
+          "Everyone had to attend",
+          "Agendas named required decision-makers",
+          "Reports were canceled"
+        ],
+        "correctIndex": 2,
+        "explanation": "Clear roles helped people judge attendance."
+      },
+      {
+        "question": "What is the main lesson about declining a meeting?",
+        "options": [
+          "Every meeting must be accepted",
+          "Focused work matters more than teamwork",
+          "Declines need long personal explanations",
+          "A respectful decline can include a useful solution"
+        ],
+        "correctIndex": 3,
+        "explanation": "Purpose and alternatives make boundaries responsible."
+      },
+      {
+        "question": "Why does the narrator inspect the agenda?",
+        "options": [
+          "To prove the meeting is unimportant",
+          "To cancel the report",
+          "To judge another team",
+          "To learn whether attendance is truly required"
+        ],
+        "correctIndex": 3,
+        "explanation": "Purpose and role guide the response."
+      },
+      {
+        "question": "What makes the decline collaborative?",
+        "options": [
+          "It offers three ways to provide the needed technical input",
+          "It describes the full calendar",
+          "It ignores the manager",
+          "It asks others to miss deadlines"
+        ],
+        "correctIndex": 0,
+        "explanation": "The shared goal still receives support."
+      },
+      {
+        "question": "Why does the short call work?",
+        "options": [
+          "The main meeting is canceled",
+          "They solve the specific question and record the decision",
+          "The narrator takes control",
+          "No notes are needed"
+        ],
+        "correctIndex": 1,
+        "explanation": "A focused alternative preserves coordination."
+      },
+      {
+        "question": "When might declining be inappropriate?",
+        "options": [
+          "Whenever focused work is planned",
+          "If a written answer exists",
+          "When the person is genuinely needed for a required decision",
+          "When the agenda is clear"
+        ],
+        "correctIndex": 2,
+        "explanation": "Boundary-setting still recognizes job duties."
+      },
+      {
+        "question": "What team change reduces unnecessary attendance?",
+        "options": [
+          "Every invitation becomes optional",
+          "Meetings have no owners",
+          "Reports are delayed",
+          "Agendas identify required decision-makers"
+        ],
+        "correctIndex": 3,
+        "explanation": "Role clarity lets invitees judge usefully."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "keep; strong boundary-setting case links role, agenda, focused work, alternatives, and honest availability",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-work-09",
+    "title": "Training the Person Who Would Replace Me",
+    "level": "A2",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] When I learned that I would move to another department, my manager asked me to train Rafi to handle the weekly inventory report.",
+      "Narrator: At first, I planned to show him the spreadsheet once and send my old notes. I had done the task for two years and forgot how many steps were not written down.",
+      "Narrator: [thoughtful] During our first session, Rafi asked why one supplier's numbers were always checked separately. The reason existed only in my memory.",
+      "Narrator: We created a clearer guide together. It included the source files, order of checks, common errors, deadline, and person to contact for unusual cases.",
+      "Narrator: [carefully] I demonstrated one report while explaining my decisions. The next week, Rafi completed it while I watched silently.",
+      "Narrator: He made one mistake with returned items. Instead of taking the keyboard, I asked him to trace the total back to the source.",
+      "Narrator: [reflective] He found the problem and added a warning to the guide in his own words.",
+      "Narrator: For the third report, I reviewed only the final figures and questions. Rafi no longer needed me beside him.",
+      "Narrator: [honestly] We also asked another coworker to follow the guide. She found two instructions that were obvious to us but unclear to a new reader.",
+      "Narrator: Before my transfer, Rafi handled the full cycle and sent the report on time.",
+      "Narrator: [gently] Training did not mean proving that the task was difficult or showing every shortcut at once. It meant making another person safely independent.",
+      "Narrator: I kept access rules in place. Rafi received the accounts required for his role; I did not share my personal password.",
+      "Narrator: [encouraging] The manager stored the guide in a team folder with an owner and review date, so it would not become an old forgotten file.",
+      "Narrator: On my first day in the new department, nobody called me about inventory. That silence was evidence of a successful handover.",
+      "Narrator: [sincere] Good knowledge transfer leaves a process stronger than one person's memory."
+    ],
+    "quiz": [
+      {
+        "question": "What task would Rafi take over?",
+        "options": [
+          "The weekly inventory report",
+          "Hiring new staff",
+          "Office cleaning",
+          "Customer travel"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator was transferring a repeated reporting duty."
+      },
+      {
+        "question": "What weakness appeared in the old process?",
+        "options": [
+          "Important reasons existed only in memory",
+          "Every step was already perfect",
+          "No spreadsheet existed",
+          "Rafi refused training"
+        ],
+        "correctIndex": 0,
+        "explanation": "Two years of habit had hidden unwritten knowledge."
+      },
+      {
+        "question": "How did Rafi learn after the demonstration?",
+        "options": [
+          "He only read old notes",
+          "He copied the final number",
+          "He skipped a week",
+          "He completed a report while the narrator observed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Practice gradually shifted responsibility."
+      },
+      {
+        "question": "Why did another coworker test the guide?",
+        "options": [
+          "To replace Rafi",
+          "To change every total",
+          "To receive a password",
+          "To find instructions unclear to new readers"
+        ],
+        "correctIndex": 3,
+        "explanation": "A fresh reader revealed hidden assumptions."
+      },
+      {
+        "question": "What shows a successful handover?",
+        "options": [
+          "The old worker stays necessary forever",
+          "The process works independently and safely",
+          "Passwords are shared",
+          "Only one person understands the task"
+        ],
+        "correctIndex": 1,
+        "explanation": "Strong transfer reduces dependence on personal memory."
+      },
+      {
+        "question": "What hidden weakness does Rafi’s question reveal?",
+        "options": [
+          "The spreadsheet has no figures",
+          "Rafi lacks system access",
+          "An important supplier check exists only in one person’s memory",
+          "The deadline is unknown to everyone"
+        ],
+        "correctIndex": 2,
+        "explanation": "Undocumented knowledge creates dependence."
+      },
+      {
+        "question": "Why does the narrator avoid taking the keyboard?",
+        "options": [
+          "Tracing the error helps Rafi learn the process independently",
+          "The keyboard is broken",
+          "Returned items are unimportant",
+          "Only managers may type"
+        ],
+        "correctIndex": 0,
+        "explanation": "Guided practice builds diagnostic skill."
+      },
+      {
+        "question": "What does the third-party test reveal?",
+        "options": [
+          "The report total is always wrong",
+          "Instructions obvious to the writers can confuse a new reader",
+          "Rafi cannot work alone",
+          "The guide must be private"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fresh users expose assumptions."
+      },
+      {
+        "question": "Why not share a personal password?",
+        "options": [
+          "Rafi already knows it",
+          "Passwords slow training",
+          "Role-based access should be granted through proper accounts",
+          "The guide contains the password"
+        ],
+        "correctIndex": 2,
+        "explanation": "Handover must preserve security."
+      },
+      {
+        "question": "What keeps the guide useful later?",
+        "options": [
+          "A team owner and scheduled review date",
+          "The narrator’s memory",
+          "A printed copy at home",
+          "No future changes"
+        ],
+        "correctIndex": 0,
+        "explanation": "Documentation needs maintenance responsibility."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "keep; excellent knowledge-transfer story uses demonstration, practice, feedback, least privilege, ownership, and review dates",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-work-10",
+    "title": "Correcting the Customer Without Winning an Argument",
+    "level": "A2",
+    "themeId": "work",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Laila",
+        "gender": "female"
+      },
+      {
+        "name": "Mr. Budi",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Laila: [warmly] Ms. Laila, your invoice charges us for delivery, but your salesperson promised free delivery.",
+      "Mr. Budi: Thank you for telling me. Do you have the quotation or message where that was stated?",
+      "Laila: [thoughtful] Yes, here is the email. It says delivery is included for orders above ten boxes.",
+      "Mr. Budi: I see that. Your order has eight boxes, so the automatic invoice added the normal fee.",
+      "Laila: [carefully] The salesperson knew we were ordering eight. He still told me there would be no charge.",
+      "Mr. Budi: Let me check the earlier message in the thread. Please give me a moment.",
+      "Laila: [reflective] Of course. I do not want to pay a fee that appeared after we agreed.",
+      "Mr. Budi: I found his message. You are correct: he specifically offered free delivery for this first order.",
+      "Laila: [honestly] Then the invoice should be changed.",
+      "Mr. Budi: Yes. I will remove the fee and send a corrected invoice today. I apologize for the inconsistency.",
+      "Laila: [gently] Thank you. I was worried you would only repeat the general policy.",
+      "Mr. Budi: The policy explains why the system added the fee, but it does not cancel a written promise made to you.",
+      "Laila: [encouraging] How will we avoid this on the next order?",
+      "Mr. Budi: I will add the standard threshold to your account note. Any exception must also appear clearly in the quotation before approval.",
+      "Laila: [sincere] That is fair. We may order more than ten boxes next time anyway.",
+      "Mr. Budi: I will also speak privately with the salesperson so special offers are entered into the billing system.",
+      "Laila: I appreciate that you checked the evidence instead of treating my complaint as an attack.",
+      "Mr. Budi: And I appreciate that you brought the email. The goal is an accurate invoice, not winning an argument.",
+      "Laila: Please send the correction to both me and our finance address.",
+      "Mr. Budi: I will. You should receive it within one hour, with the original invoice marked as canceled."
+    ],
+    "quiz": [
+      {
+        "question": "What fee does Mr. Budi question?",
+        "options": [
+          "A delivery charge",
+          "A tax refund",
+          "A product discount",
+          "A late-payment fee"
+        ],
+        "correctIndex": 0,
+        "explanation": "He expected delivery to be free."
+      },
+      {
+        "question": "What is the normal free-delivery rule?",
+        "options": [
+          "Every first order",
+          "Orders above ten boxes",
+          "Orders with eight boxes",
+          "Only international orders"
+        ],
+        "correctIndex": 1,
+        "explanation": "The automated invoice followed a quantity threshold."
+      },
+      {
+        "question": "What evidence changes the result?",
+        "options": [
+          "A verbal rumor",
+          "A salesperson’s written promise",
+          "Another customer’s invoice",
+          "No evidence"
+        ],
+        "correctIndex": 1,
+        "explanation": "The email clearly offered an exception."
+      },
+      {
+        "question": "How will future exceptions be handled?",
+        "options": [
+          "Remembered privately",
+          "Added after invoicing",
+          "Never allowed",
+          "Written in quotations and billing records"
+        ],
+        "correctIndex": 3,
+        "explanation": "Clear records align sales and billing."
+      },
+      {
+        "question": "What approach resolves the complaint?",
+        "options": [
+          "Repeat policy only",
+          "Argue until the customer leaves",
+          "Check evidence and correct the invoice without defensiveness",
+          "Ignore the written promise"
+        ],
+        "correctIndex": 2,
+        "explanation": "Accuracy is treated as the shared goal."
+      },
+      {
+        "question": "Why does the normal system add delivery?",
+        "options": [
+          "The customer requests faster shipping",
+          "The salesperson cancels the order",
+          "The order has eight boxes, below the standard threshold",
+          "The invoice has no items"
+        ],
+        "correctIndex": 2,
+        "explanation": "The rule explains the automated result."
+      },
+      {
+        "question": "What changes the correct outcome?",
+        "options": [
+          "Laila speaks firmly",
+          "The next order may be larger",
+          "A written offer specifically promises free delivery for this order",
+          "The salesperson is unavailable"
+        ],
+        "correctIndex": 2,
+        "explanation": "Case-specific evidence overrides the general assumption."
+      },
+      {
+        "question": "Why is the policy still useful?",
+        "options": [
+          "It proves the customer is wrong",
+          "It replaces the quotation",
+          "It explains the system behavior even though it cannot cancel the exception",
+          "It prevents correction"
+        ],
+        "correctIndex": 2,
+        "explanation": "A cause and a contractual result can differ."
+      },
+      {
+        "question": "How will the company prevent repetition?",
+        "options": [
+          "Record standard thresholds and approved exceptions in quotation and billing systems",
+          "Ask customers to remember every promise",
+          "Remove all delivery fees",
+          "Avoid written messages"
+        ],
+        "correctIndex": 0,
+        "explanation": "Aligned records reduce billing conflict."
+      },
+      {
+        "question": "What closes the correction clearly?",
+        "options": [
+          "A verbal promise alone",
+          "The fee is hidden elsewhere",
+          "The salesperson wins the argument",
+          "A new invoice is sent and the original is marked canceled"
+        ],
+        "correctIndex": 3,
+        "explanation": "Document status prevents duplicate or uncertain payment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "work",
+      "scriptDecision": "keep; strong complaint-resolution dialogue distinguishes policy from a documented exception and repairs both invoice and process",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

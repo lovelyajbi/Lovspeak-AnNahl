@@ -6,29 +6,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] Of all the griefs in the lives of the prophets, few are rendered with the restraint of Nuh calling out to his son as the floodwaters rose around them.",
-      "Narrator: [reflective] For nine hundred and fifty years, by tradition, Nuh had appealed to a people who preferred inherited certainty to uncomfortable scrutiny, and almost none of them relented.",
-      "Narrator: [somber] His son, watching the ark ride the swelling water, chose instead to climb toward a mountain, convinced that elevation alone would keep him beyond the reach of what was coming.",
-      "Narrator: [pained] Nuh, still bound by paternal instinct even in that catastrophic moment, called out, urging him to board rather than trust in a height offering no genuine sanctuary.",
-      "Narrator: [firm] The son's reply is the line scholars keep returning to: he would seek refuge on a mountain that would protect him from the water, as though geography could substitute for conviction.",
-      "Narrator: [heavy] Nuh answered that nothing would shield anyone that day except mercy itself, and moments later a wave severed them from one another, father from son, permanently.",
-      "Narrator: [reflective] Later, grieving and disoriented, Nuh appealed to his Lord, noting that his son was, after all, of his own family, as though kinship alone might reopen the matter.",
-      "Narrator: [gentle] The response was not a rebuke exactly, but a recalibration: lineage confers no automatic righteousness, and the bond he was invoking wasn't the one that ultimately mattered.",
-      "Narrator: [thoughtful] What I find arresting isn't the drowning itself, but this quieter epilogue, where even a prophet needed to be taught that love and correctness aren't interchangeable currencies.",
-      "Narrator: [warm] Nuh accepted the correction without protest, asking forgiveness for a request born of anguish rather than defiance, instructive about how grief can blur our clearest convictions.",
-      "Narrator: [reflective] We tend to imagine faith as transmitted along bloodlines, inherited the way a name or a house might be, yet this episode insists otherwise, quietly but unambiguously.",
-      "Narrator: [warm] Conviction has to be climbed toward individually, and no vessel, however righteous its builder, can carry a passenger who insists on his own private mountain."
+      "Narrator: [thoughtful] Of all the griefs in the lives of the prophets, few are rendered with the restraint of Nuh calling out to his son as the floodwaters rose around them.",
+      "Narrator: For nine hundred and fifty years, by tradition, Nuh had appealed to a people who preferred inherited certainty to uncomfortable scrutiny, and almost none of them relented.",
+      "Narrator: [carefully] His son, watching the ark ride the swelling water, chose instead to climb toward a mountain, convinced that elevation alone would keep him beyond the reach of what was coming.",
+      "Narrator: Nuh, still bound by paternal instinct even in that catastrophic moment, called out, urging him to board rather than trust in a height offering no genuine sanctuary.",
+      "Narrator: [reflective] The son's reply is the line scholars keep returning to: he would seek refuge on a mountain that would protect him from the water, as though geography could substitute for conviction.",
+      "Narrator: Nuh answered that nothing would shield anyone that day except mercy itself, and moments later a wave severed them from one another, father from son, permanently.",
+      "Narrator: [honestly] Later, grieving and disoriented, Nuh appealed to his Lord, noting that his son was, after all, of his own family, as though kinship alone might reopen the matter.",
+      "Narrator: The response was not a rebuke exactly, but a recalibration: lineage confers no automatic righteousness, and the bond he was invoking wasn't the one that ultimately mattered.",
+      "Narrator: [gently] What I find arresting isn't the drowning itself, but this quieter epilogue, where even a prophet needed to be taught that love and correctness aren't interchangeable currencies.",
+      "Narrator: Nuh accepted the correction without protest, asking forgiveness for a request born of anguish rather than defiance, instructive about how grief can blur our clearest convictions.",
+      "Narrator: [calmly] We tend to imagine faith as transmitted along bloodlines, inherited the way a name or a house might be, yet this episode insists otherwise, quietly but unambiguously.",
+      "Narrator: Conviction has to be climbed toward individually, and no vessel, however righteous its builder, can carry a passenger who insists on his own private mountain."
     ],
     "quiz": [
-      { "question": "What had Nuh spent centuries doing before the flood?", "options": ["Building the ark in secret", "Appealing to a people who preferred inherited certainty to scrutiny", "Traveling to warn distant nations", "Recording a written scripture"], "correctIndex": 1, "explanation": "Nuh appealed to a people who preferred inherited certainty to uncomfortable scrutiny for nine hundred and fifty years." },
-      { "question": "Why did Nuh's son refuse to board the ark?", "options": ["He did not believe the flood was real", "He believed a mountain would protect him from the water", "He was too far away to reach it", "He wanted to save others first"], "correctIndex": 1, "explanation": "The son said he would seek refuge on a mountain that would protect him from the water." },
-      { "question": "What did Nuh say would actually offer protection that day?", "options": ["Strength", "Mercy itself", "Wealth", "Distance from the shore"], "correctIndex": 1, "explanation": "Nuh answered that nothing would shield anyone that day except mercy itself." },
-      { "question": "What correction did Nuh receive after appealing on the basis of family?", "options": ["That he should have built a bigger ark", "That lineage confers no automatic righteousness", "That he had misunderstood the flood's timing", "That his son was actually safe"], "correctIndex": 1, "explanation": "The response was that lineage confers no automatic righteousness, and the bond he invoked wasn't the one that mattered." },
-      { "question": "What broader idea does the narrator draw from the episode?", "options": ["Faith is inherited automatically along bloodlines", "Conviction has to be climbed toward individually, not inherited", "Prophets are never corrected", "Family bonds matter more than belief"], "correctIndex": 1, "explanation": "The narrator concludes conviction has to be climbed toward individually, and no vessel can carry a passenger insisting on his own mountain." }
-    ]
+      {
+        "question": "What had Nuh spent centuries doing before the flood?",
+        "options": [
+          "Appealing to a people who preferred inherited certainty to scrutiny",
+          "Building the ark in secret",
+          "Traveling to warn distant nations",
+          "Recording a written scripture"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nuh appealed to a people who preferred inherited certainty to uncomfortable scrutiny for nine hundred and fifty years."
+      },
+      {
+        "question": "Why did Nuh's son refuse to board the ark?",
+        "options": [
+          "He did not believe the flood was real",
+          "He was too far away to reach it",
+          "He wanted to save others first",
+          "He believed a mountain would protect him from the water"
+        ],
+        "correctIndex": 3,
+        "explanation": "The son said he would seek refuge on a mountain that would protect him from the water."
+      },
+      {
+        "question": "What did Nuh say would actually offer protection that day?",
+        "options": [
+          "Strength",
+          "Mercy itself",
+          "Wealth",
+          "Distance from the shore"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nuh answered that nothing would shield anyone that day except mercy itself."
+      },
+      {
+        "question": "What correction did Nuh receive after appealing on the basis of family?",
+        "options": [
+          "That lineage confers no automatic righteousness",
+          "That he should have built a bigger ark",
+          "That he had misunderstood the flood's timing",
+          "That his son was actually safe"
+        ],
+        "correctIndex": 0,
+        "explanation": "The response was that lineage confers no automatic righteousness, and the bond he invoked wasn't the one that mattered."
+      },
+      {
+        "question": "What broader idea does the narrator draw from the episode?",
+        "options": [
+          "Faith is inherited automatically along bloodlines",
+          "Prophets are never corrected",
+          "Family bonds matter more than belief",
+          "Conviction has to be climbed toward individually, not inherited"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator concludes conviction has to be climbed toward individually, and no vessel can carry a passenger insisting on his own mountain."
+      },
+      {
+        "question": "How does the account contrast the son's mountain with Nuh's warning?",
+        "options": [
+          "He openly names his hardship while appealing to Allah's mercy.",
+          "Acknowledged limitation coexists with responsibility to confront power.",
+          "Physical elevation offers no refuge when divine mercy alone determines safety.",
+          "Ibrahim tells Ismail the dream and asks for his response."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Physical elevation offers no refuge when divine mercy alone determines safety."
+      },
+      {
+        "question": "What interpretive error appears in Nuh's appeal concerning his son?",
+        "options": [
+          "Suffering is voiced honestly without becoming resentment toward Allah.",
+          "Natural kinship is treated as if it guaranteed spiritual belonging.",
+          "He exposes the violent regime that made his upbringing necessary.",
+          "They emphasise willing obedience expressed in the reported reply."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Natural kinship is treated as if it guaranteed spiritual belonging."
+      },
+      {
+        "question": "How does the divine response recalibrate the meaning of family?",
+        "options": [
+          "Ayyub's wife is said to have sold her hair for food.",
+          "He cannot answer the claim, so he attacks the speaker's credibility.",
+          "Lineage cannot substitute for a person's own righteousness.",
+          "Attachment to a beloved son must not displace devotion to Allah."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Lineage cannot substitute for a person's own righteousness."
+      },
+      {
+        "question": "Why is Nuh's acceptance of correction central to the narrator's interpretation?",
+        "options": [
+          "Prophetic grief is acknowledged without making anguished judgment infallible.",
+          "Renewed blessing does not erase the history already endured.",
+          "Coercion replaces reasoning once his argument has failed.",
+          "Willingness is already established before the sacrifice is prevented."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Prophetic grief is acknowledged without making anguished judgment infallible."
+      },
+      {
+        "question": "What application remains justified without imitating any prophetic voice?",
+        "options": [
+          "Patience permits honest appeal while refusing surrender to bitterness.",
+          "Clear evidence can matter more than polished delivery when challenging power.",
+          "Good attachments should be examined when they crowd out higher obligations.",
+          "Love should not make us confuse personal attachment with moral correctness."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Love should not make us confuse personal attachment with moral correctness."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-prophets-02",
@@ -37,32 +151,149 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Ilham", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Ilham",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [pensive] I keep seeing Ayyub praised for his patience, and I understand why, but something about that framing has started to feel a little too tidy for me.",
-      "Ilham: [curious] Tidy how? He lost his wealth, his children, and his health in fairly rapid succession, and he still didn't curse his circumstances. That seems genuinely remarkable.",
-      "Nadia: [thoughtful] It is remarkable, but patience often gets flattened into passive endurance, as though he simply absorbed suffering silently for years without any interior friction whatsoever.",
-      "Ilham: [considering] That's fair, actually. He did eventually pray, quite directly, that hardship had touched him and that Allah was the most merciful of the merciful.",
-      "Nadia: [pointed] Exactly, and that phrasing isn't stoic resignation. It's an active appeal, almost a negotiation, made by someone who hadn't given up on being heard.",
-      "Ilham: [reflective] So you're saying his patience wasn't the absence of complaint, but the refusal to let complaint curdle into despair or resentment toward his Lord.",
-      "Nadia: [nodding] Precisely that distinction. He voiced his suffering honestly, which strikes me as far more demanding than simply staying quiet and waiting it out.",
-      "Ilham: [thoughtful] There's also his wife in that story, often mentioned only briefly, who stayed with him through decades of hardship despite having every reasonable excuse to leave.",
-      "Nadia: [warm] Tradition suggests she eventually sold her own hair to feed them, which tells you something about the texture of that companionship under duress.",
-      "Ilham: [reflective] And when his health was finally restored, he was told to strike the ground, and a spring emerged for washing and drinking, restoring him almost instantly.",
-      "Nadia: [thoughtful] What gets me is that his fortune and family were then described as restored and doubled, yet nothing in the story suggests the earlier losses were erased or forgotten.",
-      "Ilham: [agreeing] Right, restoration isn't the same as reversal. He carried what had happened; he simply wasn't destroyed by carrying it.",
-      "Nadia: [warm] That's probably the version of patience worth teaching, honestly, not stillness under pressure, but honesty under pressure that still refuses to collapse into bitterness.",
-      "Ilham: [smiling] I think you've just improved on every sermon I've ever heard about him, and I'm not even joking."
+      "Nadia: [thoughtful] I keep seeing Ayyub praised for his patience, and I understand why, but something about that framing has started to feel a little too tidy for me.",
+      "Ilham: Tidy how? He lost his wealth, his children, and his health in fairly rapid succession, and he still didn't curse his circumstances. That seems genuinely remarkable.",
+      "Nadia: [carefully] It is remarkable, but patience often gets flattened into passive endurance, as though he simply absorbed suffering silently for years without any interior friction whatsoever.",
+      "Ilham: That's fair, actually. He did eventually pray, quite directly, that hardship had touched him and that Allah was the most merciful of the merciful.",
+      "Nadia: [reflective] Exactly, and that phrasing isn't stoic resignation. It's an active appeal, almost a negotiation, made by someone who hadn't given up on being heard.",
+      "Ilham: So you're saying his patience wasn't the absence of complaint, but the refusal to let complaint curdle into despair or resentment toward his Lord.",
+      "Nadia: [honestly] Precisely that distinction. He voiced his suffering honestly, which strikes me as far more demanding than simply staying quiet and waiting it out.",
+      "Ilham: There's also his wife in that story, often mentioned only briefly, who stayed with him through decades of hardship despite having every reasonable excuse to leave.",
+      "Nadia: [gently] Tradition suggests she eventually sold her own hair to feed them, which tells you something about the texture of that companionship under duress.",
+      "Ilham: And when his health was finally restored, he was told to strike the ground, and a spring emerged for washing and drinking, restoring him almost instantly.",
+      "Nadia: [calmly] What gets me is that his fortune and family were then described as restored and doubled, yet nothing in the story suggests the earlier losses were erased or forgotten.",
+      "Ilham: Right, restoration isn't the same as reversal. He carried what had happened; he simply wasn't destroyed by carrying it.",
+      "Nadia: [encouraging] That's probably the version of patience worth teaching, honestly, not stillness under pressure, but honesty under pressure that still refuses to collapse into bitterness.",
+      "Ilham: I think you've just improved on every sermon I've ever heard about him, and I'm not even joking."
     ],
     "quiz": [
-      { "question": "What does Nadia find too tidy about the usual praise of Ayyub?", "options": ["That he never suffered at all", "That patience gets flattened into passive, silent endurance", "That his wealth was never actually lost", "That the story lacks detail"], "correctIndex": 1, "explanation": "Nadia says patience often gets flattened into passive endurance, as though he absorbed suffering silently without interior friction." },
-      { "question": "How does Nadia interpret Ayyub's prayer about his suffering?", "options": ["As a curse against his fate", "As an active appeal, not stoic resignation", "As proof he had given up", "As a formal complaint to his family"], "correctIndex": 1, "explanation": "Nadia says the prayer isn't stoic resignation but an active appeal from someone who hadn't given up on being heard." },
-      { "question": "What did tradition say about Ayyub's wife?", "options": ["She left him early on", "She stayed through decades of hardship and reportedly sold her own hair to feed them", "She was wealthier than he was", "She never appears in the story"], "correctIndex": 1, "explanation": "She stayed with him through decades of hardship and, tradition suggests, sold her own hair to feed them." },
-      { "question": "What happened when Ayyub struck the ground as instructed?", "options": ["Nothing happened", "A spring emerged for washing and drinking, restoring his health", "The ground opened into a cave", "He found buried treasure"], "correctIndex": 1, "explanation": "He was told to strike the ground, and a spring emerged for washing and drinking, restoring him almost instantly." },
-      { "question": "What definition of patience do Nadia and Ilham arrive at together?", "options": ["Stillness under pressure with no complaint", "Honesty under pressure that still refuses to collapse into bitterness", "Complete silence about one's suffering", "Waiting without any prayer at all"], "correctIndex": 1, "explanation": "They conclude patience is honesty under pressure that still refuses to collapse into bitterness, not mere stillness." }
-    ]
+      {
+        "question": "What does Nadia find too tidy about the usual praise of Ayyub?",
+        "options": [
+          "That he never suffered at all",
+          "That his wealth was never actually lost",
+          "That the story lacks detail",
+          "That patience gets flattened into passive, silent endurance"
+        ],
+        "correctIndex": 3,
+        "explanation": "Nadia says patience often gets flattened into passive endurance, as though he absorbed suffering silently without interior friction."
+      },
+      {
+        "question": "How does Nadia interpret Ayyub's prayer about his suffering?",
+        "options": [
+          "As an active appeal, not stoic resignation",
+          "As a curse against his fate",
+          "As proof he had given up",
+          "As a formal complaint to his family"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nadia says the prayer isn't stoic resignation but an active appeal from someone who hadn't given up on being heard."
+      },
+      {
+        "question": "What did tradition say about Ayyub's wife?",
+        "options": [
+          "She stayed through decades of hardship and reportedly sold her own hair to feed them",
+          "She left him early on",
+          "She was wealthier than he was",
+          "She never appears in the story"
+        ],
+        "correctIndex": 0,
+        "explanation": "She stayed with him through decades of hardship and, tradition suggests, sold her own hair to feed them."
+      },
+      {
+        "question": "What happened when Ayyub struck the ground as instructed?",
+        "options": [
+          "A spring emerged for washing and drinking, restoring his health",
+          "Nothing happened",
+          "The ground opened into a cave",
+          "He found buried treasure"
+        ],
+        "correctIndex": 0,
+        "explanation": "He was told to strike the ground, and a spring emerged for washing and drinking, restoring him almost instantly."
+      },
+      {
+        "question": "What definition of patience do Nadia and Ilham arrive at together?",
+        "options": [
+          "Stillness under pressure with no complaint",
+          "Complete silence about one's suffering",
+          "Honesty under pressure that still refuses to collapse into bitterness",
+          "Waiting without any prayer at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "They conclude patience is honesty under pressure that still refuses to collapse into bitterness, not mere stillness."
+      },
+      {
+        "question": "Which textual feature complicates an entirely silent model of Ayyub's patience?",
+        "options": [
+          "Acknowledged limitation coexists with responsibility to confront power.",
+          "He openly names his hardship while appealing to Allah's mercy.",
+          "Ibrahim tells Ismail the dream and asks for his response.",
+          "He leaves his mission without explicit permission after frustration."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: He openly names his hardship while appealing to Allah's mercy."
+      },
+      {
+        "question": "How do the students distinguish complaint from despair?",
+        "options": [
+          "He exposes the violent regime that made his upbringing necessary.",
+          "Suffering is voiced honestly without becoming resentment toward Allah.",
+          "They emphasise willing obedience expressed in the reported reply.",
+          "It affirms Allah and admits wrongdoing without self-defence."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Suffering is voiced honestly without becoming resentment toward Allah."
+      },
+      {
+        "question": "Which detail is explicitly introduced as a later traditional report?",
+        "options": [
+          "He cannot answer the claim, so he attacks the speaker's credibility.",
+          "Attachment to a beloved son must not displace devotion to Allah.",
+          "Ayyub's wife is said to have sold her hair for food.",
+          "The sequence links truthful acknowledgment with deliverance from distress."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Ayyub's wife is said to have sold her hair for food."
+      },
+      {
+        "question": "Why is restoration not described as a simple reversal of loss?",
+        "options": [
+          "Coercion replaces reasoning once his argument has failed.",
+          "Willingness is already established before the sacrifice is prevented.",
+          "Others using Yunus's invocation in anguish will also be answered.",
+          "Renewed blessing does not erase the history already endured."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Renewed blessing does not erase the history already endured."
+      },
+      {
+        "question": "What teaching claim do the students ultimately defend?",
+        "options": [
+          "Clear evidence can matter more than polished delivery when challenging power.",
+          "Patience permits honest appeal while refusing surrender to bitterness.",
+          "Good attachments should be examined when they crowd out higher obligations.",
+          "Accountability begins with specific admission rather than a polished excuse."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Patience permits honest appeal while refusing surrender to bitterness."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-prophets-03",
@@ -71,29 +302,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] It's worth pausing on the fact that Musa, before confronting Pharaoh, confessed to a stammer and asked for his brother Harun to accompany him as a clearer speaker.",
-      "Narrator: [reflective] That's an unusual admission for someone about to challenge the most entrenched authority of his age, and it complicates any tidy image of prophetic confidence projected backward onto him.",
-      "Narrator: [firm] Yet when the confrontation arrived, what carried the argument wasn't polish, but a relentless clarity that Pharaoh, for all his theatrical command of language, couldn't actually answer.",
-      "Narrator: [dry] Pharaoh's opening gambit was almost comic in retrospect: he reminded Musa that he'd been raised in his own household as a child, as if gratitude alone should silence any grievance.",
-      "Narrator: [pointed] Musa didn't deny the debt; he simply noted that this upbringing occurred precisely because Pharaoh's regime was busy slaughtering infants, which undercuts the moral leverage being claimed.",
-      "Narrator: [reflective] Pharaoh then pivoted, as cornered rulers often do, toward interrogating Musa's authority rather than his argument, demanding to know exactly who this Lord of the worlds was.",
-      "Narrator: [measured] Musa answered with something deliberately unspectacular: the Lord of the heavens and earth and everything between them, if only Pharaoh possessed the certainty to recognize it.",
-      "Narrator: [thoughtful] Frustrated by an answer he couldn't dismantle, Pharaoh resorted to accusing Musa of madness in front of his court, the oldest maneuver available to power when reason has failed it.",
-      "Narrator: [firm] Musa pressed further, describing a Lord of the east and the west and everything they contain, expanding the claim rather than retreating from ridicule, which visibly unsettled the room.",
-      "Narrator: [somber] Unable to win on argument, Pharaoh eventually threatened imprisonment outright, the last resort of someone who has run out of everything except coercion.",
-      "Narrator: [warm] What strikes me, reading this centuries later, is how little the shape of that exchange has dated: intimidation dressed as reasoning, madness alleged wherever logic proves insufficient.",
-      "Narrator: [thoughtful] Musa's stammer never disappears from the account, a reminder that conviction doesn't require eloquence so much as an unwillingness to concede a truth once it's been seen clearly."
+      "Narrator: That's an unusual admission for someone about to challenge the most entrenched authority of his age, and it complicates any tidy image of prophetic confidence projected backward onto him.",
+      "Narrator: [carefully] Yet when the confrontation arrived, what carried the argument wasn't polish, but a relentless clarity that Pharaoh, for all his theatrical command of language, couldn't actually answer.",
+      "Narrator: Pharaoh's opening gambit was almost comic in retrospect: he reminded Musa that he'd been raised in his own household as a child, as if gratitude alone should silence any grievance.",
+      "Narrator: [reflective] Musa didn't deny the debt; he simply noted that this upbringing occurred precisely because Pharaoh's regime was busy slaughtering infants, which undercuts the moral leverage being claimed.",
+      "Narrator: Pharaoh then pivoted, as cornered rulers often do, toward interrogating Musa's authority rather than his argument, demanding to know exactly who this Lord of the worlds was.",
+      "Narrator: [honestly] Musa answered with something deliberately unspectacular: the Lord of the heavens and earth and everything between them, if only Pharaoh possessed the certainty to recognize it.",
+      "Narrator: Frustrated by an answer he couldn't dismantle, Pharaoh resorted to accusing Musa of madness in front of his court, the oldest maneuver available to power when reason has failed it.",
+      "Narrator: [gently] Musa pressed further, describing a Lord of the east and the west and everything they contain, expanding the claim rather than retreating from ridicule, which visibly unsettled the room.",
+      "Narrator: Unable to win on argument, Pharaoh eventually threatened imprisonment outright, the last resort of someone who has run out of everything except coercion.",
+      "Narrator: [calmly] What strikes me, reading this centuries later, is how little the shape of that exchange has dated: intimidation dressed as reasoning, madness alleged wherever logic proves insufficient.",
+      "Narrator: Musa's stammer never disappears from the account, a reminder that conviction doesn't require eloquence so much as an unwillingness to concede a truth once it's been seen clearly."
     ],
     "quiz": [
-      { "question": "What did Musa confess before confronting Pharaoh?", "options": ["That he feared death", "That he stammered and asked for Harun to accompany him as a clearer speaker", "That he had never met Pharaoh before", "That he doubted his own message"], "correctIndex": 1, "explanation": "Musa confessed to a stammer and asked explicitly for his brother Harun to accompany him as a clearer speaker." },
-      { "question": "What was Pharaoh's opening argument against Musa?", "options": ["That Musa had no proof", "That Musa had been raised in his own household, implying a debt of gratitude", "That Musa was a foreigner", "That Musa's message contradicted itself"], "correctIndex": 1, "explanation": "Pharaoh reminded Musa that he had been raised in his own household as a child, as if gratitude should silence any grievance." },
-      { "question": "How did Musa respond to that claim about his upbringing?", "options": ["He apologized for his ingratitude", "He noted the upbringing occurred because Pharaoh's regime was slaughtering infants", "He denied being raised there", "He agreed Pharaoh deserved loyalty"], "correctIndex": 1, "explanation": "Musa noted that his upbringing occurred precisely because Pharaoh's regime was busy slaughtering infants, undercutting the moral leverage claimed." },
-      { "question": "What did Pharaoh do when he could not dismantle Musa's answer about the Lord of the worlds?", "options": ["He accepted the argument", "He accused Musa of madness in front of his court", "He asked for more evidence calmly", "He left the room"], "correctIndex": 1, "explanation": "Frustrated by an answer he couldn't dismantle, Pharaoh accused Musa of madness in front of his court." },
-      { "question": "What does the narrator suggest Musa's persistent stammer represents in the account?", "options": ["A flaw that undermined his mission", "A reminder that conviction doesn't require eloquence, only refusal to concede a seen truth", "Evidence that Harun did all the speaking", "A detail with no significance"], "correctIndex": 1, "explanation": "The narrator suggests the stammer remaining in the account is a reminder that conviction doesn't require eloquence so much as refusing to concede a truth once seen clearly." }
-    ]
+      {
+        "question": "What did Musa confess before confronting Pharaoh?",
+        "options": [
+          "That he feared death",
+          "That he had never met Pharaoh before",
+          "That he doubted his own message",
+          "That he stammered and asked for Harun to accompany him as a clearer speaker"
+        ],
+        "correctIndex": 3,
+        "explanation": "Musa confessed to a stammer and asked explicitly for his brother Harun to accompany him as a clearer speaker."
+      },
+      {
+        "question": "What was Pharaoh's opening argument against Musa?",
+        "options": [
+          "That Musa had no proof",
+          "That Musa had been raised in his own household, implying a debt of gratitude",
+          "That Musa was a foreigner",
+          "That Musa's message contradicted itself"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pharaoh reminded Musa that he had been raised in his own household as a child, as if gratitude should silence any grievance."
+      },
+      {
+        "question": "How did Musa respond to that claim about his upbringing?",
+        "options": [
+          "He apologized for his ingratitude",
+          "He denied being raised there",
+          "He agreed Pharaoh deserved loyalty",
+          "He noted the upbringing occurred because Pharaoh's regime was slaughtering infants"
+        ],
+        "correctIndex": 3,
+        "explanation": "Musa noted that his upbringing occurred precisely because Pharaoh's regime was busy slaughtering infants, undercutting the moral leverage claimed."
+      },
+      {
+        "question": "What did Pharaoh do when he could not dismantle Musa's answer about the Lord of the worlds?",
+        "options": [
+          "He accepted the argument",
+          "He asked for more evidence calmly",
+          "He accused Musa of madness in front of his court",
+          "He left the room"
+        ],
+        "correctIndex": 2,
+        "explanation": "Frustrated by an answer he couldn't dismantle, Pharaoh accused Musa of madness in front of his court."
+      },
+      {
+        "question": "What does the narrator suggest Musa's persistent stammer represents in the account?",
+        "options": [
+          "A flaw that undermined his mission",
+          "Evidence that Harun did all the speaking",
+          "A reminder that conviction doesn't require eloquence, only refusal to concede a seen truth",
+          "A detail with no significance"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator suggests the stammer remaining in the account is a reminder that conviction doesn't require eloquence so much as refusing to concede a truth once seen clearly."
+      },
+      {
+        "question": "How does Musa's request for Harun qualify simplistic ideas of prophetic confidence?",
+        "options": [
+          "Acknowledged limitation coexists with responsibility to confront power.",
+          "Ibrahim tells Ismail the dream and asks for his response.",
+          "He leaves his mission without explicit permission after frustration.",
+          "They seek food, reassurance, and certainty about Isa's truthfulness."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Acknowledged limitation coexists with responsibility to confront power."
+      },
+      {
+        "question": "What rhetorical move allows Musa to answer Pharaoh's claim of gratitude?",
+        "options": [
+          "He exposes the violent regime that made his upbringing necessary.",
+          "They emphasise willing obedience expressed in the reported reply.",
+          "It affirms Allah and admits wrongdoing without self-defence.",
+          "He tests whether it reflects faith rather than appetite alone."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: He exposes the violent regime that made his upbringing necessary."
+      },
+      {
+        "question": "Why does Pharaoh shift from argument to an accusation of madness?",
+        "options": [
+          "Attachment to a beloved son must not displace devotion to Allah.",
+          "He cannot answer the claim, so he attacks the speaker's credibility.",
+          "The sequence links truthful acknowledgment with deliverance from distress.",
+          "Greater evidence creates greater responsibility for those receiving it."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: He cannot answer the claim, so he attacks the speaker's credibility."
+      },
+      {
+        "question": "What does the threat of imprisonment imply about Pharaoh's position?",
+        "options": [
+          "Willingness is already established before the sacrifice is prevented.",
+          "Others using Yunus's invocation in anguish will also be answered.",
+          "Coercion replaces reasoning once his argument has failed.",
+          "It should become a sign, provision, and recurring occasion."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Coercion replaces reasoning once his argument has failed."
+      },
+      {
+        "question": "Which application follows without equating modern speakers with a prophet?",
+        "options": [
+          "Good attachments should be examined when they crowd out higher obligations.",
+          "Clear evidence can matter more than polished delivery when challenging power.",
+          "Accountability begins with specific admission rather than a polished excuse.",
+          "Vivid certainty increases accountability rather than merely providing comfort."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Clear evidence can matter more than polished delivery when challenging power."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-prophets-04",
@@ -102,32 +447,149 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bayu", "gender": "male" },
-      { "name": "Citra", "gender": "female" }
+      {
+        "name": "Bayu",
+        "gender": "male"
+      },
+      {
+        "name": "Citra",
+        "gender": "female"
+      }
     ],
     "script": [
       "Bayu: [thoughtful] Citra, I've been chewing on the story of Ibrahim and Ismail all week, specifically the part everyone rushes past to get to the ram.",
-      "Citra: [curious] The dream itself, you mean, where Ibrahim sees himself sacrificing his son and takes it as instruction from Allah?",
-      "Bayu: [nodding] Right, and what gets skipped is that he actually tells Ismail about the dream beforehand, rather than simply acting on it unilaterally.",
-      "Citra: [reflective] That detail matters more than people give it credit for. He's not imposing a decision; he's disclosing one, and asking his son's view of it.",
-      "Bayu: [thoughtful] And Ismail's answer is startling for someone reportedly still a boy: do what you've been commanded, you'll find me patient, if Allah wills it.",
-      "Citra: [pointed] No negotiation, no bargaining for his life, and crucially, no performance of bravado either. It's a strangely composed response for the situation.",
-      "Bayu: [considering] I think what unsettles modern readers isn't the obedience itself, but how calmly it's rendered, as though panic would somehow have been the more honest reaction.",
-      "Citra: [warm] Maybe, but consider what's actually being tested here. It isn't merely Ibrahim's willingness to obey; it's whether love for his son had quietly displaced everything else in his priorities.",
-      "Bayu: [reflective] Which reframes the whole episode for me. This isn't a story about a father's cruelty narrowly avoided; it's about a devotion that had to prove it hadn't become idolatry in disguise.",
-      "Citra: [thoughtful] And then the substitution arrives at the very last instant, a ram provided in Ismail's place, once the intention itself had already been fully carried out internally.",
-      "Bayu: [reflective] So the sacrifice, in some sense, had already happened before the knife ever moved, in the willingness rather than the outcome.",
-      "Citra: [warm] Exactly, and that's why the ritual gets repeated every year afterward, not to commemorate a killing that occurred, but a surrender that did.",
-      "Bayu: [thoughtful] It reframes how I think about my own attachments, honestly, the quiet ways love for something good can slowly crowd out everything it was supposed to serve.",
-      "Citra: [smiling] That's precisely why this story refuses to age, I think. It isn't really about a knife at all. It's about what we'd actually be willing to relinquish."
+      "Citra: The dream itself, you mean, where Ibrahim sees himself sacrificing his son and takes it as instruction from Allah?",
+      "Bayu: [carefully] Right, and what gets skipped is that he actually tells Ismail about the dream beforehand, rather than simply acting on it unilaterally.",
+      "Citra: That detail matters more than people give it credit for. He's not imposing a decision; he's disclosing one, and asking his son's view of it.",
+      "Bayu: [reflective] And Ismail's answer is startling for someone reportedly still a boy: do what you've been commanded, you'll find me patient, if Allah wills it.",
+      "Citra: No negotiation, no bargaining for his life, and crucially, no performance of bravado either. It's a strangely composed response for the situation.",
+      "Bayu: [honestly] I think what unsettles modern readers isn't the obedience itself, but how calmly it's rendered, as though panic would somehow have been the more honest reaction.",
+      "Citra: Maybe, but consider what's actually being tested here. It isn't merely Ibrahim's willingness to obey; it's whether love for his son had quietly displaced everything else in his priorities.",
+      "Bayu: [gently] Which reframes the whole episode for me. This isn't a story about a father's cruelty narrowly avoided; it's about a devotion that had to prove it hadn't become idolatry in disguise.",
+      "Citra: And then the substitution arrives at the very last instant, a ram provided in Ismail's place, once the intention itself had already been fully carried out internally.",
+      "Bayu: [calmly] So the sacrifice, in some sense, had already happened before the knife ever moved, in the willingness rather than the outcome.",
+      "Citra: Exactly, and that's why the ritual gets repeated every year afterward, not to commemorate a killing that occurred, but a surrender that did.",
+      "Bayu: [encouraging] It reframes how I think about my own attachments, honestly, the quiet ways love for something good can slowly crowd out everything it was supposed to serve.",
+      "Citra: That's precisely why this story refuses to age, I think. It isn't really about a knife at all. It's about what we'd actually be willing to relinquish."
     ],
     "quiz": [
-      { "question": "What does Ibrahim do before acting on his dream?", "options": ["He consults his advisors", "He tells Ismail about the dream and asks his view", "He keeps it entirely secret", "He asks Allah for a different dream"], "correctIndex": 1, "explanation": "Ibrahim tells Ismail about the dream beforehand rather than simply acting on it unilaterally, and asks his son's view." },
-      { "question": "How does Ismail respond to learning of the dream?", "options": ["He begs for his life", "He tells his father to do what he's been commanded and says he'll find him patient", "He runs away", "He questions whether the dream was real"], "correctIndex": 1, "explanation": "Ismail says to do what has been commanded, and that Ibrahim will find him patient, if Allah wills it." },
-      { "question": "According to Citra, what is actually being tested in the episode?", "options": ["Ismail's physical strength", "Whether love for his son had displaced everything else in Ibrahim's priorities", "Ibrahim's skill with a knife", "The family's wealth"], "correctIndex": 1, "explanation": "Citra suggests the test is whether love for his son had quietly displaced everything else in Ibrahim's priorities." },
-      { "question": "When did Bayu suggest the sacrifice had effectively already happened?", "options": ["Only after the ram appeared", "In the willingness itself, before the knife ever moved", "Years before the dream", "It never actually happened"], "correctIndex": 1, "explanation": "Bayu says the sacrifice had already happened before the knife moved, in the willingness rather than the outcome." },
-      { "question": "What does Citra say the annual ritual actually commemorates?", "options": ["A killing that occurred", "A surrender that occurred, not a killing", "Ismail's bravery alone", "The ram's sacrifice specifically"], "correctIndex": 1, "explanation": "Citra says the ritual is repeated not to commemorate a killing that occurred, but a surrender that did." }
-    ]
+      {
+        "question": "What does Ibrahim do before acting on his dream?",
+        "options": [
+          "He consults his advisors",
+          "He keeps it entirely secret",
+          "He asks Allah for a different dream",
+          "He tells Ismail about the dream and asks his view"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ibrahim tells Ismail about the dream beforehand rather than simply acting on it unilaterally, and asks his son's view."
+      },
+      {
+        "question": "How does Ismail respond to learning of the dream?",
+        "options": [
+          "He begs for his life",
+          "He tells his father to do what he's been commanded and says he'll find him patient",
+          "He runs away",
+          "He questions whether the dream was real"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ismail says to do what has been commanded, and that Ibrahim will find him patient, if Allah wills it."
+      },
+      {
+        "question": "According to Citra, what is actually being tested in the episode?",
+        "options": [
+          "Ismail's physical strength",
+          "Whether love for his son had displaced everything else in Ibrahim's priorities",
+          "Ibrahim's skill with a knife",
+          "The family's wealth"
+        ],
+        "correctIndex": 1,
+        "explanation": "Citra suggests the test is whether love for his son had quietly displaced everything else in Ibrahim's priorities."
+      },
+      {
+        "question": "When did Bayu suggest the sacrifice had effectively already happened?",
+        "options": [
+          "Only after the ram appeared",
+          "Years before the dream",
+          "It never actually happened",
+          "In the willingness itself, before the knife ever moved"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bayu says the sacrifice had already happened before the knife moved, in the willingness rather than the outcome."
+      },
+      {
+        "question": "What does Citra say the annual ritual actually commemorates?",
+        "options": [
+          "A surrender that occurred, not a killing",
+          "A killing that occurred",
+          "Ismail's bravery alone",
+          "The ram's sacrifice specifically"
+        ],
+        "correctIndex": 0,
+        "explanation": "Citra says the ritual is repeated not to commemorate a killing that occurred, but a surrender that did."
+      },
+      {
+        "question": "Which reported detail shapes the colleagues' emphasis on consultation?",
+        "options": [
+          "He leaves his mission without explicit permission after frustration.",
+          "They seek food, reassurance, and certainty about Isa's truthfulness.",
+          "Ibrahim tells Ismail the dream and asks for his response.",
+          "Prudent planning operates with faith rather than against it."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Ibrahim tells Ismail the dream and asks for his response."
+      },
+      {
+        "question": "How do the speakers interpret Ismail's answer without inventing hidden speech?",
+        "options": [
+          "It affirms Allah and admits wrongdoing without self-defence.",
+          "He tests whether it reflects faith rather than appetite alone.",
+          "They emphasise willing obedience expressed in the reported reply.",
+          "A spider's web and a nearby dove make the entrance appear undisturbed."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: They emphasise willing obedience expressed in the reported reply."
+      },
+      {
+        "question": "What deeper test do they infer beyond the physical act?",
+        "options": [
+          "Attachment to a beloved son must not displace devotion to Allah.",
+          "The sequence links truthful acknowledgment with deliverance from distress.",
+          "Greater evidence creates greater responsibility for those receiving it.",
+          "It redirects attention to Allah without denying the real danger."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Attachment to a beloved son must not displace devotion to Allah."
+      },
+      {
+        "question": "Why is the substitution read as following an inward surrender?",
+        "options": [
+          "Others using Yunus's invocation in anguish will also be answered.",
+          "It should become a sign, provision, and recurring occasion.",
+          "Sincere believers can still face capture, exile, or death.",
+          "Willingness is already established before the sacrifice is prevented."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Willingness is already established before the sacrifice is prevented."
+      },
+      {
+        "question": "What cautious modern implication do the colleagues draw?",
+        "options": [
+          "Accountability begins with specific admission rather than a polished excuse.",
+          "Vivid certainty increases accountability rather than merely providing comfort.",
+          "Good attachments should be examined when they crowd out higher obligations.",
+          "Composure can rest on Allah without certainty about the outcome."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Good attachments should be examined when they crowd out higher obligations."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-prophets-05",
@@ -136,29 +598,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Among the prophets, Yunus occupies an uncomfortable category almost his own: someone whose story begins not with persecution from others, but with his own decision to walk away from his mission.",
-      "Narrator: [thoughtful] Exasperated by a people who refused to heed his warnings, he departed the city without explicit permission, boarding a ship as though distance alone could dissolve his responsibility.",
-      "Narrator: [somber] A violent storm overtook the vessel, and the crew, desperate to lighten their load, cast lots to determine who should be thrown overboard, and the lot repeatedly fell upon Yunus himself.",
-      "Narrator: [heavy] He was swallowed by a great fish, and the Quran describes him entering a triple darkness there: the darkness of night, of the sea, and of the creature's own body enclosing him.",
-      "Narrator: [pained] It's worth sitting with that image, because few depictions of isolation in scripture are rendered with such compounding, almost architectural precision.",
-      "Narrator: [reflective] And yet what Yunus does inside that darkness is neither despair nor negotiation; he simply declares there is no deity besides Allah, that Allah is exalted, and that he himself had been among the wrongdoers.",
-      "Narrator: [warm] That final clause matters enormously. He doesn't plead innocence or explain his frustration with his people; he owns the decision to flee as his own failure, without qualification.",
-      "Narrator: [thoughtful] The response is immediate: he is delivered from that distress, cast onto a barren shore, weakened and exposed, where a gourd plant is made to grow over him for shade.",
-      "Narrator: [reflective] What I find instructive is the sequence itself, that admission preceded rescue, not the reverse, as though the darkness needed to be named honestly before it could be exited at all.",
-      "Narrator: [thoughtful] Later tradition holds that this pattern is available more broadly, that anyone caught in comparable anguish who calls out as Yunus did will likewise be answered.",
-      "Narrator: [warm] Which recasts the episode, for me, from a cautionary tale about disobedience into something closer to an instruction manual for what genuine accountability sounds like from inside real darkness.",
-      "Narrator: [gentle] Not composed self-improvement, not tidy resolution, but a raw, specific admission uttered from somewhere offering no guarantee of ever being heard at all."
+      "Narrator: [thoughtful] Among the prophets, Yunus occupies an uncomfortable category almost his own: someone whose story begins not with persecution from others, but with his own decision to walk away from his mission.",
+      "Narrator: Exasperated by a people who refused to heed his warnings, he departed the city without explicit permission, boarding a ship as though distance alone could dissolve his responsibility.",
+      "Narrator: [carefully] A violent storm overtook the vessel, and the crew, desperate to lighten their load, cast lots to determine who should be thrown overboard, and the lot repeatedly fell upon Yunus himself.",
+      "Narrator: He was swallowed by a great fish, and the Quran describes him entering a triple darkness there: the darkness of night, of the sea, and of the creature's own body enclosing him.",
+      "Narrator: [reflective] It's worth sitting with that image, because few depictions of isolation in scripture are rendered with such compounding, almost architectural precision.",
+      "Narrator: And yet what Yunus does inside that darkness is neither despair nor negotiation; he simply declares there is no deity besides Allah, that Allah is exalted, and that he himself had been among the wrongdoers.",
+      "Narrator: [honestly] That final clause matters enormously. He doesn't plead innocence or explain his frustration with his people; he owns the decision to flee as his own failure, without qualification.",
+      "Narrator: The response is immediate: he is delivered from that distress, cast onto a barren shore, weakened and exposed, where a gourd plant is made to grow over him for shade.",
+      "Narrator: [gently] What I find instructive is the sequence itself, that admission preceded rescue, not the reverse, as though the darkness needed to be named honestly before it could be exited at all.",
+      "Narrator: Later tradition holds that this pattern is available more broadly, that anyone caught in comparable anguish who calls out as Yunus did will likewise be answered.",
+      "Narrator: [calmly] Which recasts the episode, for me, from a cautionary tale about disobedience into something closer to an instruction manual for what genuine accountability sounds like from inside real darkness.",
+      "Narrator: Not composed self-improvement, not tidy resolution, but a raw, specific admission uttered from somewhere offering no guarantee of ever being heard at all."
     ],
     "quiz": [
-      { "question": "How does Yunus's story begin, unlike most other prophetic accounts?", "options": ["With persecution from a hostile king", "With his own decision to walk away from his mission", "With a miraculous birth", "With a battle"], "correctIndex": 1, "explanation": "Yunus's story begins with his own decision to walk away from his mission, exasperated by a people who refused to listen." },
-      { "question": "What triple darkness does the Quran describe Yunus entering?", "options": ["Night, storm, and fear", "Night, the sea, and the creature's own body", "Sleep, silence, and cold", "Prison, chains, and hunger"], "correctIndex": 1, "explanation": "He entered a triple darkness: the darkness of night, of the sea, and of the creature's own body enclosing him." },
-      { "question": "What did Yunus declare while inside the fish?", "options": ["A request to be released immediately", "That there is no deity besides Allah, and that he himself had been among the wrongdoers", "A complaint about his people", "A demand for the crew's forgiveness"], "correctIndex": 1, "explanation": "He declared there is no deity besides Allah, that Allah is exalted, and that he had been among the wrongdoers." },
-      { "question": "What happened after Yunus was delivered from the fish?", "options": ["He returned to the ship immediately", "He was cast onto a barren shore, and a gourd plant grew over him for shade", "He was punished further", "He lost his prophethood"], "correctIndex": 1, "explanation": "He was cast onto a barren shore, weakened and exposed, where a gourd plant was made to grow over him for shade." },
-      { "question": "What sequence does the narrator find instructive in this story?", "options": ["Rescue came before any admission of fault", "Honest admission preceded rescue, not the reverse", "Yunus never admitted any fault", "The crew was rescued before Yunus"], "correctIndex": 1, "explanation": "The narrator finds it instructive that admission preceded rescue, as though the darkness needed to be named honestly first." }
-    ]
+      {
+        "question": "How does Yunus's story begin, unlike most other prophetic accounts?",
+        "options": [
+          "With his own decision to walk away from his mission",
+          "With persecution from a hostile king",
+          "With a miraculous birth",
+          "With a battle"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yunus's story begins with his own decision to walk away from his mission, exasperated by a people who refused to listen."
+      },
+      {
+        "question": "What triple darkness does the Quran describe Yunus entering?",
+        "options": [
+          "Night, storm, and fear",
+          "Night, the sea, and the creature's own body",
+          "Sleep, silence, and cold",
+          "Prison, chains, and hunger"
+        ],
+        "correctIndex": 1,
+        "explanation": "He entered a triple darkness: the darkness of night, of the sea, and of the creature's own body enclosing him."
+      },
+      {
+        "question": "What did Yunus declare while inside the fish?",
+        "options": [
+          "A request to be released immediately",
+          "That there is no deity besides Allah, and that he himself had been among the wrongdoers",
+          "A complaint about his people",
+          "A demand for the crew's forgiveness"
+        ],
+        "correctIndex": 1,
+        "explanation": "He declared there is no deity besides Allah, that Allah is exalted, and that he had been among the wrongdoers."
+      },
+      {
+        "question": "What happened after Yunus was delivered from the fish?",
+        "options": [
+          "He returned to the ship immediately",
+          "He was punished further",
+          "He lost his prophethood",
+          "He was cast onto a barren shore, and a gourd plant grew over him for shade"
+        ],
+        "correctIndex": 3,
+        "explanation": "He was cast onto a barren shore, weakened and exposed, where a gourd plant was made to grow over him for shade."
+      },
+      {
+        "question": "What sequence does the narrator find instructive in this story?",
+        "options": [
+          "Rescue came before any admission of fault",
+          "Yunus never admitted any fault",
+          "Honest admission preceded rescue, not the reverse",
+          "The crew was rescued before Yunus"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator finds it instructive that admission preceded rescue, as though the darkness needed to be named honestly first."
+      },
+      {
+        "question": "What decision initiates Yunus's crisis in the narrator's account?",
+        "options": [
+          "They seek food, reassurance, and certainty about Isa's truthfulness.",
+          "Prudent planning operates with faith rather than against it.",
+          "Truthfulness, reliance, courage, and mercy remain available for reflection.",
+          "He leaves his mission without explicit permission after frustration."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: He leaves his mission without explicit permission after frustration."
+      },
+      {
+        "question": "How does the invocation in darkness model accountability?",
+        "options": [
+          "It affirms Allah and admits wrongdoing without self-defence.",
+          "He tests whether it reflects faith rather than appetite alone.",
+          "A spider's web and a nearby dove make the entrance appear undisturbed.",
+          "Lessons invite self-examination rather than judgments about another person's faith."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: It affirms Allah and admits wrongdoing without self-defence."
+      },
+      {
+        "question": "Why does the narrator emphasise that admission precedes rescue?",
+        "options": [
+          "Greater evidence creates greater responsibility for those receiving it.",
+          "It redirects attention to Allah without denying the real danger.",
+          "The sequence links truthful acknowledgment with deliverance from distress.",
+          "A detailed question requires knowledge beyond the presented account."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: The sequence links truthful acknowledgment with deliverance from distress."
+      },
+      {
+        "question": "Which broader claim is attributed to later tradition rather than the Qur'anic scene itself?",
+        "options": [
+          "Others using Yunus's invocation in anguish will also be answered.",
+          "It should become a sign, provision, and recurring occasion.",
+          "Sincere believers can still face capture, exile, or death.",
+          "Clear limits deepen engagement rather than reducing meaning."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Others using Yunus's invocation in anguish will also be answered."
+      },
+      {
+        "question": "What source-aware application does the narrator draw from the episode?",
+        "options": [
+          "Vivid certainty increases accountability rather than merely providing comfort.",
+          "Accountability begins with specific admission rather than a polished excuse.",
+          "Composure can rest on Allah without certainty about the outcome.",
+          "Handling a lesson carefully is part of honouring its prophetic subject."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Accountability begins with specific admission rather than a polished excuse."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-prophets-06",
@@ -167,36 +743,153 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Pak Hasan", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Pak Hasan",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Tonight's discussion centers on a request the disciples of Isa made, asking for a table spread from heaven. Pak Hasan, thank you for joining us.",
-      "Pak Hasan: [pleasant] My pleasure. It's a compact story, but it carries an unusual amount of psychological nuance for its length.",
-      "Host: [curious] Remind our listeners how the request itself is phrased. It's not simply a demand for food, is it?",
-      "Pak Hasan: [thoughtful] Not at all. They frame it as wanting to eat from it, to have their hearts reassured, and to know with certainty that Isa had spoken truthfully to them.",
-      "Host: [interested] That's a striking admission, isn't it, coming from people who had already witnessed him perform other miracles beforehand.",
-      "Pak Hasan: [nodding] Exactly, which is what makes the moment so honest rather than embarrassing. Belief, even among close companions, apparently still craved reinforcement occasionally.",
-      "Host: [curious] How does Isa initially respond to the request?",
-      "Pak Hasan: [reflective] With visible caution, actually. He urges them to remain conscious of Allah if they're genuinely believers, almost testing whether the request stems from faith or simple appetite.",
-      "Host: [thoughtful] So he isn't eager to grant it immediately.",
-      "Pak Hasan: [agreeing] Right, and I think that hesitation is deliberate. Miracles aren't vending machines; each one carries consequence for those who witness it and then fail to honor it afterward.",
-      "Host: [curious] And yet he does eventually pray for it.",
-      "Pak Hasan: [warm] He does, asking that it become a recurring festival, a sign from Allah, and sustenance, appealing directly for provision on their behalf as their best provider.",
-      "Host: [interested] What happens once the table actually descends?",
-      "Pak Hasan: [firm] That's the part rarely emphasized enough. Allah warns immediately afterward that whoever disbelieves following this will face a punishment unlike any given to others in creation.",
-      "Host: [reflective] So the miracle raises the stakes rather than simply settling the matter comfortably.",
-      "Pak Hasan: [thoughtful] Precisely, which I think is the real lesson buried here, that certainty, once granted so vividly, becomes accountability, not mere comfort.",
-      "Host: [warm] A generous request, then, with a rather sobering condition quietly attached to it.",
-      "Pak Hasan: [warm] Exactly that tension, and I suspect it's why the story still unsettles people who read it closely instead of skimming past it."
+      "Host: [thoughtful] Tonight's discussion centers on a request the disciples of Isa made, asking for a table spread from heaven. Pak Hasan, thank you for joining us.",
+      "Pak Hasan: My pleasure. It's a compact story, but it carries an unusual amount of psychological nuance for its length.",
+      "Host: [carefully] Remind our listeners how the request itself is phrased. It's not simply a demand for food, is it?",
+      "Pak Hasan: Not at all. They frame it as wanting to eat from it, to have their hearts reassured, and to know with certainty that Isa had spoken truthfully to them.",
+      "Host: [reflective] That's a striking admission, isn't it, coming from people who had already witnessed him perform other miracles beforehand.",
+      "Pak Hasan: Exactly, which is what makes the moment so honest rather than embarrassing. Belief, even among close companions, apparently still craved reinforcement occasionally.",
+      "Host: [honestly] How does Isa initially respond to the request?",
+      "Pak Hasan: With visible caution, actually. He urges them to remain conscious of Allah if they're genuinely believers, almost testing whether the request stems from faith or simple appetite.",
+      "Host: [gently] So he isn't eager to grant it immediately.",
+      "Pak Hasan: Right, and I think that hesitation is deliberate. Miracles aren't vending machines; each one carries consequence for those who witness it and then fail to honor it afterward.",
+      "Host: [calmly] And yet he does eventually pray for it.",
+      "Pak Hasan: He does, asking that it become a recurring festival, a sign from Allah, and sustenance, appealing directly for provision on their behalf as their best provider.",
+      "Host: [encouraging] What happens once the table actually descends?",
+      "Pak Hasan: That's the part rarely emphasized enough. Allah warns immediately afterward that whoever disbelieves following this will face a punishment unlike any given to others in creation.",
+      "Host: [seriously] So the miracle raises the stakes rather than simply settling the matter comfortably.",
+      "Pak Hasan: Precisely, which I think is the real lesson buried here, that certainty, once granted so vividly, becomes accountability, not mere comfort.",
+      "Host: A generous request, then, with a rather sobering condition quietly attached to it.",
+      "Pak Hasan: Exactly that tension, and I suspect it's why the story still unsettles people who read it closely instead of skimming past it."
     ],
     "quiz": [
-      { "question": "How did the disciples phrase their request for the table?", "options": ["Simply as a demand for food", "As wanting reassured hearts and certainty that Isa had spoken truthfully", "As a test of Isa's power alone", "As a request for wealth"], "correctIndex": 1, "explanation": "They framed it as wanting to eat from it, have their hearts reassured, and know with certainty that Isa had spoken truthfully." },
-      { "question": "How does Pak Hasan interpret the disciples already having seen other miracles?", "options": ["It proves the request was insincere", "It shows belief, even among close companions, still craved occasional reinforcement", "It means the request was unnecessary", "It contradicts the rest of the story"], "correctIndex": 1, "explanation": "Pak Hasan says this makes the moment honest rather than embarrassing, since belief still craved reinforcement occasionally." },
-      { "question": "How does Isa initially respond to the request?", "options": ["He grants it immediately without hesitation", "He urges them to remain conscious of Allah first, testing their motive", "He refuses outright", "He ignores the request"], "correctIndex": 1, "explanation": "He responds with visible caution, urging them to remain conscious of Allah if they're genuinely believers." },
-      { "question": "What does Isa ask for when he does pray for the table?", "options": ["Only food for himself", "That it become a recurring festival, a sign, and sustenance", "Wealth for the disciples", "A private miracle no one else could see"], "correctIndex": 1, "explanation": "He asks that it become a recurring festival, a sign from Allah, and sustenance, provided directly for them." },
-      { "question": "What warning follows the descent of the table?", "options": ["No warning is given", "Whoever disbelieves afterward will face an unmatched punishment", "The disciples must fast for a year", "The table would never appear again"], "correctIndex": 1, "explanation": "Allah warns that whoever disbelieves following this will face a punishment unlike any given to others in creation." }
-    ]
+      {
+        "question": "How did the disciples phrase their request for the table?",
+        "options": [
+          "Simply as a demand for food",
+          "As wanting reassured hearts and certainty that Isa had spoken truthfully",
+          "As a test of Isa's power alone",
+          "As a request for wealth"
+        ],
+        "correctIndex": 1,
+        "explanation": "They framed it as wanting to eat from it, have their hearts reassured, and know with certainty that Isa had spoken truthfully."
+      },
+      {
+        "question": "How does Pak Hasan interpret the disciples already having seen other miracles?",
+        "options": [
+          "It proves the request was insincere",
+          "It means the request was unnecessary",
+          "It shows belief, even among close companions, still craved occasional reinforcement",
+          "It contradicts the rest of the story"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pak Hasan says this makes the moment honest rather than embarrassing, since belief still craved reinforcement occasionally."
+      },
+      {
+        "question": "How does Isa initially respond to the request?",
+        "options": [
+          "He urges them to remain conscious of Allah first, testing their motive",
+          "He grants it immediately without hesitation",
+          "He refuses outright",
+          "He ignores the request"
+        ],
+        "correctIndex": 0,
+        "explanation": "He responds with visible caution, urging them to remain conscious of Allah if they're genuinely believers."
+      },
+      {
+        "question": "What does Isa ask for when he does pray for the table?",
+        "options": [
+          "Only food for himself",
+          "Wealth for the disciples",
+          "That it become a recurring festival, a sign, and sustenance",
+          "A private miracle no one else could see"
+        ],
+        "correctIndex": 2,
+        "explanation": "He asks that it become a recurring festival, a sign from Allah, and sustenance, provided directly for them."
+      },
+      {
+        "question": "What warning follows the descent of the table?",
+        "options": [
+          "No warning is given",
+          "The disciples must fast for a year",
+          "The table would never appear again",
+          "Whoever disbelieves afterward will face an unmatched punishment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Allah warns that whoever disbelieves following this will face a punishment unlike any given to others in creation."
+      },
+      {
+        "question": "What reasons do the disciples give for requesting the heavenly table?",
+        "options": [
+          "They seek food, reassurance, and certainty about Isa's truthfulness.",
+          "Prudent planning operates with faith rather than against it.",
+          "Truthfulness, reliance, courage, and mercy remain available for reflection.",
+          "Emotional authority may pressure people and manufacture false certainty."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: They seek food, reassurance, and certainty about Isa's truthfulness."
+      },
+      {
+        "question": "How does Isa's initial caution frame the request morally?",
+        "options": [
+          "A spider's web and a nearby dove make the entrance appear undisturbed.",
+          "Lessons invite self-examination rather than judgments about another person's faith.",
+          "Visitors understand supported claims, open questions, and reasons for accuracy.",
+          "He tests whether it reflects faith rather than appetite alone."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: He tests whether it reflects faith rather than appetite alone."
+      },
+      {
+        "question": "Why does the guest reject treating miracles as automatic reassurance?",
+        "options": [
+          "It redirects attention to Allah without denying the real danger.",
+          "Greater evidence creates greater responsibility for those receiving it.",
+          "A detailed question requires knowledge beyond the presented account.",
+          "Define unfamiliar terms briefly and provide routes for further learning."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Greater evidence creates greater responsibility for those receiving it."
+      },
+      {
+        "question": "What purpose does Isa include when praying for the table?",
+        "options": [
+          "Sincere believers can still face capture, exile, or death.",
+          "It should become a sign, provision, and recurring occasion.",
+          "Clear limits deepen engagement rather than reducing meaning.",
+          "Engagement must not exceed what evidence and sacred dignity permit."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: It should become a sign, provision, and recurring occasion."
+      },
+      {
+        "question": "Which contrast summarises the guest's reading of the warning?",
+        "options": [
+          "Composure can rest on Allah without certainty about the outcome.",
+          "Handling a lesson carefully is part of honouring its prophetic subject.",
+          "Vivid certainty increases accountability rather than merely providing comfort.",
+          "Teach clearly while making certainty levels and knowledge limits visible."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Vivid certainty increases accountability rather than merely providing comfort."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-prophets-07",
@@ -205,28 +898,590 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] By the time Muhammad and Abu Bakr reached the cave at Thawr, Meccan trackers were already close behind, following a trail their pursuers were confident would end the matter decisively.",
-      "Narrator: [reflective] They took the southern route rather than the expected northern one toward Madinah, a small tactical choice that speaks to prudence operating alongside faith rather than in place of it.",
-      "Narrator: [thoughtful] Once concealed inside, the two men waited three days, and tradition adds a detail almost too vivid to be incidental: a spider spun its web across the entrance, and a dove nested nearby.",
-      "Narrator: [dry] To anyone glancing casually at the mouth of that cave, it would have looked undisturbed, an unremarkable pocket of rock rather than a hiding place worth investigating.",
-      "Narrator: [somber] Abu Bakr, watching the search party's feet from within, whispered that if any of them merely looked down, they would surely be seen, his voice carrying the plain arithmetic of fear.",
-      "Narrator: [firm] Muhammad's reply is recorded with striking economy: what do you think of two, when Allah is their third, refusing panic without dismissing the danger as unreal.",
-      "Narrator: [reflective] That distinction matters. He wasn't claiming the danger was illusory; the trackers genuinely stood within a few paces of them. He was reframing what actually determined the outcome.",
-      "Narrator: [thoughtful] It's tempting to read the episode as proof that faith guarantees safety, but that reading collapses quickly, since plenty of sincere believers have been captured, exiled, or killed throughout history.",
-      "Narrator: [warm] What the cave illustrates instead is something narrower and more durable: composure under genuine threat doesn't require certainty about the outcome, only trust in whoever governs it.",
-      "Narrator: [reflective] Abu Bakr's fear, worth noting, isn't edited out of the story to preserve some illusion of flawless calm. He is described as grieved, and his fear is treated as entirely legitimate.",
-      "Narrator: [warm] What shifted wasn't the danger outside the cave, but where his attention was ultimately anchored once Muhammad spoke, a redirection rather than an erasure of the fear itself.",
-      "Narrator: [gentle] Every account of trust worth taking seriously looks less like the absence of trembling and more like this: trembling, honestly acknowledged, that still doesn't get the final word."
+      "Narrator: [thoughtful] By the time Muhammad and Abu Bakr reached the cave at Thawr, Meccan trackers were already close behind, following a trail their pursuers were confident would end the matter decisively.",
+      "Narrator: They took the southern route rather than the expected northern one toward Madinah, a small tactical choice that speaks to prudence operating alongside faith rather than in place of it.",
+      "Narrator: [carefully] Once concealed inside, the two men waited three days, and tradition adds a detail almost too vivid to be incidental: a spider spun its web across the entrance, and a dove nested nearby.",
+      "Narrator: To anyone glancing casually at the mouth of that cave, it would have looked undisturbed, an unremarkable pocket of rock rather than a hiding place worth investigating.",
+      "Narrator: [reflective] Abu Bakr, watching the search party's feet from within, whispered that if any of them merely looked down, they would surely be seen, his voice carrying the plain arithmetic of fear.",
+      "Narrator: Muhammad's reply is recorded with striking economy: what do you think of two, when Allah is their third, refusing panic without dismissing the danger as unreal.",
+      "Narrator: [honestly] That distinction matters. He wasn't claiming the danger was illusory; the trackers genuinely stood within a few paces of them. He was reframing what actually determined the outcome.",
+      "Narrator: It's tempting to read the episode as proof that faith guarantees safety, but that reading collapses quickly, since plenty of sincere believers have been captured, exiled, or killed throughout history.",
+      "Narrator: [gently] What the cave illustrates instead is something narrower and more durable: composure under genuine threat doesn't require certainty about the outcome, only trust in whoever governs it.",
+      "Narrator: Abu Bakr's fear, worth noting, isn't edited out of the story to preserve some illusion of flawless calm. He is described as grieved, and his fear is treated as entirely legitimate.",
+      "Narrator: [calmly] What shifted wasn't the danger outside the cave, but where his attention was ultimately anchored once Muhammad spoke, a redirection rather than an erasure of the fear itself.",
+      "Narrator: Every account of trust worth taking seriously looks less like the absence of trembling and more like this: trembling, honestly acknowledged, that still doesn't get the final word."
     ],
     "quiz": [
-      { "question": "What tactical choice did Muhammad and Abu Bakr make on their journey?", "options": ["They traveled by daylight only", "They took the southern route rather than the expected northern one", "They traveled with a large group", "They stayed in Mecca an extra week"], "correctIndex": 1, "explanation": "They took the southern route rather than the expected northern one toward Madinah, a tactical choice alongside their faith." },
-      { "question": "What details does tradition add about the cave's entrance?", "options": ["It was guarded by armed men", "A spider spun a web across it and a dove nested nearby", "It was sealed with stone", "It had been recently swept clean"], "correctIndex": 1, "explanation": "Tradition adds that a spider spun its web across the entrance and a dove nested nearby, making it look undisturbed." },
-      { "question": "What did Abu Bakr whisper while watching the search party?", "options": ["That they should flee immediately", "That if any of them merely looked down, they would surely be seen", "That the trackers had given up", "That he wanted to surrender"], "correctIndex": 1, "explanation": "He whispered that if any of them merely looked down, they would surely be seen, expressing his fear plainly." },
-      { "question": "How does the narrator interpret Muhammad's reply, 'what do you think of two, when Allah is their third'?", "options": ["As a claim that the danger was not real", "As a reframing of what determined the outcome, without denying the real danger", "As a command to attack the trackers", "As proof that fear is forbidden"], "correctIndex": 1, "explanation": "The narrator says Muhammad wasn't claiming the danger was illusory but was reframing what actually determined the outcome." },
-      { "question": "What does the narrator conclude genuine trust looks like, based on Abu Bakr's fear?", "options": ["The complete absence of trembling or fear", "Trembling, honestly acknowledged, that still doesn't get the final word", "Fear that is hidden and denied", "Certainty that no harm can ever occur"], "correctIndex": 1, "explanation": "The narrator concludes trust looks like trembling, honestly acknowledged, that still doesn't get the final word." }
-    ]
+      {
+        "question": "What tactical choice did Muhammad and Abu Bakr make on their journey?",
+        "options": [
+          "They traveled by daylight only",
+          "They took the southern route rather than the expected northern one",
+          "They traveled with a large group",
+          "They stayed in Mecca an extra week"
+        ],
+        "correctIndex": 1,
+        "explanation": "They took the southern route rather than the expected northern one toward Madinah, a tactical choice alongside their faith."
+      },
+      {
+        "question": "What details does tradition add about the cave's entrance?",
+        "options": [
+          "A spider spun a web across it and a dove nested nearby",
+          "It was guarded by armed men",
+          "It was sealed with stone",
+          "It had been recently swept clean"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tradition adds that a spider spun its web across the entrance and a dove nested nearby, making it look undisturbed."
+      },
+      {
+        "question": "What did Abu Bakr whisper while watching the search party?",
+        "options": [
+          "That if any of them merely looked down, they would surely be seen",
+          "That they should flee immediately",
+          "That the trackers had given up",
+          "That he wanted to surrender"
+        ],
+        "correctIndex": 0,
+        "explanation": "He whispered that if any of them merely looked down, they would surely be seen, expressing his fear plainly."
+      },
+      {
+        "question": "How does the narrator interpret Muhammad's reply, 'what do you think of two, when Allah is their third'?",
+        "options": [
+          "As a claim that the danger was not real",
+          "As a command to attack the trackers",
+          "As proof that fear is forbidden",
+          "As a reframing of what determined the outcome, without denying the real danger"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator says Muhammad wasn't claiming the danger was illusory but was reframing what actually determined the outcome."
+      },
+      {
+        "question": "What does the narrator conclude genuine trust looks like, based on Abu Bakr's fear?",
+        "options": [
+          "The complete absence of trembling or fear",
+          "Fear that is hidden and denied",
+          "Certainty that no harm can ever occur",
+          "Trembling, honestly acknowledged, that still doesn't get the final word"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator concludes trust looks like trembling, honestly acknowledged, that still doesn't get the final word."
+      },
+      {
+        "question": "What does the southern route demonstrate alongside trust?",
+        "options": [
+          "Truthfulness, reliance, courage, and mercy remain available for reflection.",
+          "Emotional authority may pressure people and manufacture false certainty.",
+          "Prudent planning operates with faith rather than against it.",
+          "State the sound principle, then seek reliable knowledge for case details."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Prudent planning operates with faith rather than against it."
+      },
+      {
+        "question": "Which cave details are presented as additions from tradition?",
+        "options": [
+          "Lessons invite self-examination rather than judgments about another person's faith.",
+          "A spider's web and a nearby dove make the entrance appear undisturbed.",
+          "Visitors understand supported claims, open questions, and reasons for accuracy.",
+          "Use reliable references and respect legitimate disagreement."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: A spider's web and a nearby dove make the entrance appear undisturbed."
+      },
+      {
+        "question": "How does the recorded reply address Abu Bakr's fear?",
+        "options": [
+          "A detailed question requires knowledge beyond the presented account.",
+          "Define unfamiliar terms briefly and provide routes for further learning.",
+          "It redirects attention to Allah without denying the real danger.",
+          "It must not justify mockery or rapid personal judgment."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: It redirects attention to Allah without denying the real danger."
+      },
+      {
+        "question": "Why does the narrator reject reading the episode as guaranteed safety?",
+        "options": [
+          "Clear limits deepen engagement rather than reducing meaning.",
+          "Engagement must not exceed what evidence and sacred dignity permit.",
+          "Sincere believers can still face capture, exile, or death.",
+          "It safeguards the help-seeker and the lesson's integrity."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Sincere believers can still face capture, exile, or death."
+      },
+      {
+        "question": "What narrower inference about trust survives that qualification?",
+        "options": [
+          "Handling a lesson carefully is part of honouring its prophetic subject.",
+          "Teach clearly while making certainty levels and knowledge limits visible.",
+          "Keep prophetic report distinct from inference, application, and specialised ruling.",
+          "Composure can rest on Allah without certainty about the outcome."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Composure can rest on Allah without certainty about the outcome."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-prophets-08",
+    "title": "Reading a Prophetic Account with More Than One Question",
+    "level": "C1",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [calm] At a study gathering, a familiar prophetic account was introduced with a short lesson about patience. Everyone recognised the wording, and several people were ready to share it immediately.",
+      "Narrator: Our teacher suggested that we slow down. Before drawing an application, she asked us to identify what the text clearly stated, what the wider context added, and which details came from later explanation.",
+      "Narrator: This did not make the account less moving. It made our response more careful. We realised that a brief extract can carry a true principle while still being too small to settle every modern problem.",
+      "Narrator: A story that encourages patience, for example, may help a person reflect on endurance and trust in Allah. It does not automatically tell someone to remain in an unsafe situation, postpone medical care, or ignore a serious injustice.",
+      "Narrator: We compared recognised sources with guidance from a qualified teacher. Where a report was uncertain or scholars differed on a detail, we did not add certainty simply because a smoother story would be easier to remember.",
+      "Narrator: That restraint was part of adab. We did not invent speech for a prophet, claim access to motives not stated in the source, or turn sacred history into a dramatic performance.",
+      "Narrator: The group still took practical lessons. We discussed truthful speech, reliance upon Allah, courage, and mercy. But we expressed those lessons as invitations to examine ourselves, not as weapons for judging another person’s faith.",
+      "Narrator: The method was simple: return to the source, recognise the limits of our knowledge, and ask qualified people when a detailed question requires more than a short discussion.",
+      "Narrator: By the end, the account felt richer rather than narrower. It asked us not only to admire a lesson, but to handle it in a way that was worthy of its subject."
+    ],
+    "quiz": [
+      {
+        "question": "What analytical sequence does the teacher require before application?",
+        "options": [
+          "Separate explicit text, wider context, and details from later explanation.",
+          "Qur'anic text, sound transmission, later reports, and modern interpretation.",
+          "A general principle is becoming a verdict about a specific person.",
+          "Appealing to a people who preferred inherited certainty to scrutiny"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Separate explicit text, wider context, and details from later explanation."
+      },
+      {
+        "question": "Why can a true principle still be insufficient for a modern case?",
+        "options": [
+          "It may make evidence of unequal strength appear equally certain.",
+          "A short extract may omit facts needed for a detailed judgment.",
+          "Ask about text, interpretation, context, and qualified authority.",
+          "He believed a mountain would protect him from the water"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: A short extract may omit facts needed for a detailed judgment."
+      },
+      {
+        "question": "What misuse of patience does the group explicitly reject?",
+        "options": [
+          "Maps, manuscripts, calligraphy, timelines, and social context.",
+          "It preserves sound values while admitting missing facts in modern cases.",
+          "It must not pressure someone to remain unsafe or ignore injustice.",
+          "Mercy itself"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: It must not pressure someone to remain unsafe or ignore injustice."
+      },
+      {
+        "question": "How does consulting recognised sources change the treatment of disagreement?",
+        "options": [
+          "State its later source, scholarly disagreement, or evidential limits plainly.",
+          "Offer clear guidance, then involve relevant scholarly or professional expertise.",
+          "That lineage confers no automatic righteousness",
+          "Uncertain details remain qualified instead of becoming smoother certainties."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Uncertain details remain qualified instead of becoming smoother certainties."
+      },
+      {
+        "question": "Why is source restraint described as part of adab?",
+        "options": [
+          "It prevents invented speech, motives, and dramatic prophetic portrayal.",
+          "An exhibition cannot replace qualified guidance informed by the actual case.",
+          "Religious language must not trap people in danger.",
+          "Conviction has to be climbed toward individually, not inherited"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: It prevents invented speech, motives, and dramatic prophetic portrayal."
+      },
+      {
+        "question": "Which lessons does the group still consider responsibly applicable?",
+        "options": [
+          "Emotional authority may pressure people and manufacture false certainty.",
+          "Truthfulness, reliance, courage, and mercy remain available for reflection.",
+          "State the sound principle, then seek reliable knowledge for case details.",
+          "Physical elevation offers no refuge when divine mercy alone determines safety."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Truthfulness, reliance, courage, and mercy remain available for reflection."
+      },
+      {
+        "question": "How does the group avoid weaponising those applications?",
+        "options": [
+          "Visitors understand supported claims, open questions, and reasons for accuracy.",
+          "Use reliable references and respect legitimate disagreement.",
+          "Lessons invite self-examination rather than judgments about another person's faith.",
+          "Natural kinship is treated as if it guaranteed spiritual belonging."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Lessons invite self-examination rather than judgments about another person's faith."
+      },
+      {
+        "question": "When should a short discussion defer to qualified expertise?",
+        "options": [
+          "Define unfamiliar terms briefly and provide routes for further learning.",
+          "It must not justify mockery or rapid personal judgment.",
+          "Lineage cannot substitute for a person's own righteousness.",
+          "A detailed question requires knowledge beyond the presented account."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: A detailed question requires knowledge beyond the presented account."
+      },
+      {
+        "question": "What effect does methodological caution have on the account's richness?",
+        "options": [
+          "Clear limits deepen engagement rather than reducing meaning.",
+          "Engagement must not exceed what evidence and sacred dignity permit.",
+          "It safeguards the help-seeker and the lesson's integrity.",
+          "Prophetic grief is acknowledged without making anguished judgment infallible."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Clear limits deepen engagement rather than reducing meaning."
+      },
+      {
+        "question": "Which final implication links accuracy with reverence?",
+        "options": [
+          "Teach clearly while making certainty levels and knowledge limits visible.",
+          "Handling a lesson carefully is part of honouring its prophetic subject.",
+          "Keep prophetic report distinct from inference, application, and specialised ruling.",
+          "Love should not make us confuse personal attachment with moral correctness."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Handling a lesson carefully is part of honouring its prophetic subject."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-prophets-09",
+    "title": "How Can a Museum Teach Sacred History Respectfully?",
+    "level": "C1",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A museum is preparing an exhibition about the historical setting of prophetic narratives. What must it make clear from the beginning?",
+      "Guest: It should distinguish between Qur’anic text, soundly transmitted material, later historical reports, and modern interpretation. A vivid display should not make every detail look equally certain.",
+      "Moderator: Can the exhibition still be engaging without dramatizing protected figures?",
+      "Guest: Certainly. Maps, manuscripts, calligraphy, timelines, social context, and careful explanation can give visitors real understanding without invented dialogue or visual portrayal of prophets.",
+      "Moderator: How should it handle reports that scholars discuss differently?",
+      "Guest: With plain, honest wording: this is reported in later sources, scholars differ on the detail, or the evidence is limited. Transparency is more respectful than a confident but unsupported story.",
+      "Moderator: What if visitors want a direct answer to a personal religious question?",
+      "Guest: The exhibition can encourage learning and point to reliable resources. It should not pretend to issue a detailed ruling or replace a qualified teacher who knows the relevant question.",
+      "Moderator: Why is this important beyond museums?",
+      "Guest: Because sacred material has great emotional force. When it is presented carelessly, it can be used to pressure people, silence questions, or create false certainty.",
+      "Moderator: What is the goal of careful curation?",
+      "Guest: Understanding with reverence: visitors should leave knowing what the evidence supports, what requires further study, and why accuracy is itself a form of respect.",
+      "Moderator: How can labels remain accessible to visitors who are new to the subject?",
+      "Guest: Use clear language, define unfamiliar terms briefly, and offer a path to further learning. Accuracy should not become a barrier that only specialists can cross.",
+      "Moderator: What should guide every display choice?",
+      "Guest: Whether it teaches truthfully while preserving the dignity of a subject that Muslims hold sacred."
+    ],
+    "quiz": [
+      {
+        "question": "Which categories should exhibition labels distinguish from the outset?",
+        "options": [
+          "Qur'anic text, sound transmission, later reports, and modern interpretation.",
+          "A general principle is becoming a verdict about a specific person.",
+          "Appealing to a people who preferred inherited certainty to scrutiny",
+          "That patience gets flattened into passive, silent endurance"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Qur'anic text, sound transmission, later reports, and modern interpretation."
+      },
+      {
+        "question": "Why can visual vividness become epistemically misleading?",
+        "options": [
+          "Ask about text, interpretation, context, and qualified authority.",
+          "It may make evidence of unequal strength appear equally certain.",
+          "He believed a mountain would protect him from the water",
+          "As an active appeal, not stoic resignation"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: It may make evidence of unequal strength appear equally certain."
+      },
+      {
+        "question": "Which materials create engagement without portraying prophets?",
+        "options": [
+          "It preserves sound values while admitting missing facts in modern cases.",
+          "Mercy itself",
+          "Maps, manuscripts, calligraphy, timelines, and social context.",
+          "She stayed through decades of hardship and reportedly sold her own hair to feed them"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Maps, manuscripts, calligraphy, timelines, and social context."
+      },
+      {
+        "question": "How should a disputed later report be labelled?",
+        "options": [
+          "Offer clear guidance, then involve relevant scholarly or professional expertise.",
+          "That lineage confers no automatic righteousness",
+          "A spring emerged for washing and drinking, restoring his health",
+          "State its later source, scholarly disagreement, or evidential limits plainly."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: State its later source, scholarly disagreement, or evidential limits plainly."
+      },
+      {
+        "question": "Why should the museum not answer individual religious cases directly?",
+        "options": [
+          "An exhibition cannot replace qualified guidance informed by the actual case.",
+          "Religious language must not trap people in danger.",
+          "Conviction has to be climbed toward individually, not inherited",
+          "Honesty under pressure that still refuses to collapse into bitterness"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: An exhibition cannot replace qualified guidance informed by the actual case."
+      },
+      {
+        "question": "What harm can careless presentation of sacred material cause?",
+        "options": [
+          "State the sound principle, then seek reliable knowledge for case details.",
+          "Emotional authority may pressure people and manufacture false certainty.",
+          "Physical elevation offers no refuge when divine mercy alone determines safety.",
+          "He openly names his hardship while appealing to Allah's mercy."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Emotional authority may pressure people and manufacture false certainty."
+      },
+      {
+        "question": "What outcome defines respectful curation?",
+        "options": [
+          "Use reliable references and respect legitimate disagreement.",
+          "Natural kinship is treated as if it guaranteed spiritual belonging.",
+          "Visitors understand supported claims, open questions, and reasons for accuracy.",
+          "Suffering is voiced honestly without becoming resentment toward Allah."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Visitors understand supported claims, open questions, and reasons for accuracy."
+      },
+      {
+        "question": "How can specialist accuracy remain accessible to new visitors?",
+        "options": [
+          "It must not justify mockery or rapid personal judgment.",
+          "Lineage cannot substitute for a person's own righteousness.",
+          "Ayyub's wife is said to have sold her hair for food.",
+          "Define unfamiliar terms briefly and provide routes for further learning."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Define unfamiliar terms briefly and provide routes for further learning."
+      },
+      {
+        "question": "What constraint should govern every dramatic design choice?",
+        "options": [
+          "Engagement must not exceed what evidence and sacred dignity permit.",
+          "It safeguards the help-seeker and the lesson's integrity.",
+          "Prophetic grief is acknowledged without making anguished judgment infallible.",
+          "Renewed blessing does not erase the history already endured."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Engagement must not exceed what evidence and sacred dignity permit."
+      },
+      {
+        "question": "Which stance best captures “understanding with reverence”?",
+        "options": [
+          "Keep prophetic report distinct from inference, application, and specialised ruling.",
+          "Teach clearly while making certainty levels and knowledge limits visible.",
+          "Love should not make us confuse personal attachment with moral correctness.",
+          "Patience permits honest appeal while refusing surrender to bitterness."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Teach clearly while making certainty levels and knowledge limits visible."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-prophets-10",
+    "title": "What Can a Study Circle Apply—and What Should It Leave to Scholars?",
+    "level": "C1",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A listener says her study group moves quickly from a prophetic narrative to strong claims about people in their community. What should make them pause?",
+      "Guest: They should pause when a principle becomes a verdict about a particular person. We can discuss conduct and clear teachings; we should not casually claim to know hidden intentions or issue detailed judgments beyond our knowledge.",
+      "Moderator: How can a facilitator guide the discussion?",
+      "Guest: Ask four questions: What does the text state? What is interpretation? What context might matter? And who is qualified to answer the specialised question that has appeared?",
+      "Moderator: Does caution make a lesson too vague?",
+      "Guest: No. It can make the lesson more useful. A group can reflect on truthfulness, mercy, courage, and responsibility while admitting that a modern case may require facts the narrative does not provide.",
+      "Moderator: What if someone needs immediate practical support?",
+      "Guest: Offer the clear encouragement the text supports, then help them identify appropriate support: a qualified scholar for a detailed religious question, or another suitable professional where the issue concerns safety, health, law, or welfare.",
+      "Moderator: Why mention those boundaries openly?",
+      "Guest: Because religious language should never be used to keep someone in danger or to make a confident speaker look more authoritative than they are.",
+      "Moderator: What is a good closing for such a discussion?",
+      "Guest: We have learned a sound principle here. For the details of this situation, let us seek reliable knowledge and ask the right person.",
+      "Moderator: Can the group discuss different scholarly explanations?",
+      "Guest: Yes, when it does so with reliable references and without turning legitimate scholarly difference into a reason for mockery or quick personal judgments.",
+      "Moderator: What habit protects the group?",
+      "Guest: A willingness to say that a matter needs further study. That sentence can protect both the listener seeking help and the integrity of the lesson."
+    ],
+    "quiz": [
+      {
+        "question": "When should a study group pause before applying a prophetic narrative?",
+        "options": [
+          "A general principle is becoming a verdict about a specific person.",
+          "Appealing to a people who preferred inherited certainty to scrutiny",
+          "That patience gets flattened into passive, silent endurance",
+          "That he stammered and asked for Harun to accompany him as a clearer speaker"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: A general principle is becoming a verdict about a specific person."
+      },
+      {
+        "question": "Which four questions discipline the facilitator's interpretation?",
+        "options": [
+          "He believed a mountain would protect him from the water",
+          "Ask about text, interpretation, context, and qualified authority.",
+          "As an active appeal, not stoic resignation",
+          "That Musa had been raised in his own household, implying a debt of gratitude"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Ask about text, interpretation, context, and qualified authority."
+      },
+      {
+        "question": "Why can caution make application more useful rather than vague?",
+        "options": [
+          "Mercy itself",
+          "She stayed through decades of hardship and reportedly sold her own hair to feed them",
+          "It preserves sound values while admitting missing facts in modern cases.",
+          "He noted the upbringing occurred because Pharaoh's regime was slaughtering infants"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: It preserves sound values while admitting missing facts in modern cases."
+      },
+      {
+        "question": "How should immediate support combine textual encouragement with referral?",
+        "options": [
+          "That lineage confers no automatic righteousness",
+          "A spring emerged for washing and drinking, restoring his health",
+          "He accused Musa of madness in front of his court",
+          "Offer clear guidance, then involve relevant scholarly or professional expertise."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: Offer clear guidance, then involve relevant scholarly or professional expertise."
+      },
+      {
+        "question": "Why must safety and welfare boundaries be named openly?",
+        "options": [
+          "Religious language must not trap people in danger.",
+          "Conviction has to be climbed toward individually, not inherited",
+          "Honesty under pressure that still refuses to collapse into bitterness",
+          "A reminder that conviction doesn't require eloquence, only refusal to concede a seen truth"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: Religious language must not trap people in danger."
+      },
+      {
+        "question": "What closing formulation preserves both lesson and uncertainty?",
+        "options": [
+          "Physical elevation offers no refuge when divine mercy alone determines safety.",
+          "State the sound principle, then seek reliable knowledge for case details.",
+          "He openly names his hardship while appealing to Allah's mercy.",
+          "Acknowledged limitation coexists with responsibility to confront power."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: State the sound principle, then seek reliable knowledge for case details."
+      },
+      {
+        "question": "Under what conditions may the group compare scholarly explanations?",
+        "options": [
+          "Natural kinship is treated as if it guaranteed spiritual belonging.",
+          "Suffering is voiced honestly without becoming resentment toward Allah.",
+          "Use reliable references and respect legitimate disagreement.",
+          "He exposes the violent regime that made his upbringing necessary."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the source-aware distinction: Use reliable references and respect legitimate disagreement."
+      },
+      {
+        "question": "What misuse of scholarly difference does the guest reject?",
+        "options": [
+          "Lineage cannot substitute for a person's own righteousness.",
+          "Ayyub's wife is said to have sold her hair for food.",
+          "He cannot answer the claim, so he attacks the speaker's credibility.",
+          "It must not justify mockery or rapid personal judgment."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the source-aware distinction: It must not justify mockery or rapid personal judgment."
+      },
+      {
+        "question": "Why is “this needs further study” intellectually protective?",
+        "options": [
+          "It safeguards the help-seeker and the lesson's integrity.",
+          "Prophetic grief is acknowledged without making anguished judgment infallible.",
+          "Renewed blessing does not erase the history already endured.",
+          "Coercion replaces reasoning once his argument has failed."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the source-aware distinction: It safeguards the help-seeker and the lesson's integrity."
+      },
+      {
+        "question": "What general habit prevents role-play and overclaiming?",
+        "options": [
+          "Love should not make us confuse personal attachment with moral correctness.",
+          "Keep prophetic report distinct from inference, application, and specialised ruling.",
+          "Patience permits honest appeal while refusing surrender to bitterness.",
+          "Clear evidence can matter more than polished delivery when challenging power."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the source-aware distinction: Keep prophetic report distinct from inference, application, and specialised ruling."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

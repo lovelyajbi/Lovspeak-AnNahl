@@ -6,31 +6,145 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [tired] Voice memo to myself, Tuesday evening. I want to remember what happened today at the pharmacy, because I am still thinking about it.",
-      "Narrator: [thoughtful] I was waiting in line for almost twenty minutes, because the pharmacist was slow and there were many customers before me.",
+      "Narrator: I was waiting in line for almost twenty minutes, because the pharmacist was slow and there were many customers before me.",
       "Narrator: [annoyed] Then a man walked straight to the front and started talking to the pharmacist, as if the line did not exist at all.",
-      "Narrator: [honestly] My first feeling was anger. I wanted to shout at him, because I had been standing there so patiently.",
-      "Narrator: [reflective] But before I said anything, an older woman behind me spoke calmly. She said, excuse me sir, we have all been waiting, so please join the line.",
-      "Narrator: [surprised] The man looked embarrassed. He apologized quietly and walked to the back of the line without arguing further.",
-      "Narrator: [thoughtful] I was impressed, because the woman did not shout or insult him. She simply reminded him of what was fair, in a calm and steady voice.",
+      "Narrator: My first feeling was anger. I wanted to shout at him, because I had been standing there so patiently.",
+      "Narrator: [calmly] But before I said anything, an older woman behind me spoke calmly. She said, excuse me sir, we have all been waiting, so please join the line.",
+      "Narrator: [embarrassed] The man looked embarrassed. He apologized quietly and walked to the back of the line without arguing further.",
+      "Narrator: I was impressed, because the woman did not shout or insult him. She simply reminded him of what was fair, in a calm and steady voice.",
       "Narrator: [reflective] Later, while I was walking home, I thought about how she handled it, and I realized something important about adab.",
       "Narrator: [warmly] Adab is not only about staying silent when someone is wrong. Sometimes real respect means speaking up, but doing it calmly and kindly.",
-      "Narrator: [honestly] If I had shouted instead, the situation would have become worse, and everyone in the pharmacy would have felt uncomfortable and tense.",
+      "Narrator: If I had shouted instead, the situation would have become worse, and everyone in the pharmacy would have felt uncomfortable and tense.",
       "Narrator: [determined] Next time something like this happens, I want to remember her voice, calm but firm, not angry and not silent either.",
-      "Narrator: [gently] I think good manners are sometimes braver than staying quiet, because you have to care enough to say something, while staying kind while doing it.",
-      "Narrator: [warmly] So that is my note to myself tonight. Speak calmly, even when you feel frustrated, because how you say something matters just as much as what you say.",
+      "Narrator: I think good manners are sometimes braver than staying quiet, because you have to care enough to say something, while staying kind while doing it.",
+      "Narrator: So that is my note to myself tonight. Speak calmly, even when you feel frustrated, because how you say something matters just as much as what you say.",
       "Narrator: [peacefully] I hope, next time I am the one who is wrong, someone corrects me with the same patience that woman showed today."
     ],
     "quiz": [
-      { "question": "Why was the narrator waiting so long at the pharmacy?", "options": ["The pharmacy was closed", "The pharmacist was slow and there were many customers", "She arrived early on purpose", "She was chatting with a friend"], "correctIndex": 1, "explanation": "She says she waited almost twenty minutes because the pharmacist was slow and many customers were ahead of her." },
-      { "question": "What did the man do that upset the narrator?", "options": ["He asked her a question", "He walked to the front of the line as if it did not exist", "He left the pharmacy", "He talked loudly on the phone"], "correctIndex": 1, "explanation": "The man walked straight to the front and spoke to the pharmacist, ignoring the line." },
-      { "question": "What did the older woman say to the man?", "options": ["Nothing, she stayed silent", "She asked him to join the line since everyone had been waiting", "She yelled at him", "She called the manager"], "correctIndex": 1, "explanation": "The woman calmly told him everyone had been waiting and asked him to join the line." },
-      { "question": "How did the man react to the woman's words?", "options": ["He argued back", "He looked embarrassed and went to the back of the line", "He ignored her completely", "He left the pharmacy angrily"], "correctIndex": 1, "explanation": "He looked embarrassed, apologized quietly, and walked to the back of the line without arguing." },
-      { "question": "What lesson does the narrator take from this moment?", "options": ["Always stay silent about unfairness", "Speak up calmly and kindly instead of shouting or staying silent", "Shouting is the best way to fix problems", "Avoid pharmacies in the future"], "correctIndex": 1, "explanation": "She concludes that real respect sometimes means speaking up, but doing it calmly, rather than shouting or staying silent." }
-    ]
+      {
+        "question": "Why was the narrator waiting so long at the pharmacy?",
+        "options": [
+          "The pharmacy was closed",
+          "She arrived early on purpose",
+          "The pharmacist was slow and there were many customers",
+          "She was chatting with a friend"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says she waited almost twenty minutes because the pharmacist was slow and many customers were ahead of her."
+      },
+      {
+        "question": "What did the man do that upset the narrator?",
+        "options": [
+          "He asked her a question",
+          "He walked to the front of the line as if it did not exist",
+          "He left the pharmacy",
+          "He talked loudly on the phone"
+        ],
+        "correctIndex": 1,
+        "explanation": "The man walked straight to the front and spoke to the pharmacist, ignoring the line."
+      },
+      {
+        "question": "What did the older woman say to the man?",
+        "options": [
+          "She asked him to join the line since everyone had been waiting",
+          "Nothing, she stayed silent",
+          "She yelled at him",
+          "She called the manager"
+        ],
+        "correctIndex": 0,
+        "explanation": "The woman calmly told him everyone had been waiting and asked him to join the line."
+      },
+      {
+        "question": "How did the man react to the woman's words?",
+        "options": [
+          "He argued back",
+          "He ignored her completely",
+          "He left the pharmacy angrily",
+          "He looked embarrassed and went to the back of the line"
+        ],
+        "correctIndex": 3,
+        "explanation": "He looked embarrassed, apologized quietly, and walked to the back of the line without arguing."
+      },
+      {
+        "question": "What lesson does the narrator take from this moment?",
+        "options": [
+          "Always stay silent about unfairness",
+          "Speak up calmly and kindly instead of shouting or staying silent",
+          "Shouting is the best way to fix problems",
+          "Avoid pharmacies in the future"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes that real respect sometimes means speaking up, but doing it calmly, rather than shouting or staying silent."
+      },
+      {
+        "question": "Why does the narrator record the voice memo?",
+        "options": [
+          "To report the pharmacist publicly",
+          "To remember and reflect on the incident",
+          "To complain to the man’s family",
+          "To count the waiting customers"
+        ],
+        "correctIndex": 1,
+        "explanation": "The recording is a private reflection about what happened."
+      },
+      {
+        "question": "What prevented the situation from becoming more tense?",
+        "options": [
+          "The narrator left the pharmacy",
+          "The pharmacist closed the counter",
+          "The man refused to move",
+          "The woman corrected the man without insulting him"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her calm wording protected fairness without beginning a fight."
+      },
+      {
+        "question": "What does “firm” mean in “calm but firm”?",
+        "options": [
+          "Clear and not easily changed",
+          "Quiet because of fear",
+          "Friendly but unclear",
+          "Angry and insulting"
+        ],
+        "correctIndex": 0,
+        "explanation": "The woman stayed polite while making the boundary clear."
+      },
+      {
+        "question": "Which two extremes does the narrator want to avoid?",
+        "options": [
+          "Waiting and buying medicine",
+          "Shouting and staying silent",
+          "Apologizing and listening",
+          "Walking and recording"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator learns that respectful correction lies between the two."
+      },
+      {
+        "question": "Why does the narrator imagine being corrected later?",
+        "options": [
+          "To prove the man was always rude",
+          "To avoid every public line",
+          "To remember that anyone can make a mistake",
+          "To ask the woman for praise"
+        ],
+        "correctIndex": 2,
+        "explanation": "The final reflection adds humility to the lesson about correction."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "keep; clear conflict-resolution story distinguishes passive silence, aggression, and calm correction",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-adab-02",
@@ -39,36 +153,153 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bima", "gender": "male" },
-      { "name": "Laras", "gender": "female" }
+      {
+        "name": "Bima",
+        "gender": "male"
+      },
+      {
+        "name": "Laras",
+        "gender": "female"
+      }
     ],
     "script": [
       "Bima: [nervous] Laras, do you have a minute? I wanted to call you about the meeting this afternoon.",
-      "Laras: [calmly] Of course, Bima. What's on your mind?",
+      "Laras: Of course, Bima. What's on your mind?",
       "Bima: [regretfully] I interrupted you twice while you were presenting the budget report, and I have felt bad about it since then.",
-      "Laras: [thoughtful] I noticed that too, actually. What happened?",
-      "Bima: [honestly] I was excited about my idea, so I spoke before you finished your sentence, both times. I did not mean to be disrespectful.",
+      "Laras: [directly] I noticed that too, actually. What happened?",
+      "Bima: I was excited about my idea, so I spoke before you finished your sentence, both times. I did not mean to be disrespectful.",
       "Laras: [gently] I understand that excitement can make us forget our manners sometimes, but it did make me lose my train of thought.",
-      "Bima: [softly] I know interrupting someone who is speaking shows a lack of respect, even when the intention behind it is good.",
+      "Bima: I know interrupting someone who is speaking shows a lack of respect, even when the intention behind it is good.",
       "Laras: [warmly] I appreciate that you noticed and called me about it afterward. That says a lot about you as a colleague.",
-      "Bima: [thoughtful] I keep thinking about how it must have looked to the rest of the team, as if I did not value your presentation.",
-      "Laras: [kindly] Honestly, nobody else seemed to notice as much as you think they did. But I am glad you are aware of it.",
+      "Bima: [worried] I keep thinking about how it must have looked to the rest of the team, as if I did not value your presentation.",
+      "Laras: Honestly, nobody else seemed to notice as much as you think they did. But I am glad you are aware of it.",
       "Bima: [determined] Next time I have an idea during a meeting, I will write it down and wait until you finish speaking completely.",
-      "Laras: [encouraging] That's a smart habit. You can also just raise your hand quietly if the idea feels urgent to share.",
-      "Bima: [relieved] Thank you for not being upset with me. I really respect you as a colleague and as a friend.",
-      "Laras: [warmly] I am not upset at all. Everyone learns these things eventually, so please do not worry too much about it.",
-      "Bima: [warmly] Still, I wanted to apologize properly, instead of just saying a quick sorry tomorrow morning before the next meeting.",
-      "Laras: [touched] I appreciate that more than you know, Bima. Thank you for calling and being honest with me.",
-      "Bima: [smiling] Of course. See you at tomorrow's meeting, and I promise to listen more carefully this time.",
+      "Laras: That's a smart habit. You can also just raise your hand quietly if the idea feels urgent to share.",
+      "Bima: Thank you for not being upset with me. I really respect you as a colleague and as a friend.",
+      "Laras: [honestly] I was frustrated during the presentation, but your apology and clear plan help repair the situation.",
+      "Bima: Still, I wanted to apologize properly, instead of just saying a quick sorry tomorrow morning before the next meeting.",
+      "Laras: [appreciatively] I appreciate that more than you know, Bima. Thank you for calling and being honest with me.",
+      "Bima: Of course. See you at tomorrow's meeting, and I will use my notes and wait for the discussion time this time.",
       "Laras: [smiling] I look forward to it. Have a good evening, Bima, and thank you again for this call."
     ],
     "quiz": [
-      { "question": "Why is Bima calling Laras?", "options": ["To ask for a raise", "To apologize for interrupting her during a meeting", "To cancel tomorrow's meeting", "To share a new project idea"], "correctIndex": 1, "explanation": "Bima calls to apologize for interrupting Laras twice while she was presenting the budget report." },
-      { "question": "Why did Bima interrupt Laras during the presentation?", "options": ["He wanted to end the meeting early", "He was excited about his idea and spoke before she finished", "He misheard what she said", "He was asked to by another coworker"], "correctIndex": 1, "explanation": "Bima explains he was excited about his idea, so he spoke before she finished her sentence." },
-      { "question": "How does Laras respond to Bima's apology?", "options": ["She says she is very upset with him", "She appreciates that he noticed and called her about it", "She refuses to speak with him", "She ends the meeting for tomorrow"], "correctIndex": 1, "explanation": "Laras tells Bima she appreciates that he noticed and called her, saying it says a lot about him." },
-      { "question": "What does Bima plan to do next time he has an idea in a meeting?", "options": ["Interrupt again if it feels important", "Write it down and wait until Laras finishes speaking", "Send her a message instead of attending", "Ask someone else to speak for him"], "correctIndex": 1, "explanation": "Bima decides to write his idea down and wait until Laras finishes speaking completely." },
-      { "question": "What does Laras suggest as an alternative if an idea feels urgent?", "options": ["Shout to get attention", "Raise a hand quietly", "Leave the meeting", "Text her during the meeting"], "correctIndex": 1, "explanation": "Laras suggests Bima could raise his hand quietly if the idea feels urgent to share." }
-    ]
+      {
+        "question": "Why is Bima calling Laras?",
+        "options": [
+          "To apologize for interrupting her during a meeting",
+          "To ask for a raise",
+          "To cancel tomorrow's meeting",
+          "To share a new project idea"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bima calls to apologize for interrupting Laras twice while she was presenting the budget report."
+      },
+      {
+        "question": "Why did Bima interrupt Laras during the presentation?",
+        "options": [
+          "He wanted to end the meeting early",
+          "He was excited about his idea and spoke before she finished",
+          "He misheard what she said",
+          "He was asked to by another coworker"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bima explains he was excited about his idea, so he spoke before she finished her sentence."
+      },
+      {
+        "question": "How does Laras respond to Bima's apology?",
+        "options": [
+          "She appreciates that he noticed and called her about it",
+          "She says she is very upset with him",
+          "She refuses to speak with him",
+          "She ends the meeting for tomorrow"
+        ],
+        "correctIndex": 0,
+        "explanation": "Laras tells Bima she appreciates that he noticed and called her, saying it says a lot about him."
+      },
+      {
+        "question": "What does Bima plan to do next time he has an idea in a meeting?",
+        "options": [
+          "Interrupt again if it feels important",
+          "Send her a message instead of attending",
+          "Write it down and wait until Laras finishes speaking",
+          "Ask someone else to speak for him"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bima decides to write his idea down and wait until Laras finishes speaking completely."
+      },
+      {
+        "question": "What does Laras suggest as an alternative if an idea feels urgent?",
+        "options": [
+          "Shout to get attention",
+          "Leave the meeting",
+          "Text her during the meeting",
+          "Raise a hand quietly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Laras suggests Bima could raise his hand quietly if the idea feels urgent to share."
+      },
+      {
+        "question": "What effect did the interruptions have on Laras?",
+        "options": [
+          "They made her lose her train of thought",
+          "They improved the report",
+          "They shortened the whole meeting",
+          "They made the budget clearer"
+        ],
+        "correctIndex": 0,
+        "explanation": "Laras names the practical effect instead of only discussing intention."
+      },
+      {
+        "question": "Why is Bima worried about the rest of the team?",
+        "options": [
+          "They did not receive the report",
+          "They heard his private call",
+          "They disliked his idea",
+          "His behavior may have looked disrespectful"
+        ],
+        "correctIndex": 3,
+        "explanation": "He realizes interruptions can communicate a message he did not intend."
+      },
+      {
+        "question": "What does “lose my train of thought” mean?",
+        "options": [
+          "Forget the idea being explained",
+          "Miss a train after work",
+          "Change the meeting room",
+          "Reject a colleague’s opinion"
+        ],
+        "correctIndex": 0,
+        "explanation": "The interruptions broke Laras’s concentration while speaking."
+      },
+      {
+        "question": "Why is Laras’s revised response more useful than “I am not upset”?",
+        "options": [
+          "It says the interruption did not happen",
+          "It removes Bima from future meetings",
+          "It honestly names the impact and accepts the repair",
+          "It avoids discussing any next step"
+        ],
+        "correctIndex": 2,
+        "explanation": "A good repair can include both honest impact and a constructive plan."
+      },
+      {
+        "question": "Which action will show that Bima’s apology is sincere?",
+        "options": [
+          "Calling Laras every evening",
+          "Waiting for discussion time in the next meeting",
+          "Explaining his intention to the whole team",
+          "Avoiding all future ideas"
+        ],
+        "correctIndex": 1,
+        "explanation": "Changed behavior completes the verbal apology."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "revise lightly; keep a specific workplace apology while making the repair action and meeting boundary clearer",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-adab-03",
@@ -77,36 +308,153 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good afternoon, listeners! Today we are talking about adab on the road, because traffic can bring out the worst in people. We have a caller on the line.",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this afternoon.",
-      "Radio Host: [warmly] Of course! What made you want to talk about this topic today?",
-      "Caller: [thoughtful] Well, I used to get very angry while driving, honking my horn whenever someone was slow or made a small mistake.",
-      "Radio Host: [curious] What changed for you?",
+      "Caller: Hello! Thank you for taking my call this afternoon.",
+      "Radio Host: Of course! What made you want to talk about this topic today?",
+      "Caller: [honestly] Well, I used to get very angry while driving, honking my horn whenever someone was slow or made a small mistake.",
+      "Radio Host: What changed for you?",
       "Caller: [reflective] One day, I honked loudly at a car in front of me, although the driver was clearly an elderly man who looked nervous.",
-      "Radio Host: [interested] What happened after that moment?",
-      "Caller: [softly] When I finally passed him, I saw his face. He looked frightened, not annoyed, and I felt terrible almost immediately.",
-      "Radio Host: [gently] That sounds like a powerful moment to experience.",
-      "Caller: [honestly] It was. I realized I had been treating strangers on the road like they did not matter, just because I could not see their faces closely.",
-      "Radio Host: [curious] So what do you do differently now, when someone drives slowly in front of you?",
-      "Caller: [warmly] Now, before I honk, I ask myself if it is truly necessary, or if I am simply feeling impatient.",
-      "Radio Host: [interested] Do you have any other habits you changed since then?",
-      "Caller: [gently] Yes, I always let pedestrians cross first, even when I am in a hurry, because their safety matters more than my few extra seconds.",
-      "Radio Host: [curious] What would you say to listeners who feel frustrated in traffic every single day?",
+      "Radio Host: What happened after that moment?",
+      "Caller: [regretfully] When I finally passed him, I saw his face. He looked frightened, not annoyed, and I felt terrible almost immediately.",
+      "Radio Host: That sounds like a powerful moment to experience.",
+      "Caller: [thoughtful] It was. I realized I had been treating strangers on the road like they did not matter, just because I could not see their faces closely.",
+      "Radio Host: So what do you do differently now, when someone drives slowly in front of you?",
+      "Caller: [carefully] Now, before I honk, I ask myself if it is truly necessary, or if I am simply feeling impatient.",
+      "Radio Host: Do you have any other habits you changed since then?",
+      "Caller: [firmly] Yes, I always let pedestrians cross first, even when I am in a hurry, because their safety matters more than my few extra seconds.",
+      "Radio Host: What would you say to listeners who feel frustrated in traffic every single day?",
       "Caller: [encouraging] I would say, remember that every car has a person inside, someone's parent or someone's child, so treat them the way you would want to be treated.",
-      "Radio Host: [smiling] That's such an important reminder for all of us. Thank you so much for calling in today.",
+      "Radio Host: That's such an important reminder for all of us. Thank you so much for calling in today.",
       "Caller: [warmly] Thank you for listening. I hope someone drives a little more gently after hearing this conversation."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Car repair tips", "Adab on the road while driving", "New traffic laws", "The best routes to work"], "correctIndex": 1, "explanation": "The host introduces today's topic as adab on the road, since traffic can bring out the worst in people." },
-      { "question": "How did the caller used to behave while driving?", "options": ["She always stayed calm", "She honked her horn whenever someone was slow or made a mistake", "She never drove during traffic", "She avoided busy roads completely"], "correctIndex": 1, "explanation": "She admits she used to get angry and honk whenever someone was slow or made a small mistake." },
-      { "question": "Who was the caller honking at when her feelings changed?", "options": ["A young driver", "An elderly man who looked nervous", "A police officer", "Her own family member"], "correctIndex": 1, "explanation": "She honked at a car driven by a clearly elderly and nervous man." },
-      { "question": "What does the caller ask herself now before honking?", "options": ["Whether she is late", "Whether it is truly necessary or she is just impatient", "Whether other cars will honk too", "Whether the light is red"], "correctIndex": 1, "explanation": "She now asks herself if honking is truly necessary or if she is just feeling impatient." },
-      { "question": "What is the caller's main message to frustrated drivers?", "options": ["Ignore other drivers completely", "Every car has a person inside, so treat them as you want to be treated", "Traffic will always be stressful", "Honking solves most problems"], "correctIndex": 1, "explanation": "She reminds listeners that every car has a person inside and to treat them the way they would want to be treated." }
-    ]
+      {
+        "question": "What is today's radio segment about?",
+        "options": [
+          "Car repair tips",
+          "Adab on the road while driving",
+          "New traffic laws",
+          "The best routes to work"
+        ],
+        "correctIndex": 1,
+        "explanation": "The host introduces today's topic as adab on the road, since traffic can bring out the worst in people."
+      },
+      {
+        "question": "How did the caller used to behave while driving?",
+        "options": [
+          "She honked her horn whenever someone was slow or made a mistake",
+          "She always stayed calm",
+          "She never drove during traffic",
+          "She avoided busy roads completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "She admits she used to get angry and honk whenever someone was slow or made a small mistake."
+      },
+      {
+        "question": "Who was the caller honking at when her feelings changed?",
+        "options": [
+          "A young driver",
+          "A police officer",
+          "An elderly man who looked nervous",
+          "Her own family member"
+        ],
+        "correctIndex": 2,
+        "explanation": "She honked at a car driven by a clearly elderly and nervous man."
+      },
+      {
+        "question": "What does the caller ask herself now before honking?",
+        "options": [
+          "Whether she is late",
+          "Whether other cars will honk too",
+          "Whether it is truly necessary or she is just impatient",
+          "Whether the light is red"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now asks herself if honking is truly necessary or if she is just feeling impatient."
+      },
+      {
+        "question": "What is the caller's main message to frustrated drivers?",
+        "options": [
+          "Ignore other drivers completely",
+          "Traffic will always be stressful",
+          "Honking solves most problems",
+          "Every car has a person inside, so treat them as you want to be treated"
+        ],
+        "correctIndex": 3,
+        "explanation": "She reminds listeners that every car has a person inside and to treat them the way they would want to be treated."
+      },
+      {
+        "question": "What changed when the caller saw the driver’s face?",
+        "options": [
+          "The road immediately became empty",
+          "The caller learned the man’s full history",
+          "The elderly man began driving faster",
+          "The driver became a person rather than an obstacle"
+        ],
+        "correctIndex": 3,
+        "explanation": "Seeing fear made the caller recognize the human effect of the horn."
+      },
+      {
+        "question": "When can using a horn still be appropriate?",
+        "options": [
+          "Whenever another driver is slower",
+          "When the caller feels impatient",
+          "To make pedestrians hurry",
+          "When it is genuinely needed for safety"
+        ],
+        "correctIndex": 3,
+        "explanation": "The caller asks whether honking is necessary rather than banning it completely."
+      },
+      {
+        "question": "Why does the caller let pedestrians cross despite being late?",
+        "options": [
+          "The car cannot move near crossings",
+          "Their safety is worth more than a few seconds",
+          "Every pedestrian is elderly",
+          "The radio host requires it"
+        ],
+        "correctIndex": 1,
+        "explanation": "The changed behavior places safety above impatience."
+      },
+      {
+        "question": "What is the main cause of the caller’s former behavior?",
+        "options": [
+          "Impatience made strangers seem unimportant",
+          "The road signs were unclear",
+          "The elderly driver insulted her",
+          "The horn worked incorrectly"
+        ],
+        "correctIndex": 0,
+        "explanation": "The caller connects anger with forgetting the people inside other vehicles."
+      },
+      {
+        "question": "Which result would best show the segment influenced a listener?",
+        "options": [
+          "The listener never drives again",
+          "The listener buys a louder horn",
+          "The listener ignores road safety",
+          "The listener pauses before reacting in traffic"
+        ],
+        "correctIndex": 3,
+        "explanation": "The goal is gentler, more thoughtful driving behavior."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "keep; road-safety story moves from personal impatience to empathy and safer behavior",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-adab-04",
@@ -115,31 +463,145 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [warmly] Last month, I went to my cousin's wedding, and something happened there that I still think about often.",
-      "Narrator: [thoughtful] During the dinner, I was sitting next to my great-uncle, a man who talks slowly and tells very long stories.",
-      "Narrator: [honestly] In the past, I usually found an excuse to leave when he started talking, because his stories felt endless and repetitive to me.",
-      "Narrator: [reflective] This time, my phone battery had died, so I could not escape into my phone like I normally would have.",
-      "Narrator: [gently] He began telling a story about how he met my great-aunt, sixty years ago, when they were both very young.",
-      "Narrator: [softly] At first, I listened only because I had no other choice, but slowly, the story began to pull me in completely.",
-      "Narrator: [warmly] He described the small letters they wrote to each other, and how nervous he felt the first time he visited her family.",
-      "Narrator: [thoughtful] I realized I had never actually asked him about his life before, even though he had been part of our family my whole life.",
-      "Narrator: [honestly] When he finished, he looked at me and said, thank you for listening, nobody has time for old stories anymore.",
+      "Narrator: During the dinner, I was sitting next to my great-uncle, a man who talks slowly and tells very long stories.",
+      "Narrator: [impatient] In the past, I usually found an excuse to leave when he started talking, because his stories felt endless and repetitive to me.",
+      "Narrator: This time, my phone battery had died, so I could not escape into my phone like I normally would have.",
+      "Narrator: [gently] He began telling a story about how he and my great-aunt built their small family shop sixty years ago.",
+      "Narrator: [slowly interested] At first, I listened only because I had no other choice, but slowly, the story began to pull me in completely.",
+      "Narrator: He described their first difficult year, the long working days, and how relatives helped them keep the shop open.",
+      "Narrator: [surprised] I realized I had never actually asked him about his life before, even though he had been part of our family my whole life.",
+      "Narrator: [softly] When he finished, he looked at me and said, thank you for listening, nobody has time for old stories anymore.",
       "Narrator: [touched] That sentence hit me hard, because it was true. I had never given him my full attention before that night.",
-      "Narrator: [reflective] I understood then that listening is a form of adab too, maybe one of the quietest and most overlooked forms there is.",
+      "Narrator: I understood then that listening is a form of adab too, maybe one of the quietest and most overlooked forms there is.",
       "Narrator: [determined] Since that wedding, I try to sit with older relatives more often, and I leave my phone in my pocket when they speak.",
-      "Narrator: [warmly] It is a small change, but I think it means more to them than any gift I could ever buy.",
-      "Narrator: [peacefully] My great-uncle passed away a few weeks after that wedding, so I am grateful I finally listened, while there was still time."
+      "Narrator: It is a small change, but full attention can communicate respect in a way an expensive gift may not.",
+      "Narrator: [grateful] My great-uncle passed away a few weeks after that wedding, so I am grateful I finally listened, while there was still time."
     ],
     "quiz": [
-      { "question": "Where does this story take place?", "options": ["At the narrator's own wedding", "At his cousin's wedding", "At a family dinner at home", "At his great-uncle's funeral"], "correctIndex": 1, "explanation": "The narrator says he went to his cousin's wedding last month." },
-      { "question": "Why couldn't the narrator escape into his phone this time?", "options": ["He forgot his phone at home", "His phone battery had died", "His great-uncle asked him to put it away", "He had no signal at the venue"], "correctIndex": 1, "explanation": "He explains that his phone battery had died, so he could not escape into it like usual." },
-      { "question": "What story did the great-uncle tell?", "options": ["A story about his job", "How he met the narrator's great-aunt sixty years ago", "A story about the wedding venue", "A story about his childhood home"], "correctIndex": 1, "explanation": "The great-uncle told the story of how he met the narrator's great-aunt sixty years ago." },
-      { "question": "What did the great-uncle say after finishing his story?", "options": ["That he was tired", "Thank you for listening, nobody has time for old stories anymore", "That he wanted to leave early", "That the food was excellent"], "correctIndex": 1, "explanation": "He thanked the narrator for listening, saying nobody has time for old stories anymore." },
-      { "question": "What did the narrator start doing after this wedding?", "options": ["Avoiding family gatherings", "Sitting with older relatives more and putting his phone away", "Calling his great-uncle every day", "Writing down family stories for a book"], "correctIndex": 1, "explanation": "He began sitting with older relatives more often and leaving his phone in his pocket when they speak." }
-    ]
+      {
+        "question": "Where does this story take place?",
+        "options": [
+          "At the narrator’s cousin’s wedding",
+          "At the great-uncle’s shop",
+          "At a family hospital",
+          "At the narrator’s workplace"
+        ],
+        "correctIndex": 0,
+        "explanation": "The conversation happens during a wedding dinner."
+      },
+      {
+        "question": "Why could the narrator not escape into the phone?",
+        "options": [
+          "The phone was at home",
+          "The battery had died",
+          "The uncle asked for it",
+          "The wedding had no signal"
+        ],
+        "correctIndex": 1,
+        "explanation": "A dead battery removed the usual distraction."
+      },
+      {
+        "question": "What story did the great-uncle tell?",
+        "options": [
+          "How he traveled alone",
+          "How he planned the wedding",
+          "How the couple built a family shop",
+          "How he repaired a phone"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised memory centers on family effort and support."
+      },
+      {
+        "question": "What did the great-uncle say after finishing?",
+        "options": [
+          "He thanked the narrator for listening",
+          "He asked for an expensive gift",
+          "He wanted to leave immediately",
+          "He complained about the dinner"
+        ],
+        "correctIndex": 0,
+        "explanation": "Being heard mattered to him."
+      },
+      {
+        "question": "What habit did the narrator begin afterward?",
+        "options": [
+          "Recording every family story publicly",
+          "Avoiding long conversations",
+          "Giving older relatives more phone-free attention",
+          "Buying gifts after each visit"
+        ],
+        "correctIndex": 2,
+        "explanation": "The experience changed how the narrator listens."
+      },
+      {
+        "question": "Why did the narrator listen at first?",
+        "options": [
+          "The uncle promised a reward",
+          "The story was already familiar",
+          "The dinner had ended",
+          "There was no phone available as an escape"
+        ],
+        "correctIndex": 3,
+        "explanation": "Initial attention was accidental before genuine interest grew."
+      },
+      {
+        "question": "What made the shop story meaningful?",
+        "options": [
+          "It explained why the wedding was late",
+          "It revealed a family history the narrator had never asked about",
+          "It proved old stories are always short",
+          "It described a famous business"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator discovers an important life beyond the relative’s usual role."
+      },
+      {
+        "question": "What does “full attention” involve here?",
+        "options": [
+          "Agreeing with every detail",
+          "Keeping the conversation brief",
+          "Listening without using the phone as a distraction",
+          "Writing down every word"
+        ],
+        "correctIndex": 2,
+        "explanation": "The lesson concerns presence rather than perfect memory or agreement."
+      },
+      {
+        "question": "Why is the final timing important?",
+        "options": [
+          "The shop closed the same evening",
+          "The narrator moved abroad",
+          "The phone was repaired later",
+          "The uncle died soon after the conversation"
+        ],
+        "correctIndex": 3,
+        "explanation": "The loss makes the one attentive conversation especially valuable."
+      },
+      {
+        "question": "What assumption did the narrator revise?",
+        "options": [
+          "Family shops never survive",
+          "Weddings are always tiring",
+          "Slow older relatives had little worth hearing",
+          "Phones make every story clearer"
+        ],
+        "correctIndex": 2,
+        "explanation": "Patient listening revealed that the earlier judgment was unfair."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "revise lightly; retain the emotional family memory while keeping the lesson on attention rather than romantic detail",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-adab-05",
@@ -148,36 +610,153 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Citra", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Citra",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Citra: [curious] Reza, can I ask you something? Why do you always reply to messages so quickly, even late at night?",
-      "Reza: [smiling] Ha, it's a habit my old manager taught me. She said ignoring messages for days shows disrespect for the other person's time.",
-      "Citra: [thoughtful] I never really thought about it that way. I usually just reply whenever I feel like it.",
+      "Citra: [curious] Reza, can I ask you something? How do you reply on time without checking work messages all night?",
+      "Reza: [thoughtful] Ha, it's a habit my old manager taught me. She said important work messages need a timely reply, but people also need clear working hours.",
+      "Citra: I never really thought about it that way. I usually just reply whenever I feel like it.",
       "Reza: [gently] I understand that, but imagine someone waiting for an answer because they need it to finish their own work.",
-      "Citra: [honestly] That's true. Last week, I left a client waiting for three days because I completely forgot to check my messages.",
-      "Reza: [nodding] That happens to everyone sometimes, but I try to at least send a short reply, even if I cannot answer fully yet.",
-      "Citra: [curious] What do you usually write when you are too busy to answer properly?",
+      "Citra: [regretfully] That's true. Last week, I left a client waiting for three days because I completely forgot to check my messages.",
+      "Reza: [practically] That happens to everyone sometimes, but During working hours, I send a short acknowledgement if I cannot answer fully. After hours, only our emergency channel alerts me.",
+      "Citra: What do you usually write when you are too busy to answer properly?",
       "Reza: [warmly] Something simple, like, thank you for your message, I will answer properly by tomorrow. It only takes ten seconds to type.",
-      "Citra: [surprised] I never thought a quick reply like that could matter so much to someone.",
-      "Reza: [thoughtful] It does, because silence makes people feel ignored, even if you did not mean to ignore them at all.",
-      "Citra: [curious] Do you also have rules about how you write your replies to people?",
-      "Reza: [gently] Yes, actually. I always read the message twice before answering, so I do not misunderstand what they need from me.",
-      "Citra: [thoughtful] That's smart. I sometimes reply too fast and give the wrong answer, then I have to correct myself later.",
-      "Reza: [warmly] Exactly, so speed matters, but understanding matters even more. Adab in messages means being both prompt and thoughtful.",
-      "Citra: [smiling] I think I have been careless about this for a long time. I want to change that starting today.",
-      "Reza: [encouraging] Start small. Just answer within a day, even briefly, and people will notice the difference quickly.",
-      "Citra: [warmly] Thank you, Reza. I am going to reply to that client right now, even though it is three days late.",
-      "Reza: [laughing] Better late than never. Good luck with the reply!"
+      "Citra: I never thought a quick reply like that could matter so much to someone.",
+      "Reza: [reflective] It does, because silence makes people feel ignored, even if you did not mean to ignore them at all.",
+      "Citra: Do you also have rules about how you write your replies to people?",
+      "Reza: [carefully] Yes, actually. I always read the message twice before answering, so I do not misunderstand what they need from me.",
+      "Citra: That's smart. I sometimes reply too fast and give the wrong answer, then I have to correct myself later.",
+      "Reza: [firmly] Exactly, so speed matters, but understanding matters even more. Adab in messages means being both prompt and thoughtful.",
+      "Citra: I think I have been careless about this for a long time. I want to change that starting today.",
+      "Reza: [encouraging] Start with a clear response time, use an emergency channel, and do not promise a deadline you cannot keep.",
+      "Citra: Thank you, Reza. I am going to reply to that client right now, even though it is three days late.",
+      "Reza: [lightly] Better late than never. Good luck with the reply!"
     ],
     "quiz": [
-      { "question": "Why is Citra curious about Reza's habit?", "options": ["He never checks his phone", "He always replies to messages quickly, even at night", "He deletes messages without reading them", "He asks others to reply for him"], "correctIndex": 1, "explanation": "Citra asks why Reza always replies to messages so quickly, even late at night." },
-      { "question": "What did Reza's old manager teach him?", "options": ["To ignore unimportant messages", "That ignoring messages for days shows disrespect for someone's time", "To reply only once a week", "To always call instead of texting"], "correctIndex": 1, "explanation": "His manager told him ignoring messages for days shows disrespect for the other person's time." },
-      { "question": "What happened when Citra left a client waiting for three days?", "options": ["She lost the client immediately", "She forgot to check her messages", "The client complained publicly", "Nothing happened at all"], "correctIndex": 1, "explanation": "Citra admits she left a client waiting for three days because she forgot to check her messages." },
-      { "question": "What does Reza suggest sending when he is too busy to reply fully?", "options": ["Nothing until he has time", "A short message saying he will answer properly soon", "An automatic away message", "A phone call instead"], "correctIndex": 1, "explanation": "He suggests a short reply like thanking them and saying he will answer properly by tomorrow." },
-      { "question": "What does Reza say matters even more than speed when replying?", "options": ["Being formal", "Understanding what the person actually needs", "Replying in the same language", "Using short sentences"], "correctIndex": 1, "explanation": "Reza says speed matters, but understanding what someone needs matters even more." }
-    ]
+      {
+        "question": "What is Citra curious about?",
+        "options": [
+          "Why Reza ignores every message",
+          "How to write to friends at midnight",
+          "How Reza replies promptly without working all night",
+          "Why clients wait three days"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised opening focuses on both responsiveness and boundaries."
+      },
+      {
+        "question": "What did Reza’s manager teach?",
+        "options": [
+          "Every message requires an immediate answer",
+          "Reply time and working-hour expectations should be clear",
+          "Clients should never send questions",
+          "Only managers may set boundaries"
+        ],
+        "correctIndex": 1,
+        "explanation": "Timeliness does not require permanent availability."
+      },
+      {
+        "question": "What problem did Citra create last week?",
+        "options": [
+          "A client waited three days without an update",
+          "She sent a reply too early",
+          "She used the emergency channel",
+          "She answered the wrong client immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "Forgetting the message left another person unable to plan."
+      },
+      {
+        "question": "What does Reza send when a full answer is not ready?",
+        "options": [
+          "An empty message",
+          "A promise to answer in ten seconds",
+          "The client’s original message",
+          "A short acknowledgement with a realistic response time"
+        ],
+        "correctIndex": 3,
+        "explanation": "A brief update manages expectations honestly."
+      },
+      {
+        "question": "What matters more than speed alone?",
+        "options": [
+          "Writing at night",
+          "Understanding the request correctly",
+          "Using the longest answer",
+          "Agreeing with the sender"
+        ],
+        "correctIndex": 1,
+        "explanation": "A quick wrong reply creates more work."
+      },
+      {
+        "question": "What protects Reza’s personal time?",
+        "options": [
+          "He turns every device off permanently",
+          "Only an emergency channel alerts him after hours",
+          "Clients cannot contact the company",
+          "He answers all messages before sleep"
+        ],
+        "correctIndex": 1,
+        "explanation": "Urgent needs have a defined route without making every message urgent."
+      },
+      {
+        "question": "What does an “acknowledgement” do?",
+        "options": [
+          "Confirms receipt before the complete answer",
+          "Solves the whole request",
+          "Rejects the client’s question",
+          "Moves the message to another company"
+        ],
+        "correctIndex": 0,
+        "explanation": "It tells the sender that the message was seen and sets an expectation."
+      },
+      {
+        "question": "Why does Reza read a message twice?",
+        "options": [
+          "To delay every response",
+          "To memorize the sender’s name",
+          "To reduce misunderstanding before replying",
+          "To make the message sound urgent"
+        ],
+        "correctIndex": 2,
+        "explanation": "Careful reading supports accuracy."
+      },
+      {
+        "question": "Which promise would follow Reza’s advice?",
+        "options": [
+          "I will answer everything immediately",
+          "Maybe I will reply someday",
+          "I have read this but cannot explain when",
+          "I will confirm the figures by 3 p.m. tomorrow"
+        ],
+        "correctIndex": 3,
+        "explanation": "A specific realistic time is both prompt and honest."
+      },
+      {
+        "question": "What broader balance defines message adab?",
+        "options": [
+          "Always choosing speed over accuracy",
+          "Respecting another person’s work and one’s own boundaries",
+          "Treating every request as an emergency",
+          "Avoiding written communication"
+        ],
+        "correctIndex": 1,
+        "explanation": "The revised dialogue combines care, clarity, and sustainable availability."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "revise; distinguish timely professional replies from unhealthy late-night availability and add communication boundaries",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-adab-06",
@@ -186,31 +765,145 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] For a long time, I believed that disagreeing with someone meant I had to prove them completely wrong.",
-      "Narrator: [honestly] When a friend or coworker said something I disagreed with, I would argue loudly until they gave up or simply walked away.",
-      "Narrator: [reflective] I thought winning the argument meant I had good ideas, but I never noticed how uncomfortable it made everyone around me.",
-      "Narrator: [gently] Then, a few months ago, a colleague disagreed with my plan during a meeting, but she did it so differently than I expected.",
-      "Narrator: [warmly] She said, I see your point, and I understand why you think that way, although I have a different idea I would like to share.",
+      "Narrator: [regretfully] When a friend or coworker said something I disagreed with, I would argue loudly until they gave up or simply walked away.",
+      "Narrator: I thought winning the argument meant I had good ideas, but I never noticed how uncomfortable it made everyone around me.",
+      "Narrator: [reflective] Then, a few months ago, a colleague disagreed with my plan during a meeting, but she did it so differently than I expected.",
+      "Narrator: [calmly] She said, I see your point, and I understand why you think that way, although I have a different idea I would like to share.",
       "Narrator: [surprised] I was ready to defend myself immediately, but her calm words made me actually want to listen to her instead of arguing.",
-      "Narrator: [thoughtful] She explained her idea clearly, without raising her voice or making me feel foolish for having a different opinion.",
-      "Narrator: [reflective] By the end of the conversation, I even agreed that her plan was better, and I did not feel embarrassed at all.",
+      "Narrator: She explained her idea clearly, without raising her voice or making me feel foolish for having a different opinion.",
+      "Narrator: [openly] By the end of the conversation, I even agreed that her plan was better, and I did not feel embarrassed at all.",
       "Narrator: [honestly] I realized that my old way of arguing had won some debates, but it had also quietly damaged many friendships over the years.",
       "Narrator: [determined] So now, when I disagree with someone, I try to start with something I genuinely respect about their idea first.",
-      "Narrator: [gently] Then I explain my different view calmly, using words like, I understand, but I see it a little differently than you.",
+      "Narrator: Then I explain my different view calmly, using words like, I understand, but I see it a little differently than you.",
       "Narrator: [warmly] This small change has made people more willing to actually consider my opinions, instead of simply defending themselves against me.",
-      "Narrator: [peacefully] I learned that adab in disagreement is not about staying silent, but about disagreeing without disrespecting the person standing in front of you.",
-      "Narrator: [with a small smile] Because you can be honest and kind at the same time, even when your opinions are completely different from each other."
+      "Narrator: I learned that adab in disagreement is not about staying silent, but about disagreeing without disrespecting the person standing in front of you.",
+      "Narrator: [peacefully] Because you can be honest and kind at the same time, even when your opinions are completely different from each other."
     ],
     "quiz": [
-      { "question": "What did the narrator used to believe about disagreeing?", "options": ["That it should always be avoided", "That she had to prove the other person completely wrong", "That it was never worth doing", "That only elders could disagree"], "correctIndex": 1, "explanation": "She believed disagreeing meant she had to prove the other person completely wrong." },
-      { "question": "How did her colleague disagree with her plan in the meeting?", "options": ["By staying silent", "By calmly acknowledging her point before sharing a different idea", "By arguing loudly", "By reporting it to a manager"], "correctIndex": 1, "explanation": "The colleague calmly said she understood the narrator's point before sharing her own different idea." },
-      { "question": "How did the narrator react to her colleague's calm approach?", "options": ["She got angrier", "She actually wanted to listen instead of arguing", "She left the meeting", "She ignored the colleague completely"], "correctIndex": 1, "explanation": "Her colleague's calm words made her actually want to listen instead of defending herself." },
-      { "question": "What does the narrator realize about her old way of arguing?", "options": ["It always improved friendships", "It had quietly damaged many friendships over the years", "It never affected anyone", "It made her more popular"], "correctIndex": 1, "explanation": "She realizes her old arguing style had quietly damaged many friendships over the years." },
-      { "question": "What does the narrator now do first when she disagrees with someone?", "options": ["She stays completely silent", "She starts with something she respects about their idea", "She immediately states her own opinion", "She avoids the person afterward"], "correctIndex": 1, "explanation": "She now tries to start with something she genuinely respects about the other person's idea." }
-    ]
+      {
+        "question": "What did the narrator used to believe about disagreeing?",
+        "options": [
+          "That it should always be avoided",
+          "That she had to prove the other person completely wrong",
+          "That it was never worth doing",
+          "That only elders could disagree"
+        ],
+        "correctIndex": 1,
+        "explanation": "She believed disagreeing meant she had to prove the other person completely wrong."
+      },
+      {
+        "question": "How did her colleague disagree with her plan in the meeting?",
+        "options": [
+          "By staying silent",
+          "By arguing loudly",
+          "By calmly acknowledging her point before sharing a different idea",
+          "By reporting it to a manager"
+        ],
+        "correctIndex": 2,
+        "explanation": "The colleague calmly said she understood the narrator's point before sharing her own different idea."
+      },
+      {
+        "question": "How did the narrator react to her colleague's calm approach?",
+        "options": [
+          "She actually wanted to listen instead of arguing",
+          "She got angrier",
+          "She left the meeting",
+          "She ignored the colleague completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her colleague's calm words made her actually want to listen instead of defending herself."
+      },
+      {
+        "question": "What does the narrator realize about her old way of arguing?",
+        "options": [
+          "It had quietly damaged many friendships over the years",
+          "It always improved friendships",
+          "It never affected anyone",
+          "It made her more popular"
+        ],
+        "correctIndex": 0,
+        "explanation": "She realizes her old arguing style had quietly damaged many friendships over the years."
+      },
+      {
+        "question": "What does the narrator now do first when she disagrees with someone?",
+        "options": [
+          "She stays completely silent",
+          "She immediately states her own opinion",
+          "She starts with something she respects about their idea",
+          "She avoids the person afterward"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now tries to start with something she genuinely respects about the other person's idea."
+      },
+      {
+        "question": "Why did the colleague’s opening make listening easier?",
+        "options": [
+          "It proved the narrator was completely wrong",
+          "It ended the meeting quickly",
+          "It avoided sharing another idea",
+          "It showed understanding before presenting disagreement"
+        ],
+        "correctIndex": 3,
+        "explanation": "Acknowledgment reduced the need for immediate self-defense."
+      },
+      {
+        "question": "Did the colleague’s politeness weaken her argument?",
+        "options": [
+          "No, she explained the different plan clearly",
+          "Yes, nobody understood her",
+          "Yes, she changed her opinion",
+          "No, because she stayed silent"
+        ],
+        "correctIndex": 0,
+        "explanation": "Respectful delivery and a strong idea existed together."
+      },
+      {
+        "question": "What long-term cost did the narrator overlook?",
+        "options": [
+          "Meetings became more expensive",
+          "Coworkers stopped having plans",
+          "Every disagreement took less time",
+          "Winning debates had damaged relationships"
+        ],
+        "correctIndex": 3,
+        "explanation": "The old style achieved short-term victory but harmed trust."
+      },
+      {
+        "question": "Why must the first positive point be genuine?",
+        "options": [
+          "False praise would make the respectful opening dishonest",
+          "Every idea is equally good",
+          "The narrator needs a longer sentence",
+          "Disagreement is not allowed after praise"
+        ],
+        "correctIndex": 0,
+        "explanation": "Adab requires sincerity, not a formula used to manipulate."
+      },
+      {
+        "question": "What is the strongest evidence that the new approach works?",
+        "options": [
+          "The narrator now wins every debate",
+          "People consider the narrator’s opinion instead of only defending themselves",
+          "Coworkers always agree immediately",
+          "Meetings contain no different ideas"
+        ],
+        "correctIndex": 1,
+        "explanation": "Lower defensiveness allows real evaluation of the idea."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "keep; mature disagreement story shows how acknowledgment lowers defensiveness without requiring false agreement",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-adab-07",
@@ -219,35 +912,603 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Andi", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Andi",
+        "gender": "male"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Andi, who got married last year and wants to talk about visiting in-laws with proper adab. Thanks for joining me.",
-      "Andi: [pleasantly] Thank you for inviting me. This topic taught me a lot during my first year of marriage.",
-      "Host: [curious] What was the biggest lesson you learned about visiting your wife's parents?",
-      "Andi: [thoughtful] Honestly, I learned that small gestures matter more than big ones. Bringing a small gift every visit meant more to them than I expected.",
-      "Host: [interested] What kind of gifts do you usually bring when you visit?",
-      "Andi: [gently] Simple things, like fruit, or something my mother-in-law mentioned she needed. It shows I was actually listening during our last conversation.",
-      "Host: [curious] Did you struggle with anything when you first started visiting?",
+      "Andi: Thank you for inviting me. This topic taught me a lot during my first year of marriage.",
+      "Host: What was the biggest lesson you learned about visiting your wife's parents?",
+      "Andi: [thoughtful] Honestly, I learned that small gestures matter more than big ones. Remembering a need or occasionally bringing something useful meant more than an expensive display.",
+      "Host: What kind of gifts do you usually bring when you visit?",
+      "Andi: [gently] Sometimes fruit, or practical help with something my mother-in-law mentioned. It shows I was actually listening during our last conversation.",
+      "Host: Did you struggle with anything when you first started visiting?",
       "Andi: [honestly] Yes, sitting quietly while my father-in-law talked for a long time. I used to check my phone without realizing how rude it looked to him.",
-      "Host: [thoughtful] How did you fix that particular habit?",
-      "Andi: [warmly] My wife gently told me it bothered her father, so now I leave my phone in the car before we even arrive.",
-      "Host: [curious] What about disagreements? Do you ever disagree with your in-laws about something?",
-      "Andi: [reflective] Sometimes, but I learned to disagree gently, and only when it truly matters, because respect comes before being right.",
-      "Host: [interested] Any advice about helping around the house during your visits?",
-      "Andi: [gently] I always offer to help clean up after meals, even though my mother-in-law usually refuses. Offering shows I do not expect to be served like a guest.",
-      "Host: [curious] What would you tell someone about to meet their in-laws for the very first time?",
+      "Host: How did you fix that particular habit?",
+      "Andi: [carefully] My wife gently told me it bothered her father, so now I silence my phone and keep it away, while allowing urgent family calls.",
+      "Host: What about disagreements? Do you ever disagree with your in-laws about something?",
+      "Andi: [reflective] Sometimes, but I learned to disagree gently, and only when it truly matters, because I choose a respectful time and wording instead of turning a visit into a debate.",
+      "Host: Any advice about helping around the house during your visits?",
+      "Andi: [helpfully] I always offer to help clean up after meals, even though my mother-in-law usually refuses. Offering shows I do not expect to be served like a guest.",
+      "Host: What would you tell someone about to meet their in-laws for the very first time?",
       "Andi: [encouraging] I would say, listen more than you speak, arrive on time, and remember that patience shows more respect than clever words ever could.",
-      "Host: [smiling] Beautiful advice, Andi. Thank you so much for sharing your experience with us today.",
+      "Host: Beautiful advice, Andi. Thank you so much for sharing your experience with us today.",
       "Andi: [warmly] Thank you for having me. I hope it helps someone feel less nervous before their next family visit."
     ],
     "quiz": [
-      { "question": "What is Andi's connection to the topic being discussed?", "options": ["He is a marriage counselor", "He got married last year and visits his wife's parents", "He writes about family traditions", "He is the host's brother"], "correctIndex": 1, "explanation": "Andi got married last year and shares his experience visiting his wife's parents." },
-      { "question": "What does Andi say matters more than expensive gifts?", "options": ["Arriving late but with a big gift", "Small gestures, like bringing something they mentioned needing", "Bringing nothing at all", "Sending a gift by mail instead"], "correctIndex": 1, "explanation": "He explains that small gestures, like bringing something his mother-in-law mentioned needing, mean more than big ones." },
-      { "question": "What habit did Andi have to change regarding his phone?", "options": ["He now brings it everywhere", "He leaves it in the car before visiting his in-laws", "He only uses it for photos", "He gave his phone to his wife"], "correctIndex": 1, "explanation": "He now leaves his phone in the car because checking it while his father-in-law spoke looked rude." },
-      { "question": "How does Andi handle disagreements with his in-laws?", "options": ["He always avoids disagreeing", "He disagrees gently and only when it truly matters", "He argues to prove his point", "He asks his wife to disagree for him"], "correctIndex": 1, "explanation": "He says he disagrees gently and only when it truly matters, because respect comes before being right." },
-      { "question": "What is Andi's main advice for someone meeting in-laws for the first time?", "options": ["Speak as much as possible to seem confident", "Listen more than you speak, arrive on time, and be patient", "Bring the most expensive gift possible", "Avoid helping with household tasks"], "correctIndex": 1, "explanation": "Andi advises listening more than speaking, arriving on time, and showing patience as a sign of respect." }
-    ]
+      {
+        "question": "Why can Andi speak from experience?",
+        "options": [
+          "He has spent his first year of marriage visiting his wife’s parents",
+          "He teaches a professional family course",
+          "He lives with the podcast host",
+          "He has never met his in-laws"
+        ],
+        "correctIndex": 0,
+        "explanation": "His lessons come from recent family visits."
+      },
+      {
+        "question": "What does Andi value over an expensive display?",
+        "options": [
+          "Bringing a gift on every visit",
+          "Remembering needs and offering useful care",
+          "Talking more than everyone",
+          "Correcting every opinion"
+        ],
+        "correctIndex": 1,
+        "explanation": "Attention and practical thought matter more than price or frequency."
+      },
+      {
+        "question": "How does Andi manage his phone now?",
+        "options": [
+          "He leaves it unsecured in the car",
+          "He uses it during long conversations",
+          "He turns off all emergency contact",
+          "He silences and puts it away but allows urgent family calls"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised habit balances attention and safety."
+      },
+      {
+        "question": "How does Andi handle a disagreement?",
+        "options": [
+          "He pretends to agree with everything",
+          "He chooses respectful timing and wording",
+          "He begins a debate during every visit",
+          "He asks his wife to argue for him"
+        ],
+        "correctIndex": 1,
+        "explanation": "Respect does not require silence, but it shapes the conversation."
+      },
+      {
+        "question": "What advice is given for a first visit?",
+        "options": [
+          "Bring an expensive gift",
+          "Avoid helping after meals",
+          "Listen, arrive on time, and show patience",
+          "Speak often to appear confident"
+        ],
+        "correctIndex": 2,
+        "explanation": "The closing advice emphasizes ordinary respectful behavior."
+      },
+      {
+        "question": "Why is practical help a meaningful gesture?",
+        "options": [
+          "It shows Andi remembered an earlier conversation",
+          "It guarantees the family will agree with him",
+          "It replaces the need to visit",
+          "It gives him control of the home"
+        ],
+        "correctIndex": 0,
+        "explanation": "Remembering a stated need demonstrates attention."
+      },
+      {
+        "question": "What first revealed the phone problem?",
+        "options": [
+          "The podcast host saw the visit",
+          "The phone stopped working",
+          "His father-in-law took the device",
+          "Andi’s wife explained that it bothered her father"
+        ],
+        "correctIndex": 3,
+        "explanation": "Feedback from his wife helped him understand how the habit appeared."
+      },
+      {
+        "question": "Why does Andi offer to clean even when the offer is refused?",
+        "options": [
+          "He wants to inspect the kitchen",
+          "He dislikes the meal",
+          "He plans to leave early",
+          "It shows he does not expect others to serve him"
+        ],
+        "correctIndex": 3,
+        "explanation": "The offer communicates willingness to share work."
+      },
+      {
+        "question": "Which behavior would contradict Andi’s lesson?",
+        "options": [
+          "Listening during a long story",
+          "Arriving at the agreed time",
+          "Offering appropriate help",
+          "Turning every family difference into a debate"
+        ],
+        "correctIndex": 3,
+        "explanation": "Not every disagreement needs to control a social visit."
+      },
+      {
+        "question": "What makes the advice flexible rather than formulaic?",
+        "options": [
+          "Every visit requires the same gift",
+          "A phone must always stay in a car",
+          "Care responds to the family’s real needs and boundaries",
+          "The guest must never speak"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revisions focus on attention instead of rigid rituals."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "revise; avoid compulsory gifts and unsafe phone storage while preserving attentive, respectful family visits",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-adab-08",
+    "title": "The Voice Note I Recorded Twice",
+    "level": "A2",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [annoyed] On Monday, a supplier sent the wrong materials to our office for the second time. I was responsible for receiving them, and I felt very annoyed.",
+      "Narrator: [impatient] I opened my phone and recorded a voice note to the supplier. My words were not insulting, but my tone sounded sharp and impatient.",
+      "Narrator: [reflective] Before sending it, I listened once. I imagined hearing that voice while trying to correct an honest mistake.",
+      "Narrator: [surprised] I deleted the recording and checked the order document. Then I discovered that one number on our own form was unclear.",
+      "Narrator: The supplier still should have confirmed it, but the problem was not completely one-sided. I recorded a second message.",
+      "Narrator: [calmly] This time, I greeted him, described what had arrived, and sent a photo beside the written order. I asked how we could replace the materials before Thursday.",
+      "Narrator: I also admitted that our form might have caused confusion. The message took only thirty seconds longer than the first version.",
+      "Narrator: [relieved] He called ten minutes later. He apologized, arranged a replacement, and asked us to type future item numbers instead of writing them by hand.",
+      "Narrator: We agreed. The solution was simple once neither person was busy protecting pride.",
+      "Narrator: [thoughtful] That experience taught me to review more than the facts before sending a message. Tone also carries meaning, especially when people cannot see our face.",
+      "Narrator: Politeness does not require hiding a real problem. My second note was still clear about the delay and the result we needed.",
+      "Narrator: [firmly] The difference was that it invited cooperation instead of beginning a fight.",
+      "Narrator: Now, when I record a difficult message, I listen before sending. If I sound as if I am attacking the person, I pause and try again.",
+      "Narrator: [gently] Good adab can live inside a voice note: a greeting, accurate details, fair responsibility, and words that leave room for a solution."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the narrator annoyed?",
+        "options": [
+          "A coworker deleted a message",
+          "The office moved",
+          "A supplier sent the wrong materials again",
+          "The phone stopped working"
+        ],
+        "correctIndex": 2,
+        "explanation": "The wrong delivery had happened for a second time."
+      },
+      {
+        "question": "Why did she delete the first recording?",
+        "options": [
+          "It was too quiet to hear",
+          "Its tone sounded sharp and impatient",
+          "It named the wrong company",
+          "It lasted one hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "Listening again helped her notice the harsh tone."
+      },
+      {
+        "question": "What did she discover in the order?",
+        "options": [
+          "The order was for another office",
+          "One handwritten number was unclear",
+          "The materials were correct",
+          "No deadline existed"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their own form may have contributed to the mistake."
+      },
+      {
+        "question": "How did the supplier respond?",
+        "options": [
+          "He ended the business relationship",
+          "He ignored every message",
+          "He arranged replacement and suggested typed numbers",
+          "He sent the same items again"
+        ],
+        "correctIndex": 2,
+        "explanation": "The respectful message led to a practical solution."
+      },
+      {
+        "question": "What is the main lesson about digital message adab?",
+        "options": [
+          "Politeness means hiding problems",
+          "The first angry response is always best",
+          "Voice notes should never be used",
+          "Clear correction can remain polite and cooperative"
+        ],
+        "correctIndex": 3,
+        "explanation": "Good adab supports truth and problem-solving together."
+      },
+      {
+        "question": "Why was listening to the first recording useful?",
+        "options": [
+          "It proved the supplier was fully responsible",
+          "It corrected the written order",
+          "It delivered the message faster",
+          "It showed how the tone might sound to the receiver"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reviewing the voice note revealed meaning carried by tone."
+      },
+      {
+        "question": "How was responsibility shared?",
+        "options": [
+          "Only the narrator made an error",
+          "Only the supplier created the problem",
+          "The supplier failed to confirm, while the office form was unclear",
+          "Neither side had any role"
+        ],
+        "correctIndex": 2,
+        "explanation": "The script avoids a one-sided accusation."
+      },
+      {
+        "question": "What evidence accompanied the second message?",
+        "options": [
+          "A photo beside the written order",
+          "A public complaint",
+          "A recording of the first delivery",
+          "A customer review"
+        ],
+        "correctIndex": 0,
+        "explanation": "The photo made the correction specific and verifiable."
+      },
+      {
+        "question": "Why did the solution become easier?",
+        "options": [
+          "Both sides focused on fixing the process instead of protecting pride",
+          "The deadline disappeared",
+          "The wrong materials became usable",
+          "The supplier stopped responding"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cooperation allowed a replacement and a clearer future form."
+      },
+      {
+        "question": "What does the story show about politeness?",
+        "options": [
+          "It requires accepting every mistake",
+          "It means removing all deadlines",
+          "It can remain direct about a real problem",
+          "It is only about greeting first"
+        ],
+        "correctIndex": 2,
+        "explanation": "The second note was respectful without hiding the needed result."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "keep; strong workplace case balances evidence, shared responsibility, tone, deadline, and cooperative correction",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-adab-09",
+    "title": "Leaving Before the Gathering Ended",
+    "level": "A2",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] My colleague invited several families to his home for dinner. I was glad to attend, but I had an early medical appointment the next morning.",
+      "Narrator: [concerned] I planned to leave at nine. When the time came, everyone was beginning another conversation, and the host was serving tea.",
+      "Narrator: I did not want to interrupt the whole room with a long goodbye. I also did not want to disappear without thanking the host.",
+      "Narrator: [quietly] I waited until he finished serving, then spoke to him quietly near the kitchen. I thanked him for the meal and explained that I needed to leave early.",
+      "Narrator: [understanding] He understood immediately. He offered to pack dessert, but I declined because I had already eaten enough.",
+      "Narrator: Before leaving, I greeted the older guests nearby. I did not walk around the entire house and stop every conversation.",
+      "Narrator: [thoughtfully] The next day, I sent one short message saying I had enjoyed the evening and reached home safely.",
+      "Narrator: [uncertain] Later, another guest told me that my exit had been almost invisible. At first, I wondered whether that was negative.",
+      "Narrator: [reflective] Then I realized a good departure does not need to become a second event. It should respect the host without taking attention from the gathering.",
+      "Narrator: There are times when a guest must explain more, especially if leaving suddenly because of an emergency.",
+      "Narrator: [calmly] My situation was simple. A quiet word, sincere thanks, and no dramatic excuse were enough.",
+      "Narrator: I also learned to mention time limits when accepting an invitation. It helps the host understand our schedule before the event begins.",
+      "Narrator: [prepared] At the next gathering, I told the host in advance that I could stay for one hour. There was no awkward moment when I left.",
+      "Narrator: [gently] Good manners include knowing how to arrive and how to leave: warmly, honestly, and without making every movement about ourselves."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator plan to leave at nine?",
+        "options": [
+          "He disliked the guests",
+          "The food was late",
+          "He had an early medical appointment",
+          "He needed to catch a flight"
+        ],
+        "correctIndex": 2,
+        "explanation": "An early appointment limited his evening."
+      },
+      {
+        "question": "How did he tell the host?",
+        "options": [
+          "By announcing it to everyone",
+          "Quietly after the host finished serving",
+          "Through another guest",
+          "By leaving a note outside"
+        ],
+        "correctIndex": 1,
+        "explanation": "He chose a calm moment and spoke directly."
+      },
+      {
+        "question": "Who else did he greet before leaving?",
+        "options": [
+          "Every person in every room",
+          "Only the children",
+          "Nobody at all",
+          "Older guests nearby"
+        ],
+        "correctIndex": 3,
+        "explanation": "He kept the departure respectful but brief."
+      },
+      {
+        "question": "What message did he send the next day?",
+        "options": [
+          "A complaint about tea",
+          "A new invitation list",
+          "A request for money",
+          "Thanks and confirmation that he arrived safely"
+        ],
+        "correctIndex": 3,
+        "explanation": "The short follow-up completed his thanks."
+      },
+      {
+        "question": "What will he do with future invitations?",
+        "options": [
+          "Always leave without speaking",
+          "Never attend dinner",
+          "Mention his time limit in advance",
+          "Give a long excuse"
+        ],
+        "correctIndex": 2,
+        "explanation": "Early communication prevents awkward departures."
+      },
+      {
+        "question": "Why did the narrator wait before speaking to the host?",
+        "options": [
+          "The narrator wanted everyone to notice",
+          "The host was still serving tea",
+          "The medical appointment was canceled",
+          "The older guests were leaving"
+        ],
+        "correctIndex": 1,
+        "explanation": "Waiting avoided interrupting the host’s immediate task."
+      },
+      {
+        "question": "Why did the narrator decline dessert?",
+        "options": [
+          "Enough food had already been eaten",
+          "The dessert looked unsafe",
+          "The host refused to pack it",
+          "The appointment required fasting"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator gives a simple honest reason without inventing an excuse."
+      },
+      {
+        "question": "What does an “almost invisible” departure mean positively?",
+        "options": [
+          "It respected the host without taking over the gathering",
+          "Nobody cared that the narrator attended",
+          "The narrator left without saying thanks",
+          "The host failed to notice a guest"
+        ],
+        "correctIndex": 0,
+        "explanation": "A good exit did not become a second event."
+      },
+      {
+        "question": "When would a longer explanation be appropriate?",
+        "options": [
+          "Whenever tea is served",
+          "If an emergency caused a sudden departure",
+          "At every ordinary dinner",
+          "Only in a message the next day"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator distinguishes the simple plan from an urgent situation."
+      },
+      {
+        "question": "How does advance notice improve future visits?",
+        "options": [
+          "The guest can leave without thanks",
+          "The host understands the guest’s time limit before the event",
+          "Every conversation ends earlier",
+          "The appointment becomes unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "Shared expectations remove awkwardness at departure time."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "keep; nuanced gathering story balances health needs, gratitude, older guests, host attention, and advance notice",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-adab-10",
+    "title": "Advice After Asking Permission",
+    "level": "A2",
+    "themeId": "adab",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Rania",
+        "gender": "female"
+      },
+      {
+        "name": "Safa",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Rania: [warmly] Safa, may I share an observation about your presentation, or would you rather rest first?",
+      "Safa: [nervous] Thank you for asking. I am still nervous, but I would like to hear one useful point.",
+      "Rania: [carefully] Your examples were clear. I noticed that the final slide had much more text than the others.",
+      "Safa: I felt that too. I was afraid I would forget the conclusion, so I put every sentence there.",
+      "Rania: [helpfully] Would it help to keep three key phrases on the slide and place the full sentences in your private notes?",
+      "Safa: Yes. Then the audience could listen instead of trying to read a paragraph.",
+      "Rania: That was my thought. Do you want help choosing the three phrases?",
+      "Safa: [relieved] Please. I appreciate that you started with what worked instead of saying the whole ending was bad.",
+      "Rania: [sincerely] I genuinely liked the examples. Feedback should be accurate, not sweet words followed by an attack.",
+      "Safa: Sometimes people say, “Can I be honest?” and then speak without care.",
+      "Rania: [thoughtful] Honesty needs purpose and good timing. If advice only releases my frustration, it may not help you.",
+      "Safa: I also have feedback about your introduction from yesterday. Is now a good time?",
+      "Rania: [openly] Yes, it is. Please tell me.",
+      "Safa: The opening question was strong, but you answered it too quickly. A short pause would let listeners think.",
+      "Rania: [encouraged] That is specific and easy to practice. I will add a pause mark to my notes.",
+      "Safa: It feels easier to exchange advice when both people can accept, delay, or limit the conversation.",
+      "Rania: [warmly] Exactly. Asking permission does not make feedback weak. It helps the other person become ready to use it.",
+      "Safa: Let us revise both sections, then practice once without stopping.",
+      "Rania: Good plan. Afterward, we can each name one improvement and finish for today.",
+      "Safa: [honestly] Agreed. Useful advice should leave us clearer, not smaller."
+    ],
+    "quiz": [
+      {
+        "question": "What does Rania ask before giving feedback?",
+        "options": [
+          "Whether Safa is ready to hear it",
+          "Whether the room is free",
+          "Whether Safa has eaten",
+          "Whether the test is canceled"
+        ],
+        "correctIndex": 0,
+        "explanation": "She asks permission and checks timing."
+      },
+      {
+        "question": "What problem does the last slide have?",
+        "options": [
+          "It contains too much text",
+          "It has no title",
+          "It uses the wrong language",
+          "It shows a private photo"
+        ],
+        "correctIndex": 0,
+        "explanation": "The final slide is crowded with sentences."
+      },
+      {
+        "question": "What solution does Rania suggest?",
+        "options": [
+          "Delete the conclusion",
+          "Read faster",
+          "Add more paragraphs",
+          "Three phrases on the slide and details in notes"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audience can listen while Safa keeps full notes."
+      },
+      {
+        "question": "What advice does Safa give Rania?",
+        "options": [
+          "Remove the question",
+          "Speak more loudly",
+          "Pause after the opening question",
+          "Begin with the final slide"
+        ],
+        "correctIndex": 2,
+        "explanation": "A pause would let listeners think."
+      },
+      {
+        "question": "What principle do they agree on?",
+        "options": [
+          "Honesty allows careless speech",
+          "Feedback should make people feel small",
+          "Only one person may give advice",
+          "Permission and specific advice make feedback usable"
+        ],
+        "correctIndex": 3,
+        "explanation": "Respectful timing supports mutual improvement."
+      },
+      {
+        "question": "Why does Safa request only one point?",
+        "options": [
+          "The presentation had only one slide",
+          "She is still nervous and wants manageable feedback",
+          "Rania knows only one fact",
+          "They have no time to practice"
+        ],
+        "correctIndex": 1,
+        "explanation": "Consent includes limiting the amount, not only saying yes or no."
+      },
+      {
+        "question": "How does Rania avoid empty praise?",
+        "options": [
+          "She says everything was perfect",
+          "She names a real strength before a specific problem",
+          "She hides the text issue",
+          "She uses sweet words without evidence"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accurate positive feedback supports trust."
+      },
+      {
+        "question": "What does Safa’s slide change improve for the audience?",
+        "options": [
+          "They receive more sentences",
+          "They no longer need a conclusion",
+          "They can skip every example",
+          "They can listen instead of reading a paragraph"
+        ],
+        "correctIndex": 3,
+        "explanation": "Three phrases reduce competition between reading and listening."
+      },
+      {
+        "question": "What test does Rania apply to advice?",
+        "options": [
+          "Whether it sounds impressive",
+          "Whether it contains many criticisms",
+          "Whether it is delivered immediately",
+          "Whether it helps the receiver rather than releases the giver’s frustration"
+        ],
+        "correctIndex": 3,
+        "explanation": "Purpose and timing determine whether honesty is useful."
+      },
+      {
+        "question": "Why is reciprocal feedback successful here?",
+        "options": [
+          "Both agree that every section is weak",
+          "Neither person asks permission",
+          "Both people can accept, delay, limit, and practice it",
+          "They compete to find more faults"
+        ],
+        "correctIndex": 2,
+        "explanation": "Choice and specificity leave them clearer rather than smaller."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "adab",
+      "scriptDecision": "keep; excellent reciprocal-feedback dialogue includes consent, limited scope, specificity, timing, and practice",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

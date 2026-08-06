@@ -9,12 +9,20 @@ import {
 
 const indexCache = new Map<string, ReadingIndexItem[] | null>();
 const itemCache = new Map<string, StaticReadingItem | StaticReadingTranslateItem | null>();
+const summaryCache = new Map<string, StaticLibrarySummary | null>();
+
+export interface StaticLibrarySummary {
+  themes: Record<string, { total: number; titles: string[] }>;
+}
 
 const buildIndexPath = (mode: ReadingPracticeMode, level: Level, themeId: string) =>
   `/content/reading/index/${mode}/${level}/${themeId}.json`;
 
 const buildItemPath = (mode: ReadingPracticeMode, id: string) =>
   `/content/reading/items/${mode}/${id}.json`;
+
+const buildSummaryPath = (mode: ReadingPracticeMode, level: Level) =>
+  `/content/reading/index/${mode}/${level}/_summary.json`;
 
 const fetchJson = async <T>(path: string): Promise<T | null> => {
   try {
@@ -42,6 +50,17 @@ export const getStaticReadingIndex = async (
   const items = payload?.items || null;
   indexCache.set(cacheKey, items);
   return items;
+};
+
+export const getStaticReadingLibrarySummary = async (
+  mode: ReadingPracticeMode,
+  level: Level,
+): Promise<StaticLibrarySummary | null> => {
+  const cacheKey = `${mode}:${level}`;
+  if (summaryCache.has(cacheKey)) return summaryCache.get(cacheKey) || null;
+  const summary = await fetchJson<StaticLibrarySummary>(buildSummaryPath(mode, level));
+  summaryCache.set(cacheKey, summary);
+  return summary;
 };
 
 export const getStaticReadingItem = async (

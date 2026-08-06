@@ -208,8 +208,27 @@ const SettingsModule: React.FC<ModuleProps> = () => {
 
           {/* API Keys */}
           <section>
+            <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">App Guide</label>
+            <button
+              type="button"
+              onClick={() => window.dispatchEvent(new CustomEvent('lovspeak:restart-tour'))}
+              className="w-full flex items-center gap-4 p-4 bg-lovelya-50 dark:bg-lovelya-900/20 rounded-2xl border border-lovelya-100 dark:border-lovelya-800/50 text-left hover:border-lovelya-300 transition-all"
+            >
+              <span className="w-11 h-11 rounded-xl bg-white dark:bg-gray-800 text-lovelya-600 flex items-center justify-center shadow-sm shrink-0">
+                <i className="fas fa-compass"></i>
+              </span>
+              <span className="flex-1">
+                <span className="block text-sm font-black text-gray-800 dark:text-white">Ulangi panduan aplikasi</span>
+                <span className="block text-[10px] text-gray-500 dark:text-gray-400 mt-0.5">Lihat kembali tour singkat fitur utama.</span>
+              </span>
+              <i className="fas fa-chevron-right text-xs text-lovelya-500"></i>
+            </button>
+          </section>
+
+          {/* API Keys */}
+          <section>
             <div className="flex items-center justify-between mb-4">
-              <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">Gemini API Keys (Multi-Rotation)</label>
+              <label className="block text-[10px] font-black text-gray-400 uppercase tracking-widest">AI API Keys (Multi-Rotation)</label>
               <div className="flex gap-2 items-center">
                 <button
                   onClick={() => setIsKeysVisible(!isKeysVisible)}

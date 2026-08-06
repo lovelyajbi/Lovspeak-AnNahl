@@ -874,5 +874,91 @@ export const LEVEL_B1: GrammarLesson[] = [
         { id: 'memo', label: 'Tip', type: 'formula', detail: 'Learn them in pairs, not isolated words.' }
       ]
     }
+  },
+  {
+    id: 'b1-second-conditional',
+    title: '11. Second Conditional',
+    level: 'B1',
+    icon: 'fa-cloud-moon',
+    description: 'Membayangkan situasi yang tidak nyata atau sangat tidak mungkin terjadi di masa kini atau masa depan.',
+    sections: [
+      {
+        heading: '1. Konsep Dasar: Dunia Imajinasi Saat Ini',
+        content: 'Second Conditional digunakan untuk membicarakan situasi hipotetis atau khayalan yang bertentangan dengan kenyataan saat ini, atau sesuatu yang sangat tidak mungkin terjadi. Rumusnya: **If + Past Simple, would + Verb 1**.\n\nMeskipun menggunakan bentuk lampau (Past Simple), kalimat ini TIDAK berbicara tentang masa lalu — ini murni tentang imajinasi masa kini. "If I had a million dollars, I would travel the world" berarti Anda TIDAK memiliki uang sejuta dolar sekarang; ini hanyalah angan-angan.',
+        formula: 'If + Past Simple, Would + Verb 1',
+        exceptions: 'Untuk subjek "I/He/She/It", gunakan "were" bukan "was" dalam gaya formal (If I were you...).',
+        examples: [
+          { text: 'If I had a million dollars, I would travel the world.', isCorrect: true, translation: 'Jika saya punya sejuta dolar, saya akan berkeliling dunia.' },
+          { text: 'If she spoke English fluently, she would get a better job.', isCorrect: true, translation: 'Jika dia fasih berbahasa Inggris, dia akan mendapat pekerjaan yang lebih baik.' },
+          { text: 'If we lived closer, we would meet more often.', isCorrect: true, translation: 'Jika kita tinggal lebih dekat, kita akan lebih sering bertemu.' },
+          { text: 'What would you do if you won the lottery?', isCorrect: true, translation: 'Apa yang akan kamu lakukan jika kamu memenangkan lotre?' },
+          { text: 'If he studied harder, he would pass the exam.', isCorrect: true, translation: 'Jika dia belajar lebih giat, dia akan lulus ujian.' }
+        ]
+      },
+      {
+        heading: '2. "If I were you...": Memberi Saran dengan Bijak',
+        content: 'Salah satu penggunaan Second Conditional yang paling umum adalah memberi saran secara sopan menggunakan frasa "If I were you, I would...". Ini terdengar jauh lebih lembut dan tidak menggurui dibandingkan perintah langsung.\n\nPerhatikan bahwa "were" digunakan untuk semua subjek dalam konstruksi ini (bukan "was"), meskipun subjeknya "I". Ini adalah bentuk subjunctive yang dipertahankan dalam bahasa Inggris formal maupun sehari-hari.',
+        formula: 'If I were you, I would + Verb 1',
+        exceptions: 'Dalam percakapan informal, "was" kadang terdengar, tetapi "were" tetap dianggap lebih benar secara tata bahasa.',
+        examples: [
+          { text: 'If I were you, I would apologize to her.', isCorrect: true, translation: 'Jika saya jadi kamu, saya akan minta maaf padanya.' },
+          { text: 'If I were you, I wouldn\'t trust him.', isCorrect: true, translation: 'Jika saya jadi kamu, saya tidak akan mempercayainya.' },
+          { text: 'If I were in your position, I would ask for help.', isCorrect: true, translation: 'Jika saya di posisimu, saya akan meminta bantuan.' },
+          { text: 'If I were you, I would save more money.', isCorrect: true, translation: 'Jika saya jadi kamu, saya akan menabung lebih banyak.' },
+          { text: 'If I were your friend, I would tell you the truth.', isCorrect: true, translation: 'Jika saya temanmu, saya akan mengatakan yang sebenarnya.' }
+        ]
+      },
+      {
+        heading: '3. Membedakan First vs Second Conditional',
+        content: 'Perbedaan utama antara First dan Second Conditional bukan soal waktu, melainkan soal KEMUNGKINAN. First Conditional (If + Present, will) digunakan untuk sesuatu yang realistis dan mungkin terjadi. Second Conditional (If + Past, would) digunakan untuk sesuatu yang tidak nyata, sangat tidak mungkin, atau murni imajinasi.\n\nBandingkan: "If it rains, I will bring an umbrella" (kemungkinan nyata) versus "If I were a bird, I would fly to Makkah" (imajinasi, tidak mungkin secara harfiah). Memilih tenses yang tepat menunjukkan seberapa realistis Anda menganggap sebuah kondisi.',
+        formula: 'Real Possibility = First | Unreal/Imaginary = Second',
+        exceptions: 'Beberapa penutur menggunakan Second Conditional untuk sesuatu yang mungkin tapi dianggap sangat tidak mungkin oleh pembicara.',
+        examples: [
+          { text: 'If I win the race, I will celebrate. (realistic)', isCorrect: true, translation: 'Jika saya menang lomba, saya akan merayakannya. (realistis)' },
+          { text: 'If I were the president, I would change the law. (imaginary)', isCorrect: true, translation: 'Jika saya presiden, saya akan mengubah undang-undang itu. (khayalan)' },
+          { text: 'If she calls, tell her I am busy.', isCorrect: true, translation: 'Jika dia menelepon, katakan aku sedang sibuk.' },
+          { text: 'If I had wings, I would fly everywhere.', isCorrect: true, translation: 'Jika saya punya sayap, saya akan terbang ke mana-mana.' },
+          { text: 'If he arrives late, we will start without him.', isCorrect: true, translation: 'Jika dia datang terlambat, kami akan mulai tanpanya.' }
+        ]
+      },
+      {
+        heading: '4. Variasi Modal: Could dan Might',
+        content: 'Selain "would", kita bisa menggunakan "could" (untuk kemampuan hipotetis) atau "might" (untuk kemungkinan yang kurang pasti) di klausa hasil. Ini menambah nuansa pada seberapa yakin Anda terhadap hasil dari situasi khayalan tersebut.\n\n"If I had more time, I could learn Arabic" menekankan kemampuan. "If I had more time, I might learn Arabic" menekankan ketidakpastian, bahwa itu hanyalah salah satu kemungkinan di antara banyak pilihan lain.',
+        formula: 'If + Past Simple, Could/Might + Verb 1',
+        exceptions: 'Could menekankan kemampuan, Might menekankan kemungkinan yang tidak pasti.',
+        examples: [
+          { text: 'If I had more time, I could learn Arabic.', isCorrect: true, translation: 'Jika saya punya lebih banyak waktu, saya bisa belajar bahasa Arab.' },
+          { text: 'If it stopped raining, we might go outside.', isCorrect: true, translation: 'Jika hujan berhenti, kami mungkin akan keluar.' },
+          { text: 'If she asked nicely, he could help her.', isCorrect: true, translation: 'Jika dia bertanya dengan baik, dia bisa membantunya.' },
+          { text: 'If we saved more, we could buy a house.', isCorrect: true, translation: 'Jika kami menabung lebih banyak, kami bisa membeli rumah.' },
+          { text: 'If I knew the answer, I might tell you.', isCorrect: true, translation: 'Jika saya tahu jawabannya, saya mungkin akan memberitahumu.' }
+        ]
+      },
+      {
+        heading: '5. Konteks Muhasabah: Merenungkan Pilihan Hidup',
+        content: 'Second Conditional adalah alat bahasa yang indah untuk muhasabah diri (introspeksi) — merenungkan bagaimana hidup kita akan berbeda jika kita membuat pilihan yang berbeda. "If I had more sabr (kesabaran), I would react differently" mendorong refleksi mendalam tanpa menghakimi diri sendiri secara berlebihan.\n\nGunakan tenses ini untuk membayangkan versi diri yang lebih baik dan merencanakan perubahan nyata, sambil tetap menyerahkan hasil akhirnya kepada Allah. Imajinasi yang baik dapat menjadi jembatan menuju perbaikan diri yang sesungguhnya.',
+        formula: 'If + Past Simple (reflection), Would + Verb 1 (change)',
+        exceptions: 'Gunakan refleksi ini sebagai motivasi untuk beramal, bukan sebagai penyesalan yang berlarut-larut.',
+        examples: [
+          { text: 'If I had more patience, I would be calmer with my family.', isCorrect: true, translation: 'Jika saya punya lebih banyak kesabaran, saya akan lebih tenang dengan keluarga saya.' },
+          { text: 'If I understood the Quran better, I would feel more peace.', isCorrect: true, translation: 'Jika saya lebih memahami Al-Quran, saya akan merasa lebih tenang.' },
+          { text: 'If we trusted Allah more, we would worry less.', isCorrect: true, translation: 'Jika kita lebih percaya kepada Allah, kita akan lebih sedikit khawatir.' },
+          { text: 'If I prayed on time every day, my heart would be softer.', isCorrect: true, translation: 'Jika saya shalat tepat waktu setiap hari, hati saya akan lebih lembut.' },
+          { text: 'If I forgave others easily, I would live more peacefully.', isCorrect: true, translation: 'Jika saya mudah memaafkan orang lain, saya akan hidup lebih tenang.' }
+        ]
+      }
+    ],
+    mindmap: {
+      id: 'b1-second-cond-root', label: 'SECOND CONDITIONAL', type: 'root', children: [
+        { id: 'sc-form', label: 'If + Past Simple, Would + V1', type: 'formula', children: [
+          { id: 'sc-were', label: 'If I/He/She/It WERE...', type: 'sub' }
+        ]},
+        { id: 'sc-use', label: 'Unreal / Imaginary Present', type: 'main', children: [
+          { id: 'sc-advice', label: 'If I were you... (advice)', type: 'sub' },
+          { id: 'sc-modal', label: 'Could / Might variation', type: 'sub' }
+        ]},
+        { id: 'sc-vs-first', label: 'vs First: Real vs Unreal', type: 'warning' }
+      ]
+    }
   }
 ];

@@ -6,29 +6,143 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] The diagnosis itself took less than a minute to deliver, yet I've spent the better part of two years absorbing what it actually meant for how I understood myself.",
-      "Narrator: [reflective] I had always narrated my own life through a vocabulary of endurance, the person who pushed through, who didn't let inconvenience dictate her choices.",
-      "Narrator: [honest] A chronic condition doesn't respect that narrative particularly well; it insists on limits that endurance, however admirable, simply cannot argue its way past.",
-      "Narrator: [uneasy] For the first several months, I treated every flare as a personal failure, evidence that I hadn't managed the illness competently enough, as though competence were even the relevant variable.",
-      "Narrator: [thoughtful] My rheumatologist eventually said something that reframed things considerably: that managing a chronic illness well doesn't look like control, it looks like negotiation, ongoing and unglamorous.",
-      "Narrator: [honest] That distinction mattered more than I expected. Negotiation implies the condition also gets a vote, which control had never allowed for in my previous thinking.",
-      "Narrator: [reflective] I started, slowly, separating my identity from my output, a distinction I hadn't previously needed to make since output had always come easily.",
-      "Narrator: [wry] It's a strange kind of grief, mourning a version of yourself that was never actually sustainable, even before the diagnosis arrived to make that fact undeniable.",
-      "Narrator: [thoughtful] Friends occasionally suggest I'm being too hard on myself, and they're right, though knowing it intellectually and believing it are evidently different achievements entirely.",
-      "Narrator: [determined] What's helped most is quietly rebuilding a sense of worth around things the illness can't touch: curiosity, humor, the particular attentiveness I bring to people I love.",
-      "Narrator: [warmly] I still have difficult weeks, ones where my body seems to be negotiating in bad faith, but I no longer interpret them as verdicts on my character.",
-      "Narrator: [peacefully] I'm not the person I was before the diagnosis, and I've mostly stopped grieving that fact, since she wasn't, in retrospect, someone I could have remained indefinitely anyway."
+      "Narrator: [thoughtful] The diagnosis itself took less than a minute to deliver, yet I've spent the better part of two years absorbing what it actually meant for how I understood myself.",
+      "Narrator: I had always narrated my own life through a vocabulary of endurance, the person who pushed through, who didn't let inconvenience dictate her choices.",
+      "Narrator: [carefully] A chronic condition doesn't respect that narrative particularly well; it insists on limits that endurance, however admirable, simply cannot argue its way past.",
+      "Narrator: For the first several months, I treated every flare as a personal failure, evidence that I hadn't managed the illness competently enough, as though competence were even the relevant variable.",
+      "Narrator: [reflective] My rheumatologist eventually said something that reframed things considerably: that managing a chronic illness well doesn't look like control, it looks like negotiation, ongoing and unglamorous.",
+      "Narrator: That distinction mattered more than I expected. Negotiation implies the condition also gets a vote, which control had never allowed for in my previous thinking.",
+      "Narrator: [honestly] I started, slowly, separating my identity from my output, a distinction I hadn't previously needed to make since output had always come easily.",
+      "Narrator: It's a strange kind of grief, mourning a version of yourself that was never actually sustainable, even before the diagnosis arrived to make that fact undeniable.",
+      "Narrator: [gently] Friends occasionally suggest I'm being too hard on myself, and they're right, though knowing it intellectually and believing it are evidently different achievements entirely.",
+      "Narrator: What's helped most is quietly rebuilding a sense of worth around things the illness can't touch: curiosity, humor, the particular attentiveness I bring to people I love.",
+      "Narrator: [calmly] I still have difficult weeks, ones where my body seems to be negotiating in bad faith, but I no longer interpret them as verdicts on my character.",
+      "Narrator: I'm not the person I was before the diagnosis, and I've mostly stopped grieving that fact, since she wasn't, in retrospect, someone I could have remained indefinitely anyway."
     ],
     "quiz": [
-      { "question": "How had the narrator always narrated her own life before the diagnosis?", "options": ["Through a vocabulary of endurance and pushing through inconvenience", "As someone who avoided challenges", "As entirely defined by her career", "As someone who never worked hard"], "correctIndex": 0, "explanation": "She says she had always narrated her life through a vocabulary of endurance, someone who pushed through and didn't let inconvenience dictate choices." },
-      { "question": "How did the narrator initially treat every flare-up?", "options": ["As unrelated to her behavior", "As a personal failure, evidence she hadn't managed the illness competently enough", "As something to celebrate", "As proof she needed a new doctor"], "correctIndex": 1, "explanation": "For the first several months, she treated every flare as a personal failure and evidence of insufficient management." },
-      { "question": "What distinction did her rheumatologist offer that reframed her thinking?", "options": ["That control is the only path to managing illness", "That managing chronic illness well looks like negotiation, not control", "That she should ignore her symptoms", "That medication alone solves everything"], "correctIndex": 1, "explanation": "Her rheumatologist said managing a chronic illness well looks like negotiation, ongoing and unglamorous, rather than control." },
-      { "question": "What has the narrator rebuilt her sense of worth around?", "options": ["Her productivity and output alone", "Things the illness can't touch, like curiosity, humor, and attentiveness to loved ones", "Her physical appearance", "Comparisons with other patients"], "correctIndex": 1, "explanation": "She has rebuilt her worth around curiosity, humor, and the attentiveness she brings to people she loves, things the illness can't touch." },
-      { "question": "How does the narrator feel about the person she was before the diagnosis by the end?", "options": ["She wants to return to being exactly that person", "She has mostly stopped grieving that version of herself, since it wasn't sustainable anyway", "She still resents her current self entirely", "She believes the diagnosis changed nothing"], "correctIndex": 1, "explanation": "She has mostly stopped grieving her former self, recognizing that version wasn't sustainable even before the diagnosis." }
-    ]
+      {
+        "question": "How had the narrator always narrated her own life before the diagnosis?",
+        "options": [
+          "Through a vocabulary of endurance and pushing through inconvenience",
+          "As someone who avoided challenges",
+          "As entirely defined by her career",
+          "As someone who never worked hard"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she had always narrated her life through a vocabulary of endurance, someone who pushed through and didn't let inconvenience dictate choices."
+      },
+      {
+        "question": "How did the narrator initially treat every flare-up?",
+        "options": [
+          "As unrelated to her behavior",
+          "As a personal failure, evidence she hadn't managed the illness competently enough",
+          "As something to celebrate",
+          "As proof she needed a new doctor"
+        ],
+        "correctIndex": 1,
+        "explanation": "For the first several months, she treated every flare as a personal failure and evidence of insufficient management."
+      },
+      {
+        "question": "What distinction did her rheumatologist offer that reframed her thinking?",
+        "options": [
+          "That control is the only path to managing illness",
+          "That she should ignore her symptoms",
+          "That managing chronic illness well looks like negotiation, not control",
+          "That medication alone solves everything"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her rheumatologist said managing a chronic illness well looks like negotiation, ongoing and unglamorous, rather than control."
+      },
+      {
+        "question": "What has the narrator rebuilt her sense of worth around?",
+        "options": [
+          "Her productivity and output alone",
+          "Her physical appearance",
+          "Comparisons with other patients",
+          "Things the illness can't touch, like curiosity, humor, and attentiveness to loved ones"
+        ],
+        "correctIndex": 3,
+        "explanation": "She has rebuilt her worth around curiosity, humor, and the attentiveness she brings to people she loves, things the illness can't touch."
+      },
+      {
+        "question": "How does the narrator feel about the person she was before the diagnosis by the end?",
+        "options": [
+          "She wants to return to being exactly that person",
+          "She still resents her current self entirely",
+          "She believes the diagnosis changed nothing",
+          "She has mostly stopped grieving that version of herself, since it wasn't sustainable anyway"
+        ],
+        "correctIndex": 3,
+        "explanation": "She has mostly stopped grieving her former self, recognizing that version wasn't sustainable even before the diagnosis."
+      },
+      {
+        "question": "How did the rheumatologist redefine good management?",
+        "options": [
+          "As ongoing negotiation rather than control",
+          "As eliminating every flare",
+          "As increasing productivity",
+          "As ignoring physical limits"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports as ongoing negotiation rather than control."
+      },
+      {
+        "question": "Why did the narrator grieve her former self?",
+        "options": [
+          "Friends rejected the diagnosis",
+          "Treatment erased her memory",
+          "That identity depended on unsustainable endurance",
+          "Work became unimportant"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports that identity depended on unsustainable endurance."
+      },
+      {
+        "question": "What helped rebuild her sense of worth?",
+        "options": [
+          "Stricter personal targets",
+          "Qualities beyond physical output",
+          "Comparing flare frequency",
+          "Hiding difficult weeks"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports qualities beyond physical output."
+      },
+      {
+        "question": "How does she now interpret a difficult week?",
+        "options": [
+          "Proof of failed treatment",
+          "A reason to stop all plans",
+          "Evidence that friends are wrong",
+          "As a challenge, not a verdict on character"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports as a challenge, not a verdict on character."
+      },
+      {
+        "question": "Which response fits the narration?",
+        "options": [
+          "Push through every flare",
+          "Adjust plans without equating limits with failure",
+          "Judge worth by output",
+          "Treat rest as defeat"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports adjust plans without equating limits with failure."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-health-02",
@@ -37,34 +151,151 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dr. Wibowo", "gender": "male" },
-      { "name": "Sari", "gender": "female" }
+      {
+        "name": "Dr. Wibowo",
+        "gender": "male"
+      },
+      {
+        "name": "Sari",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Dr. Wibowo: [warmly] You mentioned last session you'd stopped the medication without telling me. Can we talk through what prompted that?",
-      "Sari: [defensive] I felt like I was cheating somehow, relying on a pill to feel stable rather than actually fixing whatever's wrong with me.",
-      "Dr. Wibowo: [gently] Can I push back on the framing there? What exactly would 'actually fixing' look like, in your own terms?",
-      "Sari: [uncertain] I suppose managing it through willpower alone, the way people seem to expect resilience should work.",
-      "Dr. Wibowo: [thoughtful] Would you apply that same standard to insulin, or to blood pressure medication, or does the expectation only surface with conditions involving the mind?",
-      "Sari: [pausing] Put that way, it does sound inconsistent. Nobody accuses a diabetic of moral failure for taking insulin.",
-      "Dr. Wibowo: [explaining] Precisely, and the inconsistency isn't accidental; it reflects a lingering cultural assumption that psychological suffering ought to be surmountable through sheer discipline.",
-      "Sari: [honest] My mother implied something similar, actually, that previous generations endured hardship without medicating every difficult feeling away.",
-      "Dr. Wibowo: [measured] Endurance and untreated suffering aren't quite synonymous, even if they were sometimes conflated historically. People endured; that doesn't mean they thrived.",
-      "Sari: [considering] I hadn't separated those two ideas before. I'd assumed enduring something implied it wasn't actually that serious.",
-      "Dr. Wibowo: [gently] What happened, practically, in the weeks after you stopped taking it?",
-      "Sari: [reluctant] Honestly, it got considerably worse. I told myself the relapse was unrelated, a bad month rather than a predictable consequence.",
-      "Dr. Wibowo: [understanding] That's a common instinct, attributing improvement to willpower and relapse to circumstance, when medication is frequently doing more of the structural work than we credit it for.",
-      "Sari: [reflective] So stopping wasn't really proof I'd overcome anything, it was just removing the thing that had been quietly holding the structure together.",
-      "Dr. Wibowo: [warmly] That's a fair way of putting it. Would you be willing to restart, and perhaps revisit this conversation whenever the shame resurfaces?",
-      "Sari: [determined] Yes. I think I needed someone to say plainly that taking it isn't a character defect before I could actually believe it myself."
+      "Dr. Wibowo: [thoughtful] You mentioned last session you'd stopped the medication without telling me. Can we talk through what prompted that?",
+      "Sari: I felt like I was cheating somehow, relying on a pill to feel stable rather than actually fixing whatever's wrong with me.",
+      "Dr. Wibowo: [carefully] Can I push back on the framing there? What exactly would 'actually fixing' look like, in your own terms?",
+      "Sari: I suppose managing it through willpower alone, the way people seem to expect resilience should work.",
+      "Dr. Wibowo: [reflective] Would you apply that same standard to insulin, or to blood pressure medication, or does the expectation only surface with conditions involving the mind?",
+      "Sari: Put that way, it does sound inconsistent. Nobody accuses a diabetic of moral failure for taking insulin.",
+      "Dr. Wibowo: [honestly] Precisely, and the inconsistency isn't accidental; it reflects a lingering cultural assumption that psychological suffering ought to be surmountable through sheer discipline.",
+      "Sari: My mother implied something similar, actually, that previous generations endured hardship without medicating every difficult feeling away.",
+      "Dr. Wibowo: [gently] Endurance and untreated suffering aren't quite synonymous, even if they were sometimes conflated historically. People endured; that doesn't mean they thrived.",
+      "Sari: I hadn't separated those two ideas before. I'd assumed enduring something implied it wasn't actually that serious.",
+      "Dr. Wibowo: [calmly] What happened, practically, in the weeks after you stopped taking it?",
+      "Sari: Honestly, it got considerably worse. I told myself the relapse was unrelated, a bad month rather than a predictable consequence.",
+      "Dr. Wibowo: [encouraging] That's a common instinct, attributing improvement to willpower and relapse to circumstance, when medication is frequently doing more of the structural work than we credit it for.",
+      "Sari: So stopping wasn't really proof I'd overcome anything, it was just removing the thing that had been quietly holding the structure together.",
+      "Dr. Wibowo: [seriously] That's a fair way of putting it. Would you be willing to restart, and perhaps revisit this conversation whenever the shame resurfaces?",
+      "Sari: Yes. I think I needed someone to say plainly that taking it isn't a character defect before I could actually believe it myself."
     ],
     "quiz": [
-      { "question": "Why did Sari stop taking her medication without telling Dr. Wibowo?", "options": ["It was too expensive", "She felt like she was cheating by relying on a pill instead of fixing herself through willpower", "She had no side effects to worry about", "Her doctor told her to stop"], "correctIndex": 1, "explanation": "Sari felt she was cheating by relying on medication rather than actually fixing things through willpower alone." },
-      { "question": "What comparison does Dr. Wibowo make to challenge Sari's framing?", "options": ["Comparing medication to vitamins", "Comparing psychiatric medication to insulin or blood pressure medication", "Comparing therapy to exercise", "Comparing her situation to a physical injury"], "correctIndex": 1, "explanation": "He asks whether she would apply the same 'moral failure' standard to insulin or blood pressure medication, highlighting the inconsistency." },
-      { "question": "What point does Dr. Wibowo make about endurance and suffering?", "options": ["Endurance and untreated suffering are exactly the same thing", "Endurance and untreated suffering aren't synonymous; people endured but that doesn't mean they thrived", "Suffering should always be endured without help", "Medication makes endurance impossible"], "correctIndex": 1, "explanation": "He clarifies that enduring suffering historically didn't mean people thrived; endurance and treatment aren't the same thing." },
-      { "question": "What happened after Sari stopped her medication?", "options": ["Nothing changed at all", "It got considerably worse, though she initially attributed it to a bad month", "She felt immediately better", "She switched to a different treatment"], "correctIndex": 1, "explanation": "Sari admits it got considerably worse, though she initially told herself it was an unrelated bad month." },
-      { "question": "What does Sari conclude about stopping her medication?", "options": ["It proved she had overcome her condition", "It wasn't proof she'd overcome anything; it removed the thing quietly holding the structure together", "It was the correct decision after all", "It had no real effect either way"], "correctIndex": 1, "explanation": "She concludes stopping wasn't proof of overcoming anything, but removing what had been holding the structure together." }
-    ]
+      {
+        "question": "Why did Sari stop taking her medication without telling Dr. Wibowo?",
+        "options": [
+          "She felt like she was cheating by relying on a pill instead of fixing herself through willpower",
+          "It was too expensive",
+          "She had no side effects to worry about",
+          "Her doctor told her to stop"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sari felt she was cheating by relying on medication rather than actually fixing things through willpower alone."
+      },
+      {
+        "question": "What comparison does Dr. Wibowo make to challenge Sari's framing?",
+        "options": [
+          "Comparing medication to vitamins",
+          "Comparing therapy to exercise",
+          "Comparing psychiatric medication to insulin or blood pressure medication",
+          "Comparing her situation to a physical injury"
+        ],
+        "correctIndex": 2,
+        "explanation": "He asks whether she would apply the same 'moral failure' standard to insulin or blood pressure medication, highlighting the inconsistency."
+      },
+      {
+        "question": "What point does Dr. Wibowo make about endurance and suffering?",
+        "options": [
+          "Endurance and untreated suffering are exactly the same thing",
+          "Suffering should always be endured without help",
+          "Endurance and untreated suffering aren't synonymous; people endured but that doesn't mean they thrived",
+          "Medication makes endurance impossible"
+        ],
+        "correctIndex": 2,
+        "explanation": "He clarifies that enduring suffering historically didn't mean people thrived; endurance and treatment aren't the same thing."
+      },
+      {
+        "question": "What happened after Sari stopped her medication?",
+        "options": [
+          "Nothing changed at all",
+          "She felt immediately better",
+          "She switched to a different treatment",
+          "It got considerably worse, though she initially attributed it to a bad month"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sari admits it got considerably worse, though she initially told herself it was an unrelated bad month."
+      },
+      {
+        "question": "What does Sari conclude about stopping her medication?",
+        "options": [
+          "It proved she had overcome her condition",
+          "It was the correct decision after all",
+          "It had no real effect either way",
+          "It wasn't proof she'd overcome anything; it removed the thing quietly holding the structure together"
+        ],
+        "correctIndex": 3,
+        "explanation": "She concludes stopping wasn't proof of overcoming anything, but removing what had been holding the structure together."
+      },
+      {
+        "question": "Why did Sari stop the medication secretly?",
+        "options": [
+          "The doctor ended the prescription",
+          "She saw treatment as a personal weakness",
+          "It caused no improvement",
+          "Her family hid the pills"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports she saw treatment as a personal weakness."
+      },
+      {
+        "question": "What comparison challenges her belief?",
+        "options": [
+          "All medicine works identically",
+          "People do not shame insulin dependence",
+          "Diabetes has no stigma",
+          "Willpower cures every condition"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports people do not shame insulin dependence."
+      },
+      {
+        "question": "What distinction does Dr. Wibowo make?",
+        "options": [
+          "Enduring is not the same as thriving untreated",
+          "Hardship has no effect",
+          "Medication removes all struggle",
+          "Previous generations never suffered"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports enduring is not the same as thriving untreated."
+      },
+      {
+        "question": "What happened after Sari stopped treatment?",
+        "options": [
+          "She needed less support",
+          "Her relapse disappeared",
+          "She felt immediately cured",
+          "Her symptoms became considerably worse"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports her symptoms became considerably worse."
+      },
+      {
+        "question": "What does restarting medication represent?",
+        "options": [
+          "Surrendering all agency",
+          "Care, not a character defect",
+          "Proof that therapy failed",
+          "A permanent promise of stability"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports care, not a character defect."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-health-03",
@@ -73,29 +304,143 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [wry] There's a specific torment reserved for insomniacs who also happen to be analytically minded, since we insist on quantifying the very thing sabotaging us.",
-      "Narrator: [reflective] Lying there at half past two, I'd calculate precisely how many hours of sleep remained possible, as though the arithmetic itself might somehow induce drowsiness.",
-      "Narrator: [honest] It never did, obviously. If anything, the calculation functioned as its own stimulant, alertness disguised as diligence, a mind convinced it was solving something.",
-      "Narrator: [thoughtful] What I eventually understood, after months of this, is that the anxiety about sleeplessness had become entirely separable from whatever originally caused the sleeplessness.",
-      "Narrator: [analytical] The original stressor might resolve itself completely, and still the ritual would persist, since the fear had metastasized into fearing the insomnia rather than whatever preceded it.",
-      "Narrator: [wry] A sleep specialist I eventually consulted described this with a phrase I've never forgotten: the bed had become the scene of the crime rather than a place of rest.",
-      "Narrator: [reflective] My nervous system, she explained, had quietly learned to associate the mattress itself with vigilance, an association built entirely through repetition rather than conscious choice.",
-      "Narrator: [thoughtful] The prescribed remedy felt almost insultingly simple: leave the bed entirely if sleep hadn't arrived within twenty minutes, breaking the association one deliberate exit at a time.",
-      "Narrator: [honest] I resisted this advice initially, since abandoning the bed felt like conceding defeat rather than strategic retreat, a distinction that mattered more to my pride than my sleep.",
-      "Narrator: [surprised] Reluctantly trying it, I found something counterintuitive happened: the nights improved not because I forced sleep, but because I finally stopped negotiating with it so aggressively.",
-      "Narrator: [warmly] Months later, the calculating mind still occasionally surfaces at odd hours, though I've learned to treat its arrival as information rather than emergency.",
-      "Narrator: [peacefully] Sleep, it turns out, resembles trust more than it resembles a task; both dissolve the moment you try to seize them by force."
+      "Narrator: [thoughtful] There's a specific torment reserved for insomniacs who also happen to be analytically minded, since we insist on quantifying the very thing sabotaging us.",
+      "Narrator: Lying there at half past two, I'd calculate precisely how many hours of sleep remained possible, as though the arithmetic itself might somehow induce drowsiness.",
+      "Narrator: [carefully] It never did, obviously. If anything, the calculation functioned as its own stimulant, alertness disguised as diligence, a mind convinced it was solving something.",
+      "Narrator: What I eventually understood, after months of this, is that the anxiety about sleeplessness had become entirely separable from whatever originally caused the sleeplessness.",
+      "Narrator: [reflective] The original stressor might resolve itself completely, and still the ritual would persist, since the fear had metastasized into fearing the insomnia rather than whatever preceded it.",
+      "Narrator: A sleep specialist I eventually consulted described this with a phrase I've never forgotten: the bed had become the scene of the crime rather than a place of rest.",
+      "Narrator: [honestly] My nervous system, she explained, had quietly learned to associate the mattress itself with vigilance, an association built entirely through repetition rather than conscious choice.",
+      "Narrator: The prescribed remedy felt almost insultingly simple: leave the bed entirely if sleep hadn't arrived within twenty minutes, breaking the association one deliberate exit at a time.",
+      "Narrator: [gently] I resisted this advice initially, since abandoning the bed felt like conceding defeat rather than strategic retreat, a distinction that mattered more to my pride than my sleep.",
+      "Narrator: Reluctantly trying it, I found something counterintuitive happened: the nights improved not because I forced sleep, but because I finally stopped negotiating with it so aggressively.",
+      "Narrator: [calmly] Months later, the calculating mind still occasionally surfaces at odd hours, though I've learned to treat its arrival as information rather than emergency.",
+      "Narrator: Sleep, it turns out, resembles trust more than it resembles a task; both dissolve the moment you try to seize them by force."
     ],
     "quiz": [
-      { "question": "What specific torment does the narrator describe experiencing?", "options": ["Sleeping too much", "Calculating precisely how many hours of sleep remained possible while lying awake", "Forgetting to go to bed", "Sleepwalking regularly"], "correctIndex": 1, "explanation": "He describes calculating exactly how many hours of sleep remained possible, as though arithmetic might induce drowsiness." },
-      { "question": "What did the narrator eventually understand about his anxiety?", "options": ["That it had a single, unchanging cause", "That the anxiety about sleeplessness had become separable from whatever originally caused it", "That it disappeared on its own quickly", "That it was entirely imaginary"], "correctIndex": 1, "explanation": "He understood the anxiety about sleeplessness had become entirely separable from whatever originally caused the sleeplessness." },
-      { "question": "How did the sleep specialist describe his relationship with his bed?", "options": ["As a peaceful sanctuary", "As the scene of the crime rather than a place of rest", "As irrelevant to his sleep problems", "As a place he avoided entirely already"], "correctIndex": 1, "explanation": "The specialist described the bed as having become the scene of the crime rather than a place of rest." },
-      { "question": "What remedy did the specialist prescribe?", "options": ["Taking sleeping pills nightly", "Leaving the bed if sleep hadn't arrived within twenty minutes", "Sleeping in a different room permanently", "Avoiding sleep tracking entirely"], "correctIndex": 1, "explanation": "The prescribed remedy was leaving the bed entirely if sleep hadn't arrived within twenty minutes, to break the association." },
-      { "question": "What did the narrator find happened after trying the advice?", "options": ["Nothing changed", "Nights improved not because he forced sleep, but because he stopped negotiating with it so aggressively", "His insomnia worsened significantly", "He needed medication instead"], "correctIndex": 1, "explanation": "He found nights improved because he stopped forcing and negotiating with sleep so aggressively, not because he willed it to happen." }
-    ]
+      {
+        "question": "What specific torment does the narrator describe experiencing?",
+        "options": [
+          "Sleeping too much",
+          "Forgetting to go to bed",
+          "Calculating precisely how many hours of sleep remained possible while lying awake",
+          "Sleepwalking regularly"
+        ],
+        "correctIndex": 2,
+        "explanation": "He describes calculating exactly how many hours of sleep remained possible, as though arithmetic might induce drowsiness."
+      },
+      {
+        "question": "What did the narrator eventually understand about his anxiety?",
+        "options": [
+          "That it had a single, unchanging cause",
+          "That the anxiety about sleeplessness had become separable from whatever originally caused it",
+          "That it disappeared on its own quickly",
+          "That it was entirely imaginary"
+        ],
+        "correctIndex": 1,
+        "explanation": "He understood the anxiety about sleeplessness had become entirely separable from whatever originally caused the sleeplessness."
+      },
+      {
+        "question": "How did the sleep specialist describe his relationship with his bed?",
+        "options": [
+          "As the scene of the crime rather than a place of rest",
+          "As a peaceful sanctuary",
+          "As irrelevant to his sleep problems",
+          "As a place he avoided entirely already"
+        ],
+        "correctIndex": 0,
+        "explanation": "The specialist described the bed as having become the scene of the crime rather than a place of rest."
+      },
+      {
+        "question": "What remedy did the specialist prescribe?",
+        "options": [
+          "Taking sleeping pills nightly",
+          "Sleeping in a different room permanently",
+          "Leaving the bed if sleep hadn't arrived within twenty minutes",
+          "Avoiding sleep tracking entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "The prescribed remedy was leaving the bed entirely if sleep hadn't arrived within twenty minutes, to break the association."
+      },
+      {
+        "question": "What did the narrator find happened after trying the advice?",
+        "options": [
+          "Nights improved not because he forced sleep, but because he stopped negotiating with it so aggressively",
+          "Nothing changed",
+          "His insomnia worsened significantly",
+          "He needed medication instead"
+        ],
+        "correctIndex": 0,
+        "explanation": "He found nights improved because he stopped forcing and negotiating with sleep so aggressively, not because he willed it to happen."
+      },
+      {
+        "question": "Why did night-time calculations worsen the problem?",
+        "options": [
+          "They shortened the night",
+          "They changed the mattress",
+          "They diagnosed the cause",
+          "They increased alertness instead of rest"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports they increased alertness instead of rest."
+      },
+      {
+        "question": "What had the bed become associated with?",
+        "options": [
+          "Immediate sleep",
+          "Productive work",
+          "Medical treatment",
+          "Vigilance and struggle"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports vigilance and struggle."
+      },
+      {
+        "question": "Why leave the bed after twenty minutes?",
+        "options": [
+          "To avoid every tired feeling",
+          "To weaken the learned association with wakefulness",
+          "To calculate sleep elsewhere",
+          "To guarantee sleep quickly"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports to weaken the learned association with wakefulness."
+      },
+      {
+        "question": "What changed when the narrator followed advice?",
+        "options": [
+          "Insomnia ended permanently",
+          "The original stressor vanished",
+          "He needed no further practice",
+          "Sleep improved after he stopped forcing it"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports sleep improved after he stopped forcing it."
+      },
+      {
+        "question": "What final comparison explains sleep?",
+        "options": [
+          "It is a problem solved by effort",
+          "It resembles trust more than a task",
+          "It follows exact arithmetic",
+          "It depends only on pride"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports it resembles trust more than a task."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-health-04",
@@ -104,32 +449,149 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Putri", "gender": "female" },
-      { "name": "Yoga", "gender": "male" }
+      {
+        "name": "Putri",
+        "gender": "female"
+      },
+      {
+        "name": "Yoga",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Putri: [worried] Yoga, Dad fell again last week. He didn't want me to tell you, but I think we need to actually discuss moving him somewhere supervised.",
-      "Yoga: [defensive] He's stubborn, not incapable. Taking away his independence over one fall feels like an overcorrection we can't easily undo later.",
-      "Putri: [firm] It's not one fall, it's the third this year, and each time he's minimized it so thoroughly we've barely registered the pattern.",
-      "Yoga: [conflicted] I know. I just keep picturing how he'll look at us if we suggest it, like we've decided he's finished being a person who decides things.",
-      "Putri: [gently] I'm not proposing we decide for him unilaterally. I'm proposing we present the options honestly and let him weigh in on a decision that's genuinely his to make.",
-      "Yoga: [uncertain] What if he refuses outright, the way he refused the walking frame the physiotherapist recommended?",
-      "Putri: [thoughtful] Then we've at least been honest about the risk, rather than quietly managing his life around him while pretending everything's fine.",
-      "Yoga: [honest] I think what unsettles me most is the symbolism, not the logistics. This feels like the first visible marker of him no longer being the person who took care of us.",
-      "Putri: [understanding] That's real, and I feel it too, but privileging our discomfort with the symbolism over his actual safety seems like the wrong ordering of priorities.",
-      "Yoga: [considering] You're right, though I want us to frame it as expanding support rather than removing autonomy, since the language will matter enormously to how he receives it.",
-      "Putri: [agreeing] Agreed. Perhaps starting with daytime assistance rather than full relocation, something incremental he can consent to without feeling ambushed.",
-      "Yoga: [thoughtful] That feels more honest to where he actually is, rather than jumping straight to the outcome we're most afraid of.",
-      "Putri: [warmly] Exactly. And if the falls continue despite that, we'll have built enough trust to have the harder conversation later, rather than forcing it now.",
-      "Yoga: [determined] Alright. Let's talk to him together this weekend, and let him hear both our worry and our respect for his say in it."
+      "Putri: [thoughtful] Yoga, Dad fell again last week. He didn't want me to tell you, but I think we need to actually discuss moving him somewhere supervised.",
+      "Yoga: He's stubborn, not incapable. Taking away his independence over one fall feels like an overcorrection we can't easily undo later.",
+      "Putri: [carefully] It's not one fall, it's the third this year, and each time he's minimized it so thoroughly we've barely registered the pattern.",
+      "Yoga: I know. I just keep picturing how he'll look at us if we suggest it, like we've decided he's finished being a person who decides things.",
+      "Putri: [reflective] I'm not proposing we decide for him unilaterally. I'm proposing we present the options honestly and let him weigh in on a decision that's genuinely his to make.",
+      "Yoga: What if he refuses outright, the way he refused the walking frame the physiotherapist recommended?",
+      "Putri: [honestly] Then we've at least been honest about the risk, rather than quietly managing his life around him while pretending everything's fine.",
+      "Yoga: I think what unsettles me most is the symbolism, not the logistics. This feels like the first visible marker of him no longer being the person who took care of us.",
+      "Putri: [gently] That's real, and I feel it too, but privileging our discomfort with the symbolism over his actual safety seems like the wrong ordering of priorities.",
+      "Yoga: You're right, though I want us to frame it as expanding support rather than removing autonomy, since the language will matter enormously to how he receives it.",
+      "Putri: [calmly] Agreed. Perhaps starting with daytime assistance rather than full relocation, something incremental he can consent to without feeling ambushed.",
+      "Yoga: That feels more honest to where he actually is, rather than jumping straight to the outcome we're most afraid of.",
+      "Putri: [encouraging] Exactly. And if the falls continue despite that, we'll have built enough trust to have the harder conversation later, rather than forcing it now.",
+      "Yoga: Alright. Let's talk to him together this weekend, and let him hear both our worry and our respect for his say in it."
     ],
     "quiz": [
-      { "question": "What prompted Putri to raise the topic of their father's independence?", "options": ["A doctor's recommendation", "Their father falling for the third time this year", "A request from their father himself", "A financial concern"], "correctIndex": 1, "explanation": "Putri raises the issue because their father fell for the third time this year, a pattern he had minimized." },
-      { "question": "What is Yoga's initial reaction to the suggestion?", "options": ["Immediate agreement", "Defensive, feeling it's an overcorrection over one fall", "Anger at Putri", "Indifference to the topic"], "correctIndex": 1, "explanation": "Yoga is initially defensive, arguing that taking away independence over one fall feels like an overcorrection." },
-      { "question": "What does Yoga admit unsettles him most about the situation?", "options": ["The financial cost", "The symbolism of it being the first marker of their father no longer being their caretaker", "Having to talk to their father at all", "Disagreeing with Putri"], "correctIndex": 1, "explanation": "Yoga admits the symbolism unsettles him most, that this feels like the first visible marker of their father's role reversing." },
-      { "question": "What framing does Yoga suggest they use with their father?", "options": ["Removing his autonomy entirely", "Expanding support rather than removing autonomy", "Ignoring the falls completely", "Forcing an immediate relocation"], "correctIndex": 1, "explanation": "Yoga suggests framing the conversation as expanding support rather than removing autonomy, since language will matter to how their father receives it." },
-      { "question": "What incremental step do they agree to propose first?", "options": ["Full relocation to a care facility immediately", "Daytime assistance rather than full relocation", "No changes at all", "Moving in with Putri permanently"], "correctIndex": 1, "explanation": "They agree to start with daytime assistance rather than full relocation, something incremental their father can consent to." }
-    ]
+      {
+        "question": "What prompted Putri to raise the topic of their father's independence?",
+        "options": [
+          "A doctor's recommendation",
+          "Their father falling for the third time this year",
+          "A request from their father himself",
+          "A financial concern"
+        ],
+        "correctIndex": 1,
+        "explanation": "Putri raises the issue because their father fell for the third time this year, a pattern he had minimized."
+      },
+      {
+        "question": "What is Yoga's initial reaction to the suggestion?",
+        "options": [
+          "Immediate agreement",
+          "Defensive, feeling it's an overcorrection over one fall",
+          "Anger at Putri",
+          "Indifference to the topic"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yoga is initially defensive, arguing that taking away independence over one fall feels like an overcorrection."
+      },
+      {
+        "question": "What does Yoga admit unsettles him most about the situation?",
+        "options": [
+          "The symbolism of it being the first marker of their father no longer being their caretaker",
+          "The financial cost",
+          "Having to talk to their father at all",
+          "Disagreeing with Putri"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yoga admits the symbolism unsettles him most, that this feels like the first visible marker of their father's role reversing."
+      },
+      {
+        "question": "What framing does Yoga suggest they use with their father?",
+        "options": [
+          "Removing his autonomy entirely",
+          "Ignoring the falls completely",
+          "Expanding support rather than removing autonomy",
+          "Forcing an immediate relocation"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yoga suggests framing the conversation as expanding support rather than removing autonomy, since language will matter to how their father receives it."
+      },
+      {
+        "question": "What incremental step do they agree to propose first?",
+        "options": [
+          "Full relocation to a care facility immediately",
+          "Daytime assistance rather than full relocation",
+          "No changes at all",
+          "Moving in with Putri permanently"
+        ],
+        "correctIndex": 1,
+        "explanation": "They agree to start with daytime assistance rather than full relocation, something incremental their father can consent to."
+      },
+      {
+        "question": "Why does Putri reject calling the falls isolated?",
+        "options": [
+          "Yoga caused one fall",
+          "Their father asked to move",
+          "The physiotherapist confirmed recovery",
+          "They are the third fall that year"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports they are the third fall that year."
+      },
+      {
+        "question": "What does Putri refuse to do?",
+        "options": [
+          "Discuss support options",
+          "Mention safety risks",
+          "Decide her father's future without him",
+          "Visit him together"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports decide her father's future without him."
+      },
+      {
+        "question": "What concern troubles Yoga most?",
+        "options": [
+          "The symbolic loss of his father's former role",
+          "The cost of a walking frame",
+          "The distance to a facility",
+          "His own work schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports the symbolic loss of his father's former role."
+      },
+      {
+        "question": "Why start with daytime assistance?",
+        "options": [
+          "It proves relocation is required",
+          "It removes all family involvement",
+          "It prevents any later discussion",
+          "It offers incremental support with consent"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports it offers incremental support with consent."
+      },
+      {
+        "question": "What guides the siblings' weekend conversation?",
+        "options": [
+          "A demand for immediate relocation",
+          "A promise of perfect safety",
+          "Worry combined with respect for his choice",
+          "Avoiding the subject entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports worry combined with respect for his choice."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-health-05",
@@ -138,29 +600,143 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] Recording this after deleting the sleep app, the macro tracker, and the recovery ring app, all in the same restless hour, which feels almost ceremonial in retrospect.",
-      "Narrator: [reflective] For three years I treated my body as a project requiring perpetual optimization, as though wellness were a metric that could be perfected rather than simply inhabited.",
-      "Narrator: [honest] Every meal became data before it became nourishment. Every walk was logged before it was actually enjoyed, if enjoyment even remained the point anymore.",
-      "Narrator: [thoughtful] What finally cracked the illusion was noticing how anxious I felt on days the numbers disappointed me, an anxiety wildly disproportionate to whatever the number actually measured.",
-      "Narrator: [wry] A single night of poor sleep score, and I'd narrate the entire following day as compromised, regardless of how I actually felt moving through it.",
-      "Narrator: [analytical] I'd essentially outsourced the authority to interpret my own body to a wearable device manufactured by a company with no interest in my actual wellbeing, only my continued subscription.",
-      "Narrator: [honest] The language of optimization, I've come to suspect, quietly imports the logic of productivity into a domain that was never meant to operate that way.",
-      "Narrator: [reflective] Bodies aren't machines awaiting efficiency gains; they're something closer to weather, responsive to forces far beyond whatever a dashboard claims to capture.",
-      "Narrator: [thoughtful] Deleting the apps felt, absurdly, like a small act of rebellion, though rebellion against what, exactly, I'm still working out.",
-      "Narrator: [uncertain] The first week without them was disorienting, an itch to check numbers that no longer existed to check, muscle memory searching for data that had vanished.",
-      "Narrator: [warmly] Gradually, though, I noticed myself asking simpler questions instead: am I hungry, am I tired, do I want to move, questions a device had quietly been answering for me.",
-      "Narrator: [peacefully] I don't know yet whether this experiment will last permanently, but for now, inhabiting my body has started to feel less like managing a portfolio and more like simply living in it."
+      "Narrator: [thoughtful] Recording this after deleting the sleep app, the macro tracker, and the recovery ring app, all in the same restless hour, which feels almost ceremonial in retrospect.",
+      "Narrator: For three years I treated my body as a project requiring perpetual optimization, as though wellness were a metric that could be perfected rather than simply inhabited.",
+      "Narrator: [carefully] Every meal became data before it became nourishment. Every walk was logged before it was actually enjoyed, if enjoyment even remained the point anymore.",
+      "Narrator: What finally cracked the illusion was noticing how anxious I felt on days the numbers disappointed me, an anxiety wildly disproportionate to whatever the number actually measured.",
+      "Narrator: [reflective] A single night of poor sleep score, and I'd narrate the entire following day as compromised, regardless of how I actually felt moving through it.",
+      "Narrator: I'd essentially outsourced the authority to interpret my own body to a wearable device manufactured by a company with no interest in my actual wellbeing, only my continued subscription.",
+      "Narrator: [honestly] The language of optimization, I've come to suspect, quietly imports the logic of productivity into a domain that was never meant to operate that way.",
+      "Narrator: Bodies aren't machines awaiting efficiency gains; they're something closer to weather, responsive to forces far beyond whatever a dashboard claims to capture.",
+      "Narrator: [gently] Deleting the apps felt, absurdly, like a small act of rebellion, though rebellion against what, exactly, I'm still working out.",
+      "Narrator: The first week without them was disorienting, an itch to check numbers that no longer existed to check, muscle memory searching for data that had vanished.",
+      "Narrator: [calmly] Gradually, though, I noticed myself asking simpler questions instead: am I hungry, am I tired, do I want to move, questions a device had quietly been answering for me.",
+      "Narrator: I don't know yet whether this experiment will last permanently, but for now, inhabiting my body has started to feel less like managing a portfolio and more like simply living in it."
     ],
     "quiz": [
-      { "question": "What did the narrator delete before recording this memo?", "options": ["Her social media accounts", "The sleep app, macro tracker, and recovery ring app", "Her email accounts", "A fitness gym membership"], "correctIndex": 1, "explanation": "She deleted the sleep app, the macro tracker, and the recovery ring app, all in the same restless hour." },
-      { "question": "What finally cracked the narrator's illusion about optimization?", "options": ["A doctor's warning", "Noticing how anxious she felt on days the numbers disappointed her, disproportionate to what the number measured", "Running out of money for subscriptions", "A friend's intervention"], "correctIndex": 1, "explanation": "She noticed her anxiety on bad-number days was wildly disproportionate to whatever the number actually measured." },
-      { "question": "What does the narrator suspect the language of optimization imports?", "options": ["A sense of playfulness into daily life", "The logic of productivity into a domain never meant to operate that way", "Scientific accuracy into wellness", "Nothing significant at all"], "correctIndex": 1, "explanation": "She suspects the language of optimization quietly imports the logic of productivity into a domain, the body, that was never meant to operate that way." },
-      { "question": "How does the narrator compare bodies to machines?", "options": ["She says bodies are exactly like machines awaiting efficiency gains", "She says bodies are closer to weather, responsive to forces beyond what a dashboard captures", "She says bodies require constant data tracking", "She makes no such comparison"], "correctIndex": 1, "explanation": "She says bodies aren't machines awaiting efficiency gains, but something closer to weather, responsive to forces beyond a dashboard's capture." },
-      { "question": "What simpler questions does the narrator start asking herself instead?", "options": ["Questions about her calorie count", "Am I hungry, am I tired, do I want to move", "Questions about her sleep score", "No questions at all"], "correctIndex": 1, "explanation": "She starts asking simpler questions like whether she's hungry, tired, or wants to move, instead of consulting a device." }
-    ]
+      {
+        "question": "What did the narrator delete before recording this memo?",
+        "options": [
+          "The sleep app, macro tracker, and recovery ring app",
+          "Her social media accounts",
+          "Her email accounts",
+          "A fitness gym membership"
+        ],
+        "correctIndex": 0,
+        "explanation": "She deleted the sleep app, the macro tracker, and the recovery ring app, all in the same restless hour."
+      },
+      {
+        "question": "What finally cracked the narrator's illusion about optimization?",
+        "options": [
+          "A doctor's warning",
+          "Her anxiety on bad-number days exceeded what those numbers actually measured",
+          "Running out of money for subscriptions",
+          "A friend's intervention"
+        ],
+        "correctIndex": 1,
+        "explanation": "She noticed her anxiety on bad-number days was wildly disproportionate to whatever the number actually measured."
+      },
+      {
+        "question": "What does the narrator suspect the language of optimization imports?",
+        "options": [
+          "A sense of playfulness into daily life",
+          "Scientific accuracy into wellness",
+          "Nothing significant at all",
+          "The logic of productivity into a domain never meant to operate that way"
+        ],
+        "correctIndex": 3,
+        "explanation": "She suspects the language of optimization quietly imports the logic of productivity into a domain, the body, that was never meant to operate that way."
+      },
+      {
+        "question": "How does the narrator compare bodies to machines?",
+        "options": [
+          "She says bodies are closer to weather, responsive to forces beyond what a dashboard captures",
+          "She says bodies are exactly like machines awaiting efficiency gains",
+          "She says bodies require constant data tracking",
+          "She makes no such comparison"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says bodies aren't machines awaiting efficiency gains, but something closer to weather, responsive to forces beyond a dashboard's capture."
+      },
+      {
+        "question": "What simpler questions does the narrator start asking herself instead?",
+        "options": [
+          "Questions about her calorie count",
+          "Questions about her sleep score",
+          "Am I hungry, am I tired, do I want to move",
+          "No questions at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "She starts asking simpler questions like whether she's hungry, tired, or wants to move, instead of consulting a device."
+      },
+      {
+        "question": "What made the tracking habit damaging?",
+        "options": [
+          "It improved hunger signals",
+          "Poor scores shaped the whole day's story",
+          "It reduced all anxiety",
+          "It made walks enjoyable"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports poor scores shaped the whole day's story."
+      },
+      {
+        "question": "Whose authority had the narrator outsourced?",
+        "options": [
+          "His clinician's guidance",
+          "His family's decisions",
+          "The weather forecast",
+          "His own interpretation of bodily experience"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports his own interpretation of bodily experience."
+      },
+      {
+        "question": "Why does he criticise optimisation language?",
+        "options": [
+          "It requires too many apps",
+          "It ignores all exercise",
+          "It imports productivity logic into bodily life",
+          "It bans personal goals"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports it imports productivity logic into bodily life."
+      },
+      {
+        "question": "What questions replace dashboard checking?",
+        "options": [
+          "Which score is highest?",
+          "How can I log every meal?",
+          "What subscription should I buy?",
+          "Am I hungry, tired, or ready to move?"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports am i hungry, tired, or ready to move?."
+      },
+      {
+        "question": "What remains uncertain at the end?",
+        "options": [
+          "Whether bodies have needs",
+          "Whether deleting the apps will be permanent",
+          "Whether devices collect data",
+          "Whether sleep matters"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports whether deleting the apps will be permanent."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-health-06",
@@ -169,36 +745,153 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Dr. Lestari", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Dr. Lestari",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Today's guest researches something I hadn't fully considered before, the ways grief expresses itself physically rather than purely emotionally. Welcome, Dr. Lestari.",
-      "Dr. Lestari: [pleasant] Thank you. It's a topic that deserves far more attention than it currently receives, particularly in cultures that treat mind and body as tidily separate.",
-      "Host: [curious] Can you describe what physical grief actually looks like clinically, beyond the obvious tears and exhaustion?",
-      "Dr. Lestari: [informative] Chest tightness, digestive disruption, immune suppression, even measurable changes in heart rhythm during acute bereavement, a phenomenon sometimes called broken heart syndrome.",
-      "Host: [surprised] Broken heart syndrome sounds almost metaphorical, yet you're describing something with actual physiological markers.",
-      "Dr. Lestari: [nodding] Precisely, and that's what makes the metaphor misleading. It isn't poetic language; the heart muscle can genuinely weaken temporarily under acute emotional distress.",
-      "Host: [interested] Why does physical grief get so consistently overlooked, given how measurable you're describing it as being?",
-      "Dr. Lestari: [thoughtful] Partly cultural conditioning, treating emotional pain as belonging to therapy and physical pain as belonging to medicine, as though the two never intersect.",
-      "Host: [curious] Does that separation actively harm people navigating loss?",
-      "Dr. Lestari: [serious] Considerably. Patients presenting with grief-related physical symptoms are frequently dismissed or misdiagnosed, since clinicians aren't always trained to consider bereavement as a plausible cause.",
-      "Host: [thoughtful] What would you want clinicians to ask that they currently don't?",
-      "Dr. Lestari: [practical] Simply whether they've experienced a significant loss recently, a question that takes seconds yet is remarkably rarely posed in general practice.",
-      "Host: [curious] And for the grieving person themselves, what would you want them to understand about their own bodies during this period?",
-      "Dr. Lestari: [warmly] That physical symptoms aren't a sign of weakness or exaggeration, they're a legitimate, measurable manifestation of something genuinely overwhelming their system.",
-      "Host: [interested] Does the grief eventually stop registering in the body once someone has, in some sense, processed it?",
-      "Dr. Lestari: [reflective] Usually it recedes, yes, though not always linearly. Some people find it resurfaces physically around anniversaries, unpredictably, years after the emotional work felt largely complete.",
-      "Host: [smiling] A humbling reminder that grief resists tidy timelines. Thank you, Dr. Lestari, for this genuinely illuminating conversation.",
-      "Dr. Lestari: [warmly] Thank you for asking questions that treat the body as worth taking seriously alongside the heart."
+      "Host: [thoughtful] Today's guest researches something I hadn't fully considered before, the ways grief expresses itself physically rather than purely emotionally. Welcome, Dr. Lestari.",
+      "Dr. Lestari: Thank you. It's a topic that deserves far more attention than it currently receives, particularly in cultures that treat mind and body as tidily separate.",
+      "Host: [carefully] Can you describe what physical grief actually looks like clinically, beyond the obvious tears and exhaustion?",
+      "Dr. Lestari: Chest tightness, digestive disruption, immune suppression, even measurable changes in heart rhythm during acute bereavement, a phenomenon sometimes called broken heart syndrome.",
+      "Host: [reflective] Broken heart syndrome sounds almost metaphorical, yet you're describing something with actual physiological markers.",
+      "Dr. Lestari: Precisely, and that's what makes the metaphor misleading. It isn't poetic language; the heart muscle can genuinely weaken temporarily under acute emotional distress.",
+      "Host: [honestly] Why does physical grief get so consistently overlooked, given how measurable you're describing it as being?",
+      "Dr. Lestari: Partly cultural conditioning, treating emotional pain as belonging to therapy and physical pain as belonging to medicine, as though the two never intersect.",
+      "Host: [gently] Does that separation actively harm people navigating loss?",
+      "Dr. Lestari: Considerably. Patients presenting with grief-related physical symptoms are frequently dismissed or misdiagnosed, since clinicians aren't always trained to consider bereavement as a plausible cause.",
+      "Host: [calmly] What would you want clinicians to ask that they currently don't?",
+      "Dr. Lestari: Simply whether they've experienced a significant loss recently, a question that takes seconds yet is remarkably rarely posed in general practice.",
+      "Host: [encouraging] And for the grieving person themselves, what would you want them to understand about their own bodies during this period?",
+      "Dr. Lestari: That physical symptoms aren't a sign of weakness or exaggeration, they're a legitimate, measurable manifestation of something genuinely overwhelming their system.",
+      "Host: [seriously] Does the grief eventually stop registering in the body once someone has, in some sense, processed it?",
+      "Dr. Lestari: Usually it recedes, yes, though not always linearly. Some people find it resurfaces physically around anniversaries, unpredictably, years after the emotional work felt largely complete.",
+      "Host: A humbling reminder that grief resists tidy timelines. Thank you, Dr. Lestari, for this genuinely illuminating conversation.",
+      "Dr. Lestari: Thank you for asking questions that treat the body as worth taking seriously alongside the heart."
     ],
     "quiz": [
-      { "question": "What does Dr. Lestari's research focus on?", "options": ["The causes of chronic disease", "The ways grief expresses itself physically rather than purely emotionally", "Nutrition science", "Sleep disorders"], "correctIndex": 1, "explanation": "Dr. Lestari researches the ways grief manifests physically, not just emotionally, a topic she says deserves more attention." },
-      { "question": "What examples of physical grief does Dr. Lestari give?", "options": ["Only tears and exhaustion", "Chest tightness, digestive disruption, immune suppression, and changes in heart rhythm", "Only weight loss", "Nothing measurable"], "correctIndex": 1, "explanation": "She describes chest tightness, digestive disruption, immune suppression, and measurable heart rhythm changes, sometimes called broken heart syndrome." },
-      { "question": "Why does Dr. Lestari say broken heart syndrome is misleading as a term?", "options": ["Because it isn't real at all", "Because it isn't merely poetic language; the heart muscle can genuinely weaken under acute emotional distress", "Because it only affects the elderly", "Because it has no physiological markers"], "correctIndex": 1, "explanation": "She clarifies it isn't just a metaphor; the heart muscle can genuinely weaken temporarily under acute emotional distress." },
-      { "question": "What does Dr. Lestari say happens to patients with grief-related physical symptoms?", "options": ["They are always correctly diagnosed", "They are frequently dismissed or misdiagnosed, since clinicians aren't trained to consider bereavement", "They recover instantly", "They are referred to therapy immediately"], "correctIndex": 1, "explanation": "She explains such patients are frequently dismissed or misdiagnosed because clinicians aren't always trained to consider bereavement as a cause." },
-      { "question": "What does Dr. Lestari say about grief resurfacing over time?", "options": ["It always disappears permanently and quickly", "It usually recedes but can resurface physically around anniversaries, even years later", "It never affects the body after the first month", "It only affects young people"], "correctIndex": 1, "explanation": "She says grief usually recedes but not always linearly, sometimes resurfacing physically around anniversaries years later." }
-    ]
+      {
+        "question": "What does Dr. Lestari's research focus on?",
+        "options": [
+          "The ways grief expresses itself physically rather than purely emotionally",
+          "The causes of chronic disease",
+          "Nutrition science",
+          "Sleep disorders"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dr. Lestari researches the ways grief manifests physically, not just emotionally, a topic she says deserves more attention."
+      },
+      {
+        "question": "What examples of physical grief does Dr. Lestari give?",
+        "options": [
+          "Only tears and exhaustion",
+          "Only weight loss",
+          "Chest tightness, digestive disruption, immune suppression, and changes in heart rhythm",
+          "Nothing measurable"
+        ],
+        "correctIndex": 2,
+        "explanation": "She describes chest tightness, digestive disruption, immune suppression, and measurable heart rhythm changes, sometimes called broken heart syndrome."
+      },
+      {
+        "question": "Why does Dr. Lestari say broken heart syndrome is misleading as a term?",
+        "options": [
+          "Because it isn't merely poetic language; the heart muscle can genuinely weaken under acute emotional distress",
+          "Because it isn't real at all",
+          "Because it only affects the elderly",
+          "Because it has no physiological markers"
+        ],
+        "correctIndex": 0,
+        "explanation": "She clarifies it isn't just a metaphor; the heart muscle can genuinely weaken temporarily under acute emotional distress."
+      },
+      {
+        "question": "What does Dr. Lestari say happens to patients with grief-related physical symptoms?",
+        "options": [
+          "They are always correctly diagnosed",
+          "They are frequently dismissed or misdiagnosed, since clinicians aren't trained to consider bereavement",
+          "They recover instantly",
+          "They are referred to therapy immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains such patients are frequently dismissed or misdiagnosed because clinicians aren't always trained to consider bereavement as a cause."
+      },
+      {
+        "question": "What does Dr. Lestari say about grief resurfacing over time?",
+        "options": [
+          "It always disappears permanently and quickly",
+          "It usually recedes but can resurface physically around anniversaries, even years later",
+          "It never affects the body after the first month",
+          "It only affects young people"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says grief usually recedes but not always linearly, sometimes resurfacing physically around anniversaries years later."
+      },
+      {
+        "question": "Which physical effects can acute grief involve?",
+        "options": [
+          "Only tears and tiredness",
+          "Guaranteed chronic illness",
+          "Loss of all memory",
+          "Changes in digestion, immunity, and heart rhythm"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports changes in digestion, immunity, and heart rhythm."
+      },
+      {
+        "question": "Why is “broken heart syndrome” more than a metaphor?",
+        "options": [
+          "All grief damages the heart permanently",
+          "Metaphors create symptoms",
+          "Only athletes experience it",
+          "Acute distress can temporarily weaken heart muscle"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports acute distress can temporarily weaken heart muscle."
+      },
+      {
+        "question": "Why may grief-related symptoms be missed?",
+        "options": [
+          "Symptoms are never measurable",
+          "Loss has no physical effects",
+          "Care systems often separate mind from body",
+          "Patients refuse questions"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports care systems often separate mind from body."
+      },
+      {
+        "question": "What simple question could improve assessment?",
+        "options": [
+          "Did you sleep exactly eight hours?",
+          "Can you prove you are grieving?",
+          "Why are you still sad?",
+          "Have you experienced a significant loss recently?"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports have you experienced a significant loss recently?."
+      },
+      {
+        "question": "What pattern can occur after emotional recovery?",
+        "options": [
+          "Grief follows a fixed timetable",
+          "Symptoms may return around anniversaries",
+          "The body never changes",
+          "Support becomes unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports symptoms may return around anniversaries."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-health-07",
@@ -207,33 +900,589 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ayu", "gender": "female" },
-      { "name": "Rizal", "gender": "male" }
+      {
+        "name": "Ayu",
+        "gender": "female"
+      },
+      {
+        "name": "Rizal",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ayu: [tired but warm] Rizal, I just got the scan results. Clear. Officially, formally, clear.",
-      "Rizal: [overjoyed] Ayu, that's incredible news. I've been holding my breath since you texted you were heading in this morning.",
-      "Ayu: [quiet] I thought I'd feel pure relief, unclouded relief, and instead I'm sitting here feeling something considerably more complicated than that.",
-      "Rizal: [gentle] That doesn't surprise me, actually, though I imagine it's confusing to feel anything other than joy after news this good.",
-      "Ayu: [honest] Everyone keeps saying I should be celebrating, and I want to, genuinely, but there's this strange grief underneath the relief that I can't quite explain to anyone.",
-      "Rizal: [thoughtful] Grief for what, specifically, if you can put words to it?",
-      "Ayu: [reflective] For the version of me that existed before any of this, who took her body's cooperation completely for granted, without ever once questioning it.",
-      "Rizal: [understanding] That makes sense. Surviving something doesn't necessarily return you to who you were beforehand, even when the outcome is exactly what everyone hoped for.",
-      "Ayu: [uncertain] There's also this low hum of vigilance now, wondering if every ache is something recurring, when it's probably just an ordinary ache like anyone else's.",
-      "Rizal: [gentle] Do you think that vigilance fades with time, or is it something you'll be managing indefinitely, in some diminished form?",
-      "Ayu: [thoughtful] My oncologist said it typically softens, though rarely vanishes entirely, and honestly, that's a more honest answer than false reassurance would have been.",
-      "Rizal: [warmly] I'd rather you hear the honest version from her than a comforting lie from anyone else, myself included.",
-      "Ayu: [grateful] Thank you for not rushing me toward gratitude today, even though gratitude is genuinely in there somewhere, underneath everything else.",
-      "Rizal: [sincere] You're allowed the complicated version. Nobody survives something like this and comes out the other side uncomplicated.",
-      "Ayu: [softly] I think I needed permission to feel this strangely today, rather than performing the relief everyone was expecting from me.",
-      "Rizal: [warmly] Permission granted, entirely. And congratulations, genuinely, however complicated the feeling underneath it turns out to be."
+      "Ayu: [thoughtful] Rizal, I just got the scan results. Clear. Officially, formally, clear.",
+      "Rizal: Ayu, that's incredible news. I've been holding my breath since you texted you were heading in this morning.",
+      "Ayu: [carefully] I thought I'd feel pure relief, unclouded relief, and instead I'm sitting here feeling something considerably more complicated than that.",
+      "Rizal: That doesn't surprise me, actually, though I imagine it's confusing to feel anything other than joy after news this good.",
+      "Ayu: [reflective] Everyone keeps saying I should be celebrating, and I want to, genuinely, but there's this strange grief underneath the relief that I can't quite explain to anyone.",
+      "Rizal: Grief for what, specifically, if you can put words to it?",
+      "Ayu: [honestly] For the version of me that existed before any of this, who took her body's cooperation completely for granted, without ever once questioning it.",
+      "Rizal: That makes sense. Surviving something doesn't necessarily return you to who you were beforehand, even when the outcome is exactly what everyone hoped for.",
+      "Ayu: [gently] There's also this low hum of vigilance now, wondering if every ache is something recurring, when it's probably just an ordinary ache like anyone else's.",
+      "Rizal: Do you think that vigilance fades with time, or is it something you'll be managing indefinitely, in some diminished form?",
+      "Ayu: [calmly] My oncologist said it typically softens, though rarely vanishes entirely, and honestly, that's a more honest answer than false reassurance would have been.",
+      "Rizal: I'd rather you hear the honest version from her than a comforting lie from anyone else, myself included.",
+      "Ayu: [encouraging] Thank you for not rushing me toward gratitude today, even though gratitude is genuinely in there somewhere, underneath everything else.",
+      "Rizal: You're allowed the complicated version. Nobody survives something like this and comes out the other side uncomplicated.",
+      "Ayu: [seriously] I think I needed permission to feel this strangely today, rather than performing the relief everyone was expecting from me.",
+      "Rizal: Permission granted, entirely. And congratulations, genuinely, however complicated the feeling underneath it turns out to be."
     ],
     "quiz": [
-      { "question": "What news does Ayu share at the start of the call?", "options": ["That treatment was cancelled", "That her scan results came back clear", "That she needs more treatment", "That she is starting a new job"], "correctIndex": 1, "explanation": "Ayu shares that her scan results came back officially, formally clear." },
-      { "question": "How does Ayu actually feel despite the good news?", "options": ["Purely and simply relieved", "A strange grief underneath the relief that she struggles to explain", "Completely indifferent", "Angry at her doctors"], "correctIndex": 1, "explanation": "Ayu describes feeling a strange grief underneath the relief, something more complicated than pure joy." },
-      { "question": "What does Ayu say she is grieving?", "options": ["The loss of her job during treatment", "The version of herself who took her body's cooperation for granted", "Her relationship with Rizal", "Money spent on treatment"], "correctIndex": 1, "explanation": "She grieves the version of herself who existed before, who took her body's cooperation for granted without questioning it." },
-      { "question": "What did Ayu's oncologist say about the vigilance she feels?", "options": ["It vanishes completely within a week", "It typically softens, though rarely vanishes entirely", "It never changes at all", "It only affects other patients"], "correctIndex": 1, "explanation": "Her oncologist said the vigilance typically softens over time, though it rarely vanishes entirely." },
-      { "question": "What does Rizal ultimately offer Ayu during the call?", "options": ["Pressure to feel grateful immediately", "Permission to feel the complicated version of her emotions rather than performing relief", "A dismissal of her feelings", "Advice to see a different doctor"], "correctIndex": 1, "explanation": "Rizal tells her she is allowed the complicated version of her feelings, granting her permission rather than pushing her toward performed gratitude." }
-    ]
+      {
+        "question": "What news does Ayu share at the start of the call?",
+        "options": [
+          "That her scan results came back clear",
+          "That treatment was cancelled",
+          "That she needs more treatment",
+          "That she is starting a new job"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ayu shares that her scan results came back officially, formally clear."
+      },
+      {
+        "question": "How does Ayu actually feel despite the good news?",
+        "options": [
+          "A strange grief underneath the relief that she struggles to explain",
+          "Purely and simply relieved",
+          "Completely indifferent",
+          "Angry at her doctors"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ayu describes feeling a strange grief underneath the relief, something more complicated than pure joy."
+      },
+      {
+        "question": "What does Ayu say she is grieving?",
+        "options": [
+          "The loss of her job during treatment",
+          "The version of herself who took her body's cooperation for granted",
+          "Her relationship with Rizal",
+          "Money spent on treatment"
+        ],
+        "correctIndex": 1,
+        "explanation": "She grieves the version of herself who existed before, who took her body's cooperation for granted without questioning it."
+      },
+      {
+        "question": "What did Ayu's oncologist say about the vigilance she feels?",
+        "options": [
+          "It vanishes completely within a week",
+          "It never changes at all",
+          "It typically softens, though rarely vanishes entirely",
+          "It only affects other patients"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her oncologist said the vigilance typically softens over time, though it rarely vanishes entirely."
+      },
+      {
+        "question": "What does Rizal ultimately offer Ayu during the call?",
+        "options": [
+          "Permission to feel the complicated version of her emotions rather than performing relief",
+          "Pressure to feel grateful immediately",
+          "A dismissal of her feelings",
+          "Advice to see a different doctor"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rizal tells her she is allowed the complicated version of her feelings, granting her permission rather than pushing her toward performed gratitude."
+      },
+      {
+        "question": "Why is Ayu's reaction to clear results complicated?",
+        "options": [
+          "She doubts the scan exists",
+          "She expected bad news",
+          "Rizal refuses celebration",
+          "Relief is mixed with grief and vigilance"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports relief is mixed with grief and vigilance."
+      },
+      {
+        "question": "What does she grieve?",
+        "options": [
+          "The loss of employment",
+          "A broken friendship",
+          "Her earlier sense of bodily certainty",
+          "Her treatment team"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports her earlier sense of bodily certainty."
+      },
+      {
+        "question": "What does the oncologist say about vigilance?",
+        "options": [
+          "It guarantees recurrence",
+          "It often softens but may not vanish",
+          "It is a moral failure",
+          "It should be ignored"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports it often softens but may not vanish."
+      },
+      {
+        "question": "Why does Rizal avoid forced positivity?",
+        "options": [
+          "Gratitude is unimportant",
+          "Clear scans need no joy",
+          "Friends cannot help",
+          "Complicated feelings deserve room after treatment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports complicated feelings deserve room after treatment."
+      },
+      {
+        "question": "What does Ayu most need from the call?",
+        "options": [
+          "A diagnosis from Rizal",
+          "A promise of no future fear",
+          "Permission not to perform simple relief",
+          "Advice to stop follow-up"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports permission not to perform simple relief."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-health-08",
+    "title": "The Question List I Took to My Appointment",
+    "level": "C1",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [calm] When a health concern kept returning, I noticed that I arrived at appointments with a worried mind and left remembering only half of what had been said.",
+      "Narrator: A friend suggested making a one-page note before the next visit. It was not a self-diagnosis. It was a way to communicate clearly with the qualified professional responsible for my care.",
+      "Narrator: I wrote when the change had begun, what made it better or worse, medicines I was taking, and the questions that mattered most to me.",
+      "Narrator: The note also helped me describe practical limits. I could explain that a symptom affected sleep and work without feeling that I had to turn the conversation into a complete story of my private life.",
+      "Narrator: During the appointment, the clinician explained what could be assessed immediately, what might need time or further tests, and which changes would mean I should seek help sooner.",
+      "Narrator: That uncertainty was not a failure. It was more useful than a confident guess because it came with a plan for the next step.",
+      "Narrator: I asked whether I had understood correctly and wrote down the review date. If someone needs support to process information, bringing a trusted person may help when appropriate and with consent.",
+      "Narrator: The experience changed how I hear health advice online. A general video may offer vocabulary for a question, but it cannot know an individual history, risk, or treatment plan.",
+      "Narrator: Faith and encouragement gave me comfort, yet neither made professional assessment unnecessary. Taking responsible means can be part of gratitude and trust.",
+      "Narrator: The small question list did not solve everything. It did make the conversation calmer, more accurate, and easier to continue when new information appeared."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator prepare a one-page note?",
+        "options": [
+          "To communicate clearly during the appointment",
+          "To diagnose the condition",
+          "To replace clinical tests",
+          "To avoid asking questions"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports to communicate clearly during the appointment."
+      },
+      {
+        "question": "Which information belonged on the note?",
+        "options": [
+          "Every private family detail",
+          "When changes began and what affected them",
+          "Online comments about symptoms",
+          "A guessed medical label"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports when changes began and what affected them."
+      },
+      {
+        "question": "Why mention practical limits?",
+        "options": [
+          "To obtain a guaranteed diagnosis",
+          "To avoid discussing work",
+          "To explain impact without oversharing",
+          "To compare conditions publicly"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports to explain impact without oversharing."
+      },
+      {
+        "question": "What did the clinician clarify?",
+        "options": [
+          "A certain final outcome",
+          "That notes were unnecessary",
+          "That online advice was enough",
+          "What required assessment, time, or further tests"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports what required assessment, time, or further tests."
+      },
+      {
+        "question": "Why was uncertainty useful in this case?",
+        "options": [
+          "It came with a clear next step",
+          "It proved nothing could help",
+          "It removed the need to review",
+          "It meant symptoms were imaginary"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports it came with a clear next step."
+      },
+      {
+        "question": "What should the narrator confirm before leaving?",
+        "options": [
+          "That every cause was known",
+          "That she understood the plan and review date",
+          "That no further questions remain",
+          "That treatment can be copied"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports that she understood the plan and review date."
+      },
+      {
+        "question": "When might a trusted person attend?",
+        "options": [
+          "Whenever a clinician disagrees",
+          "Instead of the patient",
+          "When appropriate, with the person's consent",
+          "To share private details freely"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports when appropriate, with the person's consent."
+      },
+      {
+        "question": "What can a general health video provide?",
+        "options": [
+          "A personal treatment plan",
+          "Proof of a diagnosis",
+          "Permission to stop treatment",
+          "Vocabulary for questions, not individual care"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports vocabulary for questions, not individual care."
+      },
+      {
+        "question": "How does faith fit the narrator's approach?",
+        "options": [
+          "It offers comfort while responsible care continues",
+          "It guarantees recovery",
+          "It replaces professional assessment",
+          "It explains every symptom"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports it offers comfort while responsible care continues."
+      },
+      {
+        "question": "What did the question list improve?",
+        "options": [
+          "The speed of diagnosis",
+          "Calm, accuracy, and follow-up communication",
+          "The certainty of every result",
+          "The need for further care"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports calm, accuracy, and follow-up communication."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-health-09",
+    "title": "When Recovery Does Not Move in a Straight Line",
+    "level": "C1",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [calm] After a period of illness, my colleague returned to work with a plan that looked sensible on paper: fewer hours, regular breaks, and a review after several weeks.",
+      "Narrator: The first difficulty was other people’s expectation that returning meant being fully recovered. On a good day, she could manage a meeting. On another day, the same journey cost far more energy.",
+      "Narrator: Her clinician provided individual guidance. The team’s responsibility was not to interpret her condition, but to make the work arrangements clear enough that she could follow that guidance without repeated negotiation.",
+      "Narrator: We agreed on priority tasks, a reliable contact person, and a way to say that a limit had been reached without explaining private medical details in a group chat.",
+      "Narrator: This was not special treatment. It was an attempt to prevent a predictable problem: a person who tries to appear fine may push beyond a sensible pace because every request feels like a test of commitment.",
+      "Narrator: The arrangement was reviewed rather than frozen. Some adjustments became unnecessary; others needed to continue. The important point was that change did not have to be defended as a moral failure.",
+      "Narrator: I learned to avoid cheerful but unhelpful comments such as, You look much better, as if appearance settled the question of capacity.",
+      "Narrator: More useful questions were practical: Which part of the day is hardest? Would a written summary help? Is there a task that can wait?",
+      "Narrator: No friend or manager should promise a medical outcome. But we can reduce needless pressure, respect privacy, and encourage someone to seek appropriate help if symptoms change or become urgent.",
+      "Narrator: Recovery is personal, but it is never only personal. Workplaces and families can either make a careful plan possible or quietly make it much harder to follow."
+    ],
+    "quiz": [
+      {
+        "question": "What problem followed the colleague's return?",
+        "options": [
+          "Others assumed returning meant full recovery",
+          "Her clinician withdrew advice",
+          "She had no work plan",
+          "The team ended all meetings"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports others assumed returning meant full recovery."
+      },
+      {
+        "question": "Why could the same journey vary in difficulty?",
+        "options": [
+          "The route changed weekly",
+          "Capacity changed from day to day",
+          "Her role was uncertain",
+          "She refused transport"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports capacity changed from day to day."
+      },
+      {
+        "question": "What was the clinician's role?",
+        "options": [
+          "Interpret team workloads",
+          "Publish private details",
+          "Provide individual guidance",
+          "Promise a recovery date"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports provide individual guidance."
+      },
+      {
+        "question": "What was the team's role?",
+        "options": [
+          "Diagnose the condition",
+          "Monitor symptoms publicly",
+          "Set medical treatment",
+          "Make arrangements clear enough to follow"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports make arrangements clear enough to follow."
+      },
+      {
+        "question": "Which support protected privacy?",
+        "options": [
+          "A way to signal limits without medical details",
+          "A public health questionnaire",
+          "Daily proof of symptoms",
+          "Sharing clinician notes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports a way to signal limits without medical details."
+      },
+      {
+        "question": "Why was the plan not special treatment?",
+        "options": [
+          "It reduced the team's pay",
+          "It prevented pressure to exceed a sensible pace",
+          "It made recovery faster",
+          "It removed all duties"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports it prevented pressure to exceed a sensible pace."
+      },
+      {
+        "question": "Why review adjustments rather than freeze them?",
+        "options": [
+          "Rules should be hidden",
+          "Appearance decides capacity",
+          "Needs can change during recovery",
+          "Work plans never evolve"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports needs can change during recovery."
+      },
+      {
+        "question": "Why is “You look better” unhelpful?",
+        "options": [
+          "Compliments are always rude",
+          "Recovery cannot improve",
+          "Colleagues should not speak",
+          "Appearance does not establish capacity"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports appearance does not establish capacity."
+      },
+      {
+        "question": "Which question is more useful?",
+        "options": [
+          "Is there a task that can wait?",
+          "Why are you still tired?",
+          "Are you fully recovered now?",
+          "Can you prove your limit?"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports is there a task that can wait?."
+      },
+      {
+        "question": "What boundary closes the account?",
+        "options": [
+          "Workplaces cannot help",
+          "No manager should promise a medical outcome",
+          "Privacy blocks every question",
+          "Recovery is entirely private"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports no manager should promise a medical outcome."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-health-10",
+    "title": "How Should We Respond to Health Advice on Social Media?",
+    "level": "C1",
+    "themeId": "health",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A listener sent us a video claiming that one simple routine can fix tiredness, stress, and poor sleep. Why do posts like this travel so quickly?",
+      "Guest: They offer a tidy answer to problems that may have many causes. A confident voice and a personal success story can feel more convincing than a careful explanation of uncertainty.",
+      "Moderator: Is it wrong to learn about health online?",
+      "Guest: Not at all. Online material can help people notice questions, find general public-health information, or prepare for a conversation with a qualified clinician or pharmacist. The risk is treating it as a personal diagnosis.",
+      "Moderator: What signs should make someone pause?",
+      "Guest: Claims that work for everyone, pressure to buy immediately, advice to stop prescribed treatment, or a suggestion that seeking proper care shows weak faith or weak will.",
+      "Moderator: How should a family member respond if someone is persuaded by a video?",
+      "Guest: Start with the concern, not an argument. You might say, Let us write down the claim and ask an appropriate professional whether it is relevant and safe for you.",
+      "Moderator: What about testimonials from people who say they recovered?",
+      "Guest: They describe one experience. They do not prove cause, safety, or suitability for another person with different circumstances.",
+      "Moderator: Can religious encouragement still have a place?",
+      "Guest: Yes, as comfort and support. It should not be used to promise a cure, blame someone for illness, or delay urgent assessment.",
+      "Moderator: What is the safest final principle?",
+      "Guest: Keep hope, use reliable information, and seek timely local medical help for urgent concerns. A short audio cannot replace individual care.",
+      "Moderator: How can a listener keep track of a claim without becoming overwhelmed?",
+      "Guest: Save the source, note the exact promise, and bring that information to an appropriate professional. Specific questions are easier to assess than a general feeling that something sounded convincing."
+    ],
+    "quiz": [
+      {
+        "question": "Why do simple health claims spread quickly?",
+        "options": [
+          "They offer tidy answers to complex problems",
+          "They include clinical records",
+          "They avoid testimonials",
+          "They limit all hope"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports they offer tidy answers to complex problems."
+      },
+      {
+        "question": "What can online material appropriately do?",
+        "options": [
+          "Provide individual diagnosis",
+          "Help someone prepare informed questions",
+          "Replace a pharmacist",
+          "Guarantee safety"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports help someone prepare informed questions."
+      },
+      {
+        "question": "Which claim should make a viewer pause?",
+        "options": [
+          "A reminder to consult a clinician",
+          "A source link to public guidance",
+          "Advice to stop prescribed treatment",
+          "A note about uncertainty"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports advice to stop prescribed treatment."
+      },
+      {
+        "question": "How should family respond first?",
+        "options": [
+          "Mock the video immediately",
+          "Demand instant agreement",
+          "Hide all health information",
+          "Start with the person's concern, not an argument"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports start with the person's concern, not an argument."
+      },
+      {
+        "question": "What is the value of noting an exact claim?",
+        "options": [
+          "A professional can assess a specific promise",
+          "It proves the claim true",
+          "It prevents any uncertainty",
+          "It replaces a health history"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports a professional can assess a specific promise."
+      },
+      {
+        "question": "Why are testimonials limited evidence?",
+        "options": [
+          "Recovery stories are always false",
+          "One experience cannot establish cause or safety",
+          "They never describe feelings",
+          "They require a diagnosis"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports one experience cannot establish cause or safety."
+      },
+      {
+        "question": "How may religious encouragement help?",
+        "options": [
+          "By replacing urgent care",
+          "By blaming illness on faith",
+          "As comfort without promising a cure",
+          "By confirming every remedy"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports as comfort without promising a cure."
+      },
+      {
+        "question": "What is unsafe to suggest about proper care?",
+        "options": [
+          "That local help may be urgent",
+          "That information can be checked",
+          "That questions can be written",
+          "That seeking it reflects weak faith or will"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports that seeking it reflects weak faith or will."
+      },
+      {
+        "question": "What should urgent concerns receive?",
+        "options": [
+          "Timely local medical attention",
+          "Only social-media advice",
+          "A generic audio lesson",
+          "A delayed online search"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports timely local medical attention."
+      },
+      {
+        "question": "What final limit applies to this discussion?",
+        "options": [
+          "Hope has no role in health",
+          "Short audio cannot replace individual care",
+          "Families cannot support choices",
+          "All online information is harmful"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports short audio cannot replace individual care."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "health",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -6,106 +6,449 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] For nearly two years, I dismissed the dull ache in my lower back as something that simply came with having an office job.",
-      "Narrator: [honest] I told myself that everyone who sits at a desk for eight hours must feel some discomfort, so there was no reason to make a fuss about it.",
-      "Narrator: [worried] However, by the time the pain started spreading down my leg, even I could no longer pretend it was ordinary tiredness.",
-      "Narrator: [thoughtful] A physiotherapist examined me and explained that, despite feeling fine while sitting, my spine had been under constant pressure for far too long.",
-      "Narrator: [surprised] She showed me a diagram of how slouched posture gradually compresses the discs between the vertebrae, which I had never once considered.",
-      "Narrator: [determined] If I kept working the way I had been, she warned, the pain would likely return, no matter how many painkillers I relied on.",
-      "Narrator: [thoughtful] As a result, I agreed to make several changes, even though I doubted a chair or a desk could really fix something so persistent.",
-      "Narrator: [honest] First, I switched to a standing desk for part of the day, which felt awkward and tiring during the first week.",
-      "Narrator: [determined] Second, I set a timer to remind myself to stretch every hour, since I tended to forget entirely once I was absorbed in work.",
-      "Narrator: [reflective] In spite of my initial doubts, the stretching became the habit that mattered most, more than any equipment I purchased.",
-      "Narrator: [honest] There were setbacks, of course; some weeks I skipped the stretches entirely and paid for it with stiffness the next morning.",
-      "Narrator: [hopeful] Even so, after about two months, I noticed I could sit through a long meeting without shifting constantly in my seat.",
-      "Narrator: [thoughtful] What surprised me most was realizing that pain had quietly shaped my mood, making me irritable in ways I had never connected to my back.",
-      "Narrator: [warmly] Now, if I feel the familiar tightness returning, I treat it as a signal rather than something to ignore until it worsens.",
-      "Narrator: [reflective] I used to think discomfort was simply the price of a desk job, but I understand now that it was a warning I chose not to hear."
+      "Narrator: [thoughtful] For nearly two years, I dismissed the dull ache in my lower back as something that simply came with having an office job.",
+      "Narrator: I told myself that everyone who sits at a desk for eight hours must feel some discomfort, so there was no reason to make a fuss about it.",
+      "Narrator: [carefully] However, by the time the pain started spreading down my leg, even I could no longer pretend it was ordinary tiredness.",
+      "Narrator: A qualified clinician assessed the radiating pain and checked strength, sensation, movement, history, and warning signs before discussing possible causes.",
+      "Narrator: [reflective] She explained that back pain can have several causes. No diagram or posture alone could diagnose mine, and no single position is perfect for every body or task.",
+      "Narrator: We agreed that repeated self-treatment was not enough. I received an individual plan and instructions for symptoms that would need prompt medical attention.",
+      "Narrator: [seriously] As a result, I agreed to make several changes, even though I doubted a chair or a desk could really fix something so persistent.",
+      "Narrator: First, I adjusted the workstation and changed positions during the day. Standing was one option, not a cure or a requirement to remain upright for hours.",
+      "Narrator: [honestly] Second, I used reminders for movements approved in my plan and discussed workload and breaks with my employer.",
+      "Narrator: Regular movement and consistent follow-up seemed more useful to me than buying equipment without guidance, although my experience cannot prescribe a plan for others.",
+      "Narrator: [gently] There were setbacks, of course; some weeks I skipped the stretches entirely and paid for it with stiffness the next morning.",
+      "Narrator: Even so, after about two months, I noticed I could sit through a long meeting without shifting constantly in my seat.",
+      "Narrator: [encouraging] What surprised me most was realizing that pain had quietly shaped my mood, making me irritable in ways I had never connected to my back.",
+      "Narrator: Now I monitor changes and follow the agreed plan. New weakness, major numbness, bladder or bowel changes, or severe worsening would require prompt medical guidance.",
+      "Narrator: [sincere] I used to think discomfort was simply the price of a desk job, but I understand now that it was a warning I chose not to hear."
     ],
     "quiz": [
-      { "question": "How did the narrator initially interpret the ache in her lower back?", "options": ["As a sign of a serious illness", "As something ordinary that comes with a desk job", "As a symptom she should see a doctor about immediately", "As unrelated to her posture"], "correctIndex": 1, "explanation": "She dismissed the ache as something that simply came with having an office job, so she did not take it seriously at first." },
-      { "question": "What finally made her seek help?", "options": ["A colleague insisted she go", "The pain started spreading down her leg", "Her manager noticed her slouching", "She fainted at her desk"], "correctIndex": 1, "explanation": "Once the pain began spreading down her leg, she could no longer dismiss it as ordinary tiredness." },
-      { "question": "What did the physiotherapist explain about her posture?", "options": ["Sitting has no effect on the spine", "Slouched posture gradually compresses the discs between vertebrae", "Only standing desks cause back pain", "Her pain was unrelated to sitting"], "correctIndex": 1, "explanation": "The physiotherapist showed her how slouched posture gradually compresses the discs between the vertebrae." },
-      { "question": "According to the narrator, which habit mattered most in the end?", "options": ["Buying a standing desk", "Taking more painkillers", "Stretching every hour", "Quitting her job"], "correctIndex": 2, "explanation": "She says the hourly stretching became the habit that mattered most, more than any equipment she purchased." },
-      { "question": "What did the narrator realize pain had quietly affected?", "options": ["Her eyesight", "Her mood, making her irritable", "Her appetite", "Her memory"], "correctIndex": 1, "explanation": "She realized pain had quietly shaped her mood, making her irritable in ways she had never connected to her back." }
-    ]
+      {
+        "question": "How did the narrator initially interpret the ache in her lower back?",
+        "options": [
+          "As a sign of a serious illness",
+          "As a symptom she should see a doctor about immediately",
+          "As unrelated to her posture",
+          "As something ordinary that comes with a desk job"
+        ],
+        "correctIndex": 3,
+        "explanation": "She dismissed the ache as something that simply came with having an office job, so she did not take it seriously at first."
+      },
+      {
+        "question": "What finally made her seek help?",
+        "options": [
+          "The pain started spreading down her leg",
+          "A colleague insisted she go",
+          "Her manager noticed her slouching",
+          "She fainted at her desk"
+        ],
+        "correctIndex": 0,
+        "explanation": "Once the pain began spreading down her leg, she could no longer dismiss it as ordinary tiredness."
+      },
+      {
+        "question": "What did the physiotherapist explain about her posture?",
+        "options": [
+          "Sitting has no effect on the spine",
+          "Slouched posture gradually compresses the discs between vertebrae",
+          "Only standing desks cause back pain",
+          "Her pain was unrelated to sitting"
+        ],
+        "correctIndex": 1,
+        "explanation": "The physiotherapist showed her how slouched posture gradually compresses the discs between the vertebrae."
+      },
+      {
+        "question": "According to the narrator, which habit mattered most in the end?",
+        "options": [
+          "Buying a standing desk",
+          "Stretching every hour",
+          "Taking more painkillers",
+          "Quitting her job"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says the hourly stretching became the habit that mattered most, more than any equipment she purchased."
+      },
+      {
+        "question": "What did the narrator realize pain had quietly affected?",
+        "options": [
+          "Her eyesight",
+          "Her appetite",
+          "Her mood, making her irritable",
+          "Her memory"
+        ],
+        "correctIndex": 2,
+        "explanation": "She realized pain had quietly shaped her mood, making her irritable in ways she had never connected to her back."
+      },
+      {
+        "question": "Why was the narrator’s early assumption risky?",
+        "options": [
+          "Every desk causes disease",
+          "Pain always means a disc injury",
+          "Office workers should never sit",
+          "Persistent pain was normalized without checking changes or warning signs"
+        ],
+        "correctIndex": 3,
+        "explanation": "Normalization delayed assessment."
+      },
+      {
+        "question": "What information should guide an exercise plan?",
+        "options": [
+          "Examination, symptoms, function, and professional advice",
+          "A standing-desk advertisement",
+          "A coworker’s routine",
+          "One posture diagram"
+        ],
+        "correctIndex": 0,
+        "explanation": "Care needs individual evidence."
+      },
+      {
+        "question": "Why is no single posture called perfect?",
+        "options": [
+          "Posture never affects comfort",
+          "Standing cures all pain",
+          "Chairs determine diagnosis",
+          "Bodies and tasks vary, and changing position may matter more"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revision avoids universal claims."
+      },
+      {
+        "question": "What would require prompt medical guidance?",
+        "options": [
+          "One ordinary meeting",
+          "Owning pain medicine",
+          "Using a timer",
+          "New weakness, bladder or bowel change, numbness in a concerning area, or severe change"
+        ],
+        "correctIndex": 3,
+        "explanation": "The script adds escalation boundaries."
+      },
+      {
+        "question": "What changed besides pain intensity?",
+        "options": [
+          "The job disappeared",
+          "Every ache ended permanently",
+          "The narrator recognized links among symptoms, mood, workload, and movement",
+          "The physiotherapist guaranteed a cure"
+        ],
+        "correctIndex": 2,
+        "explanation": "Recovery is broader and not absolute."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "revise; remove an oversimplified disc diagnosis and make radiating pain a reason for individualized assessment",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-health-02",
-    "title": "Two Friends Argue About Intermittent Fasting",
+    "title": "Discussing Time-Restricted Eating Without Prescribing It",
     "level": "B1",
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dinda", "gender": "female" },
-      { "name": "Farhan", "gender": "male" }
+      {
+        "name": "Dinda",
+        "gender": "female"
+      },
+      {
+        "name": "Farhan",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dinda: [curious] Farhan, you haven't eaten anything since I got here. Are you fasting again, or did you just forget lunch?",
-      "Farhan: [confident] I'm doing intermittent fasting. I only eat between noon and eight in the evening now.",
-      "Dinda: [skeptical] Isn't that just skipping breakfast with an interesting name attached to it?",
-      "Farhan: [amused] Fair criticism, although the idea is that giving your body a longer break between meals improves digestion and energy.",
-      "Dinda: [thoughtful] I read something different, actually, that suggested the benefits mostly come from eating fewer calories overall, not the timing itself.",
-      "Farhan: [considering] That's possible, but even if that's true, the schedule makes it easier for me to avoid mindless snacking at night.",
-      "Dinda: [concerned] Doesn't it make you irritable, though? I'd be unbearable if I skipped breakfast every single day.",
-      "Farhan: [honest] Honestly, the first week was rough. I felt foggy by mid-morning and snapped at people more than I'd like to admit.",
-      "Dinda: [surprised] So why did you keep going, if it made you feel worse at first?",
-      "Farhan: [thoughtful] My doctor mentioned that the body usually adjusts within ten days or so, and in my case, that turned out to be accurate.",
-      "Dinda: [uncertain] Even so, I worry this approach isn't right for everyone, especially people with certain health conditions.",
-      "Farhan: [agreeing] You're right about that. She actually warned me it isn't suitable if someone has low blood sugar issues or is underweight.",
-      "Dinda: [curious] What does a normal eating day even look like for you now?",
-      "Farhan: [explaining] I eat a proper lunch, a snack in the afternoon, and dinner before eight, then nothing until noon the next day.",
-      "Dinda: [thoughtful] That's more structured than I expected. I assumed you were just eating one enormous meal and calling it a diet.",
-      "Farhan: [laughing] Definitely not. If anything, I plan my meals more carefully now than I ever did before.",
-      "Dinda: [considering] Maybe I'll try shortening my eating window slightly, although I doubt I could manage skipping breakfast entirely.",
-      "Farhan: [encouraging] You don't have to copy my exact schedule. Even a small adjustment could show you whether it suits your body.",
-      "Dinda: [smiling] Fair enough. I'll experiment for a week and report back, unless I become completely unbearable by Wednesday."
+      "Dinda: [curious] Farhan, you eat only during certain hours. Are you following a religious fast or a health plan?",
+      "Farhan: It is a health-focused time-restricted schedule discussed with my clinician, not a religious fast. The purposes and rules should not be confused.",
+      "Dinda: [thoughtful] What benefit were you expecting?",
+      "Farhan: Mainly a more structured eating routine. Research discusses timing, total intake, food quality, sleep, and other factors, so I cannot claim one cause or universal result.",
+      "Dinda: Did your clinician promise that your body would adjust within ten days?",
+      "Farhan: [carefully] No. Responses vary. We reviewed my health, medicines, work pattern, nutrition, and signs that would mean stopping or seeking help.",
+      "Dinda: Who should be especially cautious?",
+      "Farhan: People who are pregnant, have a history of eating disorders, take certain medicines, have glucose-control concerns, are underweight, or have other relevant conditions need individual guidance. That list is not complete.",
+      "Dinda: [reflective] During the first week you were foggy and irritable. Why continue?",
+      "Farhan: I reported it and adjusted the plan with professional advice. I would not treat fainting, confusion, severe weakness, or concerning symptoms as a challenge to push through.",
+      "Dinda: What do you eat during the available hours?",
+      "Farhan: [honestly] Balanced meals suited to my needs. A shorter window does not make poor nutrition harmless or justify one enormous meal.",
+      "Dinda: I was about to copy your schedule for a week.",
+      "Farhan: Please do not use my experience as a prescription. Start by asking what problem you want to solve and whether evidence supports this approach for you.",
+      "Dinda: [thoughtful] I also do not want a health trend to disturb a healthy relationship with food.",
+      "Farhan: That matters. If a plan creates fear, obsession, or harmful restriction, seek qualified support.",
+      "Dinda: Then I will keep my usual meals while I review my needs with an appropriate professional.",
+      "Farhan: [encouraging] Good. A responsible health conversation can share questions and experience without telling another person what treatment to start."
     ],
     "quiz": [
-      { "question": "What eating schedule does Farhan follow?", "options": ["He eats only one meal a day", "He eats between noon and eight in the evening", "He never eats breakfast or dinner", "He eats every two hours"], "correctIndex": 1, "explanation": "Farhan explains he only eats between noon and eight in the evening now." },
-      { "question": "What alternative explanation does Dinda offer for fasting's benefits?", "options": ["That timing is the only factor that matters", "That benefits mostly come from eating fewer calories overall, not timing", "That fasting has no real benefits", "That it only works for athletes"], "correctIndex": 1, "explanation": "Dinda suggests the benefits mostly come from eating fewer calories overall, not the timing itself." },
-      { "question": "How did Farhan feel during his first week of fasting?", "options": ["Energetic and calm", "Foggy and irritable", "No different than usual", "Extremely hungry only at night"], "correctIndex": 1, "explanation": "He admits he felt foggy by mid-morning and snapped at people more than he'd like to admit." },
-      { "question": "What did Farhan's doctor warn him about?", "options": ["That fasting is dangerous for everyone", "That it isn't suitable for people with low blood sugar issues or underweight people", "That he must fast for a full year", "That skipping breakfast is always healthy"], "correctIndex": 1, "explanation": "His doctor warned him that fasting isn't suitable if someone has low blood sugar issues or is underweight." },
-      { "question": "What does Dinda decide to do by the end of the conversation?", "options": ["Copy Farhan's exact schedule permanently", "Experiment with a shorter eating window for a week", "Refuse to try fasting at all", "Stop eating breakfast forever"], "correctIndex": 1, "explanation": "She agrees to experiment with shortening her eating window for a week and report back." }
-    ]
+      {
+        "question": "What kind of schedule is Farhan using?",
+        "options": [
+          "A clinician-discussed health eating schedule",
+          "A religious fast he invented",
+          "A treatment for everyone",
+          "A one-meal competition"
+        ],
+        "correctIndex": 0,
+        "explanation": "The purpose is explicitly clarified."
+      },
+      {
+        "question": "What factors may affect results?",
+        "options": [
+          "Timing alone in every case",
+          "The app used to track meals",
+          "Timing, total intake, food quality, sleep, and others",
+          "A friend’s opinion"
+        ],
+        "correctIndex": 2,
+        "explanation": "The evidence is multi-factorial."
+      },
+      {
+        "question": "What did Farhan do about fogginess?",
+        "options": [
+          "Ignored it for ten days",
+          "Told Dinda to copy him",
+          "Reported it and adjusted with professional guidance",
+          "Stopped eating completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "Symptoms were reviewed rather than glorified."
+      },
+      {
+        "question": "What does a shorter window not guarantee?",
+        "options": [
+          "Adequate nutrition or harmless food choices",
+          "A fixed clock time",
+          "A planned lunch",
+          "A conversation"
+        ],
+        "correctIndex": 0,
+        "explanation": "Meal quality still matters."
+      },
+      {
+        "question": "What concern about food does Dinda mention?",
+        "options": [
+          "Finding a larger dinner",
+          "Skipping every breakfast",
+          "Winning an argument",
+          "Avoiding fear, obsession, or harmful restriction"
+        ],
+        "correctIndex": 3,
+        "explanation": "Mental and behavioral effects matter."
+      },
+      {
+        "question": "Why is copying Farhan’s schedule unsafe?",
+        "options": [
+          "Breakfast is required for every adult",
+          "All fasting is harmful",
+          "Suitability depends on health, medicines, nutrition needs, and personal context",
+          "Dinda dislikes lunch"
+        ],
+        "correctIndex": 2,
+        "explanation": "One experience cannot prescribe another."
+      },
+      {
+        "question": "What distinction does the dialogue make?",
+        "options": [
+          "They are exactly the same intervention",
+          "Religious fasting and health-focused eating schedules have different purposes and rules",
+          "Medical advice replaces worship",
+          "Every diet is religious"
+        ],
+        "correctIndex": 1,
+        "explanation": "Context affects both language and guidance."
+      },
+      {
+        "question": "Which cause of the reported benefits still needs evidence?",
+        "options": [
+          "The schedule cures all disease",
+          "Calories never matter",
+          "Benefits may relate to timing, intake, food quality, or several factors",
+          "Eight hours is universally best"
+        ],
+        "correctIndex": 2,
+        "explanation": "The mechanism is not reduced to one claim."
+      },
+      {
+        "question": "What symptom would justify stopping and seeking advice?",
+        "options": [
+          "Feeling curious",
+          "Eating a planned lunch",
+          "Discussing the evidence",
+          "Fainting, confusion, severe weakness, or concerning glucose symptoms"
+        ],
+        "correctIndex": 3,
+        "explanation": "Safety overrides an experiment."
+      },
+      {
+        "question": "What does Dinda decide?",
+        "options": [
+          "Skip breakfast tomorrow",
+          "Not to begin from a friend’s advice; she will review her needs with a qualified professional",
+          "Copy the eight-hour window",
+          "Stop prescribed medicine"
+        ],
+        "correctIndex": 1,
+        "explanation": "The ending removes peer prescription."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "replace; prevent friends from prescribing fasting and distinguish religious fasting, time-restricted eating, evidence uncertainty, and personal contraindications",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-health-03",
-    "title": "The Hospital Visit That Changed How I Work",
+    "title": "After I Collapsed at Work: Treatment, Follow-Up, and Boundaries",
     "level": "B1",
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Six months ago, I collapsed at my desk after what I assumed was simply a stubborn flu that refused to go away.",
-      "Narrator: [honest] In truth, I had been running on almost no sleep for weeks, convinced that pushing through exhaustion was a sign of dedication rather than a warning.",
-      "Narrator: [worried] At the hospital, the doctor told me my body had essentially shut down, exhausted from months of overwork combined with an untreated infection.",
-      "Narrator: [ashamed] I remember feeling embarrassed more than frightened, as though admitting I had pushed too far somehow meant I had failed.",
-      "Narrator: [thoughtful] The nurse who cared for me, a calm woman named Ayu, said something I still think about often: exhaustion is not evidence of hard work.",
-      "Narrator: [reflective] Despite hearing that advice, I initially returned to my old habits the moment I felt slightly better, as if the collapse had taught me nothing.",
-      "Narrator: [honest] Within a month, the same warning signs appeared again, headaches, dizziness, and a strange numbness in my hands whenever I typed for too long.",
-      "Narrator: [determined] That second warning finally convinced me that something had to change permanently, not just until the immediate crisis passed.",
-      "Narrator: [thoughtful] So I spoke with my manager, explaining that unless my workload became more realistic, I could not guarantee I would remain reliable long-term.",
-      "Narrator: [relieved] To my surprise, she took it seriously and helped redistribute several of my responsibilities to other team members.",
-      "Narrator: [determined] I also started leaving the office by six, even though old habits made me anxious about appearing less committed than before.",
-      "Narrator: [hopeful] Slowly, my sleep improved, and the strange numbness in my hands disappeared entirely once I stopped working past midnight.",
-      "Narrator: [grateful] My family noticed the difference before I did, telling me I seemed calmer during weekend visits than I had in years.",
-      "Narrator: [reflective] Looking back, I recognize that our culture often rewards exhaustion as though it proves loyalty, when really it just proves poor boundaries.",
-      "Narrator: [warmly] These days, if I notice myself sliding back into old patterns, I remember Ayu's words and stop before things spiral again.",
-      "Narrator: [peacefully] Recovering taught me that resting is not the opposite of working hard; it is what makes sustainable work possible at all."
+      "Narrator: [seriously] Six months ago, I collapsed at my desk after weeks of worsening illness and very little sleep. A colleague called emergency services rather than guessing the cause.",
+      "Narrator: At the hospital, clinicians assessed me and treated an infection. They explained what they knew, what remained uncertain, and which symptoms required urgent return.",
+      "Narrator: [honestly] I had treated exhaustion as proof of commitment. That belief contributed to delayed care, but it did not give me a complete medical explanation for the collapse.",
+      "Narrator: I followed the discharge plan and took medical leave. When I returned, I resumed too much work too quickly because I feared looking unreliable.",
+      "Narrator: [carefully] Headaches, dizziness, and hand numbness returned. I did not assume they came only from typing or stress; I sought prompt reassessment.",
+      "Narrator: The medical team reviewed the symptoms and updated my care. I will not turn that individual evaluation into general treatment advice.",
+      "Narrator: [reflective] With my consent, an occupational-health professional described functional adjustments to my employer without sharing every private diagnosis.",
+      "Narrator: My manager redistributed urgent tasks, clarified response hours, and arranged a gradual return. We also documented who would cover work during illness.",
+      "Narrator: [thoughtful] Rest, treatment, time, and workload changes occurred together. I cannot honestly claim that one change alone made every symptom improve.",
+      "Narrator: Follow-up remained important even when I felt better, because symptom relief is not always the same as full recovery.",
+      "Narrator: [gently] I learned emergency warning signs and stopped using colleagues or internet searches as substitutes for clinical assessment.",
+      "Narrator: I also discussed sleep, nutrition, and stress as parts of health, not as moral tests that determine whether someone deserves illness.",
+      "Narrator: [encouraging] The workplace changed one policy: managers now review sustained overtime before a crisis, rather than praising it as loyalty.",
+      "Narrator: My personal boundaries matter, but an organization also controls staffing, deadlines, and expectations.",
+      "Narrator: [sincere] Sustainable work is not created by telling a sick person to become more disciplined. It requires timely care, honest limits, and systems that do not wait for collapse."
     ],
     "quiz": [
-      { "question": "What did the narrator initially believe about his exhaustion?", "options": ["That it was a sign of illness he should treat immediately", "That pushing through it was a sign of dedication", "That it meant he needed a vacation", "That it was caused by poor diet"], "correctIndex": 1, "explanation": "He was convinced that pushing through exhaustion was a sign of dedication rather than a warning." },
-      { "question": "What did the doctor say caused his collapse?", "options": ["A broken bone", "Months of overwork combined with an untreated infection", "A minor cold", "Food poisoning"], "correctIndex": 1, "explanation": "The doctor explained his body had shut down from months of overwork combined with an untreated infection." },
-      { "question": "What happened about a month after he returned to his old habits?", "options": ["He felt completely fine with no issues", "The same warning signs appeared again, including headaches and numbness", "He was promoted at work", "He quit his job immediately"], "correctIndex": 1, "explanation": "Within a month, the same warning signs appeared again, headaches, dizziness, and numbness in his hands." },
-      { "question": "What did the narrator's manager do after he spoke with her?", "options": ["She ignored his concerns", "She fired him", "She helped redistribute several of his responsibilities", "She told him to work more"], "correctIndex": 2, "explanation": "To his surprise, she took it seriously and helped redistribute several of his responsibilities to other team members." },
-      { "question": "What lesson does the narrator conclude with?", "options": ["Exhaustion proves loyalty to a company", "Resting is what makes sustainable work possible at all", "Working past midnight is necessary for success", "Nothing really changed for him"], "correctIndex": 1, "explanation": "He concludes that resting is not the opposite of working hard; it is what makes sustainable work possible at all." }
-    ]
+      {
+        "question": "What did the colleague do after the collapse?",
+        "options": [
+          "Called emergency services",
+          "Gave a diagnosis",
+          "Sent the narrator home alone",
+          "Asked for more work"
+        ],
+        "correctIndex": 0,
+        "explanation": "The event received urgent help."
+      },
+      {
+        "question": "What condition was treated at hospital?",
+        "options": [
+          "A confirmed back injury",
+          "High blood pressure only",
+          "A food allergy",
+          "An infection"
+        ],
+        "correctIndex": 3,
+        "explanation": "The account names treatment but preserves uncertainty."
+      },
+      {
+        "question": "Why did the narrator return too quickly?",
+        "options": [
+          "The doctor ended all care",
+          "The manager demanded midnight work",
+          "Every symptom had vanished permanently",
+          "Fear of appearing unreliable"
+        ],
+        "correctIndex": 3,
+        "explanation": "Workplace identity affected behavior."
+      },
+      {
+        "question": "Who described functional adjustments?",
+        "options": [
+          "A random coworker",
+          "The client",
+          "An occupational-health professional with consent",
+          "An online influencer"
+        ],
+        "correctIndex": 2,
+        "explanation": "Privacy and work needs were balanced."
+      },
+      {
+        "question": "What policy changed?",
+        "options": [
+          "Workers must hide illness",
+          "Managers review sustained overtime before a crisis",
+          "Every deadline becomes optional",
+          "Medical records go to the whole team"
+        ],
+        "correctIndex": 1,
+        "explanation": "The organization adds prevention."
+      },
+      {
+        "question": "Why is the original “body shut down” phrase rejected?",
+        "options": [
+          "Collapse is never serious",
+          "It is dramatic but medically unclear",
+          "Doctors cannot explain findings",
+          "Work has no health effects"
+        ],
+        "correctIndex": 1,
+        "explanation": "Clinical communication should name known findings and uncertainty."
+      },
+      {
+        "question": "What should happen when numbness returns?",
+        "options": [
+          "Only a shorter workday",
+          "Prompt medical reassessment rather than assuming workload is the sole cause",
+          "More coffee",
+          "A new chair without examination"
+        ],
+        "correctIndex": 1,
+        "explanation": "Neurological symptoms need evaluation."
+      },
+      {
+        "question": "How can the manager help without becoming a clinician?",
+        "options": [
+          "Diagnose the infection",
+          "Choose medicine",
+          "Adjust workload and process based on agreed functional needs",
+          "Read the full medical record publicly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Workplace accommodation stays within role."
+      },
+      {
+        "question": "What is the narrator careful not to claim?",
+        "options": [
+          "That rest alone caused every symptom to resolve",
+          "That overwork mattered",
+          "That an infection was treated",
+          "That follow-up occurred"
+        ],
+        "correctIndex": 0,
+        "explanation": "Several interventions and natural changes may overlap."
+      },
+      {
+        "question": "What systemic lesson is added?",
+        "options": [
+          "Dedication is measured by exhaustion",
+          "A workplace should not rely on collapse before reviewing unsafe workload",
+          "Only workers set boundaries",
+          "Recovery guarantees future health"
+        ],
+        "correctIndex": 1,
+        "explanation": "Prevention is organizational as well as personal."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "replace; remove vague “body shut down” language and ensure collapse plus recurrent neurological symptoms receive urgent reassessment",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-health-04",
@@ -114,36 +457,153 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Dr. Wibowo", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Dr. Wibowo",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. Today we're discussing something many listeners have asked about: anxiety at work. Thank you for joining us, Dr. Wibowo.",
-      "Dr. Wibowo: [pleasantly] Thank you for having me. It's a topic that deserves far more open conversation than it usually gets.",
-      "Host: [curious] Let's start there. Why do you think workplace anxiety is still so rarely discussed openly?",
-      "Dr. Wibowo: [thoughtful] Many employees fear that admitting anxiety will make colleagues doubt their competence, even though that fear is rarely justified.",
-      "Host: [interested] So the silence itself might be making things worse, rather than protecting anyone?",
-      "Dr. Wibowo: [nodding] Exactly. If people never discuss it, they assume they're struggling alone, when in fact anxiety at work is remarkably common.",
-      "Host: [curious] What symptoms should someone actually watch for, beyond simply feeling stressed occasionally?",
-      "Dr. Wibowo: [informative] Persistent dread before meetings, difficulty concentrating, and physical symptoms like a racing heart are common indicators worth taking seriously.",
-      "Host: [thoughtful] What would you say to someone who worries that raising the issue might affect how their manager views them?",
-      "Dr. Wibowo: [reassuring] I understand that fear, although in my experience, most reasonable managers respond better than employees expect, provided the conversation is approached calmly.",
-      "Host: [curious] And if the workplace itself is the problem, not just the individual's mindset?",
-      "Dr. Wibowo: [serious] That's an important distinction. Unrealistic deadlines or poor communication from leadership can create anxiety that no amount of personal coping will solve alone.",
-      "Host: [interested] In that case, what can someone realistically do, especially if changing jobs isn't immediately possible?",
-      "Dr. Wibowo: [practical] Setting small boundaries helps, such as not answering messages after certain hours, even though it feels uncomfortable at first.",
-      "Host: [curious] Does professional support make a meaningful difference, or is that only necessary in severe cases?",
-      "Dr. Wibowo: [warmly] Therapy isn't only for crises. Speaking with a counselor early often prevents manageable anxiety from becoming something far more overwhelming later.",
-      "Host: [smiling] That's a valuable distinction. Any final advice for listeners who suspect they might be struggling right now?",
-      "Dr. Wibowo: [encouraging] Notice the symptoms without judging yourself for having them, and remember that seeking support reflects self-awareness, not weakness."
+      "Host: [thoughtful] Welcome back to the show. Today we're discussing something many listeners have asked about: anxiety at work. Thank you for joining us, Dr. Wibowo.",
+      "Dr. Wibowo: Thank you for having me. It's a topic that deserves far more open conversation than it usually gets.",
+      "Host: [carefully] Let's start there. Why do you think workplace anxiety is still so rarely discussed openly?",
+      "Dr. Wibowo: Employees may fear stigma or career harm. The risk varies by workplace, role, culture, policy, and law, so we should not promise that disclosure is always safe.",
+      "Host: [reflective] So the silence itself might be making things worse, rather than protecting anyone?",
+      "Dr. Wibowo: Exactly. If people never discuss it, they assume they're struggling alone, when in fact anxiety at work is remarkably common.",
+      "Host: [seriously] What symptoms should someone actually watch for, beyond simply feeling stressed occasionally?",
+      "Dr. Wibowo: Persistent dread before meetings, difficulty concentrating, and physical symptoms like a racing heart are common indicators worth taking seriously.",
+      "Host: [honestly] What would you say to someone who worries that raising the issue might affect how their manager views them?",
+      "Dr. Wibowo: Before disclosing, consider the purpose, who needs to know, what adjustment is requested, and whether a confidential occupational-health, human-resources, union, or clinical channel is available.",
+      "Host: [gently] And if the workplace itself is the problem, not just the individual's mindset?",
+      "Dr. Wibowo: That's an important distinction. Unrealistic deadlines or poor communication from leadership can create anxiety that no amount of personal coping will solve alone.",
+      "Host: [encouraging] In that case, what can someone realistically do, especially if changing jobs isn't immediately possible?",
+      "Dr. Wibowo: Personal boundaries may help, but unsafe workload, harassment, or discrimination may require documented organizational action and relevant professional or legal support.",
+      "Host: [sincere] Does professional support make a meaningful difference, or is that only necessary in severe cases?",
+      "Dr. Wibowo: Qualified support can be useful before a crisis, but it does not guarantee prevention. Immediate danger or severe acute symptoms require urgent or emergency help appropriate to the location.",
+      "Host: That's a valuable distinction. Any final advice for listeners who suspect they might be struggling right now?",
+      "Dr. Wibowo: Notice the symptoms without judging yourself for having them, and remember that seeking support reflects self-awareness, not weakness."
     ],
     "quiz": [
-      { "question": "According to Dr. Wibowo, why do many employees stay silent about workplace anxiety?", "options": ["They don't experience it at all", "They fear colleagues will doubt their competence", "Companies forbid discussing it", "It isn't actually common"], "correctIndex": 1, "explanation": "He explains many employees fear that admitting anxiety will make colleagues doubt their competence." },
-      { "question": "What symptoms does Dr. Wibowo mention as worth taking seriously?", "options": ["Only occasional tiredness", "Persistent dread before meetings, difficulty concentrating, and a racing heart", "Just physical injuries", "Only symptoms that appear once a year"], "correctIndex": 1, "explanation": "He lists persistent dread before meetings, difficulty concentrating, and a racing heart as common indicators." },
-      { "question": "What does Dr. Wibowo say about the workplace itself sometimes being the problem?", "options": ["It's never the workplace's fault", "Unrealistic deadlines or poor communication can create anxiety personal coping won't solve alone", "Only individuals are ever responsible", "Workplaces cannot cause anxiety"], "correctIndex": 1, "explanation": "He notes that unrealistic deadlines or poor communication from leadership can create anxiety that personal coping alone won't solve." },
-      { "question": "What boundary example does Dr. Wibowo suggest?", "options": ["Quitting immediately", "Not answering messages after certain hours", "Working longer hours", "Avoiding all coworkers"], "correctIndex": 1, "explanation": "He suggests setting small boundaries, such as not answering messages after certain hours." },
-      { "question": "What does Dr. Wibowo say about seeking therapy early?", "options": ["It's only for severe crises", "It often prevents manageable anxiety from becoming more overwhelming later", "It has no real benefit", "It should be avoided if possible"], "correctIndex": 1, "explanation": "He says speaking with a counselor early often prevents manageable anxiety from becoming far more overwhelming later." }
-    ]
+      {
+        "question": "According to Dr. Wibowo, why do many employees stay silent about workplace anxiety?",
+        "options": [
+          "They fear colleagues will doubt their competence",
+          "They don't experience it at all",
+          "Companies forbid discussing it",
+          "It isn't actually common"
+        ],
+        "correctIndex": 0,
+        "explanation": "He explains many employees fear that admitting anxiety will make colleagues doubt their competence."
+      },
+      {
+        "question": "What symptoms does Dr. Wibowo mention as worth taking seriously?",
+        "options": [
+          "Only occasional tiredness",
+          "Just physical injuries",
+          "Persistent dread before meetings, difficulty concentrating, and a racing heart",
+          "Only symptoms that appear once a year"
+        ],
+        "correctIndex": 2,
+        "explanation": "He lists persistent dread before meetings, difficulty concentrating, and a racing heart as common indicators."
+      },
+      {
+        "question": "What does Dr. Wibowo say about the workplace itself sometimes being the problem?",
+        "options": [
+          "It's never the workplace's fault",
+          "Only individuals are ever responsible",
+          "Workplaces cannot cause anxiety",
+          "Unrealistic deadlines or poor communication can create anxiety personal coping won't solve alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "He notes that unrealistic deadlines or poor communication from leadership can create anxiety that personal coping alone won't solve."
+      },
+      {
+        "question": "What boundary example does Dr. Wibowo suggest?",
+        "options": [
+          "Not answering messages after certain hours",
+          "Quitting immediately",
+          "Working longer hours",
+          "Avoiding all coworkers"
+        ],
+        "correctIndex": 0,
+        "explanation": "He suggests setting small boundaries, such as not answering messages after certain hours."
+      },
+      {
+        "question": "What does Dr. Wibowo say about seeking therapy early?",
+        "options": [
+          "It often prevents manageable anxiety from becoming more overwhelming later",
+          "It's only for severe crises",
+          "It has no real benefit",
+          "It should be avoided if possible"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says speaking with a counselor early often prevents manageable anxiety from becoming far more overwhelming later."
+      },
+      {
+        "question": "Why can disclosure be a real risk?",
+        "options": [
+          "Anxiety is always visible",
+          "Managers are medical specialists",
+          "Policies never matter",
+          "Workplace culture, role, law, and manager behavior vary"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revision rejects a universal reassurance."
+      },
+      {
+        "question": "What should an employee clarify before disclosure?",
+        "options": [
+          "Every private detail",
+          "Purpose, audience, desired adjustment, and available confidential channel",
+          "A diagnosis from a colleague",
+          "A public announcement"
+        ],
+        "correctIndex": 1,
+        "explanation": "Intentional disclosure limits unnecessary exposure."
+      },
+      {
+        "question": "When is urgent help needed?",
+        "options": [
+          "When there is immediate danger or severe acute symptoms",
+          "After any ordinary deadline",
+          "Only after resignation",
+          "Never during work"
+        ],
+        "correctIndex": 0,
+        "explanation": "Emergency needs are separated from routine support."
+      },
+      {
+        "question": "Why is coping alone insufficient sometimes?",
+        "options": [
+          "Personal skills never help",
+          "Anxiety proves a weak mindset",
+          "Workload, harassment, discrimination, or unsafe systems may require organizational action",
+          "Every job must be left"
+        ],
+        "correctIndex": 2,
+        "explanation": "Context can create or maintain harm."
+      },
+      {
+        "question": "What does early support aim to do?",
+        "options": [
+          "Guarantee no future anxiety",
+          "Provide assessment and options before distress becomes harder to manage",
+          "Protect an employer from feedback",
+          "Replace workplace changes"
+        ],
+        "correctIndex": 1,
+        "explanation": "Support is useful without a promised result."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "revise; avoid claiming disclosure is usually safe and add confidentiality, emergency, and organizational-response limits",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-health-05",
@@ -152,109 +612,911 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [tired] For years, I told myself I simply wasn't a morning person, as though my sleep habits were something fixed rather than something I had shaped myself.",
-      "Narrator: [honest] In reality, I stayed up scrolling through my phone until nearly two most nights, then dragged myself out of bed exhausted by seven.",
-      "Narrator: [reflective] Even though I felt tired constantly, I convinced myself that coffee could substitute for the sleep I kept refusing to prioritize.",
-      "Narrator: [worried] It was only after fainting briefly at work that I finally admitted the problem wasn't my schedule; it was me avoiding rest.",
-      "Narrator: [thoughtful] My doctor suggested I try something called sleep hygiene, which sounded oddly clinical for something as simple as going to bed on time.",
-      "Narrator: [determined] So I set a firm rule: no screens after ten thirty, even if I wasn't remotely tired yet at that hour.",
-      "Narrator: [honest] The first few nights were miserable. I stared at the ceiling, restless, wondering what I was even supposed to do with my hands.",
-      "Narrator: [thoughtful] Instead of scrolling, I started reading a physical book, something I hadn't done regularly since university, if I'm being completely honest.",
-      "Narrator: [surprised] Within a week, I noticed I was falling asleep faster, despite my initial certainty that nothing would change so quickly.",
-      "Narrator: [hopeful] I also began waking up at the same time every day, even on weekends, which my friends thought sounded unnecessarily strict.",
-      "Narrator: [warmly] However, that consistency turned out to matter more than anything else, since my body gradually stopped fighting against an unpredictable rhythm.",
-      "Narrator: [grateful] My sister, who had struggled with insomnia herself, checked in weekly, which kept me accountable during the weeks I wanted to quit.",
-      "Narrator: [proud] By the second month, I no longer needed three cups of coffee just to function through the afternoon.",
-      "Narrator: [reflective] I used to see sleep as something I could negotiate with, squeezed in around everything else that felt more urgent.",
-      "Narrator: [peacefully] Now I understand that unless I protect my sleep deliberately, everything else in my life quietly suffers because of it.",
-      "Narrator: [warmly] If someone had told me a year ago that reading before bed would change so much, I honestly wouldn't have believed them."
+      "Narrator: [thoughtful] For years, I told myself I simply wasn't a morning person, as though my sleep habits were something fixed rather than something I had shaped myself.",
+      "Narrator: In reality, I stayed up scrolling through my phone until nearly two most nights, then dragged myself out of bed exhausted by seven.",
+      "Narrator: [carefully] Even though I felt tired constantly, I convinced myself that coffee could substitute for the sleep I kept refusing to prioritize.",
+      "Narrator: After I fainted at work, colleagues obtained medical help. Fainting has several possible causes, so poor sleep could not be assumed to explain it.",
+      "Narrator: [reflective] After assessment, a clinician discussed an individualized sleep plan and other factors that might affect rest; sleep care was not reduced to “go to bed on time.”",
+      "Narrator: I tested a consistent wind-down period and reduced stimulating screen use before bed, adjusting the exact timing to my schedule and clinical advice.",
+      "Narrator: [seriously] The first few nights were miserable. I stared at the ceiling, restless, wondering what I was even supposed to do with my hands.",
+      "Narrator: Instead of scrolling, I started reading a physical book, something I hadn't done regularly since university, if I'm being completely honest.",
+      "Narrator: [honestly] I noticed some improvement, but one week could not prove a cure or explain the earlier fainting. I continued follow-up as advised.",
+      "Narrator: I also began waking up at the same time every day, even on weekends, which my friends thought sounded unnecessarily strict.",
+      "Narrator: [gently] Consistency seemed helpful for me, alongside other changes. It should not be presented as the single most important treatment for every sleep problem.",
+      "Narrator: My sister, who had struggled with insomnia herself, checked in weekly, which kept me accountable during the weeks I wanted to quit.",
+      "Narrator: [encouraging] By the second month, I no longer needed three cups of coffee just to function through the afternoon.",
+      "Narrator: I used to see sleep as something I could negotiate with, squeezed in around everything else that felt more urgent.",
+      "Narrator: [sincere] Now I understand that unless I protect my sleep deliberately, everything else in my life quietly suffers because of it.",
+      "Narrator: Persistent or worsening sleep difficulty, breathing concerns, severe daytime sleepiness, or safety problems deserve qualified assessment rather than endless self-experiment."
     ],
     "quiz": [
-      { "question": "What did the narrator originally believe about her sleep habits?", "options": ["That they were fixed and unchangeable, since she wasn't a morning person", "That she slept perfectly well", "That she needed less sleep than most people", "That coffee was unnecessary for her"], "correctIndex": 0, "explanation": "She believed her sleep habits were something fixed, telling herself she simply wasn't a morning person." },
-      { "question": "What event made her finally admit there was a problem?", "options": ["A friend confronted her", "She fainted briefly at work", "Her doctor forced her to change", "She read an article online"], "correctIndex": 1, "explanation": "It was only after fainting briefly at work that she admitted the real problem was avoiding rest." },
-      { "question": "What rule did she set for herself?", "options": ["No coffee after noon", "No screens after ten thirty", "No reading before bed", "Sleeping only on weekends"], "correctIndex": 1, "explanation": "She set a firm rule of no screens after ten thirty, even if she wasn't tired yet." },
-      { "question": "What did she start doing instead of scrolling her phone?", "options": ["Watching television", "Reading a physical book", "Exercising late at night", "Calling friends"], "correctIndex": 1, "explanation": "She started reading a physical book instead of scrolling, something she hadn't done since university." },
-      { "question": "What did the narrator learn about waking up at the same time daily?", "options": ["It made no real difference", "That consistency mattered more than anything else for her sleep", "It was unnecessary on weekends", "It made her more tired overall"], "correctIndex": 1, "explanation": "She learned that consistency turned out to matter more than anything else, since her body stopped fighting an unpredictable rhythm." }
-    ]
+      {
+        "question": "What did the narrator originally believe about her sleep habits?",
+        "options": [
+          "That they were fixed and unchangeable, since she wasn't a morning person",
+          "That she slept perfectly well",
+          "That she needed less sleep than most people",
+          "That coffee was unnecessary for her"
+        ],
+        "correctIndex": 0,
+        "explanation": "She believed her sleep habits were something fixed, telling herself she simply wasn't a morning person."
+      },
+      {
+        "question": "What event made her finally admit there was a problem?",
+        "options": [
+          "A friend confronted her",
+          "Her doctor forced her to change",
+          "She read an article online",
+          "She fainted briefly at work"
+        ],
+        "correctIndex": 3,
+        "explanation": "It was only after fainting briefly at work that she admitted the real problem was avoiding rest."
+      },
+      {
+        "question": "What rule did she set for herself?",
+        "options": [
+          "No screens after ten thirty",
+          "No coffee after noon",
+          "No reading before bed",
+          "Sleeping only on weekends"
+        ],
+        "correctIndex": 0,
+        "explanation": "She set a firm rule of no screens after ten thirty, even if she wasn't tired yet."
+      },
+      {
+        "question": "What did she start doing instead of scrolling her phone?",
+        "options": [
+          "Watching television",
+          "Exercising late at night",
+          "Reading a physical book",
+          "Calling friends"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started reading a physical book instead of scrolling, something she hadn't done since university."
+      },
+      {
+        "question": "What did the narrator learn about waking up at the same time daily?",
+        "options": [
+          "It made no real difference",
+          "It was unnecessary on weekends",
+          "It made her more tired overall",
+          "That consistency mattered more than anything else for her sleep"
+        ],
+        "correctIndex": 3,
+        "explanation": "She learned that consistency turned out to matter more than anything else, since her body stopped fighting an unpredictable rhythm."
+      },
+      {
+        "question": "Why is fainting not proof of poor sleep alone?",
+        "options": [
+          "Sleep never affects alertness",
+          "Screens always cause fainting",
+          "It has multiple possible causes that require assessment",
+          "Coffee confirms a diagnosis"
+        ],
+        "correctIndex": 2,
+        "explanation": "One event cannot establish the cause."
+      },
+      {
+        "question": "What makes a fixed screen rule flexible?",
+        "options": [
+          "Everyone must stop at 10:30",
+          "Physical books cure insomnia",
+          "Weekends need no sleep",
+          "The plan can be adjusted to the person’s schedule, access, and response"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sleep advice is not one universal clock."
+      },
+      {
+        "question": "What additional factors should be reviewed?",
+        "options": [
+          "Only phone color",
+          "Medicines, substances, pain, breathing, mood, environment, and schedule",
+          "One friend’s opinion",
+          "The number of books"
+        ],
+        "correctIndex": 1,
+        "explanation": "Persistent sleep problems can have several contributors."
+      },
+      {
+        "question": "What does improvement fail to prove?",
+        "options": [
+          "That sleep matters",
+          "That the same routine will work for everyone or explain the fainting",
+          "That follow-up is useful",
+          "That caffeine use changed"
+        ],
+        "correctIndex": 1,
+        "explanation": "Personal response has limited generalizability."
+      },
+      {
+        "question": "When should qualified help continue?",
+        "options": [
+          "Only after buying a new phone",
+          "Never after one improvement",
+          "Whenever a friend sleeps late",
+          "When sleep difficulty persists, worsens, or affects safety and function"
+        ],
+        "correctIndex": 3,
+        "explanation": "Escalation depends on impact and course."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "revise; treat fainting as requiring assessment and present sleep hygiene as individualized support rather than a quick cure",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-health-06",
-    "title": "A Doctor Explains Blood Pressure Risk",
+    "title": "Confirming Blood Pressure Before Making a Plan",
     "level": "B1",
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dr. Amelia", "gender": "female" },
-      { "name": "Bram", "gender": "male" }
+      {
+        "name": "Dr. Amelia",
+        "gender": "female"
+      },
+      {
+        "name": "Bram",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dr. Amelia: [professional] Bram, your blood pressure reading today is higher than it was during your last two visits. Have you noticed any symptoms?",
-      "Bram: [uncertain] Occasional headaches, but honestly, I assumed those came from staring at screens all day.",
-      "Dr. Amelia: [gently] That's possible, although given this pattern, I'd rather we address the underlying cause than simply treat the headaches.",
-      "Bram: [worried] Is this something serious, or is it manageable if I make changes now?",
-      "Dr. Amelia: [reassuring] It's very manageable at this stage, provided you're willing to adjust a few habits before it progresses further.",
-      "Bram: [curious] What exactly increases the risk, besides genetics? My father has high blood pressure too.",
-      "Dr. Amelia: [informative] Genetics plays a role, certainly, but excess salt, minimal exercise, and chronic stress all contribute significantly as well.",
-      "Bram: [honest] I'll admit, I add salt to almost everything without thinking, and exercise hasn't exactly been a priority lately.",
-      "Dr. Amelia: [thoughtful] If you reduced your salt intake and walked briskly for thirty minutes most days, we'd likely see improvement within a couple of months.",
-      "Bram: [skeptical] Just walking? I expected you to recommend something more intense, given how serious this sounds.",
-      "Dr. Amelia: [smiling] Intensity matters less than consistency here. Even moderate, regular activity lowers blood pressure more reliably than occasional intense workouts.",
-      "Bram: [thoughtful] That's actually encouraging, since I've avoided exercise partly because gyms intimidate me.",
-      "Dr. Amelia: [warmly] You don't need a gym at all. A daily walk, taken seriously, would genuinely make a measurable difference.",
-      "Bram: [curious] And the stress you mentioned? My job has been overwhelming lately, if I'm being honest.",
-      "Dr. Amelia: [understanding] Chronic stress keeps your body in a heightened state, which affects blood pressure even when your diet is otherwise reasonable.",
-      "Bram: [concerned] I'm not sure how to reduce stress when my workload isn't going to shrink anytime soon.",
-      "Dr. Amelia: [gently] Start small, then. Even five minutes of deliberate breathing between meetings can lower your baseline stress over time.",
-      "Bram: [determined] Okay. I'll cut back on salt, start walking, and try the breathing exercises before our next appointment.",
-      "Dr. Amelia: [encouraging] That's a realistic plan. Let's recheck your numbers in six weeks and see how your body responds."
+      "Dr. Amelia: [carefully] Bram, today’s blood-pressure reading is high, and earlier clinic readings were also above range. Before labeling it, I want to confirm the pattern correctly.",
+      "Bram: Does my occasional headache prove the pressure is causing symptoms?",
+      "Dr. Amelia: No. High blood pressure often has no symptoms, and headaches have many causes. We should assess them without assuming one explanation.",
+      "Bram: [concerned] How do we confirm the readings?",
+      "Dr. Amelia: We will repeat measurements with correct technique and may use validated home or ambulatory readings. Extremely high values with concerning symptoms require urgent evaluation.",
+      "Bram: My father has hypertension. Does that mean I will definitely have it?",
+      "Dr. Amelia: [thoughtful] Family history affects risk but does not decide the diagnosis alone. We also review age, other conditions, medicines, smoking, sleep, diet, activity, and overall cardiovascular risk.",
+      "Bram: I add salt often and do little exercise. Should I start intense workouts immediately?",
+      "Dr. Amelia: Not without considering your current health and ability. We can build an appropriate activity plan and discuss diet without reducing everything to one nutrient.",
+      "Bram: [honestly] I expected you to promise that walking would lower the number within two months.",
+      "Dr. Amelia: Responses vary. Regular activity can help many people, but follow-up readings determine whether lifestyle changes are sufficient or medicine is also indicated.",
+      "Bram: What about stress and breathing exercises?",
+      "Dr. Amelia: [gently] Stress management may support wellbeing, but a five-minute exercise is not a guaranteed blood-pressure treatment. Workload problems may also need workplace action.",
+      "Bram: How should I measure at home?",
+      "Dr. Amelia: I will show you positioning, rest time, cuff use, timing, and how to record results. Do not change treatment from one number without guidance.",
+      "Bram: [reflective] So the plan is confirmation, total-risk review, suitable changes, and follow-up.",
+      "Dr. Amelia: Correct. I will also give you clear thresholds and symptoms for urgent help.",
+      "Bram: That feels more careful than trying three habits and hoping.",
+      "Dr. Amelia: [encouraging] Evidence-based care uses measurements and shared decisions, not fear or guarantees."
     ],
     "quiz": [
-      { "question": "What symptom had Bram noticed but dismissed?", "options": ["Chest pain", "Occasional headaches", "Dizziness", "Blurred vision"], "correctIndex": 1, "explanation": "Bram mentions occasional headaches, which he had assumed came from staring at screens all day." },
-      { "question": "According to Dr. Amelia, besides genetics, what contributes to high blood pressure?", "options": ["Only age", "Excess salt, minimal exercise, and chronic stress", "Only family history", "Nothing besides diet"], "correctIndex": 1, "explanation": "She explains that excess salt, minimal exercise, and chronic stress all contribute significantly." },
-      { "question": "What does Dr. Amelia say matters more than intensity of exercise?", "options": ["Doing extreme workouts occasionally", "Consistency of moderate, regular activity", "Joining an expensive gym", "Exercising only on weekends"], "correctIndex": 1, "explanation": "She says intensity matters less than consistency, and moderate regular activity lowers blood pressure more reliably." },
-      { "question": "Why has Bram avoided exercise?", "options": ["He has no time at all", "Gyms intimidate him", "His doctor forbade it", "He dislikes walking"], "correctIndex": 1, "explanation": "Bram admits he has avoided exercise partly because gyms intimidate him." },
-      { "question": "What small stress-reduction technique does Dr. Amelia suggest?", "options": ["Quitting his job immediately", "Five minutes of deliberate breathing between meetings", "Sleeping through meetings", "Avoiding all work stress entirely"], "correctIndex": 1, "explanation": "She suggests even five minutes of deliberate breathing between meetings can lower his baseline stress over time." }
-    ]
+      {
+        "question": "Why does Dr. Amelia repeat measurements?",
+        "options": [
+          "To confirm a pattern before diagnosis",
+          "To prove the headache cause",
+          "To delay all care",
+          "To compare Bram with his father"
+        ],
+        "correctIndex": 0,
+        "explanation": "Diagnosis needs reliable measurement."
+      },
+      {
+        "question": "What may provide readings outside the clinic?",
+        "options": [
+          "A fitness influencer",
+          "Validated home or ambulatory monitoring",
+          "A family guess",
+          "A breathing app alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Out-of-office evidence can help confirmation."
+      },
+      {
+        "question": "What does family history affect?",
+        "options": [
+          "The cuff size only",
+          "Every treatment choice automatically",
+          "Risk, not certainty",
+          "Whether symptoms exist"
+        ],
+        "correctIndex": 2,
+        "explanation": "It is one part of total risk."
+      },
+      {
+        "question": "Why is intense exercise not prescribed immediately?",
+        "options": [
+          "Exercise never helps",
+          "Walking is always enough",
+          "Health and ability must shape the plan",
+          "Bram dislikes gyms"
+        ],
+        "correctIndex": 2,
+        "explanation": "Activity needs individual suitability."
+      },
+      {
+        "question": "What will Bram receive for emergencies?",
+        "options": [
+          "A guarantee that none will occur",
+          "Clear thresholds and warning symptoms",
+          "His father’s prescription",
+          "A public chart"
+        ],
+        "correctIndex": 1,
+        "explanation": "Escalation guidance is explicit."
+      },
+      {
+        "question": "Why is one clinic reading insufficient?",
+        "options": [
+          "Blood pressure never changes",
+          "Headaches confirm hypertension",
+          "Family history is irrelevant",
+          "Diagnosis usually requires proper repeated or out-of-office measurements unless urgently high"
+        ],
+        "correctIndex": 3,
+        "explanation": "Measurement quality and pattern matter."
+      },
+      {
+        "question": "What does the clinician assess beyond salt?",
+        "options": [
+          "Only gym membership",
+          "One breathing exercise",
+          "Overall risk, medicines, conditions, activity, sleep, diet, and other factors",
+          "A parent’s exact treatment"
+        ],
+        "correctIndex": 2,
+        "explanation": "Care is broader and individual."
+      },
+      {
+        "question": "Why are headaches treated separately?",
+        "options": [
+          "High blood pressure often has no symptoms and headaches need their own assessment",
+          "They always prove pressure is high",
+          "Screens explain every headache",
+          "Symptoms should be ignored"
+        ],
+        "correctIndex": 0,
+        "explanation": "Avoiding false attribution protects diagnosis."
+      },
+      {
+        "question": "What would require urgent action?",
+        "options": [
+          "Missing one walk",
+          "Eating one salty meal",
+          "Feeling nervous at a gym",
+          "Very high readings with concerning symptoms or clinician-defined warning signs"
+        ],
+        "correctIndex": 3,
+        "explanation": "The plan includes escalation."
+      },
+      {
+        "question": "What determines follow-up treatment?",
+        "options": [
+          "A guaranteed two-month improvement",
+          "Walking alone in every case",
+          "Confirmed readings and the person’s total risk and response",
+          "Bram’s father’s medicine"
+        ],
+        "correctIndex": 2,
+        "explanation": "Lifestyle and medication decisions are individualized."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "replace; require confirmed measurement, individualized cardiovascular risk review, and non-guaranteed treatment planning",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-health-07",
-    "title": "Two Colleagues Debate the Stairs vs. the Elevator",
+    "title": "When a Stair Challenge Ignores Knee Pain",
     "level": "B1",
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Oscar", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Oscar",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [energetic] Oscar, we're on the ninth floor. Are you really taking the elevator again, even though we just talked about this?",
-      "Oscar: [tired] I know, I know, but it's the end of the day, and my legs are already tired from yesterday's stairs experiment.",
-      "Nadia: [teasing] One day of stairs doesn't count as an experiment. You have to give it more than twenty-four hours to matter.",
-      "Oscar: [defensive] In my defense, nine floors is a lot, especially when I'm carrying a laptop bag and I'm already exhausted.",
-      "Nadia: [understanding] Fair enough, although I read that even small amounts of stair climbing add up significantly over weeks, unlike one dramatic session.",
-      "Oscar: [curious] How significantly, though? I doubt walking up nine floors twice a day changes much in the long run.",
-      "Nadia: [informative] Apparently, it strengthens your heart and legs similarly to short bursts of cardio, provided you do it consistently rather than occasionally.",
-      "Oscar: [considering] That's more convincing than I expected, honestly. Still, my knees ache by the sixth floor, if I'm being truthful.",
-      "Nadia: [suggesting] What if we compromised? Take the stairs partway, then switch to the elevator once your knees actually start hurting.",
-      "Oscar: [thoughtful] That sounds far more realistic than pretending I'll suddenly become someone who loves climbing nine flights daily.",
-      "Nadia: [encouraging] Exactly. Even four floors is better than zero, despite what fitness influencers online might claim about doing everything perfectly.",
-      "Oscar: [amused] Since when did you become a fitness influencer yourself? Last month you complained about walking to the parking lot.",
-      "Nadia: [laughing] Guilty as charged. My sister started a stair-climbing habit after her checkup revealed she was dangerously inactive, and it inspired me too.",
-      "Oscar: [curious] Did it actually help her, or is this just family enthusiasm talking?",
-      "Nadia: [honest] Her energy improved noticeably within a month, although she admits the first two weeks were genuinely unpleasant.",
-      "Oscar: [determined] Alright, let's try your compromise starting tomorrow. Stairs until it hurts, elevator after that, no guilt either way.",
-      "Nadia: [warmly] Deal. And if your knees still complain after two weeks, we'll figure out something gentler together.",
-      "Oscar: [smiling] Fine, but if I collapse on the fourth floor, you're explaining that to our manager."
+      "Nadia: [energetic] Oscar, are you taking the elevator again after our stair challenge?",
+      "Oscar: Yes. My knees hurt after yesterday, and carrying the laptop bag made it worse.",
+      "Nadia: [reflective] I was about to tease you, but pain is not evidence that a challenge is working.",
+      "Oscar: I also felt pressured because the team treated elevator use like laziness.",
+      "Nadia: That was unfair. People may use elevators for visible or invisible health, disability, fatigue, safety, or personal reasons. They owe us no public explanation.",
+      "Oscar: [thoughtful] Does that mean I should avoid activity completely?",
+      "Nadia: I cannot answer medically. Since the knee pain recurs, a qualified professional can assess it and help you choose suitable movement.",
+      "Oscar: Online advice says small stair sessions improve fitness.",
+      "Nadia: [carefully] General evidence does not prescribe nine floors for your body. Route, load, symptoms, current ability, and health history matter.",
+      "Oscar: Yesterday we agreed on “stairs until it hurts.” That sounds irresponsible now.",
+      "Nadia: It is. Pain should not be used as the stopping target, and peers should not design treatment by experiment.",
+      "Oscar: [honestly] I can follow the building’s emergency guidance and use the lift routinely while I arrange assessment.",
+      "Nadia: Yes. If a clinician recommends gradual activity, you can follow that plan and report changes.",
+      "Oscar: What will you do with the challenge?",
+      "Nadia: [gently] I may take a suitable lunchtime walk for myself. I will not count your floors, compare bodies, or turn movement into office competition.",
+      "Oscar: Could we ask management to stop the public stair scoreboard?",
+      "Nadia: Good idea. A wellbeing program should offer accessible options and protect health privacy.",
+      "Oscar: [encouraging] That sounds healthier than rewarding whoever ignores discomfort longest.",
+      "Nadia: Agreed. Movement should support health, not shame people into hiding symptoms."
     ],
     "quiz": [
-      { "question": "Why does Oscar want to take the elevator today?", "options": ["He is afraid of stairs", "His legs are tired from yesterday's stairs experiment", "The elevator is faster", "He forgot which floor they work on"], "correctIndex": 1, "explanation": "He says his legs are already tired from yesterday's stairs experiment, so he wants the elevator." },
-      { "question": "What does Nadia say about small amounts of stair climbing?", "options": ["They have no lasting effect", "They add up significantly over weeks if done consistently", "They are more effective than any other exercise", "They only help once a year"], "correctIndex": 1, "explanation": "She says small amounts of stair climbing add up significantly over weeks, unlike one dramatic session." },
-      { "question": "What compromise does Nadia suggest?", "options": ["Taking the elevator every day", "Taking the stairs partway, then switching to the elevator when knees hurt", "Never using the elevator again", "Running up all nine floors"], "correctIndex": 1, "explanation": "She suggests taking the stairs partway and switching to the elevator once his knees actually start hurting." },
-      { "question": "Why did Nadia's sister start a stair-climbing habit?", "options": ["She wanted to save money", "Her checkup revealed she was dangerously inactive", "She lost a bet", "Her doctor forbade the elevator"], "correctIndex": 1, "explanation": "Nadia's sister started the habit after her checkup revealed she was dangerously inactive." },
-      { "question": "What do Nadia and Oscar agree to do starting tomorrow?", "options": ["Stop discussing exercise entirely", "Try the stairs-until-it-hurts compromise", "Only use the elevator", "Race each other up the stairs"], "correctIndex": 1, "explanation": "They agree to try the compromise: stairs until it hurts, then the elevator, without guilt either way." }
-    ]
+      {
+        "question": "What symptom does Oscar report?",
+        "options": [
+          "Knee pain after the stair challenge",
+          "A racing heart at rest",
+          "A broken arm",
+          "No discomfort"
+        ],
+        "correctIndex": 0,
+        "explanation": "The pain changes what is safe to assume."
+      },
+      {
+        "question": "Why did he feel social pressure?",
+        "options": [
+          "The lift was broken",
+          "The team treated elevator use as laziness",
+          "Nadia was his doctor",
+          "The manager required exercise"
+        ],
+        "correctIndex": 1,
+        "explanation": "The challenge attached moral judgment."
+      },
+      {
+        "question": "What does Nadia admit?",
+        "options": [
+          "She knows the diagnosis",
+          "She cannot give medical advice",
+          "Stairs are always unsafe",
+          "Activity has no benefit"
+        ],
+        "correctIndex": 1,
+        "explanation": "She respects her role limit."
+      },
+      {
+        "question": "What workplace feature will they question?",
+        "options": [
+          "The emergency plan",
+          "The public stair scoreboard",
+          "The elevator inspection",
+          "The lunch break"
+        ],
+        "correctIndex": 1,
+        "explanation": "Public competition can shame and expose people."
+      },
+      {
+        "question": "What is Nadia’s personal alternative?",
+        "options": [
+          "Monitoring Oscar’s floors",
+          "Nine painful flights",
+          "Canceling all movement",
+          "A suitable lunchtime walk"
+        ],
+        "correctIndex": 3,
+        "explanation": "She chooses activity for herself."
+      },
+      {
+        "question": "Why does Nadia stop teasing Oscar?",
+        "options": [
+          "Elevators are always healthier",
+          "Knee pain and fatigue require listening rather than pressure",
+          "Nine floors are easy",
+          "Fitness advice is forbidden"
+        ],
+        "correctIndex": 1,
+        "explanation": "Symptoms change the conversation."
+      },
+      {
+        "question": "What assumption about stairs is rejected?",
+        "options": [
+          "Activity can support health",
+          "Consistency may matter",
+          "More stairs are automatically better for every person",
+          "People have different abilities"
+        ],
+        "correctIndex": 2,
+        "explanation": "Universal challenges can be unsafe and exclusionary."
+      },
+      {
+        "question": "Who can help if knee pain persists?",
+        "options": [
+          "A qualified health professional who can assess it",
+          "A fitness influencer",
+          "The building manager alone",
+          "Nadia’s sister"
+        ],
+        "correctIndex": 0,
+        "explanation": "Persistent pain needs proper evaluation."
+      },
+      {
+        "question": "How is accessibility respected?",
+        "options": [
+          "Everyone must explain disability",
+          "Only visitors may use lifts",
+          "Elevator use is not treated as laziness or moral failure",
+          "Stairs become mandatory"
+        ],
+        "correctIndex": 2,
+        "explanation": "Mobility aids and choices deserve dignity."
+      },
+      {
+        "question": "What activity plan do they choose?",
+        "options": [
+          "Stairs until pain begins",
+          "Nine floors twice daily",
+          "No movement ever",
+          "Oscar will follow assessed guidance and Nadia will walk at lunch without monitoring him"
+        ],
+        "correctIndex": 3,
+        "explanation": "Each person chooses an appropriate plan."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "replace; remove “stairs until it hurts” and peer medical pressure; use symptom-aware activity planning and accessibility respect",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-health-08",
+    "title": "The Supplement Advertisement I Took to a Pharmacist",
+    "level": "B1",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] A video advertisement claimed that one herbal supplement could improve energy, balance blood sugar, and strengthen immunity within two weeks.",
+      "Narrator: The speaker wore a white coat, but the video did not clearly identify professional qualifications, research sources, or who paid for the promotion.",
+      "Narrator: [carefully] I nearly ordered three bottles because the discount would expire that evening. Then I noticed a sentence saying the product was “natural, so it has no side effects.”",
+      "Narrator: That statement made me pause. Natural substances can still cause harm, trigger allergies, or interact with medicine.",
+      "Narrator: [reflective] I saved the ingredient list rather than the sales link and brought it to a licensed pharmacist who knew the medicines I currently used.",
+      "Narrator: She did not declare every ingredient dangerous. Instead, she explained that evidence differed by ingredient, doses were unclear, and one extract could interact with my prescribed medicine.",
+      "Narrator: [seriously] She advised me not to start it until the prescribing clinician reviewed the combination. She also asked what problem I hoped the supplement would solve.",
+      "Narrator: I said I had felt unusually tired for several weeks. She pointed out that tiredness has many possible causes and should not be diagnosed by an advertisement.",
+      "Narrator: [honestly] I booked a medical appointment rather than replacing assessment with a product. I was also told which symptoms would require more urgent care.",
+      "Narrator: The advertisement’s countdown reached zero, and I lost the discount. I did not lose a treatment opportunity, because the video had never established that the product treated my problem.",
+      "Narrator: [gently] Later, the clinician reviewed sleep, diet, symptoms, medicines, and appropriate tests instead of assuming one cause.",
+      "Narrator: The experience changed how I read health marketing. A confident voice, professional clothing, testimonials, and urgent pricing are not the same as reliable evidence.",
+      "Narrator: [encouraging] I now check the exact claim, dose, source, conflicts of interest, possible interactions, and whether the advice fits my personal history.",
+      "Narrator: I also avoid sending supplement advertisements to relatives with a message saying, “This will fix you.”",
+      "Narrator: [sincere] Responsible self-care includes curiosity, but it also includes knowing when a claim needs qualified, individual review."
+    ],
+    "quiz": [
+      {
+        "question": "What did the advertisement promise?",
+        "options": [
+          "Several health improvements within two weeks",
+          "A medical appointment",
+          "A refund from a hospital",
+          "A new prescription"
+        ],
+        "correctIndex": 0,
+        "explanation": "The product was presented as a broad rapid solution."
+      },
+      {
+        "question": "Which sentence made the narrator pause?",
+        "options": [
+          "Natural means there are no side effects",
+          "The discount ends tonight",
+          "The bottle contains herbs",
+          "The speaker wears white"
+        ],
+        "correctIndex": 0,
+        "explanation": "The safety claim was unreliable."
+      },
+      {
+        "question": "Why did the pharmacist advise waiting?",
+        "options": [
+          "Every herb is forbidden",
+          "The product was too cheap",
+          "One extract might interact with prescribed medicine",
+          "The narrator had no symptoms"
+        ],
+        "correctIndex": 2,
+        "explanation": "Personal medicines changed the risk."
+      },
+      {
+        "question": "What concern did tiredness create?",
+        "options": [
+          "It proved low blood sugar",
+          "It guaranteed a sleep disorder",
+          "It had many possible causes requiring assessment",
+          "It could only be solved by supplements"
+        ],
+        "correctIndex": 2,
+        "explanation": "One symptom does not establish a diagnosis."
+      },
+      {
+        "question": "What does the narrator now check?",
+        "options": [
+          "Only testimonials",
+          "Evidence, dose, interests, interactions, and personal fit",
+          "Only the package color",
+          "The fastest delivery"
+        ],
+        "correctIndex": 1,
+        "explanation": "Health marketing requires several evidence checks."
+      },
+      {
+        "question": "Why is the white coat weak evidence?",
+        "options": [
+          "Appearance does not establish qualification, evidence, or independence",
+          "Clinicians never wear white",
+          "Video cannot discuss health",
+          "Uniforms prove fraud"
+        ],
+        "correctIndex": 0,
+        "explanation": "Authority signals can be manufactured."
+      },
+      {
+        "question": "What role does the ingredient list serve?",
+        "options": [
+          "It lets a professional examine substances and doses rather than the sales story",
+          "It guarantees safety",
+          "It replaces the medicine list",
+          "It proves the product works"
+        ],
+        "correctIndex": 0,
+        "explanation": "Specific contents enable risk review."
+      },
+      {
+        "question": "Why is losing the discount not losing treatment?",
+        "options": [
+          "Discounts are illegal",
+          "The product had sold out",
+          "Tiredness needs no care",
+          "The advertisement never established that the product treated the narrator’s tiredness"
+        ],
+        "correctIndex": 3,
+        "explanation": "Urgency was commercial, not clinical."
+      },
+      {
+        "question": "What does conflict of interest reveal?",
+        "options": [
+          "Whether the bottle opens",
+          "The narrator’s diagnosis",
+          "The exact cause of fatigue",
+          "Who may benefit from promoting the claim"
+        ],
+        "correctIndex": 3,
+        "explanation": "Funding can affect how evidence is presented."
+      },
+      {
+        "question": "What responsible communication rule appears?",
+        "options": [
+          "Send every natural product",
+          "Do not promise relatives that an advertisement will fix them",
+          "Hide medicine interactions",
+          "Use testimonials first"
+        ],
+        "correctIndex": 1,
+        "explanation": "Health claims should not be forwarded as prescriptions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "keep; new supplement lesson correctly distinguishes marketing, evidence, interaction risk, diagnosis, and individualized review",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-health-09",
+    "title": "The Headache Diary That Did Not Diagnose Me",
+    "level": "B1",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] I began getting headaches several afternoons each week. At first I blamed my computer screen and bought stronger pain medicine without asking anyone.",
+      "Narrator: The tablets sometimes reduced the pain, but the headaches returned. I also realized I was taking the medicine more often than the label advised.",
+      "Narrator: [carefully] A clinician asked detailed questions: when the pain began, where I felt it, how long it lasted, what other symptoms appeared, and which medicines I used.",
+      "Narrator: She checked for warning signs and explained when a sudden or severe headache, weakness, confusion, fever, injury, or vision change could require urgent assessment.",
+      "Narrator: [reflective] My symptoms did not automatically identify one cause, so she did not diagnose me from a short description or promise that one habit would solve everything.",
+      "Narrator: She asked me to keep a diary for two weeks while following a safe medicine plan. I recorded sleep, meals, hydration, caffeine, stress, pain timing, and associated symptoms.",
+      "Narrator: [seriously] The diary was not a test I could use to diagnose myself. It was structured information for a follow-up conversation.",
+      "Narrator: A pattern appeared: several headaches followed missed lunch and long uninterrupted work, but a few did not. That meant the pattern was useful, not complete proof.",
+      "Narrator: [honestly] We discussed regular meals, reasonable breaks, vision review where appropriate, and limits on pain medicine. The plan depended on my history and examination.",
+      "Narrator: I told my manager only the work adjustment I needed—short screen breaks—not my full medical record.",
+      "Narrator: [gently] After several weeks, the frequency decreased, although the result did not prove that every future headache had the same cause.",
+      "Narrator: I kept the urgent-warning instructions because a familiar symptom can still change in an important way.",
+      "Narrator: [encouraging] The experience taught me the difference between observation and diagnosis. A diary can reveal timing, associations, and questions, but it cannot replace qualified assessment.",
+      "Narrator: It also showed why repeated self-treatment deserves review. Medicine that is available without a prescription can still be misused or create problems.",
+      "Narrator: [sincere] Now I respond to recurring symptoms with accurate records, label-safe use, and timely professional advice rather than a confident guess."
+    ],
+    "quiz": [
+      {
+        "question": "What unsafe habit had developed?",
+        "options": [
+          "Taking pain medicine more often than directed",
+          "Avoiding all medicine",
+          "Sharing a prescription",
+          "Ignoring the label language"
+        ],
+        "correctIndex": 0,
+        "explanation": "Repeated self-treatment exceeded instructions."
+      },
+      {
+        "question": "What did the clinician check first?",
+        "options": [
+          "The manager’s opinion",
+          "A social-media diagnosis",
+          "History and warning signs",
+          "Only screen brightness"
+        ],
+        "correctIndex": 2,
+        "explanation": "Triage preceded a routine diary."
+      },
+      {
+        "question": "What did the diary record?",
+        "options": [
+          "Only the narrator’s mood",
+          "Habits, timing, pain, and associated symptoms",
+          "Coworker names",
+          "Medical conclusions"
+        ],
+        "correctIndex": 1,
+        "explanation": "The diary collected structured observations."
+      },
+      {
+        "question": "Why was the missed-lunch pattern not proof?",
+        "options": [
+          "Lunch never affects health",
+          "Some headaches did not follow it and association is not diagnosis",
+          "The diary was empty",
+          "The clinician rejected all patterns"
+        ],
+        "correctIndex": 1,
+        "explanation": "Useful evidence may still be incomplete."
+      },
+      {
+        "question": "What was shared with the manager?",
+        "options": [
+          "The full medical file",
+          "Every symptom detail",
+          "The medicine list publicly",
+          "Only the needed work adjustment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Minimum disclosure protected privacy."
+      },
+      {
+        "question": "Why did stronger tablets not solve the underlying issue?",
+        "options": [
+          "Pain medicine never works",
+          "The screen was definitely the cause",
+          "The diary replaced treatment",
+          "Temporary relief did not explain recurring headaches"
+        ],
+        "correctIndex": 3,
+        "explanation": "Symptom relief and diagnosis differ."
+      },
+      {
+        "question": "What is the diary’s evidential role?",
+        "options": [
+          "Organize patterns and questions for assessment",
+          "Confirm one disease",
+          "Choose a prescription",
+          "Rule out every emergency"
+        ],
+        "correctIndex": 0,
+        "explanation": "It supports but does not replace evaluation."
+      },
+      {
+        "question": "Why keep warning instructions after improvement?",
+        "options": [
+          "Improvement proves danger",
+          "Every headache is urgent",
+          "The diary expires",
+          "A familiar symptom can change in a concerning way"
+        ],
+        "correctIndex": 3,
+        "explanation": "Past patterns do not guarantee future safety."
+      },
+      {
+        "question": "What does label-safe use mean?",
+        "options": [
+          "Use any amount sold without prescription",
+          "Share medicine with coworkers",
+          "Stop all medicine suddenly",
+          "Follow dosing directions and seek review when repeated use increases"
+        ],
+        "correctIndex": 3,
+        "explanation": "Availability does not remove risk."
+      },
+      {
+        "question": "What inference fits the manager disclosure?",
+        "options": [
+          "Managers need every diagnosis",
+          "Privacy prevents all accommodation",
+          "A functional adjustment may be shared without exposing a full medical record",
+          "Screen breaks confirm the cause"
+        ],
+        "correctIndex": 2,
+        "explanation": "Minimum necessary information can support work."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "keep; new recurring-headache account separates observation, association, diagnosis, medicine safety, privacy, and urgent escalation",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-health-10",
+    "title": "After a Panic Episode at Work",
+    "level": "B1",
+    "themeId": "health",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Maya",
+        "gender": "female"
+      },
+      {
+        "name": "Counselor Idris",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Maya: [thoughtful] Idris, yesterday my heart raced, my hands shook, and I felt unable to breathe during a meeting. Was that definitely a panic attack?",
+      "Counselor Idris: Those symptoms can occur during panic, but they can also have other medical causes. I cannot confirm a diagnosis from this conversation alone.",
+      "Maya: [carefully] The episode passed after several minutes. Does that mean I can ignore it?",
+      "Counselor Idris: Not necessarily. If symptoms are new, severe, changing, or include urgent warning signs, seek medical help. If you think you are in immediate danger, use emergency services.",
+      "Maya: [reflective] I feel embarrassed because everyone saw me leave the room.",
+      "Counselor Idris: Leaving to get help was not a failure. What happened afterward?",
+      "Maya: [seriously] A colleague stayed nearby, and I contacted the clinic. They arranged an assessment for tomorrow.",
+      "Counselor Idris: That is a responsible step. Until then, follow their advice and avoid making major changes to medicine or caffeine based only on guesses.",
+      "Maya: [honestly] My manager asked what happened. Do I owe the team a full explanation?",
+      "Counselor Idris: You can usually share only what is needed for work, subject to local policy. You might request a short break option or a quieter place without giving every health detail.",
+      "Maya: [gently] I am worried it will happen again, so part of me wants to avoid every meeting.",
+      "Counselor Idris: Avoidance can feel protective, but a long-term plan should be developed with qualified support after assessment, not forced in one frightened day.",
+      "Maya: [encouraging] Can a breathing exercise help if the clinic says it is appropriate?",
+      "Counselor Idris: Some people use slow grounding or breathing skills, but they are not a test of character and not a replacement for urgent care when warning signs are present.",
+      "Maya: [sincere] What should my colleague do if it happens again?",
+      "Counselor Idris: Ask what help you want, reduce crowding, respect privacy, and seek emergency assistance if the situation appears urgent. They should not diagnose you.",
+      "Maya: I also want to make the workload discussion separate from the diagnosis.",
+      "Counselor Idris: Good distinction. Work conditions may contribute to distress and deserve review, but one episode does not prove a single cause.",
+      "Maya: So the next steps are assessment, a personal safety plan, limited workplace disclosure, and follow-up.",
+      "Counselor Idris: Yes. The goal is informed support, not attaching a label before the evidence is available."
+    ],
+    "quiz": [
+      {
+        "question": "Why does Idris avoid confirming panic?",
+        "options": [
+          "Panic has no physical symptoms",
+          "Similar symptoms can have other medical causes",
+          "Maya remembers nothing",
+          "Counselors never discuss distress"
+        ],
+        "correctIndex": 1,
+        "explanation": "The symptom set is not a diagnosis by itself."
+      },
+      {
+        "question": "What has Maya already arranged?",
+        "options": [
+          "A resignation meeting",
+          "A new prescription online",
+          "A clinic assessment",
+          "A public announcement"
+        ],
+        "correctIndex": 2,
+        "explanation": "She sought qualified evaluation."
+      },
+      {
+        "question": "How much must Maya tell the team?",
+        "options": [
+          "Her entire health history",
+          "Only information needed for work under relevant policy",
+          "Nothing even in emergencies",
+          "A diagnosis she does not have"
+        ],
+        "correctIndex": 1,
+        "explanation": "Privacy and accommodation can coexist."
+      },
+      {
+        "question": "Why is avoiding every meeting questioned?",
+        "options": [
+          "A long-term plan should follow assessment rather than one frightened reaction",
+          "Meetings are always healthy",
+          "Maya must attend while unwell",
+          "Avoidance proves weakness"
+        ],
+        "correctIndex": 0,
+        "explanation": "Decisions need support and evidence."
+      },
+      {
+        "question": "What should a colleague not do?",
+        "options": [
+          "Ask what help she wants",
+          "Diagnose Maya",
+          "Reduce crowding",
+          "Seek emergency help when needed"
+        ],
+        "correctIndex": 1,
+        "explanation": "Peers can support without acting as clinicians."
+      },
+      {
+        "question": "What is the difference between a symptom pattern and a diagnosis?",
+        "options": [
+          "Symptoms are imaginary",
+          "Only panic has physical signs",
+          "A colleague can confirm both",
+          "Similar symptoms can come from different causes requiring assessment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Clinical context is necessary."
+      },
+      {
+        "question": "Why are medicine and caffeine changes delayed?",
+        "options": [
+          "They never affect symptoms",
+          "Maya has no habits",
+          "The manager controls them",
+          "Major changes should not be based on guesses before appropriate advice"
+        ],
+        "correctIndex": 3,
+        "explanation": "Self-directed changes may add risk."
+      },
+      {
+        "question": "What does a personal safety plan provide?",
+        "options": [
+          "A guarantee against recurrence",
+          "A diagnosis for the team",
+          "Agreed actions suited to Maya after assessment",
+          "Permission to ignore warnings"
+        ],
+        "correctIndex": 2,
+        "explanation": "Planning follows qualified evaluation."
+      },
+      {
+        "question": "How can work conditions be discussed?",
+        "options": [
+          "As possible contributors needing review without claiming a single cause",
+          "As proof of one disorder",
+          "Only after resignation",
+          "By publishing health details"
+        ],
+        "correctIndex": 0,
+        "explanation": "System review and diagnostic humility coexist."
+      },
+      {
+        "question": "What is Idris’s central communication goal?",
+        "options": [
+          "Convince Maya every meeting is safe",
+          "Informed support without a confident premature label",
+          "Diagnose an anxiety disorder",
+          "Keep the episode secret from clinicians"
+        ],
+        "correctIndex": 1,
+        "explanation": "Careful uncertainty guides next steps."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "health",
+      "scriptDecision": "keep; new panic-support dialogue protects against premature diagnosis and gives medical, privacy, workplace, and emergency boundaries",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -6,27 +6,141 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [wry] We disconnected the landline last week, a decision so trivially administrative that I'm faintly embarrassed by how long I mourned it afterward.",
-      "Narrator: [reflective] Nobody had dialed that number in years except telemarketers and, twice annually, an aunt who distrusts anything with a screen attached to it.",
-      "Narrator: [thoughtful] And yet there was a particular anguish, unearned and entirely disproportionate, to watching the technician disconnect a cord that had, decades ago, delivered every significant piece of news my family ever received.",
-      "Narrator: [candid] I keep catching myself romanticizing an object I hadn't consciously thought about in a decade, which tells you less about the telephone than about how selectively nostalgia operates.",
-      "Narrator: [wry] It wasn't the ringing I missed, precisely, but the specific vulnerability the ringing implied: you answered without knowing who waited on the other end, an intimacy the caller identification on my phone has quietly, efficiently abolished.",
-      "Narrator: [honest] Every call now arrives pre-vetted, filtered through a name and a photograph, stripped of the small, bracing uncertainty that used to precede even the most mundane conversation.",
-      "Narrator: [analytical] I suspect what I'm actually grieving isn't the hardware at all but a mode of attention the hardware once enforced: a call demanded your whole, undivided presence, since nothing else was competing for it in that moment.",
-      "Narrator: [reflective] My smartphone offers infinitely more, and asks correspondingly less of me, which is either an extraordinary bargain or a slow, imperceptible theft, and I genuinely cannot decide which.",
-      "Narrator: [pragmatic] I'm not proposing we resurrect the landline; that would be sentimentality masquerading as principle, and I have little patience for either in myself.",
-      "Narrator: [with quiet resolve] But I have started, deliberately, answering calls without first consulting the screen, reintroducing a sliver of that old, bracing uncertainty into a life that has otherwise been thoroughly, comfortably pre-vetted."
+      "Narrator: [thoughtful] We disconnected the landline last week, a decision so trivially administrative that I'm faintly embarrassed by how long I mourned it afterward.",
+      "Narrator: Nobody had dialed that number in years except telemarketers and, twice annually, an aunt who distrusts anything with a screen attached to it.",
+      "Narrator: [carefully] And yet there was a particular anguish, unearned and entirely disproportionate, to watching the technician disconnect a cord that had, decades ago, delivered every significant piece of news my family ever received.",
+      "Narrator: I keep catching myself romanticizing an object I hadn't consciously thought about in a decade, which tells you less about the telephone than about how selectively nostalgia operates.",
+      "Narrator: [reflective] It wasn't the ringing I missed, precisely, but the specific vulnerability the ringing implied: you answered without knowing who waited on the other end, an intimacy the caller identification on my phone has quietly, efficiently abolished.",
+      "Narrator: Every call now arrives pre-vetted, filtered through a name and a photograph, stripped of the small, bracing uncertainty that used to precede even the most mundane conversation.",
+      "Narrator: [honestly] I suspect what I'm actually grieving isn't the hardware at all but a mode of attention the hardware once enforced: a call demanded your whole, undivided presence, since nothing else was competing for it in that moment.",
+      "Narrator: My smartphone offers infinitely more, and asks correspondingly less of me, which is either an extraordinary bargain or a slow, imperceptible theft, and I genuinely cannot decide which.",
+      "Narrator: [gently] I'm not proposing we resurrect the landline; that would be sentimentality masquerading as principle, and I have little patience for either in myself.",
+      "Narrator: But I have started, deliberately, answering calls without first consulting the screen, reintroducing a sliver of that old, bracing uncertainty into a life that has otherwise been thoroughly, comfortably pre-vetted."
     ],
     "quiz": [
-      { "question": "What did the narrator's household disconnect last week?", "options": ["Their internet router", "The landline telephone", "A television subscription", "A car"], "correctIndex": 1, "explanation": "The narrator says they disconnected the landline last week." },
-      { "question": "Who had actually been calling the landline in recent years?", "options": ["Close friends only", "Telemarketers and, twice annually, an aunt who distrusts screens", "No one at all", "Work colleagues"], "correctIndex": 1, "explanation": "He says only telemarketers and an aunt who distrusts screens had called the landline in years." },
-      { "question": "What does the narrator say he actually misses, more than the ringing itself?", "options": ["The physical object", "The specific vulnerability of answering without knowing who waited on the other end", "The monthly bill", "The old phone number"], "correctIndex": 1, "explanation": "He says he misses the vulnerability implied by not knowing who was calling, not the ringing itself." },
-      { "question": "How does caller identification affect calls now, according to the narrator?", "options": ["It makes calls more exciting", "It pre-vets every call, stripping away the small uncertainty that used to precede conversations", "It has no real effect", "It only works for video calls"], "correctIndex": 1, "explanation": "He says caller ID pre-vets calls, removing the bracing uncertainty that once preceded mundane conversations." },
-      { "question": "What deliberate habit has the narrator started adopting?", "options": ["Never answering his phone", "Answering calls without first consulting the screen", "Buying a new landline", "Ignoring all unknown numbers"], "correctIndex": 1, "explanation": "He has started deliberately answering calls without first checking the screen, to reintroduce some uncertainty." }
-    ]
+      {
+        "question": "What did the narrator's household disconnect last week?",
+        "options": [
+          "The landline telephone",
+          "Their internet router",
+          "A television subscription",
+          "A car"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator says they disconnected the landline last week."
+      },
+      {
+        "question": "Who had actually been calling the landline in recent years?",
+        "options": [
+          "Close friends only",
+          "Telemarketers and, twice annually, an aunt who distrusts screens",
+          "No one at all",
+          "Work colleagues"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says only telemarketers and an aunt who distrusts screens had called the landline in years."
+      },
+      {
+        "question": "What does the narrator say he actually misses, more than the ringing itself?",
+        "options": [
+          "The physical object",
+          "The monthly bill",
+          "The specific vulnerability of answering without knowing who waited on the other end",
+          "The old phone number"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says he misses the vulnerability implied by not knowing who was calling, not the ringing itself."
+      },
+      {
+        "question": "How does caller identification affect calls now, according to the narrator?",
+        "options": [
+          "It makes calls more exciting",
+          "It has no real effect",
+          "It only works for video calls",
+          "It pre-vets every call, stripping away the small uncertainty that used to precede conversations"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says caller ID pre-vets calls, removing the bracing uncertainty that once preceded mundane conversations."
+      },
+      {
+        "question": "What deliberate habit has the narrator started adopting?",
+        "options": [
+          "Answering calls without first consulting the screen",
+          "Never answering his phone",
+          "Buying a new landline",
+          "Ignoring all unknown numbers"
+        ],
+        "correctIndex": 0,
+        "explanation": "He has started deliberately answering calls without first checking the screen, to reintroduce some uncertainty."
+      },
+      {
+        "question": "What central claim does “An Elegy for the Landline” develop?",
+        "options": [
+          "Personalisation can infer patterns without genuine understanding.",
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Being reachable should remain a choice, not an obligation.",
+          "Technical success and beauty are not identical standards."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “An Elegy for the Landline”?",
+        "options": [
+          "The algorithm’s prediction exposes how much data is collected.",
+          "Constant availability blurs work and private boundaries.",
+          "The landline’s limits shape a different kind of availability.",
+          "The engineers disagree about what their creation serves."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “An Elegy for the Landline”?",
+        "options": [
+          "Prediction is not consent or knowledge of a person’s values.",
+          "Connectivity does not require surrendering all privacy.",
+          "A polished product may still create social harm.",
+          "Nostalgia does not prove older tools were universally better."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “An Elegy for the Landline”?",
+        "options": [
+          "The narrator weighs what was gained and lost.",
+          "The narrator questions opaque profiling.",
+          "The speaker sets deliberate limits on findability.",
+          "They examine purpose as well as craft."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “An Elegy for the Landline”?",
+        "options": [
+          "Data convenience can create privacy and power costs.",
+          "Technology choices redistribute attention and access.",
+          "Healthy systems make refusal and disconnection possible.",
+          "Design judgment includes consequences beyond performance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-technology-02",
@@ -35,32 +149,149 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Aisyah", "gender": "female" },
-      { "name": "Rendra", "gender": "male" }
+      {
+        "name": "Aisyah",
+        "gender": "female"
+      },
+      {
+        "name": "Rendra",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Aisyah: [unsettled] I found my mother's phone open to an advertisement so precisely tailored to her situation that I genuinely wondered, briefly, whether someone had been listening to our private conversations.",
-      "Rendra: [wry] Nobody needed to listen. The inference alone is damning enough without invoking anything so dramatic as surveillance.",
-      "Aisyah: [curious] Meaning what, exactly? She hasn't searched for anything remotely related.",
-      "Rendra: [explanatory] She didn't need to. Enough adjacent behavior, browsing patterns, the time she lingers on certain articles, the pauses before she scrolls past something, aggregates into a portrait more candid than most confessions.",
-      "Aisyah: [troubled] That's a considerably more intimate portrait than I'd feel comfortable handing a stranger, and yet she's handed it over without ever consciously agreeing to anything.",
-      "Rendra: [measured] Consent, in this context, is largely theatrical. Nobody reads the document; everybody clicks accept, and the theater satisfies a legal requirement rather than an ethical one.",
-      "Aisyah: [frustrated] So what would meaningful consent even look like, practically, for someone her age who barely trusts the device to begin with?",
-      "Rendra: [thoughtful] Probably something closer to a standing conversation than a one-time checkbox, revisited periodically as her circumstances shift, rather than buried in a document nobody was ever expected to read.",
-      "Aisyah: [skeptical] That sounds appealing in theory and entirely unprofitable in practice, which is presumably why no platform has volunteered for it.",
-      "Rendra: [dry] Precisely. The business model depends on exactly the opacity you're objecting to. Transparency and profitability are, in this particular arrangement, natural adversaries.",
-      "Aisyah: [resolute] Then I suppose the least I can do is sit with her and actually walk through what she's agreed to, badly translated legalese and all.",
-      "Rendra: [warmly] That's not nothing. An hour of genuine explanation probably does more good than any regulation currently pending.",
-      "Aisyah: [wry] Small comfort, given how thoroughly the algorithm's already finished its portrait of her.",
-      "Rendra: [gently] Finished portraits can still be corrected, Aisyah. That's rather the whole point of intervening now instead of never."
+      "Aisyah: [thoughtful] I found my mother's phone open to an advertisement so precisely tailored to her situation that I genuinely wondered, briefly, whether someone had been listening to our private conversations.",
+      "Rendra: Nobody needed to listen. The inference alone is damning enough without invoking anything so dramatic as surveillance.",
+      "Aisyah: [carefully] Meaning what, exactly? She hasn't searched for anything remotely related.",
+      "Rendra: She didn't need to. Enough adjacent behavior, browsing patterns, the time she lingers on certain articles, the pauses before she scrolls past something, aggregates into a portrait more candid than most confessions.",
+      "Aisyah: [reflective] That's a considerably more intimate portrait than I'd feel comfortable handing a stranger, and yet she's handed it over without ever consciously agreeing to anything.",
+      "Rendra: Consent, in this context, is largely theatrical. Nobody reads the document; everybody clicks accept, and the theater satisfies a legal requirement rather than an ethical one.",
+      "Aisyah: [honestly] So what would meaningful consent even look like, practically, for someone her age who barely trusts the device to begin with?",
+      "Rendra: Probably something closer to a standing conversation than a one-time checkbox, revisited periodically as her circumstances shift, rather than buried in a document nobody was ever expected to read.",
+      "Aisyah: [gently] That sounds appealing in theory and entirely unprofitable in practice, which is presumably why no platform has volunteered for it.",
+      "Rendra: Precisely. The business model depends on exactly the opacity you're objecting to. Transparency and profitability are, in this particular arrangement, natural adversaries.",
+      "Aisyah: [calmly] Then I suppose the least I can do is sit with her and actually walk through what she's agreed to, badly translated legalese and all.",
+      "Rendra: That's not nothing. An hour of genuine explanation probably does more good than any regulation currently pending.",
+      "Aisyah: [encouraging] Small comfort, given how thoroughly the algorithm's already finished its portrait of her.",
+      "Rendra: Finished portraits can still be corrected, Aisyah. That's rather the whole point of intervening now instead of never."
     ],
     "quiz": [
-      { "question": "What did Aisyah find on her mother's phone?", "options": ["A message from a stranger", "An advertisement so precisely tailored it seemed like someone had been listening in", "A virus warning", "An old photograph"], "correctIndex": 1, "explanation": "Aisyah found an advertisement so precisely tailored that she wondered if someone had been listening to their conversations." },
-      { "question": "According to Rendra, how is such precise targeting achieved without direct searches?", "options": ["Through random guessing", "Through aggregating adjacent behavior like browsing patterns and pauses before scrolling", "Through illegal wiretapping", "It cannot actually happen"], "correctIndex": 1, "explanation": "Rendra explains that adjacent behavior aggregates into a detailed portrait without any direct search being needed." },
-      { "question": "How does Rendra describe consent in this context?", "options": ["Fully meaningful and carefully considered", "Largely theatrical, satisfying a legal requirement rather than an ethical one", "Completely unnecessary", "Required by every platform equally"], "correctIndex": 1, "explanation": "Rendra says consent is largely theatrical, satisfying legal rather than ethical requirements." },
-      { "question": "What does Rendra say the business model depends on?", "options": ["Complete transparency", "The exact opacity that Aisyah objects to", "Government regulation", "User trust alone"], "correctIndex": 1, "explanation": "Rendra says the business model depends on the opacity Aisyah is objecting to, making transparency and profit adversaries." },
-      { "question": "What does Aisyah decide to do by the end of the conversation?", "options": ["Delete her mother's phone entirely", "Sit with her mother and walk through what she has agreed to", "Report the platform to authorities", "Ignore the issue completely"], "correctIndex": 1, "explanation": "Aisyah resolves to sit with her mother and actually walk through what she's agreed to, badly translated legalese included." }
-    ]
+      {
+        "question": "What did Aisyah find on her mother's phone?",
+        "options": [
+          "An advertisement so precisely tailored it seemed like someone had been listening in",
+          "A message from a stranger",
+          "A virus warning",
+          "An old photograph"
+        ],
+        "correctIndex": 0,
+        "explanation": "Aisyah found an advertisement so precisely tailored that she wondered if someone had been listening to their conversations."
+      },
+      {
+        "question": "According to Rendra, how is such precise targeting achieved without direct searches?",
+        "options": [
+          "Through random guessing",
+          "Through aggregating adjacent behavior like browsing patterns and pauses before scrolling",
+          "Through illegal wiretapping",
+          "It cannot actually happen"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rendra explains that adjacent behavior aggregates into a detailed portrait without any direct search being needed."
+      },
+      {
+        "question": "How does Rendra describe consent in this context?",
+        "options": [
+          "Fully meaningful and carefully considered",
+          "Completely unnecessary",
+          "Largely theatrical, satisfying a legal requirement rather than an ethical one",
+          "Required by every platform equally"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rendra says consent is largely theatrical, satisfying legal rather than ethical requirements."
+      },
+      {
+        "question": "What does Rendra say the business model depends on?",
+        "options": [
+          "Complete transparency",
+          "Government regulation",
+          "User trust alone",
+          "The exact opacity that Aisyah objects to"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rendra says the business model depends on the opacity Aisyah is objecting to, making transparency and profit adversaries."
+      },
+      {
+        "question": "What does Aisyah decide to do by the end of the conversation?",
+        "options": [
+          "Sit with her mother and walk through what she has agreed to",
+          "Delete her mother's phone entirely",
+          "Report the platform to authorities",
+          "Ignore the issue completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Aisyah resolves to sit with her mother and actually walk through what she's agreed to, badly translated legalese included."
+      },
+      {
+        "question": "What central claim does “The Algorithm Knows My Mother Better Than I Do” develop?",
+        "options": [
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Personalisation can infer patterns without genuine understanding.",
+          "Being reachable should remain a choice, not an obligation.",
+          "Technical success and beauty are not identical standards."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Algorithm Knows My Mother Better Than I Do”?",
+        "options": [
+          "The landline’s limits shape a different kind of availability.",
+          "Constant availability blurs work and private boundaries.",
+          "The algorithm’s prediction exposes how much data is collected.",
+          "The engineers disagree about what their creation serves."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “The Algorithm Knows My Mother Better Than I Do”?",
+        "options": [
+          "Nostalgia does not prove older tools were universally better.",
+          "Connectivity does not require surrendering all privacy.",
+          "A polished product may still create social harm.",
+          "Prediction is not consent or knowledge of a person’s values."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Algorithm Knows My Mother Better Than I Do”?",
+        "options": [
+          "The narrator questions opaque profiling.",
+          "The narrator weighs what was gained and lost.",
+          "The speaker sets deliberate limits on findability.",
+          "They examine purpose as well as craft."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “The Algorithm Knows My Mother Better Than I Do”?",
+        "options": [
+          "Technology choices redistribute attention and access.",
+          "Data convenience can create privacy and power costs.",
+          "Healthy systems make refusal and disconnection possible.",
+          "Design judgment includes consequences beyond performance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-technology-03",
@@ -69,27 +300,141 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] There is a particular exhaustion, rarely named precisely, that comes not from working too much but from being perpetually available to work, which turns out to be an entirely different affliction.",
-      "Narrator: [analytical] I used to conflate the two, assuming that if I merely reduced my hours, the exhaustion would recede proportionally, and it never quite did, which puzzled me for longer than I'd like to admit.",
-      "Narrator: [reflective] What finally clarified things was noticing that my shoulders tensed the instant I glimpsed a notification, regardless of whether I opened it, regardless even of whether I was technically off duty at the time.",
-      "Narrator: [candid] The mere possibility of a demand, it turns out, exacts nearly the same toll as the demand itself, a discovery that felt less like insight than accusation.",
-      "Narrator: [thoughtful] We've built, almost accidentally, an economy that prizes findability as though it were a virtue indistinguishable from diligence, when in fact they share almost nothing beyond a superficial resemblance.",
-      "Narrator: [firm] Diligence is what you do with your attention once it's engaged. Findability is merely surrendering the right to decide when it gets engaged at all.",
-      "Narrator: [honest] I spent years mistaking the second for the first, priding myself on rapid replies at inconvenient hours as though responsiveness were itself an achievement rather than simply an erosion I'd stopped noticing.",
-      "Narrator: [determined] So I've instituted something almost comically modest: a window, roughly ninety minutes each evening, during which the phone is physically elsewhere, out of both reach and eyeline.",
-      "Narrator: [wry] The withdrawal, I confess, was considerably more acute than I'd anticipated for something this small, which itself told me everything about how deep the habit had rooted.",
-      "Narrator: [warmly] Ninety minutes is a modest ambition, I realize, hardly the stuff of a manifesto. But it's the first ninety minutes in years during which nobody, anywhere, could summon my attention without my prior consent."
+      "Narrator: [thoughtful] There is a particular exhaustion, rarely named precisely, that comes not from working too much but from being perpetually available to work, which turns out to be an entirely different affliction.",
+      "Narrator: I used to conflate the two, assuming that if I merely reduced my hours, the exhaustion would recede proportionally, and it never quite did, which puzzled me for longer than I'd like to admit.",
+      "Narrator: [carefully] What finally clarified things was noticing that my shoulders tensed the instant I glimpsed a notification, regardless of whether I opened it, regardless even of whether I was technically off duty at the time.",
+      "Narrator: The mere possibility of a demand, it turns out, exacts nearly the same toll as the demand itself, a discovery that felt less like insight than accusation.",
+      "Narrator: [reflective] We've built, almost accidentally, an economy that prizes findability as though it were a virtue indistinguishable from diligence, when in fact they share almost nothing beyond a superficial resemblance.",
+      "Narrator: Diligence is what you do with your attention once it's engaged. Findability is merely surrendering the right to decide when it gets engaged at all.",
+      "Narrator: [honestly] I spent years mistaking the second for the first, priding myself on rapid replies at inconvenient hours as though responsiveness were itself an achievement rather than simply an erosion I'd stopped noticing.",
+      "Narrator: So I've instituted something almost comically modest: a window, roughly ninety minutes each evening, during which the phone is physically elsewhere, out of both reach and eyeline.",
+      "Narrator: [gently] The withdrawal, I confess, was considerably more acute than I'd anticipated for something this small, which itself told me everything about how deep the habit had rooted.",
+      "Narrator: Ninety minutes is a modest ambition, I realize, hardly the stuff of a manifesto. But it's the first ninety minutes in years during which nobody, anywhere, could summon my attention without my prior consent."
     ],
     "quiz": [
-      { "question": "What kind of exhaustion does the narrator distinguish from simply working too much?", "options": ["Physical exhaustion from exercise", "The exhaustion of being perpetually available to work", "Exhaustion from lack of sleep", "Exhaustion from travel"], "correctIndex": 1, "explanation": "She distinguishes exhaustion from overwork from the distinct exhaustion of being perpetually available." },
-      { "question": "What did the narrator notice about her body when she glimpsed a notification?", "options": ["Nothing at all", "Her shoulders tensed, regardless of whether she opened it or was off duty", "She felt immediate relief", "She fell asleep"], "correctIndex": 1, "explanation": "She noticed her shoulders tensed at the mere sight of a notification, regardless of opening it or being off duty." },
-      { "question": "How does the narrator distinguish diligence from findability?", "options": ["They are essentially the same thing", "Diligence is what you do with engaged attention; findability is surrendering the right to decide when it engages", "Findability is more valuable than diligence", "Diligence requires more technology"], "correctIndex": 1, "explanation": "She defines diligence as directing engaged attention, while findability surrenders the right to decide when attention engages at all." },
-      { "question": "What modest habit has the narrator instituted?", "options": ["Deleting all her apps permanently", "A roughly ninety-minute window each evening when her phone is physically out of reach", "Working only mornings", "Turning off her phone for a full week"], "correctIndex": 1, "explanation": "She has instituted a roughly ninety-minute evening window during which her phone is physically elsewhere." },
-      { "question": "What did the intensity of her withdrawal reveal to the narrator?", "options": ["That the habit was shallow and easy to break", "How deeply the habit of constant availability had rooted", "That she should abandon the experiment", "That ninety minutes was too short to matter"], "correctIndex": 1, "explanation": "The unexpectedly acute withdrawal revealed to her how deeply the habit of findability had rooted." }
-    ]
+      {
+        "question": "What kind of exhaustion does the narrator distinguish from simply working too much?",
+        "options": [
+          "The exhaustion of being perpetually available to work",
+          "Physical exhaustion from exercise",
+          "Exhaustion from lack of sleep",
+          "Exhaustion from travel"
+        ],
+        "correctIndex": 0,
+        "explanation": "She distinguishes exhaustion from overwork from the distinct exhaustion of being perpetually available."
+      },
+      {
+        "question": "What did the narrator notice about her body when she glimpsed a notification?",
+        "options": [
+          "Nothing at all",
+          "Her shoulders tensed, regardless of whether she opened it or was off duty",
+          "She felt immediate relief",
+          "She fell asleep"
+        ],
+        "correctIndex": 1,
+        "explanation": "She noticed her shoulders tensed at the mere sight of a notification, regardless of opening it or being off duty."
+      },
+      {
+        "question": "What boundary does the narrator set around being findable?",
+        "options": [
+          "Permanent availability to all contacts.",
+          "A deliberate limit that protects private life.",
+          "Reliance on location tracking alone.",
+          "Refusal to use any communication tool."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account argues that reachability should be chosen rather than imposed."
+      },
+      {
+        "question": "What modest habit has the narrator instituted?",
+        "options": [
+          "Deleting all her apps permanently",
+          "Working only mornings",
+          "Turning off her phone for a full week",
+          "A roughly ninety-minute window each evening when her phone is physically out of reach"
+        ],
+        "correctIndex": 3,
+        "explanation": "She has instituted a roughly ninety-minute evening window during which her phone is physically elsewhere."
+      },
+      {
+        "question": "What did the intensity of her withdrawal reveal to the narrator?",
+        "options": [
+          "How deeply the habit of constant availability had rooted",
+          "That the habit was shallow and easy to break",
+          "That she should abandon the experiment",
+          "That ninety minutes was too short to matter"
+        ],
+        "correctIndex": 0,
+        "explanation": "The unexpectedly acute withdrawal revealed to her how deeply the habit of findability had rooted."
+      },
+      {
+        "question": "What central claim does “On the Discipline of Being Findable” develop?",
+        "options": [
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Being reachable should remain a choice, not an obligation.",
+          "Personalisation can infer patterns without genuine understanding.",
+          "Technical success and beauty are not identical standards."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “On the Discipline of Being Findable”?",
+        "options": [
+          "The landline’s limits shape a different kind of availability.",
+          "The algorithm’s prediction exposes how much data is collected.",
+          "Constant availability blurs work and private boundaries.",
+          "The engineers disagree about what their creation serves."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “On the Discipline of Being Findable”?",
+        "options": [
+          "Nostalgia does not prove older tools were universally better.",
+          "Prediction is not consent or knowledge of a person’s values.",
+          "A polished product may still create social harm.",
+          "Connectivity does not require surrendering all privacy."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “On the Discipline of Being Findable”?",
+        "options": [
+          "The speaker sets deliberate limits on findability.",
+          "The narrator weighs what was gained and lost.",
+          "The narrator questions opaque profiling.",
+          "They examine purpose as well as craft."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “On the Discipline of Being Findable”?",
+        "options": [
+          "Technology choices redistribute attention and access.",
+          "Healthy systems make refusal and disconnection possible.",
+          "Data convenience can create privacy and power costs.",
+          "Design judgment includes consequences beyond performance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-technology-04",
@@ -98,30 +443,147 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Galih", "gender": "male" },
-      { "name": "Prita", "gender": "female" }
+      {
+        "name": "Galih",
+        "gender": "male"
+      },
+      {
+        "name": "Prita",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Galih: [uneasy] Six years building this recommendation engine, and I've started wondering whether we've built anything I'd actually defend on its merits, or merely something that works.",
-      "Prita: [pointed] Those aren't mutually exclusive, Galih. Plenty of things work brilliantly while being, in some larger sense, indefensible.",
-      "Galih: [candid] That's rather my worry, precisely. It optimizes for engagement with a ruthlessness I find difficult to admire, even as I remain professionally proud of the elegance underneath it.",
-      "Prita: [thoughtful] I've made peace with that particular tension, mostly by separating the craft from the deployment. The engineering can be beautiful even when its application is, at minimum, ethically ambiguous.",
-      "Galih: [challenging] Can it, though? Or is that distinction just a convenient partition we've built to protect our own conscience from the thing we're actually paid to optimize?",
-      "Prita: [conceding] Possibly. I won't pretend the partition is airtight. But the alternative, refusing any craft whose downstream use might be questionable, would rule out nearly every consequential piece of engineering ever built.",
-      "Galih: [considering] Fair, and yet there's a meaningful difference between unpredictable downstream misuse and an outcome we deliberately engineered toward from the outset.",
-      "Prita: [firm] Agreed, and that distinction is exactly where I think our actual responsibility sits, not in refusing the work, but in refusing to look away from what we've deliberately optimized it to do.",
-      "Galih: [honest] I haven't been looking away, if I'm honest. I've been looking directly at it and simply telling myself the elegance excuses the target.",
-      "Prita: [gently] That's a harder confession than most engineers manage. Most of us prefer the comfortable fiction that neutrality is even available to us.",
-      "Galih: [resolved] I don't think it is, not anymore. I think I'd rather build something less impressive that I could actually stand behind without flinching.",
-      "Prita: [warmly] Then propose it. I'd rather argue with you about a worse metric and a clearer conscience than keep perfecting a machine neither of us can fully defend."
+      "Galih: [thoughtful] Six years building this recommendation engine, and I've started wondering whether we've built anything I'd actually defend on its merits, or merely something that works.",
+      "Prita: Those aren't mutually exclusive, Galih. Plenty of things work brilliantly while being, in some larger sense, indefensible.",
+      "Galih: [carefully] That's rather my worry, precisely. It optimizes for engagement with a ruthlessness I find difficult to admire, even as I remain professionally proud of the elegance underneath it.",
+      "Prita: I've made peace with that particular tension, mostly by separating the craft from the deployment. The engineering can be beautiful even when its application is, at minimum, ethically ambiguous.",
+      "Galih: [reflective] Can it, though? Or is that distinction just a convenient partition we've built to protect our own conscience from the thing we're actually paid to optimize?",
+      "Prita: Possibly. I won't pretend the partition is airtight. But the alternative, refusing any craft whose downstream use might be questionable, would rule out nearly every consequential piece of engineering ever built.",
+      "Galih: [honestly] Fair, and yet there's a meaningful difference between unpredictable downstream misuse and an outcome we deliberately engineered toward from the outset.",
+      "Prita: Agreed, and that distinction is exactly where I think our actual responsibility sits, not in refusing the work, but in refusing to look away from what we've deliberately optimized it to do.",
+      "Galih: [gently] I haven't been looking away, if I'm honest. I've been looking directly at it and simply telling myself the elegance excuses the target.",
+      "Prita: That's a harder confession than most engineers manage. Most of us prefer the comfortable fiction that neutrality is even available to us.",
+      "Galih: [calmly] I don't think it is, not anymore. I think I'd rather build something less impressive that I could actually stand behind without flinching.",
+      "Prita: Then propose it. I'd rather argue with you about a worse metric and a clearer conscience than keep perfecting a machine neither of us can fully defend."
     ],
     "quiz": [
-      { "question": "What has Galih started wondering after six years on the recommendation engine?", "options": ["Whether it works technically", "Whether they've built anything he'd actually defend on its merits, beyond it simply working", "Whether to quit engineering entirely", "Whether Prita is a good colleague"], "correctIndex": 1, "explanation": "Galih wonders whether they've built something defensible on its merits, not merely something functional." },
-      { "question": "How does Prita initially try to reconcile the tension Galih raises?", "options": ["By ignoring the problem entirely", "By separating the craft from the deployment, seeing engineering as beautiful even when its application is ambiguous", "By quitting the project immediately", "By blaming users for misuse"], "correctIndex": 1, "explanation": "Prita separates the elegance of the craft from the ethics of its deployment as her initial coping strategy." },
-      { "question": "What distinction does Galih draw regarding downstream effects?", "options": ["There is no meaningful distinction to draw", "A difference between unpredictable misuse and an outcome deliberately engineered toward from the outset", "All outcomes are equally the engineers' fault", "Only regulators can determine responsibility"], "correctIndex": 1, "explanation": "Galih distinguishes between unpredictable downstream misuse and a deliberately engineered outcome." },
-      { "question": "What confession does Galih make about his own behavior?", "options": ["That he has been ignoring the ethical questions entirely", "That he has been looking directly at the issue and telling himself the elegance excuses the target", "That he never noticed any ethical tension", "That he wants to blame Prita"], "correctIndex": 1, "explanation": "Galih admits he has been looking directly at the problem while telling himself elegance excuses the target." },
-      { "question": "What does Galih ultimately decide he would rather build?", "options": ["Nothing at all, leaving the field", "Something less impressive that he could actually stand behind without flinching", "An even more engagement-optimized system", "A system identical to the current one"], "correctIndex": 1, "explanation": "Galih resolves he would rather build something less impressive that he could stand behind without flinching." }
-    ]
+      {
+        "question": "What has Galih started wondering after six years on the recommendation engine?",
+        "options": [
+          "Whether they've built anything he'd actually defend on its merits, beyond it simply working",
+          "Whether it works technically",
+          "Whether to quit engineering entirely",
+          "Whether Prita is a good colleague"
+        ],
+        "correctIndex": 0,
+        "explanation": "Galih wonders whether they've built something defensible on its merits, not merely something functional."
+      },
+      {
+        "question": "What disagreement do the engineers examine?",
+        "options": [
+          "Whether technical success is the only measure of value.",
+          "Whether users deserve explanation.",
+          "Whether data should be minimised.",
+          "Whether tools can contain bias."
+        ],
+        "correctIndex": 1,
+        "explanation": "They contrast technical accomplishment with wider questions of purpose and beauty."
+      },
+      {
+        "question": "What distinction does Galih draw regarding downstream effects?",
+        "options": [
+          "There is no meaningful distinction to draw",
+          "All outcomes are equally the engineers' fault",
+          "A difference between unpredictable misuse and an outcome deliberately engineered toward from the outset",
+          "Only regulators can determine responsibility"
+        ],
+        "correctIndex": 2,
+        "explanation": "Galih distinguishes between unpredictable downstream misuse and a deliberately engineered outcome."
+      },
+      {
+        "question": "What confession does Galih make about his own behavior?",
+        "options": [
+          "That he has been ignoring the ethical questions entirely",
+          "That he never noticed any ethical tension",
+          "That he wants to blame Prita",
+          "That he has been looking directly at the issue and telling himself the elegance excuses the target"
+        ],
+        "correctIndex": 3,
+        "explanation": "Galih admits he has been looking directly at the problem while telling himself elegance excuses the target."
+      },
+      {
+        "question": "What does Galih ultimately decide he would rather build?",
+        "options": [
+          "Something less impressive that he could actually stand behind without flinching",
+          "Nothing at all, leaving the field",
+          "An even more engagement-optimized system",
+          "A system identical to the current one"
+        ],
+        "correctIndex": 0,
+        "explanation": "Galih resolves he would rather build something less impressive that he could stand behind without flinching."
+      },
+      {
+        "question": "What central claim does “Two Engineers Argue About Whether They Made Anything Beautiful” develop?",
+        "options": [
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Technical success and beauty are not identical standards.",
+          "Personalisation can infer patterns without genuine understanding.",
+          "Being reachable should remain a choice, not an obligation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Two Engineers Argue About Whether They Made Anything Beautiful”?",
+        "options": [
+          "The landline’s limits shape a different kind of availability.",
+          "The algorithm’s prediction exposes how much data is collected.",
+          "The engineers disagree about what their creation serves.",
+          "Constant availability blurs work and private boundaries."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “Two Engineers Argue About Whether They Made Anything Beautiful”?",
+        "options": [
+          "Nostalgia does not prove older tools were universally better.",
+          "Prediction is not consent or knowledge of a person’s values.",
+          "Connectivity does not require surrendering all privacy.",
+          "A polished product may still create social harm."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Two Engineers Argue About Whether They Made Anything Beautiful”?",
+        "options": [
+          "They examine purpose as well as craft.",
+          "The narrator weighs what was gained and lost.",
+          "The narrator questions opaque profiling.",
+          "The speaker sets deliberate limits on findability."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “Two Engineers Argue About Whether They Made Anything Beautiful”?",
+        "options": [
+          "Technology choices redistribute attention and access.",
+          "Design judgment includes consequences beyond performance.",
+          "Data convenience can create privacy and power costs.",
+          "Healthy systems make refusal and disconnection possible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-technology-05",
@@ -130,32 +592,149 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Oma Ratih", "gender": "female" },
-      { "name": "Dimas", "gender": "male" }
+      {
+        "name": "Oma Ratih",
+        "gender": "female"
+      },
+      {
+        "name": "Dimas",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dimas: [amazed] Oma, you're telling me you strung the scammer along for twenty minutes before hanging up, purely for your own entertainment?",
-      "Oma Ratih: [wry] Purely for entertainment, and partly out of a lifelong grudge against people who assume old age is synonymous with credulity.",
-      "Dimas: [curious] What tipped you off in the first place? They're usually quite convincing these days.",
-      "Oma Ratih: [dry] The manufactured urgency, mostly. Genuine institutions rarely demand you resolve an emergency within the next ninety seconds while conveniently refusing to let you call back on a number you'd verify yourself.",
-      "Dimas: [impressed] That's sharper instinct than half my colleagues have, and they build software for a living.",
-      "Oma Ratih: [amused] Instinct built on decades of being underestimated has its uses, apparently. Once he realized I wasn't panicking on schedule, his script started fraying rather badly.",
-      "Dimas: [curious] Did he ever catch on that you were toying with him?",
-      "Oma Ratih: [smiling] Eventually, yes, and rather abruptly, once I asked him to spell his supposed employer's name and he stumbled over it in a way no legitimate representative ever would.",
-      "Dimas: [thoughtful] I worry more about your neighbor, honestly, the one who isn't quite as suspicious of unfamiliar callers as you are.",
-      "Oma Ratih: [serious] So do I, which is precisely why I've started sharing these stories at the community gathering rather than keeping them as private amusement.",
-      "Dimas: [warmly] That's a better use of the story than I'd given you credit for. I assumed it was purely for the satisfaction of outwitting him.",
-      "Oma Ratih: [dry] It was that too. I contain multitudes, Dimas, including a petty streak I've stopped apologizing for at my age.",
-      "Dimas: [laughing] Fair enough. Just promise me you'll actually hang up next time rather than negotiating for sport.",
-      "Oma Ratih: [firm] I promise nothing of the sort. A woman needs her hobbies."
+      "Dimas: [thoughtful] Oma, you're telling me you strung the scammer along for twenty minutes before hanging up, purely for your own entertainment?",
+      "Oma Ratih: Purely for entertainment, and partly out of a lifelong grudge against people who assume old age is synonymous with credulity.",
+      "Dimas: [carefully] What tipped you off in the first place? They're usually quite convincing these days.",
+      "Oma Ratih: The manufactured urgency, mostly. Genuine institutions rarely demand you resolve an emergency within the next ninety seconds while conveniently refusing to let you call back on a number you'd verify yourself.",
+      "Dimas: [reflective] That's sharper instinct than half my colleagues have, and they build software for a living.",
+      "Oma Ratih: Instinct built on decades of being underestimated has its uses, apparently. Once he realized I wasn't panicking on schedule, his script started fraying rather badly.",
+      "Dimas: [honestly] Did he ever catch on that you were toying with him?",
+      "Oma Ratih: Eventually, yes, and rather abruptly, once I asked him to spell his supposed employer's name and he stumbled over it in a way no legitimate representative ever would.",
+      "Dimas: [gently] I worry more about your neighbor, honestly, the one who isn't quite as suspicious of unfamiliar callers as you are.",
+      "Oma Ratih: So do I, which is precisely why I've started sharing these stories at the community gathering rather than keeping them as private amusement.",
+      "Dimas: [calmly] That's a better use of the story than I'd given you credit for. I assumed it was purely for the satisfaction of outwitting him.",
+      "Oma Ratih: It was that too. I contain multitudes, Dimas, including a petty streak I've stopped apologizing for at my age.",
+      "Dimas: [encouraging] Fair enough. Just promise me you'll actually hang up next time rather than negotiating for sport.",
+      "Oma Ratih: I promise nothing of the sort. A woman needs her hobbies."
     ],
     "quiz": [
-      { "question": "How long did Oma Ratih string the scammer along?", "options": ["Two minutes", "Twenty minutes", "One hour", "She hung up immediately"], "correctIndex": 1, "explanation": "Oma Ratih kept the scammer on the phone for twenty minutes before hanging up." },
-      { "question": "What tipped Oma Ratih off that the call was a scam?", "options": ["A strange background noise", "The manufactured urgency and refusal to let her call back on a verifiable number", "A misspelled name in a text", "Her phone displayed a warning"], "correctIndex": 1, "explanation": "She says the manufactured urgency and refusal to allow a callback on a verified number tipped her off." },
-      { "question": "What eventually made the scammer's script fall apart, according to Oma Ratih?", "options": ["She threatened to call the police", "He realized she wasn't panicking on schedule and stumbled spelling his employer's name", "She hung up immediately", "Her grandson took over the call"], "correctIndex": 1, "explanation": "The script frayed once she wasn't panicking on schedule, and he stumbled spelling his supposed employer's name." },
-      { "question": "What has Oma Ratih started doing with these scam stories?", "options": ["Keeping them entirely private", "Sharing them at the community gathering to warn less suspicious neighbors", "Posting them online for fame", "Reporting them only to the police"], "correctIndex": 1, "explanation": "She has started sharing the stories at the community gathering, especially concerned about a less suspicious neighbor." },
-      { "question": "Does Oma Ratih promise to simply hang up next time instead of engaging scammers?", "options": ["Yes, she promises immediately", "No, she refuses, saying a woman needs her hobbies", "She says she'll think about it", "She avoids answering the question"], "correctIndex": 1, "explanation": "She firmly refuses to promise that, saying a woman needs her hobbies." }
-    ]
+      {
+        "question": "How long did Oma Ratih string the scammer along?",
+        "options": [
+          "Twenty minutes",
+          "Two minutes",
+          "One hour",
+          "She hung up immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "Oma Ratih kept the scammer on the phone for twenty minutes before hanging up."
+      },
+      {
+        "question": "What tipped Oma Ratih off that the call was a scam?",
+        "options": [
+          "A strange background noise",
+          "The manufactured urgency and refusal to let her call back on a verifiable number",
+          "A misspelled name in a text",
+          "Her phone displayed a warning"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says the manufactured urgency and refusal to allow a callback on a verified number tipped her off."
+      },
+      {
+        "question": "What eventually made the scammer's script fall apart, according to Oma Ratih?",
+        "options": [
+          "She threatened to call the police",
+          "She hung up immediately",
+          "He realized she wasn't panicking on schedule and stumbled spelling his employer's name",
+          "Her grandson took over the call"
+        ],
+        "correctIndex": 2,
+        "explanation": "The script frayed once she wasn't panicking on schedule, and he stumbled spelling his supposed employer's name."
+      },
+      {
+        "question": "What has Oma Ratih started doing with these scam stories?",
+        "options": [
+          "Keeping them entirely private",
+          "Posting them online for fame",
+          "Reporting them only to the police",
+          "Sharing them at the community gathering to warn less suspicious neighbors"
+        ],
+        "correctIndex": 3,
+        "explanation": "She has started sharing the stories at the community gathering, especially concerned about a less suspicious neighbor."
+      },
+      {
+        "question": "Does Oma Ratih promise to simply hang up next time instead of engaging scammers?",
+        "options": [
+          "No, she refuses, saying a woman needs her hobbies",
+          "Yes, she promises immediately",
+          "She says she'll think about it",
+          "She avoids answering the question"
+        ],
+        "correctIndex": 0,
+        "explanation": "She firmly refuses to promise that, saying a woman needs her hobbies."
+      },
+      {
+        "question": "What central claim does “The Grandmother Who Outsmarted the Scam” develop?",
+        "options": [
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Scam resistance depends on skepticism and clear verification.",
+          "Personalisation can infer patterns without genuine understanding.",
+          "Being reachable should remain a choice, not an obligation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Grandmother Who Outsmarted the Scam”?",
+        "options": [
+          "The landline’s limits shape a different kind of availability.",
+          "The algorithm’s prediction exposes how much data is collected.",
+          "The grandmother questions an urgent suspicious request.",
+          "Constant availability blurs work and private boundaries."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “The Grandmother Who Outsmarted the Scam”?",
+        "options": [
+          "Nostalgia does not prove older tools were universally better.",
+          "Prediction is not consent or knowledge of a person’s values.",
+          "Connectivity does not require surrendering all privacy.",
+          "Confidence in a message is not evidence of legitimacy."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Grandmother Who Outsmarted the Scam”?",
+        "options": [
+          "The response uses independent checks rather than panic.",
+          "The narrator weighs what was gained and lost.",
+          "The narrator questions opaque profiling.",
+          "The speaker sets deliberate limits on findability."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “The Grandmother Who Outsmarted the Scam”?",
+        "options": [
+          "Technology choices redistribute attention and access.",
+          "Digital safety improves when people can contest claims.",
+          "Data convenience can create privacy and power costs.",
+          "Healthy systems make refusal and disconnection possible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-technology-06",
@@ -164,27 +743,141 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I began, somewhat obsessively, tracking every app I opened for a month, less out of discipline than a nagging suspicion that my own account of my days had grown quietly unreliable.",
-      "Narrator: [wry] The suspicion, it turns out, was generous to myself; the actual figures were considerably more damning than anything I'd braced for.",
-      "Narrator: [candid] I had estimated perhaps ninety minutes daily surrendered to idle scrolling, a figure I'd already considered mildly embarrassing, and the true number nearly tripled it.",
-      "Narrator: [thoughtful] What unsettled me wasn't merely the volume but the total absence of memory attached to it, entire evenings that had simply evaporated without leaving behind a single retrievable image or thought.",
-      "Narrator: [analytical] Compare that to an hour spent reading, which I can usually reconstruct in some detail weeks later, and you begin to suspect that not all hours are created equal, however identically the clock renders them.",
-      "Narrator: [reflective] Some hours accumulate, becoming part of the architecture of a person; others simply pass through, leaving no more residue than water through an open hand.",
-      "Narrator: [honest] I don't say this as an indictment of the platforms alone, tempting as that convenient villain remains; I chose, each time, to open the application, however thoroughly its design conspired against my closing it again.",
-      "Narrator: [determined] So I've become, rather grandly, the cartographer of my own attention, mapping where it actually travels rather than where I'd like to believe it goes.",
-      "Narrator: [wry] The map is unflattering, as most honest maps of the self tend to be, but at least it's now accurate, which strikes me as the necessary precondition for revising the territory at all.",
-      "Narrator: [warmly] I haven't reclaimed all those evaporated hours, and perhaps I never fully will. But I notice the vanishing now, in real time, which is a considerably more modest achievement than reform, and a considerably more honest one."
+      "Narrator: [thoughtful] I began, somewhat obsessively, tracking every app I opened for a month, less out of discipline than a nagging suspicion that my own account of my days had grown quietly unreliable.",
+      "Narrator: The suspicion, it turns out, was generous to myself; the actual figures were considerably more damning than anything I'd braced for.",
+      "Narrator: [carefully] I had estimated perhaps ninety minutes daily surrendered to idle scrolling, a figure I'd already considered mildly embarrassing, and the true number nearly tripled it.",
+      "Narrator: What unsettled me wasn't merely the volume but the total absence of memory attached to it, entire evenings that had simply evaporated without leaving behind a single retrievable image or thought.",
+      "Narrator: [reflective] Compare that to an hour spent reading, which I can usually reconstruct in some detail weeks later, and you begin to suspect that not all hours are created equal, however identically the clock renders them.",
+      "Narrator: Some hours accumulate, becoming part of the architecture of a person; others simply pass through, leaving no more residue than water through an open hand.",
+      "Narrator: [honestly] I don't say this as an indictment of the platforms alone, tempting as that convenient villain remains; I chose, each time, to open the application, however thoroughly its design conspired against my closing it again.",
+      "Narrator: So I've become, rather grandly, the cartographer of my own attention, mapping where it actually travels rather than where I'd like to believe it goes.",
+      "Narrator: [gently] The map is unflattering, as most honest maps of the self tend to be, but at least it's now accurate, which strikes me as the necessary precondition for revising the territory at all.",
+      "Narrator: I haven't reclaimed all those evaporated hours, and perhaps I never fully will. But I notice the vanishing now, in real time, which is a considerably more modest achievement than reform, and a considerably more honest one."
     ],
     "quiz": [
-      { "question": "Why did the narrator begin tracking every app he opened for a month?", "options": ["A workplace requirement", "A nagging suspicion that his own account of his days had grown unreliable", "A challenge from a friend", "He wanted to sell the data"], "correctIndex": 1, "explanation": "He began tracking out of a nagging suspicion that his account of his days had become unreliable." },
-      { "question": "How did the actual figures compare to the narrator's estimate?", "options": ["They matched exactly", "The true number nearly tripled his estimate of ninety minutes daily", "The true number was lower than expected", "He refused to calculate them"], "correctIndex": 1, "explanation": "He had estimated ninety minutes daily, but the true figure nearly tripled that estimate." },
-      { "question": "What unsettled the narrator most about the scrolling time?", "options": ["The cost of his phone plan", "The total absence of memory attached to it, with entire evenings evaporating", "That his friends knew about it", "The battery drain on his phone"], "correctIndex": 1, "explanation": "He was most unsettled by the complete absence of retrievable memory from those scrolling hours." },
-      { "question": "What comparison does the narrator draw with reading?", "options": ["Reading and scrolling produce identical memories", "An hour of reading can usually be reconstructed in detail weeks later, unlike scrolling", "Reading is always more enjoyable", "Reading takes more time than scrolling"], "correctIndex": 1, "explanation": "He contrasts scrolling with reading, which he can often reconstruct in detail weeks later." },
-      { "question": "What does the narrator call himself after starting this tracking practice?", "options": ["A victim of technology", "The cartographer of his own attention", "A digital minimalist expert", "An addict beyond help"], "correctIndex": 1, "explanation": "He describes himself as having become the cartographer of his own attention, mapping where it actually travels." }
-    ]
+      {
+        "question": "Why did the narrator begin tracking every app he opened for a month?",
+        "options": [
+          "A nagging suspicion that his own account of his days had grown unreliable",
+          "A workplace requirement",
+          "A challenge from a friend",
+          "He wanted to sell the data"
+        ],
+        "correctIndex": 0,
+        "explanation": "He began tracking out of a nagging suspicion that his account of his days had become unreliable."
+      },
+      {
+        "question": "How did the actual figures compare to the narrator's estimate?",
+        "options": [
+          "They matched exactly",
+          "The true number nearly tripled his estimate of ninety minutes daily",
+          "The true number was lower than expected",
+          "He refused to calculate them"
+        ],
+        "correctIndex": 1,
+        "explanation": "He had estimated ninety minutes daily, but the true figure nearly tripled that estimate."
+      },
+      {
+        "question": "What unsettled the narrator most about the scrolling time?",
+        "options": [
+          "The cost of his phone plan",
+          "That his friends knew about it",
+          "The total absence of memory attached to it, with entire evenings evaporating",
+          "The battery drain on his phone"
+        ],
+        "correctIndex": 2,
+        "explanation": "He was most unsettled by the complete absence of retrievable memory from those scrolling hours."
+      },
+      {
+        "question": "What comparison does the narrator draw with reading?",
+        "options": [
+          "Reading and scrolling produce identical memories",
+          "Reading is always more enjoyable",
+          "Reading takes more time than scrolling",
+          "An hour of reading can usually be reconstructed in detail weeks later, unlike scrolling"
+        ],
+        "correctIndex": 3,
+        "explanation": "He contrasts scrolling with reading, which he can often reconstruct in detail weeks later."
+      },
+      {
+        "question": "What does the narrator call himself after starting this tracking practice?",
+        "options": [
+          "The cartographer of his own attention",
+          "A victim of technology",
+          "A digital minimalist expert",
+          "An addict beyond help"
+        ],
+        "correctIndex": 0,
+        "explanation": "He describes himself as having become the cartographer of his own attention, mapping where it actually travels."
+      },
+      {
+        "question": "What central claim does “The Cartographer of My Own Attention” develop?",
+        "options": [
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Attention can be mapped without becoming fully understood.",
+          "Personalisation can infer patterns without genuine understanding.",
+          "Being reachable should remain a choice, not an obligation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Cartographer of My Own Attention”?",
+        "options": [
+          "The landline’s limits shape a different kind of availability.",
+          "The algorithm’s prediction exposes how much data is collected.",
+          "Tracking reveals habits but not a complete self.",
+          "Constant availability blurs work and private boundaries."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “The Cartographer of My Own Attention”?",
+        "options": [
+          "Nostalgia does not prove older tools were universally better.",
+          "Prediction is not consent or knowledge of a person’s values.",
+          "Connectivity does not require surrendering all privacy.",
+          "Data patterns do not justify deterministic conclusions."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Cartographer of My Own Attention”?",
+        "options": [
+          "The narrator uses the map as reflection, not verdict.",
+          "The narrator weighs what was gained and lost.",
+          "The narrator questions opaque profiling.",
+          "The speaker sets deliberate limits on findability."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “The Cartographer of My Own Attention”?",
+        "options": [
+          "Technology choices redistribute attention and access.",
+          "Measurement should support agency rather than control.",
+          "Data convenience can create privacy and power costs.",
+          "Healthy systems make refusal and disconnection possible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-technology-07",
@@ -193,33 +886,589 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yasmin", "gender": "female" },
-      { "name": "Father", "gender": "male" }
+      {
+        "name": "Yasmin",
+        "gender": "female"
+      },
+      {
+        "name": "Father",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Father: [defensive] I don't need a tutorial, Yasmin. I've read that article three times, and it's clearly well-researched.",
-      "Yasmin: [gentle] Can I ask what made it feel well-researched to you, specifically?",
-      "Father: [confident] It cited numbers, it sounded confident, and frankly it confirmed what I already suspected was true.",
-      "Yasmin: [careful] That last part concerns me more than the first two, honestly. Confirming a prior suspicion is a reason to read something more skeptically, not less.",
-      "Father: [defensive] You're suggesting I only believe things that flatter my existing opinions. That's rather insulting, coming from my own daughter.",
-      "Yasmin: [firm] I'm suggesting all of us do that, myself included, and the feed knows it better than we do, which is precisely why it keeps surfacing exactly this kind of article for you.",
-      "Father: [skeptical] So the algorithm is choosing my beliefs now? That sounds like the conspiracy theory, not the article.",
-      "Yasmin: [patient] Not choosing them from nothing, no, but amplifying whichever ones already generate your attention, and attention is the entire currency it's optimizing for.",
-      "Father: [considering] Alright, hypothetically, humor me. How would I even tell a well-researched article from a convincing one?",
-      "Yasmin: [encouraging] Start by checking whether the same claim, in roughly the same words, appears anywhere outside sources that already agree with each other.",
-      "Father: [trying] And if it doesn't?",
-      "Yasmin: [gently] Then it's probably one voice amplified into an echo, which sounds like a chorus but is really just a single opinion bouncing off itself.",
-      "Father: [reluctant] I suppose I have occasionally mistaken volume for consensus.",
-      "Yasmin: [warmly] We all have, Dad. I'm not trying to make you paranoid, just slightly slower to nod along before checking.",
-      "Father: [wry] Slower to nod along. At my age, that's practically a personality transplant.",
-      "Yasmin: [laughing] I'll settle for a slight renovation. The transplant can wait for next year."
+      "Father: [thoughtful] I don't need a tutorial, Yasmin. I've read that article three times, and it's clearly well-researched.",
+      "Yasmin: Can I ask what made it feel well-researched to you, specifically?",
+      "Father: [carefully] It cited numbers, it sounded confident, and frankly it confirmed what I already suspected was true.",
+      "Yasmin: That last part concerns me more than the first two, honestly. Confirming a prior suspicion is a reason to read something more skeptically, not less.",
+      "Father: [reflective] You're suggesting I only believe things that flatter my existing opinions. That's rather insulting, coming from my own daughter.",
+      "Yasmin: I'm suggesting all of us do that, myself included, and the feed knows it better than we do, which is precisely why it keeps surfacing exactly this kind of article for you.",
+      "Father: [honestly] So the algorithm is choosing my beliefs now? That sounds like the conspiracy theory, not the article.",
+      "Yasmin: Not choosing them from nothing, no, but amplifying whichever ones already generate your attention, and attention is the entire currency it's optimizing for.",
+      "Father: [gently] Alright, hypothetically, humor me. How would I even tell a well-researched article from a convincing one?",
+      "Yasmin: Start by checking whether the same claim, in roughly the same words, appears anywhere outside sources that already agree with each other.",
+      "Father: [calmly] And if it doesn't?",
+      "Yasmin: Then it's probably one voice amplified into an echo, which sounds like a chorus but is really just a single opinion bouncing off itself.",
+      "Father: [encouraging] I suppose I have occasionally mistaken volume for consensus.",
+      "Yasmin: We all have, Dad. I'm not trying to make you paranoid, just slightly slower to nod along before checking.",
+      "Father: [seriously] Slower to nod along. At my age, that's practically a personality transplant.",
+      "Yasmin: I'll settle for a slight renovation. The transplant can wait for next year."
     ],
     "quiz": [
-      { "question": "Why did the father initially find the article well-researched?", "options": ["A friend recommended it", "It cited numbers, sounded confident, and confirmed what he already suspected", "It was published by a university", "It had many positive comments"], "correctIndex": 1, "explanation": "The father says it cited numbers, sounded confident, and confirmed his existing suspicions." },
-      { "question": "Why does Yasmin say confirming a prior suspicion should prompt more skepticism?", "options": ["It shouldn't matter at all", "Because it's a reason to read something more skeptically, not less, since we all favor flattering opinions", "Because confirmed suspicions are always false", "Because it means the source is paid"], "correctIndex": 1, "explanation": "Yasmin explains that confirming a prior suspicion is a reason for more skepticism, not less, since everyone favors flattering information." },
-      { "question": "What does Yasmin say the algorithm optimizes for?", "options": ["Factual accuracy", "Attention, amplifying whichever beliefs already generate engagement", "Random selection of content", "Educational value"], "correctIndex": 1, "explanation": "Yasmin says attention is the entire currency the algorithm optimizes for, amplifying beliefs that generate it." },
-      { "question": "What test does Yasmin suggest for checking a claim?", "options": ["Checking the number of likes it received", "Checking whether the same claim appears outside sources that already agree with each other", "Asking a friend for their opinion", "Checking only the publication date"], "correctIndex": 1, "explanation": "Yasmin suggests checking whether the claim appears outside sources that already agree with each other." },
-      { "question": "What does the father admit by the end of the conversation?", "options": ["That the article was completely false", "That he has occasionally mistaken volume for consensus", "That he will stop using the internet", "That Yasmin is wrong about everything"], "correctIndex": 1, "explanation": "The father admits he has occasionally mistaken volume for consensus." }
-    ]
+      {
+        "question": "Why did the father initially find the article well-researched?",
+        "options": [
+          "It cited numbers, sounded confident, and confirmed what he already suspected",
+          "A friend recommended it",
+          "It was published by a university",
+          "It had many positive comments"
+        ],
+        "correctIndex": 0,
+        "explanation": "The father says it cited numbers, sounded confident, and confirmed his existing suspicions."
+      },
+      {
+        "question": "Why does Yasmin say confirming a prior suspicion should prompt more skepticism?",
+        "options": [
+          "It shouldn't matter at all",
+          "Because it's a reason to read something more skeptically, not less, since we all favor flattering opinions",
+          "Because confirmed suspicions are always false",
+          "Because it means the source is paid"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yasmin explains that confirming a prior suspicion is a reason for more skepticism, not less, since everyone favors flattering information."
+      },
+      {
+        "question": "What does Yasmin say the algorithm optimizes for?",
+        "options": [
+          "Factual accuracy",
+          "Random selection of content",
+          "Attention, amplifying whichever beliefs already generate engagement",
+          "Educational value"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yasmin says attention is the entire currency the algorithm optimizes for, amplifying beliefs that generate it."
+      },
+      {
+        "question": "What test does Yasmin suggest for checking a claim?",
+        "options": [
+          "Checking the number of likes it received",
+          "Asking a friend for their opinion",
+          "Checking only the publication date",
+          "Checking whether the same claim appears outside sources that already agree with each other"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yasmin suggests checking whether the claim appears outside sources that already agree with each other."
+      },
+      {
+        "question": "What does the father admit by the end of the conversation?",
+        "options": [
+          "That he has occasionally mistaken volume for consensus",
+          "That the article was completely false",
+          "That he will stop using the internet",
+          "That Yasmin is wrong about everything"
+        ],
+        "correctIndex": 0,
+        "explanation": "The father admits he has occasionally mistaken volume for consensus."
+      },
+      {
+        "question": "What central claim does “Teaching My Father to Distrust His Feed” develop?",
+        "options": [
+          "Convenience can quietly replace forms of deliberate connection.",
+          "Critical media literacy requires questioning a feed’s incentives.",
+          "Personalisation can infer patterns without genuine understanding.",
+          "Being reachable should remain a choice, not an obligation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Teaching My Father to Distrust His Feed”?",
+        "options": [
+          "The landline’s limits shape a different kind of availability.",
+          "The algorithm’s prediction exposes how much data is collected.",
+          "The father’s feed rewards repetition and emotional certainty.",
+          "Constant availability blurs work and private boundaries."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which qualification limits the claim in “Teaching My Father to Distrust His Feed”?",
+        "options": [
+          "Nostalgia does not prove older tools were universally better.",
+          "Prediction is not consent or knowledge of a person’s values.",
+          "Connectivity does not require surrendering all privacy.",
+          "Popularity does not establish accuracy or fairness."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Teaching My Father to Distrust His Feed”?",
+        "options": [
+          "Teaching focuses on checking sources and slowing reaction.",
+          "The narrator weighs what was gained and lost.",
+          "The narrator questions opaque profiling.",
+          "The speaker sets deliberate limits on findability."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      },
+      {
+        "question": "What implication follows most clearly from “Teaching My Father to Distrust His Feed”?",
+        "options": [
+          "Technology choices redistribute attention and access.",
+          "Users need tools to contest automated claims.",
+          "Data convenience can create privacy and power costs.",
+          "Healthy systems make refusal and disconnection possible."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer reflects limits of automated claims and accountable technology use."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-technology-08",
+    "title": "The Consent Form Hidden Behind the Useful App",
+    "level": "C2",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] Our community centre wanted an app for booking rooms, tracking attendance, and sending reminders. The demonstration was smooth enough that everyone wanted to approve it within ten minutes.",
+      "Narrator: Then a volunteer asked what information the app collected when someone merely opened it. The question changed the meeting from a feature comparison into a discussion about trust.",
+      "Narrator: We requested the privacy documentation, asked where data would be stored, who could access it, how long it would be retained, and whether a person could use the centre without surrendering unnecessary personal information.",
+      "Narrator: The vendor’s answers were mixed. Some data was needed to manage a booking; other collection seemed designed for analytics that the centre did not actually require.",
+      "Narrator: So we reduced the form, disabled optional tracking, created separate access levels for staff, and wrote a plain-language notice rather than relying on a link to dense legal terms.",
+      "Narrator: We also planned for ordinary failure. What happens if a volunteer sends a reminder to the wrong group? How is an account closed? Who responds if someone believes their details have been mishandled?",
+      "Narrator: None of this made the app less useful. It made the usefulness more proportionate to the trust people were being asked to give.",
+      "Narrator: Technology choices often appear neutral because they arrive as settings. Yet every default can decide who is visible, who is excluded, and whose information becomes easier to copy or misuse.",
+      "Narrator: The final decision was not whether to use technology. It was whether we could explain the system clearly enough that people understood the exchange they were making and had a meaningful choice about it."
+    ],
+    "quiz": [
+      {
+        "question": "What principle should guide a reading of the room-booking app approval?",
+        "options": [
+          "Useful technology needs data scrutiny because convenience cannot replace informed trust.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that useful technology deserves scrutiny of data practices because convenience cannot substitute for informed trust."
+      },
+      {
+        "question": "Which observation makes the case in the room-booking app approval less straightforward?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A volunteer asks what information the booking app collects when someone merely opens it.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a volunteer asks what information the booking app collects when someone merely opens it."
+      },
+      {
+        "question": "Which restraint prevents the room-booking app approval from being oversimplified?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Consent is not meaningful when collection is hidden behind a smooth demonstration.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that consent is not meaningful when collection is hidden behind a smooth demonstration."
+      },
+      {
+        "question": "What would a proportionate response to the room-booking app approval look like?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Review collection, purpose, retention, access, and alternatives before approval."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that review collection, purpose, retention, access, and alternatives before approval."
+      },
+      {
+        "question": "Which instinct does the speaker ask listeners to resist in the room-booking app approval?",
+        "options": [
+          "approving a system solely because its features look convenient.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that approving a system solely because its features look convenient"
+      },
+      {
+        "question": "What makes the speaker treat the room-booking app approval with caution rather than certainty?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Consent is not meaningful when collection is hidden behind a smooth demonstration.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that consent is not meaningful when collection is hidden behind a smooth demonstration."
+      },
+      {
+        "question": "What harm may follow from ignoring the lesson of the room-booking app approval?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Useful technology needs data scrutiny because convenience cannot replace informed trust.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that useful technology deserves scrutiny of data practices because convenience cannot substitute for informed trust."
+      },
+      {
+        "question": "What would repeat the very mistake highlighted by the room-booking app approval?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "approving a system solely because its features look convenient."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that approving a system solely because its features look convenient"
+      },
+      {
+        "question": "How should a listener weigh the issue raised by the room-booking app approval?",
+        "options": [
+          "Review collection, purpose, retention, access, and alternatives before approval.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that review collection, purpose, retention, access, and alternatives before approval."
+      },
+      {
+        "question": "Which takeaway best reflects the reasoning developed through the room-booking app approval?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Useful technology needs data scrutiny because convenience cannot replace informed trust.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that useful technology deserves scrutiny of data practices because convenience cannot substitute for informed trust."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-technology-09",
+    "title": "Testing an Accessible Website with the People It Was Meant to Serve",
+    "level": "C2",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] A volunteer team was proud of the new website until a visitor using a screen reader tried to register for an event. The page looked polished, but the form labels were unclear and the confirmation message never reached the reader.",
+      "Narrator: That session changed our definition of testing. We had checked whether the site worked for people who built it; we had not checked whether it worked for the full range of people expected to use it.",
+      "Narrator: We invited feedback from users with different access needs and paid attention to what they did rather than defending what we had intended. A decorative button that seemed obvious to us was confusing in use.",
+      "Narrator: The repairs included clear headings, keyboard navigation, readable contrast, descriptive labels, and a contact route that did not require someone to explain their disability publicly.",
+      "Narrator: We did not assume that one tester could represent everyone. Accessibility is not a single category, and people should not be treated as unpaid proof that a product is inclusive.",
+      "Narrator: The team also reconsidered speed. A rushed launch had created extra work for people who were already being asked to work around barriers. A later release with better testing was the more responsible choice.",
+      "Narrator: This experience taught us that design is an ethical activity. Exclusion can be produced by a missing label, an uncaptioned video, or a support process that assumes everyone can call during office hours.",
+      "Narrator: The website improved because criticism was treated as evidence, not as a threat to the designers. That habit is useful far beyond accessibility: the people affected by a system often see its limits first.",
+      "Narrator: A good digital service should not require users to be unusually patient in order to receive ordinary access."
+    ],
+    "quiz": [
+      {
+        "question": "What stance emerges from the screen-reader registration test?",
+        "options": [
+          "Accessibility testing is incomplete until people with varied needs can use the service.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that accessibility testing is incomplete until people with different access needs can use the service successfully."
+      },
+      {
+        "question": "Which evidence in the screen-reader registration test disrupts the obvious interpretation?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A screen-reader user finds unclear labels and an unreadable confirmation despite the site looking polished.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a screen-reader user finds unclear labels and an unreadable confirmation despite the site looking polished."
+      },
+      {
+        "question": "What does the speaker refuse to assume about the screen-reader registration test?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A team’s own successful test does not represent every intended user.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a team’s own successful test does not represent every intended user."
+      },
+      {
+        "question": "How should someone act after encountering the screen-reader registration test?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Test with affected users and fix the whole journey, including confirmation and recovery."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that test with affected users and fix the whole journey, including confirmation and recovery."
+      },
+      {
+        "question": "Which shortcut does the speaker reject in the screen-reader registration test?",
+        "options": [
+          "confusing visual polish with usable access.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that confusing visual polish with usable access"
+      },
+      {
+        "question": "Why does the screen-reader registration test call for slower reasoning?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A team’s own successful test does not represent every intended user.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a team’s own successful test does not represent every intended user."
+      },
+      {
+        "question": "What consequence could follow if the warning in the screen-reader registration test is missed?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Accessibility testing is incomplete until people with varied needs can use the service.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that accessibility testing is incomplete until people with different access needs can use the service successfully."
+      },
+      {
+        "question": "Which choice runs against the insight drawn from the screen-reader registration test?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "confusing visual polish with usable access."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that confusing visual polish with usable access"
+      },
+      {
+        "question": "How does the screen-reader registration test define sound judgement?",
+        "options": [
+          "Test with affected users and fix the whole journey, including confirmation and recovery.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that test with affected users and fix the whole journey, including confirmation and recovery."
+      },
+      {
+        "question": "What enduring lesson does the speaker draw from the screen-reader registration test?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Accessibility testing is incomplete until people with varied needs can use the service.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that accessibility testing is incomplete until people with different access needs can use the service successfully."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-technology-10",
+    "title": "When an Algorithm Recommends a Decision",
+    "level": "C2",
+    "themeId": "technology",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] A housing organisation is considering software that ranks applications by urgency. What should it ask before relying on the ranking?",
+      "Analyst: First, what data enters the system, what outcome it has been trained to predict, and whether that outcome is actually the moral and legal question the organisation must answer.",
+      "Interviewer: Why might those differ?",
+      "Analyst: A model may identify patterns in past decisions, but past decisions can contain unequal access, incomplete records, or earlier unfairness. Efficiency does not cleanse a biased history.",
+      "Interviewer: Can a human reviewer solve that problem?",
+      "Analyst: Only if the reviewer has authority, time, and reasons to challenge the recommendation. A human who merely approves a screen is not meaningful oversight.",
+      "Interviewer: What should applicants be told?",
+      "Analyst: They should know when automated tools affect a process, what information is used, how to correct an error, and how to seek a review. Explanations must be understandable, not only technically accurate.",
+      "Interviewer: Is refusing automation always safer?",
+      "Analyst: Not automatically. A well-governed tool may reduce some inconsistency. The question is whether its use is proportionate, auditable, and accountable to those who bear the consequences.",
+      "Interviewer: What is the red line?",
+      "Analyst: Never let a probability score become a verdict about a person’s worth, intention, or entitlement without the proper evidence and lawful process.",
+      "Interviewer: What should a leader document?",
+      "Analyst: The purpose, data limits, appeal route, monitoring plan, and the decision-maker who remains responsible when the system is wrong.",
+      "Interviewer: How often should the system be reviewed?",
+      "Analyst: Before launch, after real use begins, and whenever the data, policy, or affected population changes. Ongoing review matters because harm may appear only after a pattern develops.",
+      "Interviewer: Who should see the results?",
+      "Analyst: Leaders and appropriate oversight bodies, with enough public explanation for affected people to understand whether their concerns have led to change."
+    ],
+    "quiz": [
+      {
+        "question": "What must be examined before using the urgency ranking?",
+        "options": [
+          "Whether its inputs and predicted outcome match the real decision.",
+          "Whether the interface appears modern.",
+          "Whether staff can process more cases daily.",
+          "Whether applicants prefer automated messages."
+        ],
+        "correctIndex": 0,
+        "explanation": "The analyst asks whether the model’s target is actually the moral and legal question at issue."
+      },
+      {
+        "question": "Why can historical data be problematic?",
+        "options": [
+          "It always lacks enough observations.",
+          "It may preserve unequal access or earlier unfairness.",
+          "It prevents any human review.",
+          "It makes software too expensive."
+        ],
+        "correctIndex": 1,
+        "explanation": "Patterns in past decisions may reflect distorted records or prior injustice."
+      },
+      {
+        "question": "What makes human oversight meaningful?",
+        "options": [
+          "Reviewers must agree with every recommendation.",
+          "Reviewers should work without time limits.",
+          "Reviewers need time, authority, and grounds to challenge it.",
+          "Reviewers should hide the system from applicants."
+        ],
+        "correctIndex": 2,
+        "explanation": "A person who merely approves a screen cannot provide substantive oversight."
+      },
+      {
+        "question": "What information should applicants receive?",
+        "options": [
+          "Only the final ranking result.",
+          "A technical manual for the software.",
+          "The names of all other applicants.",
+          "Tool use, data, corrections, and review routes."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio requires understandable notice and a way to correct or challenge errors."
+      },
+      {
+        "question": "What is the analyst’s position on automation itself?",
+        "options": [
+          "It can help, but only with proportionate governance and accountability.",
+          "It is always less fair than human judgment.",
+          "It should replace all discretionary judgment.",
+          "It is acceptable if it reduces staffing costs."
+        ],
+        "correctIndex": 0,
+        "explanation": "The analyst rejects both blind acceptance and blanket rejection of automation."
+      },
+      {
+        "question": "What red line does the analyst identify?",
+        "options": [
+          "A model should never use past data.",
+          "A probability score cannot become a verdict without due process.",
+          "Applicants should never see automated decisions.",
+          "Leaders should avoid documenting system limits."
+        ],
+        "correctIndex": 1,
+        "explanation": "A score must not determine worth, intention, or entitlement without proper evidence and process."
+      },
+      {
+        "question": "Why must the system be reviewed after launch?",
+        "options": [
+          "Users will always reject automation.",
+          "Initial testing makes monitoring unnecessary.",
+          "Harm may emerge only once patterns develop in use.",
+          "The law requires a new system every month."
+        ],
+        "correctIndex": 2,
+        "explanation": "The analyst notes that practical effects can appear after real use begins."
+      },
+      {
+        "question": "What does public explanation contribute to oversight?",
+        "options": [
+          "It removes the need for appeal.",
+          "It proves that errors cannot occur.",
+          "It allows leaders to keep data secret.",
+          "It helps affected people see whether concerns changed practice."
+        ],
+        "correctIndex": 3,
+        "explanation": "Explanation makes oversight intelligible to people who bear the consequences."
+      },
+      {
+        "question": "Which inference best follows from the dialogue?",
+        "options": [
+          "Efficiency cannot by itself establish fairness.",
+          "Past decisions are always neutral evidence.",
+          "Human review automatically prevents bias.",
+          "Applicants need no explanation if a tool is accurate."
+        ],
+        "correctIndex": 0,
+        "explanation": "The dialogue repeatedly distinguishes operational efficiency from fair and accountable decision-making."
+      },
+      {
+        "question": "What is the dialogue’s central purpose?",
+        "options": [
+          "To promote a specific housing algorithm.",
+          "To define conditions for accountable automated decision support.",
+          "To argue that data should never guide public services.",
+          "To show that technical accuracy is the only relevant standard."
+        ],
+        "correctIndex": 1,
+        "explanation": "The discussion sets conditions for use: fit, review, explanation, appeal, monitoring, and responsibility."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "technology",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

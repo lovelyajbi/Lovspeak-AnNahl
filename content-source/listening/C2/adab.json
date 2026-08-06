@@ -6,30 +6,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [measured] You asked me last night how to correct someone senior to you without humiliating them in the process, and I promised a proper answer once I'd thought it through honestly.",
-      "Narrator: [thoughtful] Here it is, imperfect as it may be: humiliation is rarely a byproduct of correction, it's usually the actual objective, dressed up afterward as necessary honesty.",
-      "Narrator: [wry] I've delivered plenty of corrections I privately enjoyed delivering, which should have told me something about my own motives long before it eventually did.",
-      "Narrator: [reflective] Adab doesn't ask you to withhold the correction itself. Withholding a true, necessary correction is its own quiet dereliction, not any kind of virtue.",
-      "Narrator: [honest] It asks you to examine whether you want the room to witness the mistake, or simply want the mistake fixed, because those are entirely different appetites wearing identical vocabulary.",
-      "Narrator: [gently] Tomorrow, when you raise the figures he misrepresented, do it privately first, if the timeline genuinely allows for that at all.",
-      "Narrator: [thoughtful] If it doesn't allow for that, and sometimes urgency genuinely won't, address the figures themselves, not his competence, and address them exactly once.",
-      "Narrator: [wry] Resist, and I say this having failed at it more than I'd like to admit, the temptation to add commentary about pattern or character once you've made your point cleanly.",
-      "Narrator: [firm] The correction stands on its own merits, or it doesn't. Commentary about him as a person only exists to satisfy an audience, and the correction was never actually for the audience.",
-      "Narrator: [reflective] I learned this considerably later than I should have, from a man I corrected publicly fifteen years ago, entirely accurately, and entirely unnecessarily cruelly.",
-      "Narrator: [honest] He was right to be devastated. I was right about the figures and thoroughly wrong about everything surrounding them that afternoon.",
-      "Narrator: [warmly] You won't be perfect tomorrow either, nobody manages that on a first attempt worth mentioning. Just ask yourself, before you speak, what you're actually trying to fix.",
-      "Narrator: [peacefully] If the answer is the figures, proceed. If the answer includes some quieter need to be seen fixing them, wait until that particular need has quieted down considerably."
+      "Narrator: [thoughtful] You asked me last night how to correct someone senior to you without humiliating them in the process, and I promised a proper answer once I'd thought it through honestly.",
+      "Narrator: Here it is, imperfect as it may be: humiliation is rarely a byproduct of correction, it's usually the actual objective, dressed up afterward as necessary honesty.",
+      "Narrator: [carefully] I've delivered plenty of corrections I privately enjoyed delivering, which should have told me something about my own motives long before it eventually did.",
+      "Narrator: Adab doesn't ask you to withhold the correction itself. Withholding a true, necessary correction is its own quiet dereliction, not any kind of virtue.",
+      "Narrator: [reflective] It asks you to examine whether you want the room to witness the mistake, or simply want the mistake fixed, because those are entirely different appetites wearing identical vocabulary.",
+      "Narrator: Tomorrow, when you raise the figures he misrepresented, do it privately first, if the timeline genuinely allows for that at all.",
+      "Narrator: [honestly] If it doesn't allow for that, and sometimes urgency genuinely won't, address the figures themselves, not his competence, and address them exactly once.",
+      "Narrator: Resist, and I say this having failed at it more than I'd like to admit, the temptation to add commentary about pattern or character once you've made your point cleanly.",
+      "Narrator: [gently] The correction stands on its own merits, or it doesn't. Commentary about him as a person only exists to satisfy an audience, and the correction was never actually for the audience.",
+      "Narrator: I learned this considerably later than I should have, from a man I corrected publicly fifteen years ago, entirely accurately, and entirely unnecessarily cruelly.",
+      "Narrator: [calmly] He was right to be devastated. I was right about the figures and thoroughly wrong about everything surrounding them that afternoon.",
+      "Narrator: You won't be perfect tomorrow either, nobody manages that on a first attempt worth mentioning. Just ask yourself, before you speak, what you're actually trying to fix.",
+      "Narrator: [encouraging] If the answer is the figures, proceed. If the answer includes some quieter need to be seen fixing them, wait until that particular need has quieted down considerably."
     ],
     "quiz": [
-      { "question": "What did the protégé ask the narrator the night before?", "options": ["How to write a resignation letter", "How to correct someone senior to her without humiliating them", "How to negotiate a raise", "How to organize a meeting agenda"], "correctIndex": 1, "explanation": "She asked how to correct someone senior to her without humiliating them in the process." },
-      { "question": "What does the narrator say humiliation usually is, rather than a byproduct?", "options": ["An unavoidable accident", "Usually the actual objective, dressed up afterward as necessary honesty", "Something impossible to prevent", "A sign of weak character in the corrector"], "correctIndex": 1, "explanation": "He says humiliation is rarely a byproduct of correction; it's usually the actual objective, dressed up as honesty." },
-      { "question": "What does the narrator say adab does NOT ask a person to do?", "options": ["Withhold a true, necessary correction", "Speak kindly to others", "Consider timing before acting", "Reflect on one's own motives"], "correctIndex": 0, "explanation": "He clarifies adab doesn't ask someone to withhold a true, necessary correction; that would be its own dereliction." },
-      { "question": "What temptation does the narrator warn his protégé to resist after making a correction?", "options": ["The temptation to apologize too much", "The temptation to add commentary about the person's pattern or character afterward", "The temptation to correct too gently", "The temptation to avoid the topic entirely"], "correctIndex": 1, "explanation": "He warns against adding commentary about pattern or character once the point has been made cleanly." },
-      { "question": "What question does the narrator tell his protégé to ask herself before speaking?", "options": ["Whether she will be liked afterward", "What she is actually trying to fix", "Whether the room will be impressed", "How long the correction will take"], "correctIndex": 1, "explanation": "He tells her to ask herself, before speaking, what she is actually trying to fix." }
-    ]
+      {
+        "question": "What did the protégé ask the narrator the night before?",
+        "options": [
+          "How to correct someone senior to her without humiliating them",
+          "How to write a resignation letter",
+          "How to negotiate a raise",
+          "How to organize a meeting agenda"
+        ],
+        "correctIndex": 0,
+        "explanation": "She asked how to correct someone senior to her without humiliating them in the process."
+      },
+      {
+        "question": "What does the narrator say humiliation usually is, rather than a byproduct?",
+        "options": [
+          "An unavoidable accident",
+          "Usually the actual objective, dressed up afterward as necessary honesty",
+          "Something impossible to prevent",
+          "A sign of weak character in the corrector"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says humiliation is rarely a byproduct of correction; it's usually the actual objective, dressed up as honesty."
+      },
+      {
+        "question": "What does the narrator say adab does NOT ask a person to do?",
+        "options": [
+          "Speak kindly to others",
+          "Consider timing before acting",
+          "Withhold a true, necessary correction",
+          "Reflect on one's own motives"
+        ],
+        "correctIndex": 2,
+        "explanation": "He clarifies adab doesn't ask someone to withhold a true, necessary correction; that would be its own dereliction."
+      },
+      {
+        "question": "What temptation does the narrator warn his protégé to resist after making a correction?",
+        "options": [
+          "The temptation to apologize too much",
+          "The temptation to correct too gently",
+          "The temptation to avoid the topic entirely",
+          "The temptation to add commentary about the person's pattern or character afterward"
+        ],
+        "correctIndex": 3,
+        "explanation": "He warns against adding commentary about pattern or character once the point has been made cleanly."
+      },
+      {
+        "question": "What question does the narrator tell his protégé to ask herself before speaking?",
+        "options": [
+          "What she is actually trying to fix",
+          "Whether she will be liked afterward",
+          "Whether the room will be impressed",
+          "How long the correction will take"
+        ],
+        "correctIndex": 0,
+        "explanation": "He tells her to ask herself, before speaking, what she is actually trying to fix."
+      },
+      {
+        "question": "What principle guides the narrator's approach to correction?",
+        "options": [
+          "A correction should always be postponed until tempers disappear",
+          "A necessary correction can be firm without becoming public humiliation",
+          "Senior people should never receive corrective feedback",
+          "A correction matters only when an audience witnesses it"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator separates correcting a real error from using correction to humiliate someone."
+      },
+      {
+        "question": "Which experience most clearly explains the narrator's caution?",
+        "options": [
+          "He once avoided raising an error and caused a larger loss",
+          "He saw a colleague praised for correcting someone publicly",
+          "He publicly corrected accurate figures but needlessly made the man feel small.",
+          "He discovered that private feedback is always optional"
+        ],
+        "correctIndex": 2,
+        "explanation": "His regret concerns the cruelty surrounding a correction that was factually accurate."
+      },
+      {
+        "question": "What qualification does the narrator make about correcting privately?",
+        "options": [
+          "Private correction is required even when urgent harm is occurring",
+          "Private correction is useful only for equal-status colleagues",
+          "Public correction should include a judgment of the person's character",
+          "Urgency may require public correction, focused only on the facts"
+        ],
+        "correctIndex": 3,
+        "explanation": "He prefers privacy when possible, but permits a factual, limited public correction when timing truly requires it."
+      },
+      {
+        "question": "Which stance does the narrator take toward his earlier mistake?",
+        "options": [
+          "He accepts responsibility for the harm caused by his manner",
+          "He blames the other man for taking accurate feedback personally",
+          "He considers public correction more honest than private correction",
+          "He thinks intention matters more than the actual impact"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says he was right about the figures but wrong about how he handled the person."
+      },
+      {
+        "question": "What action follows if the wish to be seen correcting someone is still present?",
+        "options": [
+          "Announce the correction to establish authority",
+          "Wait until that motive has quieted before speaking",
+          "Ask someone else to criticize the person publicly",
+          "Abandon the correction regardless of its importance"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator advises pausing when the desire for recognition, rather than repair, is driving the correction."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-adab-02",
@@ -38,34 +152,151 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Salma", "gender": "female" },
-      { "name": "Bayu", "gender": "male" }
+      {
+        "name": "Salma",
+        "gender": "female"
+      },
+      {
+        "name": "Bayu",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Salma: [bright] Bayu! I nearly didn't recognize you, successful people apparently age differently than the rest of us mere mortals.",
-      "Bayu: [wincing] Please don't open with that. I've spent the entire drive here dreading exactly this kind of comment, if I'm honest.",
-      "Salma: [surprised] It was meant as a compliment, mostly, I promise you that much.",
-      "Bayu: [honest] I know, and that's precisely the trouble. I've become the person people compliment and quietly resent in the very same sentence.",
-      "Salma: [thoughtful] Is that actually true, or is it a story you've built to feel appropriately humble about your own success lately.",
-      "Bayu: [wry] Probably both, if I'm scrupulously honest with you tonight. It's easier than admitting the resentment might be entirely mine to manage, not theirs to suppress.",
-      "Salma: [curious] What would managing it actually look like, practically speaking, at an event exactly like this one.",
-      "Bayu: [reflective] Not performing false modesty, for one thing. False modesty is its own quiet insult, implying everyone else is too fragile for a plain fact.",
-      "Salma: [interested] So, what, you simply announce your achievements plainly and let people sit with whatever they feel about it afterward.",
-      "Bayu: [firm] Something closer to that, yes, without either inflating them for effect or shrinking them defensively to manage a room's comfort.",
-      "Salma: [honest] I'll admit, watching you tonight, I caught myself doing the very thing you're describing, complimenting you while privately cataloguing my own comparative disappointments.",
-      "Bayu: [gently] That's remarkably honest of you to say out loud, considerably more than most people manage at gatherings exactly like this one.",
-      "Salma: [reflective] Adab, I suppose, cuts both directions here. You owe the room accuracy without spectacle, and I owe you genuine happiness without the quiet asterisk I keep attaching to it.",
-      "Bayu: [warmly] We're both apparently still practicing, fifteen years past graduation and no closer to mastering either half of that particular equation.",
-      "Salma: [laughing] Then let's practice properly tonight. Tell me the actual story, unshrunk, and I'll work privately on the asterisk.",
-      "Bayu: [warmly] Deal. Though fair warning, the actual story involves considerably more failure than the compliment implied a moment ago."
+      "Salma: [thoughtful] Bayu! I nearly didn't recognize you, successful people apparently age differently than the rest of us mere mortals.",
+      "Bayu: Please don't open with that. I've spent the entire drive here dreading exactly this kind of comment, if I'm honest.",
+      "Salma: [carefully] It was meant as a compliment, mostly, I promise you that much.",
+      "Bayu: I know, and that's precisely the trouble. I've become the person people compliment and quietly resent in the very same sentence.",
+      "Salma: [reflective] Is that actually true, or is it a story you've built to feel appropriately humble about your own success lately.",
+      "Bayu: Probably both, if I'm scrupulously honest with you tonight. It's easier than admitting the resentment might be entirely mine to manage, not theirs to suppress.",
+      "Salma: [honestly] What would managing it actually look like, practically speaking, at an event exactly like this one.",
+      "Bayu: Not performing false modesty, for one thing. False modesty is its own quiet insult, implying everyone else is too fragile for a plain fact.",
+      "Salma: [gently] So, what, you simply announce your achievements plainly and let people sit with whatever they feel about it afterward.",
+      "Bayu: Something closer to that, yes, without either inflating them for effect or shrinking them defensively to manage a room's comfort.",
+      "Salma: [calmly] I'll admit, watching you tonight, I caught myself doing the very thing you're describing, complimenting you while privately cataloguing my own comparative disappointments.",
+      "Bayu: That's remarkably honest of you to say out loud, considerably more than most people manage at gatherings exactly like this one.",
+      "Salma: [encouraging] Adab, I suppose, cuts both directions here. You owe the room accuracy without spectacle, and I owe you genuine happiness without the quiet asterisk I keep attaching to it.",
+      "Bayu: We're both apparently still practicing, fifteen years past graduation and no closer to mastering either half of that particular equation.",
+      "Salma: [seriously] Then let's practice properly tonight. Tell me the actual story, unshrunk, and I'll work privately on the asterisk.",
+      "Bayu: Deal. Though fair warning, the actual story involves considerably more failure than the compliment implied a moment ago."
     ],
     "quiz": [
-      { "question": "How does Bayu react to Salma's opening comment about his success?", "options": ["He laughs it off happily", "He winces, saying he dreaded exactly that kind of comment during his drive there", "He ignores her completely", "He immediately corrects her about his career"], "correctIndex": 1, "explanation": "Bayu winces and admits he'd spent the entire drive dreading exactly that kind of comment." },
-      { "question": "What does Bayu say he has become, in his own words?", "options": ["Someone nobody notices anymore", "The person people compliment and quietly resent in the same sentence", "Someone who avoids all social events", "A person with no ambition left"], "correctIndex": 1, "explanation": "Bayu says he's become the person people compliment and quietly resent in the same sentence." },
-      { "question": "What does Bayu say false modesty actually does?", "options": ["It always protects others' feelings successfully", "It is its own quiet insult, implying everyone else is too fragile for a plain fact", "It has no real effect on anyone", "It is required by adab in every situation"], "correctIndex": 1, "explanation": "Bayu explains false modesty is its own quiet insult, implying others are too fragile for a plain fact." },
-      { "question": "What does Salma admit she caught herself doing during the conversation?", "options": ["Ignoring Bayu entirely", "Complimenting Bayu while privately cataloguing her own comparative disappointments", "Planning to leave the reunion early", "Criticizing Bayu's choices openly"], "correctIndex": 1, "explanation": "Salma admits she caught herself complimenting Bayu while privately cataloguing her own comparative disappointments." },
-      { "question": "How does Salma describe adab's demands in this situation?", "options": ["It only applies to Bayu, not to her", "It cuts both directions: Bayu owes accuracy without spectacle, she owes genuine happiness without a quiet asterisk", "It requires complete silence from both of them", "It has no relevance to envy or success"], "correctIndex": 1, "explanation": "Salma says adab cuts both directions, requiring accuracy from Bayu and genuine happiness without a quiet asterisk from her." }
-    ]
+      {
+        "question": "How does Bayu react to Salma's opening comment about his success?",
+        "options": [
+          "He winces, saying he dreaded exactly that kind of comment during his drive there",
+          "He laughs it off happily",
+          "He ignores her completely",
+          "He immediately corrects her about his career"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bayu winces and admits he'd spent the entire drive dreading exactly that kind of comment."
+      },
+      {
+        "question": "What does Bayu say he has become, in his own words?",
+        "options": [
+          "Someone nobody notices anymore",
+          "The person people compliment and quietly resent in the same sentence",
+          "Someone who avoids all social events",
+          "A person with no ambition left"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bayu says he's become the person people compliment and quietly resent in the same sentence."
+      },
+      {
+        "question": "What does Bayu say false modesty actually does?",
+        "options": [
+          "It always protects others' feelings successfully",
+          "It has no real effect on anyone",
+          "It is its own quiet insult, implying everyone else is too fragile for a plain fact",
+          "It is required by adab in every situation"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bayu explains false modesty is its own quiet insult, implying others are too fragile for a plain fact."
+      },
+      {
+        "question": "What does Salma admit she caught herself doing during the conversation?",
+        "options": [
+          "Ignoring Bayu entirely",
+          "Planning to leave the reunion early",
+          "Criticizing Bayu's choices openly",
+          "Complimenting Bayu while privately cataloguing her own comparative disappointments"
+        ],
+        "correctIndex": 3,
+        "explanation": "Salma admits she caught herself complimenting Bayu while privately cataloguing her own comparative disappointments."
+      },
+      {
+        "question": "What balance does Bayu recommend when speaking about success?",
+        "options": [
+          "Hide achievements whenever comparison might arise.",
+          "Exaggerate achievements so others recognise their worth.",
+          "Speak accurately without either defensive shrinking or theatrical inflation.",
+          "List every failure before mentioning any achievement."
+        ],
+        "correctIndex": 2,
+        "explanation": "Bayu rejects both false modesty and self-display; he asks for plain, proportionate accuracy."
+      },
+      {
+        "question": "How does the dialogue define adab around visible success?",
+        "options": [
+          "By asking successful people to minimize their achievements",
+          "By combining accuracy about success with private management of envy",
+          "By avoiding reunions where comparison might occur",
+          "By requiring others to suppress all uncomfortable feelings"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bayu rejects both self-inflation and false modesty, while Salma accepts responsibility for her own envy."
+      },
+      {
+        "question": "Which admission gives the dialogue its strongest evidence of self-awareness?",
+        "options": [
+          "Bayu says he no longer cares about how others view him",
+          "Salma says the reunion should celebrate only financial success",
+          "Salma admits her praise was mixed with comparison to her own disappointments",
+          "Bayu says his success involved no failures"
+        ],
+        "correctIndex": 2,
+        "explanation": "Salma openly identifies the private comparison beneath her compliment, making the moral tension concrete."
+      },
+      {
+        "question": "What qualification does Bayu place on speaking honestly about achievement?",
+        "options": [
+          "Achievements should be exaggerated so others understand their value",
+          "Truthful success should be hidden whenever anyone may feel envy",
+          "People should disclose every failure before discussing success",
+          "Honesty should avoid both defensive shrinking and theatrical inflation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bayu proposes plain accuracy: neither inflating achievements nor minimizing them to manage the room."
+      },
+      {
+        "question": "Which stance does Bayu take toward other people's resentment?",
+        "options": [
+          "He accepts that some resentment may be his responsibility to manage",
+          "He expects everyone to hide resentment for his comfort",
+          "He believes success makes social responsibility unnecessary",
+          "He treats every compliment as insincere"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bayu concedes that the resentment may be his to manage rather than something others must suppress."
+      },
+      {
+        "question": "What implication follows from Salma and Bayu's agreement?",
+        "options": [
+          "Social harmony requires pretending achievement does not exist",
+          "Genuine happiness for another can include honest self-examination",
+          "Success should be discussed only with close relatives",
+          "Comparative disappointment always makes friendship impossible"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their agreement makes room for an unshrunk story of success alongside private work on envy."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-adab-03",
@@ -74,33 +305,150 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ratna", "gender": "female" },
-      { "name": "Ilham", "gender": "male" }
+      {
+        "name": "Ratna",
+        "gender": "female"
+      },
+      {
+        "name": "Ilham",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ratna: [tired] Ilham, tell me honestly, is it my turn to host Uncle Zul this year, or have I simply lost track of the rotation entirely.",
-      "Ilham: [amused] Technically it's mine, but I'll confess I've been quietly hoping you'd forget the rotation existed at all.",
-      "Ratna: [flat] I have not forgotten. I have simply been pretending very convincingly, apparently unsuccessfully, given this call.",
-      "Ilham: [honest] He's exhausting, Ratna, I won't pretend otherwise. An entire weekend of unsolicited commentary on my career choices, my weight, my continued bachelorhood.",
+      "Ratna: [thoughtful] Ilham, tell me honestly, is it my turn to host Uncle Zul this year, or have I simply lost track of the rotation entirely.",
+      "Ilham: Technically it's mine, but I'll confess I've been quietly hoping you'd forget the rotation existed at all.",
+      "Ratna: [carefully] I have not forgotten. I have simply been pretending very convincingly, apparently unsuccessfully, given this call.",
+      "Ilham: He's exhausting, Ratna, I won't pretend otherwise. An entire weekend of unsolicited commentary on my career choices, my weight, my continued bachelorhood.",
       "Ratna: [reflective] And yet he flew here alone after Auntie passed, with nobody left to tell him his commentary lands rather badly these days.",
-      "Ilham: [quieter] I hadn't thought about it from that particular angle, honestly. I'd mostly been thinking about my own weekend, selfishly.",
-      "Ratna: [gently] Adab doesn't require us to enjoy hosting him. It just requires us to host him properly regardless of enjoyment, which are entirely separate obligations.",
-      "Ilham: [wry] That's an uncomfortably precise distinction to hear at eight in the morning, over the phone, no less.",
-      "Ratna: [thoughtful] Precise distinctions are usually the ones worth hearing early, before the day gives us a convenient excuse to forget them.",
-      "Ilham: [considering] Fine. I'll host him properly, and I'll try genuinely listening rather than merely enduring his commentary this particular time.",
-      "Ratna: [warmly] That's more than the rotation technically required of you. Thank you for actually hearing me out on this.",
-      "Ilham: [curious] Will you come for dinner one evening, at least, so I'm not entirely alone absorbing the commentary myself.",
-      "Ratna: [laughing] I'll come for one evening, strategically positioned between his opinions on my career and his opinions on yours.",
-      "Ilham: [warmly] Fair distribution. We'll call it shared adab, since apparently neither of us can sustain it solo for an entire weekend.",
-      "Ratna: [gently] Nobody expects solo sustainability, Ilham. That's rather the entire point of family showing up in shifts, isn't it."
+      "Ilham: I hadn't thought about it from that particular angle, honestly. I'd mostly been thinking about my own weekend, selfishly.",
+      "Ratna: [honestly] Adab doesn't require us to enjoy hosting him. It just requires us to host him properly regardless of enjoyment, which are entirely separate obligations.",
+      "Ilham: That's an uncomfortably precise distinction to hear at eight in the morning, over the phone, no less.",
+      "Ratna: [gently] Precise distinctions are usually the ones worth hearing early, before the day gives us a convenient excuse to forget them.",
+      "Ilham: Fine. I'll host him properly, and I'll try genuinely listening rather than merely enduring his commentary this particular time.",
+      "Ratna: [calmly] That's more than the rotation technically required of you. Thank you for actually hearing me out on this.",
+      "Ilham: Will you come for dinner one evening, at least, so I'm not entirely alone absorbing the commentary myself.",
+      "Ratna: [encouraging] I'll come for one evening, strategically positioned between his opinions on my career and his opinions on yours.",
+      "Ilham: Fair distribution. We'll call it shared adab, since apparently neither of us can sustain it solo for an entire weekend.",
+      "Ratna: [seriously] Nobody expects solo sustainability, Ilham. That's rather the entire point of family showing up in shifts, isn't it."
     ],
     "quiz": [
-      { "question": "What is Ratna calling Ilham to clarify?", "options": ["Who will pay for a family trip", "Whose turn it is to host Uncle Zul this year", "Who will plan a birthday party", "Whether to sell a family property"], "correctIndex": 1, "explanation": "Ratna calls to clarify whether it's her turn to host Uncle Zul or if she's lost track of the rotation." },
-      { "question": "What does Ilham admit he was hoping regarding Ratna?", "options": ["That she would host every year permanently", "That she would forget the hosting rotation existed", "That she would refuse to speak to Uncle Zul", "That she would move away entirely"], "correctIndex": 1, "explanation": "Ilham confesses he was quietly hoping Ratna would forget the rotation existed at all." },
-      { "question": "What does Ratna point out about Uncle Zul's situation since Auntie passed?", "options": ["He has remarried recently", "He flew here alone, with nobody left to tell him his commentary lands badly", "He no longer wants to visit", "He has stopped speaking to the family"], "correctIndex": 1, "explanation": "Ratna notes he flew in alone after Auntie passed, with no one left to tell him his commentary lands badly." },
-      { "question": "How does Ratna distinguish adab from enjoyment in this context?", "options": ["She says adab requires genuinely enjoying every guest", "She says adab doesn't require enjoying hosting him, just hosting him properly regardless", "She says adab is irrelevant to family hosting", "She says enjoyment is the only real measure of adab"], "correctIndex": 1, "explanation": "Ratna explains adab doesn't require enjoying hosting him, only hosting him properly, which are separate obligations." },
-      { "question": "What do Ratna and Ilham agree to do by the end of the call?", "options": ["Ratna will host alone instead", "Ilham will host properly and Ratna will join for one dinner to share the load", "They will ask another relative to host instead", "They will cancel the visit entirely"], "correctIndex": 1, "explanation": "Ilham agrees to host properly and Ratna agrees to come for one dinner so he isn't entirely alone with it." }
-    ]
+      {
+        "question": "What is Ratna calling Ilham to clarify?",
+        "options": [
+          "Whose turn it is to host Uncle Zul this year",
+          "Who will pay for a family trip",
+          "Who will plan a birthday party",
+          "Whether to sell a family property"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ratna calls to clarify whether it's her turn to host Uncle Zul or if she's lost track of the rotation."
+      },
+      {
+        "question": "What does Ilham admit he was hoping regarding Ratna?",
+        "options": [
+          "That she would host every year permanently",
+          "That she would forget the hosting rotation existed",
+          "That she would refuse to speak to Uncle Zul",
+          "That she would move away entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ilham confesses he was quietly hoping Ratna would forget the rotation existed at all."
+      },
+      {
+        "question": "What does Ratna point out about Uncle Zul's situation since Auntie passed?",
+        "options": [
+          "He has remarried recently",
+          "He no longer wants to visit",
+          "He flew here alone, with nobody left to tell him his commentary lands badly",
+          "He has stopped speaking to the family"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ratna notes he flew in alone after Auntie passed, with no one left to tell him his commentary lands badly."
+      },
+      {
+        "question": "How does Ratna distinguish adab from enjoyment in this context?",
+        "options": [
+          "She says adab requires genuinely enjoying every guest",
+          "She says adab is irrelevant to family hosting",
+          "She says enjoyment is the only real measure of adab",
+          "She says adab doesn't require enjoying hosting him, just hosting him properly regardless"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratna explains adab doesn't require enjoying hosting him, only hosting him properly, which are separate obligations."
+      },
+      {
+        "question": "What do Ratna and Ilham agree to do by the end of the call?",
+        "options": [
+          "Ilham will host properly and Ratna will join for one dinner to share the load",
+          "Ratna will host alone instead",
+          "They will ask another relative to host instead",
+          "They will cancel the visit entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ilham agrees to host properly and Ratna agrees to come for one dinner so he isn't entirely alone with it."
+      },
+      {
+        "question": "What principle reframes the family's hosting obligation?",
+        "options": [
+          "A difficult relative should be hosted only when pleasant",
+          "They need not enjoy Uncle Zul, but should host him properly",
+          "The family should ignore his grief to protect their weekend",
+          "Hosting becomes optional once the rotation is inconvenient"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ratna distinguishes enjoyment from the obligation to offer a difficult relative proper care."
+      },
+      {
+        "question": "Which detail most supports Ratna's call for compassion?",
+        "options": [
+          "Uncle Zul has always preferred to spend holidays alone",
+          "Ilham has never met Uncle Zul's family",
+          "Uncle Zul has been alone since Auntie passed away",
+          "The family cancelled the annual hosting rotation"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ratna asks Ilham to see his uncle's difficult behaviour alongside the loneliness that followed Auntie's death."
+      },
+      {
+        "question": "How do the cousins qualify the demand placed on one host?",
+        "options": [
+          "One relative should absorb all discomfort to prove sincerity",
+          "Hosting is only valid if it happens without any support",
+          "A demanding guest should be confronted by the whole family at once",
+          "Family members can share the care rather than leave one host alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratna offers to join dinner, showing that care can be shared without withdrawing proper hospitality."
+      },
+      {
+        "question": "Which stance does Ratna take toward Uncle Zul's difficult behaviour?",
+        "options": [
+          "She asks for compassion without denying that he can be exhausting",
+          "She treats his comments as harmless because he is elderly",
+          "She argues that relatives must enjoy every family visit",
+          "She recommends leaving him alone after a difficult comment"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ratna acknowledges the strain while inviting Ilham to consider his uncle's bereavement and isolation."
+      },
+      {
+        "question": "What implication follows from the cousins' final arrangement?",
+        "options": [
+          "The rotation should be abandoned after any complaint",
+          "Family care can be shared while preserving a demanding relative's dignity",
+          "Hosting requires accepting every hurtful remark without response",
+          "Bereavement removes the need for ordinary family boundaries"
+        ],
+        "correctIndex": 1,
+        "explanation": "They share the practical burden while still committing to host Uncle Zul with care."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-adab-04",
@@ -109,30 +457,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] Twenty-two years in foreign service taught me considerably more about refusal than about negotiation, though negotiation gets all the memoirs written about it.",
-      "Narrator: [reflective] Every skilled diplomat I ever admired shared one quality: an ability to decline something completely while leaving the other party feeling strangely well attended to.",
-      "Narrator: [thoughtful] I used to think that was simply verbal technique, a collection of phrases deployed cleverly enough to disguise an unwelcome answer beneath politeness.",
-      "Narrator: [honest] It isn't technique, not primarily. It's attention, genuine attention paid to what the request actually cost the person making it before you decline it.",
-      "Narrator: [wry] A hastily delivered no, however accurate, communicates something the requester hears regardless of your actual intentions, and what they hear is dismissal.",
-      "Narrator: [reflective] Adab, in this particular arena, asks for the considerably harder discipline of slowing down long enough to decline without also, incidentally, diminishing the person asking.",
-      "Narrator: [thoughtful] I once watched a junior colleague reject a proposal in four clipped sentences, entirely correct on the substance, and entirely careless about everything surrounding it.",
-      "Narrator: [honest] The proposal deserved rejection. The manner deserved considerably more scrutiny than it received, and the colleague never fully recovered his standing in that room afterward.",
+      "Narrator: [thoughtful] Twenty-two years in foreign service taught me considerably more about refusal than about negotiation, though negotiation gets all the memoirs written about it.",
+      "Narrator: Every skilled diplomat I ever admired shared one quality: an ability to decline something completely while leaving the other party feeling strangely well attended to.",
+      "Narrator: [carefully] I used to think that was simply verbal technique, a collection of phrases deployed cleverly enough to disguise an unwelcome answer beneath politeness.",
+      "Narrator: It isn't technique, not primarily. It's attention, genuine attention paid to what the request actually cost the person making it before you decline it.",
+      "Narrator: [reflective] A hastily delivered no, however accurate, communicates something the requester hears regardless of your actual intentions, and what they hear is dismissal.",
+      "Narrator: Adab, in this particular arena, asks for the considerably harder discipline of slowing down long enough to decline without also, incidentally, diminishing the person asking.",
+      "Narrator: [honestly] I once watched a junior colleague reject a proposal in four clipped sentences, entirely correct on the substance, and entirely careless about everything surrounding it.",
+      "Narrator: The proposal deserved rejection. The manner deserved considerably more scrutiny than it received, and the colleague never fully recovered his standing in that room afterward.",
       "Narrator: [gently] I've since developed something closer to a private ritual before declining anything consequential: naming, silently, what the request cost the other person to make.",
-      "Narrator: [warmly] Usually it cost them more than my irritation at receiving it, which recalibrates the tone considerably before I've said a single word aloud.",
-      "Narrator: [reflective] This isn't weakness dressed up as manners, whatever cynical colleagues occasionally suggested throughout my career. Declining clearly and declining kindly were never actually in tension.",
-      "Narrator: [peacefully] I'm retired now, mostly negotiating with grandchildren over bedtimes, and I find the same discipline applies, somewhat comically, at considerably lower diplomatic stakes.",
-      "Narrator: [warmly] No, still means no. It simply arrives, these days, having first considered what the asking genuinely cost the person standing in front of me."
+      "Narrator: Usually it cost them more than my irritation at receiving it, which recalibrates the tone considerably before I've said a single word aloud.",
+      "Narrator: [calmly] This isn't weakness dressed up as manners, whatever cynical colleagues occasionally suggested throughout my career. Declining clearly and declining kindly were never actually in tension.",
+      "Narrator: I'm retired now, mostly negotiating with grandchildren over bedtimes, and I find the same discipline applies, somewhat comically, at considerably lower diplomatic stakes.",
+      "Narrator: [encouraging] No, still means no. It simply arrives, these days, having first considered what the asking genuinely cost the person standing in front of me."
     ],
     "quiz": [
-      { "question": "What did twenty-two years in foreign service teach the narrator most?", "options": ["More about negotiation than refusal", "More about refusal than about negotiation, though negotiation gets the memoirs written about it", "Nothing useful about interpersonal skills", "How to avoid difficult conversations entirely"], "correctIndex": 1, "explanation": "She says the years taught her considerably more about refusal than negotiation, though negotiation gets the memoirs." },
-      { "question": "What quality did every skilled diplomat the narrator admired share?", "options": ["An ability to avoid ever saying no", "An ability to decline something completely while leaving the other party feeling well attended to", "An ability to agree to everything requested", "An ability to delay decisions indefinitely"], "correctIndex": 1, "explanation": "She admired diplomats who could decline completely while leaving the other party feeling well attended to." },
-      { "question": "What does the narrator say the skill actually is, rather than mere verbal technique?", "options": ["A rehearsed script of polite phrases", "Genuine attention paid to what the request cost the person making it", "A legal formality required in diplomacy", "An inherited personality trait"], "correctIndex": 1, "explanation": "She says it isn't primarily technique but genuine attention to what the request cost the person making it." },
-      { "question": "What happened to the junior colleague who rejected a proposal in four clipped sentences?", "options": ["He was promoted for efficiency", "He was entirely correct on substance but careless about manner, and never fully recovered his standing", "Nothing changed for him afterward", "He was praised by everyone in the room"], "correctIndex": 1, "explanation": "The colleague was correct on substance but careless in manner, and never fully recovered his standing in the room." },
-      { "question": "What private ritual has the narrator developed before declining anything consequential?", "options": ["Waiting exactly 24 hours before responding", "Silently naming what the request cost the other person to make", "Consulting a colleague before every decision", "Writing a formal memo justifying the refusal"], "correctIndex": 1, "explanation": "She developed a ritual of silently naming what the request cost the other person before declining." }
-    ]
+      {
+        "question": "What did twenty-two years in foreign service teach the narrator most?",
+        "options": [
+          "More about refusal than about negotiation, though negotiation gets the memoirs written about it",
+          "More about negotiation than refusal",
+          "Nothing useful about interpersonal skills",
+          "How to avoid difficult conversations entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says the years taught her considerably more about refusal than negotiation, though negotiation gets the memoirs."
+      },
+      {
+        "question": "What quality did every skilled diplomat the narrator admired share?",
+        "options": [
+          "An ability to avoid ever saying no",
+          "An ability to decline something completely while leaving the other party feeling well attended to",
+          "An ability to agree to everything requested",
+          "An ability to delay decisions indefinitely"
+        ],
+        "correctIndex": 1,
+        "explanation": "She admired diplomats who could decline completely while leaving the other party feeling well attended to."
+      },
+      {
+        "question": "What does the narrator say the skill actually is, rather than mere verbal technique?",
+        "options": [
+          "A rehearsed script of polite phrases",
+          "A legal formality required in diplomacy",
+          "Genuine attention paid to what the request cost the person making it",
+          "An inherited personality trait"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says it isn't primarily technique but genuine attention to what the request cost the person making it."
+      },
+      {
+        "question": "What happened to the junior colleague who rejected a proposal in four clipped sentences?",
+        "options": [
+          "He was promoted for efficiency",
+          "Nothing changed for him afterward",
+          "He was praised by everyone in the room",
+          "He was entirely correct on substance but careless about manner, and never fully recovered his standing"
+        ],
+        "correctIndex": 3,
+        "explanation": "The colleague was correct on substance but careless in manner, and never fully recovered his standing in the room."
+      },
+      {
+        "question": "What private ritual has the narrator developed before declining anything consequential?",
+        "options": [
+          "Silently naming what the request cost the other person to make",
+          "Waiting exactly 24 hours before responding",
+          "Consulting a colleague before every decision",
+          "Writing a formal memo justifying the refusal"
+        ],
+        "correctIndex": 0,
+        "explanation": "She developed a ritual of silently naming what the request cost the other person before declining."
+      },
+      {
+        "question": "How does the narrator distinguish gracious refusal from mere verbal technique?",
+        "options": [
+          "It depends on finding a more elegant phrase for rejection",
+          "It begins by attending to what making the request cost the other person",
+          "It requires agreeing to the request before declining it",
+          "It prevents the requester from feeling disappointed"
+        ],
+        "correctIndex": 1,
+        "explanation": "The diplomat rejects polished wording alone and treats genuine attention to the requester as the basis of courteous refusal."
+      },
+      {
+        "question": "Which example supports the narrator's warning about careless refusal?",
+        "options": [
+          "A junior colleague accepted a proposal that should have been rejected",
+          "A requester withdrew a proposal after a long negotiation",
+          "A junior colleague rejected a sound proposal correctly but carelessly",
+          "A diplomat gave unclear approval to avoid disagreement"
+        ],
+        "correctIndex": 2,
+        "explanation": "The junior colleague was correct on substance but careless in manner, damaging his standing in the room."
+      },
+      {
+        "question": "What qualification does the narrator make about saying no kindly?",
+        "options": [
+          "A refusal becomes kind only when it is ambiguous",
+          "Kindness requires accepting every reasonable request",
+          "A clear refusal is less ethical than a delayed answer",
+          "Kindness changes delivery without weakening the refusal itself"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator insists that declining clearly and declining kindly are compatible, not competing goals."
+      },
+      {
+        "question": "Which stance does the narrator take toward attentive refusal?",
+        "options": [
+          "It is a discipline rather than a performance of manners",
+          "It is useful only in formal diplomatic settings",
+          "It makes the content of a refusal irrelevant",
+          "It should be abandoned when a requester seems difficult"
+        ],
+        "correctIndex": 0,
+        "explanation": "He describes a private ritual of considering what a request cost before responding, not a set of decorative phrases."
+      },
+      {
+        "question": "What practical implication follows from the narrator's private ritual?",
+        "options": [
+          "Delay every consequential decision until both parties agree",
+          "Consider the requester's effort before declining a consequential request",
+          "Use personal stories to avoid explaining a refusal",
+          "Let grandchildren set rules for all adult negotiations"
+        ],
+        "correctIndex": 1,
+        "explanation": "The ritual recalibrates tone by making the narrator consider the effort behind the request before he says no."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-adab-05",
@@ -141,33 +603,150 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Tara", "gender": "female" },
-      { "name": "Deni", "gender": "male" }
+      {
+        "name": "Tara",
+        "gender": "female"
+      },
+      {
+        "name": "Deni",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Tara: [firm] The client keeps thanking you exclusively for the proposal, Deni, and I've said nothing at all for three meetings running now.",
-      "Deni: [surprised] I hadn't actually noticed the pattern, honestly, though I believe you noticed it considerably earlier than I did myself.",
-      "Tara: [measured] I'm not accusing you of engineering it deliberately. I think it's simply easier for clients to credit whoever spoke last in the room.",
-      "Deni: [thoughtful] Which happened to be me, repeatedly, mostly because you were the one actually building the analysis while I presented it afterward.",
-      "Tara: [honest] I don't need a grand public correction, for what it's worth. I need you to notice, and mention my name occasionally without my having to request it.",
-      "Deni: [gently] That's a fair, considerably more modest request than I'd braced myself for when you asked to talk privately this morning.",
-      "Tara: [wry] Adab doesn't obligate me to suffer silently, whatever version of humility some people apparently mistake it for around here.",
-      "Deni: [conceding] No, it doesn't, and I should have been distributing credit accurately without needing the correction at all from you.",
-      "Tara: [curious] What happens at tomorrow's meeting, practically speaking, now that we've actually named this out loud between us.",
-      "Deni: [determined] I open by crediting the analysis explicitly, by name, before I present a single slide of it to anyone.",
-      "Tara: [warmly] That's more than I was strictly asking for, though I won't pretend I'm not pleased to hear it from you.",
-      "Deni: [honest] You should have asked sooner, frankly. I'd rather correct this quickly than have you privately cataloguing three more meetings of silence.",
-      "Tara: [reflective] I think I stayed quiet hoping you'd notice unprompted, which was probably unfair to both of us in its own particular way.",
-      "Deni: [warmly] Probably, yes, though I'd rather you'd said something in meeting one than carried it politely for three meetings straight.",
-      "Tara: [smiling] Noted, for next time. Though I'm hoping there won't actually need to be a next time, honestly."
+      "Tara: [thoughtful] The client keeps thanking you exclusively for the proposal, Deni, and I've said nothing at all for three meetings running now.",
+      "Deni: I hadn't actually noticed the pattern, honestly, though I believe you noticed it considerably earlier than I did myself.",
+      "Tara: [carefully] I'm not accusing you of engineering it deliberately. I think it's simply easier for clients to credit whoever spoke last in the room.",
+      "Deni: Which happened to be me, repeatedly, mostly because you were the one actually building the analysis while I presented it afterward.",
+      "Tara: [reflective] I don't need a grand public correction, for what it's worth. I need you to notice, and mention my name occasionally without my having to request it.",
+      "Deni: That's a fair, considerably more modest request than I'd braced myself for when you asked to talk privately this morning.",
+      "Tara: [honestly] Adab doesn't obligate me to suffer silently, whatever version of humility some people apparently mistake it for around here.",
+      "Deni: No, it doesn't, and I should have been distributing credit accurately without needing the correction at all from you.",
+      "Tara: [gently] What happens at tomorrow's meeting, practically speaking, now that we've actually named this out loud between us.",
+      "Deni: I open by crediting the analysis explicitly, by name, before I present a single slide of it to anyone.",
+      "Tara: [calmly] That's more than I was strictly asking for, though I won't pretend I'm not pleased to hear it from you.",
+      "Deni: You should have asked sooner, frankly. I'd rather correct this quickly than have you privately cataloguing three more meetings of silence.",
+      "Tara: [encouraging] I think I stayed quiet hoping you'd notice unprompted, which was probably unfair to both of us in its own particular way.",
+      "Deni: Probably, yes, though I'd rather you'd said something in meeting one than carried it politely for three meetings straight.",
+      "Tara: [seriously] Noted, for next time. Though I'm hoping there won't actually need to be a next time, honestly."
     ],
     "quiz": [
-      { "question": "What has Tara noticed happening over three meetings?", "options": ["Deni has been criticizing her work", "The client keeps thanking Deni exclusively for the proposal while she has said nothing", "Deni has stopped attending meetings", "The client wants to end the contract"], "correctIndex": 1, "explanation": "Tara notices the client keeps thanking Deni exclusively for the proposal, and she's said nothing for three meetings." },
-      { "question": "Why does Deni suggest the client credits him rather than Tara?", "options": ["Because he did all the actual work", "Because it's easier for clients to credit whoever spoke last in the room, which was him", "Because Tara asked him to take credit", "Because the client dislikes Tara"], "correctIndex": 1, "explanation": "Tara suggests it's simply easier for clients to credit whoever spoke last, which happened to be Deni." },
-      { "question": "What does Tara say she actually needs, rather than a grand public correction?", "options": ["A formal apology in writing", "For Deni to notice and mention her name occasionally without her having to request it", "A raise in salary", "To be removed from the project"], "correctIndex": 1, "explanation": "Tara says she needs Deni to notice and mention her name occasionally without her having to ask." },
-      { "question": "What does Tara say about adab and suffering silently?", "options": ["Adab requires suffering silently as true humility", "Adab doesn't obligate her to suffer silently, despite some people's mistaken view of humility", "Adab has nothing to do with workplace credit", "Adab only applies to family situations"], "correctIndex": 1, "explanation": "Tara states adab doesn't obligate her to suffer silently, which some people apparently mistake for humility." },
-      { "question": "What does Deni commit to doing at tomorrow's meeting?", "options": ["Avoiding the client's questions", "Crediting the analysis explicitly, by name, before presenting a single slide", "Asking Tara to present instead of him", "Ending the project early"], "correctIndex": 1, "explanation": "Deni commits to opening the meeting by explicitly crediting the analysis by name before presenting anything." }
-    ]
+      {
+        "question": "What has Tara noticed happening over three meetings?",
+        "options": [
+          "The client keeps thanking Deni exclusively for the proposal while she has said nothing",
+          "Deni has been criticizing her work",
+          "Deni has stopped attending meetings",
+          "The client wants to end the contract"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tara notices the client keeps thanking Deni exclusively for the proposal, and she's said nothing for three meetings."
+      },
+      {
+        "question": "Why does Deni suggest the client credits him rather than Tara?",
+        "options": [
+          "Because he did all the actual work",
+          "Because it's easier for clients to credit whoever spoke last in the room, which was him",
+          "Because Tara asked him to take credit",
+          "Because the client dislikes Tara"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tara suggests it's simply easier for clients to credit whoever spoke last, which happened to be Deni."
+      },
+      {
+        "question": "What does Tara say she actually needs, rather than a grand public correction?",
+        "options": [
+          "A formal apology in writing",
+          "A raise in salary",
+          "For Deni to notice and mention her name occasionally without her having to request it",
+          "To be removed from the project"
+        ],
+        "correctIndex": 2,
+        "explanation": "Tara says she needs Deni to notice and mention her name occasionally without her having to ask."
+      },
+      {
+        "question": "What does Tara say about adab and suffering silently?",
+        "options": [
+          "Adab requires suffering silently as true humility",
+          "Adab has nothing to do with workplace credit",
+          "Adab only applies to family situations",
+          "Adab doesn't obligate her to suffer silently, despite some people's mistaken view of humility"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tara states adab doesn't obligate her to suffer silently, which some people apparently mistake for humility."
+      },
+      {
+        "question": "What does Deni commit to doing at tomorrow's meeting?",
+        "options": [
+          "Crediting the analysis explicitly, by name, before presenting a single slide",
+          "Avoiding the client's questions",
+          "Asking Tara to present instead of him",
+          "Ending the project early"
+        ],
+        "correctIndex": 0,
+        "explanation": "Deni commits to opening the meeting by explicitly crediting the analysis by name before presenting anything."
+      },
+      {
+        "question": "What norm do the coworkers agree should guide professional credit?",
+        "options": [
+          "Contributors should wait silently for others to notice their work",
+          "Credit should accurately reflect contribution without requiring silent resentment",
+          "Clients should decide attribution based on who speaks last",
+          "Public praise should be avoided to prevent discomfort"
+        ],
+        "correctIndex": 1,
+        "explanation": "The exchange rejects both passive silence and defensive denial in favour of accurate, proactive attribution."
+      },
+      {
+        "question": "Which detail most strongly supports Deni's concern about attribution?",
+        "options": [
+          "Deni presented the proposal while the colleague built the analysis",
+          "The client asked Deni to lead every future project",
+          "Deni built the analysis while the colleague repeatedly presented it",
+          "The proposal was written jointly after the client meeting"
+        ],
+        "correctIndex": 2,
+        "explanation": "Deni produced the analysis, while the colleague's repeated presentations led clients to credit the presenter alone."
+      },
+      {
+        "question": "What qualification does Deni make about their own silence?",
+        "options": [
+          "Silence was the only professional response available",
+          "The colleague could have inferred the problem without discussion",
+          "Waiting three meetings made the correction more persuasive",
+          "Waiting to be noticed was unfair to both of them"
+        ],
+        "correctIndex": 3,
+        "explanation": "Deni acknowledges that hoping to be noticed unprompted allowed the problem to continue and was unfair to both colleagues."
+      },
+      {
+        "question": "Which stance does the presenting colleague take after the concern is raised?",
+        "options": [
+          "They offer a concrete correction rather than a defensive denial",
+          "They deny any benefit from being credited first",
+          "They ask Deni to prove the analysis was theirs",
+          "They advise leaving attribution to the client"
+        ],
+        "correctIndex": 0,
+        "explanation": "The colleague commits to naming Deni and the analysis explicitly before presenting any slide."
+      },
+      {
+        "question": "What should happen at the next client meeting under their agreement?",
+        "options": [
+          "Deni should interrupt whenever the colleague speaks",
+          "The analysis should be credited by name before it is presented",
+          "The client should choose one person to own all credit",
+          "The coworkers should avoid sharing future work"
+        ],
+        "correctIndex": 1,
+        "explanation": "The presenter promises to credit the analysis and Deni explicitly at the start of the next meeting."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-adab-06",
@@ -176,30 +755,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [warmly] Twenty years behind a stove taught me that hospitality collapses the instant it starts calculating who deserves the good cuts of meat.",
-      "Narrator: [reflective] I've fed critics who reviewed me harshly and fed strangers who wandered in penniless, and I've tried, imperfectly, to plate both meals with identical attention.",
-      "Narrator: [honest] Tried, I say, because the temptation to punish a bad review with a mediocre second dish is considerably stronger than any cookbook ever admits openly.",
-      "Narrator: [wry] I've indulged that temptation exactly once, early in my career, and the resulting dish tasted precisely as resentful as I felt while plating it.",
-      "Narrator: [thoughtful] Adab in a kitchen, I've come to think, isn't primarily about technique, however much technique dominates the actual training we receive.",
-      "Narrator: [reflective] It's about extending the same unhurried attention to the guest who can't afford dessert as to the one settling a considerable bill without glancing at it twice.",
-      "Narrator: [honest] My grandmother, who ran a considerably humbler kitchen than mine, used to say a guest's hunger doesn't announce itself according to their income.",
-      "Narrator: [warmly] I didn't understand that as instruction until years into my own career, plating food for people whose worth I'd begun, quietly, ranking by their tips alone.",
-      "Narrator: [reflective] Ranking guests, I eventually noticed, is a peculiar kind of theft, taking something that was never mine to withhold selectively in the first place.",
-      "Narrator: [thoughtful] The example set toward guests in our tradition was never calibrated to their status, and I've spent considerable effort since trying, imperfectly, to plate accordingly.",
-      "Narrator: [gently] Some nights the kitchen is chaos, tickets stacking faster than we can manage, and generosity becomes the first casualty of that particular chaos.",
-      "Narrator: [determined] On those nights I try hardest, not because generosity comes easily under pressure, but precisely because it doesn't, and that's rather when it counts most.",
-      "Narrator: [peacefully] Every plate that leaves my kitchen, I hope, carries less of my judgment about who deserves it and more of whatever hospitality actually requires of me."
+      "Narrator: [thoughtful] Twenty years behind a stove taught me that hospitality collapses the instant it starts calculating who deserves the good cuts of meat.",
+      "Narrator: I've fed critics who reviewed me harshly and fed strangers who wandered in penniless, and I've tried, imperfectly, to plate both meals with identical attention.",
+      "Narrator: [carefully] Tried, I say, because the temptation to punish a bad review with a mediocre second dish is considerably stronger than any cookbook ever admits openly.",
+      "Narrator: I've indulged that temptation exactly once, early in my career, and the resulting dish tasted precisely as resentful as I felt while plating it.",
+      "Narrator: [reflective] Adab in a kitchen, I've come to think, isn't primarily about technique, however much technique dominates the actual training we receive.",
+      "Narrator: It's about extending the same unhurried attention to the guest who can't afford dessert as to the one settling a considerable bill without glancing at it twice.",
+      "Narrator: [honestly] My grandmother, who ran a considerably humbler kitchen than mine, used to say a guest's hunger doesn't announce itself according to their income.",
+      "Narrator: I didn't understand that as instruction until years into my own career, plating food for people whose worth I'd begun, quietly, ranking by their tips alone.",
+      "Narrator: [gently] Ranking guests, I eventually noticed, is a peculiar kind of theft, taking something that was never mine to withhold selectively in the first place.",
+      "Narrator: The example set toward guests in our tradition was never calibrated to their status, and I've spent considerable effort since trying, imperfectly, to plate accordingly.",
+      "Narrator: [calmly] Some nights the kitchen is chaos, tickets stacking faster than we can manage, and generosity becomes the first casualty of that particular chaos.",
+      "Narrator: On those nights I try hardest, not because generosity comes easily under pressure, but precisely because it doesn't, and that's rather when it counts most.",
+      "Narrator: [encouraging] Every plate that leaves my kitchen, I hope, carries less of my judgment about who deserves it and more of whatever hospitality actually requires of me."
     ],
     "quiz": [
-      { "question": "What did twenty years behind a stove teach the narrator about hospitality?", "options": ["That hospitality should focus on wealthy guests only", "That hospitality collapses the instant it starts calculating who deserves the good cuts of meat", "That hospitality is unrelated to how food is served", "That hospitality only matters for critics"], "correctIndex": 1, "explanation": "He learned hospitality collapses the moment it starts calculating who deserves the good cuts of meat." },
-      { "question": "What happened the one time the narrator gave in to the temptation to punish a bad reviewer?", "options": ["The dish turned out perfectly regardless", "The resulting dish tasted precisely as resentful as he felt while plating it", "He was praised for his honesty", "Nothing different happened at all"], "correctIndex": 1, "explanation": "He indulged the temptation once and the dish tasted precisely as resentful as he felt while making it." },
-      { "question": "What did the narrator's grandmother used to say about a guest's hunger?", "options": ["That it only matters for paying customers", "That a guest's hunger doesn't announce itself according to their income", "That hunger should be ignored during busy nights", "That only regular customers deserve full attention"], "correctIndex": 1, "explanation": "His grandmother said a guest's hunger doesn't announce itself according to their income." },
-      { "question": "What does the narrator call the practice of ranking guests by their tips?", "options": ["A necessary business practice", "A peculiar kind of theft, taking something that was never his to withhold selectively", "An acceptable part of running a restaurant", "Something his grandmother taught him to do"], "correctIndex": 1, "explanation": "He calls ranking guests a peculiar kind of theft, taking something never his to withhold selectively." },
-      { "question": "When does the narrator say he tries hardest to be generous?", "options": ["Only on slow, calm nights", "On chaotic nights, precisely because generosity doesn't come easily under pressure", "Only when critics are present", "He says generosity never varies by circumstance"], "correctIndex": 1, "explanation": "He tries hardest on chaotic nights, because generosity doesn't come easily under pressure, which is when it counts most." }
-    ]
+      {
+        "question": "What did twenty years behind a stove teach the narrator about hospitality?",
+        "options": [
+          "That hospitality collapses the instant it starts calculating who deserves the good cuts of meat",
+          "That hospitality should focus on wealthy guests only",
+          "That hospitality is unrelated to how food is served",
+          "That hospitality only matters for critics"
+        ],
+        "correctIndex": 0,
+        "explanation": "He learned hospitality collapses the moment it starts calculating who deserves the good cuts of meat."
+      },
+      {
+        "question": "What happened the one time the narrator gave in to the temptation to punish a bad reviewer?",
+        "options": [
+          "The dish turned out perfectly regardless",
+          "The resulting dish tasted precisely as resentful as he felt while plating it",
+          "He was praised for his honesty",
+          "Nothing different happened at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "He indulged the temptation once and the dish tasted precisely as resentful as he felt while making it."
+      },
+      {
+        "question": "What did the narrator's grandmother used to say about a guest's hunger?",
+        "options": [
+          "That it only matters for paying customers",
+          "That hunger should be ignored during busy nights",
+          "That a guest's hunger doesn't announce itself according to their income",
+          "That only regular customers deserve full attention"
+        ],
+        "correctIndex": 2,
+        "explanation": "His grandmother said a guest's hunger doesn't announce itself according to their income."
+      },
+      {
+        "question": "What does the narrator call the practice of ranking guests by their tips?",
+        "options": [
+          "A necessary business practice",
+          "An acceptable part of running a restaurant",
+          "Something his grandmother taught him to do",
+          "A peculiar kind of theft, taking something that was never his to withhold selectively"
+        ],
+        "correctIndex": 3,
+        "explanation": "He calls ranking guests a peculiar kind of theft, taking something never his to withhold selectively."
+      },
+      {
+        "question": "When does the narrator say he tries hardest to be generous?",
+        "options": [
+          "On chaotic nights, precisely because generosity doesn't come easily under pressure",
+          "Only on slow, calm nights",
+          "Only when critics are present",
+          "He says generosity never varies by circumstance"
+        ],
+        "correctIndex": 0,
+        "explanation": "He tries hardest on chaotic nights, because generosity doesn't come easily under pressure, which is when it counts most."
+      },
+      {
+        "question": "What does the chef identify as the core of adab in a kitchen?",
+        "options": [
+          "Perfect technique regardless of how guests are treated",
+          "Giving guests unhurried attention regardless of perceived status",
+          "Serving only critics who have been kind to the restaurant",
+          "Using higher prices to identify deserving diners"
+        ],
+        "correctIndex": 1,
+        "explanation": "The chef frames hospitality as equal attention for guests who differ in money, status, and treatment of the restaurant."
+      },
+      {
+        "question": "Which past failure supports the chef's self-critique?",
+        "options": [
+          "He refused to serve a critic who had reviewed him harshly",
+          "He charged a stranger extra for dessert",
+          "He once plated a resentful dish after receiving a bad review",
+          "He dismissed his grandmother's advice as impractical"
+        ],
+        "correctIndex": 2,
+        "explanation": "He admits one resentful response to a bad review and uses the bad dish as evidence that resentment shaped his care."
+      },
+      {
+        "question": "What qualification does the chef make about generosity under pressure?",
+        "options": [
+          "Generosity matters only when service is calm",
+          "A busy kitchen excuses selective attention to guests",
+          "Pressure proves that hospitality is unrealistic",
+          "Generosity is hardest in chaos, which makes practicing it more important"
+        ],
+        "correctIndex": 3,
+        "explanation": "The chef recognises that pressure makes generosity difficult, and therefore treats those moments as its real test."
+      },
+      {
+        "question": "Which stance does the chef take toward judging guests by status?",
+        "options": [
+          "He treats it as a personal failure he must resist",
+          "He sees it as necessary for a profitable restaurant",
+          "He considers it harmless when customers leave large tips",
+          "He believes guests should explain their income before ordering"
+        ],
+        "correctIndex": 0,
+        "explanation": "He calls ranking guests a kind of theft and describes trying to remove his own judgment from each plate."
+      },
+      {
+        "question": "What implication follows from the chef's account of hospitality?",
+        "options": [
+          "Hospitality is mainly a reward for respectful guests",
+          "Care must be sustained especially when pressure invites selective treatment",
+          "A chef should conceal dissatisfaction with every customer",
+          "Technical training removes the need for moral discipline"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narration makes pressure the setting in which equal care is most difficult and most meaningful."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-adab-07",
@@ -208,33 +901,591 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [engaging] Tonight's question arrives from a listener whose father shares outdated, occasionally offensive opinions at family dinners, and who wants to know how to correct him without shaming him in front of everyone.",
-      "Guest: [thoughtful] A question I suspect half our audience is nodding along to right now, given how universal that particular dinner table scenario exists to be.",
-      "Radio Host: [curious] Where would you actually begin, practically, for someone dreading this exact scenario next weekend at home.",
-      "Guest: [explaining] By separating the correction from the audience entirely, wherever that's genuinely possible. Dinner, in front of everyone, is rarely the correct venue for it.",
-      "Radio Host: [pressing] But doesn't silence in the moment risk looking like agreement, particularly to younger relatives listening closely at the table.",
-      "Guest: [conceding] A legitimate concern, certainly. I'd distinguish between silent agreement and a visible, brief refusal to participate, which needn't become an actual confrontation.",
-      "Radio Host: [curious] What does that visible refusal actually sound like, in the room, without escalating things further at the table.",
-      "Guest: [reflective] Something as simple as, I see it differently, said calmly, without elaboration, followed by changing the subject rather than pursuing a debate nobody there actually wants.",
-      "Radio Host: [thoughtful] And the fuller correction, presumably, happens later, privately, away from the table entirely.",
-      "Guest: [warmly] Exactly there, later, privately, with considerably more patience than any dinner table generally affords anyone involved.",
-      "Radio Host: [interested] Does age itself change the obligation here, practically speaking, correcting a parent versus correcting a peer your own age.",
-      "Guest: [firm] Adab toward elders doesn't forbid correction, whatever some traditional readings occasionally imply. It simply raises the bar for how gently that correction gets delivered.",
-      "Radio Host: [curious] Gently, meaning what, exactly, in concrete terms our listener could actually use this weekend.",
-      "Guest: [gently] Meaning leading with genuine questions rather than declarations, giving him room to reconsider without an audience recording his reversal for later reference.",
-      "Radio Host: [smiling] That's considerably more patient than most family group chats manage on this exact subject, myself included, admittedly.",
-      "Guest: [warmly] Most of us manage it poorly, myself included, some years more than others. Patience toward elders, apparently, requires its own lifelong practice."
+      "Radio Host: [thoughtful] Tonight's question arrives from a listener whose father shares outdated, occasionally offensive opinions at family dinners, and who wants to know how to correct him without shaming him in front of everyone.",
+      "Guest: A question I suspect half our audience is nodding along to right now, given how universal that particular dinner table scenario exists to be.",
+      "Radio Host: [carefully] Where would you actually begin, practically, for someone dreading this exact scenario next weekend at home.",
+      "Guest: By separating the correction from the audience entirely, wherever that's genuinely possible. Dinner, in front of everyone, is rarely the correct venue for it.",
+      "Radio Host: [reflective] But doesn't silence in the moment risk looking like agreement, particularly to younger relatives listening closely at the table.",
+      "Guest: A legitimate concern, certainly. I'd distinguish between silent agreement and a visible, brief refusal to participate, which needn't become an actual confrontation.",
+      "Radio Host: [honestly] What does that visible refusal actually sound like, in the room, without escalating things further at the table.",
+      "Guest: Something as simple as, I see it differently, said calmly, without elaboration, followed by changing the subject rather than pursuing a debate nobody there actually wants.",
+      "Radio Host: [gently] And the fuller correction, presumably, happens later, privately, away from the table entirely.",
+      "Guest: Exactly there, later, privately, with considerably more patience than any dinner table generally affords anyone involved.",
+      "Radio Host: [calmly] Does age itself change the obligation here, practically speaking, correcting a parent versus correcting a peer your own age.",
+      "Guest: Adab toward elders doesn't forbid correction, whatever some traditional readings occasionally imply. It simply raises the bar for how gently that correction gets delivered.",
+      "Radio Host: [encouraging] Gently, meaning what, exactly, in concrete terms our listener could actually use this weekend.",
+      "Guest: Meaning leading with genuine questions rather than declarations, giving him room to reconsider without an audience recording his reversal for later reference.",
+      "Radio Host: [seriously] That's considerably more patient than most family group chats manage on this exact subject, myself included, admittedly.",
+      "Guest: Most of us manage it poorly, myself included, some years more than others. Patience toward elders, apparently, requires its own lifelong practice."
     ],
     "quiz": [
-      { "question": "What problem does the listener describe in their question?", "options": ["Their father refuses to attend family dinners", "Their father shares outdated, occasionally offensive opinions at family dinners", "Their father never speaks at family gatherings", "Their father wants to move in with them"], "correctIndex": 1, "explanation": "The listener's father shares outdated, occasionally offensive opinions at family dinners." },
-      { "question": "Where does the guest say the correction should ideally happen?", "options": ["Publicly at the dinner table, immediately", "Separated from the audience entirely, wherever genuinely possible", "Never, correction should always be avoided", "Only through a formal written letter"], "correctIndex": 1, "explanation": "The guest advises separating the correction from the audience entirely, since dinner is rarely the correct venue." },
-      { "question": "What does the guest suggest as a visible, brief refusal to participate at the table?", "options": ["Leaving the table immediately", "Saying 'I see it differently' calmly, then changing the subject", "Arguing extensively until the point is won", "Ignoring the father completely for the rest of dinner"], "correctIndex": 1, "explanation": "He suggests saying 'I see it differently' calmly, without elaboration, then changing the subject." },
-      { "question": "According to the guest, does adab toward elders forbid correction?", "options": ["Yes, elders can never be corrected", "No, it doesn't forbid correction, but it raises the bar for how gently it's delivered", "Correction is only allowed if written formally", "Adab has no relevance to correcting elders"], "correctIndex": 1, "explanation": "The guest states adab toward elders doesn't forbid correction, it simply raises the bar for gentleness in delivery." },
-      { "question": "What does the guest recommend leading with when correcting an elder gently?", "options": ["Direct declarations of fact", "Genuine questions, giving room to reconsider without an audience recording the reversal", "Public examples of other people's opinions", "A list of past mistakes"], "correctIndex": 1, "explanation": "He recommends leading with genuine questions rather than declarations, allowing room to reconsider privately." }
-    ]
+      {
+        "question": "What problem does the listener describe in their question?",
+        "options": [
+          "Their father shares outdated, occasionally offensive opinions at family dinners",
+          "Their father refuses to attend family dinners",
+          "Their father never speaks at family gatherings",
+          "Their father wants to move in with them"
+        ],
+        "correctIndex": 0,
+        "explanation": "The listener's father shares outdated, occasionally offensive opinions at family dinners."
+      },
+      {
+        "question": "Where does the guest say the correction should ideally happen?",
+        "options": [
+          "Publicly at the dinner table, immediately",
+          "Separated from the audience entirely, wherever genuinely possible",
+          "Never, correction should always be avoided",
+          "Only through a formal written letter"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest advises separating the correction from the audience entirely, since dinner is rarely the correct venue."
+      },
+      {
+        "question": "What does the guest suggest as a visible, brief refusal to participate at the table?",
+        "options": [
+          "Leaving the table immediately",
+          "Arguing extensively until the point is won",
+          "Saying 'I see it differently' calmly, then changing the subject",
+          "Ignoring the father completely for the rest of dinner"
+        ],
+        "correctIndex": 2,
+        "explanation": "He suggests saying 'I see it differently' calmly, without elaboration, then changing the subject."
+      },
+      {
+        "question": "According to the guest, does adab toward elders forbid correction?",
+        "options": [
+          "Yes, elders can never be corrected",
+          "Correction is only allowed if written formally",
+          "Adab has no relevance to correcting elders",
+          "No, it doesn't forbid correction, but it raises the bar for how gently it's delivered"
+        ],
+        "correctIndex": 3,
+        "explanation": "The guest states adab toward elders doesn't forbid correction, it simply raises the bar for gentleness in delivery."
+      },
+      {
+        "question": "What does the guest recommend leading with when correcting an elder gently?",
+        "options": [
+          "Genuine questions, giving room to reconsider without an audience recording the reversal",
+          "Direct declarations of fact",
+          "Public examples of other people's opinions",
+          "A list of past mistakes"
+        ],
+        "correctIndex": 0,
+        "explanation": "He recommends leading with genuine questions rather than declarations, allowing room to reconsider privately."
+      },
+      {
+        "question": "What approach do the speakers recommend for harmful remarks at dinner?",
+        "options": [
+          "Debate the parent publicly until they retract the remark",
+          "Show brief disagreement now, then correct more fully in private",
+          "Remain silent so younger relatives do not feel tension",
+          "Ask younger relatives to confront the parent instead"
+        ],
+        "correctIndex": 1,
+        "explanation": "They recommend a visible but calm refusal to join the view, followed by a more patient private conversation."
+      },
+      {
+        "question": "Which distinction supports their recommendation against silence?",
+        "options": [
+          "Silence always prevents a family argument",
+          "Parents understand silence as a sign of respect",
+          "Silence can seem like agreement, while brief refusal need not escalate",
+          "Younger relatives should interpret silence without guidance"
+        ],
+        "correctIndex": 2,
+        "explanation": "The speakers distinguish silent agreement from a calm, limited refusal to participate in the remark."
+      },
+      {
+        "question": "How do the speakers qualify correction when the person is an elder?",
+        "options": [
+          "Respect for elders prohibits correcting them altogether",
+          "Age makes factual accuracy irrelevant",
+          "Only peers may receive patient questions",
+          "Correction remains possible, but demands greater gentleness"
+        ],
+        "correctIndex": 3,
+        "explanation": "They say adab toward elders does not forbid correction; it raises the standard for how gently it is delivered."
+      },
+      {
+        "question": "Which stance best captures the radio hosts' response to family conflict?",
+        "options": [
+          "They favour patience and de-escalation over winning a table debate",
+          "They argue that every disagreement needs immediate public resolution",
+          "They treat the listener's concern as evidence of parental failure",
+          "They recommend avoiding family dinners entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "The hosts recommend calm, brief disagreement at the table and fuller, gentler engagement later in private."
+      },
+      {
+        "question": "What implication follows for younger relatives at the table?",
+        "options": [
+          "They should be asked to judge the parent publicly",
+          "Respectful correction can signal disagreement without shaming a parent",
+          "They should learn that silence always equals approval",
+          "They must choose between politeness and moral clarity"
+        ],
+        "correctIndex": 1,
+        "explanation": "A brief, calm refusal can protect younger listeners from mistaking silence for agreement while avoiding public humiliation."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-adab-08",
+    "title": "The Meeting That Changed After One Careful Question",
+    "level": "C2",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] At a neighbourhood board meeting, I watched two capable volunteers turn a small disagreement about a youth programme into a contest over who had been consulted first.",
+      "Narrator: The room became quiet only after the newest volunteer asked a question that neither side had expected: What outcome are we trying to protect for the young people?",
+      "Narrator: That question did not erase the procedural mistake. It did, however, move the discussion from wounded status to the decision itself.",
+      "Narrator: We placed the competing proposals beside the actual constraints: available rooms, safeguarding responsibilities, transport, and the families who would bear the inconvenience.",
+      "Narrator: One organiser then restated the other proposal in terms its author recognised. The relief in her face was striking; she had not won, but she had been heard accurately.",
+      "Narrator: A better plan emerged from that exercise. It kept the original timetable for one month, tested an alternative on a smaller scale, and named who would collect feedback.",
+      "Narrator: The useful lesson was not that courtesy makes every disagreement pleasant. Courtesy made the disagreement legible enough to solve.",
+      "Narrator: Adab required us to correct a weak argument without treating its author as a weak person. It also required us to admit that seniority alone did not settle a practical question.",
+      "Narrator: Before leaving, we wrote a short note: the decision, the reasons, the review date, and the point at which anyone could raise a concern.",
+      "Narrator: That record mattered because memory often rewards the loudest version of a meeting. Clear process protects people after the room has emptied.",
+      "Narrator: If a dispute involves rights, safety, or a specialised ruling, good manners are still necessary but they are not sufficient; the appropriate qualified person must be involved."
+    ],
+    "quiz": [
+      {
+        "question": "What reframes the board’s disagreement?",
+        "options": [
+          "The young people’s needs, not consultation status.",
+          "A vote on each volunteer’s seniority.",
+          "A rule against discussing procedure.",
+          "A demand for immediate apology."
+        ],
+        "correctIndex": 0,
+        "explanation": "The new question redirects attention to the purpose of the programme."
+      },
+      {
+        "question": "Why does the narrator call the new question effective?",
+        "options": [
+          "It proves the earlier process was irrelevant.",
+          "It shifts attention from injury to the decision.",
+          "It gives the newest volunteer final authority.",
+          "It prevents any criticism of the plan."
+        ],
+        "correctIndex": 1,
+        "explanation": "The question does not erase the mistake; it changes the focus of discussion."
+      },
+      {
+        "question": "Which evidence is used to test the competing proposals?",
+        "options": [
+          "Personal friendship between organisers.",
+          "The loudest participant’s memory.",
+          "Practical constraints and affected families.",
+          "A prediction that either plan will succeed."
+        ],
+        "correctIndex": 2,
+        "explanation": "The group compares rooms, safeguarding, transport, and inconvenience to families."
+      },
+      {
+        "question": "What does the accurate restatement achieve?",
+        "options": [
+          "It ends the disagreement immediately.",
+          "It confirms that one side has lost.",
+          "It replaces feedback with politeness.",
+          "It lets a participant feel understood without winning."
+        ],
+        "correctIndex": 3,
+        "explanation": "Being represented accurately reduces distortion even when views remain different."
+      },
+      {
+        "question": "What makes the revised plan proportionate?",
+        "options": [
+          "It combines a temporary continuation, a small test, and feedback ownership.",
+          "It cancels both proposals until all conflict disappears.",
+          "It adopts the newest volunteer’s preference permanently.",
+          "It removes families from further consultation."
+        ],
+        "correctIndex": 0,
+        "explanation": "The plan preserves continuity while testing an alternative and assigning follow-up."
+      },
+      {
+        "question": "What is the narrator’s view of courtesy?",
+        "options": [
+          "Courtesy makes conflict easy to avoid.",
+          "Courtesy makes disagreement clear enough to address.",
+          "Courtesy requires accepting weak arguments.",
+          "Courtesy matters only after a formal ruling."
+        ],
+        "correctIndex": 1,
+        "explanation": "Courtesy is presented as a condition for intelligible, solvable disagreement."
+      },
+      {
+        "question": "Which distinction expresses the account’s adab principle?",
+        "options": [
+          "Senior staff should decide practical matters alone.",
+          "Procedural error proves bad character.",
+          "A weak argument need not define its author.",
+          "All disagreement reflects a personal injury."
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator separates correction of reasoning from judgment of the person."
+      },
+      {
+        "question": "Why is the written note important after the meeting?",
+        "options": [
+          "It allows the loudest account to prevail.",
+          "It replaces the need for a review date.",
+          "It keeps objections private from everyone.",
+          "It preserves reasons and routes for later challenge."
+        ],
+        "correctIndex": 3,
+        "explanation": "The note records the decision, rationale, review, and route for concerns."
+      },
+      {
+        "question": "What justified inference follows from the final caution?",
+        "options": [
+          "Some disputes need expertise beyond courteous discussion.",
+          "Good manners are unnecessary in high-stakes cases.",
+          "Every board decision requires a legal ruling.",
+          "Safety concerns should be postponed for consensus."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio keeps courtesy necessary but insufficient for specialised or high-stakes questions."
+      },
+      {
+        "question": "What is the speaker’s overall purpose?",
+        "options": [
+          "To establish one universally correct youth programme.",
+          "To show how process can protect dignity and decision quality.",
+          "To discourage volunteers from raising objections.",
+          "To argue that seniority should be ignored."
+        ],
+        "correctIndex": 1,
+        "explanation": "The case models a process that respects people while improving a practical decision."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-adab-09",
+    "title": "A Voice Note Before Sending the Difficult Email",
+    "level": "C2",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] I recorded this voice note for myself after drafting an email that was perfectly factual and, I realised, unnecessarily humiliating.",
+      "Narrator: A colleague had missed a deadline that affected several others. My first draft opened with the failure, copied a wide group, and asked questions whose answers I already knew.",
+      "Narrator: The message would have created evidence of accountability, but it would also have converted a repairable error into a public performance.",
+      "Narrator: So I began again with the operational facts: which deliverable was incomplete, what dependency had been delayed, and what information was needed to recover the schedule.",
+      "Narrator: I moved the wider team out of the first exchange. Public visibility can be appropriate when a decision needs collective ownership; it should not be used to manufacture embarrassment.",
+      "Narrator: The colleague explained that an approved change had not reached her. That did not remove her responsibility to check, but it changed the remedy from accusation to a shared process fix.",
+      "Narrator: We agreed on a revised date, a brief checkpoint, and one channel for changes. I also acknowledged the pressure created by my own late request.",
+      "Narrator: This was not softness masquerading as management. The missed deadline remained documented and the client still received an honest update.",
+      "Narrator: It was an attempt to make correction proportionate: precise enough to improve the work, restrained enough to preserve dignity, and transparent about consequences.",
+      "Narrator: Adab in written communication is often visible in what we decline to imply. We can state a problem without assigning motives we cannot know.",
+      "Narrator: I sent the second email. It was shorter, clearer, and much more likely to produce the behaviour the project needed."
+    ],
+    "quiz": [
+      {
+        "question": "Which value does the speaker place at the centre of the private email about a missed deadline?",
+        "options": [
+          "A difficult email should correct the problem without recruiting an audience for someone’s shame.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that a difficult email should correct the problem without recruiting an audience for someone’s shame."
+      },
+      {
+        "question": "What evidence from the private email about a missed deadline requires the listener to revise an easy conclusion?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The first draft copied a wide group and asked questions whose answers were already known.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the first draft copied a wide group and asked questions whose answers were already known."
+      },
+      {
+        "question": "What caution should accompany a confident response to the private email about a missed deadline?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Use a private, proportionate channel unless wider disclosure is genuinely necessary.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that use a private, proportionate channel unless wider disclosure is genuinely necessary."
+      },
+      {
+        "question": "Which action translates the reasoning of the private email about a missed deadline into practice?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Revise the message around the repair needed and send it only to people who must act."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that revise the message around the repair needed and send it only to people who must act."
+      },
+      {
+        "question": "What does the private email about a missed deadline show is a misleading habit?",
+        "options": [
+          "using factual accuracy as a licence to humiliate.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that using factual accuracy as a licence to humiliate"
+      },
+      {
+        "question": "Why should listeners pause before deciding what the private email about a missed deadline means?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Use a private, proportionate channel unless wider disclosure is genuinely necessary.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that use a private, proportionate channel unless wider disclosure is genuinely necessary."
+      },
+      {
+        "question": "What important distinction disappears when the private email about a missed deadline is handled badly?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A difficult email should correct the problem without recruiting an audience for someone’s shame.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a difficult email should correct the problem without recruiting an audience for someone’s shame."
+      },
+      {
+        "question": "Which approach is least consistent with the account of the private email about a missed deadline?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "using factual accuracy as a licence to humiliate."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that using factual accuracy as a licence to humiliate"
+      },
+      {
+        "question": "What does acting responsibly mean in the case of the private email about a missed deadline?",
+        "options": [
+          "Revise the message around the repair needed and send it only to people who must act.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that revise the message around the repair needed and send it only to people who must act."
+      },
+      {
+        "question": "What is the account ultimately asking listeners to preserve in the private email about a missed deadline?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A difficult email should correct the problem without recruiting an audience for someone’s shame.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a difficult email should correct the problem without recruiting an audience for someone’s shame."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-adab-10",
+    "title": "Can Disagreement Be Both Firm and Courteous?",
+    "level": "C2",
+    "themeId": "adab",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] In our listener mail, a recurring concern is that polite disagreement can become a way of avoiding a necessary objection. Is that fair?",
+      "Analyst: It can happen. Courtesy becomes evasive when it replaces the claim with vague reassurance, or when it leaves a harmful decision untouched because confrontation feels uncomfortable.",
+      "Interviewer: So what does a direct but well-mannered objection sound like in practice?",
+      "Analyst: It names the proposition, the evidence, and the consequence. For example: I do not think this timetable is safe because the transport plan leaves no supervision after sunset.",
+      "Interviewer: That is much clearer than saying the proposal makes people uneasy.",
+      "Analyst: Exactly. It also separates the argument from the person. You may respect a colleague while showing that a particular assumption is unsupported.",
+      "Interviewer: What should happen after the objection is raised?",
+      "Analyst: The group should test it. Ask what evidence would weaken the objection, who is affected, and who has authority to make the final decision.",
+      "Interviewer: Does restating the opposing view really matter at an advanced level?",
+      "Analyst: Very much. It prevents victory through caricature. If the other person says, Yes, that is what I mean, then the disagreement has become intellectually honest.",
+      "Interviewer: And when the issue concerns a religious ruling, medicine, law, or technical safety?",
+      "Analyst: Then adab includes knowing the limit of the conversation. A respectful discussion can prepare good questions, but it cannot replace qualified advice.",
+      "Interviewer: What is the final test?",
+      "Analyst: Whether the exchange leaves the claim clearer, the affected people safer, and the relationship capable of carrying the next difficult conversation.",
+      "Interviewer: What should someone do if the meeting has already become personal?",
+      "Analyst: Pause the exchange, return to the decision at hand, and if necessary ask a neutral person to help set a fair process before the relationship is damaged further."
+    ],
+    "quiz": [
+      {
+        "question": "How does the disagreement over a harmful decision reshape the speaker’s view of the issue?",
+        "options": [
+          "Firm disagreement addresses a decision without evasion or personal attack.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that courtesy and firmness can coexist when disagreement addresses the decision rather than evading it or attacking people."
+      },
+      {
+        "question": "Where does the disagreement over a harmful decision expose the weakness of a quick assumption?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The speaker distinguishes a clear objection from vague reassurance that leaves harmful decisions untouched.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the speaker distinguishes a clear objection from vague reassurance that leaves harmful decisions untouched."
+      },
+      {
+        "question": "What boundary keeps the account of the disagreement over a harmful decision proportionate?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Courtesy must not become a reason to avoid a necessary objection.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that courtesy must not become a reason to avoid a necessary objection."
+      },
+      {
+        "question": "What practical response does the disagreement over a harmful decision support?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "State the concern precisely, give reasons, and remain open to a better argument."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that state the concern precisely, give reasons, and remain open to a better argument."
+      },
+      {
+        "question": "Which temptation is being criticised through the disagreement over a harmful decision?",
+        "options": [
+          "treating politeness as silence or bluntness as honesty.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that treating politeness as silence or bluntness as honesty"
+      },
+      {
+        "question": "Why does the speaker withhold a simple verdict on the disagreement over a harmful decision?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Courtesy must not become a reason to avoid a necessary objection.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that courtesy must not become a reason to avoid a necessary objection."
+      },
+      {
+        "question": "What would be obscured by mishandling the disagreement over a harmful decision?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Firm disagreement addresses a decision without evasion or personal attack.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that courtesy and firmness can coexist when disagreement addresses the decision rather than evading it or attacking people."
+      },
+      {
+        "question": "Which proposal misunderstands the lesson of the disagreement over a harmful decision?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "treating politeness as silence or bluntness as honesty."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that treating politeness as silence or bluntness as honesty"
+      },
+      {
+        "question": "What must a careful decision-maker do in the disagreement over a harmful decision?",
+        "options": [
+          "State the concern precisely, give reasons, and remain open to a better argument.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that state the concern precisely, give reasons, and remain open to a better argument."
+      },
+      {
+        "question": "What should remain clear after considering the disagreement over a harmful decision?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Firm disagreement addresses a decision without evasion or personal attack.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that courtesy and firmness can coexist when disagreement addresses the decision rather than evading it or attacking people."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "adab",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -34,9 +34,19 @@ import SplashScreen from './components/SplashScreen';
 import InstallPrompt from './src/components/InstallPrompt';
 import { ApiLimitModal } from './components/ApiLimitModal';
 import { getUserAssignments, getUserNotifications, markNotificationRead, markUserAssignmentRead } from './services/admin';
+import ErrorBoundary from './src/components/ErrorBoundary';
 
 // App version — must match APP_VERSION in sw.js. Bump on every deploy.
 const APP_VERSION = '2.1.2';
+
+// Bump a module's release value whenever it receives a meaningful content or
+// experience update. Each badge is dismissed independently after that module
+// is opened, so the dashboard stays informative without becoming noisy.
+const MODULE_UPDATE_RELEASES: Partial<Record<AppView, { release: string }>> = {
+  [AppView.READING]: { release: 'reading-library-2026-08' },
+  [AppView.LISTENING]: { release: 'listening-library-2026-08' },
+  [AppView.SHADOWING]: { release: 'shadowing-paths-2026-08' },
+};
 
 // Force-update: check if the running Service Worker matches this version.
 // If it doesn't (stale cache / old PWA install), force SW update + page reload.
@@ -138,6 +148,8 @@ const App: React.FC = () => {
   const [taskNotifications, setTaskNotifications] = useState<UserNotification[]>([]);
   const [taskPopup, setTaskPopup] = useState<UserNotification | null>(null);
   const [showTour, setShowTour] = useState(false);
+  const [unseenModuleUpdates, setUnseenModuleUpdates] = useState<Partial<Record<AppView, boolean>>>({});
+  const [moduleRecoveryKey, setModuleRecoveryKey] = useState(0);
 
   // Dashboard View State
   const [dashboardView, setDashboardView] = useState<'yesterday' | 'today' | 'week' | 'month'>('today');
@@ -170,6 +182,20 @@ const App: React.FC = () => {
     void loadInbox();
     return () => { cancelled = true; };
   }, [user?.uid, isActive, isSyncing]);
+
+  useEffect(() => {
+    if (!user) {
+      setUnseenModuleUpdates({});
+      return;
+    }
+
+    const pendingUpdates = Object.entries(MODULE_UPDATE_RELEASES).reduce<Partial<Record<AppView, boolean>>>((updates, [moduleView, update]) => {
+      const key = `lovspeak_module_update_${update!.release}_${user.uid}`;
+      if (!localStorage.getItem(key)) updates[moduleView as AppView] = true;
+      return updates;
+    }, {});
+    setUnseenModuleUpdates(pendingUpdates);
+  }, [user]);
 
   useEffect(() => {
     const handlePopState = () => {
@@ -380,7 +406,15 @@ const App: React.FC = () => {
     }
   };
 
+  const acknowledgeModuleUpdate = (targetView: AppView) => {
+    const update = MODULE_UPDATE_RELEASES[targetView];
+    if (!user || !update || !unseenModuleUpdates[targetView]) return;
+    localStorage.setItem(`lovspeak_module_update_${update.release}_${user.uid}`, 'seen');
+    setUnseenModuleUpdates(current => ({ ...current, [targetView]: false }));
+  };
+
   const handleStartTask = (task: DailyTask) => {
+    acknowledgeModuleUpdate(task.moduleView);
     setActiveTaskId(task.id);
     setModuleContext({ 
       title: task.title, 
@@ -388,6 +422,10 @@ const App: React.FC = () => {
       targetLessonId: task.targetLessonId,
       shadowingTaskId: task.shadowingTaskId,
       shadowingSentenceIds: task.shadowingSentenceIds,
+      shadowingMode: task.shadowingMode,
+      shadowingTheme: task.shadowingTheme,
+      shadowingScenarioId: task.shadowingScenarioId,
+      shadowingRole: task.shadowingRole,
       bridgeId: task.bridgeId,
       bridgeIds: task.bridgeIds,
       vocabWordIds: task.vocabWordIds,
@@ -415,6 +453,7 @@ const App: React.FC = () => {
     const target = assignment.target;
     const targetView = target.moduleView || (target.kind === 'roadmap_pack' ? AppView.ROADMAP : AppView.HOME);
     if (targetView === AppView.HOME) return;
+    acknowledgeModuleUpdate(targetView);
     setActiveTaskId(null);
     setModuleContext({
       autoStart: true,
@@ -433,6 +472,7 @@ const App: React.FC = () => {
     setView(targetView);
   };
   const handleNavigate = (targetView: AppView) => {
+    acknowledgeModuleUpdate(targetView);
     setActiveTaskId(null);
     setModuleContext(null);
     setView(targetView);
@@ -440,9 +480,16 @@ const App: React.FC = () => {
 
   const handleRoadmapNavigation = (targetView: AppView, context: any) => {
     // A roadmap step has its own completion lane; never inherit a daily-plan task.
+    acknowledgeModuleUpdate(targetView);
     setActiveTaskId(null);
     setModuleContext(context);
     setView(targetView);
+  };
+
+  const resetCurrentModule = () => {
+    setActiveTaskId(null);
+    setModuleContext(null);
+    setModuleRecoveryKey(key => key + 1);
   };
 
   const saveActiveTaskProgress = (data: any) => {
@@ -695,8 +742,13 @@ const App: React.FC = () => {
                               <button
                                 key={item.id}
                                 onClick={() => handleNavigate(item.id as AppView)}
-                                className="flex-shrink-0 w-[72px] md:w-28 lg:w-32 flex flex-col items-center justify-center p-3 lg:p-4 bg-white dark:bg-gray-800 rounded-2xl lg:rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-lovelya-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group snap-center"
+                                className="relative flex-shrink-0 w-[72px] md:w-28 lg:w-32 flex flex-col items-center justify-center p-3 lg:p-4 bg-white dark:bg-gray-800 rounded-2xl lg:rounded-3xl shadow-sm border border-gray-100 dark:border-gray-700 hover:border-lovelya-300 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group snap-center"
                               >
+                                {unseenModuleUpdates[item.id as AppView] && (
+                                  <span className="absolute -top-1 -right-1 z-10 rounded-full bg-lovelya-600 px-1.5 py-0.5 text-[7px] md:text-[9px] font-black leading-none text-white shadow-sm ring-2 ring-white dark:ring-gray-800">
+                                    Baru
+                                  </span>
+                                )}
                                 <div className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl ${item.bg} flex items-center justify-center text-sm md:text-lg lg:text-xl ${item.color} mb-2 lg:mb-2 group-hover:scale-110 transition-transform shadow-sm`}>
                                   <i className={`fas ${item.icon}`}></i>
                                 </div>
@@ -728,6 +780,11 @@ const App: React.FC = () => {
                           <div className="flex items-center gap-3">
                             <div className="w-1.5 h-7 bg-lovelya-600 rounded-full"></div>
                             <h3 className="text-sm md:text-2xl lg:text-3xl font-black text-gray-800 dark:text-white tracking-tight">Daily Missions</h3>
+                            {(dashboardView === 'today' || dashboardView === 'yesterday') && tasks.length > 0 && (
+                              <span className="bg-lovelya-50 dark:bg-lovelya-900/30 text-lovelya-600 dark:text-lovelya-400 text-[9px] md:text-xs font-black px-2.5 py-1 rounded-full uppercase tracking-wider shrink-0">
+                                {completedTasks}/{tasks.length} · {progressPercent}%
+                              </span>
+                            )}
                           </div>
                           <div className="flex flex-col items-center sm:items-end gap-2">
                             <div className="bg-gray-100 dark:bg-gray-700 p-1 rounded-2xl flex shrink-0 w-full sm:w-auto shadow-inner">
@@ -999,13 +1056,22 @@ const App: React.FC = () => {
 
   return (
     <Layout currentView={view} onNavigate={handleNavigate} userProfile={userProfile}>
-      <Suspense fallback={
-        <div className="min-h-[60vh] flex items-center justify-center">
-          <div className="w-12 h-12 border-4 border-lovelya-500 border-t-transparent rounded-full animate-spin"></div>
-        </div>
-      }>
-        {renderContent()}
-      </Suspense>
+      <ErrorBoundary
+        key={`${view}-${moduleRecoveryKey}`}
+        onReset={resetCurrentModule}
+        onGoHome={() => {
+          resetCurrentModule();
+          setView(AppView.HOME);
+        }}
+      >
+        <Suspense fallback={
+          <div className="min-h-[60vh] flex items-center justify-center">
+            <div className="w-12 h-12 border-4 border-lovelya-500 border-t-transparent rounded-full animate-spin"></div>
+          </div>
+        }>
+          {renderContent()}
+        </Suspense>
+      </ErrorBoundary>
       <InstallPrompt />
       <ApiLimitModal onNavigateToSettings={() => setView(AppView.SETTINGS)} />
 

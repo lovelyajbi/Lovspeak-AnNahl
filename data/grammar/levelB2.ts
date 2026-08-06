@@ -874,5 +874,90 @@ export const LEVEL_B2: GrammarLesson[] = [
         { id: 'verbs', label: 'Descriptive Verbs', type: 'formula', detail: 'Suggest, Offer, Refuse, Warn, Promise.' }
       ]
     }
+  },
+  {
+    id: 'b2-third-conditional',
+    title: '11. Third Conditional',
+    level: 'B2',
+    icon: 'fa-hourglass-end',
+    description: 'Membicarakan situasi hipotetis di masa lalu yang tidak terjadi, sering digunakan untuk menyatakan penyesalan.',
+    sections: [
+      {
+        heading: '1. Konsep Dasar: Mengubah Masa Lalu yang Tak Bisa Diubah',
+        content: 'Third Conditional digunakan untuk membicarakan situasi yang berlawanan dengan kenyataan di masa lalu — sesuatu yang TIDAK terjadi, dan hasil khayalannya jika seandainya itu terjadi. Rumusnya: **If + Past Perfect, would have + Verb 3**.\n\nKarena masa lalu sudah berlalu dan tidak bisa diubah, tenses ini murni bersifat spekulatif tentang "apa yang seharusnya terjadi". "If I had studied harder, I would have passed the exam" berarti Anda TIDAK belajar giat, dan pada kenyataannya Anda TIDAK lulus ujian.',
+        formula: 'If + Past Perfect, Would Have + Verb 3',
+        exceptions: 'Selalu gunakan Past Perfect (had + V3) di klausa "if", bukan Simple Past.',
+        examples: [
+          { text: 'If I had studied harder, I would have passed the exam.', isCorrect: true, translation: 'Jika saya belajar lebih giat, saya pasti sudah lulus ujian.' },
+          { text: 'If she had left earlier, she would have caught the train.', isCorrect: true, translation: 'Jika dia berangkat lebih awal, dia pasti sudah mengejar keretanya.' },
+          { text: 'If we had known about the traffic, we would have taken another route.', isCorrect: true, translation: 'Jika kami tahu tentang kemacetan itu, kami pasti sudah mengambil rute lain.' },
+          { text: 'If he had listened to his parents, he would have avoided the mistake.', isCorrect: true, translation: 'Jika dia mendengarkan orang tuanya, dia pasti sudah menghindari kesalahan itu.' },
+          { text: 'They would have won the match if they had trained harder.', isCorrect: true, translation: 'Mereka pasti sudah memenangkan pertandingan jika mereka berlatih lebih keras.' }
+        ]
+      },
+      {
+        heading: '2. Menyatakan Penyesalan (Regret)',
+        content: 'Fungsi paling umum dari Third Conditional adalah mengekspresikan penyesalan atas keputusan atau kejadian di masa lalu. Ini adalah cara halus namun kuat untuk berkata "seharusnya aku melakukan hal berbeda" tanpa terjebak dalam kalimat yang terlalu emosional.\n\nPenyesalan yang diungkapkan lewat tenses ini bersifat reflektif, bukan menyalahkan diri secara berlebihan. Ini membantu pembelajar bahasa Inggris mengungkapkan nuansa emosi yang kompleks — kekecewaan bercampur harapan tentang bagaimana keadaan bisa berbeda.',
+        formula: 'If + Past Perfect (regret), Would Have + V3 (imagined outcome)',
+        exceptions: 'Bandingkan dengan "I wish I had..." yang juga mengekspresikan penyesalan tanpa struktur if-clause penuh.',
+        examples: [
+          { text: 'If I had known you were coming, I would have baked a cake.', isCorrect: true, translation: 'Jika saya tahu kamu akan datang, saya pasti sudah membuat kue.' },
+          { text: 'If she had saved money, she would not have borrowed from her friend.', isCorrect: true, translation: 'Jika dia menabung uang, dia pasti tidak akan meminjam dari temannya.' },
+          { text: 'If I had apologized sooner, we would have stayed friends.', isCorrect: true, translation: 'Jika saya minta maaf lebih cepat, kami pasti masih berteman.' },
+          { text: 'If he had checked the map, he would not have gotten lost.', isCorrect: true, translation: 'Jika dia memeriksa peta, dia pasti tidak akan tersesat.' },
+          { text: 'We would have arrived on time if we had left the house earlier.', isCorrect: true, translation: 'Kami pasti sudah tiba tepat waktu jika kami meninggalkan rumah lebih awal.' }
+        ]
+      },
+      {
+        heading: '3. Membedakan Second vs Third Conditional',
+        content: 'Perbedaan kunci: Second Conditional membicarakan masa KINI/masa depan yang tidak nyata (If + Past Simple, would + V1), sementara Third Conditional membicarakan masa LALU yang tidak terjadi (If + Past Perfect, would have + V3).\n\nBandingkan: "If I had more money, I would buy a house" (Second — saat ini saya tidak punya cukup uang) versus "If I had had more money, I would have bought a house" (Third — dulu, di masa lalu, saya tidak punya cukup uang dan tidak jadi membeli rumah). Perhatikan struktur "had had" yang sering membingungkan pembelajar.',
+        formula: 'Second = Present Unreal | Third = Past Unreal',
+        exceptions: 'Struktur "had had" (had sebagai auxiliary + had sebagai main verb) adalah benar secara gramatikal, meski terdengar aneh.',
+        examples: [
+          { text: 'If I were rich, I would travel a lot. (now)', isCorrect: true, translation: 'Jika saya kaya, saya akan sering bepergian. (sekarang)' },
+          { text: 'If I had been rich, I would have traveled a lot. (in the past)', isCorrect: true, translation: 'Jika dulu saya kaya, saya pasti sudah sering bepergian. (di masa lalu)' },
+          { text: 'If she had had more time, she would have finished the project.', isCorrect: true, translation: 'Jika dulu dia punya lebih banyak waktu, dia pasti sudah menyelesaikan proyek itu.' },
+          { text: 'If they had prepared better, they would have succeeded.', isCorrect: true, translation: 'Jika mereka mempersiapkan lebih baik, mereka pasti sudah berhasil.' },
+          { text: 'What would you have done if you had been in my situation?', isCorrect: true, translation: 'Apa yang akan kamu lakukan jika kamu berada di posisiku (dulu)?' }
+        ]
+      },
+      {
+        heading: '4. Variasi Modal: Could Have dan Might Have',
+        content: 'Sama seperti Second Conditional, kita bisa mengganti "would have" dengan "could have" (kemampuan hipotetis di masa lalu) atau "might have" (kemungkinan yang kurang pasti di masa lalu) untuk menambahkan nuansa berbeda.\n\n"If I had trained harder, I could have won" menekankan kemampuan yang terlewatkan. "If I had trained harder, I might have won" menekankan bahwa kemenangan hanyalah salah satu kemungkinan, bukan kepastian.',
+        formula: 'If + Past Perfect, Could/Might Have + Verb 3',
+        exceptions: 'Could have menekankan kemampuan yang hilang, Might have menekankan ketidakpastian.',
+        examples: [
+          { text: 'If I had trained harder, I could have won the competition.', isCorrect: true, translation: 'Jika saya berlatih lebih keras, saya mungkin bisa memenangkan kompetisi itu.' },
+          { text: 'If the weather had been better, we might have gone hiking.', isCorrect: true, translation: 'Jika cuaca lebih baik, kami mungkin sudah pergi mendaki.' },
+          { text: 'If she had asked for help, she could have finished on time.', isCorrect: true, translation: 'Jika dia meminta bantuan, dia bisa saja selesai tepat waktu.' },
+          { text: 'If he had taken the medicine, he might have recovered faster.', isCorrect: true, translation: 'Jika dia minum obatnya, dia mungkin sudah pulih lebih cepat.' },
+          { text: 'If we had left earlier, we could have avoided the traffic.', isCorrect: true, translation: 'Jika kami berangkat lebih awal, kami bisa saja menghindari kemacetan.' }
+        ]
+      },
+      {
+        heading: '5. Konteks Qadar: Menerima Ketetapan dengan Ridha',
+        content: 'Third Conditional sering memicu perasaan "andai saja" (seandainya), namun sebagai seorang Muslim, penting untuk mengingat konsep Qadar — bahwa segala sesuatu yang telah terjadi adalah ketetapan Allah. Menggunakan tenses ini boleh untuk evaluasi diri dan pembelajaran, tetapi jangan sampai berlarut dalam penyesalan yang menjauhkan dari tawakkal.\n\nRasulullah SAW mengajarkan untuk berkata "Qaddarallahu wa ma sha\'a fa\'ala" (Allah telah menetapkan, dan apa yang Dia kehendaki, Dia lakukan) daripada terus-menerus berkata "seandainya". Gunakan Third Conditional untuk belajar dari masa lalu, bukan untuk tenggelam dalam kesedihan atasnya.',
+        formula: 'Reflection + Acceptance (Ridha bil Qadar)',
+        exceptions: 'Hindari penggunaan berlebihan yang mengarah pada penyesalan berkepanjangan; gunakan untuk evaluasi dan perbaikan.',
+        examples: [
+          { text: 'If I had prayed more consistently, I would have felt closer to Allah.', isCorrect: true, translation: 'Jika saya shalat lebih konsisten, saya pasti sudah merasa lebih dekat dengan Allah.' },
+          { text: 'If we had helped more people, we would have earned more blessings.', isCorrect: true, translation: 'Jika kami membantu lebih banyak orang, kami pasti sudah mendapat lebih banyak berkah.' },
+          { text: 'If she had been more patient, she would have handled it better, but it was already Qadar.', isCorrect: true, translation: 'Jika dia lebih sabar, dia pasti sudah menanganinya dengan lebih baik, tapi itu sudah menjadi Qadar.' },
+          { text: 'If I had known the outcome, I would have made the same choice, trusting Allah.', isCorrect: true, translation: 'Meskipun saya tahu hasilnya, saya akan tetap membuat pilihan yang sama, karena percaya kepada Allah.' },
+          { text: 'We would have avoided many mistakes if we had sought more knowledge, and now we learn from them.', isCorrect: true, translation: 'Kami pasti sudah menghindari banyak kesalahan jika kami mencari lebih banyak ilmu, dan sekarang kami belajar darinya.' }
+        ]
+      }
+    ],
+    mindmap: {
+      id: 'b2-third-cond-root', label: 'THIRD CONDITIONAL', type: 'root', children: [
+        { id: 'tc-form', label: 'If + Past Perfect, Would Have + V3', type: 'formula', children: [
+          { id: 'tc-hadhad', label: 'Watch out: "had had" is correct', type: 'sub' }
+        ]},
+        { id: 'tc-use', label: 'Unreal Past / Regret', type: 'main', children: [
+          { id: 'tc-modal', label: 'Could Have / Might Have variation', type: 'sub' }
+        ]},
+        { id: 'tc-vs-second', label: 'vs Second: Past vs Present Unreal', type: 'warning' }
+      ]
+    }
   }
 ];

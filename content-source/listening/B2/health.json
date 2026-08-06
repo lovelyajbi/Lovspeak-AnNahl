@@ -6,30 +6,144 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Six weeks after the surgeon reconstructed my torn ligament, I still flinched every time I stepped off a curb, half convinced the knee would give way beneath me.",
-      "Narrator: [honest] The physiotherapist kept insisting that the joint was structurally sound again, yet no amount of reassurance could override the memory of that first, sickening pop on the football pitch.",
-      "Narrator: [frustrated] What nobody had warned me about was how tedious recovery would be, how much of it consisted of small, unglamorous exercises repeated until they became almost meaningless.",
-      "Narrator: [thoughtful] I had always assumed healing was something that simply happened to you, passively, while you waited it out on the sofa with your leg elevated.",
-      "Narrator: [surprised] Instead, I discovered that recovery demanded a kind of discipline I had never needed for the sport itself, since motivation is easy when you are winning.",
-      "Narrator: [determined] Three sets of quad exercises before breakfast, ice afterward, a resistance band looped around the doorframe each evening, whether or not I felt like bothering.",
-      "Narrator: [honest] There were days I resented the whole process, particularly when a teammate posted videos of himself training as though nothing in the world could touch him.",
-      "Narrator: [grateful] My physiotherapist, a patient man named Yusuf, eventually told me to stop measuring my recovery against anyone else's timeline, since no two ligaments heal identically.",
-      "Narrator: [thoughtful] That advice sounds obvious written down, but hearing it from someone who had watched hundreds of knees heal carried a weight my own reasoning never managed.",
-      "Narrator: [hopeful] By the fourth month, I could finally jog in a straight line without that instinctive hesitation, though sharp turns still made me noticeably nervous.",
-      "Narrator: [reflective] I used to think confidence returned the moment the injury healed, but I now understand that the body trusts itself only after evidence, not after permission.",
-      "Narrator: [warmly] These days, when the knee twinges after a long run, I no longer panic; I simply rest it, the way Yusuf taught me, and wait.",
-      "Narrator: [peacefully] Recovery, I learned, is less a return to who you were and more a slow negotiation with who your body has quietly become."
+      "Narrator: [thoughtful] Six weeks after the surgeon reconstructed my torn ligament, I still flinched every time I stepped off a curb, half convinced the knee would give way beneath me.",
+      "Narrator: The physiotherapist kept insisting that the joint was structurally sound again, yet no amount of reassurance could override the memory of that first, sickening pop on the football pitch.",
+      "Narrator: [carefully] What nobody had warned me about was how tedious recovery would be, how much of it consisted of small, unglamorous exercises repeated until they became almost meaningless.",
+      "Narrator: I had always assumed healing was something that simply happened to you, passively, while you waited it out on the sofa with your leg elevated.",
+      "Narrator: [reflective] Instead, I discovered that recovery demanded a kind of discipline I had never needed for the sport itself, since motivation is easy when you are winning.",
+      "Narrator: Three sets of quad exercises before breakfast, ice afterward, a resistance band looped around the doorframe each evening, whether or not I felt like bothering.",
+      "Narrator: [honestly] There were days I resented the whole process, particularly when a teammate posted videos of himself training as though nothing in the world could touch him.",
+      "Narrator: My physiotherapist, a patient man named Yusuf, eventually told me to stop measuring my recovery against anyone else's timeline, since no two ligaments heal identically.",
+      "Narrator: [gently] That advice sounds obvious written down, but hearing it from someone who had watched hundreds of knees heal carried a weight my own reasoning never managed.",
+      "Narrator: By the fourth month, I could finally jog in a straight line without that instinctive hesitation, though sharp turns still made me noticeably nervous.",
+      "Narrator: [calmly] I used to think confidence returned the moment the injury healed, but I now understand that the body trusts itself only after evidence, not after permission.",
+      "Narrator: These days, when the knee twinges after a long run, I no longer panic; I simply rest it, the way Yusuf taught me, and wait.",
+      "Narrator: [encouraging] Recovery, I learned, is less a return to who you were and more a slow negotiation with who your body has quietly become."
     ],
     "quiz": [
-      { "question": "How did the narrator react to ordinary movements weeks after her surgery?", "options": ["She avoided leaving the house entirely", "She flinched, half convinced the knee would give way", "She felt no lingering fear at all", "She stopped attending physiotherapy"], "correctIndex": 1, "explanation": "She says she still flinched stepping off a curb, half convinced the knee would give way beneath her." },
-      { "question": "What did the narrator not expect about recovery?", "options": ["That it would be quick", "How tedious it would be, full of small repeated exercises", "That it required no effort", "That it would be painless"], "correctIndex": 1, "explanation": "She says nobody warned her how tedious recovery would be, consisting of small, unglamorous exercises." },
-      { "question": "What made her feel further behind in her recovery?", "options": ["Her physiotherapist's schedule", "Comparing herself to a teammate's effortless training videos", "A second injury", "Missing appointments"], "correctIndex": 1, "explanation": "She resented the process particularly when a teammate posted videos of himself training effortlessly." },
-      { "question": "What did Yusuf, her physiotherapist, eventually tell her?", "options": ["To quit the sport", "To stop measuring her recovery against anyone else's timeline", "To ice her knee only once a week", "To skip her exercises"], "correctIndex": 1, "explanation": "Yusuf told her to stop comparing her recovery to others, since no two ligaments heal identically." },
-      { "question": "What conclusion does the narrator reach about confidence and healing?", "options": ["Confidence returns the instant an injury heals", "The body trusts itself only after evidence, not permission", "Confidence has nothing to do with physical recovery", "She never regained confidence in her knee"], "correctIndex": 1, "explanation": "She concludes the body trusts itself only after evidence, not after permission." }
-    ]
+      {
+        "question": "How did the narrator react to ordinary movements weeks after her surgery?",
+        "options": [
+          "She avoided leaving the house entirely",
+          "She felt no lingering fear at all",
+          "She flinched, half convinced the knee would give way",
+          "She stopped attending physiotherapy"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says she still flinched stepping off a curb, half convinced the knee would give way beneath her."
+      },
+      {
+        "question": "What did the narrator not expect about recovery?",
+        "options": [
+          "That it would be quick",
+          "How tedious it would be, full of small repeated exercises",
+          "That it required no effort",
+          "That it would be painless"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says nobody warned her how tedious recovery would be, consisting of small, unglamorous exercises."
+      },
+      {
+        "question": "What made her feel further behind in her recovery?",
+        "options": [
+          "Comparing herself to a teammate's effortless training videos",
+          "Her physiotherapist's schedule",
+          "A second injury",
+          "Missing appointments"
+        ],
+        "correctIndex": 0,
+        "explanation": "She resented the process particularly when a teammate posted videos of himself training effortlessly."
+      },
+      {
+        "question": "What did Yusuf, her physiotherapist, eventually tell her?",
+        "options": [
+          "To quit the sport",
+          "To ice her knee only once a week",
+          "To skip her exercises",
+          "To stop measuring her recovery against anyone else's timeline"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf told her to stop comparing her recovery to others, since no two ligaments heal identically."
+      },
+      {
+        "question": "What conclusion does the narrator reach about confidence and healing?",
+        "options": [
+          "Confidence returns the instant an injury heals",
+          "The body trusts itself only after evidence, not permission",
+          "Confidence has nothing to do with physical recovery",
+          "She never regained confidence in her knee"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes the body trusts itself only after evidence, not after permission."
+      },
+      {
+        "question": "Why did the narrator distrust the knee despite medical reassurance?",
+        "options": [
+          "The injury memory remained emotionally powerful",
+          "The operation had failed",
+          "The physiotherapist refused tests",
+          "The knee was never examined"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that the injury memory remained emotionally powerful."
+      },
+      {
+        "question": "What made rehabilitation harder than sport?",
+        "options": [
+          "It required no discipline",
+          "It involved team competition",
+          "It produced immediate wins",
+          "Progress depended on tedious repeated exercises"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that progress depended on tedious repeated exercises."
+      },
+      {
+        "question": "Why did Yusuf discourage comparison?",
+        "options": [
+          "The teammate had another sport",
+          "Videos cannot show movement",
+          "Healing timelines differ between individuals",
+          "Competition delays every recovery"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that healing timelines differ between individuals."
+      },
+      {
+        "question": "What evidence helped confidence return?",
+        "options": [
+          "Permission to train immediately",
+          "Watching teammates online",
+          "Ignoring every twinge",
+          "Jogging successfully through gradual rehabilitation"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that jogging successfully through gradual rehabilitation."
+      },
+      {
+        "question": "Which response follows the narrator's lesson?",
+        "options": [
+          "Copy another athlete's timetable",
+          "Follow the individual clinical plan and observe progress",
+          "Treat fear as proof of reinjury",
+          "Rush sharp turns for confidence"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that follow the individual clinical plan and observe progress."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-health-02",
@@ -38,36 +152,153 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Larasati", "gender": "female" },
-      { "name": "Wisnu", "gender": "male" }
+      {
+        "name": "Larasati",
+        "gender": "female"
+      },
+      {
+        "name": "Wisnu",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Larasati: [amused] Wisnu, you checked your watch again. Are you obsessed with your heart rate now?",
-      "Wisnu: [defensive] I'm not obsessed, I'm informed. This thing tells me exactly how well I recovered from yesterday's session, down to the percentage.",
-      "Larasati: [skeptical] Does a percentage actually tell you anything useful, though, or does it just give you something new to worry about?",
-      "Wisnu: [confident] It tells me whether I should push hard today or take it easier, which frankly beats guessing based on how tired I feel.",
-      "Larasati: [thoughtful] I'd argue how tired you feel is precisely the information worth listening to, rather than outsourcing that judgment to an algorithm.",
-      "Wisnu: [considering] Fair point, except my own judgment has talked me into overtraining more than once, whereas the data has never lied to me.",
-      "Larasati: [curious] Has it ever made you anxious, though? I've heard people describe feeling almost punished by a bad sleep score.",
-      "Wisnu: [honest] Occasionally, yes. There was a stretch last month when a low readiness score genuinely ruined my morning before I'd even left bed.",
+      "Larasati: [thoughtful] Wisnu, you checked your watch again. Are you obsessed with your heart rate now?",
+      "Wisnu: I'm not obsessed, I'm informed. This thing tells me exactly how well I recovered from yesterday's session, down to the percentage.",
+      "Larasati: [carefully] Does a percentage actually tell you anything useful, though, or does it just give you something new to worry about?",
+      "Wisnu: It tells me whether I should push hard today or take it easier, which frankly beats guessing based on how tired I feel.",
+      "Larasati: [reflective] I'd argue how tired you feel is precisely the information worth listening to, rather than outsourcing that judgment to an algorithm.",
+      "Wisnu: Fair point, except my own judgment has talked me into overtraining more than once, whereas the data has never lied to me.",
+      "Larasati: [honestly] Has it ever made you anxious, though? I've heard people describe feeling almost punished by a bad sleep score.",
+      "Wisnu: Occasionally, yes. There was a stretch last month when a low readiness score genuinely ruined my morning before I'd even left bed.",
       "Larasati: [gently] That's exactly what worries me. A number decided how your day would feel before anything had happened.",
-      "Wisnu: [thoughtful] When you frame it that way, it does sound slightly absurd, letting a wristband dictate my mood before breakfast.",
-      "Larasati: [encouraging] I'm not saying throw it away, just that it shouldn't be the only voice you listen to.",
-      "Wisnu: [considering] What would you suggest instead, given you clearly think I've handed over too much authority to a gadget?",
-      "Larasati: [suggesting] Treat the data as one opinion among several, alongside how your body actually feels and what your week realistically allows.",
-      "Wisnu: [reflective] That's reasonable. I suppose I started trusting the number more than myself somewhere along the way, without really noticing.",
-      "Larasati: [warmly] Most of us do, eventually, with something. At least you're willing to question it instead of defending it blindly.",
-      "Wisnu: [amused] Don't get used to this humility, though. I'm still checking my recovery score the second we finish this conversation.",
-      "Larasati: [laughing] Naturally. Just promise me you'll ignore it occasionally, as an act of rebellion against your own wrist.",
-      "Wisnu: [smiling] Deal. Though if I sleep badly tonight, I reserve the right to blame you for the data."
+      "Wisnu: When you frame it that way, it does sound slightly absurd, letting a wristband dictate my mood before breakfast.",
+      "Larasati: [calmly] I'm not saying throw it away, just that it shouldn't be the only voice you listen to.",
+      "Wisnu: What would you suggest instead, given you clearly think I've handed over too much authority to a gadget?",
+      "Larasati: [encouraging] Treat the data as one opinion among several, alongside how your body actually feels and what your week realistically allows.",
+      "Wisnu: That's reasonable. I suppose I started trusting the number more than myself somewhere along the way, without really noticing.",
+      "Larasati: [seriously] Most of us do, eventually, with something. At least you're willing to question it instead of defending it blindly.",
+      "Wisnu: Don't get used to this humility, though. I'm still checking my recovery score the second we finish this conversation.",
+      "Larasati: Naturally. Just promise me you'll ignore it occasionally, as an act of rebellion against your own wrist.",
+      "Wisnu: Deal. Though if I sleep badly tonight, I reserve the right to blame you for the data."
     ],
     "quiz": [
-      { "question": "Why does Wisnu defend checking his watch so often?", "options": ["He is bored", "He says it tells him how well he recovered and whether to push hard", "He is waiting for a message", "He does not actually check it often"], "correctIndex": 1, "explanation": "Wisnu says the watch tells him exactly how well he recovered and whether to train hard or ease off." },
-      { "question": "What does Larasati argue should be trusted instead of the algorithm?", "options": ["A coach's opinion", "How tired he actually feels", "Random guessing", "His teammates' schedules"], "correctIndex": 1, "explanation": "Larasati argues that how tired he feels is the information worth listening to, not an outsourced algorithm." },
-      { "question": "What happened last month because of a low readiness score?", "options": ["Wisnu skipped training entirely", "It genuinely ruined his morning before he'd even left bed", "He broke his watch", "He ignored it completely"], "correctIndex": 1, "explanation": "Wisnu admits a low readiness score genuinely ruined his morning before he had even left bed." },
-      { "question": "What does Larasati suggest doing with the tracker's data?", "options": ["Deleting the app permanently", "Treating it as one opinion among several, not the only voice", "Trusting it completely over instinct", "Ignoring it entirely"], "correctIndex": 1, "explanation": "She suggests treating the data as one opinion among several, alongside how his body feels." },
-      { "question": "How does Wisnu respond to Larasati's advice by the end?", "options": ["He rejects it completely", "He agrees it's reasonable but admits he'll still check his score right away", "He deletes his fitness tracker app", "He stops speaking to her"], "correctIndex": 1, "explanation": "He agrees the advice is reasonable, though he jokes he'll still check his recovery score immediately." }
-    ]
+      {
+        "question": "Why does Wisnu defend checking his watch so often?",
+        "options": [
+          "He says it tells him how well he recovered and whether to push hard",
+          "He is bored",
+          "He is waiting for a message",
+          "He does not actually check it often"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wisnu says the watch tells him exactly how well he recovered and whether to train hard or ease off."
+      },
+      {
+        "question": "What does Larasati argue should be trusted instead of the algorithm?",
+        "options": [
+          "A coach's opinion",
+          "Random guessing",
+          "His teammates' schedules",
+          "How tired he actually feels"
+        ],
+        "correctIndex": 3,
+        "explanation": "Larasati argues that how tired he feels is the information worth listening to, not an outsourced algorithm."
+      },
+      {
+        "question": "What happened last month because of a low readiness score?",
+        "options": [
+          "Wisnu skipped training entirely",
+          "It genuinely ruined his morning before he'd even left bed",
+          "He broke his watch",
+          "He ignored it completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Wisnu admits a low readiness score genuinely ruined his morning before he had even left bed."
+      },
+      {
+        "question": "What does Larasati suggest doing with the tracker's data?",
+        "options": [
+          "Deleting the app permanently",
+          "Trusting it completely over instinct",
+          "Ignoring it entirely",
+          "Treating it as one opinion among several, not the only voice"
+        ],
+        "correctIndex": 3,
+        "explanation": "She suggests treating the data as one opinion among several, alongside how his body feels."
+      },
+      {
+        "question": "How does Wisnu respond to Larasati's advice by the end?",
+        "options": [
+          "He rejects it completely",
+          "He deletes his fitness tracker app",
+          "He agrees it's reasonable but admits he'll still check his score right away",
+          "He stops speaking to her"
+        ],
+        "correctIndex": 2,
+        "explanation": "He agrees the advice is reasonable, though he jokes he'll still check his recovery score immediately."
+      },
+      {
+        "question": "How did a low readiness score affect Wisnu?",
+        "options": [
+          "It damaged his mood before the day began",
+          "It improved his sleep",
+          "It cancelled his membership",
+          "It caused a physical injury"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that it damaged his mood before the day began."
+      },
+      {
+        "question": "What authority had Wisnu given the tracker?",
+        "options": [
+          "It chose his exercise location",
+          "It contacted his doctor",
+          "It often overruled his own judgment",
+          "It controlled his diet"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that it often overruled his own judgment."
+      },
+      {
+        "question": "What balance does Larasati recommend?",
+        "options": [
+          "Ignore all measurements",
+          "Combine data, bodily experience, and real-life capacity",
+          "Follow feelings alone",
+          "Train whenever the score rises"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that combine data, bodily experience, and real-life capacity."
+      },
+      {
+        "question": "Why does Wisnu accept her criticism?",
+        "options": [
+          "The device stopped working",
+          "She offers a newer watch",
+          "His trainer bans trackers",
+          "He recognises the number had become too influential"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that he recognises the number had become too influential."
+      },
+      {
+        "question": "Which use of a tracker fits their conclusion?",
+        "options": [
+          "Let it decide the day's mood",
+          "Treat its score as one input, not a verdict",
+          "Assume its data never misleads",
+          "Ignore fatigue when scores are high"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that treat its score as one input, not a verdict."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-health-03",
@@ -76,33 +307,147 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I nearly cancelled my first therapy appointment three times, convincing myself that admitting exhaustion would confirm I had failed at everything I valued.",
-      "Narrator: [honest] For months I had explained my fatigue away as ambition, as though collapsing into bed each night proved how seriously I took my career.",
-      "Narrator: [worried] It was my sister who finally pointed out that I hadn't laughed properly in longer than either of us could remember.",
-      "Narrator: [uncertain] Sitting across from the therapist, I struggled to explain what was wrong, since nothing catastrophic had technically happened to me.",
-      "Narrator: [thoughtful] She asked a question that unsettled me: when was the last time I did something purely because it brought me joy, not results?",
-      "Narrator: [honest] I could not answer immediately, and the silence that followed embarrassed me more than any admission of sadness would have.",
-      "Narrator: [reflective] Over the following weeks, she helped me notice how thoroughly I had tied my worth to output, as if rest had to be earned.",
-      "Narrator: [surprised] I hadn't realized how much resentment had built up beneath my dedication, resentment toward a version of success I had never chosen for myself.",
-      "Narrator: [determined] Gradually, I began scheduling things that produced nothing measurable: a walk with no destination, an afternoon reading fiction instead of reports.",
-      "Narrator: [honest] The guilt during those first unstructured hours was almost physical, a nagging voice insisting I should be doing something more productive instead.",
-      "Narrator: [hopeful] Slowly, that voice grew quieter, though it never disappeared entirely, and I've learned not to expect it to.",
-      "Narrator: [grateful] My sister noticed the shift before I fully trusted it myself, telling me I sounded lighter on the phone, less braced for disaster.",
-      "Narrator: [reflective] What surprises me most, looking back, is how close I came to dismissing therapy as something reserved for people with more obvious problems than mine.",
-      "Narrator: [thoughtful] I understand now that burnout rarely announces itself dramatically; it accumulates quietly until ordinary tasks feel unbearably heavy.",
-      "Narrator: [warmly] These days, when I notice that familiar tightness returning, I no longer wait for a crisis to justify asking for help again.",
-      "Narrator: [peacefully] Healing, I've discovered, is less about fixing something broken and more about learning to notice myself before I break at all."
+      "Narrator: [thoughtful] I nearly cancelled my first therapy appointment three times, convincing myself that admitting exhaustion would confirm I had failed at everything I valued.",
+      "Narrator: For months I had explained my fatigue away as ambition, as though collapsing into bed each night proved how seriously I took my career.",
+      "Narrator: [carefully] It was my sister who finally pointed out that I hadn't laughed properly in longer than either of us could remember.",
+      "Narrator: Sitting across from the therapist, I struggled to explain what was wrong, since nothing catastrophic had technically happened to me.",
+      "Narrator: [reflective] She asked a question that unsettled me: when was the last time I did something purely because it brought me joy, not results?",
+      "Narrator: I could not answer immediately, and the silence that followed embarrassed me more than any admission of sadness would have.",
+      "Narrator: [honestly] Over the following weeks, she helped me notice how thoroughly I had tied my worth to output, as if rest had to be earned.",
+      "Narrator: I hadn't realized how much resentment had built up beneath my dedication, resentment toward a version of success I had never chosen for myself.",
+      "Narrator: [gently] Gradually, I began scheduling things that produced nothing measurable: a walk with no destination, an afternoon reading fiction instead of reports.",
+      "Narrator: The guilt during those first unstructured hours was almost physical, a nagging voice insisting I should be doing something more productive instead.",
+      "Narrator: [calmly] Slowly, that voice grew quieter, though it never disappeared entirely, and I've learned not to expect it to.",
+      "Narrator: My sister noticed the shift before I fully trusted it myself, telling me I sounded lighter on the phone, less braced for disaster.",
+      "Narrator: [encouraging] What surprises me most, looking back, is how close I came to dismissing therapy as something reserved for people with more obvious problems than mine.",
+      "Narrator: I understand now that burnout rarely announces itself dramatically; it accumulates quietly until ordinary tasks feel unbearably heavy.",
+      "Narrator: [seriously] These days, when I notice that familiar tightness returning, I no longer wait for a crisis to justify asking for help again.",
+      "Narrator: Healing, I've discovered, is less about fixing something broken and more about learning to notice myself before I break at all."
     ],
     "quiz": [
-      { "question": "Why did the narrator nearly cancel his first therapy appointment?", "options": ["He had no time that day", "He believed admitting exhaustion would confirm he had failed", "He didn't believe in therapy", "He forgot the appointment"], "correctIndex": 1, "explanation": "He convinced himself that admitting exhaustion would confirm he had failed at everything he valued." },
-      { "question": "What did his sister point out?", "options": ["That he worked too little", "That he hadn't laughed properly in a very long time", "That he needed a vacation", "That he should change jobs"], "correctIndex": 1, "explanation": "His sister pointed out that he hadn't laughed properly in longer than either of them could remember." },
-      { "question": "What question from the therapist unsettled him most?", "options": ["Why he chose his career", "When he last did something purely for joy, not results", "How much he earned", "Whether he slept enough"], "correctIndex": 1, "explanation": "She asked when he had last done something purely because it brought him joy, not results." },
-      { "question": "What did the narrator begin scheduling during his recovery?", "options": ["More work meetings", "Things that produced nothing measurable, like an aimless walk", "Extra therapy sessions daily", "Nothing changed at all"], "correctIndex": 1, "explanation": "He began scheduling things that produced nothing measurable, such as a walk with no destination." },
-      { "question": "What does the narrator conclude about how burnout develops?", "options": ["It always happens suddenly and dramatically", "It accumulates quietly until ordinary tasks feel unbearably heavy", "It only affects people with obvious problems", "It cannot be prevented"], "correctIndex": 1, "explanation": "He concludes that burnout rarely announces itself dramatically; it accumulates quietly over time." }
-    ]
+      {
+        "question": "Why did the narrator nearly cancel his first therapy appointment?",
+        "options": [
+          "He believed admitting exhaustion would confirm he had failed",
+          "He had no time that day",
+          "He didn't believe in therapy",
+          "He forgot the appointment"
+        ],
+        "correctIndex": 0,
+        "explanation": "He convinced himself that admitting exhaustion would confirm he had failed at everything he valued."
+      },
+      {
+        "question": "What did his sister point out?",
+        "options": [
+          "That he worked too little",
+          "That he hadn't laughed properly in a very long time",
+          "That he needed a vacation",
+          "That he should change jobs"
+        ],
+        "correctIndex": 1,
+        "explanation": "His sister pointed out that he hadn't laughed properly in longer than either of them could remember."
+      },
+      {
+        "question": "What question from the therapist unsettled him most?",
+        "options": [
+          "Why he chose his career",
+          "How much he earned",
+          "When he last did something purely for joy, not results",
+          "Whether he slept enough"
+        ],
+        "correctIndex": 2,
+        "explanation": "She asked when he had last done something purely because it brought him joy, not results."
+      },
+      {
+        "question": "What did the narrator begin scheduling during his recovery?",
+        "options": [
+          "More work meetings",
+          "Things that produced nothing measurable, like an aimless walk",
+          "Extra therapy sessions daily",
+          "Nothing changed at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "He began scheduling things that produced nothing measurable, such as a walk with no destination."
+      },
+      {
+        "question": "What does the narrator conclude about how burnout develops?",
+        "options": [
+          "It always happens suddenly and dramatically",
+          "It only affects people with obvious problems",
+          "It accumulates quietly until ordinary tasks feel unbearably heavy",
+          "It cannot be prevented"
+        ],
+        "correctIndex": 2,
+        "explanation": "He concludes that burnout rarely announces itself dramatically; it accumulates quietly over time."
+      },
+      {
+        "question": "Why did the narrator nearly cancel therapy?",
+        "options": [
+          "The therapist changed the date",
+          "Her sister opposed treatment",
+          "The clinic required a diagnosis",
+          "Seeking help felt like admitting failure"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that seeking help felt like admitting failure."
+      },
+      {
+        "question": "What did the therapist's joy question reveal?",
+        "options": [
+          "The narrator disliked fiction",
+          "Her career had ended",
+          "Walks caused more fatigue",
+          "Almost every activity had become result-driven"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that almost every activity had become result-driven."
+      },
+      {
+        "question": "Why were unproductive activities uncomfortable at first?",
+        "options": [
+          "She felt guilty when not producing results",
+          "They required expensive equipment",
+          "Her sister criticised them",
+          "The therapist assigned grades"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that she felt guilty when not producing results."
+      },
+      {
+        "question": "How did the sister notice improvement?",
+        "options": [
+          "She worked longer hours",
+          "She cancelled future sessions",
+          "She stopped reading",
+          "The narrator sounded lighter on the phone"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that the narrator sounded lighter on the phone."
+      },
+      {
+        "question": "When does the narrator now seek help?",
+        "options": [
+          "Only after a breakdown",
+          "Before familiar strain becomes a crisis",
+          "Whenever work feels ambitious",
+          "After friends insist repeatedly"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that before familiar strain becomes a crisis."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-health-04",
@@ -111,37 +456,154 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dr. Ratna", "gender": "female" },
-      { "name": "Bimo", "gender": "male" }
+      {
+        "name": "Dr. Ratna",
+        "gender": "female"
+      },
+      {
+        "name": "Bimo",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dr. Ratna: [professional] Bimo, you mentioned the bloating gets worse in the evenings. Has anything else changed recently besides your work schedule?",
-      "Bimo: [uncertain] Not that I've noticed, though I'll admit I haven't paid much attention to what I actually eat lately.",
-      "Dr. Ratna: [gently] That's fairly common. Most people can describe their symptoms in detail but struggle to recall what triggered them.",
-      "Bimo: [curious] So what would you recommend? I've read conflicting things online about cutting out entire food groups.",
-      "Dr. Ratna: [informative] Rather than eliminating everything at once, I'd suggest removing one likely trigger, dairy, for instance, for two weeks and observing carefully.",
-      "Bimo: [skeptical] Isn't that a bit slow? A friend of mine went gluten-free overnight and swore it transformed her digestion instantly.",
-      "Dr. Ratna: [patient] It might have, genuinely, but removing several things simultaneously makes it nearly impossible to identify which change actually mattered.",
-      "Bimo: [considering] That's fair. I suppose I was hoping for a quicker answer than methodically testing one variable at a time.",
-      "Dr. Ratna: [warmly] Understandable, though the gut tends to reward patience far more reliably than it rewards drastic overnight changes.",
-      "Bimo: [honest] Two weeks without cheese sounds miserable, if I'm being completely honest with you.",
-      "Dr. Ratna: [amused] Most people say exactly that, and most people survive it perfectly well, occasionally even feeling noticeably better by the end.",
-      "Bimo: [thoughtful] And if dairy turns out not to be the problem, what happens then?",
-      "Dr. Ratna: [explaining] Then we reintroduce it and move to the next likely culprit, gluten or excess sugar, following the same method.",
-      "Bimo: [worried] Could this actually be something more serious, something I should be more concerned about?",
-      "Dr. Ratna: [reassuring] It's unlikely, given your other results, but if the elimination approach doesn't clarify things, we'll investigate further with proper testing.",
-      "Bimo: [relieved] That's reassuring, actually. I think I expected you to say something far more alarming.",
-      "Dr. Ratna: [encouraging] Keep a simple food diary alongside this, noting symptoms honestly, even the embarrassing ones you might want to leave out.",
-      "Bimo: [laughing] Noted, though I make no promises about how honest that diary will be on weekends.",
-      "Dr. Ratna: [smiling] I'll take partial honesty over none at all. Let's review everything together in two weeks."
+      "Dr. Ratna: [thoughtful] Bimo, you mentioned the bloating gets worse in the evenings. Has anything else changed recently besides your work schedule?",
+      "Bimo: Not that I've noticed, though I'll admit I haven't paid much attention to what I actually eat lately.",
+      "Dr. Ratna: [carefully] That's fairly common. Most people can describe their symptoms in detail but struggle to recall what triggered them.",
+      "Bimo: So what would you recommend? I've read conflicting things online about cutting out entire food groups.",
+      "Dr. Ratna: [reflective] Rather than eliminating everything at once, I'd suggest removing one likely trigger, dairy, for instance, for two weeks and observing carefully.",
+      "Bimo: Isn't that a bit slow? A friend of mine went gluten-free overnight and swore it transformed her digestion instantly.",
+      "Dr. Ratna: [honestly] It might have, genuinely, but removing several things simultaneously makes it nearly impossible to identify which change actually mattered.",
+      "Bimo: That's fair. I suppose I was hoping for a quicker answer than methodically testing one variable at a time.",
+      "Dr. Ratna: [gently] Understandable, though the gut tends to reward patience far more reliably than it rewards drastic overnight changes.",
+      "Bimo: Two weeks without cheese sounds miserable, if I'm being completely honest with you.",
+      "Dr. Ratna: [calmly] Most people say exactly that, and most people survive it perfectly well, occasionally even feeling noticeably better by the end.",
+      "Bimo: And if dairy turns out not to be the problem, what happens then?",
+      "Dr. Ratna: [encouraging] Then we reintroduce it and move to the next likely culprit, gluten or excess sugar, following the same method.",
+      "Bimo: Could this actually be something more serious, something I should be more concerned about?",
+      "Dr. Ratna: [seriously] It's unlikely, given your other results, but if the elimination approach doesn't clarify things, we'll investigate further with proper testing.",
+      "Bimo: That's reassuring, actually. I think I expected you to say something far more alarming.",
+      "Dr. Ratna: Keep a simple food diary alongside this, noting symptoms honestly, even the embarrassing ones you might want to leave out.",
+      "Bimo: Noted, though I make no promises about how honest that diary will be on weekends.",
+      "Dr. Ratna: I'll take partial honesty over none at all. Let's review everything together in two weeks."
     ],
     "quiz": [
-      { "question": "What method does Dr. Ratna recommend instead of cutting out everything at once?", "options": ["Eliminating all food groups immediately", "Removing one likely trigger at a time and observing carefully", "Ignoring the symptoms entirely", "Only taking medication"], "correctIndex": 1, "explanation": "She recommends removing one likely trigger, like dairy, for two weeks and observing carefully rather than eliminating everything at once." },
-      { "question": "Why does Dr. Ratna caution against removing several foods simultaneously?", "options": ["It's too expensive", "It makes it nearly impossible to identify which change actually mattered", "It's against medical guidelines", "It takes too much time to prepare meals"], "correctIndex": 1, "explanation": "She explains that removing several things at once makes it nearly impossible to identify which change actually mattered." },
-      { "question": "What does Dr. Ratna say about the gut and patience?", "options": ["The gut prefers sudden, drastic changes", "The gut tends to reward patience more than drastic overnight changes", "Patience has no effect on digestion", "Only medication works"], "correctIndex": 1, "explanation": "She says the gut tends to reward patience far more reliably than it rewards drastic overnight changes." },
-      { "question": "What happens if dairy turns out not to be the problem?", "options": ["The process ends immediately", "They reintroduce it and test the next likely culprit, like gluten", "Bimo must see a different doctor", "They repeat the same test with dairy"], "correctIndex": 1, "explanation": "Dr. Ratna explains they would reintroduce dairy and move to the next likely culprit using the same method." },
-      { "question": "What does Dr. Ratna ask Bimo to keep alongside the elimination process?", "options": ["An exercise log", "A simple food diary noting symptoms honestly", "A sleep tracker", "A list of medications"], "correctIndex": 1, "explanation": "She asks him to keep a simple food diary alongside the elimination process, noting symptoms honestly." }
-    ]
+      {
+        "question": "What method does Dr. Ratna recommend instead of cutting out everything at once?",
+        "options": [
+          "Eliminating all food groups immediately",
+          "Removing one likely trigger at a time and observing carefully",
+          "Ignoring the symptoms entirely",
+          "Only taking medication"
+        ],
+        "correctIndex": 1,
+        "explanation": "She recommends removing one likely trigger, like dairy, for two weeks and observing carefully rather than eliminating everything at once."
+      },
+      {
+        "question": "Why does Dr. Ratna caution against removing several foods simultaneously?",
+        "options": [
+          "It's too expensive",
+          "It makes it nearly impossible to identify which change actually mattered",
+          "It's against medical guidelines",
+          "It takes too much time to prepare meals"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains that removing several things at once makes it nearly impossible to identify which change actually mattered."
+      },
+      {
+        "question": "What does Dr. Ratna say about the gut and patience?",
+        "options": [
+          "The gut prefers sudden, drastic changes",
+          "The gut tends to reward patience more than drastic overnight changes",
+          "Patience has no effect on digestion",
+          "Only medication works"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says the gut tends to reward patience far more reliably than it rewards drastic overnight changes."
+      },
+      {
+        "question": "What happens if dairy turns out not to be the problem?",
+        "options": [
+          "The process ends immediately",
+          "Bimo must see a different doctor",
+          "They reintroduce it and test the next likely culprit, like gluten",
+          "They repeat the same test with dairy"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dr. Ratna explains they would reintroduce dairy and move to the next likely culprit using the same method."
+      },
+      {
+        "question": "What does Dr. Ratna ask Bimo to keep alongside the elimination process?",
+        "options": [
+          "An exercise log",
+          "A sleep tracker",
+          "A list of medications",
+          "A simple food diary noting symptoms honestly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She asks him to keep a simple food diary alongside the elimination process, noting symptoms honestly."
+      },
+      {
+        "question": "Why test one food variable at a time?",
+        "options": [
+          "It helps identify which change affects symptoms",
+          "It guarantees a cure",
+          "It removes the need for testing",
+          "It works faster than all methods"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that it helps identify which change affects symptoms."
+      },
+      {
+        "question": "Why is the friend's experience insufficient evidence?",
+        "options": [
+          "The friend kept no diary",
+          "Gluten never affects digestion",
+          "Several factors may differ between people",
+          "Instant change proves exaggeration"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that several factors may differ between people."
+      },
+      {
+        "question": "What happens if dairy shows no effect?",
+        "options": [
+          "It is reintroduced before testing another possibility",
+          "Every food group is removed",
+          "The diary is discarded",
+          "Bimo receives a diagnosis"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that it is reintroduced before testing another possibility."
+      },
+      {
+        "question": "When would Dr. Ratna investigate further?",
+        "options": [
+          "Before recording any food",
+          "Only after Bimo stops cheese",
+          "When weekends begin",
+          "If the structured trial does not clarify symptoms"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that if the structured trial does not clarify symptoms."
+      },
+      {
+        "question": "What information should Bimo bring to review?",
+        "options": [
+          "His friend's meal plan",
+          "Only embarrassing symptoms",
+          "An honest food-and-symptom record",
+          "A list of online cures"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that an honest food-and-symptom record."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-health-05",
@@ -150,34 +612,148 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [tired] For eight months, my days followed the same rhythm: hospital visits before work, phone calls at lunch, my father's medication schedule pinned above my desk.",
-      "Narrator: [honest] I told everyone I was fine, mostly because admitting otherwise felt like betraying how much I loved him.",
-      "Narrator: [worried] Watching someone who had always seemed unshakeable become fragile rearranged something in me that I still can't fully articulate.",
-      "Narrator: [reflective] Nobody warns you that caregiving quietly erodes you too, not through one dramatic moment but through hundreds of small ones.",
-      "Narrator: [ashamed] There were nights I resented the exhaustion, then immediately felt ashamed of that resentment, as though love shouldn't come with limits.",
-      "Narrator: [honest] A close friend eventually told me, quite bluntly, that I looked like someone running on fumes rather than functioning.",
-      "Narrator: [defensive] I brushed it off initially, insisting that my own tiredness mattered far less than my father's recovery.",
-      "Narrator: [thoughtful] It took a minor breakdown in a hospital corridor, sobbing over something as small as a parking ticket, to make the truth undeniable.",
-      "Narrator: [reflective] My exhaustion wasn't separate from his illness; it was part of the same situation, and pretending otherwise had only made both of us worse.",
-      "Narrator: [determined] So I asked my brother to take over two days a week, something I had avoided out of stubborn, unspoken guilt.",
-      "Narrator: [uncertain] Handing over that responsibility felt like admitting failure, even though logically I knew it wasn't.",
-      "Narrator: [surprised] To my relief, my father recovered no slower with someone else beside him; my presence was not the only thing keeping him steady.",
-      "Narrator: [grateful] Those two free days let me sleep properly, see friends briefly, and remember that I existed as a person outside this crisis.",
-      "Narrator: [hopeful] Gradually, as his condition improved, I noticed I could sit beside his bed without silently calculating everything else I was neglecting.",
-      "Narrator: [reflective] I used to believe caregiving meant disappearing entirely into someone else's need, as though my own needs had become irrelevant by comparison.",
-      "Narrator: [warmly] Now I understand that sustaining someone else properly requires refusing to abandon yourself completely in the process.",
-      "Narrator: [peacefully] My father is well again, and I carry this lesson forward, quietly, into whatever comes for either of us next."
+      "Narrator: [thoughtful] For eight months, my days followed the same rhythm: hospital visits before work, phone calls at lunch, my father's medication schedule pinned above my desk.",
+      "Narrator: I told everyone I was fine, mostly because admitting otherwise felt like betraying how much I loved him.",
+      "Narrator: [carefully] Watching someone who had always seemed unshakeable become fragile rearranged something in me that I still can't fully articulate.",
+      "Narrator: Nobody warns you that caregiving quietly erodes you too, not through one dramatic moment but through hundreds of small ones.",
+      "Narrator: [reflective] There were nights I resented the exhaustion, then immediately felt ashamed of that resentment, as though love shouldn't come with limits.",
+      "Narrator: A close friend eventually told me, quite bluntly, that I looked like someone running on fumes rather than functioning.",
+      "Narrator: [honestly] I brushed it off initially, insisting that my own tiredness mattered far less than my father's recovery.",
+      "Narrator: It took a minor breakdown in a hospital corridor, sobbing over something as small as a parking ticket, to make the truth undeniable.",
+      "Narrator: [gently] My exhaustion wasn't separate from his illness; it was part of the same situation, and pretending otherwise had only made both of us worse.",
+      "Narrator: So I asked my brother to take over two days a week, something I had avoided out of stubborn, unspoken guilt.",
+      "Narrator: [calmly] Handing over that responsibility felt like admitting failure, even though logically I knew it wasn't.",
+      "Narrator: To my relief, my father recovered no slower with someone else beside him; my presence was not the only thing keeping him steady.",
+      "Narrator: [encouraging] Those two free days let me sleep properly, see friends briefly, and remember that I existed as a person outside this crisis.",
+      "Narrator: Gradually, as his condition improved, I noticed I could sit beside his bed without silently calculating everything else I was neglecting.",
+      "Narrator: [seriously] I used to believe caregiving meant disappearing entirely into someone else's need, as though my own needs had become irrelevant by comparison.",
+      "Narrator: Now I understand that sustaining someone else properly requires refusing to abandon yourself completely in the process.",
+      "Narrator: My father is well again, and I carry this lesson forward, quietly, into whatever comes for either of us next."
     ],
     "quiz": [
-      { "question": "Why did the narrator tell everyone she was managing fine?", "options": ["Because it was true and easy", "Because admitting otherwise felt like betraying how much she loved her father", "Because her father asked her to lie", "Because she didn't want visitors"], "correctIndex": 1, "explanation": "She says admitting she wasn't fine felt like betraying how much she loved her father." },
-      { "question": "What finally made the truth about her exhaustion undeniable?", "options": ["A doctor's warning", "A minor breakdown in a hospital corridor over a parking ticket", "Her father's request", "A scheduled therapy session"], "correctIndex": 1, "explanation": "A minor breakdown in a hospital corridor, sobbing over a parking ticket, made the truth undeniable." },
-      { "question": "What did the narrator eventually ask her brother to do?", "options": ["Move in with their father permanently", "Take over caregiving two days a week", "Pay for a nurse", "Take over completely"], "correctIndex": 1, "explanation": "She asked her brother to take over two days a week, something she had avoided out of unspoken guilt." },
-      { "question": "What surprised her after her brother took over some caregiving?", "options": ["Her father's condition worsened", "Her father recovered no slower with someone else beside him", "Her father refused his help", "Nothing changed at all"], "correctIndex": 1, "explanation": "To her relief, her father recovered no slower with someone else beside him, showing her presence wasn't the only factor." },
-      { "question": "What does the narrator conclude about caregiving by the end?", "options": ["Caregivers should disappear entirely into another's need", "Sustaining someone else properly requires not abandoning yourself completely", "Asking for help is a sign of failure", "Her own needs became irrelevant"], "correctIndex": 1, "explanation": "She concludes that sustaining someone else properly requires refusing to abandon yourself completely in the process." }
-    ]
+      {
+        "question": "Why did the narrator tell everyone she was managing fine?",
+        "options": [
+          "Because it was true and easy",
+          "Because her father asked her to lie",
+          "Because admitting otherwise felt like betraying how much she loved her father",
+          "Because she didn't want visitors"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says admitting she wasn't fine felt like betraying how much she loved her father."
+      },
+      {
+        "question": "What finally made the truth about her exhaustion undeniable?",
+        "options": [
+          "A doctor's warning",
+          "A minor breakdown in a hospital corridor over a parking ticket",
+          "Her father's request",
+          "A scheduled therapy session"
+        ],
+        "correctIndex": 1,
+        "explanation": "A minor breakdown in a hospital corridor, sobbing over a parking ticket, made the truth undeniable."
+      },
+      {
+        "question": "What did the narrator eventually ask her brother to do?",
+        "options": [
+          "Move in with their father permanently",
+          "Pay for a nurse",
+          "Take over completely",
+          "Take over caregiving two days a week"
+        ],
+        "correctIndex": 3,
+        "explanation": "She asked her brother to take over two days a week, something she had avoided out of unspoken guilt."
+      },
+      {
+        "question": "What surprised her after her brother took over some caregiving?",
+        "options": [
+          "Her father's condition worsened",
+          "Her father refused his help",
+          "Her father recovered no slower with someone else beside him",
+          "Nothing changed at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "To her relief, her father recovered no slower with someone else beside him, showing her presence wasn't the only factor."
+      },
+      {
+        "question": "What does the narrator conclude about caregiving by the end?",
+        "options": [
+          "Caregivers should disappear entirely into another's need",
+          "Asking for help is a sign of failure",
+          "Sustaining someone else properly requires not abandoning yourself completely",
+          "Her own needs became irrelevant"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes that sustaining someone else properly requires refusing to abandon yourself completely in the process."
+      },
+      {
+        "question": "Why did the narrator hide exhaustion?",
+        "options": [
+          "It felt disloyal to her love for her father",
+          "Her brother forbade help",
+          "The hospital required silence",
+          "Her father denied being ill"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that it felt disloyal to her love for her father."
+      },
+      {
+        "question": "What made the strain undeniable?",
+        "options": [
+          "Her father changed hospitals",
+          "She broke down over a small parking ticket",
+          "She missed a medicine dose",
+          "Her friend stopped calling"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that she broke down over a small parking ticket."
+      },
+      {
+        "question": "Why had she avoided involving her brother?",
+        "options": [
+          "Guilt made sharing care feel like failure",
+          "He lived in another country",
+          "He lacked permission",
+          "Her father refused him"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that guilt made sharing care feel like failure."
+      },
+      {
+        "question": "What did the two free days restore?",
+        "options": [
+          "A faster medical recovery",
+          "Complete freedom from worry",
+          "Control over the hospital",
+          "Sleep, friendships, and a self beyond caregiving"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that sleep, friendships, and a self beyond caregiving."
+      },
+      {
+        "question": "What belief does she reject by the end?",
+        "options": [
+          "Caregiving involves practical work",
+          "Love requires disappearing into another's needs",
+          "Families can share responsibility",
+          "Rest supports sustained care"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that love requires disappearing into another's needs."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-health-06",
@@ -186,36 +762,153 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Dr. Chandra", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Dr. Chandra",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back. Today we're exploring something almost everyone struggles with occasionally: falling asleep despite feeling genuinely exhausted. Thanks for joining us, Dr. Chandra.",
-      "Dr. Chandra: [pleasantly] Thank you for having me. It's a paradox that confuses more people than you'd expect, exhaustion without the ability to actually sleep.",
-      "Host: [curious] Why does that happen? Shouldn't tiredness guarantee sleep almost automatically?",
-      "Dr. Chandra: [informative] You'd assume so, but sleep depends on more than fatigue alone; it depends heavily on your circadian rhythm being properly aligned.",
-      "Host: [interested] Can you explain what throws that rhythm off for most people, beyond the obvious culprit of staring at phones?",
-      "Dr. Chandra: [thoughtful] Inconsistent wake times matter more than people realize. Sleeping in on weekends essentially recreates jet lag without ever leaving your city.",
-      "Host: [surprised] That's a striking comparison. So the damage isn't only from going to bed late, but from waking up inconsistently?",
-      "Dr. Chandra: [nodding] Precisely. Your body relies on a predictable signal each morning to regulate hormones that eventually make you sleepy again at night.",
-      "Host: [curious] What about people who insist caffeine has no effect on them, even when consumed late in the afternoon?",
-      "Dr. Chandra: [gently] That belief is remarkably common and remarkably mistaken. Caffeine can linger in your system for hours longer than most people assume.",
-      "Host: [thoughtful] So someone might fall asleep fine, yet still be experiencing disrupted sleep without realizing caffeine is the cause?",
-      "Dr. Chandra: [serious] Exactly right. The disruption often shows up as lighter, more fragmented sleep rather than difficulty falling asleep itself.",
-      "Host: [curious] What would you say to listeners who've tried everything, dark rooms, no screens, and still struggle most nights?",
-      "Dr. Chandra: [practical] I'd ask whether anxiety about sleep itself has become the actual obstacle, which happens more often than people expect.",
-      "Host: [interested] Meaning the worry about not sleeping becomes its own barrier to sleeping?",
-      "Dr. Chandra: [warmly] Precisely that. Lying awake calculating remaining hours only heightens the alertness you're desperately trying to escape.",
-      "Host: [smiling] That's a frustrating cycle. Any practical advice for someone caught inside it right now?",
-      "Dr. Chandra: [encouraging] If sleep hasn't arrived within twenty minutes, get up briefly rather than lying there battling it, then return once genuinely drowsy."
+      "Host: [thoughtful] Welcome back. Today we're exploring something almost everyone struggles with occasionally: falling asleep despite feeling genuinely exhausted. Thanks for joining us, Dr. Chandra.",
+      "Dr. Chandra: Thank you for having me. It's a paradox that confuses more people than you'd expect, exhaustion without the ability to actually sleep.",
+      "Host: [carefully] Why does that happen? Shouldn't tiredness guarantee sleep almost automatically?",
+      "Dr. Chandra: You'd assume so, but sleep depends on more than fatigue alone; it depends heavily on your circadian rhythm being properly aligned.",
+      "Host: [reflective] Can you explain what throws that rhythm off for most people, beyond the obvious culprit of staring at phones?",
+      "Dr. Chandra: Inconsistent wake times matter more than people realize. Sleeping in on weekends essentially recreates jet lag without ever leaving your city.",
+      "Host: [honestly] That's a striking comparison. So the damage isn't only from going to bed late, but from waking up inconsistently?",
+      "Dr. Chandra: Precisely. Your body relies on a predictable signal each morning to regulate hormones that eventually make you sleepy again at night.",
+      "Host: [gently] What about people who insist caffeine has no effect on them, even when consumed late in the afternoon?",
+      "Dr. Chandra: That belief is remarkably common and remarkably mistaken. Caffeine can linger in your system for hours longer than most people assume.",
+      "Host: [calmly] So someone might fall asleep fine, yet still be experiencing disrupted sleep without realizing caffeine is the cause?",
+      "Dr. Chandra: Exactly right. The disruption often shows up as lighter, more fragmented sleep rather than difficulty falling asleep itself.",
+      "Host: [encouraging] What would you say to listeners who've tried everything, dark rooms, no screens, and still struggle most nights?",
+      "Dr. Chandra: I'd ask whether anxiety about sleep itself has become the actual obstacle, which happens more often than people expect.",
+      "Host: [seriously] Meaning the worry about not sleeping becomes its own barrier to sleeping?",
+      "Dr. Chandra: Precisely that. Lying awake calculating remaining hours only heightens the alertness you're desperately trying to escape.",
+      "Host: That's a frustrating cycle. Any practical advice for someone caught inside it right now?",
+      "Dr. Chandra: If sleep hasn't arrived within twenty minutes, get up briefly rather than lying there battling it, then return once genuinely drowsy."
     ],
     "quiz": [
-      { "question": "According to Dr. Chandra, what does sleep depend on besides fatigue?", "options": ["Room temperature alone", "The circadian rhythm being properly aligned", "How much someone eats", "Nothing besides tiredness"], "correctIndex": 1, "explanation": "She explains sleep depends heavily on the circadian rhythm being properly aligned, not fatigue alone." },
-      { "question": "What comparison does Dr. Chandra make about sleeping in on weekends?", "options": ["It has no effect on sleep", "It essentially recreates jet lag without leaving your city", "It always improves sleep quality", "It only affects children"], "correctIndex": 1, "explanation": "She compares sleeping in on weekends to recreating jet lag without ever leaving your city." },
-      { "question": "What mistaken belief does Dr. Chandra address about caffeine?", "options": ["That it has no lingering effect on some people", "That it only affects people who drink coffee", "That it improves sleep quality", "That it has no relation to sleep at all"], "correctIndex": 0, "explanation": "She says the belief that caffeine has no effect on some people is common and mistaken, since it can linger for hours." },
-      { "question": "How does caffeine-related sleep disruption often show up?", "options": ["As difficulty falling asleep only", "As lighter, more fragmented sleep rather than trouble falling asleep", "It has no noticeable effect", "As oversleeping"], "correctIndex": 1, "explanation": "Dr. Chandra explains the disruption often shows up as lighter, more fragmented sleep rather than difficulty falling asleep." },
-      { "question": "What advice does Dr. Chandra give for someone unable to sleep after twenty minutes?", "options": ["Keep lying there and force it", "Get up briefly rather than battling it, then return once drowsy", "Take medication immediately", "Turn on bright lights"], "correctIndex": 1, "explanation": "She advises getting up briefly rather than lying there battling it, then returning to bed once genuinely drowsy." }
-    ]
+      {
+        "question": "According to Dr. Chandra, what does sleep depend on besides fatigue?",
+        "options": [
+          "Room temperature alone",
+          "The circadian rhythm being properly aligned",
+          "How much someone eats",
+          "Nothing besides tiredness"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains sleep depends heavily on the circadian rhythm being properly aligned, not fatigue alone."
+      },
+      {
+        "question": "What comparison does Dr. Chandra make about sleeping in on weekends?",
+        "options": [
+          "It essentially recreates jet lag without leaving your city",
+          "It has no effect on sleep",
+          "It always improves sleep quality",
+          "It only affects children"
+        ],
+        "correctIndex": 0,
+        "explanation": "She compares sleeping in on weekends to recreating jet lag without ever leaving your city."
+      },
+      {
+        "question": "What mistaken belief does Dr. Chandra address about caffeine?",
+        "options": [
+          "That it only affects people who drink coffee",
+          "That it improves sleep quality",
+          "That it has no relation to sleep at all",
+          "That it has no lingering effect on some people"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says the belief that caffeine has no effect on some people is common and mistaken, since it can linger for hours."
+      },
+      {
+        "question": "How does caffeine-related sleep disruption often show up?",
+        "options": [
+          "As difficulty falling asleep only",
+          "It has no noticeable effect",
+          "As lighter, more fragmented sleep rather than trouble falling asleep",
+          "As oversleeping"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dr. Chandra explains the disruption often shows up as lighter, more fragmented sleep rather than difficulty falling asleep."
+      },
+      {
+        "question": "What advice does Dr. Chandra give for someone unable to sleep after twenty minutes?",
+        "options": [
+          "Keep lying there and force it",
+          "Take medication immediately",
+          "Turn on bright lights",
+          "Get up briefly rather than battling it, then return once drowsy"
+        ],
+        "correctIndex": 3,
+        "explanation": "She advises getting up briefly rather than lying there battling it, then returning to bed once genuinely drowsy."
+      },
+      {
+        "question": "What besides tiredness helps regulate sleep?",
+        "options": [
+          "Alignment of the circadian rhythm",
+          "Exercise during bedtime",
+          "A weekend alarm only",
+          "Complete physical exhaustion"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that alignment of the circadian rhythm."
+      },
+      {
+        "question": "How can sleeping late on weekends affect rhythm?",
+        "options": [
+          "It eliminates weekday fatigue",
+          "It blocks all caffeine",
+          "It creates an effect similar to jet lag",
+          "It guarantees deeper sleep"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that it creates an effect similar to jet lag."
+      },
+      {
+        "question": "Why do consistent wake times matter?",
+        "options": [
+          "They replace every evening routine",
+          "They give the body a predictable morning signal",
+          "They reduce sleep needs",
+          "They prevent all anxiety"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that they give the body a predictable morning signal."
+      },
+      {
+        "question": "How may late caffeine disrupt someone who falls asleep?",
+        "options": [
+          "Dreams stop completely",
+          "Wake time becomes earlier",
+          "The circadian rhythm disappears",
+          "Sleep can become lighter and fragmented"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that sleep can become lighter and fragmented."
+      },
+      {
+        "question": "What does Dr. Chandra suggest after twenty wakeful minutes?",
+        "options": [
+          "Keep calculating remaining sleep",
+          "Get up briefly and return when drowsy",
+          "Drink more caffeine",
+          "Stay in bed and struggle"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that get up briefly and return when drowsy."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-health-07",
@@ -224,35 +917,587 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Kirana", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Kirana",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Kirana: [concerned] Reza, you've been at the gym almost every single day this month. Is this actually about health anymore, or something else?",
-      "Reza: [defensive] What's that supposed to mean? I'm just finally taking my fitness seriously instead of being lazy like before.",
-      "Kirana: [gently] I'm not accusing you of laziness. I'm asking because you've mentioned your body differently lately, almost critically.",
-      "Reza: [honest] Maybe I have. I look in the mirror now and mostly notice what's still wrong rather than what's improved.",
-      "Kirana: [thoughtful] That sounds exhausting, chasing a version of yourself that keeps moving further away no matter what you achieve.",
-      "Reza: [uncertain] It is, honestly, though I didn't expect you to notice, since I've tried keeping that part fairly private.",
-      "Kirana: [warmly] You're my brother. Of course I notice when something that used to bring you joy starts sounding like punishment instead.",
-      "Reza: [reflective] I started this for energy and confidence, and somewhere along the way it became about correcting flaws I hadn't even noticed before.",
-      "Kirana: [curious] Where do you think that shift actually came from? It rarely happens without some kind of trigger.",
-      "Reza: [honest] Probably comparing myself constantly to people online whose entire job is looking a certain way for a camera.",
-      "Kirana: [understanding] That comparison was never fair to begin with, though I understand how easily it creeps in unnoticed.",
-      "Reza: [thoughtful] Logically I know that, yet knowing it hasn't stopped me from scrolling through those accounts most evenings anyway.",
-      "Kirana: [suggesting] What if you measured progress by how you feel afterward instead, energy, mood, sleep, rather than how you look in a mirror?",
-      "Reza: [considering] That's harder to track obsessively, which is probably exactly why it might actually help me.",
-      "Kirana: [encouraging] Exactly. And maybe unfollow a few of those accounts, just to see whether the mirror gets quieter too.",
-      "Reza: [determined] I'll try it for a month and see whether training starts feeling like mine again instead of some competition.",
-      "Kirana: [smiling] That's all I'm asking. I liked you better when the gym made you calmer, not more critical of yourself.",
-      "Reza: [warmly] Thanks for saying something, even though I clearly didn't want to hear it at first."
+      "Kirana: [thoughtful] Reza, you've been at the gym almost every single day this month. Is this actually about health anymore, or something else?",
+      "Reza: What's that supposed to mean? I'm just finally taking my fitness seriously instead of being lazy like before.",
+      "Kirana: [carefully] I'm not accusing you of laziness. I'm asking because you've mentioned your body differently lately, almost critically.",
+      "Reza: Maybe I have. I look in the mirror now and mostly notice what's still wrong rather than what's improved.",
+      "Kirana: [reflective] That sounds exhausting, chasing a version of yourself that keeps moving further away no matter what you achieve.",
+      "Reza: It is, honestly, though I didn't expect you to notice, since I've tried keeping that part fairly private.",
+      "Kirana: [honestly] You're my brother. Of course I notice when something that used to bring you joy starts sounding like punishment instead.",
+      "Reza: I started this for energy and confidence, and somewhere along the way it became about correcting flaws I hadn't even noticed before.",
+      "Kirana: [gently] Where do you think that shift actually came from? It rarely happens without some kind of trigger.",
+      "Reza: Probably comparing myself constantly to people online whose entire job is looking a certain way for a camera.",
+      "Kirana: [calmly] That comparison was never fair to begin with, though I understand how easily it creeps in unnoticed.",
+      "Reza: Logically I know that, yet knowing it hasn't stopped me from scrolling through those accounts most evenings anyway.",
+      "Kirana: [encouraging] What if you measured progress by how you feel afterward instead, energy, mood, sleep, rather than how you look in a mirror?",
+      "Reza: That's harder to track obsessively, which is probably exactly why it might actually help me.",
+      "Kirana: [seriously] Exactly. And maybe unfollow a few of those accounts, just to see whether the mirror gets quieter too.",
+      "Reza: I'll try it for a month and see whether training starts feeling like mine again instead of some competition.",
+      "Kirana: That's all I'm asking. I liked you better when the gym made you calmer, not more critical of yourself.",
+      "Reza: Thanks for saying something, even though I clearly didn't want to hear it at first."
     ],
     "quiz": [
-      { "question": "Why does Kirana bring up Reza's gym habits?", "options": ["She thinks he goes too rarely", "She notices he's started talking about his body critically", "She wants him to stop exercising completely", "She is jealous of his routine"], "correctIndex": 1, "explanation": "Kirana says she is asking because he has mentioned his body differently lately, almost critically." },
-      { "question": "What does Reza admit about looking in the mirror now?", "options": ["He no longer looks in mirrors", "He mostly notices what's still wrong rather than what's improved", "He feels completely satisfied", "He avoids exercise entirely"], "correctIndex": 1, "explanation": "Reza admits he looks in the mirror and mostly notices what's still wrong rather than what's improved." },
-      { "question": "What does Reza say caused the shift in how he sees fitness?", "options": ["A doctor's advice", "Constantly comparing himself to people online who look a certain way for a camera", "His sister's comments", "An injury"], "correctIndex": 1, "explanation": "He says it's probably from comparing himself constantly to people online whose job is looking a certain way for a camera." },
-      { "question": "What alternative way of measuring progress does Kirana suggest?", "options": ["Only tracking weight", "Measuring by how he feels afterward, like energy, mood, and sleep", "Ignoring progress entirely", "Comparing himself to others more"], "correctIndex": 1, "explanation": "She suggests measuring progress by how he feels afterward, energy, mood, sleep, rather than his mirror reflection." },
-      { "question": "What does Reza agree to try for a month?", "options": ["Quitting the gym entirely", "Unfollowing accounts and shifting how he measures progress", "Doubling his workout time", "Ignoring his sister's advice"], "correctIndex": 1, "explanation": "Reza agrees to try unfollowing some accounts and shifting his focus for a month to see if training feels like his own again." }
-    ]
+      {
+        "question": "Why does Kirana bring up Reza's gym habits?",
+        "options": [
+          "She thinks he goes too rarely",
+          "She notices he's started talking about his body critically",
+          "She wants him to stop exercising completely",
+          "She is jealous of his routine"
+        ],
+        "correctIndex": 1,
+        "explanation": "Kirana says she is asking because he has mentioned his body differently lately, almost critically."
+      },
+      {
+        "question": "What does Reza admit about looking in the mirror now?",
+        "options": [
+          "He mostly notices what's still wrong rather than what's improved",
+          "He no longer looks in mirrors",
+          "He feels completely satisfied",
+          "He avoids exercise entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reza admits he looks in the mirror and mostly notices what's still wrong rather than what's improved."
+      },
+      {
+        "question": "What does Reza say caused the shift in how he sees fitness?",
+        "options": [
+          "Constantly comparing himself to people online who look a certain way for a camera",
+          "A doctor's advice",
+          "His sister's comments",
+          "An injury"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says it's probably from comparing himself constantly to people online whose job is looking a certain way for a camera."
+      },
+      {
+        "question": "What alternative way of measuring progress does Kirana suggest?",
+        "options": [
+          "Only tracking weight",
+          "Ignoring progress entirely",
+          "Measuring by how he feels afterward, like energy, mood, and sleep",
+          "Comparing himself to others more"
+        ],
+        "correctIndex": 2,
+        "explanation": "She suggests measuring progress by how he feels afterward, energy, mood, sleep, rather than his mirror reflection."
+      },
+      {
+        "question": "What does Reza agree to try for a month?",
+        "options": [
+          "Quitting the gym entirely",
+          "Doubling his workout time",
+          "Ignoring his sister's advice",
+          "Unfollowing accounts and shifting how he measures progress"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reza agrees to try unfollowing some accounts and shifting his focus for a month to see if training feels like his own again."
+      },
+      {
+        "question": "What change alerted Kirana?",
+        "options": [
+          "Reza stopped attending the gym",
+          "Exercise began sounding like punishment",
+          "He developed a new hobby",
+          "His sleep improved"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that exercise began sounding like punishment."
+      },
+      {
+        "question": "What had Reza started noticing in the mirror?",
+        "options": [
+          "Only increased energy",
+          "Changes in gym lighting",
+          "His brother's appearance",
+          "Remaining flaws rather than progress"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that remaining flaws rather than progress."
+      },
+      {
+        "question": "What likely triggered the shift?",
+        "options": [
+          "A clinician's advice",
+          "A sports competition",
+          "Constant comparison with online fitness figures",
+          "Kirana's training plan"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that constant comparison with online fitness figures."
+      },
+      {
+        "question": "Which measures does Kirana propose instead?",
+        "options": [
+          "Followers, likes, and photographs",
+          "Weight alone",
+          "Daily mirror checks",
+          "Energy, mood, and sleep"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that energy, mood, and sleep."
+      },
+      {
+        "question": "Why might unfollowing accounts help?",
+        "options": [
+          "It guarantees physical health",
+          "It could reduce unfair comparison",
+          "It replaces professional advice",
+          "It makes exercise unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that it could reduce unfair comparison."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-health-08",
+    "title": "The Headache Diary I Took to My Appointment",
+    "level": "B2",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [matter-of-factly] When my headaches began returning several times a week, I did what many people do: I searched online. Within ten minutes, I had found explanations ranging from ordinary tiredness to frightening conditions. None of them could assess me, yet each one changed my mood.",
+      "Narrator: I decided to stop guessing and book an appointment with a licensed clinician. The receptionist advised me to seek urgent care if certain severe warning signs appeared. Since they did not, I kept the scheduled appointment and started a simple diary.",
+      "Narrator: [carefully] I recorded when the pain started, how long it lasted, what I had eaten, my sleep, screen use, and any medicine I took. I did not alter prescribed treatment or test random remedies. The purpose was to bring clearer information, not to diagnose myself.",
+      "Narrator: After ten days, the diary showed patterns I had missed. Some headaches followed long meetings without water or breaks, but others did not. That uncertainty mattered; one pattern was not proof of a single cause.",
+      "Narrator: [thoughtful] At the appointment, the clinician asked additional questions, reviewed my history, and performed an assessment. We discussed practical changes and when I should return or seek faster help. The plan was specific to my situation.",
+      "Narrator: I also showed her a popular video that promised a complete cure through one supplement. She explained why a confident testimonial could not establish safety or effectiveness for everyone.",
+      "Narrator: [relieved] The diary did not provide a dramatic answer. It improved the conversation. I left with a plan, clear warning signs, and fewer assumptions.",
+      "Narrator: Now, when friends mention similar symptoms, I do not hand them my conclusion. I suggest they record useful details and consult an appropriately qualified professional, because similar experiences can have different causes and needs."
+    ],
+    "quiz": [
+      {
+        "question": "What problem followed the narrator's online search?",
+        "options": [
+          "Unassessed explanations changed her mood",
+          "The clinic cancelled her visit",
+          "Her symptoms immediately worsened",
+          "A website prescribed medicine"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that unassessed explanations changed her mood."
+      },
+      {
+        "question": "Why did she keep the scheduled appointment?",
+        "options": [
+          "The headaches had ended",
+          "The receptionist diagnosed her",
+          "The urgent warning signs were absent",
+          "She rejected medical care"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that the urgent warning signs were absent."
+      },
+      {
+        "question": "Which detail belonged in the diary?",
+        "options": [
+          "Only the most severe day",
+          "Timing, duration, sleep, food, and medicine use",
+          "Names of online commenters",
+          "A guessed diagnosis"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that timing, duration, sleep, food, and medicine use."
+      },
+      {
+        "question": "What did she deliberately avoid?",
+        "options": [
+          "Recording screen use",
+          "Drinking water",
+          "Asking about warning signs",
+          "Changing treatment or testing random remedies"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that changing treatment or testing random remedies."
+      },
+      {
+        "question": "Why was the meeting pattern not a proven cause?",
+        "options": [
+          "Some headaches occurred without it",
+          "Meetings never affect health",
+          "The diary was too long",
+          "Water intake was unknown"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that some headaches occurred without it."
+      },
+      {
+        "question": "How did the clinician use the information?",
+        "options": [
+          "Accepted the diary as a diagnosis",
+          "Recommended the online supplement",
+          "Ignored symptom timing",
+          "Combined it with history, questions, and assessment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that combined it with history, questions, and assessment."
+      },
+      {
+        "question": "Why was the supplement testimonial inadequate?",
+        "options": [
+          "The video had too few views",
+          "It could not establish general safety or effectiveness",
+          "Supplements contain no ingredients",
+          "Personal stories are always false"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that it could not establish general safety or effectiveness."
+      },
+      {
+        "question": "What did the appointment provide?",
+        "options": [
+          "A universal cure",
+          "Certainty about one cause",
+          "A personal plan and clear warning signs",
+          "Permission to copy others"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that a personal plan and clear warning signs."
+      },
+      {
+        "question": "Why does she not give friends her conclusion?",
+        "options": [
+          "Similar symptoms may have different causes",
+          "She lost the diary",
+          "Friends dislike records",
+          "The clinician banned conversation"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that similar symptoms may have different causes."
+      },
+      {
+        "question": "What is the diary's proper role?",
+        "options": [
+          "Replace clinical assessment",
+          "Improve a professional conversation, not self-diagnose",
+          "Prove one explanation",
+          "Select treatment independently"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that improve a professional conversation, not self-diagnose."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-health-09",
+    "title": "Rest Is Part of the Plan",
+    "level": "B2",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [tiredly] During the busiest month at our office, I began treating sleep like an optional reward. I answered messages after midnight, woke before my alarm, and used strong coffee to hide how slowly I was thinking.",
+      "Narrator: The consequences appeared in small ways. I sent an attachment to the wrong internal group, forgot a meeting I had organised, and became impatient with a colleague who asked a reasonable question. No single mistake was disastrous, but together they showed that my current pace was unsafe.",
+      "Narrator: [honestly] I spoke to my manager before the situation worsened. We reviewed the deadlines and discovered that two reports were being prepared twice by different people. Another task had been labelled urgent even though the client did not need it for three weeks.",
+      "Narrator: We reassigned the duplicate work, moved the non-urgent deadline, and agreed that messages after a certain hour could wait unless the on-call procedure applied. I also took the leave day I had repeatedly postponed.",
+      "Narrator: [reflective] Rest did not solve every pressure. The team still had a demanding project, and some evenings remained busy. But after sleeping consistently, I could distinguish a genuine problem from a notification that merely felt urgent.",
+      "Narrator: I learned not to make health claims from one personal experience. Fatigue can have many causes, and persistent or concerning changes deserve professional advice. My lesson was narrower: my own habits and workload were contributing to poor functioning, and both could be addressed.",
+      "Narrator: [calmly] We now include capacity in project planning instead of discussing it only after someone struggles. People can raise workload concerns without sharing private medical details.",
+      "Narrator: A sustainable team does not celebrate exhaustion as proof of commitment. It protects the quality of the work by treating human limits as real information."
+    ],
+    "quiz": [
+      {
+        "question": "How did coffee function during the busy month?",
+        "options": [
+          "It hid how slowly the narrator was thinking",
+          "It improved every decision",
+          "It replaced sleep safely",
+          "It prevented mistakes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that it hid how slowly the narrator was thinking."
+      },
+      {
+        "question": "Which signs showed the pace was unsafe?",
+        "options": [
+          "Higher sales and faster work",
+          "More leave and fewer messages",
+          "Errors, forgetfulness, and impatience",
+          "Improved memory and calm"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that errors, forgetfulness, and impatience."
+      },
+      {
+        "question": "What duplication did the manager find?",
+        "options": [
+          "Two clients shared an account",
+          "Two teams were preparing the same reports",
+          "Two meetings had one room",
+          "Two staff took leave"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that two teams were preparing the same reports."
+      },
+      {
+        "question": "Why was one urgent task moved?",
+        "options": [
+          "Nobody understood it",
+          "It contained private data",
+          "The deadline had passed",
+          "The client did not need it for three weeks"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that the client did not need it for three weeks."
+      },
+      {
+        "question": "What boundary applied to late messages?",
+        "options": [
+          "They could wait unless on-call rules applied",
+          "Every message required reply",
+          "No emergencies were allowed",
+          "Only managers could write"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that they could wait unless on-call rules applied."
+      },
+      {
+        "question": "What improved after consistent sleep?",
+        "options": [
+          "All project pressure vanished",
+          "Every evening became free",
+          "Coffee was medically forbidden",
+          "Distinguishing real problems from noisy notifications"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that distinguishing real problems from noisy notifications."
+      },
+      {
+        "question": "Why does the narrator limit the health conclusion?",
+        "options": [
+          "Workload never affects functioning",
+          "Fatigue can have multiple causes",
+          "Personal experience proves nothing",
+          "Sleep has no relationship to focus"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that fatigue can have multiple causes."
+      },
+      {
+        "question": "What planning change followed?",
+        "options": [
+          "Health details became public",
+          "All deadlines were removed",
+          "Team capacity became part of project decisions",
+          "Staff worked fewer projects forever"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that team capacity became part of project decisions."
+      },
+      {
+        "question": "How can employees raise concerns privately?",
+        "options": [
+          "Discuss workload without disclosing medical information",
+          "Publish their symptoms",
+          "Avoid managers entirely",
+          "Claim a diagnosis themselves"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that discuss workload without disclosing medical information."
+      },
+      {
+        "question": "What culture does the narrator oppose?",
+        "options": [
+          "Using on-call procedures",
+          "Treating exhaustion as proof of commitment",
+          "Taking approved leave",
+          "Reviewing deadlines"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that treating exhaustion as proof of commitment."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-health-10",
+    "title": "Should I Trust This Wellness Video?",
+    "level": "B2",
+    "themeId": "health",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [curious] A video says one morning drink will “reset your hormones, remove toxins, and cure fatigue.” It has two million views. Where do you begin?",
+      "Guest: With the claims, not the popularity. Words like “cure” and “for everyone” require strong evidence, especially when health decisions are involved.",
+      "Host: The presenter includes several personal success stories.",
+      "Guest: [carefully] Testimonials can describe real experiences, but they cannot show what caused the change, how many people saw no benefit, or whether there were harms.",
+      "Host: What evidence would be more useful?",
+      "Guest: Reliable clinical guidance, transparent research methods, appropriate comparison groups, and information about limits and side effects. I would also check whether the source is qualified in the relevant field.",
+      "Host: The drink uses ordinary food ingredients. Does that make it harmless?",
+      "Guest: Not automatically. Amounts, allergies, existing conditions, and interactions can matter. “Natural” is a description of origin, not a guarantee of safety.",
+      "Host: [thoughtful] What if I am simply curious and want to try it?",
+      "Guest: Avoid replacing prescribed care or delaying an assessment for persistent symptoms. If the product could affect your situation, ask a licensed healthcare professional who can consider your history.",
+      "Host: How can we discuss the video without attacking the presenter?",
+      "Guest: Address the evidence and wording. We can say the claim is unsupported or exaggerated without pretending to know the person's intention.",
+      "Host: [serious] Are all online health videos useless?",
+      "Guest: No. Some explain questions clearly and point to trustworthy sources. A responsible creator states uncertainty, avoids universal promises, and tells viewers when professional help is appropriate.",
+      "Host: So what is the shortest useful checklist?",
+      "Guest: Ask who is speaking, what exactly is claimed, what evidence supports it, what risks are omitted, and whether following it could delay proper care."
+    ],
+    "quiz": [
+      {
+        "question": "Why are “cure” and “for everyone” warning signs?",
+        "options": [
+          "They make broad claims needing strong evidence",
+          "They describe ordinary ingredients",
+          "They appear only in research",
+          "They guarantee harmlessness"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that they make broad claims needing strong evidence."
+      },
+      {
+        "question": "What cannot testimonials establish?",
+        "options": [
+          "That a person had an experience",
+          "That the video is popular",
+          "Cause, failure rates, and possible harms",
+          "That ingredients have names"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that cause, failure rates, and possible harms."
+      },
+      {
+        "question": "Which evidence would be stronger?",
+        "options": [
+          "More dramatic comments",
+          "Transparent research with suitable comparisons",
+          "A celebrity endorsement",
+          "A longer product advertisement"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that transparent research with suitable comparisons."
+      },
+      {
+        "question": "Why is a qualified source relevant?",
+        "options": [
+          "Qualifications guarantee certainty",
+          "Only doctors can discuss food",
+          "View counts prove expertise",
+          "Expertise should match the health question"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that expertise should match the health question."
+      },
+      {
+        "question": "Why can ordinary ingredients still carry risk?",
+        "options": [
+          "Dose, allergies, conditions, and interactions matter",
+          "All foods are medicines",
+          "Natural products are always unsafe",
+          "Ingredients change online"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that dose, allergies, conditions, and interactions matter."
+      },
+      {
+        "question": "What does “natural” fail to guarantee?",
+        "options": [
+          "Origin",
+          "Taste",
+          "Availability",
+          "Safety"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that safety."
+      },
+      {
+        "question": "When should someone avoid experimenting alone?",
+        "options": [
+          "Whenever a video is short",
+          "When it could replace care or delay assessment",
+          "When an ingredient is common",
+          "Only after symptoms disappear"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that when it could replace care or delay assessment."
+      },
+      {
+        "question": "How can the video's claim be criticised fairly?",
+        "options": [
+          "Publish personal accusations",
+          "Assume deliberate fraud",
+          "Address its evidence without judging the creator's motives",
+          "Ignore exaggerated wording"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that address its evidence without judging the creator's motives."
+      },
+      {
+        "question": "What marks a responsible health creator?",
+        "options": [
+          "Clear uncertainty, reliable sources, and referral limits",
+          "Universal promises",
+          "Only personal stories",
+          "No mention of risks"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that clear uncertainty, reliable sources, and referral limits."
+      },
+      {
+        "question": "Which checklist question protects against delayed care?",
+        "options": [
+          "How many likes did it receive?",
+          "Could following this postpone proper assessment?",
+          "Is the presenter entertaining?",
+          "Does the drink look natural?"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that could following this postpone proper assessment?."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "health",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

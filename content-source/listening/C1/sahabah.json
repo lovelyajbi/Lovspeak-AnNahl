@@ -6,30 +6,144 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] It is a peculiar irony that the most prolific source of Prophetic tradition was neither a trained jurist nor a man burdened with scholarly gravitas, but a woman who came of age inside the Prophet's own household.",
-      "Narrator: [reflective] Aisha bint Abi Bakr transmitted several thousand narrations, and what distinguishes her corpus is not merely its volume but its granularity, absent from testimony offered by companions who observed the Prophet only in public.",
-      "Narrator: [analytical] Later jurists, confronted with narrations that seemed to contradict one another, frequently discovered that Aisha alone possessed the detail capable of reconciling the discrepancy.",
-      "Narrator: [with subtle irony] More than one senior companion, having circulated an account confidently for years, found himself gently corrected by a woman roughly two decades his junior, and revised his position without resentment.",
-      "Narrator: [serious] Her authority rested on an unusual convergence, exceptional memory, proximity to revelation as it unfolded within her own home, and a willingness to interrogate received wisdom rather than repeat it.",
-      "Narrator: [thoughtful] When later critics accused women broadly of intellectual inferiority, students of hadith needed only gesture toward her corrected transmissions, evidence already sitting in their own tradition.",
-      "Narrator: [reflective] What often escapes casual retellings is the intellectual courage her position required, correcting elders publicly in a culture that prized deference to seniority above nearly every social virtue.",
-      "Narrator: [calm] She distinguished, with remarkable precision, between what the Prophet had explicitly stated and what companions had merely inferred, a distinction scholars still find indispensable.",
-      "Narrator: [with admiration] Her teaching circle, convened for decades after the Prophet's death, drew students from across the peninsula, men included, unbothered by a hierarchy that favored convention over expertise.",
-      "Narrator: [thoughtful] Some accounts describe her weeping when certain verses were recited, not from theatrical piety but from an intimacy no later listener could replicate.",
-      "Narrator: [reflective] Her political interventions, later in life, proved more contested than her scholarship, a reminder that even formidable intellects navigate consequences they cannot foresee.",
-      "Narrator: [warmly] What endures is a methodology, testing memory against memory, refusing convenient simplification, insisting precision matters even when it is uncomfortable.",
-      "Narrator: [thoughtful] I return to her example whenever tempted to accept a plausible account simply because contradicting it would require an uncomfortable conversation."
+      "Narrator: Aisha bint Abi Bakr transmitted several thousand narrations, and what distinguishes her corpus is not merely its volume but its granularity, absent from testimony offered by companions who observed the Prophet only in public.",
+      "Narrator: [carefully] Later jurists, confronted with narrations that seemed to contradict one another, frequently discovered that Aisha alone possessed the detail capable of reconciling the discrepancy.",
+      "Narrator: More than one senior companion, having circulated an account confidently for years, found himself gently corrected by a woman roughly two decades his junior, and revised his position without resentment.",
+      "Narrator: [reflective] Her authority rested on an unusual convergence, exceptional memory, proximity to revelation as it unfolded within her own home, and a willingness to interrogate received wisdom rather than repeat it.",
+      "Narrator: When later critics accused women broadly of intellectual inferiority, students of hadith needed only gesture toward her corrected transmissions, evidence already sitting in their own tradition.",
+      "Narrator: [honestly] What often escapes casual retellings is the intellectual courage her position required, correcting elders publicly in a culture that prized deference to seniority above nearly every social virtue.",
+      "Narrator: She distinguished, with remarkable precision, between what the Prophet had explicitly stated and what companions had merely inferred, a distinction scholars still find indispensable.",
+      "Narrator: [gently] Her teaching circle, convened for decades after the Prophet's death, drew students from across the peninsula, men included, unbothered by a hierarchy that favored convention over expertise.",
+      "Narrator: Some accounts describe her weeping when certain verses were recited, not from theatrical piety but from an intimacy no later listener could replicate.",
+      "Narrator: [calmly] Her political interventions, later in life, proved more contested than her scholarship, a reminder that even formidable intellects navigate consequences they cannot foresee.",
+      "Narrator: What endures is a methodology, testing memory against memory, refusing convenient simplification, insisting precision matters even when it is uncomfortable.",
+      "Narrator: [encouraging] I return to her example whenever tempted to accept a plausible account simply because contradicting it would require an uncomfortable conversation."
     ],
     "quiz": [
-      { "question": "What distinguishes Aisha's hadith corpus, according to the narrator?", "options": ["Its brevity", "Its granularity and domestic, psychological texture absent from public testimony", "Its focus on military matters", "Its anonymity"], "correctIndex": 1, "explanation": "The narrator says what distinguishes her corpus is not merely volume but granularity, domestic and psychological texture absent from testimony offered by companions who saw the Prophet only publicly." },
-      { "question": "How did senior companions typically respond when Aisha corrected their narrations?", "options": ["They dismissed her entirely", "They revised their position without visible resentment", "They stopped teaching altogether", "They demanded formal apologies"], "correctIndex": 1, "explanation": "Corrected companions revised their position without visible resentment, despite being roughly two decades her senior." },
-      { "question": "What distinction did Aisha draw with notable precision?", "options": ["Between rich and poor companions", "Between what the Prophet explicitly stated and what was merely inferred from his silence or conduct", "Between Meccan and Madinan converts", "Between early and late revelations only"], "correctIndex": 1, "explanation": "She distinguished precisely between explicit statements and inferences companions drew from silence or conduct." },
-      { "question": "What characterized her teaching circle after the Prophet's death?", "options": ["It excluded men", "It drew students from across the peninsula, including men", "It was disbanded quickly", "It focused only on poetry"], "correctIndex": 1, "explanation": "Her teaching circle drew students from across the peninsula, men included, unbothered by convention." },
-      { "question": "What does the narrator say about Aisha's later political interventions?", "options": ["They were universally praised", "They proved considerably more contested than her scholarship", "They were never discussed by historians", "They ended her teaching career"], "correctIndex": 1, "explanation": "Her political interventions later in life proved considerably more contested than her scholarship." }
-    ]
+      {
+        "question": "What distinguishes Aisha's hadith corpus, according to the narrator?",
+        "options": [
+          "Its brevity",
+          "Its focus on military matters",
+          "Its granularity and domestic, psychological texture absent from public testimony",
+          "Its anonymity"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator says what distinguishes her corpus is not merely volume but granularity, domestic and psychological texture absent from testimony offered by companions who saw the Prophet only publicly."
+      },
+      {
+        "question": "How did senior companions typically respond when Aisha corrected their narrations?",
+        "options": [
+          "They dismissed her entirely",
+          "They revised their position without visible resentment",
+          "They stopped teaching altogether",
+          "They demanded formal apologies"
+        ],
+        "correctIndex": 1,
+        "explanation": "Corrected companions revised their position without visible resentment, despite being roughly two decades her senior."
+      },
+      {
+        "question": "What distinction did Aisha draw with notable precision?",
+        "options": [
+          "Between rich and poor companions",
+          "Between Meccan and Madinan converts",
+          "Between what the Prophet explicitly stated and what was merely inferred from his silence or conduct",
+          "Between early and late revelations only"
+        ],
+        "correctIndex": 2,
+        "explanation": "She distinguished precisely between explicit statements and inferences companions drew from silence or conduct."
+      },
+      {
+        "question": "What characterized her teaching circle after the Prophet's death?",
+        "options": [
+          "It drew students from across the peninsula, including men",
+          "It excluded men",
+          "It was disbanded quickly",
+          "It focused only on poetry"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her teaching circle drew students from across the peninsula, men included, unbothered by convention."
+      },
+      {
+        "question": "What does the narrator say about Aisha's later political interventions?",
+        "options": [
+          "They were universally praised",
+          "They proved considerably more contested than her scholarship",
+          "They were never discussed by historians",
+          "They ended her teaching career"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her political interventions later in life proved considerably more contested than her scholarship."
+      },
+      {
+        "question": "Why did later jurists value Aisha's reports when narrations seemed to conflict?",
+        "options": [
+          "They replaced all earlier transmitters.",
+          "They excluded legal reasoning.",
+          "They focused only on political disputes.",
+          "They supplied private contextual detail missing from public observation."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports they supplied private contextual detail missing from public observation."
+      },
+      {
+        "question": "What does the narrative identify as the basis of Aisha's authority?",
+        "options": [
+          "Family wealth and tribal rank alone.",
+          "A formal judicial appointment.",
+          "Avoiding disagreement with elders.",
+          "Memory, household proximity, and critical inquiry combined."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports memory, household proximity, and critical inquiry combined."
+      },
+      {
+        "question": "Why were Aisha's public corrections especially courageous?",
+        "options": [
+          "They challenged seniority within a culture that prized deference.",
+          "They occurred before any scholars existed.",
+          "They rejected all transmitted knowledge.",
+          "They made domestic learning illegal."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports they challenged seniority within a culture that prized deference."
+      },
+      {
+        "question": "What methodological boundary did Aisha protect?",
+        "options": [
+          "Private reports always outweigh public reports.",
+          "Senior transmitters cannot be corrected.",
+          "Political judgment is identical to scholarship.",
+          "Explicit Prophetic words must not be confused with companions' inferences."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports explicit Prophetic words must not be confused with companions' inferences."
+      },
+      {
+        "question": "What does the narrator infer from Aisha's legacy?",
+        "options": [
+          "Expertise should remain private.",
+          "Precision may require uncomfortable correction rather than easy agreement.",
+          "Memory is more valuable than evidence.",
+          "Scholarship requires political involvement."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports precision may require uncomfortable correction rather than easy agreement."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-sahabah-02",
@@ -38,34 +152,151 @@
     "themeId": "sahabah",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dewi: [curious] Fajar, I read that Mus'ab ibn Umair was once the most fashionably dressed young man in Mecca. How does someone like that end up remembered mainly for austerity?",
-      "Fajar: [thoughtful] That contrast is exactly what makes him such a compelling case study. His family's wealth afforded him imported garments and perfumes most of his peers couldn't dream of affording.",
-      "Dewi: [interested] What happened when he embraced the message, then? Did his family simply accept the change?",
-      "Fajar: [serious] Hardly. His mother, apparently formidable in her own right, confined him at home, hoping isolation would erode his conviction before it solidified into something permanent.",
-      "Dewi: [surprised] Did the confinement work, even partially?",
-      "Fajar: [firmly] Not remotely. He eventually escaped to Abyssinia, and when he later returned, his previous elegance had visibly deteriorated, patched clothing, a gauntness that startled people who remembered him.",
-      "Dewi: [thoughtful] That's a striking image, someone who once epitomized luxury choosing visible poverty over comfortable concealment.",
-      "Fajar: [reflective] The Prophet reportedly wept at the sight of him, less from pity than from recognizing precisely what that transformation had genuinely cost.",
-      "Dewi: [curious] Wasn't he also entrusted with something considerably more consequential than personal sacrifice?",
-      "Fajar: [explaining] Yes, he was sent to Madinah essentially as an ambassador, tasked with teaching the Quran to a city that hadn't yet accepted the Prophet's leadership.",
-      "Dewi: [impressed] That seems like an enormous responsibility for someone still relatively new to the faith himself.",
-      "Fajar: [nodding] It was, yet by most accounts he handled it with a diplomatic patience that converted entire households, including tribal leaders initially hostile to his presence.",
-      "Dewi: [softly] And he was killed at Uhud, wasn't he? I recall something about the burial cloth being too short.",
-      "Fajar: [with feeling] Exactly. The cloth covered either his head or his feet, never both, so companions covered his feet with grass instead, unwilling to leave any part exposed.",
-      "Dewi: [thoughtful] It's almost unbearably poetic, a man once wrapped in silk buried in something that couldn't even fully cover him.",
-      "Fajar: [warmly] That juxtaposition is precisely why his story gets retold, not as a lesson about deprivation, but about what people are willing to relinquish once conviction outweighs comfort."
+      "Dewi: [thoughtful] Fajar, I read that Mus'ab ibn Umair was once the most fashionably dressed young man in Mecca. How does someone like that end up remembered mainly for austerity?",
+      "Fajar: That contrast is exactly what makes him such a compelling case study. His family's wealth afforded him imported garments and perfumes most of his peers couldn't dream of affording.",
+      "Dewi: [carefully] What happened when he embraced the message, then? Did his family simply accept the change?",
+      "Fajar: Hardly. His mother, apparently formidable in her own right, confined him at home, hoping isolation would erode his conviction before it solidified into something permanent.",
+      "Dewi: [reflective] Did the confinement work, even partially?",
+      "Fajar: Not remotely. He eventually escaped to Abyssinia, and when he later returned, his previous elegance had visibly deteriorated, patched clothing, a gauntness that startled people who remembered him.",
+      "Dewi: [honestly] That's a striking image, someone who once epitomized luxury choosing visible poverty over comfortable concealment.",
+      "Fajar: The Prophet reportedly wept at the sight of him, less from pity than from recognizing precisely what that transformation had genuinely cost.",
+      "Dewi: [gently] Wasn't he also entrusted with something considerably more consequential than personal sacrifice?",
+      "Fajar: Yes, he was sent to Madinah essentially as an ambassador, tasked with teaching the Quran to a city that hadn't yet accepted the Prophet's leadership.",
+      "Dewi: [calmly] That seems like an enormous responsibility for someone still relatively new to the faith himself.",
+      "Fajar: It was, yet by most accounts he handled it with a diplomatic patience that converted entire households, including tribal leaders initially hostile to his presence.",
+      "Dewi: [encouraging] And he was killed at Uhud, wasn't he? I recall something about the burial cloth being too short.",
+      "Fajar: Exactly. The cloth covered either his head or his feet, never both, so companions covered his feet with grass instead, unwilling to leave any part exposed.",
+      "Dewi: [seriously] It's almost unbearably poetic, a man once wrapped in silk buried in something that couldn't even fully cover him.",
+      "Fajar: That juxtaposition is precisely why his story gets retold, not as a lesson about deprivation, but about what people are willing to relinquish once conviction outweighs comfort."
     ],
     "quiz": [
-      { "question": "What did Mus'ab's mother do when he embraced the message?", "options": ["She disowned him publicly", "She confined him at home hoping isolation would erode his conviction", "She joined him immediately", "She sent him abroad herself"], "correctIndex": 1, "explanation": "His mother confined him at home, hoping isolation would erode his conviction before it solidified." },
-      { "question": "What did Mus'ab look like when he returned from Abyssinia?", "options": ["Unchanged and still elegant", "His elegance had deteriorated, with patched clothing and visible gauntness", "Wealthier than before", "Dressed in imported silk"], "correctIndex": 1, "explanation": "His previous elegance had visibly deteriorated, patched clothing and a gauntness that startled people who remembered him." },
-      { "question": "What responsibility was Mus'ab given in Madinah?", "options": ["Managing trade caravans", "Serving as an ambassador teaching the Quran to the city", "Commanding a large army", "Collecting taxes"], "correctIndex": 1, "explanation": "He was sent to Madinah as an ambassador, tasked with teaching the Quran to a city that hadn't yet accepted the Prophet's leadership." },
-      { "question": "What was unusual about Mus'ab's burial cloth?", "options": ["It was made of silk", "It was too short to cover both his head and feet", "It was never found", "It was borrowed from an enemy"], "correctIndex": 1, "explanation": "The cloth covered either his head or his feet, never both, so companions covered his feet with grass instead." },
-      { "question": "According to Fajar, why does Mus'ab's story get retold?", "options": ["As a lesson about deprivation itself", "As a lesson about what people relinquish once conviction outweighs comfort", "As a lesson about fashion history", "As a lesson about military tactics"], "correctIndex": 1, "explanation": "Fajar says the juxtaposition is retold not as a lesson about deprivation, but about relinquishing comfort once conviction outweighs it." }
-    ]
+      {
+        "question": "What did Mus'ab's mother do when he embraced the message?",
+        "options": [
+          "She disowned him publicly",
+          "She joined him immediately",
+          "She sent him abroad herself",
+          "She confined him at home hoping isolation would erode his conviction"
+        ],
+        "correctIndex": 3,
+        "explanation": "His mother confined him at home, hoping isolation would erode his conviction before it solidified."
+      },
+      {
+        "question": "What did Mus'ab look like when he returned from Abyssinia?",
+        "options": [
+          "Unchanged and still elegant",
+          "Wealthier than before",
+          "Dressed in imported silk",
+          "His elegance had deteriorated, with patched clothing and visible gauntness"
+        ],
+        "correctIndex": 3,
+        "explanation": "His previous elegance had visibly deteriorated, patched clothing and a gauntness that startled people who remembered him."
+      },
+      {
+        "question": "What responsibility was Mus'ab given in Madinah?",
+        "options": [
+          "Serving as an ambassador teaching the Quran to the city",
+          "Managing trade caravans",
+          "Commanding a large army",
+          "Collecting taxes"
+        ],
+        "correctIndex": 0,
+        "explanation": "He was sent to Madinah as an ambassador, tasked with teaching the Quran to a city that hadn't yet accepted the Prophet's leadership."
+      },
+      {
+        "question": "What was unusual about Mus'ab's burial cloth?",
+        "options": [
+          "It was made of silk",
+          "It was too short to cover both his head and feet",
+          "It was never found",
+          "It was borrowed from an enemy"
+        ],
+        "correctIndex": 1,
+        "explanation": "The cloth covered either his head or his feet, never both, so companions covered his feet with grass instead."
+      },
+      {
+        "question": "According to Fajar, why does Mus'ab's story get retold?",
+        "options": [
+          "As a lesson about what people relinquish once conviction outweighs comfort",
+          "As a lesson about deprivation itself",
+          "As a lesson about fashion history",
+          "As a lesson about military tactics"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fajar says the juxtaposition is retold not as a lesson about deprivation, but about relinquishing comfort once conviction outweighs it."
+      },
+      {
+        "question": "What does Mus'ab's transformation primarily demonstrate?",
+        "options": [
+          "Poverty guarantees leadership.",
+          "Family pressure always strengthens belief.",
+          "Conviction can outweigh a life of inherited comfort.",
+          "Diplomacy requires social privilege."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports conviction can outweigh a life of inherited comfort."
+      },
+      {
+        "question": "Why is the Prophet's response to Mus'ab's condition significant?",
+        "options": [
+          "It condemns migration as reckless.",
+          "It rewards public display of hardship.",
+          "It recognises the real cost of his chosen transformation.",
+          "It treats wealth as inherently corrupt."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports it recognises the real cost of his chosen transformation."
+      },
+      {
+        "question": "How did Mus'ab's work in Madinah differ from mere personal austerity?",
+        "options": [
+          "He withdrew from all public responsibility.",
+          "He used patient teaching to engage initially hostile households.",
+          "He relied on inherited tribal authority.",
+          "He avoided speaking with leaders."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports he used patient teaching to engage initially hostile households."
+      },
+      {
+        "question": "What is the function of the burial-cloth contrast in the account?",
+        "options": [
+          "It proves hardship was strategically planned.",
+          "It dismisses his earlier social position.",
+          "It argues mourning should be avoided.",
+          "It highlights commitment without presenting deprivation as the lesson itself."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports it highlights commitment without presenting deprivation as the lesson itself."
+      },
+      {
+        "question": "Which interpretation best fits the ending?",
+        "options": [
+          "The story praises poverty over every form of wealth.",
+          "The story measures what conviction can make comfort surrender.",
+          "The story portrays family conflict as desirable.",
+          "The story treats appearance as proof of faith."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports the story measures what conviction can make comfort surrender."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-sahabah-03",
@@ -74,30 +305,144 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Sa'd ibn Abi Waqqas embraced the message early, among the very first handful, yet his household nearly unraveled entirely because of that decision.",
-      "Narrator: [serious] His mother, devastated by his conversion, refused to eat or drink, declaring she would starve herself until either he recanted or she died attempting to force the issue.",
-      "Narrator: [with feeling] Sa'd loved her, by every account, without qualification, yet he refused to abandon his conviction, telling her plainly that even a hundred lives would not persuade him otherwise.",
-      "Narrator: [reflective] She eventually relented, physically unable to sustain the protest, and what strikes me is how the episode became, almost immediately, a template for something considerably larger than one family's private crisis.",
-      "Narrator: [analytical] Revelation addressed the situation directly, instructing believers to treat parents with continued kindness even amid profound disagreement, while still declining obedience where conviction itself was concerned.",
-      "Narrator: [thoughtful] That distinction, tenderness without capitulation, is subtler than it first appears, since most of us quietly conflate loving someone with eventually agreeing with them.",
-      "Narrator: [serious] Sa'd carried that same resolve into later life, commanding forces at Qadisiyyah despite illness so severe he reportedly directed the battle from a makeshift shelter, unable to stand unaided.",
-      "Narrator: [with admiration] Victory there reshaped the region's political trajectory considerably, yet Sa'd remained famously reluctant to attribute the outcome to his own generalship alone.",
-      "Narrator: [reflective] He was also known as someone whose prayers were rarely refused, a reputation he apparently found more burdensome than flattering, given how frequently people approached him seeking intercession.",
-      "Narrator: [thoughtful] In his later years, he withdrew somewhat from public affairs, avoiding the political fractures that consumed several of his contemporaries during that turbulent period.",
-      "Narrator: [calm] Asked once why he stayed distant from the disputes dividing the community, he reportedly said he preferred a clear conscience to a contested legacy.",
-      "Narrator: [warmly] What I find genuinely instructive isn't the military triumph, impressive as it was, but that earlier refusal, a young man declining to trade conviction for his mother's comfort, while somehow never once treating her with contempt.",
-      "Narrator: [thoughtful] Loyalty and integrity, it turns out, aren't always compatible in the moment, and Sa'd's life suggests choosing integrity doesn't require abandoning loyalty afterward."
+      "Narrator: His mother, devastated by his conversion, refused to eat or drink, declaring she would starve herself until either he recanted or she died attempting to force the issue.",
+      "Narrator: [carefully] Sa'd loved her, by every account, without qualification, yet he refused to abandon his conviction, telling her plainly that even a hundred lives would not persuade him otherwise.",
+      "Narrator: She eventually relented, physically unable to sustain the protest, and what strikes me is how the episode became, almost immediately, a template for something considerably larger than one family's private crisis.",
+      "Narrator: [reflective] Revelation addressed the situation directly, instructing believers to treat parents with continued kindness even amid profound disagreement, while still declining obedience where conviction itself was concerned.",
+      "Narrator: That distinction, tenderness without capitulation, is subtler than it first appears, since most of us quietly conflate loving someone with eventually agreeing with them.",
+      "Narrator: [honestly] Sa'd carried that same resolve into later life, commanding forces at Qadisiyyah despite illness so severe he reportedly directed the battle from a makeshift shelter, unable to stand unaided.",
+      "Narrator: Victory there reshaped the region's political trajectory considerably, yet Sa'd remained famously reluctant to attribute the outcome to his own generalship alone.",
+      "Narrator: [gently] He was also known as someone whose prayers were rarely refused, a reputation he apparently found more burdensome than flattering, given how frequently people approached him seeking intercession.",
+      "Narrator: In his later years, he withdrew somewhat from public affairs, avoiding the political fractures that consumed several of his contemporaries during that turbulent period.",
+      "Narrator: [calmly] Asked once why he stayed distant from the disputes dividing the community, he reportedly said he preferred a clear conscience to a contested legacy.",
+      "Narrator: What I find genuinely instructive isn't the military triumph, impressive as it was, but that earlier refusal, a young man declining to trade conviction for his mother's comfort, while somehow never once treating her with contempt.",
+      "Narrator: [encouraging] Loyalty and integrity, it turns out, aren't always compatible in the moment, and Sa'd's life suggests choosing integrity doesn't require abandoning loyalty afterward."
     ],
     "quiz": [
-      { "question": "What did Sa'd's mother do to force him to recant?", "options": ["She reported him to authorities", "She refused to eat or drink, threatening to starve herself", "She left the household permanently", "She destroyed his belongings"], "correctIndex": 1, "explanation": "She refused to eat or drink, declaring she would starve herself until either he recanted or she died attempting to force the issue." },
-      { "question": "What did Sa'd tell his mother about her protest?", "options": ["That he would reconsider his faith", "That even a hundred lives would not persuade him otherwise", "That she should stop immediately", "That he would leave the household"], "correctIndex": 1, "explanation": "He told her plainly that even a hundred lives would not persuade him otherwise." },
-      { "question": "What did revelation instruct regarding parents in such disagreements?", "options": ["To obey them regardless of belief", "To treat them with continued kindness while declining obedience where conviction was concerned", "To sever all contact with them", "To ignore their concerns entirely"], "correctIndex": 1, "explanation": "Revelation instructed believers to treat parents with continued kindness even amid disagreement, while declining obedience where conviction was concerned." },
-      { "question": "How did Sa'd command forces at Qadisiyyah?", "options": ["He avoided the battle entirely", "He directed the battle from a shelter despite being too ill to stand unaided", "He delegated command completely", "He fought without any illness"], "correctIndex": 1, "explanation": "Despite severe illness, he reportedly directed the battle from a makeshift shelter, unable to stand unaided." },
-      { "question": "Why did Sa'd withdraw from later political disputes?", "options": ["He was forced out by rivals", "He preferred a clear conscience to a contested legacy", "He lost interest in public life", "He was instructed to by the caliph"], "correctIndex": 1, "explanation": "He reportedly said he preferred a clear conscience to a contested legacy." }
-    ]
+      {
+        "question": "What did Sa'd's mother do to force him to recant?",
+        "options": [
+          "She refused to eat or drink, threatening to starve herself",
+          "She reported him to authorities",
+          "She left the household permanently",
+          "She destroyed his belongings"
+        ],
+        "correctIndex": 0,
+        "explanation": "She refused to eat or drink, declaring she would starve herself until either he recanted or she died attempting to force the issue."
+      },
+      {
+        "question": "What did Sa'd tell his mother about her protest?",
+        "options": [
+          "That even a hundred lives would not persuade him otherwise",
+          "That he would reconsider his faith",
+          "That she should stop immediately",
+          "That he would leave the household"
+        ],
+        "correctIndex": 0,
+        "explanation": "He told her plainly that even a hundred lives would not persuade him otherwise."
+      },
+      {
+        "question": "What did revelation instruct regarding parents in such disagreements?",
+        "options": [
+          "To obey them regardless of belief",
+          "To sever all contact with them",
+          "To treat them with continued kindness while declining obedience where conviction was concerned",
+          "To ignore their concerns entirely"
+        ],
+        "correctIndex": 2,
+        "explanation": "Revelation instructed believers to treat parents with continued kindness even amid disagreement, while declining obedience where conviction was concerned."
+      },
+      {
+        "question": "How did Sa'd command forces at Qadisiyyah?",
+        "options": [
+          "He avoided the battle entirely",
+          "He directed the battle from a shelter despite being too ill to stand unaided",
+          "He delegated command completely",
+          "He fought without any illness"
+        ],
+        "correctIndex": 1,
+        "explanation": "Despite severe illness, he reportedly directed the battle from a makeshift shelter, unable to stand unaided."
+      },
+      {
+        "question": "Why did Sa'd withdraw from later political disputes?",
+        "options": [
+          "He was forced out by rivals",
+          "He preferred a clear conscience to a contested legacy",
+          "He lost interest in public life",
+          "He was instructed to by the caliph"
+        ],
+        "correctIndex": 1,
+        "explanation": "He reportedly said he preferred a clear conscience to a contested legacy."
+      },
+      {
+        "question": "What distinction does Sa'd's early conflict with his mother establish?",
+        "options": [
+          "Love requires eventual agreement.",
+          "Family ties end after disagreement.",
+          "Conviction excuses contempt toward parents.",
+          "Kindness can continue even when obedience conflicts with conviction."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports kindness can continue even when obedience conflicts with conviction."
+      },
+      {
+        "question": "Why did the episode become larger than one family dispute?",
+        "options": [
+          "Sa'd publicly defeated his mother.",
+          "His mother accepted his military career.",
+          "The family moved away from Mecca.",
+          "Revelation framed its principle for believers facing similar pressure."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports revelation framed its principle for believers facing similar pressure."
+      },
+      {
+        "question": "How does Sa'd's later conduct qualify his military achievement?",
+        "options": [
+          "He avoided all responsibility because of illness.",
+          "He sought public praise for Qadisiyyah.",
+          "He resisted claiming victory as personal credit.",
+          "He blamed others for political change."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports he resisted claiming victory as personal credit."
+      },
+      {
+        "question": "Why did Sa'd keep distance from later political conflict?",
+        "options": [
+          "He lacked knowledge of public affairs.",
+          "He believed disagreement was impossible.",
+          "He had retired from every community role.",
+          "He preferred moral clarity to a legacy shaped by faction."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports he preferred moral clarity to a legacy shaped by faction."
+      },
+      {
+        "question": "What central tension does the narrative preserve?",
+        "options": [
+          "Military success resolves family disagreement.",
+          "Integrity and loyalty may clash without making kindness impossible.",
+          "Prayer removes every ethical dilemma.",
+          "Public status is the measure of conscience."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports integrity and loyalty may clash without making kindness impossible."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-sahabah-04",
@@ -106,36 +451,153 @@
     "themeId": "sahabah",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Today's guest researches the political acumen of early Muslim women, and she wants to start with Umm Salamah's role at Hudaybiyyah. Welcome to the program.",
-      "Guest: [pleasantly] Thank you. That episode is honestly underrated whenever people discuss decisive companions, mostly because the decisive figure there wasn't a general at all.",
-      "Host: [curious] Set the scene for us. What actually happened at Hudaybiyyah?",
-      "Guest: [explaining] The Prophet negotiated a treaty many companions found humiliating on its surface, conceding terms that seemed to favor Mecca considerably more than Madinah.",
-      "Host: [interested] And the companions resisted complying with the closing rituals afterward?",
-      "Guest: [thoughtful] Precisely. He instructed them to shave their heads and sacrifice their animals, standard closing rites, yet stunned by disappointment, nobody moved.",
-      "Host: [surprised] Nobody at all? Even after a direct instruction?",
-      "Guest: [nodding] Repeated instruction, in fact, three times, met with the same paralysis. He returned to his tent visibly troubled by the impasse.",
-      "Host: [curious] Where does Umm Salamah enter this story?",
-      "Guest: [warmly] She suggested something deceptively simple, that he proceed with the rituals himself, publicly, without waiting for anyone's participation or permission.",
-      "Host: [thoughtful] And that worked?",
-      "Guest: [firmly] Immediately. Once he shaved his own head, the companions, released from whatever collective hesitation had gripped them, rushed to follow suit.",
-      "Host: [impressed] That's a remarkably precise diagnosis of group psychology for someone operating without any formal theory of it.",
-      "Guest: [reflective] Exactly my point. She understood that hesitation often needs one visible actor to dissolve it, not further argument or persuasion.",
-      "Host: [interested] Was that pattern, quiet strategic clarity, consistent throughout her life?",
-      "Guest: [thoughtful] Remarkably so. She'd already displayed it during the earlier migration to Abyssinia, and later transmitted substantial hadith, becoming a reference point other companions consulted directly.",
-      "Host: [warmly] It's striking that her most consequential contribution was essentially a single, well-timed suggestion.",
-      "Guest: [smiling] Which is perhaps the underrated skill in leadership generally, knowing precisely when to say the one thing everyone else has overlooked."
+      "Host: [thoughtful] Today's guest researches the political acumen of early Muslim women, and she wants to start with Umm Salamah's role at Hudaybiyyah. Welcome to the program.",
+      "Guest: Thank you. That episode is honestly underrated whenever people discuss decisive companions, mostly because the decisive figure there wasn't a general at all.",
+      "Host: [carefully] Set the scene for us. What actually happened at Hudaybiyyah?",
+      "Guest: The Prophet negotiated a treaty many companions found humiliating on its surface, conceding terms that seemed to favor Mecca considerably more than Madinah.",
+      "Host: [reflective] And the companions resisted complying with the closing rituals afterward?",
+      "Guest: Precisely. He instructed them to shave their heads and sacrifice their animals, standard closing rites, yet stunned by disappointment, nobody moved.",
+      "Host: [honestly] Nobody at all? Even after a direct instruction?",
+      "Guest: Repeated instruction, in fact, three times, met with the same paralysis. He returned to his tent visibly troubled by the impasse.",
+      "Host: [gently] Where does Umm Salamah enter this story?",
+      "Guest: She suggested something deceptively simple, that he proceed with the rituals himself, publicly, without waiting for anyone's participation or permission.",
+      "Host: [calmly] And that worked?",
+      "Guest: Immediately. Once he shaved his own head, the companions, released from whatever collective hesitation had gripped them, rushed to follow suit.",
+      "Host: [encouraging] That's a remarkably precise diagnosis of group psychology for someone operating without any formal theory of it.",
+      "Guest: Exactly my point. She understood that hesitation often needs one visible actor to dissolve it, not further argument or persuasion.",
+      "Host: [seriously] Was that pattern, quiet strategic clarity, consistent throughout her life?",
+      "Guest: Remarkably so. She'd already displayed it during the earlier migration to Abyssinia, and later transmitted substantial hadith, becoming a reference point other companions consulted directly.",
+      "Host: It's striking that her most consequential contribution was essentially a single, well-timed suggestion.",
+      "Guest: Which is perhaps the underrated skill in leadership generally, knowing precisely when to say the one thing everyone else has overlooked."
     ],
     "quiz": [
-      { "question": "What did the Prophet instruct the companions to do after the Hudaybiyyah treaty?", "options": ["Return home immediately", "Shave their heads and sacrifice their animals", "Renegotiate the treaty", "Prepare for battle"], "correctIndex": 1, "explanation": "He instructed them to shave their heads and sacrifice their animals, the standard closing rites." },
-      { "question": "What happened when the Prophet first gave that instruction?", "options": ["Everyone complied instantly", "Nobody moved, even after the instruction was repeated three times", "The companions left the camp", "They asked for a vote"], "correctIndex": 1, "explanation": "Stunned by disappointment, nobody moved, even after repeated instruction three times." },
-      { "question": "What did Umm Salamah suggest?", "options": ["That the Prophet renegotiate the treaty", "That he perform the rituals himself publicly without waiting", "That the companions be punished", "That they abandon the rituals entirely"], "correctIndex": 1, "explanation": "She suggested he proceed with the rituals himself, publicly, without waiting for anyone's participation or permission." },
-      { "question": "What happened after the Prophet followed her suggestion?", "options": ["Nothing changed", "The companions rushed to follow suit once released from their hesitation", "The companions left in protest", "The treaty was cancelled"], "correctIndex": 1, "explanation": "Once he shaved his own head, the companions rushed to follow suit, released from their collective hesitation." },
-      { "question": "According to the Guest, what underrated leadership skill does this episode illustrate?", "options": ["Giving longer speeches", "Knowing precisely when to say the one thing everyone else has overlooked", "Avoiding difficult decisions", "Relying on formal authority alone"], "correctIndex": 1, "explanation": "The Guest says this is perhaps the underrated skill in leadership generally, knowing when to say the one thing everyone else overlooked." }
-    ]
+      {
+        "question": "What did the Prophet instruct the companions to do after the Hudaybiyyah treaty?",
+        "options": [
+          "Return home immediately",
+          "Renegotiate the treaty",
+          "Shave their heads and sacrifice their animals",
+          "Prepare for battle"
+        ],
+        "correctIndex": 2,
+        "explanation": "He instructed them to shave their heads and sacrifice their animals, the standard closing rites."
+      },
+      {
+        "question": "What happened when the Prophet first gave that instruction?",
+        "options": [
+          "Everyone complied instantly",
+          "The companions left the camp",
+          "Nobody moved, even after the instruction was repeated three times",
+          "They asked for a vote"
+        ],
+        "correctIndex": 2,
+        "explanation": "Stunned by disappointment, nobody moved, even after repeated instruction three times."
+      },
+      {
+        "question": "What did Umm Salamah suggest?",
+        "options": [
+          "That the Prophet renegotiate the treaty",
+          "That he perform the rituals himself publicly without waiting",
+          "That the companions be punished",
+          "That they abandon the rituals entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "She suggested he proceed with the rituals himself, publicly, without waiting for anyone's participation or permission."
+      },
+      {
+        "question": "What happened after the Prophet followed her suggestion?",
+        "options": [
+          "Nothing changed",
+          "The companions left in protest",
+          "The treaty was cancelled",
+          "The companions rushed to follow suit once released from their hesitation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Once he shaved his own head, the companions rushed to follow suit, released from their collective hesitation."
+      },
+      {
+        "question": "According to the Guest, what underrated leadership skill does this episode illustrate?",
+        "options": [
+          "Knowing precisely when to say the one thing everyone else has overlooked",
+          "Giving longer speeches",
+          "Avoiding difficult decisions",
+          "Relying on formal authority alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "The Guest says this is perhaps the underrated skill in leadership generally, knowing when to say the one thing everyone else overlooked."
+      },
+      {
+        "question": "Why did repeated instructions at Hudaybiyyah fail at first?",
+        "options": [
+          "Collective disappointment produced paralysis rather than open defiance.",
+          "The companions had not heard the instruction.",
+          "The rites were legally optional.",
+          "Umm Salamah opposed the treaty."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports collective disappointment produced paralysis rather than open defiance."
+      },
+      {
+        "question": "What did Umm Salamah diagnose about the group's hesitation?",
+        "options": [
+          "The group needed stricter punishment.",
+          "The treaty had to be cancelled first.",
+          "Only tribal leaders could act.",
+          "A visible example would work better than further argument."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports a visible example would work better than further argument."
+      },
+      {
+        "question": "Why was her suggestion strategically effective?",
+        "options": [
+          "It replaced ritual with political debate.",
+          "The Prophet's action gave the group a practical way to move.",
+          "It required no public communication.",
+          "It made disagreement disappear permanently."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports the Prophet's action gave the group a practical way to move."
+      },
+      {
+        "question": "What broader leadership principle does the interview suggest?",
+        "options": [
+          "Authority depends on speaking the longest.",
+          "Groups follow only written orders.",
+          "Private advice should never shape public action.",
+          "Well-timed clarity can unblock a stalled group."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports well-timed clarity can unblock a stalled group."
+      },
+      {
+        "question": "How does the program challenge narrow ideas of decisive contribution?",
+        "options": [
+          "Only generals can alter history.",
+          "Influence may come through precise counsel, not military command.",
+          "Scholarship and strategy cannot coexist.",
+          "Women contributed only through narration."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports influence may come through precise counsel, not military command."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-sahabah-05",
@@ -144,30 +606,144 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Zayd ibn Harithah's story complicates any tidy assumption that kinship is simply a matter of blood rather than something occasionally chosen.",
-      "Narrator: [reflective] Captured as a child during a raid, he was eventually purchased and given to Khadijah, who later gifted him to the Prophet, a transaction that could easily have defined the rest of his life as servitude.",
-      "Narrator: [serious] Instead, the Prophet freed him and treated him with an affection that startled onlookers accustomed to far harsher treatment of those without status or lineage.",
-      "Narrator: [with feeling] Years passed before his biological father, having finally located him through travelers' accounts, arrived offering considerable ransom to reclaim his son.",
-      "Narrator: [tense] The Prophet, remarkably, told Zayd he was free to choose, his own family or continued life within this household, without pressure exerted in either direction.",
-      "Narrator: [thoughtful] Zayd chose to stay, a decision his father found almost incomprehensible, given that freedom and biological family were being offered without condition.",
-      "Narrator: [calm] Zayd reportedly explained that he had witnessed something in the Prophet's character he had never encountered anywhere else, something he was unwilling to trade even for reunion with blood relatives.",
-      "Narrator: [with admiration] Moved by that loyalty, the Prophet publicly adopted him, and for years afterward he was known simply as Zayd, son of Muhammad, until later revelation clarified that adoption doesn't erase lineage, only affection.",
-      "Narrator: [reflective] That correction, rather than diminishing him, seemed to redirect focus toward what actually mattered, his character and conduct rather than the label attached to his name.",
-      "Narrator: [serious] The Prophet subsequently entrusted him with command of military expeditions, an extraordinary appointment given that lineage typically determined leadership eligibility in that society.",
-      "Narrator: [thoughtful] He is, notably, the only companion mentioned by name within the Quran itself, a distinction that still puzzles scholars attempting to rank companions by conventional measures of status.",
-      "Narrator: [with feeling] He was eventually killed leading forces at Mu'tah, a battle whose difficulty he reportedly anticipated yet refused to avoid.",
-      "Narrator: [warmly] What lingers, for me, isn't merely his eventual rank, but that earlier choice, a boy offered freedom and blood family, deciding that belonging isn't always where it originates."
+      "Narrator: Captured as a child during a raid, he was eventually purchased and given to Khadijah, who later gifted him to the Prophet, a transaction that could easily have defined the rest of his life as servitude.",
+      "Narrator: [carefully] Instead, the Prophet freed him and treated him with an affection that startled onlookers accustomed to far harsher treatment of those without status or lineage.",
+      "Narrator: Years passed before his biological father, having finally located him through travelers' accounts, arrived offering considerable ransom to reclaim his son.",
+      "Narrator: [reflective] The Prophet, remarkably, told Zayd he was free to choose, his own family or continued life within this household, without pressure exerted in either direction.",
+      "Narrator: Zayd chose to stay, a decision his father found almost incomprehensible, given that freedom and biological family were being offered without condition.",
+      "Narrator: [honestly] Zayd reportedly explained that he had witnessed something in the Prophet's character he had never encountered anywhere else, something he was unwilling to trade even for reunion with blood relatives.",
+      "Narrator: Moved by that loyalty, the Prophet publicly adopted him, and for years afterward he was known simply as Zayd, son of Muhammad, until later revelation clarified that adoption doesn't erase lineage, only affection.",
+      "Narrator: [gently] That correction, rather than diminishing him, seemed to redirect focus toward what actually mattered, his character and conduct rather than the label attached to his name.",
+      "Narrator: The Prophet subsequently entrusted him with command of military expeditions, an extraordinary appointment given that lineage typically determined leadership eligibility in that society.",
+      "Narrator: [calmly] He is, notably, the only companion mentioned by name within the Quran itself, a distinction that still puzzles scholars attempting to rank companions by conventional measures of status.",
+      "Narrator: He was eventually killed leading forces at Mu'tah, a battle whose difficulty he reportedly anticipated yet refused to avoid.",
+      "Narrator: [encouraging] What lingers, for me, isn't merely his eventual rank, but that earlier choice, a boy offered freedom and blood family, deciding that belonging isn't always where it originates."
     ],
     "quiz": [
-      { "question": "How did Zayd come to be part of the Prophet's household?", "options": ["He was born into it", "He was captured as a child, purchased, and eventually given to the Prophet by Khadijah", "He volunteered as an adult", "He was sent by his father as a gift"], "correctIndex": 1, "explanation": "Captured as a child during a raid, he was purchased and given to Khadijah, who later gifted him to the Prophet." },
-      { "question": "What did the Prophet do when Zayd's biological father arrived offering ransom?", "options": ["He refused to let Zayd's father speak to him", "He told Zayd he was free to choose between his family and staying", "He immediately sent Zayd home", "He demanded more money"], "correctIndex": 1, "explanation": "The Prophet told Zayd he was free to choose, his own family or continued life within the household, without pressure." },
-      { "question": "What did Zayd choose?", "options": ["To return with his father", "To stay with the Prophet despite the offer of freedom and family", "To leave and live independently", "To split time between both households"], "correctIndex": 1, "explanation": "Zayd chose to stay, a decision his father found almost incomprehensible given the unconditional offer." },
-      { "question": "What did later revelation clarify about adoption in Zayd's case?", "options": ["That adoption erases all prior lineage", "That adoption doesn't erase lineage, only affection", "That adoption should be kept secret", "That adoption was forbidden entirely"], "correctIndex": 1, "explanation": "Later revelation clarified that adoption doesn't erase lineage, only affection." },
-      { "question": "What is notable about Zayd's mention in the Quran?", "options": ["He is criticized by name", "He is the only companion mentioned by name in the Quran", "He is mentioned only indirectly", "He is never mentioned at all"], "correctIndex": 1, "explanation": "He is notably the only companion mentioned by name within the Quran itself." }
-    ]
+      {
+        "question": "How did Zayd come to be part of the Prophet's household?",
+        "options": [
+          "He was born into it",
+          "He volunteered as an adult",
+          "He was captured as a child, purchased, and eventually given to the Prophet by Khadijah",
+          "He was sent by his father as a gift"
+        ],
+        "correctIndex": 2,
+        "explanation": "Captured as a child during a raid, he was purchased and given to Khadijah, who later gifted him to the Prophet."
+      },
+      {
+        "question": "What did the Prophet do when Zayd's biological father arrived offering ransom?",
+        "options": [
+          "He refused to let Zayd's father speak to him",
+          "He told Zayd he was free to choose between his family and staying",
+          "He immediately sent Zayd home",
+          "He demanded more money"
+        ],
+        "correctIndex": 1,
+        "explanation": "The Prophet told Zayd he was free to choose, his own family or continued life within the household, without pressure."
+      },
+      {
+        "question": "What did Zayd choose?",
+        "options": [
+          "To return with his father",
+          "To leave and live independently",
+          "To stay with the Prophet despite the offer of freedom and family",
+          "To split time between both households"
+        ],
+        "correctIndex": 2,
+        "explanation": "Zayd chose to stay, a decision his father found almost incomprehensible given the unconditional offer."
+      },
+      {
+        "question": "What did later revelation clarify about adoption in Zayd's case?",
+        "options": [
+          "That adoption erases all prior lineage",
+          "That adoption should be kept secret",
+          "That adoption was forbidden entirely",
+          "That adoption doesn't erase lineage, only affection"
+        ],
+        "correctIndex": 3,
+        "explanation": "Later revelation clarified that adoption doesn't erase lineage, only affection."
+      },
+      {
+        "question": "What is notable about Zayd's mention in the Quran?",
+        "options": [
+          "He is the only companion mentioned by name in the Quran",
+          "He is criticized by name",
+          "He is mentioned only indirectly",
+          "He is never mentioned at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "He is notably the only companion mentioned by name within the Quran itself."
+      },
+      {
+        "question": "Why is Zayd's choice presented as surprising?",
+        "options": [
+          "He chose a household relationship despite free reunion with family.",
+          "He rejected freedom in every form.",
+          "He did not know his biological father.",
+          "He was forbidden to leave."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports he chose a household relationship despite free reunion with family."
+      },
+      {
+        "question": "What does the account treat as the reason for Zayd's decision?",
+        "options": [
+          "He wanted a public military role.",
+          "He had forgotten his lineage.",
+          "He expected financial reward.",
+          "He trusted a character he had experienced directly."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports he trusted a character he had experienced directly."
+      },
+      {
+        "question": "What did the later correction of his name clarify?",
+        "options": [
+          "Zayd had never been freed.",
+          "Adoption preserves affection but does not erase lineage.",
+          "Family bonds require no names.",
+          "Military rank changes ancestry."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports adoption preserves affection but does not erase lineage."
+      },
+      {
+        "question": "Why was Zayd's command appointment socially striking?",
+        "options": [
+          "He had no experience of responsibility.",
+          "The Prophet avoided all companions of status.",
+          "Military roles were reserved for children.",
+          "Leadership was usually constrained by lineage in that society."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports leadership was usually constrained by lineage in that society."
+      },
+      {
+        "question": "What concept of belonging does the narrative advance?",
+        "options": [
+          "Blood ties are always irrelevant.",
+          "Belonging can be chosen through character and care.",
+          "Freedom prevents loyalty.",
+          "Status determines every family bond."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports belonging can be chosen through character and care."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-sahabah-06",
@@ -176,34 +752,151 @@
     "themeId": "sahabah",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rina", "gender": "female" },
-      { "name": "Bagas", "gender": "male" }
+      {
+        "name": "Rina",
+        "gender": "female"
+      },
+      {
+        "name": "Bagas",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Rina: [curious] Bagas, something's always puzzled me about Abu Hurairah. He only knew the Prophet for a few years, yet he's credited with more transmitted hadith than companions who knew him for decades.",
-      "Bagas: [thoughtful] That discrepancy bothered skeptics too, both then and now. The explanation, though, has less to do with proximity and more with circumstance.",
-      "Rina: [interested] What circumstance made him so unusually prolific?",
-      "Bagas: [explaining] He had no household or trade competing for his attention, unlike companions managing farms, families, or commerce, so he spent his days essentially attached to the Prophet's presence.",
-      "Rina: [thoughtful] So volume reflects available time rather than any implied favoritism or exaggeration?",
-      "Bagas: [firmly] Largely, yes, though he also developed what amounts to a discipline of memorization, requesting the Prophet's prayer that his retention never fade.",
-      "Rina: [surprised] He actually asked for that specifically?",
-      "Bagas: [nodding] Reportedly, yes, spreading his cloak during a lesson and asking the Prophet to gather his words into it, metaphorically, so nothing would be forgotten.",
-      "Rina: [curious] Did his contemporaries ever challenge the accuracy of what he transmitted, given how much material he alone produced?",
-      "Bagas: [serious] Occasionally, and rigorously, actually. Later scholars cross-examined his narrations against other transmitters with considerable scrutiny, precisely because volume alone invites suspicion.",
-      "Rina: [thoughtful] And how did his material hold up under that scrutiny?",
-      "Bagas: [reflective] Remarkably well, on the whole. Discrepancies existed, as they do with any transmitter, but nothing suggesting systematic distortion or embellishment.",
-      "Rina: [interested] It's an interesting epistemic problem, isn't it, verifying testimony generations after the fact, without any of the usual physical evidence.",
-      "Bagas: [warmly] Exactly, which is why the scholarly tradition built around hadith verification remains genuinely impressive, treating memory as something that requires the same rigor as any other evidence.",
-      "Rina: [thoughtful] So his legacy isn't really about sheer output, it's about how thoroughly that output withstood examination.",
-      "Bagas: [firmly] Precisely. Quantity would mean very little without the verification apparatus built specifically to interrogate it."
+      "Rina: [thoughtful] Bagas, something's always puzzled me about Abu Hurairah. He only knew the Prophet for a few years, yet he's credited with more transmitted hadith than companions who knew him for decades.",
+      "Bagas: That discrepancy bothered skeptics too, both then and now. The explanation, though, has less to do with proximity and more with circumstance.",
+      "Rina: [carefully] What circumstance made him so unusually prolific?",
+      "Bagas: He had no household or trade competing for his attention, unlike companions managing farms, families, or commerce, so he spent his days essentially attached to the Prophet's presence.",
+      "Rina: [reflective] So volume reflects available time rather than any implied favoritism or exaggeration?",
+      "Bagas: Largely, yes, though he also developed what amounts to a discipline of memorization, requesting the Prophet's prayer that his retention never fade.",
+      "Rina: [honestly] He actually asked for that specifically?",
+      "Bagas: Reportedly, yes, spreading his cloak during a lesson and asking the Prophet to gather his words into it, metaphorically, so nothing would be forgotten.",
+      "Rina: [gently] Did his contemporaries ever challenge the accuracy of what he transmitted, given how much material he alone produced?",
+      "Bagas: Occasionally, and rigorously, actually. Later scholars cross-examined his narrations against other transmitters with considerable scrutiny, precisely because volume alone invites suspicion.",
+      "Rina: [calmly] And how did his material hold up under that scrutiny?",
+      "Bagas: Remarkably well, on the whole. Discrepancies existed, as they do with any transmitter, but nothing suggesting systematic distortion or embellishment.",
+      "Rina: [encouraging] It's an interesting epistemic problem, isn't it, verifying testimony generations after the fact, without any of the usual physical evidence.",
+      "Bagas: Exactly, which is why the scholarly tradition built around hadith verification remains genuinely impressive, treating memory as something that requires the same rigor as any other evidence.",
+      "Rina: [seriously] So his legacy isn't really about sheer output, it's about how thoroughly that output withstood examination.",
+      "Bagas: Precisely. Quantity would mean very little without the verification apparatus built specifically to interrogate it."
     ],
     "quiz": [
-      { "question": "Why was Abu Hurairah able to transmit so much hadith despite knowing the Prophet only a few years?", "options": ["He had a photographic ability from birth", "He had no household or trade competing for his attention, so he stayed near the Prophet constantly", "He copied from other companions", "He fabricated most of it"], "correctIndex": 1, "explanation": "Unlike companions managing farms, families, or commerce, he had no competing obligations, so he spent his days attached to the Prophet's presence." },
-      { "question": "What did Abu Hurairah reportedly request from the Prophet?", "options": ["Financial support", "A prayer that his memory and retention would never fade", "A leadership position", "Permission to leave Madinah"], "correctIndex": 1, "explanation": "He reportedly spread his cloak and asked the Prophet to pray that his words be gathered into it, so nothing would be forgotten." },
-      { "question": "How did later scholars treat Abu Hurairah's narrations?", "options": ["They accepted them without question", "They cross-examined them rigorously against other transmitters", "They dismissed them entirely", "They refused to study them"], "correctIndex": 1, "explanation": "Later scholars cross-examined his narrations against other transmitters with considerable scrutiny, precisely because volume invites suspicion." },
-      { "question": "What did that scrutiny generally find?", "options": ["Widespread systematic distortion", "Discrepancies existed but nothing suggesting systematic distortion or embellishment", "Complete fabrication", "No discrepancies whatsoever"], "correctIndex": 1, "explanation": "Discrepancies existed, as with any transmitter, but nothing suggesting systematic distortion or embellishment." },
-      { "question": "According to Bagas, what does Abu Hurairah's legacy really depend on?", "options": ["Sheer volume of output alone", "How thoroughly that output withstood examination", "His wealth and status", "His military achievements"], "correctIndex": 1, "explanation": "Bagas says quantity would mean very little without the verification apparatus built specifically to interrogate it." }
-    ]
+      {
+        "question": "Why was Abu Hurairah able to transmit so much hadith despite knowing the Prophet only a few years?",
+        "options": [
+          "He had no household or trade competing for his attention, so he stayed near the Prophet constantly",
+          "He had a photographic ability from birth",
+          "He copied from other companions",
+          "He fabricated most of it"
+        ],
+        "correctIndex": 0,
+        "explanation": "Unlike companions managing farms, families, or commerce, he had no competing obligations, so he spent his days attached to the Prophet's presence."
+      },
+      {
+        "question": "What did Abu Hurairah reportedly request from the Prophet?",
+        "options": [
+          "Financial support",
+          "A leadership position",
+          "A prayer that his memory and retention would never fade",
+          "Permission to leave Madinah"
+        ],
+        "correctIndex": 2,
+        "explanation": "He reportedly spread his cloak and asked the Prophet to pray that his words be gathered into it, so nothing would be forgotten."
+      },
+      {
+        "question": "How did later scholars treat Abu Hurairah's narrations?",
+        "options": [
+          "They accepted them without question",
+          "They cross-examined them rigorously against other transmitters",
+          "They dismissed them entirely",
+          "They refused to study them"
+        ],
+        "correctIndex": 1,
+        "explanation": "Later scholars cross-examined his narrations against other transmitters with considerable scrutiny, precisely because volume invites suspicion."
+      },
+      {
+        "question": "What did that scrutiny generally find?",
+        "options": [
+          "Widespread systematic distortion",
+          "Complete fabrication",
+          "Discrepancies existed but nothing suggesting systematic distortion or embellishment",
+          "No discrepancies whatsoever"
+        ],
+        "correctIndex": 2,
+        "explanation": "Discrepancies existed, as with any transmitter, but nothing suggesting systematic distortion or embellishment."
+      },
+      {
+        "question": "According to Bagas, what does Abu Hurairah's legacy really depend on?",
+        "options": [
+          "Sheer volume of output alone",
+          "His wealth and status",
+          "His military achievements",
+          "How thoroughly that output withstood examination"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bagas says quantity would mean very little without the verification apparatus built specifically to interrogate it."
+      },
+      {
+        "question": "What explanation does the dialogue offer for Abu Hurairah's high output?",
+        "options": [
+          "He had unusual time to remain near the Prophet.",
+          "He received fewer reports than others.",
+          "He managed a larger trading network.",
+          "He wrote official legal codes."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports he had unusual time to remain near the Prophet."
+      },
+      {
+        "question": "Why did later scholars scrutinise Abu Hurairah's narrations closely?",
+        "options": [
+          "They assumed all memory was unreliable.",
+          "They rejected every late transmitter.",
+          "They wanted to reduce his reputation.",
+          "High volume makes verification more necessary, not less."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports high volume makes verification more necessary, not less."
+      },
+      {
+        "question": "What conclusion did scrutiny largely support?",
+        "options": [
+          "Every report matched word for word.",
+          "His reports showed no pattern of systematic distortion.",
+          "His output was mostly fabricated.",
+          "Only family members trusted him."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports his reports showed no pattern of systematic distortion."
+      },
+      {
+        "question": "What does the cloak account represent within the dialogue?",
+        "options": [
+          "A material method of preserving manuscripts.",
+          "A ritual that replaced learning.",
+          "Proof that scrutiny was unnecessary.",
+          "A request for lasting retention, described metaphorically."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports a request for lasting retention, described metaphorically."
+      },
+      {
+        "question": "What larger lesson does the dialogue draw about testimony?",
+        "options": [
+          "Frequent narration proves accuracy automatically.",
+          "Evidence needs an apparatus of verification beyond quantity.",
+          "Physical evidence is always available.",
+          "Memory cannot be assessed responsibly."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports evidence needs an apparatus of verification beyond quantity."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-sahabah-07",
@@ -212,29 +905,590 @@
     "themeId": "sahabah",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Zubair ibn al-Awwam's earliest recorded act of devotion involved a mistake, a false rumor that the Prophet had been captured, and a fifteen-year-old drawing his sword and sprinting through Mecca to intervene.",
-      "Narrator: [reflective] The rumor proved false, yet the Prophet reportedly prayed for him afterward, less impressed by the accuracy of his information than by the immediacy of his response.",
-      "Narrator: [serious] That impulsiveness, tempered with age, defined much of his later reputation as a battlefield commander whose courage colleagues described as almost unsettling to witness firsthand.",
-      "Narrator: [with feeling] Less discussed is his financial conduct, which reveals something arguably more demanding than bravery, a scrupulous honesty under circumstances that would have tempted lesser men toward shortcuts.",
-      "Narrator: [thoughtful] Wealthy individuals frequently entrusted him with deposits, and rather than accepting them as simple safekeeping, he insisted on treating them as loans, obligating him personally rather than merely holding assets on someone's behalf.",
-      "Narrator: [analytical] That decision meant that upon his death, his estate carried substantial debt, not from mismanagement, but from an unusually rigorous interpretation of what trust required of him.",
-      "Narrator: [with admiration] His son Abdullah spent considerable time settling those obligations meticulously, determined that his father's reputation for integrity would outlast any temptation to quietly minimize the debt.",
-      "Narrator: [reflective] Zubair's final hours carry a quiet irony, since he withdrew entirely from the conflict later called the Battle of the Camel, remembering a warning the Prophet once gave him about fighting Ali unjustly.",
-      "Narrator: [serious] He left the battlefield voluntarily, an act requiring considerable moral nerve given how it might have been perceived by allies expecting his continued participation.",
-      "Narrator: [tense] He was killed shortly afterward while praying, alone, by someone exploiting his unguarded posture rather than confronting him directly.",
-      "Narrator: [thoughtful] Ali reportedly wept upon hearing the news, describing him as someone who had spent his life defending the faith only to die by an act of cowardice.",
-      "Narrator: [warmly] What I find most instructive isn't the youthful sword or the battlefield reputation, but that later, quieter decision, walking away from a fight his conscience no longer permitted him to justify.",
-      "Narrator: [thoughtful] Courage sometimes looks like leaving rather than staying, and Zubair's life suggests both forms require the same underlying integrity."
+      "Narrator: The rumor proved false, yet the Prophet reportedly prayed for him afterward, less impressed by the accuracy of his information than by the immediacy of his response.",
+      "Narrator: [carefully] That impulsiveness, tempered with age, defined much of his later reputation as a battlefield commander whose courage colleagues described as almost unsettling to witness firsthand.",
+      "Narrator: Less discussed is his financial conduct, which reveals something arguably more demanding than bravery, a scrupulous honesty under circumstances that would have tempted lesser men toward shortcuts.",
+      "Narrator: [reflective] Wealthy individuals frequently entrusted him with deposits, and rather than accepting them as simple safekeeping, he insisted on treating them as loans, obligating him personally rather than merely holding assets on someone's behalf.",
+      "Narrator: That decision meant that upon his death, his estate carried substantial debt, not from mismanagement, but from an unusually rigorous interpretation of what trust required of him.",
+      "Narrator: [honestly] His son Abdullah spent considerable time settling those obligations meticulously, determined that his father's reputation for integrity would outlast any temptation to quietly minimize the debt.",
+      "Narrator: Zubair's final hours carry a quiet irony, since he withdrew entirely from the conflict later called the Battle of the Camel, remembering a warning the Prophet once gave him about fighting Ali unjustly.",
+      "Narrator: [gently] He left the battlefield voluntarily, an act requiring considerable moral nerve given how it might have been perceived by allies expecting his continued participation.",
+      "Narrator: He was killed shortly afterward while praying, alone, by someone exploiting his unguarded posture rather than confronting him directly.",
+      "Narrator: [calmly] Ali reportedly wept upon hearing the news, describing him as someone who had spent his life defending the faith only to die by an act of cowardice.",
+      "Narrator: What I find most instructive isn't the youthful sword or the battlefield reputation, but that later, quieter decision, walking away from a fight his conscience no longer permitted him to justify.",
+      "Narrator: [encouraging] Courage sometimes looks like leaving rather than staying, and Zubair's life suggests both forms require the same underlying integrity."
     ],
     "quiz": [
-      { "question": "What triggered Zubair's earliest recorded act of devotion?", "options": ["A trade dispute", "A false rumor that the Prophet had been captured", "A family inheritance conflict", "An invitation to a feast"], "correctIndex": 1, "explanation": "A false rumor that the Prophet had been captured prompted the fifteen-year-old to draw his sword and sprint through Mecca." },
-      { "question": "How did Zubair treat deposits entrusted to him by wealthy individuals?", "options": ["As simple safekeeping with no personal obligation", "As loans, which obligated him personally rather than merely holding assets", "He refused all deposits", "He gave them away immediately"], "correctIndex": 1, "explanation": "He insisted on treating deposits as loans, a distinction that obligated him personally rather than merely holding assets on someone's behalf." },
-      { "question": "What did Zubair's son Abdullah do after his father's death?", "options": ["He ignored the debts", "He spent considerable time meticulously settling the debts", "He sold the family estate immediately", "He refused to inherit anything"], "correctIndex": 1, "explanation": "Abdullah spent considerable time settling those obligations meticulously, determined to preserve his father's reputation for integrity." },
-      { "question": "Why did Zubair withdraw from the Battle of the Camel?", "options": ["He was injured beforehand", "He remembered a warning the Prophet gave him about fighting Ali unjustly", "He was ordered to retreat", "He ran out of supplies"], "correctIndex": 1, "explanation": "He withdrew entirely, having remembered a warning the Prophet once gave him about fighting Ali unjustly." },
-      { "question": "How was Zubair killed?", "options": ["In direct combat on the battlefield", "While praying alone, by someone exploiting his unguarded posture", "During a public trial", "While traveling with his son"], "correctIndex": 1, "explanation": "He was killed shortly afterward while praying, alone, by someone exploiting his unguarded posture rather than confronting him directly." }
-    ]
+      {
+        "question": "What triggered Zubair's earliest recorded act of devotion?",
+        "options": [
+          "A trade dispute",
+          "A family inheritance conflict",
+          "An invitation to a feast",
+          "A false rumor that the Prophet had been captured"
+        ],
+        "correctIndex": 3,
+        "explanation": "A false rumor that the Prophet had been captured prompted the fifteen-year-old to draw his sword and sprint through Mecca."
+      },
+      {
+        "question": "How did Zubair treat deposits entrusted to him by wealthy individuals?",
+        "options": [
+          "As simple safekeeping with no personal obligation",
+          "As loans, which obligated him personally rather than merely holding assets",
+          "He refused all deposits",
+          "He gave them away immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "He insisted on treating deposits as loans, a distinction that obligated him personally rather than merely holding assets on someone's behalf."
+      },
+      {
+        "question": "What did Zubair's son Abdullah do after his father's death?",
+        "options": [
+          "He spent considerable time meticulously settling the debts",
+          "He ignored the debts",
+          "He sold the family estate immediately",
+          "He refused to inherit anything"
+        ],
+        "correctIndex": 0,
+        "explanation": "Abdullah spent considerable time settling those obligations meticulously, determined to preserve his father's reputation for integrity."
+      },
+      {
+        "question": "Why did Zubair withdraw from the Battle of the Camel?",
+        "options": [
+          "He was injured beforehand",
+          "He was ordered to retreat",
+          "He remembered a warning the Prophet gave him about fighting Ali unjustly",
+          "He ran out of supplies"
+        ],
+        "correctIndex": 2,
+        "explanation": "He withdrew entirely, having remembered a warning the Prophet once gave him about fighting Ali unjustly."
+      },
+      {
+        "question": "How was Zubair killed?",
+        "options": [
+          "In direct combat on the battlefield",
+          "During a public trial",
+          "While praying alone, by someone exploiting his unguarded posture",
+          "While traveling with his son"
+        ],
+        "correctIndex": 2,
+        "explanation": "He was killed shortly afterward while praying, alone, by someone exploiting his unguarded posture rather than confronting him directly."
+      },
+      {
+        "question": "Why did Zubair classify deposits as loans?",
+        "options": [
+          "He wanted personal responsibility for their return.",
+          "He wanted to invest others' money freely.",
+          "He distrusted every depositor.",
+          "He avoided recording obligations."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports he wanted personal responsibility for their return."
+      },
+      {
+        "question": "How did that choice affect his estate after death?",
+        "options": [
+          "It prevented any inheritance.",
+          "It made creditors abandon claims.",
+          "It transferred every loss to depositors.",
+          "It created debts his son settled meticulously."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports it created debts his son settled meticulously."
+      },
+      {
+        "question": "Why did Zubair leave the Battle of the Camel?",
+        "options": [
+          "He was ordered to surrender by enemies.",
+          "A remembered warning made the conflict morally unjustifiable to him.",
+          "He lacked confidence in battle.",
+          "He sought a political office elsewhere."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports a remembered warning made the conflict morally unjustifiable to him."
+      },
+      {
+        "question": "What irony does the account attach to Zubair's death?",
+        "options": [
+          "His early courage proved false.",
+          "His wealth protected him from danger.",
+          "His allies honoured a formal truce.",
+          "A defender of faith was killed through cowardly exploitation."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports a defender of faith was killed through cowardly exploitation."
+      },
+      {
+        "question": "What redefinition of courage closes the narrative?",
+        "options": [
+          "Courage means never revising a decision.",
+          "Conscience can require leaving a fight as much as entering one.",
+          "Loyalty demands staying with allies.",
+          "Integrity is proven only in battle."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports conscience can require leaving a fight as much as entering one."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-sahabah-08",
+    "title": "The Footnote That Removed My Best Story",
+    "level": "C1",
+    "themeId": "sahabah",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] The most memorable section of my lecture disappeared the night before I delivered it. I had planned to describe a Companion, may Allah be pleased with them, making a dramatic promise during a well-known historical event. The scene carried my entire conclusion about courage.",
+      "Narrator: When I traced the quotation, however, each website led to another website. A popular biography included it without a reference, while a more careful study discussed the event but not the promise. I had mistaken familiarity for authentication.",
+      "Narrator: [carefully] I consulted a teacher who works with early Islamic sources. She did not tell me that every unverified detail was necessarily false. She explained a more important distinction: I did not have adequate grounds to attribute those exact words to the Companion.",
+      "Narrator: Removing the quotation created a gap, so I rebuilt the lecture around what reliable reports did establish. I described the documented circumstances, identified where accounts differed, and separated later commentary from the historical material itself.",
+      "Narrator: [thoughtful] The revised argument became less cinematic and more demanding. Instead of using one perfect line as proof of lifelong character, I asked how several established actions illuminated responsibility under pressure.",
+      "Narrator: I also removed an imagined first-person passage. Even when presented as educational drama, speaking as a Companion risks giving invention the emotional authority of testimony. A narrator could explain the evidence without occupying the person's voice.",
+      "Narrator: [humble] During questions, someone asked what the Companion would think about a current political dispute. I declined to manufacture a modern verdict and directed the detailed issue towards qualified scholarship.",
+      "Narrator: My best story had made the lecture easier to remember, but memory is not the only educational value. Respectful history teaches listeners to admire what is established, recognise interpretation, and leave an unsupported detail where it belongs: outside the quotation marks."
+    ],
+    "quiz": [
+      {
+        "question": "What error did the lecturer first recognise?",
+        "options": [
+          "Familiar repetition had been mistaken for authentication.",
+          "A source had been translated poorly.",
+          "The historical event was entirely fictional.",
+          "Students disliked dramatic examples."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports familiar repetition had been mistaken for authentication."
+      },
+      {
+        "question": "Why did the teacher reject attributing the promise?",
+        "options": [
+          "The Companion opposed all public speaking.",
+          "The evidence did not justify assigning those exact words.",
+          "Only biographies may cite speeches.",
+          "The quotation was too short."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports the evidence did not justify assigning those exact words."
+      },
+      {
+        "question": "How did the revised lecture change its argument?",
+        "options": [
+          "It omitted all historical context.",
+          "It treated commentary as primary evidence.",
+          "It used multiple established actions instead of one dramatic line.",
+          "It replaced evidence with imagination."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports it used multiple established actions instead of one dramatic line."
+      },
+      {
+        "question": "Why was the imagined first-person passage removed?",
+        "options": [
+          "It made the lecture too concise.",
+          "It might confuse the event's date.",
+          "It prevented any moral lesson.",
+          "It could give invention the authority of testimony."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports it could give invention the authority of testimony."
+      },
+      {
+        "question": "How did the lecturer handle a modern political question?",
+        "options": [
+          "He declined to invent a verdict and referred it onward.",
+          "He treated the question as historical proof.",
+          "He supplied a personal answer as fact.",
+          "He ignored the question entirely."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports he declined to invent a verdict and referred it onward."
+      },
+      {
+        "question": "What educational value did the lecturer prioritise over memorability?",
+        "options": [
+          "Dramatic performance by the narrator.",
+          "Respectful accuracy about what evidence establishes.",
+          "A single flawless moral slogan.",
+          "Complete certainty about disputed details."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports respectful accuracy about what evidence establishes."
+      },
+      {
+        "question": "What does the account imply about unverified details?",
+        "options": [
+          "They become true through frequent retelling.",
+          "They should be presented as private opinions.",
+          "They should remain outside direct attribution.",
+          "They are harmless in lectures."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports they should remain outside direct attribution."
+      },
+      {
+        "question": "Which practice best reflects the lecture's final method?",
+        "options": [
+          "Use familiar quotations without checking.",
+          "Speak in a Companion's voice for impact.",
+          "Infer modern policies from silence.",
+          "Separate reports, disagreement, and later interpretation."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports separate reports, disagreement, and later interpretation."
+      },
+      {
+        "question": "What is the central contrast in the lecturer's revision?",
+        "options": [
+          "Less cinematic storytelling, more accountable reasoning.",
+          "More emotional language, less research.",
+          "More quotation, less context.",
+          "Less history, more personal advice."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports less cinematic storytelling, more accountable reasoning."
+      },
+      {
+        "question": "Why does the narrator call the revised lecture demanding?",
+        "options": [
+          "It requires professional actors.",
+          "Listeners must assess evidence rather than follow one perfect story.",
+          "It removes every lesson from history.",
+          "It depends on secret sources."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports listeners must assess evidence rather than follow one perfect story."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-sahabah-09",
+    "title": "How Much Uncertainty Belongs on a Museum Label?",
+    "level": "C1",
+    "themeId": "sahabah",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [welcoming] You are curating a small exhibition about the Companions. One object is traditionally connected to a famous journey, but its ownership cannot be verified. Do you display it?",
+      "Guest: Possibly, if the label states exactly what is known. The object can illustrate a period without being presented as a personal possession of a Companion.",
+      "Moderator: Wouldn't uncertainty disappoint visitors?",
+      "Guest: [carefully] It may challenge expectations, but false certainty creates a deeper problem. A label could say, “This type of object was used in the region; a later local tradition associates this example with the journey, but the attribution is unconfirmed.”",
+      "Moderator: How do you keep that language readable?",
+      "Guest: Put the key conclusion first, then offer optional detail. Clarity does not require collapsing “reported,” “disputed,” and “established” into one category.",
+      "Moderator: [curious] What about dramatic audio scenes beside the display?",
+      "Guest: We can use modern narrators and researchers, but we should not role-play a Companion or invent private dialogue. The emotional force should come from the reliable account.",
+      "Moderator: Some exhibitions place a moral slogan beneath every object.",
+      "Guest: That can reduce a complex life to our chosen message. Explain the historical context before drawing a limited lesson, and distinguish the curator's interpretation from the report.",
+      "Moderator: How should disagreement among scholars appear?",
+      "Guest: Proportionately. Not every technical debate belongs on the main label, but a relevant disagreement should not be hidden when it changes the claim.",
+      "Moderator: [reflective] Is there a risk of becoming so cautious that visitors learn nothing?",
+      "Guest: Good curation is not a list of disclaimers. It uses dependable evidence creatively—maps, timelines, source comparisons—while refusing to decorate gaps with invention.",
+      "Moderator: Your final editorial rule?",
+      "Guest: Let visitors leave with both admiration and intellectual honesty. Respect for the Companions is strengthened, not weakened, when our confidence matches our evidence."
+    ],
+    "quiz": [
+      {
+        "question": "When may the disputed object be displayed responsibly?",
+        "options": [
+          "When its label states the attribution is unconfirmed.",
+          "Only after ownership is proven absolutely.",
+          "Never, because uncertainty ruins education.",
+          "Only with a dramatic reconstruction."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports when its label states the attribution is unconfirmed."
+      },
+      {
+        "question": "What does the sample label distinguish?",
+        "options": [
+          "A museum from a mosque.",
+          "A regional object type from a claimed personal possession.",
+          "An expert from a visitor.",
+          "A journey from a timeline."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports a regional object type from a claimed personal possession."
+      },
+      {
+        "question": "Why does the curator reject role-playing a Companion?",
+        "options": [
+          "It makes labels too long.",
+          "It prevents using maps.",
+          "It risks inventing private dialogue as evidence.",
+          "It makes research inaccessible."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports it risks inventing private dialogue as evidence."
+      },
+      {
+        "question": "How should scholarly disagreement appear in the exhibition?",
+        "options": [
+          "As every technical dispute in full.",
+          "Never, because it confuses visitors.",
+          "Only in a hidden archive.",
+          "In proportion to whether it changes the claim."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports in proportion to whether it changes the claim."
+      },
+      {
+        "question": "What prevents caution from becoming empty disclaimers?",
+        "options": [
+          "Using dependable evidence creatively through context and comparison.",
+          "Removing all objects with uncertain histories.",
+          "Adding moral slogans below each display.",
+          "Choosing only emotional testimonies."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports using dependable evidence creatively through context and comparison."
+      },
+      {
+        "question": "What does the curator treat as the core editorial discipline?",
+        "options": [
+          "Making every exhibit entertaining.",
+          "Matching confidence to the strength of evidence.",
+          "Avoiding all interpretation.",
+          "Turning complexity into certainty."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports matching confidence to the strength of evidence."
+      },
+      {
+        "question": "Why should a label place its conclusion first?",
+        "options": [
+          "Sources are less important than headlines.",
+          "Disagreement should be concealed.",
+          "Visitors need clear claims before optional detail.",
+          "Curators must reduce all nuance."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports visitors need clear claims before optional detail."
+      },
+      {
+        "question": "What kind of lesson can a display draw responsibly?",
+        "options": [
+          "A universal slogan attached to every object.",
+          "A prediction about current politics.",
+          "A claim based on imagined dialogue.",
+          "A limited interpretation clearly separated from report."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports a limited interpretation clearly separated from report."
+      },
+      {
+        "question": "Which practice best protects visitor understanding?",
+        "options": [
+          "Marking reported, disputed, and established claims differently.",
+          "Using one category for every tradition.",
+          "Removing all historical context.",
+          "Treating tradition as proof of ownership."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports marking reported, disputed, and established claims differently."
+      },
+      {
+        "question": "What final outcome does the curator seek?",
+        "options": [
+          "Certainty joined to entertainment.",
+          "Admiration joined to intellectual honesty.",
+          "Moral slogans joined to drama.",
+          "Technical debate joined to confusion."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports admiration joined to intellectual honesty."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-sahabah-10",
+    "title": "When Admiration Becomes a Shortcut",
+    "level": "C1",
+    "themeId": "sahabah",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A leadership course builds every lesson around a single Companion's biography. Why might admiration become a shortcut?",
+      "Guest: Because the teacher may begin with a modern principle, then search the biography for a scene that appears to endorse it. History becomes decoration for a conclusion chosen in advance.",
+      "Moderator: What would a better method look like?",
+      "Guest: [carefully] Start with a reliably reported episode, understand its context, and ask what conclusions the evidence can reasonably carry. Some applications will remain limited or require qualified guidance.",
+      "Moderator: Can the course describe the Companion as “a natural entrepreneur” or “the perfect strategist”?",
+      "Guest: Such labels may impose modern categories and flatten a rich life. It is safer to describe documented actions and let learners examine the qualities visible in those circumstances.",
+      "Moderator: [curious] Learners often want practical takeaways. Must we avoid them?",
+      "Guest: Not at all. We can discuss consultation, courage, generosity, learning, or accountability when the sources support those themes. The problem is turning one event into a universal management formula.",
+      "Moderator: What if an inspiring quotation cannot be traced?",
+      "Guest: Do not attribute it. State the idea independently if it is sound, or replace it with a verified passage. A useful message does not require a prestigious but uncertain name beneath it.",
+      "Moderator: How should the course handle difficult historical disagreements?",
+      "Guest: With recognised scholarship, restraint, and language appropriate to the evidence. It should avoid sensational motives and casual judgments about honoured people.",
+      "Moderator: [reflective] Does critical source work conflict with reverence?",
+      "Guest: No. Careful verification is part of speaking responsibly about the Companions, may Allah be pleased with them.",
+      "Moderator: What should an editor ask before publication?",
+      "Guest: Which claims are reports, which are interpretations, which sources support them, and whether any dramatic technique has quietly added words, motives, or certainty that the evidence does not provide."
+    ],
+    "quiz": [
+      {
+        "question": "What risk arises when a teacher begins with a modern principle?",
+        "options": [
+          "Biography can be selected to decorate a preset conclusion.",
+          "Learners will receive too much context.",
+          "Historical sources become easier to verify.",
+          "Practical lessons become impossible."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports biography can be selected to decorate a preset conclusion."
+      },
+      {
+        "question": "What does the better method require first?",
+        "options": [
+          "Choose the most marketable label.",
+          "Start with reliable evidence and its context.",
+          "Apply a universal management formula.",
+          "Avoid all contemporary relevance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports start with reliable evidence and its context."
+      },
+      {
+        "question": "Why are labels like 'perfect strategist' discouraged?",
+        "options": [
+          "They are too respectful.",
+          "They contain no practical lesson.",
+          "They flatten a life into modern categories.",
+          "They make sources more precise."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports they flatten a life into modern categories."
+      },
+      {
+        "question": "What kind of takeaway remains legitimate?",
+        "options": [
+          "A rule extracted from one incident.",
+          "A claim about a person's inner motive.",
+          "A quotation with unknown origin.",
+          "A supported, limited lesson from documented actions."
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports a supported, limited lesson from documented actions."
+      },
+      {
+        "question": "How should difficult historical disagreements be handled?",
+        "options": [
+          "With recognised scholarship and restrained language.",
+          "With sensational explanations.",
+          "With casual moral judgments.",
+          "By removing every mention of them."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports with recognised scholarship and restrained language."
+      },
+      {
+        "question": "Why does verification not conflict with reverence?",
+        "options": [
+          "Reverence requires avoiding sources.",
+          "Responsible speech is itself part of respect.",
+          "Critical work attacks honoured people.",
+          "Only devotion can assess reports."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports responsible speech is itself part of respect."
+      },
+      {
+        "question": "What should happen to an untraceable inspiring quotation?",
+        "options": [
+          "Publish it if the message is useful.",
+          "Assign it to the nearest famous figure.",
+          "Do not attribute it; use verified material instead.",
+          "Present it as certain tradition."
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio supports do not attribute it; use verified material instead."
+      },
+      {
+        "question": "Which editorial question tests for invented certainty?",
+        "options": [
+          "Is the biography entertaining enough?",
+          "Will the lesson fit one slide?",
+          "Does the speaker sound confident?",
+          "Have dramatic techniques added words or motives?"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio supports have dramatic techniques added words or motives?"
+      },
+      {
+        "question": "What distinction must the course keep visible?",
+        "options": [
+          "Reports, interpretations, and source-supported claims differ.",
+          "Leadership and generosity are identical.",
+          "Modern labels and facts are interchangeable.",
+          "Admiration removes all ambiguity."
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio supports reports, interpretations, and source-supported claims differ."
+      },
+      {
+        "question": "What does the course reject about application?",
+        "options": [
+          "Practice is irrelevant to learning.",
+          "One event cannot become a universal formula.",
+          "Context weakens moral insight.",
+          "Learners should avoid all conclusions."
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio supports one event cannot become a universal formula."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "sahabah",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

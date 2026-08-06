@@ -10,9 +10,9 @@ import {
 import { audioService } from '../services/audioService';
 import { VOCAB_CATEGORIES } from '../constants';
 import { STATIC_VOCAB } from '../data/vocabWords';
-import { STATIC_VOCAB_DETAILS } from '../data/vocabDetails';
-import { generateVocabDetails } from '../services/gemini';
 import { ttsService } from '../services/ttsService';
+
+type StaticVocabDetail = Pick<VocabItem, 'ipa' | 'synonyms' | 'antonyms' | 'examples'>;
 
 const DEFAULT_ICONS: Record<string, string> = {
   'Adab & Akhlak': 'fa-hand-holding-heart',
@@ -50,6 +50,7 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
   const [userItems, setUserItems] = useState<VocabItem[]>([]);
   const [favorites, setFavorites] = useState<string[]>([]);
   const [customCategories, setCustomCategories] = useState<CustomCategory[]>([]);
+  const [staticDetails, setStaticDetails] = useState<Record<string, StaticVocabDetail>>({});
 
   // Task Tracking State
   const [completedIds, setCompletedIds] = useState<Set<string>>(new Set());
@@ -126,6 +127,27 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
     }
   }, [initialContext]);
 
+  useEffect(() => {
+    let cancelled = false;
+    const loadStaticDetails = async () => {
+      const response = await fetch('/content/vocab/details.json');
+      if (!response.ok) return;
+      const details = await response.json() as Record<string, StaticVocabDetail>;
+      if (!cancelled) setStaticDetails(details);
+    };
+
+    if (initialContext?.vocabWordIds?.length) {
+      void loadStaticDetails();
+      return () => { cancelled = true; };
+    }
+
+    const timer = window.setTimeout(() => { void loadStaticDetails(); }, 1200);
+    return () => {
+      cancelled = true;
+      window.clearTimeout(timer);
+    };
+  }, [initialContext]);
+
   const loadData = () => {
     setUserItems(getVocab());
     setFavorites(getFavorites());
@@ -138,11 +160,11 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
       // 1. Check AI enrichment (persistent)
       // 2. Check Static details (hardcoded dictionary)
       const enriched = enrichment[item.id];
-      const hardcoded = STATIC_VOCAB_DETAILS[item.english.toLowerCase()];
+      const hardcoded = staticDetails[item.english.toLowerCase()];
 
       return { ...item, ...hardcoded, ...enriched };
     });
-  }, [userItems]);
+  }, [userItems, staticDetails]);
 
   const categoryIcons = useMemo(() => {
     const icons = { ...DEFAULT_ICONS };
@@ -299,7 +321,7 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
     if (!newWord.trim()) return;
     setIsAiLoading(true);
     try {
-      const details = await generateVocabDetails(newWord);
+      const details = await requestVocabDetails(newWord);
       setNewIpa(details.ipa);
       setNewSynonyms(details.synonyms);
       setNewExamples(details.examples);
@@ -315,6 +337,11 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
     ttsService.speak(text, 'en-US');
   };
 
+  const requestVocabDetails = async (word: string) => {
+    const { generateVocabDetails } = await import('../services/gemini');
+    return generateVocabDetails(word);
+  };
+
   // --- FLASHCARD MISSION MODE ---
   if (isFlashcardMode) {
     const wordIds = initialContext!.vocabWordIds!;
@@ -323,7 +350,7 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
       const base = [...STATIC_VOCAB, ...userItems].find(v => v.id === id);
       if (!base) return null;
       const enriched = enrichment[base.id];
-      const hardcoded = STATIC_VOCAB_DETAILS[base.english.toLowerCase()];
+      const hardcoded = staticDetails[base.english.toLowerCase()];
       return { ...base, ...hardcoded, ...enriched };
     }).filter(Boolean) as VocabItem[];
 
@@ -510,7 +537,7 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
                       onClick={async () => {
                         setIsAiLoading(true);
                         try {
-                          const details = await generateVocabDetails(currentWord.english);
+                          const details = await requestVocabDetails(currentWord.english);
                           await saveVocabEnrichment(currentWord.id, details);
                           audioService.play('magic');
                           // Force re-render by incrementing index back and forth
@@ -1057,7 +1084,7 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
                     onClick={async () => {
                       setIsAiLoading(true);
                       try {
-                        const details = await generateVocabDetails(selectedDetailItem.english);
+                        const details = await requestVocabDetails(selectedDetailItem.english);
                         await saveVocabEnrichment(selectedDetailItem.id, details);
                         setSelectedDetailItem({ ...selectedDetailItem, ...details });
                         audioService.play('magic');

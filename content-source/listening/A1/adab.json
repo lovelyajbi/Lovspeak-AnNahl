@@ -6,31 +6,145 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] For years, my greetings were quick and empty. I said hello while looking at my phone, not at the person in front of me.",
-      "Narrator: [thoughtful] I did not think this was rude. I thought it was just normal, busy, modern life.",
-      "Narrator: [reflective] Then one day, an older neighbor greeted me properly. She stopped walking, looked at my eyes, and asked how my whole family was doing.",
-      "Narrator: [warmly] I was surprised. Nobody had greeted me like that in a long time. It only took thirty seconds, but I felt truly seen.",
-      "Narrator: [gently] That small moment stayed with me for days. I started noticing how careless my own greetings had become.",
-      "Narrator: [determined] So I decided to change something small. Whenever I greet someone now, I put my phone away first.",
-      "Narrator: [thoughtful] I try to say salaam clearly, look at the person, and actually listen to their answer, instead of already thinking about my reply.",
-      "Narrator: [honestly] At first, it felt strange and slow. I was used to rushing past people with a quick word.",
-      "Narrator: [gently] But slowly, something changed. People began smiling more when they saw me, and conversations felt warmer.",
-      "Narrator: [warmly] My grandmother always said a good greeting opens the door to a good relationship. I understand her now.",
-      "Narrator: [reflective] I also learned to greet elders first, and to use both hands when shaking hands with someone respected.",
-      "Narrator: [peacefully] These are small things, almost invisible, but they carry real meaning between people.",
-      "Narrator: [with a small smile] Now, when I meet someone, even a stranger, I try to greet them like they matter. Because they do.",
-      "Narrator: [gently] It costs nothing, this small kindness, yet it changes how a whole conversation begins."
+      "Narrator: [reflective] For years, my greetings were quick and empty. I said hello while looking at my phone, not at the person in front of me.",
+      "Narrator: I did not think this was rude. I thought it was just normal, busy, modern life.",
+      "Narrator: [warmly] Then one day, an older neighbor greeted me properly. She stopped walking, looked at my eyes, and asked how my whole family was doing.",
+      "Narrator: I was surprised. Nobody had greeted me like that in a long time. It only took thirty seconds, but I felt truly seen.",
+      "Narrator: That small moment stayed with me for days. I started noticing how careless my own greetings had become.",
+      "Narrator: So I decided to change something small. Whenever I greet someone now, I put my phone away first.",
+      "Narrator: I try to say salaam clearly, look at the person, and actually listen to their answer, instead of already thinking about my reply.",
+      "Narrator: At first, it felt strange and slow. I was used to rushing past people with a quick word.",
+      "Narrator: [thoughtful] But slowly, something changed. People began smiling more when they saw me, and conversations felt warmer.",
+      "Narrator: My grandmother always said a good greeting opens the door to a good relationship. I understand her now.",
+      "Narrator: I also learned to greet elders first, and to use both hands when shaking hands with someone respected.",
+      "Narrator: These are small things, almost invisible, but they carry real meaning between people.",
+      "Narrator: [warmly] Now, when I meet someone, even a stranger, I try to greet them like they matter. Because they do.",
+      "Narrator: It costs nothing, this small kindness, yet it changes how a whole conversation begins."
     ],
     "quiz": [
-      { "question": "How did the narrator usually greet people before this change?", "options": ["Warmly and slowly", "Quickly and while looking at her phone", "She never greeted anyone", "Only in writing"], "correctIndex": 1, "explanation": "She says her greetings were quick and empty, said while looking at her phone." },
-      { "question": "What did the older neighbor do differently?", "options": ["She ignored the narrator", "She stopped, looked at her eyes, and asked about her family", "She waved from far away", "She sent a text message"], "correctIndex": 1, "explanation": "The neighbor stopped walking, made eye contact, and asked how the family was doing." },
-      { "question": "What did the narrator start doing before greeting people?", "options": ["Checking her phone first", "Putting her phone away", "Writing notes", "Practicing in a mirror"], "correctIndex": 1, "explanation": "She decided to put her phone away first whenever greeting someone now." },
-      { "question": "What did people do more after her greetings changed?", "options": ["Avoided her", "Smiled more, and conversations felt warmer", "Complained about her", "Ignored her completely"], "correctIndex": 1, "explanation": "She noticed people smiling more and conversations feeling warmer." },
-      { "question": "What does the narrator believe a good greeting does?", "options": ["Wastes time", "Opens the door to a good relationship", "Makes people uncomfortable", "Has no real effect"], "correctIndex": 1, "explanation": "She recalls her grandmother's words that a good greeting opens the door to a good relationship." }
-    ]
+      {
+        "question": "How did the narrator usually greet people before this change?",
+        "options": [
+          "Warmly and slowly",
+          "Quickly and while looking at her phone",
+          "She never greeted anyone",
+          "Only in writing"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says her greetings were quick and empty, said while looking at her phone."
+      },
+      {
+        "question": "What did the older neighbor do differently?",
+        "options": [
+          "She ignored the narrator",
+          "She waved from far away",
+          "She stopped, looked at her eyes, and asked about her family",
+          "She sent a text message"
+        ],
+        "correctIndex": 2,
+        "explanation": "The neighbor stopped walking, made eye contact, and asked how the family was doing."
+      },
+      {
+        "question": "What did the narrator start doing before greeting people?",
+        "options": [
+          "Putting her phone away",
+          "Checking her phone first",
+          "Writing notes",
+          "Practicing in a mirror"
+        ],
+        "correctIndex": 0,
+        "explanation": "She decided to put her phone away first whenever greeting someone now."
+      },
+      {
+        "question": "What did people do more after her greetings changed?",
+        "options": [
+          "Avoided her",
+          "Complained about her",
+          "Ignored her completely",
+          "Smiled more, and conversations felt warmer"
+        ],
+        "correctIndex": 3,
+        "explanation": "She noticed people smiling more and conversations feeling warmer."
+      },
+      {
+        "question": "What does the narrator believe a good greeting does?",
+        "options": [
+          "Wastes time",
+          "Makes people uncomfortable",
+          "Opens the door to a good relationship",
+          "Has no real effect"
+        ],
+        "correctIndex": 2,
+        "explanation": "She recalls her grandmother's words that a good greeting opens the door to a good relationship."
+      },
+      {
+        "question": "Why did the neighbor’s greeting stay in her mind?",
+        "options": [
+          "She felt noticed and cared for",
+          "The neighbor gave her a phone",
+          "The greeting lasted all day",
+          "Her family was waiting outside"
+        ],
+        "correctIndex": 0,
+        "explanation": "The neighbor gave her full attention, so the short greeting felt important."
+      },
+      {
+        "question": "What does “put my phone away” mean here?",
+        "options": [
+          "Stop using it during the greeting",
+          "Give it to the neighbor",
+          "Turn up its sound",
+          "Buy a different phone"
+        ],
+        "correctIndex": 0,
+        "explanation": "She stops looking at the phone so she can focus on the person."
+      },
+      {
+        "question": "What does she do after saying salaam?",
+        "options": [
+          "She walks away quickly",
+          "She checks a message",
+          "She changes the subject",
+          "She listens to the answer"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now stays present and listens instead of preparing to leave."
+      },
+      {
+        "question": "How will a person probably feel after her new greeting?",
+        "options": [
+          "Ignored",
+          "Respected",
+          "Rushed",
+          "Confused"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her eye contact and attention help the other person feel respected."
+      },
+      {
+        "question": "Why does the narrator tell this story?",
+        "options": [
+          "To show that a small greeting can build closeness",
+          "To explain how phones are repaired",
+          "To ask people to avoid neighbors",
+          "To compare different family names"
+        ],
+        "correctIndex": 0,
+        "explanation": "The story shows how a sincere greeting improves relationships."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; coherent personal story with a few long sentences but clear A1 context",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-adab-02",
@@ -39,36 +153,153 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Sari, a teacher who talks a lot about adab, or good manners, with her students. Thanks for joining me, Sari.",
-      "Guest: [pleasantly] Thank you for inviting me. This is a topic I truly care about.",
+      "Guest: [pleased] Thank you for inviting me. This is a topic I truly care about.",
       "Host: [curious] For listeners who are unfamiliar, how would you explain adab in simple words?",
-      "Guest: [thoughtful] I would say adab is respect shown through small daily actions, like how you speak, greet, eat, and treat other people.",
-      "Host: [interested] Can you give us an everyday example from your classroom?",
-      "Guest: [gently] Yes. I teach my students to knock before entering a room, even my office, even if the door is open.",
-      "Host: [curious] Why does something so small matter so much to you?",
-      "Guest: [reflective] Because small actions build a habit of respect. If you respect small moments, you naturally respect bigger moments too.",
-      "Host: [interested] What about speaking to elders? Do you teach that as well?",
-      "Guest: [warmly] Definitely. I remind students to lower their voice a little when speaking to someone older, and to listen fully before answering.",
-      "Host: [curious] Do you think young people today struggle more with this than before?",
-      "Guest: [honestly] Not exactly struggle, but distraction. Phones make it easy to forget to look at someone while they speak.",
-      "Host: [thoughtful] That's a fair point. How do you encourage them to fix that habit?",
-      "Guest: [encouraging] I simply ask them to put the phone face down during conversations. It's a small rule, but it changes everything.",
-      "Host: [curious] What would you say to someone who thinks manners are old-fashioned or unnecessary now?",
-      "Guest: [warmly] I would say manners are timeless, not old-fashioned. They simply show another person that they matter to you.",
-      "Host: [smiling] That's a beautiful way to close this conversation, Sari. Thank you for sharing your thoughts with us today.",
-      "Guest: [warmly] Thank you for having me. I hope it reminds someone to greet a little more kindly today."
+      "Guest: [calmly] I would say adab is respect shown through small daily actions, like how you speak, greet, eat, and treat other people.",
+      "Host: Can you give us an everyday example from your classroom?",
+      "Guest: Yes. I teach my students to knock before entering a room, even my office, even if the door is open.",
+      "Host: Why does something so small matter so much to you?",
+      "Guest: Because small actions build a habit of respect. If you respect small moments, you naturally respect bigger moments too.",
+      "Host: What about speaking to elders? Do you teach that as well?",
+      "Guest: Definitely. I remind students to lower their voice a little when speaking to someone older, and to listen fully before answering.",
+      "Host: Do you think young people today struggle more with this than before?",
+      "Guest: Not exactly struggle, but distraction. Phones make it easy to forget to look at someone while they speak.",
+      "Host: That's a fair point. How do you encourage them to fix that habit?",
+      "Guest: I simply ask them to put the phone face down during conversations. It's a small rule, but it changes everything.",
+      "Host: What would you say to someone who thinks manners are old-fashioned or unnecessary now?",
+      "Guest: I would say manners are timeless, not old-fashioned. They simply show another person that they matter to you.",
+      "Host: [warmly] That's a beautiful way to close this conversation, Sari. Thank you for sharing your thoughts with us today.",
+      "Guest: [gratefully] Thank you for having me. I hope it reminds someone to greet a little more kindly today."
     ],
     "quiz": [
-      { "question": "What is Sari's profession?", "options": ["Doctor", "Teacher", "Radio host", "Chef"], "correctIndex": 1, "explanation": "The host introduces Sari as a teacher who talks about adab with her students." },
-      { "question": "How does Sari explain adab in simple words?", "options": ["Following strict rules only", "Respect shown through small daily actions", "A type of prayer", "A formal ceremony"], "correctIndex": 1, "explanation": "She defines adab as respect shown through small daily actions like speaking, greeting, and eating." },
-      { "question": "What does Sari teach her students to do before entering a room?", "options": ["Take off their shoes", "Knock, even if the door is open", "Call ahead", "Wait outside for an hour"], "correctIndex": 1, "explanation": "She teaches students to knock before entering a room, even her office." },
-      { "question": "According to Sari, what makes it easy to forget to look at someone while they speak?", "options": ["Loud music", "Phones", "Bright lights", "Cold weather"], "correctIndex": 1, "explanation": "She says phones make it easy to forget to look at someone while they speak." },
-      { "question": "What is Sari's final message about manners?", "options": ["Manners are old-fashioned", "Manners are timeless and show someone they matter", "Manners are only for children", "Manners are not important today"], "correctIndex": 1, "explanation": "She says manners are timeless, not old-fashioned, and show another person that they matter." }
-    ]
+      {
+        "question": "What is Sari's profession?",
+        "options": [
+          "Doctor",
+          "Radio host",
+          "Chef",
+          "Teacher"
+        ],
+        "correctIndex": 3,
+        "explanation": "The host introduces Sari as a teacher who talks about adab with her students."
+      },
+      {
+        "question": "How does Sari explain adab in simple words?",
+        "options": [
+          "Following strict rules only",
+          "Respect shown through small daily actions",
+          "A type of prayer",
+          "A formal ceremony"
+        ],
+        "correctIndex": 1,
+        "explanation": "She defines adab as respect shown through small daily actions like speaking, greeting, and eating."
+      },
+      {
+        "question": "What does Sari teach her students to do before entering a room?",
+        "options": [
+          "Knock, even if the door is open",
+          "Take off their shoes",
+          "Call ahead",
+          "Wait outside for an hour"
+        ],
+        "correctIndex": 0,
+        "explanation": "She teaches students to knock before entering a room, even her office."
+      },
+      {
+        "question": "According to Sari, what makes it easy to forget to look at someone while they speak?",
+        "options": [
+          "Loud music",
+          "Phones",
+          "Bright lights",
+          "Cold weather"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says phones make it easy to forget to look at someone while they speak."
+      },
+      {
+        "question": "What is Sari's final message about manners?",
+        "options": [
+          "Manners are old-fashioned",
+          "Manners are timeless and show someone they matter",
+          "Manners are only for children",
+          "Manners are not important today"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says manners are timeless, not old-fashioned, and show another person that they matter."
+      },
+      {
+        "question": "Which rule helps students focus during a conversation?",
+        "options": [
+          "Put the phone face down",
+          "Open the office door",
+          "Speak before the elder",
+          "Leave the room quickly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sari asks students to put phones face down so they can pay attention."
+      },
+      {
+        "question": "What does “timeless” mean in this podcast?",
+        "options": [
+          "Only useful in the past",
+          "New and expensive",
+          "Difficult to remember",
+          "Useful in every time"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sari means that good manners remain useful in every age."
+      },
+      {
+        "question": "Why does Sari teach small actions first?",
+        "options": [
+          "Large actions are not allowed",
+          "Students dislike every rule",
+          "Small actions build respectful habits",
+          "The class has little time"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says respect in small moments supports respect in bigger moments."
+      },
+      {
+        "question": "What does Sari value most while someone is speaking?",
+        "options": [
+          "A quick answer",
+          "A loud voice",
+          "Full attention",
+          "A long message"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her examples repeatedly ask learners to look and listen carefully."
+      },
+      {
+        "question": "What is the podcast trying to do?",
+        "options": [
+          "Advertise a new phone",
+          "Give simple examples of good manners",
+          "Test a school subject",
+          "Describe an office building"
+        ],
+        "correctIndex": 1,
+        "explanation": "The host and guest explain adab through common daily actions."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; podcast format is clear, adult, and understandable with contextual support",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-adab-03",
@@ -77,36 +308,153 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
       "Dewi: [curious] Fajar, I noticed you always wait until everyone sits down before you start eating. Is that a habit from home?",
-      "Fajar: [smiling] Yes, actually. My mother always said it's polite to wait, especially when eating with others.",
-      "Dewi: [thoughtful] I never really thought about it. I usually just start eating once my food arrives.",
-      "Fajar: [gently] It's a small thing, but it makes the meal feel shared, not rushed.",
-      "Dewi: [curious] Do you have other habits like that from your family?",
-      "Fajar: [warmly] A few. We always say bismillah before eating, and we try not to talk with food in our mouths.",
+      "Fajar: [warmly] Yes, actually. My mother always said it's polite to wait, especially when eating with others.",
+      "Dewi: I never really thought about it. I usually just start eating once my food arrives.",
+      "Fajar: It's a small thing, but it makes the meal feel shared, not rushed.",
+      "Dewi: Do you have other habits like that from your family?",
+      "Fajar: A few. We always say bismillah before eating, and we try not to talk with food in our mouths.",
       "Dewi: [laughing] Okay, that second one, I definitely need to work on.",
-      "Fajar: [kindly] Ha, most people do. It's easy to forget when the conversation gets interesting.",
-      "Dewi: [thoughtful] What about taking food from a shared plate? I always feel awkward about that.",
-      "Fajar: [gently] My family taught me to take food from the side closest to me, not reach across the whole table.",
-      "Dewi: [surprised] I never noticed that rule before, but it makes sense. It keeps things tidy and respectful.",
-      "Fajar: [warmly] Exactly. And if you want something far away, it's better to ask someone to pass it.",
-      "Dewi: [curious] Do you also finish everything on your plate, or is that just my family's rule?",
-      "Fajar: [nodding] We do too. My grandmother always said wasting food shows a lack of gratitude for what we have.",
-      "Dewi: [thoughtful] That's a nice way to see it. I usually just leave a little, out of habit.",
-      "Fajar: [encouraging] Maybe try taking a smaller portion first. You can always take more if you're still hungry.",
-      "Dewi: [smiling] That's actually good advice. I think I've been careless about these little things for years.",
+      "Fajar: Ha, most people do. It's easy to forget when the conversation gets interesting.",
+      "Dewi: What about taking food from a shared plate? I always feel awkward about that.",
+      "Fajar: My family taught me to take food from the side closest to me, not reach across the whole table.",
+      "Dewi: I never noticed that rule before, but it makes sense. It keeps things tidy and respectful.",
+      "Fajar: Exactly. And if you want something far away, it's better to ask someone to pass it.",
+      "Dewi: Do you also finish everything on your plate, or is that just my family's rule?",
+      "Fajar: We do too. My grandmother always said wasting food shows a lack of gratitude for what we have.",
+      "Dewi: That's a nice way to see it. I usually just leave a little, out of habit.",
+      "Fajar: Maybe try taking a smaller portion first. You can always take more if you're still hungry.",
+      "Dewi: [thoughtful] That's actually good advice. I think I've been careless about these little things for years.",
       "Fajar: [warmly] We all learn slowly. The important part is noticing and trying to do better."
     ],
     "quiz": [
-      { "question": "What habit does Fajar have when eating with others?", "options": ["He eats first, alone", "He waits until everyone sits down before starting", "He never eats with coworkers", "He eats very quickly"], "correctIndex": 1, "explanation": "Fajar waits until everyone sits down before he starts eating, a habit from his mother." },
-      { "question": "What does Fajar's family say before eating?", "options": ["Nothing special", "Bismillah", "A long speech", "A toast"], "correctIndex": 1, "explanation": "Fajar says his family always says bismillah before eating." },
-      { "question": "What rule did Fajar's family teach about a shared plate?", "options": ["Take as much as possible quickly", "Take food from the side closest to you, not reach across", "Never touch a shared plate", "Only the eldest may take food"], "correctIndex": 1, "explanation": "He was taught to take food from the side closest to him, not reach across the table." },
-      { "question": "What did Fajar's grandmother say about wasting food?", "options": ["It doesn't matter", "It shows a lack of gratitude", "It saves money", "It is always necessary"], "correctIndex": 1, "explanation": "His grandmother said wasting food shows a lack of gratitude for what they have." },
-      { "question": "What advice does Fajar give Dewi about portions?", "options": ["Take a huge portion immediately", "Take a smaller portion first and take more later if needed", "Never take seconds", "Skip the meal entirely"], "correctIndex": 1, "explanation": "Fajar suggests taking a smaller portion first, with the option to take more if still hungry." }
-    ]
+      {
+        "question": "What habit does Fajar have when eating with others?",
+        "options": [
+          "He eats first, alone",
+          "He never eats with coworkers",
+          "He eats very quickly",
+          "He waits until everyone sits down before starting"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fajar waits until everyone sits down before he starts eating, a habit from his mother."
+      },
+      {
+        "question": "What does Fajar's family say before eating?",
+        "options": [
+          "Nothing special",
+          "Bismillah",
+          "A long speech",
+          "A toast"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar says his family always says bismillah before eating."
+      },
+      {
+        "question": "What rule did Fajar's family teach about a shared plate?",
+        "options": [
+          "Take as much as possible quickly",
+          "Take food from the side closest to you, not reach across",
+          "Never touch a shared plate",
+          "Only the eldest may take food"
+        ],
+        "correctIndex": 1,
+        "explanation": "He was taught to take food from the side closest to him, not reach across the table."
+      },
+      {
+        "question": "What did Fajar's grandmother say about wasting food?",
+        "options": [
+          "It doesn't matter",
+          "It saves money",
+          "It shows a lack of gratitude",
+          "It is always necessary"
+        ],
+        "correctIndex": 2,
+        "explanation": "His grandmother said wasting food shows a lack of gratitude for what they have."
+      },
+      {
+        "question": "What advice does Fajar give Dewi about portions?",
+        "options": [
+          "Take a smaller portion first and take more later if needed",
+          "Take a huge portion immediately",
+          "Never take seconds",
+          "Skip the meal entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fajar suggests taking a smaller portion first, with the option to take more if still hungry."
+      },
+      {
+        "question": "Why does Fajar wait before eating?",
+        "options": [
+          "He is waiting for another plate",
+          "He does not like the food",
+          "He wants to eat alone",
+          "He wants the meal to feel shared"
+        ],
+        "correctIndex": 3,
+        "explanation": "Waiting for everyone makes the meal feel shared instead of rushed."
+      },
+      {
+        "question": "What should Dewi do when food is far away?",
+        "options": [
+          "Ask someone to pass it",
+          "Reach across the whole table",
+          "Stand on the chair",
+          "Leave the meal"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fajar says it is better to ask than reach across other people."
+      },
+      {
+        "question": "What does “awkward” mean when Dewi says it?",
+        "options": [
+          "Very hungry",
+          "Angry with Fajar",
+          "Unsure and uncomfortable",
+          "Ready to leave"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dewi feels unsure about the polite way to take shared food."
+      },
+      {
+        "question": "How can a smaller first portion help?",
+        "options": [
+          "It makes the plate heavier",
+          "It ends the conversation",
+          "It can reduce wasted food",
+          "It keeps food far away"
+        ],
+        "correctIndex": 2,
+        "explanation": "A person can take more later instead of leaving food uneaten."
+      },
+      {
+        "question": "How does Fajar respond to Dewi’s mistakes?",
+        "options": [
+          "He laughs at her habits",
+          "He reports her to work",
+          "He gives friendly advice",
+          "He refuses to eat"
+        ],
+        "correctIndex": 2,
+        "explanation": "He explains the habits kindly and says everyone learns slowly."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; natural coworker exchange with concrete table manners",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-adab-04",
@@ -115,30 +463,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [warmly] My grandfather was a quiet man, but he noticed everything. He never scolded loudly, yet his lessons stayed with me for life.",
-      "Narrator: [thoughtful] When I was young, I once walked into his room and took his newspaper without asking. I thought it was a small thing.",
-      "Narrator: [gently] He did not shout. He simply asked, did you ask permission before taking that? I said no, and I felt suddenly small.",
-      "Narrator: [reflective] He explained that asking permission is not about the object itself. It is about respecting another person's space and belongings.",
-      "Narrator: [softly] From that day, I started asking before touching anything that was not clearly mine, even small things, even at home.",
-      "Narrator: [warmly] My grandfather also taught me to ask permission before entering someone's house, even close family, by knocking and greeting first.",
-      "Narrator: [thoughtful] He said this habit protects everyone's dignity, and it shows that you value the other person's comfort, not just your own convenience.",
-      "Narrator: [honestly] At first, I thought these rules were too formal, almost old-fashioned for modern life.",
-      "Narrator: [gently] But as I grew older, I noticed how rare this habit had become, and how much people appreciated it when I practiced it.",
-      "Narrator: [warmly] Friends started telling me I was thoughtful and easy to trust, simply because I asked before borrowing or entering.",
-      "Narrator: [reflective] Now I try to teach the same lesson to younger people around me, the same quiet lesson my grandfather taught me.",
-      "Narrator: [peacefully] He passed away a few years ago, but I still hear his calm voice whenever I reach for something that is not mine.",
-      "Narrator: [with feeling] A simple question, may I, carries more respect than people realize. My grandfather understood that better than anyone I have known."
+      "Narrator: [reflective] When I was young, I once walked into his room and took his newspaper without asking. I thought it was a small thing.",
+      "Narrator: He did not shout. He simply asked, did you ask permission before taking that? I said no, and I felt suddenly small.",
+      "Narrator: He explained that asking permission is not about the object itself. It is about respecting another person's space and belongings.",
+      "Narrator: From that day, I started asking before touching anything that was not clearly mine, even small things, even at home.",
+      "Narrator: My grandfather also taught me to ask permission before entering someone's house, even close family, by knocking and greeting first.",
+      "Narrator: He said this habit helps everyone feel safe and respected. It shows that you care about the other person, not only what is easy for you.",
+      "Narrator: At first, I thought these rules were too serious and old-fashioned for modern life.",
+      "Narrator: But as I grew older, I noticed how rare this habit had become, and how much people appreciated it when I practiced it.",
+      "Narrator: [thoughtful] Friends started telling me I was thoughtful and easy to trust, simply because I asked before borrowing or entering.",
+      "Narrator: Now I try to teach the same lesson to younger people around me, the same quiet lesson my grandfather taught me.",
+      "Narrator: [softly] He passed away a few years ago, but I still hear his calm voice whenever I reach for something that is not mine.",
+      "Narrator: [warmly] A simple question, may I, carries more respect than people realize. My grandfather understood that better than anyone I have known."
     ],
     "quiz": [
-      { "question": "What did the narrator do as a child that upset his grandfather slightly?", "options": ["He broke a window", "He took his grandfather's newspaper without asking", "He lost his keys", "He was late for dinner"], "correctIndex": 1, "explanation": "He walked into his grandfather's room and took the newspaper without asking permission." },
-      { "question": "According to the grandfather, what is asking permission really about?", "options": ["The value of the object", "Respecting another person's space and belongings", "Following strict rules for no reason", "Avoiding punishment"], "correctIndex": 1, "explanation": "The grandfather explained it is about respecting another person's space and belongings, not the object itself." },
-      { "question": "What else did the grandfather teach about entering houses?", "options": ["Walk in without knocking to save time", "Knock and greet first, even at close family's homes", "Only enter empty houses", "Never visit anyone"], "correctIndex": 1, "explanation": "He taught the narrator to knock and greet first before entering someone's house, even close family." },
-      { "question": "How did the narrator's habit affect his friends' view of him?", "options": ["They found him annoying", "They found him thoughtful and easy to trust", "They ignored the change", "They thought he was strange"], "correctIndex": 1, "explanation": "Friends told him he was thoughtful and easy to trust because he asked before borrowing or entering." },
-      { "question": "What does the narrator do now with this lesson?", "options": ["He has forgotten it", "He tries to teach it to younger people around him", "He keeps it only to himself", "He no longer believes in it"], "correctIndex": 1, "explanation": "He now tries to teach the same lesson to younger people around him." }
-    ]
+      {
+        "question": "What did the narrator do as a child that upset his grandfather slightly?",
+        "options": [
+          "He took his grandfather's newspaper without asking",
+          "He broke a window",
+          "He lost his keys",
+          "He was late for dinner"
+        ],
+        "correctIndex": 0,
+        "explanation": "He walked into his grandfather's room and took the newspaper without asking permission."
+      },
+      {
+        "question": "According to the grandfather, what is asking permission really about?",
+        "options": [
+          "The value of the object",
+          "Following strict rules for no reason",
+          "Avoiding punishment",
+          "Respecting another person's space and belongings"
+        ],
+        "correctIndex": 3,
+        "explanation": "The grandfather explained it is about respecting another person's space and belongings, not the object itself."
+      },
+      {
+        "question": "What else did the grandfather teach about entering houses?",
+        "options": [
+          "Walk in without knocking to save time",
+          "Knock and greet first, even at close family's homes",
+          "Only enter empty houses",
+          "Never visit anyone"
+        ],
+        "correctIndex": 1,
+        "explanation": "He taught the narrator to knock and greet first before entering someone's house, even close family."
+      },
+      {
+        "question": "How did the narrator's habit affect his friends' view of him?",
+        "options": [
+          "They found him annoying",
+          "They ignored the change",
+          "They thought he was strange",
+          "They found him thoughtful and easy to trust"
+        ],
+        "correctIndex": 3,
+        "explanation": "Friends told him he was thoughtful and easy to trust because he asked before borrowing or entering."
+      },
+      {
+        "question": "What does the narrator do now with this lesson?",
+        "options": [
+          "He has forgotten it",
+          "He keeps it only to himself",
+          "He tries to teach it to younger people around him",
+          "He no longer believes in it"
+        ],
+        "correctIndex": 2,
+        "explanation": "He now tries to teach the same lesson to younger people around him."
+      },
+      {
+        "question": "How did the grandfather correct the child?",
+        "options": [
+          "He asked a calm question",
+          "He shouted across the house",
+          "He hid the newspaper",
+          "He called another person"
+        ],
+        "correctIndex": 0,
+        "explanation": "The grandfather calmly asked whether permission had been given."
+      },
+      {
+        "question": "What are “belongings” in this story?",
+        "options": [
+          "Rooms in a house",
+          "Words in a newspaper",
+          "Things that someone owns",
+          "Lessons at school"
+        ],
+        "correctIndex": 2,
+        "explanation": "The word refers to another person’s objects or possessions."
+      },
+      {
+        "question": "What should happen before entering a family home?",
+        "options": [
+          "Walk in without speaking",
+          "Knock and greet first",
+          "Take something from the room",
+          "Wait outside all day"
+        ],
+        "correctIndex": 1,
+        "explanation": "The grandfather teaches the narrator to knock and greet before entering."
+      },
+      {
+        "question": "Why did friends find the narrator easy to trust?",
+        "options": [
+          "He owned many newspapers",
+          "He spoke very loudly",
+          "He visited without asking",
+          "He asked before borrowing things"
+        ],
+        "correctIndex": 3,
+        "explanation": "His habit showed respect for other people’s property and space."
+      },
+      {
+        "question": "What does “May I?” show in the story?",
+        "options": [
+          "Fear",
+          "Hurry",
+          "Surprise",
+          "Respect"
+        ],
+        "correctIndex": 3,
+        "explanation": "The simple question asks permission and shows respect."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "revise selected abstract phrases; keep the strong personal memory",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-adab-05",
@@ -147,36 +609,153 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Father", "gender": "male" }
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      },
+      {
+        "name": "Father",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Yusuf: [nervous] Dad, I wanted to call and talk about yesterday. I was rude to you at dinner, and I've felt bad about it since.",
+      "Yusuf: [regretfully] Dad, I wanted to call and talk about yesterday. I was rude to you at dinner, and I've felt bad about it since.",
       "Father: [calmly] I noticed you were upset. What happened, exactly?",
-      "Yusuf: [regretfully] I was tired from work, and I raised my voice when you asked about my plans. I shouldn't have spoken to you that way.",
-      "Father: [gently] I appreciate you calling to say that. It takes courage to admit something like this.",
-      "Yusuf: [softly] I know respect toward parents matters a lot, and I ignored that completely in that moment.",
-      "Father: [warmly] Everyone loses patience sometimes, son. What matters more is what you do after.",
-      "Yusuf: [thoughtful] Still, I keep thinking about your face when I raised my voice. I hurt you, and I'm truly sorry.",
-      "Father: [kindly] I forgive you, Yusuf. Truly. I was young once too, and I made similar mistakes with my own father.",
-      "Yusuf: [relieved] Thank you, Dad. That means more to me than you know.",
-      "Father: [gently] Just remember, next time you feel that frustration rising, take a breath before you speak.",
+      "Yusuf: I was tired from work, and I raised my voice when you asked about my plans. I shouldn't have spoken to you that way.",
+      "Father: I appreciate you calling to say that. It takes courage to admit something like this.",
+      "Yusuf: I know respect toward parents matters a lot, and I ignored that completely in that moment.",
+      "Father: Everyone loses patience sometimes, son. What matters more is what you do after.",
+      "Yusuf: Still, I keep thinking about your face when I raised my voice. I hurt you, and I'm truly sorry.",
+      "Father: [warmly] I forgive you, Yusuf. Truly. I was young once too, and I made similar mistakes with my own father.",
+      "Yusuf: Thank you, Dad. That means more to me than you know.",
+      "Father: Just remember, next time you feel that frustration rising, take a breath before you speak.",
       "Yusuf: [determined] I will try. I don't want tiredness to become an excuse for disrespect again.",
-      "Father: [warmly] That's a wise thing to notice at your age. Not everyone learns that lesson so early.",
-      "Yusuf: [softly] I learned it from watching you, actually. You always stayed calm with your own parents, even when tired.",
-      "Father: [touched] I'm glad some of that reached you, even quietly, over the years.",
-      "Yusuf: [warmly] Can I bring dinner this weekend, to make things right properly?",
-      "Father: [smiling] You don't need to make anything right, but yes, I would enjoy that very much.",
+      "Father: That's a wise thing to notice at your age. Not everyone learns that lesson so early.",
+      "Yusuf: I learned it from watching you, actually. You always stayed calm with your own parents, even when tired.",
+      "Father: I'm glad some of that reached you, even quietly, over the years.",
+      "Yusuf: Can I bring dinner this weekend, to make things right properly?",
+      "Father: You don't need to make anything right, but yes, I would enjoy that very much.",
       "Yusuf: [relieved] Good. I love you, Dad, and I'm sorry again for yesterday.",
-      "Father: [with love] I love you too, son. This call already means everything to me."
+      "Father: [warmly] I love you too, son. This call already means everything to me."
     ],
     "quiz": [
-      { "question": "Why is Yusuf calling his father?", "options": ["To ask for money", "To apologize for being rude at dinner", "To cancel weekend plans", "To share good news"], "correctIndex": 1, "explanation": "Yusuf calls to apologize for raising his voice and being rude to his father at dinner." },
-      { "question": "Why did Yusuf raise his voice the day before?", "options": ["He was angry at his father specifically", "He was tired from work", "He was joking", "He misheard the question"], "correctIndex": 1, "explanation": "Yusuf explains he was tired from work when he raised his voice." },
-      { "question": "How does the father respond to Yusuf's apology?", "options": ["He refuses to forgive him", "He forgives him and shares he made similar mistakes once", "He hangs up angrily", "He ignores the apology"], "correctIndex": 1, "explanation": "The father forgives Yusuf and admits he made similar mistakes with his own father when young." },
-      { "question": "What does the father advise Yusuf to do next time he feels frustrated?", "options": ["Avoid calling him", "Take a breath before speaking", "Leave the room immediately", "Write a letter instead"], "correctIndex": 1, "explanation": "The father advises Yusuf to take a breath before speaking next time frustration rises." },
-      { "question": "What does Yusuf offer to do that weekend?", "options": ["Move back home", "Bring dinner to make things right", "Take his father on a trip", "Buy him a gift"], "correctIndex": 1, "explanation": "Yusuf offers to bring dinner that weekend to make things right properly." }
-    ]
+      {
+        "question": "Why is Yusuf calling his father?",
+        "options": [
+          "To apologize for being rude at dinner",
+          "To ask for money",
+          "To cancel weekend plans",
+          "To share good news"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf calls to apologize for raising his voice and being rude to his father at dinner."
+      },
+      {
+        "question": "Why did Yusuf raise his voice the day before?",
+        "options": [
+          "He was tired from work",
+          "He was angry at his father specifically",
+          "He was joking",
+          "He misheard the question"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf explains he was tired from work when he raised his voice."
+      },
+      {
+        "question": "How does the father respond to Yusuf's apology?",
+        "options": [
+          "He refuses to forgive him",
+          "He forgives him and shares he made similar mistakes once",
+          "He hangs up angrily",
+          "He ignores the apology"
+        ],
+        "correctIndex": 1,
+        "explanation": "The father forgives Yusuf and admits he made similar mistakes with his own father when young."
+      },
+      {
+        "question": "What does the father advise Yusuf to do next time he feels frustrated?",
+        "options": [
+          "Avoid calling him",
+          "Leave the room immediately",
+          "Take a breath before speaking",
+          "Write a letter instead"
+        ],
+        "correctIndex": 2,
+        "explanation": "The father advises Yusuf to take a breath before speaking next time frustration rises."
+      },
+      {
+        "question": "What does Yusuf offer to do that weekend?",
+        "options": [
+          "Move back home",
+          "Take his father on a trip",
+          "Buy him a gift",
+          "Bring dinner to make things right"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf offers to bring dinner that weekend to make things right properly."
+      },
+      {
+        "question": "What does Yusuf do first to repair the problem?",
+        "options": [
+          "He sends food to work",
+          "He avoids the family dinner",
+          "He asks his brother to speak",
+          "He calls his father"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf directly calls his father and begins an honest apology."
+      },
+      {
+        "question": "What does “frustration rising” mean?",
+        "options": [
+          "Starting to feel upset",
+          "Becoming very sleepy",
+          "Feeling ready to eat",
+          "Beginning to laugh"
+        ],
+        "correctIndex": 0,
+        "explanation": "The father means the moment when angry feelings begin to grow."
+      },
+      {
+        "question": "What is the father’s tone during the call?",
+        "options": [
+          "Cold and impatient",
+          "Calm and forgiving",
+          "Loud and mocking",
+          "Confused and careless"
+        ],
+        "correctIndex": 1,
+        "explanation": "He listens, forgives Yusuf, and gives gentle advice."
+      },
+      {
+        "question": "Why is tiredness not a good excuse for Yusuf?",
+        "options": [
+          "It means dinner must stop",
+          "It makes every parent angry",
+          "It does not make rude speech right",
+          "It prevents all phone calls"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yusuf accepts that being tired does not excuse disrespect."
+      },
+      {
+        "question": "What makes Yusuf’s apology sincere?",
+        "options": [
+          "He names his mistake and plans to change",
+          "He asks his father to forget it",
+          "He blames his work completely",
+          "He speaks only about dinner"
+        ],
+        "correctIndex": 0,
+        "explanation": "He accepts responsibility, apologizes, and explains what he will do next."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; emotionally clear phone apology with natural adult context",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-adab-06",
@@ -185,31 +764,145 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] People often ask why simple words like thank you still matter in a fast, busy world.",
-      "Narrator: [gently] I used to say thank you quickly, almost automatically, without really meaning it.",
-      "Narrator: [reflective] Then, last year, someone thanked me properly for helping them, and it completely changed how I saw the habit.",
-      "Narrator: [warmly] My coworker looked at me directly, used my name, and explained exactly what my help meant to her.",
-      "Narrator: [softly] It only took fifteen seconds, but I felt genuinely valued, not just politely acknowledged.",
-      "Narrator: [thoughtful] I realized my own thank you had become empty, a habit rather than a real expression of gratitude.",
-      "Narrator: [determined] So I started practicing something different. Instead of a quick word, I try to name exactly what someone did for me.",
-      "Narrator: [gently] Instead of just saying thanks, I might say, thank you for staying late to help me finish that report.",
-      "Narrator: [honestly] At first, this felt slow and a little unnatural, like I was overexplaining something simple.",
-      "Narrator: [warmly] But people responded differently. Their faces softened, and some even said nobody had thanked them so clearly before.",
-      "Narrator: [reflective] I also learned to thank people who are often overlooked, like drivers, cleaners, and shopkeepers, not only close friends.",
-      "Narrator: [peacefully] Gratitude, I learned, is not just a feeling inside us. It becomes real adab only when we express it clearly to others.",
-      "Narrator: [with a small smile] Now, before I say thank you, I pause for one second and think about what I'm actually grateful for.",
+      "Narrator: I used to say thank you quickly, almost automatically, without really meaning it.",
+      "Narrator: [warmly] Then, last year, someone thanked me properly for helping them, and it completely changed how I saw the habit.",
+      "Narrator: My coworker looked at me directly, used my name, and explained exactly what my help meant to her.",
+      "Narrator: It only took fifteen seconds, but I felt genuinely valued, not just politely acknowledged.",
+      "Narrator: I realized my own thank you had become empty, a habit rather than a real expression of gratitude.",
+      "Narrator: [reflective] So I started practicing something different. Instead of a quick word, I try to name exactly what someone did for me.",
+      "Narrator: Instead of just saying thanks, I might say, thank you for staying late to help me finish that report.",
+      "Narrator: At first, this felt slow and a little unnatural, like I was overexplaining something simple.",
+      "Narrator: But people responded differently. Their faces softened, and some even said nobody had thanked them so clearly before.",
+      "Narrator: [warmly] I also learned to thank people who are often overlooked, like drivers, cleaners, and shopkeepers, not only close friends.",
+      "Narrator: Gratitude, I learned, is not just a feeling inside us. It becomes real adab only when we express it clearly to others.",
+      "Narrator: Now, before I say thank you, I pause for one second and think about what I'm actually grateful for.",
       "Narrator: [warmly] That small pause changed something quiet but important in how I treat the people around me every single day."
     ],
     "quiz": [
-      { "question": "How did the narrator usually say thank you before this change?", "options": ["Very slowly and formally", "Quickly and almost automatically", "She never said thank you", "Only in writing"], "correctIndex": 1, "explanation": "She used to say thank you quickly, almost automatically, without really meaning it." },
-      { "question": "What did the coworker do that changed the narrator's view?", "options": ["Ignored her completely", "Looked at her, used her name, and explained what the help meant", "Sent a generic message", "Gave her money"], "correctIndex": 1, "explanation": "The coworker looked directly at her, used her name, and explained exactly what the help meant." },
-      { "question": "What new habit did the narrator start practicing?", "options": ["Saying thanks less often", "Naming exactly what someone did for her", "Avoiding gratitude altogether", "Only thanking family members"], "correctIndex": 1, "explanation": "She started naming exactly what someone did for her, instead of a quick generic word." },
-      { "question": "Who does the narrator say she now also thanks?", "options": ["Only her closest friends", "Overlooked people like drivers, cleaners, and shopkeepers", "Nobody new", "Only her boss"], "correctIndex": 1, "explanation": "She learned to thank overlooked people like drivers, cleaners, and shopkeepers, not only close friends." },
-      { "question": "What does the narrator conclude gratitude becomes when expressed clearly?", "options": ["A waste of time", "Real adab", "Unnecessary", "A business transaction"], "correctIndex": 1, "explanation": "She concludes gratitude becomes real adab only when we express it clearly to others." }
-    ]
+      {
+        "question": "How did the narrator usually say thank you before this change?",
+        "options": [
+          "Quickly and almost automatically",
+          "Very slowly and formally",
+          "She never said thank you",
+          "Only in writing"
+        ],
+        "correctIndex": 0,
+        "explanation": "She used to say thank you quickly, almost automatically, without really meaning it."
+      },
+      {
+        "question": "What did the coworker do that changed the narrator's view?",
+        "options": [
+          "Ignored her completely",
+          "Sent a generic message",
+          "Looked at her, used her name, and explained what the help meant",
+          "Gave her money"
+        ],
+        "correctIndex": 2,
+        "explanation": "The coworker looked directly at her, used her name, and explained exactly what the help meant."
+      },
+      {
+        "question": "What new habit did the narrator start practicing?",
+        "options": [
+          "Saying thanks less often",
+          "Avoiding gratitude altogether",
+          "Naming exactly what someone did for her",
+          "Only thanking family members"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started naming exactly what someone did for her, instead of a quick generic word."
+      },
+      {
+        "question": "Who does the narrator say she now also thanks?",
+        "options": [
+          "Only her closest friends",
+          "Nobody new",
+          "Only her boss",
+          "Overlooked people like drivers, cleaners, and shopkeepers"
+        ],
+        "correctIndex": 3,
+        "explanation": "She learned to thank overlooked people like drivers, cleaners, and shopkeepers, not only close friends."
+      },
+      {
+        "question": "What does the narrator conclude gratitude becomes when expressed clearly?",
+        "options": [
+          "A waste of time",
+          "Real adab",
+          "Unnecessary",
+          "A business transaction"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes gratitude becomes real adab only when we express it clearly to others."
+      },
+      {
+        "question": "Why did the coworker’s thanks feel special?",
+        "options": [
+          "It came with an expensive gift",
+          "It explained why the help mattered",
+          "It was written in a report",
+          "It lasted for an hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "The coworker used her name and described the value of her help."
+      },
+      {
+        "question": "What does “overlooked” mean here?",
+        "options": [
+          "Unable to work",
+          "Not often noticed",
+          "New to the city",
+          "Ready to speak"
+        ],
+        "correctIndex": 1,
+        "explanation": "Drivers, cleaners, and shopkeepers may not receive enough thanks."
+      },
+      {
+        "question": "What does the narrator do before saying thank you now?",
+        "options": [
+          "She thinks about the exact reason",
+          "She checks who is watching",
+          "She writes a long letter",
+          "She waits until the next day"
+        ],
+        "correctIndex": 0,
+        "explanation": "A short pause helps her give clear and honest thanks."
+      },
+      {
+        "question": "Why did people respond differently to her new thanks?",
+        "options": [
+          "The words were much louder",
+          "She thanked only close friends",
+          "She stopped using names",
+          "The words were clear and personal"
+        ],
+        "correctIndex": 3,
+        "explanation": "Specific words made people feel that their work was truly noticed."
+      },
+      {
+        "question": "Which thank-you best follows her new habit?",
+        "options": [
+          "Thanks for everything",
+          "Thank you for helping me finish the report",
+          "Okay, thank you",
+          "I saw your message"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her new habit names the helpful action clearly."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; focused reflection on specific gratitude, distinct from the greeting lesson",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-adab-07",
@@ -218,35 +911,601 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good morning, listeners! Today's topic is welcoming guests with proper adab. We have a caller on the line. Hello there!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this morning.",
-      "Radio Host: [warmly] Of course! What made you want to talk about this topic today?",
-      "Caller: [thoughtful] Honestly, my grandmother recently stayed with us for a month, and she taught my whole family so much about hosting guests properly.",
-      "Radio Host: [curious] That sounds wonderful. What did she teach you specifically?",
-      "Caller: [gently] First, she said to always offer something to drink immediately, even before asking why the guest has come.",
-      "Radio Host: [interested] I love that. What else did she share?",
-      "Caller: [reflective] She said to never let a guest sit alone in silence. Someone should always stay and talk with them, even briefly.",
-      "Radio Host: [curious] Did she teach anything about how to say goodbye to guests?",
-      "Caller: [warmly] Yes, actually. She always walks guests to the door, sometimes even to their car, no matter how tired she is.",
-      "Radio Host: [smiling] That's such a thoughtful habit. Did this change how your household treats visitors now?",
-      "Caller: [determined] Completely. We used to just say goodbye from the living room, but now someone always walks the guest out properly.",
-      "Radio Host: [curious] What about unexpected guests, people who arrive without calling first?",
-      "Caller: [gently] My grandmother says to welcome them just as warmly, without complaining about the surprise, even if the house isn't perfectly tidy.",
-      "Radio Host: [understanding] That takes real patience and generosity of spirit.",
-      "Caller: [warmly] It does, but she says hospitality isn't about a perfect house, it's about making someone feel genuinely welcome.",
-      "Radio Host: [encouraging] What a beautiful lesson to pass on to your family. Thank you so much for sharing this with us.",
-      "Caller: [sincerely] Thank you for listening. I hope it inspires someone to greet their next guest a little more warmly."
+      "Caller: [warmly] Hello! Thank you for taking my call this morning.",
+      "Radio Host: Of course! What made you want to talk about this topic today?",
+      "Caller: [reflective] Honestly, my grandmother recently stayed with us for a month, and she taught my whole family so much about hosting guests properly.",
+      "Radio Host: That sounds wonderful. What did she teach you specifically?",
+      "Caller: First, she said to always offer something to drink immediately, even before asking why the guest has come.",
+      "Radio Host: I love that. What else did she share?",
+      "Caller: She said to never let a guest sit alone in silence. Someone should always stay and talk with them, even briefly.",
+      "Radio Host: Did she teach anything about how to say goodbye to guests?",
+      "Caller: Yes, actually. She always walks guests to the door, sometimes even to their car, no matter how tired she is.",
+      "Radio Host: [warmly] That's such a thoughtful habit. Did this change how your household treats visitors now?",
+      "Caller: Completely. We used to just say goodbye from the living room, but now someone always walks the guest out properly.",
+      "Radio Host: What about unexpected guests, people who arrive without calling first?",
+      "Caller: My grandmother says to welcome them just as warmly, without complaining about the surprise, even if the house isn't perfectly tidy.",
+      "Radio Host: That takes real patience and generosity of spirit.",
+      "Caller: It does, but she says hospitality isn't about a perfect house, it's about making someone feel genuinely welcome.",
+      "Radio Host: [warmly] What a beautiful lesson to pass on to your family. Thank you so much for sharing this with us.",
+      "Caller: [gratefully] Thank you for listening. I hope it inspires someone to greet their next guest a little more warmly."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Cooking recipes", "Welcoming guests with proper adab", "Traffic updates", "Sports results"], "correctIndex": 1, "explanation": "The host introduces today's topic as welcoming guests with proper adab." },
-      { "question": "Who taught the caller's family about hosting guests properly?", "options": ["A neighbor", "His grandmother, who stayed with them for a month", "A television show", "His boss"], "correctIndex": 1, "explanation": "The caller's grandmother stayed with the family for a month and taught them about hosting guests." },
-      { "question": "What did the grandmother say to offer a guest immediately?", "options": ["Money", "Something to drink", "A gift", "A tour of the house"], "correctIndex": 1, "explanation": "She said to always offer something to drink immediately, even before asking why the guest came." },
-      { "question": "What habit does the grandmother have when guests leave?", "options": ["She says goodbye from the couch", "She walks guests to the door, sometimes to their car", "She leaves the room early", "She asks them to leave quickly"], "correctIndex": 1, "explanation": "She always walks guests to the door, sometimes even to their car, no matter how tired she is." },
-      { "question": "What does the grandmother say hospitality is really about?", "options": ["Having a perfectly tidy house", "Making someone feel genuinely welcome", "Serving expensive food", "Avoiding unexpected visitors"], "correctIndex": 1, "explanation": "She says hospitality isn't about a perfect house, it's about making someone feel genuinely welcome." }
-    ]
+      {
+        "question": "Which guest-related habit does the radio segment explain?",
+        "options": [
+          "Cooking recipes",
+          "Traffic updates",
+          "Sports results",
+          "Welcoming guests with proper adab"
+        ],
+        "correctIndex": 3,
+        "explanation": "The host introduces today's topic as welcoming guests with proper adab."
+      },
+      {
+        "question": "Who taught the caller's family about hosting guests properly?",
+        "options": [
+          "A neighbor",
+          "His grandmother, who stayed with them for a month",
+          "A television show",
+          "His boss"
+        ],
+        "correctIndex": 1,
+        "explanation": "The caller's grandmother stayed with the family for a month and taught them about hosting guests."
+      },
+      {
+        "question": "What did the grandmother say to offer a guest immediately?",
+        "options": [
+          "Money",
+          "Something to drink",
+          "A gift",
+          "A tour of the house"
+        ],
+        "correctIndex": 1,
+        "explanation": "She said to always offer something to drink immediately, even before asking why the guest came."
+      },
+      {
+        "question": "What habit does the grandmother have when guests leave?",
+        "options": [
+          "She says goodbye from the couch",
+          "She leaves the room early",
+          "She walks guests to the door, sometimes to their car",
+          "She asks them to leave quickly"
+        ],
+        "correctIndex": 2,
+        "explanation": "She always walks guests to the door, sometimes even to their car, no matter how tired she is."
+      },
+      {
+        "question": "What does the grandmother say hospitality is really about?",
+        "options": [
+          "Making someone feel genuinely welcome",
+          "Having a perfectly tidy house",
+          "Serving expensive food",
+          "Avoiding unexpected visitors"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says hospitality isn't about a perfect house, it's about making someone feel genuinely welcome."
+      },
+      {
+        "question": "Why should someone sit with a guest?",
+        "options": [
+          "So the guest eats faster",
+          "So the house stays quiet",
+          "So the guest is not left alone",
+          "So nobody opens the door"
+        ],
+        "correctIndex": 2,
+        "explanation": "The grandmother says someone should talk with a guest, even briefly."
+      },
+      {
+        "question": "How should the family treat an unexpected guest?",
+        "options": [
+          "Complain about the visit",
+          "Ask the guest to return",
+          "Welcome the guest warmly",
+          "Hide the untidy room"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her grandmother says a surprise guest still deserves a warm welcome."
+      },
+      {
+        "question": "What does “hospitality” mean in this segment?",
+        "options": [
+          "Cleaning every room",
+          "Calling before a visit",
+          "Caring well for guests",
+          "Preparing a radio show"
+        ],
+        "correctIndex": 2,
+        "explanation": "The word describes welcoming and caring for visitors."
+      },
+      {
+        "question": "How has the family changed?",
+        "options": [
+          "They no longer offer drinks",
+          "They avoid surprise visitors",
+          "They sit in separate rooms",
+          "They now walk guests to the door"
+        ],
+        "correctIndex": 3,
+        "explanation": "The family now follows the grandmother’s goodbye habit."
+      },
+      {
+        "question": "Why does the caller share this story?",
+        "options": [
+          "To encourage warmer welcomes",
+          "To ask for a perfect house",
+          "To advertise her grandmother’s car",
+          "To explain a monthly visit"
+        ],
+        "correctIndex": 0,
+        "explanation": "She hopes listeners will greet their next guest more warmly."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; radio call-in is concrete and offers a different listening format",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-adab-08",
+    "title": "The Seat I Nearly Kept",
+    "level": "A1",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [tired] The bus was crowded when I left work on Tuesday. I was tired, and I was happy to find the last empty seat near the door.",
+      "Narrator: At the next stop, an older man entered with two heavy bags. He held the rail, but the bus moved suddenly and he almost fell.",
+      "Narrator: I saw him, yet I waited for someone else to stand. For a few seconds, I told myself that my day had also been difficult.",
+      "Narrator: [regretfully] Then a schoolboy across from me started to rise. He was carrying a large backpack and looked more tired than I felt.",
+      "Narrator: I became ashamed. I stood first and offered my seat to the older man. He thanked me and placed his bags beside his feet.",
+      "Narrator: The boy smiled, and I smiled back. Nothing dramatic happened, but my mood changed at once.",
+      "Narrator: I understood that good manners often begin before anyone asks us for help. We have to notice people and act without waiting for praise.",
+      "Narrator: [reflective] The man later asked where I worked. We spoke quietly about the busy road and the rain that was coming.",
+      "Narrator: Before his stop, he thanked me again. I told him it was a small thing, and he said small things can make a hard journey easier.",
+      "Narrator: His words stayed with me. I had nearly chosen my own comfort while another person needed help.",
+      "Narrator: Now, when I enter a bus, I look around before I sit. If someone needs the seat more, the choice becomes simple.",
+      "Narrator: Respect is not only polite language. Sometimes it is a seat, a door held open, or a moment of attention.",
+      "Narrator: [warmly] That short ride taught me to notice people and help without waiting for praise."
+    ],
+    "quiz": [
+      {
+        "question": "Where was the narrator traveling?",
+        "options": [
+          "On a crowded bus after work",
+          "On a quiet train",
+          "In a taxi to school",
+          "On an airplane"
+        ],
+        "correctIndex": 0,
+        "explanation": "He was traveling on a crowded bus after work."
+      },
+      {
+        "question": "Who entered at the next stop?",
+        "options": [
+          "A mother with a baby",
+          "His manager",
+          "A bus driver",
+          "An older man with two heavy bags"
+        ],
+        "correctIndex": 3,
+        "explanation": "An older man entered carrying two heavy bags."
+      },
+      {
+        "question": "Why did the narrator feel ashamed?",
+        "options": [
+          "He missed his stop",
+          "A tired schoolboy was ready to help first",
+          "He lost his ticket",
+          "He spoke too loudly"
+        ],
+        "correctIndex": 1,
+        "explanation": "He saw a schoolboy preparing to give the man a seat while he waited."
+      },
+      {
+        "question": "What did the older man say about small things?",
+        "options": [
+          "They are never important",
+          "They cost too much",
+          "They should be ignored",
+          "They can make a hard journey easier"
+        ],
+        "correctIndex": 3,
+        "explanation": "The man said small things can make a hard journey easier."
+      },
+      {
+        "question": "What lesson did the narrator learn?",
+        "options": [
+          "Always stand on a bus",
+          "Avoid speaking to strangers",
+          "Respect includes noticing and helping people",
+          "Travel only when buses are empty"
+        ],
+        "correctIndex": 2,
+        "explanation": "He learned that respect includes attention and helpful action."
+      },
+      {
+        "question": "Why did the narrator wait at first?",
+        "options": [
+          "He did not see the older man",
+          "He was tired and wanted the seat",
+          "The bus was at the last stop",
+          "The schoolboy asked him to wait"
+        ],
+        "correctIndex": 1,
+        "explanation": "He thought about his own difficult day and hoped someone else would stand."
+      },
+      {
+        "question": "What made him decide to stand?",
+        "options": [
+          "The driver called his name",
+          "The older man dropped both bags",
+          "The bus became empty",
+          "He saw the schoolboy begin to rise"
+        ],
+        "correctIndex": 3,
+        "explanation": "Seeing another tired person ready to help made him feel ashamed."
+      },
+      {
+        "question": "How did the narrator feel after giving the seat?",
+        "options": [
+          "Angry with the schoolboy",
+          "Afraid of the older man",
+          "Worried about the rain",
+          "Better about his choice"
+        ],
+        "correctIndex": 3,
+        "explanation": "The small helpful action changed his mood at once."
+      },
+      {
+        "question": "What does the older man mean by “make a hard journey easier”?",
+        "options": [
+          "Every bus ride should be short",
+          "Heavy bags should stay at home",
+          "Small help can reduce another person’s difficulty",
+          "Rain always improves travel"
+        ],
+        "correctIndex": 2,
+        "explanation": "A simple seat can make travel safer and less tiring."
+      },
+      {
+        "question": "What will the narrator probably do on his next bus ride?",
+        "options": [
+          "Look for anyone who needs a seat",
+          "Always stand near the driver",
+          "Carry bags for every passenger",
+          "Avoid speaking to older people"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says he now looks around before choosing to sit."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "simplify the final reflection; keep the clear bus story",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-adab-09",
+    "title": "Tea Before Questions",
+    "level": "A1",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [excited] Last month, my cousin Hana visited our home after a long journey. I wanted to hear every detail about her new job and apartment.",
+      "Narrator: As soon as she entered, I started asking questions. Was the train late? Did she like her manager? Was her neighborhood safe?",
+      "Narrator: [gently] Hana answered politely, but her voice was quiet. My mother noticed her tired face and gently touched my arm.",
+      "Narrator: She welcomed Hana, carried one of her bags, and showed her where to wash. Then she brought water, warm tea, and a simple meal.",
+      "Narrator: No one asked Hana to tell a story while she ate. We gave her time to breathe and become comfortable.",
+      "Narrator: [warmly] After resting, Hana joined us in the living room. This time, she spoke with energy and shared funny moments from the journey.",
+      "Narrator: Later, my mother explained something important. A guest does not have to answer every question as soon as they arrive.",
+      "Narrator: Welcoming a person means thinking about what they need. A traveler may need water, food, privacy, prayer, or quiet before conversation.",
+      "Narrator: [reflective] I realized that my questions were friendly, but I had asked at the wrong time. Good intentions still need good manners.",
+      "Narrator: The next weekend, another relative came to our house. I greeted him warmly, took his coat, and showed him the bathroom first.",
+      "Narrator: I offered a drink and said he could rest before joining us. His shoulders relaxed, and he thanked me.",
+      "Narrator: That small change made our home feel calmer. I also enjoyed the conversation more because our guest was ready for it.",
+      "Narrator: [warmly] Now I remember my mother's simple rule: welcome the person first, and ask the questions later."
+    ],
+    "quiz": [
+      {
+        "question": "Why did Hana visit the family?",
+        "options": [
+          "She needed a school book",
+          "She was delivering food",
+          "She came after a long journey",
+          "She missed a bus"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hana arrived at their home after a long journey."
+      },
+      {
+        "question": "What did the narrator do too soon?",
+        "options": [
+          "Asked Hana many questions",
+          "Went to sleep",
+          "Served a large dinner",
+          "Opened Hana’s bags"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator immediately asked many questions."
+      },
+      {
+        "question": "How did the mother welcome Hana?",
+        "options": [
+          "She asked Hana to clean",
+          "She offered help, water, tea, food, and rest",
+          "She left the house",
+          "She turned on loud music"
+        ],
+        "correctIndex": 1,
+        "explanation": "The mother cared for Hana’s needs before starting a conversation."
+      },
+      {
+        "question": "What did the mother say a guest is not?",
+        "options": [
+          "A family member",
+          "A traveler",
+          "A person who needs rest",
+          "A performer who must entertain everyone"
+        ],
+        "correctIndex": 3,
+        "explanation": "She said a guest is not a performer who must entertain the hosts."
+      },
+      {
+        "question": "What rule does the narrator remember?",
+        "options": [
+          "Welcome the person first and ask questions later",
+          "Never speak to visitors",
+          "Prepare expensive gifts",
+          "Ask every question at the door"
+        ],
+        "correctIndex": 0,
+        "explanation": "The lesson is to welcome a guest before asking many questions."
+      },
+      {
+        "question": "What showed that Hana was tired?",
+        "options": [
+          "Her voice was quiet",
+          "She asked many questions",
+          "She carried no bag",
+          "Her train was early"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hana answered politely, but her quiet voice showed low energy."
+      },
+      {
+        "question": "What changed after Hana rested?",
+        "options": [
+          "She left the house",
+          "She stopped speaking",
+          "She spoke with more energy",
+          "She asked for another train"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rest helped Hana feel ready to share her journey."
+      },
+      {
+        "question": "Why were the narrator’s first questions a problem?",
+        "options": [
+          "They came before Hana could rest",
+          "They were about the wrong person",
+          "They were written on paper",
+          "They were asked after dinner"
+        ],
+        "correctIndex": 0,
+        "explanation": "The questions were friendly, but the time was not right."
+      },
+      {
+        "question": "How did the narrator welcome the next visitor?",
+        "options": [
+          "He asked many questions at the door",
+          "He offered help, a drink, and rest",
+          "He left the visitor alone outside",
+          "He asked the visitor to cook"
+        ],
+        "correctIndex": 1,
+        "explanation": "He used his mother’s lesson during the next visit."
+      },
+      {
+        "question": "What does the story teach about welcoming travelers?",
+        "options": [
+          "Prepare many difficult questions",
+          "Keep every visit very short",
+          "Wait for visitors to request water",
+          "Meet their needs before asking for stories"
+        ],
+        "correctIndex": 3,
+        "explanation": "A tired traveler may first need water, food, prayer, privacy, or quiet."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "simplify two abstract phrases; keep the well-paced guest story",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-adab-10",
+    "title": "Correcting a Name With Kindness",
+    "level": "A1",
+    "themeId": "adab",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Lina",
+        "gender": "female"
+      },
+      {
+        "name": "Rafi",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Lina: [gently] Rafi, can I ask you about something from this morning's meeting?",
+      "Rafi: Of course. Did I forget to send you one of the notes?",
+      "Lina: No, the notes were clear. It is about our new colleague, Naila. You called her Nadia three times.",
+      "Rafi: [surprised] Oh, I did not realize that. The names sounded similar in my head, and nobody corrected me.",
+      "Lina: She looked uncomfortable, but she did not want to interrupt you in front of the whole team.",
+      "Rafi: [regretfully] I feel terrible. I should have checked her name before I introduced her.",
+      "Lina: Mistakes happen. I wanted to tell you privately so you can correct it without feeling embarrassed.",
+      "Rafi: Thank you. That was kinder than announcing it across the office.",
+      "Lina: What will you do now?",
+      "Rafi: I will speak to Naila before lunch. I will say her name correctly, apologize briefly, and not make excuses.",
+      "Lina: [calmly] That sounds good. You could also correct the meeting notes because her name appears there twice.",
+      "Rafi: You're right. I will update the file and send the corrected version to everyone.",
+      "Lina: Do you think I should make a long apology in the group chat?",
+      "Rafi: Probably not. A simple correction protects her from more mistakes without making her the center of attention.",
+      "Lina: I understand. I want her to know that remembering her name matters.",
+      "Rafi: It does. A person's name is a basic part of showing respect.",
+      "Lina: [warmly] Thank you for telling me quietly, Lina. You helped both of us today.",
+      "Rafi: And thank you for listening calmly. Some people become defensive when they are corrected.",
+      "Lina: I was embarrassed for a moment, but the important thing is fixing the mistake.",
+      "Rafi: [warmly] Exactly. Kind correction and a sincere response can keep a small error from becoming a bigger problem."
+    ],
+    "quiz": [
+      {
+        "question": "What mistake did Rafi make?",
+        "options": [
+          "He canceled the meeting",
+          "He lost Lina’s notes",
+          "He called Naila by the wrong name",
+          "He arrived late"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rafi called Naila “Nadia” several times."
+      },
+      {
+        "question": "Why did Lina speak to Rafi privately?",
+        "options": [
+          "To ask for lunch money",
+          "To correct him without embarrassing him",
+          "To hide the meeting notes",
+          "To complain about Naila"
+        ],
+        "correctIndex": 1,
+        "explanation": "Lina chose a private and respectful correction."
+      },
+      {
+        "question": "What will Rafi do before lunch?",
+        "options": [
+          "Leave the office",
+          "Call another meeting",
+          "Buy a gift for Lina",
+          "Apologize briefly to Naila"
+        ],
+        "correctIndex": 3,
+        "explanation": "He plans to speak to Naila and apologize briefly."
+      },
+      {
+        "question": "What else needs correction?",
+        "options": [
+          "The office address",
+          "The lunch order",
+          "Naila’s name in the meeting notes",
+          "The meeting time"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her name also appears incorrectly in the notes."
+      },
+      {
+        "question": "What is the main lesson?",
+        "options": [
+          "Never correct a coworker",
+          "Correct people kindly and respond without defensiveness",
+          "Names are not important",
+          "Every mistake needs a public apology"
+        ],
+        "correctIndex": 1,
+        "explanation": "The dialogue shows respectful correction and a calm response."
+      },
+      {
+        "question": "Why did Naila stay quiet in the meeting?",
+        "options": [
+          "She had forgotten her own name",
+          "She was writing the notes",
+          "She did not want to interrupt",
+          "She had left the room"
+        ],
+        "correctIndex": 2,
+        "explanation": "Naila looked uncomfortable but did not want to interrupt Rafi publicly."
+      },
+      {
+        "question": "What does “defensive” mean here?",
+        "options": [
+          "Unwilling to accept correction",
+          "Ready to help quickly",
+          "Unable to hear a name",
+          "Happy about a mistake"
+        ],
+        "correctIndex": 0,
+        "explanation": "Lina says some people react badly instead of listening to correction."
+      },
+      {
+        "question": "What should Rafi correct after speaking to Naila?",
+        "options": [
+          "Her name in the meeting notes",
+          "The time of the meeting",
+          "Lina’s phone number",
+          "The office lunch order"
+        ],
+        "correctIndex": 0,
+        "explanation": "The written notes could cause more people to repeat the wrong name."
+      },
+      {
+        "question": "Why should the apology stay brief?",
+        "options": [
+          "Rafi has no time before lunch",
+          "The group chat is closed",
+          "A long public message may embarrass Naila",
+          "Lina wants to write it herself"
+        ],
+        "correctIndex": 2,
+        "explanation": "A simple private apology fixes the problem without adding attention."
+      },
+      {
+        "question": "What helped the correction end well?",
+        "options": [
+          "Naila left the company",
+          "The team ignored the mistake",
+          "Rafi changed the new colleague",
+          "Lina spoke kindly and Rafi listened"
+        ],
+        "correctIndex": 3,
+        "explanation": "Kind delivery and a calm response allowed the mistake to be repaired."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "adab",
+      "scriptDecision": "keep; realistic workplace correction with clear cause and repair",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

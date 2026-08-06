@@ -6,54 +6,143 @@
     "themeId": "nature",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I had wanted to see a glacier since I was a teenager, and last year, even though the trip was expensive, I finally booked the flight.",
-      "Narrator: [honestly] I had imagined something dramatic, a wall of ice crashing into the sea while I stood there gasping, but the reality turned out quite different.",
-      "Narrator: [thoughtful] The guide explained that despite what tourists expect, glaciers mostly move so slowly that you cannot actually watch them shift, even if you stare for hours.",
-      "Narrator: [curious] I asked her how fast this particular glacier was retreating, and she said it had lost nearly two kilometers in the last thirty years alone.",
-      "Narrator: [with feeling] That number startled me more than any dramatic collapse could have, because it meant something enormous was happening quietly, without any single visible moment to point to.",
-      "Narrator: [thoughtful] She told us that scientists mark the ice's former edges with small stone posts, so that even though nothing seems to move day to day, the long retreat becomes undeniable over years.",
-      "Narrator: [reflective] Standing beside one of those posts, I realized how easily we humans dismiss anything that changes too slowly for our attention span to notice.",
-      "Narrator: [honestly] If a mountain had suddenly exploded in front of us, everyone would have filmed it immediately, yet this equally significant loss happens in near total silence.",
-      "Narrator: [gently] The guide, however, did not seem hopeless. She said that even slow damage can be slowed further, provided enough people actually care before it becomes irreversible.",
-      "Narrator: [warmly] Despite the cold wind cutting through my jacket, I stayed near that edge longer than planned, just listening to occasional cracking sounds deep inside the ice.",
-      "Narrator: [peacefully] I used to think patience only mattered for waiting on good things, but now I think it also means noticing slow loss before it is too late to respond.",
-      "Narrator: [warmly] Since that trip, whenever something in my own life changes gradually, a friendship cooling, a habit slipping, I try to notice it early, the way that guide notices her ice."
+      "Narrator: [thoughtful] I had wanted to see a glacier since I was a teenager, and last year, even though the trip was expensive, I finally booked the flight.",
+      "Narrator: I had imagined something dramatic, a wall of ice crashing into the sea while I stood there gasping, but the reality turned out quite different.",
+      "Narrator: [carefully] The guide explained that despite what tourists expect, glaciers mostly move so slowly that you cannot actually watch them shift, even if you stare for hours.",
+      "Narrator: I asked about this glacier. She pointed to dated local monitoring records showing that its mapped edge had retreated nearly two kilometers over the previous thirty years.",
+      "Narrator: [reflective] That number startled me more than any dramatic collapse could have, because it meant something enormous was happening quietly, without any single visible moment to point to.",
+      "Narrator: She showed us dated surveys and marked former edges. Day-to-day change remained difficult to see, but repeated measurements created a clear local record over years.",
+      "Narrator: [honestly] Standing beside one of those posts, I realized how easily we humans dismiss anything that changes too slowly for our attention span to notice.",
+      "Narrator: If a mountain had suddenly exploded in front of us, everyone would have filmed it immediately, yet this equally significant loss happens in near total silence.",
+      "Narrator: [seriously] The guide was serious but not hopeless. She discussed evidence-based emission reduction, adaptation, and local protection without promising that one visitor’s action could reverse every loss.",
+      "Narrator: Despite the cold wind cutting through my jacket, I stayed near that edge longer than planned, just listening to occasional cracking sounds deep inside the ice.",
+      "Narrator: [gently] I used to think patience only mattered for waiting on good things, but now I think it also means noticing slow loss before it is too late to respond.",
+      "Narrator: Since the trip, I use the glacier as a personal reminder to notice gradual change. That analogy is my reflection; the claim about the ice comes from measurements, not from my feelings."
     ],
     "quiz": [
       {
         "question": "What did the narrator originally imagine seeing at the glacier?",
-        "options": ["A calm, frozen lake", "A dramatic wall of ice crashing into the sea", "A desert landscape", "A volcano erupting"],
-        "correctIndex": 1,
+        "options": [
+          "A calm, frozen lake",
+          "A desert landscape",
+          "A dramatic wall of ice crashing into the sea",
+          "A volcano erupting"
+        ],
+        "correctIndex": 2,
         "explanation": "She had imagined something dramatic, like a wall of ice crashing into the sea while she watched."
       },
       {
         "question": "How much had the glacier retreated in the last thirty years?",
-        "options": ["Nearly two kilometers", "Ten meters", "It had grown larger", "Exactly one kilometer"],
-        "correctIndex": 0,
+        "options": [
+          "Ten meters",
+          "It had grown larger",
+          "Nearly two kilometers",
+          "Exactly one kilometer"
+        ],
+        "correctIndex": 2,
         "explanation": "The guide said the glacier had lost nearly two kilometers in the last thirty years alone."
       },
       {
         "question": "How do scientists track the glacier's slow retreat?",
-        "options": ["With satellite photos only", "With small stone posts marking the ice's former edges", "By measuring temperature daily", "They cannot track it at all"],
+        "options": [
+          "With satellite photos only",
+          "With small stone posts marking the ice's former edges",
+          "By measuring temperature daily",
+          "They cannot track it at all"
+        ],
         "correctIndex": 1,
         "explanation": "Scientists mark the ice's former edges with small stone posts to show the retreat over years."
       },
       {
         "question": "What did the guide say about slow damage to the glacier?",
-        "options": ["Nothing can be done about it", "It can be slowed further if enough people care in time", "It is not actually happening", "Only governments can fix it"],
-        "correctIndex": 1,
+        "options": [
+          "Nothing can be done about it",
+          "It is not actually happening",
+          "Only governments can fix it",
+          "It can be slowed further if enough people care in time"
+        ],
+        "correctIndex": 3,
         "explanation": "The guide said even slow damage can be slowed further, provided enough people care before it becomes irreversible."
       },
       {
         "question": "What lesson does the narrator apply to her own life now?",
-        "options": ["To avoid cold places", "To notice gradual changes early, before they become too large to address", "To travel more often", "To stop caring about slow problems"],
-        "correctIndex": 1,
+        "options": [
+          "To notice gradual changes early, before they become too large to address",
+          "To avoid cold places",
+          "To travel more often",
+          "To stop caring about slow problems"
+        ],
+        "correctIndex": 0,
         "explanation": "She now tries to notice gradual changes in her own life early, the way the guide notices the ice."
+      },
+      {
+        "question": "Why did the retreat figure affect the narrator more than a dramatic collapse?",
+        "options": [
+          "It revealed a large cumulative change that was difficult to notice moment by moment",
+          "It proved the guide could predict every future year",
+          "It made the journey cheaper",
+          "It showed the glacier was moving toward the sea"
+        ],
+        "correctIndex": 0,
+        "explanation": "Long records made slow change visible."
+      },
+      {
+        "question": "What evidence supported the guide’s statement?",
+        "options": [
+          "A single tourist photograph",
+          "The narrator’s memory from childhood",
+          "A sound heard inside the ice",
+          "Dated surveys, mapped former edges, and local monitoring records"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revision identifies the basis of the local claim."
+      },
+      {
+        "question": "Why should the local number not be used for every glacier?",
+        "options": [
+          "Glaciers differ by location and must be assessed with relevant records",
+          "All glaciers have identical measurements",
+          "Distance cannot be measured",
+          "Only tourists study ice"
+        ],
+        "correctIndex": 0,
+        "explanation": "A site-specific observation is not a universal rate."
+      },
+      {
+        "question": "What does the narrator separate in the conclusion?",
+        "options": [
+          "Scientific evidence about ice from a personal analogy about noticing gradual change",
+          "Weather from clothing",
+          "Travel from cost",
+          "Patience from observation"
+        ],
+        "correctIndex": 0,
+        "explanation": "The analogy is meaningful but not presented as proof."
+      },
+      {
+        "question": "Which action is more precise than simply “caring”?",
+        "options": [
+          "Waiting for a visible collapse",
+          "Supporting evidence-based emission reduction, adaptation, and local protection",
+          "Moving the stone markers",
+          "Ignoring changes too slow to film"
+        ],
+        "correctIndex": 1,
+        "explanation": "Response is described through concrete categories."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; anchor the retreat figure to displayed local monitoring, avoid a vague irreversible threshold, and distinguish personal reflection from climate evidence",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-nature-02",
@@ -62,60 +151,152 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Made", "gender": "male" },
-      { "name": "Intan", "gender": "female" }
+      {
+        "name": "Made",
+        "gender": "male"
+      },
+      {
+        "name": "Intan",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Made: [concerned] Intan, look at those clouds building over the ridge. I think we should turn back now, even though we're so close to the summit.",
-      "Intan: [determined] We've been climbing for four hours already. Turning back now would mean this whole morning was wasted for nothing.",
-      "Made: [firmly] I understand the frustration, but if that storm reaches us above the treeline, we'll have nowhere to shelter at all.",
-      "Intan: [frustrated] It might pass to the east, though. Clouds like that shift direction constantly around this mountain, in my experience.",
-      "Made: [gently] That's true sometimes, but I'd rather lose a summit than risk being caught in lightning on exposed rock.",
-      "Intan: [thoughtful] I hear you, but I trained for six months for this hike, and part of me feels like giving up now proves I can't finish anything.",
-      "Made: [understanding] I get that feeling completely, but finishing isn't actually the same thing as being reckless about the weather.",
-      "Intan: [quietly] You're probably right, even if I don't want to admit it just yet.",
-      "Made: [gently] What if we compromise? We climb another twenty minutes toward that flat outcrop, and if the clouds get darker, we descend immediately, no arguing.",
-      "Intan: [reluctantly] Fine, twenty minutes. Although honestly, I already suspect how this ends.",
-      "Made: [warmly] Maybe. But at least we'll have decided together, instead of me simply forcing you to turn around against your judgment.",
-      "Intan: [after a pause] Look, the clouds just darkened noticeably in the last few minutes. I think you were right after all.",
-      "Made: [calm] I'm not happy about it either, believe me. I wanted that summit as much as you did this morning.",
-      "Intan: [resigned] As a result, I suppose we're descending now, before this decision gets made for us by the weather instead.",
-      "Made: [encouraging] We'll come back next month, better prepared, and hopefully with clearer skies above this same ridge.",
-      "Intan: [smiling slightly] Deal. Despite everything, I'm actually glad you pushed back instead of just following me blindly today.",
-      "Made: [warmly] That's what hiking partners are for, even when it means disappointing each other occasionally for good reasons."
+      "Made: [thoughtful] Intan, look at those clouds building over the ridge. I think we should turn back now, even though we're so close to the summit.",
+      "Intan: We've been climbing for four hours already. Turning back now would mean this whole morning was wasted for nothing.",
+      "Made: [carefully] I understand the frustration, but if that storm reaches us above the treeline, we'll have nowhere to shelter at all.",
+      "Intan: It might pass to the east, though. Clouds like that shift direction constantly around this mountain, in my experience.",
+      "Made: [reflective] That's true sometimes, but I'd rather lose a summit than risk being caught in lightning on exposed rock.",
+      "Intan: I hear you, but I trained for six months for this hike, and part of me feels like giving up now proves I can't finish anything.",
+      "Made: [honestly] I get that feeling completely, but finishing isn't actually the same thing as being reckless about the weather.",
+      "Intan: You're probably right, even if I don't want to admit it just yet.",
+      "Made: [seriously] Our plan says to leave exposed terrain when storm indicators reach this threshold. Let us descend now, stay together, and follow the safer route without waiting for certainty.",
+      "Intan: I am disappointed, but you are right: the four hours already spent cannot make the next twenty minutes safer. I am ready to descend.",
+      "Made: [gently] Thank you. Before our next attempt, we will review the forecast, route advice, turnaround time, communication, and emergency equipment again.",
+      "Intan: The clouds have darkened while we are already moving down. I am glad we did not stay above the treeline to demand more proof.",
+      "Made: [encouraging] I'm not happy about it either, believe me. I wanted that summit as much as you did this morning.",
+      "Intan: I used to think turning back meant failure. Now I think a safe return and a sound decision are part of completing a mountain journey.",
+      "Made: [sincere] We'll come back next month, better prepared, and hopefully with clearer skies above this same ridge.",
+      "Intan: Deal. Despite everything, I'm actually glad you pushed back instead of just following me blindly today.",
+      "Made: [thoughtful] That's what hiking partners are for, even when it means disappointing each other occasionally for good reasons."
     ],
     "quiz": [
       {
         "question": "Why does Made want to turn back?",
-        "options": ["He is too tired to continue", "He is worried about storm clouds building over the ridge", "He forgot his water bottle", "He wants to eat lunch"],
-        "correctIndex": 1,
-        "explanation": "Made is concerned about the clouds building over the ridge and the risk of being caught above the treeline."
+        "options": [
+          "He has reached the summit",
+          "His food is missing",
+          "Storm clouds and possible lightning threaten the exposed route",
+          "The trail is too quiet"
+        ],
+        "correctIndex": 2,
+        "explanation": "The decision responds to a developing hazard."
       },
       {
-        "question": "Why does Intan initially resist turning back?",
-        "options": ["She doesn't believe the clouds are real", "She trained for six months and fears giving up proves she can't finish things", "She wants to camp overnight", "She dislikes Made's company"],
-        "correctIndex": 1,
-        "explanation": "Intan says she trained for six months and part of her feels giving up now proves she can't finish anything."
+        "question": "Why does Intan initially resist?",
+        "options": [
+          "She cannot see the clouds",
+          "Made has the map",
+          "She connects the summit with months of training and personal success",
+          "She wants to shelter above the treeline"
+        ],
+        "correctIndex": 2,
+        "explanation": "Emotional investment affects her judgment."
       },
       {
-        "question": "What compromise does Made suggest?",
-        "options": ["Turning back immediately with no discussion", "Climbing twenty more minutes, then descending immediately if the clouds darken", "Waiting at the summit until the storm passes", "Splitting up and going separate ways"],
-        "correctIndex": 1,
-        "explanation": "Made suggests climbing twenty more minutes toward a flat outcrop, then descending immediately if the clouds darken."
+        "question": "What replaces the proposed compromise?",
+        "options": [
+          "They follow the safer turnaround decision and descend promptly",
+          "They wait on exposed rock",
+          "They race the storm upward",
+          "They split into separate routes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The revision removes unnecessary additional exposure."
       },
       {
-        "question": "What makes Intan finally agree the descent is right?",
-        "options": ["Made orders her to descend", "The clouds visibly darken within a few minutes", "She twists her ankle", "They run out of daylight"],
-        "correctIndex": 1,
-        "explanation": "Intan notices the clouds darken noticeably in the last few minutes and admits Made was right."
+        "question": "What confirms the decision rather than causing it?",
+        "options": [
+          "The summit becomes visible",
+          "Another group passes them",
+          "The rain stops completely",
+          "The clouds continue darkening after they have begun the safe response"
+        ],
+        "correctIndex": 3,
+        "explanation": "They do not wait for certainty before acting."
       },
       {
-        "question": "How does Intan feel about Made pushing back on her decision?",
-        "options": ["Angry and resentful", "Glad, despite her disappointment about the summit", "Indifferent", "She refuses to speak to him again"],
+        "question": "How does Intan feel about Made’s challenge?",
+        "options": [
+          "Angry that he hid the forecast",
+          "Disappointed but grateful that he did not follow her blindly",
+          "Certain the training was useless",
+          "Unwilling to hike again"
+        ],
         "correctIndex": 1,
-        "explanation": "Intan says she is actually glad Made pushed back instead of just following her blindly."
+        "explanation": "She recognizes the value of disagreement."
+      },
+      {
+        "question": "Why is “we are nearly there” poor safety reasoning?",
+        "options": [
+          "Summits always move farther away",
+          "Past effort cannot reduce the hazard ahead",
+          "Training makes clouds darker",
+          "Morning hikes are never completed"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sunk effort should not override current risk."
+      },
+      {
+        "question": "What should partners agree before a hike?",
+        "options": [
+          "Who gets the summit photograph",
+          "Weather thresholds, turnaround time, route, communication, and emergency plan",
+          "Which person complains first",
+          "A promise never to return"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pre-agreed limits reduce pressure during a difficult decision."
+      },
+      {
+        "question": "Why do they descend without another twenty minutes?",
+        "options": [
+          "Lightning and exposed terrain can worsen before certainty is available",
+          "They have forgotten their shoes",
+          "The outcrop is private property",
+          "The summit has closed permanently"
+        ],
+        "correctIndex": 0,
+        "explanation": "Waiting for proof can remove the safety margin."
+      },
+      {
+        "question": "How does Intan reinterpret success?",
+        "options": [
+          "Training was completely wasted",
+          "A safe return and sound decision can matter more than reaching the summit",
+          "Made must choose every future route",
+          "Bad weather proves weak ability"
+        ],
+        "correctIndex": 1,
+        "explanation": "The dialogue changes the definition of completion."
+      },
+      {
+        "question": "What does partnership contribute?",
+        "options": [
+          "A partner guarantees good weather",
+          "Two hikers need no forecast",
+          "Disagreement should be hidden",
+          "A companion can challenge risky thinking and support a safe plan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Constructive challenge is a safety resource."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; remove the unsafe twenty-minute compromise under possible lightning and replace it with pre-agreed turnaround rules, immediate descent, and route-specific safety judgment",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-nature-03",
@@ -124,59 +305,151 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] This morning I'm joined by Rani, who turned her late father's abandoned farm into a rewilding project. Welcome.",
-      "Host: [curious] For listeners unfamiliar with the term, what exactly does rewilding mean in practice, on an actual piece of land?",
-      "Guest: [thoughtful] Essentially, it means stepping back and letting natural processes take over again, rather than continuing to control every inch the way farming requires.",
-      "Host: [interested] That sounds almost counterintuitive. Wouldn't neglecting the land simply lead to it becoming an overgrown mess?",
-      "Guest: [smiling] That's exactly what my neighbors said at first, and honestly, for the first year, it did look somewhat chaotic and unplanned.",
-      "Guest: [confidently] However, by the second year, native grasses returned on their own, and insects I hadn't seen since childhood started appearing throughout the fields.",
-      "Host: [surprised] Even though you weren't actively planting anything yourself during that whole process?",
-      "Guest: [explaining] Correct, though I did remove some invasive plants early on, since those would have prevented native species from establishing themselves properly.",
-      "Host: [curious] What was the hardest emotional part of watching your father's organized farm transform into something so different from what he built?",
-      "Guest: [honestly] Accepting that honoring his memory didn't necessarily mean preserving the farm exactly as he left it, despite what I initially assumed. In spite of that early guilt, I eventually realized he loved this land itself, not merely the crops growing on it.",
-      "Host: [thoughtful] Has wildlife actually returned in noticeable numbers, or is that mostly aspirational at this stage?",
-      "Guest: [warmly] Genuinely noticeable. We now have owls nesting in the old barn, deer passing through regularly, and a small stream that had dried up decades ago started flowing again.",
-      "Host: [curious] What would you tell someone considering a similar project on their own unused land?",
-      "Guest: [encouraging] Be patient, because nature moves on its own schedule, and results that seem invisible in year one often become undeniable by year three.",
-      "Host: [warmly] That's a beautiful way to close this. Thank you so much for sharing your father's land and its transformation with us today, Rani.",
-      "Guest: [warmly] Thank you for having me. I hope it encourages someone listening to try something similar with their own quiet corner of land."
+      "Host: [thoughtful] This morning I'm joined by Rani, who turned her late father's abandoned farm into a rewilding project. Welcome.",
+      "Host: For listeners unfamiliar with the term, what exactly does rewilding mean in practice, on an actual piece of land?",
+      "Guest: [carefully] It means restoring more space for natural processes, but not simply abandoning responsibility. We used ecological assessment, permissions, monitoring, and targeted management.",
+      "Host: That sounds almost counterintuitive. Wouldn't neglecting the land simply lead to it becoming an overgrown mess?",
+      "Guest: [reflective] That's exactly what my neighbors said at first, and honestly, for the first year, it did look somewhat chaotic and unplanned.",
+      "Guest: However, by the second year, native grasses returned on their own, and insects I hadn't seen since childhood started appearing throughout the fields.",
+      "Host: [honestly] Even though you weren't actively planting anything yourself during that whole process?",
+      "Guest: Correct, though I did remove some invasive plants early on, since those would have prevented native species from establishing themselves properly.",
+      "Host: [seriously] What was the hardest emotional part of watching your father's organized farm transform into something so different from what he built?",
+      "Guest: Accepting that honoring his memory didn't necessarily mean preserving the farm exactly as he left it, despite what I initially assumed. In spite of that early guilt, I eventually realized he loved this land itself, not merely the crops growing on it.",
+      "Host: [gently] Has wildlife actually returned in noticeable numbers, or is that mostly aspirational at this stage?",
+      "Guest: We documented owls, deer, and water flowing again in part of an old stream. Those observations matter, but monitoring has not proved that our project alone caused every change.",
+      "Host: [encouraging] What would you tell someone considering a similar project on their own unused land?",
+      "Guest: First consult relevant ecologists, authorities, neighbors, and land users. Check legal duties, fire and invasive-species risks, water, animal welfare, and long-term monitoring before changing management.",
+      "Host: [sincere] That's a beautiful way to close this. Thank you so much for sharing your father's land and its transformation with us today, Rani.",
+      "Guest: Thank you. I hope listeners value restoration while recognizing that each site needs its own evidence, permissions, community discussion, and plan."
     ],
     "quiz": [
       {
         "question": "What does rewilding mean according to Rani?",
-        "options": ["Planting as many crops as possible", "Stepping back and letting natural processes take over the land", "Building fences around wildlife", "Selling the land to developers"],
-        "correctIndex": 1,
+        "options": [
+          "Stepping back and letting natural processes take over the land",
+          "Planting as many crops as possible",
+          "Building fences around wildlife",
+          "Selling the land to developers"
+        ],
+        "correctIndex": 0,
         "explanation": "Rani explains rewilding means stepping back and letting natural processes take over, rather than controlling every inch."
       },
       {
         "question": "What did the land look like during the first year of the project?",
-        "options": ["Perfectly organized", "Somewhat chaotic and unplanned", "Completely bare", "Exactly the same as before"],
-        "correctIndex": 1,
+        "options": [
+          "Perfectly organized",
+          "Completely bare",
+          "Somewhat chaotic and unplanned",
+          "Exactly the same as before"
+        ],
+        "correctIndex": 2,
         "explanation": "Rani admits that for the first year, the land did look somewhat chaotic and unplanned."
       },
       {
         "question": "Did Rani do any active work on the land, or did she leave it entirely alone?",
-        "options": ["She left it completely alone", "She removed some invasive plants early on", "She planted new crops every season", "She built new structures"],
-        "correctIndex": 1,
+        "options": [
+          "She left it completely alone",
+          "She planted new crops every season",
+          "She built new structures",
+          "She removed some invasive plants early on"
+        ],
+        "correctIndex": 3,
         "explanation": "She removed some invasive plants early on, since those would have prevented native species from establishing themselves."
       },
       {
         "question": "What was the hardest emotional part of the project for Rani?",
-        "options": ["The physical labor involved", "Accepting that honoring her father's memory didn't mean preserving the farm exactly as he left it", "Losing money", "Dealing with her neighbors' opinions"],
-        "correctIndex": 1,
+        "options": [
+          "The physical labor involved",
+          "Losing money",
+          "Dealing with her neighbors' opinions",
+          "Accepting that honoring her father's memory didn't mean preserving the farm exactly as he left it"
+        ],
+        "correctIndex": 3,
         "explanation": "She says the hardest part was accepting that honoring his memory didn't necessarily mean keeping the farm exactly the same."
       },
       {
         "question": "What signs of wildlife return does Rani mention?",
-        "options": ["None, wildlife has not returned", "Owls nesting in the barn, deer passing through, and a stream flowing again", "Only insects", "A large forest growing overnight"],
+        "options": [
+          "None, wildlife has not returned",
+          "Owls nesting in the barn, deer passing through, and a stream flowing again",
+          "Only insects",
+          "A large forest growing overnight"
+        ],
         "correctIndex": 1,
         "explanation": "She mentions owls nesting in the old barn, deer passing through regularly, and a dried-up stream flowing again."
+      },
+      {
+        "question": "Why is rewilding not simply abandonment?",
+        "options": [
+          "Every plant must be removed",
+          "Farms automatically become forests",
+          "It may require research, invasive-species control, monitoring, and active risk management",
+          "Neighbors lose all rights"
+        ],
+        "correctIndex": 2,
+        "explanation": "The project reduces some control while retaining stewardship."
+      },
+      {
+        "question": "Whose knowledge should shape a project?",
+        "options": [
+          "Only online visitors",
+          "Only the landowner’s memories",
+          "Ecologists, land authorities, neighbors, and affected land users",
+          "Anyone selling seeds"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ecological action also has legal and social context."
+      },
+      {
+        "question": "Why is the stream observation reported cautiously?",
+        "options": [
+          "Streams cannot return",
+          "Owls created the water",
+          "Its return was observed, but one project alone did not prove the cause",
+          "The host did not see it"
+        ],
+        "correctIndex": 2,
+        "explanation": "Observation and causal explanation are separated."
+      },
+      {
+        "question": "What emotional change does Rani describe?",
+        "options": [
+          "She forgets that the farm existed",
+          "She learns that honoring her father need not mean freezing the land in one condition",
+          "She decides agriculture is always wrong",
+          "She gives the land to the host"
+        ],
+        "correctIndex": 1,
+        "explanation": "Memory and stewardship are reconciled."
+      },
+      {
+        "question": "What advice replaces “try it on any unused land”?",
+        "options": [
+          "Assess obligations and establish a suitable monitored plan before changing management",
+          "Stop all maintenance immediately",
+          "Introduce animals from another region",
+          "Promise visible results in three years"
+        ],
+        "correctIndex": 0,
+        "explanation": "Responsible replication begins with assessment."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; present rewilding as active, evidence-based stewardship with legal, ecological, neighbor, and monitoring responsibilities rather than simple neglect",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-nature-04",
@@ -185,55 +458,144 @@
     "themeId": "nature",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Every year in late autumn, thousands of birds pass directly above our city on their way south, though most people never even glance upward to notice.",
-      "Narrator: [honestly] I only started paying attention after my neighbor, an elderly man who has watched this migration for decades, invited me onto his rooftop one evening.",
-      "Narrator: [curious] I asked him how he even noticed birds so far above the noise and lights of the city, since I had genuinely never seen them before.",
-      "Narrator: [reflective] He said that once you learn their calls, you start hearing them even when you can't see them clearly against the darkening sky.",
-      "Narrator: [with feeling] That first evening, we counted over two hundred birds within just one hour, moving in loose formations toward some destination I couldn't fully imagine.",
-      "Narrator: [thoughtful] He explained that certain species travel thousands of kilometers each year, navigating partly by stars, even though scientists still don't fully understand every method they use.",
-      "Narrator: [amazed] I found that genuinely humbling, that a creature weighing almost nothing could cross entire countries using instincts we can barely explain with our advanced technology.",
-      "Narrator: [gently] He told me that if the city lights grew brighter every year, fewer birds would successfully complete their journey, since artificial light disorients their navigation badly.",
-      "Narrator: [concerned] As a result, he now turns off unnecessary lights during peak migration weeks, and he has convinced several neighbors to do the same small thing.",
-      "Narrator: [thoughtful] I asked whether such a tiny gesture actually mattered, given how enormous the city's overall light pollution remains despite his efforts.",
-      "Narrator: [warmly] He said even though he alone cannot fix the whole problem, doing nothing simply guarantees the outcome he fears, so he does what little he can regardless.",
-      "Narrator: [reflective] That answer stayed with me longer than the birds themselves did, honestly, because I recognized the same excuse in my own life about larger problems.",
-      "Narrator: [peacefully] Now, every autumn evening, I climb up to that same rooftop, watch quietly, and switch off my apartment lights before the birds pass overhead."
+      "Narrator: I only started paying attention after my neighbor, an elderly man who has watched this migration for decades, invited me onto his rooftop one evening.",
+      "Narrator: [carefully] I asked him how he even noticed birds so far above the noise and lights of the city, since I had genuinely never seen them before.",
+      "Narrator: He said that once you learn their calls, you start hearing them even when you can't see them clearly against the darkening sky.",
+      "Narrator: [reflective] That first evening, we counted over two hundred birds within just one hour, moving in loose formations toward some destination I couldn't fully imagine.",
+      "Narrator: He explained that some species travel thousands of kilometers and may use several cues, including celestial, magnetic, visual, and learned information; the mix varies and remains an active research area.",
+      "Narrator: [honestly] I found that genuinely humbling, that a creature weighing almost nothing could cross entire countries using instincts we can barely explain with our advanced technology.",
+      "Narrator: He said research links unnecessary artificial light at night with risks such as attraction, disorientation, and collision during migration, although effects vary by species and conditions.",
+      "Narrator: [seriously] He now reduces unnecessary light during locally identified migration periods while keeping lighting needed for safety, accessibility, and legal requirements.",
+      "Narrator: I asked whether such a tiny gesture actually mattered, given how enormous the city's overall light pollution remains despite his efforts.",
+      "Narrator: [gently] He said even though he alone cannot fix the whole problem, doing nothing simply guarantees the outcome he fears, so he does what little he can regardless.",
+      "Narrator: That answer stayed with me longer than the birds themselves did, honestly, because I recognized the same excuse in my own life about larger problems.",
+      "Narrator: [encouraging] Now I observe from an authorized rooftop with safe access and barriers, follow local guidance, and reduce unnecessary indoor light without claiming that my action alone determines a bird’s journey."
     ],
     "quiz": [
       {
         "question": "How did the narrator start noticing the bird migration?",
-        "options": ["He read about it in a book", "His elderly neighbor invited him onto his rooftop one evening", "He saw a documentary", "He works as a bird researcher"],
+        "options": [
+          "He read about it in a book",
+          "His elderly neighbor invited him onto his rooftop one evening",
+          "He saw a documentary",
+          "He works as a bird researcher"
+        ],
         "correctIndex": 1,
         "explanation": "He only started paying attention after his elderly neighbor invited him onto his rooftop one evening."
       },
       {
         "question": "How many birds did they count in one hour that first evening?",
-        "options": ["Over two hundred", "Exactly ten", "Around fifty", "Over a thousand"],
-        "correctIndex": 0,
+        "options": [
+          "Exactly ten",
+          "Around fifty",
+          "Over a thousand",
+          "Over two hundred"
+        ],
+        "correctIndex": 3,
         "explanation": "They counted over two hundred birds within just one hour that first evening."
       },
       {
         "question": "What does the neighbor say disorients the birds' navigation?",
-        "options": ["Loud noises", "Artificial city lights", "Strong winds", "Rain"],
-        "correctIndex": 1,
+        "options": [
+          "Loud noises",
+          "Strong winds",
+          "Rain",
+          "Artificial city lights"
+        ],
+        "correctIndex": 3,
         "explanation": "He explains that artificial light disorients the birds' navigation badly during migration."
       },
       {
         "question": "What small action does the neighbor take during migration weeks?",
-        "options": ["He builds bird feeders", "He turns off unnecessary lights and encourages neighbors to do the same", "He calls the local government", "He stops using his rooftop entirely"],
+        "options": [
+          "He builds bird feeders",
+          "He turns off unnecessary lights and encourages neighbors to do the same",
+          "He calls the local government",
+          "He stops using his rooftop entirely"
+        ],
         "correctIndex": 1,
         "explanation": "He turns off unnecessary lights during peak migration weeks and has convinced several neighbors to do the same."
       },
       {
         "question": "What lesson does the narrator take from the neighbor's answer about small gestures?",
-        "options": ["Small actions never matter", "Doing nothing guarantees the feared outcome, so small actions are still worth doing", "Only large organizations can help", "Birds are not actually in danger"],
-        "correctIndex": 1,
+        "options": [
+          "Doing nothing guarantees the feared outcome, so small actions are still worth doing",
+          "Small actions never matter",
+          "Only large organizations can help",
+          "Birds are not actually in danger"
+        ],
+        "correctIndex": 0,
         "explanation": "He recognizes that doing nothing guarantees the outcome one fears, so doing what little one can still matters."
+      },
+      {
+        "question": "What first helped the narrator notice birds at night?",
+        "options": [
+          "Learning to recognize calls before seeing the birds clearly",
+          "Buying a brighter roof light",
+          "Following the birds south",
+          "Closing every window"
+        ],
+        "correctIndex": 0,
+        "explanation": "Listening changed what the city environment revealed."
+      },
+      {
+        "question": "Why is the rooftop detail qualified?",
+        "options": [
+          "All roofs are public",
+          "Birds avoid lower floors",
+          "Observation requires permission, barriers, safe access, and suitable conditions",
+          "Headlamps prevent falls"
+        ],
+        "correctIndex": 2,
+        "explanation": "A poetic setting should not become unsafe advice."
+      },
+      {
+        "question": "How is artificial light described responsibly?",
+        "options": [
+          "One lamp always causes a bird to fail",
+          "Stars are the only navigation cue",
+          "City light has no ecological effect",
+          "Research links unnecessary night light with migration risks, but effects vary by species and conditions"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revision avoids an absolute causal statement."
+      },
+      {
+        "question": "What does the neighbor’s action represent?",
+        "options": [
+          "Proof that his apartment saved the migration",
+          "A replacement for city policy",
+          "A reason to make streets unsafe",
+          "A practical contribution within a wider evidence-based effort"
+        ],
+        "correctIndex": 3,
+        "explanation": "The action is useful without inflated impact."
+      },
+      {
+        "question": "Which lights should not simply be switched off?",
+        "options": [
+          "Decorative empty-room lights",
+          "Unused advertising after closing",
+          "Lighting needed for safety, accessibility, or legal requirements",
+          "An apartment light with no occupant"
+        ],
+        "correctIndex": 2,
+        "explanation": "Risk reduction must preserve human safety."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; qualify navigation and light claims, add safe authorized rooftop access, and avoid suggesting one household action has a known population effect",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-nature-05",
@@ -242,59 +604,151 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nabila", "gender": "female" },
-      { "name": "Tomo", "gender": "male" }
+      {
+        "name": "Nabila",
+        "gender": "female"
+      },
+      {
+        "name": "Tomo",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nabila: [worried] Tomo, are you okay? I just saw on the news that the river near your street overflowed last night.",
-      "Tomo: [tired] We're fine, though the ground floor took in about knee-deep water before we managed to move everything upstairs in time.",
-      "Nabila: [relieved] Thank goodness you're safe. Did you get any warning beforehand, or did it just happen suddenly overnight?",
-      "Tomo: [explaining] There was a warning, actually, though it came only two hours before the water rose, which wasn't nearly enough time honestly.",
-      "Nabila: [concerned] Two hours seems dangerously short, given how much rain fell upstream over the past few days according to the reports.",
-      "Tomo: [frustrated] Exactly what several of us have been saying for years, yet nothing changed until it actually happened to us directly.",
-      "Nabila: [thoughtful] Do you think the new drainage construction upstream contributed to this, or was it simply an unusually heavy storm season?",
-      "Tomo: [honestly] Probably both, if I'm being fair. The storm was severe, but the drainage changes likely made the water rise faster than it would have otherwise.",
-      "Nabila: [gently] Even though this happened, I'm glad you got everyone out safely, despite how little warning time you actually had.",
-      "Tomo: [grateful] Me too. My elderly neighbor couldn't manage the stairs alone, so my brother carried her up, which honestly felt heroic in the moment.",
-      "Nabila: [curious] What are you doing now that the water has mostly receded from your street?",
-      "Tomo: [weary] Cleaning mud out of everything, throwing away ruined furniture, and trying to dry the walls before mold becomes an even bigger problem.",
-      "Nabila: [offering] I can come this weekend and help with the cleanup, if that would actually be useful rather than just one more person in your way.",
-      "Tomo: [warmly] It would genuinely help. Even in spite of everything lost, having extra hands makes this feel slightly less overwhelming.",
-      "Nabila: [determined] Then I'll bring gloves and old towels. Despite the damage, at least you and your family are safe, and that matters most.",
-      "Tomo: [sincerely] Thank you, Nabila. Honestly, moments like this remind me how much community matters when nature reminds us who's really in charge."
+      "Nabila: [thoughtful] Tomo, are you okay? I just saw on the news that the river near your street overflowed last night.",
+      "Tomo: We're fine, though the ground floor took in about knee-deep water before we managed to move everything upstairs in time.",
+      "Nabila: [carefully] Thank goodness you're safe. Did you get any warning beforehand, or did it just happen suddenly overnight?",
+      "Tomo: There was a warning, actually, though it came only two hours before the water rose, which wasn't nearly enough time honestly.",
+      "Nabila: [reflective] Two hours seems dangerously short, given how much rain fell upstream over the past few days according to the reports.",
+      "Tomo: Exactly what several of us have been saying for years, yet nothing changed until it actually happened to us directly.",
+      "Nabila: [honestly] Some neighbors blame the upstream construction. Has an official investigation established what contributed?",
+      "Tomo: Not yet. Rainfall, river conditions, land use, and drainage all need qualified analysis, so I should not assign a cause from what I saw on one street.",
+      "Nabila: [seriously] Even though this happened, I'm glad you got everyone out safely, despite how little warning time you actually had.",
+      "Tomo: Me too. We followed the evacuation instructions and helped our older neighbor through the safest available assistance for her needs and the conditions.",
+      "Nabila: [gently] What are you doing now that the water has mostly receded from your street?",
+      "Tomo: First we are waiting for electrical, structural, and contamination safety guidance. Cleanup and drying need suitable protective equipment and qualified mold advice when the damage is extensive.",
+      "Nabila: [encouraging] I can come this weekend and help with the cleanup, if that would actually be useful rather than just one more person in your way.",
+      "Tomo: It would genuinely help. Even in spite of everything lost, having extra hands makes this feel slightly less overwhelming.",
+      "Nabila: [sincere] Then I will contact the volunteer coordinator, bring the specified protective equipment, and accept only tasks the response team says are safe.",
+      "Tomo: Thank you, Nabila. Honestly, moments like this remind me how much community matters when nature reminds us who's really in charge."
     ],
     "quiz": [
       {
         "question": "How much water entered the ground floor of Tomo's house?",
-        "options": ["Ankle-deep", "About knee-deep", "Up to the ceiling", "None at all"],
-        "correctIndex": 1,
+        "options": [
+          "Ankle-deep",
+          "Up to the ceiling",
+          "About knee-deep",
+          "None at all"
+        ],
+        "correctIndex": 2,
         "explanation": "Tomo says the ground floor took in about knee-deep water before they moved everything upstairs."
       },
       {
         "question": "How much warning time did Tomo's family receive before the water rose?",
-        "options": ["Two days", "Only about two hours", "One week", "No warning at all"],
-        "correctIndex": 1,
+        "options": [
+          "Only about two hours",
+          "Two days",
+          "One week",
+          "No warning at all"
+        ],
+        "correctIndex": 0,
         "explanation": "Tomo explains the warning came only two hours before the water rose, which wasn't enough time."
       },
       {
         "question": "What does Tomo say may have contributed to the flood besides the heavy storm?",
-        "options": ["Nothing else, only the storm", "New drainage construction upstream", "A dam breaking", "An earthquake"],
-        "correctIndex": 1,
+        "options": [
+          "Nothing else, only the storm",
+          "A dam breaking",
+          "An earthquake",
+          "New drainage construction upstream"
+        ],
+        "correctIndex": 3,
         "explanation": "Tomo says the drainage changes upstream likely made the water rise faster than it would have otherwise."
       },
       {
         "question": "Who helped Tomo's elderly neighbor during the flood?",
-        "options": ["A rescue team", "Tomo's brother, who carried her up the stairs", "No one helped her", "She managed alone"],
-        "correctIndex": 1,
+        "options": [
+          "Tomo's brother, who carried her up the stairs",
+          "A rescue team",
+          "No one helped her",
+          "She managed alone"
+        ],
+        "correctIndex": 0,
         "explanation": "Tomo's brother carried the elderly neighbor upstairs since she couldn't manage the stairs alone."
       },
       {
         "question": "What does Nabila offer to do?",
-        "options": ["Send money only", "Come this weekend to help with the cleanup", "Nothing, she is too busy", "Move in with Tomo's family"],
-        "correctIndex": 1,
+        "options": [
+          "Come this weekend to help with the cleanup",
+          "Send money only",
+          "Nothing, she is too busy",
+          "Move in with Tomo's family"
+        ],
+        "correctIndex": 0,
         "explanation": "Nabila offers to come this weekend and help with the cleanup if it would actually be useful."
+      },
+      {
+        "question": "Why does Tomo avoid assigning the flood to the drainage project?",
+        "options": [
+          "Causation requires rainfall, river, land-use, drainage, and engineering evidence",
+          "Construction can never affect water",
+          "Nabila dislikes reports",
+          "The river has no upstream area"
+        ],
+        "correctIndex": 0,
+        "explanation": "A resident’s impression is not a completed investigation."
+      },
+      {
+        "question": "What should happen before entering a flooded building?",
+        "options": [
+          "Furniture should be moved immediately",
+          "Qualified professionals should confirm electrical, structural, and contamination safety",
+          "Windows must stay closed for a month",
+          "Volunteers should enter alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cleanup begins after immediate hazards are assessed."
+      },
+      {
+        "question": "Why is carrying the neighbor upstairs not celebrated as the universal plan?",
+        "options": [
+          "Older people cannot use stairs",
+          "Neighbors should evacuate last",
+          "Family members need no training",
+          "Evacuation should follow safe assistance appropriate to the person and conditions"
+        ],
+        "correctIndex": 3,
+        "explanation": "A dramatic rescue detail should not become unsafe guidance."
+      },
+      {
+        "question": "What does Nabila need before volunteering?",
+        "options": [
+          "Only old towels",
+          "Coordination, protective equipment, and clear safe tasks",
+          "A live electrical connection",
+          "Permission to inspect mold herself"
+        ],
+        "correctIndex": 1,
+        "explanation": "Extra hands help only within a safe response plan."
+      },
+      {
+        "question": "What uncertainty remains about the flood's contributing causes?",
+        "options": [
+          "Whether water entered the home",
+          "Whether the warning lasted two hours",
+          "How much each environmental and infrastructure factor contributed",
+          "Whether the family moved upstairs"
+        ],
+        "correctIndex": 2,
+        "explanation": "The event is known while causal shares remain uncertain."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; remove unsupported flood-cause speculation and add evacuation, contaminated-water, electrical, structural, cleanup, mold, and vulnerable-person safeguards",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-nature-06",
@@ -303,55 +757,144 @@
     "themeId": "nature",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [tired] I hadn't planned this hike carefully. I simply needed to leave the city after a year that had drained nearly everything out of me.",
-      "Narrator: [honestly] My friend suggested watching the sunrise from a nearby peak, and even though I was exhausted, something in me agreed almost immediately.",
-      "Narrator: [reflective] We started climbing at three in the morning, using headlamps, stumbling occasionally over roots we couldn't see clearly in the dark.",
-      "Narrator: [thoughtful] For most of the climb, I complained internally about my aching legs, wondering why anyone would choose exhaustion voluntarily after an already difficult year.",
-      "Narrator: [with feeling] However, as we reached the ridge, the sky began shifting from black to a deep, uncertain blue, and my complaining quietly stopped.",
-      "Narrator: [amazed] Then, gradually, thin orange light spread along the horizon, touching the clouds below us, since we were actually standing above them at that altitude.",
-      "Narrator: [with feeling] I had never seen clouds from above like that, spread out like some enormous, slowly shifting ocean beneath our feet.",
-      "Narrator: [reflective] I thought about everything that had happened this year, the job I lost, the friendship that quietly ended, the constant tiredness I couldn't explain to anyone.",
-      "Narrator: [gently] Yet watching that light spread so patiently across the sky, none of it rushing, none of it forced, something in my chest finally loosened.",
-      "Narrator: [warmly] My friend didn't say much, which I appreciated, since some moments don't actually need conversation to feel complete or understood.",
-      "Narrator: [thoughtful] I realized that even though my year had felt like one long, dark climb, mornings like this one had been waiting quietly the entire time, regardless of whether I noticed them.",
-      "Narrator: [peacefully] Despite everything difficult I had carried up that mountain, I walked back down feeling lighter, not because my problems had vanished, but because I remembered something larger existed beyond them.",
-      "Narrator: [with a small smile] Sometimes healing doesn't arrive through answers. Sometimes it simply arrives through light, patiently spreading across a sky you almost didn't bother climbing to see."
+      "Narrator: [thoughtful] After a draining year, I wanted to leave the city briefly. Because the hike began before dawn, my experienced friend and I planned the route rather than leaving impulsively.",
+      "Narrator: We checked the forecast and local guidance, considered my fitness and tiredness, packed suitable clothing, lights, water, navigation, and emergency items, and shared our route and return time.",
+      "Narrator: [carefully] We started at three with reliable lights, stayed on the approved route, moved at a safe pace, and kept the agreed turnaround limit.",
+      "Narrator: For most of the climb, I complained internally about my aching legs, wondering why anyone would choose exhaustion voluntarily after an already difficult year.",
+      "Narrator: [reflective] However, as we reached the ridge, the sky began shifting from black to a deep, uncertain blue, and my complaining quietly stopped.",
+      "Narrator: Then, gradually, thin orange light spread along the horizon, touching the clouds below us, since we were actually standing above them at that altitude.",
+      "Narrator: [honestly] I had never seen clouds from above like that, spread out like some enormous, slowly shifting ocean beneath our feet.",
+      "Narrator: I thought about everything that had happened this year, the job I lost, the friendship that quietly ended, the constant tiredness I couldn't explain to anyone.",
+      "Narrator: [seriously] Yet watching that light spread so patiently across the sky, none of it rushing, none of it forced, something in my chest finally loosened.",
+      "Narrator: My friend didn't say much, which I appreciated, since some moments don't actually need conversation to feel complete or understood.",
+      "Narrator: [gently] I realized that even though my year had felt like one long, dark climb, mornings like this one had been waiting quietly the entire time, regardless of whether I noticed them.",
+      "Narrator: Despite everything difficult I had carried up that mountain, I walked back down feeling lighter, not because my problems had vanished, but because I remembered something larger existed beyond them.",
+      "Narrator: [encouraging] The sunrise gave me comfort and perspective, not a diagnosis or cure. Persistent unexplained tiredness or distress still deserves qualified assessment and continuing support."
     ],
     "quiz": [
       {
         "question": "Why did the narrator go on this hike?",
-        "options": ["For a work assignment", "She needed to leave the city after an exhausting, difficult year", "To train for a competition", "She was forced by her friend"],
-        "correctIndex": 1,
+        "options": [
+          "For a work assignment",
+          "To train for a competition",
+          "She was forced by her friend",
+          "She needed to leave the city after an exhausting, difficult year"
+        ],
+        "correctIndex": 3,
         "explanation": "She simply needed to leave the city after a year that had drained nearly everything out of her."
       },
       {
         "question": "What time did they start climbing?",
-        "options": ["Three in the morning", "Noon", "Six in the evening", "Midnight exactly"],
-        "correctIndex": 0,
+        "options": [
+          "Noon",
+          "Three in the morning",
+          "Six in the evening",
+          "Midnight exactly"
+        ],
+        "correctIndex": 1,
         "explanation": "They started climbing at three in the morning, using headlamps in the dark."
       },
       {
         "question": "What did the narrator see from above at the ridge?",
-        "options": ["A city skyline", "Clouds spread out below them like an ocean", "Other hikers", "A lake"],
+        "options": [
+          "A city skyline",
+          "Clouds spread out below them like an ocean",
+          "Other hikers",
+          "A lake"
+        ],
         "correctIndex": 1,
         "explanation": "She saw clouds spread out like an enormous, slowly shifting ocean beneath their feet, since they stood above them."
       },
       {
         "question": "What difficulties from her year does the narrator think about?",
-        "options": ["None, she thought only about the view", "The job she lost, a friendship that ended, and constant unexplained tiredness", "A physical injury", "Moving to a new city"],
-        "correctIndex": 1,
+        "options": [
+          "None, she thought only about the view",
+          "A physical injury",
+          "The job she lost, a friendship that ended, and constant unexplained tiredness",
+          "Moving to a new city"
+        ],
+        "correctIndex": 2,
         "explanation": "She thought about the job she lost, the friendship that quietly ended, and the constant tiredness she couldn't explain."
       },
       {
         "question": "How did the narrator feel walking back down the mountain?",
-        "options": ["Angrier than before", "Lighter, because she remembered something larger existed beyond her problems", "Exactly the same as before", "More exhausted and hopeless"],
+        "options": [
+          "Angrier than before",
+          "Lighter, because she remembered something larger existed beyond her problems",
+          "Exactly the same as before",
+          "More exhausted and hopeless"
+        ],
         "correctIndex": 1,
         "explanation": "She felt lighter, not because her problems vanished, but because she remembered something larger existed beyond them."
+      },
+      {
+        "question": "What safety preparation is added?",
+        "options": [
+          "Route, forecast, fitness, equipment, contacts, turnaround limits, and local guidance",
+          "Only a brighter camera",
+          "A promise to reach the ridge",
+          "Following unknown footprints"
+        ],
+        "correctIndex": 0,
+        "explanation": "Predawn hiking requires more than emotional motivation."
+      },
+      {
+        "question": "Why does the narrator avoid calling sunrise a cure?",
+        "options": [
+          "Relief after one experience does not diagnose or treat ongoing exhaustion",
+          "Sunrise has no emotional value",
+          "Mountains prevent reflection",
+          "Friends cannot offer support"
+        ],
+        "correctIndex": 0,
+        "explanation": "Comfort and treatment are different claims."
+      },
+      {
+        "question": "What role does the friend play?",
+        "options": [
+          "A medical specialist who diagnoses tiredness",
+          "A guide who ignores the weather",
+          "A prepared companion who offers quiet support without forcing an explanation",
+          "A person who hides the route"
+        ],
+        "correctIndex": 2,
+        "explanation": "Support remains helpful without exceeding its role."
+      },
+      {
+        "question": "What does “lighter” mean in context?",
+        "options": [
+          "Every practical problem disappears",
+          "The descent requires no effort",
+          "The job is immediately restored",
+          "The narrator gains perspective while the underlying problems still exist"
+        ],
+        "correctIndex": 3,
+        "explanation": "The text explicitly rejects instant resolution."
+      },
+      {
+        "question": "What follow-up would be appropriate for persistent unexplained tiredness?",
+        "options": [
+          "A more difficult climb alone",
+          "Qualified assessment and continuing support rather than relying only on hikes",
+          "Ignoring it after sunrise",
+          "Giving the same advice to everyone"
+        ],
+        "correctIndex": 1,
+        "explanation": "A lasting health concern needs appropriate evaluation."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; turn an improvised predawn hike into a prepared outing and keep nature-based comfort separate from medical or psychological treatment claims",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-nature-07",
@@ -360,60 +903,607 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Today's guest is Wulan, a wildlife veterinarian, here to discuss why keeping wild animals as pets is complicated.",
-      "Host: [curious] Let's start simply. Why do you think people are drawn to owning exotic animals in the first place, despite the obvious challenges?",
-      "Guest: [thoughtful] Honestly, I think it comes from good intentions initially, people find an animal in distress and feel a genuine desire to protect it.",
-      "Host: [interested] That sounds admirable on the surface. What goes wrong after that initial rescue moment, in your experience?",
-      "Guest: [explaining] The problem is that even though the intention is kind, most people underestimate how specific an animal's needs actually are once it matures.",
-      "Host: [curious] Could you give a concrete example from your own clinic work?",
-      "Guest: [reflective] Certainly. I once treated an owl someone had raised since it was a chick, and despite loving it deeply, the owner hadn't realized it needed to hunt live prey to develop properly.",
-      "Host: [surprised] So even with genuine affection, the animal still suffered from what it didn't receive?",
-      "Guest: [firmly] Precisely. Affection alone cannot replace an entire ecosystem of behaviors an animal would naturally learn from its own species and environment.",
-      "Host: [thoughtful] What would you say to someone who argues a well-funded, careful owner could provide everything a wild animal needs?",
-      "Guest: [honestly] In rare situations, perhaps, though even then, most animals experience chronic stress from an environment that isn't truly theirs.",
-      "Guest: [gently] As a result, I always encourage people to support proper sanctuaries instead, where trained staff can meet those complex needs appropriately.",
-      "Host: [curious] Is there ever a situation where keeping an injured wild animal makes genuine sense for a while?",
-      "Guest: [nodding] Temporary rehabilitation, yes, provided the eventual goal remains release back into the wild, not permanent ownership disguised as rescue.",
-      "Host: [thoughtful] That distinction seems important, between rescuing something temporarily and claiming it permanently for yourself.",
-      "Guest: [warmly] Exactly. Real care sometimes means letting something go back to where it actually belongs, even when keeping it feels emotionally easier.",
-      "Host: [smiling] That's a thoughtful place to end. Thank you for clarifying something many people genuinely misunderstand, Wulan.",
-      "Guest: [warmly] Thank you for having me. I hope it changes how at least a few listeners think about animals they encounter."
+      "Host: [thoughtful] Today's guest is Wulan, a wildlife veterinarian, here to discuss why keeping wild animals as pets is complicated.",
+      "Host: Let's start simply. Why do you think people are drawn to owning exotic animals in the first place, despite the obvious challenges?",
+      "Guest: [carefully] Honestly, I think it comes from good intentions initially, people find an animal in distress and feel a genuine desire to protect it.",
+      "Host: That sounds admirable on the surface. What goes wrong after that initial rescue moment, in your experience?",
+      "Guest: [reflective] The problem is that even though the intention is kind, most people underestimate how specific an animal's needs actually are once it matures.",
+      "Host: Could you give a concrete example from your own clinic work?",
+      "Guest: [honestly] I once assessed an owl raised privately from a chick. Despite genuine affection, it had missed species-specific nutrition, social learning, space, and behavior needed for healthy development.",
+      "Host: So even with genuine affection, the animal still suffered from what it didn't receive?",
+      "Guest: [seriously] Precisely. Affection alone cannot replace an entire ecosystem of behaviors an animal would naturally learn from its own species and environment.",
+      "Host: What would you say to someone who argues a well-funded, careful owner could provide everything a wild animal needs?",
+      "Guest: [gently] Private possession may be illegal. Money alone cannot provide authorization or expertise. Licensed specialists assess welfare, disease risk, facilities, and law.",
+      "Guest: If someone finds wildlife, keep a safe distance and contact the authorized local wildlife service. Do not feed, handle, transport, or publish a sensitive location unless instructed.",
+      "Host: [encouraging] Is there ever a situation where keeping an injured wild animal makes genuine sense for a while?",
+      "Guest: Authorized rehabilitation may be appropriate after qualified assessment. Release is preferred when safe and lawful, but some animals need other welfare decisions based on health, behavior, habitat, and regulation.",
+      "Host: [sincere] That distinction seems important, between rescuing something temporarily and claiming it permanently for yourself.",
+      "Guest: Exactly. Real care sometimes means letting something go back to where it actually belongs, even when keeping it feels emotionally easier.",
+      "Host: [thoughtful] That's a thoughtful place to end. Thank you for clarifying something many people genuinely misunderstand, Wulan.",
+      "Guest: Thank you for having me. I hope it changes how at least a few listeners think about animals they encounter."
     ],
     "quiz": [
       {
         "question": "What does Wulan think initially draws people to owning exotic animals?",
-        "options": ["Financial profit", "Good intentions, after finding an animal in distress", "Government requirements", "Social media trends"],
-        "correctIndex": 1,
+        "options": [
+          "Financial profit",
+          "Government requirements",
+          "Social media trends",
+          "Good intentions, after finding an animal in distress"
+        ],
+        "correctIndex": 3,
         "explanation": "Wulan says it comes from good intentions initially, when people find an animal in distress and want to protect it."
       },
       {
         "question": "What example does Wulan give about the owl?",
-        "options": ["The owl was never sick", "The owner loved it but it never learned to hunt live prey, needed for proper development", "The owl escaped immediately", "The owner refused to bring it to the clinic"],
-        "correctIndex": 1,
+        "options": [
+          "The owl was never sick",
+          "The owl escaped immediately",
+          "The owner loved it but it never learned to hunt live prey, needed for proper development",
+          "The owner refused to bring it to the clinic"
+        ],
+        "correctIndex": 2,
         "explanation": "She describes an owl raised since a chick that, despite being loved, hadn't learned to hunt live prey needed for proper development."
       },
       {
         "question": "According to Wulan, why can't affection alone meet a wild animal's needs?",
-        "options": ["Affection is unnecessary for animals", "It cannot replace the ecosystem of behaviors an animal naturally learns from its species and environment", "Only zoos can provide affection", "Wild animals don't need any care"],
-        "correctIndex": 1,
+        "options": [
+          "Affection is unnecessary for animals",
+          "Only zoos can provide affection",
+          "It cannot replace the ecosystem of behaviors an animal naturally learns from its species and environment",
+          "Wild animals don't need any care"
+        ],
+        "correctIndex": 2,
         "explanation": "She explains affection alone cannot replace an entire ecosystem of behaviors an animal would naturally learn."
       },
       {
         "question": "What does Wulan recommend instead of private ownership?",
-        "options": ["Releasing all animals immediately with no care", "Supporting proper sanctuaries with trained staff", "Banning all animal rescue entirely", "Selling animals to zoos"],
-        "correctIndex": 1,
+        "options": [
+          "Supporting proper sanctuaries with trained staff",
+          "Releasing all animals immediately with no care",
+          "Banning all animal rescue entirely",
+          "Selling animals to zoos"
+        ],
+        "correctIndex": 0,
         "explanation": "She encourages supporting proper sanctuaries where trained staff can meet an animal's complex needs appropriately."
       },
       {
         "question": "When does Wulan say temporarily keeping an injured wild animal makes sense?",
-        "options": ["Never, under any circumstance", "When the eventual goal remains release back into the wild, not permanent ownership", "Only for owls specifically", "When the owner is wealthy enough"],
+        "options": [
+          "Never, under any circumstance",
+          "When the eventual goal remains release back into the wild, not permanent ownership",
+          "Only for owls specifically",
+          "When the owner is wealthy enough"
+        ],
         "correctIndex": 1,
         "explanation": "She says temporary rehabilitation makes sense provided the eventual goal remains release back into the wild."
+      },
+      {
+        "question": "Why can private rescue create harm despite affection?",
+        "options": [
+          "Wild animals cannot recognize people",
+          "All homes are too small",
+          "Kind intentions are illegal",
+          "Wild species have specialized welfare, social, diet, disease, and legal needs"
+        ],
+        "correctIndex": 3,
+        "explanation": "Intent does not guarantee suitable care."
+      },
+      {
+        "question": "What should someone do after finding injured wildlife?",
+        "options": [
+          "Keep a safe distance and contact an authorized wildlife service for instructions",
+          "Feed it household food",
+          "Post its location and invite visitors",
+          "Take it home permanently"
+        ],
+        "correctIndex": 0,
+        "explanation": "Early specialist guidance protects people and animals."
+      },
+      {
+        "question": "Why is release not always the immediate result?",
+        "options": [
+          "Sanctuaries never release animals",
+          "Owners choose by affection",
+          "Qualified assessment must consider health, behavior, habitat, law, and survival prospects",
+          "Every animal prefers captivity"
+        ],
+        "correctIndex": 2,
+        "explanation": "Release is a welfare decision, not merely a slogan."
+      },
+      {
+        "question": "What does the owl example demonstrate?",
+        "options": [
+          "Owls must be trained as pets",
+          "Love did not provide the species-specific development and care the bird needed",
+          "Live prey is required in every household",
+          "Veterinarians oppose rescue"
+        ],
+        "correctIndex": 1,
+        "explanation": "The revised example avoids prescribing a feeding method."
+      },
+      {
+        "question": "What is the key distinction at the end?",
+        "options": [
+          "Temporary care creates ownership",
+          "Payment permits wildlife possession",
+          "Authorized rehabilitation serves the animal’s welfare, not a person’s wish to possess it",
+          "Release is always possible within a week"
+        ],
+        "correctIndex": 2,
+        "explanation": "Purpose and professional authority separate rehabilitation from pet keeping."
       }
-    ]
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "revise; replace a questionable owl-feeding claim and ensure wildlife rescue, rehabilitation, release, possession, disease control, and welfare remain with authorized specialists",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-nature-08",
+    "title": "What the Mangrove Team Counted Before Planting",
+    "level": "B1",
+    "themeId": "nature",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] When our coastal youth group proposed planting ten thousand mangrove seedlings, the number sounded impressive enough for a campaign poster.",
+      "Narrator: A local ecologist asked us to delay the order. She said planting was only one possible action, and first we needed to understand why trees had disappeared.",
+      "Narrator: [carefully] We walked the shoreline with fishers, residents, land managers, and people who studied tides. Several families also depended on clear boat access.",
+      "Narrator: On one section, old drainage channels had changed the water flow. On another, waves were too strong for the species listed in the nursery catalogue.",
+      "Narrator: [reflective] A third section was already recovering naturally. Planting there could damage young growth that volunteers had mistaken for weeds.",
+      "Narrator: The team mapped water depth, salinity, erosion, existing plants, land rights, waste, and the routes used by boats.",
+      "Narrator: [honestly] We also asked who would maintain the site after the launch photographs were taken. Previous projects had left plastic guards and dead seedlings behind.",
+      "Narrator: The final plan was smaller than our first announcement. We restored water movement in one suitable area, protected natural regeneration in another, and planted several locally appropriate species only where evidence supported it.",
+      "Narrator: [seriously] Community representatives approved access arrangements, and trained workers explained how to avoid damaging nesting areas and muddy banks.",
+      "Narrator: We recorded survival, not just the number planted. We also watched shoreline change and listened for effects on fishing access.",
+      "Narrator: [gently] Some seedlings died, so the report included losses instead of hiding them. The team adjusted timing and placement without claiming that every change came from our work.",
+      "Narrator: After one year, the photographs looked less dramatic than a field of identical young trees.",
+      "Narrator: [encouraging] However, the site had a maintenance group, clearer water routes, surviving native growth, and measurements that could guide the next season.",
+      "Narrator: I learned that restoration is not a competition to place the largest number of seedlings in the ground.",
+      "Narrator: [sincere] Good environmental work begins with the ecosystem and the people connected to it, then chooses an action whose results can be checked honestly."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the ecologist delay the seedling order?",
+        "options": [
+          "The team first needed to understand the causes and site conditions",
+          "The nursery had no posters",
+          "Fishers opposed every tree",
+          "Mangroves cannot be planted"
+        ],
+        "correctIndex": 0,
+        "explanation": "Diagnosis came before a visible action."
+      },
+      {
+        "question": "Why was one recovering area not planted?",
+        "options": [
+          "It belonged to the nursery",
+          "New planting could damage natural young growth",
+          "The water was fresh",
+          "No plants existed there"
+        ],
+        "correctIndex": 1,
+        "explanation": "Natural regeneration sometimes needed protection instead."
+      },
+      {
+        "question": "What did the team measure after action?",
+        "options": [
+          "Survival, shoreline change, and effects on access",
+          "Only volunteer attendance",
+          "Only the original target number",
+          "The price of photographs"
+        ],
+        "correctIndex": 0,
+        "explanation": "Outcomes mattered more than inputs."
+      },
+      {
+        "question": "How did the report treat dead seedlings?",
+        "options": [
+          "It counted them as successful",
+          "It blamed residents",
+          "It removed the entire project",
+          "It recorded losses and informed adjustment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Honest monitoring supported learning."
+      },
+      {
+        "question": "What is the narrator’s main lesson?",
+        "options": [
+          "The largest planting campaign is best",
+          "Every coastline needs one species",
+          "Maintenance is less important than launch day",
+          "Restoration should fit ecological evidence and affected communities"
+        ],
+        "correctIndex": 3,
+        "explanation": "Quality depends on fit, consent, and evidence."
+      },
+      {
+        "question": "What made the original target attractive?",
+        "options": [
+          "It came from tidal measurements",
+          "Every seedling was already growing",
+          "Fishers had selected one species",
+          "A large number looked impressive in campaign publicity"
+        ],
+        "correctIndex": 3,
+        "explanation": "The opening contrasts visible scale with appropriate action."
+      },
+      {
+        "question": "Why were fishers and residents included?",
+        "options": [
+          "They owned the nursery catalogue",
+          "Only residents could measure salt",
+          "Scientists were unavailable",
+          "Restoration could affect access, livelihoods, and local knowledge"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ecological decisions also affect people."
+      },
+      {
+        "question": "What did natural regeneration require?",
+        "options": [
+          "Replacement with identical nursery trees",
+          "Protection from unnecessary planting and disturbance",
+          "Removal as weeds",
+          "A concrete wall"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sometimes recovery needs space rather than more inputs."
+      },
+      {
+        "question": "Why was the final plan smaller?",
+        "options": [
+          "The team no longer valued mangroves",
+          "The campaign had no volunteers",
+          "Evidence supported different actions in different sections",
+          "Every site was privately owned"
+        ],
+        "correctIndex": 2,
+        "explanation": "Site variation changed the intervention."
+      },
+      {
+        "question": "What indicates a durable project?",
+        "options": [
+          "A launch photograph alone",
+          "The number ordered",
+          "Maintenance, community arrangements, survival records, and adaptive decisions",
+          "One year without losses"
+        ],
+        "correctIndex": 2,
+        "explanation": "Long-term capacity matters more than a planting event."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "retain; strong restoration account that prioritizes diagnosis, community interests, natural regeneration, species fit, maintenance, and honest monitoring",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-nature-09",
+    "title": "A Night Survey Without Turning Wildlife Into a Show",
+    "level": "B1",
+    "themeId": "nature",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] I joined a licensed conservation team for a night survey after volunteers reported frogs calling near a planned road extension.",
+      "Narrator: Before we entered the wetland, the survey leader explained that our goal was to collect limited evidence, not to chase every animal for a photograph.",
+      "Narrator: [carefully] We cleaned our boots and equipment to reduce the chance of carrying disease or invasive material between sites.",
+      "Narrator: We followed an approved route, spoke quietly, used low-impact lights where permitted, and stayed out of sensitive areas marked by the land manager.",
+      "Narrator: [reflective] The leader recorded temperature, recent rain, time, location, and the calls we could identify with reasonable confidence.",
+      "Narrator: When two species sounded similar, she marked the record as uncertain and saved an audio sample for expert review.",
+      "Narrator: [honestly] She did not allow us to play repeated calls from a speaker. Such playback can disturb animals and change the behavior we are trying to observe.",
+      "Narrator: A volunteer found a frog beside the path and reached toward it. The leader stopped him because handling required training, hygiene, and authorization.",
+      "Narrator: [seriously] We photographed it from the approved distance and continued walking, leaving the animal where it was.",
+      "Narrator: The survey also recorded traffic noise, standing water, vegetation, and barriers that could affect movement. A species list alone would not explain how the road might change the habitat.",
+      "Narrator: [gently] After midnight, we ended at the planned time rather than staying until everyone was exhausted.",
+      "Narrator: The next day, qualified staff checked the uncertain recording and combined our observations with surveys from other nights and seasons.",
+      "Narrator: [encouraging] One visit could show presence, but absence during a short survey would not prove that a species never used the site.",
+      "Narrator: The final report stated those limits and separated direct observations from interpretation.",
+      "Narrator: [sincere] I had expected conservation to feel like discovering rare creatures in the dark.",
+      "Narrator: Instead, its most responsible moments involved cleaning boots, accepting uncertainty, avoiding disturbance, and knowing when not to touch what we hoped to protect."
+    ],
+    "quiz": [
+      {
+        "question": "What was the survey’s purpose?",
+        "options": [
+          "To photograph every frog",
+          "To move animals into homes",
+          "To collect limited evidence near a planned road extension",
+          "To advertise night tours"
+        ],
+        "correctIndex": 2,
+        "explanation": "The survey addressed a development question."
+      },
+      {
+        "question": "Why were boots and equipment cleaned?",
+        "options": [
+          "To reduce disease or invasive transfer between sites",
+          "To make walking faster",
+          "To attract frogs",
+          "To remove rainwater only"
+        ],
+        "correctIndex": 0,
+        "explanation": "Biosecurity was part of field practice."
+      },
+      {
+        "question": "How was an uncertain call recorded?",
+        "options": [
+          "It was assigned to the rarest species",
+          "It was marked uncertain and saved for expert review",
+          "It was deleted immediately",
+          "It was shared as confirmed news"
+        ],
+        "correctIndex": 1,
+        "explanation": "Uncertainty remained visible."
+      },
+      {
+        "question": "Why was the frog not handled?",
+        "options": [
+          "The team disliked frogs",
+          "The path belonged to traffic",
+          "Photographs were forbidden",
+          "Handling required training, hygiene, and authorization"
+        ],
+        "correctIndex": 3,
+        "explanation": "Observation did not create permission to touch."
+      },
+      {
+        "question": "What could one short survey not prove?",
+        "options": [
+          "That an unobserved species never used the site",
+          "That rain had recently fallen",
+          "That traffic made noise",
+          "That the route had vegetation"
+        ],
+        "correctIndex": 0,
+        "explanation": "Non-detection is not proof of absence."
+      },
+      {
+        "question": "Why did the team record weather and time?",
+        "options": [
+          "Frogs require a calendar",
+          "The road company requested a diary",
+          "Temperature proves a species identity",
+          "Detection and interpretation depend on survey conditions"
+        ],
+        "correctIndex": 3,
+        "explanation": "Context affects what observers can hear and infer."
+      },
+      {
+        "question": "Why was repeated call playback avoided?",
+        "options": [
+          "It could disturb animals and alter the behavior under study",
+          "Speakers cannot work at night",
+          "Volunteers preferred silence",
+          "Recordings are always illegal"
+        ],
+        "correctIndex": 0,
+        "explanation": "A survey method can change its subject."
+      },
+      {
+        "question": "What broader evidence did the road assessment need?",
+        "options": [
+          "Only the longest species list",
+          "Habitat, noise, water, movement barriers, and repeated seasonal observations",
+          "One volunteer’s memory",
+          "A photograph from another wetland"
+        ],
+        "correctIndex": 1,
+        "explanation": "Impact assessment extends beyond detection."
+      },
+      {
+        "question": "Why did the team stop at the planned time?",
+        "options": [
+          "Every frog had been counted",
+          "The road opened at midnight",
+          "Fatigue can reduce safety and observation quality",
+          "The equipment belonged elsewhere"
+        ],
+        "correctIndex": 2,
+        "explanation": "Field discipline includes safe limits."
+      },
+      {
+        "question": "What is the narrator’s changed view of conservation?",
+        "options": [
+          "Restraint and honest uncertainty can be more responsible than dramatic contact",
+          "Rare photographs are the main evidence",
+          "Animals should be moved for study",
+          "Uncertain calls should be ignored"
+        ],
+        "correctIndex": 0,
+        "explanation": "The closing reframes careful practice as meaningful action."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "retain; strong field-survey monologue with biosecurity, authorization, non-disturbance, uncertainty, contextual data, and limits of non-detection",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-nature-10",
+    "title": "Planning a Turtle-Nesting Beach Visit",
+    "level": "B1",
+    "themeId": "nature",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Laila",
+        "gender": "female"
+      },
+      {
+        "name": "Rafi",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Laila: [thoughtful] Rafi, I found a tour that promises close photographs of nesting turtles tonight. Should we book it?",
+      "Rafi: Before booking, let us check whether the operator is authorized and follows the local conservation program.",
+      "Laila: [carefully] Their page says guides can guarantee that every visitor sees a turtle.",
+      "Rafi: Wildlife cannot be guaranteed responsibly. That promise may encourage guides to disturb animals or ignore protected zones.",
+      "Laila: [reflective] The advertisement also shows visitors standing in front of a turtle with bright telephone screens.",
+      "Rafi: Bright or white light, crowding, noise, and blocking an animal’s route can disturb nesting. We should follow the site’s exact rules, which may require darkness or approved filtered lights.",
+      "Laila: [honestly] Could we use flash for one second if we stand far away?",
+      "Rafi: No. We should not invent our own exception. The authorized guide and local rules determine whether any photography is permitted.",
+      "Laila: [seriously] What else should we ask the operator?",
+      "Rafi: Group size, viewing distance, training, where the fees go, how they respond if a turtle changes direction, and whether guests receive instructions before entering.",
+      "Laila: [gently] What if no turtle appears during our scheduled time?",
+      "Rafi: Then we accept that outcome. Payment buys a guided opportunity, not control over a wild animal.",
+      "Laila: [encouraging] I like that. The beach itself could still teach us about tracks, vegetation, tides, and threats without touching a nest.",
+      "Rafi: Exactly. A trained guide may explain signs without revealing sensitive locations publicly or encouraging visitors to search alone.",
+      "Laila: [sincere] Should I post our live location if we see one?",
+      "Rafi: Wait and follow the conservation program’s advice. Real-time locations can attract crowds or people who do not respect the rules.",
+      "Laila: [thoughtful] The tour page also offers visitors a chance to release hatchlings by hand.",
+      "Rafi: That activity requires careful evaluation. We should not handle turtles unless an authorized conservation team directs a lawful, evidence-based intervention.",
+      "Laila: [carefully] I found another operator listed by the local program. Its page gives rules but promises no sighting.",
+      "Rafi: That honest uncertainty is a good sign. Let us contact them and confirm accessibility and safety arrangements too.",
+      "Laila: Agreed. I want the visit to leave us informed without making the turtles pay for our excitement."
+    ],
+    "quiz": [
+      {
+        "question": "What claim first makes Rafi cautious?",
+        "options": [
+          "The visit occurs at night",
+          "The page mentions photographs",
+          "The operator guarantees every visitor a turtle sighting",
+          "The beach has tides"
+        ],
+        "correctIndex": 2,
+        "explanation": "Wildlife cannot be scheduled for customer promises."
+      },
+      {
+        "question": "Who determines photography rules?",
+        "options": [
+          "Each visitor individually",
+          "The authorized guide and local conservation rules",
+          "The loudest tour group",
+          "Any social-media account"
+        ],
+        "correctIndex": 1,
+        "explanation": "Visitors should not invent exceptions."
+      },
+      {
+        "question": "Why should a live location be treated carefully?",
+        "options": [
+          "It could attract crowds to a sensitive site",
+          "Phones cannot show beaches",
+          "The operator owns the location",
+          "Turtles follow online maps"
+        ],
+        "correctIndex": 0,
+        "explanation": "Location sharing can increase disturbance."
+      },
+      {
+        "question": "When may visitors handle turtles?",
+        "options": [
+          "Whenever a hatchling is small",
+          "For one quick photograph",
+          "After paying the tour fee",
+          "Only under an authorized lawful conservation intervention"
+        ],
+        "correctIndex": 3,
+        "explanation": "Good intentions do not create permission."
+      },
+      {
+        "question": "Why does Laila prefer the second operator?",
+        "options": [
+          "It guarantees closer access",
+          "It is listed by the program, explains rules, and does not promise a sighting",
+          "It allows flash photography",
+          "It reveals nest locations"
+        ],
+        "correctIndex": 1,
+        "explanation": "Honest uncertainty and authorization support responsible tourism."
+      },
+      {
+        "question": "What does payment not provide?",
+        "options": [
+          "Access to an authorized guide",
+          "A scheduled meeting place",
+          "Safety information",
+          "Control over whether a wild turtle appears"
+        ],
+        "correctIndex": 3,
+        "explanation": "Wildlife remains unpredictable."
+      },
+      {
+        "question": "Why can the beach still be educational without a sighting?",
+        "options": [
+          "Visitors may open nests themselves",
+          "Photographs can be staged",
+          "Tracks, habitat, tides, and threats can be interpreted responsibly",
+          "The tour becomes a swimming lesson"
+        ],
+        "correctIndex": 2,
+        "explanation": "Learning does not require forcing an encounter."
+      },
+      {
+        "question": "What information should be checked before booking?",
+        "options": [
+          "Only the cheapest ticket",
+          "Only the camera brand",
+          "Authorization, group practice, distance, training, fees, and response rules",
+          "The number of live posts"
+        ],
+        "correctIndex": 2,
+        "explanation": "Operator practice matters more than promotional images."
+      },
+      {
+        "question": "Why are accessibility arrangements mentioned?",
+        "options": [
+          "Responsible conservation visits should also plan for visitor safety and access",
+          "Accessibility allows closer wildlife contact",
+          "Rules apply only to some guests",
+          "The beach has no hazards"
+        ],
+        "correctIndex": 0,
+        "explanation": "Environmental care and inclusive planning can coexist."
+      },
+      {
+        "question": "What ethical aim guides Laila’s final choice?",
+        "options": [
+          "Guarantee a close photograph",
+          "Find a nest without a guide",
+          "Learn without transferring the cost of excitement to the animals",
+          "Handle a hatchling briefly"
+        ],
+        "correctIndex": 2,
+        "explanation": "The conclusion centers animal welfare."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "nature",
+      "scriptDecision": "retain; strong ecotourism dialogue centered on authorization, non-disturbance, honest uncertainty, location sensitivity, accessibility, and no unauthorized handling",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

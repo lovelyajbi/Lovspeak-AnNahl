@@ -6,33 +6,147 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [honestly] For years, I told myself I would call my friends later, when life felt calmer. Later never really came.",
-      "Narrator: [thoughtful] My days filled up with work, errands, and small tasks, and my closest friendships slowly grew quiet.",
-      "Narrator: [reflective] I never decided to drift away from anyone. It happened slowly, one skipped message at a time.",
-      "Narrator: [softly] Then, one evening, a friend from university sent me a message after almost two years of silence.",
-      "Narrator: [gently] She said she missed me and wanted to know if I was still the same person she remembered.",
-      "Narrator: [thoughtful] Something about that short message made me sit still and think for a long time that night.",
-      "Narrator: [honestly] I realized I had almost thirty people saved as friends, but I rarely spoke to any of them anymore.",
+      "Narrator: My days filled up with work, errands, and small tasks, and my closest friendships slowly grew quiet.",
+      "Narrator: I never decided to drift away from anyone. It happened slowly, one skipped message at a time.",
+      "Narrator: [surprised] Then, one evening, a friend from university sent me a message after almost two years of silence.",
+      "Narrator: She said she missed me and wanted to know if I was still the same person she remembered.",
+      "Narrator: Something about that short message made me sit still and think for a long time that night.",
+      "Narrator: [reflective] I realized I had almost thirty people saved as friends, but I rarely spoke to any of them anymore.",
       "Narrator: [determined] So I made a small rule for myself. Every week, I would call one friend, just to talk, no real reason needed.",
-      "Narrator: [honestly] The first few calls felt awkward, like starting a car that had been sitting still for too long.",
+      "Narrator: [awkwardly] The first few calls felt awkward, like starting a car that had been sitting still for too long.",
       "Narrator: [warmly] But after a few minutes, old comfort returned, and we laughed like no time had passed between us at all.",
-      "Narrator: [reflective] I learned that friendship does not need constant contact, but it does need occasional effort from both sides.",
-      "Narrator: [gently] A short message, a quick call, even a simple line like I was thinking of you keeps a bond alive.",
-      "Narrator: [warmly] Now I keep a small list of names near my phone, so I remember who I have not called in a while.",
-      "Narrator: [thoughtful] Some weeks I miss my own rule completely, and I simply try again the following week instead of giving up.",
-      "Narrator: [with a small smile] My friendships feel different now, warmer and more alive, because I finally chose to show up for them.",
-      "Narrator: [peacefully] It turns out people rarely forget you completely. They just wait quietly for you to reach out first."
+      "Narrator: I learned that friendship does not need constant contact, but it does need occasional effort from both sides.",
+      "Narrator: A short message, a quick call, even a simple line like I was thinking of you keeps a bond alive.",
+      "Narrator: [practically] Now I keep a small list of names near my phone, so I remember who I have not called in a while.",
+      "Narrator: Some weeks I miss my own rule completely, and I simply try again the following week instead of giving up.",
+      "Narrator: [peacefully] My friendships feel different now, warmer and more alive, because I finally chose to show up for them.",
+      "Narrator: [carefully] I cannot know how every friend feels, but a respectful message can open the door to reconnecting."
     ],
     "quiz": [
-      { "question": "What did the narrator usually tell herself about calling friends?", "options": ["That she would call them right away", "That she would call later, when life felt calmer", "That she did not need friends", "That texting was better than calling"], "correctIndex": 1, "explanation": "She told herself she would call friends later, when things felt calmer, but later never came." },
-      { "question": "Who reached out to the narrator after almost two years of silence?", "options": ["A coworker", "A friend from university", "Her neighbor", "Her cousin"], "correctIndex": 1, "explanation": "A friend from university messaged her after almost two years of silence between them." },
-      { "question": "What rule did the narrator make for herself?", "options": ["To call one friend every week, just to talk", "To never use her phone", "To message everyone daily", "To meet a new person each month"], "correctIndex": 0, "explanation": "She made a rule to call one friend every week, just to talk, with no real reason needed." },
-      { "question": "How did the first few calls feel?", "options": ["Boring", "Awkward, like starting a car that sat still too long", "Perfectly natural immediately", "Too short to matter"], "correctIndex": 1, "explanation": "She says the first few calls felt awkward, like restarting a car that had been sitting still for too long." },
-      { "question": "What does the narrator conclude about people and reaching out?", "options": ["People forget you completely", "People rarely forget you completely; they wait for you to reach out", "Friendship needs constant daily contact", "It is too late to fix old friendships"], "correctIndex": 1, "explanation": "She concludes that people rarely forget you completely; they just wait quietly for you to reach out first." }
-    ]
+      {
+        "question": "What did the narrator usually tell herself about calling friends?",
+        "options": [
+          "That she would call them right away",
+          "That she did not need friends",
+          "That texting was better than calling",
+          "That she would call later, when life felt calmer"
+        ],
+        "correctIndex": 3,
+        "explanation": "She told herself she would call friends later, when things felt calmer, but later never came."
+      },
+      {
+        "question": "Who reached out to the narrator after almost two years of silence?",
+        "options": [
+          "A coworker",
+          "Her neighbor",
+          "Her cousin",
+          "A friend from university"
+        ],
+        "correctIndex": 3,
+        "explanation": "A friend from university messaged her after almost two years of silence between them."
+      },
+      {
+        "question": "What rule did the narrator make for herself?",
+        "options": [
+          "To call one friend every week, just to talk",
+          "To never use her phone",
+          "To message everyone daily",
+          "To meet a new person each month"
+        ],
+        "correctIndex": 0,
+        "explanation": "She made a rule to call one friend every week, just to talk, with no real reason needed."
+      },
+      {
+        "question": "How did the first few calls feel?",
+        "options": [
+          "Boring",
+          "Perfectly natural immediately",
+          "Awkward, like starting a car that sat still too long",
+          "Too short to matter"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says the first few calls felt awkward, like restarting a car that had been sitting still for too long."
+      },
+      {
+        "question": "What does the narrator conclude about people and reaching out?",
+        "options": [
+          "People rarely forget you completely; they wait for you to reach out",
+          "People forget you completely",
+          "Friendship needs constant daily contact",
+          "It is too late to fix old friendships"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that people rarely forget you completely; they just wait quietly for you to reach out first."
+      },
+      {
+        "question": "What slowly weakened the friendships?",
+        "options": [
+          "A large argument",
+          "Moving during school",
+          "A broken phone",
+          "Skipped messages and a busy life"
+        ],
+        "correctIndex": 3,
+        "explanation": "Distance grew through many small missed contacts."
+      },
+      {
+        "question": "How many saved friends did the narrator notice?",
+        "options": [
+          "Only two",
+          "More than one hundred",
+          "Almost thirty",
+          "Exactly five"
+        ],
+        "correctIndex": 2,
+        "explanation": "Many names did not mean active contact."
+      },
+      {
+        "question": "What helped the weekly rule?",
+        "options": [
+          "A new social app",
+          "A public promise",
+          "Calling every person daily",
+          "A list near the phone"
+        ],
+        "correctIndex": 3,
+        "explanation": "The list made forgotten contacts visible."
+      },
+      {
+        "question": "What happens after a missed week?",
+        "options": [
+          "The whole habit ends",
+          "The narrator tries again",
+          "Friends are blamed",
+          "Two calls become required"
+        ],
+        "correctIndex": 1,
+        "explanation": "The routine allows imperfection."
+      },
+      {
+        "question": "What is the careful final lesson?",
+        "options": [
+          "Every old friend is waiting",
+          "A respectful message may reopen contact",
+          "Silence always means rejection",
+          "Constant contact is required"
+        ],
+        "correctIndex": 1,
+        "explanation": "The ending avoids assuming another person’s feelings."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "revise lightly; keep realistic reconnection story while removing an unsupported claim about what other people feel",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-social-02",
@@ -41,38 +155,155 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Mira, who volunteers every weekend at a community kitchen. Thanks for joining me, Mira.",
-      "Guest: [pleasantly] Thank you for having me. I love talking about this, so I'm happy to be here.",
-      "Host: [curious] How did you first get involved with the community kitchen?",
+      "Guest: Thank you for having me. I love talking about this, so I'm happy to be here.",
+      "Host: How did you first get involved with the community kitchen?",
       "Guest: [thoughtful] Honestly, I moved to this city two years ago and I did not know anyone at all.",
-      "Host: [interested] That sounds lonely. What made you choose volunteering, instead of something else?",
+      "Host: That sounds lonely. What made you choose volunteering, instead of something else?",
       "Guest: [gently] A neighbor mentioned it once, almost by accident, and I decided to try it just to get out of my apartment.",
-      "Host: [curious] Did it feel strange at first, working with strangers every weekend?",
-      "Guest: [honestly] Very strange. I barely spoke during my first few visits. I mostly just chopped vegetables quietly.",
-      "Host: [interested] When did that start to change for you?",
-      "Guest: [warmly] Slowly, people started remembering my name, asking about my week, saving me a seat at lunch.",
-      "Host: [curious] So the kitchen became more than just a task for you?",
+      "Host: Did it feel strange at first, working with strangers every weekend?",
+      "Guest: [shyly] Very strange. I barely spoke during my first few visits. I mostly just chopped vegetables quietly.",
+      "Host: When did that start to change for you?",
+      "Guest: [surprised] Slowly, people started remembering my name, asking about my week, saving me a seat at lunch.",
+      "Host: So the kitchen became more than just a task for you?",
       "Guest: [smiling] Completely. Now some of those volunteers are my closest friends in this whole city.",
-      "Host: [thoughtful] What do you think made those friendships form so naturally there?",
+      "Host: What do you think made those friendships form so naturally there?",
       "Guest: [reflective] I think working side by side, doing something useful together, brings people closer than just talking ever could.",
-      "Host: [curious] Would you recommend volunteering to someone who feels isolated in a new city?",
-      "Guest: [encouraging] Absolutely. You do not need to already have friends to belong somewhere. You just need to show up once.",
-      "Host: [curious] What would you say to someone who feels too shy to start?",
-      "Guest: [gently] I would say, you don't have to talk much at first. Just being present regularly is enough to begin.",
-      "Host: [smiling] That's wonderful advice, Mira. Thank you so much for sharing your story with us today.",
-      "Guest: [warmly] Thank you for listening. I hope someone out there finds their own community kitchen this year."
+      "Host: Would you recommend volunteering to someone who feels isolated in a new city?",
+      "Guest: [encouraging] Absolutely. You do not need to already have friends to belong somewhere. You can start with one visit and return if the place is suitable and safe.",
+      "Host: What would you say to someone who feels too shy to start?",
+      "Guest: [reassuring] I would say, you don't have to talk much at first. A small task and regular presence can be enough to begin.",
+      "Host: That's wonderful advice, Mira. Thank you so much for sharing your story with us today.",
+      "Guest: Thank you for listening. I hope someone out there finds their own community kitchen this year."
     ],
     "quiz": [
-      { "question": "Where does Mira volunteer every weekend?", "options": ["A hospital", "A community kitchen", "A library", "A school"], "correctIndex": 1, "explanation": "The host introduces Mira as someone who volunteers every weekend at a community kitchen." },
-      { "question": "Why did Mira first decide to try volunteering?", "options": ["She needed money", "She had just moved to the city and knew no one", "Her boss required it", "She wanted free food"], "correctIndex": 1, "explanation": "Mira explains she moved to the city two years ago and did not know anyone, so she tried volunteering to get out." },
-      { "question": "How did Mira behave during her first few visits?", "options": ["She talked constantly", "She barely spoke and mostly chopped vegetables quietly", "She refused to participate", "She left early every time"], "correctIndex": 1, "explanation": "She says she barely spoke during her first few visits and mostly chopped vegetables quietly." },
-      { "question": "What does Mira believe helped the friendships form naturally?", "options": ["Working side by side on something useful", "Exchanging phone numbers immediately", "Formal introductions", "Attending a party together"], "correctIndex": 0, "explanation": "Mira reflects that working side by side, doing something useful together, brings people closer than just talking." },
-      { "question": "What advice does Mira give someone too shy to start volunteering?", "options": ["Wait until you feel confident", "You don't have to talk much; just being present regularly is enough", "Only volunteer with friends", "Avoid new places entirely"], "correctIndex": 1, "explanation": "Mira says you don't have to talk much at first; just being present regularly is enough to begin." }
-    ]
+      {
+        "question": "Where does Mira volunteer every weekend?",
+        "options": [
+          "A community kitchen",
+          "A hospital",
+          "A library",
+          "A school"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces Mira as someone who volunteers every weekend at a community kitchen."
+      },
+      {
+        "question": "Why did Mira first decide to try volunteering?",
+        "options": [
+          "She needed money",
+          "Her boss required it",
+          "She had just moved to the city and knew no one",
+          "She wanted free food"
+        ],
+        "correctIndex": 2,
+        "explanation": "Mira explains she moved to the city two years ago and did not know anyone, so she tried volunteering to get out."
+      },
+      {
+        "question": "How did Mira behave during her first few visits?",
+        "options": [
+          "She talked constantly",
+          "She refused to participate",
+          "She left early every time",
+          "She barely spoke and mostly chopped vegetables quietly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says she barely spoke during her first few visits and mostly chopped vegetables quietly."
+      },
+      {
+        "question": "What does Mira believe helped the friendships form naturally?",
+        "options": [
+          "Exchanging phone numbers immediately",
+          "Formal introductions",
+          "Attending a party together",
+          "Working side by side on something useful"
+        ],
+        "correctIndex": 3,
+        "explanation": "Mira reflects that working side by side, doing something useful together, brings people closer than just talking."
+      },
+      {
+        "question": "What advice does Mira give someone too shy to start volunteering?",
+        "options": [
+          "Wait until you feel confident",
+          "You don't have to talk much; just being present regularly is enough",
+          "Only volunteer with friends",
+          "Avoid new places entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "Mira says you don't have to talk much at first; just being present regularly is enough to begin."
+      },
+      {
+        "question": "How long ago did Mira move?",
+        "options": [
+          "Two weeks ago",
+          "Two years ago",
+          "One month ago",
+          "Ten years ago"
+        ],
+        "correctIndex": 1,
+        "explanation": "She arrived without knowing anyone."
+      },
+      {
+        "question": "Who told her about the kitchen?",
+        "options": [
+          "A neighbor",
+          "The radio host",
+          "A school friend",
+          "Her manager"
+        ],
+        "correctIndex": 0,
+        "explanation": "A casual mention led to her first visit."
+      },
+      {
+        "question": "What job did she first do quietly?",
+        "options": [
+          "Managed the volunteers",
+          "Served as host",
+          "Chopped vegetables",
+          "Delivered every meal"
+        ],
+        "correctIndex": 2,
+        "explanation": "A simple task let her participate without much talking."
+      },
+      {
+        "question": "How did volunteers include her?",
+        "options": [
+          "They asked her to leave",
+          "They made her speak publicly",
+          "They remembered her name and saved a seat",
+          "They stopped giving tasks"
+        ],
+        "correctIndex": 2,
+        "explanation": "Small repeated welcomes built comfort."
+      },
+      {
+        "question": "What is safe advice for a newcomer?",
+        "options": [
+          "Assume every group is safe",
+          "Expect close friends on day one",
+          "Try a suitable place and begin with a small task",
+          "Share private details immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised advice keeps the process gradual."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "revise lightly; preserve belonging through service while making participation gradual rather than guaranteed after one visit",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-social-03",
@@ -81,38 +312,155 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
       "Dewi: [excited] Fajar, guess what? Someone from my old high school class wants to organize a reunion this year.",
-      "Fajar: [interested] That sounds fun. How many years has it been since you all graduated?",
+      "Fajar: That sounds fun. How many years has it been since you all graduated?",
       "Dewi: [thoughtful] Almost twelve years now. I honestly haven't seen most of them since we finished school.",
-      "Fajar: [curious] Are you nervous about seeing everyone again after so long?",
-      "Dewi: [honestly] A little, actually. People change so much, and I worry we won't have much to talk about.",
-      "Fajar: [gently] I felt the same before my own reunion last year. It was easier than I expected, honestly.",
-      "Dewi: [curious] Really? What helped it feel easier once you were there?",
+      "Fajar: Are you nervous about seeing everyone again after so long?",
+      "Dewi: [nervous] A little, actually. People change so much, and I worry we won't have much to talk about.",
+      "Fajar: [reassuring] I felt the same before my own reunion last year. It was easier than I expected, honestly.",
+      "Dewi: Really? What helped it feel easier once you were there?",
       "Fajar: [warmly] Once the first few minutes passed, old jokes came back, and it felt like no time had passed at all.",
-      "Dewi: [smiling] That's reassuring to hear. I guess some connections just don't fully disappear.",
-      "Fajar: [thoughtful] Exactly. Shared memories create a bond that doesn't need constant contact to survive.",
-      "Dewi: [curious] Did anyone surprise you, like someone completely different from who you remembered?",
-      "Fajar: [laughing] One classmate used to be extremely shy, and now he runs his own small restaurant confidently.",
-      "Dewi: [interested] That's wonderful. I wonder who will surprise me the most at mine.",
-      "Fajar: [encouraging] You'll find out soon. When is the reunion happening exactly?",
-      "Dewi: [thoughtful] Next month, at a restaurant near our old school. I'm helping organize the guest list.",
-      "Fajar: [curious] Do you need any help with planning? I'm pretty good with spreadsheets and lists.",
+      "Dewi: That's reassuring to hear. I guess some connections just don't fully disappear.",
+      "Fajar: Exactly. Shared memories create a bond that doesn't need constant contact to survive.",
+      "Dewi: Did anyone surprise you, like someone completely different from who you remembered?",
+      "Fajar: [amused] One classmate used to be extremely shy, and now he runs his own small restaurant confidently.",
+      "Dewi: That's wonderful. I wonder who will surprise me the most at mine.",
+      "Fajar: You'll find out soon. When is the reunion happening exactly?",
+      "Dewi: [organized] Next month, at a restaurant near our old school. I'm helping organize the guest list.",
+      "Fajar: Do you need any help with planning? I'm pretty good with spreadsheets and lists.",
       "Dewi: [grateful] Actually, yes. I'm struggling to track who has confirmed and who hasn't replied yet.",
-      "Fajar: [warmly] Send me the list tonight. I'll organize it properly for you by tomorrow morning.",
+      "Fajar: Send me the list tonight. I'll organize it properly for you by tomorrow morning.",
       "Dewi: [relieved] Thank you so much, Fajar. This whole thing feels less overwhelming already.",
-      "Fajar: [smiling] That's what coworkers are for. Now go enjoy reconnecting with your old classmates."
+      "Fajar: That's what coworkers are for. Now go enjoy reconnecting with your old classmates."
     ],
     "quiz": [
-      { "question": "What is Dewi organizing with an old classmate?", "options": ["A wedding", "A high school reunion", "A work conference", "A birthday party"], "correctIndex": 1, "explanation": "Dewi mentions that someone from her old high school class wants to organize a reunion this year." },
-      { "question": "How long has it been since Dewi's class graduated?", "options": ["Two years", "Almost twelve years", "Twenty years", "Six months"], "correctIndex": 1, "explanation": "Dewi says it has been almost twelve years since they graduated." },
-      { "question": "What does Fajar say made his own reunion easier than expected?", "options": ["Nothing, it stayed awkward", "Old jokes came back after the first few minutes", "He didn't attend it", "He only talked to one person"], "correctIndex": 1, "explanation": "Fajar says once the first few minutes passed, old jokes came back and it felt like no time had passed." },
-      { "question": "What surprised Fajar about a former classmate?", "options": ["A shy classmate now runs his own restaurant confidently", "Someone moved abroad", "A classmate became famous", "Nobody changed at all"], "correctIndex": 0, "explanation": "Fajar mentions a classmate who used to be shy now runs his own small restaurant confidently." },
-      { "question": "How does Fajar offer to help Dewi?", "options": ["By attending in her place", "By organizing the guest confirmation list with spreadsheets", "By paying for the venue", "By writing invitations"], "correctIndex": 1, "explanation": "Fajar offers to organize Dewi's list of confirmed and unreplied guests using spreadsheets." }
-    ]
+      {
+        "question": "What is Dewi organizing with an old classmate?",
+        "options": [
+          "A high school reunion",
+          "A wedding",
+          "A work conference",
+          "A birthday party"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dewi mentions that someone from her old high school class wants to organize a reunion this year."
+      },
+      {
+        "question": "How long has it been since Dewi's class graduated?",
+        "options": [
+          "Two years",
+          "Almost twelve years",
+          "Twenty years",
+          "Six months"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dewi says it has been almost twelve years since they graduated."
+      },
+      {
+        "question": "What does Fajar say made his own reunion easier than expected?",
+        "options": [
+          "Nothing, it stayed awkward",
+          "Old jokes came back after the first few minutes",
+          "He didn't attend it",
+          "He only talked to one person"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar says once the first few minutes passed, old jokes came back and it felt like no time had passed."
+      },
+      {
+        "question": "What surprised Fajar about a former classmate?",
+        "options": [
+          "A shy classmate now runs his own restaurant confidently",
+          "Someone moved abroad",
+          "A classmate became famous",
+          "Nobody changed at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fajar mentions a classmate who used to be shy now runs his own small restaurant confidently."
+      },
+      {
+        "question": "How does Fajar offer to help Dewi?",
+        "options": [
+          "By attending in her place",
+          "By paying for the venue",
+          "By writing invitations",
+          "By organizing the guest confirmation list with spreadsheets"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fajar offers to organize Dewi's list of confirmed and unreplied guests using spreadsheets."
+      },
+      {
+        "question": "Where will the reunion happen?",
+        "options": [
+          "Inside Dewi’s office",
+          "At a restaurant near the old school",
+          "At Fajar’s house",
+          "In another city"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dewi names the place while discussing dates."
+      },
+      {
+        "question": "What worries Dewi?",
+        "options": [
+          "Nobody has graduated",
+          "The restaurant has closed",
+          "They may have little to discuss",
+          "Fajar will not help"
+        ],
+        "correctIndex": 2,
+        "explanation": "Twelve years have passed since school."
+      },
+      {
+        "question": "What does “reassuring” mean?",
+        "options": [
+          "Making a list longer",
+          "Remembering an old joke",
+          "Making someone feel less worried",
+          "Changing a restaurant"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fajar’s experience reduces Dewi’s concern."
+      },
+      {
+        "question": "What information is difficult to track?",
+        "options": [
+          "Who owns a restaurant",
+          "Who confirmed or has not replied",
+          "Who was shy at school",
+          "Who works with Fajar"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest list needs clearer status."
+      },
+      {
+        "question": "Why is a spreadsheet useful?",
+        "options": [
+          "It invites people without consent",
+          "It creates old memories",
+          "It changes the date",
+          "It organizes responses clearly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fajar offers a practical planning tool."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "keep; natural planning dialogue stays within friendship and organization, with no invented romance or unsuitable content",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-social-04",
@@ -121,71 +469,302 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [warmly] Every Sunday, without exception, my whole family gathers at my aunt's house for dinner. It has been this way since I was a child.",
-      "Narrator: [thoughtful] As a teenager, I found these dinners boring. I wanted to be anywhere else, with my own friends instead.",
-      "Narrator: [honestly] I used to sit quietly, checking the time, waiting for a polite moment to leave early.",
+      "Narrator: [warmly] On many Sundays, my whole family gathers at my aunt's house for dinner. It has been this way since I was a child.",
+      "Narrator: [restless] As a teenager, I found these dinners boring. I wanted to be anywhere else, with my own friends instead.",
+      "Narrator: I used to sit quietly, checking the time, waiting for a polite moment to leave early.",
       "Narrator: [reflective] Then I moved to another city for work, and Sunday dinners suddenly stopped happening for me completely.",
-      "Narrator: [softly] At first, I enjoyed the freedom. No more long dinners, no more loud cousins arguing about small things.",
-      "Narrator: [honestly] But after a few months, something felt missing, even though my new life was busy and full.",
-      "Narrator: [thoughtful] I started calling my mother more, just to hear updates about who said what at dinner that week.",
-      "Narrator: [warmly] Slowly, I realized those dinners were never really about the food. They were about simply being counted, being present.",
-      "Narrator: [reflective] My grandmother once said a family that eats together rarely feels truly alone, even during hard years.",
-      "Narrator: [gently] I understand her words differently now, from far away, than I ever did sitting at that crowded table.",
-      "Narrator: [determined] So now, whenever I visit home, I make Sunday dinner my absolute priority, no matter what else is planned.",
-      "Narrator: [warmly] My cousins still argue loudly about small things, and somehow, now, I find that noise comforting instead of annoying.",
+      "Narrator: At first, I enjoyed the freedom. No more long dinners, no more loud cousins arguing about small things.",
+      "Narrator: [lonely] But after a few months, something felt missing, even though my new life was busy and full.",
+      "Narrator: I started calling my mother more, just to hear updates about who said what at dinner that week.",
+      "Narrator: [thoughtful] Slowly, I realized those dinners were never really about the food. They were about simply being counted, being present.",
+      "Narrator: My grandmother once said regular time together can help family members stay connected during hard years.",
+      "Narrator: [understanding] I understand her words differently now, from far away, than I ever did sitting at that crowded table.",
+      "Narrator: So now, whenever I visit home, I make Sunday dinner an important plan when I am able to visit.",
+      "Narrator: [amused] My cousins still argue loudly about small things, and somehow, now, I find that noise comforting instead of annoying.",
       "Narrator: [peacefully] Belonging, I learned, is not always exciting. Sometimes it is just showing up, again and again, for ordinary Sundays.",
-      "Narrator: [with feeling] I hope my own future children will complain about these dinners too, and later miss them just as much as I did."
+      "Narrator: [with hope] I hope my own future children will complain about these dinners too, and later miss them just as much as I did."
     ],
     "quiz": [
-      { "question": "Where does the narrator's family gather every Sunday?", "options": ["At a restaurant", "At his aunt's house", "At his grandmother's farm", "At his own apartment"], "correctIndex": 1, "explanation": "The narrator says his whole family gathers at his aunt's house for dinner every Sunday." },
-      { "question": "How did the narrator feel about these dinners as a teenager?", "options": ["He loved every moment", "He found them boring and wanted to leave early", "He never attended them", "He organized them himself"], "correctIndex": 1, "explanation": "As a teenager, he found the dinners boring and waited for a polite moment to leave early." },
-      { "question": "What happened after the narrator moved to another city?", "options": ["Nothing changed", "Sunday dinners stopped happening for him completely", "He started hosting his own dinners", "His family moved with him"], "correctIndex": 1, "explanation": "After moving away for work, Sunday dinners suddenly stopped happening for him." },
-      { "question": "What did the narrator's grandmother once say about families?", "options": ["Families should live separately", "A family that eats together rarely feels truly alone", "Dinners are unnecessary", "Cousins should not argue"], "correctIndex": 1, "explanation": "His grandmother said a family that eats together rarely feels truly alone, even during hard years." },
-      { "question": "What does the narrator conclude belonging really is?", "options": ["Always exciting and new", "Simply showing up, again and again, for ordinary moments", "Something only children need", "Only possible with large families"], "correctIndex": 1, "explanation": "He concludes belonging is not always exciting, sometimes it is just showing up again and again for ordinary Sundays." }
-    ]
+      {
+        "question": "Where does the narrator's family gather every Sunday?",
+        "options": [
+          "At his aunt's house",
+          "At a restaurant",
+          "At his grandmother's farm",
+          "At his own apartment"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator says his whole family gathers at his aunt's house for dinner every Sunday."
+      },
+      {
+        "question": "How did the narrator feel about these dinners as a teenager?",
+        "options": [
+          "He loved every moment",
+          "He found them boring and wanted to leave early",
+          "He never attended them",
+          "He organized them himself"
+        ],
+        "correctIndex": 1,
+        "explanation": "As a teenager, he found the dinners boring and waited for a polite moment to leave early."
+      },
+      {
+        "question": "What happened after the narrator moved to another city?",
+        "options": [
+          "Nothing changed",
+          "He started hosting his own dinners",
+          "Sunday dinners stopped happening for him completely",
+          "His family moved with him"
+        ],
+        "correctIndex": 2,
+        "explanation": "After moving away for work, Sunday dinners suddenly stopped happening for him."
+      },
+      {
+        "question": "What did the narrator's grandmother once say about families?",
+        "options": [
+          "A family that eats together rarely feels truly alone",
+          "Families should live separately",
+          "Dinners are unnecessary",
+          "Cousins should not argue"
+        ],
+        "correctIndex": 0,
+        "explanation": "His grandmother said a family that eats together rarely feels truly alone, even during hard years."
+      },
+      {
+        "question": "What does the narrator conclude belonging really is?",
+        "options": [
+          "Always exciting and new",
+          "Something only children need",
+          "Simply showing up, again and again, for ordinary moments",
+          "Only possible with large families"
+        ],
+        "correctIndex": 2,
+        "explanation": "He concludes belonging is not always exciting, sometimes it is just showing up again and again for ordinary Sundays."
+      },
+      {
+        "question": "Where does the family usually meet?",
+        "options": [
+          "At the narrator’s office",
+          "At a restaurant",
+          "In the new city",
+          "At the aunt’s house"
+        ],
+        "correctIndex": 3,
+        "explanation": "The aunt hosts many Sunday meals."
+      },
+      {
+        "question": "What did the teenager often do?",
+        "options": [
+          "Checked the time and wanted to leave",
+          "Cooked every dish",
+          "Invited work friends",
+          "Called from another city"
+        ],
+        "correctIndex": 0,
+        "explanation": "The meals once felt boring."
+      },
+      {
+        "question": "What changed after moving?",
+        "options": [
+          "The family stopped gathering",
+          "The narrator began to miss the dinners",
+          "The cousins became quiet",
+          "The aunt sold her house"
+        ],
+        "correctIndex": 1,
+        "explanation": "Distance changed the meaning of the routine."
+      },
+      {
+        "question": "Why did the narrator call the mother more?",
+        "options": [
+          "To hear family updates",
+          "To complain about food",
+          "To cancel every visit",
+          "To plan a birthday"
+        ],
+        "correctIndex": 0,
+        "explanation": "The calls restored part of the missed connection."
+      },
+      {
+        "question": "What is the balanced lesson?",
+        "options": [
+          "Every family must meet weekly",
+          "Noise always proves love",
+          "Missing one dinner breaks a bond",
+          "Regular presence can support belonging"
+        ],
+        "correctIndex": 3,
+        "explanation": "Connection is valuable without an absolute rule."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "revise; retain family belonging without absolute attendance or a universal claim that family meals prevent loneliness",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-social-05",
-    "title": "A Phone Call to Plan Grandma's Surprise Birthday",
+    "title": "Planning Grandma’s Family Appreciation Lunch",
     "level": "A1",
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rania", "gender": "female" },
-      { "name": "Iqbal", "gender": "male" }
+      {
+        "name": "Rania",
+        "gender": "female"
+      },
+      {
+        "name": "Iqbal",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Rania: [excited] Iqbal, are you free to talk? I want to plan something for Grandma's birthday next month.",
-      "Iqbal: [curious] Sure, I have a few minutes. What are you thinking?",
-      "Rania: [enthusiastic] I want to organize a surprise gathering, with all the cousins, at her house.",
-      "Iqbal: [thoughtful] That's a lovely idea. Do you think she would actually enjoy a surprise, though?",
-      "Rania: [confident] I think so. She always says she misses when the whole family was together in one room.",
-      "Iqbal: [interested] Okay, I'm in. What do you need help with first?",
-      "Rania: [organized] First, I need someone to quietly ask all the cousins if they're free that weekend.",
-      "Iqbal: [agreeing] I can message our cousins on my side of the family. That's about six people.",
-      "Rania: [grateful] Perfect, that helps a lot. I'll handle the ones on our mother's side.",
-      "Iqbal: [curious] What about food? Are we cooking, or ordering something from outside?",
-      "Rania: [thoughtful] I was thinking we cook her favorite dishes together, like she used to cook for us.",
-      "Iqbal: [warmly] She would love that, honestly. It would mean more than any restaurant food.",
-      "Rania: [curious] Can you handle getting a cake without her noticing anything unusual?",
-      "Iqbal: [smiling] Already thought of that. I'll pick it up that morning while you keep her busy at home.",
-      "Rania: [laughing] Good, because keeping secrets from Grandma is nearly impossible. She notices everything.",
-      "Iqbal: [chuckling] True, we'll need a good excuse to keep her out of the kitchen that day.",
-      "Rania: [thoughtful] Maybe I'll ask her to help me pick fabric for curtains, somewhere far from the house.",
-      "Iqbal: [approving] That could work well. She loves giving opinions about fabric and colors.",
-      "Rania: [warmly] I just want her to feel how loved she is, surrounded by everyone at once.",
-      "Iqbal: [touched] She will. Let's make some calls tonight and get this properly organized."
+      "Rania: [warmly] Iqbal, Grandma has helped our family so much. I want to arrange a simple appreciation lunch for her.",
+      "Iqbal: That sounds kind. Have you asked what kind of family visit she enjoys?",
+      "Rania: She often says she misses having the cousins together for a quiet meal.",
+      "Iqbal: [thoughtful] Good. Let us ask her directly instead of making it a surprise she may not enjoy.",
+      "Rania: I agree. She chose next Saturday and asked for a small group at her house.",
+      "Iqbal: What should we organize first?",
+      "Rania: [practically] I will confirm the cousins she invited. Can you make a list of the food?",
+      "Iqbal: Yes. We should also ask about allergies and dishes that are easy for her to eat.",
+      "Rania: I want us to cook two of her recipes and bring one meal from a nearby shop.",
+      "Iqbal: [warmly] That shares the work and keeps the kitchen from becoming too busy.",
+      "Rania: Could you collect short thank-you notes from the cousins?",
+      "Iqbal: I can. I will put them in a simple folder, not read them aloud unless Grandma wants that.",
+      "Rania: [pleased] Good. She likes personal words but does not enjoy being the center of a loud event.",
+      "Iqbal: Who will help clean after lunch?",
+      "Rania: I made three teams: food, serving, and cleaning. Grandma should not need to manage us.",
+      "Iqbal: [approving] That is real appreciation—making the day easier, not giving her more work.",
+      "Rania: We will take photos only after asking everyone.",
+      "Iqbal: Good. Care includes consent and privacy.",
+      "Rania: [hopeful] I want the lunch to feel calm, useful, and full of gratitude.",
+      "Iqbal: It will. Let us send the clear plan tonight."
     ],
     "quiz": [
-      { "question": "What is Rania planning for her grandmother?", "options": ["A trip abroad", "A surprise birthday gathering with the cousins", "A new house", "A cooking class"], "correctIndex": 1, "explanation": "Rania wants to organize a surprise gathering with all the cousins at her grandmother's house." },
-      { "question": "Why does Rania think Grandma would enjoy a surprise?", "options": ["Grandma loves surprises in general", "Grandma often says she misses the whole family together", "Grandma asked for one", "Grandma dislikes small gatherings"], "correctIndex": 1, "explanation": "Rania says Grandma always mentions missing when the whole family was together in one room." },
-      { "question": "What food plan do Rania and Iqbal agree on?", "options": ["Ordering from a restaurant", "Cooking Grandma's favorite dishes together", "Buying only a cake", "Skipping food entirely"], "correctIndex": 1, "explanation": "Rania suggests cooking Grandma's favorite dishes together, like she used to cook for them." },
-      { "question": "How will Iqbal get the cake without Grandma noticing?", "options": ["He will hide it days early", "He will pick it up that morning while Rania keeps Grandma busy", "He will have it delivered secretly at night", "He will ask a neighbor to buy it"], "correctIndex": 1, "explanation": "Iqbal plans to pick up the cake that morning while Rania keeps Grandma busy at home." },
-      { "question": "What excuse does Rania consider to keep Grandma away from the kitchen?", "options": ["A doctor's appointment", "Asking her to help pick fabric for curtains", "A grocery run", "A visit to a friend"], "correctIndex": 1, "explanation": "Rania considers asking Grandma to help her pick fabric for curtains somewhere far from the house." }
-    ]
+      {
+        "question": "What does Rania want to arrange?",
+        "options": [
+          "A family appreciation lunch",
+          "A school reunion",
+          "A surprise birthday",
+          "A work meeting"
+        ],
+        "correctIndex": 0,
+        "explanation": "The meal thanks Grandma for her care."
+      },
+      {
+        "question": "Why do they ask Grandma directly?",
+        "options": [
+          "To plan a visit she will enjoy",
+          "To hide the date",
+          "To invite strangers",
+          "To make the event louder"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her preference guides the plan."
+      },
+      {
+        "question": "What did Grandma choose?",
+        "options": [
+          "A large restaurant party",
+          "A small Saturday group at home",
+          "A trip abroad",
+          "A weekday office lunch"
+        ],
+        "correctIndex": 1,
+        "explanation": "She prefers a quiet family meal."
+      },
+      {
+        "question": "What food safety detail will they check?",
+        "options": [
+          "Table color",
+          "Photo size",
+          "Car parking",
+          "Allergies"
+        ],
+        "correctIndex": 3,
+        "explanation": "The menu should be suitable for guests."
+      },
+      {
+        "question": "What should Grandma not need to do?",
+        "options": [
+          "Receive thank-you notes",
+          "Choose a date",
+          "Eat with family",
+          "Manage the work"
+        ],
+        "correctIndex": 3,
+        "explanation": "Teams handle food, serving, and cleaning."
+      },
+      {
+        "question": "Why will they use three work teams?",
+        "options": [
+          "To make Grandma supervise",
+          "To invite more people",
+          "To create a competition",
+          "To share clear duties"
+        ],
+        "correctIndex": 3,
+        "explanation": "The division prevents one person carrying everything."
+      },
+      {
+        "question": "When will notes be read aloud?",
+        "options": [
+          "Before she arrives",
+          "During every meal",
+          "Only if Grandma wants",
+          "They will never be written"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her comfort controls public attention."
+      },
+      {
+        "question": "What does “consent” mean here?",
+        "options": [
+          "A list of food",
+          "A cleaning task",
+          "A family recipe",
+          "Permission before photos or attention"
+        ],
+        "correctIndex": 3,
+        "explanation": "People should agree before images are taken."
+      },
+      {
+        "question": "How do they keep the kitchen calm?",
+        "options": [
+          "Ask Grandma to cook everything",
+          "Bring no food",
+          "Cook some food and order one dish",
+          "Use three kitchens"
+        ],
+        "correctIndex": 2,
+        "explanation": "Sharing sources lowers the workload."
+      },
+      {
+        "question": "What makes the lunch genuine appreciation?",
+        "options": [
+          "It remains secret",
+          "It follows Grandma’s wishes and reduces her work",
+          "It has loud decorations",
+          "It receives online praise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Care is designed for the person receiving it."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "replace; avoid a disputed birthday celebration and keep the valuable family-care planning skills",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-social-06",
@@ -194,31 +773,145 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] People often say making friends as an adult is harder than it was in school. I used to think that sounded like an excuse.",
-      "Narrator: [honestly] Then I moved to a new city for work, and I understood exactly what that difficulty really meant.",
-      "Narrator: [reflective] In school, friendship happened naturally. You sat near someone every day, and slowly, a bond formed without much effort.",
-      "Narrator: [gently] As an adult, nobody assigns you a seat next to a stranger for months at a time.",
-      "Narrator: [thoughtful] I noticed something else too. Adults are often busy, tired, and cautious about opening up to someone new.",
-      "Narrator: [warmly] So friendship now requires something school never demanded from me, real intention and repeated effort over time.",
-      "Narrator: [honestly] I had to learn to invite people directly, instead of waiting for friendship to simply happen on its own.",
-      "Narrator: [gently] The first invitation always feels the scariest. What if they say no, or worse, what if they simply don't reply?",
-      "Narrator: [reflective] I sent several invitations that were never answered, and honestly, that stung more than I expected each time.",
-      "Narrator: [determined] But some invitations were accepted, and those small yeses slowly became real, dependable friendships over many months.",
-      "Narrator: [thoughtful] I also learned that consistency matters more than excitement. Regular coffee with the same person beats one big outing.",
-      "Narrator: [warmly] Now I try to see a friend at least once every two weeks, even briefly, even just for tea.",
-      "Narrator: [peacefully] Adult friendship is quieter than the friendships of childhood, but I think it can be just as deep.",
-      "Narrator: [with a small smile] It simply asks something different of us, effort instead of proximity, choice instead of chance."
+      "Narrator: [surprised] Then I moved to a new city for work, and I understood exactly what that difficulty really meant.",
+      "Narrator: In school, friendship happened naturally. You sat near someone every day, and slowly, a bond formed without much effort.",
+      "Narrator: As an adult, nobody assigns you a seat next to a stranger for months at a time.",
+      "Narrator: [understanding] I noticed something else too. Adults are often busy, tired, and cautious about opening up to someone new.",
+      "Narrator: So friendship now requires something school never demanded from me, real intention and repeated effort over time.",
+      "Narrator: [determined] I had to learn to invite people directly, instead of waiting for friendship to simply happen on its own.",
+      "Narrator: [nervous] The first invitation always feels the scariest. What if they say no, or worse, what if they simply don't reply?",
+      "Narrator: [hurt] I sent several invitations that were never answered, and honestly, that stung more than I expected each time.",
+      "Narrator: [hopeful] But some invitations were accepted, and those small yeses slowly became real, dependable friendships over many months.",
+      "Narrator: I also learned that consistency matters more than excitement. Regular coffee with the same person beats one big outing.",
+      "Narrator: [practical] Now I try to see a friend at least once every two weeks, even briefly, even just for tea.",
+      "Narrator: Adult friendship is quieter than the friendships of childhood, but I think it can be just as deep.",
+      "Narrator: [peacefully] It simply asks something different of us, effort instead of proximity, choice instead of chance."
     ],
     "quiz": [
-      { "question": "What did the narrator used to think about the idea that adult friendship is harder?", "options": ["She always believed it strongly", "She thought it sounded like an excuse", "She never thought about it", "She thought it was impossible"], "correctIndex": 1, "explanation": "She admits she used to think the idea sounded like an excuse, before experiencing it herself." },
-      { "question": "How did friendship happen naturally in school, according to the narrator?", "options": ["Through formal introductions", "By sitting near someone every day without much effort", "By joining clubs only", "By family arrangement"], "correctIndex": 1, "explanation": "She says in school, you sat near someone every day and a bond formed naturally without much effort." },
-      { "question": "What does the narrator say adult friendship now requires?", "options": ["Nothing new", "Real intention and repeated effort over time", "Only luck", "Living in the same building"], "correctIndex": 1, "explanation": "She says friendship as an adult requires real intention and repeated effort over time." },
-      { "question": "How did the narrator feel when some invitations were never answered?", "options": ["Indifferent", "It stung more than she expected each time", "She felt relieved", "She stopped inviting anyone forever"], "correctIndex": 1, "explanation": "She admits unanswered invitations stung more than she expected each time." },
-      { "question": "What does the narrator believe matters more than excitement in adult friendship?", "options": ["Big outings", "Consistency, like regular coffee with the same person", "Expensive gifts", "Meeting many new people at once"], "correctIndex": 1, "explanation": "She concludes consistency matters more than excitement, and regular coffee beats one big outing." }
-    ]
+      {
+        "question": "What did the narrator used to think about the idea that adult friendship is harder?",
+        "options": [
+          "She thought it sounded like an excuse",
+          "She always believed it strongly",
+          "She never thought about it",
+          "She thought it was impossible"
+        ],
+        "correctIndex": 0,
+        "explanation": "She admits she used to think the idea sounded like an excuse, before experiencing it herself."
+      },
+      {
+        "question": "How did friendship happen naturally in school, according to the narrator?",
+        "options": [
+          "Through formal introductions",
+          "By joining clubs only",
+          "By family arrangement",
+          "By sitting near someone every day without much effort"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says in school, you sat near someone every day and a bond formed naturally without much effort."
+      },
+      {
+        "question": "What does the narrator say adult friendship now requires?",
+        "options": [
+          "Nothing new",
+          "Real intention and repeated effort over time",
+          "Only luck",
+          "Living in the same building"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says friendship as an adult requires real intention and repeated effort over time."
+      },
+      {
+        "question": "How did the narrator feel when some invitations were never answered?",
+        "options": [
+          "Indifferent",
+          "She felt relieved",
+          "She stopped inviting anyone forever",
+          "It stung more than she expected each time"
+        ],
+        "correctIndex": 3,
+        "explanation": "She admits unanswered invitations stung more than she expected each time."
+      },
+      {
+        "question": "What does the narrator believe matters more than excitement in adult friendship?",
+        "options": [
+          "Big outings",
+          "Expensive gifts",
+          "Consistency, like regular coffee with the same person",
+          "Meeting many new people at once"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes consistency matters more than excitement, and regular coffee beats one big outing."
+      },
+      {
+        "question": "What changed the narrator’s opinion?",
+        "options": [
+          "Returning to school",
+          "Starting a restaurant",
+          "Moving to a new city",
+          "Receiving a weekly call"
+        ],
+        "correctIndex": 2,
+        "explanation": "Adult friendship became personally difficult."
+      },
+      {
+        "question": "Why did school friendships form easily?",
+        "options": [
+          "Everyone made invitations",
+          "People spent regular time together",
+          "Nobody felt shy",
+          "Work was less busy"
+        ],
+        "correctIndex": 1,
+        "explanation": "Shared places created repeated contact."
+      },
+      {
+        "question": "What does “opening up” mean here?",
+        "options": [
+          "Opening an office door",
+          "Answering every invitation",
+          "Sharing thoughts and becoming comfortable",
+          "Moving to another city"
+        ],
+        "correctIndex": 2,
+        "explanation": "Busy adults may be careful with new trust."
+      },
+      {
+        "question": "What happened to accepted invitations?",
+        "options": [
+          "They slowly became dependable friendships",
+          "They ended after one outing",
+          "They were all exciting events",
+          "They required daily meetings"
+        ],
+        "correctIndex": 0,
+        "explanation": "Small meetings grew over months."
+      },
+      {
+        "question": "What practical habit does the narrator use?",
+        "options": [
+          "One large yearly event",
+          "Waiting for others only",
+          "Regular brief time with a friend",
+          "Inviting strangers every day"
+        ],
+        "correctIndex": 2,
+        "explanation": "Consistency matters more than a dramatic outing."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "keep; relatable adult friendship reflection uses rejection, consistency, and manageable effort without inappropriate themes",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-social-07",
@@ -227,37 +920,606 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good morning, listeners! Today we're discussing staying close to family who live abroad. We have a caller on the line. Hello!",
-      "Caller: [a little nervous] Hello! Thanks so much for taking my call this morning.",
-      "Radio Host: [warmly] Of course! Tell us a bit about your situation with family abroad.",
+      "Caller: Hello! Thanks so much for taking my call this morning.",
+      "Radio Host: Of course! Tell us a bit about your situation with family abroad.",
       "Caller: [thoughtful] My younger sister moved overseas for work about three years ago now, and it changed our whole relationship at first.",
-      "Radio Host: [curious] How did the distance affect things between you two in the beginning?",
-      "Caller: [honestly] Honestly, we barely spoke for the first few months. The time difference made calls feel complicated and difficult to arrange.",
-      "Radio Host: [interested] What changed that pattern for you both eventually?",
-      "Caller: [reflective] We finally agreed on one fixed time each week, no matter what else was happening in our lives.",
-      "Radio Host: [curious] What time did you choose, and how do you use that call now?",
+      "Radio Host: How did the distance affect things between you two in the beginning?",
+      "Caller: [frustrated] Honestly, we barely spoke for the first few months. The time difference made calls feel complicated and difficult to arrange.",
+      "Radio Host: What changed that pattern for you both eventually?",
+      "Caller: [determined] We finally agreed on one fixed time each week, no matter what else was happening in our lives.",
+      "Radio Host: What time did you choose, and how do you use that call now?",
       "Caller: [warmly] Every Sunday morning for us, which is her Sunday evening. We just talk about small, ordinary things mostly.",
-      "Radio Host: [interested] What kind of ordinary things do you two usually discuss?",
+      "Radio Host: What kind of ordinary things do you two usually discuss?",
       "Caller: [smiling] What we cooked that week, funny things from our jobs, sometimes nothing important at all, and that's perfectly fine.",
-      "Radio Host: [curious] Do you do anything besides calling to stay connected with her?",
+      "Radio Host: Do you do anything besides calling to stay connected with her?",
       "Caller: [gently] Yes, we send each other short videos throughout the week, little moments from our ordinary days.",
-      "Radio Host: [understanding] That sounds like a lovely way to feel present in each other's lives despite the distance.",
-      "Caller: [determined] It really is. We also plan one visit every year, and we save money specifically for that trip.",
-      "Radio Host: [curious] What would you tell other listeners who have family living far away right now?",
+      "Radio Host: That sounds like a lovely way to feel present in each other's lives despite the distance.",
+      "Caller: [hopeful] It really is. We also plan one visit every year, and we save money specifically for that trip.",
+      "Radio Host: What would you tell other listeners who have family living far away right now?",
       "Caller: [encouraging] I would say, pick one small habit and keep it consistent. Distance shrinks when contact becomes a steady routine.",
-      "Radio Host: [smiling] That's beautiful advice. Thank you so much for calling in and sharing your story today.",
-      "Caller: [sincerely] Thank you for listening. I hope it encourages someone to call their own family member today."
+      "Radio Host: That's beautiful advice. Thank you so much for calling in and sharing your story today.",
+      "Caller: Thank you for listening. I hope it encourages someone to call their own family member today."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Traveling for work", "Staying close to family who live abroad", "Learning new languages", "Cooking family recipes"], "correctIndex": 1, "explanation": "The host introduces today's topic as staying close to family who live abroad." },
-      { "question": "Where did the caller's sister move about three years ago?", "options": ["To a nearby city", "Overseas, for work", "Back to their hometown", "Nowhere, she stayed home"], "correctIndex": 1, "explanation": "The caller says his younger sister moved overseas for work about three years ago." },
-      { "question": "What made calls feel complicated at first?", "options": ["Poor internet connection", "The time difference between their locations", "Neither one had a phone", "They were angry with each other"], "correctIndex": 1, "explanation": "The caller says the time difference made calls feel complicated and difficult to arrange at first." },
-      { "question": "What routine did the caller and his sister eventually agree on?", "options": ["Calling only on birthdays", "One fixed call time each week, no matter what", "Writing letters instead", "Meeting once a decade"], "correctIndex": 1, "explanation": "They agreed on one fixed time each week for a call, no matter what else was happening." },
-      { "question": "What final advice does the caller give listeners with family abroad?", "options": ["Wait for the right moment to call", "Pick one small habit and keep it consistent", "Distance cannot be managed", "Only visit once a decade"], "correctIndex": 1, "explanation": "He advises picking one small habit and keeping it consistent, since distance shrinks with steady routine contact." }
-    ]
+      {
+        "question": "Who does the radio segment help listeners stay close to?",
+        "options": [
+          "Staying close to family who live abroad",
+          "Traveling for work",
+          "Learning new languages",
+          "Cooking family recipes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces today's topic as staying close to family who live abroad."
+      },
+      {
+        "question": "Where did the caller's sister move about three years ago?",
+        "options": [
+          "To a nearby city",
+          "Back to their hometown",
+          "Overseas, for work",
+          "Nowhere, she stayed home"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller says his younger sister moved overseas for work about three years ago."
+      },
+      {
+        "question": "What made calls feel complicated at first?",
+        "options": [
+          "Poor internet connection",
+          "Neither one had a phone",
+          "They were angry with each other",
+          "The time difference between their locations"
+        ],
+        "correctIndex": 3,
+        "explanation": "The caller says the time difference made calls feel complicated and difficult to arrange at first."
+      },
+      {
+        "question": "What routine did the caller and his sister eventually agree on?",
+        "options": [
+          "Calling only on birthdays",
+          "One fixed call time each week, no matter what",
+          "Writing letters instead",
+          "Meeting once a decade"
+        ],
+        "correctIndex": 1,
+        "explanation": "They agreed on one fixed time each week for a call, no matter what else was happening."
+      },
+      {
+        "question": "What final advice does the caller give listeners with family abroad?",
+        "options": [
+          "Wait for the right moment to call",
+          "Distance cannot be managed",
+          "Only visit once a decade",
+          "Pick one small habit and keep it consistent"
+        ],
+        "correctIndex": 3,
+        "explanation": "He advises picking one small habit and keeping it consistent, since distance shrinks with steady routine contact."
+      },
+      {
+        "question": "How long has the sister lived abroad?",
+        "options": [
+          "Three weeks",
+          "About three years",
+          "One year",
+          "Ten years"
+        ],
+        "correctIndex": 1,
+        "explanation": "The move first changed their contact."
+      },
+      {
+        "question": "How often do they schedule a call?",
+        "options": [
+          "Every hour",
+          "Once a week",
+          "Once a year",
+          "Twice a day"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sunday is their fixed routine."
+      },
+      {
+        "question": "Why are their call times different?",
+        "options": [
+          "They live in different time zones",
+          "One works at night",
+          "The phone changes the clock",
+          "They call on different days"
+        ],
+        "correctIndex": 0,
+        "explanation": "Morning for one is evening for the other."
+      },
+      {
+        "question": "What do they send during the week?",
+        "options": [
+          "Long work reports",
+          "Short videos of daily life",
+          "Restaurant bills",
+          "Travel tickets"
+        ],
+        "correctIndex": 1,
+        "explanation": "Small clips help them feel present."
+      },
+      {
+        "question": "How do they prepare for a yearly visit?",
+        "options": [
+          "Wait for free tickets",
+          "Stop weekly calls",
+          "Save money for the trip",
+          "Ask the radio host to pay"
+        ],
+        "correctIndex": 2,
+        "explanation": "The visit is planned financially."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "keep; family-distance radio segment offers realistic time-zone planning, ordinary contact, and saving for visits",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-social-08",
+    "title": "The New Neighbor’s First Week",
+    "level": "A1",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] A family moved into the apartment across from mine during a busy Monday morning. I saw boxes, tired faces, and two children waiting near the lift.",
+      "Narrator: I wanted to welcome them, but I did not want to enter their space while they were unpacking.",
+      "Narrator: [carefully] That evening, I prepared a small container of rice and soup. I wrote the ingredients on a note because I did not know about allergies.",
+      "Narrator: [understanding] When I knocked, the father thanked me but explained that they had already eaten. I said there was no problem and the food could be used tomorrow.",
+      "Narrator: I also gave him a paper with the building manager's number, rubbish schedule, nearby clinic, and prayer space.",
+      "Narrator: [practically] The paper was more useful than a long visit. The family needed clear information, not many personal questions.",
+      "Narrator: Two days later, the mother returned the clean container. We spoke for five minutes in the hallway.",
+      "Narrator: [helpfully] She asked where to buy vegetables and how children could join the library. I showed her the locations on a map.",
+      "Narrator: On Saturday, the children met others in the shared garden. Their parents stayed nearby, and the conversation grew naturally.",
+      "Narrator: [reflective] I learned that welcoming someone does not require becoming close immediately. Friendship and trust need time.",
+      "Narrator: A useful welcome respects privacy while making the next week easier. It offers a door without pulling someone through it.",
+      "Narrator: [pleased] The family later invited me for tea when their home was ready. By then, we already had a simple history of helpful moments.",
+      "Narrator: Now our hallway feels warmer. We share deliveries and inform each other about building repairs.",
+      "Narrator: The first step was not a large celebration. It was food with an ingredient note and information they could use.",
+      "Narrator: [encouraging] Good neighbors notice needs, offer help clearly, and allow the relationship to develop at a comfortable pace."
+    ],
+    "quiz": [
+      {
+        "question": "What did the narrator first notice?",
+        "options": [
+          "A new family moving into the opposite apartment",
+          "A shop closing",
+          "A bus arriving",
+          "A school event"
+        ],
+        "correctIndex": 0,
+        "explanation": "The family was moving in with boxes and children."
+      },
+      {
+        "question": "Why were ingredients written down?",
+        "options": [
+          "Because the food was for sale",
+          "Because the narrator did not know about allergies",
+          "Because the recipe was secret",
+          "Because the container was empty"
+        ],
+        "correctIndex": 1,
+        "explanation": "The note helped the family judge whether the meal was suitable."
+      },
+      {
+        "question": "What useful information was on the paper?",
+        "options": [
+          "Private questions about neighbors",
+          "Restaurant advertisements only",
+          "Building contacts, schedules, clinic, and prayer space",
+          "A list of apartment prices"
+        ],
+        "correctIndex": 2,
+        "explanation": "The paper answered practical first-week needs."
+      },
+      {
+        "question": "What did the mother later ask about?",
+        "options": [
+          "Buying a car",
+          "Changing jobs",
+          "Vegetables and the children’s library",
+          "Traveling abroad"
+        ],
+        "correctIndex": 2,
+        "explanation": "A short hallway talk led to local guidance."
+      },
+      {
+        "question": "What is the lesson?",
+        "options": [
+          "Welcome people helpfully while respecting privacy and time",
+          "New neighbors need a long visit immediately",
+          "Friendship must begin with personal questions",
+          "Only parties create community"
+        ],
+        "correctIndex": 0,
+        "explanation": "A gentle practical welcome allowed trust to grow."
+      },
+      {
+        "question": "Why did the narrator avoid a long first visit?",
+        "options": [
+          "The family disliked neighbors",
+          "The food was not ready",
+          "The building was closed",
+          "The family was busy unpacking"
+        ],
+        "correctIndex": 3,
+        "explanation": "Space was respectful during a tiring move."
+      },
+      {
+        "question": "What happened when the food was not needed that night?",
+        "options": [
+          "It could be eaten the next day",
+          "The father had to accept it",
+          "The narrator became angry",
+          "It was left outside"
+        ],
+        "correctIndex": 0,
+        "explanation": "The offer stayed flexible and polite."
+      },
+      {
+        "question": "What place did the children ask about?",
+        "options": [
+          "A restaurant",
+          "A private office",
+          "A distant school",
+          "The library"
+        ],
+        "correctIndex": 3,
+        "explanation": "Their mother wanted to know how they could join."
+      },
+      {
+        "question": "Where did children meet others?",
+        "options": [
+          "In the shared garden",
+          "Inside the lift",
+          "At the clinic",
+          "In the rubbish room"
+        ],
+        "correctIndex": 0,
+        "explanation": "Parents stayed nearby while contact grew."
+      },
+      {
+        "question": "What does “offers a door without pulling someone through it” mean?",
+        "options": [
+          "The apartment door is broken",
+          "Help is available without pressure",
+          "Neighbors must become close quickly",
+          "The family needs moving boxes"
+        ],
+        "correctIndex": 1,
+        "explanation": "A welcome can respect the other person’s pace."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "keep; excellent welcoming scenario respects allergies, privacy, children’s safety, and gradual trust",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-social-09",
+    "title": "A Birthday Without a Surprise",
+    "level": "A1",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [excited] My friends wanted to plan a surprise birthday dinner for Yusuf. Everyone in the group sounded excited except his sister.",
+      "Narrator: [concerned] She reminded us that Yusuf dislikes sudden attention. Last year, a restaurant sang to him, and he looked uncomfortable for the rest of the evening.",
+      "Narrator: [reflective] At first, we thought she was ruining the fun. Then I realized we were planning the celebration we wanted, not the one he would enjoy.",
+      "Narrator: We changed the plan and asked Yusuf directly. We said we would like to share a meal and offered three simple choices.",
+      "Narrator: [calmly] He chose a quiet lunch at a small restaurant with six people. He asked us not to bring large decorations or post photos without permission.",
+      "Narrator: Those requests were easy to respect. We reserved a table near the corner and agreed on one shared gift he actually needed.",
+      "Narrator: [warmly] During lunch, we spoke about ordinary things, told two short stories, and gave him a handwritten card.",
+      "Narrator: [relieved] Nobody shouted his name or placed a camera in his face. Yusuf seemed relaxed and stayed longer than he had planned.",
+      "Narrator: Afterward, he thanked us for asking. He said celebrations can feel tiring when a person must perform happiness for other people.",
+      "Narrator: [thoughtful] That sentence stayed with me. A kind event should center the person receiving it, not the organizers' wish for a dramatic moment.",
+      "Narrator: We still had fun. The lunch included warm conversation, good food, and laughter that happened naturally.",
+      "Narrator: [honestly] The absence of a surprise did not make the friendship less loving. In fact, listening made the care more personal.",
+      "Narrator: Now I ask before planning public attention, photos, or large gatherings for someone else.",
+      "Narrator: [gently] Social kindness includes consent. We can show love in a way that the other person can truly receive."
+    ],
+    "quiz": [
+      {
+        "question": "Why did Yusuf’s sister question the surprise?",
+        "options": [
+          "Yusuf dislikes sudden public attention",
+          "Yusuf was outside the country",
+          "The restaurant was closed",
+          "Nobody knew his birthday"
+        ],
+        "correctIndex": 0,
+        "explanation": "Past public attention had made him uncomfortable."
+      },
+      {
+        "question": "How did the group change its approach?",
+        "options": [
+          "They canceled every celebration",
+          "They asked Yusuf and offered simple choices",
+          "They planned a larger surprise",
+          "They invited strangers"
+        ],
+        "correctIndex": 1,
+        "explanation": "They included Yusuf in deciding the event."
+      },
+      {
+        "question": "What kind of event did he choose?",
+        "options": [
+          "A quiet lunch with six people",
+          "A large night concert",
+          "A trip with fifty people",
+          "A public office party"
+        ],
+        "correctIndex": 0,
+        "explanation": "His preferred celebration was small and calm."
+      },
+      {
+        "question": "What permission did he request?",
+        "options": [
+          "Do not order food",
+          "Do not write a card",
+          "Do not post photos without asking",
+          "Do not speak during lunch"
+        ],
+        "correctIndex": 2,
+        "explanation": "He wanted control over online sharing."
+      },
+      {
+        "question": "What does the birthday situation teach about caring for someone?",
+        "options": [
+          "Every birthday needs a surprise",
+          "Public attention proves friendship",
+          "Organizers should ignore preferences",
+          "Care should fit the receiver, including consent"
+        ],
+        "correctIndex": 3,
+        "explanation": "Listening made the celebration more personal and kind."
+      },
+      {
+        "question": "What happened at a restaurant last year?",
+        "options": [
+          "Yusuf planned a surprise",
+          "His sister left early",
+          "Singing made Yusuf uncomfortable",
+          "Nobody noticed him"
+        ],
+        "correctIndex": 2,
+        "explanation": "The earlier experience warned the group."
+      },
+      {
+        "question": "How many people joined the chosen lunch?",
+        "options": [
+          "Two",
+          "Twenty",
+          "Thirty",
+          "Six"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yusuf selected a small event."
+      },
+      {
+        "question": "What gift did the group choose?",
+        "options": [
+          "Large decorations",
+          "A public video",
+          "Several surprise cakes",
+          "One item he actually needed"
+        ],
+        "correctIndex": 3,
+        "explanation": "The gift followed his practical preference."
+      },
+      {
+        "question": "Why did Yusuf stay longer?",
+        "options": [
+          "He had to perform happiness",
+          "He felt relaxed",
+          "The cameras blocked him",
+          "The group changed restaurants"
+        ],
+        "correctIndex": 1,
+        "explanation": "Respect made the event comfortable."
+      },
+      {
+        "question": "Whose wishes should guide a kind event?",
+        "options": [
+          "The loudest organizer",
+          "Online viewers",
+          "Restaurant workers",
+          "The person receiving it"
+        ],
+        "correctIndex": 3,
+        "explanation": "Care should fit the recipient, not the planners’ excitement."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "keep; strong consent-centered celebration story avoids forced attention and unauthorized photos",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-social-10",
+    "title": "Sharing the Community Kitchen",
+    "level": "A1",
+    "themeId": "social",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Karim",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Dewi: [warmly] Karim, can we discuss the shared kitchen after the Saturday class?",
+      "Karim: Yes. Is this about the dishes left in the sink?",
+      "Dewi: [concerned] Partly. Several groups use the room, and everyone thinks another group will clean it.",
+      "Karim: Our youth group washed its cups, but we may have left food on the table.",
+      "Dewi: The family class cleaned the table, but they found the rubbish bin full from Friday.",
+      "Karim: [thoughtful] So the problem is not one careless person. We need a clearer system.",
+      "Dewi: I agree. Could each group choose one person to check the room before leaving?",
+      "Karim: [fairly] Yes, but that person should not do all the cleaning. Everyone still handles their own things.",
+      "Dewi: Good point. We can make a short checklist: dishes, table, floor, rubbish, and fridge.",
+      "Karim: [carefully] The fridge needs dates too. Yesterday I found a container with no name or date.",
+      "Dewi: Let us provide labels and remove unclaimed food every Sunday evening.",
+      "Karim: [firmly] We should announce that rule first so nobody loses food without warning.",
+      "Dewi: [helpfully] I can make a simple sign in two languages because not every visitor reads the same language well.",
+      "Karim: Thank you. I will ask the center manager where rubbish bags and cleaning tools should be stored.",
+      "Dewi: What about children who want to help?",
+      "Karim: [safely] Adults can give them safe tasks, like wiping a low table, but chemicals must stay locked away.",
+      "Dewi: This plan feels fairer than sending an angry message to every group.",
+      "Karim: [reflective] Yes. A shared space works when duties are visible and communication is respectful.",
+      "Dewi: Shall we test the checklist for one month?",
+      "Karim: [openly] Agreed. Then we can ask each group what worked and adjust the system together."
+    ],
+    "quiz": [
+      {
+        "question": "What shared problem do they discuss?",
+        "options": [
+          "Different groups leave kitchen tasks unfinished",
+          "The center has no kitchen",
+          "A class was canceled",
+          "Nobody uses the room"
+        ],
+        "correctIndex": 0,
+        "explanation": "Cleaning duties are unclear across groups."
+      },
+      {
+        "question": "What will each group choose?",
+        "options": [
+          "A private refrigerator",
+          "A new teacher",
+          "A person to cook every meal",
+          "A person to check the room before leaving"
+        ],
+        "correctIndex": 3,
+        "explanation": "A checker supports the group without doing everything."
+      },
+      {
+        "question": "What rule is planned for fridge food?",
+        "options": [
+          "Keep everything forever",
+          "Use names and dates, with Sunday removal after notice",
+          "Allow no containers",
+          "Remove food every hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "Labels and a known schedule make the rule fair."
+      },
+      {
+        "question": "Why will Dewi use two languages?",
+        "options": [
+          "To practice for an exam",
+          "To hide the message",
+          "To make the sign accessible to more visitors",
+          "To make the sign longer"
+        ],
+        "correctIndex": 2,
+        "explanation": "Not every visitor reads the same language comfortably."
+      },
+      {
+        "question": "How long will they test the checklist?",
+        "options": [
+          "One day",
+          "One month",
+          "One year",
+          "One hour"
+        ],
+        "correctIndex": 1,
+        "explanation": "They will review the system after a month."
+      },
+      {
+        "question": "Why is one person not blamed?",
+        "options": [
+          "Several groups share an unclear system",
+          "Only children use the room",
+          "Dewi left every dish",
+          "The manager removed the tools"
+        ],
+        "correctIndex": 0,
+        "explanation": "The problem crosses different users and days."
+      },
+      {
+        "question": "What will be on the checklist?",
+        "options": [
+          "Names and phone numbers",
+          "Dishes, table, floor, rubbish, and fridge",
+          "Recipes and prices",
+          "Class lessons only"
+        ],
+        "correctIndex": 1,
+        "explanation": "The list makes cleaning duties visible."
+      },
+      {
+        "question": "Why announce the fridge rule first?",
+        "options": [
+          "The labels are expensive",
+          "Sunday has no classes",
+          "People need warning before food is removed",
+          "The fridge is locked"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fair rules are communicated before action."
+      },
+      {
+        "question": "Which task can children do?",
+        "options": [
+          "Handle cleaning chemicals",
+          "Wipe a low table with adult guidance",
+          "Empty every rubbish bin alone",
+          "Move the locked products"
+        ],
+        "correctIndex": 1,
+        "explanation": "Safe help matches age and supervision."
+      },
+      {
+        "question": "What happens after one month?",
+        "options": [
+          "The kitchen closes",
+          "One person cleans forever",
+          "All signs are removed",
+          "Groups review and adjust the system"
+        ],
+        "correctIndex": 3,
+        "explanation": "Testing allows shared feedback."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "social",
+      "scriptDecision": "keep; strong shared-space dialogue uses fair duties, accessible signs, food notice, and child chemical safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -1036,11 +1036,12 @@ export const generateListeningContent = async (title: string, level: string, typ
                 accentScriptInstruction = `- CRITICAL STYLE: You MUST write the script using standard Australian English spelling and regional vocabulary/expressions (e.g., mate, G'day, arvo) where appropriate.`;
             }
         }
-        // Level-aware complexity scaling (moderately reduced for speed)
+        // Level-aware complexity and clean-script duration targets. Audio tags,
+        // speaker names, and performance directions are excluded from the count.
         const levelGuide: Record<string, { vocab: string; sentences: string; speed: string; wordCount: string; turns: string }> = {
-            'A1': { vocab: 'basic everyday words (100-300 most common)', sentences: 'very short and simple (subject-verb-object)', speed: 'clear and gentle', wordCount: '250-300', turns: '8-12' },
-            'A2': { vocab: 'common daily vocabulary (300-600 words)', sentences: 'short sentences with simple connectors (and, but, because)', speed: 'clear and comfortable', wordCount: '250-300', turns: '10-14' },
-            'B1': { vocab: 'intermediate vocabulary with some idiomatic expressions', sentences: 'moderate complexity with relative clauses', speed: 'natural comfortable pace', wordCount: '300-350', turns: '12-16' },
+            'A1': { vocab: 'basic everyday words (100-300 most common)', sentences: 'short, clear sentences with one main idea', speed: 'clear and gentle', wordCount: '240-300', turns: '12-16' },
+            'A2': { vocab: 'common daily vocabulary (300-600 words)', sentences: 'short sentences with simple connectors (and, but, because)', speed: 'clear and comfortable', wordCount: '260-330', turns: '14-18' },
+            'B1': { vocab: 'intermediate vocabulary with a small amount of natural idiomatic language', sentences: 'moderate complexity with clear relative clauses', speed: 'natural comfortable pace', wordCount: '280-360', turns: '16-20' },
             'B2': { vocab: 'wide-ranging vocabulary including abstract concepts', sentences: 'complex sentences with multiple clauses', speed: 'natural conversational speed', wordCount: '300-350', turns: '14-18' },
             'C1': { vocab: 'sophisticated and nuanced vocabulary', sentences: 'complex and varied sentence structures', speed: 'natural confident pace', wordCount: '350-400', turns: '16-20' },
             'C2': { vocab: 'full range including rare and specialized terms', sentences: 'highly complex, native-level structures', speed: 'fast natural native speed', wordCount: '350-400', turns: '18-22' },
@@ -1051,38 +1052,37 @@ export const generateListeningContent = async (title: string, level: string, typ
             ? `DIALOGUE RULES:
 - Choose 2 character names. Mix between Islamic names (Ahmad, Fatimah, Omar, Aisha, Yusuf, Zainab, Hassan, Maryam, Khalid, Nadia) and General names (James, Sarah, David, Emma, Michael, Olivia, Daniel, Sophie, Liam, Chloe).
 - CRITICAL: Assign a gender to each character. Male names MUST have gender "male", female names MUST have gender "female". Never mismatch.
-- FORMAT: Randomly choose between making this a "Casual Everyday Conversation" OR a "Podcast Episode / Interview". If it's a podcast, include a brief intro/outro.
+- FORMAT: Select the format that best serves the title and theme: daily conversation, podcast interview, problem-solving exchange, planning/decision conversation, or guided family/work/community discussion. Do not choose randomly.
 - Format each line as "CharacterName: [emotion/tone tag] dialogue text"
 - AUDIO TAGS — CRITICAL RULES FOR NATURAL EXPRESSIVENESS:
   * Use a DIVERSE palette of tags: [warmly], [excited], [curious], [thoughtful], [laughing], [sighs], [gasps], [nervously], [whispering], [confidently], [hesitantly], [surprised], [amused], [serious], [enthusiastically], [gently], [with wonder], [chuckling], [reassuringly], [playfully], [concerned], [proudly], [softly], [eagerly], [relieved].
-  * Place tags at the START of turns AND mid-sentence when emotion shifts naturally. Example: "Ahmad: [excited] Oh, you went there too? That's amazing! [thoughtful] Actually... I wonder if it was the same day we were there."
-  * NOT every sentence needs a tag — only where the emotion genuinely changes or needs emphasis. Aim for 1-3 tags per turn naturally, not forced.
-  * The emotional arc should EVOLVE across the conversation — start casual, build interest, hit peaks of excitement/surprise, then settle warmly.
+  * Place one tag at the start of a turn when tone direction is useful. A mid-turn tag is allowed only when the emotion genuinely changes.
+  * NOT every sentence needs a tag. Never add a tag merely to decorate the script.
+  * Let the emotional arc follow the actual situation; not every conversation needs excitement or drama.
   * NEVER repeat the same tag in consecutive turns. Vary them!
-- MUST USE FILLER WORDS: Make it sound incredibly human by using words like "Well...", "Um,", "Like,", "You know,", "Ah," or "Hmm...".
-- MUST USE PUNCTUATION FOR PACING: Use ellipses (...) heavily for pauses, dashes (-) for interruptions, and exclamation marks for excitement.
+- NATURAL SPEECH: Occasional fillers or pauses are allowed only when they suit the speaker and level. Do not force fillers, ellipses, interruptions, or exclamation marks.
 - Create ${guide.turns} turns (back and forth). Each turn should be 1-3 sentences.
 - NATURAL CONVERSATION FLOW: Include natural reactions like "Oh really?", "That's interesting!", "Hmm, I see...", "Wait, what?", "No way!", "Tell me more!". Characters should react genuinely to each other.
 - DEPTH: Don't just exchange surface-level information. Have characters share personal stories, ask follow-up questions, express opinions, and build on each other's ideas.
 - VOCABULARY: Use ONLY ${guide.vocab}.
 - SENTENCES: Use ${guide.sentences}.
-- CRITICAL DURATION: The script MUST be at least ${guide.wordCount} words to produce approximately 1.5-2 minutes of audio. Do NOT write a short script.
-- Make the conversation feel 100% REAL — not like a textbook reading.`
+- CRITICAL DURATION: The clean spoken text, excluding speaker names and audio tags, MUST contain ${guide.wordCount} words so the final audio lasts about 2-3 minutes.
+- Make the conversation feel real and purposeful, not like a textbook exchange.
+- For Islamic history, prophets, or companions, never invent dialogue and never role-play a prophet or companion. Use a respectful host/expert or teacher/learner format based only on well-established facts.`
             : `MONOLOGUE RULES:
 - Choose 1 narrator name with their gender.
-- DYNAMIC STYLE: Look at the Title. If it sounds like a story, write a narrative. If it sounds like a lecture/talk, write an engaging presentation. If it sounds personal, write a journal entry.
-- NARRATIVE STRUCTURE: Build a compelling arc — open with an engaging hook, develop with interesting details, and close with a meaningful conclusion or insight.
+- FORMAT: Select the style that best serves the title: personal storytelling, reflective journal, mini-podcast narration, informative report/explanation, or respectful sirah/history narration.
+- STRUCTURE: Use the natural structure of the selected format. A story needs a clear sequence; a report needs organized facts; a reflection needs a specific experience and insight. Do not force every monologue into the same dramatic arc.
 - AUDIO TAGS — NATURAL EXPRESSIVENESS:
   * Use a DIVERSE palette: [warmly], [excited], [thoughtful], [pauses heavily], [sighs], [chuckling], [serious], [with wonder], [nostalgically], [confidently], [softly], [proudly], [amused], [gently], [eagerly], [hesitantly], [relieved], [passionately].
-  * Place tags at the START of paragraphs AND mid-sentence when emotion shifts. Example: "[thoughtful] You know, when I first arrived... [chuckling] I had absolutely no idea what I was doing."
-  * Aim for 2-4 tags per paragraph, placed naturally — not forced on every sentence.
-  * The emotional arc should BUILD: start calm/reflective, build energy, hit an emotional peak, then resolve warmly.
-- PUNCTUATION FOR BREATHING: Use ellipses (...) frequently for dramatic pauses and breaths.
-- FILLER WORDS: Make it human. Use "Well...", "Now,", "You see,", "So...", "Anyway,".
-- CRITICAL DURATION: Aim for ${guide.wordCount} words to produce approximately 1.5-2 minutes of audio. Do NOT write a short script.
+  * Place a tag at the start of a paragraph or thought when it genuinely helps performance. Mid-sentence tags are optional and rare.
+  * Do not force a dramatic emotional arc onto factual, instructional, or historical audio.
+- NATURAL DELIVERY: Occasional pauses or discourse markers are allowed, but never repeat them as a formula.
+- CRITICAL DURATION: The clean spoken text, excluding speaker names and audio tags, MUST contain ${guide.wordCount} words so the final audio lasts about 2-3 minutes.
 - VOCABULARY: Use ONLY ${guide.vocab}.
 - SENTENCES: Use ${guide.sentences}.
-- The script MUST sound like a real, passionate human telling a fascinating story, never like a robot reading text.`;
+- The script must sound like authentic English listening material in its chosen format, never like a generic generated passage.
+- For Islamic history, prophets, or companions, use respectful third-person narration based only on well-established facts. Never invent dialogue, private thoughts, or unsupported details.`;
 
         const prompt = `You are an expert English content creator for CEFR ${level} level learners.
 
@@ -1147,6 +1147,12 @@ Return ONLY this JSON structure (NO quiz, ONLY script and speakers):
 export const generateListeningScript = async (title: string, level: string, type: string, theme: string, isIslamic: boolean, accent: string = 'Default'): Promise<string> => {
     const MODEL = 'gemini-2.5-flash-lite';
     return callGeminiWithRotation(MODEL, async (ai) => {
+        const durationTargets: Record<string, string> = {
+            A1: '240-300',
+            A2: '260-330',
+            B1: '280-360',
+        };
+        const durationTarget = durationTargets[level] || '300-360';
         let accentScriptInstruction = '';
         if (accent && accent !== 'Default') {
             if (accent === 'UK') {
@@ -1161,7 +1167,12 @@ export const generateListeningScript = async (title: string, level: string, type
         Theme: ${theme}. 
         ${isIslamic ? 'Ensure the content reflects Islamic manners and vocabulary.' : ''}
         ${accentScriptInstruction}
-        ${type === 'dialogue' ? `Choose 2 real character names (mix of Islamic names like Ahmad, Fatimah, Omar and general names like James, Sarah, David). Use audio tags like [warmly], [excited], [laughing], [curious] throughout. Create a vibrant dialogue with 10-14 turns, each 1-3 sentences.` : `Write in first person as someone sharing a personal experience. Use a narrative arc: engaging hook → interesting development → meaningful conclusion. Use audio tags like [warmly], [thoughtful], [pausing], [emphasizing], [with wonder], [smiling] throughout. Aim for 250-300 words. Make it sound like a real person telling a fascinating story, NOT a textbook passage.`}
+        ${type === 'dialogue'
+            ? `Choose 2 suitable character names and use the format "Name: [tone] text". Select a purposeful format that fits the title: daily conversation, podcast interview, problem solving, planning/decision making, or guided discussion. Use audio tags only where they support a real change in tone.`
+            : `Use the format "Narrator: [tone] text". Select the most suitable form: personal storytelling, reflective journal, mini-podcast narration, informative report/explanation, or respectful sirah/history narration. Do not force every topic into the same story arc.`}
+        The clean spoken text, excluding speaker names and audio tags, must contain ${durationTarget} words for approximately 2-3 minutes of audio.
+        Do not use repeated filler phrases, forced ellipses, or a reusable template.
+        For prophets, companions, or Islamic history, never invent dialogue, private thoughts, or unsupported details, and never role-play a prophet or companion.
         ${STRICT_FILTER} 
         Return only the plain text script.`;
         const response = await ai.models.generateContent({
@@ -1176,11 +1187,12 @@ export const generateListeningScript = async (title: string, level: string, type
 export const generateListeningQuiz = async (script: string, level: string): Promise<QuizQuestion[]> => {
     const MODEL = 'gemini-2.5-flash';
     return callGeminiWithRotation(MODEL, async (ai) => {
-        const prompt = `Create 5 MCQ comprehension questions for this English script at ${level} level: "${script}". 
+        const prompt = `Create exactly 10 MCQ comprehension questions for this English script at ${level} level: "${script}".
         ${getLanguageInstruction()}
         ${STRICT_FILTER}
         CRITICAL: ALL questions MUST strictly be based ONLY on the provided script. Do not ask generic questions or include information outside of this context.
-        IMPORTANT: Randomize the correctIndex (0, 1, 2, or 3) for each question so the correct answer is NOT always the first option!
+        QUESTION MIX: 1 main idea, 4 important details, 1 sequence or cause-effect, 1 vocabulary-in-context, 1 speaker purpose, 1 tone/attitude, and 1 conclusion or inference. Keep inference simple for A1 and progressively deeper for A2 and B1.
+        IMPORTANT: Distribute correctIndex values (0, 1, 2, and 3) across the set. Use every position at least twice and avoid a predictable pattern.
         ${QUALITY_ASSURANCE_PROMPT}
         Return JSON: { "quiz": [{ "question": "...", "options": ["4 options"], "correctIndex": 0, "explanation": "..." }] }`;
         const response = await ai.models.generateContent({

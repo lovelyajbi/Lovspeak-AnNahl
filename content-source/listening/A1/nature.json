@@ -6,30 +6,144 @@
     "themeId": "nature",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [honestly] For a long time, my morning walks were not really walks. I looked at my phone the whole time, and I barely noticed the street around me.",
-      "Narrator: [thoughtful] I passed the same trees every day, but I could not have described them if someone asked me to.",
-      "Narrator: [reflective] One morning, my phone battery died before I left the house. I almost turned back to charge it, but I decided to walk anyway.",
+      "Narrator: I passed the same trees every day, but I could not have described them if someone asked me to.",
+      "Narrator: [surprised] One morning, my phone battery died before I left the house. I almost turned back to charge it, but I decided to walk anyway.",
       "Narrator: [softly] Without the screen in my hand, I noticed the air first. It was cool, and it smelled like wet grass after the night's rain.",
-      "Narrator: [warmly] Then I noticed the trees. One had small yellow flowers I had never seen before, even though I passed it almost every day.",
-      "Narrator: [gently] Birds were singing loudly in the branches above me. I stopped for a moment and just listened, which felt strange at first.",
-      "Narrator: [thoughtful] I realized I had walked past this same park for two years without truly seeing it.",
+      "Narrator: Then I noticed the trees. One had small yellow flowers I had never seen before, even though I passed it almost every day.",
+      "Narrator: Birds were singing loudly in the branches above me. I stopped for a moment and just listened, which felt strange at first.",
+      "Narrator: I realized I had walked past this same park for two years without truly seeing it.",
       "Narrator: [determined] So now, I leave my phone at home three mornings a week. It is a small change, but it feels important.",
-      "Narrator: [honestly] The first few walks felt boring without something to look at. My hands did not know what to do without a screen.",
-      "Narrator: [gently] But after a week, boredom turned into something else. I started noticing small changes, like new leaves or a different bird each morning.",
+      "Narrator: [restless] The first few walks felt boring without something to look at. I kept reaching for a screen that was not there.",
+      "Narrator: But after a week, boredom turned into something else. I started noticing small changes, like new leaves or a different bird each morning.",
       "Narrator: [peacefully] Now I know which trees flower first in spring, and which corner of the park stays shady even at noon.",
-      "Narrator: [reflective] My sister asked me why I bother, since nothing about the walk itself changed. But everything about how I experience it changed.",
+      "Narrator: My sister asked me why I bother, since nothing about the walk itself changed. But the way I experienced it changed.",
       "Narrator: [warmly] A slow walk with open eyes teaches you more than a fast walk with a screen ever could. That is what I learned this year."
     ],
     "quiz": [
-      { "question": "How did the narrator usually spend her morning walks before this change?", "options": ["Running quickly", "Looking at her phone the whole time", "Talking to neighbors", "Listening to music loudly"], "correctIndex": 1, "explanation": "She says her walks were not really walks because she looked at her phone the whole time." },
-      { "question": "What happened one morning that changed things?", "options": ["She got lost", "Her phone battery died before she left home", "She met a friend", "It started raining heavily"], "correctIndex": 1, "explanation": "Her phone battery died before she left the house, so she walked without it." },
-      { "question": "What did she notice first without her phone?", "options": ["The traffic noise", "The cool air that smelled like wet grass", "A shop sign", "Her own footsteps"], "correctIndex": 1, "explanation": "She says she noticed the cool air first, which smelled like wet grass after the night's rain." },
-      { "question": "What does the narrator do now, several times a week?", "options": ["Walks faster than before", "Leaves her phone at home", "Takes a different route", "Walks with her sister"], "correctIndex": 1, "explanation": "She now leaves her phone at home three mornings a week." },
-      { "question": "What is the narrator's final lesson?", "options": ["Walking is a waste of time", "A slow walk with open eyes teaches more than a fast walk with a screen", "Phones should never be used outside", "Parks are boring places"], "correctIndex": 1, "explanation": "She concludes that a slow walk with open eyes teaches more than a fast walk with a screen." }
-    ]
+      {
+        "question": "How did the narrator usually spend her morning walks before this change?",
+        "options": [
+          "Running quickly",
+          "Talking to neighbors",
+          "Listening to music loudly",
+          "Looking at her phone the whole time"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says her walks were not really walks because she looked at her phone the whole time."
+      },
+      {
+        "question": "What happened one morning that changed things?",
+        "options": [
+          "Her phone battery died before she left home",
+          "She got lost",
+          "She met a friend",
+          "It started raining heavily"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her phone battery died before she left the house, so she walked without it."
+      },
+      {
+        "question": "What did she notice first without her phone?",
+        "options": [
+          "The traffic noise",
+          "A shop sign",
+          "The cool air that smelled like wet grass",
+          "Her own footsteps"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says she noticed the cool air first, which smelled like wet grass after the night's rain."
+      },
+      {
+        "question": "What does the narrator do now, several times a week?",
+        "options": [
+          "Walks faster than before",
+          "Takes a different route",
+          "Walks with her sister",
+          "Leaves her phone at home"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now leaves her phone at home three mornings a week."
+      },
+      {
+        "question": "What is the narrator's final lesson?",
+        "options": [
+          "A slow walk with open eyes teaches more than a fast walk with a screen",
+          "Walking is a waste of time",
+          "Phones should never be used outside",
+          "Parks are boring places"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that a slow walk with open eyes teaches more than a fast walk with a screen."
+      },
+      {
+        "question": "Why did the narrator almost return home?",
+        "options": [
+          "To get an umbrella",
+          "To change shoes",
+          "To invite a friend",
+          "To charge the phone"
+        ],
+        "correctIndex": 3,
+        "explanation": "The phone battery died, so charging it was the first thought."
+      },
+      {
+        "question": "What does “barely noticed” mean?",
+        "options": [
+          "Looked at carefully",
+          "Almost did not see",
+          "Remembered clearly",
+          "Stopped to draw"
+        ],
+        "correctIndex": 1,
+        "explanation": "The phone took so much attention that the street was almost unseen."
+      },
+      {
+        "question": "What felt strange during the first phone-free walk?",
+        "options": [
+          "Walking past the park",
+          "Stopping to listen to birds",
+          "Seeing a phone screen",
+          "Returning after noon"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator was not used to pausing and listening."
+      },
+      {
+        "question": "What changed after one week?",
+        "options": [
+          "The morning route became shorter",
+          "The yellow flowers disappeared",
+          "Boredom became interest in small changes",
+          "The narrator bought a new phone"
+        ],
+        "correctIndex": 2,
+        "explanation": "New leaves and different birds began to hold the narrator’s attention."
+      },
+      {
+        "question": "Why does the narrator now know the park better?",
+        "options": [
+          "The park has added many signs",
+          "A sister explains every tree",
+          "The walks are much faster",
+          "More attention is given to the surroundings"
+        ],
+        "correctIndex": 3,
+        "explanation": "Looking away from the screen made details easier to notice."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; clear personal observation story with concrete sensory details and gradual change",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-nature-02",
@@ -38,38 +152,155 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Maya, who has hiked more than thirty mountains in the last five years. Thanks for joining me, Maya.",
-      "Guest: [pleasantly] Thank you for having me. Mountains are basically my second home now.",
-      "Host: [curious] How did this hobby actually start for you?",
+      "Guest: Thank you for having me. Mountains are basically my second home now.",
+      "Host: How did this hobby actually start for you?",
       "Guest: [thoughtful] Honestly, a coworker invited me on an easy hike four years ago, and I almost said no because I was so out of shape.",
-      "Host: [interested] What made you say yes in the end?",
-      "Guest: [smiling] I was curious about the view from the top, more than the walking itself.",
-      "Host: [curious] And was the view worth the effort?",
-      "Guest: [warmly] Completely. When I reached the top and saw the clouds below me, I actually got tears in my eyes.",
-      "Host: [interested] That's a powerful reaction for a first hike. What happened after that day?",
+      "Host: What made you say yes in the end?",
+      "Guest: I was curious about the view from the top, more than the walking itself.",
+      "Host: And was the view worth the effort?",
+      "Guest: [amazed] Completely. When I reached the top and saw the clouds below me, I actually got tears in my eyes.",
+      "Host: That's a powerful reaction for a first hike. What happened after that day?",
       "Guest: [reflective] I started hiking every weekend I could. My legs hurt for a week, but I did not care at all.",
-      "Host: [curious] What do you love most about being on a mountain?",
+      "Host: What do you love most about being on a mountain?",
       "Guest: [gently] The silence, mostly. No traffic, no notifications, just wind and birds and my own breathing.",
-      "Host: [curious] Do you ever hike alone, or always with a group?",
-      "Guest: [honestly] Both, depending on the trail. Alone, I think more clearly. With friends, I laugh more and complain less about tired legs.",
-      "Host: [interested] Any advice for someone who wants to start but feels nervous?",
-      "Guest: [encouraging] Start small, with an easy trail and good shoes. Nobody climbs a big mountain on their first weekend.",
-      "Host: [curious] What keeps you coming back, hike after hike, year after year?",
-      "Guest: [warmly] Every mountain feels different, even the ones I have climbed before. There is always something new to notice.",
-      "Host: [smiling] That's a lovely way to see it, Maya. Thank you for sharing your story with us today.",
+      "Host: How do you prepare before you choose a trail?",
+      "Guest: [carefully] I check the route, weather, and local rules. I also go with a group or a trusted partner, especially on a new trail.",
+      "Host: Any advice for someone who wants to start but feels nervous?",
+      "Guest: [encouraging] Start small, with an easy marked trail, good shoes, enough water, and an experienced group. Check the weather before leaving.",
+      "Host: What keeps you coming back, hike after hike, year after year?",
+      "Guest: Every mountain feels different, even the ones I have climbed before. There is always something new to notice.",
+      "Host: That's a lovely way to see it, Maya. Thank you for sharing your story with us today.",
       "Guest: [warmly] Thank you for listening. Maybe someone will try their first easy hike this weekend."
     ],
     "quiz": [
-      { "question": "How many mountains has Maya hiked in the last five years?", "options": ["Ten", "More than thirty", "Two", "One hundred"], "correctIndex": 1, "explanation": "The host introduces Maya as someone who has hiked more than thirty mountains in five years." },
-      { "question": "How did Maya's hiking hobby begin?", "options": ["She joined a gym class", "A coworker invited her on an easy hike", "She read a book about mountains", "She watched a documentary"], "correctIndex": 1, "explanation": "A coworker invited Maya on an easy hike four years ago." },
-      { "question": "How did Maya react when she first reached the top of a mountain?", "options": ["She felt bored", "She got tears in her eyes seeing the clouds below her", "She fell asleep", "She wanted to go home immediately"], "correctIndex": 1, "explanation": "She says she got tears in her eyes when she saw the clouds below her from the top." },
-      { "question": "What does Maya say she loves most about being on a mountain?", "options": ["The crowds", "The silence, with just wind and birds", "The shopping nearby", "The loud music"], "correctIndex": 1, "explanation": "Maya says she loves the silence, with no traffic or notifications, just wind and birds." },
-      { "question": "What advice does Maya give beginners?", "options": ["Start with the tallest mountain available", "Start small with an easy trail and good shoes", "Hike alone at night", "Skip proper shoes to save money"], "correctIndex": 1, "explanation": "Maya advises starting small with an easy trail and good shoes." }
-    ]
+      {
+        "question": "How many mountains has Maya hiked in the last five years?",
+        "options": [
+          "Ten",
+          "Two",
+          "More than thirty",
+          "One hundred"
+        ],
+        "correctIndex": 2,
+        "explanation": "The host introduces Maya as someone who has hiked more than thirty mountains in five years."
+      },
+      {
+        "question": "How did Maya's hiking hobby begin?",
+        "options": [
+          "She joined a gym class",
+          "She read a book about mountains",
+          "She watched a documentary",
+          "A coworker invited her on an easy hike"
+        ],
+        "correctIndex": 3,
+        "explanation": "A coworker invited Maya on an easy hike four years ago."
+      },
+      {
+        "question": "How did Maya react when she first reached the top of a mountain?",
+        "options": [
+          "She got tears in her eyes seeing the clouds below her",
+          "She felt bored",
+          "She fell asleep",
+          "She wanted to go home immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she got tears in her eyes when she saw the clouds below her from the top."
+      },
+      {
+        "question": "What does Maya say she loves most about being on a mountain?",
+        "options": [
+          "The crowds",
+          "The shopping nearby",
+          "The silence, with just wind and birds",
+          "The loud music"
+        ],
+        "correctIndex": 2,
+        "explanation": "Maya says she loves the silence, with no traffic or notifications, just wind and birds."
+      },
+      {
+        "question": "What advice does Maya give beginners?",
+        "options": [
+          "Start with the tallest mountain available",
+          "Hike alone at night",
+          "Start small with an easy trail and good shoes",
+          "Skip proper shoes to save money"
+        ],
+        "correctIndex": 2,
+        "explanation": "Maya advises starting small with an easy trail and good shoes."
+      },
+      {
+        "question": "Why did Maya almost refuse her first hike?",
+        "options": [
+          "She disliked her coworker",
+          "She did not feel fit enough",
+          "The weather was stormy",
+          "She had no interest in views"
+        ],
+        "correctIndex": 1,
+        "explanation": "Maya worried that the walking would be too difficult."
+      },
+      {
+        "question": "What does Maya enjoy in the mountains besides the view?",
+        "options": [
+          "Shops beside every trail",
+          "Fast internet service",
+          "Quiet without traffic or notifications",
+          "Crowded city sounds"
+        ],
+        "correctIndex": 2,
+        "explanation": "She describes wind, birds, silence, and her own breathing."
+      },
+      {
+        "question": "What does Maya check before choosing a trail?",
+        "options": [
+          "The route, weather, and local rules",
+          "Only the number of photos",
+          "Her office schedule alone",
+          "The price of a hotel"
+        ],
+        "correctIndex": 0,
+        "explanation": "These checks are part of her safety preparation."
+      },
+      {
+        "question": "Who does Maya recommend hiking with?",
+        "options": [
+          "No one on a first trail",
+          "An experienced group or trusted partner",
+          "Only office managers",
+          "Any stranger at the top"
+        ],
+        "correctIndex": 1,
+        "explanation": "The revised advice gives beginners clear and safer support."
+      },
+      {
+        "question": "Why does Maya return to mountains?",
+        "options": [
+          "Every mountain is easy now",
+          "She must complete a work task",
+          "Her legs never become tired",
+          "Each hike offers something different to notice"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says even a familiar mountain can feel different."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "revise; retain an engaging podcast story while adding beginner hiking safety and removing casual solo-hiking encouragement",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-nature-03",
@@ -78,37 +309,154 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
       "Dewi: [excited] Fajar, I've been thinking about that camping trip we talked about. Are you still free this weekend?",
-      "Fajar: [smiling] Yes, definitely. I already checked the weather, and it looks clear until Sunday evening.",
-      "Dewi: [curious] Perfect. Where should we go? Somewhere near the lake, or up in the hills?",
-      "Fajar: [thoughtful] I like the lake spot. There's a quiet campsite there with a good view of the water at sunrise.",
-      "Dewi: [pleased] That sounds beautiful. Have you camped there before?",
-      "Fajar: [warmly] Once, last year. I woke up early and watched the mist rising off the water. It was completely silent, just birds calling.",
-      "Dewi: [thoughtful] Now I really want to go. What should I bring that people usually forget?",
+      "Fajar: [prepared] Yes, definitely. I already checked the weather, and it looks clear until Sunday evening.",
+      "Dewi: Perfect. Where should we go? Somewhere near the lake, or up in the hills?",
+      "Fajar: [thoughtful] I like the lake spot. There's an official campsite there with a good view of the water at sunrise.",
+      "Dewi: That sounds beautiful. Have you camped there before?",
+      "Fajar: Once, last year. I woke up early and watched the mist rising off the water. It was completely silent, just birds calling.",
+      "Dewi: Now I really want to go. What should I bring that people usually forget?",
       "Fajar: [helpfully] A warm jacket, honestly. It gets surprisingly cold near the water at night, even in dry season.",
       "Dewi: [surprised] Really? I was only planning for the daytime heat.",
-      "Fajar: [nodding] Everyone makes that mistake the first time. I'll also bring a small stove so we can make hot tea in the morning.",
-      "Dewi: [excited] That sounds wonderful, actually. Anything else I should pack?",
-      "Fajar: [thinking] A flashlight, definitely, and maybe a book, since there's no signal there for your phone anyway.",
-      "Dewi: [laughing] No signal sounds like a relief, honestly. I could use two days without messages.",
-      "Fajar: [agreeing] Same here. I always sleep better after a weekend without a screen near my face.",
+      "Fajar: Everyone makes that mistake the first time. I'll also bring a small stove so we can make hot tea in the morning.",
+      "Dewi: That sounds wonderful, actually. Anything else I should pack?",
+      "Fajar: [carefully] A flashlight, definitely, an offline map, and the campsite emergency number because phone signal is weak there.",
+      "Dewi: I still like the quiet, but I will tell my sister our route and return time before we leave.",
+      "Fajar: Good plan. We can enjoy less screen time after our safety information is ready.",
       "Dewi: [curious] What time should we leave on Saturday?",
-      "Fajar: [confidently] Early, around six, so we can set up the tent before the sun gets too strong.",
-      "Dewi: [determined] Alright, six it is. I'll bring the food if you bring the tent and stove.",
-      "Fajar: [warmly] Deal. I think this trip is exactly what this tired week has been missing.",
+      "Fajar: Early, around six, so we can set up the tent before the sun gets too strong.",
+      "Dewi: Alright, six it is. I'll bring the food if you bring the tent and stove.",
+      "Fajar: Deal. I think this trip is exactly what this tired week has been missing.",
       "Dewi: [smiling] Same here. I can already imagine that quiet lake in the morning."
     ],
     "quiz": [
-      { "question": "What are Dewi and Fajar planning together?", "options": ["A work meeting", "A weekend camping trip near a lake", "A trip to the city", "A dinner party"], "correctIndex": 1, "explanation": "They are planning a weekend camping trip, and Fajar suggests the lake spot." },
-      { "question": "What did Fajar see when he camped there last year?", "options": ["A storm", "Mist rising off the water at sunrise, with birds calling", "Other campers arriving", "Nothing unusual"], "correctIndex": 1, "explanation": "Fajar describes watching the mist rise off the water at sunrise, with birds calling, in complete silence." },
-      { "question": "What does Fajar warn Dewi to pack that people often forget?", "options": ["Sunglasses", "A warm jacket, because it gets cold at night near the water", "Extra shoes", "A map"], "correctIndex": 1, "explanation": "Fajar warns her to bring a warm jacket since it gets surprisingly cold near the water at night." },
-      { "question": "Why does Dewi say no phone signal sounds like a relief?", "options": ["She dislikes phones in general", "She could use two days without messages", "Her phone is broken", "She wants to save battery"], "correctIndex": 1, "explanation": "Dewi says no signal sounds like a relief because she could use two days without messages." },
-      { "question": "What time do they plan to leave on Saturday?", "options": ["Noon", "Around six in the morning, before the sun gets strong", "Midnight", "Late afternoon"], "correctIndex": 1, "explanation": "Fajar suggests leaving around six so they can set up the tent before the sun gets too strong." }
-    ]
+      {
+        "question": "What are Dewi and Fajar planning together?",
+        "options": [
+          "A work meeting",
+          "A trip to the city",
+          "A dinner party",
+          "A weekend camping trip near a lake"
+        ],
+        "correctIndex": 3,
+        "explanation": "They are planning a weekend camping trip, and Fajar suggests the lake spot."
+      },
+      {
+        "question": "What did Fajar see when he camped there last year?",
+        "options": [
+          "A storm",
+          "Other campers arriving",
+          "Mist rising off the water at sunrise, with birds calling",
+          "Nothing unusual"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fajar describes watching the mist rise off the water at sunrise, with birds calling, in complete silence."
+      },
+      {
+        "question": "What does Fajar warn Dewi to pack that people often forget?",
+        "options": [
+          "Sunglasses",
+          "A warm jacket, because it gets cold at night near the water",
+          "Extra shoes",
+          "A map"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar warns her to bring a warm jacket since it gets surprisingly cold near the water at night."
+      },
+      {
+        "question": "Why does Dewi say no phone signal sounds like a relief?",
+        "options": [
+          "She dislikes phones in general",
+          "Her phone is broken",
+          "She could use two days without messages",
+          "She wants to save battery"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dewi says no signal sounds like a relief because she could use two days without messages."
+      },
+      {
+        "question": "What time do they plan to leave on Saturday?",
+        "options": [
+          "Noon",
+          "Around six in the morning, before the sun gets strong",
+          "Midnight",
+          "Late afternoon"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar suggests leaving around six so they can set up the tent before the sun gets too strong."
+      },
+      {
+        "question": "Why do they choose the lake location?",
+        "options": [
+          "It has strong phone signal",
+          "It is beside their office",
+          "It stays hot at night",
+          "It has an official campsite and a sunrise view"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fajar knows a recognized place with a view of the water."
+      },
+      {
+        "question": "What does “mist” mean in Fajar’s memory?",
+        "options": [
+          "A thin cloud close to the water",
+          "Heavy rain inside a tent",
+          "Smoke from the stove",
+          "Dust from a road"
+        ],
+        "correctIndex": 0,
+        "explanation": "He saw mist rising from the lake in the early morning."
+      },
+      {
+        "question": "Why does Dewi need a warm jacket?",
+        "options": [
+          "The daytime sun is weak",
+          "Nights near the water can be cold",
+          "The jacket holds their food",
+          "Rain is certain all weekend"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar warns that the temperature drops at night."
+      },
+      {
+        "question": "What will Dewi tell her sister?",
+        "options": [
+          "The title of her book",
+          "Their route and expected return time",
+          "How to cook on the stove",
+          "The color of the tent"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sharing travel information helps someone know their plan."
+      },
+      {
+        "question": "How do they divide the camping supplies?",
+        "options": [
+          "Dewi brings food; Fajar brings the tent and stove",
+          "Dewi brings everything",
+          "Fajar brings only books",
+          "They will buy supplies at the lake"
+        ],
+        "correctIndex": 0,
+        "explanation": "Their final agreement gives each person a clear task."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "revise; keep the natural planning dialogue and add campsite, contact, and offline-map safety details",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-nature-04",
@@ -117,31 +465,145 @@
     "themeId": "nature",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [warmly] My grandmother had a small garden behind her house, full of tomatoes, herbs, and one stubborn old mango tree.",
-      "Narrator: [thoughtful] As a child, I did not understand why she spent so much time there, bent over the soil in the early morning heat.",
-      "Narrator: [gently] I once asked her, why not just buy vegetables from the market? It would be so much faster.",
-      "Narrator: [reflective] She laughed and said, faster is not always better, and handed me a small shovel without another word.",
-      "Narrator: [softly] That summer, she taught me to plant seeds, water them gently, and then wait, sometimes for weeks, without seeing any change at all.",
-      "Narrator: [honestly] I was impatient. I checked the soil every single day, expecting a plant to appear overnight.",
-      "Narrator: [with feeling] Nothing happened for what felt like forever, and I almost gave up on the whole idea completely.",
-      "Narrator: [warmly] Then one morning, a tiny green shoot pushed through the dark soil, and I felt genuinely proud, like I had done something important.",
-      "Narrator: [thoughtful] My grandmother smiled and said, you see, everything worth having grows slowly and quietly, mostly when nobody is watching.",
-      "Narrator: [gently] Years later, I lost a job and struggled to find new work for many long months.",
-      "Narrator: [reflective] I remembered her garden often during that hard time, and how nothing changed for weeks before that tiny shoot appeared.",
-      "Narrator: [peacefully] I reminded myself that quiet waiting is not the same as failing, even when it feels exactly like failing.",
-      "Narrator: [warmly] My grandmother passed away two years ago, but her small garden still grows behind that house, tended now by my cousin.",
+      "Narrator: As a child, I did not understand why she spent so much time there, bent over the soil in the early morning heat.",
+      "Narrator: [curious] I once asked her, why not just buy vegetables from the market? It would be so much faster.",
+      "Narrator: She laughed and said, faster is not always better, and handed me a small shovel without another word.",
+      "Narrator: [gently] That summer, she taught me to plant seeds, water them gently, and then wait, sometimes for weeks, without seeing any change at all.",
+      "Narrator: [impatient] I was impatient. I checked the soil every single day, expecting a plant to appear overnight.",
+      "Narrator: Nothing happened for what felt like forever, and I almost gave up on the whole idea completely.",
+      "Narrator: [proud] Then one morning, a tiny green shoot pushed through the dark soil, and I felt genuinely proud, like I had done something important.",
+      "Narrator: [wisely] My grandmother smiled and said, you see, some good things need time and care, even when we cannot see a change yet.",
+      "Narrator: [sadly] Years later, I lost a job and struggled to find new work for many long months.",
+      "Narrator: I remembered her garden often during that hard time, and how nothing changed for weeks before that tiny shoot appeared.",
+      "Narrator: I reminded myself that waiting and continuing to try did not always mean I was failing.",
+      "Narrator: My grandmother passed away two years ago, but her small garden still grows behind that house, tended now by my cousin.",
       "Narrator: [with feeling] Whenever I visit and see those tomatoes ripening slowly in the sun, I think of her patient hands, and I try to be a little more patient myself."
     ],
     "quiz": [
-      { "question": "What grew in the narrator's grandmother's garden?", "options": ["Only flowers", "Tomatoes, herbs, and a mango tree", "Rice fields", "Nothing, it was empty"], "correctIndex": 1, "explanation": "The garden was full of tomatoes, herbs, and one stubborn old mango tree." },
-      { "question": "What did the narrator ask his grandmother as a child?", "options": ["Why she never left the house", "Why not just buy vegetables from the market instead", "Why the tree was so old", "Why she woke up so early"], "correctIndex": 1, "explanation": "He asked why not just buy vegetables from the market, since it would be faster." },
-      { "question": "How did the narrator behave while waiting for the seeds to grow?", "options": ["Patient and calm", "Impatient, checking the soil every day", "Uninterested completely", "He forgot about the garden"], "correctIndex": 1, "explanation": "He admits he was impatient and checked the soil every single day." },
-      { "question": "What did the grandmother say about things worth having?", "options": ["They appear overnight", "They grow slowly and quietly, mostly when nobody is watching", "They should be bought, not grown", "They never really change"], "correctIndex": 1, "explanation": "She said everything worth having grows slowly and quietly, mostly when nobody is watching." },
-      { "question": "How did the narrator use this lesson years later?", "options": ["He ignored it completely", "He remembered it during months of struggling to find a new job", "He started a garden business", "He forgot about his grandmother"], "correctIndex": 1, "explanation": "He remembered her garden during a hard period of unemployment, reminding himself that quiet waiting is not the same as failing." }
-    ]
+      {
+        "question": "What grew in the narrator's grandmother's garden?",
+        "options": [
+          "Tomatoes, herbs, and a mango tree",
+          "Only flowers",
+          "Rice fields",
+          "Nothing, it was empty"
+        ],
+        "correctIndex": 0,
+        "explanation": "The garden was full of tomatoes, herbs, and one stubborn old mango tree."
+      },
+      {
+        "question": "What did the narrator ask his grandmother as a child?",
+        "options": [
+          "Why she never left the house",
+          "Why the tree was so old",
+          "Why not just buy vegetables from the market instead",
+          "Why she woke up so early"
+        ],
+        "correctIndex": 2,
+        "explanation": "He asked why not just buy vegetables from the market, since it would be faster."
+      },
+      {
+        "question": "How did the narrator behave while waiting for the seeds to grow?",
+        "options": [
+          "Patient and calm",
+          "Impatient, checking the soil every day",
+          "Uninterested completely",
+          "He forgot about the garden"
+        ],
+        "correctIndex": 1,
+        "explanation": "He admits he was impatient and checked the soil every single day."
+      },
+      {
+        "question": "What did the grandmother say about things worth having?",
+        "options": [
+          "They appear overnight",
+          "They should be bought, not grown",
+          "They never really change",
+          "They grow slowly and quietly, mostly when nobody is watching"
+        ],
+        "correctIndex": 3,
+        "explanation": "She said everything worth having grows slowly and quietly, mostly when nobody is watching."
+      },
+      {
+        "question": "How did the narrator use this lesson years later?",
+        "options": [
+          "He ignored it completely",
+          "He started a garden business",
+          "He remembered it during months of struggling to find a new job",
+          "He forgot about his grandmother"
+        ],
+        "correctIndex": 2,
+        "explanation": "He remembered her garden during a hard period of unemployment, reminding himself that quiet waiting is not the same as failing."
+      },
+      {
+        "question": "What did the grandmother give the child?",
+        "options": [
+          "A small shovel",
+          "A basket of mangoes",
+          "A market bag",
+          "A new job"
+        ],
+        "correctIndex": 0,
+        "explanation": "She answered the question by inviting the child to help."
+      },
+      {
+        "question": "What does “impatient” mean?",
+        "options": [
+          "Happy to work slowly",
+          "Not wanting to wait",
+          "Afraid of the garden",
+          "Unable to use a shovel"
+        ],
+        "correctIndex": 1,
+        "explanation": "The child expected a plant to appear very quickly."
+      },
+      {
+        "question": "What finally came through the soil?",
+        "options": [
+          "A ripe tomato",
+          "An old mango branch",
+          "A market receipt",
+          "A tiny green shoot"
+        ],
+        "correctIndex": 3,
+        "explanation": "The first visible plant growth made the narrator proud."
+      },
+      {
+        "question": "What difficult event happened years later?",
+        "options": [
+          "The narrator lost a job",
+          "The garden was sold",
+          "The cousin moved away",
+          "The market closed"
+        ],
+        "correctIndex": 0,
+        "explanation": "The garden memory returned during a long job search."
+      },
+      {
+        "question": "Who cares for the garden now?",
+        "options": [
+          "The narrator’s cousin",
+          "A market seller",
+          "The old manager",
+          "The narrator’s child"
+        ],
+        "correctIndex": 0,
+        "explanation": "The cousin tends it after the grandmother’s death."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; meaningful family memory with a concrete garden image, while narrowing one overly broad statement",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-nature-05",
@@ -150,37 +612,154 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rafi", "gender": "male" },
-      { "name": "Mother", "gender": "female" }
+      {
+        "name": "Rafi",
+        "gender": "male"
+      },
+      {
+        "name": "Mother",
+        "gender": "female"
+      }
     ],
     "script": [
       "Rafi: [excited] Mom, I have to tell you about this morning. I woke up before dawn to watch the sunrise from the mountain.",
-      "Mother: [warmly] That sounds lovely. Was it worth waking up so early?",
+      "Mother: That sounds lovely. Was it worth waking up so early?",
       "Rafi: [amazed] Completely worth it. The sky turned pink, then orange, then this bright gold, all in about twenty minutes.",
-      "Mother: [smiling] I can almost picture it. Were you alone up there, or with friends?",
-      "Rafi: [thoughtful] With two friends, but honestly, none of us spoke much. We just sat there watching, in silence.",
-      "Mother: [curious] What did it feel like, being up so high with a view like that?",
+      "Mother: I can almost picture it. Were you alone up there, or with friends?",
+      "Rafi: [quietly] With two friends, but honestly, none of us spoke much. We just sat there watching, in silence.",
+      "Mother: What did it feel like, being up so high with a view like that?",
       "Rafi: [softly] Small, in a good way. Like my worries from this week suddenly felt much less important.",
-      "Mother: [gently] That's exactly what nature does sometimes. It puts things back into proportion for us.",
-      "Rafi: [reflective] I kept thinking, how does something this beautiful happen every single morning, and most people never even see it.",
-      "Mother: [warmly] We get used to beauty when it's constant. The sun rises daily, so we forget to look up.",
-      "Rafi: [thoughtful] I want to remember to look up more, honestly, not just on mountains but at home too.",
+      "Mother: That's exactly what nature does sometimes. It can help us see our worries in a new way.",
+      "Rafi: I kept thinking, how does something this beautiful happen every single morning, and most people never even see it.",
+      "Mother: [thoughtful] We get used to beauty when it's constant. The sun rises daily, so we forget to look up.",
+      "Rafi: I want to remember to look up more, honestly, not just on mountains but at home too.",
       "Mother: [encouraging] You could start small. Watch the sky for one minute from your balcony each morning.",
-      "Rafi: [considering] That's a good idea. It doesn't need to be a mountain every time.",
-      "Mother: [curious] Did you take photos? I would love to see them.",
+      "Rafi: That's a good idea. It doesn't need to be a mountain every time.",
+      "Mother: Did you take photos? I would love to see them.",
       "Rafi: [smiling] I took a few, but honestly, my phone camera didn't capture the real colors at all.",
-      "Mother: [gently] Some things are meant to stay only in memory, not on a screen.",
-      "Rafi: [warmly] That's true. I think this morning will stay with me for a long time.",
+      "Mother: Some things are meant to stay only in memory, not on a screen.",
+      "Rafi: That's true. I think this morning will stay with me for a long time.",
       "Mother: [with love] I'm so glad you got to see something so beautiful, my son. Come tell me more this weekend.",
-      "Rafi: [happily] I will, Mom. I love you. Thanks for listening to me ramble about clouds and colors."
+      "Rafi: I will, Mom. I love you. Thanks for listening to my long story about clouds and colors."
     ],
     "quiz": [
-      { "question": "Why did Rafi wake up before dawn?", "options": ["To catch a flight", "To watch the sunrise from the mountain", "To go to work early", "To call his mother"], "correctIndex": 1, "explanation": "Rafi woke up before dawn to watch the sunrise from the mountain." },
-      { "question": "How did the sky change during the sunrise?", "options": ["It stayed grey the whole time", "It turned pink, then orange, then bright gold", "It turned dark quickly", "It rained the entire time"], "correctIndex": 1, "explanation": "Rafi describes the sky turning pink, then orange, then bright gold, over about twenty minutes." },
-      { "question": "How did Rafi feel while watching the sunrise?", "options": ["Bored and tired", "Small, in a good way, with his worries feeling less important", "Angry about waking up early", "Disappointed by the view"], "correctIndex": 1, "explanation": "He says he felt small in a good way, and his worries felt much less important." },
-      { "question": "What does the mother suggest Rafi do at home?", "options": ["Climb a mountain every day", "Watch the sky for one minute from his balcony each morning", "Stop taking photos completely", "Sleep in later"], "correctIndex": 1, "explanation": "She suggests he watch the sky for one minute from his balcony each morning, even without a mountain." },
-      { "question": "What did Rafi say about his photos of the sunrise?", "options": ["They were perfect", "His phone camera didn't capture the real colors", "He forgot to take any", "He deleted them immediately"], "correctIndex": 1, "explanation": "Rafi says his phone camera didn't capture the real colors of the sunrise at all." }
-    ]
+      {
+        "question": "Why did Rafi wake up before dawn?",
+        "options": [
+          "To watch the sunrise from the mountain",
+          "To catch a flight",
+          "To go to work early",
+          "To call his mother"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rafi woke up before dawn to watch the sunrise from the mountain."
+      },
+      {
+        "question": "How did the sky change during the sunrise?",
+        "options": [
+          "It stayed grey the whole time",
+          "It turned dark quickly",
+          "It turned pink, then orange, then bright gold",
+          "It rained the entire time"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rafi describes the sky turning pink, then orange, then bright gold, over about twenty minutes."
+      },
+      {
+        "question": "How did Rafi feel while watching the sunrise?",
+        "options": [
+          "Bored and tired",
+          "Angry about waking up early",
+          "Small, in a good way, with his worries feeling less important",
+          "Disappointed by the view"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says he felt small in a good way, and his worries felt much less important."
+      },
+      {
+        "question": "What does the mother suggest Rafi do at home?",
+        "options": [
+          "Climb a mountain every day",
+          "Stop taking photos completely",
+          "Sleep in later",
+          "Watch the sky for one minute from his balcony each morning"
+        ],
+        "correctIndex": 3,
+        "explanation": "She suggests he watch the sky for one minute from his balcony each morning, even without a mountain."
+      },
+      {
+        "question": "What did Rafi say about his photos of the sunrise?",
+        "options": [
+          "They were perfect",
+          "His phone camera didn't capture the real colors",
+          "He forgot to take any",
+          "He deleted them immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rafi says his phone camera didn't capture the real colors of the sunrise at all."
+      },
+      {
+        "question": "Who watched the sunrise with Rafi?",
+        "options": [
+          "Two friends",
+          "His mother",
+          "A mountain guide only",
+          "No one"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rafi says he was with two friends."
+      },
+      {
+        "question": "Why were the three friends mostly silent?",
+        "options": [
+          "They were angry with each other",
+          "They had lost their phones",
+          "They were still asleep",
+          "They were watching the view"
+        ],
+        "correctIndex": 3,
+        "explanation": "The sunrise held their attention, so they spoke very little."
+      },
+      {
+        "question": "What does “dawn” mean?",
+        "options": [
+          "The middle of the night",
+          "The hottest part of the day",
+          "The time after sunset",
+          "The early time before sunrise"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rafi woke before the sun came up."
+      },
+      {
+        "question": "Why does Rafi want to look up more often?",
+        "options": [
+          "Mountains appear every morning",
+          "His camera needs more light",
+          "His balcony has no view",
+          "Daily beauty is easy to miss"
+        ],
+        "correctIndex": 3,
+        "explanation": "The conversation helps him notice ordinary skies too."
+      },
+      {
+        "question": "Why were the photos disappointing?",
+        "options": [
+          "Rafi forgot to take any",
+          "They did not show the real colors",
+          "The phone battery was empty",
+          "His friends deleted them"
+        ],
+        "correctIndex": 1,
+        "explanation": "The camera could not fully capture what he saw."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; warm family conversation uses color, silence, and a practical small habit to express reflection",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-nature-06",
@@ -189,30 +768,144 @@
     "themeId": "nature",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] People sometimes ask me why I care so much about small changes in the weather and the plants around my street.",
-      "Narrator: [gently] Honestly, I did not always notice these things. For years, one month felt the same as any other to me.",
+      "Narrator: Honestly, I did not always notice these things. For years, one month felt the same as any other to me.",
       "Narrator: [reflective] Then last year, I started keeping a small notebook, just to write one line each day about the sky, the air, or something growing nearby.",
-      "Narrator: [calm] At first, I wrote simple things, like today it rained, or today the wind was strong and the leaves fell early.",
-      "Narrator: [thoughtful] Slowly, I began noticing patterns I had never seen before, even though they happened every single year of my life.",
-      "Narrator: [warmly] I noticed the wind changes direction before the rainy season starts, days before the first big storm actually arrives.",
-      "Narrator: [gently] I noticed certain flowers bloom for only two short weeks, and then disappear completely until the following year.",
-      "Narrator: [honestly] I used to feel like the seasons were background noise, something happening while I focused on more important things.",
-      "Narrator: [reflective] Now I see them differently, as a quiet, careful rhythm that continues whether I am paying attention or not.",
-      "Narrator: [with hope] Writing this small notebook made me slower in a good way. I started walking to work instead of driving, just to notice more.",
-      "Narrator: [gently] It is such a small habit, only a few minutes each evening, but it changed how connected I feel to the world outside my window.",
-      "Narrator: [peacefully] I no longer feel like a stranger passing through my own neighborhood. I feel like someone who actually knows this place.",
+      "Narrator: [simply] At first, I wrote simple things, like today it rained, or today the wind was strong and the leaves fell early.",
+      "Narrator: Slowly, I began noticing patterns I had never seen before, even though they happened every single year of my life.",
+      "Narrator: [surprised] I noticed the wind changes direction before the rainy season starts, days before the first big storm actually arrives.",
+      "Narrator: I noticed certain flowers bloom for only two short weeks, and then disappear completely until the following year.",
+      "Narrator: [honestly] I used to feel like the seasons were easy to ignore while I thought about other things.",
+      "Narrator: Now I see them differently, as small changes that continue whether I notice them or not.",
+      "Narrator: [hopeful] Writing this small notebook made me slower in a good way. I started walking to work instead of driving, just to notice more.",
+      "Narrator: It is such a small habit, only a few minutes each evening, but it changed how connected I feel to the world outside my window.",
+      "Narrator: [peacefully] My neighborhood no longer feels like a place I simply pass through. I feel like someone who actually knows this place.",
       "Narrator: [warmly] Maybe you walk past the same trees and skies every day without truly seeing them. I hope you find your own small notebook too."
     ],
     "quiz": [
-      { "question": "What did the narrator start doing last year?", "options": ["Traveling more often", "Keeping a small notebook about the sky, air, and nearby plants", "Studying weather science", "Growing a large garden"], "correctIndex": 1, "explanation": "She started keeping a small notebook to write one line each day about the sky, air, or something growing nearby." },
-      { "question": "What pattern did the narrator notice about the wind?", "options": ["It never changes", "It changes direction before the rainy season starts", "It only blows at night", "It stops completely in summer"], "correctIndex": 1, "explanation": "She noticed the wind changes direction before the rainy season starts, days before the first storm." },
-      { "question": "How did the narrator used to think of the seasons?", "options": ["As the most important part of her life", "As background noise while she focused on other things", "As something to fear", "As identical to holidays"], "correctIndex": 1, "explanation": "She says she used to feel the seasons were background noise while she focused on more important things." },
-      { "question": "What change did the notebook habit lead to?", "options": ["She stopped writing after a week", "She started walking to work instead of driving", "She moved to a new neighborhood", "She bought a car"], "correctIndex": 1, "explanation": "Writing the notebook made her slower in a good way, so she started walking to work instead of driving." },
-      { "question": "How does the narrator feel about her neighborhood now?", "options": ["Like a stranger passing through", "Like someone who actually knows the place", "Bored and indifferent", "Eager to move away"], "correctIndex": 1, "explanation": "She says she no longer feels like a stranger, but like someone who actually knows this place." }
-    ]
+      {
+        "question": "What did the narrator start doing last year?",
+        "options": [
+          "Keeping a small notebook about the sky, air, and nearby plants",
+          "Traveling more often",
+          "Studying weather science",
+          "Growing a large garden"
+        ],
+        "correctIndex": 0,
+        "explanation": "She started keeping a small notebook to write one line each day about the sky, air, or something growing nearby."
+      },
+      {
+        "question": "What pattern did the narrator notice about the wind?",
+        "options": [
+          "It never changes",
+          "It only blows at night",
+          "It changes direction before the rainy season starts",
+          "It stops completely in summer"
+        ],
+        "correctIndex": 2,
+        "explanation": "She noticed the wind changes direction before the rainy season starts, days before the first storm."
+      },
+      {
+        "question": "How did the narrator used to think of the seasons?",
+        "options": [
+          "As the most important part of her life",
+          "As background noise while she focused on other things",
+          "As something to fear",
+          "As identical to holidays"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she used to feel the seasons were background noise while she focused on more important things."
+      },
+      {
+        "question": "What change did the notebook habit lead to?",
+        "options": [
+          "She stopped writing after a week",
+          "She moved to a new neighborhood",
+          "She bought a car",
+          "She started walking to work instead of driving"
+        ],
+        "correctIndex": 3,
+        "explanation": "Writing the notebook made her slower in a good way, so she started walking to work instead of driving."
+      },
+      {
+        "question": "How does the narrator feel about her neighborhood now?",
+        "options": [
+          "Like a stranger passing through",
+          "Bored and indifferent",
+          "Like someone who actually knows the place",
+          "Eager to move away"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says she no longer feels like a stranger, but like someone who actually knows this place."
+      },
+      {
+        "question": "How much does the narrator write each day?",
+        "options": [
+          "One full book",
+          "One line",
+          "Ten pages",
+          "Nothing about weather"
+        ],
+        "correctIndex": 1,
+        "explanation": "The notebook entry is intentionally short."
+      },
+      {
+        "question": "What does “bloom” mean for flowers?",
+        "options": [
+          "Fall from a tree",
+          "Become dry soil",
+          "Open and produce flowers",
+          "Move in the wind"
+        ],
+        "correctIndex": 2,
+        "explanation": "Some flowers appear for only two weeks each year."
+      },
+      {
+        "question": "When did the narrator notice the wind changing?",
+        "options": [
+          "After every evening meal",
+          "Only during spring",
+          "Before the rainy season",
+          "When driving to work"
+        ],
+        "correctIndex": 2,
+        "explanation": "The wind pattern appears before the first large storm."
+      },
+      {
+        "question": "Why did the narrator begin walking to work?",
+        "options": [
+          "To avoid writing at night",
+          "To arrive much faster",
+          "To find a different job",
+          "To notice more outside"
+        ],
+        "correctIndex": 3,
+        "explanation": "Walking creates more time to observe the street and seasons."
+      },
+      {
+        "question": "What makes the habit easy to continue?",
+        "options": [
+          "It takes only a few minutes",
+          "It requires a long drive",
+          "It depends on rare flowers",
+          "It needs expensive tools"
+        ],
+        "correctIndex": 0,
+        "explanation": "A one-line evening note is small and manageable."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; simple notebook habit creates a clear sequence from observation to stronger local awareness",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-nature-07",
@@ -221,37 +914,604 @@
     "themeId": "nature",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good morning, listeners! Today we're talking about birdwatching right here in the city. We have a caller on the line. Hello!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this morning.",
-      "Radio Host: [warmly] Of course! Tell us, how did you get into birdwatching, of all hobbies?",
+      "Caller: [nervous] Hello! Thank you for taking my call this morning.",
+      "Radio Host: Of course! Tell us, how did you get into birdwatching, of all hobbies?",
       "Caller: [thoughtful] Honestly, it started by accident. I saw an unusual bird outside my office window and got curious about its name.",
-      "Radio Host: [interested] What kind of bird was it?",
+      "Radio Host: What kind of bird was it?",
       "Caller: [smiling] A small kingfisher, bright blue, sitting near a drain of all places. I never expected to see one in the middle of the city.",
-      "Radio Host: [curious] What did you do after seeing it?",
-      "Caller: [reflective] I downloaded an app to identify birds, and honestly, I got a little obsessed after that first discovery.",
-      "Radio Host: [warmly] How many different birds have you spotted since then?",
+      "Radio Host: What did you do after seeing it?",
+      "Caller: [excited] I downloaded an app to identify birds, and honestly, I wanted to learn more after that first discovery.",
+      "Radio Host: How many different birds have you spotted since then?",
       "Caller: [proudly] Over forty species now, just within walking distance of my apartment. I never imagined the city had so much life hiding in it.",
-      "Radio Host: [curious] What's the best time of day to see birds around here?",
+      "Radio Host: What's the best time of day to see birds around here?",
       "Caller: [helpfully] Early morning, definitely, right around sunrise. That's when they're most active and easiest to hear.",
-      "Radio Host: [interested] Do you need expensive equipment to start this hobby?",
-      "Caller: [reassuringly] Not at all. A cheap pair of binoculars and a free app are enough to begin.",
-      "Radio Host: [curious] What has birdwatching taught you, beyond just the names of birds?",
-      "Caller: [warmly] Patience, mostly. You have to stand still and quiet, sometimes for a long time, before anything interesting happens.",
-      "Radio Host: [understanding] That's a valuable skill in a busy, noisy city.",
-      "Caller: [thoughtful] It really is. It also made me appreciate the small green spaces we still have, even between all the buildings.",
-      "Radio Host: [encouraging] What would you say to someone thinking about trying this hobby?",
-      "Caller: [warmly] Just look up tomorrow morning, even for five minutes. You'll be surprised how much life is flying right above your head."
+      "Radio Host: Do you need expensive equipment to start this hobby?",
+      "Caller: Not at all. A cheap pair of binoculars and a free app are enough to begin.",
+      "Radio Host: What has birdwatching taught you, beyond just the names of birds?",
+      "Caller: [patiently] Patience, mostly. You have to stand still and quiet, sometimes for a long time, before anything interesting happens.",
+      "Radio Host: That's a valuable skill in a busy, noisy city.",
+      "Caller: It really is. It also made me appreciate the small green spaces we still have, even between all the buildings.",
+      "Radio Host: What would you say to someone thinking about trying this hobby?",
+      "Caller: [warmly] Just look up tomorrow morning, even for five minutes. You'll be surprised how many birds are flying above you."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Cooking in the city", "Birdwatching in the city", "Traffic problems", "City parks maintenance"], "correctIndex": 1, "explanation": "The host introduces today's topic as birdwatching right in the city." },
-      { "question": "What bird did the caller first notice that started his interest?", "options": ["An eagle", "A small blue kingfisher near a drain", "A pigeon on his roof", "An owl at night"], "correctIndex": 1, "explanation": "He saw a small kingfisher, bright blue, sitting near a drain outside his office window." },
-      { "question": "How many bird species has the caller spotted so far?", "options": ["Five", "Over forty, within walking distance of his apartment", "One hundred", "None, he only reads about them"], "correctIndex": 1, "explanation": "He has spotted over forty species within walking distance of his apartment." },
-      { "question": "What equipment does the caller say is needed to start birdwatching?", "options": ["Expensive cameras only", "A cheap pair of binoculars and a free app", "A car and a guide", "Special training courses"], "correctIndex": 1, "explanation": "He says a cheap pair of binoculars and a free app are enough to begin." },
-      { "question": "What has birdwatching mainly taught the caller?", "options": ["How to run faster", "Patience, from standing still and quiet", "How to cook new dishes", "How to avoid crowds"], "correctIndex": 1, "explanation": "He says birdwatching taught him patience, since you must stand still and quiet before anything interesting happens." }
-    ]
+      {
+        "question": "What activity in the city is featured in the radio segment?",
+        "options": [
+          "Cooking in the city",
+          "Birdwatching in the city",
+          "Traffic problems",
+          "City parks maintenance"
+        ],
+        "correctIndex": 1,
+        "explanation": "The host introduces today's topic as birdwatching right in the city."
+      },
+      {
+        "question": "What bird did the caller first notice that started his interest?",
+        "options": [
+          "An eagle",
+          "A small blue kingfisher near a drain",
+          "A pigeon on his roof",
+          "An owl at night"
+        ],
+        "correctIndex": 1,
+        "explanation": "He saw a small kingfisher, bright blue, sitting near a drain outside his office window."
+      },
+      {
+        "question": "How many bird species has the caller spotted so far?",
+        "options": [
+          "Five",
+          "One hundred",
+          "None, he only reads about them",
+          "Over forty, within walking distance of his apartment"
+        ],
+        "correctIndex": 3,
+        "explanation": "He has spotted over forty species within walking distance of his apartment."
+      },
+      {
+        "question": "What equipment does the caller say is needed to start birdwatching?",
+        "options": [
+          "Expensive cameras only",
+          "A cheap pair of binoculars and a free app",
+          "A car and a guide",
+          "Special training courses"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says a cheap pair of binoculars and a free app are enough to begin."
+      },
+      {
+        "question": "What has birdwatching mainly taught the caller?",
+        "options": [
+          "How to run faster",
+          "How to cook new dishes",
+          "How to avoid crowds",
+          "Patience, from standing still and quiet"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says birdwatching taught him patience, since you must stand still and quiet before anything interesting happens."
+      },
+      {
+        "question": "Where did the caller see the first unusual bird?",
+        "options": [
+          "Outside an office window",
+          "On a mountain",
+          "Inside the apartment",
+          "At a pet shop"
+        ],
+        "correctIndex": 0,
+        "explanation": "The hobby began with a bird near the caller’s workplace."
+      },
+      {
+        "question": "What does the bird app help the caller do?",
+        "options": [
+          "Identify different birds",
+          "Buy binoculars",
+          "Find office work",
+          "Change sunrise time"
+        ],
+        "correctIndex": 0,
+        "explanation": "The app helps connect a sighting with a bird name."
+      },
+      {
+        "question": "When are birds easiest to hear?",
+        "options": [
+          "At midnight",
+          "During busy traffic",
+          "Around sunrise",
+          "After the radio show"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller recommends early morning when birds are active."
+      },
+      {
+        "question": "Why is patience useful in birdwatching?",
+        "options": [
+          "Birds always arrive on command",
+          "The app takes many hours to open",
+          "A person may wait quietly before seeing something",
+          "Binoculars work only slowly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Standing still and quiet can take time."
+      },
+      {
+        "question": "What changed in how the caller sees the city?",
+        "options": [
+          "All buildings seemed empty",
+          "Small green spaces became more valuable",
+          "The city became completely silent",
+          "Walking distance became longer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Birdwatching revealed nature between the buildings."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; lively radio format presents an accessible city hobby through specific details and simple advice",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-nature-08",
+    "title": "The Morning the Beach Was Quiet",
+    "level": "A1",
+    "themeId": "nature",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] I had visited the same beach many times, but always in the afternoon when food sellers, music, and families filled the shore.",
+      "Narrator: [curious] One Saturday, I arrived just after sunrise to help a local group collect litter. The place felt completely different.",
+      "Narrator: The sea was pale silver, and small birds searched the wet sand. I could hear each wave clearly.",
+      "Narrator: [carefully] Our leader gave us gloves and separate bags for plastic, glass, and other waste. She also explained what we should not touch.",
+      "Narrator: [surprised] At first, the beach looked clean. When I looked closely, I found bottle caps, fishing line, and tiny pieces of plastic near the plants.",
+      "Narrator: A volunteer showed me a bird's nest above the sand. We walked around it and marked the area so others would keep their distance.",
+      "Narrator: [reflective] That moment changed the work for me. We were not cleaning an empty outdoor room; we were caring for a living home.",
+      "Narrator: [tired] After an hour, our bags were heavy. Most waste was small enough for visitors to ignore, but together it filled several containers.",
+      "Narrator: We recorded the kinds of litter before sending them for safe disposal. The group uses this information to speak with shops and visitors.",
+      "Narrator: When regular beachgoers began arriving, the birds moved farther away and the quiet sounds disappeared under human noise.",
+      "Narrator: [honestly] I did not feel angry at the visitors because I was usually one of them. Instead, I felt responsible for how I use shared places.",
+      "Narrator: Now I carry a small bag for my own rubbish and pick up safe items near me.",
+      "Narrator: [thoughtful] The early beach taught me that nature is often active before we notice it. Respect begins when we slow down enough to see."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator arrive after sunrise?",
+        "options": [
+          "To join a litter collection",
+          "To sell food",
+          "To swim in a race",
+          "To meet a musician"
+        ],
+        "correctIndex": 0,
+        "explanation": "He joined a local beach-cleaning group."
+      },
+      {
+        "question": "What small waste did volunteers find?",
+        "options": [
+          "Bottle caps, fishing line, and plastic pieces",
+          "Old furniture",
+          "Car parts",
+          "Books and clothes"
+        ],
+        "correctIndex": 0,
+        "explanation": "Much of the litter was small but harmful."
+      },
+      {
+        "question": "Why did they mark one area?",
+        "options": [
+          "To build a shop",
+          "To protect a bird’s nest",
+          "To reserve a picnic place",
+          "To park vehicles"
+        ],
+        "correctIndex": 1,
+        "explanation": "They kept people away from a nest."
+      },
+      {
+        "question": "What did the group record?",
+        "options": [
+          "The names of every visitor",
+          "The wave height every minute",
+          "Food prices",
+          "The different kinds of litter"
+        ],
+        "correctIndex": 3,
+        "explanation": "Their data supports later prevention work."
+      },
+      {
+        "question": "What did the quiet beach show the narrator about shared places?",
+        "options": [
+          "Beaches are empty before noon",
+          "Only groups can protect nature",
+          "Shared natural places are living homes that need care",
+          "Visitors should never come"
+        ],
+        "correctIndex": 2,
+        "explanation": "Noticing living things changed his sense of responsibility."
+      },
+      {
+        "question": "What safety item did the leader give volunteers?",
+        "options": [
+          "Swimming shoes",
+          "Sunrise maps",
+          "Bird food",
+          "Gloves"
+        ],
+        "correctIndex": 3,
+        "explanation": "Gloves protected their hands while collecting litter."
+      },
+      {
+        "question": "Why were there different bags?",
+        "options": [
+          "To carry food for birds",
+          "To mark the sea level",
+          "To separate types of waste",
+          "To give one to each visitor"
+        ],
+        "correctIndex": 2,
+        "explanation": "Plastic, glass, and other rubbish were sorted."
+      },
+      {
+        "question": "What does “keep their distance” mean?",
+        "options": [
+          "Stay far enough away",
+          "Stand on the nest",
+          "Take the nest home",
+          "Make a loud sound"
+        ],
+        "correctIndex": 0,
+        "explanation": "The marked area helped people avoid disturbing the bird’s home."
+      },
+      {
+        "question": "Why did the heavy bags surprise the narrator?",
+        "options": [
+          "Small ignored pieces added up",
+          "The beach looked dirty at first",
+          "Visitors left full containers",
+          "The group collected only glass"
+        ],
+        "correctIndex": 0,
+        "explanation": "Many tiny items together filled several containers."
+      },
+      {
+        "question": "How did the cleanup change the narrator?",
+        "options": [
+          "Afternoon visits were no longer allowed",
+          "Shared natural places felt like a personal responsibility",
+          "All visitors seemed harmful",
+          "The sea became quieter every day"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator now manages personal rubbish and safe nearby litter."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; strong environmental volunteering story includes protective equipment, wildlife distance, sorting, and responsible follow-up",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-nature-09",
+    "title": "Rain on the Farm Roof",
+    "level": "A1",
+    "themeId": "nature",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] During a visit to my uncle's farm, dark clouds arrived while we were carrying tools from the field.",
+      "Narrator: [hurriedly] We entered a small wooden shelter just before heavy rain began. The drops struck the metal roof with a deep, steady sound.",
+      "Narrator: [surprised] I expected my uncle to complain because we could not finish the day's work. Instead, he sat near the open side and smiled.",
+      "Narrator: [relieved] He said the ground had been dry for weeks. The young corn needed water, and the well was becoming low.",
+      "Narrator: From the shelter, we watched dust turn into dark soil. Narrow lines of water moved between the rows.",
+      "Narrator: [carefully] My uncle explained that strong rain can also cause problems. If water moves too fast, it carries good soil away.",
+      "Narrator: When the rain became lighter, we put on boots and checked the small channels beside the field.",
+      "Narrator: [working] Leaves and sticks blocked one channel. We cleared it so the water could move slowly toward a storage pond.",
+      "Narrator: The work was wet and muddy, but I began to understand the farm differently. Rain was not simply good weather or bad weather.",
+      "Narrator: Its effect depended on the land, the crops, and how people prepared for it.",
+      "Narrator: [peacefully] We returned to the shelter and drank warm tea. My uncle wrote the rainfall amount in a notebook.",
+      "Narrator: He keeps records because memory is not enough when planning seeds and water for another season.",
+      "Narrator: By sunset, the air smelled fresh, and drops remained on every leaf. We had completed less work than planned but received something the farm needed.",
+      "Narrator: [reflective] That afternoon taught me to look beyond my own convenience. The same rain that delays one task may support life all around us."
+    ],
+    "quiz": [
+      {
+        "question": "Where did the narrator and his uncle wait?",
+        "options": [
+          "Inside a city apartment",
+          "In a small wooden shelter",
+          "Under a bus stop",
+          "In a restaurant"
+        ],
+        "correctIndex": 1,
+        "explanation": "They sheltered from rain in a farm building."
+      },
+      {
+        "question": "Why was the uncle pleased?",
+        "options": [
+          "He wanted to stop farming",
+          "The roof was new",
+          "The dry corn and low well needed rain",
+          "Visitors were arriving"
+        ],
+        "correctIndex": 2,
+        "explanation": "The farm had lacked water for weeks."
+      },
+      {
+        "question": "What danger can strong rain cause?",
+        "options": [
+          "It can make seeds sing",
+          "It can empty every pond",
+          "It can stop all plants growing",
+          "It can carry good soil away"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fast water may cause soil erosion."
+      },
+      {
+        "question": "What blocked a water channel?",
+        "options": [
+          "Farm machines",
+          "Fish",
+          "Large stones from a wall",
+          "Leaves and sticks"
+        ],
+        "correctIndex": 3,
+        "explanation": "They removed leaves and sticks to guide the water."
+      },
+      {
+        "question": "Why does the uncle record rainfall?",
+        "options": [
+          "To write a novel",
+          "To remember visitors",
+          "To decide tea prices",
+          "To plan future seeds and water"
+        ],
+        "correctIndex": 3,
+        "explanation": "Records help him make seasonal farming decisions."
+      },
+      {
+        "question": "What sound did the rain make?",
+        "options": [
+          "A deep steady sound on the metal roof",
+          "A quiet sound under the soil",
+          "A loud sound from the well",
+          "A dry sound in the corn"
+        ],
+        "correctIndex": 0,
+        "explanation": "Heavy drops struck the shelter roof."
+      },
+      {
+        "question": "What happened to the dusty ground?",
+        "options": [
+          "It became dark wet soil",
+          "It blew away immediately",
+          "It changed into a road",
+          "It stayed completely dry"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator watched the rain change its color and condition."
+      },
+      {
+        "question": "Why did they clear the channel?",
+        "options": [
+          "To send water out of the farm",
+          "To guide water slowly to a storage pond",
+          "To dry the corn at once",
+          "To make room for their tools"
+        ],
+        "correctIndex": 1,
+        "explanation": "The channel helped manage water and protect the soil."
+      },
+      {
+        "question": "What does “blocked” mean here?",
+        "options": [
+          "Filled with clean water",
+          "Built beside the field",
+          "Recorded in a notebook",
+          "Closed by leaves and sticks"
+        ],
+        "correctIndex": 3,
+        "explanation": "Debris stopped the water from moving properly."
+      },
+      {
+        "question": "What new idea did the narrator understand?",
+        "options": [
+          "Rain is always bad for farm work",
+          "A farm never needs stored water",
+          "Rain can help or cause problems depending on conditions",
+          "Planning is unnecessary after rain"
+        ],
+        "correctIndex": 2,
+        "explanation": "The effects depend on land, crops, and preparation."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; coherent farm observation explains both benefits and risks of rain through concrete actions",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-nature-10",
+    "title": "Should We Feed the Park Monkeys?",
+    "level": "A1",
+    "themeId": "nature",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Salma",
+        "gender": "female"
+      },
+      {
+        "name": "Guide Arif",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Salma: [curious] Guide Arif, that small monkey is looking at my banana. May I give it a piece?",
+      "Guide Arif: [firmly] Please do not feed it, even if it comes close and looks hungry.",
+      "Salma: I thought fruit would be healthier than the snacks some visitors give.",
+      "Guide Arif: [carefully] Fruit is better than candy, but wild monkeys still need to find their own natural food.",
+      "Salma: What happens when visitors feed them often?",
+      "Guide Arif: [concerned] They begin to wait near people instead of searching in the forest. Some become aggressive and grab bags.",
+      "Salma: I saw a sign about keeping food inside our backpacks. Is that why?",
+      "Guide Arif: [helpfully] Yes. The rule protects visitors and monkeys. Human food can also make the animals sick.",
+      "Salma: The little one is following us now. What should I do?",
+      "Guide Arif: [calmly] Do not show the banana or run. Put it inside your bag, stay calm, and give the animal space.",
+      "Salma: Should we make a loud sound to frighten it away?",
+      "Guide Arif: No. Sudden actions may frighten or challenge it. We can walk slowly toward the open path.",
+      "Salma: I understand. Taking a close photo is probably a bad idea too.",
+      "Guide Arif: [seriously] Correct. Use the camera from a safe distance and never stand between an adult and a young monkey.",
+      "Salma: I used to think feeding wildlife was a kind action.",
+      "Guide Arif: [thoughtful] Kindness must include the animal's long-term health, not only a pleasant moment for us.",
+      "Salma: Is there a safe way to support the animals here?",
+      "Guide Arif: Follow park rules, carry out rubbish, and support habitat protection. Those actions help without changing wild behavior.",
+      "Salma: The monkey has moved back toward the trees now.",
+      "Guide Arif: [warmly] Good. We observed it without touching its life, and that is the best kind of wildlife visit."
+    ],
+    "quiz": [
+      {
+        "question": "What does Salma want to give the monkey?",
+        "options": [
+          "A piece of banana",
+          "A bottle of water",
+          "A camera",
+          "A bag of rice"
+        ],
+        "correctIndex": 0,
+        "explanation": "She asks about sharing her banana."
+      },
+      {
+        "question": "Why should visitors not feed wild monkeys?",
+        "options": [
+          "The monkeys dislike fruit",
+          "It changes behavior and may harm health",
+          "The park sells no food",
+          "The guide wants all bananas"
+        ],
+        "correctIndex": 1,
+        "explanation": "Feeding creates dependence, aggression, and health risks."
+      },
+      {
+        "question": "What should Salma do with the banana?",
+        "options": [
+          "Throw it at the monkey",
+          "Put it inside her bag",
+          "Leave it on the path",
+          "Hold it above her head"
+        ],
+        "correctIndex": 1,
+        "explanation": "Food should be hidden calmly."
+      },
+      {
+        "question": "How should she photograph the animal?",
+        "options": [
+          "While touching it",
+          "Between an adult and baby",
+          "From a safe distance",
+          "After chasing it"
+        ],
+        "correctIndex": 2,
+        "explanation": "Safe observation avoids close contact."
+      },
+      {
+        "question": "What support does the guide recommend?",
+        "options": [
+          "Feed animals every week",
+          "Bring pets into the park",
+          "Build a road through the trees",
+          "Follow rules, remove rubbish, and protect habitat"
+        ],
+        "correctIndex": 3,
+        "explanation": "These actions help wildlife without changing its natural behavior."
+      },
+      {
+        "question": "Why is fruit still not suitable to give?",
+        "options": [
+          "Fruit is always worse than candy",
+          "Wild monkeys should find their natural food",
+          "The monkey has already eaten",
+          "The park sells different fruit"
+        ],
+        "correctIndex": 1,
+        "explanation": "Even healthier human food can change wild behavior."
+      },
+      {
+        "question": "What may monkeys do after people feed them often?",
+        "options": [
+          "Move deeper into the forest",
+          "Wait near people and grab bags",
+          "Stop looking at all food",
+          "Become safe pets"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guide explains that feeding creates risky habits."
+      },
+      {
+        "question": "What does “aggressive” mean here?",
+        "options": [
+          "Ready to threaten or attack",
+          "Quietly eating alone",
+          "Moving slowly to a tree",
+          "Afraid of every backpack"
+        ],
+        "correctIndex": 0,
+        "explanation": "Some monkeys may approach people forcefully and take bags."
+      },
+      {
+        "question": "Why should Salma avoid loud sounds?",
+        "options": [
+          "They make the banana sweeter",
+          "They attract the park guide",
+          "They improve close photos",
+          "They may frighten or challenge the monkey"
+        ],
+        "correctIndex": 3,
+        "explanation": "Calm, slow movement is safer than a sudden action."
+      },
+      {
+        "question": "What kind action helps without changing wild behavior?",
+        "options": [
+          "Feeding fruit from a distance",
+          "Standing near a young monkey",
+          "Protecting habitat and following park rules",
+          "Leaving rubbish beside the path"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guide recommends support that keeps wildlife wild."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "nature",
+      "scriptDecision": "keep; excellent safety dialogue replaces an appealing but harmful action with specific wildlife-respect behavior",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "reading:sync": "node scripts/sync-reading-content.mjs",
     "reading:validate": "node scripts/sync-reading-content.mjs --validate-only",
-    "listening:sync": "node scripts/sync-listening-content.mjs"
+    "listening:sync": "node scripts/sync-listening-content.mjs",
+    "listening:validate": "node scripts/validate-listening-content.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.34.0",

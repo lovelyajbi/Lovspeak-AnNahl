@@ -6,30 +6,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [wry] The email arrived at nine in the morning, congratulating a man I'd personally trained eighteen months ago on his promotion to the position I'd been quietly coveting.",
-      "Narrator: [restrained] I read it twice, mostly to confirm I hadn't misunderstood, and then I closed my laptop and sat with the particular stillness that precedes either grace or bitterness.",
-      "Narrator: [honestly] My first instinct, if I'm being scrupulously honest, wasn't magnanimity. It was a small, ungenerous satisfaction in cataloguing his every flaw as evidence of managerial error.",
-      "Narrator: [reflective] I've noticed that envy rarely announces itself plainly. It arrives dressed as principle, as concern for standards, as anything but what it actually is.",
-      "Narrator: [reasoning] Adab, I've come to think, isn't the absence of that ugly first instinct. It's the discipline of not letting the instinct author your next sentence.",
-      "Narrator: [thoughtful] So I sent him a message, brief and unembellished, congratulating him properly, and I meant perhaps sixty percent of it, which felt like an honest enough starting point.",
-      "Narrator: [wry] The remaining forty percent I kept to myself, where uncomfortable truths are permitted to exist without requiring an audience or immediate resolution.",
-      "Narrator: [firm] That doesn't mean I intend to pretend the process was flawless. I'll request a conversation with my director, calmly, about why I was overlooked.",
-      "Narrator: [reasoning] There's a meaningful difference between advocating honestly for oneself and diminishing someone else to accomplish it, though the two are frequently confused under pressure.",
-      "Narrator: [reflective] What unsettles me more than the decision itself is how easily I could have let disappointment curdle into something corrosive, something I'd have called justified at the time.",
-      "Narrator: [honestly] I keep thinking of a teacher who once said that resentment is a debt you pay daily to someone who's stopped thinking about you entirely.",
-      "Narrator: [peacefully] So I'm choosing, deliberately and without much natural enthusiasm, to let this particular debt go unpaid, one congratulatory message at a time.",
-      "Narrator: [determined] Tomorrow I'll ask for feedback, prepare a stronger case, and continue mentoring whoever needs it, including, apparently, the people who eventually outpace me."
+      "Narrator: [thoughtful] The email arrived at nine in the morning, congratulating a man I'd personally trained eighteen months ago on his promotion to the position I'd been quietly coveting.",
+      "Narrator: I read it twice, mostly to confirm I hadn't misunderstood, and then I closed my laptop and sat with the particular stillness that precedes either grace or bitterness.",
+      "Narrator: [carefully] My first instinct, if I'm being scrupulously honest, wasn't magnanimity. It was a small, ungenerous satisfaction in cataloguing his every flaw as evidence of managerial error.",
+      "Narrator: I've noticed that envy rarely announces itself plainly. It arrives dressed as principle, as concern for standards, as anything but what it actually is.",
+      "Narrator: [reflective] Adab, I've come to think, isn't the absence of that ugly first instinct. It's the discipline of not letting the instinct author your next sentence.",
+      "Narrator: So I sent him a message, brief and unembellished, congratulating him properly, and I meant perhaps sixty percent of it, which felt like an honest enough starting point.",
+      "Narrator: [honestly] The remaining forty percent I kept to myself, where uncomfortable truths are permitted to exist without requiring an audience or immediate resolution.",
+      "Narrator: That doesn't mean I intend to pretend the process was flawless. I'll request a conversation with my director, calmly, about why I was overlooked.",
+      "Narrator: [gently] There's a meaningful difference between advocating honestly for oneself and diminishing someone else to accomplish it, though the two are frequently confused under pressure.",
+      "Narrator: What unsettles me more than the decision itself is how easily I could have let disappointment curdle into something corrosive, something I'd have called justified at the time.",
+      "Narrator: [calmly] I keep thinking of a teacher who once said that resentment is a debt you pay daily to someone who's stopped thinking about you entirely.",
+      "Narrator: So I'm choosing, deliberately and without much natural enthusiasm, to let this particular debt go unpaid, one congratulatory message at a time.",
+      "Narrator: [encouraging] Tomorrow I'll ask for feedback, prepare a stronger case, and continue mentoring whoever needs it, including, apparently, the people who eventually outpace me."
     ],
     "quiz": [
-      { "question": "What news does the narrator receive by email?", "options": ["That he has been laid off", "That a man he trained has been promoted to the position he wanted", "That his salary has been reduced", "That he must relocate for work"], "correctIndex": 1, "explanation": "The email congratulates a man the narrator personally trained on being promoted to the position the narrator had been coveting." },
-      { "question": "How does the narrator describe his first instinct upon reading the news?", "options": ["Pure happiness for his colleague", "A small, ungenerous satisfaction in cataloguing the man's flaws", "Complete indifference", "Immediate forgiveness"], "correctIndex": 1, "explanation": "He admits his first instinct was a small, ungenerous satisfaction in listing the man's flaws as evidence of managerial error." },
-      { "question": "How does the narrator describe adab in this reflection?", "options": ["The absence of any negative feeling", "The discipline of not letting the ugly first instinct author one's next sentence", "A guarantee of fair treatment at work", "A reason to avoid all confrontation"], "correctIndex": 1, "explanation": "He describes adab as the discipline of not letting the initial ugly instinct dictate what he says or does next." },
-      { "question": "Does the narrator plan to accept being overlooked without comment?", "options": ["Yes, entirely and silently", "No, he plans to calmly request a conversation with his director about it", "No, he plans to resign immediately", "Yes, because complaining would violate adab"], "correctIndex": 1, "explanation": "He states he'll request a calm conversation with his director about why he was overlooked, distinguishing this from diminishing his colleague." },
-      { "question": "What does the narrator recall a teacher saying about resentment?", "options": ["That it protects a person from future harm", "That it is a debt paid daily to someone who has stopped thinking about you", "That it should always be expressed openly", "That it fades on its own without effort"], "correctIndex": 1, "explanation": "He recalls a teacher's saying that resentment is a debt you pay daily to someone who's stopped thinking about you entirely." }
-    ]
+      {
+        "question": "What news does the narrator receive by email?",
+        "options": [
+          "That a man he trained has been promoted to the position he wanted",
+          "That he has been laid off",
+          "That his salary has been reduced",
+          "That he must relocate for work"
+        ],
+        "correctIndex": 0,
+        "explanation": "The email congratulates a man the narrator personally trained on being promoted to the position the narrator had been coveting."
+      },
+      {
+        "question": "How does the narrator describe his first instinct upon reading the news?",
+        "options": [
+          "Pure happiness for his colleague",
+          "Complete indifference",
+          "A small, ungenerous satisfaction in cataloguing the man's flaws",
+          "Immediate forgiveness"
+        ],
+        "correctIndex": 2,
+        "explanation": "He admits his first instinct was a small, ungenerous satisfaction in listing the man's flaws as evidence of managerial error."
+      },
+      {
+        "question": "How does the narrator describe adab in this reflection?",
+        "options": [
+          "The absence of any negative feeling",
+          "A guarantee of fair treatment at work",
+          "A reason to avoid all confrontation",
+          "The discipline of not letting the ugly first instinct author one's next sentence"
+        ],
+        "correctIndex": 3,
+        "explanation": "He describes adab as the discipline of not letting the initial ugly instinct dictate what he says or does next."
+      },
+      {
+        "question": "Does the narrator plan to accept being overlooked without comment?",
+        "options": [
+          "Yes, entirely and silently",
+          "No, he plans to resign immediately",
+          "No, he plans to calmly request a conversation with his director about it",
+          "Yes, because complaining would violate adab"
+        ],
+        "correctIndex": 2,
+        "explanation": "He states he'll request a calm conversation with his director about why he was overlooked, distinguishing this from diminishing his colleague."
+      },
+      {
+        "question": "What does the narrator recall a teacher saying about resentment?",
+        "options": [
+          "That it protects a person from future harm",
+          "That it is a debt paid daily to someone who has stopped thinking about you",
+          "That it should always be expressed openly",
+          "That it fades on its own without effort"
+        ],
+        "correctIndex": 1,
+        "explanation": "He recalls a teacher's saying that resentment is a debt you pay daily to someone who's stopped thinking about you entirely."
+      },
+      {
+        "question": "What does the narrator's reaction reveal about envy's preferred disguise?",
+        "options": [
+          "Truthful speech must be weighed alongside timing and another person's grief.",
+          "It often presents personal resentment as principled concern about standards.",
+          "Repair continues privately after public attention has disappeared.",
+          "Other mourners were neither responsible for nor equipped to carry old wounds."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It often presents personal resentment as principled concern about standards."
+      },
+      {
+        "question": "Why is the partly sincere congratulation treated as a legitimate beginning?",
+        "options": [
+          "Disciplined conduct can precede complete emotional generosity.",
+          "Habitual silence can conceal cowardice and deprive relationships of honesty.",
+          "Adab concerns whether harm is repaired, not how impressive remorse sounds.",
+          "Simple praise or condemnation would erase part of the inheritance."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Disciplined conduct can precede complete emotional generosity."
+      },
+      {
+        "question": "How does the planned meeting with the director avoid undermining the promoted colleague?",
+        "options": [
+          "Silence becomes culpable when it actively permits harm.",
+          "They relieve criticism temporarily without producing durable moral change.",
+          "It governs audience and purpose rather than demanding false speech.",
+          "It argues for the narrator's case without attacking another person's worth."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It argues for the narrator's case without attacking another person's worth."
+      },
+      {
+        "question": "What implication follows from the teacher's description of resentment as debt?",
+        "options": [
+          "Sustained bitterness burdens the resentful person more than its target.",
+          "A public audience would turn correction into defensive performance.",
+          "The specific injury matters more than spectators' demand for a statement.",
+          "She shares the history and can hold tenderness beside harm."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Sustained bitterness burdens the resentful person more than its target."
+      },
+      {
+        "question": "Which future action best confirms the narrator's chosen understanding of adab?",
+        "options": [
+          "She commits to a private conversation rather than indefinite avoidance.",
+          "Reputation management serves the offender; repentance serves the harmed party.",
+          "Truth becomes humane when entrusted to witnesses who understand its complexity.",
+          "Continue mentoring others while seeking specific feedback and stronger evidence."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Continue mentoring others while seeking specific feedback and stronger evidence."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-adab-02",
@@ -38,33 +152,150 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Maya", "gender": "female" }
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      },
+      {
+        "name": "Maya",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Yusuf: [provoking] You've spent the entire dinner nodding politely at my sister's opinions, none of which you actually hold. Isn't that its own quiet dishonesty?",
-      "Maya: [measured] Not every unspoken disagreement is deception, Yusuf. Sometimes it's simply restraint, choosing the wrong moment not to matter more than the truth itself.",
-      "Yusuf: [skeptical] That sounds convenient. Restraint starts looking suspiciously like cowardice once it becomes a permanent policy rather than an occasional choice.",
-      "Maya: [defensive] I'm not silent out of cowardice, I'm silent because your sister wasn't inviting debate, she was processing grief through certainty, and certainty comforted her.",
-      "Yusuf: [conceding] Fair, though I worry you extend that generosity indefinitely, until nobody around you ever learns what you genuinely think about anything.",
-      "Maya: [thoughtful] Perhaps. But adab, as I understand it, weighs timing as seriously as it weighs honesty, rather than treating them as competing obligations.",
-      "Yusuf: [curious] Where's the line, then? At what point does tactful silence curdle into something closer to complicity with whatever's being said?",
-      "Maya: [reasoning] When staying quiet actively causes harm, I'd say, rather than merely sparing someone a disagreement they weren't prepared to hear yet.",
-      "Yusuf: [pressing] And tonight, watching her insist that ambition ruins women, did your silence spare her, or did it just spare you an argument?",
-      "Maya: [honestly] Probably the latter, if I'm being scrupulous with myself, though I'd have chosen a different table for that particular correction anyway.",
-      "Yusuf: [gently] I appreciate you admitting that rather than dressing avoidance up as wisdom, which is what most people do when confronted like this.",
-      "Maya: [reflective] I'll speak with her privately, later this week, without an audience pressuring either of us toward performance instead of honest conversation.",
-      "Yusuf: [warmly] That seems more honest than either confronting her publicly or letting the comment vanish entirely into pleasant, forgettable dinner conversation.",
-      "Maya: [wry] Careful, husband. Keep dismantling my rationalizations this precisely and I'll have nowhere left to hide my more ordinary cowardices.",
-      "Yusuf: [smiling] I'll allow you a few. Just not the ones you're currently mistaking for principle."
+      "Yusuf: [thoughtful] You've spent the entire dinner nodding politely at my sister's opinions, none of which you actually hold. Isn't that its own quiet dishonesty?",
+      "Maya: Not every unspoken disagreement is deception, Yusuf. Sometimes it's simply restraint, choosing the wrong moment not to matter more than the truth itself.",
+      "Yusuf: [carefully] That sounds convenient. Restraint starts looking suspiciously like cowardice once it becomes a permanent policy rather than an occasional choice.",
+      "Maya: I'm not silent out of cowardice, I'm silent because your sister wasn't inviting debate, she was processing grief through certainty, and certainty comforted her.",
+      "Yusuf: [reflective] Fair, though I worry you extend that generosity indefinitely, until nobody around you ever learns what you genuinely think about anything.",
+      "Maya: Perhaps. But adab, as I understand it, weighs timing as seriously as it weighs honesty, rather than treating them as competing obligations.",
+      "Yusuf: [honestly] Where's the line, then? At what point does tactful silence curdle into something closer to complicity with whatever's being said?",
+      "Maya: When staying quiet actively causes harm, I'd say, rather than merely sparing someone a disagreement they weren't prepared to hear yet.",
+      "Yusuf: [gently] And tonight, watching her insist that ambition ruins women, did your silence spare her, or did it just spare you an argument?",
+      "Maya: Probably the latter, if I'm being scrupulous with myself, though I'd have chosen a different table for that particular correction anyway.",
+      "Yusuf: [calmly] I appreciate you admitting that rather than dressing avoidance up as wisdom, which is what most people do when confronted like this.",
+      "Maya: I'll speak with her privately, later this week, without an audience pressuring either of us toward performance instead of honest conversation.",
+      "Yusuf: [encouraging] That seems more honest than either confronting her publicly or letting the comment vanish entirely into pleasant, forgettable dinner conversation.",
+      "Maya: Careful, husband. Keep dismantling my rationalizations this precisely and I'll have nowhere left to hide my more ordinary cowardices.",
+      "Yusuf: [seriously] I'll allow you a few. Just not the ones you're currently mistaking for principle."
     ],
     "quiz": [
-      { "question": "What does Yusuf accuse Maya of during dinner?", "options": ["Arguing too aggressively with his sister", "Nodding politely at opinions she doesn't actually hold", "Ignoring his sister entirely", "Changing the subject constantly"], "correctIndex": 1, "explanation": "Yusuf accuses Maya of nodding politely at his sister's opinions throughout dinner despite not holding them herself." },
-      { "question": "How does Maya initially justify her silence?", "options": ["She agrees with the opinions", "She says it's restraint, since the moment wasn't right for the truth to matter more", "She claims she wasn't listening", "She says she is afraid of conflict generally"], "correctIndex": 1, "explanation": "Maya says her silence is restraint, choosing not to let the wrong moment matter more than the truth." },
-      { "question": "According to Maya, when does tactful silence become harmful complicity?", "options": ["Whenever someone disagrees with her", "When staying quiet actively causes harm rather than sparing an unready listener", "Only during formal arguments", "Never, silence is always acceptable"], "correctIndex": 1, "explanation": "Maya says the line is crossed when silence actively causes harm, not when it merely spares someone a disagreement." },
-      { "question": "What does Maya admit about her silence during the specific comment about ambition?", "options": ["That it fully protected his sister from harm", "That it probably spared herself an argument more than it spared his sister", "That she agreed with the comment", "That she didn't hear the comment"], "correctIndex": 1, "explanation": "Maya honestly admits the silence probably spared her an argument rather than genuinely sparing his sister anything." },
-      { "question": "What does Maya decide to do about the comment?", "options": ["Ignore it permanently", "Speak with his sister privately later, without an audience", "Post about it publicly", "Ask Yusuf to confront her instead"], "correctIndex": 1, "explanation": "Maya decides to speak with the sister privately later in the week, without an audience pressuring either of them." }
-    ]
+      {
+        "question": "What does Yusuf accuse Maya of during dinner?",
+        "options": [
+          "Arguing too aggressively with his sister",
+          "Ignoring his sister entirely",
+          "Nodding politely at opinions she doesn't actually hold",
+          "Changing the subject constantly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yusuf accuses Maya of nodding politely at his sister's opinions throughout dinner despite not holding them herself."
+      },
+      {
+        "question": "How does Maya initially justify her silence?",
+        "options": [
+          "She says it's restraint, since the moment wasn't right for the truth to matter more",
+          "She agrees with the opinions",
+          "She claims she wasn't listening",
+          "She says she is afraid of conflict generally"
+        ],
+        "correctIndex": 0,
+        "explanation": "Maya says her silence is restraint, choosing not to let the wrong moment matter more than the truth."
+      },
+      {
+        "question": "According to Maya, when does tactful silence become harmful complicity?",
+        "options": [
+          "Whenever someone disagrees with her",
+          "When staying quiet actively causes harm rather than sparing an unready listener",
+          "Only during formal arguments",
+          "Never, silence is always acceptable"
+        ],
+        "correctIndex": 1,
+        "explanation": "Maya says the line is crossed when silence actively causes harm, not when it merely spares someone a disagreement."
+      },
+      {
+        "question": "What does Maya admit about her silence during the specific comment about ambition?",
+        "options": [
+          "That it fully protected his sister from harm",
+          "That she agreed with the comment",
+          "That she didn't hear the comment",
+          "That it probably spared herself an argument more than it spared his sister"
+        ],
+        "correctIndex": 3,
+        "explanation": "Maya honestly admits the silence probably spared her an argument rather than genuinely sparing his sister anything."
+      },
+      {
+        "question": "What does Maya decide to do about the comment?",
+        "options": [
+          "Speak with his sister privately later, without an audience",
+          "Ignore it permanently",
+          "Post about it publicly",
+          "Ask Yusuf to confront her instead"
+        ],
+        "correctIndex": 0,
+        "explanation": "Maya decides to speak with the sister privately later in the week, without an audience pressuring either of them."
+      },
+      {
+        "question": "On what basis does Maya initially defend withholding disagreement?",
+        "options": [
+          "Repair continues privately after public attention has disappeared.",
+          "Other mourners were neither responsible for nor equipped to carry old wounds.",
+          "Praise repeatedly lowers resistance and produces concessions benefiting the client.",
+          "Truthful speech must be weighed alongside timing and another person's grief."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Truthful speech must be weighed alongside timing and another person's grief."
+      },
+      {
+        "question": "What weakness does Yusuf identify in restraint used as a permanent policy?",
+        "options": [
+          "Adab concerns whether harm is repaired, not how impressive remorse sounds.",
+          "Simple praise or condemnation would erase part of the inheritance.",
+          "Habitual silence can conceal cowardice and deprive relationships of honesty.",
+          "It governs one's conduct but cannot guarantee another person's sincerity."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Habitual silence can conceal cowardice and deprive relationships of honesty."
+      },
+      {
+        "question": "Which criterion finally distinguishes tact from complicity for Maya?",
+        "options": [
+          "They relieve criticism temporarily without producing durable moral change.",
+          "Silence becomes culpable when it actively permits harm.",
+          "It governs audience and purpose rather than demanding false speech.",
+          "Being strategically outmanoeuvred need not make them dishonest or rude."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Silence becomes culpable when it actively permits harm."
+      },
+      {
+        "question": "Why does Maya reject correcting Yusuf's sister during dinner?",
+        "options": [
+          "The specific injury matters more than spectators' demand for a statement.",
+          "A public audience would turn correction into defensive performance.",
+          "She shares the history and can hold tenderness beside harm.",
+          "A warm, repeated refusal separates politeness from concession."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: A public audience would turn correction into defensive performance."
+      },
+      {
+        "question": "What development shows that Yusuf's challenge changed Maya's stance?",
+        "options": [
+          "She commits to a private conversation rather than indefinite avoidance.",
+          "Reputation management serves the offender; repentance serves the harmed party.",
+          "Truth becomes humane when entrusted to witnesses who understand its complexity.",
+          "Good manners do not create an obligation to accept unfavourable terms."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: She commits to a private conversation rather than indefinite avoidance."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-adab-03",
@@ -73,35 +304,152 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Moderator", "gender": "female" },
-      { "name": "Panelist", "gender": "male" }
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Panelist",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Moderator: [engaging] Tonight's panel examines whether public apologies have devolved into performance. Ustadz Hilman, does contrition still mean anything once it's staged for an audience?",
-      "Panelist: [measured] It can, though I'll admit the format tempts people toward spectacle over substance, which weren't traditionally the same undertaking at all.",
-      "Moderator: [probing] What distinguishes genuine contrition from what you're calling spectacle, in practice, when both look nearly identical from the outside?",
-      "Panelist: [thoughtful] Genuine contrition survives the absence of an audience. It continues privately, unglamorously, long after the cameras and comment sections have moved elsewhere.",
-      "Moderator: [interested] So the test isn't the apology's eloquence, but whether the person's behavior changes once nobody's watching them anymore?",
-      "Panelist: [nodding] Precisely. Adab was never primarily about the elegance of the statement, it concerned itself with restitution, with whether the harmed party was actually made whole.",
-      "Panelist: [continuing] I've seen apologies so polished they read like marketing copy, and I've seen clumsy, halting ones that nonetheless transformed how someone lived afterward.",
-      "Moderator: [challenging] Some argue public apologies pressure people into confessing prematurely, before genuine reflection, merely to placate an outraged audience. Is that concern legitimate?",
-      "Panelist: [conceding] Entirely legitimate. Coerced contrition, extracted through public pressure rather than conscience, rarely produces anything durable beyond temporary relief from criticism.",
-      "Moderator: [curious] How, then, should someone apologize when they've genuinely wronged another person, particularly under public scrutiny?",
-      "Panelist: [explaining] Privately first, to whoever was actually harmed, addressing the specific injury rather than a sanitized, general wrongdoing acceptable to spectators.",
-      "Moderator: [interested] And the public statement, if one becomes unavoidable given the circumstances surrounding the situation?",
-      "Panelist: [firm] Secondary, brief, and unconcerned with rehabilitating one's reputation, which is a different project entirely from genuine repentance.",
-      "Moderator: [reflective] That distinction, reputation versus repentance, seems like the crux of your entire argument tonight.",
-      "Panelist: [warmly] It is. One serves the self. The other serves whoever was actually wronged. Confusing them corrupts adab into a spectator sport.",
-      "Moderator: [smiling] A sobering note to close on. Thank you for such a candid conversation this evening, Ustadz.",
-      "Panelist: [warmly] Thank you for hosting a question most panels prefer to avoid entirely."
+      "Moderator: [thoughtful] Tonight's panel examines whether public apologies have devolved into performance. Ustadz Hilman, does contrition still mean anything once it's staged for an audience?",
+      "Panelist: It can, though I'll admit the format tempts people toward spectacle over substance, which weren't traditionally the same undertaking at all.",
+      "Moderator: [carefully] What distinguishes genuine contrition from what you're calling spectacle, in practice, when both look nearly identical from the outside?",
+      "Panelist: Genuine contrition survives the absence of an audience. It continues privately, unglamorously, long after the cameras and comment sections have moved elsewhere.",
+      "Moderator: [reflective] So the test isn't the apology's eloquence, but whether the person's behavior changes once nobody's watching them anymore?",
+      "Panelist: Precisely. Adab was never primarily about the elegance of the statement, it concerned itself with restitution, with whether the harmed party was actually made whole.",
+      "Panelist: [honestly] I've seen apologies so polished they read like marketing copy, and I've seen clumsy, halting ones that nonetheless transformed how someone lived afterward.",
+      "Moderator: Some argue public apologies pressure people into confessing prematurely, before genuine reflection, merely to placate an outraged audience. Is that concern legitimate?",
+      "Panelist: [gently] Entirely legitimate. Coerced contrition, extracted through public pressure rather than conscience, rarely produces anything durable beyond temporary relief from criticism.",
+      "Moderator: How, then, should someone apologize when they've genuinely wronged another person, particularly under public scrutiny?",
+      "Panelist: [calmly] Privately first, to whoever was actually harmed, addressing the specific injury rather than a sanitized, general wrongdoing acceptable to spectators.",
+      "Moderator: And the public statement, if one becomes unavoidable given the circumstances surrounding the situation?",
+      "Panelist: [encouraging] Secondary, brief, and unconcerned with rehabilitating one's reputation, which is a different project entirely from genuine repentance.",
+      "Moderator: That distinction, reputation versus repentance, seems like the crux of your entire argument tonight.",
+      "Panelist: [seriously] It is. One serves the self. The other serves whoever was actually wronged. Confusing them corrupts adab into a spectator sport.",
+      "Moderator: A sobering note to close on. Thank you for such a candid conversation this evening, Ustadz.",
+      "Panelist: Thank you for hosting a question most panels prefer to avoid entirely."
     ],
     "quiz": [
-      { "question": "What is the panel discussion primarily examining?", "options": ["Whether apologies should be banned from television", "Whether public apologies have devolved into performance rather than genuine contrition", "How to write better apology letters", "Whether celebrities should apologize more often"], "correctIndex": 1, "explanation": "The moderator introduces the topic as whether public apologies have devolved into performance over substance." },
-      { "question": "According to the panelist, what distinguishes genuine contrition from spectacle?", "options": ["How eloquent the apology sounds", "Whether it survives the absence of an audience and continues privately afterward", "How quickly the apology is delivered", "Whether it is broadcast on television"], "correctIndex": 1, "explanation": "The panelist says genuine contrition continues privately, unglamorously, long after the audience has moved on, unlike spectacle." },
-      { "question": "What did adab traditionally concern itself with, according to the panelist?", "options": ["The elegance of the apology statement", "Restitution and whether the harmed party was actually made whole", "Avoiding all public scrutiny", "Winning back public approval quickly"], "correctIndex": 1, "explanation": "The panelist states adab concerned itself with restitution, whether the harmed party was actually made whole, not eloquence." },
-      { "question": "What does the panelist say about apologies coerced through public pressure?", "options": ["They are always more sincere", "They rarely produce anything durable beyond temporary relief from criticism", "They should be encouraged more often", "They are identical to private apologies"], "correctIndex": 1, "explanation": "He says coerced contrition, extracted through public pressure rather than conscience, rarely produces anything durable." },
-      { "question": "What distinction does the panelist say is the crux of his argument?", "options": ["Public versus private apologies", "Reputation versus repentance", "Fast versus slow apologies", "Written versus spoken apologies"], "correctIndex": 1, "explanation": "The panelist identifies reputation versus repentance as the central distinction, since confusing the two corrupts adab." }
-    ]
+      {
+        "question": "What is the panel discussion primarily examining?",
+        "options": [
+          "Whether apologies should be banned from television",
+          "Whether public apologies have devolved into performance rather than genuine contrition",
+          "How to write better apology letters",
+          "Whether celebrities should apologize more often"
+        ],
+        "correctIndex": 1,
+        "explanation": "The moderator introduces the topic as whether public apologies have devolved into performance over substance."
+      },
+      {
+        "question": "According to the panelist, what distinguishes genuine contrition from spectacle?",
+        "options": [
+          "Whether it survives the absence of an audience and continues privately afterward",
+          "How eloquent the apology sounds",
+          "How quickly the apology is delivered",
+          "Whether it is broadcast on television"
+        ],
+        "correctIndex": 0,
+        "explanation": "The panelist says genuine contrition continues privately, unglamorously, long after the audience has moved on, unlike spectacle."
+      },
+      {
+        "question": "What did adab traditionally concern itself with, according to the panelist?",
+        "options": [
+          "Restitution and whether the harmed party was actually made whole",
+          "The elegance of the apology statement",
+          "Avoiding all public scrutiny",
+          "Winning back public approval quickly"
+        ],
+        "correctIndex": 0,
+        "explanation": "The panelist states adab concerned itself with restitution, whether the harmed party was actually made whole, not eloquence."
+      },
+      {
+        "question": "What does the panelist say about apologies coerced through public pressure?",
+        "options": [
+          "They are always more sincere",
+          "They should be encouraged more often",
+          "They rarely produce anything durable beyond temporary relief from criticism",
+          "They are identical to private apologies"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says coerced contrition, extracted through public pressure rather than conscience, rarely produces anything durable."
+      },
+      {
+        "question": "What distinction does the panelist say is the crux of his argument?",
+        "options": [
+          "Public versus private apologies",
+          "Reputation versus repentance",
+          "Fast versus slow apologies",
+          "Written versus spoken apologies"
+        ],
+        "correctIndex": 1,
+        "explanation": "The panelist identifies reputation versus repentance as the central distinction, since confusing the two corrupts adab."
+      },
+      {
+        "question": "What test makes genuine contrition distinguishable from polished performance?",
+        "options": [
+          "Other mourners were neither responsible for nor equipped to carry old wounds.",
+          "Praise repeatedly lowers resistance and produces concessions benefiting the client.",
+          "Its accuracy would not prevent it from punishing rather than clarifying.",
+          "Repair continues privately after public attention has disappeared."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Repair continues privately after public attention has disappeared."
+      },
+      {
+        "question": "Why does the panelist rank restitution above eloquent wording?",
+        "options": [
+          "Simple praise or condemnation would erase part of the inheritance.",
+          "It governs one's conduct but cannot guarantee another person's sincerity.",
+          "Adab concerns whether harm is repaired, not how impressive remorse sounds.",
+          "He converts one omission into a complete story of rejected friendship."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Adab concerns whether harm is repaired, not how impressive remorse sounds."
+      },
+      {
+        "question": "What causal problem follows from apologies extracted by public pressure?",
+        "options": [
+          "It governs audience and purpose rather than demanding false speech.",
+          "Being strategically outmanoeuvred need not make them dishonest or rude.",
+          "A mistaken assumption was reinforced by the narrator's recent absence.",
+          "They relieve criticism temporarily without producing durable moral change."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: They relieve criticism temporarily without producing durable moral change."
+      },
+      {
+        "question": "Why should the harmed person receive the apology before the wider audience?",
+        "options": [
+          "She shares the history and can hold tenderness beside harm.",
+          "A warm, repeated refusal separates politeness from concession.",
+          "The specific injury matters more than spectators' demand for a statement.",
+          "Repair can proceed while disappointment remains emotionally unresolved."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: The specific injury matters more than spectators' demand for a statement."
+      },
+      {
+        "question": "Which contrast carries the panelist's central evaluative claim?",
+        "options": [
+          "Truth becomes humane when entrusted to witnesses who understand its complexity.",
+          "Reputation management serves the offender; repentance serves the harmed party.",
+          "Good manners do not create an obligation to accept unfavourable terms.",
+          "Direct but non-punitive truth can preserve relationships better than concealed resentment."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Reputation management serves the offender; repentance serves the harmed party."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-adab-04",
@@ -110,30 +458,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [heavy] People kept approaching me at the memorial with the same well-intentioned phrase, he's in a better place now, as though grief were a math problem awaiting the correct answer.",
-      "Narrator: [honest] I nodded each time, thanked them, and said nothing about the complicated inheritance my father actually left behind, which wasn't only love.",
-      "Narrator: [reflective] He was, by most accounts, a generous man publicly and a difficult one privately, and both descriptions were entirely, maddeningly accurate simultaneously.",
-      "Narrator: [torn] Standing there, receiving condolences for a man half the room hadn't truly known, I felt something closer to exhaustion than sorrow.",
-      "Narrator: [thoughtful] I kept wondering whether adab required me to preserve everyone's comfortable illusion of him, or whether some private honesty was owed to myself instead.",
-      "Narrator: [reasoning] I've decided grief doesn't obligate a person toward eulogy, toward sanding down every rough edge until the deceased becomes unrecognizably saintly.",
-      "Narrator: [gently] What it does obligate, I think, is restraint about where and with whom that unvarnished truth gets aired, and for what purpose.",
-      "Narrator: [honestly] A funeral, crowded with people mourning genuinely, wasn't the place to relitigate old wounds nobody there was equipped to help me carry.",
-      "Narrator: [reflective] So I let the better place now comments wash past me, unchallenged, and saved my more complicated grief for quieter company.",
-      "Narrator: [softly] Later that week, with my sister, who'd lived the same difficult inheritance, I finally said what I'd swallowed all afternoon.",
-      "Narrator: [warmly] We sat for hours, laughing at his stubbornness and mourning his tenderness, holding both truths without needing either to cancel out the other.",
-      "Narrator: [peacefully] That, I've realized, is where honest grief belongs, not performed for an audience seeking simple closure, but shared with those who already know the whole story.",
-      "Narrator: [reflective] Adab didn't ask me to lie about who he was. It only asked me to choose my witnesses more carefully than my words."
+      "Narrator: [thoughtful] People kept approaching me at the memorial with the same well-intentioned phrase, he's in a better place now, as though grief were a math problem awaiting the correct answer.",
+      "Narrator: I nodded each time, thanked them, and said nothing about the complicated inheritance my father actually left behind, which wasn't only love.",
+      "Narrator: [carefully] He was, by most accounts, a generous man publicly and a difficult one privately, and both descriptions were entirely, maddeningly accurate simultaneously.",
+      "Narrator: Standing there, receiving condolences for a man half the room hadn't truly known, I felt something closer to exhaustion than sorrow.",
+      "Narrator: [reflective] I kept wondering whether adab required me to preserve everyone's comfortable illusion of him, or whether some private honesty was owed to myself instead.",
+      "Narrator: I've decided grief doesn't obligate a person toward eulogy, toward sanding down every rough edge until the deceased becomes unrecognizably saintly.",
+      "Narrator: [honestly] What it does obligate, I think, is restraint about where and with whom that unvarnished truth gets aired, and for what purpose.",
+      "Narrator: A funeral, crowded with people mourning genuinely, wasn't the place to relitigate old wounds nobody there was equipped to help me carry.",
+      "Narrator: [gently] So I let the better place now comments wash past me, unchallenged, and saved my more complicated grief for quieter company.",
+      "Narrator: Later that week, with my sister, who'd lived the same difficult inheritance, I finally said what I'd swallowed all afternoon.",
+      "Narrator: [calmly] We sat for hours, laughing at his stubbornness and mourning his tenderness, holding both truths without needing either to cancel out the other.",
+      "Narrator: That, I've realized, is where honest grief belongs, not performed for an audience seeking simple closure, but shared with those who already know the whole story.",
+      "Narrator: [encouraging] Adab didn't ask me to lie about who he was. It only asked me to choose my witnesses more carefully than my words."
     ],
     "quiz": [
-      { "question": "What phrase do people repeatedly say to the narrator at the memorial?", "options": ["He will be greatly missed", "He's in a better place now", "He lived a perfect life", "He would want you to be strong"], "correctIndex": 1, "explanation": "People repeatedly tell her he's in a better place now, which she compares to treating grief as a math problem." },
-      { "question": "How does the narrator describe her father?", "options": ["Entirely saintly with no flaws", "Generous publicly and difficult privately, both accurate simultaneously", "Cold and distant with everyone", "Unknown to most of the family"], "correctIndex": 1, "explanation": "She describes him as generous publicly and difficult privately, noting both descriptions were maddeningly accurate at once." },
-      { "question": "What does the narrator decide grief does not obligate a person toward?", "options": ["Any form of remembrance", "Eulogy that sands down every rough edge until the deceased seems saintly", "Attending the funeral", "Speaking with family afterward"], "correctIndex": 1, "explanation": "She decides grief doesn't obligate sanding down every rough edge until the deceased becomes unrecognizably saintly." },
-      { "question": "What does the narrator conclude adab actually requires of her?", "options": ["Complete silence about her father forever", "Restraint about where and with whom the unvarnished truth gets shared", "Public confrontation at the funeral", "Pretending she felt nothing"], "correctIndex": 1, "explanation": "She concludes adab requires restraint about where and with whom that unvarnished truth gets aired, not silence altogether." },
-      { "question": "With whom does the narrator finally share her complicated grief?", "options": ["A stranger at the memorial", "Her sister, later that week, who had lived the same difficult inheritance", "A religious counselor", "Nobody, she kept it entirely private"], "correctIndex": 1, "explanation": "She shares her complicated grief with her sister later that week, since her sister lived through the same inheritance." }
-    ]
+      {
+        "question": "What phrase do people repeatedly say to the narrator at the memorial?",
+        "options": [
+          "He's in a better place now",
+          "He will be greatly missed",
+          "He lived a perfect life",
+          "He would want you to be strong"
+        ],
+        "correctIndex": 0,
+        "explanation": "People repeatedly tell her he's in a better place now, which she compares to treating grief as a math problem."
+      },
+      {
+        "question": "How does the narrator describe her father?",
+        "options": [
+          "Entirely saintly with no flaws",
+          "Generous publicly and difficult privately, both accurate simultaneously",
+          "Cold and distant with everyone",
+          "Unknown to most of the family"
+        ],
+        "correctIndex": 1,
+        "explanation": "She describes him as generous publicly and difficult privately, noting both descriptions were maddeningly accurate at once."
+      },
+      {
+        "question": "What does the narrator decide grief does not obligate a person toward?",
+        "options": [
+          "Any form of remembrance",
+          "Attending the funeral",
+          "Speaking with family afterward",
+          "Eulogy that sands down every rough edge until the deceased seems saintly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She decides grief doesn't obligate sanding down every rough edge until the deceased becomes unrecognizably saintly."
+      },
+      {
+        "question": "What does the narrator conclude adab actually requires of her?",
+        "options": [
+          "Complete silence about her father forever",
+          "Public confrontation at the funeral",
+          "Pretending she felt nothing",
+          "Restraint about where and with whom the unvarnished truth gets shared"
+        ],
+        "correctIndex": 3,
+        "explanation": "She concludes adab requires restraint about where and with whom that unvarnished truth gets aired, not silence altogether."
+      },
+      {
+        "question": "With whom does the narrator finally share her complicated grief?",
+        "options": [
+          "A stranger at the memorial",
+          "A religious counselor",
+          "Her sister, later that week, who had lived the same difficult inheritance",
+          "Nobody, she kept it entirely private"
+        ],
+        "correctIndex": 2,
+        "explanation": "She shares her complicated grief with her sister later that week, since her sister lived through the same inheritance."
+      },
+      {
+        "question": "Why does the narrator resist turning the memorial into an honest reckoning?",
+        "options": [
+          "Praise repeatedly lowers resistance and produces concessions benefiting the client.",
+          "Other mourners were neither responsible for nor equipped to carry old wounds.",
+          "Its accuracy would not prevent it from punishing rather than clarifying.",
+          "Screens remove the facial feedback that normally restrains cruelty."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Other mourners were neither responsible for nor equipped to carry old wounds."
+      },
+      {
+        "question": "What does the father's mixed public and private character complicate?",
+        "options": [
+          "It governs one's conduct but cannot guarantee another person's sincerity.",
+          "He converts one omission into a complete story of rejected friendship.",
+          "Simple praise or condemnation would erase part of the inheritance.",
+          "It releases existing contempt rather than creating it from nothing."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Simple praise or condemnation would erase part of the inheritance."
+      },
+      {
+        "question": "How does the narrator revise the idea that adab requires silence?",
+        "options": [
+          "It governs audience and purpose rather than demanding false speech.",
+          "Being strategically outmanoeuvred need not make them dishonest or rude.",
+          "A mistaken assumption was reinforced by the narrator's recent absence.",
+          "Substantive disagreement seeks exchange; provocation seeks only reaction."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It governs audience and purpose rather than demanding false speech."
+      },
+      {
+        "question": "Why can the sister receive truths withheld from memorial guests?",
+        "options": [
+          "A warm, repeated refusal separates politeness from concession.",
+          "Repair can proceed while disappointment remains emotionally unresolved.",
+          "Critique the claim while withholding assumptions about character and motive.",
+          "She shares the history and can hold tenderness beside harm."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: She shares the history and can hold tenderness beside harm."
+      },
+      {
+        "question": "What justified inference follows from the narrator's account of honest grief?",
+        "options": [
+          "Good manners do not create an obligation to accept unfavourable terms.",
+          "Direct but non-punitive truth can preserve relationships better than concealed resentment.",
+          "Truth becomes humane when entrusted to witnesses who understand its complexity.",
+          "Some conflicts neither require participation nor belong to the speaker."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Truth becomes humane when entrusted to witnesses who understand its complexity."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-adab-05",
@@ -142,33 +604,150 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dinda", "gender": "female" },
-      { "name": "Aris", "gender": "male" }
+      {
+        "name": "Dinda",
+        "gender": "female"
+      },
+      {
+        "name": "Aris",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dinda: [pointed] Our new client is unfailingly courteous, and yet somehow every meeting ends with us conceding something we hadn't intended to concede.",
-      "Aris: [amused] You're describing charm, Dinda, not manipulation. The two overlap uncomfortably, but they aren't strictly synonymous with each other.",
-      "Dinda: [insistent] Are they not, though? He compliments our proposal, thanks us extravagantly, and somehow we leave having renegotiated terms in his favor entirely.",
-      "Aris: [considering] That's a fair pattern to notice. Though technically, nobody forced our hand, we simply found it harder to refuse someone so relentlessly gracious.",
-      "Dinda: [firm] That's precisely the mechanism I'm describing. Politeness, weaponized deliberately, becomes a subtler form of pressure than any outright demand could manage.",
-      "Aris: [thoughtful] I suppose adab was never intended as armor against being taken advantage of. It was meant to govern our own conduct, not guarantee others' sincerity.",
-      "Dinda: [conceding] Fine, but doesn't that leave the courteous person perpetually vulnerable to whoever's willing to exploit the very virtue they're practicing?",
-      "Aris: [reasoning] Vulnerable to exploitation, perhaps, but not to corruption. There's a meaningful difference between being outmaneuvered and becoming dishonest yourself in response.",
-      "Dinda: [pressing] So your solution is what, exactly? We simply accept unfavorable terms indefinitely because refusing feels rude given how pleasant he is?",
-      "Aris: [firm] Not remotely. We can recognize the tactic, name it internally, and decline just as courteously as he pressures, without matching his manipulation with our own discourtesy.",
-      "Dinda: [curious] Practically speaking, what does that sound like in the actual room, next time he starts complimenting his way toward another concession?",
-      "Aris: [explaining] Something like, we appreciate that generous framing, and our answer remains unchanged, said warmly, repeated calmly, however many times becomes necessary.",
-      "Dinda: [wry] Pleasant, immovable, and utterly exhausting to negotiate against. I suppose that's precisely the version of adab this client requires from us.",
-      "Aris: [warmly] Exhausting, certainly, but preferable to becoming someone who confuses gracious manners with an obligation to keep losing gracefully.",
-      "Dinda: [smiling] Fine. Next meeting, I'm testing your immovable, pleasant strategy myself, and reporting back on whether it survives contact with him."
+      "Dinda: [thoughtful] Our new client is unfailingly courteous, and yet somehow every meeting ends with us conceding something we hadn't intended to concede.",
+      "Aris: You're describing charm, Dinda, not manipulation. The two overlap uncomfortably, but they aren't strictly synonymous with each other.",
+      "Dinda: [carefully] Are they not, though? He compliments our proposal, thanks us extravagantly, and somehow we leave having renegotiated terms in his favor entirely.",
+      "Aris: That's a fair pattern to notice. Though technically, nobody forced our hand, we simply found it harder to refuse someone so relentlessly gracious.",
+      "Dinda: [reflective] That's precisely the mechanism I'm describing. Politeness, weaponized deliberately, becomes a subtler form of pressure than any outright demand could manage.",
+      "Aris: I suppose adab was never intended as armor against being taken advantage of. It was meant to govern our own conduct, not guarantee others' sincerity.",
+      "Dinda: [honestly] Fine, but doesn't that leave the courteous person perpetually vulnerable to whoever's willing to exploit the very virtue they're practicing?",
+      "Aris: Vulnerable to exploitation, perhaps, but not to corruption. There's a meaningful difference between being outmaneuvered and becoming dishonest yourself in response.",
+      "Dinda: [gently] So your solution is what, exactly? We simply accept unfavorable terms indefinitely because refusing feels rude given how pleasant he is?",
+      "Aris: Not remotely. We can recognize the tactic, name it internally, and decline just as courteously as he pressures, without matching his manipulation with our own discourtesy.",
+      "Dinda: [calmly] Practically speaking, what does that sound like in the actual room, next time he starts complimenting his way toward another concession?",
+      "Aris: Something like, we appreciate that generous framing, and our answer remains unchanged, said warmly, repeated calmly, however many times becomes necessary.",
+      "Dinda: [encouraging] Pleasant, immovable, and utterly exhausting to negotiate against. I suppose that's precisely the version of adab this client requires from us.",
+      "Aris: Exhausting, certainly, but preferable to becoming someone who confuses gracious manners with an obligation to keep losing gracefully.",
+      "Dinda: [seriously] Fine. Next meeting, I'm testing your immovable, pleasant strategy myself, and reporting back on whether it survives contact with him."
     ],
     "quiz": [
-      { "question": "What pattern does Dinda notice about their new client?", "options": ["He is rude and aggressive in meetings", "He is unfailingly courteous, yet meetings end with them conceding things unintentionally", "He never speaks during meetings", "He always agrees to their terms"], "correctIndex": 1, "explanation": "Dinda notices the client is unfailingly courteous, yet every meeting somehow ends with them conceding something unintended." },
-      { "question": "What does Aris initially suggest Dinda is describing?", "options": ["Outright dishonesty", "Charm, which overlaps with manipulation but isn't strictly synonymous with it", "A legal violation", "Simple bad luck"], "correctIndex": 1, "explanation": "Aris initially suggests she's describing charm, which overlaps uncomfortably with manipulation but isn't the same thing." },
-      { "question": "What does Aris say adab was actually meant to govern?", "options": ["Other people's sincerity", "One's own conduct, not a guarantee of others' sincerity", "Business negotiations specifically", "Nothing related to workplace behavior"], "correctIndex": 1, "explanation": "Aris says adab was meant to govern one's own conduct, not serve as armor guaranteeing others' sincerity." },
-      { "question": "What distinction does Aris draw regarding being exploited?", "options": ["There is no difference between being outmaneuvered and becoming dishonest", "Being outmaneuvered differs meaningfully from becoming dishonest oneself in response", "Exploitation is always the victim's fault", "Vulnerability to exploitation is impossible for courteous people"], "correctIndex": 1, "explanation": "Aris distinguishes being vulnerable to exploitation from becoming corrupted or dishonest oneself in response to it." },
-      { "question": "What strategy does Aris propose for handling the client's tactic?", "options": ["Match his manipulation with their own", "Recognize the tactic, decline courteously, and repeat the same calm answer as needed", "Stop working with the client entirely", "Agree to all future terms to avoid conflict"], "correctIndex": 1, "explanation": "Aris proposes recognizing the tactic and declining just as courteously as the client pressures, repeating the answer calmly." }
-    ]
+      {
+        "question": "What pattern does Dinda notice about their new client?",
+        "options": [
+          "He is unfailingly courteous, yet meetings end with them conceding things unintentionally",
+          "He is rude and aggressive in meetings",
+          "He never speaks during meetings",
+          "He always agrees to their terms"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dinda notices the client is unfailingly courteous, yet every meeting somehow ends with them conceding something unintended."
+      },
+      {
+        "question": "What does Aris initially suggest Dinda is describing?",
+        "options": [
+          "Outright dishonesty",
+          "A legal violation",
+          "Charm, which overlaps with manipulation but isn't strictly synonymous with it",
+          "Simple bad luck"
+        ],
+        "correctIndex": 2,
+        "explanation": "Aris initially suggests she's describing charm, which overlaps uncomfortably with manipulation but isn't the same thing."
+      },
+      {
+        "question": "What does Aris say adab was actually meant to govern?",
+        "options": [
+          "Other people's sincerity",
+          "Business negotiations specifically",
+          "One's own conduct, not a guarantee of others' sincerity",
+          "Nothing related to workplace behavior"
+        ],
+        "correctIndex": 2,
+        "explanation": "Aris says adab was meant to govern one's own conduct, not serve as armor guaranteeing others' sincerity."
+      },
+      {
+        "question": "What distinction does Aris draw regarding being exploited?",
+        "options": [
+          "There is no difference between being outmaneuvered and becoming dishonest",
+          "Exploitation is always the victim's fault",
+          "Vulnerability to exploitation is impossible for courteous people",
+          "Being outmaneuvered differs meaningfully from becoming dishonest oneself in response"
+        ],
+        "correctIndex": 3,
+        "explanation": "Aris distinguishes being vulnerable to exploitation from becoming corrupted or dishonest oneself in response to it."
+      },
+      {
+        "question": "What strategy does Aris propose for handling the client's tactic?",
+        "options": [
+          "Match his manipulation with their own",
+          "Stop working with the client entirely",
+          "Recognize the tactic, decline courteously, and repeat the same calm answer as needed",
+          "Agree to all future terms to avoid conflict"
+        ],
+        "correctIndex": 2,
+        "explanation": "Aris proposes recognizing the tactic and declining just as courteously as the client pressures, repeating the answer calmly."
+      },
+      {
+        "question": "Why does Dinda classify the client's courtesy as a form of pressure?",
+        "options": [
+          "Its accuracy would not prevent it from punishing rather than clarifying.",
+          "Praise repeatedly lowers resistance and produces concessions benefiting the client.",
+          "Screens remove the facial feedback that normally restrains cruelty.",
+          "The narrator avoids celebrating personal courage before the group."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Praise repeatedly lowers resistance and produces concessions benefiting the client."
+      },
+      {
+        "question": "What boundary does Aris place around the protective power of adab?",
+        "options": [
+          "It governs one's conduct but cannot guarantee another person's sincerity.",
+          "He converts one omission into a complete story of rejected friendship.",
+          "It releases existing contempt rather than creating it from nothing.",
+          "Repeated safe conduct is needed to reverse expectations created by humiliation."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It governs one's conduct but cannot guarantee another person's sincerity."
+      },
+      {
+        "question": "Which contrast allows the team to resist without imitating manipulation?",
+        "options": [
+          "A mistaken assumption was reinforced by the narrator's recent absence.",
+          "Substantive disagreement seeks exchange; provocation seeks only reaction.",
+          "Intention matters but cannot cancel a foreseeable harmful effect.",
+          "Being strategically outmanoeuvred need not make them dishonest or rude."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Being strategically outmanoeuvred need not make them dishonest or rude."
+      },
+      {
+        "question": "How does the proposed response neutralise the client's gracious pressure?",
+        "options": [
+          "Repair can proceed while disappointment remains emotionally unresolved.",
+          "A warm, repeated refusal separates politeness from concession.",
+          "Critique the claim while withholding assumptions about character and motive.",
+          "Forgiveness cannot be demanded according to the offender's preferred timetable."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: A warm, repeated refusal separates politeness from concession."
+      },
+      {
+        "question": "What broader implication does the debate draw about courteous people?",
+        "options": [
+          "Good manners do not create an obligation to accept unfavourable terms.",
+          "Direct but non-punitive truth can preserve relationships better than concealed resentment.",
+          "Some conflicts neither require participation nor belong to the speaker.",
+          "An apology should accept responsibility without attaching a self-defence."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Good manners do not create an obligation to accept unfavourable terms."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-adab-06",
@@ -177,30 +756,144 @@
     "themeId": "adab",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [flat] I found out through a group chat, three weeks before the wedding, that someone else had been asked to stand beside him instead of me.",
-      "Narrator: [honestly] Fifteen years of friendship, and I learned my own diminished role the same way I'd have learned about a change in venue.",
-      "Narrator: [wounded] My initial reaction wasn't sadness exactly, it was something more clinical, a rapid, humiliating audit of every moment I'd apparently misjudged our closeness.",
-      "Narrator: [reflective] I drafted a message explaining precisely how this had landed, technically true in every sentence, and devastating in its cumulative effect.",
-      "Narrator: [thoughtful] I didn't send it. Not from cowardice, I think, but from suspecting that devastating messages rarely produce the clarity they claim to be seeking.",
-      "Narrator: [reasoning] Adab, in this instance, wasn't about pretending the omission didn't sting, because pretending would have been its own quiet dishonesty toward myself.",
+      "Narrator: [thoughtful] I found out through a group chat, three weeks before the wedding, that someone else had been asked to stand beside him instead of me.",
+      "Narrator: Fifteen years of friendship, and I learned my own diminished role the same way I'd have learned about a change in venue.",
+      "Narrator: [carefully] My initial reaction wasn't sadness exactly, it was something more clinical, a rapid, humiliating audit of every moment I'd apparently misjudged our closeness.",
+      "Narrator: I drafted a message explaining precisely how this had landed, technically true in every sentence, and devastating in its cumulative effect.",
+      "Narrator: [reflective] I didn't send it. Not from cowardice, I think, but from suspecting that devastating messages rarely produce the clarity they claim to be seeking.",
+      "Narrator: Adab, in this instance, wasn't about pretending the omission didn't sting, because pretending would have been its own quiet dishonesty toward myself.",
       "Narrator: [honestly] It was about separating the sting from the story I was rapidly constructing around it, a story starring myself as the wronged, forgotten friend.",
-      "Narrator: [considering] So instead, I called him, admitted plainly that the news had hurt more than I expected, and asked, genuinely, what had happened.",
-      "Narrator: [reflective] His answer wasn't flattering to either of us. He'd assumed, wrongly, that my recent silence meant I'd drifted from wanting the role at all.",
-      "Narrator: [honestly] A misreading, certainly, though one I'd inadvertently invited by disappearing into my own busy, distracted life over the past year.",
-      "Narrator: [thoughtful] I could have accepted his apology while nursing the injury privately for months, letting resentment calcify beneath a friendly surface.",
-      "Narrator: [determined] Instead, I told him honestly how it landed, accepted that misunderstandings compound on both sides, and agreed to give a toast anyway.",
-      "Narrator: [peacefully] Not because the hurt vanished entirely, but because friendship, like adab itself, apparently survives more honesty than either of us initially assumed."
+      "Narrator: So instead, I called him, admitted plainly that the news had hurt more than I expected, and asked, genuinely, what had happened.",
+      "Narrator: [gently] His answer wasn't flattering to either of us. He'd assumed, wrongly, that my recent silence meant I'd drifted from wanting the role at all.",
+      "Narrator: A misreading, certainly, though one I'd inadvertently invited by disappearing into my own busy, distracted life over the past year.",
+      "Narrator: [calmly] I could have accepted his apology while nursing the injury privately for months, letting resentment calcify beneath a friendly surface.",
+      "Narrator: Instead, I told him honestly how it landed, accepted that misunderstandings compound on both sides, and agreed to give a toast anyway.",
+      "Narrator: [encouraging] Not because the hurt vanished entirely, but because friendship, like adab itself, apparently survives more honesty than either of us initially assumed."
     ],
     "quiz": [
-      { "question": "How did the narrator learn he wasn't chosen as best man?", "options": ["His friend called him personally", "He found out through a group chat, three weeks before the wedding", "He read about it in an invitation", "A mutual friend told him at a party"], "correctIndex": 1, "explanation": "He learned through a group chat, three weeks before the wedding, the same way he'd learn about a venue change." },
-      { "question": "What was the narrator's initial reaction described as?", "options": ["Immediate relief", "Something more clinical, a rapid audit of every moment he'd apparently misjudged their closeness", "Complete indifference", "Joy for his friend"], "correctIndex": 1, "explanation": "His initial reaction was described as clinical, a rapid, humiliating audit of moments he felt he'd misjudged." },
-      { "question": "Why did the narrator not send the message he drafted?", "options": ["He forgot about it", "He suspected devastating messages rarely produce the clarity they claim to seek", "His phone broke", "He was told not to by a mutual friend"], "correctIndex": 1, "explanation": "He didn't send it, suspecting that devastating messages rarely produce the clarity they claim to be seeking." },
-      { "question": "What did the friend admit had caused the misunderstanding?", "options": ["He never liked the narrator", "He assumed the narrator's recent silence meant he'd drifted from wanting the role", "He forgot the narrator existed", "He wanted to save money on the wedding"], "correctIndex": 1, "explanation": "The friend admitted he wrongly assumed the narrator's recent silence meant he no longer wanted the role at all." },
-      { "question": "What does the narrator ultimately decide to do?", "options": ["End the friendship entirely", "Tell his friend honestly how it landed, accept the misunderstanding, and give a toast anyway", "Pretend nothing happened and say nothing further", "Refuse to attend the wedding"], "correctIndex": 1, "explanation": "He honestly shares how it landed, accepts the misunderstanding was mutual, and agrees to give a toast anyway." }
-    ]
+      {
+        "question": "How did the narrator learn he wasn't chosen as best man?",
+        "options": [
+          "His friend called him personally",
+          "He read about it in an invitation",
+          "A mutual friend told him at a party",
+          "He found out through a group chat, three weeks before the wedding"
+        ],
+        "correctIndex": 3,
+        "explanation": "He learned through a group chat, three weeks before the wedding, the same way he'd learn about a venue change."
+      },
+      {
+        "question": "What was the narrator's initial reaction described as?",
+        "options": [
+          "Something more clinical, a rapid audit of every moment he'd apparently misjudged their closeness",
+          "Immediate relief",
+          "Complete indifference",
+          "Joy for his friend"
+        ],
+        "correctIndex": 0,
+        "explanation": "His initial reaction was described as clinical, a rapid, humiliating audit of moments he felt he'd misjudged."
+      },
+      {
+        "question": "Why did the narrator not send the message he drafted?",
+        "options": [
+          "He forgot about it",
+          "He suspected devastating messages rarely produce the clarity they claim to seek",
+          "His phone broke",
+          "He was told not to by a mutual friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "He didn't send it, suspecting that devastating messages rarely produce the clarity they claim to be seeking."
+      },
+      {
+        "question": "What did the friend admit had caused the misunderstanding?",
+        "options": [
+          "He never liked the narrator",
+          "He forgot the narrator existed",
+          "He wanted to save money on the wedding",
+          "He assumed the narrator's recent silence meant he'd drifted from wanting the role"
+        ],
+        "correctIndex": 3,
+        "explanation": "The friend admitted he wrongly assumed the narrator's recent silence meant he no longer wanted the role at all."
+      },
+      {
+        "question": "What does the narrator ultimately decide to do?",
+        "options": [
+          "End the friendship entirely",
+          "Pretend nothing happened and say nothing further",
+          "Tell his friend honestly how it landed, accept the misunderstanding, and give a toast anyway",
+          "Refuse to attend the wedding"
+        ],
+        "correctIndex": 2,
+        "explanation": "He honestly shares how it landed, accepts the misunderstanding was mutual, and agrees to give a toast anyway."
+      },
+      {
+        "question": "Why does the narrator withhold the devastating drafted message?",
+        "options": [
+          "Its accuracy would not prevent it from punishing rather than clarifying.",
+          "Screens remove the facial feedback that normally restrains cruelty.",
+          "The narrator avoids celebrating personal courage before the group.",
+          "Inclusion requires integrating competing evidence, not reversing whose concerns count."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Its accuracy would not prevent it from punishing rather than clarifying."
+      },
+      {
+        "question": "What interpretive error accompanies the initial hurt?",
+        "options": [
+          "It releases existing contempt rather than creating it from nothing.",
+          "Repeated safe conduct is needed to reverse expectations created by humiliation.",
+          "He converts one omission into a complete story of rejected friendship.",
+          "A decorative feature is delayed and the higher security cost is disclosed."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: He converts one omission into a complete story of rejected friendship."
+      },
+      {
+        "question": "How does the friend's explanation distribute responsibility more evenly?",
+        "options": [
+          "Substantive disagreement seeks exchange; provocation seeks only reaction.",
+          "A mistaken assumption was reinforced by the narrator's recent absence.",
+          "Intention matters but cannot cancel a foreseeable harmful effect.",
+          "Claims become traceable and affected people can challenge assumptions."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: A mistaken assumption was reinforced by the narrator's recent absence."
+      },
+      {
+        "question": "Why is giving the toast not evidence that the injury disappeared?",
+        "options": [
+          "Critique the claim while withholding assumptions about character and motive.",
+          "Repair can proceed while disappointment remains emotionally unresolved.",
+          "Forgiveness cannot be demanded according to the offender's preferred timetable.",
+          "Decision-makers must investigate whether participation was genuinely possible."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Repair can proceed while disappointment remains emotionally unresolved."
+      },
+      {
+        "question": "What does the episode imply about honesty within durable friendship?",
+        "options": [
+          "Some conflicts neither require participation nor belong to the speaker.",
+          "An apology should accept responsibility without attaching a self-defence.",
+          "Direct but non-punitive truth can preserve relationships better than concealed resentment.",
+          "It includes accessible participation and fair distribution of hidden costs."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Direct but non-punitive truth can preserve relationships better than concealed resentment."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-adab-07",
@@ -209,35 +902,587 @@
     "themeId": "adab",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [engaging] Tonight we're asking whether adab, traditionally concerned with face-to-face conduct, meaningfully applies to arguments conducted entirely through screens.",
-      "Guest: [thoughtful] I'd argue it applies more urgently online, precisely because the usual restraints of physical presence have quietly disappeared from the equation.",
-      "Radio Host: [curious] What restraints, specifically, do you mean by physical presence, and why does their absence matter so much?",
-      "Guest: [explaining] Watching someone's face absorb an insult tends to complicate cruelty. A screen removes that complication entirely, which makes cruelty considerably easier to dispense.",
-      "Radio Host: [probing] Do you think people are genuinely crueler online, or simply less inhibited about revealing cruelty they'd otherwise suppress?",
-      "Guest: [considering] Probably the latter, mostly. The anonymity doesn't manufacture contempt from nothing, it simply removes whatever friction previously discouraged expressing it.",
-      "Radio Host: [interested] How does someone practice adab, then, while genuinely disagreeing with a stranger who's clearly arguing in bad faith?",
-      "Guest: [reasoning] First, by distinguishing between disagreement worth engaging and provocation designed purely to extract a reaction from you.",
-      "Radio Host: [curious] And if the disagreement seems genuine, rather than merely provocative or performative in nature?",
-      "Guest: [thoughtful] Then I'd apply the same standard I would offline, addressing the argument's substance without addressing the person's presumed character or motives.",
-      "Radio Host: [challenging] Isn't that harder online, where tone is invisible and every statement risks being misread as hostile, regardless of intention?",
-      "Guest: [conceding] Considerably harder, yes. Which is precisely why deliberate restraint matters more there, not less, given how easily misreading escalates unnecessarily.",
-      "Radio Host: [curious] Do you ever simply choose silence, declining to respond publicly at all, even when you disagree strongly?",
-      "Guest: [honestly] Often. Not every disagreement requires my participation, and adab, I've realized, includes recognizing which battles were never actually mine to fight.",
-      "Radio Host: [interested] What would you say to someone convinced that restraint online just means letting misinformation spread unchallenged?",
-      "Guest: [firm] I'd say correcting falsehood and correcting it contemptuously are different acts entirely, however frequently we collapse them into one online.",
-      "Radio Host: [smiling] A distinction worth remembering before our next heated comment section. Thank you for this conversation tonight.",
-      "Guest: [warmly] Thank you. I hope it slows someone's thumb down before their next reply."
+      "Radio Host: [thoughtful] Tonight we're asking whether adab, traditionally concerned with face-to-face conduct, meaningfully applies to arguments conducted entirely through screens.",
+      "Guest: I'd argue it applies more urgently online, precisely because the usual restraints of physical presence have quietly disappeared from the equation.",
+      "Radio Host: [carefully] What restraints, specifically, do you mean by physical presence, and why does their absence matter so much?",
+      "Guest: Watching someone's face absorb an insult tends to complicate cruelty. A screen removes that complication entirely, which makes cruelty considerably easier to dispense.",
+      "Radio Host: [reflective] Do you think people are genuinely crueler online, or simply less inhibited about revealing cruelty they'd otherwise suppress?",
+      "Guest: Probably the latter, mostly. The anonymity doesn't manufacture contempt from nothing, it simply removes whatever friction previously discouraged expressing it.",
+      "Radio Host: [honestly] How does someone practice adab, then, while genuinely disagreeing with a stranger who's clearly arguing in bad faith?",
+      "Guest: First, by distinguishing between disagreement worth engaging and provocation designed purely to extract a reaction from you.",
+      "Radio Host: [gently] And if the disagreement seems genuine, rather than merely provocative or performative in nature?",
+      "Guest: Then I'd apply the same standard I would offline, addressing the argument's substance without addressing the person's presumed character or motives.",
+      "Radio Host: [calmly] Isn't that harder online, where tone is invisible and every statement risks being misread as hostile, regardless of intention?",
+      "Guest: Considerably harder, yes. Which is precisely why deliberate restraint matters more there, not less, given how easily misreading escalates unnecessarily.",
+      "Radio Host: [encouraging] Do you ever simply choose silence, declining to respond publicly at all, even when you disagree strongly?",
+      "Guest: Often. Not every disagreement requires my participation, and adab, I've realized, includes recognizing which battles were never actually mine to fight.",
+      "Radio Host: [seriously] What would you say to someone convinced that restraint online just means letting misinformation spread unchallenged?",
+      "Guest: I'd say correcting falsehood and correcting it contemptuously are different acts entirely, however frequently we collapse them into one online.",
+      "Radio Host: A distinction worth remembering before our next heated comment section. Thank you for this conversation tonight.",
+      "Guest: Thank you. I hope it slows someone's thumb down before their next reply."
     ],
     "quiz": [
-      { "question": "According to the guest, why might adab apply more urgently online?", "options": ["Because online arguments are less common", "Because the usual restraints of physical presence have quietly disappeared", "Because online arguments are always resolved quickly", "Because screens make people more honest"], "correctIndex": 1, "explanation": "The guest argues adab applies more urgently online because the usual restraints of physical presence have disappeared." },
-      { "question": "What does the guest say complicates cruelty in face-to-face interaction?", "options": ["Watching someone's face absorb an insult", "The presence of witnesses", "Legal consequences", "Social media algorithms"], "correctIndex": 0, "explanation": "The guest explains that watching someone's face absorb an insult tends to complicate cruelty, unlike a screen." },
-      { "question": "What does the guest suggest doing first when disagreeing with someone online?", "options": ["Blocking them immediately", "Distinguishing between genuine disagreement and provocation designed to extract a reaction", "Reporting every comment to a moderator", "Always responding publicly and immediately"], "correctIndex": 1, "explanation": "He suggests first distinguishing between disagreement worth engaging and provocation designed purely to extract a reaction." },
-      { "question": "What does the guest say about choosing silence online?", "options": ["It always means avoiding responsibility", "Not every disagreement requires his participation, and some battles were never his to fight", "It is never an acceptable option", "It only applies to strangers, never friends"], "correctIndex": 1, "explanation": "He says he often chooses silence, recognizing that not every disagreement requires his participation." },
-      { "question": "What distinction does the guest draw regarding correcting misinformation?", "options": ["There is no difference between correcting it calmly or contemptuously", "Correcting falsehood and correcting it contemptuously are different acts entirely", "Misinformation should never be corrected online", "Only experts should correct misinformation"], "correctIndex": 1, "explanation": "The guest states correcting falsehood and correcting it contemptuously are different acts, though often collapsed into one." }
-    ]
+      {
+        "question": "According to the guest, why might adab apply more urgently online?",
+        "options": [
+          "Because online arguments are less common",
+          "Because the usual restraints of physical presence have quietly disappeared",
+          "Because online arguments are always resolved quickly",
+          "Because screens make people more honest"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest argues adab applies more urgently online because the usual restraints of physical presence have disappeared."
+      },
+      {
+        "question": "What does the guest say complicates cruelty in face-to-face interaction?",
+        "options": [
+          "The presence of witnesses",
+          "Legal consequences",
+          "Watching someone's face absorb an insult",
+          "Social media algorithms"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guest explains that watching someone's face absorb an insult tends to complicate cruelty, unlike a screen."
+      },
+      {
+        "question": "What does the guest suggest doing first when disagreeing with someone online?",
+        "options": [
+          "Distinguishing between genuine disagreement and provocation designed to extract a reaction",
+          "Blocking them immediately",
+          "Reporting every comment to a moderator",
+          "Always responding publicly and immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "He suggests first distinguishing between disagreement worth engaging and provocation designed purely to extract a reaction."
+      },
+      {
+        "question": "What does the guest say about choosing silence online?",
+        "options": [
+          "It always means avoiding responsibility",
+          "It is never an acceptable option",
+          "It only applies to strangers, never friends",
+          "Not every disagreement requires his participation, and some battles were never his to fight"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says he often chooses silence, recognizing that not every disagreement requires his participation."
+      },
+      {
+        "question": "What distinction does the guest draw regarding correcting misinformation?",
+        "options": [
+          "There is no difference between correcting it calmly or contemptuously",
+          "Misinformation should never be corrected online",
+          "Correcting falsehood and correcting it contemptuously are different acts entirely",
+          "Only experts should correct misinformation"
+        ],
+        "correctIndex": 2,
+        "explanation": "The guest states correcting falsehood and correcting it contemptuously are different acts, though often collapsed into one."
+      },
+      {
+        "question": "Why does the guest consider online adab especially urgent?",
+        "options": [
+          "The narrator avoids celebrating personal courage before the group.",
+          "Screens remove the facial feedback that normally restrains cruelty.",
+          "Inclusion requires integrating competing evidence, not reversing whose concerns count.",
+          "Request examples, compare criteria, and document the discussion."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Screens remove the facial feedback that normally restrains cruelty."
+      },
+      {
+        "question": "What account of anonymity does the guest prefer?",
+        "options": [
+          "It releases existing contempt rather than creating it from nothing.",
+          "Repeated safe conduct is needed to reverse expectations created by humiliation.",
+          "A decorative feature is delayed and the higher security cost is disclosed.",
+          "One protects substantive truth while the other protects human dignity."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It releases existing contempt rather than creating it from nothing."
+      },
+      {
+        "question": "Which distinction determines whether an online disagreement deserves engagement?",
+        "options": [
+          "Intention matters but cannot cancel a foreseeable harmful effect.",
+          "Claims become traceable and affected people can challenge assumptions.",
+          "Truth delivered without restraint can needlessly humiliate.",
+          "Substantive disagreement seeks exchange; provocation seeks only reaction."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Substantive disagreement seeks exchange; provocation seeks only reaction."
+      },
+      {
+        "question": "How should a genuine disagreement be addressed without personal attack?",
+        "options": [
+          "Forgiveness cannot be demanded according to the offender's preferred timetable.",
+          "Decision-makers must investigate whether participation was genuinely possible.",
+          "Critique the claim while withholding assumptions about character and motive.",
+          "Pleasant language hides the actual disagreement or prevents challenge."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Critique the claim while withholding assumptions about character and motive."
+      },
+      {
+        "question": "Why can silence represent disciplined judgment rather than surrender?",
+        "options": [
+          "An apology should accept responsibility without attaching a self-defence.",
+          "It includes accessible participation and fair distribution of hidden costs.",
+          "Both parties can identify evidence, next actions, and unresolved questions.",
+          "Some conflicts neither require participation nor belong to the speaker."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Some conflicts neither require participation nor belong to the speaker."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-adab-08",
+    "title": "The Draft Apology with No “But”",
+    "level": "C1",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] My first apology was four paragraphs long and almost entirely useless. I had embarrassed a colleague during a planning meeting by imitating the way he presented an idea. Everyone laughed, including him, but his silence afterwards told a different story.",
+      "Narrator: That evening, I wrote: “I am sorry if the joke upset you, but the meeting was tense, and everyone knew I meant no harm.” The sentence protected my intention, questioned his reaction, and invited him to reassure me. It asked the injured person to complete my defence.",
+      "Narrator: [carefully] I deleted it and wrote down only what I could establish. I had repeated his words in a mocking tone. Other colleagues had laughed. Whether or not humiliation was my purpose, humiliation was a foreseeable effect.",
+      "Narrator: The second draft was shorter: “I mocked your contribution in front of the group. That was disrespectful. I am sorry. I will correct it at tomorrow's meeting, and I will not repeat it.” I asked whether he preferred a call or a written conversation.",
+      "Narrator: [somberly] He chose a call. He explained that the joke had made him reluctant to speak again, especially because he was new to the team. I listened without interrupting to explain how stressed I had been.",
+      "Narrator: The next morning, I addressed the group before the agenda began. I named my conduct, not his private response, and clarified that his original suggestion deserved proper consideration. I did not turn the apology into a speech about my courage.",
+      "Narrator: [thoughtful] Repair did not restore trust instantly. For several meetings, I had to demonstrate that disagreement would no longer become entertainment.",
+      "Narrator: The experience sharpened my understanding of adab: intention matters, but it does not erase impact; accountability matters, but it should not demand forgiveness on schedule. A credible apology leaves out the word “but” and makes room for changed behaviour to finish the sentence."
+    ],
+    "quiz": [
+      {
+        "question": "Why is the phrase “if the joke upset you” inadequate as an apology?",
+        "options": [
+          "It questions the harm and shifts emotional work onto the colleague.",
+          "Courteous procedure had excluded people who would bear the decision's effects.",
+          "It withholds the specific evidence needed for improvement.",
+          "That a man he trained has been promoted to the position he wanted"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It questions the harm and shifts emotional work onto the colleague."
+      },
+      {
+        "question": "What evidential method improves the second draft?",
+        "options": [
+          "The invitation method was inaccessible to many contract workers.",
+          "It names observable conduct and foreseeable impact without defending intention.",
+          "The feedback isolates revisable work instead of defining identity.",
+          "A small, ungenerous satisfaction in cataloguing the man's flaws"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It names observable conduct and foreseeable impact without defending intention."
+      },
+      {
+        "question": "Why does the narrator offer a choice between a call and writing?",
+        "options": [
+          "It reduces access barriers created by time, language, and technology.",
+          "She should test objections and clarify standards without guaranteeing comfort.",
+          "The harmed colleague receives control over the form of conversation.",
+          "The discipline of not letting the ugly first instinct author one's next sentence"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: The harmed colleague receives control over the form of conversation."
+      },
+      {
+        "question": "What does the colleague's reluctance to speak establish about the joke?",
+        "options": [
+          "She identifies a flawed invitation process rather than accusing selfish motives.",
+          "The audience should be no broader than the learning or accountability purpose.",
+          "No, he plans to calmly request a conversation with his director about it",
+          "The mockery affected participation, particularly because he was new."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: The mockery affected participation, particularly because he was new."
+      },
+      {
+        "question": "Why is the public correction limited to conduct and the original idea?",
+        "options": [
+          "Repair should not expose the colleague's private emotional response.",
+          "The proposed gate obstructed wheelchair turning space in practice.",
+          "It can disguise an unchallengeable decision and remove routes for appeal.",
+          "That it is a debt paid daily to someone who has stopped thinking about you"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Repair should not expose the colleague's private emotional response."
+      },
+      {
+        "question": "What prevents the apology from becoming another performance?",
+        "options": [
+          "Inclusion requires integrating competing evidence, not reversing whose concerns count.",
+          "The narrator avoids celebrating personal courage before the group.",
+          "Request examples, compare criteria, and document the discussion.",
+          "It often presents personal resentment as principled concern about standards."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: The narrator avoids celebrating personal courage before the group."
+      },
+      {
+        "question": "Why does trust remain unsettled after the words of apology?",
+        "options": [
+          "A decorative feature is delayed and the higher security cost is disclosed.",
+          "One protects substantive truth while the other protects human dignity.",
+          "Repeated safe conduct is needed to reverse expectations created by humiliation.",
+          "Disciplined conduct can precede complete emotional generosity."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Repeated safe conduct is needed to reverse expectations created by humiliation."
+      },
+      {
+        "question": "How does the account qualify the moral importance of intention?",
+        "options": [
+          "Claims become traceable and affected people can challenge assumptions.",
+          "Truth delivered without restraint can needlessly humiliate.",
+          "It argues for the narrator's case without attacking another person's worth.",
+          "Intention matters but cannot cancel a foreseeable harmful effect."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Intention matters but cannot cancel a foreseeable harmful effect."
+      },
+      {
+        "question": "What boundary protects the colleague after accountability begins?",
+        "options": [
+          "Forgiveness cannot be demanded according to the offender's preferred timetable.",
+          "Decision-makers must investigate whether participation was genuinely possible.",
+          "Pleasant language hides the actual disagreement or prevents challenge.",
+          "Sustained bitterness burdens the resentful person more than its target."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Forgiveness cannot be demanded according to the offender's preferred timetable."
+      },
+      {
+        "question": "What does the missing word “but” symbolise in the final argument?",
+        "options": [
+          "It includes accessible participation and fair distribution of hidden costs.",
+          "An apology should accept responsibility without attaching a self-defence.",
+          "Both parties can identify evidence, next actions, and unresolved questions.",
+          "Continue mentoring others while seeking specific feedback and stronger evidence."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: An apology should accept responsibility without attaching a self-defence."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-adab-09",
+    "title": "When the Chair Asked Who Hadn’t Spoken",
+    "level": "C1",
+    "themeId": "adab",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [observant] Halfway through the housing committee meeting, the chair closed her notebook and asked an unexpected question: “Whose experience is missing from this room?” We had spent an hour debating new security gates, yet nobody had heard from the night cleaners, delivery riders, or wheelchair users who would encounter them daily.",
+      "Narrator: The discussion had sounded civil. People waited for their turn and avoided insults. Still, courtesy had become a polished surface over a narrow decision-making process.",
+      "Narrator: [analytical] The chair postponed the vote and proposed three forms of consultation: a walk-through at different times of day, translated paper feedback, and a session accessible to residents who could not attend late meetings. One member objected that reopening the issue rewarded people who had not participated.",
+      "Narrator: She answered without accusing him of selfishness. Invitations, she noted, had been sent through an app that many contract workers could not access. Absence was therefore not evidence of indifference.",
+      "Narrator: [thoughtful] The walk-through revealed practical conflicts. A gate that appeared harmless on the plan narrowed a turning space used by wheelchair users. The proposed closing time would leave night staff dependent on a distant entrance. Residents also described genuine concerns about theft that could not simply be dismissed.",
+      "Narrator: The revised design used better lighting, a wider controlled entrance, and temporary access codes with clear privacy limits. It cost more, so a decorative feature was delayed and the budget change was published.",
+      "Narrator: [reflective] Not everyone preferred the result. What changed was the quality of the disagreement. Claims could be traced to observations, affected people could challenge assumptions, and the chair explained which constraints remained.",
+      "Narrator: I left thinking that adab in public decisions is not merely a gentle tone. It includes making participation possible, refusing to confuse silence with consent, and ensuring that efficiency does not place its hidden costs on people with the least influence."
+    ],
+    "quiz": [
+      {
+        "question": "What does the chair's question expose beneath the committee's civil tone?",
+        "options": [
+          "Courteous procedure had excluded people who would bear the decision's effects.",
+          "It withholds the specific evidence needed for improvement.",
+          "That a man he trained has been promoted to the position he wanted",
+          "Nodding politely at opinions she doesn't actually hold"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Courteous procedure had excluded people who would bear the decision's effects."
+      },
+      {
+        "question": "Why is nonparticipation an unreliable sign of indifference here?",
+        "options": [
+          "The feedback isolates revisable work instead of defining identity.",
+          "The invitation method was inaccessible to many contract workers.",
+          "A small, ungenerous satisfaction in cataloguing the man's flaws",
+          "She says it's restraint, since the moment wasn't right for the truth to matter more"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: The invitation method was inaccessible to many contract workers."
+      },
+      {
+        "question": "What purpose does the multi-format consultation serve?",
+        "options": [
+          "She should test objections and clarify standards without guaranteeing comfort.",
+          "The discipline of not letting the ugly first instinct author one's next sentence",
+          "It reduces access barriers created by time, language, and technology.",
+          "When staying quiet actively causes harm rather than sparing an unready listener"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: It reduces access barriers created by time, language, and technology."
+      },
+      {
+        "question": "How does the chair answer resistance without personalising the disagreement?",
+        "options": [
+          "The audience should be no broader than the learning or accountability purpose.",
+          "No, he plans to calmly request a conversation with his director about it",
+          "That it probably spared herself an argument more than it spared his sister",
+          "She identifies a flawed invitation process rather than accusing selfish motives."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: She identifies a flawed invitation process rather than accusing selfish motives."
+      },
+      {
+        "question": "Which observation demonstrates the limits of reviewing only the plan?",
+        "options": [
+          "The proposed gate obstructed wheelchair turning space in practice.",
+          "It can disguise an unchallengeable decision and remove routes for appeal.",
+          "That it is a debt paid daily to someone who has stopped thinking about you",
+          "Speak with his sister privately later, without an audience"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: The proposed gate obstructed wheelchair turning space in practice."
+      },
+      {
+        "question": "Why are residents' concerns about theft retained in the revised reasoning?",
+        "options": [
+          "Request examples, compare criteria, and document the discussion.",
+          "Inclusion requires integrating competing evidence, not reversing whose concerns count.",
+          "It often presents personal resentment as principled concern about standards.",
+          "Truthful speech must be weighed alongside timing and another person's grief."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Inclusion requires integrating competing evidence, not reversing whose concerns count."
+      },
+      {
+        "question": "What trade-off makes the revised design publicly accountable?",
+        "options": [
+          "One protects substantive truth while the other protects human dignity.",
+          "Disciplined conduct can precede complete emotional generosity.",
+          "A decorative feature is delayed and the higher security cost is disclosed.",
+          "Habitual silence can conceal cowardice and deprive relationships of honesty."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: A decorative feature is delayed and the higher security cost is disclosed."
+      },
+      {
+        "question": "How does the quality of disagreement improve after consultation?",
+        "options": [
+          "Truth delivered without restraint can needlessly humiliate.",
+          "It argues for the narrator's case without attacking another person's worth.",
+          "Silence becomes culpable when it actively permits harm.",
+          "Claims become traceable and affected people can challenge assumptions."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Claims become traceable and affected people can challenge assumptions."
+      },
+      {
+        "question": "What implication follows from refusing to equate silence with consent?",
+        "options": [
+          "Decision-makers must investigate whether participation was genuinely possible.",
+          "Pleasant language hides the actual disagreement or prevents challenge.",
+          "Sustained bitterness burdens the resentful person more than its target.",
+          "A public audience would turn correction into defensive performance."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Decision-makers must investigate whether participation was genuinely possible."
+      },
+      {
+        "question": "How does the case expand adab beyond gentle speech?",
+        "options": [
+          "Both parties can identify evidence, next actions, and unresolved questions.",
+          "It includes accessible participation and fair distribution of hidden costs.",
+          "Continue mentoring others while seeking specific feedback and stronger evidence.",
+          "She commits to a private conversation rather than indefinite avoidance."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It includes accessible participation and fair distribution of hidden costs."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-adab-10",
+    "title": "Can Candour Survive Courtesy?",
+    "level": "C1",
+    "themeId": "adab",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A manager tells an employee, “Your report needs improvement,” but avoids every specific criticism because she wants to remain kind. Is that good adab?",
+      "Guest: Not if vagueness leaves the employee unable to improve. Courtesy should govern the delivery of truth, not remove the truth from the conversation.",
+      "Moderator: Where should the manager begin?",
+      "Guest: [carefully] With observable work. She might say, “The conclusion introduces claims that the evidence section does not support,” rather than, “You are not analytical.” One addresses a document; the other turns a problem into an identity.",
+      "Moderator: What if the employee becomes defensive?",
+      "Guest: Listen for a legitimate objection, clarify the standard, and allow time to respond. Respectful feedback cannot guarantee comfort or agreement.",
+      "Moderator: Some workplaces encourage public critique so everyone can learn.",
+      "Guest: The audience should match the purpose. Discussing a shared process can be public; exposing an individual's avoidable mistake may require privacy. Serious accountability still follows formal procedures.",
+      "Moderator: [curious] Can excessive politeness conceal power?",
+      "Guest: Certainly. A manager may use warm language while making an unchallengeable decision. Genuine courtesy includes clear authority, reasons, and a route for questions or appeal.",
+      "Moderator: How should the employee respond if the feedback itself is unfair?",
+      "Guest: Ask for examples, compare the written criteria, and document the conversation. Challenge the assessment without speculating about the manager's character.",
+      "Moderator: [reflective] So candour and courtesy are not competing percentages.",
+      "Guest: Exactly. Candour without restraint can humiliate; courtesy without substance can manipulate. Mature communication protects dignity while making the actual disagreement visible.",
+      "Moderator: Give us a final test.",
+      "Guest: After the conversation, can both people state what evidence was discussed, what action follows, and what remains open? If not, pleasant language may have disguised a failure to communicate."
+    ],
+    "quiz": [
+      {
+        "question": "Why does vague kindness fail the employee in the report example?",
+        "options": [
+          "It withholds the specific evidence needed for improvement.",
+          "That a man he trained has been promoted to the position he wanted",
+          "Nodding politely at opinions she doesn't actually hold",
+          "Whether public apologies have devolved into performance rather than genuine contrition"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It withholds the specific evidence needed for improvement."
+      },
+      {
+        "question": "What ethical advantage comes from criticising the document rather than the person?",
+        "options": [
+          "A small, ungenerous satisfaction in cataloguing the man's flaws",
+          "The feedback isolates revisable work instead of defining identity.",
+          "She says it's restraint, since the moment wasn't right for the truth to matter more",
+          "Whether it survives the absence of an audience and continues privately afterward"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: The feedback isolates revisable work instead of defining identity."
+      },
+      {
+        "question": "How should defensiveness affect the manager's response?",
+        "options": [
+          "The discipline of not letting the ugly first instinct author one's next sentence",
+          "When staying quiet actively causes harm rather than sparing an unready listener",
+          "She should test objections and clarify standards without guaranteeing comfort.",
+          "Restitution and whether the harmed party was actually made whole"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: She should test objections and clarify standards without guaranteeing comfort."
+      },
+      {
+        "question": "What principle determines whether criticism belongs in public or private?",
+        "options": [
+          "No, he plans to calmly request a conversation with his director about it",
+          "That it probably spared herself an argument more than it spared his sister",
+          "They rarely produce anything durable beyond temporary relief from criticism",
+          "The audience should be no broader than the learning or accountability purpose."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: The audience should be no broader than the learning or accountability purpose."
+      },
+      {
+        "question": "How can warm managerial language conceal coercive power?",
+        "options": [
+          "It can disguise an unchallengeable decision and remove routes for appeal.",
+          "That it is a debt paid daily to someone who has stopped thinking about you",
+          "Speak with his sister privately later, without an audience",
+          "Reputation versus repentance"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It can disguise an unchallengeable decision and remove routes for appeal."
+      },
+      {
+        "question": "Which employee response challenges unfair feedback without counterattacking?",
+        "options": [
+          "It often presents personal resentment as principled concern about standards.",
+          "Request examples, compare criteria, and document the discussion.",
+          "Truthful speech must be weighed alongside timing and another person's grief.",
+          "Repair continues privately after public attention has disappeared."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Request examples, compare criteria, and document the discussion."
+      },
+      {
+        "question": "What contrast explains why candour and courtesy are not competing proportions?",
+        "options": [
+          "Disciplined conduct can precede complete emotional generosity.",
+          "Habitual silence can conceal cowardice and deprive relationships of honesty.",
+          "One protects substantive truth while the other protects human dignity.",
+          "Adab concerns whether harm is repaired, not how impressive remorse sounds."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: One protects substantive truth while the other protects human dignity."
+      },
+      {
+        "question": "When does candour become ethically defective?",
+        "options": [
+          "It argues for the narrator's case without attacking another person's worth.",
+          "Silence becomes culpable when it actively permits harm.",
+          "They relieve criticism temporarily without producing durable moral change.",
+          "Truth delivered without restraint can needlessly humiliate."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Truth delivered without restraint can needlessly humiliate."
+      },
+      {
+        "question": "When does courtesy become manipulative rather than respectful?",
+        "options": [
+          "Pleasant language hides the actual disagreement or prevents challenge.",
+          "Sustained bitterness burdens the resentful person more than its target.",
+          "A public audience would turn correction into defensive performance.",
+          "The specific injury matters more than spectators' demand for a statement."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Pleasant language hides the actual disagreement or prevents challenge."
+      },
+      {
+        "question": "What final test reveals whether the conversation genuinely communicated?",
+        "options": [
+          "Continue mentoring others while seeking specific feedback and stronger evidence.",
+          "Both parties can identify evidence, next actions, and unresolved questions.",
+          "She commits to a private conversation rather than indefinite avoidance.",
+          "Reputation management serves the offender; repentance serves the harmed party."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Both parties can identify evidence, next actions, and unresolved questions."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "adab",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

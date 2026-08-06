@@ -6,30 +6,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] I found a wallet on the train this morning, and I have been thinking about it all day, because what happened next surprised even me.",
-      "Narrator: [reflective] It was sitting on the empty seat beside me, and since nobody came back for it before my stop, I picked it up to look for identification.",
+      "Narrator: It was sitting on the empty seat beside me, and since nobody came back for it before my stop, I picked it up to look for identification.",
       "Narrator: [tempted] Inside was almost two million rupiah in cash, an ID card, a few bank cards, and a small photo of a smiling family.",
       "Narrator: [honestly] For a second, I thought about keeping the cash and leaving the wallet near the station, because nobody would ever know it was me.",
       "Narrator: [determined] But then I looked at the photo again, and I imagined how worried that man must already be feeling about his missing wallet.",
-      "Narrator: [warmly] I got off at the next station and called the number on one of his cards; when he answered, his voice sounded tired, almost hopeless.",
-      "Narrator: [gently] When I explained that I had found his wallet, he went completely silent for a moment, then almost started crying with relief.",
-      "Narrator: [moved] He told me that money was meant for his mother's medicine, and losing it that morning had frightened him more than anything else that week.",
-      "Narrator: [reflective] We met near a small coffee shop close to the station, and when I handed him the wallet, he tried to give me some money as thanks.",
-      "Narrator: [honestly] I refused politely, because helping him did not feel like something that should be paid for with money in the first place.",
-      "Narrator: [thoughtful] Walking back to catch another train, I realized I had missed an important meeting, although honestly, I did not regret my choice even slightly.",
-      "Narrator: [warmly] I am recording this note because I want to remember how light and calm I felt after returning something that was never truly mine.",
-      "Narrator: [with a small smile] Tomorrow I will apologize to my manager for being late, but tonight, I am simply grateful that I stopped and made the right choice."
+      "Narrator: [carefully] I took the wallet to the station service desk and asked them to record it as lost property. Staff used the ID to contact its owner.",
+      "Narrator: While I waited, staff checked the wallet contents with me as a witness so there would be a clear record.",
+      "Narrator: [relieved] When the owner arrived, he confirmed his identity and described the wallet before staff returned it. He said the cash was for an urgent family expense.",
+      "Narrator: [gratefully] He thanked me at the public service desk and offered a small reward.",
+      "Narrator: I refused politely, because helping him did not feel like something that should be paid for with money in the first place.",
+      "Narrator: [concerned] Walking back to catch another train, I realized I had missed an important meeting, although honestly, I did not regret my choice even slightly.",
+      "Narrator: I am recording this note because I want to remember how light and calm I felt after returning something that was never truly mine.",
+      "Narrator: [peacefully] Tomorrow I will explain the documented delay to my manager, but tonight, I am simply grateful that I stopped and made the right choice."
     ],
     "quiz": [
-      { "question": "Where did the narrator find the wallet?", "options": ["On a bus", "On the seat beside her on the train", "In a coffee shop", "On the street"], "correctIndex": 1, "explanation": "The wallet was sitting on the empty seat beside her on the train." },
-      { "question": "What did the narrator briefly consider doing?", "options": ["Reporting it to the police immediately", "Keeping the cash and leaving the wallet somewhere", "Giving it to a stranger", "Ignoring it completely"], "correctIndex": 1, "explanation": "She thought about keeping the cash and leaving the wallet near the station since nobody would know." },
-      { "question": "What was the money in the wallet meant for?", "options": ["A vacation", "His mother's medicine", "Rent payment", "A new phone"], "correctIndex": 1, "explanation": "The man told her the money was meant for his mother's medicine." },
-      { "question": "What did the man try to do after getting his wallet back?", "options": ["Call the police", "Give the narrator money as thanks", "Ask for her phone number", "Argue with her"], "correctIndex": 1, "explanation": "He tried to give her some money as thanks, but she refused politely." },
-      { "question": "What happened as a result of the narrator's choice?", "options": ["She got a reward from her company", "She missed an important meeting but did not regret it", "She lost her job", "She caught an earlier train"], "correctIndex": 1, "explanation": "She missed an important meeting because of the delay, but she said she did not regret her choice." }
-    ]
+      {
+        "question": "Where was the wallet found?",
+        "options": [
+          "Inside a coffee shop",
+          "On an empty train seat",
+          "At the service desk",
+          "Under the narrator’s office chair"
+        ],
+        "correctIndex": 1,
+        "explanation": "It remained beside the narrator until the next stop."
+      },
+      {
+        "question": "What temptation did the narrator experience?",
+        "options": [
+          "Keeping the cash and leaving the wallet",
+          "Using the bank cards",
+          "Calling the family photo shop",
+          "Giving the wallet to another passenger"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator honestly describes a brief dishonest thought."
+      },
+      {
+        "question": "Where did the narrator take the wallet?",
+        "options": [
+          "A private restaurant",
+          "The owner’s home",
+          "The narrator’s workplace",
+          "The station service desk"
+        ],
+        "correctIndex": 3,
+        "explanation": "Official lost-property handling reduced risk for both sides."
+      },
+      {
+        "question": "How was the owner verified?",
+        "options": [
+          "He only stated the cash amount online",
+          "The narrator recognized his voice",
+          "He showed identity and described the wallet",
+          "He brought a family member"
+        ],
+        "correctIndex": 2,
+        "explanation": "Staff checked that the claimant was the rightful owner."
+      },
+      {
+        "question": "What cost did the narrator’s decision have?",
+        "options": [
+          "The wallet cash was lost",
+          "The train service stopped",
+          "The manager ended the job",
+          "An important meeting was missed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Returning the property responsibly took extra time."
+      },
+      {
+        "question": "Why did staff record the contents?",
+        "options": [
+          "To decide who could keep the cash",
+          "To publish the owner’s information",
+          "To charge a lost-property fee",
+          "To create a clear account of what was handed in"
+        ],
+        "correctIndex": 3,
+        "explanation": "A documented handover protects the finder, staff, and owner."
+      },
+      {
+        "question": "What made the family photo morally important to the narrator?",
+        "options": [
+          "It helped her imagine the owner as a worried person",
+          "It proved the cash amount",
+          "It contained the station address",
+          "It gave permission to open the wallet"
+        ],
+        "correctIndex": 0,
+        "explanation": "Empathy interrupted the temptation to keep the money."
+      },
+      {
+        "question": "Why was the official desk safer than a private meeting?",
+        "options": [
+          "The owner could not thank the narrator",
+          "The train would wait longer",
+          "Cash is never allowed in a station",
+          "Identity and transfer could be verified publicly"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revision avoids arranging a meeting with an unknown person."
+      },
+      {
+        "question": "Does refusing the reward mean every reward is forbidden?",
+        "options": [
+          "Yes, the script gives a legal rule",
+          "No, it describes the narrator’s personal choice",
+          "No, because the owner withdrew it",
+          "Yes, station staff demanded refusal"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator explains motivation, not a universal ruling."
+      },
+      {
+        "question": "What does the narrator still owe the manager?",
+        "options": [
+          "A false excuse about the train",
+          "The owner’s private information",
+          "An honest explanation of the documented delay",
+          "Part of the recovered cash"
+        ],
+        "correctIndex": 2,
+        "explanation": "Good character toward one person does not remove responsibility to another."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "revise; replace an unsafe private meeting with official lost-property handling and identity verification",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-akhlak-02",
@@ -38,36 +152,153 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Aldi, who wants to talk about caring for his father, who has become forgetful with age.",
-      "Guest: [pleasantly] Thank you for inviting me. This subject has been difficult for my family, so I appreciate the chance to talk about it openly.",
-      "Host: [curious] When did you first notice that your father was changing?",
+      "Guest: Thank you for inviting me. This subject has been difficult for my family, so I appreciate the chance to talk about it openly.",
+      "Host: When did you first notice that your father was changing?",
       "Guest: [thoughtful] About two years ago, he started forgetting small things, like where he put his keys, or whether he had already eaten lunch that day.",
-      "Host: [gently] That must have been frightening to watch happen slowly. How did you react at first?",
+      "Host: That must have been frightening to watch happen slowly. How did you react at first?",
       "Guest: [honestly] Honestly, I got frustrated easily, because I kept expecting him to remember things the way he always had before this started.",
-      "Host: [understanding] Did that frustration ever show, even when you tried hard to hide it from him?",
+      "Host: Did that frustration ever show, even when you tried hard to hide it from him?",
       "Guest: [regretfully] Yes, unfortunately. Once I raised my voice when he asked the same question three times within an hour, and I still feel ashamed about that.",
-      "Host: [curious] What changed after that moment for you, if anything did change?",
+      "Host: What changed after that moment for you, if anything did change?",
       "Guest: [reflective] I called my sister that night, and she reminded me that he isn't choosing to forget, so getting angry doesn't actually help either of us.",
-      "Host: [interested] So how do you handle those repeated questions now, compared to before?",
+      "Host: So how do you handle those repeated questions now, compared to before?",
       "Guest: [calmly] I answer as though it's the first time, even the tenth time, because for him, in that moment, it truly is the first time.",
-      "Host: [curious] Has that shift changed how you feel about caring for him day to day?",
-      "Guest: [warmly] Definitely. Once I stopped expecting him to be who he used to be, caring for him became less exhausting and much more peaceful.",
-      "Host: [thoughtful] What would you tell someone who is just starting this same difficult journey with an aging parent?",
-      "Guest: [encouraging] I would say patience isn't a feeling that simply appears. It's a choice you make again, quietly, every time you feel your temper rising.",
-      "Host: [smiling] Thank you, Aldi, for sharing something so personal with our listeners today.",
+      "Host: Has that shift changed how you feel about caring for him day to day?",
+      "Guest: [carefully] Definitely. After a medical assessment, our family learned practical ways to support him. I also take breaks and ask my sister for help before I become overwhelmed.",
+      "Host: What would you tell someone who is just starting this same difficult journey with an aging parent?",
+      "Guest: [encouraging] I would say patience includes a calm response, suitable medical guidance, and asking for caregiver support before anger grows.",
+      "Host: Thank you, Aldi, for sharing something so personal with our listeners today.",
       "Guest: [warmly] Thank you for listening. I hope someone out there feels a little less alone after hearing this."
     ],
     "quiz": [
-      { "question": "What is the podcast episode about?", "options": ["Starting a business", "Caring for an aging, forgetful father", "Traveling abroad", "Learning a new language"], "correctIndex": 1, "explanation": "The host introduces the episode as being about caring for Aldi's father, who has become forgetful with age." },
-      { "question": "How did Aldi react when his father first started forgetting things?", "options": ["He stayed calm immediately", "He got frustrated easily", "He ignored the situation", "He moved away"], "correctIndex": 1, "explanation": "Aldi admits he got frustrated easily because he expected his father to remember things as before." },
-      { "question": "What happened once when his father asked the same question three times?", "options": ["Aldi laughed it off", "Aldi raised his voice and later felt ashamed", "His father got angry first", "Nothing happened"], "correctIndex": 1, "explanation": "Aldi raised his voice when his father asked the same question three times, and he still feels ashamed about it." },
-      { "question": "What did Aldi's sister remind him?", "options": ["That his father was doing it on purpose", "That his father isn't choosing to forget, so anger doesn't help", "That he should see a doctor himself", "That he should move his father to a care home"], "correctIndex": 1, "explanation": "His sister reminded him his father isn't choosing to forget, so getting angry doesn't help either of them." },
-      { "question": "How does Aldi describe patience at the end of the interview?", "options": ["A feeling that simply appears", "A choice made again every time his temper rises", "Something only some people are born with", "Something that becomes unnecessary with time"], "correctIndex": 1, "explanation": "Aldi says patience isn't a feeling that appears, but a choice made again every time his temper rises." }
-    ]
+      {
+        "question": "What is the podcast episode about?",
+        "options": [
+          "Caring for an aging, forgetful father",
+          "Starting a business",
+          "Traveling abroad",
+          "Learning a new language"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces the episode as being about caring for Aldi's father, who has become forgetful with age."
+      },
+      {
+        "question": "How did Aldi react when his father first started forgetting things?",
+        "options": [
+          "He stayed calm immediately",
+          "He ignored the situation",
+          "He got frustrated easily",
+          "He moved away"
+        ],
+        "correctIndex": 2,
+        "explanation": "Aldi admits he got frustrated easily because he expected his father to remember things as before."
+      },
+      {
+        "question": "What happened once when his father asked the same question three times?",
+        "options": [
+          "Aldi laughed it off",
+          "Aldi raised his voice and later felt ashamed",
+          "His father got angry first",
+          "Nothing happened"
+        ],
+        "correctIndex": 1,
+        "explanation": "Aldi raised his voice when his father asked the same question three times, and he still feels ashamed about it."
+      },
+      {
+        "question": "What did Aldi's sister remind him?",
+        "options": [
+          "That his father was doing it on purpose",
+          "That he should see a doctor himself",
+          "That his father isn't choosing to forget, so anger doesn't help",
+          "That he should move his father to a care home"
+        ],
+        "correctIndex": 2,
+        "explanation": "His sister reminded him his father isn't choosing to forget, so getting angry doesn't help either of them."
+      },
+      {
+        "question": "How does Aldi describe patience at the end of the interview?",
+        "options": [
+          "A feeling that simply appears",
+          "Something only some people are born with",
+          "Something that becomes unnecessary with time",
+          "A choice made again every time his temper rises"
+        ],
+        "correctIndex": 3,
+        "explanation": "Aldi says patience isn't a feeling that appears, but a choice made again every time his temper rises."
+      },
+      {
+        "question": "Why did Aldi’s early expectation create frustration?",
+        "options": [
+          "His father refused every meal",
+          "His sister denied the changes",
+          "He expected his father’s memory to work as before",
+          "The doctor gave no information"
+        ],
+        "correctIndex": 2,
+        "explanation": "The expectation did not match his father’s changing ability."
+      },
+      {
+        "question": "What does the sister’s reminder change?",
+        "options": [
+          "It proves repeated questions are easy",
+          "It separates a symptom from intentional behavior",
+          "It makes medical assessment unnecessary",
+          "It gives Aldi control over memory loss"
+        ],
+        "correctIndex": 1,
+        "explanation": "Recognizing that forgetting is not a choice reduces blame."
+      },
+      {
+        "question": "What new support appears in the revised script?",
+        "options": [
+          "Medical guidance and shared caregiver breaks",
+          "A promise never to feel tired",
+          "A strict rule to answer alone",
+          "A public discussion of private details"
+        ],
+        "correctIndex": 0,
+        "explanation": "Patience is supported by care systems, not only willpower."
+      },
+      {
+        "question": "Why should Aldi ask for help before becoming overwhelmed?",
+        "options": [
+          "His father needs fewer family members",
+          "Caregivers should never answer questions",
+          "His sister caused the memory problem",
+          "Rest can reduce the risk of an angry response"
+        ],
+        "correctIndex": 3,
+        "explanation": "Caregiver limits matter for the safety and dignity of everyone."
+      },
+      {
+        "question": "What is the interview careful not to claim?",
+        "options": [
+          "That repeated questions occur",
+          "That families may struggle",
+          "That calmness alone treats memory changes",
+          "That Aldi once raised his voice"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revision places emotional patience beside professional assessment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "revise; add medical assessment and caregiver support so patience does not replace appropriate care",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-akhlak-03",
@@ -76,35 +307,152 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Bagas", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Bagas",
+        "gender": "male"
+      }
     ],
     "script": [
       "Farah: [tense] Bagas, I need to talk to you about the money you were supposed to invest in our shop last month. It still hasn't arrived.",
       "Bagas: [nervous] I know, Farah, and I'm sorry. Things happened that I didn't expect, and I should have called you sooner to explain everything.",
-      "Farah: [frustrated] Because of that delay, I had to borrow money from my brother just to pay our supplier on time.",
+      "Farah: Because of that delay, I had to borrow money from my brother just to pay our supplier on time.",
       "Bagas: [ashamed] I feel terrible hearing that. I promised you that money would come through, and instead I put you in a difficult position.",
-      "Farah: [curious] What actually happened, Bagas? You've always been reliable before this, so I'm confused about what changed.",
+      "Farah: What actually happened, Bagas? You've always been reliable before this, so I'm confused about what changed.",
       "Bagas: [honestly] My father got sick suddenly, and the hospital bills used almost everything I had saved for the shop this year.",
       "Farah: [softening] Why didn't you just tell me that immediately, instead of staying quiet and letting me wonder what was going on?",
-      "Bagas: [regretfully] I was embarrassed, honestly. I didn't want you to think I couldn't handle both my family and our business at the same time.",
-      "Farah: [gently] I would have understood completely if you had just explained it. Silence was what actually hurt more than the missing money did.",
-      "Bagas: [quietly] You're right. I should have trusted you with the truth instead of avoiding your calls for almost two weeks.",
-      "Farah: [reflective] Family comes before business, Bagas. If your father was sick, that money was exactly where it needed to be.",
-      "Bagas: [relieved] Thank you for saying that. I was afraid you would end our partnership over this.",
-      "Farah: [warmly] I was hurt, but I'm not going to throw away three years of trust because of one difficult month.",
-      "Bagas: [determined] I'll send what I can by next week, and the rest once my father recovers and I'm working again properly.",
-      "Farah: [gently] Take the time you need. Just promise you'll talk to me next time, instead of disappearing when things get hard.",
+      "Bagas: I was embarrassed, honestly. I didn't want you to think I couldn't handle both my family and our business at the same time.",
+      "Farah: [hurt] I would have understood completely if you had just explained it. Silence was what actually hurt more than the missing money did.",
+      "Bagas: You're right. I should have trusted you with the truth instead of avoiding your calls for almost two weeks.",
+      "Farah: [compassionately] I understand why you used your own savings for your father. But our business still needs a clear revised plan because I made commitments based on your promise.",
+      "Bagas: Thank you for saying that. I was afraid you would end our partnership over this.",
+      "Farah: [firmly] I was hurt, but I'm not going to throw away three years of trust because of one difficult month.",
+      "Bagas: [carefully] I can confirm a safe amount by Friday. Then we should write a revised schedule based on my actual finances, not on when my father recovers.",
+      "Farah: Let us review the supplier debt and put the new agreement in writing. And please talk to me early next time, instead of disappearing when things get hard.",
       "Bagas: [sincerely] I promise. And thank you for forgiving me, even though I honestly didn't handle this well at all.",
-      "Farah: [warmly] Everyone struggles sometimes, Bagas. What matters now is that we keep building this shop together, honestly, from here forward."
+      "Farah: [hopeful] Everyone struggles sometimes, Bagas. What matters now is that we keep building this shop together, honestly, from here forward."
     ],
     "quiz": [
-      { "question": "Why does Farah call Bagas at the start?", "options": ["To end their friendship", "Because the money he promised to invest never arrived", "To ask him to work longer hours", "To plan a trip"], "correctIndex": 1, "explanation": "Farah calls because the money Bagas was supposed to invest in their shop last month still hasn't arrived." },
-      { "question": "What actually happened to Bagas's money?", "options": ["He lost it gambling", "His father got sick, and hospital bills used his savings", "He spent it on a vacation", "He gave it to another business"], "correctIndex": 1, "explanation": "Bagas's father got sick suddenly, and the hospital bills used almost everything he had saved." },
-      { "question": "Why didn't Bagas tell Farah sooner?", "options": ["He forgot", "He was embarrassed and didn't want her to think he couldn't handle everything", "He was too busy to call", "He didn't have her number"], "correctIndex": 1, "explanation": "Bagas admits he was embarrassed and didn't want Farah to think he couldn't handle his family and the business." },
-      { "question": "What does Farah say hurt her more than the missing money?", "options": ["The amount of money itself", "Bagas's silence and avoiding her calls", "Losing the shop", "Borrowing from her brother"], "correctIndex": 1, "explanation": "Farah says silence was what actually hurt more than the missing money." },
-      { "question": "What does Farah decide about their partnership?", "options": ["She ends it immediately", "She forgives him and wants to keep building the shop together", "She demands all the money at once", "She asks someone else to be her partner"], "correctIndex": 1, "explanation": "Farah decides not to throw away three years of trust and wants to keep building the shop together." }
-    ]
+      {
+        "question": "Why does Farah call Bagas at the start?",
+        "options": [
+          "Because the money he promised to invest never arrived",
+          "To end their friendship",
+          "To ask him to work longer hours",
+          "To plan a trip"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farah calls because the money Bagas was supposed to invest in their shop last month still hasn't arrived."
+      },
+      {
+        "question": "What actually happened to Bagas's money?",
+        "options": [
+          "He lost it gambling",
+          "He spent it on a vacation",
+          "His father got sick, and hospital bills used his savings",
+          "He gave it to another business"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bagas's father got sick suddenly, and the hospital bills used almost everything he had saved."
+      },
+      {
+        "question": "Why didn't Bagas tell Farah sooner?",
+        "options": [
+          "He forgot",
+          "He was embarrassed and didn't want her to think he couldn't handle everything",
+          "He was too busy to call",
+          "He didn't have her number"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bagas admits he was embarrassed and didn't want Farah to think he couldn't handle his family and the business."
+      },
+      {
+        "question": "What does Farah say hurt her more than the missing money?",
+        "options": [
+          "The amount of money itself",
+          "Losing the shop",
+          "Borrowing from her brother",
+          "Bagas's silence and avoiding her calls"
+        ],
+        "correctIndex": 3,
+        "explanation": "Farah says silence was what actually hurt more than the missing money."
+      },
+      {
+        "question": "What does Farah decide about their partnership?",
+        "options": [
+          "She ends it immediately",
+          "She forgives him and wants to keep building the shop together",
+          "She demands all the money at once",
+          "She asks someone else to be her partner"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah decides not to throw away three years of trust and wants to keep building the shop together."
+      },
+      {
+        "question": "What practical harm did the silence cause Farah?",
+        "options": [
+          "She closed the shop immediately",
+          "She borrowed money to pay the supplier",
+          "She paid the hospital bill",
+          "She lost contact with her brother"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah made an expensive adjustment without information."
+      },
+      {
+        "question": "Why is Farah’s revised response both kind and responsible?",
+        "options": [
+          "She cancels the entire debt",
+          "She respects the family need but still requires a business plan",
+          "She ignores the supplier commitment",
+          "She demands money during the call"
+        ],
+        "correctIndex": 1,
+        "explanation": "Compassion does not erase commitments made to the shop."
+      },
+      {
+        "question": "Why should repayment not depend on the father’s recovery?",
+        "options": [
+          "Recovery time is uncertain and should not become a financial promise",
+          "The father caused the partnership problem",
+          "Hospital care always ends by Friday",
+          "Farah controls the recovery date"
+        ],
+        "correctIndex": 0,
+        "explanation": "A responsible schedule uses finances that can actually be checked."
+      },
+      {
+        "question": "What does putting the agreement in writing achieve?",
+        "options": [
+          "It publicly exposes the father’s illness",
+          "It guarantees the shop will succeed",
+          "It creates shared expectations that both partners can review",
+          "It removes the need for future communication"
+        ],
+        "correctIndex": 2,
+        "explanation": "A written repair makes dates and responsibilities clear."
+      },
+      {
+        "question": "What must accompany Farah’s forgiveness?",
+        "options": [
+          "No further discussion of money",
+          "A promise that hardship will not return",
+          "Ending the partnership immediately",
+          "Earlier honesty and reliable follow-through"
+        ],
+        "correctIndex": 3,
+        "explanation": "Trust can continue, but it needs changed behavior and accountability."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "revise; keep compassion for family illness while adding written business repair, realistic dates, and accountability",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-akhlak-04",
@@ -113,33 +461,147 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [reflective] Last month, I won an award at work for the best sales results in our entire branch, and honestly, it changed something inside me temporarily.",
-      "Narrator: [honestly] For about a week, I felt proud in a way that started to feel uncomfortable, even to myself when I noticed it happening.",
-      "Narrator: [thoughtful] I found myself mentioning the award in almost every conversation, even when nobody had actually asked me about it at all.",
-      "Narrator: [reflective] One afternoon, my colleague Dedi quietly told me that I had been talking about the award constantly since the ceremony happened.",
-      "Narrator: [honest] At first, I felt embarrassed and slightly defensive, because I didn't like hearing that about myself from someone I respected.",
-      "Narrator: [thoughtful] But later that evening, I thought about it seriously, and I realized he was completely right about how I had been behaving.",
-      "Narrator: [reflective] I remembered that the award wasn't only because of my own effort. My team supported me through every difficult negotiation this year.",
-      "Narrator: [honestly] My manager also gave me opportunities that other people never received, simply because of good timing and circumstances beyond my control.",
-      "Narrator: [thoughtful] So although I had worked hard, plenty of other people work just as hard without ever receiving recognition or an award.",
+      "Narrator: [uneasy] For about a week, I felt proud in a way that started to feel uncomfortable, even to myself when I noticed it happening.",
+      "Narrator: I found myself mentioning the award in almost every conversation, even when nobody had actually asked me about it at all.",
+      "Narrator: [quietly] One afternoon, my colleague Dedi quietly told me that I had been talking about the award constantly since the ceremony happened.",
+      "Narrator: [defensive] At first, I felt embarrassed and slightly defensive, because I didn't like hearing that about myself from someone I respected.",
+      "Narrator: But later that evening, I thought about it seriously, and I realized he was completely right about how I had been behaving.",
+      "Narrator: [thoughtful] I remembered that the award wasn't only because of my own effort. My team supported me through every difficult negotiation this year.",
+      "Narrator: My manager also gave me opportunities that other people never received, simply because of good timing and circumstances beyond my control.",
+      "Narrator: [humbly] So although I had worked hard, plenty of other people work just as hard without ever receiving recognition or an award.",
       "Narrator: [determined] The next morning, I apologized to Dedi for talking so much about myself, and I thanked my team properly for the first time.",
       "Narrator: [warmly] Their reaction surprised me. Several people said they had been waiting to hear something like that since the ceremony happened.",
-      "Narrator: [reflective] I understood then that humility isn't pretending your achievement didn't matter. It's remembering how many people helped you reach it.",
-      "Narrator: [gently] Success can quietly change how you treat others if you're not paying close attention to yourself and your own behavior.",
-      "Narrator: [peacefully] Now, when I feel proud of something, I try to pause and ask who else deserves credit alongside me for it.",
-      "Narrator: [warmly] That small question keeps me grounded, and honestly, it has made my relationships at work noticeably warmer than they were before.",
-      "Narrator: [with a small smile] The award still sits on my desk, but these days, it reminds me of my team, not just of myself alone."
+      "Narrator: I understood then that humility isn't pretending your achievement didn't matter. It's remembering how many people helped you reach it.",
+      "Narrator: [cautiously] Success can quietly change how you treat others if you're not paying close attention to yourself and your own behavior.",
+      "Narrator: Now, when I feel proud of something, I try to pause and ask who else deserves credit alongside me for it.",
+      "Narrator: [peacefully] That small question keeps me grounded, and honestly, it has made my relationships at work noticeably warmer than they were before.",
+      "Narrator: [smiling] The award still sits on my desk, but these days, it reminds me of my team, not just of myself alone."
     ],
     "quiz": [
-      { "question": "What did the narrator win last month?", "options": ["A promotion", "An award for the best sales results in his branch", "A trip abroad", "A new job offer"], "correctIndex": 1, "explanation": "The narrator won an award for the best sales results in his entire branch." },
-      { "question": "What did Dedi point out to him?", "options": ["That his sales numbers were wrong", "That he had been talking about the award constantly", "That he should quit his job", "That the team was upset about pay"], "correctIndex": 1, "explanation": "Dedi told him he had been talking about the award constantly since the ceremony." },
-      { "question": "How did the narrator first react to Dedi's comment?", "options": ["He agreed immediately", "He felt embarrassed and slightly defensive", "He laughed it off", "He ignored Dedi completely"], "correctIndex": 1, "explanation": "He felt embarrassed and slightly defensive when he first heard the comment from someone he respected." },
-      { "question": "What did the narrator do the next morning?", "options": ["He returned the award", "He apologized to Dedi and thanked his team properly", "He asked for another award", "He avoided his coworkers"], "correctIndex": 1, "explanation": "The next morning, he apologized to Dedi and thanked his team properly for the first time." },
-      { "question": "How does the narrator define humility by the end?", "options": ["Pretending an achievement doesn't matter", "Remembering how many people helped you reach it", "Refusing all awards", "Never talking about work again"], "correctIndex": 1, "explanation": "He concludes humility is remembering how many people helped you reach your achievement, not pretending it didn't matter." }
-    ]
+      {
+        "question": "What did the narrator win last month?",
+        "options": [
+          "An award for the best sales results in his branch",
+          "A promotion",
+          "A trip abroad",
+          "A new job offer"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator won an award for the best sales results in his entire branch."
+      },
+      {
+        "question": "What did Dedi point out to him?",
+        "options": [
+          "That his sales numbers were wrong",
+          "That he should quit his job",
+          "That he had been talking about the award constantly",
+          "That the team was upset about pay"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dedi told him he had been talking about the award constantly since the ceremony."
+      },
+      {
+        "question": "How did the narrator first react to Dedi's comment?",
+        "options": [
+          "He felt embarrassed and slightly defensive",
+          "He agreed immediately",
+          "He laughed it off",
+          "He ignored Dedi completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "He felt embarrassed and slightly defensive when he first heard the comment from someone he respected."
+      },
+      {
+        "question": "What did the narrator do the next morning?",
+        "options": [
+          "He returned the award",
+          "He asked for another award",
+          "He avoided his coworkers",
+          "He apologized to Dedi and thanked his team properly"
+        ],
+        "correctIndex": 3,
+        "explanation": "The next morning, he apologized to Dedi and thanked his team properly for the first time."
+      },
+      {
+        "question": "How does the narrator define humility by the end?",
+        "options": [
+          "Pretending an achievement doesn't matter",
+          "Refusing all awards",
+          "Remembering how many people helped you reach it",
+          "Never talking about work again"
+        ],
+        "correctIndex": 2,
+        "explanation": "He concludes humility is remembering how many people helped you reach your achievement, not pretending it didn't matter."
+      },
+      {
+        "question": "What showed that pride was becoming unhealthy?",
+        "options": [
+          "The narrator mentioned the award without being asked",
+          "The award remained on the desk",
+          "The team attended the ceremony",
+          "Dedi congratulated the narrator"
+        ],
+        "correctIndex": 0,
+        "explanation": "Repeated self-promotion made the change visible."
+      },
+      {
+        "question": "Why was Dedi’s comment difficult to accept?",
+        "options": [
+          "It denied that the award existed",
+          "It challenged the narrator’s preferred self-image",
+          "It came from a stranger",
+          "It accused the whole team"
+        ],
+        "correctIndex": 1,
+        "explanation": "Embarrassment and defensiveness came before reflection."
+      },
+      {
+        "question": "Which factors existed beside the narrator’s hard work?",
+        "options": [
+          "Only luck with no effort",
+          "A mistake by another branch",
+          "A promise from the manager",
+          "Team support, opportunity, timing, and circumstance"
+        ],
+        "correctIndex": 3,
+        "explanation": "The story presents achievement as real but not isolated."
+      },
+      {
+        "question": "Why had coworkers been waiting for thanks?",
+        "options": [
+          "They wanted the physical award",
+          "Public praise had not yet included their contribution",
+          "They had not heard about the ceremony",
+          "Dedi asked them to complain"
+        ],
+        "correctIndex": 1,
+        "explanation": "Recognition felt incomplete until the team was acknowledged."
+      },
+      {
+        "question": "How did the meaning of the award change?",
+        "options": [
+          "It became a reminder of shared effort",
+          "It became proof that pride is necessary",
+          "It lost all value",
+          "It was hidden from the office"
+        ],
+        "correctIndex": 0,
+        "explanation": "Humility changes interpretation without pretending the success did not matter."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "keep; thoughtful humility story gives appropriate credit without denying real personal effort",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-akhlak-05",
@@ -148,74 +610,310 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sari", "gender": "female" },
-      { "name": "Yoga", "gender": "male" }
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Yoga",
+        "gender": "male"
+      }
     ],
     "script": [
       "Sari: [concerned] Yoga, are you okay? You looked like you wanted to walk out of that meeting halfway through.",
       "Yoga: [tense] Honestly, I was one comment away from saying something I would have regretted immediately afterward.",
-      "Sari: [curious] What set you off so badly? You usually handle criticism better than almost anyone else on our team.",
+      "Sari: What set you off so badly? You usually handle criticism better than almost anyone else on our team.",
       "Yoga: [frustrated] When the director blamed my department for the delay, although the real problem started with the supplier weeks before that.",
-      "Sari: [understanding] That does sound unfair, especially since you warned everyone about the supplier issue back in March.",
-      "Yoga: [tense] Exactly. So when he said it in front of the whole company, I felt my face getting hot immediately.",
-      "Sari: [gently] What stopped you from correcting him right there, in front of everyone in that meeting?",
-      "Yoga: [thoughtful] I remembered something my old mentor told me once: never respond to public criticism with public anger, because both sides lose.",
-      "Sari: [interested] So what did you do instead, if you didn't say anything during the meeting itself?",
+      "Sari: That does sound unfair, especially since you warned everyone about the supplier issue back in March.",
+      "Yoga: [angry] Exactly. So when he said it in front of the whole company, I felt my face getting hot immediately.",
+      "Sari: What stopped you from correcting him right there, in front of everyone in that meeting?",
+      "Yoga: [remembering] I remembered something my old mentor told me once: never respond to public criticism with public anger, because both sides lose.",
+      "Sari: So what did you do instead, if you didn't say anything during the meeting itself?",
       "Yoga: [calmly] I breathed slowly, wrote down my thoughts on paper, and waited until the meeting had completely ended before saying anything at all.",
-      "Sari: [curious] Did you talk to him afterward, once the meeting was over and everyone had left the room?",
-      "Yoga: [honestly] Yes, privately, in his office. I explained the timeline calmly, with the emails to support what I was saying.",
-      "Sari: [interested] How did he react once you showed him the actual timeline and those emails?",
+      "Sari: Did you talk to him afterward, once the meeting was over and everyone had left the room?",
+      "Yoga: [firmly] Yes, privately, in his office. I explained the timeline calmly, with the emails to support what I was saying.",
+      "Sari: How did he react once you showed him the actual timeline and those emails?",
       "Yoga: [relieved] He apologized immediately and said he would clarify the situation with everyone at our next weekly meeting.",
-      "Sari: [warmly] That's a much better outcome than if you had argued with him in front of the entire company today.",
+      "Sari: That's a much better outcome than if you had argued with him in front of the entire company today.",
       "Yoga: [reflective] I know. If I had reacted angrily, he probably would have defended his position instead of actually listening to mine.",
-      "Sari: [smiling] Well, I'm proud of you for handling that so well. It clearly wasn't easy for you to stay quiet today.",
+      "Sari: Well, I'm proud of you for handling that so well. It clearly wasn't easy for you to stay quiet today.",
       "Yoga: [grateful] Thanks, Sari. Honestly, my hands were still shaking a little under the table the entire meeting."
     ],
     "quiz": [
-      { "question": "Why was Yoga upset during the meeting?", "options": ["He was denied a promotion", "The director blamed his department for a delay caused by the supplier", "He lost an important client", "He was asked to work overtime"], "correctIndex": 1, "explanation": "The director blamed Yoga's department for the delay, even though the real problem started with the supplier." },
-      { "question": "What did Yoga's old mentor once tell him?", "options": ["To always defend himself immediately", "Never respond to public criticism with public anger", "To avoid all meetings", "To quit if criticized unfairly"], "correctIndex": 1, "explanation": "His mentor told him never to respond to public criticism with public anger, because both sides lose." },
-      { "question": "What did Yoga do instead of reacting during the meeting?", "options": ["He left the room", "He breathed slowly, wrote down his thoughts, and waited until after the meeting", "He argued back immediately", "He complained to another coworker"], "correctIndex": 1, "explanation": "He breathed slowly, wrote his thoughts on paper, and waited until the meeting ended before saying anything." },
-      { "question": "What did Yoga bring to support his explanation privately?", "options": ["A signed letter", "The timeline and emails", "A witness", "Nothing at all"], "correctIndex": 1, "explanation": "He explained the timeline calmly, with the emails to support what he was saying." },
-      { "question": "How did the director react once shown the evidence?", "options": ["He denied everything", "He apologized and said he would clarify the situation at the next meeting", "He ignored Yoga completely", "He fired the supplier"], "correctIndex": 1, "explanation": "The director apologized immediately and said he would clarify the situation with everyone at the next weekly meeting." }
-    ]
+      {
+        "question": "Why was Yoga upset during the meeting?",
+        "options": [
+          "The director blamed his department for a delay caused by the supplier",
+          "He was denied a promotion",
+          "He lost an important client",
+          "He was asked to work overtime"
+        ],
+        "correctIndex": 0,
+        "explanation": "The director blamed Yoga's department for the delay, even though the real problem started with the supplier."
+      },
+      {
+        "question": "What did Yoga's old mentor once tell him?",
+        "options": [
+          "To always defend himself immediately",
+          "To avoid all meetings",
+          "Never respond to public criticism with public anger",
+          "To quit if criticized unfairly"
+        ],
+        "correctIndex": 2,
+        "explanation": "His mentor told him never to respond to public criticism with public anger, because both sides lose."
+      },
+      {
+        "question": "What did Yoga do instead of reacting during the meeting?",
+        "options": [
+          "He left the room",
+          "He argued back immediately",
+          "He complained to another coworker",
+          "He breathed slowly, wrote down his thoughts, and waited until after the meeting"
+        ],
+        "correctIndex": 3,
+        "explanation": "He breathed slowly, wrote his thoughts on paper, and waited until the meeting ended before saying anything."
+      },
+      {
+        "question": "What did Yoga bring to support his explanation privately?",
+        "options": [
+          "A signed letter",
+          "The timeline and emails",
+          "A witness",
+          "Nothing at all"
+        ],
+        "correctIndex": 1,
+        "explanation": "He explained the timeline calmly, with the emails to support what he was saying."
+      },
+      {
+        "question": "How did the director react once shown the evidence?",
+        "options": [
+          "He denied everything",
+          "He apologized and said he would clarify the situation at the next meeting",
+          "He ignored Yoga completely",
+          "He fired the supplier"
+        ],
+        "correctIndex": 1,
+        "explanation": "The director apologized immediately and said he would clarify the situation with everyone at the next weekly meeting."
+      },
+      {
+        "question": "What physical sign showed Yoga’s anger?",
+        "options": [
+          "He lost his voice completely",
+          "He left the room",
+          "He tore the written notes",
+          "His face felt hot and his hands shook"
+        ],
+        "correctIndex": 3,
+        "explanation": "The script shows self-control despite a strong body response."
+      },
+      {
+        "question": "Why did writing help during the meeting?",
+        "options": [
+          "It proved the director was correct",
+          "It informed the entire company",
+          "It replaced the supporting emails",
+          "It stored his points without releasing them as anger"
+        ],
+        "correctIndex": 3,
+        "explanation": "Notes created time between emotion and response."
+      },
+      {
+        "question": "What made Yoga’s private explanation persuasive?",
+        "options": [
+          "A louder version of the complaint",
+          "Agreement from every coworker",
+          "The director’s earlier apology",
+          "A calm timeline supported by emails"
+        ],
+        "correctIndex": 3,
+        "explanation": "Evidence shifted the discussion from blame to facts."
+      },
+      {
+        "question": "Why will the director clarify the issue publicly?",
+        "options": [
+          "The original blame created a public false impression",
+          "Yoga requested public praise",
+          "The supplier joined the meeting",
+          "Private correction is always insufficient"
+        ],
+        "correctIndex": 0,
+        "explanation": "The record needs repair in front of the group that heard the error."
+      },
+      {
+        "question": "What does the story suggest about silence?",
+        "options": [
+          "Silence always means agreement",
+          "Unfair criticism should never be corrected",
+          "Temporary silence can prepare a better response, not surrender the truth",
+          "Evidence matters only in private"
+        ],
+        "correctIndex": 2,
+        "explanation": "Yoga delays the response but still addresses the injustice."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "keep; emotionally realistic workplace story delays anger, gathers evidence, corrects the record, and protects dignity",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-akhlak-06",
-    "title": "A Family Dinner Story About a Promise Kept",
+    "title": "A Family Dinner Story About a Promise Repaired",
     "level": "A2",
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ayah", "gender": "male" },
-      { "name": "Nabila", "gender": "female" }
+      {
+        "name": "Ayah",
+        "gender": "male"
+      },
+      {
+        "name": "Nabila",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Nabila: [curious] Ayah, why did you drive two hours back home last night, just to bring me my forgotten book for school today?",
-      "Ayah: [warmly] Because I promised you last week that whenever you needed something for school, I would bring it, no matter what.",
-      "Nabila: [surprised] But you had already reached the city for your work trip. That must have cost you so much extra time.",
-      "Ayah: [gently] It did, but a promise isn't only kept when it's convenient, Nabila. That's actually when it matters the most.",
-      "Nabila: [thoughtful] I never really thought about promises that way before. I thought they were just something people said politely.",
-      "Ayah: [reflective] When I was young, my own father promised to attend my school performance, and then he canceled at the very last moment for work.",
-      "Nabila: [curious] How did that make you feel, when he canceled after promising he would come?",
-      "Ayah: [honestly] I stood on that stage looking for his face, and when I couldn't find him, something in me quietly broke a little.",
-      "Nabila: [softly] I'm sorry that happened to you, Ayah. That sounds like it really hurt, especially as a child.",
-      "Ayah: [gently] It did. And I decided then that if I ever had children, my promises would mean something solid and dependable.",
-      "Nabila: [thoughtful] So last night wasn't really about the book at all, was it? It was about something bigger than that.",
-      "Ayah: [warmly] Exactly. The book mattered, but what mattered more was you learning that my word means something you can always trust.",
-      "Nabila: [curious] Do you ever break a promise, though, even accidentally, when something unexpected happens?",
-      "Ayah: [honestly] Sometimes, yes, when things truly are impossible to control. But when that happens, I explain it honestly instead of just staying silent.",
-      "Nabila: [nodding] That makes sense. I think I'd rather hear an honest explanation than a promise that quietly disappears without any reason.",
-      "Ayah: [gently] Most people would agree with you. Explaining a broken promise builds more trust than pretending you never made it.",
-      "Nabila: [warmly] Thank you for driving back last night, Ayah. I won't forget it, and I'll try to keep my own promises too.",
-      "Ayah: [proudly] That's exactly what I hoped you would learn from all of this, Nabila. Now, let's eat before the food gets cold."
+      "Nabila: [concerned] Ayah, thank you for helping with my school book last night. I know you were already away for work.",
+      "Ayah: You called because the book was at Aunt Hana’s house and you needed two pages for today’s class.",
+      "Nabila: I thought you would drive back for it because you once promised to bring anything I needed for school.",
+      "Ayah: [carefully] That promise was too wide. Driving four extra hours while tired would not have been a safe or wise solution.",
+      "Nabila: Were you worried I would think you had broken your word?",
+      "Ayah: Yes. But keeping trust does not mean choosing a dangerous action just to follow my exact old sentence.",
+      "Nabila: [curious] So what did you do instead?",
+      "Ayah: I called Aunt Hana. With your teacher’s permission, she photographed the two pages and sent them privately to us.",
+      "Nabila: Then you called me and explained that the book could be collected safely after your trip.",
+      "Ayah: [warmly] Exactly. I still helped with the real need, but I changed the unsafe method.",
+      "Nabila: Why did you apologize? The pages arrived in time.",
+      "Ayah: Because I had made a promise that sounded unlimited. A trustworthy person should not promise what health, safety, or circumstances may prevent.",
+      "Nabila: [thoughtful] What would have happened if Aunt Hana could not send the pages?",
+      "Ayah: We would have told the teacher honestly and asked for another reasonable solution. We would not invent an excuse.",
+      "Nabila: So a repaired promise can still protect trust?",
+      "Ayah: [gently] Yes, when we communicate early, explain the limit, and do what is safely possible.",
+      "Nabila: I also need to take responsibility. I left the book there and only noticed at night.",
+      "Ayah: That is true. Tonight, let us make a short school-bag checklist together.",
+      "Nabila: [determined] I will check it before bed instead of depending on an emergency rescue.",
+      "Ayah: Good. Trust grows when both people speak honestly, plan carefully, and repair mistakes without creating a new danger."
     ],
     "quiz": [
-      { "question": "Why did Ayah drive two hours back home the night before?", "options": ["To pick up a package", "To bring Nabila her forgotten book for school", "To attend a meeting", "To visit a relative"], "correctIndex": 1, "explanation": "Ayah drove back to bring Nabila the book she had forgotten, keeping the promise he made her." },
-      { "question": "What happened when Ayah's own father promised to attend his school performance?", "options": ["He came early", "He canceled at the last moment for work", "He forgot the date completely", "He sent a gift instead"], "correctIndex": 1, "explanation": "Ayah's father promised to attend but canceled at the very last moment for work." },
-      { "question": "How did young Ayah feel when he couldn't find his father in the audience?", "options": ["Relieved", "Something in him quietly broke a little", "Excited", "Indifferent"], "correctIndex": 1, "explanation": "He said something in him quietly broke a little when he couldn't find his father's face." },
-      { "question": "What did Ayah decide because of that childhood experience?", "options": ["To never make promises", "That his own promises would mean something solid and dependable", "To avoid school events", "To stop trusting his father completely"], "correctIndex": 1, "explanation": "He decided that if he ever had children, his promises would mean something solid and dependable." },
-      { "question": "What does Ayah do when a promise truly becomes impossible to keep?", "options": ["He stays silent about it", "He explains it honestly instead of staying silent", "He blames someone else", "He avoids the person"], "correctIndex": 1, "explanation": "When something truly is impossible to control, he explains it honestly instead of just staying silent." }
-    ]
+      {
+        "question": "Where was Nabila’s school book?",
+        "options": [
+          "In Ayah’s car",
+          "At Aunt Hana’s house",
+          "At the school office",
+          "Inside the work hotel"
+        ],
+        "correctIndex": 1,
+        "explanation": "She needed only two pages from the forgotten book."
+      },
+      {
+        "question": "Why did Ayah refuse to drive back?",
+        "options": [
+          "He did not care about school",
+          "Four extra tired hours would be unsafe",
+          "The road was permanently closed",
+          "Nabila had found the book"
+        ],
+        "correctIndex": 1,
+        "explanation": "Safety placed a reasonable limit on the old promise."
+      },
+      {
+        "question": "How did they receive the needed pages?",
+        "options": [
+          "Ayah posted the whole book publicly",
+          "Nabila bought another book",
+          "Aunt Hana sent private photos with teacher permission",
+          "The teacher canceled class"
+        ],
+        "correctIndex": 2,
+        "explanation": "They found a lawful, private, and practical alternative."
+      },
+      {
+        "question": "Why did Ayah still apologize?",
+        "options": [
+          "The photos arrived too early",
+          "Aunt Hana refused to help",
+          "Nabila had made no mistake",
+          "His original promise was unrealistically unlimited"
+        ],
+        "correctIndex": 3,
+        "explanation": "He takes responsibility for careless wording."
+      },
+      {
+        "question": "What will Nabila use in the future?",
+        "options": [
+          "A school-bag checklist before bed",
+          "A promise of another long drive",
+          "A public photo folder",
+          "Her teacher’s private number"
+        ],
+        "correctIndex": 0,
+        "explanation": "Planning reduces avoidable emergencies."
+      },
+      {
+        "question": "What is the difference between the need and the method?",
+        "options": [
+          "The book and pages had no connection",
+          "The teacher required the original book",
+          "The method mattered more than school",
+          "Nabila needed pages, but Ayah did not need to drive dangerously"
+        ],
+        "correctIndex": 3,
+        "explanation": "A promise can honor its purpose through a safer solution."
+      },
+      {
+        "question": "What would they do if the photos were impossible?",
+        "options": [
+          "Invent a transport problem",
+          "Drive despite exhaustion",
+          "Tell the teacher honestly and request another solution",
+          "Hide the missing work"
+        ],
+        "correctIndex": 2,
+        "explanation": "Trustworthy repair includes honest limits."
+      },
+      {
+        "question": "Why was the page sharing kept private?",
+        "options": [
+          "The pages were embarrassing",
+          "Aunt Hana wanted payment",
+          "School material and messages should go only to the people who need them",
+          "The teacher banned all photos"
+        ],
+        "correctIndex": 2,
+        "explanation": "The script models limited, permission-based sharing."
+      },
+      {
+        "question": "How does Nabila share responsibility?",
+        "options": [
+          "She admits forgetting and begins a preparation habit",
+          "She blames Ayah’s work trip",
+          "She demands a stronger promise",
+          "She asks the teacher to pack for her"
+        ],
+        "correctIndex": 0,
+        "explanation": "Repair is stronger when both sides address their part."
+      },
+      {
+        "question": "What is the mature lesson about promises?",
+        "options": [
+          "Exact words must be followed at any cost",
+          "A changed plan always breaks trust",
+          "Reliability includes safety, early communication, and realistic repair",
+          "Parents must solve every forgotten item"
+        ],
+        "correctIndex": 2,
+        "explanation": "Good character avoids creating a second harm while addressing the first problem."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "replace; remove an unsafe four-hour drive and an impossible “no matter what” promise while teaching reliable repair",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-akhlak-07",
@@ -224,30 +922,597 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Something happened at work today that I keep replaying in my mind, so I wanted to record my thoughts before I forget how it felt.",
-      "Narrator: [honest] During lunch, two coworkers started talking about Rina, our new manager, saying she only got promoted because she's close friends with the director.",
-      "Narrator: [reflective] I don't actually know if that's true, and honestly, neither do they, although they spoke about it as though it were completely certain.",
+      "Narrator: [uneasy] During lunch, two coworkers started talking about Rina, our new manager, saying she only got promoted because she's close friends with the director.",
+      "Narrator: I don't actually know if that's true, and honestly, neither do they, although they spoke about it as though it were completely certain.",
       "Narrator: [tempted] Part of me wanted to join the conversation, because I had noticed a few strange decisions Rina made during her first month leading our team.",
-      "Narrator: [thoughtful] But then I remembered how gossip spreads so quickly, changing slightly with every person who repeats it, until it barely resembles the truth anymore.",
-      "Narrator: [honestly] So instead of adding my own opinion, I simply said I didn't know enough about the situation to comment on it fairly.",
+      "Narrator: [reflective] But then I remembered how gossip spreads so quickly, changing slightly with every person who repeats it, until it barely resembles the truth anymore.",
+      "Narrator: [firmly] So instead of adding my own opinion, I simply said I didn't know enough about the situation to comment on it fairly.",
       "Narrator: [determined] After lunch, I actually went to talk with Rina directly about one decision that had confused me during her first weeks.",
-      "Narrator: [warmly] She explained her reasoning clearly, and honestly, it made much more sense once I understood the full situation behind it.",
-      "Narrator: [reflective] If I had simply gossiped about her instead, I would still be confused, and she would never have known that people were talking about her at all.",
-      "Narrator: [thoughtful] I used to think staying out of gossip made me boring, or somehow distant from my coworkers and their daily conversations.",
-      "Narrator: [honestly] Now I think it just means I'd rather build real understanding than spread stories that might not even be true in the first place.",
+      "Narrator: [relieved] She explained her reasoning clearly, and honestly, it made much more sense once I understood the full situation behind it.",
+      "Narrator: If I had simply gossiped about her instead, I would still be confused, and she would never have known that people were talking about her at all.",
+      "Narrator: [honestly] I used to think staying out of gossip made me boring, or somehow distant from my coworkers and their daily conversations.",
+      "Narrator: Now I think it just means I'd rather build real understanding than spread stories that might not even be true in the first place.",
       "Narrator: [gently] Words travel so much faster than the truth sometimes, especially once they leave our mouths and enter someone else's conversation.",
-      "Narrator: [peacefully] Tonight, I feel proud of a very small, quiet choice that nobody else at work will probably ever notice or remember.",
-      "Narrator: [warmly] I'm turning off this recording now, but I hope tomorrow, when I'm tempted again, I remember how good today's silence actually felt."
+      "Narrator: Tonight, I feel proud of a very small, quiet choice that nobody else at work will probably ever notice or remember.",
+      "Narrator: [peacefully] I'm turning off this recording now, but I hope tomorrow, when I'm tempted again, I remember how good today's silence actually felt."
     ],
     "quiz": [
-      { "question": "What were the narrator's coworkers gossiping about during lunch?", "options": ["A company scandal", "That Rina got promoted only because she's close friends with the director", "A coworker's salary", "A customer complaint"], "correctIndex": 1, "explanation": "They said Rina only got promoted because she's close friends with the director." },
-      { "question": "Why did the narrator almost join the conversation?", "options": ["She wanted to defend Rina", "She had noticed a few strange decisions Rina made", "She disliked her coworkers", "She wanted to change the subject"], "correctIndex": 1, "explanation": "Part of her wanted to join because she had noticed a few strange decisions Rina made during her first month." },
-      { "question": "What did the narrator say instead of joining the gossip?", "options": ["She agreed with them completely", "She said she didn't know enough about the situation to comment fairly", "She defended Rina loudly", "She left the room"], "correctIndex": 1, "explanation": "She said she didn't know enough about the situation to comment on it fairly." },
-      { "question": "What did the narrator do after lunch?", "options": ["She reported her coworkers", "She went to talk with Rina directly about a decision that confused her", "She avoided Rina completely", "She told Rina about the gossip"], "correctIndex": 1, "explanation": "She went to talk with Rina directly about one decision that had confused her." },
-      { "question": "What does the narrator conclude about staying out of gossip?", "options": ["It makes her boring and distant", "She'd rather build real understanding than spread possibly untrue stories", "It is impossible to avoid gossip", "Gossip is always harmless"], "correctIndex": 1, "explanation": "She concludes she'd rather build real understanding than spread stories that might not even be true." }
-    ]
+      {
+        "question": "What were the narrator's coworkers gossiping about during lunch?",
+        "options": [
+          "A company scandal",
+          "That Rina got promoted only because she's close friends with the director",
+          "A coworker's salary",
+          "A customer complaint"
+        ],
+        "correctIndex": 1,
+        "explanation": "They said Rina only got promoted because she's close friends with the director."
+      },
+      {
+        "question": "Why did the narrator almost join the conversation?",
+        "options": [
+          "She wanted to defend Rina",
+          "She had noticed a few strange decisions Rina made",
+          "She disliked her coworkers",
+          "She wanted to change the subject"
+        ],
+        "correctIndex": 1,
+        "explanation": "Part of her wanted to join because she had noticed a few strange decisions Rina made during her first month."
+      },
+      {
+        "question": "What did the narrator say instead of joining the gossip?",
+        "options": [
+          "She agreed with them completely",
+          "She defended Rina loudly",
+          "She left the room",
+          "She said she didn't know enough about the situation to comment fairly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She said she didn't know enough about the situation to comment on it fairly."
+      },
+      {
+        "question": "What did the narrator do after lunch?",
+        "options": [
+          "She reported her coworkers",
+          "She avoided Rina completely",
+          "She told Rina about the gossip",
+          "She went to talk with Rina directly about a decision that confused her"
+        ],
+        "correctIndex": 3,
+        "explanation": "She went to talk with Rina directly about one decision that had confused her."
+      },
+      {
+        "question": "What does the narrator conclude about staying out of gossip?",
+        "options": [
+          "She'd rather build real understanding than spread possibly untrue stories",
+          "It makes her boring and distant",
+          "It is impossible to avoid gossip",
+          "Gossip is always harmless"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes she'd rather build real understanding than spread stories that might not even be true."
+      },
+      {
+        "question": "Why was the promotion claim unreliable?",
+        "options": [
+          "The coworkers spoke with certainty but had no evidence",
+          "Rina denied being manager",
+          "The director announced another reason",
+          "The narrator knew it was true"
+        ],
+        "correctIndex": 0,
+        "explanation": "Confidence in a statement does not replace evidence."
+      },
+      {
+        "question": "How did the narrator respond without defending Rina blindly?",
+        "options": [
+          "She claimed every decision was correct",
+          "She admitted she lacked enough information to judge fairly",
+          "She reported both coworkers immediately",
+          "She left without saying anything"
+        ],
+        "correctIndex": 1,
+        "explanation": "The response rejects gossip without pretending to know the truth."
+      },
+      {
+        "question": "Why was one direct question more useful than lunch gossip?",
+        "options": [
+          "It proved the promotion process",
+          "It made every coworker agree",
+          "Rina could explain the decision and its context",
+          "It kept Rina unaware of confusion"
+        ],
+        "correctIndex": 2,
+        "explanation": "The real source could address the actual work issue."
+      },
+      {
+        "question": "What does “words travel faster than truth” mean?",
+        "options": [
+          "Truth is always difficult to say",
+          "Messages move slowly at work",
+          "Rumors spread before accurate information is checked",
+          "Every repeated story becomes correct"
+        ],
+        "correctIndex": 2,
+        "explanation": "Repetition can change and strengthen an unverified claim."
+      },
+      {
+        "question": "What quiet success does the narrator value?",
+        "options": [
+          "Learning the director’s private life",
+          "Choosing fairness although nobody will praise it",
+          "Winning the lunch discussion",
+          "Proving Rina deserved promotion"
+        ],
+        "correctIndex": 1,
+        "explanation": "Character is shown through a choice that may remain unnoticed."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "keep; strong gossip scenario replaces uncertain claims with a direct, fair question about a real decision",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-akhlak-08",
+    "title": "The Credit I Added Back",
+    "level": "A2",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] My manager praised a new customer guide that I presented during our weekly meeting. She said the instructions were clear and the examples were practical.",
+      "Narrator: [uneasy] I thanked her, but I did not mention that my coworker Bayu had solved the hardest part of the guide.",
+      "Narrator: Bayu was working from home that day, so nobody saw his expression. The meeting moved to another topic.",
+      "Narrator: [honestly] For the next hour, the praise felt uncomfortable. I had written most of the guide, but its best diagram came from his careful work.",
+      "Narrator: [reflective] I told myself I could thank him privately. Then I understood that private thanks would not correct the public impression.",
+      "Narrator: [gently] I sent a message to my manager and the team. I said I appreciated the feedback and added that Bayu had designed the diagram and tested every step.",
+      "Narrator: The message was short and did not pretend I had done nothing. It simply made the contribution visible.",
+      "Narrator: [relieved] My manager replied that she was glad to know. She later added Bayu's name to the final document.",
+      "Narrator: [hurt] Bayu thanked me. He admitted that he had felt disappointed but did not want to create conflict during the meeting.",
+      "Narrator: [thoughtful] That conversation taught me how easily silence can become unfair, even when every spoken sentence is technically true.",
+      "Narrator: I had not said, “I did all the work,” but I had accepted praise that sounded that way.",
+      "Narrator: [firmly] Sharing credit did not reduce my own effort. The team still knew I led the project and wrote most sections.",
+      "Narrator: Instead, accurate credit increased trust. Bayu became more willing to share ideas with me in the next project.",
+      "Narrator: [prepared] Now, before presenting group work, I prepare one sentence naming key contributions.",
+      "Narrator: [encouraging] Good character at work includes correcting a flattering misunderstanding, especially when the absent person cannot speak for themselves."
+    ],
+    "quiz": [
+      {
+        "question": "What did the manager praise?",
+        "options": [
+          "A new customer guide",
+          "A sales result",
+          "A building design",
+          "A training schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator presented a clear practical guide."
+      },
+      {
+        "question": "What had Bayu contributed?",
+        "options": [
+          "The main diagram and testing",
+          "Only the document title",
+          "The meeting room",
+          "A customer complaint"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bayu solved an important visual part."
+      },
+      {
+        "question": "Why was private thanks not enough?",
+        "options": [
+          "The mistaken impression was public",
+          "Bayu disliked messages",
+          "The guide was private",
+          "The manager had left"
+        ],
+        "correctIndex": 0,
+        "explanation": "Public credit needed public correction."
+      },
+      {
+        "question": "How did the manager respond?",
+        "options": [
+          "She canceled the guide",
+          "She blamed Bayu",
+          "She removed the narrator’s name",
+          "She added Bayu’s name to the final document"
+        ],
+        "correctIndex": 3,
+        "explanation": "The correction led to accurate authorship."
+      },
+      {
+        "question": "What did the narrator learn?",
+        "options": [
+          "Sharing credit removes personal achievement",
+          "Silence can unfairly accept credit",
+          "Only leaders deserve names",
+          "Absence means no contribution"
+        ],
+        "correctIndex": 1,
+        "explanation": "Honesty includes correcting a flattering misunderstanding."
+      },
+      {
+        "question": "Why did the praise become uncomfortable?",
+        "options": [
+          "The guide contained no useful work",
+          "Bayu had rejected the diagram",
+          "It made the narrator’s contribution sound complete when it was not",
+          "The manager criticized the examples"
+        ],
+        "correctIndex": 2,
+        "explanation": "Silence allowed an inaccurate impression."
+      },
+      {
+        "question": "Why would private thanks fail to repair the issue?",
+        "options": [
+          "Bayu worked from home",
+          "The manager disliked private messages",
+          "The document was unfinished",
+          "The team had received the misleading impression publicly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Correction needs to reach the same audience as the misunderstanding."
+      },
+      {
+        "question": "How did the narrator avoid false self-denial?",
+        "options": [
+          "She transferred the whole project to Bayu",
+          "The message named Bayu’s work without denying her own leadership",
+          "She rejected all manager feedback",
+          "She claimed to have done nothing"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accurate credit can include several real contributions."
+      },
+      {
+        "question": "What later behavior shows trust increased?",
+        "options": [
+          "Bayu stopped working remotely",
+          "The manager gave another award",
+          "Bayu shared ideas more freely in the next project",
+          "The team removed the narrator’s name"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fair recognition changed future collaboration."
+      },
+      {
+        "question": "What preventive habit does the narrator adopt?",
+        "options": [
+          "Preparing a sentence that names key contributions",
+          "Waiting for absent people to complain",
+          "Avoiding group presentations",
+          "Thanking everyone with no details"
+        ],
+        "correctIndex": 0,
+        "explanation": "Planned credit reduces accidental omission."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "keep; excellent credit-sharing case distinguishes technically true words from a misleading public impression",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-akhlak-09",
+    "title": "Patience at the Pharmacy Queue",
+    "level": "A2",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [tired] I stopped at a pharmacy after a long day because my mother needed her regular medicine. Only one pharmacist was working, and the queue barely moved.",
+      "Narrator: A man near the front asked many questions. He opened several papers and called someone on his phone.",
+      "Narrator: [impatient] People behind me began sighing. One woman said loudly that some customers should prepare before reaching the counter.",
+      "Narrator: I agreed inside my head. I looked at the time and imagined missing the bus home.",
+      "Narrator: [surprised] Then I heard part of the conversation. The man was collecting medicine for his father after a hospital visit and did not understand the new instructions.",
+      "Narrator: [seriously] The pharmacist was checking two medicines that should not be used together. The delay was protecting someone from a serious mistake.",
+      "Narrator: [concerned] My impatience changed into concern. I still wanted the line to move, but I no longer treated the man as a problem.",
+      "Narrator: When he finished, he apologized to the queue. The woman who had complained looked away.",
+      "Narrator: [reflective] At my turn, the pharmacist also took time to confirm my mother's dose. I realized I wanted careful service for my family while demanding speed for everyone else.",
+      "Narrator: Patience did not shorten the wait. It changed how I behaved during it.",
+      "Narrator: [calmly] I stopped making unhappy sounds, gave the person ahead enough space, and sent my mother a calm update.",
+      "Narrator: [resigned] The bus left before I reached the stop. I took the next one and arrived twenty minutes later than planned.",
+      "Narrator: Nothing terrible happened. My earlier anger had been much larger than the real result.",
+      "Narrator: [gently] Now I try to remember that a slow counter may contain a problem I cannot see.",
+      "Narrator: [encouraging] Good character in a queue means respecting order, controlling harmful comments, and allowing workers to do careful work."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the pharmacy queue slow?",
+        "options": [
+          "The pharmacy had no medicine",
+          "One pharmacist was serving and a case needed care",
+          "Every customer left",
+          "The lights were off"
+        ],
+        "correctIndex": 1,
+        "explanation": "A complex medicine question required time."
+      },
+      {
+        "question": "What was the man trying to understand?",
+        "options": [
+          "A bus schedule",
+          "A job application",
+          "New instructions for his father’s medicine",
+          "A shopping discount"
+        ],
+        "correctIndex": 2,
+        "explanation": "He was helping his father after hospital care."
+      },
+      {
+        "question": "What danger did the pharmacist find?",
+        "options": [
+          "Two medicines should not be combined",
+          "The papers were wet",
+          "The phone had no battery",
+          "The medicine was too cheap"
+        ],
+        "correctIndex": 0,
+        "explanation": "The careful check prevented an unsafe combination."
+      },
+      {
+        "question": "What inconsistency did the narrator notice?",
+        "options": [
+          "He preferred walking to buses",
+          "He disliked every pharmacist",
+          "He wanted care for family but speed for others",
+          "He had no prescription"
+        ],
+        "correctIndex": 2,
+        "explanation": "His own expectations were unfair."
+      },
+      {
+        "question": "How does he define patience in a queue?",
+        "options": [
+          "Respect order and avoid harmful reactions",
+          "Leave immediately",
+          "Demand rushed service",
+          "Complain loudly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Patience guides conduct even when waiting remains."
+      },
+      {
+        "question": "What assumption did the complaining woman make?",
+        "options": [
+          "The pharmacist had closed the counter",
+          "The narrator needed different medicine",
+          "The bus had already left",
+          "The man was unprepared and wasting time"
+        ],
+        "correctIndex": 3,
+        "explanation": "She judged the delay before knowing its purpose."
+      },
+      {
+        "question": "Why was the slow service medically important?",
+        "options": [
+          "It reduced the medicine price",
+          "It allowed the man to make a call",
+          "It changed the father’s hospital",
+          "It prevented two medicines from being used together"
+        ],
+        "correctIndex": 3,
+        "explanation": "Careful checking protected the patient from a serious error."
+      },
+      {
+        "question": "What contradiction does the narrator identify?",
+        "options": [
+          "He disliked queues but arrived early",
+          "He needed a bus but chose to walk",
+          "He trusted the pharmacist but not medicine",
+          "He wanted careful service for family but speed for strangers"
+        ],
+        "correctIndex": 3,
+        "explanation": "Personal needs exposed an unfair double standard."
+      },
+      {
+        "question": "Did patience remove the practical cost?",
+        "options": [
+          "Yes, the line moved immediately",
+          "No, the medicine was unavailable",
+          "Yes, another pharmacist arrived",
+          "No, the narrator still missed the bus"
+        ],
+        "correctIndex": 3,
+        "explanation": "Patience changed behavior, not the waiting time."
+      },
+      {
+        "question": "What information does the narrator avoid demanding?",
+        "options": [
+          "The location of the bus stop",
+          "The full private details behind another customer’s delay",
+          "The dose for his mother",
+          "The order of the queue"
+        ],
+        "correctIndex": 1,
+        "explanation": "The lesson allows uncertainty without invading privacy."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "keep; nuanced pharmacy story uses overheard context to correct impatience without demanding private medical details",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-akhlak-10",
+    "title": "A Promise Made Under Pressure",
+    "level": "A2",
+    "themeId": "akhlak",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Fikri",
+        "gender": "male"
+      },
+      {
+        "name": "Hasan",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Fikri: [worried] Hasan, I told the community center I could design all twelve posters by Friday.",
+      "Hasan: That is a large task. How many have you finished?",
+      "Fikri: [panicked] Only two. My work deadline also moved forward, and I am starting to panic.",
+      "Hasan: Why did you agree to twelve?",
+      "Fikri: [reflective] They needed an answer during the meeting. Everyone looked at me, and I wanted to be helpful.",
+      "Hasan: Wanting to help is good, but a promise should match your real ability.",
+      "Fikri: [desperate] I know. Should I stay awake for two nights and try to finish?",
+      "Hasan: [firmly] That may harm your work and the quality of the posters. Contact the organizer before the delay becomes a surprise.",
+      "Fikri: I feel embarrassed because they trusted me.",
+      "Hasan: [thoughtful] You can admit that your estimate was wrong and bring a solution, not only a problem.",
+      "Fikri: What solution would be fair?",
+      "Hasan: [practically] Offer four finished posters by Friday, simple templates for the remaining events, and a schedule for completing them next week.",
+      "Fikri: Could we also ask whether another volunteer can adapt the templates?",
+      "Hasan: [gently] Yes, if the organizer agrees. Give clear files and explain the fonts and sizes.",
+      "Fikri: I should not make a new promise before checking my calendar.",
+      "Hasan: [carefully] Exactly. Open it now and choose dates you can truly protect.",
+      "Fikri: I can finish four by Friday and four on each of the next two Tuesdays.",
+      "Hasan: [honestly] Then say that clearly and accept if they need a different arrangement.",
+      "Fikri: I will call this afternoon instead of sending a vague late-night message.",
+      "Hasan: [encouraging] Good. Keeping trust after a poor promise begins with early honesty and a realistic repair plan."
+    ],
+    "quiz": [
+      {
+        "question": "What did Fikri promise?",
+        "options": [
+          "Two reports by Monday",
+          "Twelve posters by Friday",
+          "A new community building",
+          "A week of teaching"
+        ],
+        "correctIndex": 1,
+        "explanation": "He accepted a large design task."
+      },
+      {
+        "question": "Why did he agree too quickly?",
+        "options": [
+          "He had already finished",
+          "Hasan told him to",
+          "The posters were unnecessary",
+          "He felt pressure to be helpful in the meeting"
+        ],
+        "correctIndex": 3,
+        "explanation": "Public pressure affected his answer."
+      },
+      {
+        "question": "Why does Hasan reject two sleepless nights?",
+        "options": [
+          "The office closes at night",
+          "Fikri has no computer",
+          "They may harm work and poster quality",
+          "Friday was canceled"
+        ],
+        "correctIndex": 2,
+        "explanation": "An unhealthy rescue plan creates more risk."
+      },
+      {
+        "question": "What immediate solution is suggested?",
+        "options": [
+          "Delete all files",
+          "Avoid the organizer",
+          "Four posters, templates, and a later schedule",
+          "Finish only one next month"
+        ],
+        "correctIndex": 2,
+        "explanation": "The repair plan offers usable work and honest dates."
+      },
+      {
+        "question": "What should Fikri do before new promises?",
+        "options": [
+          "Check and protect real calendar time",
+          "Wait for public pressure",
+          "Always say yes",
+          "Hide his workload"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reliable commitments begin with capacity checking."
+      },
+      {
+        "question": "What social pressure affected Fikri’s estimate?",
+        "options": [
+          "The organizer threatened him",
+          "Hasan promised the work first",
+          "The meeting had no schedule",
+          "Everyone expected an immediate helpful answer"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fikri agreed before checking actual capacity."
+      },
+      {
+        "question": "Why are two sleepless nights a poor repair?",
+        "options": [
+          "They provide too much calendar time",
+          "They risk health, paid work, and poster quality",
+          "The organizer asked for templates",
+          "The fonts are already complete"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fixing one promise should not create several new problems."
+      },
+      {
+        "question": "What makes Hasan’s proposal more than an excuse?",
+        "options": [
+          "It asks the organizer to wait without details",
+          "It includes finished work, reusable templates, and dated follow-up",
+          "It transfers all work secretly",
+          "It promises twelve posters again"
+        ],
+        "correctIndex": 1,
+        "explanation": "The alternative gives immediate value and a realistic path."
+      },
+      {
+        "question": "Why must the organizer agree before another volunteer adapts files?",
+        "options": [
+          "The changed responsibility and method need consent",
+          "Volunteers cannot use templates",
+          "Fikri owns the community center",
+          "Hasan needs public credit"
+        ],
+        "correctIndex": 0,
+        "explanation": "A repair plan cannot be imposed on the person depending on the promise."
+      },
+      {
+        "question": "What restores trust after the poor estimate?",
+        "options": [
+          "A vague message after Friday",
+          "Early honesty plus a schedule that matches real capacity",
+          "Staying silent until all work is done",
+          "Making a larger promise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reliable repair begins before the delay becomes a surprise."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "akhlak",
+      "scriptDecision": "keep; strong promise-repair dialogue rejects unhealthy overwork and builds a specific, reviewable alternative",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

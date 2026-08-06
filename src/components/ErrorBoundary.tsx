@@ -3,6 +3,8 @@ import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
+  onReset?: () => void;
+  onGoHome?: () => void;
 }
 
 interface State {
@@ -29,8 +31,21 @@ class ErrorBoundary extends Component<Props, State> {
   };
 
   private handleGoHome = () => {
+    if (this.props.onGoHome) {
+      this.setState({ hasError: false, error: null });
+      this.props.onGoHome();
+      return;
+    }
     // Navigate to root and force a full page reload to reset all React state
     window.location.href = window.location.origin;
+  };
+
+  private handleResetModule = () => {
+    if (this.props.onReset) {
+      this.props.onReset();
+      return;
+    }
+    this.handleReload();
   };
 
   private handleClearAndReload = async () => {
@@ -110,12 +125,12 @@ class ErrorBoundary extends Component<Props, State> {
             </p>
 
             <div className="space-y-3">
-              {/* Primary: Reload */}
+              {/* Primary: reset only the affected module when possible. */}
               <button 
-                onClick={this.handleReload}
+                onClick={this.handleResetModule}
                 className="w-full bg-lovelya-600 text-white py-4 rounded-2xl font-black text-sm shadow-xl shadow-lovelya-200/30 hover:bg-lovelya-700 transition active:scale-95 flex items-center justify-center gap-2"
               >
-                <i className="fas fa-redo"></i> Muat Ulang Halaman
+                <i className="fas fa-redo"></i> {this.props.onReset ? 'Muat Ulang Modul' : 'Muat Ulang Halaman'}
               </button>
 
               {/* Secondary: Go Home */}

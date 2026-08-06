@@ -6,29 +6,143 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] There is a particular vanity native to founders, one I indulged for the better part of a decade without ever quite naming it: the conviction that the enterprise would falter without my hand perpetually on its tiller.",
-      "Narrator: [reflective] I mistook indispensability for devotion, as though the company's dependence on me were proof of love rather than, more plainly, a design flaw I had architected myself.",
-      "Narrator: [honest] The reckoning arrived, unglamorously, during a minor surgery that sidelined me for three weeks I had not planned to survive without checking my inbox hourly.",
-      "Narrator: [thoughtful] The company, to my considerable chagrin, not only endured my absence but in certain respects thrived within it, decisions arriving faster once nobody was waiting on my imprimatur.",
-      "Narrator: [uneasy] I returned to find myself simultaneously relieved and quietly wounded, a contradiction I hadn't anticipated and was slow to forgive myself for feeling.",
-      "Narrator: [analytical] What I'd built, I came to understand, was not an organisation but an elaborate dependency, a structure that mistook my own centrality for the load-bearing wall it was never designed to be.",
-      "Narrator: [determined] So I began, deliberately and against every instinct, engineering my own redundancy: documenting judgment calls, promoting the deputies I'd unconsciously kept tethered to my approval.",
-      "Narrator: [honest] It felt, at first, indistinguishable from self-erasure, as though I were rehearsing my own obsolescence one delegated decision at a time.",
-      "Narrator: [wry] Colleagues occasionally asked, with something between admiration and suspicion, why a founder would actively dismantle her own irreplaceability.",
-      "Narrator: [reflective] The honest answer is that irreplaceability was never the achievement I'd imagined; it was a cage I'd mistaken for a throne, gilded enough to disguise its bars.",
-      "Narrator: [warmly] These days, the company runs for stretches without requiring my attention at all, and I've stopped experiencing that fact as an indictment.",
-      "Narrator: [peacefully] What I feel instead, on my better days, resembles something closer to grace: proof that what I built might actually outlast the ego that built it."
+      "Narrator: [thoughtful] There is a particular vanity native to founders, one I indulged for the better part of a decade without ever quite naming it: the conviction that the enterprise would falter without my hand perpetually on its tiller.",
+      "Narrator: I mistook indispensability for devotion, as though the company's dependence on me were proof of love rather than, more plainly, a design flaw I had architected myself.",
+      "Narrator: [carefully] The reckoning arrived, unglamorously, during a minor surgery that sidelined me for three weeks I had not planned to survive without checking my inbox hourly.",
+      "Narrator: The company, to my considerable chagrin, not only endured my absence but in certain respects thrived within it, decisions arriving faster once nobody was waiting on my imprimatur.",
+      "Narrator: [reflective] I returned to find myself simultaneously relieved and quietly wounded, a contradiction I hadn't anticipated and was slow to forgive myself for feeling.",
+      "Narrator: What I'd built, I came to understand, was not an organisation but an elaborate dependency, a structure that mistook my own centrality for the load-bearing wall it was never designed to be.",
+      "Narrator: [honestly] So I began, deliberately and against every instinct, engineering my own redundancy: documenting judgment calls, promoting the deputies I'd unconsciously kept tethered to my approval.",
+      "Narrator: It felt, at first, indistinguishable from self-erasure, as though I were rehearsing my own obsolescence one delegated decision at a time.",
+      "Narrator: [gently] Colleagues occasionally asked, with something between admiration and suspicion, why a founder would actively dismantle her own irreplaceability.",
+      "Narrator: The honest answer is that irreplaceability was never the achievement I'd imagined; it was a cage I'd mistaken for a throne, gilded enough to disguise its bars.",
+      "Narrator: [calmly] These days, the company runs for stretches without requiring my attention at all, and I've stopped experiencing that fact as an indictment.",
+      "Narrator: What I feel instead, on my better days, resembles something closer to grace: proof that what I built might actually outlast the ego that built it."
     ],
     "quiz": [
-      { "question": "What vanity does the narrator describe indulging as a founder?", "options": ["The belief she was underpaid", "The conviction the company would falter without her hand perpetually on its tiller", "The wish to be liked by everyone", "A desire to avoid all responsibility"], "correctIndex": 1, "explanation": "She describes the founder's vanity of believing the company depended on her constant involvement." },
-      { "question": "What event prompted her reckoning?", "options": ["A hostile takeover", "A minor surgery that sidelined her for three weeks", "Being fired by her own board", "A competitor's product launch"], "correctIndex": 1, "explanation": "A minor surgery kept her away for three weeks, exposing how the company functioned without her constant oversight." },
-      { "question": "What did she realize she had actually built?", "options": ["A resilient, self-sufficient organisation", "An elaborate dependency that mistook her centrality for a load-bearing wall it was never meant to be", "A company with no clear leadership at all", "A business destined to fail regardless"], "correctIndex": 1, "explanation": "She realized she had built a dependency structure that mistook her centrality for something structurally essential." },
-      { "question": "What did engineering her own redundancy initially feel like?", "options": ["Effortless and immediately rewarding", "Indistinguishable from self-erasure, like rehearsing her own obsolescence", "A purely financial decision", "Something colleagues fully supported from the start"], "correctIndex": 1, "explanation": "She says it initially felt like self-erasure, rehearsing her own obsolescence one delegated decision at a time." },
-      { "question": "How does the narrator ultimately reframe irreplaceability?", "options": ["As the greatest achievement of her career", "As a cage she had mistaken for a throne", "As something every founder should pursue", "As entirely unrelated to leadership"], "correctIndex": 1, "explanation": "She concludes irreplaceability was a cage she'd mistaken for a throne, gilded enough to disguise its bars." }
-    ]
+      {
+        "question": "What vanity does the narrator describe indulging as a founder?",
+        "options": [
+          "The conviction the company would falter without her hand perpetually on its tiller",
+          "The belief she was underpaid",
+          "The wish to be liked by everyone",
+          "A desire to avoid all responsibility"
+        ],
+        "correctIndex": 0,
+        "explanation": "She describes the founder's vanity of believing the company depended on her constant involvement."
+      },
+      {
+        "question": "What event prompted her reckoning?",
+        "options": [
+          "A hostile takeover",
+          "A minor surgery that sidelined her for three weeks",
+          "Being fired by her own board",
+          "A competitor's product launch"
+        ],
+        "correctIndex": 1,
+        "explanation": "A minor surgery kept her away for three weeks, exposing how the company functioned without her constant oversight."
+      },
+      {
+        "question": "What did she realize she had actually built?",
+        "options": [
+          "A resilient, self-sufficient organisation",
+          "A company with no clear leadership at all",
+          "An elaborate dependency that mistook her centrality for a load-bearing wall it was never meant to be",
+          "A business destined to fail regardless"
+        ],
+        "correctIndex": 2,
+        "explanation": "She realized she had built a dependency structure that mistook her centrality for something structurally essential."
+      },
+      {
+        "question": "What did engineering her own redundancy initially feel like?",
+        "options": [
+          "Effortless and immediately rewarding",
+          "A purely financial decision",
+          "Something colleagues fully supported from the start",
+          "Indistinguishable from self-erasure, like rehearsing her own obsolescence"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says it initially felt like self-erasure, rehearsing her own obsolescence one delegated decision at a time."
+      },
+      {
+        "question": "How does the narrator ultimately reframe irreplaceability?",
+        "options": [
+          "As a cage she had mistaken for a throne",
+          "As the greatest achievement of her career",
+          "As something every founder should pursue",
+          "As entirely unrelated to leadership"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes irreplaceability was a cage she'd mistaken for a throne, gilded enough to disguise its bars."
+      },
+      {
+        "question": "What central claim does “Engineering My Own Redundancy” develop?",
+        "options": [
+          "Craft can survive automation when judgment remains accountable.",
+          "Automation can change a role without erasing responsibility for workers.",
+          "Promotion can expose limits that require support, not concealment.",
+          "Honest exit feedback can reveal process failure without retaliation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Engineering My Own Redundancy”?",
+        "options": [
+          "Editors distinguish speed from editorial responsibility.",
+          "Vertigo follows responsibility beyond familiar competence.",
+          "The narrator’s redundancy follows a system he helped create.",
+          "The interview makes room for evidence about recurring conditions."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “Engineering My Own Redundancy”?",
+        "options": [
+          "A tool’s output is not evidence of its suitability.",
+          "Confidence is not proof that a decision is sound.",
+          "One report does not prove every allegation or motive.",
+          "Efficiency gains do not settle questions of fair transition."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Engineering My Own Redundancy”?",
+        "options": [
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "They test claims against readers and consequences.",
+          "The narrator seeks evidence and help before acting.",
+          "The organisation should investigate proportionately and protect reporting routes."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “Engineering My Own Redundancy”?",
+        "options": [
+          "Human oversight matters when choices shape meaning.",
+          "Accountable innovation includes repair for displaced people.",
+          "Accountability includes naming scope and escalation needs.",
+          "Repair requires more than collecting uncomfortable feedback."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-work-02",
@@ -37,32 +151,149 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Bagas", "gender": "male" },
-      { "name": "Ratna", "gender": "female" }
+      {
+        "name": "Bagas",
+        "gender": "male"
+      },
+      {
+        "name": "Ratna",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Bagas: [agitated] Twenty years sharpening a sentence until it earns its place on the page, Ratna, and now a machine produces something serviceable in four seconds. Forgive me if I don't consider that progress.",
-      "Ratna: [measured] Serviceable, though, is doing a great deal of work in that sentence. Serviceable was never the standard you held yourself to, and it still isn't the standard your readers actually reward.",
-      "Bagas: [defensive] Maybe not yet. But the market has never particularly cared about the difference between adequate and exceptional, provided adequate arrives faster and costs considerably less.",
-      "Ratna: [challenging] That's a fairly bleak indictment of every editor who's ever hired you, then, since presumably someone along the way did notice the difference.",
-      "Bagas: [conceding] Fair, though I suspect that discernment is precisely the faculty being quietly hollowed out, an entire generation losing the palate to distinguish craft from its convincing imitation.",
-      "Ratna: [thoughtful] Perhaps. Or perhaps craft simply migrates, the way it always has, toward whatever the machine still can't touch: judgment, risk, the deliberate imperfection that signals a mind was actually present.",
-      "Bagas: [wry] You're describing a shrinking territory with remarkable optimism. Each year the machine annexes another province you'd previously called uniquely human.",
-      "Ratna: [gently] I'm not claiming the territory won't shrink. I'm claiming what remains becomes correspondingly more valuable, not less, precisely because scarcity is the thing markets do reliably reward.",
-      "Bagas: [uncertain] And if I'm wrong about my own scarcity? If what I mistake for irreplaceable judgment turns out to be replicable after all, given sufficient data?",
-      "Ratna: [honest] Then we adapt, grieving what deserves grieving, without pretending the grief itself constitutes an argument against the tide actually arriving.",
-      "Bagas: [reflective] That's a colder comfort than I was hoping for, coming from you specifically.",
-      "Ratna: [warmly] It's the only honest comfort available. The alternative, insisting the tide won't come, has never once kept anyone's feet dry.",
-      "Bagas: [wry] Fine. I'll keep sharpening sentences, then, on the theory that someone, somewhere, will still know the difference when it matters.",
-      "Ratna: [smiling] That's not nothing, Bagas. Most craftsmen throughout history have worked under exactly that uncertain wager, and plenty of their work outlived the tools that eventually replaced them."
+      "Bagas: [thoughtful] Twenty years sharpening a sentence until it earns its place on the page, Ratna, and now a machine produces something serviceable in four seconds. Forgive me if I don't consider that progress.",
+      "Ratna: Serviceable, though, is doing a great deal of work in that sentence. Serviceable was never the standard you held yourself to, and it still isn't the standard your readers actually reward.",
+      "Bagas: [carefully] Maybe not yet. But the market has never particularly cared about the difference between adequate and exceptional, provided adequate arrives faster and costs considerably less.",
+      "Ratna: That's a fairly bleak indictment of every editor who's ever hired you, then, since presumably someone along the way did notice the difference.",
+      "Bagas: [reflective] Fair, though I suspect that discernment is precisely the faculty being quietly hollowed out, an entire generation losing the palate to distinguish craft from its convincing imitation.",
+      "Ratna: Perhaps. Or perhaps craft simply migrates, the way it always has, toward whatever the machine still can't touch: judgment, risk, the deliberate imperfection that signals a mind was actually present.",
+      "Bagas: [honestly] You're describing a shrinking territory with remarkable optimism. Each year the machine annexes another province you'd previously called uniquely human.",
+      "Ratna: I'm not claiming the territory won't shrink. I'm claiming what remains becomes correspondingly more valuable, not less, precisely because scarcity is the thing markets do reliably reward.",
+      "Bagas: [gently] And if I'm wrong about my own scarcity? If what I mistake for irreplaceable judgment turns out to be replicable after all, given sufficient data?",
+      "Ratna: Then we adapt, grieving what deserves grieving, without pretending the grief itself constitutes an argument against the tide actually arriving.",
+      "Bagas: [calmly] That's a colder comfort than I was hoping for, coming from you specifically.",
+      "Ratna: It's the only honest comfort available. The alternative, insisting the tide won't come, has never once kept anyone's feet dry.",
+      "Bagas: [encouraging] Fine. I'll keep sharpening sentences, then, on the theory that someone, somewhere, will still know the difference when it matters.",
+      "Ratna: That's not nothing, Bagas. Most craftsmen throughout history have worked under exactly that uncertain wager, and plenty of their work outlived the tools that eventually replaced them."
     ],
     "quiz": [
-      { "question": "What is Bagas's initial grievance?", "options": ["He is being paid too little", "A machine can now produce serviceable writing in seconds after his decades of craft", "His editor rejected his latest piece", "Ratna refuses to work with him"], "correctIndex": 1, "explanation": "Bagas is troubled that a machine can produce serviceable writing in seconds after his decades spent perfecting sentences." },
-      { "question": "What does Ratna say 'serviceable' was never the standard for?", "options": ["Ratna's own writing only", "What Bagas held himself to, or what readers actually reward", "The publishing industry as a whole", "Machine-generated content"], "correctIndex": 1, "explanation": "Ratna points out serviceable was never the standard Bagas held himself to, nor what readers ultimately reward." },
-      { "question": "What faculty does Bagas fear is being hollowed out?", "options": ["Basic literacy", "The discernment to distinguish craft from its convincing imitation", "Typing speed", "Interest in reading altogether"], "correctIndex": 1, "explanation": "Bagas fears the discernment to tell genuine craft apart from convincing imitation is being quietly lost." },
-      { "question": "How does Ratna reframe the shrinking territory of human craft?", "options": ["As proof that craft is already dead", "As making what remains correspondingly more valuable, due to scarcity", "As irrelevant to markets entirely", "As something that will reverse itself soon"], "correctIndex": 1, "explanation": "Ratna argues that as human territory shrinks, what remains becomes more valuable because scarcity is reliably rewarded." },
-      { "question": "What comfort does Ratna offer regarding the 'tide' of automation?", "options": ["That it will never actually arrive", "That grieving what deserves grieving is honest, but doesn't argue against the tide arriving", "That resisting it is always successful", "That craftsmen have never faced this before"], "correctIndex": 1, "explanation": "Ratna says the only honest comfort is adapting and grieving appropriately, since denial has never kept anyone's feet dry." }
-    ]
+      {
+        "question": "What is Bagas's initial grievance?",
+        "options": [
+          "A machine can now produce serviceable writing in seconds after his decades of craft",
+          "He is being paid too little",
+          "His editor rejected his latest piece",
+          "Ratna refuses to work with him"
+        ],
+        "correctIndex": 0,
+        "explanation": "Bagas is troubled that a machine can produce serviceable writing in seconds after his decades spent perfecting sentences."
+      },
+      {
+        "question": "What does Ratna say 'serviceable' was never the standard for?",
+        "options": [
+          "Ratna's own writing only",
+          "What Bagas held himself to, or what readers actually reward",
+          "The publishing industry as a whole",
+          "Machine-generated content"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ratna points out serviceable was never the standard Bagas held himself to, nor what readers ultimately reward."
+      },
+      {
+        "question": "What faculty does Bagas fear is being hollowed out?",
+        "options": [
+          "Basic literacy",
+          "Typing speed",
+          "The discernment to distinguish craft from its convincing imitation",
+          "Interest in reading altogether"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bagas fears the discernment to tell genuine craft apart from convincing imitation is being quietly lost."
+      },
+      {
+        "question": "How does Ratna reframe the shrinking territory of human craft?",
+        "options": [
+          "As proof that craft is already dead",
+          "As irrelevant to markets entirely",
+          "As something that will reverse itself soon",
+          "As making what remains correspondingly more valuable, due to scarcity"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratna argues that as human territory shrinks, what remains becomes more valuable because scarcity is reliably rewarded."
+      },
+      {
+        "question": "What comfort does Ratna offer regarding the 'tide' of automation?",
+        "options": [
+          "That grieving what deserves grieving is honest, but doesn't argue against the tide arriving",
+          "That it will never actually arrive",
+          "That resisting it is always successful",
+          "That craftsmen have never faced this before"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ratna says the only honest comfort is adapting and grieving appropriately, since denial has never kept anyone's feet dry."
+      },
+      {
+        "question": "What central claim does “Two Editors Argue Over Whether Craft Survives Automation” develop?",
+        "options": [
+          "Automation can change a role without erasing responsibility for workers.",
+          "Craft can survive automation when judgment remains accountable.",
+          "Promotion can expose limits that require support, not concealment.",
+          "Honest exit feedback can reveal process failure without retaliation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Two Editors Argue Over Whether Craft Survives Automation”?",
+        "options": [
+          "The narrator’s redundancy follows a system he helped create.",
+          "Vertigo follows responsibility beyond familiar competence.",
+          "Editors distinguish speed from editorial responsibility.",
+          "The interview makes room for evidence about recurring conditions."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “Two Editors Argue Over Whether Craft Survives Automation”?",
+        "options": [
+          "Efficiency gains do not settle questions of fair transition.",
+          "Confidence is not proof that a decision is sound.",
+          "One report does not prove every allegation or motive.",
+          "A tool’s output is not evidence of its suitability."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Two Editors Argue Over Whether Craft Survives Automation”?",
+        "options": [
+          "They test claims against readers and consequences.",
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "The narrator seeks evidence and help before acting.",
+          "The organisation should investigate proportionately and protect reporting routes."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “Two Editors Argue Over Whether Craft Survives Automation”?",
+        "options": [
+          "Accountable innovation includes repair for displaced people.",
+          "Human oversight matters when choices shape meaning.",
+          "Accountability includes naming scope and escalation needs.",
+          "Repair requires more than collecting uncomfortable feedback."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-work-03",
@@ -71,29 +302,143 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [measured] There's a particular vertigo that arrives roughly six months into a promotion you privately suspect exceeded your actual capabilities, a suspicion no congratulatory email quite manages to dispel.",
-      "Narrator: [honest] I'd spent a decade excelling at the discrete, bounded work of an individual contributor, the kind with visible edges and defensible outcomes.",
-      "Narrator: [reflective] Leadership, by contrast, offered no such edges, only an amorphous expectation that I somehow metabolize other people's ambiguity into decisions nobody else wanted to own.",
-      "Narrator: [uneasy] I performed competence for months, nodding through meetings whose stakes I only half grasped, terrified that admitting confusion would confirm what I already suspected everyone secretly believed.",
-      "Narrator: [thoughtful] The exhaustion of that performance eventually outpaced my capacity to sustain it, which is, I've since realized, precisely how most people finally confess to struggling.",
-      "Narrator: [honest] I told my own mentor, haltingly, that I thought the promotion had been a mistake, that I'd been elevated past whatever ceiling my actual skill honestly warranted.",
-      "Narrator: [reflective] She didn't reassure me, which I initially resented, and instead asked a question I hadn't thought to ask myself: whether competence at this level even resembled competence at the last one.",
-      "Narrator: [analytical] It doesn't, I slowly understood. The very qualities that had made me exceptional before, precision, individual ownership, a taste for solving things alone, actively undermined me now.",
-      "Narrator: [thoughtful] What this role actually demanded was closer to translation than execution: absorbing chaos from a dozen directions and returning something coherent enough for others to act on.",
-      "Narrator: [determined] So I stopped measuring myself against my old competence entirely, and began, awkwardly, building the unfamiliar muscles this altogether different job actually required.",
-      "Narrator: [warmly] The vertigo hasn't disappeared completely, and I suspect it never fully will, each new altitude apparently arriving with its own particular thinness of air.",
-      "Narrator: [peacefully] But I've stopped mistaking that thinness for proof I don't belong here, and started treating it, instead, as the unglamorous, ordinary texture of actually growing."
+      "Narrator: [thoughtful] There's a particular vertigo that arrives roughly six months into a promotion you privately suspect exceeded your actual capabilities, a suspicion no congratulatory email quite manages to dispel.",
+      "Narrator: I'd spent a decade excelling at the discrete, bounded work of an individual contributor, the kind with visible edges and defensible outcomes.",
+      "Narrator: [carefully] Leadership, by contrast, offered no such edges, only an amorphous expectation that I somehow metabolize other people's ambiguity into decisions nobody else wanted to own.",
+      "Narrator: I performed competence for months, nodding through meetings whose stakes I only half grasped, terrified that admitting confusion would confirm what I already suspected everyone secretly believed.",
+      "Narrator: [reflective] The exhaustion of that performance eventually outpaced my capacity to sustain it, which is, I've since realized, precisely how most people finally confess to struggling.",
+      "Narrator: I told my own mentor, haltingly, that I thought the promotion had been a mistake, that I'd been elevated past whatever ceiling my actual skill honestly warranted.",
+      "Narrator: [honestly] She didn't reassure me, which I initially resented, and instead asked a question I hadn't thought to ask myself: whether competence at this level even resembled competence at the last one.",
+      "Narrator: It doesn't, I slowly understood. The very qualities that had made me exceptional before, precision, individual ownership, a taste for solving things alone, actively undermined me now.",
+      "Narrator: [gently] What this role actually demanded was closer to translation than execution: absorbing chaos from a dozen directions and returning something coherent enough for others to act on.",
+      "Narrator: So I stopped measuring myself against my old competence entirely, and began, awkwardly, building the unfamiliar muscles this altogether different job actually required.",
+      "Narrator: [calmly] The vertigo hasn't disappeared completely, and I suspect it never fully will, each new altitude apparently arriving with its own particular thinness of air.",
+      "Narrator: But I've stopped mistaking that thinness for proof I don't belong here, and started treating it, instead, as the unglamorous, ordinary texture of actually growing."
     ],
     "quiz": [
-      { "question": "When does the narrator say this vertigo typically arrives?", "options": ["Immediately after the promotion", "Roughly six months into a promotion he privately suspects exceeded his capabilities", "Only on his last day", "Before the promotion was even announced"], "correctIndex": 1, "explanation": "He says the vertigo arrives about six months in, once the initial congratulations fade." },
-      { "question": "What kind of work had the narrator excelled at previously?", "options": ["Vague, unstructured leadership tasks", "Discrete, bounded individual-contributor work with visible edges and defensible outcomes", "Public speaking engagements", "Managing large teams"], "correctIndex": 1, "explanation": "He had excelled at bounded individual-contributor work with clear edges, unlike the ambiguity of leadership." },
-      { "question": "What question did his mentor ask instead of reassuring him?", "options": ["Whether he wanted to quit", "Whether competence at this level even resembled competence at the last one", "Whether he had asked for a raise", "Whether his team liked him"], "correctIndex": 1, "explanation": "His mentor asked whether competence at his new level even resembled competence at his previous one, prompting reflection." },
-      { "question": "What did the narrator realize his old strengths did in the new role?", "options": ["They transferred perfectly", "They actively undermined him, since the role demanded different qualities", "They were completely irrelevant either way", "They made the promotion easier"], "correctIndex": 1, "explanation": "He realized the precision and solo focus that once made him excellent now actively undermined him in the new role." },
-      { "question": "How does the narrator ultimately interpret the persistent 'thinness of air'?", "options": ["As proof he doesn't belong in the role", "As the unglamorous, ordinary texture of actually growing", "As a sign he should resign immediately", "As something that will vanish completely soon"], "correctIndex": 1, "explanation": "He stops treating the vertigo as proof of not belonging and instead treats it as the ordinary texture of growth." }
-    ]
+      {
+        "question": "When does the narrator say this vertigo typically arrives?",
+        "options": [
+          "Roughly six months into a promotion he privately suspects exceeded his capabilities",
+          "Immediately after the promotion",
+          "Only on his last day",
+          "Before the promotion was even announced"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says the vertigo arrives about six months in, once the initial congratulations fade."
+      },
+      {
+        "question": "What kind of work had the narrator excelled at previously?",
+        "options": [
+          "Vague, unstructured leadership tasks",
+          "Discrete, bounded individual-contributor work with visible edges and defensible outcomes",
+          "Public speaking engagements",
+          "Managing large teams"
+        ],
+        "correctIndex": 1,
+        "explanation": "He had excelled at bounded individual-contributor work with clear edges, unlike the ambiguity of leadership."
+      },
+      {
+        "question": "What question did his mentor ask instead of reassuring him?",
+        "options": [
+          "Whether he wanted to quit",
+          "Whether he had asked for a raise",
+          "Whether competence at this level even resembled competence at the last one",
+          "Whether his team liked him"
+        ],
+        "correctIndex": 2,
+        "explanation": "His mentor asked whether competence at his new level even resembled competence at his previous one, prompting reflection."
+      },
+      {
+        "question": "What did the narrator realize his old strengths did in the new role?",
+        "options": [
+          "They transferred perfectly",
+          "They were completely irrelevant either way",
+          "They made the promotion easier",
+          "They actively undermined him, since the role demanded different qualities"
+        ],
+        "correctIndex": 3,
+        "explanation": "He realized the precision and solo focus that once made him excellent now actively undermined him in the new role."
+      },
+      {
+        "question": "How does the narrator ultimately interpret the persistent 'thinness of air'?",
+        "options": [
+          "As the unglamorous, ordinary texture of actually growing",
+          "As proof he doesn't belong in the role",
+          "As a sign he should resign immediately",
+          "As something that will vanish completely soon"
+        ],
+        "correctIndex": 0,
+        "explanation": "He stops treating the vertigo as proof of not belonging and instead treats it as the ordinary texture of growth."
+      },
+      {
+        "question": "What central claim does “The Vertigo of Being Promoted Past My Competence” develop?",
+        "options": [
+          "Automation can change a role without erasing responsibility for workers.",
+          "Promotion can expose limits that require support, not concealment.",
+          "Craft can survive automation when judgment remains accountable.",
+          "Honest exit feedback can reveal process failure without retaliation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Vertigo of Being Promoted Past My Competence”?",
+        "options": [
+          "The narrator’s redundancy follows a system he helped create.",
+          "Editors distinguish speed from editorial responsibility.",
+          "Vertigo follows responsibility beyond familiar competence.",
+          "The interview makes room for evidence about recurring conditions."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “The Vertigo of Being Promoted Past My Competence”?",
+        "options": [
+          "Efficiency gains do not settle questions of fair transition.",
+          "A tool’s output is not evidence of its suitability.",
+          "One report does not prove every allegation or motive.",
+          "Confidence is not proof that a decision is sound."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Vertigo of Being Promoted Past My Competence”?",
+        "options": [
+          "The narrator seeks evidence and help before acting.",
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "They test claims against readers and consequences.",
+          "The organisation should investigate proportionately and protect reporting routes."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “The Vertigo of Being Promoted Past My Competence”?",
+        "options": [
+          "Accountable innovation includes repair for displaced people.",
+          "Accountability includes naming scope and escalation needs.",
+          "Human oversight matters when choices shape meaning.",
+          "Repair requires more than collecting uncomfortable feedback."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-work-04",
@@ -102,34 +447,151 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ibu Nur", "gender": "female" },
-      { "name": "Teguh", "gender": "male" }
+      {
+        "name": "Ibu Nur",
+        "gender": "female"
+      },
+      {
+        "name": "Teguh",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Ibu Nur: [professional] Thank you for staying for this, Teguh. Most people simply vanish on their last day, so I appreciate the candour in advance.",
-      "Teguh: [wry] I've got nothing left to protect here, which is, I suppose, the one genuine luxury of leaving.",
-      "Ibu Nur: [curious] Then let's use it. What would you say actually drove the decision, beneath whatever reason you've listed on the form?",
-      "Teguh: [measured] The form says 'new opportunity,' which is true but incomplete, the way most official reasons for leaving tend to be.",
-      "Ibu Nur: [gently] What's the incomplete part?",
-      "Teguh: [honest] That I stopped believing my work here was actually seen, as distinct from merely being used, which is a distinction I didn't have language for until fairly recently.",
-      "Ibu Nur: [thoughtful] That's a sharper distinction than most people offer in these conversations. Can you say more about where that gap actually showed up?",
-      "Teguh: [reflective] Every review praised my output in the abstract, yet somehow never translated into advocacy when promotion cycles actually arrived.",
-      "Ibu Nur: [honest] I won't pretend that's an isolated pattern. I've watched it happen to others and said less than I should have, at the time.",
-      "Teguh: [surprised] I wasn't expecting that admission, frankly, especially not from someone still employed here.",
-      "Ibu Nur: [candid] Exit interviews are the one place honesty costs the company nothing, which is precisely why they're so often wasted on scripted pleasantries instead.",
-      "Teguh: [considering] Then I'll say the uncomfortable part plainly: the gap between how this place talks about people and how it actually invests in them is wider than anyone in leadership seems willing to acknowledge.",
-      "Ibu Nur: [serious] Noted, and I mean that beyond the formality of noting it. What would have changed your decision, hypothetically, six months ago?",
-      "Teguh: [thoughtful] Concrete advocacy, once, at a moment when it actually mattered, rather than warm words arriving only after the decision to leave was already irreversible.",
-      "Ibu Nur: [sincere] That's a fair, precise answer, and considerably more useful than anything I usually get in this room.",
-      "Teguh: [warmly] I don't say it out of bitterness, for what it's worth. I say it because someone after me deserves the advocacy I didn't receive."
+      "Ibu Nur: [thoughtful] Thank you for staying for this, Teguh. Most people simply vanish on their last day, so I appreciate the candour in advance.",
+      "Teguh: I've got nothing left to protect here, which is, I suppose, the one genuine luxury of leaving.",
+      "Ibu Nur: [carefully] Then let's use it. What would you say actually drove the decision, beneath whatever reason you've listed on the form?",
+      "Teguh: The form says 'new opportunity,' which is true but incomplete, the way most official reasons for leaving tend to be.",
+      "Ibu Nur: [reflective] What's the incomplete part?",
+      "Teguh: That I stopped believing my work here was actually seen, as distinct from merely being used, which is a distinction I didn't have language for until fairly recently.",
+      "Ibu Nur: [honestly] That's a sharper distinction than most people offer in these conversations. Can you say more about where that gap actually showed up?",
+      "Teguh: Every review praised my output in the abstract, yet somehow never translated into advocacy when promotion cycles actually arrived.",
+      "Ibu Nur: [gently] I won't pretend that's an isolated pattern. I've watched it happen to others and said less than I should have, at the time.",
+      "Teguh: I wasn't expecting that admission, frankly, especially not from someone still employed here.",
+      "Ibu Nur: [calmly] Exit interviews are the one place honesty costs the company nothing, which is precisely why they're so often wasted on scripted pleasantries instead.",
+      "Teguh: Then I'll say the uncomfortable part plainly: the gap between how this place talks about people and how it actually invests in them is wider than anyone in leadership seems willing to acknowledge.",
+      "Ibu Nur: [encouraging] Noted, and I mean that beyond the formality of noting it. What would have changed your decision, hypothetically, six months ago?",
+      "Teguh: Concrete advocacy, once, at a moment when it actually mattered, rather than warm words arriving only after the decision to leave was already irreversible.",
+      "Ibu Nur: [seriously] That's a fair, precise answer, and considerably more useful than anything I usually get in this room.",
+      "Teguh: I don't say it out of bitterness, for what it's worth. I say it because someone after me deserves the advocacy I didn't receive."
     ],
     "quiz": [
-      { "question": "Why does Teguh feel able to be candid in this exit interview?", "options": ["He was promised a bonus for honesty", "He has nothing left to protect, which he calls the one genuine luxury of leaving", "He was ordered to by HR policy", "He wants to get another employee fired"], "correctIndex": 1, "explanation": "Teguh says having nothing left to protect is the one genuine luxury of leaving, enabling his candour." },
-      { "question": "What incomplete reason does the exit form list, according to Teguh?", "options": ["Personal health reasons", "'New opportunity,' true but incomplete", "Relocation to another city", "Retirement"], "correctIndex": 1, "explanation": "The form lists 'new opportunity' as the reason, which Teguh says is true but incomplete." },
-      { "question": "What distinction does Teguh say he stopped believing was true about his work?", "options": ["That it was ever completed on time", "That his work was actually seen, as distinct from merely being used", "That it was valued by clients", "That it mattered to the company at all"], "correctIndex": 1, "explanation": "Teguh explains he stopped believing his work was actually seen, as opposed to simply being used." },
-      { "question": "How does Ibu Nur respond to Teguh's observation about the pattern?", "options": ["She denies it ever happens", "She admits she has watched it happen to others and said less than she should have", "She defends the company fully", "She ends the interview immediately"], "correctIndex": 1, "explanation": "Ibu Nur admits she has witnessed this pattern with others and hasn't spoken up as much as she should have." },
-      { "question": "What does Teguh say would have changed his decision six months ago?", "options": ["A higher salary offer alone", "Concrete advocacy at a moment when it actually mattered, rather than words after the fact", "Nothing could have changed it", "A public apology from leadership"], "correctIndex": 1, "explanation": "Teguh says concrete advocacy at the right moment, not belated warm words, would have changed his decision." }
-    ]
+      {
+        "question": "Why does Teguh feel able to be candid in this exit interview?",
+        "options": [
+          "He has nothing left to protect, which he calls the one genuine luxury of leaving",
+          "He was promised a bonus for honesty",
+          "He was ordered to by HR policy",
+          "He wants to get another employee fired"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teguh says having nothing left to protect is the one genuine luxury of leaving, enabling his candour."
+      },
+      {
+        "question": "What incomplete reason does the exit form list, according to Teguh?",
+        "options": [
+          "Personal health reasons",
+          "'New opportunity,' true but incomplete",
+          "Relocation to another city",
+          "Retirement"
+        ],
+        "correctIndex": 1,
+        "explanation": "The form lists 'new opportunity' as the reason, which Teguh says is true but incomplete."
+      },
+      {
+        "question": "What distinction does Teguh say he stopped believing was true about his work?",
+        "options": [
+          "That it was ever completed on time",
+          "That it was valued by clients",
+          "That his work was actually seen, as distinct from merely being used",
+          "That it mattered to the company at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "Teguh explains he stopped believing his work was actually seen, as opposed to simply being used."
+      },
+      {
+        "question": "How does Ibu Nur respond to Teguh's observation about the pattern?",
+        "options": [
+          "She denies it ever happens",
+          "She defends the company fully",
+          "She ends the interview immediately",
+          "She admits she has watched it happen to others and said less than she should have"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ibu Nur admits she has witnessed this pattern with others and hasn't spoken up as much as she should have."
+      },
+      {
+        "question": "What does Teguh say would have changed his decision six months ago?",
+        "options": [
+          "Concrete advocacy at a moment when it actually mattered, rather than words after the fact",
+          "A higher salary offer alone",
+          "Nothing could have changed it",
+          "A public apology from leadership"
+        ],
+        "correctIndex": 0,
+        "explanation": "Teguh says concrete advocacy at the right moment, not belated warm words, would have changed his decision."
+      },
+      {
+        "question": "What central claim does “An Exit Interview Nobody Expected to Be Honest” develop?",
+        "options": [
+          "Automation can change a role without erasing responsibility for workers.",
+          "Honest exit feedback can reveal process failure without retaliation.",
+          "Craft can survive automation when judgment remains accountable.",
+          "Promotion can expose limits that require support, not concealment."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “An Exit Interview Nobody Expected to Be Honest”?",
+        "options": [
+          "The narrator’s redundancy follows a system he helped create.",
+          "Editors distinguish speed from editorial responsibility.",
+          "The interview makes room for evidence about recurring conditions.",
+          "Vertigo follows responsibility beyond familiar competence."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “An Exit Interview Nobody Expected to Be Honest”?",
+        "options": [
+          "Efficiency gains do not settle questions of fair transition.",
+          "A tool’s output is not evidence of its suitability.",
+          "Confidence is not proof that a decision is sound.",
+          "One report does not prove every allegation or motive."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “An Exit Interview Nobody Expected to Be Honest”?",
+        "options": [
+          "The organisation should investigate proportionately and protect reporting routes.",
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "They test claims against readers and consequences.",
+          "The narrator seeks evidence and help before acting."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “An Exit Interview Nobody Expected to Be Honest”?",
+        "options": [
+          "Accountable innovation includes repair for displaced people.",
+          "Repair requires more than collecting uncomfortable feedback.",
+          "Human oversight matters when choices shape meaning.",
+          "Accountability includes naming scope and escalation needs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-work-05",
@@ -138,29 +600,143 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Recording this the night before thirty-one years of employment condense themselves into a speech I'm told should run no longer than eight minutes.",
-      "Narrator: [wry] Eight minutes, for a career that consumed roughly a third of my waking life, feels like an accounting error someone should have caught earlier.",
-      "Narrator: [honest] I keep drafting sentences that sound appropriately grateful, then discarding them for sounding rehearsed in exactly the way genuine gratitude never actually does.",
-      "Narrator: [thoughtful] What nobody warns you about retirement, at least not honestly, is the strange bereavement of losing a self you didn't realize was load-bearing until it's scheduled for removal.",
+      "Narrator: [thoughtful] Recording this the night before thirty-one years of employment condense themselves into a speech I'm told should run no longer than eight minutes.",
+      "Narrator: Eight minutes, for a career that consumed roughly a third of my waking life, feels like an accounting error someone should have caught earlier.",
+      "Narrator: [carefully] I keep drafting sentences that sound appropriately grateful, then discarding them for sounding rehearsed in exactly the way genuine gratitude never actually does.",
+      "Narrator: What nobody warns you about retirement, at least not honestly, is the strange bereavement of losing a self you didn't realize was load-bearing until it's scheduled for removal.",
       "Narrator: [reflective] I've been 'the person who handles it' for so long that I've started wondering, quietly, who exactly remains once nobody needs anything handled.",
-      "Narrator: [honest] There's also a guilt I hadn't anticipated, at how readily replaceable the role turns out to be, my successor already fluent in systems I spent a decade half-inventing.",
-      "Narrator: [wry] I suppose that's the quiet insult buried in every well-run succession: the smoother it goes, the more thoroughly it proves you were never quite as irreplaceable as the job made you feel.",
-      "Narrator: [thoughtful] And yet, examined honestly, I don't actually want to have been irreplaceable. Irreplaceable people leave behind chaos, not institutions capable of continuing without them.",
-      "Narrator: [warmly] What I actually want, if I'm being precise about it, is to have mattered without having been indispensable, which is a considerably harder distinction to sit with gracefully.",
-      "Narrator: [determined] Tomorrow I'll thank the people who deserve thanking, and resist the urge to over-explain thirty-one years into eight tidy minutes that could never truly contain them.",
-      "Narrator: [peacefully] Whatever self I've been within these walls, I suspect she doesn't vanish tomorrow so much as she finally gets released from a single, narrowing job description.",
-      "Narrator: [warmly] Tomorrow I become, for the first time in decades, a person defined by nothing except whatever I actually choose next."
+      "Narrator: There's also a guilt I hadn't anticipated, at how readily replaceable the role turns out to be, my successor already fluent in systems I spent a decade half-inventing.",
+      "Narrator: [honestly] I suppose that's the quiet insult buried in every well-run succession: the smoother it goes, the more thoroughly it proves you were never quite as irreplaceable as the job made you feel.",
+      "Narrator: And yet, examined honestly, I don't actually want to have been irreplaceable. Irreplaceable people leave behind chaos, not institutions capable of continuing without them.",
+      "Narrator: [gently] What I actually want, if I'm being precise about it, is to have mattered without having been indispensable, which is a considerably harder distinction to sit with gracefully.",
+      "Narrator: Tomorrow I'll thank the people who deserve thanking, and resist the urge to over-explain thirty-one years into eight tidy minutes that could never truly contain them.",
+      "Narrator: [calmly] Whatever self I've been within these walls, I suspect she doesn't vanish tomorrow so much as she finally gets released from a single, narrowing job description.",
+      "Narrator: Tomorrow I become, for the first time in decades, a person defined by nothing except whatever I actually choose next."
     ],
     "quiz": [
-      { "question": "How long is the narrator's retirement speech meant to be?", "options": ["Thirty minutes", "No longer than eight minutes", "One hour", "There is no time limit"], "correctIndex": 1, "explanation": "She notes the speech is meant to run no longer than eight minutes despite thirty-one years of employment." },
-      { "question": "What strange bereavement does the narrator describe?", "options": ["Losing her office furniture", "Losing a self she didn't realize was load-bearing until it's scheduled for removal", "Losing her pension", "Losing contact with all colleagues immediately"], "correctIndex": 1, "explanation": "She describes the bereavement of losing a self she didn't realize was load-bearing until retirement made its removal scheduled." },
-      { "question": "What guilt does the narrator admit to feeling?", "options": ["Guilt over leaving too early", "Guilt at how readily replaceable her role turns out to be", "Guilt about her salary", "Guilt about disliking her job"], "correctIndex": 1, "explanation": "She admits guilt at how readily replaceable the role turns out to be, with her successor already capable." },
-      { "question": "What 'quiet insult' does the narrator identify in a well-run succession?", "options": ["That nobody thanks the retiring employee", "The smoother it goes, the more it proves she was never as irreplaceable as the job made her feel", "That successors are always less competent", "That companies never plan successions properly"], "correctIndex": 1, "explanation": "She identifies the insult that a smooth succession proves she was never as irreplaceable as she had felt." },
-      { "question": "What does the narrator say she actually wants, upon reflection?", "options": ["To have been irreplaceable and indispensable", "To have mattered without having been indispensable", "To be forgotten entirely", "To return to work immediately after retiring"], "correctIndex": 1, "explanation": "She concludes she wants to have mattered without having been indispensable, a harder distinction to accept gracefully." }
-    ]
+      {
+        "question": "How long is the narrator's retirement speech meant to be?",
+        "options": [
+          "No longer than eight minutes",
+          "Thirty minutes",
+          "One hour",
+          "There is no time limit"
+        ],
+        "correctIndex": 0,
+        "explanation": "She notes the speech is meant to run no longer than eight minutes despite thirty-one years of employment."
+      },
+      {
+        "question": "What strange bereavement does the narrator describe?",
+        "options": [
+          "Losing her office furniture",
+          "Losing a self she didn't realize was load-bearing until it's scheduled for removal",
+          "Losing her pension",
+          "Losing contact with all colleagues immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "She describes the bereavement of losing a self she didn't realize was load-bearing until retirement made its removal scheduled."
+      },
+      {
+        "question": "What guilt does the narrator admit to feeling?",
+        "options": [
+          "Guilt over leaving too early",
+          "Guilt about her salary",
+          "Guilt at how readily replaceable her role turns out to be",
+          "Guilt about disliking her job"
+        ],
+        "correctIndex": 2,
+        "explanation": "She admits guilt at how readily replaceable the role turns out to be, with her successor already capable."
+      },
+      {
+        "question": "Which tension shapes the narrator's retirement reflection?",
+        "options": [
+          "Whether her speech should be longer or shorter",
+          "Whether her successor still needs training",
+          "Whether retirement requires part-time work",
+          "Having mattered without needing to be indispensable"
+        ],
+        "correctIndex": 3,
+        "explanation": "She wants her work to have mattered, while accepting that a healthy institution can continue without her."
+      },
+      {
+        "question": "What does the narrator say she actually wants, upon reflection?",
+        "options": [
+          "To have mattered without having been indispensable",
+          "To have been irreplaceable and indispensable",
+          "To be forgotten entirely",
+          "To return to work immediately after retiring"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes she wants to have mattered without having been indispensable, a harder distinction to accept gracefully."
+      },
+      {
+        "question": "What central claim does “Voice Memo the Night Before My Retirement Speech” develop?",
+        "options": [
+          "Automation can change a role without erasing responsibility for workers.",
+          "Retirement reflection can separate legacy from self-congratulation.",
+          "Craft can survive automation when judgment remains accountable.",
+          "Promotion can expose limits that require support, not concealment."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Voice Memo the Night Before My Retirement Speech”?",
+        "options": [
+          "The narrator’s redundancy follows a system he helped create.",
+          "Editors distinguish speed from editorial responsibility.",
+          "The speech forces the narrator to assess who carried unseen work.",
+          "Vertigo follows responsibility beyond familiar competence."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “Voice Memo the Night Before My Retirement Speech”?",
+        "options": [
+          "Efficiency gains do not settle questions of fair transition.",
+          "A tool’s output is not evidence of its suitability.",
+          "Confidence is not proof that a decision is sound.",
+          "Recognition should not erase colleagues’ contributions."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Voice Memo the Night Before My Retirement Speech”?",
+        "options": [
+          "He credits others and avoids claims he cannot substantiate.",
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "They test claims against readers and consequences.",
+          "The narrator seeks evidence and help before acting."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “Voice Memo the Night Before My Retirement Speech”?",
+        "options": [
+          "Accountable innovation includes repair for displaced people.",
+          "A responsible legacy makes shared labour visible.",
+          "Human oversight matters when choices shape meaning.",
+          "Accountability includes naming scope and escalation needs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-work-06",
@@ -169,33 +745,150 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Melati", "gender": "female" },
-      { "name": "Arman", "gender": "male" }
+      {
+        "name": "Melati",
+        "gender": "female"
+      },
+      {
+        "name": "Arman",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Melati: [controlled] Arman, I want to talk about the client meeting, specifically the moment you presented the retention strategy as though it hadn't originated entirely from my proposal.",
-      "Arman: [defensive] That's a fairly uncharitable reading. I presented the strategy the team had landed on, which happens to include work from several of us.",
-      "Melati: [firm] The team landed on it after I'd already written the document, line by line, at eleven o'clock on a Sunday you weren't copied on.",
-      "Arman: [uncomfortable] I didn't intend to erase your contribution, if that's how it registered. These presentations move quickly, and attribution isn't always foremost in my mind under pressure.",
-      "Melati: [pointed] Attribution rarely is foremost in the mind of whoever benefits from its absence, which is precisely why it requires deliberate effort rather than passive good intentions.",
-      "Arman: [conceding] That lands harder than I'd like to admit, mostly because I suspect it's accurate.",
-      "Melati: [measured] I'm not interested in a lengthy confession. I'm interested in what changes the next time we're both in a room with people whose opinions actually shape our trajectories.",
-      "Arman: [thoughtful] What would that look like, concretely, rather than as a vague promise I make and quietly forget by Thursday?",
-      "Melati: [direct] Name me explicitly when the idea is mine. It costs you nothing measurable and costs me considerably, compounding, when you don't.",
-      "Arman: [honest] I think part of what happened is that crediting you felt, unconsciously, like diminishing my own visibility in a room I was nervous about impressing.",
-      "Melati: [understanding] That's a more honest explanation than most people manage, though I'd point out that visibility built on someone else's uncredited labour is a fairly unstable foundation.",
-      "Arman: [reflective] Put that plainly, I can't really defend it. I think I've been treating credit as a fixed pie, when it clearly isn't, or doesn't have to be.",
-      "Melati: [warmly] It isn't, generally, provided the people distributing it are actually paying attention rather than defaulting to whoever spoke last and loudest.",
-      "Arman: [determined] Understood. Next meeting, I name you first, explicitly, before I say anything else about the strategy at all.",
-      "Melati: [genuine] That's all I was asking for, Arman. Not an apology tour, just the accuracy the work actually earned."
+      "Melati: [thoughtful] Arman, I want to talk about the client meeting, specifically the moment you presented the retention strategy as though it hadn't originated entirely from my proposal.",
+      "Arman: That's a fairly uncharitable reading. I presented the strategy the team had landed on, which happens to include work from several of us.",
+      "Melati: [carefully] The team landed on it after I'd already written the document, line by line, at eleven o'clock on a Sunday you weren't copied on.",
+      "Arman: I didn't intend to erase your contribution, if that's how it registered. These presentations move quickly, and attribution isn't always foremost in my mind under pressure.",
+      "Melati: [reflective] Attribution rarely is foremost in the mind of whoever benefits from its absence, which is precisely why it requires deliberate effort rather than passive good intentions.",
+      "Arman: That lands harder than I'd like to admit, mostly because I suspect it's accurate.",
+      "Melati: [honestly] I'm not interested in a lengthy confession. I'm interested in what changes the next time we're both in a room with people whose opinions actually shape our trajectories.",
+      "Arman: What would that look like, concretely, rather than as a vague promise I make and quietly forget by Thursday?",
+      "Melati: [gently] Name me explicitly when the idea is mine. It costs you nothing measurable and costs me considerably, compounding, when you don't.",
+      "Arman: I think part of what happened is that crediting you felt, unconsciously, like diminishing my own visibility in a room I was nervous about impressing.",
+      "Melati: [calmly] That's a more honest explanation than most people manage, though I'd point out that visibility built on someone else's uncredited labour is a fairly unstable foundation.",
+      "Arman: Put that plainly, I can't really defend it. I think I've been treating credit as a fixed pie, when it clearly isn't, or doesn't have to be.",
+      "Melati: [encouraging] It isn't, generally, provided the people distributing it are actually paying attention rather than defaulting to whoever spoke last and loudest.",
+      "Arman: Understood. Next meeting, I name you first, explicitly, before I say anything else about the strategy at all.",
+      "Melati: [seriously] That's all I was asking for, Arman. Not an apology tour, just the accuracy the work actually earned."
     ],
     "quiz": [
-      { "question": "What specifically does Melati confront Arman about?", "options": ["Missing a deadline", "Presenting her retention strategy without acknowledging it originated from her proposal", "Being late to the client meeting", "Disagreeing with her in front of the client"], "correctIndex": 1, "explanation": "Melati confronts Arman for presenting her retention strategy as a team effort without crediting its actual origin." },
-      { "question": "What excuse does Arman initially offer?", "options": ["He forgot she existed", "Presentations move quickly and attribution isn't always foremost in his mind under pressure", "He didn't know she wrote it", "He thought she wanted anonymity"], "correctIndex": 1, "explanation": "Arman initially claims attribution isn't foremost in his mind during fast-moving presentations under pressure." },
-      { "question": "What does Melati say about attribution and who benefits from its absence?", "options": ["Attribution is unimportant in professional settings", "Attribution rarely is foremost in the mind of whoever benefits from its absence, requiring deliberate effort", "Attribution should never be discussed openly", "Attribution only matters for junior employees"], "correctIndex": 1, "explanation": "Melati points out that attribution conveniently isn't top of mind for whoever benefits from its absence, requiring deliberate effort instead." },
-      { "question": "What honest explanation does Arman eventually offer for his behavior?", "options": ["He genuinely disliked Melati", "Crediting her felt, unconsciously, like diminishing his own visibility in a room he was nervous about impressing", "He was told to do it by his manager", "He had no explanation at all"], "correctIndex": 1, "explanation": "Arman admits crediting Melati unconsciously felt like it would diminish his own visibility while nervous about impressing the room." },
-      { "question": "What specific change does Arman commit to?", "options": ["Never speaking in meetings again", "Naming Melati first, explicitly, before saying anything else about the strategy", "Quitting the project entirely", "Writing her a formal apology letter"], "correctIndex": 1, "explanation": "Arman commits to explicitly naming Melati first in the next meeting before discussing the strategy at all." }
-    ]
+      {
+        "question": "What specifically does Melati confront Arman about?",
+        "options": [
+          "Presenting her retention strategy without acknowledging it originated from her proposal",
+          "Missing a deadline",
+          "Being late to the client meeting",
+          "Disagreeing with her in front of the client"
+        ],
+        "correctIndex": 0,
+        "explanation": "Melati confronts Arman for presenting her retention strategy as a team effort without crediting its actual origin."
+      },
+      {
+        "question": "What excuse does Arman initially offer?",
+        "options": [
+          "He forgot she existed",
+          "Presentations move quickly and attribution isn't always foremost in his mind under pressure",
+          "He didn't know she wrote it",
+          "He thought she wanted anonymity"
+        ],
+        "correctIndex": 1,
+        "explanation": "Arman initially claims attribution isn't foremost in his mind during fast-moving presentations under pressure."
+      },
+      {
+        "question": "What does Melati say about attribution and who benefits from its absence?",
+        "options": [
+          "Attribution is unimportant in professional settings",
+          "Attribution should never be discussed openly",
+          "Attribution rarely is foremost in the mind of whoever benefits from its absence, requiring deliberate effort",
+          "Attribution only matters for junior employees"
+        ],
+        "correctIndex": 2,
+        "explanation": "Melati points out that attribution conveniently isn't top of mind for whoever benefits from its absence, requiring deliberate effort instead."
+      },
+      {
+        "question": "What motive does Arman acknowledge may have shaped his omission?",
+        "options": [
+          "He doubted the quality of Melati's proposal",
+          "He believed the client disliked shared credit",
+          "He had forgotten who wrote the strategy",
+          "He wanted to protect his visibility in an intimidating room"
+        ],
+        "correctIndex": 3,
+        "explanation": "Arman recognises that anxiety about impressing the room may have made him treat credit as if it reduced his own visibility."
+      },
+      {
+        "question": "What specific change does Arman commit to?",
+        "options": [
+          "Naming Melati first, explicitly, before saying anything else about the strategy",
+          "Never speaking in meetings again",
+          "Quitting the project entirely",
+          "Writing her a formal apology letter"
+        ],
+        "correctIndex": 0,
+        "explanation": "Arman commits to explicitly naming Melati first in the next meeting before discussing the strategy at all."
+      },
+      {
+        "question": "What central claim does “Confronting a Colleague Who Took Credit in the Room” develop?",
+        "options": [
+          "Automation can change a role without erasing responsibility for workers.",
+          "Credit disputes require evidence and proportionate correction.",
+          "Craft can survive automation when judgment remains accountable.",
+          "Promotion can expose limits that require support, not concealment."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Confronting a Colleague Who Took Credit in the Room”?",
+        "options": [
+          "The narrator’s redundancy follows a system he helped create.",
+          "Editors distinguish speed from editorial responsibility.",
+          "The meeting reveals a colleague taking credit for shared work.",
+          "Vertigo follows responsibility beyond familiar competence."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “Confronting a Colleague Who Took Credit in the Room”?",
+        "options": [
+          "Efficiency gains do not settle questions of fair transition.",
+          "A tool’s output is not evidence of its suitability.",
+          "Confidence is not proof that a decision is sound.",
+          "Reporting should avoid claims beyond documented facts."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Confronting a Colleague Who Took Credit in the Room”?",
+        "options": [
+          "The narrator addresses the issue through a clear accountable process.",
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "They test claims against readers and consequences.",
+          "The narrator seeks evidence and help before acting."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “Confronting a Colleague Who Took Credit in the Room”?",
+        "options": [
+          "Accountable innovation includes repair for displaced people.",
+          "Fair repair protects both contribution and due process.",
+          "Human oversight matters when choices shape meaning.",
+          "Accountability includes naming scope and escalation needs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-work-07",
@@ -204,35 +897,592 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Dr. Amelia", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Dr. Amelia",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] This evening we're joined by an occupational psychologist who argues something counterintuitive: that burnout isn't primarily a personal failing but an institutional design flaw. Welcome, Dr. Amelia.",
-      "Dr. Amelia: [pleasant] Thank you. It's a reframing that tends to unsettle people initially, mostly because we've been culturally conditioned to treat exhaustion as a character deficiency.",
-      "Radio Host: [curious] Unpack that distinction for us. Why locate the flaw in the institution rather than the individual who's, presumably, simply overworking themselves?",
-      "Dr. Amelia: [explaining] Because the individuals I study are rarely uniquely undisciplined. They're routinely operating within systems that reward overextension while offering no structural mechanism for recovery.",
-      "Radio Host: [interested] So the incentive structure itself manufactures the very exhaustion companies then discipline employees for exhibiting.",
-      "Dr. Amelia: [nodding] Precisely, and there's a particular cruelty in that arrangement, punishing the predictable output of a system deliberately engineered to extract maximal effort indefinitely.",
-      "Radio Host: [skeptical] Some listeners will say individuals still retain agency, that nobody's literally forcing them to answer emails at midnight.",
-      "Dr. Amelia: [measured] Agency exists, certainly, but it operates within constraints most people underestimate: implicit penalties for setting limits that never appear in any written policy.",
-      "Radio Host: [curious] What does that implicit penalty typically look like, in practice?",
-      "Dr. Amelia: [thoughtful] Subtler things: being quietly passed over for visibility, having your commitment silently questioned, watching colleagues who never disconnect receive the promotions instead.",
-      "Radio Host: [interested] Which effectively trains everyone toward overextension, regardless of any official wellness policy on the books.",
-      "Dr. Amelia: [wry] Wellness policies, in my experience, frequently function as decoration, addressing symptoms while leaving the underlying incentive architecture entirely untouched.",
-      "Radio Host: [curious] Is there an organisation you'd point to that's actually addressed the architecture itself, rather than merely the symptoms?",
-      "Dr. Amelia: [encouraging] The rare ones that succeed tend to redesign how success itself gets measured, rewarding sustainable output rather than visible sacrifice.",
-      "Radio Host: [interested] Meaning the metric shifts from hours performed to outcomes actually delivered.",
-      "Dr. Amelia: [warmly] Exactly that shift, though it requires considerable institutional courage, since visible sacrifice is, unfortunately, far easier to measure than sustainable competence.",
-      "Radio Host: [smiling] A sobering diagnosis, delivered with surprising optimism about the remedy. Thank you, Dr. Amelia.",
-      "Dr. Amelia: [smiling] My pleasure. Though I'll admit, I'm saying all this having answered three work emails already tonight."
+      "Radio Host: [thoughtful] This evening we're joined by an occupational psychologist who argues something counterintuitive: that burnout isn't primarily a personal failing but an institutional design flaw. Welcome, Dr. Amelia.",
+      "Dr. Amelia: Thank you. It's a reframing that tends to unsettle people initially, mostly because we've been culturally conditioned to treat exhaustion as a character deficiency.",
+      "Radio Host: [carefully] Unpack that distinction for us. Why locate the flaw in the institution rather than the individual who's, presumably, simply overworking themselves?",
+      "Dr. Amelia: Because the individuals I study are rarely uniquely undisciplined. They're routinely operating within systems that reward overextension while offering no structural mechanism for recovery.",
+      "Radio Host: [reflective] So the incentive structure itself manufactures the very exhaustion companies then discipline employees for exhibiting.",
+      "Dr. Amelia: Precisely, and there's a particular cruelty in that arrangement, punishing the predictable output of a system deliberately engineered to extract maximal effort indefinitely.",
+      "Radio Host: [honestly] Some listeners will say individuals still retain agency, that nobody's literally forcing them to answer emails at midnight.",
+      "Dr. Amelia: Agency exists, certainly, but it operates within constraints most people underestimate: implicit penalties for setting limits that never appear in any written policy.",
+      "Radio Host: [gently] What does that implicit penalty typically look like, in practice?",
+      "Dr. Amelia: Subtler things: being quietly passed over for visibility, having your commitment silently questioned, watching colleagues who never disconnect receive the promotions instead.",
+      "Radio Host: [calmly] Which effectively trains everyone toward overextension, regardless of any official wellness policy on the books.",
+      "Dr. Amelia: Wellness policies, in my experience, frequently function as decoration, addressing symptoms while leaving the underlying incentive architecture entirely untouched.",
+      "Radio Host: [encouraging] Is there an organisation you'd point to that's actually addressed the architecture itself, rather than merely the symptoms?",
+      "Dr. Amelia: The rare ones that succeed tend to redesign how success itself gets measured, rewarding sustainable output rather than visible sacrifice.",
+      "Radio Host: [seriously] Meaning the metric shifts from hours performed to outcomes actually delivered.",
+      "Dr. Amelia: Exactly that shift, though it requires considerable institutional courage, since visible sacrifice is, unfortunately, far easier to measure than sustainable competence.",
+      "Radio Host: A sobering diagnosis, delivered with surprising optimism about the remedy. Thank you, Dr. Amelia.",
+      "Dr. Amelia: My pleasure. Though I'll admit, I'm saying all this having answered three work emails already tonight."
     ],
     "quiz": [
-      { "question": "What counterintuitive argument does Dr. Amelia make about burnout?", "options": ["Burnout is purely a medical condition", "Burnout isn't primarily a personal failing but an institutional design flaw", "Burnout only affects lazy employees", "Burnout is entirely unavoidable"], "correctIndex": 1, "explanation": "Dr. Amelia argues burnout is primarily an institutional design flaw rather than a personal character deficiency." },
-      { "question": "What does Dr. Amelia say about the individuals she studies?", "options": ["They are uniquely undisciplined compared to others", "They routinely operate within systems that reward overextension without offering recovery mechanisms", "They rarely work hard at all", "They are all in the same profession"], "correctIndex": 1, "explanation": "She explains the individuals are rarely uniquely undisciplined; they operate within systems rewarding overextension with no structural recovery." },
-      { "question": "What implicit penalties does Dr. Amelia describe for setting limits?", "options": ["Formal written warnings only", "Being quietly passed over for visibility and watching non-disconnecting colleagues get promoted instead", "Immediate termination", "Public reprimands in meetings"], "correctIndex": 1, "explanation": "She describes subtler penalties like being passed over for visibility while colleagues who never disconnect get promoted." },
-      { "question": "How does Dr. Amelia characterize typical wellness policies?", "options": ["As fully effective solutions", "As frequently functioning as decoration, addressing symptoms while leaving incentive architecture untouched", "As unnecessary entirely", "As more effective than restructuring incentives"], "correctIndex": 1, "explanation": "She describes wellness policies as often decorative, treating symptoms without addressing the underlying incentive structure." },
-      { "question": "What do the rare successful organisations do differently, according to Dr. Amelia?", "options": ["They eliminate all deadlines", "They redesign success metrics to reward sustainable output rather than visible sacrifice", "They require longer working hours", "They avoid measuring performance altogether"], "correctIndex": 1, "explanation": "She says successful organisations redesign how success is measured, rewarding sustainable output over visible sacrifice." }
-    ]
+      {
+        "question": "What counterintuitive argument does Dr. Amelia make about burnout?",
+        "options": [
+          "Burnout isn't primarily a personal failing but an institutional design flaw",
+          "Burnout is purely a medical condition",
+          "Burnout only affects lazy employees",
+          "Burnout is entirely unavoidable"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dr. Amelia argues burnout is primarily an institutional design flaw rather than a personal character deficiency."
+      },
+      {
+        "question": "What does Dr. Amelia say about the individuals she studies?",
+        "options": [
+          "They are uniquely undisciplined compared to others",
+          "They routinely operate within systems that reward overextension without offering recovery mechanisms",
+          "They rarely work hard at all",
+          "They are all in the same profession"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains the individuals are rarely uniquely undisciplined; they operate within systems rewarding overextension with no structural recovery."
+      },
+      {
+        "question": "What implicit penalties does Dr. Amelia describe for setting limits?",
+        "options": [
+          "Formal written warnings only",
+          "Immediate termination",
+          "Being quietly passed over for visibility and watching non-disconnecting colleagues get promoted instead",
+          "Public reprimands in meetings"
+        ],
+        "correctIndex": 2,
+        "explanation": "She describes subtler penalties like being passed over for visibility while colleagues who never disconnect get promoted."
+      },
+      {
+        "question": "How does Dr. Amelia characterize typical wellness policies?",
+        "options": [
+          "As fully effective solutions",
+          "As unnecessary entirely",
+          "As more effective than restructuring incentives",
+          "As frequently functioning as decoration, addressing symptoms while leaving incentive architecture untouched"
+        ],
+        "correctIndex": 3,
+        "explanation": "She describes wellness policies as often decorative, treating symptoms without addressing the underlying incentive structure."
+      },
+      {
+        "question": "What do the rare successful organisations do differently, according to Dr. Amelia?",
+        "options": [
+          "They redesign success metrics to reward sustainable output rather than visible sacrifice",
+          "They eliminate all deadlines",
+          "They require longer working hours",
+          "They avoid measuring performance altogether"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says successful organisations redesign how success is measured, rewarding sustainable output over visible sacrifice."
+      },
+      {
+        "question": "What central claim does “A Radio Segment on Burnout as an Institutional Design Flaw” develop?",
+        "options": [
+          "Automation can change a role without erasing responsibility for workers.",
+          "Burnout can reveal institutional design rather than private weakness.",
+          "Craft can survive automation when judgment remains accountable.",
+          "Promotion can expose limits that require support, not concealment."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “A Radio Segment on Burnout as an Institutional Design Flaw”?",
+        "options": [
+          "The narrator’s redundancy follows a system he helped create.",
+          "Editors distinguish speed from editorial responsibility.",
+          "Patterns of workload and control shape exhaustion.",
+          "Vertigo follows responsibility beyond familiar competence."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which qualification limits the inference in “A Radio Segment on Burnout as an Institutional Design Flaw”?",
+        "options": [
+          "Efficiency gains do not settle questions of fair transition.",
+          "A tool’s output is not evidence of its suitability.",
+          "Confidence is not proof that a decision is sound.",
+          "Individual resilience does not remove organisational responsibility."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “A Radio Segment on Burnout as an Institutional Design Flaw”?",
+        "options": [
+          "The segment calls for process review and safer reporting.",
+          "He reports impacts rather than claiming intent for decision-makers.",
+          "They test claims against readers and consequences.",
+          "The narrator seeks evidence and help before acting."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      },
+      {
+        "question": "What implication follows most clearly from “A Radio Segment on Burnout as an Institutional Design Flaw”?",
+        "options": [
+          "Accountable innovation includes repair for displaced people.",
+          "Sustainable work requires changes beyond motivational advice.",
+          "Human oversight matters when choices shape meaning.",
+          "Accountability includes naming scope and escalation needs."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s evidence, accountability, and proportionate repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-work-08",
+    "title": "The Salary Conversation We Were Afraid to Have",
+    "level": "C2",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] In a small organisation, nobody knew how pay decisions were made. People knew the figures on their own contracts, but not the criteria, review dates, or range for comparable responsibilities.",
+      "Narrator: This secrecy produced rumours. Some staff assumed favouritism; others avoided asking questions because they feared appearing ungrateful. The uncertainty itself became a source of unequal confidence.",
+      "Narrator: A staff group proposed a modest change: publish role bands, explain the review process, and give employees a clear route to ask about discrepancies without exposing anyone’s private salary.",
+      "Narrator: Management worried that transparency would create conflict. In fact, it created more specific conversations. A person could ask why a role had been placed in a band rather than making assumptions about a colleague.",
+      "Narrator: The process also revealed a genuine problem. Two positions with similar responsibility had evolved differently after a restructuring. Correcting that required budget planning, not merely a reassuring statement.",
+      "Narrator: No policy can remove every disappointment. But fairness improves when the reasons for a decision can be examined and when people have a respectful way to challenge an error.",
+      "Narrator: We were careful about privacy. Transparency in criteria is different from broadcasting personal details. Employees should not have to disclose family circumstances, debt, or health information in order to be treated consistently.",
+      "Narrator: The final policy included written criteria, an annual review point, and an appeal conversation with someone outside the immediate reporting line.",
+      "Narrator: Workplace ethics often appears in such unglamorous places. A clear process cannot guarantee that every outcome feels equal, but it can reduce the power of secrecy and make accountability possible.",
+      "Narrator: The conversation did not make compensation simple, but it made an important distinction visible: confidentiality can protect a person, whereas opacity can protect an unexplained decision."
+    ],
+    "quiz": [
+      {
+        "question": "How does the opaque pay system reshape the speaker’s view of the issue?",
+        "options": [
+          "Pay systems need clear criteria because secrecy can create unequal confidence.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that pay systems need understandable criteria and review processes because secrecy can create unequal confidence and rumours."
+      },
+      {
+        "question": "Where does the opaque pay system expose the weakness of a quick assumption?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Staff lack the criteria, review dates, and salary ranges for comparable responsibilities.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that staff lack the criteria, review dates, and salary ranges for comparable responsibilities."
+      },
+      {
+        "question": "What boundary keeps the account of the opaque pay system proportionate?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Transparency can protect privacy while still explaining how decisions are made.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that transparency can protect privacy while still explaining how decisions are made."
+      },
+      {
+        "question": "What practical response does the opaque pay system support?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Publish criteria and review routes without exposing individual contracts unnecessarily."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that publish criteria and review routes without exposing individual contracts unnecessarily."
+      },
+      {
+        "question": "Which temptation is being criticised through the opaque pay system?",
+        "options": [
+          "assuming secrecy is neutral when employees need to question decisions.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that assuming secrecy is neutral when employees need to question decisions"
+      },
+      {
+        "question": "Why does the speaker withhold a simple verdict on the opaque pay system?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Transparency can protect privacy while still explaining how decisions are made.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that transparency can protect privacy while still explaining how decisions are made."
+      },
+      {
+        "question": "What would be obscured by mishandling the opaque pay system?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Pay systems need clear criteria because secrecy can create unequal confidence.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that pay systems need understandable criteria and review processes because secrecy can create unequal confidence and rumours."
+      },
+      {
+        "question": "Which proposal misunderstands the lesson of the opaque pay system?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "assuming secrecy is neutral when employees need to question decisions."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that assuming secrecy is neutral when employees need to question decisions"
+      },
+      {
+        "question": "What must a careful decision-maker do in the opaque pay system?",
+        "options": [
+          "Publish criteria and review routes without exposing individual contracts unnecessarily.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that publish criteria and review routes without exposing individual contracts unnecessarily."
+      },
+      {
+        "question": "What should remain clear after considering the opaque pay system?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Pay systems need clear criteria because secrecy can create unequal confidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that pay systems need understandable criteria and review processes because secrecy can create unequal confidence and rumours."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-work-09",
+    "title": "Postmortem of a Project That Did Not Fail for One Reason",
+    "level": "C2",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] When our service launch missed its target date, the first meeting was full of competing explanations. Design blamed late requirements, engineering blamed unstable data, and management blamed poor estimation.",
+      "Narrator: A useful review began only when we stopped asking who had caused the failure and started mapping the sequence that had made failure more likely.",
+      "Narrator: The map showed several small decisions: a rushed discovery phase, unclear ownership of a key dependency, a risk register no one revisited, and a late change that was approved without testing its impact on support staff.",
+      "Narrator: None of these findings excused missed commitments. They explained why blaming one team would have produced a satisfying but inaccurate story.",
+      "Narrator: We invited the support team to the review because they had heard user confusion before the launch. Their notes showed that a feature described as intuitive relied on knowledge most users did not have.",
+      "Narrator: The action list was deliberately narrow. We added an explicit decision owner, a dependency check before scope changes, a user test at an earlier stage, and a rule that risks without a named response would not be treated as logged and solved.",
+      "Narrator: The review also named what had gone well: colleagues had raised concerns early, and no one had hidden the problem once it became visible. A fair postmortem recognises that candour is an asset, not a career hazard.",
+      "Narrator: We avoided assigning motives. Delay can reveal a process weakness without proving laziness, dishonesty, or indifference in a particular person.",
+      "Narrator: The next launch was not perfect. It was better prepared because the team had turned an uncomfortable experience into specific, shared learning rather than a search for a single culprit."
+    ],
+    "quiz": [
+      {
+        "question": "What larger claim is the account making through the delayed service launch?",
+        "options": [
+          "A useful project review maps contributing conditions instead of blaming one person.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that a useful project review maps contributing conditions rather than reducing a failure to one person or department."
+      },
+      {
+        "question": "Which part of the delayed service launch most complicates the first impression?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The team traces late requirements, unstable data, and poor estimates instead of blaming.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the team moves from competing blame to tracing the sequence of late requirements, unstable data, and poor estimates."
+      },
+      {
+        "question": "Where does the speaker draw a limit in the delayed service launch?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Shared causes do not erase accountability; they make corrective action more accurate.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that shared causes do not erase accountability; they make corrective action more accurate."
+      },
+      {
+        "question": "If this happened again, what would the speaker advise in light of the delayed service launch?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Map decisions, handoffs, and constraints before assigning changes and ownership."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that map decisions, handoffs, and constraints before assigning changes and ownership."
+      },
+      {
+        "question": "What error would repeat the failure described in the delayed service launch?",
+        "options": [
+          "searching for a single culprit instead of the conditions that enabled failure.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that searching for a single culprit instead of the conditions that enabled failure"
+      },
+      {
+        "question": "What complexity in the delayed service launch resists an immediate answer?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Shared causes do not erase accountability; they make corrective action more accurate.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that shared causes do not erase accountability; they make corrective action more accurate."
+      },
+      {
+        "question": "What risk does the speaker identify if the delayed service launch is treated carelessly?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A useful project review maps contributing conditions instead of blaming one person.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a useful project review maps contributing conditions rather than reducing a failure to one person or department."
+      },
+      {
+        "question": "What response would undo the care urged by the delayed service launch?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "searching for a single culprit instead of the conditions that enabled failure."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that searching for a single culprit instead of the conditions that enabled failure"
+      },
+      {
+        "question": "Which discipline of judgement is required by the delayed service launch?",
+        "options": [
+          "Map decisions, handoffs, and constraints before assigning changes and ownership.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that map decisions, handoffs, and constraints before assigning changes and ownership."
+      },
+      {
+        "question": "Which final judgement is most faithful to the delayed service launch?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A useful project review maps contributing conditions instead of blaming one person.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a useful project review maps contributing conditions rather than reducing a failure to one person or department."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-work-10",
+    "title": "When Does Efficiency Become an Excuse?",
+    "level": "C2",
+    "themeId": "work",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] A company wants to automate its first response to customer complaints. The proposal promises speed. What should leaders ask before approving it?",
+      "Analyst: They should ask what kind of complaint is being handled, what harm a delayed or mistaken response might create, and whether the system can recognise cases that require a person quickly.",
+      "Interviewer: Is a fast standard reply always a problem?",
+      "Analyst: No. For simple, low-risk requests it may be helpful. The concern arises when efficiency is used to avoid listening where a customer is reporting a safety issue, financial loss, discrimination, or another serious matter.",
+      "Interviewer: What does accountable design include?",
+      "Analyst: Clear escalation routes, records of how cases are categorised, regular review for error patterns, and a named person who remains responsible for outcomes rather than blaming the tool.",
+      "Interviewer: How should staff be involved?",
+      "Analyst: Frontline staff often know where automated language will confuse or anger people. Excluding them may make a pilot look efficient on paper while transferring hidden work to them later.",
+      "Interviewer: Can customers be told that automation is involved?",
+      "Analyst: They should be told in language they can understand, along with how to reach a human when the matter needs one. Concealing the process undermines trust.",
+      "Interviewer: What is the broader ethical test?",
+      "Analyst: Whether the system saves time without making the least powerful person carry the cost of its mistakes.",
+      "Interviewer: And if the evidence is uncertain?",
+      "Analyst: Pilot carefully, measure real effects, and retain the willingness to stop or revise the system.",
+      "Interviewer: How can leaders test whether a tool is creating hidden work?",
+      "Analyst: Track repeat contacts, escalation time, staff corrections, and the experiences of people whose cases do not fit the standard path. A quick first reply may conceal a slow real resolution.",
+      "Interviewer: What should they do with those findings?",
+      "Analyst: Publish the relevant lessons internally, correct the design, and never call a system efficient merely because its burden has been transferred out of view."
+    ],
+    "quiz": [
+      {
+        "question": "Which governing principle is tested in the automated complaint response?",
+        "options": [
+          "Efficiency cannot justify automation when complaints may need timely human judgement.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that efficiency is not sufficient justification for automation when a complaint may require timely human judgement."
+      },
+      {
+        "question": "What detail from the automated complaint response prevents a simple reading?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "The proposal raises the risk that an automated first response may delay or mishandle cases needing.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that the proposal raises the risk that an automated first response may delay or mishandle cases needing a person."
+      },
+      {
+        "question": "Which qualification matters most when judging the automated complaint response?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Speed can be valuable, but not when it hides serious harm or removes escalation.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that speed can be valuable, but not when it hides serious harm or removes escalation."
+      },
+      {
+        "question": "Which next step best puts the lesson from the automated complaint response into practice?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Define which cases can automate and provide a fast route to human review for the rest."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that define which cases can automate and provide a fast route to human review for the rest."
+      },
+      {
+        "question": "What false move lies beneath the problem in the automated complaint response?",
+        "options": [
+          "measuring efficiency only by the speed of the first reply.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that measuring efficiency only by the speed of the first reply"
+      },
+      {
+        "question": "What makes a one-step answer inadequate for the automated complaint response?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Speed can be valuable, but not when it hides serious harm or removes escalation.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that speed can be valuable, but not when it hides serious harm or removes escalation."
+      },
+      {
+        "question": "If people repeat the criticised approach to the automated complaint response, what is jeopardised?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Efficiency cannot justify automation when complaints may need timely human judgement.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that efficiency is not sufficient justification for automation when a complaint may require timely human judgement."
+      },
+      {
+        "question": "What would the speaker object to after reflecting on the automated complaint response?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "measuring efficiency only by the speed of the first reply."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that measuring efficiency only by the speed of the first reply"
+      },
+      {
+        "question": "What responsibility does the speaker attach to the automated complaint response?",
+        "options": [
+          "Define which cases can automate and provide a fast route to human review for the rest.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that define which cases can automate and provide a fast route to human review for the rest."
+      },
+      {
+        "question": "Which conclusion best honours the concern revealed by the automated complaint response?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Efficiency cannot justify automation when complaints may need timely human judgement.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that efficiency is not sufficient justification for automation when a complaint may require timely human judgement."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "work",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -7,12 +7,20 @@ import {
 
 const indexCache = new Map<string, ListeningIndexItem[] | null>();
 const itemCache = new Map<string, StaticListeningItem | null>();
+const summaryCache = new Map<string, StaticLibrarySummary | null>();
+
+export interface StaticLibrarySummary {
+  themes: Record<string, { total: number; titles: string[] }>;
+}
 
 const buildIndexPath = (level: Level, themeId: string) =>
   `/content/listening/index/${level}/${themeId}.json`;
 
 const buildItemPath = (id: string) =>
   `/content/listening/items/${id}.json`;
+
+const buildSummaryPath = (level: Level) =>
+  `/content/listening/index/${level}/_summary.json`;
 
 const fetchJson = async <T>(path: string): Promise<T | null> => {
   try {
@@ -38,6 +46,13 @@ export const getStaticListeningIndex = async (
   const items = payload?.items || null;
   indexCache.set(cacheKey, items);
   return items;
+};
+
+export const getStaticListeningLibrarySummary = async (level: Level): Promise<StaticLibrarySummary | null> => {
+  if (summaryCache.has(level)) return summaryCache.get(level) || null;
+  const summary = await fetchJson<StaticLibrarySummary>(buildSummaryPath(level));
+  summaryCache.set(level, summary);
+  return summary;
 };
 
 export const getStaticListeningItem = async (

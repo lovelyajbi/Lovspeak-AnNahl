@@ -1046,7 +1046,7 @@ const ProfileModule: React.FC = () => {
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="max-w-5xl mx-auto space-y-5 pb-10">
 
             {/* Header Profile Section - Redesigned for Proportionality */}
-            <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-2xl rounded-3xl lg:rounded-[2.5rem] p-5 md:p-6 lg:p-8 shadow-xl border border-white/40 dark:border-gray-700 relative overflow-hidden">
+            <div data-tour="profile-overview" className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-2xl rounded-3xl lg:rounded-[2.5rem] p-5 md:p-6 lg:p-8 shadow-xl border border-white/40 dark:border-gray-700 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-lovelya-500/5 via-transparent to-purple-500/5 pointer-events-none"></div>
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-7 items-center relative z-10">
@@ -1205,7 +1205,7 @@ const ProfileModule: React.FC = () => {
             </div>
 
             {/* --- WEEKLY AI INSIGHT --- */}
-            <div className="relative overflow-hidden rounded-3xl lg:rounded-[2.5rem] bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 p-5 md:p-6 lg:p-8 group">
+            <div data-tour="profile-insight" className="relative overflow-hidden rounded-3xl lg:rounded-[2.5rem] bg-white dark:bg-gray-800 shadow-lg border border-gray-100 dark:border-gray-700 p-5 md:p-6 lg:p-8 group">
                 <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                     <i className="fas fa-brain text-6xl"></i>
                 </div>
@@ -1237,7 +1237,7 @@ const ProfileModule: React.FC = () => {
 
             {/* --- ANALYTICS SECTION --- */}
             <div className="space-y-6">
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
+                <div data-tour="profile-analytics" className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4">
                     <h3 className="text-2xl font-bold text-gray-800 dark:text-white flex items-center gap-3">
                         <span className="w-10 h-10 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 flex items-center justify-center text-xl">
                             <i className="fas fa-chart-pie"></i>
@@ -1430,7 +1430,7 @@ const ProfileModule: React.FC = () => {
 
             {/* --- BADGES SECTION --- */}
             <div className="space-y-6">
-                <div className="flex justify-between items-center">
+                <div data-tour="profile-achievements" className="flex justify-between items-center">
                     <h3 className="text-2xl font-bold text-gray-800 dark:text-white flex items-center gap-3">
                         <span className="w-10 h-10 rounded-xl bg-lovelya-100 dark:bg-lovelya-900/30 text-lovelya-600 flex items-center justify-center text-xl">
                             <i className="fas fa-award"></i>

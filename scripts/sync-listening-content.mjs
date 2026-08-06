@@ -10,13 +10,21 @@ if (!fs.existsSync(SRC_DIR)) {
   process.exit(0);
 }
 
-const levels = fs.readdirSync(SRC_DIR).filter(d => fs.statSync(path.join(SRC_DIR, d)).isDirectory());
+const requestedLevel = process.argv[2];
+const CEFR_LEVELS = new Set(['A1', 'A2', 'B1', 'B2', 'C1', 'C2']);
+const availableLevels = fs.readdirSync(SRC_DIR)
+  .filter(d => CEFR_LEVELS.has(d) && fs.statSync(path.join(SRC_DIR, d)).isDirectory());
+if (requestedLevel && !availableLevels.includes(requestedLevel)) {
+  throw new Error(`Unknown listening level: ${requestedLevel}`);
+}
+const levels = requestedLevel ? [requestedLevel] : availableLevels;
 
 let total = 0;
 
 for (const level of levels) {
   const levelDir = path.join(SRC_DIR, level);
   const themeFiles = fs.readdirSync(levelDir).filter(f => f.endsWith('.json'));
+  const librarySummary = { themes: {} };
 
   for (const file of themeFiles) {
     const themeId = file.replace('.json', '');
@@ -43,9 +51,12 @@ for (const level of levels) {
 
     fs.mkdirSync(path.join(OUT_INDEX, level), { recursive: true });
     fs.writeFileSync(path.join(OUT_INDEX, level, `${themeId}.json`), JSON.stringify({ items: indexItems }));
+    librarySummary.themes[themeId] = { total: indexItems.length, titles: indexItems.map(item => item.title) };
 
     console.log(`${level}/${themeId}: ${items.length} items synced`);
   }
+
+  fs.writeFileSync(path.join(OUT_INDEX, level, '_summary.json'), JSON.stringify(librarySummary));
 }
 
 console.log(`\nTotal: ${total} listening items synced.`);

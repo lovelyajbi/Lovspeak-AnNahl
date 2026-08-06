@@ -6,32 +6,146 @@
     "themeId": "tauhid",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] For years, I used the word luck without really thinking about it. When something good happened, I said I was lucky. When something bad happened, I said I had bad luck.",
-      "Narrator: [reflective] I never questioned this habit because everyone around me spoke the same way. It felt normal, even harmless.",
-      "Narrator: [honestly] Then, last winter, I almost missed an important flight because my car broke down on the highway.",
-      "Narrator: [with feeling] A stranger stopped, helped me fix the engine in ten minutes, and I reached the airport just before the gate closed.",
-      "Narrator: [thoughtful] My first reaction was to say, wow, I got so lucky today. But something inside me paused before I finished the sentence.",
-      "Narrator: [gently] I realized that stranger did not appear by accident, and my car did not fix itself. Nothing about that morning was random.",
-      "Narrator: [reflective] So I started asking myself a harder question. If I truly believe Allah controls everything, why do I still credit luck first, before I credit Him?",
-      "Narrator: [honestly] It was an uncomfortable question, because it showed me how my words did not match my actual belief.",
-      "Narrator: [determined] So I decided to change my language, slowly and on purpose, even in small daily moments.",
-      "Narrator: [warmly] Now, when a parking space opens up right when I need it, I say alhamdulillah instead of saying I got lucky again.",
-      "Narrator: [gently] When a friend calls exactly when I am struggling, I remind myself that timing like that is planned, not accidental.",
-      "Narrator: [thoughtful] This shift did not happen overnight. Old habits are strong, and sometimes the word luck still slips out before I catch it.",
-      "Narrator: [peacefully] But slowly, my whole view of daily life started changing, because I began noticing Allah's hand in ordinary, unremarkable moments.",
-      "Narrator: [warmly] The stranger on the highway, the friend who calls at the right time, the parking space, none of it is luck anymore in my mind.",
-      "Narrator: [with a small smile] It is all evidence, quiet daily evidence, that someone is paying attention to my life far more closely than I ever imagined."
+      "Narrator: I never questioned this habit because everyone around me spoke the same way. It felt normal, even harmless.",
+      "Narrator: [reflective] Then, last winter, I almost missed an important flight because my car broke down on the highway.",
+      "Narrator: I moved to a safe place and called roadside assistance. A trained worker repaired a minor fault, and I reached the airport before the gate closed.",
+      "Narrator: [carefully] My first reaction was to say, wow, I got so lucky today. But something inside me paused before I finished the sentence.",
+      "Narrator: I remembered that every event occurs within Allah’s decree, while the worker’s skill and my call for help were real causes.",
+      "Narrator: [honestly] So I started asking myself a harder question. If I truly believe Allah controls everything, why do I still credit luck first, before I credit Him?",
+      "Narrator: It was an uncomfortable question, because it showed me how my words did not match my actual belief.",
+      "Narrator: [gently] So I decided to change my language, slowly and on purpose, even in small daily moments.",
+      "Narrator: Now, when a parking space opens up right when I need it, I say alhamdulillah instead of saying I got lucky again.",
+      "Narrator: [warmly] When timely help comes, I thank Allah and the person. I do not claim to know a hidden message behind every coincidence.",
+      "Narrator: This shift did not happen overnight. Old habits are strong, and sometimes the word luck still slips out before I catch it.",
+      "Narrator: [encouraging] Slowly, my view changed. I remembered Allah’s knowledge and decree in ordinary life without pretending I could explain every specific wisdom.",
+      "Narrator: Help on the highway, a friend’s call, and an open space are created events and causes, not an independent power called luck.",
+      "Narrator: [sincere] Allah already knows every detail of my life. That belief leads me to gratitude, careful action, and humility about what I do not know."
     ],
     "quiz": [
-      { "question": "What habit did the narrator have for years?", "options": ["Praying before every trip", "Calling good and bad events luck without thinking", "Avoiding highways", "Writing in a journal daily"], "correctIndex": 1, "explanation": "She says she used the word luck without really thinking about it, for both good and bad events." },
-      { "question": "What happened on the highway last winter?", "options": ["She had a car accident", "Her car broke down and a stranger helped her reach her flight in time", "She lost her phone", "She missed a meeting"], "correctIndex": 1, "explanation": "Her car broke down, a stranger fixed it quickly, and she reached the airport before the gate closed." },
-      { "question": "What question did she start asking herself?", "options": ["Why cars break down so often", "Why she credits luck first instead of Allah, if she truly believes He controls everything", "How to drive better", "Why strangers are unhelpful"], "correctIndex": 1, "explanation": "She asked why she credits luck first, before Allah, if she truly believes He controls everything." },
-      { "question": "What does she now say when a parking space opens up?", "options": ["Nothing different", "Alhamdulillah, instead of saying she got lucky", "She complains about traffic", "She calls it a coincidence"], "correctIndex": 1, "explanation": "She now says alhamdulillah instead of saying she got lucky again." },
-      { "question": "What does the narrator conclude about these small moments now?", "options": ["They are still random luck", "They are quiet evidence that Allah is paying attention to her life", "They mean nothing at all", "They only happen to lucky people"], "correctIndex": 1, "explanation": "She concludes these moments are quiet daily evidence that Allah is paying attention to her life closely." }
-    ]
+      {
+        "question": "What habit did the narrator have for years?",
+        "options": [
+          "Praying before every trip",
+          "Calling good and bad events luck without thinking",
+          "Avoiding highways",
+          "Writing in a journal daily"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she used the word luck without really thinking about it, for both good and bad events."
+      },
+      {
+        "question": "What happened on the highway last winter?",
+        "options": [
+          "She had a car accident",
+          "Her car broke down and a stranger helped her reach her flight in time",
+          "She lost her phone",
+          "She missed a meeting"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her car broke down, a stranger fixed it quickly, and she reached the airport before the gate closed."
+      },
+      {
+        "question": "What question did she start asking herself?",
+        "options": [
+          "Why she credits luck first instead of Allah, if she truly believes He controls everything",
+          "Why cars break down so often",
+          "How to drive better",
+          "Why strangers are unhelpful"
+        ],
+        "correctIndex": 0,
+        "explanation": "She asked why she credits luck first, before Allah, if she truly believes He controls everything."
+      },
+      {
+        "question": "What does she now say when a parking space opens up?",
+        "options": [
+          "Nothing different",
+          "She complains about traffic",
+          "Alhamdulillah, instead of saying she got lucky",
+          "She calls it a coincidence"
+        ],
+        "correctIndex": 2,
+        "explanation": "She now says alhamdulillah instead of saying she got lucky again."
+      },
+      {
+        "question": "What does the narrator conclude about these small moments now?",
+        "options": [
+          "They are still random luck",
+          "They mean nothing at all",
+          "They are quiet evidence that Allah is paying attention to her life",
+          "They only happen to lucky people"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes these moments are quiet daily evidence that Allah is paying attention to her life closely."
+      },
+      {
+        "question": "What language habit does the narrator reconsider?",
+        "options": [
+          "Saying thank you to people",
+          "Checking a car before travel",
+          "Using ordinary probability words",
+          "Calling outcomes good or bad luck as if events were outside Allah’s decree"
+        ],
+        "correctIndex": 3,
+        "explanation": "The concern is independent luck, not normal descriptions of chance."
+      },
+      {
+        "question": "What human cause helped on the highway?",
+        "options": [
+          "The car repaired itself",
+          "A parking attendant stopped the flight",
+          "A friend moved the airport",
+          "A trained roadside worker repaired a minor fault"
+        ],
+        "correctIndex": 3,
+        "explanation": "Allah’s decree includes real created causes."
+      },
+      {
+        "question": "Why does the narrator still thank the worker?",
+        "options": [
+          "The worker controls every outcome",
+          "Payment is unnecessary",
+          "Thanking Allah does not erase gratitude to people",
+          "Human help is only an illusion"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised script keeps both kinds of gratitude in place."
+      },
+      {
+        "question": "What claim does the narrator avoid?",
+        "options": [
+          "That Allah knows every event",
+          "That preparation matters",
+          "That each convenient timing is a special message about personal status",
+          "That outcomes are decreed"
+        ],
+        "correctIndex": 2,
+        "explanation": "We do not decode hidden meaning without evidence."
+      },
+      {
+        "question": "How does belief change preparation?",
+        "options": [
+          "The narrator checks the car and leaves extra time while trusting Allah",
+          "The narrator stops using mechanics",
+          "Every journey becomes guaranteed",
+          "Planning is replaced by a phrase"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reliance includes lawful means."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "revise; affirm Allah’s decree without treating every convenient event as a personally decoded sign",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-tauhid-02",
@@ -40,77 +154,312 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. Today my guest is Amira, who recently spent seven months searching for a new job. Thank you for joining me, Amira.",
-      "Guest: [pleasantly] Thank you for having me. Seven months felt much longer while I was living through it.",
-      "Host: [curious] Can you describe how those months actually felt, especially at the beginning?",
-      "Guest: [thoughtful] At first, I applied everywhere, because I assumed effort alone would guarantee results quickly.",
-      "Host: [sympathetically] That's a common assumption. When did you realize it wasn't working the way you expected?",
-      "Guest: [honestly] After about six weeks of silence and rejection emails, I started to feel genuinely afraid about my future.",
-      "Host: [understanding] What did you do with that fear, since it clearly didn't disappear on its own?",
-      "Guest: [reflective] I talked to my imam, who reminded me that tawakkul means working hard and trusting Allah's plan at the same time, not choosing one instead of the other.",
-      "Host: [interested] That sounds simple, but I imagine it's hard to practice when bills are waiting.",
-      "Guest: [gently] Exactly. Because although I understood the idea, applying it daily required real discipline, especially on the hardest weeks.",
-      "Host: [curious] So what changed in your daily routine after that conversation?",
-      "Guest: [warmly] I kept applying every single day, but I stopped checking my email obsessively, and I prayed istikhara before big interviews.",
-      "Host: [curious] Did the anxiety fully disappear once you made that change?",
-      "Guest: [honestly] Not completely, but it became quieter, because I felt like I was no longer carrying the whole outcome alone.",
-      "Host: [interested] When did the right opportunity finally arrive?",
-      "Guest: [smiling] In month seven, a smaller company offered me a role I hadn't even expected to enjoy, and now I love it more than my old job.",
-      "Host: [thoughtful] Looking back, what would you tell someone who is currently in month two or three of a search like yours?",
-      "Guest: [encouraging] I would say keep working seriously, but stop treating silence as proof that Allah has forgotten you, because He hasn't.",
-      "Host: [smiling] That's powerful advice, Amira. Thank you for being so honest with us today.",
-      "Guest: [warmly] Thank you for listening. I hope someone struggling right now hears this at the right moment."
+      "Host: [thoughtful] Welcome back to the show. Today my guest is Amira, who recently spent seven months searching for a new job. Thank you for joining me, Amira.",
+      "Guest: Thank you for having me. Seven months felt much longer while I was living through it.",
+      "Host: [reflective] Can you describe how those months actually felt, especially at the beginning?",
+      "Guest: At first, I applied everywhere, because I assumed effort alone would guarantee results quickly.",
+      "Host: [carefully] That's a common assumption. When did you realize it wasn't working the way you expected?",
+      "Guest: After about six weeks of silence and rejection emails, I started to feel genuinely afraid about my future.",
+      "Host: [honestly] What did you do with that fear, since it clearly didn't disappear on its own?",
+      "Guest: I talked to my imam, who reminded me that tawakkul means working hard and trusting Allah's plan at the same time, not choosing one instead of the other.",
+      "Host: [gently] That sounds simple, but I imagine it's hard to practice when bills are waiting.",
+      "Guest: Exactly. Because although I understood the idea, applying it daily required real discipline, especially on the hardest weeks.",
+      "Host: [warmly] So what changed in your daily routine after that conversation?",
+      "Guest: I made targeted applications, requested feedback, checked email at set times, and made a short budget plan. I used istikharah when facing an actual choice, not to predict an interview result.",
+      "Host: [encouraging] Did the anxiety fully disappear once you made that change?",
+      "Guest: Not completely, but it became quieter, because I felt like I was no longer carrying the whole outcome alone.",
+      "Host: [sincere] When did the right opportunity finally arrive?",
+      "Guest: In month seven, a smaller company offered a suitable role. I accepted after checking the duties and terms, and I am grateful that the work is going well.",
+      "Host: Looking back, what would you tell someone who is currently in month two or three of a search like yours?",
+      "Guest: Keep working, seek advice and lawful support, and do not treat silence as proof that Allah has forgotten you. A delay is difficult, but it does not reveal the unseen.",
+      "Host: That's powerful advice, Amira. Thank you for being so honest with us today.",
+      "Guest: Thank you for listening. I hope someone struggling right now hears this at the right moment."
     ],
     "quiz": [
-      { "question": "How long did Amira's job search last?", "options": ["Two weeks", "Seven months", "One year", "Three days"], "correctIndex": 1, "explanation": "The host mentions Amira spent seven months searching for a new job." },
-      { "question": "What did Amira assume at the beginning of her search?", "options": ["That she would never find a job", "That effort alone would guarantee quick results", "That she should stop applying", "That prayer was unnecessary"], "correctIndex": 1, "explanation": "She assumed effort alone would guarantee results quickly." },
-      { "question": "What did her imam remind her about tawakkul?", "options": ["It means only praying, not working", "It means working hard and trusting Allah's plan at the same time", "It means giving up all effort", "It has nothing to do with daily life"], "correctIndex": 1, "explanation": "Her imam reminded her tawakkul means working hard and trusting Allah's plan at the same time." },
-      { "question": "What did Amira start doing before big interviews?", "options": ["Nothing new", "Praying istikhara", "Skipping meals", "Calling every relative"], "correctIndex": 1, "explanation": "She started praying istikhara before big interviews." },
-      { "question": "What is Amira's advice to someone early in a similar search?", "options": ["Stop applying immediately", "Keep working seriously, and don't treat silence as proof Allah forgot them", "Only trust luck", "Give up after one rejection"], "correctIndex": 1, "explanation": "She advises keeping serious effort while not treating silence as proof Allah has forgotten them." }
-    ]
+      {
+        "question": "How long did Amira's job search last?",
+        "options": [
+          "Two weeks",
+          "Seven months",
+          "One year",
+          "Three days"
+        ],
+        "correctIndex": 1,
+        "explanation": "The host mentions Amira spent seven months searching for a new job."
+      },
+      {
+        "question": "What did Amira assume at the beginning of her search?",
+        "options": [
+          "That she would never find a job",
+          "That she should stop applying",
+          "That effort alone would guarantee quick results",
+          "That prayer was unnecessary"
+        ],
+        "correctIndex": 2,
+        "explanation": "She assumed effort alone would guarantee results quickly."
+      },
+      {
+        "question": "What did her imam remind her about tawakkul?",
+        "options": [
+          "It means working hard and trusting Allah's plan at the same time",
+          "It means only praying, not working",
+          "It means giving up all effort",
+          "It has nothing to do with daily life"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her imam reminded her tawakkul means working hard and trusting Allah's plan at the same time."
+      },
+      {
+        "question": "What did Amira start doing before big interviews?",
+        "options": [
+          "Nothing new",
+          "Skipping meals",
+          "Calling every relative",
+          "Praying istikhara"
+        ],
+        "correctIndex": 3,
+        "explanation": "She started praying istikhara before big interviews."
+      },
+      {
+        "question": "What is Amira's advice to someone early in a similar search?",
+        "options": [
+          "Keep working seriously, and don't treat silence as proof Allah forgot them",
+          "Stop applying immediately",
+          "Only trust luck",
+          "Give up after one rejection"
+        ],
+        "correctIndex": 0,
+        "explanation": "She advises keeping serious effort while not treating silence as proof Allah has forgotten them."
+      },
+      {
+        "question": "What mistaken belief does Amira have first?",
+        "options": [
+          "Job searching needs no action",
+          "Every rejection is final",
+          "Only large companies hire",
+          "Effort should guarantee a quick result"
+        ],
+        "correctIndex": 3,
+        "explanation": "She confuses using means with controlling outcomes."
+      },
+      {
+        "question": "What does tawakkul combine?",
+        "options": [
+          "Waiting without applying",
+          "Anxiety with constant email checks",
+          "One interview with a guarantee",
+          "Serious lawful effort with reliance upon Allah"
+        ],
+        "correctIndex": 3,
+        "explanation": "The two parts are not alternatives."
+      },
+      {
+        "question": "What practical change improves the search?",
+        "options": [
+          "Sending the same application everywhere",
+          "Ignoring bills",
+          "Waiting for a dream",
+          "Targeted applications, feedback, a budget plan, and limited email checks"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her routine becomes more sustainable and informed."
+      },
+      {
+        "question": "What is istikharah not used for?",
+        "options": [
+          "Seeking guidance in a real choice",
+          "Predicting whether an interview must lead to an offer",
+          "Worshiping Allah",
+          "Continuing normal research"
+        ],
+        "correctIndex": 1,
+        "explanation": "It is not fortune-telling or an outcome guarantee."
+      },
+      {
+        "question": "Why is the accepted role not called “the right opportunity” with certainty?",
+        "options": [
+          "The company is too small",
+          "Enjoyment is forbidden",
+          "She can be grateful without claiming full knowledge of Allah’s hidden wisdom",
+          "All jobs are equal"
+        ],
+        "correctIndex": 2,
+        "explanation": "A good present result does not reveal the unseen."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "revise; keep tawakkul practical through targeted applications, financial planning, consultation, and acceptance of uncertain outcomes",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-tauhid-03",
-    "title": "Two Coworkers Talk About a Canceled Promotion",
+    "title": "After the Promotion Decision",
     "level": "A2",
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Hana", "gender": "female" },
-      { "name": "Bram", "gender": "male" }
+      {
+        "name": "Hana",
+        "gender": "female"
+      },
+      {
+        "name": "Bram",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Hana: [frustrated] Bram, did you hear? They gave the promotion to someone else, even though I worked toward it for two full years.",
-      "Bram: [sympathetically] I heard this morning. I'm really sorry, Hana. I know how much you wanted that role.",
-      "Hana: [upset] I keep asking myself what I did wrong, although my manager said my performance wasn't the problem at all.",
-      "Bram: [gently] Maybe it genuinely wasn't about your performance. Sometimes decisions like this depend on things we can't see or control.",
-      "Hana: [sighing] I know I'm supposed to say Allah has a better plan, but honestly, right now, that feels difficult to believe.",
-      "Bram: [understanding] That's a fair feeling. Nobody expects you to feel peaceful the same day you're disappointed.",
-      "Hana: [thoughtful] Can I tell you something? Two years ago, I was upset when I didn't get transferred to another department.",
-      "Bram: [curious] What happened after that disappointment?",
-      "Hana: [reflective] Six months later, that department had major layoffs, and I would have lost my job completely if I had transferred.",
-      "Bram: [warmly] So the thing that felt unfair back then actually protected you, even though you couldn't see it at the time.",
-      "Hana: [quietly] Exactly. And now I'm wondering if this promotion delay might be protecting me from something too, although I can't imagine what yet.",
-      "Bram: [encouraging] Maybe it will become clear later, or maybe you'll never fully understand it, and that's okay too.",
-      "Hana: [thoughtful] I think what bothers me most is feeling like I wasted two years of extra effort for nothing.",
-      "Bram: [gently] I don't think effort done sincerely is ever wasted, even when the outcome looks different than we hoped.",
-      "Hana: [softly] That's a kind way to look at it. I needed to hear that today, honestly.",
-      "Bram: [warmly] You're allowed to be disappointed and still trust that Allah knows something you don't right now.",
-      "Hana: [with a small smile] Thank you, Bram. I think I needed both things today, the sympathy and the reminder.",
-      "Bram: [kindly] That's what coworkers are for. Coffee later, my treat?",
-      "Hana: [smiling] Yes, please. I definitely need it after this news."
+      "Hana: [frustrated] Bram, the promotion went to someone else. I prepared for two years, so I feel deeply disappointed.",
+      "Bram: I am sorry, Hana. You do not need to pretend the news is easy.",
+      "Hana: [honestly] My manager said performance was not the main problem, but that answer is too general to help me improve.",
+      "Bram: Could you request specific feedback and the selection criteria?",
+      "Hana: Yes. I also want to understand whether my experience matched the role’s actual duties.",
+      "Bram: [carefully] Ask about your own application, but avoid requesting private information about the selected person.",
+      "Hana: Two years ago, I missed a transfer. That department later had layoffs, and sometimes I call the rejection protection.",
+      "Bram: It may have benefited you, but we cannot state Allah’s exact reason with certainty. We only know the later event.",
+      "Hana: [reflective] Then what does trust look like when I do not understand this decision?",
+      "Bram: You can believe Allah is wise, feel disappointed, and still examine the workplace process fairly.",
+      "Hana: I worried that asking questions would show weak acceptance.",
+      "Bram: [gently] Respectful questions are a lawful means. If the process seems unfair, use the official review channel with evidence, not rumors.",
+      "Hana: I can request a meeting, write down the feedback, and ask for a realistic development plan.",
+      "Bram: Good. You can also decide later whether another role or employer fits your goals better.",
+      "Hana: [thoughtful] I cannot control the outcome, but I can choose an honest next action.",
+      "Bram: Exactly. Tawakkul does not mean calling every rejection good or refusing to address possible unfairness.",
+      "Hana: I will congratulate the selected colleague without making her responsible for my disappointment.",
+      "Bram: [warmly] That protects dignity. Then give yourself time, pray, and make the next decision with clear information.",
+      "Hana: Thank you. Sympathy, practical steps, and a reminder of Allah’s wisdom are more helpful than a quick slogan.",
+      "Bram: [sincere] I am here if you want me to review your questions before the meeting."
     ],
     "quiz": [
-      { "question": "What happened to Hana at work?", "options": ["She was promoted", "She was passed over for a promotion she worked toward for two years", "She quit her job", "She was transferred"], "correctIndex": 1, "explanation": "Hana learns someone else got the promotion despite her working toward it for two years." },
-      { "question": "What did Hana's manager say about her performance?", "options": ["It was the main problem", "It wasn't the problem at all", "It was never discussed", "It was excellent but irrelevant"], "correctIndex": 1, "explanation": "Her manager told her that her performance wasn't the problem at all." },
-      { "question": "What story does Hana share about two years earlier?", "options": ["She got fired", "She was upset about not getting transferred, but that department later had layoffs", "She won an award", "She moved to another city"], "correctIndex": 1, "explanation": "She recalls being upset about a missed transfer, and that department had major layoffs six months later." },
-      { "question": "What does Bram say about effort done sincerely?", "options": ["It is always wasted if the outcome is different", "It is never wasted, even when the outcome looks different than hoped", "It only matters if you get promoted", "It should be avoided"], "correctIndex": 1, "explanation": "Bram says effort done sincerely is never wasted, even when the outcome looks different." },
-      { "question": "What does Bram remind Hana she is allowed to feel?", "options": ["Only happiness", "Disappointed while still trusting Allah knows something she doesn't", "Nothing at all", "Anger only"], "correctIndex": 1, "explanation": "Bram tells her she's allowed to be disappointed and still trust Allah knows something she doesn't." }
-    ]
+      {
+        "question": "What explanation does Hana find too general?",
+        "options": [
+          "That performance was not the main problem",
+          "That the role was canceled",
+          "That she lacked two years of work",
+          "That Bram chose the candidate"
+        ],
+        "correctIndex": 0,
+        "explanation": "She needs actionable feedback."
+      },
+      {
+        "question": "What private information should Hana not request?",
+        "options": [
+          "Her own selection score",
+          "Details about the selected employee",
+          "The role duties",
+          "Her development options"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fair review still protects another worker."
+      },
+      {
+        "question": "What official option remains if the process seems unfair?",
+        "options": [
+          "A rumor campaign",
+          "A private threat",
+          "A workplace review or appeal channel",
+          "Deleting her records"
+        ],
+        "correctIndex": 2,
+        "explanation": "Evidence can be raised properly."
+      },
+      {
+        "question": "How will Hana treat the selected colleague?",
+        "options": [
+          "Ask her to refuse the role",
+          "Share her private details",
+          "Avoid her permanently",
+          "Congratulate her without blaming her"
+        ],
+        "correctIndex": 3,
+        "explanation": "The colleague is not made responsible for the decision."
+      },
+      {
+        "question": "What can Bram help review?",
+        "options": [
+          "The other employee’s contract",
+          "A resignation letter he wrote",
+          "Hana’s questions before the manager meeting",
+          "The company’s private salaries"
+        ],
+        "correctIndex": 2,
+        "explanation": "His support remains appropriate and practical."
+      },
+      {
+        "question": "What happened to Hana?",
+        "options": [
+          "Another person received the promotion she had prepared for",
+          "Her entire department closed",
+          "She resigned before the decision",
+          "Her manager reduced her salary"
+        ],
+        "correctIndex": 0,
+        "explanation": "The disappointment concerns one role."
+      },
+      {
+        "question": "What may Hana ask her manager for?",
+        "options": [
+          "Specific feedback, selection criteria, and a development plan",
+          "Private information about the chosen worker",
+          "A promise of the next promotion",
+          "A religious explanation of the result"
+        ],
+        "correctIndex": 0,
+        "explanation": "A fair review uses relevant workplace evidence."
+      },
+      {
+        "question": "Why does Bram avoid calling the rejection “protection”?",
+        "options": [
+          "They do not know Allah’s specific hidden wisdom",
+          "No rejection can ever help",
+          "Hana did not work hard",
+          "Layoffs are impossible"
+        ],
+        "correctIndex": 0,
+        "explanation": "Trust does not authorize claims about the unseen."
+      },
+      {
+        "question": "What can Hana do if the process seems unfair?",
+        "options": [
+          "Spread rumors about the colleague",
+          "Use the company’s respectful review or appeal channel",
+          "Delete her work records",
+          "Confront the successful candidate"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accountability remains possible alongside acceptance."
+      },
+      {
+        "question": "What two responses can exist together?",
+        "options": [
+          "Anger and public accusation",
+          "Certainty about hidden wisdom and no action",
+          "Silence and guaranteed promotion",
+          "Real disappointment and trust in Allah"
+        ],
+        "correctIndex": 3,
+        "explanation": "Faith does not require denying emotion or evidence."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "replace; remove the false claim that an earlier rejection definitely protected Hana and combine faith with a fair workplace review",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-tauhid-04",
@@ -119,32 +468,146 @@
     "themeId": "tauhid",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [tired but calm] It's day forty of recovering from my injury, and I'm recording this voice memo because writing still hurts my wrist too much.",
-      "Narrator: [reflective] When the accident happened, I honestly thought my whole life had stopped, because I couldn't work, cook, or even drive myself anywhere.",
-      "Narrator: [honestly] For the first two weeks, I was angry more than anything else. I kept asking why this happened to me specifically.",
-      "Narrator: [thoughtful] Nobody around me had a satisfying answer, and eventually I stopped expecting one, because some questions simply don't get clean answers.",
-      "Narrator: [gently] Instead, I started noticing small things I had never appreciated before this happened to me.",
-      "Narrator: [warmly] My neighbor started bringing dinner twice a week, without me ever asking her for help directly.",
-      "Narrator: [softly] My brother, who I hadn't spoken to properly in months, started calling every single evening just to check on me.",
-      "Narrator: [reflective] I realized that although the accident took away my independence temporarily, it gave me something I had been missing for years, real connection with people.",
-      "Narrator: [thoughtful] I used to believe that asking Allah for patience meant asking to feel nothing difficult at all.",
-      "Narrator: [gently] Now I understand patience differently. It means still feeling the difficulty fully, while choosing not to lose hope inside it.",
-      "Narrator: [with feeling] Some mornings I still cry from frustration, because healing is slower than I want it to be, and that's simply the truth.",
-      "Narrator: [peacefully] But other mornings, I feel strangely grateful, because this slow season taught me things a busy, healthy life never could have taught me.",
-      "Narrator: [warmly] My doctor says I should be walking normally again within two more months, if I keep doing the exercises carefully.",
-      "Narrator: [determined] So I'll keep doing them, one difficult day at a time, trusting that this whole process has a purpose I can't fully see yet.",
-      "Narrator: [with a small smile] Recording this memo, I actually feel more at peace than I expected to feel today. That surprises me, honestly."
+      "Narrator: [thoughtful] It's day forty of recovering from my injury, and I'm recording this voice memo because writing still hurts my wrist too much.",
+      "Narrator: When the accident happened, I honestly thought my whole life had stopped, because I couldn't work, cook, or even drive myself anywhere.",
+      "Narrator: [reflective] For the first two weeks, I was angry more than anything else. I kept asking why this happened to me specifically.",
+      "Narrator: Nobody around me had a satisfying answer, and eventually I stopped expecting one, because some questions simply don't get clean answers.",
+      "Narrator: [carefully] Instead, I started noticing small things I had never appreciated before this happened to me.",
+      "Narrator: My neighbor started bringing dinner twice a week, without me ever asking her for help directly.",
+      "Narrator: [honestly] My brother, who I hadn't spoken to properly in months, started calling every single evening just to check on me.",
+      "Narrator: I realized that although the accident took away my independence temporarily, it gave me something I had been missing for years, real connection with people.",
+      "Narrator: [gently] I used to believe that asking Allah for patience meant asking to feel nothing difficult at all.",
+      "Narrator: Now I understand patience differently. It means still feeling the difficulty fully, while choosing not to lose hope inside it.",
+      "Narrator: [warmly] Some mornings I still cry from frustration, because healing is slower than I want it to be, and that's simply the truth.",
+      "Narrator: But other mornings, I feel strangely grateful, because this slow season taught me things a busy, healthy life never could have taught me.",
+      "Narrator: [encouraging] My doctor says I should be walking normally again within two more months, if I keep doing the exercises carefully.",
+      "Narrator: So I'll keep doing them, one difficult day at a time, trusting that this whole process has a purpose I can't fully see yet.",
+      "Narrator: [sincere] Recording this memo, I actually feel more at peace than I expected to feel today. That surprises me, honestly."
     ],
     "quiz": [
-      { "question": "Why is the narrator recording a voice memo instead of writing?", "options": ["He prefers speaking", "Writing still hurts his injured wrist too much", "He lost his notebook", "He doesn't know how to write"], "correctIndex": 1, "explanation": "He explains writing still hurts his wrist too much, so he records a voice memo instead." },
-      { "question": "How did the narrator feel during the first two weeks after the accident?", "options": ["Calm and accepting", "Angry, asking why this happened to him specifically", "Happy and relieved", "Completely indifferent"], "correctIndex": 1, "explanation": "He says he was angry more than anything and kept asking why it happened to him." },
-      { "question": "What did his neighbor start doing without being asked?", "options": ["Cleaning his house", "Bringing dinner twice a week", "Driving him to work", "Paying his bills"], "correctIndex": 1, "explanation": "His neighbor started bringing dinner twice a week without him asking directly." },
-      { "question": "How does the narrator now understand patience?", "options": ["Feeling nothing difficult at all", "Still feeling difficulty fully while choosing not to lose hope", "Ignoring problems completely", "Only smiling through pain"], "correctIndex": 1, "explanation": "He now understands patience as feeling difficulty fully while choosing not to lose hope inside it." },
-      { "question": "What does the doctor say about his recovery timeline?", "options": ["He will never walk normally again", "He should walk normally again within two more months with careful exercise", "He is already fully recovered", "There is no timeline given"], "correctIndex": 1, "explanation": "The doctor says he should be walking normally again within two more months if he keeps doing the exercises." }
-    ]
+      {
+        "question": "Why is the narrator recording a voice memo instead of writing?",
+        "options": [
+          "Writing still hurts his injured wrist too much",
+          "He prefers speaking",
+          "He lost his notebook",
+          "He doesn't know how to write"
+        ],
+        "correctIndex": 0,
+        "explanation": "He explains writing still hurts his wrist too much, so he records a voice memo instead."
+      },
+      {
+        "question": "How did the narrator feel during the first two weeks after the accident?",
+        "options": [
+          "Calm and accepting",
+          "Angry, asking why this happened to him specifically",
+          "Happy and relieved",
+          "Completely indifferent"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says he was angry more than anything and kept asking why it happened to him."
+      },
+      {
+        "question": "What did his neighbor start doing without being asked?",
+        "options": [
+          "Cleaning his house",
+          "Bringing dinner twice a week",
+          "Driving him to work",
+          "Paying his bills"
+        ],
+        "correctIndex": 1,
+        "explanation": "His neighbor started bringing dinner twice a week without him asking directly."
+      },
+      {
+        "question": "How does the narrator now understand patience?",
+        "options": [
+          "Feeling nothing difficult at all",
+          "Ignoring problems completely",
+          "Only smiling through pain",
+          "Still feeling difficulty fully while choosing not to lose hope"
+        ],
+        "correctIndex": 3,
+        "explanation": "He now understands patience as feeling difficulty fully while choosing not to lose hope inside it."
+      },
+      {
+        "question": "What does the doctor say about his recovery timeline?",
+        "options": [
+          "He will never walk normally again",
+          "He should walk normally again within two more months with careful exercise",
+          "He is already fully recovered",
+          "There is no timeline given"
+        ],
+        "correctIndex": 1,
+        "explanation": "The doctor says he should be walking normally again within two more months if he keeps doing the exercises."
+      },
+      {
+        "question": "Why does the narrator record audio?",
+        "options": [
+          "The doctor forbids all writing forever",
+          "The phone has no keyboard",
+          "Writing still causes wrist pain",
+          "A neighbor requests a podcast"
+        ],
+        "correctIndex": 2,
+        "explanation": "The medium adapts to a temporary limitation."
+      },
+      {
+        "question": "How has the narrator’s view of patience changed?",
+        "options": [
+          "Patience guarantees quick healing",
+          "Crying cancels trust",
+          "Recovery needs no effort",
+          "Patience includes pain and hope rather than emotional numbness"
+        ],
+        "correctIndex": 3,
+        "explanation": "Difficult feelings can exist with faithful endurance."
+      },
+      {
+        "question": "What benefit does the narrator notice?",
+        "options": [
+          "Renewed connection with a neighbor and brother",
+          "A guaranteed explanation for the accident",
+          "Permanent independence",
+          "An end to all frustration"
+        ],
+        "correctIndex": 0,
+        "explanation": "A real benefit is noticed without explaining every decree."
+      },
+      {
+        "question": "How does the doctor qualify the timeline?",
+        "options": [
+          "Recovery is guaranteed tomorrow",
+          "Exercises are optional",
+          "Normal walking is expected if exercises continue, but it remains a medical estimate",
+          "Pain proves healing is complete"
+        ],
+        "correctIndex": 2,
+        "explanation": "The condition and professional context matter."
+      },
+      {
+        "question": "What action supports tawakkul?",
+        "options": [
+          "Stopping care to show trust",
+          "Continuing prescribed exercises one day at a time",
+          "Ignoring new symptoms",
+          "Demanding a reason from friends"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hope is joined to appropriate treatment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "keep; balanced recovery narrative allows grief, follows medical rehabilitation, and expresses hope without promising a hidden purpose",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-tauhid-05",
@@ -153,36 +616,153 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Uncle Hadi", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Uncle Hadi",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [anxious] Uncle Hadi, I can't sleep. My final exam is tomorrow morning, and I still feel completely unprepared.",
-      "Uncle Hadi: [calmly] Tell me honestly, how many hours did you actually study this week?",
-      "Nadia: [tired] Probably thirty hours, maybe more, because I barely left my room since Monday.",
-      "Uncle Hadi: [warmly] That sounds like real effort, Nadia, not laziness. So why does it still feel unprepared to you?",
-      "Nadia: [worried] Because there's always more material than time, and I keep imagining every possible way it could go wrong tomorrow.",
-      "Uncle Hadi: [gently] I understand that fear, although imagining failure repeatedly won't actually make you more prepared.",
-      "Nadia: [quietly] I know that logically, but my mind keeps doing it anyway, especially late at night like this.",
-      "Uncle Hadi: [thoughtful] Can I share something your late grandfather used to tell me before difficult moments?",
-      "Nadia: [curious] Please, I need something right now besides my own worried thoughts.",
-      "Uncle Hadi: [warmly] He always said, do everything within your power, then hand the outcome to Allah completely, because worrying changes nothing except your sleep.",
-      "Nadia: [softly] That's easier to say than to actually do, especially the night before something this important.",
-      "Uncle Hadi: [gently] You're right, it takes practice. But you've already done the hard part, thirty hours of real studying since Monday.",
-      "Nadia: [thoughtful] I suppose worrying more tonight won't add any new knowledge to what I already learned this week.",
-      "Uncle Hadi: [encouraging] Exactly. So pray, ask Allah for calm and clarity tomorrow, and then let your body finally rest.",
-      "Nadia: [determined] Okay. I'll pray, and I'll try to stop reviewing my notes at midnight like I planned to.",
-      "Uncle Hadi: [warmly] Good decision. Whatever happens tomorrow, you'll know you truly tried, and that matters more than any single grade.",
-      "Nadia: [relieved] Thank you, Uncle. I already feel a little calmer just from talking this through with you.",
-      "Uncle Hadi: [with love] That's what family is for, Nadia. Now go rest. I'll be thinking of you tomorrow morning."
+      "Nadia: [thoughtful] Uncle Hadi, I can't sleep. My final exam is tomorrow morning, and I still feel completely unprepared.",
+      "Uncle Hadi: Tell me honestly, how many hours did you actually study this week?",
+      "Nadia: [reflective] About thirty hours since Monday, but I skipped breaks and stayed in my room too much. I do not think that was a healthy plan.",
+      "Uncle Hadi: That is serious effort, but sleep, food, movement, and focused breaks also support learning. What still feels unclear?",
+      "Nadia: [carefully] Because there's always more material than time, and I keep imagining every possible way it could go wrong tomorrow.",
+      "Uncle Hadi: I understand that fear, although imagining failure repeatedly won't actually make you more prepared.",
+      "Nadia: [honestly] I know that logically, but my mind keeps doing it anyway, especially late at night like this.",
+      "Uncle Hadi: Can I share something your late grandfather used to tell me before difficult moments?",
+      "Nadia: [gently] Please, I need something right now besides my own worried thoughts.",
+      "Uncle Hadi: He always said, do everything within your power, then hand the outcome to Allah completely, because worrying changes nothing except your sleep.",
+      "Nadia: [warmly] That's easier to say than to actually do, especially the night before something this important.",
+      "Uncle Hadi: You're right, it takes practice. You have studied. Tonight, prepare your identification and materials, stop reviewing, and let sleep support what you learned.",
+      "Nadia: [encouraging] I suppose worrying more tonight won't add any new knowledge to what I already learned this week.",
+      "Uncle Hadi: Exactly. So pray, ask Allah for calm and clarity tomorrow, and then let your body finally rest.",
+      "Nadia: [sincere] Okay. I'll pray, and I'll try to stop reviewing my notes at midnight like I planned to.",
+      "Uncle Hadi: Good decision. One grade measures one assessment, not your complete worth. Afterward, review the result and seek academic help where needed.",
+      "Nadia: Thank you, Uncle. I already feel a little calmer just from talking this through with you.",
+      "Uncle Hadi: Now rest. If this level of panic or sleeplessness keeps returning, speak with a qualified counselor or health professional as well as people you trust."
     ],
     "quiz": [
-      { "question": "Why is Nadia calling her uncle?", "options": ["To ask for money", "Because she can't sleep before her final exam tomorrow", "To cancel a trip", "To share good news"], "correctIndex": 1, "explanation": "Nadia calls because she can't sleep and feels unprepared for her exam the next morning." },
-      { "question": "How many hours did Nadia study that week?", "options": ["Five hours", "About thirty hours", "One hundred hours", "She didn't study at all"], "correctIndex": 1, "explanation": "Nadia says she probably studied about thirty hours, maybe more, since Monday." },
-      { "question": "What did Nadia's late grandfather used to say?", "options": ["Never study, just trust Allah", "Do everything within your power, then hand the outcome to Allah", "Worrying helps you prepare better", "Sleep is unimportant before exams"], "correctIndex": 1, "explanation": "Uncle Hadi recalls the grandfather saying to do everything within your power, then hand the outcome to Allah." },
-      { "question": "What does Uncle Hadi say worrying changes?", "options": ["Her exam score directly", "Nothing except her sleep", "The exam questions", "Her uncle's opinion of her"], "correctIndex": 1, "explanation": "He says worrying changes nothing except her sleep." },
-      { "question": "What does Nadia decide to do instead of reviewing notes at midnight?", "options": ["Study even harder", "Pray and try to rest", "Call more relatives", "Watch a movie"], "correctIndex": 1, "explanation": "She decides to pray and stop reviewing her notes at midnight so she can rest." }
-    ]
+      {
+        "question": "Why is Nadia calling her uncle?",
+        "options": [
+          "Because she can't sleep before her final exam tomorrow",
+          "To ask for money",
+          "To cancel a trip",
+          "To share good news"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nadia calls because she can't sleep and feels unprepared for her exam the next morning."
+      },
+      {
+        "question": "How many hours did Nadia study that week?",
+        "options": [
+          "Five hours",
+          "One hundred hours",
+          "About thirty hours",
+          "She didn't study at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nadia says she probably studied about thirty hours, maybe more, since Monday."
+      },
+      {
+        "question": "What did Nadia's late grandfather used to say?",
+        "options": [
+          "Never study, just trust Allah",
+          "Do everything within your power, then hand the outcome to Allah",
+          "Worrying helps you prepare better",
+          "Sleep is unimportant before exams"
+        ],
+        "correctIndex": 1,
+        "explanation": "Uncle Hadi recalls the grandfather saying to do everything within your power, then hand the outcome to Allah."
+      },
+      {
+        "question": "What does Uncle Hadi say worrying changes?",
+        "options": [
+          "Her exam score directly",
+          "The exam questions",
+          "Nothing except her sleep",
+          "Her uncle's opinion of her"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says worrying changes nothing except her sleep."
+      },
+      {
+        "question": "What does Nadia decide to do instead of reviewing notes at midnight?",
+        "options": [
+          "Study even harder",
+          "Pray and try to rest",
+          "Call more relatives",
+          "Watch a movie"
+        ],
+        "correctIndex": 1,
+        "explanation": "She decides to pray and stop reviewing her notes at midnight so she can rest."
+      },
+      {
+        "question": "What shows Nadia may have studied unsustainably?",
+        "options": [
+          "She reviewed one chapter",
+          "She called a family member",
+          "She plans to sleep",
+          "She barely left her room while studying thirty hours since Monday"
+        ],
+        "correctIndex": 3,
+        "explanation": "Large effort does not automatically mean healthy preparation."
+      },
+      {
+        "question": "What should she do tonight?",
+        "options": [
+          "Study until the exam begins",
+          "Drink more caffeine",
+          "Stop late review, prepare essentials, pray, and sleep",
+          "Predict every question"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rest now supports recall and wellbeing."
+      },
+      {
+        "question": "What does handing the outcome to Allah not mean?",
+        "options": [
+          "Ignoring planning, health, or available academic help",
+          "Making dua",
+          "Accepting limited control",
+          "Ending repeated worry"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tawakkul follows reasonable preparation."
+      },
+      {
+        "question": "When should Nadia seek more support?",
+        "options": [
+          "Only after failing every class",
+          "Whenever one topic is difficult",
+          "If panic or sleeplessness keeps recurring or becomes hard to manage",
+          "Never, because worry is normal"
+        ],
+        "correctIndex": 2,
+        "explanation": "Persistent distress deserves appropriate help."
+      },
+      {
+        "question": "What does one grade measure?",
+        "options": [
+          "Total faith and character",
+          "Every future opportunity",
+          "The number of study hours",
+          "Performance on one assessment, not a person’s complete worth"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised reassurance stays realistic."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "revise; reduce unhealthy cramming and give a concrete plan for rest, acute anxiety, and exam preparation",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-tauhid-06",
@@ -191,31 +771,145 @@
     "themeId": "tauhid",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [warmly] My father was a fisherman for almost forty years, and although he never studied religion formally, he understood Allah in a way few scholars ever explained to me.",
-      "Narrator: [thoughtful] Every morning before sailing out, he would stand quietly by the boat and look at the sky for several minutes.",
+      "Narrator: [thoughtful] My father fished for almost forty years. He was not a religious teacher, but his daily reflection helped me understand lessons scholars also explain from the Quran.",
+      "Narrator: Every morning before sailing out, he would stand quietly by the boat and look at the sky for several minutes.",
       "Narrator: [reflective] As a boy, I once asked him what exactly he was looking for out there, since the sky looked ordinary to me.",
-      "Narrator: [gently] He said, I'm not just checking the weather, son. I'm remembering who arranged all of this so perfectly before I even woke up today.",
-      "Narrator: [warmly] I didn't fully understand him then, because I was young and mostly wanted breakfast, not philosophy, so early in the morning.",
-      "Narrator: [softly] Years later, after I moved to the city and started my own stressful office job, I began remembering his words more often.",
-      "Narrator: [thoughtful] During difficult weeks, when everything felt uncertain, I found myself standing by my window, doing the same quiet thing he used to do.",
-      "Narrator: [reflective] I noticed how the sunrise arrived at the exact same gentle pace every single morning, whether I was calm or completely anxious inside.",
+      "Narrator: He said, “I am checking the weather and remembering the Creator of the sky and sea. Reflection does not replace a safe forecast.”",
+      "Narrator: [carefully] I didn't fully understand him then, because I was young and mostly wanted breakfast, not philosophy, so early in the morning.",
+      "Narrator: Years later, after I moved to the city and started my own stressful office job, I began remembering his words more often.",
+      "Narrator: [honestly] During difficult weeks, when everything felt uncertain, I found myself standing by my window, doing the same quiet thing he used to do.",
+      "Narrator: I noticed how the sunrise arrived at the exact same gentle pace every single morning, whether I was calm or completely anxious inside.",
       "Narrator: [gently] That consistency started to comfort me, because it reminded me that some things remain perfectly ordered, even when my own life feels chaotic.",
-      "Narrator: [warmly] My father used to say that Allah doesn't only speak through miracles, He speaks constantly through patterns we've simply stopped noticing.",
-      "Narrator: [thoughtful] The tide that returns every day, the seasons that change on schedule, even a wound that quietly heals itself without our help.",
-      "Narrator: [peacefully] These aren't accidents happening randomly around us, he always insisted, they're quiet daily signs, if only we slow down enough to actually see them.",
-      "Narrator: [with feeling] My father passed away three years ago, but I still stand by windows sometimes, remembering how he watched the sky every single morning.",
-      "Narrator: [warmly] Now, when my own son asks what I'm doing standing there so quietly, I finally understand exactly what to tell him."
+      "Narrator: My father said that creation contains signs of Allah’s power and wisdom. We should not call natural patterns new revelation or private messages.",
+      "Narrator: [warmly] He mentioned tides, seasons, and the body’s healing processes. He also used navigation knowledge, safe equipment, and medical care when needed.",
+      "Narrator: He taught me that ordered creation is not an independent power. We reflect on its signs while remaining humble about specific events we cannot explain.",
+      "Narrator: [encouraging] My father passed away three years ago, but I still stand by windows sometimes, remembering how he watched the sky every single morning.",
+      "Narrator: Now I tell my son: the Quran is Allah’s revelation, creation contains signs, and gratitude should lead us to worship and responsible action."
     ],
     "quiz": [
-      { "question": "What was the narrator's father's profession?", "options": ["Teacher", "Fisherman for almost forty years", "Doctor", "Farmer"], "correctIndex": 1, "explanation": "The narrator's father was a fisherman for almost forty years." },
-      { "question": "What did the father do every morning before sailing?", "options": ["Ate a large breakfast", "Stood quietly by the boat and looked at the sky", "Called his friends", "Checked his phone"], "correctIndex": 1, "explanation": "He stood quietly by the boat looking at the sky for several minutes each morning." },
-      { "question": "What did the father say he was really doing while looking at the sky?", "options": ["Only checking the weather", "Remembering who arranged everything so perfectly before he woke up", "Praying for good fish", "Nothing important"], "correctIndex": 1, "explanation": "He said he was remembering who arranged everything so perfectly before he even woke up." },
-      { "question": "According to the father, how does Allah often speak to people?", "options": ["Only through miracles", "Constantly through patterns people have stopped noticing", "He never communicates at all", "Only through scholars"], "correctIndex": 1, "explanation": "The father believed Allah speaks constantly through patterns people have simply stopped noticing." },
-      { "question": "What does the narrator do now, years later?", "options": ["He ignores his father's habit completely", "He sometimes stands by windows the way his father watched the sky", "He became a fisherman too", "He never thinks about his father"], "correctIndex": 1, "explanation": "He finds himself standing by his window during difficult weeks, doing the same quiet thing his father used to do." }
-    ]
+      {
+        "question": "What was the narrator's father's profession?",
+        "options": [
+          "Teacher",
+          "Fisherman for almost forty years",
+          "Doctor",
+          "Farmer"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator's father was a fisherman for almost forty years."
+      },
+      {
+        "question": "What did the father do every morning before sailing?",
+        "options": [
+          "Ate a large breakfast",
+          "Called his friends",
+          "Checked his phone",
+          "Stood quietly by the boat and looked at the sky"
+        ],
+        "correctIndex": 3,
+        "explanation": "He stood quietly by the boat looking at the sky for several minutes each morning."
+      },
+      {
+        "question": "What did the father say he was really doing while looking at the sky?",
+        "options": [
+          "Remembering who arranged everything so perfectly before he woke up",
+          "Only checking the weather",
+          "Praying for good fish",
+          "Nothing important"
+        ],
+        "correctIndex": 0,
+        "explanation": "He said he was remembering who arranged everything so perfectly before he even woke up."
+      },
+      {
+        "question": "According to the father, how does Allah often speak to people?",
+        "options": [
+          "Only through miracles",
+          "He never communicates at all",
+          "Constantly through patterns people have stopped noticing",
+          "Only through scholars"
+        ],
+        "correctIndex": 2,
+        "explanation": "The father believed Allah speaks constantly through patterns people have simply stopped noticing."
+      },
+      {
+        "question": "What does the narrator do now, years later?",
+        "options": [
+          "He ignores his father's habit completely",
+          "He became a fisherman too",
+          "He never thinks about his father",
+          "He sometimes stands by windows the way his father watched the sky"
+        ],
+        "correctIndex": 3,
+        "explanation": "He finds himself standing by his window during difficult weeks, doing the same quiet thing his father used to do."
+      },
+      {
+        "question": "What is the father doing besides remembering Allah?",
+        "options": [
+          "Predicting revelation from clouds",
+          "Ignoring safety forecasts",
+          "Waiting for breakfast",
+          "Checking weather conditions before sailing"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reflection exists beside practical observation."
+      },
+      {
+        "question": "Why is “Allah speaks through patterns” changed?",
+        "options": [
+          "Nature has no order",
+          "Only scholars may see the sky",
+          "Revelation has a distinct meaning; creation contains signs pointing to Allah",
+          "Patterns are always random"
+        ],
+        "correctIndex": 2,
+        "explanation": "Precise wording protects the difference between signs and revelation."
+      },
+      {
+        "question": "How should a fisherman respond to the sky?",
+        "options": [
+          "Treat every cloud as a private command",
+          "Reflect, check reliable forecasts, and take safety precautions",
+          "Sail in dangerous warnings",
+          "Rely on memory alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Signs do not replace knowledge and preparation."
+      },
+      {
+        "question": "What comforts the adult narrator?",
+        "options": [
+          "Sunrise guarantees an easy workday",
+          "His father never made mistakes",
+          "Wounds need no treatment",
+          "Regular patterns in creation remind him of Allah’s wisdom and power"
+        ],
+        "correctIndex": 3,
+        "explanation": "The comfort does not become a personal prediction."
+      },
+      {
+        "question": "What will he teach his son?",
+        "options": [
+          "Creation contains signs, while the Quran is revelation and safety still matters",
+          "Every natural event has a secret message for them",
+          "Weather science opposes faith",
+          "Healing occurs without causes"
+        ],
+        "correctIndex": 0,
+        "explanation": "The conclusion joins sound belief and action."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "revise; replace theologically imprecise “Allah speaks through patterns” with Quranic signs and responsible use of natural knowledge",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-tauhid-07",
@@ -224,37 +918,608 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [warmly] Good evening, listeners. Tonight we're speaking with Ratna, whose home was damaged badly in last month's flooding. Thank you for calling in, Ratna.",
-      "Caller: [steady] Thank you for having me. It's still strange to talk about it, although it's been almost four weeks now.",
-      "Radio Host: [gently] Can you describe what that night was actually like for you and your family?",
-      "Caller: [reflective] The water rose so quickly that we only had time to grab our important documents and leave through the back door.",
-      "Radio Host: [sympathetically] That must have been terrifying. What went through your mind as you were leaving?",
-      "Caller: [honestly] Strangely, I wasn't thinking about our furniture or belongings at all. I was only thinking about getting my children somewhere safe.",
-      "Radio Host: [curious] When you returned the next day, how much had you lost?",
-      "Caller: [calmly] Almost everything downstairs was ruined, our furniture, our kitchen, years of photographs, things we can never fully replace.",
+      "Radio Host: [thoughtful] Good evening, listeners. Tonight we're speaking with Ratna, whose home was damaged badly in last month's flooding. Thank you for calling in, Ratna.",
+      "Caller: Thank you for having me. It's still strange to talk about it, although it's been almost four weeks now.",
+      "Radio Host: [reflective] Can you describe what that night was actually like for you and your family?",
+      "Caller: The water rose so quickly that we only had time to grab our important documents and leave through the back door.",
+      "Radio Host: [carefully] That must have been terrifying. What went through your mind as you were leaving?",
+      "Caller: Strangely, I wasn't thinking about our furniture or belongings at all. I was only thinking about getting my children somewhere safe.",
+      "Radio Host: [honestly] When you returned the next day, how much had you lost?",
+      "Caller: Almost everything downstairs was ruined, our furniture, our kitchen, years of photographs, things we can never fully replace.",
       "Radio Host: [gently] I imagine that discovery must have been devastating to witness.",
-      "Caller: [thoughtful] It was, although something unexpected happened while I stood there looking at the damage.",
-      "Radio Host: [curious] What was that?",
-      "Caller: [warmly] I suddenly felt overwhelming gratitude, because every single person in my family was standing beside me, completely safe and unharmed.",
-      "Radio Host: [interested] That's a powerful shift to notice in such a difficult moment.",
-      "Caller: [reflective] I kept thinking, things can always be rebuilt slowly, but if I had lost even one of them, nothing would ever feel whole again.",
-      "Radio Host: [curious] How has that realization shaped the weeks since the flood?",
-      "Caller: [determined] We're rebuilding room by room now, and honestly, we complain far less about small daily inconveniences than we used to before this happened.",
-      "Radio Host: [understanding] It sounds like the flood changed more than just your house.",
-      "Caller: [warmly] It did. We pray together more now, and we thank Allah out loud for ordinary things we used to take completely for granted.",
-      "Radio Host: [encouraging] Thank you so much for sharing something so personal with our listeners tonight, Ratna.",
-      "Caller: [sincerely] Thank you for listening. If your home is still standing tonight, please don't take that for granted like we once did."
+      "Caller: It was, although something unexpected happened while I stood there looking at the damage.",
+      "Radio Host: [warmly] What was that?",
+      "Caller: I suddenly felt overwhelming gratitude, because every single person in my family was standing beside me, completely safe and unharmed.",
+      "Radio Host: [encouraging] That's a powerful shift to notice in such a difficult moment.",
+      "Caller: I kept thinking, things can always be rebuilt slowly, but if I had lost even one of them, nothing would ever feel whole again.",
+      "Radio Host: [sincere] How has that realization shaped the weeks since the flood?",
+      "Caller: We're rebuilding room by room now, and honestly, we complain far less about small daily inconveniences than we used to before this happened.",
+      "Radio Host: It sounds like the flood changed more than just your house.",
+      "Caller: It did. We pray together more now, and we thank Allah out loud for ordinary things we used to take completely for granted.",
+      "Radio Host: Thank you so much for sharing something so personal with our listeners tonight, Ratna.",
+      "Caller: Thank you for listening. If your home is still standing tonight, please don't take that for granted like we once did."
     ],
     "quiz": [
-      { "question": "What happened to Ratna's home?", "options": ["It burned down", "It was damaged badly in flooding", "It was sold", "Nothing happened to it"], "correctIndex": 1, "explanation": "Ratna's home was damaged badly in last month's flooding." },
-      { "question": "What did Ratna's family grab before leaving that night?", "options": ["Furniture", "Their important documents", "Kitchen appliances", "Photographs only"], "correctIndex": 1, "explanation": "They only had time to grab their important documents before leaving through the back door." },
-      { "question": "What was Ratna mainly thinking about while leaving the house?", "options": ["Saving her furniture", "Getting her children somewhere safe", "Locking the doors", "Calling her neighbors"], "correctIndex": 1, "explanation": "She says she was only thinking about getting her children somewhere safe." },
-      { "question": "What did Ratna feel while looking at the damage the next day?", "options": ["Only anger", "Overwhelming gratitude that her family was safe and unharmed", "Complete numbness", "Relief that the flood was over"], "correctIndex": 1, "explanation": "She felt overwhelming gratitude because every person in her family was safe and unharmed." },
-      { "question": "How has the family changed since the flood?", "options": ["They complain more now", "They pray together more and thank Allah for ordinary things", "They moved away permanently", "They stopped speaking to each other"], "correctIndex": 1, "explanation": "She says they pray together more now and thank Allah out loud for ordinary things they used to take for granted." }
-    ]
+      {
+        "question": "What happened to Ratna's home?",
+        "options": [
+          "It burned down",
+          "It was sold",
+          "Nothing happened to it",
+          "It was damaged badly in flooding"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratna's home was damaged badly in last month's flooding."
+      },
+      {
+        "question": "What did Ratna's family grab before leaving that night?",
+        "options": [
+          "Furniture",
+          "Kitchen appliances",
+          "Their important documents",
+          "Photographs only"
+        ],
+        "correctIndex": 2,
+        "explanation": "They only had time to grab their important documents before leaving through the back door."
+      },
+      {
+        "question": "What was Ratna mainly thinking about while leaving the house?",
+        "options": [
+          "Saving her furniture",
+          "Getting her children somewhere safe",
+          "Locking the doors",
+          "Calling her neighbors"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she was only thinking about getting her children somewhere safe."
+      },
+      {
+        "question": "What did Ratna feel while looking at the damage the next day?",
+        "options": [
+          "Only anger",
+          "Complete numbness",
+          "Relief that the flood was over",
+          "Overwhelming gratitude that her family was safe and unharmed"
+        ],
+        "correctIndex": 3,
+        "explanation": "She felt overwhelming gratitude because every person in her family was safe and unharmed."
+      },
+      {
+        "question": "How has the family changed since the flood?",
+        "options": [
+          "They pray together more and thank Allah for ordinary things",
+          "They complain more now",
+          "They moved away permanently",
+          "They stopped speaking to each other"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says they pray together more now and thank Allah out loud for ordinary things they used to take for granted."
+      },
+      {
+        "question": "What is Ratna’s first priority during evacuation?",
+        "options": [
+          "Getting every family member to safety",
+          "Saving furniture",
+          "Recording the flood",
+          "Calling the radio host"
+        ],
+        "correctIndex": 0,
+        "explanation": "Life takes priority over property."
+      },
+      {
+        "question": "Why are the photographs especially painful to lose?",
+        "options": [
+          "Some memories cannot be physically replaced",
+          "They prove the flood happened",
+          "They were all insured",
+          "The host requested them"
+        ],
+        "correctIndex": 0,
+        "explanation": "The script acknowledges real grief rather than minimizing possessions."
+      },
+      {
+        "question": "What can gratitude and sadness do together?",
+        "options": [
+          "Cancel one another",
+          "Coexist after the family survives a serious loss",
+          "Guarantee quick rebuilding",
+          "Prevent every complaint"
+        ],
+        "correctIndex": 1,
+        "explanation": "Thankfulness does not deny damage."
+      },
+      {
+        "question": "What action shows continued responsibility?",
+        "options": [
+          "The family rebuilds room by room",
+          "They wait without seeking help",
+          "They return during rising water",
+          "They keep the address public"
+        ],
+        "correctIndex": 0,
+        "explanation": "Gratitude is followed by practical recovery."
+      },
+      {
+        "question": "What should listeners avoid assuming?",
+        "options": [
+          "That safety is valuable",
+          "That documents matter",
+          "That flood victims who struggle are less grateful",
+          "That prayer can comfort people"
+        ],
+        "correctIndex": 2,
+        "explanation": "Different trauma responses must not be judged by one story."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "keep; respectful disaster account permits grief, gratitude, emergency action, and rebuilding without blaming victims",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-tauhid-08",
+    "title": "The Contract I Read Before Istikharah",
+    "level": "A2",
+    "themeId": "tauhid",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] A small company offered me freelance work with a higher payment than my usual projects. I felt excited and wanted to accept that evening.",
+      "Narrator: A friend reminded me that making istikharah does not replace understanding the decision in front of us.",
+      "Narrator: [reflective] I read the contract carefully. One section allowed the company to use my work for products they did not clearly describe.",
+      "Narrator: Another section required payment only after the final customer approved, with no time limit for that approval.",
+      "Narrator: [carefully] I wrote down my questions and asked the company for clearer terms. I also spoke with someone experienced in contracts.",
+      "Narrator: The adviser did not choose for me. She explained the risks and suggested a fixed payment date and a clear list of permitted uses.",
+      "Narrator: [honestly] After gathering information, I prayed istikharah and asked Allah to guide me toward what was good and keep me away from harm.",
+      "Narrator: I did not wait for a dream or a mysterious sign. I continued the normal process with trust in Allah.",
+      "Narrator: [gently] The company accepted the fixed payment date but refused to limit how the work could be used. That answer made the risk clearer.",
+      "Narrator: I declined politely. The decision still felt difficult because I needed income, but I no longer felt confused about the contract.",
+      "Narrator: [warmly] Two weeks later, another project arrived with lower payment but fair terms and work I could support with a clear conscience.",
+      "Narrator: I cannot claim that every later event explains Allah's decree. Istikharah is worship, not a promise that each choice will become easy immediately.",
+      "Narrator: [encouraging] The experience taught me to join dua with research, consultation, and honest attention to lawful boundaries.",
+      "Narrator: Tawakkul is not closing our eyes before a decision. We use the means Allah permits, ask for guidance, decide, and accept the outcome.",
+      "Narrator: [sincere] Reading every page of the contract was part of my reliance, not a sign that I relied only on myself."
+    ],
+    "quiz": [
+      {
+        "question": "What made the first offer attractive?",
+        "options": [
+          "It required no work",
+          "It came from a relative",
+          "It included free travel",
+          "It paid more than usual"
+        ],
+        "correctIndex": 3,
+        "explanation": "The freelance payment was unusually high."
+      },
+      {
+        "question": "What risks appeared in the contract?",
+        "options": [
+          "A short office meeting",
+          "Unclear usage rights and no fixed payment time",
+          "A clear deadline and limited use",
+          "Too many holidays"
+        ],
+        "correctIndex": 1,
+        "explanation": "Two important terms could harm the freelancer."
+      },
+      {
+        "question": "What did the adviser provide?",
+        "options": [
+          "Risk explanation and clearer suggested terms",
+          "A command to accept",
+          "A dream interpretation",
+          "Money for the project"
+        ],
+        "correctIndex": 0,
+        "explanation": "Consultation improved understanding without choosing for him."
+      },
+      {
+        "question": "What did the narrator do after istikharah?",
+        "options": [
+          "Waited only for a dream",
+          "Continued the normal decision process",
+          "Ignored the contract",
+          "Accepted immediately"
+        ],
+        "correctIndex": 1,
+        "explanation": "Istikharah accompanied responsible action."
+      },
+      {
+        "question": "What is the main lesson about istikharah and decisions?",
+        "options": [
+          "Research shows weak faith",
+          "Reliance joins guidance, research, consultation, and decision",
+          "Every good choice becomes easy",
+          "High payment proves work is suitable"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tawakkul uses lawful means while trusting Allah."
+      },
+      {
+        "question": "Why does the narrator delay acceptance?",
+        "options": [
+          "The payment is too low",
+          "A dream forbids the work",
+          "The adviser chooses another client",
+          "Important contract terms are unclear"
+        ],
+        "correctIndex": 3,
+        "explanation": "Excitement should not replace review."
+      },
+      {
+        "question": "What does the adviser do?",
+        "options": [
+          "Guarantee future income",
+          "Issue a religious ruling",
+          "Explain risks while leaving the decision to the narrator",
+          "Rewrite the contract secretly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Consultation supports rather than removes agency."
+      },
+      {
+        "question": "What happens after istikharah?",
+        "options": [
+          "A mysterious sign appears",
+          "Every concern disappears",
+          "The narrator continues negotiation and normal decision-making",
+          "The company accepts all terms"
+        ],
+        "correctIndex": 2,
+        "explanation": "Prayer is not a substitute for action."
+      },
+      {
+        "question": "Why is the later project not called proof of the full decree?",
+        "options": [
+          "The lower payment is always bad",
+          "A person cannot know every hidden reason from a later event",
+          "Fair terms do not matter",
+          "Istikharah cannot be prayed"
+        ],
+        "correctIndex": 1,
+        "explanation": "The monologue states an epistemic boundary."
+      },
+      {
+        "question": "How is reading the contract part of tawakkul?",
+        "options": [
+          "It uses a lawful means while relying upon Allah",
+          "It proves self-reliance only",
+          "It removes all risk",
+          "It predicts the customer’s behavior"
+        ],
+        "correctIndex": 0,
+        "explanation": "Careful means and trust work together."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "keep; exemplary account correctly presents istikharah with research, consultation, lawful limits, and no dream requirement",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-tauhid-09",
+    "title": "Gratitude After the Water Returned",
+    "level": "A2",
+    "themeId": "tauhid",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] Our apartment building lost water for almost a full day after a pipe broke under the street. At first, everyone treated it as a small inconvenience.",
+      "Narrator: By afternoon, washing, cooking, wudu, and cleaning had all become difficult. The building's emergency supply was limited.",
+      "Narrator: [reflective] I carried two containers from a public water point and suddenly understood how heavy ordinary daily water can be.",
+      "Narrator: When the repair team restored service that evening, several taps were left running while residents checked them.",
+      "Narrator: [carefully] The building manager asked us to close the taps, fill only what we needed, and allow the system to become stable.",
+      "Narrator: I watched clear water return to the kitchen and said Alhamdulillah. The words felt more attentive than they had the day before.",
+      "Narrator: [honestly] The interruption did not create the blessing. Water had always been a blessing, but constant access had made me less aware of it.",
+      "Narrator: Islamic gratitude is not only noticing comfort after it disappears. It should also shape how we use what Allah provides.",
+      "Narrator: [gently] The next week, I repaired a leaking toilet valve that I had ignored for months. A plumber showed me how much water the quiet leak could waste.",
+      "Narrator: Our family also changed small habits: turning off the tap while brushing, using only the needed amount, and reporting leaks quickly.",
+      "Narrator: [warmly] We did not become fearful of using water. Clean water is meant to be used for healthy and lawful needs.",
+      "Narrator: The goal was to avoid waste and remember that access is not equal for every family.",
+      "Narrator: [encouraging] We donated to a trusted clean-water project, but we also checked its reports instead of sharing an emotional advertisement without evidence.",
+      "Narrator: The broken pipe gave us one day of difficulty and a longer lesson about dependence.",
+      "Narrator: [sincere] Every glass, meal, and act of purification can remind us that Allah's provision deserves thanks through the tongue and responsible action."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the building lose water?",
+        "options": [
+          "Residents forgot to pay",
+          "The weather froze every tap",
+          "The building was empty",
+          "A pipe broke under the street"
+        ],
+        "correctIndex": 3,
+        "explanation": "A damaged public pipe stopped the supply."
+      },
+      {
+        "question": "What did the narrator carry?",
+        "options": [
+          "A broken pipe",
+          "A washing machine",
+          "Two water containers",
+          "A bag of tools only"
+        ],
+        "correctIndex": 2,
+        "explanation": "He collected emergency water by hand."
+      },
+      {
+        "question": "What happened when service returned?",
+        "options": [
+          "Nobody noticed",
+          "Some taps were left running during checks",
+          "The water remained unavailable",
+          "Every pipe broke again"
+        ],
+        "correctIndex": 1,
+        "explanation": "Residents needed to avoid unnecessary flow."
+      },
+      {
+        "question": "What home repair followed?",
+        "options": [
+          "A leaking toilet valve",
+          "A window",
+          "A refrigerator door",
+          "A light switch"
+        ],
+        "correctIndex": 0,
+        "explanation": "Gratitude led to correcting ongoing waste."
+      },
+      {
+        "question": "How is gratitude described?",
+        "options": [
+          "Avoiding all water use",
+          "Thanking Allah and using provision responsibly",
+          "Speaking without changing habits",
+          "Waiting for every blessing to disappear"
+        ],
+        "correctIndex": 1,
+        "explanation": "True gratitude appears in words and conduct."
+      },
+      {
+        "question": "What makes water feel newly noticeable?",
+        "options": [
+          "The pipe creates the blessing",
+          "The family stops making wudu",
+          "A temporary loss reveals how many daily tasks depend on it",
+          "The public point is empty"
+        ],
+        "correctIndex": 2,
+        "explanation": "The blessing existed before awareness increased."
+      },
+      {
+        "question": "Why must residents close taps after service returns?",
+        "options": [
+          "The system needs to stabilize and water should not be wasted",
+          "Water is no longer clean",
+          "Every container must be filled",
+          "The manager owns the water"
+        ],
+        "correctIndex": 0,
+        "explanation": "Practical restraint supports community access."
+      },
+      {
+        "question": "What action repairs ongoing waste?",
+        "options": [
+          "Buying more containers",
+          "Closing the public point",
+          "Fixing a leaking toilet valve",
+          "Avoiding all water use"
+        ],
+        "correctIndex": 2,
+        "explanation": "Gratitude motivates maintenance."
+      },
+      {
+        "question": "Why check the clean-water project’s reports?",
+        "options": [
+          "Donations should be anonymous",
+          "Reports replace intention",
+          "Only local projects are lawful",
+          "Emotional advertising is not enough evidence of responsible use"
+        ],
+        "correctIndex": 3,
+        "explanation": "Giving also requires due care."
+      },
+      {
+        "question": "What balance does the narrator state?",
+        "options": [
+          "Fear every use of water",
+          "Conservation means never washing",
+          "Use water for healthy needs while avoiding waste",
+          "Access is equal everywhere"
+        ],
+        "correctIndex": 2,
+        "explanation": "Responsible gratitude is not deprivation."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "keep; strong gratitude lesson links praise to conservation without fear of lawful use",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-tauhid-10",
+    "title": "When the Fundraising Number Grew",
+    "level": "A2",
+    "themeId": "tauhid",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Mariam",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Mariam: [thoughtful] Yusuf, the fundraiser has passed its target. Everyone is saying our social-media strategy made it happen.",
+      "Yusuf: The strategy helped people find the campaign, but we should be careful about giving ourselves complete credit.",
+      "Mariam: [reflective] I agree that Allah provided the result, yet we also worked hard for two weeks.",
+      "Yusuf: Recognizing Allah does not erase human effort. It places our effort in the correct position.",
+      "Mariam: [carefully] How should we speak about the success publicly?",
+      "Yusuf: Thank the donors and volunteers, explain the verified result, and say Alhamdulillah without turning the post into self-praise.",
+      "Mariam: [honestly] Should we mention which video received the most views?",
+      "Yusuf: Yes, if it helps the team learn, but views are not the same as sincerity or final impact.",
+      "Mariam: [gently] The extra funds also create a new responsibility.",
+      "Yusuf: Exactly. The campaign promised a specific purpose. We cannot move money to another project without following the stated policy and donor conditions.",
+      "Mariam: [warmly] I will ask the finance team for a report before we announce any new plan.",
+      "Yusuf: Good. A blessing should make our accountability stronger, not make us careless because people are praising us.",
+      "Mariam: [encouraging] Some volunteers want a celebration dinner from the campaign budget.",
+      "Yusuf: Was that expense included and clearly permitted?",
+      "Mariam: [sincere] No. We can organize a simple meal from separate personal contributions if the team wants one.",
+      "Yusuf: That protects the donated money. What about sharing the total immediately?",
+      "Mariam: Wait until deposits are confirmed and duplicate payments are checked. Accuracy is part of gratitude.",
+      "Yusuf: Then our message will thank Allah, people, and describe the next accountable steps.",
+      "Mariam: Yes. Tawhid teaches us not to worship our own method, while responsibility teaches us to use every means carefully.",
+      "Yusuf: Success can test the heart as much as difficulty.",
+      "Mariam: And the best response is humble gratitude, truthful reporting, and lawful use of what has been entrusted to us."
+    ],
+    "quiz": [
+      {
+        "question": "What happened to the fundraiser?",
+        "options": [
+          "It passed its target",
+          "It received no donations",
+          "It was canceled",
+          "It changed into a business"
+        ],
+        "correctIndex": 0,
+        "explanation": "The campaign raised more than expected."
+      },
+      {
+        "question": "How should they discuss their effort?",
+        "options": [
+          "Pretend no one worked",
+          "Credit only the videos",
+          "Claim the result independently",
+          "Recognize it without claiming complete control"
+        ],
+        "correctIndex": 3,
+        "explanation": "Human means are acknowledged beneath Allah’s provision."
+      },
+      {
+        "question": "Why are extra funds a responsibility?",
+        "options": [
+          "They remain tied to stated purposes and conditions",
+          "They belong to the volunteers personally",
+          "They must be spent on dinner",
+          "Reports are no longer needed"
+        ],
+        "correctIndex": 0,
+        "explanation": "Unexpected success does not remove donor trust."
+      },
+      {
+        "question": "Why should they delay publishing the total?",
+        "options": [
+          "They want to hide the campaign",
+          "Deposits and duplicates must be verified",
+          "The target is unknown",
+          "They lost the finance team"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accurate reporting requires confirmed figures."
+      },
+      {
+        "question": "What response to success do they choose?",
+        "options": [
+          "Self-praise and quick spending",
+          "Humble gratitude, truthful reporting, and lawful use",
+          "No public information",
+          "Celebration from donated money"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their response joins tawhid and accountability."
+      },
+      {
+        "question": "Why should the team not credit strategy completely?",
+        "options": [
+          "Strategy did not reach anyone",
+          "Volunteers did no work",
+          "The method is a cause, while the result remains under Allah’s decree",
+          "The target was too small"
+        ],
+        "correctIndex": 2,
+        "explanation": "The dialogue places effort correctly."
+      },
+      {
+        "question": "What may they learn from video views?",
+        "options": [
+          "Which donor is most righteous",
+          "How all funds were spent",
+          "Which communication reached people, not whose intention was pure",
+          "Whether Allah accepted every deed"
+        ],
+        "correctIndex": 2,
+        "explanation": "Metrics have a limited role."
+      },
+      {
+        "question": "Why can extra money not be moved freely?",
+        "options": [
+          "Donor conditions and the promised purpose still apply",
+          "The team dislikes other projects",
+          "Extra funds have no owner",
+          "Celebration is required first"
+        ],
+        "correctIndex": 0,
+        "explanation": "Success increases trust obligations."
+      },
+      {
+        "question": "Why is a separate meal fund suggested?",
+        "options": [
+          "Volunteers may never eat together",
+          "The target was not reached",
+          "Finance reports are private",
+          "Campaign donations did not clearly allow a celebration expense"
+        ],
+        "correctIndex": 3,
+        "explanation": "Separate personal contributions protect restricted money."
+      },
+      {
+        "question": "What makes the public total trustworthy?",
+        "options": [
+          "Confirmed deposits and duplicate checks",
+          "Posting immediately",
+          "Counting views as donations",
+          "Using an estimate"
+        ],
+        "correctIndex": 0,
+        "explanation": "Accuracy is part of gratitude."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "tauhid",
+      "scriptDecision": "keep; excellent tawhid-and-accountability dialogue recognizes human means without worshiping them",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

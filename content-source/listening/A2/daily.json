@@ -6,38 +6,155 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Yusuf", "gender": "male" },
-      { "name": "Rina", "gender": "female" }
+      {
+        "name": "Nisa",
+        "gender": "female"
+      },
+      {
+        "name": "Rina",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Yusuf: [excited] Rina, I finally booked the train tickets for Saturday, so now this trip actually feels real.",
-      "Rina: [pleased] Good, because I was starting to think we would keep talking about it and never actually go.",
-      "Yusuf: [practical] The train leaves at seven in the morning, which means we should probably wake up around five thirty.",
-      "Rina: [groaning] Five thirty on a Saturday? That feels almost cruel, although I understand why we need the early train.",
-      "Yusuf: [laughing] It is cruel, but the later trains were already fully booked when I checked yesterday afternoon.",
+      "Nisa: [excited] Rina, I finally booked the train tickets for Saturday, so now this trip actually feels real.",
+      "Rina: Good, because I was starting to think we would keep talking about it and never actually go.",
+      "Nisa: [practical] The train leaves at seven in the morning, which means we should probably wake up around five thirty.",
+      "Rina: [sleepily] Five thirty on a Saturday? That feels almost cruel, although I understand why we need the early train.",
+      "Nisa: It is cruel, but the later trains were already fully booked when I checked yesterday afternoon.",
       "Rina: [thoughtful] Fine, I will survive it. What should we actually pack, since we are only staying two nights?",
-      "Yusuf: [organizing] Light clothes, since it will be warm, but bring one jacket just in case it rains.",
-      "Rina: [adding] I will bring snacks too, because train food is expensive and honestly never very good either.",
-      "Yusuf: [agreeing] Smart. Should we also print the hotel confirmation, or is showing it on my phone enough?",
-      "Rina: [cautious] Print it, because phones die at the worst possible moments, and I don't want to argue with a hotel desk.",
-      "Yusuf: [nodding] Good point. What about activities once we arrive? Do you have anything specific in mind already?",
-      "Rina: [suggesting] I want to visit that old market near the river, the one my cousin kept recommending last month.",
-      "Yusuf: [interested] That sounds great. We could walk there Saturday afternoon, once we have checked into the hotel and rested.",
-      "Rina: [thinking] And Sunday morning, maybe something quieter, since we will be tired after two days of walking around.",
-      "Yusuf: [agreeing] A slow breakfast somewhere nice, then heading back to the station before it gets crowded with other travelers.",
-      "Rina: [satisfied] That sounds like a solid plan. Should we split the hotel cost like we usually do for these trips?",
-      "Yusuf: [nodding] Yes, same as always. I will send you the exact amount once I get the final receipt.",
-      "Rina: [smiling] Perfect. Honestly, I really needed a short trip like this, work has felt exhausting these past few weeks.",
-      "Yusuf: [warmly] Same here. Let's just try to actually relax, instead of planning every single hour like we usually do.",
+      "Nisa: Light clothes, since it will be warm, but bring one jacket just in case it rains.",
+      "Rina: I will bring snacks too, because train food is expensive and honestly never very good either.",
+      "Nisa: [carefully] Smart. Should we also print the hotel confirmation, or is showing it on my phone enough?",
+      "Rina: Print it, because phones die at the worst possible moments, and I don't want to argue with a hotel desk.",
+      "Nisa: [curious] Good point. What about activities once we arrive? Do you have anything specific in mind already?",
+      "Rina: I want to visit that old market near the river, the one my cousin kept recommending last month.",
+      "Nisa: [pleased] That sounds great. We could walk there Saturday afternoon, once we have checked into the hotel and rested.",
+      "Rina: And Sunday morning, maybe something quieter, since we will be tired after two days of walking around.",
+      "Nisa: A slow breakfast somewhere nice, then heading back to the station before it gets crowded with other travelers.",
+      "Rina: [organized] That sounds like a solid plan. Should we split the hotel cost like we usually do for these trips?",
+      "Nisa: Yes, same as always. I will send you the exact amount once I get the final receipt.",
+      "Rina: [tired] Perfect. Honestly, I really needed a short trip like this, work has felt exhausting these past few weeks.",
+      "Nisa: Same here. Let's just try to actually relax, instead of planning every single hour like we usually do.",
       "Rina: [laughing] Easier said than done, but I will genuinely try. See you at the station Saturday morning, sleepy."
     ],
     "quiz": [
-      { "question": "What time does the train leave on Saturday?", "options": ["Five thirty", "Seven in the morning", "Nine in the morning", "Midnight"], "correctIndex": 1, "explanation": "Yusuf says the train leaves at seven in the morning." },
-      { "question": "Why did Yusuf book the earlier train instead of a later one?", "options": ["It was cheaper", "The later trains were already fully booked", "He prefers mornings", "Rina asked for it"], "correctIndex": 1, "explanation": "He explains the later trains were already fully booked when he checked." },
-      { "question": "Why does Rina want to print the hotel confirmation?", "options": ["She doesn't trust phones", "Phones die at the worst moments and she doesn't want to argue with the hotel desk", "The hotel requires paper only", "Yusuf's phone is broken"], "correctIndex": 1, "explanation": "Rina says phones die at bad moments and she doesn't want to argue with the hotel desk." },
-      { "question": "What does Rina want to visit on Saturday afternoon?", "options": ["A museum", "An old market near the river that her cousin recommended", "A beach", "A concert"], "correctIndex": 1, "explanation": "Rina wants to visit the old market near the river that her cousin recommended." },
-      { "question": "How will they split the hotel cost?", "options": ["Yusuf pays for everything", "Split evenly, as they usually do", "Rina pays for everything", "They will decide later"], "correctIndex": 1, "explanation": "They agree to split the hotel cost the same way they usually do for their trips." }
-    ]
+      {
+        "question": "What time does the train leave on Saturday?",
+        "options": [
+          "Seven in the morning",
+          "Five thirty",
+          "Nine in the morning",
+          "Midnight"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf says the train leaves at seven in the morning."
+      },
+      {
+        "question": "Why did Yusuf book the earlier train instead of a later one?",
+        "options": [
+          "It was cheaper",
+          "The later trains were already fully booked",
+          "He prefers mornings",
+          "Rina asked for it"
+        ],
+        "correctIndex": 1,
+        "explanation": "He explains the later trains were already fully booked when he checked."
+      },
+      {
+        "question": "Why does Rina want to print the hotel confirmation?",
+        "options": [
+          "She doesn't trust phones",
+          "The hotel requires paper only",
+          "Yusuf's phone is broken",
+          "Phones die at the worst moments and she doesn't want to argue with the hotel desk"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rina says phones die at bad moments and she doesn't want to argue with the hotel desk."
+      },
+      {
+        "question": "What does Rina want to visit on Saturday afternoon?",
+        "options": [
+          "A museum",
+          "A beach",
+          "An old market near the river that her cousin recommended",
+          "A concert"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rina wants to visit the old market near the river that her cousin recommended."
+      },
+      {
+        "question": "How will they split the hotel cost?",
+        "options": [
+          "Yusuf pays for everything",
+          "Rina pays for everything",
+          "They will decide later",
+          "Split evenly, as they usually do"
+        ],
+        "correctIndex": 3,
+        "explanation": "They agree to split the hotel cost the same way they usually do for their trips."
+      },
+      {
+        "question": "Why do Nisa and Rina need to wake at 5:30?",
+        "options": [
+          "They plan to visit the market first",
+          "The hotel opens before sunrise",
+          "They need time to reach the 7:00 train",
+          "They want to cook breakfast on the train"
+        ],
+        "correctIndex": 2,
+        "explanation": "The early wake-up supports travel to the station before departure."
+      },
+      {
+        "question": "What does the printed confirmation protect against?",
+        "options": [
+          "The hotel changing its location",
+          "A dead phone causing check-in difficulty",
+          "The train food being expensive",
+          "Rain at the market"
+        ],
+        "correctIndex": 1,
+        "explanation": "A paper backup keeps key booking information accessible."
+      },
+      {
+        "question": "How does their Sunday plan differ from Saturday?",
+        "options": [
+          "It includes more crowded attractions",
+          "It begins with another early train",
+          "It is quieter and leaves time to reach the station",
+          "It has every hour scheduled"
+        ],
+        "correctIndex": 2,
+        "explanation": "They expect fatigue and deliberately reduce activity."
+      },
+      {
+        "question": "Why will Nisa wait for the final receipt?",
+        "options": [
+          "To send Rina an exact share of the hotel cost",
+          "To change the train tickets",
+          "To reserve the old market",
+          "To calculate the snack price"
+        ],
+        "correctIndex": 0,
+        "explanation": "The receipt makes shared expenses transparent."
+      },
+      {
+        "question": "What tension appears in their planning style?",
+        "options": [
+          "They disagree about whether to travel",
+          "They want to pack heavy luggage",
+          "They want structure but also enough space to relax",
+          "They refuse to plan any activity"
+        ],
+        "correctIndex": 2,
+        "explanation": "The ending recognizes that overplanning can reduce the rest they need."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "revise; make the travel companions unambiguously same-gender while retaining realistic planning, backups, cost sharing, and rest",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-daily-02",
@@ -46,32 +163,146 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honest] Three months ago, I could barely fry an egg without setting off the smoke alarm, which honestly says a lot about where I started.",
-      "Narrator: [reflective] I decided to learn cooking properly because I was tired of spending most of my salary on takeout every single week.",
+      "Narrator: [honestly] Three months ago, I could barely fry an egg without setting off the smoke alarm, which honestly says a lot about where I started.",
+      "Narrator: I decided to learn cooking properly because I was tired of spending most of my salary on takeout every single week.",
       "Narrator: [amused] My first attempt was a simple soup, and somehow I still managed to burn it, even though soup is mostly just water and patience.",
       "Narrator: [determined] Instead of giving up, I watched a few videos, read some old recipes my grandmother had written by hand, and tried again the next day.",
-      "Narrator: [warmly] That second soup was actually edible, and I remember feeling proud of something so small in a way I hadn't expected.",
-      "Narrator: [thoughtful] After that, I gave myself one simple rule, cook something new every weekend, even if it turns out badly the first time.",
-      "Narrator: [honest] Some weekends were disasters. I once made rice so dry it could barely be called rice, and I laughed about it for days afterward.",
+      "Narrator: [proud] That second soup was actually edible, and I remember feeling proud of something so small in a way I hadn't expected.",
+      "Narrator: After that, I gave myself one simple rule, cook something new every weekend, even if it turns out badly the first time.",
+      "Narrator: [laughing] Some weekends were disasters. I once made rice so dry it could barely be called rice, and I laughed about it for days afterward.",
       "Narrator: [pleased] But slowly, my kitchen stopped feeling like a scary, unfamiliar room and started feeling like somewhere I actually enjoyed spending time.",
-      "Narrator: [practical] I learned that seasoning matters more than expensive ingredients, and that patience usually matters more than following a recipe exactly.",
-      "Narrator: [warmly] Now, when friends come over, I actually cook for them instead of ordering food, which still feels like a strange, wonderful change.",
-      "Narrator: [reflective] My mother laughed when I told her this, because she remembers me refusing to enter the kitchen as a teenager.",
-      "Narrator: [smiling] I told her that things change when your wallet gets tired of takeout containers piling up in the recycling bin.",
-      "Narrator: [thoughtful] What surprised me most wasn't the cooking itself, but how calming it became after long, stressful days at the office.",
-      "Narrator: [peacefully] Chopping vegetables slowly, without rushing, somehow clears my head better than scrolling my phone ever manages to do.",
-      "Narrator: [encouraging] If you have never cooked before, start with something small and forgivable, because burnt soup taught me more than any perfect meal ever could."
+      "Narrator: [practical] I learned that basic seasoning and patient practice matter more than expensive ingredients, while food-safety steps and important recipe measurements still need care.",
+      "Narrator: Now, when friends come over, I actually cook for them instead of ordering food, which still feels like a strange, wonderful change.",
+      "Narrator: [warmly] My mother laughed when I told her this, because she remembers me refusing to enter the kitchen as a teenager.",
+      "Narrator: I told her that things change when your wallet gets tired of takeout containers piling up in the recycling bin.",
+      "Narrator: [reflective] What surprised me most wasn't the cooking itself, but how calming it became after long, stressful days at the office.",
+      "Narrator: Chopping vegetables slowly, without rushing, somehow clears my head better than scrolling my phone ever manages to do.",
+      "Narrator: [encouraging] If you have never cooked before, start with a simple recipe, read the safety steps first, and allow yourself to learn, because burnt soup taught me more than any perfect meal ever could."
     ],
     "quiz": [
-      { "question": "Why did the narrator decide to learn cooking?", "options": ["A doctor told her to", "She was tired of spending most of her salary on takeout", "She lost her job", "Her mother forced her"], "correctIndex": 1, "explanation": "She says she was tired of spending most of her salary on takeout every week." },
-      { "question": "What happened with her first soup attempt?", "options": ["It was perfect", "She burned it, even though soup is mostly water and patience", "She never finished it", "She gave up cooking entirely"], "correctIndex": 1, "explanation": "She burned the first soup despite it being mostly just water and patience." },
-      { "question": "What rule did she give herself after the first soup?", "options": ["Only cook on weekdays", "Cook something new every weekend, even if it turns out badly", "Never cook soup again", "Hire a cooking teacher"], "correctIndex": 1, "explanation": "She set the rule to cook something new every weekend, even if it fails at first." },
-      { "question": "What does she say matters more than expensive ingredients?", "options": ["Fancy kitchen tools", "Seasoning and patience", "A large kitchen", "Following recipes exactly"], "correctIndex": 1, "explanation": "She learned that seasoning matters more than expensive ingredients, and patience matters more than exact recipes." },
-      { "question": "What does cooking now do for her after stressful days?", "options": ["Nothing special", "It calms her more than scrolling her phone", "It makes her more stressed", "She avoids it after work"], "correctIndex": 1, "explanation": "She says chopping vegetables slowly clears her head better than scrolling her phone." }
-    ]
+      {
+        "question": "Why did the narrator decide to learn cooking?",
+        "options": [
+          "A doctor told her to",
+          "She was tired of spending most of her salary on takeout",
+          "She lost her job",
+          "Her mother forced her"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she was tired of spending most of her salary on takeout every week."
+      },
+      {
+        "question": "What happened with her first soup attempt?",
+        "options": [
+          "She burned it, even though soup is mostly water and patience",
+          "It was perfect",
+          "She never finished it",
+          "She gave up cooking entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "She burned the first soup despite it being mostly just water and patience."
+      },
+      {
+        "question": "What rule did she give herself after the first soup?",
+        "options": [
+          "Only cook on weekdays",
+          "Never cook soup again",
+          "Cook something new every weekend, even if it turns out badly",
+          "Hire a cooking teacher"
+        ],
+        "correctIndex": 2,
+        "explanation": "She set the rule to cook something new every weekend, even if it fails at first."
+      },
+      {
+        "question": "What does she say matters more than expensive ingredients?",
+        "options": [
+          "Fancy kitchen tools",
+          "A large kitchen",
+          "Seasoning and patience",
+          "Following recipes exactly"
+        ],
+        "correctIndex": 2,
+        "explanation": "She learned that seasoning matters more than expensive ingredients, and patience matters more than exact recipes."
+      },
+      {
+        "question": "What does cooking now do for her after stressful days?",
+        "options": [
+          "Nothing special",
+          "It makes her more stressed",
+          "She avoids it after work",
+          "It calms her more than scrolling her phone"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says chopping vegetables slowly clears her head better than scrolling her phone."
+      },
+      {
+        "question": "What financial pattern motivated the narrator?",
+        "options": [
+          "Kitchen equipment was too expensive",
+          "Takeout consumed too much of the salary",
+          "Friends expected free meals",
+          "Recipes required paid videos"
+        ],
+        "correctIndex": 1,
+        "explanation": "Cooking began as a response to repeated food spending."
+      },
+      {
+        "question": "Why was the second soup important?",
+        "options": [
+          "It proved improvement was possible after a failed attempt",
+          "It was served to many guests",
+          "It exactly copied a restaurant meal",
+          "It used expensive ingredients"
+        ],
+        "correctIndex": 0,
+        "explanation": "A small success made continued practice feel worthwhile."
+      },
+      {
+        "question": "What does the weekend rule provide?",
+        "options": [
+          "A requirement to cook every meal",
+          "A reason to ignore safety steps",
+          "A promise that every dish succeeds",
+          "Regular practice with permission to make mistakes"
+        ],
+        "correctIndex": 3,
+        "explanation": "One new dish a week creates manageable repetition."
+      },
+      {
+        "question": "Which part of a recipe should not be treated casually?",
+        "options": [
+          "The price of ingredients",
+          "The narrator’s grandmother’s handwriting",
+          "The number of friends invited",
+          "Food-safety instructions and important measurements"
+        ],
+        "correctIndex": 3,
+        "explanation": "Creative learning still needs safe handling and reliable proportions."
+      },
+      {
+        "question": "Why does cooking now help after work?",
+        "options": [
+          "Every meal saves the same amount",
+          "The kitchen removes all stress",
+          "Friends always visit afterward",
+          "Slow physical tasks give the mind a calmer focus"
+        ],
+        "correctIndex": 3,
+        "explanation": "Chopping and preparing replace passive phone scrolling with focused activity."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "revise lightly; preserve the beginner cooking arc while restoring recipe and food-safety importance",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-daily-03",
@@ -80,36 +311,153 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Landlord Pak Agus", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Landlord Pak Agus",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dewi: [polite but firm] Good evening, Pak Agus. Sorry to call so late, but the heater in my apartment stopped working again tonight.",
-      "Landlord Pak Agus: [tired] Ah, the same heater from last month? I thought the technician fixed that problem completely.",
-      "Dewi: [explaining] So did I, honestly. It worked fine for about three weeks, but tonight it just made a strange noise and shut off.",
-      "Landlord Pak Agus: [concerned] That's frustrating to hear, especially since it's getting colder outside now. When exactly did it stop working?",
-      "Dewi: [thinking] Around eight o'clock, while I was cooking dinner. I checked the switch several times, but nothing happened after that.",
+      "Dewi: [firmly] Good evening, Pak Agus. Sorry to call so late, but the heater in my apartment stopped working again tonight.",
+      "Landlord Pak Agus: [concerned] Ah, the same heater from last month? I thought the technician fixed that problem completely.",
+      "Dewi: So did I, honestly. It worked fine for about three weeks, but tonight it just made a strange noise and shut off.",
+      "Landlord Pak Agus: [alert] That's frustrating to hear, especially since it's getting colder outside now. When exactly did it stop working?",
+      "Dewi: Around eight o'clock, while I was cooking dinner. I checked the switch several times, but nothing happened after that.",
       "Landlord Pak Agus: [apologetic] I'm sorry about this, Dewi. I'll call the same technician first thing tomorrow morning, since he already knows this unit.",
-      "Dewi: [relieved] Thank you. Should I try anything myself tonight, or is it safer to just leave it completely alone until then?",
-      "Landlord Pak Agus: [cautious] Please don't touch the wiring yourself. Just use extra blankets tonight, and I promise this gets fixed quickly tomorrow.",
-      "Dewi: [understanding] Okay, that's fair. Although, because this is the second time, could we maybe discuss replacing the whole unit instead of repairing it again?",
-      "Landlord Pak Agus: [thoughtful] That's a reasonable request. If it breaks a third time, I'll agree to buy a completely new heater for the apartment.",
-      "Dewi: [appreciative] I appreciate that, Pak Agus. I don't want to keep bothering you every few weeks about the same broken appliance.",
-      "Landlord Pak Agus: [warmly] You're not bothering me, you're paying rent and deserve a working apartment. I should have replaced it after the first repair, honestly.",
-      "Dewi: [softly] Thank you for saying that. I know landlords aren't always this understanding about repairs and small inconveniences like this.",
-      "Landlord Pak Agus: [sincerely] I try to be fair, because tenants like you always pay on time and never cause unnecessary problems for me.",
-      "Dewi: [smiling] I appreciate that too. So, technician tomorrow morning, and extra blankets tonight, that's the plan then?",
+      "Dewi: [carefully] Thank you. Should I try anything myself tonight, or is it safer to just leave it completely alone until then?",
+      "Landlord Pak Agus: [seriously] Please don't touch the wiring yourself. Do not touch the unit or wiring. I will call the emergency maintenance line now. If the apartment cannot stay safely warm, we will arrange a safe temporary place tonight.",
+      "Dewi: [thoughtful] Okay, that's fair. Although, because this is the second time, could we maybe discuss replacing the whole unit instead of repairing it again?",
+      "Landlord Pak Agus: [responsibly] That's a reasonable request. Because it failed again, a technician will assess whether replacement is safer than repair.",
+      "Dewi: I appreciate that, Pak Agus. I don't want to keep bothering you every few weeks about the same broken appliance.",
+      "Landlord Pak Agus: [firmly] You are not bothering me. Every tenant deserves a safe, working home, and I need to respond properly to a repeated failure.",
+      "Dewi: Thank you for saying that. I know landlords aren't always this understanding about repairs and small inconveniences like this.",
+      "Landlord Pak Agus: [sincerely] I try to be fair, because safe maintenance is my responsibility, not a reward for being an easy tenant.",
+      "Dewi: I appreciate that too. So, technician tomorrow morning, and extra blankets tonight, that's the plan then?",
       "Landlord Pak Agus: [confirming] Exactly. I'll message you once I know what time he can arrive, probably sometime before noon.",
-      "Dewi: [grateful] Perfect, thank you again for handling this quickly. I hope you have a peaceful rest of your evening, Pak Agus.",
+      "Dewi: Perfect, thank you again for handling this quickly. I hope you have a peaceful rest of your evening, Pak Agus.",
       "Landlord Pak Agus: [warmly] You too, Dewi. Stay warm tonight, and I'm sorry again for the inconvenience this has caused you."
     ],
     "quiz": [
-      { "question": "What problem is Dewi calling about?", "options": ["A broken window", "The heater stopped working again", "A water leak", "Noisy neighbors"], "correctIndex": 1, "explanation": "Dewi calls because the heater in her apartment stopped working again that night." },
-      { "question": "When did the heater stop working that evening?", "options": ["Around eight o'clock, while she was cooking dinner", "Early morning", "Right after breakfast", "Just before midnight"], "correctIndex": 0, "explanation": "Dewi says it stopped around eight o'clock while she was cooking dinner." },
-      { "question": "What does Pak Agus tell Dewi not to do?", "options": ["Use blankets", "Touch the wiring herself", "Call again tomorrow", "Open the windows"], "correctIndex": 1, "explanation": "He tells her not to touch the wiring herself and to use extra blankets instead." },
-      { "question": "What does Pak Agus agree to do if the heater breaks a third time?", "options": ["Ignore the problem", "Buy a completely new heater for the apartment", "Raise her rent", "End her lease"], "correctIndex": 1, "explanation": "He agrees to buy a completely new heater if it breaks a third time." },
-      { "question": "Why does Pak Agus say he tries to be fair to Dewi?", "options": ["Because she is his relative", "Because she pays on time and doesn't cause unnecessary problems", "Because the law requires it", "Because she complains often"], "correctIndex": 1, "explanation": "He says tenants like her who pay on time and don't cause problems deserve fairness." }
-    ]
+      {
+        "question": "Why does Dewi call Pak Agus?",
+        "options": [
+          "The apartment heater has failed again",
+          "The apartment is too expensive",
+          "The technician arrived early",
+          "The wiring has been replaced"
+        ],
+        "correctIndex": 0,
+        "explanation": "The failure returned after three weeks."
+      },
+      {
+        "question": "When did the unit stop?",
+        "options": [
+          "Around eight while Dewi was cooking",
+          "At noon during work",
+          "Before the previous repair",
+          "After the technician called"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dewi gives a specific time and context."
+      },
+      {
+        "question": "What must Dewi avoid?",
+        "options": [
+          "Using extra clothing",
+          "Touching the heater or wiring",
+          "Calling the landlord",
+          "Leaving the kitchen"
+        ],
+        "correctIndex": 1,
+        "explanation": "A qualified person should assess the faulty equipment."
+      },
+      {
+        "question": "What will happen because this is a repeat failure?",
+        "options": [
+          "They will wait for a third failure",
+          "A technician will assess repair versus replacement",
+          "Dewi must buy a heater",
+          "The old repair is assumed safe"
+        ],
+        "correctIndex": 1,
+        "explanation": "Repeated failure triggers a stronger response."
+      },
+      {
+        "question": "Why does Pak Agus say he must act?",
+        "options": [
+          "Dewi has never complained",
+          "The rent will increase",
+          "Safe maintenance is a landlord responsibility",
+          "The technician knows Dewi"
+        ],
+        "correctIndex": 2,
+        "explanation": "Tenant safety is not conditional on being easy or quiet."
+      },
+      {
+        "question": "Why is “extra blankets” alone an incomplete plan?",
+        "options": [
+          "Blankets always damage heaters",
+          "Dewi has no blankets",
+          "The technician needs them",
+          "The home may become unsafely cold before morning"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised response considers whether staying in the apartment is safe."
+      },
+      {
+        "question": "What is the purpose of the emergency maintenance call?",
+        "options": [
+          "To obtain qualified advice about the immediate risk",
+          "To teach Dewi how to repair wiring",
+          "To delay the morning visit",
+          "To document rent payment"
+        ],
+        "correctIndex": 0,
+        "explanation": "A strange noise and shutdown may need more than routine scheduling."
+      },
+      {
+        "question": "What temporary option is discussed?",
+        "options": [
+          "Buying an unapproved heater",
+          "Sleeping in the kitchen",
+          "Repairing the unit alone",
+          "A safe place to stay if the apartment cannot remain warm"
+        ],
+        "correctIndex": 3,
+        "explanation": "Alternative accommodation protects the tenant while the fault is assessed."
+      },
+      {
+        "question": "How does Dewi communicate effectively?",
+        "options": [
+          "She gives the history, timing, symptom, and a reasonable replacement question",
+          "She promises to fix the unit",
+          "She hides that it failed before",
+          "She demands an exact diagnosis"
+        ],
+        "correctIndex": 0,
+        "explanation": "Specific facts help the landlord choose an appropriate response."
+      },
+      {
+        "question": "What principle replaces praise for a “good tenant”?",
+        "options": [
+          "Only punctual tenants receive repairs",
+          "Repeated failures are minor inconveniences",
+          "Housing safety applies regardless of a tenant’s convenience to the landlord",
+          "A landlord may wait until equipment fails three times"
+        ],
+        "correctIndex": 2,
+        "explanation": "Basic maintenance is a responsibility, not a personal favor."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "revise; strengthen a repeated-heater response with urgent safety assessment and unconditional tenant rights",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-daily-04",
@@ -118,32 +466,146 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [tired but honest] For almost two years, I answered work messages at every hour, because I was afraid of seeming lazy or uncommitted to my team.",
-      "Narrator: [reflective] I would reply to emails during dinner, during weekends, and sometimes even while I was supposed to be resting on vacation.",
-      "Narrator: [honest] Nobody actually forced me to do this. I built that habit myself, slowly, without noticing how exhausted it was making me.",
-      "Narrator: [with feeling] The moment I realized something was wrong happened during my sister's birthday dinner, when I answered three messages before the cake was even served.",
-      "Narrator: [thoughtful] She didn't say anything cruel, she just looked disappointed, and that expression stayed with me for days afterward.",
+      "Narrator: [tired] For almost two years, I answered work messages at every hour, because I was afraid of seeming lazy or uncommitted to my team.",
+      "Narrator: I would reply to emails during dinner, during weekends, and sometimes even while I was supposed to be resting on vacation.",
+      "Narrator: [honestly] Nobody actually forced me to do this. I built that habit myself, slowly, without noticing how exhausted it was making me.",
+      "Narrator: [regretfully] The moment I realized something was wrong happened during a family dinner with my sister, when I answered three messages before our meal was even served.",
+      "Narrator: She didn't say anything cruel, she just looked disappointed, and that expression stayed with me for days afterward.",
       "Narrator: [determined] So I decided to change something small first, turning off work notifications after seven in the evening, unless something was truly urgent.",
-      "Narrator: [honest] The first week felt uncomfortable, almost like I was doing something wrong by simply not answering immediately.",
+      "Narrator: [uneasy] The first week felt uncomfortable, almost like I was doing something wrong by simply not answering immediately.",
       "Narrator: [surprised] But nothing terrible happened. My manager didn't complain, my coworkers adjusted, and the world kept turning without my instant replies.",
-      "Narrator: [warmly] Slowly, I extended this boundary to weekends too, only checking messages once on Saturday morning, instead of constantly throughout both days.",
+      "Narrator: Slowly, I extended this boundary to weekends too, only checking messages once on Saturday morning, instead of constantly throughout both days.",
       "Narrator: [reflective] What surprised me most was how much clearer my thinking became once I wasn't mentally half at work all the time.",
-      "Narrator: [thoughtful] I used to believe boundaries meant caring less about my job, although now I understand it differently.",
-      "Narrator: [gently] Boundaries actually let me care more, because I show up focused and rested, instead of tired and quietly resentful.",
-      "Narrator: [honest] My sister noticed the change first, actually. She said I finally seemed present during our conversations, not just physically there.",
-      "Narrator: [warmly] That comment meant more to me than any compliment I ever received about my work performance.",
-      "Narrator: [encouraging] If you're constantly available for everyone else, consider starting small too, maybe just one quiet hour that belongs completely to you."
+      "Narrator: I used to believe boundaries meant caring less about my job, although now I understand it differently.",
+      "Narrator: [calmly] Boundaries actually let me care more, because I show up focused and rested, instead of tired and quietly resentful.",
+      "Narrator: [grateful] My sister noticed the change first, actually. She said I finally seemed present during our conversations, not just physically there.",
+      "Narrator: That comment meant more to me than any compliment I ever received about my work performance.",
+      "Narrator: [encouraging] If you're constantly available for everyone else, consider starting small too, maybe just one protected hour, while making sure genuine emergencies have a clear contact route."
     ],
     "quiz": [
-      { "question": "Why did the narrator used to answer work messages at all hours?", "options": ["His boss demanded it", "He was afraid of seeming lazy or uncommitted", "He had nothing else to do", "He enjoyed working constantly"], "correctIndex": 1, "explanation": "He explains he was afraid of seeming lazy or uncommitted to his team." },
-      { "question": "What happened at his sister's birthday dinner?", "options": ["He forgot to attend", "He answered three messages before the cake was served", "He argued with his sister", "He left early for work"], "correctIndex": 1, "explanation": "He answered three work messages before the cake was even served, and his sister looked disappointed." },
-      { "question": "What was the first boundary he set?", "options": ["Quitting his job", "Turning off work notifications after seven in the evening unless urgent", "Never checking email again", "Working only mornings"], "correctIndex": 1, "explanation": "He started turning off work notifications after seven in the evening unless something was truly urgent." },
-      { "question": "What happened after he stopped replying instantly?", "options": ["He got fired", "Nothing terrible happened; his manager and coworkers adjusted", "His team fell apart", "He lost all his clients"], "correctIndex": 1, "explanation": "Nothing terrible happened; his manager didn't complain and his coworkers adjusted." },
-      { "question": "What did his sister notice about him after the change?", "options": ["He seemed more tired", "He finally seemed present during conversations, not just physically there", "He talked about work more", "She noticed nothing different"], "correctIndex": 1, "explanation": "His sister said he finally seemed present during their conversations, not just physically there." }
-    ]
+      {
+        "question": "Why did the narrator used to answer work messages at all hours?",
+        "options": [
+          "His boss demanded it",
+          "He was afraid of seeming lazy or uncommitted",
+          "He had nothing else to do",
+          "He enjoyed working constantly"
+        ],
+        "correctIndex": 1,
+        "explanation": "He explains he was afraid of seeming lazy or uncommitted to his team."
+      },
+      {
+        "question": "What happened at his sister's birthday dinner?",
+        "options": [
+          "He forgot to attend",
+          "He argued with his sister",
+          "He answered three messages before the cake was served",
+          "He left early for work"
+        ],
+        "correctIndex": 2,
+        "explanation": "He answered three work messages before the cake was even served, and his sister looked disappointed."
+      },
+      {
+        "question": "What was the first boundary he set?",
+        "options": [
+          "Quitting his job",
+          "Turning off work notifications after seven in the evening unless urgent",
+          "Never checking email again",
+          "Working only mornings"
+        ],
+        "correctIndex": 1,
+        "explanation": "He started turning off work notifications after seven in the evening unless something was truly urgent."
+      },
+      {
+        "question": "What happened after he stopped replying instantly?",
+        "options": [
+          "He got fired",
+          "His team fell apart",
+          "He lost all his clients",
+          "Nothing terrible happened; his manager and coworkers adjusted"
+        ],
+        "correctIndex": 3,
+        "explanation": "Nothing terrible happened; his manager didn't complain and his coworkers adjusted."
+      },
+      {
+        "question": "What did his sister notice about him after the change?",
+        "options": [
+          "He seemed more tired",
+          "He talked about work more",
+          "He finally seemed present during conversations, not just physically there",
+          "She noticed nothing different"
+        ],
+        "correctIndex": 2,
+        "explanation": "His sister said he finally seemed present during their conversations, not just physically there."
+      },
+      {
+        "question": "What fear maintained the narrator’s availability?",
+        "options": [
+          "The manager required vacation replies",
+          "Others might see him as lazy or uncommitted",
+          "His sister needed work updates",
+          "Every message was an emergency"
+        ],
+        "correctIndex": 1,
+        "explanation": "The habit grew from an assumption about how commitment looked."
+      },
+      {
+        "question": "What made the family dinner a turning point?",
+        "options": [
+          "His sister’s disappointment showed the cost outside work",
+          "The meal was served late",
+          "His manager sent a complaint",
+          "The phone stopped receiving messages"
+        ],
+        "correctIndex": 0,
+        "explanation": "The nonverbal reaction exposed a damaged relationship."
+      },
+      {
+        "question": "Why did the first quiet evenings feel wrong?",
+        "options": [
+          "Constant availability had become a learned expectation",
+          "Coworkers were angry",
+          "The emergency route had failed",
+          "The narrator disliked family time"
+        ],
+        "correctIndex": 0,
+        "explanation": "Discomfort continued even without an external demand."
+      },
+      {
+        "question": "How did boundaries improve work rather than reduce care?",
+        "options": [
+          "The narrator worked fewer required hours",
+          "Rest allowed clearer and more focused participation",
+          "All difficult messages disappeared",
+          "Coworkers took over every task"
+        ],
+        "correctIndex": 1,
+        "explanation": "Energy and attention replaced exhaustion and resentment."
+      },
+      {
+        "question": "What makes the closing advice responsible?",
+        "options": [
+          "It tells everyone to ignore all work",
+          "It assumes every job has the same hours",
+          "It requires a full weekend offline",
+          "It protects time while preserving a route for real emergencies"
+        ],
+        "correctIndex": 3,
+        "explanation": "A boundary should fit actual responsibilities and urgent needs."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "revise; remove a birthday setting and keep the boundary lesson within an ordinary family dinner",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-daily-05",
@@ -152,38 +614,155 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
       "Host: [welcoming] Welcome back to the show. Today I'm talking with Farid, who cut his grocery spending nearly in half this year. Thanks for joining me.",
-      "Guest: [friendly] Happy to be here. This topic feels boring on the surface, but it genuinely changed my monthly stress levels.",
-      "Host: [curious] What did your grocery spending look like before you made these changes?",
-      "Guest: [honest] Chaotic, honestly. I shopped without any plan, bought things because they looked good, and threw away food constantly because it spoiled.",
-      "Host: [interested] What was the first thing you changed?",
+      "Guest: Happy to be here. This topic feels boring on the surface, but it genuinely changed my monthly stress levels.",
+      "Host: What did your grocery spending look like before you made these changes?",
+      "Guest: [honestly] Chaotic, honestly. I shopped without any plan, bought things because they looked good, and threw away food constantly because it spoiled.",
+      "Host: What was the first thing you changed?",
       "Guest: [practical] I started writing a list before shopping, based on meals I actually planned to cook that week, not random cravings.",
-      "Host: [curious] Did that alone make a big difference?",
-      "Guest: [nodding] A noticeable one, although the bigger change came when I started checking what I already owned before buying anything new.",
-      "Host: [interested] So you were buying duplicates without realizing it?",
-      "Guest: [laughing] Constantly. I once found four bottles of soy sauce in my cabinet, because I kept forgetting I already had some.",
-      "Host: [amused] That's a common mistake. What about eating out? Did that change too?",
-      "Guest: [thoughtful] Yes, because although eating out felt convenient, it was quietly draining my budget faster than groceries ever did.",
-      "Host: [curious] How did you reduce that without feeling deprived?",
+      "Host: Did that alone make a big difference?",
+      "Guest: [thoughtful] A noticeable one, although the bigger change came when I started checking what I already owned before buying anything new.",
+      "Host: So you were buying duplicates without realizing it?",
+      "Guest: [amused] Constantly. I once found four bottles of soy sauce in my cabinet, because I kept forgetting I already had some.",
+      "Host: That's a common mistake. What about eating out? Did that change too?",
+      "Guest: [reflective] Yes, because although eating out felt convenient, it was quietly draining my budget faster than groceries ever did.",
+      "Host: How did you reduce that without feeling deprived?",
       "Guest: [warmly] I started cooking larger portions and freezing extra meals, so I always had something ready when I felt too tired to cook.",
-      "Host: [interested] Did you set any specific weekly budget number?",
+      "Host: Did you set any specific weekly budget number?",
       "Guest: [practical] Yes, a fixed amount each week, and I keep the receipts in a small folder just to track patterns over time.",
-      "Host: [curious] What surprised you most while tracking your spending this closely?",
-      "Guest: [reflective] How much I spent on snacks specifically, small purchases that never felt significant until I added them together monthly.",
-      "Host: [smiling] That's a common surprise for a lot of people. Any final advice for listeners starting this today?",
+      "Host: What surprised you most while tracking your spending this closely?",
+      "Guest: [surprised] How much I spent on snacks specifically, small purchases that never felt significant until I added them together monthly.",
+      "Host: That's a common surprise for a lot of people. Any final advice for listeners starting this today?",
       "Guest: [encouraging] Start with one honest list, check your cabinet first, and don't shop when you're hungry, that one rule alone helps enormously."
     ],
     "quiz": [
-      { "question": "What did Farid's grocery spending look like before the changes?", "options": ["Carefully planned", "Chaotic, with food constantly spoiling", "Very low already", "Managed by an app"], "correctIndex": 1, "explanation": "He describes his old shopping as chaotic, buying without a plan and wasting spoiled food." },
-      { "question": "What was the first change Farid made?", "options": ["He stopped cooking entirely", "Writing a shopping list based on planned meals", "Hiring a nutritionist", "Buying only in bulk"], "correctIndex": 1, "explanation": "He started writing a list based on meals he actually planned to cook that week." },
-      { "question": "What funny example does Farid give about duplicate purchases?", "options": ["Four bags of rice", "Four bottles of soy sauce in his cabinet", "Three jars of honey", "Two bags of flour"], "correctIndex": 1, "explanation": "He found four bottles of soy sauce because he kept forgetting he already had some." },
-      { "question": "How did Farid reduce eating out without feeling deprived?", "options": ["He stopped eating altogether", "Cooking larger portions and freezing extra meals", "Only eating at friends' houses", "Ordering cheaper takeout"], "correctIndex": 1, "explanation": "He started cooking larger portions and freezing extras for tired days." },
-      { "question": "What surprised Farid most while tracking his spending?", "options": ["How much he spent on rent", "How much he spent on snacks", "How cheap groceries were", "How much he saved instantly"], "correctIndex": 1, "explanation": "He was surprised by how much he spent on snacks once added together monthly." }
-    ]
+      {
+        "question": "What did Farid's grocery spending look like before the changes?",
+        "options": [
+          "Carefully planned",
+          "Chaotic, with food constantly spoiling",
+          "Very low already",
+          "Managed by an app"
+        ],
+        "correctIndex": 1,
+        "explanation": "He describes his old shopping as chaotic, buying without a plan and wasting spoiled food."
+      },
+      {
+        "question": "What was the first change Farid made?",
+        "options": [
+          "He stopped cooking entirely",
+          "Writing a shopping list based on planned meals",
+          "Hiring a nutritionist",
+          "Buying only in bulk"
+        ],
+        "correctIndex": 1,
+        "explanation": "He started writing a list based on meals he actually planned to cook that week."
+      },
+      {
+        "question": "What funny example does Farid give about duplicate purchases?",
+        "options": [
+          "Four bottles of soy sauce in his cabinet",
+          "Four bags of rice",
+          "Three jars of honey",
+          "Two bags of flour"
+        ],
+        "correctIndex": 0,
+        "explanation": "He found four bottles of soy sauce because he kept forgetting he already had some."
+      },
+      {
+        "question": "How did Farid reduce eating out without feeling deprived?",
+        "options": [
+          "He stopped eating altogether",
+          "Only eating at friends' houses",
+          "Ordering cheaper takeout",
+          "Cooking larger portions and freezing extra meals"
+        ],
+        "correctIndex": 3,
+        "explanation": "He started cooking larger portions and freezing extras for tired days."
+      },
+      {
+        "question": "What surprised Farid most while tracking his spending?",
+        "options": [
+          "How much he spent on rent",
+          "How cheap groceries were",
+          "How much he saved instantly",
+          "How much he spent on snacks"
+        ],
+        "correctIndex": 3,
+        "explanation": "He was surprised by how much he spent on snacks once added together monthly."
+      },
+      {
+        "question": "Why did food waste occur before budgeting?",
+        "options": [
+          "The weekly limit was too low",
+          "Frozen meals spoiled immediately",
+          "Shopping was disconnected from planned meals",
+          "Receipts were stored in a folder"
+        ],
+        "correctIndex": 2,
+        "explanation": "Random purchases were not matched to actual cooking."
+      },
+      {
+        "question": "What did checking the cupboard add beyond making a list?",
+        "options": [
+          "It increased restaurant spending",
+          "It removed all snack purchases",
+          "It prevented buying items already owned",
+          "It set the weekly budget"
+        ],
+        "correctIndex": 2,
+        "explanation": "An inventory made the list accurate."
+      },
+      {
+        "question": "How does freezing portions solve a specific problem?",
+        "options": [
+          "It provides food when tiredness would otherwise lead to eating out",
+          "It makes every ingredient cheaper",
+          "It removes the need to plan meals",
+          "It guarantees no food expires"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ready meals preserve convenience within the budget."
+      },
+      {
+        "question": "Why are receipts useful over time?",
+        "options": [
+          "They replace the shopping list",
+          "They keep food fresh",
+          "They reveal repeated spending patterns",
+          "They decide what Farid may eat"
+        ],
+        "correctIndex": 2,
+        "explanation": "Small purchases become visible when reviewed together."
+      },
+      {
+        "question": "Which advice targets impulse buying directly?",
+        "options": [
+          "Cook only one portion",
+          "Avoid all snacks",
+          "Do not shop while hungry",
+          "Never eat outside the home"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hunger can make unplanned food look more necessary."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "keep; practical grocery podcast distinguishes planning, inventory, bulk cooking, tracking, and hunger-driven choices",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-daily-06",
@@ -192,70 +771,755 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [tired but proud] Recording this at ten thirty at night, which might sound normal to you, but for me, this is genuinely an achievement.",
-      "Narrator: [honest] For almost a year, I went to bed around two in the morning, scrolling my phone long after I should have been asleep.",
+      "Narrator: For almost a year, I went to bed around two in the morning, scrolling my phone long after I should have been asleep.",
       "Narrator: [reflective] I always blamed work stress, although honestly, the habit continued even during weeks when work was fairly calm.",
-      "Narrator: [thoughtful] The turning point came when I fell asleep during an important meeting, briefly, but long enough for my manager to notice and comment.",
-      "Narrator: [embarrassed] That was humiliating, and it forced me to admit my sleep schedule wasn't just inconvenient, it was actually affecting my work seriously.",
+      "Narrator: [embarrassed] The turning point came when I fell asleep during an important meeting, briefly, but long enough for my manager to notice and comment.",
+      "Narrator: That was humiliating, and it forced me to admit my sleep schedule wasn't just inconvenient, it was actually affecting my work seriously.",
       "Narrator: [determined] So I made small changes, starting with charging my phone in the kitchen instead of beside my bed every night.",
-      "Narrator: [honest] The first few nights were strange. I kept reaching for a phone that simply wasn't there anymore, out of pure habit.",
-      "Narrator: [practical] I also started making tea around nine, a quiet signal to my brain that the day was slowly winding down.",
-      "Narrator: [warmly] Within two weeks, I was falling asleep before midnight, which felt almost impossible when I first started this whole experiment.",
-      "Narrator: [pleased] Now, most nights, I'm actually asleep by eleven, and waking up no longer feels like fighting against my own body.",
+      "Narrator: [restless] The first few nights were strange. I kept reaching for a phone that simply wasn't there anymore, out of pure habit.",
+      "Narrator: [calmly] I also started making a caffeine-free warm drink around nine, a quiet signal to my brain that the day was slowly winding down.",
+      "Narrator: [surprised] Within two weeks, I was falling asleep before midnight, which felt almost impossible when I first started this whole experiment.",
+      "Narrator: Now, most nights, I'm actually asleep by eleven, and waking up no longer feels like fighting against my own body.",
       "Narrator: [reflective] My mornings changed the most, surprisingly. I used to wake up already exhausted, dragging myself through the first few hours of every day.",
-      "Narrator: [peacefully] Now I actually have quiet time before work, enough to eat breakfast slowly instead of rushing out the door.",
-      "Narrator: [honest] I still slip sometimes, especially on weekends, when I convince myself just one more episode won't matter that much.",
-      "Narrator: [smiling] But overall, this small change reshaped my entire day, not only my nights, which I genuinely didn't expect when I started.",
-      "Narrator: [encouraging] If your evenings feel out of control too, maybe start with just moving your phone, mine made a bigger difference than I imagined."
+      "Narrator: Now I actually have quiet time before work, enough to eat breakfast slowly instead of rushing out the door.",
+      "Narrator: [honestly] I still slip sometimes, especially on weekends, when I convince myself just one more episode won't matter that much.",
+      "Narrator: But overall, this small change reshaped my entire day, not only my nights, which I genuinely didn't expect when I started.",
+      "Narrator: [carefully] Moving a phone may be one useful experiment. If serious sleepiness or sleep problems continue, seek appropriate health advice instead of relying on one habit."
     ],
     "quiz": [
-      { "question": "What was the narrator's old bedtime habit?", "options": ["Sleeping at nine every night", "Going to bed around two in the morning, scrolling her phone", "Never using her phone at night", "Sleeping too early"], "correctIndex": 1, "explanation": "She used to go to bed around two in the morning while scrolling her phone." },
-      { "question": "What was the turning point that made her change her habits?", "options": ["A doctor's warning", "Falling asleep briefly during an important meeting", "A friend's advice", "Losing her job"], "correctIndex": 1, "explanation": "She fell asleep during an important meeting and her manager noticed, which embarrassed her." },
-      { "question": "What was the first change she made?", "options": ["Deleting social media", "Charging her phone in the kitchen instead of beside her bed", "Drinking coffee at night", "Sleeping in a different room"], "correctIndex": 1, "explanation": "She started charging her phone in the kitchen instead of next to her bed." },
-      { "question": "What does she do around nine to signal her day is winding down?", "options": ["Exercises", "Makes tea", "Watches television", "Calls a friend"], "correctIndex": 1, "explanation": "She started making tea around nine as a quiet signal to wind down." },
-      { "question": "How have her mornings changed the most?", "options": ["They stayed the same", "She now has quiet time to eat breakfast slowly instead of rushing", "She wakes up later than before", "She skips breakfast entirely"], "correctIndex": 1, "explanation": "She says mornings changed the most, now having quiet time to eat breakfast slowly instead of rushing." }
-    ]
+      {
+        "question": "What was the narrator's old bedtime habit?",
+        "options": [
+          "Sleeping at nine every night",
+          "Never using her phone at night",
+          "Going to bed around two in the morning, scrolling her phone",
+          "Sleeping too early"
+        ],
+        "correctIndex": 2,
+        "explanation": "She used to go to bed around two in the morning while scrolling her phone."
+      },
+      {
+        "question": "What was the turning point that made her change her habits?",
+        "options": [
+          "A doctor's warning",
+          "A friend's advice",
+          "Losing her job",
+          "Falling asleep briefly during an important meeting"
+        ],
+        "correctIndex": 3,
+        "explanation": "She fell asleep during an important meeting and her manager noticed, which embarrassed her."
+      },
+      {
+        "question": "What was the first change she made?",
+        "options": [
+          "Charging her phone in the kitchen instead of beside her bed",
+          "Deleting social media",
+          "Drinking coffee at night",
+          "Sleeping in a different room"
+        ],
+        "correctIndex": 0,
+        "explanation": "She started charging her phone in the kitchen instead of next to her bed."
+      },
+      {
+        "question": "What does she do around nine to signal her day is winding down?",
+        "options": [
+          "Exercises",
+          "Watches television",
+          "Makes tea",
+          "Calls a friend"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started making tea around nine as a quiet signal to wind down."
+      },
+      {
+        "question": "How have her mornings changed the most?",
+        "options": [
+          "They stayed the same",
+          "She now has quiet time to eat breakfast slowly instead of rushing",
+          "She wakes up later than before",
+          "She skips breakfast entirely"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says mornings changed the most, now having quiet time to eat breakfast slowly instead of rushing."
+      },
+      {
+        "question": "What evidence weakened the work-stress explanation?",
+        "options": [
+          "The manager denied any stress",
+          "The phone was used only at work",
+          "Weekends had earlier bedtimes",
+          "The late habit continued during calm work weeks"
+        ],
+        "correctIndex": 3,
+        "explanation": "The pattern remained when the claimed cause was absent."
+      },
+      {
+        "question": "Why was falling asleep in the meeting significant?",
+        "options": [
+          "The schedule was affecting daytime function and work",
+          "The meeting occurred at midnight",
+          "The narrator had finished every task",
+          "The manager recommended tea"
+        ],
+        "correctIndex": 0,
+        "explanation": "The consequence showed the issue was more than inconvenience."
+      },
+      {
+        "question": "What role does the warm drink play?",
+        "options": [
+          "It medically treats every sleep problem",
+          "It replaces the need for a bedtime",
+          "It keeps the narrator awake",
+          "It is a repeated signal that the day is ending"
+        ],
+        "correctIndex": 3,
+        "explanation": "A caffeine-free routine supports transition rather than acting as a cure."
+      },
+      {
+        "question": "How does the narrator respond to occasional slips?",
+        "options": [
+          "She gives up the changes",
+          "She removes all weekend activities",
+          "She stays awake the next night",
+          "She returns to the routine instead of treating one night as failure"
+        ],
+        "correctIndex": 3,
+        "explanation": "The story presents improvement as imperfect but continuing."
+      },
+      {
+        "question": "When is professional advice appropriate?",
+        "options": [
+          "After any single late night",
+          "When serious sleepiness or sleep difficulty continues",
+          "Only if moving the phone works",
+          "Never, because the habit solved it"
+        ],
+        "correctIndex": 1,
+        "explanation": "Persistent symptoms may need assessment beyond self-help."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "revise; keep gradual sleep-hygiene changes while removing caffeine ambiguity and adding a professional-care boundary",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-daily-07",
-    "title": "Two Roommates Deciding Who Walks the Dog",
+    "title": "Two Shelter Volunteers Plan the Dog-Walking Rota",
     "level": "A2",
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Tara", "gender": "female" },
-      { "name": "Joko", "gender": "male" }
+      {
+        "name": "Tara",
+        "gender": "female"
+      },
+      {
+        "name": "Nisa",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Tara: [amused] Joko, we've had Bimo for three weeks now, and somehow we still haven't agreed on a proper walking schedule.",
-      "Joko: [laughing] I know, we've just been walking him whenever one of us happens to notice he's staring at the leash.",
-      "Tara: [practical] That's not really sustainable, though. Yesterday nobody noticed until nine at night, and he seemed genuinely miserable by then.",
-      "Joko: [guilty] Fair point. I actually felt bad about that too, although I assumed you had already taken him out earlier.",
-      "Tara: [gently] See, that's exactly the problem, we're both assuming the other person handled it, so sometimes nobody does.",
-      "Joko: [thinking] Okay, let's actually fix this properly. What if mornings are always mine, since I already wake up early for work anyway?",
-      "Tara: [agreeing] That works well, because I'm barely functional before eight, and Bimo deserves better than a half-asleep walker.",
-      "Joko: [continuing] Then evenings could alternate, since our work schedules change depending on the week, that part feels harder to fix permanently.",
-      "Tara: [suggesting] What if we just text each other by six every evening, confirming who's walking him that specific night?",
-      "Joko: [nodding] That's simple enough that we'll actually remember to do it, unlike our last three failed schedule attempts.",
-      "Tara: [laughing] True, remember the color-coded calendar? It lasted exactly four days before we both forgot it existed.",
-      "Joko: [chuckling] Don't remind me. Okay, mornings mine, evenings decided by text, and weekends we split however feels fair that week.",
-      "Tara: [pleased] Sounds reasonable. Also, can we agree that whoever walks him also refills his water bowl afterward?",
-      "Joko: [agreeing] Definitely, that keeps getting forgotten too, and he ends up staring at an empty bowl like we've betrayed him.",
-      "Tara: [smiling] He really does give that exact look. Okay, I think this plan might actually survive longer than four days.",
-      "Joko: [determined] Let's write it on the fridge this time, next to the chore chart, so we see it constantly.",
-      "Tara: [warmly] Good idea. Honestly, having him has been wonderful, we just need to get better at the logistics part.",
-      "Joko: [smiling] Agreed completely. Speaking of which, he's staring at the leash right now, so that's my morning walk starting early.",
-      "Tara: [laughing] Go on then, before he starts making that disappointed sound he does when we ignore him too long."
+      "Tara: [concerned] Nisa, the shelter coordinator said Bimo’s evening walk was recorded late twice this week.",
+      "Nisa: I saw that. Several volunteers helped with food, but everyone assumed another person had taken him outside.",
+      "Tara: The unclear rota is unfair to the dog. Exercise, water, and observation cannot depend on someone noticing by chance.",
+      "Nisa: [thoughtful] Let us make fixed morning roles and confirmed evening roles. Which time can you truly protect?",
+      "Tara: I can do Monday, Wednesday, and Friday mornings before work. I should not promise every morning because Tuesday begins early.",
+      "Nisa: Good. I can cover Tuesday and Thursday, and the weekend team already has two trained walkers.",
+      "Tara: [practical] Evenings change more often. What if the assigned person confirms in the group by four o’clock?",
+      "Nisa: If there is no confirmation, the backup volunteer receives an alert. We should never wait until the dog is already distressed.",
+      "Tara: The walker also needs to refill water and record appetite, energy, and anything unusual.",
+      "Nisa: [carefully] Yes, but volunteers should not diagnose illness. A concern goes to shelter staff or the veterinarian.",
+      "Tara: What about new volunteers who want to help?",
+      "Nisa: They first learn leash safety and walk with a trained person. Bimo is strong when he becomes excited.",
+      "Tara: [relieved] This is better than our old color-coded calendar because it includes confirmation and backup.",
+      "Nisa: The calendar was attractive, but nobody owned the final check.",
+      "Tara: I will put the rota near the staff desk and in the private volunteer group.",
+      "Nisa: [firmly] Keep visitor names and medical notes out of the group. It needs only animal-care tasks and volunteer shifts.",
+      "Tara: Agreed. We can review the plan after two weeks and ask staff whether Bimo’s routine became more consistent.",
+      "Nisa: If a shift repeatedly fails, we change the rota rather than blaming the dog or hiding the missed care.",
+      "Tara: [warmly] Clear responsibility is part of kindness. Good intentions are not enough if the animal’s needs are missed.",
+      "Nisa: Exactly. I will confirm tonight’s walk now, and you can check the water record afterward."
     ],
     "quiz": [
-      { "question": "How long have Tara and Joko had their dog, Bimo?", "options": ["Three days", "Three weeks", "Three months", "One year"], "correctIndex": 1, "explanation": "Tara mentions they've had Bimo for three weeks." },
-      { "question": "What happened the night before this conversation?", "options": ["Bimo ran away", "Nobody walked him until nine at night", "They walked him twice", "He got sick"], "correctIndex": 1, "explanation": "Tara says nobody noticed until nine at night, and Bimo seemed miserable." },
-      { "question": "Why does Joko take mornings in the new schedule?", "options": ["He likes mornings best", "He already wakes up early for work anyway", "Tara refuses to wake up early ever", "It was random"], "correctIndex": 1, "explanation": "Joko takes mornings because he already wakes up early for work anyway." },
-      { "question": "How will they decide who walks the dog in the evening?", "options": ["Whoever gets home first", "Texting each other by six to confirm", "Always Tara", "Flipping a coin daily"], "correctIndex": 1, "explanation": "They agree to text each other by six each evening to confirm who is walking him." },
-      { "question": "What extra task do they agree should follow each walk?", "options": ["Feeding him dinner", "Refilling his water bowl", "Brushing his fur", "Giving him a bath"], "correctIndex": 1, "explanation": "They agree that whoever walks him also refills his water bowl afterward." }
-    ]
+      {
+        "question": "What problem did the shelter coordinator report?",
+        "options": [
+          "Bimo refused every meal",
+          "The weekend team had resigned",
+          "The dog had no trained walkers",
+          "Bimo’s evening walk was recorded late twice"
+        ],
+        "correctIndex": 3,
+        "explanation": "Unclear responsibility caused delayed care."
+      },
+      {
+        "question": "Why does Tara reject promising every morning?",
+        "options": [
+          "She dislikes morning walks",
+          "Her Tuesday schedule would make the promise unrealistic",
+          "Nisa requested all mornings",
+          "The shelter is closed on Tuesday"
+        ],
+        "correctIndex": 1,
+        "explanation": "She matches commitment to actual availability."
+      },
+      {
+        "question": "How will evening shifts be protected?",
+        "options": [
+          "An assigned person confirms, with a backup if needed",
+          "Any visitor may notice the leash",
+          "The dog chooses a volunteer",
+          "Only the calendar is checked at night"
+        ],
+        "correctIndex": 0,
+        "explanation": "Confirmation and backup prevent assumption gaps."
+      },
+      {
+        "question": "What must a walker record?",
+        "options": [
+          "A medical diagnosis",
+          "Visitor names",
+          "Water, appetite, energy, and unusual observations",
+          "Every private staff note"
+        ],
+        "correctIndex": 2,
+        "explanation": "The record supports continuity without exceeding the volunteer role."
+      },
+      {
+        "question": "How are new volunteers introduced?",
+        "options": [
+          "They immediately walk alone",
+          "They only read the old calendar",
+          "They learn safety and walk with a trained person",
+          "They receive the veterinarian’s password"
+        ],
+        "correctIndex": 2,
+        "explanation": "Training protects both people and the animal."
+      },
+      {
+        "question": "Why did the old calendar fail?",
+        "options": [
+          "It displayed shifts but did not ensure anyone confirmed completion",
+          "Its colors frightened Bimo",
+          "It included too many veterinarians",
+          "The staff desk had no space"
+        ],
+        "correctIndex": 0,
+        "explanation": "A schedule needs ownership and follow-through."
+      },
+      {
+        "question": "What happens when a volunteer notices a health concern?",
+        "options": [
+          "Shelter staff or a veterinarian assesses it",
+          "The volunteer diagnoses and treats it",
+          "The concern is posted publicly",
+          "The walk continues without a note"
+        ],
+        "correctIndex": 0,
+        "explanation": "Observation and professional judgment have different roles."
+      },
+      {
+        "question": "Why is the volunteer group private and limited?",
+        "options": [
+          "The public is not allowed to know the shelter exists",
+          "Care coordination should not expose unrelated personal data",
+          "Volunteers cannot discuss shifts",
+          "Bimo’s name is confidential"
+        ],
+        "correctIndex": 1,
+        "explanation": "The group contains only information needed for the task."
+      },
+      {
+        "question": "What will the two-week review measure?",
+        "options": [
+          "Whether every volunteer likes the colors",
+          "Whether Bimo can skip walks",
+          "Whether the dog should live with Tara",
+          "Whether the care routine became more consistent"
+        ],
+        "correctIndex": 3,
+        "explanation": "Review tests the system against the animal’s actual needs."
+      },
+      {
+        "question": "What is the dialogue’s central ethical point?",
+        "options": [
+          "Kind intentions need clear responsibility to become reliable care",
+          "Volunteers should accept every shift",
+          "Animals can wait until someone remembers",
+          "A written rota removes all need for communication"
+        ],
+        "correctIndex": 0,
+        "explanation": "Good character is shown through dependable action."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "replace; avoid an unsuitable mixed-household and pet premise while retaining shared responsibility and animal welfare",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-daily-08",
+    "title": "One Week of Writing Down Every Expense",
+    "level": "A2",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] I believed I understood my daily spending because I rarely bought expensive things. Still, my account balance always surprised me near the end of the month.",
+      "Narrator: [curious] For one week, I wrote down every payment immediately. I used a small note on my phone with only four categories.",
+      "Narrator: The first category was meals, the second was transport, the third was household needs, and the fourth was optional spending.",
+      "Narrator: [surprised] On Monday, the list looked ordinary. By Wednesday, I noticed that I had bought drinks and snacks six times.",
+      "Narrator: None of them cost much, but together they were almost equal to two full meals.",
+      "Narrator: [honestly] I also paid for short motorcycle rides when I could have walked safely in fifteen minutes. I used them mostly because I left home late.",
+      "Narrator: [reflective] The record did not tell me to remove every comfort. It showed which choices were automatic rather than useful.",
+      "Narrator: [prepared] For the rest of the week, I carried water and one snack. I also prepared my bag earlier, so I could walk to nearby places without rushing.",
+      "Narrator: On Sunday, I reviewed the list. Household spending was reasonable, and I did not feel guilty about lunch with a friend.",
+      "Narrator: [thoughtful] The biggest opportunity was not the social meal. It was the repeated spending I barely remembered.",
+      "Narrator: I created a simple monthly amount for snacks and transport. When I choose to spend it, I want the choice to be visible.",
+      "Narrator: [generously] I also kept a small amount for generosity and unexpected needs, because a budget should not make a person hard-hearted or unable to help.",
+      "Narrator: Writing everything forever may be tiring, so now I track closely for one week each month.",
+      "Narrator: [calmly] The exercise gives me an honest picture without turning every coin into anxiety.",
+      "Narrator: [encouraging] A useful budget is not punishment. It is information that helps money follow our real priorities."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the narrator surprised each month?",
+        "options": [
+          "Small spending reduced the balance",
+          "He bought a house",
+          "His salary disappeared by error",
+          "He never checked the account"
+        ],
+        "correctIndex": 0,
+        "explanation": "Many ordinary payments were adding up."
+      },
+      {
+        "question": "How many tracking categories did he use?",
+        "options": [
+          "Ten",
+          "Four",
+          "One",
+          "Twenty"
+        ],
+        "correctIndex": 1,
+        "explanation": "The system stayed simple with four categories."
+      },
+      {
+        "question": "What repeated expense stood out by Wednesday?",
+        "options": [
+          "Medical care",
+          "Drinks and snacks",
+          "Rent",
+          "Books"
+        ],
+        "correctIndex": 1,
+        "explanation": "Six small food purchases had accumulated."
+      },
+      {
+        "question": "How did preparation reduce transport spending?",
+        "options": [
+          "He bought a car",
+          "He stopped leaving home",
+          "Earlier packing allowed safe walking",
+          "He moved beside work"
+        ],
+        "correctIndex": 2,
+        "explanation": "Less rushing removed some short rides."
+      },
+      {
+        "question": "What is his view of budgeting?",
+        "options": [
+          "It should create guilt",
+          "It must remove generosity",
+          "It matters only for expensive items",
+          "It is information, not punishment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The record helps spending follow priorities."
+      },
+      {
+        "question": "Why did the narrator initially underestimate spending?",
+        "options": [
+          "The bank account was incorrect",
+          "Individual purchases were small and easy to forget",
+          "Household costs were hidden",
+          "Friends paid for every meal"
+        ],
+        "correctIndex": 1,
+        "explanation": "Low prices did not prevent a large combined effect."
+      },
+      {
+        "question": "What caused avoidable motorcycle rides?",
+        "options": [
+          "Leaving home too late to walk",
+          "Unsafe walking routes every day",
+          "A dislike of public transport",
+          "Heavy household shopping"
+        ],
+        "correctIndex": 0,
+        "explanation": "Earlier preparation changed the transport choice."
+      },
+      {
+        "question": "Why is lunch with a friend not treated as the main problem?",
+        "options": [
+          "It cost less than water",
+          "The friend returned the money",
+          "It was a visible, valued choice rather than automatic repetition",
+          "Social meals never affect budgets"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator distinguishes priorities from unnoticed habits."
+      },
+      {
+        "question": "What prevents the budget from becoming hard-hearted?",
+        "options": [
+          "Every comfort is removed",
+          "Only household expenses are tracked",
+          "Friends choose the categories",
+          "Money remains for generosity and unexpected needs"
+        ],
+        "correctIndex": 3,
+        "explanation": "The plan leaves room for care and uncertainty."
+      },
+      {
+        "question": "Why track closely only one week each month?",
+        "options": [
+          "The other weeks have no spending",
+          "It provides evidence without making daily life constantly anxious",
+          "The phone note expires weekly",
+          "The categories change every Sunday"
+        ],
+        "correctIndex": 1,
+        "explanation": "The method balances useful information with sustainability."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "keep; strong personal-finance story targets automatic spending without shaming social meals or generosity",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-daily-09",
+    "title": "The Drawer for Important Papers",
+    "level": "A2",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [frustrated] When I needed a copy of my rental agreement, I searched three cupboards, two bags, and a stack of old mail.",
+      "Narrator: [surprised] I finally found it inside a cooking magazine. I had placed it there during a rushed phone call and forgotten.",
+      "Narrator: [determined] That evening, I decided to create one system for important household papers. I chose a lockable drawer away from water and cooking heat.",
+      "Narrator: I made folders for identity copies, housing, bills, health records, work papers, and warranties.",
+      "Narrator: [carefully] Before filing anything, I checked what should be kept and what could be safely destroyed. I did not keep unnecessary copies of sensitive information.",
+      "Narrator: I wrote a simple contents list but no identification numbers. The list helps me find a folder without exposing private details.",
+      "Narrator: [securely] For digital copies, I scanned only useful documents and stored them in an encrypted account with a strong unique password.",
+      "Narrator: [thoughtful] I also told one trusted family member where emergency papers could be found. Access should not depend on one person being available.",
+      "Narrator: [firmly] The most difficult part was old mail. Some letters could go into normal recycling, but papers with addresses or account information needed shredding.",
+      "Narrator: [relieved] After two hours, the drawer was organized. More importantly, I created a five-minute routine for new papers.",
+      "Narrator: When mail arrives, I either act on it, file it, or destroy it safely. Nothing goes into a temporary pile without a decision.",
+      "Narrator: [reflective] Once a year, I review the folders because expired documents should not remain forever.",
+      "Narrator: The system is not visually beautiful. It uses plain labels and inexpensive folders.",
+      "Narrator: [practically] But when the building manager requested my agreement again, I found it in less than a minute.",
+      "Narrator: [encouraging] Daily organization works best when it protects both time and privacy, not when it only makes a shelf look neat."
+    ],
+    "quiz": [
+      {
+        "question": "Where was the rental agreement found?",
+        "options": [
+          "At the building office",
+          "Inside a cooking magazine",
+          "Under the sink",
+          "In a friend’s car"
+        ],
+        "correctIndex": 1,
+        "explanation": "A rushed moment had placed it in an unusual location."
+      },
+      {
+        "question": "Where did the narrator create storage?",
+        "options": [
+          "An open kitchen shelf",
+          "A public online page",
+          "A lockable drawer away from water and heat",
+          "A box outside the home"
+        ],
+        "correctIndex": 2,
+        "explanation": "The chosen place supports physical security."
+      },
+      {
+        "question": "What is left off the contents list?",
+        "options": [
+          "Identification numbers",
+          "Folder names",
+          "Document categories",
+          "The review date"
+        ],
+        "correctIndex": 0,
+        "explanation": "The list should guide without exposing sensitive data."
+      },
+      {
+        "question": "What is the rule for incoming mail?",
+        "options": [
+          "Place everything in a pile",
+          "Scan every advertisement",
+          "Keep all papers forever",
+          "Act, file, or destroy it safely"
+        ],
+        "correctIndex": 3,
+        "explanation": "Each new paper receives an immediate decision."
+      },
+      {
+        "question": "What two goals does the system serve?",
+        "options": [
+          "Decoration and entertainment",
+          "Cooking and travel",
+          "Saving time and protecting privacy",
+          "Shopping and exercise"
+        ],
+        "correctIndex": 2,
+        "explanation": "Organization is judged by usefulness and safety."
+      },
+      {
+        "question": "Why is the drawer placed away from water and heat?",
+        "options": [
+          "To reduce physical damage to important papers",
+          "To hide it from the building manager",
+          "To make cooking easier",
+          "To improve the folder labels"
+        ],
+        "correctIndex": 0,
+        "explanation": "Storage location protects the documents as well as organizing them."
+      },
+      {
+        "question": "Why are identification numbers excluded from the contents list?",
+        "options": [
+          "The numbers are never useful",
+          "The list can guide retrieval without exposing sensitive data",
+          "The folders contain no identity copies",
+          "Encryption automatically removes them"
+        ],
+        "correctIndex": 1,
+        "explanation": "A simple index should reveal as little private information as possible."
+      },
+      {
+        "question": "What risk does the trusted-family arrangement address?",
+        "options": [
+          "Family members need all account passwords",
+          "The drawer cannot be locked",
+          "Emergency access should not depend on one unavailable person",
+          "The narrator may forget how to read labels"
+        ],
+        "correctIndex": 2,
+        "explanation": "Limited continuity planning supports real emergencies."
+      },
+      {
+        "question": "Why are some papers shredded instead of recycled normally?",
+        "options": [
+          "Shredded paper lasts longer",
+          "Recycling does not accept mail",
+          "Old letters are always illegal to keep",
+          "Addresses or account details could be exposed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Secure destruction matches the sensitivity of the content."
+      },
+      {
+        "question": "What makes the system more than visual tidiness?",
+        "options": [
+          "It uses expensive matching folders",
+          "It keeps every document forever",
+          "It protects privacy while making records quickly usable",
+          "It removes the need for annual review"
+        ],
+        "correctIndex": 2,
+        "explanation": "Function and information security are the real goals."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "keep; excellent paper-management system combines retrieval, minimal retention, encryption, emergency access, and secure destruction",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-daily-10",
+    "title": "The Grocery List Built From the Cupboard",
+    "level": "A2",
+    "themeId": "daily",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Iman",
+        "gender": "female"
+      },
+      {
+        "name": "Rizal",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Iman: [warmly] Rizal, before we write the grocery list, can you check the top cupboard?",
+      "Rizal: Why? We already know we need rice, oil, and pasta.",
+      "Iman: [surprised] I checked yesterday. We have two bags of rice, three bottles of oil, and five packs of pasta.",
+      "Rizal: That explains why the cupboard barely closes. I keep buying from memory.",
+      "Iman: [reflective] Let us plan meals from what we own before adding anything.",
+      "Rizal: All right. There are lentils, canned tomatoes, tuna, and several spices.",
+      "Iman: [practical] We can make lentil soup on Monday and tomato pasta on Tuesday.",
+      "Rizal: The tuna could become sandwiches for Wednesday lunch. What fresh items do we need?",
+      "Iman: [thoughtful] Onions, carrots, spinach, bread, fruit, eggs, and some chicken for Thursday.",
+      "Rizal: Check the dates on the open packages too. The red lentils should be used first.",
+      "Iman: [carefully] They are still good, but the flour expires next month.",
+      "Rizal: Then we can make simple flatbread this weekend instead of buying extra bread.",
+      "Iman: [measured] I will add only one loaf for the first days. Should we buy snacks?",
+      "Rizal: We have nuts and popcorn kernels. Let us use those before getting more.",
+      "Iman: [pleased] This list is much shorter than usual.",
+      "Rizal: It should also cost less and reduce food waste.",
+      "Iman: [warmly] Can we keep a small whiteboard on the cupboard door for items that truly run out?",
+      "Rizal: Yes, but we should still check before shopping. Someone may write rice when another person has already bought it.",
+      "Iman: [prepared] Agreed. I will take a photo of the cupboard and the final list.",
+      "Rizal: [honestly] Good. Planning begins with seeing what we have, not with walking through the shop and hoping to remember."
+    ],
+    "quiz": [
+      {
+        "question": "What do they discover about rice and oil?",
+        "options": [
+          "Both are completely finished",
+          "They already have more than expected",
+          "They never use them",
+          "The shop has none"
+        ],
+        "correctIndex": 1,
+        "explanation": "Buying from memory created extra stock."
+      },
+      {
+        "question": "What meal will use the lentils?",
+        "options": [
+          "Monday soup",
+          "Thursday chicken",
+          "Wednesday sandwiches",
+          "Weekend breakfast"
+        ],
+        "correctIndex": 0,
+        "explanation": "They build Monday’s meal around existing lentils."
+      },
+      {
+        "question": "Why should red lentils be used first?",
+        "options": [
+          "Their open package should be prioritized",
+          "They are a new purchase",
+          "They cannot be cooked",
+          "They belong to a neighbor"
+        ],
+        "correctIndex": 0,
+        "explanation": "Older open food should be planned first."
+      },
+      {
+        "question": "What will they use for snacks?",
+        "options": [
+          "New cakes",
+          "Nuts and popcorn already at home",
+          "Restaurant food",
+          "Only fruit juice"
+        ],
+        "correctIndex": 1,
+        "explanation": "Existing food replaces another purchase."
+      },
+      {
+        "question": "What is the central method?",
+        "options": [
+          "Buy from memory",
+          "Fill the cupboard completely",
+          "Check current supplies before planning purchases",
+          "Avoid all fresh food"
+        ],
+        "correctIndex": 2,
+        "explanation": "A cupboard check controls waste and cost."
+      },
+      {
+        "question": "What caused the crowded cupboard?",
+        "options": [
+          "Iman planned too many meals",
+          "Fresh food was stored there",
+          "Rizal repeatedly bought from memory",
+          "The whiteboard listed no items"
+        ],
+        "correctIndex": 2,
+        "explanation": "Assumption replaced checking."
+      },
+      {
+        "question": "How do package dates affect the meal plan?",
+        "options": [
+          "Items that should be used sooner are scheduled first",
+          "Expired food is automatically cooked",
+          "Dates decide who shops",
+          "Only fresh food receives a date"
+        ],
+        "correctIndex": 0,
+        "explanation": "Meal order helps reduce avoidable waste."
+      },
+      {
+        "question": "Why will they buy only one loaf?",
+        "options": [
+          "Existing flour can become later flatbread",
+          "Bread cannot be stored",
+          "They plan no lunches",
+          "The shop limits purchases"
+        ],
+        "correctIndex": 0,
+        "explanation": "Current supplies cover part of the need."
+      },
+      {
+        "question": "What weakness could the whiteboard still have?",
+        "options": [
+          "It cannot show words",
+          "It always increases food waste",
+          "Only Rizal may read it",
+          "Someone may list an item another person already bought"
+        ],
+        "correctIndex": 3,
+        "explanation": "The board improves communication but does not replace a final check."
+      },
+      {
+        "question": "Why does Iman photograph both cupboard and list?",
+        "options": [
+          "To post the food publicly",
+          "To replace checking dates",
+          "To calculate restaurant prices",
+          "To carry current evidence while shopping"
+        ],
+        "correctIndex": 3,
+        "explanation": "The photos reduce dependence on memory at the shop."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "daily",
+      "scriptDecision": "keep; coherent cupboard-first planning combines inventory, dates, meal sequence, waste reduction, and shared updates",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

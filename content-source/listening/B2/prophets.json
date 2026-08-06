@@ -6,29 +6,143 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [measured] Long before Ibrahim became known as the father of nations, he was a young man in a kingdom where questioning the ruler could cost you your life.",
-      "Narrator: [thoughtful] Namrud, the tyrant who governed that land, had convinced his subjects that his authority was practically limitless, that he alone decided who lived and who perished.",
-      "Narrator: [reflective] Rather than shrinking from the confrontation, Ibrahim addressed the king plainly, telling him that his own Lord was the one who gives life and causes death.",
-      "Narrator: [dry] Namrud, unwilling to be outmatched, retorted that he too could grant life and death, and pardoned one prisoner while executing another, as if that settled the argument.",
-      "Narrator: [firm] Ibrahim then pointed out that his Lord brings the sun up from the east, and challenged Namrud to bring it up from the west instead, if his power were genuinely comparable.",
-      "Narrator: [quiet] At that, the king fell silent, stunned into an embarrassment he had clearly never experienced before an audience of his own subjects.",
-      "Narrator: [thoughtful] What strikes me about this exchange isn't merely that Ibrahim won it, but how he won it, refusing to be baited into shouting or theatrics himself.",
-      "Narrator: [reflective] He simply followed the logic of the king's own claim until it collapsed under its own weight, exposing pretension rather than merely opposing it.",
-      "Narrator: [somber] This wasn't their only confrontation; earlier, after Ibrahim had smashed the idols in the temple, the enraged king had ordered him thrown into a roaring fire.",
-      "Narrator: [awed] Miraculously, the flames were commanded to become cool and safe, and Ibrahim walked out unscathed, having lost nothing but the fear that might have silenced a lesser man.",
-      "Narrator: [warm] Taken together, these episodes suggest something worth carrying with us: conviction, when genuinely rooted in truth, tends to outlast whatever intimidation is thrown against it.",
-      "Narrator: [gentle] Namrud had armies, wealth, and the power to condemn people on a whim, yet none of it could withstand a single, calmly reasoned argument."
+      "Narrator: [thoughtful] Long before Ibrahim became known as the father of nations, he was a young man in a kingdom where questioning the ruler could cost you your life.",
+      "Narrator: Namrud, the tyrant who governed that land, had convinced his subjects that his authority was practically limitless, that he alone decided who lived and who perished.",
+      "Narrator: [carefully] Rather than shrinking from the confrontation, Ibrahim addressed the king plainly, telling him that his own Lord was the one who gives life and causes death.",
+      "Narrator: Namrud, unwilling to be outmatched, retorted that he too could grant life and death, and pardoned one prisoner while executing another, as if that settled the argument.",
+      "Narrator: [reflective] Ibrahim then pointed out that his Lord brings the sun up from the east, and challenged Namrud to bring it up from the west instead, if his power were genuinely comparable.",
+      "Narrator: At that, the king fell silent, stunned into an embarrassment he had clearly never experienced before an audience of his own subjects.",
+      "Narrator: [honestly] What strikes me about this exchange isn't merely that Ibrahim won it, but how he won it, refusing to be baited into shouting or theatrics himself.",
+      "Narrator: He simply followed the logic of the king's own claim until it collapsed under its own weight, exposing pretension rather than merely opposing it.",
+      "Narrator: [gently] This wasn't their only confrontation; earlier, after Ibrahim had smashed the idols in the temple, the enraged king had ordered him thrown into a roaring fire.",
+      "Narrator: Miraculously, the flames were commanded to become cool and safe, and Ibrahim walked out unscathed, having lost nothing but the fear that might have silenced a lesser man.",
+      "Narrator: [calmly] Taken together, these episodes suggest something worth carrying with us: conviction, when genuinely rooted in truth, tends to outlast whatever intimidation is thrown against it.",
+      "Narrator: Namrud had armies, wealth, and the power to condemn people on a whim, yet none of it could withstand a single, calmly reasoned argument."
     ],
     "quiz": [
-      { "question": "What claim had Namrud convinced his subjects of?", "options": ["That he was a prophet", "That his authority was practically limitless, deciding life and death", "That he owned all the land", "That he could not be seen"], "correctIndex": 1, "explanation": "Namrud had convinced his subjects his authority was practically limitless, that he alone decided who lived and who perished." },
-      { "question": "How did Namrud initially respond to Ibrahim's claim about his Lord?", "options": ["He agreed immediately", "He pardoned one prisoner and executed another to claim similar power", "He fled the throne room", "He asked for proof in writing"], "correctIndex": 1, "explanation": "Namrud pardoned one prisoner while executing another, as if that proved he too could grant life and death." },
-      { "question": "What challenge finally silenced Namrud?", "options": ["A challenge to build a bigger palace", "Bringing the sun up from the west instead of the east", "A challenge to a physical fight", "A request for gold"], "correctIndex": 1, "explanation": "Ibrahim challenged Namrud to bring the sun up from the west, since his Lord brings it from the east." },
-      { "question": "What happened when Ibrahim was thrown into the fire?", "options": ["He was badly burned", "The flames became cool and safe for him", "Someone rescued him first", "The fire never was lit"], "correctIndex": 1, "explanation": "The flames were commanded to become cool and safe, and Ibrahim walked out unscathed." },
-      { "question": "According to the narrator, what does the story suggest?", "options": ["Power always wins in the end", "Genuine conviction tends to outlast intimidation", "Arguments are pointless against rulers", "Fire cannot be controlled"], "correctIndex": 1, "explanation": "The narrator concludes that conviction rooted in truth tends to outlast whatever intimidation is thrown against it." }
-    ]
+      {
+        "question": "What claim had Namrud convinced his subjects of?",
+        "options": [
+          "That he was a prophet",
+          "That he owned all the land",
+          "That he could not be seen",
+          "That his authority was practically limitless, deciding life and death"
+        ],
+        "correctIndex": 3,
+        "explanation": "Namrud had convinced his subjects his authority was practically limitless, that he alone decided who lived and who perished."
+      },
+      {
+        "question": "How did Namrud initially respond to Ibrahim's claim about his Lord?",
+        "options": [
+          "He agreed immediately",
+          "He pardoned one prisoner and executed another to claim similar power",
+          "He fled the throne room",
+          "He asked for proof in writing"
+        ],
+        "correctIndex": 1,
+        "explanation": "Namrud pardoned one prisoner while executing another, as if that proved he too could grant life and death."
+      },
+      {
+        "question": "What challenge finally silenced Namrud?",
+        "options": [
+          "A challenge to build a bigger palace",
+          "Bringing the sun up from the west instead of the east",
+          "A challenge to a physical fight",
+          "A request for gold"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ibrahim challenged Namrud to bring the sun up from the west, since his Lord brings it from the east."
+      },
+      {
+        "question": "What happened when Ibrahim was thrown into the fire?",
+        "options": [
+          "He was badly burned",
+          "Someone rescued him first",
+          "The flames became cool and safe for him",
+          "The fire never was lit"
+        ],
+        "correctIndex": 2,
+        "explanation": "The flames were commanded to become cool and safe, and Ibrahim walked out unscathed."
+      },
+      {
+        "question": "According to the narrator, what does the story suggest?",
+        "options": [
+          "Power always wins in the end",
+          "Genuine conviction tends to outlast intimidation",
+          "Arguments are pointless against rulers",
+          "Fire cannot be controlled"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator concludes that conviction rooted in truth tends to outlast whatever intimidation is thrown against it."
+      },
+      {
+        "question": "How did Ibrahim answer the ruler's false claim?",
+        "options": [
+          "He used the ruler's own claim to expose its limit",
+          "He organised an army",
+          "He accepted the claim",
+          "He avoided every response"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that he used the ruler's own claim to expose its limit."
+      },
+      {
+        "question": "What quality does the narrator emphasise in the debate?",
+        "options": [
+          "Physical strength",
+          "Political compromise",
+          "Calm reasoning rather than theatrical anger",
+          "Personal wealth"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that calm reasoning rather than theatrical anger."
+      },
+      {
+        "question": "Why did the ruler's power fail to settle the argument?",
+        "options": [
+          "Authority cannot make a false claim true",
+          "His army had departed",
+          "The audience left early",
+          "Ibrahim changed topics"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that authority cannot make a false claim true."
+      },
+      {
+        "question": "What contrast closes the account?",
+        "options": [
+          "Two equal armies competed",
+          "Wealth created knowledge",
+          "Silence defeated evidence",
+          "Material power faced conviction grounded in truth"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that material power faced conviction grounded in truth."
+      },
+      {
+        "question": "Which application best fits the narration?",
+        "options": [
+          "Assume powerful speakers are correct",
+          "Respond to every threat with shouting",
+          "Test intimidating claims through evidence and logic",
+          "Avoid challenging falsehood"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that test intimidating claims through evidence and logic."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-prophets-02",
@@ -37,34 +151,151 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Salma", "gender": "female" },
-      { "name": "Rizal", "gender": "male" }
+      {
+        "name": "Salma",
+        "gender": "female"
+      },
+      {
+        "name": "Rizal",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Salma: [animated] I finally finished reading about Musa's journey with Khidr, and honestly, I'm still turning it over in my head.",
-      "Rizal: [curious] The one where he's told to be patient and then can't manage it, not even once?",
-      "Salma: [wry] Exactly that one. Musa asks to accompany Khidr, promising to stay silent no matter what he witnesses, and within minutes he's breaking that promise.",
-      "Rizal: [amused] To be fair, what Khidr does would test anyone's composure. He damages a boat belonging to poor fishermen, seemingly for no reason at all.",
-      "Salma: [thoughtful] Right, and Musa objects immediately, assuming he's just witnessed senseless destruction, since nothing about it looks justified on the surface.",
-      "Rizal: [reflective] Then Khidr kills a young boy, which is even harder to swallow, and Musa can't hold his tongue a second time either.",
-      "Salma: [firm] I don't blame him, honestly. If I saw that happen in front of me, I doubt I could stay quiet and simply trust that some hidden wisdom justified it.",
-      "Rizal: [thoughtful] That's what makes the third incident so striking, though, where Khidr repairs a wall in a town that had refused them any hospitality.",
-      "Salma: [curious] Remind me why that one mattered so much?",
-      "Rizal: [explaining] Beneath the wall was treasure belonging to two orphans, and it had been protected by their righteous father, so it needed to stay hidden until they came of age.",
-      "Salma: [reflective] So every single action, however brutal or baffling it appeared, was actually shielding someone from a greater harm we couldn't have anticipated.",
-      "Rizal: [warm] Exactly, and once Khidr finally explains everything, Musa's frustration dissolves into something closer to humility.",
-      "Salma: [thoughtful] What gets me is that Musa was a prophet, given knowledge that few humans have ever possessed, and even he had to be shown, quite bluntly, that his knowledge had limits.",
-      "Rizal: [gentle] I think that's precisely the point being made, that certainty about what looks right or wrong from where we're standing can be dangerously incomplete.",
-      "Salma: [reflective] It's humbling, isn't it? We judge situations constantly based on fragments, convinced we understand the whole picture.",
-      "Rizal: [warm] Which is probably why this story keeps getting revisited, generation after generation. It never stops being relevant."
+      "Salma: [thoughtful] I finally finished reading about Musa's journey with Khidr, and honestly, I'm still turning it over in my head.",
+      "Rizal: The one where he's told to be patient and then can't manage it, not even once?",
+      "Salma: [carefully] Exactly that one. Musa asks to accompany Khidr, promising to stay silent no matter what he witnesses, and within minutes he's breaking that promise.",
+      "Rizal: To be fair, what Khidr does would test anyone's composure. He damages a boat belonging to poor fishermen, seemingly for no reason at all.",
+      "Salma: [reflective] Right, and Musa objects immediately, assuming he's just witnessed senseless destruction, since nothing about it looks justified on the surface.",
+      "Rizal: Then Khidr kills a young boy, which is even harder to swallow, and Musa can't hold his tongue a second time either.",
+      "Salma: [honestly] I don't blame him, honestly. If I saw that happen in front of me, I doubt I could stay quiet and simply trust that some hidden wisdom justified it.",
+      "Rizal: That's what makes the third incident so striking, though, where Khidr repairs a wall in a town that had refused them any hospitality.",
+      "Salma: [gently] Remind me why that one mattered so much?",
+      "Rizal: Beneath the wall was treasure belonging to two orphans, and it had been protected by their righteous father, so it needed to stay hidden until they came of age.",
+      "Salma: [calmly] So every single action, however brutal or baffling it appeared, was actually shielding someone from a greater harm we couldn't have anticipated.",
+      "Rizal: Exactly, and once Khidr finally explains everything, Musa's frustration dissolves into something closer to humility.",
+      "Salma: [encouraging] What gets me is that Musa was a prophet, given knowledge that few humans have ever possessed, and even he had to be shown, quite bluntly, that his knowledge had limits.",
+      "Rizal: I think that's precisely the point being made, that certainty about what looks right or wrong from where we're standing can be dangerously incomplete.",
+      "Salma: [seriously] It's humbling, isn't it? We judge situations constantly based on fragments, convinced we understand the whole picture.",
+      "Rizal: Which is probably why this story keeps getting revisited, generation after generation. It never stops being relevant."
     ],
     "quiz": [
-      { "question": "What did Musa promise Khidr before their journey?", "options": ["To pay him money", "To stay silent no matter what he witnessed", "To leave after one day", "To bring supplies"], "correctIndex": 1, "explanation": "Musa promised to accompany Khidr while staying silent no matter what he witnessed." },
-      { "question": "What was the first thing Khidr did that Musa objected to?", "options": ["He stole from a market", "He damaged a boat belonging to poor fishermen", "He insulted a stranger", "He refused to eat"], "correctIndex": 1, "explanation": "Khidr damaged a boat belonging to poor fishermen, and Musa objected, assuming senseless destruction." },
-      { "question": "Why did Khidr repair the wall in the inhospitable town?", "options": ["To earn payment from the townspeople", "Because it hid treasure belonging to two orphans, protected by their righteous father", "Because he owed the town a favor", "To prove his strength"], "correctIndex": 1, "explanation": "Beneath the wall was treasure belonging to two orphans, protected by their righteous father, needing to stay hidden until they came of age." },
-      { "question": "How does Musa react once Khidr explains everything?", "options": ["He remains angry", "His frustration dissolves into something closer to humility", "He refuses to accept the explanation", "He leaves without a word"], "correctIndex": 1, "explanation": "Once Khidr explains everything, Musa's frustration dissolves into something closer to humility." },
-      { "question": "What overall lesson do Salma and Rizal draw from the story?", "options": ["Patience is never worth practicing", "Certainty about what looks right or wrong can be dangerously incomplete", "Prophets never make mistakes", "Wisdom belongs only to the elderly"], "correctIndex": 1, "explanation": "They conclude that certainty about what looks right or wrong from where we're standing can be dangerously incomplete." }
-    ]
+      {
+        "question": "What did Musa promise Khidr before their journey?",
+        "options": [
+          "To pay him money",
+          "To stay silent no matter what he witnessed",
+          "To leave after one day",
+          "To bring supplies"
+        ],
+        "correctIndex": 1,
+        "explanation": "Musa promised to accompany Khidr while staying silent no matter what he witnessed."
+      },
+      {
+        "question": "What was the first thing Khidr did that Musa objected to?",
+        "options": [
+          "He stole from a market",
+          "He insulted a stranger",
+          "He damaged a boat belonging to poor fishermen",
+          "He refused to eat"
+        ],
+        "correctIndex": 2,
+        "explanation": "Khidr damaged a boat belonging to poor fishermen, and Musa objected, assuming senseless destruction."
+      },
+      {
+        "question": "Why did Khidr repair the wall in the inhospitable town?",
+        "options": [
+          "Because it hid treasure belonging to two orphans, protected by their righteous father",
+          "To earn payment from the townspeople",
+          "Because he owed the town a favor",
+          "To prove his strength"
+        ],
+        "correctIndex": 0,
+        "explanation": "Beneath the wall was treasure belonging to two orphans, protected by their righteous father, needing to stay hidden until they came of age."
+      },
+      {
+        "question": "How does Musa react once Khidr explains everything?",
+        "options": [
+          "His frustration dissolves into something closer to humility",
+          "He remains angry",
+          "He refuses to accept the explanation",
+          "He leaves without a word"
+        ],
+        "correctIndex": 0,
+        "explanation": "Once Khidr explains everything, Musa's frustration dissolves into something closer to humility."
+      },
+      {
+        "question": "What overall lesson do Salma and Rizal draw from the story?",
+        "options": [
+          "Certainty about what looks right or wrong can be dangerously incomplete",
+          "Patience is never worth practicing",
+          "Prophets never make mistakes",
+          "Wisdom belongs only to the elderly"
+        ],
+        "correctIndex": 0,
+        "explanation": "They conclude that certainty about what looks right or wrong from where we're standing can be dangerously incomplete."
+      },
+      {
+        "question": "Why does Musa object to Khidr's actions?",
+        "options": [
+          "He rejects all teaching",
+          "He knows every outcome",
+          "Khidr gives no condition",
+          "Their wisdom is hidden from his immediate view"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that their wisdom is hidden from his immediate view."
+      },
+      {
+        "question": "What did repairing the wall protect?",
+        "options": [
+          "A ruler's private property",
+          "A fisherman's damaged boat",
+          "Treasure belonging to two orphans",
+          "The town's food supply"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that treasure belonging to two orphans."
+      },
+      {
+        "question": "What changes after the explanations?",
+        "options": [
+          "Every action becomes repeatable",
+          "Confusion gives way to humility about limited knowledge",
+          "Musa loses interest",
+          "The town rewards them"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that confusion gives way to humility about limited knowledge."
+      },
+      {
+        "question": "What warning do Salma and Rizal draw?",
+        "options": [
+          "Visible harm never matters",
+          "People should ignore wrongdoing",
+          "Hidden reasons excuse personal actions",
+          "Judgments based on fragments may be incomplete"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that judgments based on fragments may be incomplete."
+      },
+      {
+        "question": "What boundary is important when applying the account?",
+        "options": [
+          "Every puzzling act is justified",
+          "Questions should never be asked",
+          "Humans cannot claim Khidr's special knowledge for themselves",
+          "Evidence has no value"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that humans cannot claim khidr's special knowledge for themselves."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-prophets-03",
@@ -73,33 +304,150 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Deni", "gender": "male" },
-      { "name": "Wulan", "gender": "female" }
+      {
+        "name": "Deni",
+        "gender": "male"
+      },
+      {
+        "name": "Wulan",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Deni: [curious] Wulan, can I run something by you? It's about that ethics training we sat through yesterday.",
-      "Wulan: [interested] Go on, I've been thinking about it too, actually.",
-      "Deni: [thoughtful] They mentioned Yusuf briefly, how he was propositioned by Zulaikha, the noblewoman whose household he worked in, and refused despite every incentive to comply.",
-      "Wulan: [nodding] Right, and it wasn't a small refusal either. He was young, isolated in a foreign land, and utterly dependent on her household for his safety.",
+      "Deni: [thoughtful] Wulan, can I run something by you? It's about that ethics training we sat through yesterday.",
+      "Wulan: Go on, I've been thinking about it too, actually.",
+      "Deni: [carefully] They mentioned Yusuf briefly, how he was propositioned by Zulaikha, the noblewoman whose household he worked in, and refused despite every incentive to comply.",
+      "Wulan: Right, and it wasn't a small refusal either. He was young, isolated in a foreign land, and utterly dependent on her household for his safety.",
       "Deni: [reflective] Exactly, which is what makes it so relevant to workplaces now. He had every practical reason to give in, and essentially no support if he refused.",
-      "Wulan: [thoughtful] Wasn't there also that scene where the women of the city mocked Zulaikha for her infatuation, assuming she was simply being dramatic?",
-      "Deni: [wry] There was. So she invited them over, gave each of them a knife and some fruit, and had Yusuf walk into the room unannounced.",
-      "Wulan: [amazed] And they were so stunned by his appearance that they cut their own hands without even noticing the pain.",
-      "Deni: [thoughtful] It's a strange detail, but I think it's making a point: even people who mock temptation from a distance can be overwhelmed once they're confronted with it directly.",
-      "Wulan: [reflective] That's uncomfortably relatable, honestly. It's easy to judge someone else's compromise until you're standing exactly where they were standing.",
-      "Deni: [firm] Which brings me back to Yusuf. Despite the pressure mounting from every direction, he still said he would rather go to prison than do what was being demanded of him.",
-      "Wulan: [thoughtful] And he did go to prison, unfairly, for years, simply because he chose integrity over convenience.",
-      "Deni: [warm] What I keep coming back to is that his integrity wasn't rewarded immediately. He paid a real price for it first.",
-      "Wulan: [reflective] Maybe that's the part they should have emphasized more in training. Doing the right thing rarely pays off on schedule, but it still matters regardless.",
-      "Deni: [smiling] Well, now I'll never forget the lesson, thanks to you connecting the dots properly."
+      "Wulan: Wasn't there also that scene where the women of the city mocked Zulaikha for her infatuation, assuming she was simply being dramatic?",
+      "Deni: [honestly] There was. So she invited them over, gave each of them a knife and some fruit, and had Yusuf walk into the room unannounced.",
+      "Wulan: And they were so stunned by his appearance that they cut their own hands without even noticing the pain.",
+      "Deni: [gently] It's a strange detail, but I think it's making a point: even people who mock temptation from a distance can be overwhelmed once they're confronted with it directly.",
+      "Wulan: That's uncomfortably relatable, honestly. It's easy to judge someone else's compromise until you're standing exactly where they were standing.",
+      "Deni: [calmly] Which brings me back to Yusuf. Despite the pressure mounting from every direction, he still said he would rather go to prison than do what was being demanded of him.",
+      "Wulan: And he did go to prison, unfairly, for years, simply because he chose integrity over convenience.",
+      "Deni: [encouraging] What I keep coming back to is that his integrity wasn't rewarded immediately. He paid a real price for it first.",
+      "Wulan: Maybe that's the part they should have emphasized more in training. Doing the right thing rarely pays off on schedule, but it still matters regardless.",
+      "Deni: [seriously] Well, now I'll never forget the lesson, thanks to you connecting the dots properly."
     ],
     "quiz": [
-      { "question": "What was Yusuf's situation when Zulaikha propositioned him?", "options": ["He was wealthy and powerful", "He was young, isolated in a foreign land, and dependent on her household", "He was married with children", "He was visiting briefly"], "correctIndex": 1, "explanation": "He was young, isolated in a foreign land, and utterly dependent on her household for his safety." },
-      { "question": "Why did Zulaikha invite the women of the city over with knives?", "options": ["To prepare a feast together", "Because they had mocked her infatuation, assuming she was being dramatic", "To test their cooking skills", "To punish them"], "correctIndex": 1, "explanation": "The women had mocked Zulaikha for her infatuation, so she invited them over to prove her point." },
-      { "question": "What happened when Yusuf entered the room unannounced?", "options": ["The women left immediately", "The women were so stunned they cut their own hands without noticing", "The women laughed at him", "Nothing unusual happened"], "correctIndex": 1, "explanation": "The women were so stunned by his appearance that they cut their own hands without even noticing the pain." },
-      { "question": "What did Yusuf say he would rather do than comply?", "options": ["Leave the country", "Go to prison", "Lose his job quietly", "Report Zulaikha to the king"], "correctIndex": 1, "explanation": "He said he would rather go to prison than do what was being demanded of him." },
-      { "question": "What lesson does Wulan think should have been emphasized more?", "options": ["Integrity is always rewarded immediately", "Doing the right thing rarely pays off on schedule, but it still matters", "Prison is worse than compromise", "Temptation should always be reported"], "correctIndex": 1, "explanation": "Wulan reflects that doing the right thing rarely pays off on schedule, but it still matters regardless." }
-    ]
+      {
+        "question": "What was Yusuf's situation when Zulaikha propositioned him?",
+        "options": [
+          "He was young, isolated in a foreign land, and dependent on her household",
+          "He was wealthy and powerful",
+          "He was married with children",
+          "He was visiting briefly"
+        ],
+        "correctIndex": 0,
+        "explanation": "He was young, isolated in a foreign land, and utterly dependent on her household for his safety."
+      },
+      {
+        "question": "Why did Zulaikha invite the women of the city over with knives?",
+        "options": [
+          "To prepare a feast together",
+          "To test their cooking skills",
+          "To punish them",
+          "Because they had mocked her infatuation, assuming she was being dramatic"
+        ],
+        "correctIndex": 3,
+        "explanation": "The women had mocked Zulaikha for her infatuation, so she invited them over to prove her point."
+      },
+      {
+        "question": "What happened when Yusuf entered the room unannounced?",
+        "options": [
+          "The women left immediately",
+          "The women were so stunned they cut their own hands without noticing",
+          "The women laughed at him",
+          "Nothing unusual happened"
+        ],
+        "correctIndex": 1,
+        "explanation": "The women were so stunned by his appearance that they cut their own hands without even noticing the pain."
+      },
+      {
+        "question": "What did Yusuf say he would rather do than comply?",
+        "options": [
+          "Leave the country",
+          "Lose his job quietly",
+          "Go to prison",
+          "Report Zulaikha to the king"
+        ],
+        "correctIndex": 2,
+        "explanation": "He said he would rather go to prison than do what was being demanded of him."
+      },
+      {
+        "question": "What lesson does Wulan think should have been emphasized more?",
+        "options": [
+          "Integrity is always rewarded immediately",
+          "Prison is worse than compromise",
+          "Temptation should always be reported",
+          "Doing the right thing rarely pays off on schedule, but it still matters"
+        ],
+        "correctIndex": 3,
+        "explanation": "Wulan reflects that doing the right thing rarely pays off on schedule, but it still matters regardless."
+      },
+      {
+        "question": "Why was Yusuf's refusal especially costly?",
+        "options": [
+          "He lacked power and protection in the household",
+          "He owned the household",
+          "The demand was public",
+          "He could leave freely"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that he lacked power and protection in the household."
+      },
+      {
+        "question": "What do the colleagues learn about temptation?",
+        "options": [
+          "Beauty removes responsibility",
+          "Pressure guarantees wrongdoing",
+          "It is easier to judge from a distance",
+          "Mockery prevents temptation"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that it is easier to judge from a distance."
+      },
+      {
+        "question": "What consequence followed Yusuf's integrity?",
+        "options": [
+          "He received an immediate promotion",
+          "He was imprisoned unjustly",
+          "He returned home at once",
+          "The pressure disappeared"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that he was imprisoned unjustly."
+      },
+      {
+        "question": "Why is delayed reward central to their discussion?",
+        "options": [
+          "Integrity guarantees quick success",
+          "Prison proves a poor decision",
+          "Training should promise rewards",
+          "Right action can matter before outcomes improve"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that right action can matter before outcomes improve."
+      },
+      {
+        "question": "Which workplace lesson is reasonable?",
+        "options": [
+          "Employees should role-play prophets",
+          "Power imbalance can make ethical refusal costly",
+          "Every manager resembles the account",
+          "Private pressure should be ignored"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that power imbalance can make ethical refusal costly."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-prophets-04",
@@ -108,30 +456,144 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [somber] Historians who study the life of the Prophet Muhammad often refer to a single, grinding period as the Year of Sorrow, and once you learn what it contained, the name makes complete sense.",
-      "Narrator: [reflective] Within the span of roughly twelve months, he lost both Khadijah, his devoted wife of twenty-five years, and Abu Talib, the uncle who had shielded him from persecution since childhood.",
-      "Narrator: [gentle] Khadijah hadn't simply been a spouse; she had been his first believer, financing his mission and steadying him through every early rejection he faced.",
-      "Narrator: [thoughtful] Abu Talib, though he never formally embraced Islam himself, had used his considerable social standing to keep the hostile clans of Mecca from harming his nephew outright.",
-      "Narrator: [heavy] With both protections gone almost simultaneously, the danger surrounding Muhammad increased sharply, and grief compounded that vulnerability rather than easing it.",
-      "Narrator: [reflective] It was during this same bruised period that he traveled to the city of Taif, hoping its leaders might offer him and his message a more welcoming reception.",
-      "Narrator: [pained] Instead, they mocked him openly and reportedly incited local children to hurl stones at him as he was driven from the city, bleeding and utterly humiliated.",
-      "Narrator: [soft] Tradition holds that an angel appeared afterward, offering to crush the city between its surrounding mountains if Muhammad simply gave the word.",
-      "Narrator: [awed] He declined, saying instead that he hoped Allah would bring forth from their descendants people who would worship Him alone, refusing vengeance even at his lowest moment.",
-      "Narrator: [warm] That response, to me, says as much about his character as any sermon he ever delivered, choosing hope over retribution while his own wounds were still fresh.",
-      "Narrator: [reflective] Not long afterward came the night journey, Isra and Mi'raj, when he was taken from Mecca to Jerusalem and then, in a manner beyond ordinary comprehension, ascended through the heavens.",
-      "Narrator: [thoughtful] Some scholars describe this sequence as deliberate: profound loss followed almost immediately by profound spiritual elevation, as if devastation were being answered directly.",
-      "Narrator: [warm] Whatever your reading of it, the pattern itself offers something enduring, that seasons of unbearable grief aren't necessarily the end of the story being written."
+      "Narrator: [thoughtful] Historians who study the life of the Prophet Muhammad often refer to a single, grinding period as the Year of Sorrow, and once you learn what it contained, the name makes complete sense.",
+      "Narrator: Within the span of roughly twelve months, he lost both Khadijah, his devoted wife of twenty-five years, and Abu Talib, the uncle who had shielded him from persecution since childhood.",
+      "Narrator: [carefully] Khadijah hadn't simply been a spouse; she had been his first believer, financing his mission and steadying him through every early rejection he faced.",
+      "Narrator: Abu Talib, though he never formally embraced Islam himself, had used his considerable social standing to keep the hostile clans of Mecca from harming his nephew outright.",
+      "Narrator: [reflective] With both protections gone almost simultaneously, the danger surrounding Muhammad increased sharply, and grief compounded that vulnerability rather than easing it.",
+      "Narrator: It was during this same bruised period that he traveled to the city of Taif, hoping its leaders might offer him and his message a more welcoming reception.",
+      "Narrator: [honestly] Instead, they mocked him openly and reportedly incited local children to hurl stones at him as he was driven from the city, bleeding and utterly humiliated.",
+      "Narrator: Tradition holds that an angel appeared afterward, offering to crush the city between its surrounding mountains if Muhammad simply gave the word.",
+      "Narrator: [gently] He declined, saying instead that he hoped Allah would bring forth from their descendants people who would worship Him alone, refusing vengeance even at his lowest moment.",
+      "Narrator: That response, to me, says as much about his character as any sermon he ever delivered, choosing hope over retribution while his own wounds were still fresh.",
+      "Narrator: [calmly] Not long afterward came the night journey, Isra and Mi'raj, when he was taken from Mecca to Jerusalem and then, in a manner beyond ordinary comprehension, ascended through the heavens.",
+      "Narrator: Some scholars describe this sequence as deliberate: profound loss followed almost immediately by profound spiritual elevation, as if devastation were being answered directly.",
+      "Narrator: [encouraging] Whatever your reading of it, the pattern itself offers something enduring, that seasons of unbearable grief aren't necessarily the end of the story being written."
     ],
     "quiz": [
-      { "question": "What two losses defined the Year of Sorrow?", "options": ["Loss of wealth and land", "Khadijah, his wife of twenty-five years, and Abu Talib, his protective uncle", "Two of his companions in battle", "His home and his business"], "correctIndex": 1, "explanation": "Within roughly twelve months he lost Khadijah, his devoted wife, and Abu Talib, his protective uncle." },
-      { "question": "What role had Abu Talib played, despite never formally embracing Islam?", "options": ["He financed the mission", "He used his social standing to keep hostile clans from harming Muhammad", "He led the prayers", "He wrote down the revelations"], "correctIndex": 1, "explanation": "Abu Talib used his considerable social standing to keep the hostile clans of Mecca from harming his nephew." },
-      { "question": "What happened when Muhammad traveled to Taif?", "options": ["He was welcomed warmly", "He was mocked and driven out, with children reportedly throwing stones at him", "He found new protection there", "He decided to settle there permanently"], "correctIndex": 1, "explanation": "The leaders of Taif mocked him and reportedly incited children to throw stones at him as he was driven out." },
-      { "question": "What did Muhammad say when the angel offered to destroy the city?", "options": ["He agreed immediately", "He declined, hoping Allah would bring forth worshippers from their descendants", "He asked for more time to decide", "He asked the angel to leave"], "correctIndex": 1, "explanation": "He declined, saying he hoped Allah would bring forth from their descendants people who would worship Him alone." },
-      { "question": "What event is described as following this period of grief?", "options": ["His migration to Madinah", "The night journey, Isra and Mi'raj", "The battle of Badr", "His marriage to Khadijah"], "correctIndex": 1, "explanation": "Not long afterward came the night journey, Isra and Mi'raj, when he ascended through the heavens." }
-    ]
+      {
+        "question": "What two losses defined the Year of Sorrow?",
+        "options": [
+          "Loss of wealth and land",
+          "Two of his companions in battle",
+          "His home and his business",
+          "Khadijah, his wife of twenty-five years, and Abu Talib, his protective uncle"
+        ],
+        "correctIndex": 3,
+        "explanation": "Within roughly twelve months he lost Khadijah, his devoted wife, and Abu Talib, his protective uncle."
+      },
+      {
+        "question": "What role had Abu Talib played, despite never formally embracing Islam?",
+        "options": [
+          "He financed the mission",
+          "He used his social standing to keep hostile clans from harming Muhammad",
+          "He led the prayers",
+          "He wrote down the revelations"
+        ],
+        "correctIndex": 1,
+        "explanation": "Abu Talib used his considerable social standing to keep the hostile clans of Mecca from harming his nephew."
+      },
+      {
+        "question": "What happened when Muhammad traveled to Taif?",
+        "options": [
+          "He was welcomed warmly",
+          "He found new protection there",
+          "He was mocked and driven out, with children reportedly throwing stones at him",
+          "He decided to settle there permanently"
+        ],
+        "correctIndex": 2,
+        "explanation": "The leaders of Taif mocked him and reportedly incited children to throw stones at him as he was driven out."
+      },
+      {
+        "question": "What did Muhammad say when the angel offered to destroy the city?",
+        "options": [
+          "He agreed immediately",
+          "He asked for more time to decide",
+          "He asked the angel to leave",
+          "He declined, hoping Allah would bring forth worshippers from their descendants"
+        ],
+        "correctIndex": 3,
+        "explanation": "He declined, saying he hoped Allah would bring forth from their descendants people who would worship Him alone."
+      },
+      {
+        "question": "What event is described as following this period of grief?",
+        "options": [
+          "His migration to Madinah",
+          "The battle of Badr",
+          "The night journey, Isra and Mi'raj",
+          "His marriage to Khadijah"
+        ],
+        "correctIndex": 2,
+        "explanation": "Not long afterward came the night journey, Isra and Mi'raj, when he ascended through the heavens."
+      },
+      {
+        "question": "Why was the period especially vulnerable?",
+        "options": [
+          "Personal grief coincided with reduced social protection",
+          "Travel became impossible",
+          "The message had ended",
+          "Mecca accepted the mission"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that personal grief coincided with reduced social protection."
+      },
+      {
+        "question": "What did Khadijah's support include?",
+        "options": [
+          "Military command",
+          "Belief, resources, and emotional steadiness",
+          "Political office",
+          "Control of hostile clans"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that belief, resources, and emotional steadiness."
+      },
+      {
+        "question": "How did the response at Taif demonstrate character?",
+        "options": [
+          "Hope was chosen over personal revenge",
+          "Pain was denied",
+          "The journey was celebrated",
+          "Opponents were immediately punished"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that hope was chosen over personal revenge."
+      },
+      {
+        "question": "What interpretive caution appears near the end?",
+        "options": [
+          "Every date is certain",
+          "Grief guarantees elevation",
+          "Historical study is unnecessary",
+          "Scholars may explain the sequence differently"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that scholars may explain the sequence differently."
+      },
+      {
+        "question": "What enduring pattern does the narrator identify?",
+        "options": [
+          "Loss always ends quickly",
+          "Severe grief need not be the final chapter",
+          "Hardship proves rejection",
+          "Spiritual events erase mourning"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that severe grief need not be the final chapter."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-prophets-05",
@@ -140,36 +602,153 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Ustadz Rian", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Ustadz Rian",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Tonight we're exploring the encounter between Prophet Sulaiman and Queen Bilqis, a story I've always found remarkably layered. Thank you for joining us, Ustadz Rian.",
-      "Ustadz Rian: [pleasant] Glad to be here. It's one of those stories that rewards a second, closer reading.",
-      "Host: [curious] Set the stage for us. How did Sulaiman even learn that Bilqis and her people existed?",
-      "Ustadz Rian: [thoughtful] Through a hoopoe bird, actually, part of his court, which had flown off without permission and returned reporting a kingdom that worshipped the sun instead of Allah.",
-      "Host: [interested] So Sulaiman didn't march in with an army straightaway?",
-      "Ustadz Rian: [warmly] Not at all, which I think is instructive in itself. He sent a letter instead, inviting her to abandon arrogance and submit to Allah peacefully.",
-      "Host: [curious] How did Bilqis respond to that invitation?",
-      "Ustadz Rian: [reflective] Cautiously and wisely. She consulted her advisors rather than reacting impulsively, and when they pushed for war, she resisted, arguing that conquest tends to devastate the very people it claims to protect.",
-      "Host: [impressed] That's a strikingly measured instinct for someone ruling in that era.",
-      "Ustadz Rian: [agreeing] It is. She sent gifts instead, testing Sulaiman's intentions, but he rejected them, making clear his invitation wasn't about wealth or dominance at all.",
-      "Host: [curious] And then comes that famous, almost cinematic detail about her throne.",
-      "Ustadz Rian: [warm] Right, one of Sulaiman's advisors, gifted with unusual knowledge, brought her enormous throne to his court before she herself had even arrived to negotiate.",
-      "Host: [amazed] Purely to demonstrate the scale of what Allah had granted Sulaiman?",
-      "Ustadz Rian: [thoughtful] Exactly that, and to disarm her with something undeniable rather than relying on threats or intimidation.",
-      "Host: [reflective] When she finally saw it, disguised among other thrones, she recognized it immediately, didn't she?",
-      "Ustadz Rian: [warm] She did, and that recognition seems to have opened something in her, because soon afterward she declared her submission to Allah, the Lord of all the worlds.",
-      "Host: [thoughtful] What's your own takeaway from her arc specifically?",
-      "Ustadz Rian: [warm] That real wisdom in leadership often looks like restraint, listening carefully, and being genuinely willing to be persuaded rather than merely defending your position."
+      "Host: [thoughtful] Tonight we're exploring the encounter between Prophet Sulaiman and Queen Bilqis, a story I've always found remarkably layered. Thank you for joining us, Ustadz Rian.",
+      "Ustadz Rian: Glad to be here. It's one of those stories that rewards a second, closer reading.",
+      "Host: [carefully] Set the stage for us. How did Sulaiman even learn that Bilqis and her people existed?",
+      "Ustadz Rian: Through a hoopoe bird, actually, part of his court, which had flown off without permission and returned reporting a kingdom that worshipped the sun instead of Allah.",
+      "Host: [reflective] So Sulaiman didn't march in with an army straightaway?",
+      "Ustadz Rian: Not at all, which I think is instructive in itself. He sent a letter instead, inviting her to abandon arrogance and submit to Allah peacefully.",
+      "Host: [honestly] How did Bilqis respond to that invitation?",
+      "Ustadz Rian: Cautiously and wisely. She consulted her advisors rather than reacting impulsively, and when they pushed for war, she resisted, arguing that conquest tends to devastate the very people it claims to protect.",
+      "Host: [gently] That's a strikingly measured instinct for someone ruling in that era.",
+      "Ustadz Rian: It is. She sent gifts instead, testing Sulaiman's intentions, but he rejected them, making clear his invitation wasn't about wealth or dominance at all.",
+      "Host: [calmly] And then comes that famous, almost cinematic detail about her throne.",
+      "Ustadz Rian: Right, one of Sulaiman's advisors, gifted with unusual knowledge, brought her enormous throne to his court before she herself had even arrived to negotiate.",
+      "Host: [encouraging] Purely to demonstrate the scale of what Allah had granted Sulaiman?",
+      "Ustadz Rian: Exactly that, and to disarm her with something undeniable rather than relying on threats or intimidation.",
+      "Host: [seriously] When she finally saw it, disguised among other thrones, she recognized it immediately, didn't she?",
+      "Ustadz Rian: She did, and that recognition seems to have opened something in her, because soon afterward she declared her submission to Allah, the Lord of all the worlds.",
+      "Host: What's your own takeaway from her arc specifically?",
+      "Ustadz Rian: That real wisdom in leadership often looks like restraint, listening carefully, and being genuinely willing to be persuaded rather than merely defending your position."
     ],
     "quiz": [
-      { "question": "How did Sulaiman first learn about Bilqis and her kingdom?", "options": ["From a traveling merchant", "From a hoopoe bird that had flown off and returned with a report", "From a letter she sent him", "From his own scouts"], "correctIndex": 1, "explanation": "A hoopoe bird flew off without permission and returned reporting a kingdom that worshipped the sun instead of Allah." },
-      { "question": "What did Bilqis argue when her advisors pushed for war?", "options": ["That war would bring quick victory", "That conquest tends to devastate the very people it claims to protect", "That her army was too weak", "That Sulaiman was too powerful to fight"], "correctIndex": 1, "explanation": "She resisted war, arguing that conquest tends to devastate the very people it claims to protect." },
-      { "question": "What happened to Bilqis's throne before she arrived at Sulaiman's court?", "options": ["It was destroyed", "It was brought to Sulaiman's court by one of his advisors before she arrived", "She sold it", "It was hidden from her"], "correctIndex": 1, "explanation": "An advisor with unusual knowledge brought her throne to Sulaiman's court before she herself had arrived." },
-      { "question": "Why did Sulaiman reject the gifts Bilqis sent?", "options": ["He wanted more gifts", "His invitation wasn't about wealth or dominance", "The gifts were of poor quality", "He was offended by her caution"], "correctIndex": 1, "explanation": "He rejected them, making clear his invitation wasn't about wealth or dominance at all." },
-      { "question": "What is Ustadz Rian's main takeaway about Bilqis's leadership?", "options": ["That aggression wins respect", "That real wisdom in leadership often looks like restraint and willingness to be persuaded", "That queens should never negotiate", "That gifts always resolve conflict"], "correctIndex": 1, "explanation": "He concludes that real wisdom in leadership often looks like restraint, listening carefully, and being willing to be persuaded." }
-    ]
+      {
+        "question": "How did Sulaiman first learn about Bilqis and her kingdom?",
+        "options": [
+          "From a hoopoe bird that had flown off and returned with a report",
+          "From a traveling merchant",
+          "From a letter she sent him",
+          "From his own scouts"
+        ],
+        "correctIndex": 0,
+        "explanation": "A hoopoe bird flew off without permission and returned reporting a kingdom that worshipped the sun instead of Allah."
+      },
+      {
+        "question": "What did Bilqis argue when her advisors pushed for war?",
+        "options": [
+          "That war would bring quick victory",
+          "That conquest tends to devastate the very people it claims to protect",
+          "That her army was too weak",
+          "That Sulaiman was too powerful to fight"
+        ],
+        "correctIndex": 1,
+        "explanation": "She resisted war, arguing that conquest tends to devastate the very people it claims to protect."
+      },
+      {
+        "question": "What happened to Bilqis's throne before she arrived at Sulaiman's court?",
+        "options": [
+          "It was destroyed",
+          "She sold it",
+          "It was hidden from her",
+          "It was brought to Sulaiman's court by one of his advisors before she arrived"
+        ],
+        "correctIndex": 3,
+        "explanation": "An advisor with unusual knowledge brought her throne to Sulaiman's court before she herself had arrived."
+      },
+      {
+        "question": "Why did Sulaiman reject the gifts Bilqis sent?",
+        "options": [
+          "He wanted more gifts",
+          "His invitation wasn't about wealth or dominance",
+          "The gifts were of poor quality",
+          "He was offended by her caution"
+        ],
+        "correctIndex": 1,
+        "explanation": "He rejected them, making clear his invitation wasn't about wealth or dominance at all."
+      },
+      {
+        "question": "What is Ustadz Rian's main takeaway about Bilqis's leadership?",
+        "options": [
+          "That aggression wins respect",
+          "That real wisdom in leadership often looks like restraint and willingness to be persuaded",
+          "That queens should never negotiate",
+          "That gifts always resolve conflict"
+        ],
+        "correctIndex": 1,
+        "explanation": "He concludes that real wisdom in leadership often looks like restraint, listening carefully, and being willing to be persuaded."
+      },
+      {
+        "question": "Why did Sulaiman send a letter first?",
+        "options": [
+          "His army was unavailable",
+          "Bilqis requested gifts",
+          "He invited a peaceful response before conflict",
+          "The hoopoe carried money"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that he invited a peaceful response before conflict."
+      },
+      {
+        "question": "What did Bilqis do before deciding?",
+        "options": [
+          "Declared war immediately",
+          "Rejected all information",
+          "Consulted her advisers",
+          "Left her kingdom secretly"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that consulted her advisers."
+      },
+      {
+        "question": "Why did Sulaiman reject the gifts?",
+        "options": [
+          "His invitation was not a bid for wealth",
+          "The gifts were damaged",
+          "His adviser opposed trade",
+          "Bilqis had no authority"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that his invitation was not a bid for wealth."
+      },
+      {
+        "question": "What leadership quality is attributed to Bilqis?",
+        "options": [
+          "Refusal to consult",
+          "Dependence on intimidation",
+          "Interest only in status",
+          "Restraint and willingness to consider evidence"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that restraint and willingness to consider evidence."
+      },
+      {
+        "question": "Which teaching method suits this account?",
+        "options": [
+          "Invent private dialogue",
+          "Role-play prophetic speech",
+          "Separate Qur'anic details from later dramatic additions",
+          "Treat every retelling as equal"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that separate qur'anic details from later dramatic additions."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-prophets-06",
@@ -178,30 +757,144 @@
     "themeId": "prophets",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [contemplative] There's a detail in Adam's creation that I find myself returning to more than almost any other episode in the wider story of the prophets.",
-      "Narrator: [thoughtful] Before Adam was even placed in the garden, Allah taught him the names of all things, a form of knowledge no other created being had yet received.",
-      "Narrator: [reflective] The angels, understandably, had voiced concern earlier about humanity's capacity for corruption and bloodshed, wondering aloud why a being so flawed should be granted such a role.",
-      "Narrator: [firm] Rather than simply overruling their objection, Allah demonstrated something instead, presenting the names to the angels and asking them to recite them if their judgment were truly sound.",
-      "Narrator: [gentle] They admitted, without embarrassment, that they possessed no knowledge beyond what they had been taught, acknowledging the limits of their own understanding honestly.",
-      "Narrator: [warm] Then Adam was asked to recite the same names, and he did so effortlessly, revealing a capacity the angels themselves did not possess.",
-      "Narrator: [reflective] What moves me isn't merely that Adam succeeded, but what the whole exchange implies about humility, that even beings of pure obedience can misjudge situations they haven't fully seen.",
-      "Narrator: [thoughtful] It also reframes what makes humanity valuable in the first place, not physical strength or even moral perfection, but the capacity to learn, question, and articulate meaning.",
-      "Narrator: [somber] Of course, this same Adam would later be deceived by Shaytan and eat from the forbidden tree, a lapse that cost him the garden itself.",
-      "Narrator: [gentle] Yet even there, something instructive happens: rather than making excuses, Adam and his wife immediately turned to Allah, admitting they had wronged themselves and asking sincerely for forgiveness.",
-      "Narrator: [warm] That combination, remarkable capacity paired with genuine humility after failure, strikes me as the real inheritance passed down to every one of his descendants.",
-      "Narrator: [reflective] We are, all of us, capable of extraordinary understanding, and equally capable of missteps that require us to admit fault honestly rather than defend it.",
-      "Narrator: [warm] Perhaps that's precisely why his story opens the whole narrative, establishing the pattern the rest of us have been living out ever since."
+      "Narrator: [thoughtful] There's a detail in Adam's creation that I find myself returning to more than almost any other episode in the wider story of the prophets.",
+      "Narrator: Before Adam was even placed in the garden, Allah taught him the names of all things, a form of knowledge no other created being had yet received.",
+      "Narrator: [carefully] The angels, understandably, had voiced concern earlier about humanity's capacity for corruption and bloodshed, wondering aloud why a being so flawed should be granted such a role.",
+      "Narrator: Rather than simply overruling their objection, Allah demonstrated something instead, presenting the names to the angels and asking them to recite them if their judgment were truly sound.",
+      "Narrator: [reflective] They admitted, without embarrassment, that they possessed no knowledge beyond what they had been taught, acknowledging the limits of their own understanding honestly.",
+      "Narrator: Then Adam was asked to recite the same names, and he did so effortlessly, revealing a capacity the angels themselves did not possess.",
+      "Narrator: [honestly] What moves me isn't merely that Adam succeeded, but what the whole exchange implies about humility, that even beings of pure obedience can misjudge situations they haven't fully seen.",
+      "Narrator: It also reframes what makes humanity valuable in the first place, not physical strength or even moral perfection, but the capacity to learn, question, and articulate meaning.",
+      "Narrator: [gently] Of course, this same Adam would later be deceived by Shaytan and eat from the forbidden tree, a lapse that cost him the garden itself.",
+      "Narrator: Yet even there, something instructive happens: rather than making excuses, Adam and his wife immediately turned to Allah, admitting they had wronged themselves and asking sincerely for forgiveness.",
+      "Narrator: [calmly] That combination, remarkable capacity paired with genuine humility after failure, strikes me as the real inheritance passed down to every one of his descendants.",
+      "Narrator: We are, all of us, capable of extraordinary understanding, and equally capable of missteps that require us to admit fault honestly rather than defend it.",
+      "Narrator: [encouraging] Perhaps that's precisely why his story opens the whole narrative, establishing the pattern the rest of us have been living out ever since."
     ],
     "quiz": [
-      { "question": "What unique knowledge was Adam given before entering the garden?", "options": ["Knowledge of the future", "The names of all things", "The language of angels", "Knowledge of medicine"], "correctIndex": 1, "explanation": "Allah taught Adam the names of all things, knowledge no other created being had yet received." },
-      { "question": "What concern had the angels voiced about humanity?", "options": ["That humans would be too weak", "That humanity had the capacity for corruption and bloodshed", "That humans would live too briefly", "That humans would not worship at all"], "correctIndex": 1, "explanation": "The angels had voiced concern about humanity's capacity for corruption and bloodshed." },
-      { "question": "How did the angels respond when asked to recite the names?", "options": ["They refused to try", "They admitted they possessed no knowledge beyond what they had been taught", "They recited them perfectly", "They argued with Allah"], "correctIndex": 1, "explanation": "They admitted, without embarrassment, that they possessed no knowledge beyond what they had been taught." },
-      { "question": "What did Adam and his wife do after eating from the forbidden tree?", "options": ["They blamed each other", "They immediately turned to Allah, admitting fault and asking for forgiveness", "They hid from Allah", "They denied any wrongdoing"], "correctIndex": 1, "explanation": "Rather than making excuses, they immediately turned to Allah, admitting they had wronged themselves and asking for forgiveness." },
-      { "question": "What does the narrator see as humanity's real inheritance from Adam?", "options": ["Physical strength", "Remarkable capacity paired with genuine humility after failure", "Immunity from mistakes", "Permanent residence in the garden"], "correctIndex": 1, "explanation": "The narrator says this combination of capacity and humility after failure is the real inheritance passed to Adam's descendants." }
-    ]
+      {
+        "question": "What unique knowledge was Adam given before entering the garden?",
+        "options": [
+          "The names of all things",
+          "Knowledge of the future",
+          "The language of angels",
+          "Knowledge of medicine"
+        ],
+        "correctIndex": 0,
+        "explanation": "Allah taught Adam the names of all things, knowledge no other created being had yet received."
+      },
+      {
+        "question": "What concern had the angels voiced about humanity?",
+        "options": [
+          "That humanity had the capacity for corruption and bloodshed",
+          "That humans would be too weak",
+          "That humans would live too briefly",
+          "That humans would not worship at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "The angels had voiced concern about humanity's capacity for corruption and bloodshed."
+      },
+      {
+        "question": "How did the angels respond when asked to recite the names?",
+        "options": [
+          "They refused to try",
+          "They admitted they possessed no knowledge beyond what they had been taught",
+          "They recited them perfectly",
+          "They argued with Allah"
+        ],
+        "correctIndex": 1,
+        "explanation": "They admitted, without embarrassment, that they possessed no knowledge beyond what they had been taught."
+      },
+      {
+        "question": "What did Adam and his wife do after eating from the forbidden tree?",
+        "options": [
+          "They blamed each other",
+          "They hid from Allah",
+          "They denied any wrongdoing",
+          "They immediately turned to Allah, admitting fault and asking for forgiveness"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rather than making excuses, they immediately turned to Allah, admitting they had wronged themselves and asking for forgiveness."
+      },
+      {
+        "question": "What does the narrator see as humanity's real inheritance from Adam?",
+        "options": [
+          "Physical strength",
+          "Immunity from mistakes",
+          "Remarkable capacity paired with genuine humility after failure",
+          "Permanent residence in the garden"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator says this combination of capacity and humility after failure is the real inheritance passed to Adam's descendants."
+      },
+      {
+        "question": "What did the angels acknowledge?",
+        "options": [
+          "Adam had no knowledge",
+          "Their knowledge was limited to what Allah taught",
+          "Humanity was morally perfect",
+          "Names had no meaning"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that their knowledge was limited to what allah taught."
+      },
+      {
+        "question": "What capacity does the narrator connect with humanity?",
+        "options": [
+          "Physical strength alone",
+          "Freedom from mistakes",
+          "Knowledge without teaching",
+          "Learning and articulating meaning"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that learning and articulating meaning."
+      },
+      {
+        "question": "How did Adam respond after wrongdoing?",
+        "options": [
+          "Blamed creation",
+          "Denied the action",
+          "Admitted fault and sought forgiveness",
+          "Claimed perfect knowledge"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that admitted fault and sought forgiveness."
+      },
+      {
+        "question": "What combination becomes the narrator's lesson?",
+        "options": [
+          "Knowledge without accountability",
+          "Obedience without learning",
+          "Strength without repentance",
+          "Capacity to learn with humility after failure"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that capacity to learn with humility after failure."
+      },
+      {
+        "question": "Which learner applies that lesson?",
+        "options": [
+          "One who defends every mistake",
+          "One who admits error and corrects understanding",
+          "One who claims complete knowledge",
+          "One who refuses new evidence"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that one who admits error and corrects understanding."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-prophets-07",
@@ -210,34 +903,586 @@
     "themeId": "prophets",
     "type": "dialogue",
     "speakers": [
-      { "name": "Hana", "gender": "female" },
-      { "name": "Farid", "gender": "male" }
+      {
+        "name": "Hana",
+        "gender": "female"
+      },
+      {
+        "name": "Farid",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Hana: [curious] Farid, I was reading about Zakariya last night, and I hadn't realized how old he was when Yahya was born.",
-      "Farid: [thoughtful] Quite old, and his wife was considered unable to have children even before age became a factor at all.",
-      "Hana: [reflective] What struck me was how privately he prayed for a son, almost as if he didn't want anyone overhearing his hope.",
-      "Farid: [warm] I noticed that too. He describes his prayer as a secret, quiet call to his Lord, not something announced publicly for others to witness or admire.",
-      "Hana: [thoughtful] Do you think that privacy mattered, or is it just incidental detail?",
-      "Farid: [considering] I'd argue it mattered. There's something honest about asking for something deeply personal without performing your desperation for an audience.",
-      "Hana: [curious] What exactly worried him about growing old without an heir?",
-      "Farid: [explaining] He feared what might happen to his community and its values after his relatives took over, since he doubted their commitment to guarding the faith properly.",
-      "Hana: [nodding] So it wasn't pure vanity, wanting a son just to carry his name forward.",
-      "Farid: [agreeing] Not really, no. It reads more like concern for continuity, for someone trustworthy to inherit responsibilities that mattered deeply to him.",
-      "Hana: [amazed] And then Allah answers him, promising a son named Yahya, who would be unlike anyone before him.",
-      "Farid: [warm] Zakariya, astonished, asks how this could happen given his age and his wife's condition, and he's given a strange, specific sign in response.",
-      "Hana: [curious] The three days of silence, right? Even though nothing was physically wrong with him.",
-      "Farid: [reflective] Exactly, unable to speak to people for three days despite being perfectly healthy, communicating instead through gestures alone.",
-      "Hana: [thoughtful] What do you make of that particular sign? It seems oddly specific compared to other miracles we've discussed.",
-      "Farid: [warm] I think it forced him into sustained reflection, silence as a discipline rather than a punishment, right before the most significant blessing of his life arrived.",
-      "Hana: [smiling] That's a lovely way to read it, honestly. Gratitude arriving through stillness rather than noise."
+      "Hana: [thoughtful] Farid, I was reading about Zakariya last night, and I hadn't realized how old he was when Yahya was born.",
+      "Farid: Quite old, and his wife was considered unable to have children even before age became a factor at all.",
+      "Hana: [carefully] What struck me was how privately he prayed for a son, almost as if he didn't want anyone overhearing his hope.",
+      "Farid: I noticed that too. He describes his prayer as a secret, quiet call to his Lord, not something announced publicly for others to witness or admire.",
+      "Hana: [reflective] Do you think that privacy mattered, or is it just incidental detail?",
+      "Farid: I'd argue it mattered. There's something honest about asking for something deeply personal without performing your desperation for an audience.",
+      "Hana: [honestly] What exactly worried him about growing old without an heir?",
+      "Farid: He feared what might happen to his community and its values after his relatives took over, since he doubted their commitment to guarding the faith properly.",
+      "Hana: [gently] So it wasn't pure vanity, wanting a son just to carry his name forward.",
+      "Farid: Not really, no. It reads more like concern for continuity, for someone trustworthy to inherit responsibilities that mattered deeply to him.",
+      "Hana: [calmly] And then Allah answers him, promising a son named Yahya, who would be unlike anyone before him.",
+      "Farid: Zakariya, astonished, asks how this could happen given his age and his wife's condition, and he's given a strange, specific sign in response.",
+      "Hana: [encouraging] The three days of silence, right? Even though nothing was physically wrong with him.",
+      "Farid: Exactly, unable to speak to people for three days despite being perfectly healthy, communicating instead through gestures alone.",
+      "Hana: [seriously] What do you make of that particular sign? It seems oddly specific compared to other miracles we've discussed.",
+      "Farid: I think it forced him into sustained reflection, silence as a discipline rather than a punishment, right before the most significant blessing of his life arrived.",
+      "Hana: That's a lovely way to read it, honestly. Gratitude arriving through stillness rather than noise."
     ],
     "quiz": [
-      { "question": "How does Zakariya describe his prayer for a son?", "options": ["A public announcement", "A secret, quiet call to his Lord", "A demand made in anger", "A prayer he never actually made"], "correctIndex": 1, "explanation": "He describes his prayer as a secret, quiet call to his Lord, not something announced publicly." },
-      { "question": "What worried Zakariya about growing old without an heir?", "options": ["He would lose his wealth", "He feared what might happen to his community after relatives took over", "He would be forgotten by history", "He would have no one to farm his land"], "correctIndex": 1, "explanation": "He feared what might happen to his community and its values after his relatives took over, doubting their commitment to the faith." },
-      { "question": "What name was promised for his son?", "options": ["Isa", "Yahya", "Musa", "Ibrahim"], "correctIndex": 1, "explanation": "Allah promised him a son named Yahya, who would be unlike anyone before him." },
-      { "question": "What sign was Zakariya given after asking how this could happen?", "options": ["A vision in a dream", "Three days of silence despite being perfectly healthy", "A sudden illness", "A change in the weather"], "correctIndex": 1, "explanation": "He was unable to speak to people for three days despite being perfectly healthy, communicating through gestures alone." },
-      { "question": "How does Farid interpret the meaning of the sign?", "options": ["As a punishment for doubting", "As a discipline of reflection before the greatest blessing of his life", "As proof his prayer failed", "As an unrelated coincidence"], "correctIndex": 1, "explanation": "Farid suggests it forced him into sustained reflection, silence as a discipline rather than a punishment, before the blessing arrived." }
-    ]
+      {
+        "question": "How does Zakariya describe his prayer for a son?",
+        "options": [
+          "A public announcement",
+          "A secret, quiet call to his Lord",
+          "A demand made in anger",
+          "A prayer he never actually made"
+        ],
+        "correctIndex": 1,
+        "explanation": "He describes his prayer as a secret, quiet call to his Lord, not something announced publicly."
+      },
+      {
+        "question": "What worried Zakariya about growing old without an heir?",
+        "options": [
+          "He would lose his wealth",
+          "He would be forgotten by history",
+          "He would have no one to farm his land",
+          "He feared what might happen to his community after relatives took over"
+        ],
+        "correctIndex": 3,
+        "explanation": "He feared what might happen to his community and its values after his relatives took over, doubting their commitment to the faith."
+      },
+      {
+        "question": "What name was promised for his son?",
+        "options": [
+          "Isa",
+          "Musa",
+          "Yahya",
+          "Ibrahim"
+        ],
+        "correctIndex": 2,
+        "explanation": "Allah promised him a son named Yahya, who would be unlike anyone before him."
+      },
+      {
+        "question": "What sign was Zakariya given after asking how this could happen?",
+        "options": [
+          "A vision in a dream",
+          "A sudden illness",
+          "A change in the weather",
+          "Three days of silence despite being perfectly healthy"
+        ],
+        "correctIndex": 3,
+        "explanation": "He was unable to speak to people for three days despite being perfectly healthy, communicating through gestures alone."
+      },
+      {
+        "question": "How does Farid interpret the meaning of the sign?",
+        "options": [
+          "As a discipline of reflection before the greatest blessing of his life",
+          "As a punishment for doubting",
+          "As proof his prayer failed",
+          "As an unrelated coincidence"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farid suggests it forced him into sustained reflection, silence as a discipline rather than a punishment, before the blessing arrived."
+      },
+      {
+        "question": "Why was Zakariya's request not merely personal vanity?",
+        "options": [
+          "He was concerned about responsible continuity",
+          "He wanted public admiration",
+          "He sought political wealth",
+          "He disliked his relatives personally"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that he was concerned about responsible continuity."
+      },
+      {
+        "question": "How is the prayer described?",
+        "options": [
+          "Announced to a crowd",
+          "Written for performance",
+          "Private and quiet",
+          "Demanded through advisers"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that private and quiet."
+      },
+      {
+        "question": "What sign followed the promise?",
+        "options": [
+          "He travelled for three days",
+          "He could not speak to people for three days",
+          "His hearing disappeared",
+          "He forgot the promised name"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that he could not speak to people for three days."
+      },
+      {
+        "question": "How did he communicate during that period?",
+        "options": [
+          "Through public speeches",
+          "Through letters only",
+          "Through another prophet",
+          "Through gestures"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that through gestures."
+      },
+      {
+        "question": "What interpretation does Farid offer cautiously?",
+        "options": [
+          "Silence was proof of punishment",
+          "Silence encouraged reflection before the blessing",
+          "Every prayer needs the same sign",
+          "The sign guarantees descendants"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that silence encouraged reflection before the blessing."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-prophets-08",
+    "title": "Reading the Story of Musa with the Text Open",
+    "level": "B2",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] I once prepared a lesson about Prophet Musa, peace be upon him, from memory. The outline sounded confident: courage before a tyrant, trust during danger, and patience with a difficult people. Then I opened the Qur'an and realised how many details I had blended together.",
+      "Narrator: Some points belonged to different passages; others came from popular retellings whose sources I had never checked. The overall message sounded familiar, but familiarity was not enough for responsible teaching.",
+      "Narrator: [carefully] I began again with the relevant verses open in front of me. I noted who was speaking, what the passage actually stated, and where the Qur'an moved without supplying every historical detail. I consulted a recognised tafsir for context and marked interpretations rather than presenting them as direct quotations.",
+      "Narrator: One correction changed the lesson. I had planned to describe Musa's fear as a failure of faith. The text did not support that careless judgment. Fear can be a human response, while faithful action is shown in what a person does with it.",
+      "Narrator: [reflective] I also removed invented dialogue. Dramatic sentences may keep listeners interested, but placing words into a prophet's mouth is not a harmless storytelling technique.",
+      "Narrator: The final lesson became less cinematic and more precise. We compared two Qur'anic passages, identified repeated themes, and discussed how context shaped each emphasis.",
+      "Narrator: [humble] When students asked questions beyond my preparation, I wrote them down instead of improvising. A qualified teacher later helped us distinguish a reliable explanation from an attractive but unsupported story.",
+      "Narrator: I learned that respect for the prophets includes respect for evidence. We can draw powerful lessons from their accounts without filling every silence, judging inner states, or turning revelation into a slogan detached from its words."
+    ],
+    "quiz": [
+      {
+        "question": "What problem appeared when the narrator taught from memory?",
+        "options": [
+          "Details from different sources were blended",
+          "The class rejected the Qur'an",
+          "Every verse had the same context",
+          "No lesson could be found"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that details from different sources were blended."
+      },
+      {
+        "question": "Why was familiarity insufficient?",
+        "options": [
+          "Familiar stories are always false",
+          "Memory has no educational use",
+          "Repeated material may still lack reliable support",
+          "Only one passage exists"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that repeated material may still lack reliable support."
+      },
+      {
+        "question": "What did the narrator record while rereading?",
+        "options": [
+          "Only dramatic quotations",
+          "Speaker, stated detail, and textual gaps",
+          "Modern opinions alone",
+          "Students' preferred endings"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that speaker, stated detail, and textual gaps."
+      },
+      {
+        "question": "Why consult recognised tafsir?",
+        "options": [
+          "To replace the Qur'anic text",
+          "To invent missing dialogue",
+          "To avoid source checking",
+          "To gain responsible context and explanation"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that to gain responsible context and explanation."
+      },
+      {
+        "question": "What mistaken claim about fear was removed?",
+        "options": [
+          "That Musa's fear proved failed faith",
+          "That fear is human",
+          "That action can show faith",
+          "That tyrants create danger"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that that musa's fear proved failed faith."
+      },
+      {
+        "question": "Why avoid invented dialogue?",
+        "options": [
+          "It makes audio too short",
+          "Learners dislike conversation",
+          "Every dialogue is forbidden",
+          "It assigns unsupported words to a prophet"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that it assigns unsupported words to a prophet."
+      },
+      {
+        "question": "How did the final lesson become stronger?",
+        "options": [
+          "It added cinematic scenes",
+          "It compared passages and their contexts",
+          "It claimed one simple slogan",
+          "It answered every question"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that it compared passages and their contexts."
+      },
+      {
+        "question": "What happened to questions beyond preparation?",
+        "options": [
+          "The narrator improvised answers",
+          "Students chose by vote",
+          "They were recorded for qualified follow-up",
+          "They were declared irrelevant"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that they were recorded for qualified follow-up."
+      },
+      {
+        "question": "What does evidence-based respect avoid?",
+        "options": [
+          "Judging inner states without textual support",
+          "Drawing any moral lesson",
+          "Using recognised explanation",
+          "Comparing established passages"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that judging inner states without textual support."
+      },
+      {
+        "question": "Which practice best protects a prophetic lesson?",
+        "options": [
+          "Fill every narrative silence",
+          "Distinguish text, interpretation, and uncertainty",
+          "Prefer popular details",
+          "Speak in the prophet's voice"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that distinguish text, interpretation, and uncertainty."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-prophets-09",
+    "title": "What a Timeline Cannot Tell Us",
+    "level": "B2",
+    "themeId": "prophets",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [measured] A timeline can be useful when studying prophetic history. It helps learners see that events occurred in an order and that a period of hardship may have extended over years. Yet a neat line across a page can create false confidence.",
+      "Narrator: While designing an exhibition panel, our team found three dates for the same event. Two came from modern websites that cited no source. The third came from a scholarly reference, but even there the author explained that the exact year was uncertain.",
+      "Narrator: [carefully] We had a choice: select one date because it looked tidy, or display the uncertainty. We chose a range and added a short note about the evidence. The panel became slightly less simple and much more honest.",
+      "Narrator: Another problem concerned sequence. A popular illustrated book placed two episodes together, making them appear to happen on consecutive days. The primary religious texts did not state that. We separated the episodes and removed the invented bridge.",
+      "Narrator: [reflective] This did not make the exhibition empty. We focused on what the sources clearly supported: the moral challenge, the response commanded by Allah, and the lessons scholars responsibly drew from the account.",
+      "Narrator: We also avoided drawing images of prophets or producing dramatic first-person voices for them. A narrator guided visitors through the evidence without pretending to recreate sacred figures.",
+      "Narrator: [thoughtful] At the exit, learners could compare “established,” “reported with disagreement,” and “not established” examples. Many said the uncertainty labels increased their trust rather than weakening the story.",
+      "Narrator: A timeline can organise information, but it cannot turn an unknown date into a fact. Responsible teaching makes room for both conviction in what revelation establishes and humility about details it does not give us."
+    ],
+    "quiz": [
+      {
+        "question": "What useful function can a timeline serve?",
+        "options": [
+          "Show event order and extended periods",
+          "Prove every exact date",
+          "Resolve all source disagreements",
+          "Recreate private thoughts"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that show event order and extended periods."
+      },
+      {
+        "question": "Why did the team reject two proposed dates?",
+        "options": [
+          "The dates were too recent",
+          "The panel lacked space",
+          "The websites gave no sources",
+          "Visitors preferred a range"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that the websites gave no sources."
+      },
+      {
+        "question": "Why was a range more honest?",
+        "options": [
+          "Ranges are always more accurate",
+          "The scholarly reference acknowledged uncertainty",
+          "No event had occurred",
+          "The team disliked exact years"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that the scholarly reference acknowledged uncertainty."
+      },
+      {
+        "question": "What error did the illustrated book create?",
+        "options": [
+          "It removed every event",
+          "It used a scholarly date",
+          "It marked disagreement",
+          "It made separate episodes appear consecutive"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that it made separate episodes appear consecutive."
+      },
+      {
+        "question": "How was that sequence corrected?",
+        "options": [
+          "The episodes were separated without an invented bridge",
+          "A new conversation was added",
+          "One episode was deleted",
+          "The book's version was declared certain"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that the episodes were separated without an invented bridge."
+      },
+      {
+        "question": "What remained available for teaching?",
+        "options": [
+          "Only disputed dates",
+          "Imagined motives",
+          "Dramatic first-person scenes",
+          "Established challenges, responses, and responsible lessons"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that established challenges, responses, and responsible lessons."
+      },
+      {
+        "question": "Why avoid first-person prophetic voices?",
+        "options": [
+          "Narrators cannot speak clearly",
+          "They can imply a recreation unsupported by sources",
+          "Visitors prefer silent panels",
+          "All audio history is forbidden"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that they can imply a recreation unsupported by sources."
+      },
+      {
+        "question": "What did the certainty categories help visitors compare?",
+        "options": [
+          "Three different museums",
+          "Only modern websites",
+          "Established, disputed, and unsupported claims",
+          "Dates from one author"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that established, disputed, and unsupported claims."
+      },
+      {
+        "question": "How did uncertainty labels affect trust?",
+        "options": [
+          "They increased it for many learners",
+          "They ended interest",
+          "They made every claim doubtful",
+          "They removed moral meaning"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that they increased it for many learners."
+      },
+      {
+        "question": "What cannot a timeline do?",
+        "options": [
+          "Organise known events",
+          "Turn an unknown date into fact",
+          "Show long hardship",
+          "Display source notes"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that turn an unknown date into fact."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-prophets-10",
+    "title": "How Do We Teach a Prophetic Story Responsibly?",
+    "level": "B2",
+    "themeId": "prophets",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [welcoming] You are preparing an audio lesson about a prophet. What is the first question you ask?",
+      "Guest: “What is my reliable source?” I begin with the Qur'an and authentic teachings, then consult trustworthy scholarship for explanation.",
+      "Host: Why not begin with the most exciting version online?",
+      "Guest: [carefully] Because excitement can come from invented dialogue, unsupported miracles, or details borrowed from another tradition. Repetition does not turn a story into evidence.",
+      "Host: Can a teacher simplify language for B2 learners?",
+      "Guest: Certainly. We can shorten sentences and explain vocabulary while preserving the meaning. Simplification should not add motives, private thoughts, or events the source never states.",
+      "Host: [curious] What about acting out the prophet's voice?",
+      "Guest: We avoid role-playing protected figures. A narrator can say, “The Qur'an reports that...” and quote or accurately paraphrase the relevant passage with proper respect.",
+      "Host: Learners often ask, “What would this prophet do in my exact situation?”",
+      "Guest: I would not claim knowledge of a hypothetical choice. We can identify established principles and then discuss how qualified guidance applies them today.",
+      "Host: How do you handle disagreements in historical detail?",
+      "Guest: [thoughtful] State the level of certainty. If a point is disputed and not essential, say so briefly or leave it out. Never present one weak report as settled fact merely because it improves the plot.",
+      "Host: Can lessons become too cautious to be meaningful?",
+      "Guest: Accuracy does not remove meaning. The accounts already contain courage, repentance, patience, justice, and reliance upon Allah. We do not need invented decoration.",
+      "Host: Your final check before publishing?",
+      "Guest: Verify every quotation, distinguish text from explanation, remove unsupported claims, and ask a qualified teacher to review sensitive religious conclusions."
+    ],
+    "quiz": [
+      {
+        "question": "What should begin preparation of a prophetic lesson?",
+        "options": [
+          "Identifying reliable primary and scholarly sources",
+          "Choosing the most dramatic plot",
+          "Writing imagined dialogue",
+          "Selecting a modern slogan"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that identifying reliable primary and scholarly sources."
+      },
+      {
+        "question": "Why is online repetition weak evidence?",
+        "options": [
+          "Online material has no authors",
+          "Every repeated claim is false",
+          "Popularity does not authenticate a detail",
+          "Exciting stories lack lessons"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that popularity does not authenticate a detail."
+      },
+      {
+        "question": "What may B2 simplification change?",
+        "options": [
+          "Historical events",
+          "Language difficulty, while preserving meaning",
+          "A prophet's private motives",
+          "The level of certainty"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that language difficulty, while preserving meaning."
+      },
+      {
+        "question": "How should protected figures be presented?",
+        "options": [
+          "Dramatic role-play",
+          "Invented first-person speech",
+          "Anonymous fictional scenes",
+          "Through respectful narration and accurate reporting"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that through respectful narration and accurate reporting."
+      },
+      {
+        "question": "Why reject hypothetical prophetic verdicts?",
+        "options": [
+          "We cannot claim choices that sources never state",
+          "Modern questions never matter",
+          "Principles cannot be applied",
+          "Qualified guidance is unnecessary"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that we cannot claim choices that sources never state."
+      },
+      {
+        "question": "How should disputed minor details be handled?",
+        "options": [
+          "Present them as certain",
+          "Choose the most exciting report",
+          "Resolve them through voting",
+          "State uncertainty briefly or omit them"
+        ],
+        "correctIndex": 3,
+        "explanation": "The audio explains that state uncertainty briefly or omit them."
+      },
+      {
+        "question": "Why does accuracy not empty the lesson?",
+        "options": [
+          "Accuracy adds dramatic decoration",
+          "Reliable accounts already contain rich moral themes",
+          "Every gap has one answer",
+          "Meaning depends on invented speech"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that reliable accounts already contain rich moral themes."
+      },
+      {
+        "question": "What requires qualified review?",
+        "options": [
+          "Every vocabulary definition",
+          "Audio recording volume",
+          "Sensitive religious conclusions",
+          "The title length"
+        ],
+        "correctIndex": 2,
+        "explanation": "The audio explains that sensitive religious conclusions."
+      },
+      {
+        "question": "Which final check concerns quotations?",
+        "options": [
+          "Verify each attribution before publication",
+          "Make every quote longer",
+          "Use only social media versions",
+          "Remove all direct sources"
+        ],
+        "correctIndex": 0,
+        "explanation": "The audio explains that verify each attribution before publication."
+      },
+      {
+        "question": "What distinction should editors preserve?",
+        "options": [
+          "Truth versus vocabulary",
+          "Revelatory text versus later explanation",
+          "Audio versus writing",
+          "History versus every moral lesson"
+        ],
+        "correctIndex": 1,
+        "explanation": "The audio explains that revelatory text versus later explanation."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "prophets",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

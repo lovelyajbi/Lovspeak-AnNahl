@@ -6,38 +6,152 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [tired] For years, I told myself I would start exercising next week, and next week never actually came.",
-      "Narrator: [honest] I worked at a desk from morning until evening, and my body simply stopped moving much at all.",
-      "Narrator: [thoughtful] My back ached constantly, and climbing two flights of stairs left me breathless and a little dizzy.",
-      "Narrator: [worried] Last spring, my doctor looked at my test results and told me plainly that something needed to change.",
-      "Narrator: [honest] She did not scold me. She simply asked, what is one thing you could do this week.",
-      "Narrator: [thoughtful] I thought about it for days before I answered her, honestly unsure what I could manage.",
-      "Narrator: [determined] Finally, I decided on something small. I would walk around my block every single morning.",
-      "Narrator: [honest] The first morning was humiliating, if I am being truthful. I was out of breath after five minutes.",
-      "Narrator: [tired] My legs felt like stone, and I wanted to turn back before I even finished one block.",
-      "Narrator: [determined] But I did not turn back. I walked slowly, and I finished the whole block anyway.",
-      "Narrator: [hopeful] The second morning was slightly easier, and by the end of the first week, I felt a little stronger.",
-      "Narrator: [thoughtful] I started waking up fifteen minutes earlier, just enough time to walk before my morning shower.",
-      "Narrator: [proud] After three weeks, I added a second block, then a small park loop near my apartment.",
-      "Narrator: [amazed] Two months later, I can walk for forty minutes without stopping to catch my breath.",
-      "Narrator: [warmly] My back pain has almost disappeared, and I no longer dread the stairs at work.",
-      "Narrator: [peacefully] I sleep more deeply now too, and I wake up feeling like my body actually rested.",
-      "Narrator: [reflective] What surprises me most is how small this change felt at the beginning, almost too small to matter.",
-      "Narrator: [warmly] But small changes, repeated daily, became something real, something I could feel physically.",
-      "Narrator: [grateful] My doctor was right to ask that simple question instead of giving me a long list of rules.",
-      "Narrator: [with a small smile] One thing, done consistently, was enough to start changing everything else around it.",
-      "Narrator: [peacefully] Now, walking each morning is not a task on my list. It is simply part of who I am becoming."
+      "Narrator: [discouraged] For years, I told myself I would start exercising next week, and next week never actually came.",
+      "Narrator: I worked at a desk from morning until evening, and my body simply stopped moving much at all.",
+      "Narrator: My back ached constantly, and climbing two flights of stairs left me breathless and a little dizzy.",
+      "Narrator: [concerned] Last spring, my doctor looked at my test results and told me plainly that something needed to change.",
+      "Narrator: She did not scold me. She simply asked, what is one thing you could do this week.",
+      "Narrator: I thought about it for days before I answered her, honestly unsure what I could manage.",
+      "Narrator: Finally, I decided on something small. I would walk around my block every single morning.",
+      "Narrator: [determined] The first morning felt embarrassing, if I am being truthful. I was out of breath after five minutes.",
+      "Narrator: My legs felt like stone, and I wanted to turn back before I even finished one block.",
+      "Narrator: [tired] But I did not turn back. I walked slowly, and I finished the whole block anyway.",
+      "Narrator: The second morning was slightly easier, and by the end of the first week, I felt a little stronger.",
+      "Narrator: I started waking up fifteen minutes earlier, just enough time to walk before my morning shower.",
+      "Narrator: [hopeful] After three weeks, I added a second block, then a small park loop near my apartment.",
+      "Narrator: Two months later, I can walk for forty minutes without stopping to catch my breath.",
+      "Narrator: My back pain has almost disappeared, and I no longer dread the stairs at work.",
+      "Narrator: I sleep more deeply now too, and I wake up feeling like my body actually rested.",
+      "Narrator: [proud] What surprises me most is how small this change felt at the beginning, almost too small to matter.",
+      "Narrator: But small changes, repeated daily, became something real, something I could feel physically.",
+      "Narrator: My doctor was right to ask that simple question instead of giving me a long list of rules.",
+      "Narrator: One thing, done regularly, was enough to start changing everything else around it.",
+      "Narrator: [encouraging] Now, walking each morning is not a task on my list. It is simply part of who I am becoming."
     ],
     "quiz": [
-      { "question": "What did the narrator keep telling herself for years?", "options": ["That exercise was dangerous", "That she would start exercising next week", "That she did not need to move", "That walking was boring"], "correctIndex": 1, "explanation": "She admits she told herself she would start exercising next week, but next week never came." },
-      { "question": "What prompted her to finally make a change?", "options": ["A friend's advice", "Her doctor's test results and a simple question", "A magazine article", "Losing her job"], "correctIndex": 1, "explanation": "Her doctor looked at her test results and asked what one thing she could do that week." },
-      { "question": "What small change did she choose to make?", "options": ["Join a gym", "Walk around her block every morning", "Run five kilometers daily", "Buy a bicycle"], "correctIndex": 1, "explanation": "She decided to walk around her block every single morning." },
-      { "question": "How did the first morning of walking feel?", "options": ["Easy and relaxing", "Humiliating, with breathlessness after five minutes", "Painful in her arms", "Not tiring at all"], "correctIndex": 1, "explanation": "She says the first morning was humiliating, and she was out of breath after five minutes." },
-      { "question": "What has improved after two months of walking?", "options": ["Nothing changed", "She walks forty minutes easily, her back feels better, and she sleeps deeper", "Only her mood improved", "She stopped walking after a week"], "correctIndex": 1, "explanation": "She can now walk forty minutes without stopping, her back pain is almost gone, and she sleeps more deeply." }
-    ]
+      {
+        "question": "What did the narrator keep telling herself for years?",
+        "options": [
+          "That exercise was dangerous",
+          "That she did not need to move",
+          "That walking was boring",
+          "That she would start exercising next week"
+        ],
+        "correctIndex": 3,
+        "explanation": "She admits she told herself she would start exercising next week, but next week never came."
+      },
+      {
+        "question": "What prompted her to finally make a change?",
+        "options": [
+          "A friend's advice",
+          "Her doctor's test results and a simple question",
+          "A magazine article",
+          "Losing her job"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her doctor looked at her test results and asked what one thing she could do that week."
+      },
+      {
+        "question": "What small change did she choose to make?",
+        "options": [
+          "Walk around her block every morning",
+          "Join a gym",
+          "Run five kilometers daily",
+          "Buy a bicycle"
+        ],
+        "correctIndex": 0,
+        "explanation": "She decided to walk around her block every single morning."
+      },
+      {
+        "question": "How did the first morning of walking feel?",
+        "options": [
+          "Easy and relaxing",
+          "Painful in her arms",
+          "Humiliating, with breathlessness after five minutes",
+          "Not tiring at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says the first morning was humiliating, and she was out of breath after five minutes."
+      },
+      {
+        "question": "What has improved after two months of walking?",
+        "options": [
+          "Nothing changed",
+          "Only her mood improved",
+          "She walks forty minutes easily, her back feels better, and she sleeps deeper",
+          "She stopped walking after a week"
+        ],
+        "correctIndex": 2,
+        "explanation": "She can now walk forty minutes without stopping, her back pain is almost gone, and she sleeps more deeply."
+      },
+      {
+        "question": "Why did the doctor ask for one small change?",
+        "options": [
+          "A simple start felt possible",
+          "The narrator needed a gym",
+          "The stairs were closed",
+          "Walking was the only exercise"
+        ],
+        "correctIndex": 0,
+        "explanation": "One manageable action helped the narrator begin."
+      },
+      {
+        "question": "What does “breathless” mean?",
+        "options": [
+          "Having difficulty breathing after effort",
+          "Unable to speak to the doctor",
+          "Feeling sleepy at work",
+          "Having pain in the hands"
+        ],
+        "correctIndex": 0,
+        "explanation": "The stairs and first walk made breathing difficult."
+      },
+      {
+        "question": "How did the walking distance change?",
+        "options": [
+          "Forty minutes became five minutes",
+          "The park loop was removed",
+          "The narrator stopped after one week",
+          "One block grew into a longer route"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator increased the route gradually over several weeks."
+      },
+      {
+        "question": "Which result appeared besides easier walking?",
+        "options": [
+          "Less back pain and better sleep",
+          "A new work schedule",
+          "Faster medical tests",
+          "More time at a desk"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator reports several personal improvements after two months."
+      },
+      {
+        "question": "What is the safe lesson from this story?",
+        "options": [
+          "Copy the same plan without checking health",
+          "Begin with a suitable small step and medical guidance",
+          "Exercise through dizziness",
+          "Change everything in one day"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator begins after a doctor’s check and progresses slowly."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; doctor-supported change with gradual progress and clear personal results",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-health-02",
@@ -46,43 +160,160 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Doctor Amina", "gender": "female" },
-      { "name": "Farid", "gender": "male" }
+      {
+        "name": "Doctor Amina",
+        "gender": "female"
+      },
+      {
+        "name": "Farid",
+        "gender": "male"
+      }
     ],
     "script": [
       "Doctor Amina: [warmly] Good morning, Farid. Please sit down. What brings you in for a checkup today?",
-      "Farid: [a bit nervous] Good morning, doctor. Honestly, I feel exhausted all the time lately, even after sleeping.",
-      "Doctor Amina: [attentive] I see. Let's go through a few questions first. How many hours do you sleep each night?",
-      "Farid: [thoughtful] Maybe five or six hours. I stay up late finishing work on my laptop most nights.",
-      "Doctor Amina: [gently] That is less than your body needs to recover. Do you feel stressed at work too?",
-      "Farid: [honest] Very stressed. My manager gives me new deadlines almost every single day now.",
-      "Doctor Amina: [caring] Stress and poor sleep together can explain a lot of what you're feeling.",
-      "Farid: [curious] Is that really the whole problem? I was worried something more serious was wrong with me.",
-      "Doctor Amina: [reassuring] Let's check first. I'm going to measure your blood pressure and heartbeat.",
-      "Farid: [nervous] Okay, go ahead. I've been a little afraid to hear the results.",
-      "Doctor Amina: [pleased] Good news. Your blood pressure is normal, and your heartbeat sounds strong and steady.",
-      "Farid: [relieved] That's a relief to hear. Thank you for checking so carefully.",
-      "Doctor Amina: [serious] Still, we should not ignore how tired you feel. Your body is clearly asking for rest.",
-      "Farid: [listening] What do you recommend I actually do, starting today?",
-      "Doctor Amina: [caring] First, try to sleep at least seven hours, even if it means closing your laptop earlier.",
-      "Doctor Amina: [caring] Second, drink more water during the day, and cut back on coffee after lunchtime.",
-      "Farid: [thoughtful] I drink a lot of coffee to stay awake, but maybe that is making my sleep worse.",
-      "Doctor Amina: [nodding] Exactly. Coffee late in the day often makes falling asleep much harder at night.",
-      "Farid: [determined] Okay, doctor. I will try sleeping earlier and drinking less coffee, starting tonight.",
-      "Doctor Amina: [encouraging] Also, try short breaks during your workday, even five minutes away from the screen.",
-      "Farid: [nodding] That sounds manageable. I forget to take breaks when I'm under pressure.",
-      "Doctor Amina: [warmly] Many people forget that. Rest is part of working well, not separate from it.",
-      "Farid: [grateful] Thank you, doctor. I feel more hopeful now than when I arrived.",
-      "Doctor Amina: [smiling] Good. Come back in one month, and tell me honestly how your sleep has changed.",
-      "Farid: [smiling] I will. Thank you again for taking the time to explain everything so clearly."
+      "Farid: [exhausted] Good morning, doctor. Honestly, I feel exhausted all the time lately, even after sleeping.",
+      "Doctor Amina: I see. Let's go through a few questions first. How many hours do you sleep each night?",
+      "Farid: Maybe five or six hours. I stay up late finishing work on my laptop most nights.",
+      "Doctor Amina: That is less than your body needs to recover. Do you feel stressed at work too?",
+      "Farid: [concerned] Very stressed. My manager gives me new deadlines almost every single day now.",
+      "Doctor Amina: Stress and poor sleep together can explain a lot of what you're feeling.",
+      "Farid: Is that really the whole problem? I was worried something more serious was wrong with me.",
+      "Doctor Amina: Let's check first. I'm going to measure your blood pressure and heartbeat.",
+      "Farid: Okay, go ahead. I've been a little afraid to hear the results.",
+      "Doctor Amina: [nervous] Good news. Your blood pressure is normal, and your heartbeat sounds strong and steady.",
+      "Farid: That's a relief to hear. Thank you for checking so carefully.",
+      "Doctor Amina: [relieved] Still, we should not ignore how tired you feel. Your body is clearly asking for rest.",
+      "Farid: What do you recommend I actually do, starting today?",
+      "Doctor Amina: First, try to sleep at least seven hours, even if it means closing your laptop earlier.",
+      "Doctor Amina: Second, drink more water during the day, and cut back on coffee after lunchtime.",
+      "Farid: [practical] I drink a lot of coffee to stay awake, but maybe that is making my sleep worse.",
+      "Doctor Amina: Exactly. Coffee late in the day often makes falling asleep much harder at night.",
+      "Farid: Okay, doctor. I will try sleeping earlier and drinking less coffee, starting tonight.",
+      "Doctor Amina: Also, try short breaks during your workday, even five minutes away from the screen.",
+      "Farid: That sounds manageable. I forget to take breaks when I'm under pressure.",
+      "Doctor Amina: Many people forget that. Rest is part of working well, not separate from it.",
+      "Farid: Thank you, doctor. I feel more hopeful now than when I arrived.",
+      "Doctor Amina: [hopeful] Good. Come back in one month, and tell me honestly how your sleep has changed.",
+      "Farid: I will. Thank you again for taking the time to explain everything so clearly."
     ],
     "quiz": [
-      { "question": "Why did Farid come in for a checkup?", "options": ["He had a broken bone", "He feels exhausted all the time, even after sleeping", "He wanted a routine test only", "He had a skin problem"], "correctIndex": 1, "explanation": "Farid tells the doctor he feels exhausted all the time lately, even after sleeping." },
-      { "question": "How many hours does Farid usually sleep?", "options": ["Eight hours", "Five or six hours", "Ten hours", "Three hours"], "correctIndex": 1, "explanation": "Farid says he sleeps maybe five or six hours because he stays up late working." },
-      { "question": "What did the doctor find when she examined Farid?", "options": ["High blood pressure", "Normal blood pressure and a strong, steady heartbeat", "An irregular heartbeat", "A fever"], "correctIndex": 1, "explanation": "The doctor says his blood pressure is normal and his heartbeat sounds strong and steady." },
-      { "question": "What does the doctor say about Farid's coffee habit?", "options": ["He should drink more coffee", "Coffee late in the day makes falling asleep harder", "Coffee has no effect on sleep", "He should only drink coffee at night"], "correctIndex": 1, "explanation": "The doctor explains that coffee late in the day often makes falling asleep much harder at night." },
-      { "question": "What does the doctor ask Farid to do at the end?", "options": ["Never come back", "Come back in one month and report how his sleep has changed", "Stop working completely", "Take medicine immediately"], "correctIndex": 1, "explanation": "The doctor asks him to come back in one month and tell her honestly how his sleep has changed." }
-    ]
+      {
+        "question": "Why did Farid come in for a checkup?",
+        "options": [
+          "He had a broken bone",
+          "He wanted a routine test only",
+          "He feels exhausted all the time, even after sleeping",
+          "He had a skin problem"
+        ],
+        "correctIndex": 2,
+        "explanation": "Farid tells the doctor he feels exhausted all the time lately, even after sleeping."
+      },
+      {
+        "question": "How many hours does Farid usually sleep?",
+        "options": [
+          "Eight hours",
+          "Ten hours",
+          "Three hours",
+          "Five or six hours"
+        ],
+        "correctIndex": 3,
+        "explanation": "Farid says he sleeps maybe five or six hours because he stays up late working."
+      },
+      {
+        "question": "What did the doctor find when she examined Farid?",
+        "options": [
+          "High blood pressure",
+          "An irregular heartbeat",
+          "A fever",
+          "Normal blood pressure and a strong, steady heartbeat"
+        ],
+        "correctIndex": 3,
+        "explanation": "The doctor says his blood pressure is normal and his heartbeat sounds strong and steady."
+      },
+      {
+        "question": "What does the doctor say about Farid's coffee habit?",
+        "options": [
+          "Coffee late in the day makes falling asleep harder",
+          "He should drink more coffee",
+          "Coffee has no effect on sleep",
+          "He should only drink coffee at night"
+        ],
+        "correctIndex": 0,
+        "explanation": "The doctor explains that coffee late in the day often makes falling asleep much harder at night."
+      },
+      {
+        "question": "What does the doctor ask Farid to do at the end?",
+        "options": [
+          "Come back in one month and report how his sleep has changed",
+          "Never come back",
+          "Stop working completely",
+          "Take medicine immediately"
+        ],
+        "correctIndex": 0,
+        "explanation": "The doctor asks him to come back in one month and tell her honestly how his sleep has changed."
+      },
+      {
+        "question": "What happens before the doctor gives advice?",
+        "options": [
+          "Farid drinks more coffee",
+          "She checks Farid and asks questions",
+          "The manager changes deadlines",
+          "Farid goes home to sleep"
+        ],
+        "correctIndex": 1,
+        "explanation": "The doctor first gathers information and examines him."
+      },
+      {
+        "question": "What does “recover” mean here?",
+        "options": [
+          "Finish a work deadline",
+          "Rest and regain energy",
+          "Drink coffee at night",
+          "Measure blood pressure"
+        ],
+        "correctIndex": 1,
+        "explanation": "The doctor says sleep helps the body regain strength."
+      },
+      {
+        "question": "Why may afternoon coffee be a problem?",
+        "options": [
+          "It always raises blood pressure",
+          "It can make sleep harder",
+          "It replaces every meal",
+          "It creates more work deadlines"
+        ],
+        "correctIndex": 1,
+        "explanation": "The doctor connects late caffeine with difficulty falling asleep."
+      },
+      {
+        "question": "Why do short screen breaks sound possible to Farid?",
+        "options": [
+          "His manager canceled work",
+          "They need only a few minutes",
+          "He already takes long breaks",
+          "The laptop is broken"
+        ],
+        "correctIndex": 1,
+        "explanation": "A five-minute break feels manageable during a busy day."
+      },
+      {
+        "question": "Why is the one-month return important?",
+        "options": [
+          "Farid needs another coffee plan",
+          "The office requires a note",
+          "The doctor can review whether symptoms changed",
+          "The first check was not completed"
+        ],
+        "correctIndex": 2,
+        "explanation": "Follow-up checks whether the plan helped or more care is needed."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; clinical check occurs before routine advice and includes follow-up",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-health-03",
@@ -91,37 +322,151 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [weak] Four days ago, I woke up with a sore throat and a heavy, aching head.",
-      "Narrator: [groaning] By the afternoon, a fever had settled in, and my whole body felt strangely weak.",
-      "Narrator: [thoughtful] I almost forced myself to go to work anyway, the way I usually do when I feel unwell.",
-      "Narrator: [reflective] But something made me stop that morning. I realized I was only going to make things worse.",
-      "Narrator: [determined] So I called my supervisor, explained honestly, and stayed home to rest instead of pushing myself.",
-      "Narrator: [caring] I drank warm water with lemon and honey, and I kept a blanket close all day.",
-      "Narrator: [honest] Sleep came easily that first day. My body seemed to know exactly what it needed most.",
-      "Narrator: [grateful] My sister heard I was sick and brought warm soup to my door every single evening.",
-      "Narrator: [warmly] That small kindness meant more to me than she probably realized at the time.",
-      "Narrator: [thoughtful] By the second day, my fever was still there, but my headache had softened a little.",
-      "Narrator: [honest] I tried to read a book, but my eyes felt tired, so I mostly just rested quietly.",
-      "Narrator: [hopeful] On the third day, I woke up and noticed my throat did not hurt as much.",
-      "Narrator: [relieved] I still felt tired, but a different kind of tired, more like healing than sickness.",
-      "Narrator: [reflective] I used that time to think, too, about how rarely I actually let myself slow down.",
-      "Narrator: [honest] Normally I push through everything, even when my body is clearly asking me to stop.",
-      "Narrator: [warmly] Today, four days later, I finally feel like myself again, with real energy returning slowly.",
-      "Narrator: [grateful] My sister's soup, my own patience, and simple rest brought me back faster than I expected.",
-      "Narrator: [reflective] I learned something important this week. Resting properly is not laziness, it is simply how the body heals.",
-      "Narrator: [peacefully] Next time I feel sick, I hope I remember this lesson instead of ignoring my body again.",
-      "Narrator: [with a small smile] Tomorrow, I plan to return to work, grateful, rested, and finally breathing easily again."
+      "Narrator: [unwell] Four days ago, I woke up with a sore throat and a heavy, aching head.",
+      "Narrator: By the afternoon, a fever had settled in, and my whole body felt strangely weak.",
+      "Narrator: I almost forced myself to go to work anyway, the way I usually do when I feel unwell.",
+      "Narrator: [thoughtful] But something made me stop that morning. I realized I was only going to make things worse.",
+      "Narrator: So I called my supervisor, explained honestly, and stayed home to rest instead of pushing myself.",
+      "Narrator: [tired] I drank warm water with lemon and honey, and I kept a blanket close all day.",
+      "Narrator: Sleep came easily that first day. My body seemed to know exactly what it needed most.",
+      "Narrator: My sister heard I was sick and brought warm soup to my door every single evening.",
+      "Narrator: [grateful] That small kindness meant more to me than she probably realized at the time.",
+      "Narrator: By the second day, my fever was still there, but my headache had softened a little.",
+      "Narrator: I tried to read a book, but my eyes felt tired, so I mostly just rested quietly.",
+      "Narrator: On the third day, I woke up and noticed my throat did not hurt as much.",
+      "Narrator: [hopeful] I still felt tired, but a different kind of tired, more like healing than sickness.",
+      "Narrator: I used that time to think, too, about how rarely I actually let myself slow down.",
+      "Narrator: Normally I push through everything, even when my body is clearly asking me to stop.",
+      "Narrator: Today, four days later, I finally feel like myself again, with real energy returning slowly.",
+      "Narrator: My sister's soup, my own patience, and simple rest brought me back faster than I expected.",
+      "Narrator: [relieved] I learned something important this week. Resting properly is not laziness, it is simply how the body heals.",
+      "Narrator: Next time I feel sick, I hope I remember this lesson instead of ignoring my body again.",
+      "Narrator: [warmly] Tomorrow, I plan to return to work, grateful, rested, and finally breathing easily again."
     ],
     "quiz": [
-      { "question": "How did the narrator's illness begin?", "options": ["With a headache only", "With a sore throat and a heavy, aching head", "With a stomach ache", "With back pain"], "correctIndex": 1, "explanation": "He woke up with a sore throat and a heavy, aching head four days ago." },
-      { "question": "What did the narrator decide to do about work?", "options": ["Go to work anyway", "Call his supervisor and stay home to rest", "Ask a friend to cover his shift", "Work from a cafe"], "correctIndex": 1, "explanation": "He called his supervisor, explained honestly, and stayed home to rest instead of pushing himself." },
-      { "question": "What did he drink to help himself feel better?", "options": ["Cold juice", "Warm water with lemon and honey", "Black coffee", "Plain milk"], "correctIndex": 1, "explanation": "He drank warm water with lemon and honey while resting." },
-      { "question": "Who brought him soup every evening?", "options": ["His mother", "His sister", "His doctor", "His coworker"], "correctIndex": 1, "explanation": "His sister brought him warm soup to his door every single evening." },
-      { "question": "What did the narrator learn from this experience?", "options": ["Resting is lazy", "Resting properly is how the body heals", "Medicine is never needed", "Soup cures every illness"], "correctIndex": 1, "explanation": "He concludes that resting properly is not laziness, it is simply how the body heals." }
-    ]
+      {
+        "question": "How did the narrator's illness begin?",
+        "options": [
+          "With a sore throat and a heavy, aching head",
+          "With a headache only",
+          "With a stomach ache",
+          "With back pain"
+        ],
+        "correctIndex": 0,
+        "explanation": "He woke up with a sore throat and a heavy, aching head four days ago."
+      },
+      {
+        "question": "What did the narrator decide to do about work?",
+        "options": [
+          "Go to work anyway",
+          "Ask a friend to cover his shift",
+          "Work from a cafe",
+          "Call his supervisor and stay home to rest"
+        ],
+        "correctIndex": 3,
+        "explanation": "He called his supervisor, explained honestly, and stayed home to rest instead of pushing himself."
+      },
+      {
+        "question": "What did he drink to help himself feel better?",
+        "options": [
+          "Cold juice",
+          "Warm water with lemon and honey",
+          "Black coffee",
+          "Plain milk"
+        ],
+        "correctIndex": 1,
+        "explanation": "He drank warm water with lemon and honey while resting."
+      },
+      {
+        "question": "Who brought him soup every evening?",
+        "options": [
+          "His mother",
+          "His doctor",
+          "His sister",
+          "His coworker"
+        ],
+        "correctIndex": 2,
+        "explanation": "His sister brought him warm soup to his door every single evening."
+      },
+      {
+        "question": "What did the narrator learn from this experience?",
+        "options": [
+          "Resting is lazy",
+          "Medicine is never needed",
+          "Resting properly is how the body heals",
+          "Soup cures every illness"
+        ],
+        "correctIndex": 2,
+        "explanation": "He concludes that resting properly is not laziness, it is simply how the body heals."
+      },
+      {
+        "question": "Why did the narrator stay home?",
+        "options": [
+          "The supervisor closed the office",
+          "His sister needed help",
+          "The book was difficult to read",
+          "Work might make the illness worse"
+        ],
+        "correctIndex": 3,
+        "explanation": "He chose rest instead of forcing himself through work."
+      },
+      {
+        "question": "What does “pushing myself” mean here?",
+        "options": [
+          "Moving a heavy object",
+          "Calling the clinic many times",
+          "Forcing himself to continue while sick",
+          "Walking quickly to work"
+        ],
+        "correctIndex": 2,
+        "explanation": "He usually continues working even when his body needs rest."
+      },
+      {
+        "question": "What improved on the second day?",
+        "options": [
+          "All symptoms disappeared",
+          "The narrator returned to work",
+          "The headache became lighter",
+          "His eyes could read for hours"
+        ],
+        "correctIndex": 2,
+        "explanation": "The fever remained, but the head pain softened."
+      },
+      {
+        "question": "Why was the sister’s soup important?",
+        "options": [
+          "It immediately ended the illness",
+          "It provided care and made him feel supported",
+          "It replaced the need for rest",
+          "It allowed him to work from home"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her daily visit was both practical and emotionally meaningful."
+      },
+      {
+        "question": "What should happen before returning to normal activity?",
+        "options": [
+          "The person should be well enough and follow health guidance",
+          "A fixed four-day period must pass",
+          "The fever should be ignored",
+          "Work should begin while symptoms grow"
+        ],
+        "correctIndex": 0,
+        "explanation": "The story is personal; readiness and appropriate guidance matter."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; personal recovery story clearly describes rest and family support, not a universal treatment",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-health-04",
@@ -130,42 +475,159 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Nadia, who wants to talk about managing daily stress. Thanks for joining me, Nadia.",
-      "Guest: [pleasantly] Thank you for having me. This topic is something I think about often.",
-      "Host: [curious] Can you tell our listeners why stress management became important to you personally?",
-      "Guest: [thoughtful] Two years ago, I was working constantly, barely sleeping, and I felt anxious almost every single day.",
-      "Host: [sympathetically] That sounds exhausting. What made you realize something needed to change?",
-      "Guest: [honest] One night, my heart was racing so fast that I actually thought something was seriously wrong with me.",
-      "Host: [concerned] That must have been frightening. What did you do after that night?",
-      "Guest: [reflective] I went to see a doctor, and she explained it was likely stress and lack of rest.",
-      "Host: [interested] Did she recommend any specific changes to your daily routine?",
-      "Guest: [warmly] Yes. She suggested short breathing exercises, regular sleep, and taking real breaks during my workday.",
-      "Host: [curious] Did those small changes actually make a noticeable difference for you?",
-      "Guest: [pleased] Slowly, yes. I started noticing my shoulders relaxing, and my thoughts felt less scattered.",
-      "Host: [interested] What does a typical stress-relief moment look like for you now?",
-      "Guest: [gently] Every afternoon, I close my laptop for five minutes and just breathe slowly, without checking my phone.",
-      "Host: [curious] Do you think most people underestimate how much stress affects the physical body?",
-      "Guest: [thoughtful] Completely. People think stress is only mental, but it shows up in our shoulders, stomach, and sleep too.",
-      "Host: [curious] What would you tell someone who feels too busy to try something like this?",
-      "Guest: [encouraging] I would say five minutes is not a luxury, it is basic maintenance for your whole body and mind.",
-      "Host: [curious] Has your sleep improved since you started managing stress this way?",
-      "Guest: [warmly] Enormously. I used to lie awake with racing thoughts, and now I fall asleep much faster.",
-      "Host: [smiling] That's wonderful to hear, Nadia. Any final advice for our listeners today?",
-      "Guest: [warmly] Start small. One quiet breath, one short walk, one honest conversation. It adds up more than people expect.",
-      "Host: [smiling] Thank you so much for sharing your story with us today, Nadia.",
+      "Guest: Thank you for having me. This topic is something I think about often.",
+      "Host: Can you tell our listeners why stress management became important to you personally?",
+      "Guest: [stressed] Two years ago, I was working constantly, barely sleeping, and I felt anxious almost every single day.",
+      "Host: That sounds exhausting. What made you realize something needed to change?",
+      "Guest: [frightened] One night, my heart was racing so fast that I actually thought something was seriously wrong with me.",
+      "Host: That must have been frightening. What did you do after that night?",
+      "Guest: [calmly] I went to see a doctor, and she explained it was likely stress and lack of rest.",
+      "Host: Did she recommend any specific changes to your daily routine?",
+      "Guest: Yes. She suggested short breathing exercises, regular sleep, and taking real breaks during my workday.",
+      "Host: Did those small changes actually make a noticeable difference for you?",
+      "Guest: [relieved] Slowly, yes. I started noticing my shoulders relaxing, and my thoughts felt less scattered.",
+      "Host: What does a typical stress-relief moment look like for you now?",
+      "Guest: Every afternoon, I close my laptop for five minutes and just breathe slowly, without checking my phone.",
+      "Host: Do you think most people underestimate how much stress affects the physical body?",
+      "Guest: Completely. People think stress is only mental, but it shows up in our shoulders, stomach, and sleep too.",
+      "Host: What would you tell someone who feels too busy to try something like this?",
+      "Guest: [encouraging] I would say five minutes is not a luxury, it is basic care for your body and mind.",
+      "Host: Has your sleep improved since you started managing stress this way?",
+      "Guest: A lot. I used to lie awake with racing thoughts, and now I fall asleep much faster.",
+      "Host: That's wonderful to hear, Nadia. Any final advice for our listeners today?",
+      "Guest: Start small. One quiet breath, one short walk, one honest conversation. It adds up more than people expect.",
+      "Host: Thank you so much for sharing your story with us today, Nadia.",
       "Guest: [warmly] Thank you for listening. I hope it helps someone who needs to hear it today."
     ],
     "quiz": [
-      { "question": "Why did stress management become important to Nadia?", "options": ["She read about it once", "She was working constantly, barely sleeping, and felt anxious daily", "Her friend recommended the topic", "She had no reason at all"], "correctIndex": 1, "explanation": "Nadia says two years ago she was working constantly, barely sleeping, and felt anxious almost every day." },
-      { "question": "What frightened Nadia one night?", "options": ["A loud noise outside", "Her heart racing fast, making her think something was seriously wrong", "A bad dream", "A phone call"], "correctIndex": 1, "explanation": "Her heart was racing so fast that she thought something was seriously wrong with her." },
-      { "question": "What did the doctor suggest to Nadia?", "options": ["Stop working entirely", "Breathing exercises, regular sleep, and real breaks during work", "Only medication", "Ignoring the stress"], "correctIndex": 1, "explanation": "The doctor suggested short breathing exercises, regular sleep, and taking real breaks during the workday." },
-      { "question": "What does Nadia do every afternoon now?", "options": ["Takes a long nap", "Closes her laptop for five minutes and breathes slowly", "Calls a friend", "Goes for a run"], "correctIndex": 1, "explanation": "Every afternoon she closes her laptop for five minutes and breathes slowly, without checking her phone." },
-      { "question": "What is Nadia's final advice to listeners?", "options": ["Only professionals can manage stress", "Start small, with one breath, one walk, one honest conversation", "Stress cannot be managed", "Ignore stress until it passes"], "correctIndex": 1, "explanation": "She advises listeners to start small, saying one breath, one short walk, one honest conversation adds up." }
-    ]
+      {
+        "question": "Why did stress management become important to Nadia?",
+        "options": [
+          "She read about it once",
+          "Her friend recommended the topic",
+          "She had no reason at all",
+          "She was working constantly, barely sleeping, and felt anxious daily"
+        ],
+        "correctIndex": 3,
+        "explanation": "Nadia says two years ago she was working constantly, barely sleeping, and felt anxious almost every day."
+      },
+      {
+        "question": "What frightened Nadia one night?",
+        "options": [
+          "Her heart racing fast, making her think something was seriously wrong",
+          "A loud noise outside",
+          "A bad dream",
+          "A phone call"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her heart was racing so fast that she thought something was seriously wrong with her."
+      },
+      {
+        "question": "What did the doctor suggest to Nadia?",
+        "options": [
+          "Breathing exercises, regular sleep, and real breaks during work",
+          "Stop working entirely",
+          "Only medication",
+          "Ignoring the stress"
+        ],
+        "correctIndex": 0,
+        "explanation": "The doctor suggested short breathing exercises, regular sleep, and taking real breaks during the workday."
+      },
+      {
+        "question": "What does Nadia do every afternoon now?",
+        "options": [
+          "Takes a long nap",
+          "Calls a friend",
+          "Closes her laptop for five minutes and breathes slowly",
+          "Goes for a run"
+        ],
+        "correctIndex": 2,
+        "explanation": "Every afternoon she closes her laptop for five minutes and breathes slowly, without checking her phone."
+      },
+      {
+        "question": "What is Nadia's final advice to listeners?",
+        "options": [
+          "Only professionals can manage stress",
+          "Stress cannot be managed",
+          "Ignore stress until it passes",
+          "Start small, with one breath, one walk, one honest conversation"
+        ],
+        "correctIndex": 3,
+        "explanation": "She advises listeners to start small, saying one breath, one short walk, one honest conversation adds up."
+      },
+      {
+        "question": "What did Nadia do after her heart raced?",
+        "options": [
+          "She searched only online",
+          "She stopped sleeping",
+          "She worked through the night",
+          "She visited a doctor"
+        ],
+        "correctIndex": 3,
+        "explanation": "She sought medical help instead of deciding the cause herself."
+      },
+      {
+        "question": "What does “scattered” mean for her thoughts?",
+        "options": [
+          "Easy to remember",
+          "Focused on one task",
+          "Hard to organize",
+          "Ready for sleep"
+        ],
+        "correctIndex": 2,
+        "explanation": "Stress made her thoughts feel divided and difficult to control."
+      },
+      {
+        "question": "What does Nadia avoid during her five-minute break?",
+        "options": [
+          "Slow breathing",
+          "A closed laptop",
+          "A quiet room",
+          "Her phone"
+        ],
+        "correctIndex": 3,
+        "explanation": "She creates a real pause without another screen."
+      },
+      {
+        "question": "Where did Nadia notice stress in her body?",
+        "options": [
+          "Only her hands",
+          "Shoulders, stomach, and sleep",
+          "Only her eyesight",
+          "Her feet after walking"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains that stress can have physical signs."
+      },
+      {
+        "question": "What is Nadia’s main purpose?",
+        "options": [
+          "Promise one method works for everyone",
+          "Share small habits that helped after medical advice",
+          "Replace professional health care",
+          "Teach listeners to ignore a racing heart"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her experience encourages small steps while beginning with proper assessment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; doctor assessment precedes stress-management changes and the story avoids self-diagnosis",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-health-05",
@@ -174,37 +636,151 @@
     "themeId": "health",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [warmly] My grandmother lived to ninety-three, and people always asked her the same question, what is your secret.",
-      "Narrator: [thoughtful] She never gave a complicated answer. She simply said, I move my body, and I eat slowly.",
-      "Narrator: [reflective] Growing up, I watched her walk to the market every morning, even in her eighties, rain or sun.",
-      "Narrator: [honest] As a child, I did not understand why she refused rides that would have been so much faster.",
-      "Narrator: [gently] She once told me, my legs are a gift, and gifts should be used, not left unopened.",
-      "Narrator: [warmly] She also cooked almost everything herself, using vegetables from a small garden behind her kitchen.",
-      "Narrator: [thoughtful] I remember her saying that food made with patience tastes different from food made in a hurry.",
-      "Narrator: [reflective] She ate slowly too, always finishing after the rest of us, though she started last at the table.",
-      "Narrator: [honest] When I asked why she chewed so carefully, she laughed and said her stomach thanked her for it.",
-      "Narrator: [warmly] Sleep mattered to her as well. She went to bed early and never once owned a television.",
-      "Narrator: [thoughtful] As a teenager, I thought her habits were old-fashioned, almost boring compared to my own busy life.",
-      "Narrator: [honest] I stayed up late, ate quickly, and rarely walked anywhere I could drive instead.",
-      "Narrator: [reflective] It was only after she passed away that I truly understood what she had been teaching me all along.",
-      "Narrator: [warmly] Last year, I started walking to work instead of driving, just fifteen minutes, but it felt like her voice guiding me.",
-      "Narrator: [thoughtful] I also started cooking more at home, slowing down at dinner instead of eating in front of a screen.",
-      "Narrator: [honest] My energy improved within weeks, and I finally understood why she moved through her days so lightly.",
-      "Narrator: [peacefully] She never exercised in a gym or followed any special program that people talk about today.",
-      "Narrator: [warmly] Her secret, if you could call it that, was simply consistency in small, ordinary choices, repeated for decades.",
-      "Narrator: [reflective] Now, when people ask me for health advice, I find myself repeating her words without even trying.",
-      "Narrator: [with a small smile] Move your body, eat slowly, sleep early. Simple advice, but I finally understand why it worked so well."
+      "Narrator: She never gave a complicated answer. She simply said, I move my body, and I eat slowly.",
+      "Narrator: Growing up, I watched her walk to the market every morning, even in her eighties, rain or sun.",
+      "Narrator: [admiring] As a child, I did not understand why she refused rides that would have been so much faster.",
+      "Narrator: She once told me, my legs are a gift, and gifts should be used, not left unopened.",
+      "Narrator: She also cooked almost everything herself, using vegetables from a small garden behind her kitchen.",
+      "Narrator: I remember her saying that food made with patience tastes different from food made in a hurry.",
+      "Narrator: [amused] She ate slowly too, always finishing after the rest of us, though she started last at the table.",
+      "Narrator: When I asked why she chewed so carefully, she laughed and said her stomach thanked her for it.",
+      "Narrator: Sleep mattered to her as well. She went to bed early and never once owned a television.",
+      "Narrator: [reflective] As a teenager, I thought her habits were old-fashioned, almost boring compared to my own busy life.",
+      "Narrator: I stayed up late, ate quickly, and rarely walked anywhere I could drive instead.",
+      "Narrator: It was only after she passed away that I truly understood what she had been teaching me all along.",
+      "Narrator: Last year, I started walking to work instead of driving, just fifteen minutes, but it felt like her voice guiding me.",
+      "Narrator: [inspired] I also started cooking more at home, slowing down at dinner instead of eating in front of a screen.",
+      "Narrator: My energy improved within weeks, and I finally understood why she moved through her days so lightly.",
+      "Narrator: She never exercised in a gym or followed any special program that people talk about today.",
+      "Narrator: Her secret, if you could call it that, was simply consistency in small, ordinary choices, repeated for decades.",
+      "Narrator: [thoughtful] Now, when people ask me for health advice, I find myself repeating her words without even trying.",
+      "Narrator: Move your body, eat slowly, sleep early. These habits suited her life and later helped me too, but every person may need different health advice."
     ],
     "quiz": [
-      { "question": "What did the narrator's grandmother say was her secret to a long life?", "options": ["Special medicine", "Moving her body and eating slowly", "Never working", "Eating only fruit"], "correctIndex": 1, "explanation": "She simply said, I move my body, and I eat slowly." },
-      { "question": "What did the grandmother do every morning, even in her eighties?", "options": ["Stayed in bed", "Walked to the market", "Drove to a gym", "Watched television"], "correctIndex": 1, "explanation": "The narrator watched her grandmother walk to the market every morning, even in her eighties." },
-      { "question": "What did the grandmother say about her legs?", "options": ["They were weak", "They were a gift that should be used", "They needed to rest always", "They were unimportant"], "correctIndex": 1, "explanation": "She told the narrator that her legs were a gift, and gifts should be used, not left unopened." },
-      { "question": "What change did the narrator make after her grandmother passed away?", "options": ["She stopped cooking entirely", "She started walking to work and cooking more at home", "She bought a television", "She moved to a new city"], "correctIndex": 1, "explanation": "She started walking to work instead of driving and cooking more at home, slowing down at dinner." },
-      { "question": "What is the grandmother's simple advice the narrator now repeats?", "options": ["Buy expensive equipment", "Move your body, eat slowly, sleep early", "Follow strict diet programs", "Avoid all vegetables"], "correctIndex": 1, "explanation": "She now finds herself repeating her grandmother's words: move your body, eat slowly, sleep early." }
-    ]
+      {
+        "question": "What did the narrator's grandmother say was her secret to a long life?",
+        "options": [
+          "Moving her body and eating slowly",
+          "Special medicine",
+          "Never working",
+          "Eating only fruit"
+        ],
+        "correctIndex": 0,
+        "explanation": "She simply said, I move my body, and I eat slowly."
+      },
+      {
+        "question": "What did the grandmother do every morning, even in her eighties?",
+        "options": [
+          "Stayed in bed",
+          "Walked to the market",
+          "Drove to a gym",
+          "Watched television"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator watched her grandmother walk to the market every morning, even in her eighties."
+      },
+      {
+        "question": "What did the grandmother say about her legs?",
+        "options": [
+          "They were a gift that should be used",
+          "They were weak",
+          "They needed to rest always",
+          "They were unimportant"
+        ],
+        "correctIndex": 0,
+        "explanation": "She told the narrator that her legs were a gift, and gifts should be used, not left unopened."
+      },
+      {
+        "question": "What change did the narrator make after her grandmother passed away?",
+        "options": [
+          "She stopped cooking entirely",
+          "She bought a television",
+          "She started walking to work and cooking more at home",
+          "She moved to a new city"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started walking to work instead of driving and cooking more at home, slowing down at dinner."
+      },
+      {
+        "question": "What is the grandmother's simple advice the narrator now repeats?",
+        "options": [
+          "Buy expensive equipment",
+          "Follow strict diet programs",
+          "Avoid all vegetables",
+          "Move your body, eat slowly, sleep early"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now finds herself repeating her grandmother's words: move your body, eat slowly, sleep early."
+      },
+      {
+        "question": "Why did the grandmother refuse many rides?",
+        "options": [
+          "She disliked the market",
+          "The garden needed a car",
+          "She wanted to keep walking",
+          "She could not ride safely"
+        ],
+        "correctIndex": 2,
+        "explanation": "Walking was a regular part of her daily life."
+      },
+      {
+        "question": "What does “old-fashioned” mean here?",
+        "options": [
+          "Dangerous for an older person",
+          "New and difficult",
+          "Only used at a gym",
+          "Belonging to an earlier way of life"
+        ],
+        "correctIndex": 3,
+        "explanation": "As a teenager, the narrator thought the habits seemed from another time."
+      },
+      {
+        "question": "How did the narrator eat differently later?",
+        "options": [
+          "More slowly and away from a screen",
+          "Only from the garden",
+          "Earlier than everyone",
+          "Without home cooking"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator adopted part of the grandmother’s calm routine."
+      },
+      {
+        "question": "What made the grandmother’s routine consistent?",
+        "options": [
+          "She followed a special short program",
+          "She repeated simple habits for many years",
+          "She changed the habits weekly",
+          "She used expensive equipment"
+        ],
+        "correctIndex": 1,
+        "explanation": "The same ordinary choices continued over decades."
+      },
+      {
+        "question": "What important limit is stated at the end?",
+        "options": [
+          "Different people may need different advice",
+          "The habits guarantee a long life",
+          "Everyone should refuse every ride",
+          "Medical guidance is unnecessary"
+        ],
+        "correctIndex": 0,
+        "explanation": "A personal family experience should not be treated as a promise for all people."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep family memory; add a clear boundary that one person’s habits are not a guarantee",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-health-06",
@@ -213,42 +789,155 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sami", "gender": "male" },
-      { "name": "Rania", "gender": "female" }
+      {
+        "name": "Sami",
+        "gender": "male"
+      },
+      {
+        "name": "Rania",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Sami: [caring] Hey, I heard you weren't feeling well. How are you doing today?",
-      "Rania: [tired] Hi Sami. Honestly, not great. I've had a fever since yesterday morning.",
-      "Sami: [concerned] That sounds rough. Have you seen a doctor, or are you just resting at home?",
-      "Rania: [weak] I called a clinic this morning. They said it's probably just a virus, nothing serious.",
-      "Sami: [relieved] That's good to hear, at least. Are you drinking enough water?",
-      "Rania: [honest] Not as much as I should, honestly. I don't feel like drinking or eating much at all.",
-      "Sami: [caring] Try small sips throughout the day, even if you're not thirsty. Your body needs it to fight the fever.",
-      "Rania: [tired] You're right. I'll try to drink more water after we hang up.",
-      "Sami: [gently] Do you have anyone bringing you food, or are you completely alone right now?",
-      "Rania: [honest] My neighbor checked on me this morning, but otherwise I'm alone in the apartment.",
-      "Sami: [determined] I'm coming by this evening with some soup, then. No arguments allowed.",
-      "Rania: [touched] You don't have to do that, Sami, but honestly, thank you so much.",
-      "Sami: [warmly] Of course I do. That's what friends are for, especially when someone is sick alone.",
-      "Rania: [tired] I keep telling myself I'll feel better tomorrow, but today has been really hard.",
-      "Sami: [gently] It's okay to have a hard day. Just rest, and let your body do its work.",
-      "Rania: [honest] I've been trying to sleep, but the fever keeps waking me up every couple of hours.",
-      "Sami: [caring] Do you have any medicine for the fever, or something cool for your forehead?",
-      "Rania: [thoughtful] I have some medicine, actually. I just haven't taken it today.",
-      "Sami: [encouraging] Take it now, while we're talking. I'll stay on the phone if you need to.",
-      "Rania: [grateful] Okay, give me one second. Thank you for pushing me to actually take care of myself.",
-      "Sami: [warmly] That's exactly what I'm here for. I'll see you this evening with soup and company.",
-      "Rania: [relieved] I really appreciate you calling. It already makes me feel a little less alone.",
-      "Sami: [gently] Rest now, drink some water, and I'll knock on your door around six. Feel better soon.",
-      "Rania: [warmly] Thank you, Sami. I'll see you this evening."
+      "Sami: [concerned] Hi Rania. I heard you have been sick since yesterday. How are you feeling now?",
+      "Rania: I still have a fever and a sore throat. I feel weak, and I did not sleep well.",
+      "Sami: Have you spoken with a clinic or another health professional?",
+      "Rania: [tired] I called the clinic this morning. They asked about my symptoms and told me which warning signs need urgent help.",
+      "Sami: Good. Do you have their instructions written down?",
+      "Rania: Yes. They told me to rest, drink small amounts often, and call again if the fever continues or anything becomes worse.",
+      "Sami: Have you been able to drink today?",
+      "Rania: Only a little. Getting up to fill the bottle feels difficult.",
+      "Sami: I can leave water and soup at your door this evening. Is six o'clock suitable?",
+      "Rania: [grateful] That would help a lot. Please message before you arrive so I can open the door safely.",
+      "Sami: Of course. Is there anyone nearby who can check on you sooner if you need help?",
+      "Rania: My neighbor has my number, and my sister will call again this afternoon.",
+      "Sami: You mentioned medicine yesterday. Have you checked the label and the clinic's advice?",
+      "Rania: Yes. I wrote down the correct dose and the next time. I will not take extra or mix it with another product.",
+      "Sami: That sounds careful. If you are unsure, call the pharmacist or clinic instead of guessing.",
+      "Rania: [relieved] I will. Thank you for helping without acting like my doctor.",
+      "Sami: Friendship can mean food, company, and helping you reach qualified care when you need it.",
+      "Rania: The call already makes me feel less alone. I will rest now and follow the clinic's plan.",
+      "Sami: [warmly] Good. I will message at six, and you can tell me if your needs change.",
+      "Rania: Thank you, Sami. I appreciate the practical help."
     ],
     "quiz": [
-      { "question": "What symptom has Rania had since yesterday morning?", "options": ["A headache", "A fever", "A broken arm", "A cough only"], "correctIndex": 1, "explanation": "Rania says she's had a fever since yesterday morning." },
-      { "question": "What did the clinic tell Rania?", "options": ["It's very serious", "It's probably just a virus, nothing serious", "She needs surgery", "Nothing at all"], "correctIndex": 1, "explanation": "The clinic told her it's probably just a virus, nothing serious." },
-      { "question": "What does Sami encourage Rania to do while they are on the phone?", "options": ["Go for a walk", "Take her fever medicine", "Cook a meal", "Call her neighbor"], "correctIndex": 1, "explanation": "Sami tells her to take her medicine now while they're talking, and offers to stay on the phone." },
-      { "question": "What does Sami plan to do that evening?", "options": ["Nothing special", "Bring soup and visit Rania", "Take Rania to the hospital", "Call her doctor instead"], "correctIndex": 1, "explanation": "Sami says he is coming by that evening with soup and plans to knock on her door around six." },
-      { "question": "How does Rania feel about Sami's call by the end?", "options": ["More annoyed", "Less alone and grateful", "Confused", "Unaffected"], "correctIndex": 1, "explanation": "Rania says the call already makes her feel a little less alone, and she thanks him." }
-    ]
+      {
+        "question": "What symptoms does Rania mention?",
+        "options": [
+          "A fever, sore throat, and weakness",
+          "A broken arm and headache",
+          "Only a cough",
+          "No symptoms now"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rania explains that she still feels unwell and weak."
+      },
+      {
+        "question": "Whom did Rania call?",
+        "options": [
+          "Her manager",
+          "A food shop",
+          "A clinic",
+          "A bus driver"
+        ],
+        "correctIndex": 2,
+        "explanation": "The clinic asked about symptoms and explained warning signs."
+      },
+      {
+        "question": "What will Sami bring?",
+        "options": [
+          "Two kinds of medicine",
+          "Water and soup",
+          "A work laptop",
+          "A medical report"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sami offers practical non-medical support."
+      },
+      {
+        "question": "What has Rania written down?",
+        "options": [
+          "Her work schedule",
+          "Sami’s home address",
+          "The dose and next medicine time",
+          "A new food recipe"
+        ],
+        "correctIndex": 2,
+        "explanation": "She follows the label and professional advice instead of guessing."
+      },
+      {
+        "question": "What will Rania do if unsure?",
+        "options": [
+          "Take an extra dose",
+          "Ask a social-media group",
+          "Mix two products",
+          "Call a pharmacist or clinic"
+        ],
+        "correctIndex": 3,
+        "explanation": "Qualified advice is the safe next step for medicine questions."
+      },
+      {
+        "question": "Why does Rania keep the clinic instructions?",
+        "options": [
+          "They replace every future check",
+          "They prove the illness is minor",
+          "They tell Sami what medicine to choose",
+          "They guide safe next steps"
+        ],
+        "correctIndex": 3,
+        "explanation": "Written guidance helps her remember care and warning signs."
+      },
+      {
+        "question": "What does “warning signs” mean?",
+        "options": [
+          "Signs outside the clinic",
+          "Symptoms that may need quick medical help",
+          "Normal changes in a food order",
+          "Reasons to return to work"
+        ],
+        "correctIndex": 1,
+        "explanation": "The clinic explains when Rania should seek more urgent care."
+      },
+      {
+        "question": "Why does Sami message before arriving?",
+        "options": [
+          "Rania asked for a safe and easy visit",
+          "Sami needs the clinic address",
+          "The soup is not ready",
+          "The neighbor closed the door"
+        ],
+        "correctIndex": 0,
+        "explanation": "Planning the delivery respects Rania’s condition and space."
+      },
+      {
+        "question": "What medical boundary does Sami keep?",
+        "options": [
+          "He chooses a larger dose",
+          "He supports Rania but does not prescribe treatment",
+          "He tells her to stop clinic care",
+          "He decides the illness is harmless"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sami offers food, water, contact, and access to qualified help."
+      },
+      {
+        "question": "What is the main value of the call?",
+        "options": [
+          "Rania returns to work immediately",
+          "Rania receives safe support and feels less alone",
+          "Sami solves the illness himself",
+          "Medicine becomes unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "The friends combine practical care with professional boundaries."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "replace; previous friend gave unsafe direct medication instructions without checking the label or professional advice",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-health-07",
@@ -257,39 +946,607 @@
     "themeId": "health",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good morning, listeners! Today we're talking about building better sleep habits. We have a caller on the line. Hello!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this morning.",
-      "Radio Host: [warmly] Of course! What made you want to talk about sleep today?",
-      "Caller: [thoughtful] Honestly, for years I only slept five or six hours a night and thought that was normal.",
-      "Radio Host: [curious] What changed for you? Why start paying attention to it now?",
-      "Caller: [honest] I kept getting sick often, and I was always irritable with my family for no clear reason.",
-      "Radio Host: [sympathetically] That sounds difficult. What did you do to start improving your sleep?",
-      "Caller: [reflective] First, I set a fixed bedtime, even on weekends, instead of sleeping whenever I felt tired.",
-      "Radio Host: [interested] Was that hard to keep, especially on weekends with friends and family around?",
-      "Caller: [honest] At first, very hard. I used to think weekends were for staying up late without limits.",
-      "Radio Host: [curious] What else did you change besides the fixed bedtime?",
-      "Caller: [gently] I stopped using my phone in bed, and I dimmed the lights in my apartment an hour before sleeping.",
-      "Radio Host: [interested] Did the darker lighting really make a noticeable difference?",
-      "Caller: [warmly] Surprisingly, yes. My body seemed to understand it was time to slow down and rest.",
-      "Radio Host: [curious] How long did it take before you noticed real improvement in how you felt?",
-      "Caller: [thoughtful] About two weeks. I started waking up without an alarm, which had never happened before.",
-      "Radio Host: [smiling] That's a wonderful change. Has it affected other parts of your daily life?",
-      "Caller: [pleased] Definitely. I'm calmer with my family now, and I get sick far less often than before.",
-      "Radio Host: [curious] Would you recommend this to other listeners who feel constantly exhausted?",
-      "Caller: [warmly] Absolutely. It costs nothing, just discipline, and it changed how my whole day feels, from morning to night.",
-      "Radio Host: [encouraging] Thank you so much for sharing your experience with us this morning.",
-      "Caller: [sincerely] Thank you for listening. I hope someone out there tries it and feels the difference too."
+      "Caller: [tired] Hello! Thank you for taking my call this morning.",
+      "Radio Host: Of course! What made you want to talk about sleep today?",
+      "Caller: Honestly, for years I only slept five or six hours a night and thought that was normal.",
+      "Radio Host: What changed for you? Why start paying attention to it now?",
+      "Caller: [concerned] I kept getting sick often, and I was always irritable with my family for no clear reason.",
+      "Radio Host: That sounds difficult. What did you do to start improving your sleep?",
+      "Caller: First, I set a fixed bedtime, even on weekends, instead of sleeping whenever I felt tired.",
+      "Radio Host: Was that hard to keep, especially on weekends with friends and family around?",
+      "Caller: [determined] At first, very hard. I used to think weekends were for staying up late without limits.",
+      "Radio Host: What else did you change besides the fixed bedtime?",
+      "Caller: I stopped using my phone in bed, and I dimmed the lights in my apartment an hour before sleeping.",
+      "Radio Host: Did the darker lighting really make a noticeable difference?",
+      "Caller: Surprisingly, yes. My body seemed to understand it was time to slow down and rest.",
+      "Radio Host: How long did it take before you noticed real improvement in how you felt?",
+      "Caller: [surprised] About two weeks. I started waking up without an alarm, which had never happened before.",
+      "Radio Host: That's a wonderful change. Has it affected other parts of your daily life?",
+      "Caller: Definitely. I'm calmer with my family now, and I have also been sick less often, although many things can affect health.",
+      "Radio Host: Would you recommend this to other listeners who feel constantly exhausted?",
+      "Caller: The simple routine helped me, but anyone with continuing sleep problems should seek proper advice, from morning to night.",
+      "Radio Host: [carefully] Thank you so much for sharing your experience with us this morning.",
+      "Caller: Thank you for listening. I hope someone out there tries it and feels the difference too."
     ],
     "quiz": [
-      { "question": "What was the caller's old sleep habit?", "options": ["Sleeping ten hours a night", "Sleeping five or six hours and thinking it was normal", "Never sleeping at night", "Sleeping only on weekends"], "correctIndex": 1, "explanation": "He says for years he only slept five or six hours a night and thought that was normal." },
-      { "question": "Why did the caller decide to change his sleep habits?", "options": ["A doctor forced him to", "He kept getting sick and was irritable with his family", "He lost his job", "He read a book about it"], "correctIndex": 1, "explanation": "He kept getting sick often and was always irritable with his family for no clear reason." },
-      { "question": "What was the first change the caller made?", "options": ["Sleeping less", "Setting a fixed bedtime, even on weekends", "Drinking more coffee", "Watching more television at night"], "correctIndex": 1, "explanation": "He first set a fixed bedtime, even on weekends, instead of sleeping whenever he felt tired." },
-      { "question": "What other changes did the caller make?", "options": ["Nothing else", "Stopped using his phone in bed and dimmed the lights before sleeping", "Started exercising at midnight", "Moved to a new apartment"], "correctIndex": 1, "explanation": "He stopped using his phone in bed and dimmed the lights an hour before sleeping." },
-      { "question": "How long did it take before the caller noticed real improvement?", "options": ["One year", "About two weeks", "A few hours", "Six months"], "correctIndex": 1, "explanation": "He says it took about two weeks before he started waking up without an alarm." }
-    ]
+      {
+        "question": "What was the caller's old sleep habit?",
+        "options": [
+          "Sleeping five or six hours and thinking it was normal",
+          "Sleeping ten hours a night",
+          "Never sleeping at night",
+          "Sleeping only on weekends"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says for years he only slept five or six hours a night and thought that was normal."
+      },
+      {
+        "question": "Why did the caller decide to change his sleep habits?",
+        "options": [
+          "A doctor forced him to",
+          "He lost his job",
+          "He read a book about it",
+          "He kept getting sick and was irritable with his family"
+        ],
+        "correctIndex": 3,
+        "explanation": "He kept getting sick often and was always irritable with his family for no clear reason."
+      },
+      {
+        "question": "What was the first change the caller made?",
+        "options": [
+          "Sleeping less",
+          "Setting a fixed bedtime, even on weekends",
+          "Drinking more coffee",
+          "Watching more television at night"
+        ],
+        "correctIndex": 1,
+        "explanation": "He first set a fixed bedtime, even on weekends, instead of sleeping whenever he felt tired."
+      },
+      {
+        "question": "What other changes did the caller make?",
+        "options": [
+          "Nothing else",
+          "Started exercising at midnight",
+          "Stopped using his phone in bed and dimmed the lights before sleeping",
+          "Moved to a new apartment"
+        ],
+        "correctIndex": 2,
+        "explanation": "He stopped using his phone in bed and dimmed the lights an hour before sleeping."
+      },
+      {
+        "question": "How long did it take before the caller noticed real improvement?",
+        "options": [
+          "One year",
+          "A few hours",
+          "Six months",
+          "About two weeks"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says it took about two weeks before he started waking up without an alarm."
+      },
+      {
+        "question": "What was difficult on weekends?",
+        "options": [
+          "Turning on brighter lights",
+          "Waking without an alarm",
+          "Keeping the same bedtime",
+          "Talking with the radio host"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller was used to staying up late without limits."
+      },
+      {
+        "question": "What does “irritable” mean?",
+        "options": [
+          "Very sleepy",
+          "Easily annoyed",
+          "Often hungry",
+          "Ready to exercise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Poor sleep was connected with impatient behavior toward family."
+      },
+      {
+        "question": "Why does the caller dim the lights?",
+        "options": [
+          "To save the phone battery",
+          "To wake without an alarm",
+          "To help the body slow down",
+          "To make the room colder"
+        ],
+        "correctIndex": 2,
+        "explanation": "Lower light becomes a signal that bedtime is near."
+      },
+      {
+        "question": "What personal result appeared after two weeks?",
+        "options": [
+          "Waking without an alarm",
+          "Never becoming sick again",
+          "Sleeping only five hours",
+          "Using the phone in bed"
+        ],
+        "correctIndex": 0,
+        "explanation": "The caller noticed easier natural waking."
+      },
+      {
+        "question": "What should someone do if sleep problems continue?",
+        "options": [
+          "Copy one caller’s routine only",
+          "Stay awake until exhausted",
+          "Seek appropriate professional advice",
+          "Ignore effects on daily life"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised ending makes clear that one experience is not universal care."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep personal sleep story; soften cause language and avoid a universal promise",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-health-08",
+    "title": "A Walk After Every Lunch",
+    "level": "A1",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [tired] My job keeps me at a computer for most of the day. By three o'clock, my shoulders often felt tight and my mind felt slow.",
+      "Narrator: I thought exercise required a gym, special clothes, and a free hour. Because I had none of those, I did almost nothing.",
+      "Narrator: [reflective] During a routine checkup, a nurse asked how long I sat without moving. My honest answer surprised even me.",
+      "Narrator: She suggested a ten-minute walk after lunch. It was not a complete fitness plan, but it was a safe place to begin.",
+      "Narrator: [practical] The next Monday, I ate at my desk and then walked around the block. I kept my normal work clothes and comfortable shoes.",
+      "Narrator: At first, the walk felt too short to matter. However, I returned with warmer hands and clearer attention.",
+      "Narrator: [surprised] I repeated it on Tuesday and invited a coworker on Wednesday. We agreed not to discuss unfinished tasks while walking.",
+      "Narrator: Instead, we noticed a small garden behind our building and a bakery we had never seen.",
+      "Narrator: Rain came on Thursday, so we walked through the covered market. The habit did not need perfect weather.",
+      "Narrator: [cheerful] After three weeks, the biggest change was not my weight. My afternoon headache appeared less often, and I slept better.",
+      "Narrator: I also stopped thinking of movement as a punishment for eating. The walk became a gentle break between two parts of the day.",
+      "Narrator: [relieved] On busy days, I sometimes walk for only seven minutes. I still count it because regular movement matters more than a perfect number.",
+      "Narrator: I continue to follow medical advice and know that one walk cannot solve every health issue.",
+      "Narrator: [warmly] But this small routine helped me care for my body in a way that fits my real life."
+    ],
+    "quiz": [
+      {
+        "question": "What caused discomfort for the narrator?",
+        "options": [
+          "Sitting at a computer for most of the day",
+          "Working outdoors",
+          "Walking too far",
+          "Cooking lunch"
+        ],
+        "correctIndex": 0,
+        "explanation": "Long periods at the computer made his shoulders tight."
+      },
+      {
+        "question": "Who suggested a short walk?",
+        "options": [
+          "His manager",
+          "A bakery worker",
+          "His neighbor",
+          "A nurse during a checkup"
+        ],
+        "correctIndex": 3,
+        "explanation": "A nurse suggested beginning with ten minutes after lunch."
+      },
+      {
+        "question": "What rule did he and his coworker make?",
+        "options": [
+          "They would run quickly",
+          "They would skip lunch",
+          "They would not discuss unfinished work while walking",
+          "They would buy cake daily"
+        ],
+        "correctIndex": 2,
+        "explanation": "The walk was kept separate from work problems."
+      },
+      {
+        "question": "What changed after three weeks?",
+        "options": [
+          "He changed jobs",
+          "He lost all interest in walking",
+          "He bought a car",
+          "Headaches were less frequent and sleep improved"
+        ],
+        "correctIndex": 3,
+        "explanation": "The routine helped his afternoon comfort and sleep."
+      },
+      {
+        "question": "What is the key lesson?",
+        "options": [
+          "Health requires expensive equipment",
+          "Regular movement can begin with a small realistic habit",
+          "Only long exercise matters",
+          "Walking solves every illness"
+        ],
+        "correctIndex": 1,
+        "explanation": "A manageable habit fit his real schedule and supported health."
+      },
+      {
+        "question": "Why did the narrator once avoid exercise?",
+        "options": [
+          "Walking caused every headache",
+          "The nurse advised no movement",
+          "Work was outside all day",
+          "It seemed to need time and special equipment"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator had an unrealistic picture of what exercise required."
+      },
+      {
+        "question": "What does “routine checkup” mean?",
+        "options": [
+          "A regular health visit",
+          "An emergency operation",
+          "A meeting with a coworker",
+          "A daily walk"
+        ],
+        "correctIndex": 0,
+        "explanation": "The nurse asked about sitting during a normal health appointment."
+      },
+      {
+        "question": "Why do coworkers avoid work talk on the walk?",
+        "options": [
+          "Their manager is nearby",
+          "They have no unfinished tasks",
+          "The market is too loud",
+          "The walk is meant to be a real break"
+        ],
+        "correctIndex": 3,
+        "explanation": "Keeping work out of the conversation helps attention rest."
+      },
+      {
+        "question": "How did they continue on a rainy day?",
+        "options": [
+          "They ran outside without cover",
+          "They canceled the whole habit",
+          "They walked through a covered market",
+          "They exercised at a gym"
+        ],
+        "correctIndex": 2,
+        "explanation": "The routine changed location instead of requiring perfect weather."
+      },
+      {
+        "question": "What limit does the narrator state?",
+        "options": [
+          "Seven minutes never counts",
+          "A short walk cannot solve every health problem",
+          "Walking always changes weight",
+          "Medical advice is no longer needed"
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator continues professional care and avoids a broad promise."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; nurse-supported walking habit states its limits clearly",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-health-09",
+    "title": "Reading the Medicine Label Twice",
+    "level": "A1",
+    "themeId": "health",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [unwell] Last winter, I caught a cold and went to a pharmacy after work. My head hurt, and I wanted to go home quickly.",
+      "Narrator: I chose two common medicines from the shelf because one was for a headache and the other was for cold symptoms.",
+      "Narrator: [concerned] Before I paid, the pharmacist asked to see both boxes. She read the labels and pointed to the main ingredient.",
+      "Narrator: The same ingredient was present in each medicine. Taking both could mean taking more than the safe amount.",
+      "Narrator: [surprised] I had looked only at the large words on the front. I had not read the smaller list on the side.",
+      "Narrator: The pharmacist helped me choose one product and explained the correct amount and time between doses.",
+      "Narrator: She also asked whether I used other medicine or had any health conditions. Those questions were not a delay; they were part of safe care.",
+      "Narrator: [attentive] At home, I read the label again in good light. I wrote the next dose time on a piece of paper.",
+      "Narrator: I used the measuring cup from the package instead of a kitchen spoon. I also kept the medicine away from my young nephew.",
+      "Narrator: My cold improved after several days. More importantly, the experience changed how I buy and use medicine.",
+      "Narrator: [thoughtful] A familiar box is still medicine, and familiar does not mean harmless. Names and colors can be different while ingredients are the same.",
+      "Narrator: Now I ask a pharmacist or doctor when I am unsure. I do not copy a friend's dose or combine products by guessing.",
+      "Narrator: I also keep a simple list of medicines I use, so I can answer questions clearly.",
+      "Narrator: [firmly] Reading a label takes a little time, but it protects us from a mistake that may be difficult to correct."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator choose two medicines?",
+        "options": [
+          "One was for pain and one was for cold symptoms",
+          "They were gifts",
+          "A friend requested them",
+          "The boxes were empty"
+        ],
+        "correctIndex": 0,
+        "explanation": "He thought the products treated different symptoms."
+      },
+      {
+        "question": "What problem did the pharmacist find?",
+        "options": [
+          "Both boxes were expired",
+          "Both products contained the same main ingredient",
+          "The price was wrong",
+          "The labels were missing"
+        ],
+        "correctIndex": 1,
+        "explanation": "Using both could have doubled the same ingredient."
+      },
+      {
+        "question": "How did the pharmacist help?",
+        "options": [
+          "She selected one product and explained safe use",
+          "She told him to take both",
+          "She opened every box",
+          "She called his manager"
+        ],
+        "correctIndex": 0,
+        "explanation": "She guided him to one suitable product and its dosing instructions."
+      },
+      {
+        "question": "What measuring tool did he use?",
+        "options": [
+          "A large kitchen spoon",
+          "His hand",
+          "A coffee cup",
+          "The cup provided with the medicine"
+        ],
+        "correctIndex": 3,
+        "explanation": "He used the proper measuring cup from the package."
+      },
+      {
+        "question": "What does he do when unsure now?",
+        "options": [
+          "Asks a pharmacist or doctor",
+          "Copies a friend",
+          "Guesses from the box color",
+          "Takes every product"
+        ],
+        "correctIndex": 0,
+        "explanation": "He seeks qualified advice instead of guessing."
+      },
+      {
+        "question": "Why did the two boxes seem different?",
+        "options": [
+          "They came from different pharmacies",
+          "They were for different symptoms",
+          "Only one had a label",
+          "One belonged to a friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "The front labels focused on headache and cold symptoms."
+      },
+      {
+        "question": "What is an “ingredient” in medicine?",
+        "options": [
+          "The measuring cup",
+          "The time between doses",
+          "A substance used in the product",
+          "A health condition"
+        ],
+        "correctIndex": 2,
+        "explanation": "Both products contained the same active substance."
+      },
+      {
+        "question": "Why did the pharmacist ask about other medicine?",
+        "options": [
+          "Different products can affect safe use",
+          "She wanted to sell more boxes",
+          "The narrator forgot the price",
+          "The cold had already ended"
+        ],
+        "correctIndex": 0,
+        "explanation": "The full medicine list helps prevent unsafe combinations."
+      },
+      {
+        "question": "Why is a kitchen spoon not used?",
+        "options": [
+          "It is too clean",
+          "It changes the ingredient",
+          "It may not measure the correct amount",
+          "It belongs to the nephew"
+        ],
+        "correctIndex": 2,
+        "explanation": "The package cup is made for accurate dosing."
+      },
+      {
+        "question": "Which action protects the young nephew?",
+        "options": [
+          "Showing him both labels",
+          "Using a larger cup",
+          "Leaving the box open",
+          "Keeping medicine out of his reach"
+        ],
+        "correctIndex": 3,
+        "explanation": "Safe storage prevents a child from taking the medicine."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; strong medication-safety script centered on pharmacist guidance and label use",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-health-10",
+    "title": "Planning a Safer Return to Exercise",
+    "level": "A1",
+    "themeId": "health",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Tariq",
+        "gender": "male"
+      },
+      {
+        "name": "Coach Hana",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Tariq: [eager] Coach Hana, I want to start running again tomorrow. I have not exercised for almost a year.",
+      "Coach Hana: [carefully] It is good that you want to return, but beginning with a long run may be too much.",
+      "Tariq: I used to run five kilometers easily. I thought I could start there.",
+      "Coach Hana: Your old ability is useful information, but your body needs time to rebuild strength.",
+      "Tariq: What would you recommend for the first week?",
+      "Coach Hana: [practical] Begin with a health check if you have concerns. Then try twenty minutes of walking with short, easy jogging periods.",
+      "Tariq: How short should the jogging periods be?",
+      "Coach Hana: [firmly] Perhaps one minute of gentle jogging followed by two minutes of walking. Stop if you feel pain, dizziness, or unusual breathing.",
+      "Tariq: That sounds much easier than the plan in my head.",
+      "Coach Hana: [relieved] Easy is not useless. The purpose of week one is to finish safely and feel ready to return.",
+      "Tariq: Should I do it every day?",
+      "Coach Hana: No. Three sessions are enough at first. Rest or choose light movement between them.",
+      "Tariq: I also bought new shoes. Do I need any other equipment?",
+      "Coach Hana: Comfortable clothes, water, and a safe route are enough. Reflective clothing helps if it is dark.",
+      "Tariq: How will I know when to increase the running time?",
+      "Coach Hana: [thoughtful] Keep a simple note after each session. If you recover well for a week, add a little time, not a large jump.",
+      "Tariq: I like having a clear rule. It will stop me from competing with my old self.",
+      "Coach Hana: Exactly. Progress is not a race against your past.",
+      "Tariq: I will walk and jog on Monday, Wednesday, and Saturday, then tell you how I feel.",
+      "Coach Hana: [encouraging] That is a sensible start. Consistency and safety will carry you further than one exhausting run."
+    ],
+    "quiz": [
+      {
+        "question": "How long has Tariq been inactive?",
+        "options": [
+          "One week",
+          "Two days",
+          "Almost a year",
+          "Five years"
+        ],
+        "correctIndex": 2,
+        "explanation": "He has not exercised for nearly a year."
+      },
+      {
+        "question": "What was Tariq’s first plan?",
+        "options": [
+          "Join a cycling race",
+          "Start with a five-kilometer run",
+          "Exercise every hour",
+          "Buy more equipment"
+        ],
+        "correctIndex": 1,
+        "explanation": "He wanted to begin at his old five-kilometer distance."
+      },
+      {
+        "question": "What pattern does the coach suggest?",
+        "options": [
+          "Ten minutes sprinting",
+          "Only sitting",
+          "One minute jogging and two minutes walking",
+          "Five hours walking"
+        ],
+        "correctIndex": 2,
+        "explanation": "Short jogging periods alternate with longer walking periods."
+      },
+      {
+        "question": "How many first-week sessions are suggested?",
+        "options": [
+          "Seven",
+          "One",
+          "Three",
+          "Ten"
+        ],
+        "correctIndex": 2,
+        "explanation": "The coach recommends three sessions at first."
+      },
+      {
+        "question": "When should he increase the time?",
+        "options": [
+          "During the first session",
+          "Whenever another runner passes",
+          "Only after buying equipment",
+          "After recovering well for a week"
+        ],
+        "correctIndex": 3,
+        "explanation": "He should increase gradually after showing good recovery."
+      },
+      {
+        "question": "Why is the old five-kilometer ability not enough?",
+        "options": [
+          "The route no longer exists",
+          "The coach dislikes running",
+          "New shoes make it unsafe",
+          "The body has changed during a year off"
+        ],
+        "correctIndex": 3,
+        "explanation": "Past ability does not remove the need to rebuild gradually."
+      },
+      {
+        "question": "What does “recover well” mean?",
+        "options": [
+          "Run faster during the session",
+          "Feel ready again after a session",
+          "Buy more equipment",
+          "Exercise every day"
+        ],
+        "correctIndex": 1,
+        "explanation": "The coach wants Tariq’s body to handle and recover from the activity."
+      },
+      {
+        "question": "When should Tariq stop during a session?",
+        "options": [
+          "With pain, dizziness, or unusual breathing",
+          "When walking begins",
+          "After exactly one minute",
+          "Whenever another runner passes"
+        ],
+        "correctIndex": 0,
+        "explanation": "Those warning signs require him to stop and respond safely."
+      },
+      {
+        "question": "Why does Tariq keep a note?",
+        "options": [
+          "To track how each session feels",
+          "To compare with other runners",
+          "To record shoe prices",
+          "To avoid rest days"
+        ],
+        "correctIndex": 0,
+        "explanation": "A simple record supports a careful decision about progress."
+      },
+      {
+        "question": "What does “not a race against your past” mean?",
+        "options": [
+          "Try to beat every old time",
+          "Never remember earlier exercise",
+          "Do not force the body to match old ability now",
+          "Choose a competitive route"
+        ],
+        "correctIndex": 2,
+        "explanation": "Safe current progress matters more than proving former fitness."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "health",
+      "scriptDecision": "keep; gradual return includes warning symptoms, rest days, and a health-check boundary",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

@@ -1,6 +1,6 @@
 import { LevelCurriculum, AppView } from '../types';
 
-export const MASTER_CURRICULUM: LevelCurriculum[] = [
+const BASE_CURRICULUM: LevelCurriculum[] = [
   // --- LEVEL A1 (10 UNITS) ---
   {
     level: 'A1',
@@ -649,3 +649,37 @@ export const MASTER_CURRICULUM: LevelCurriculum[] = [
     ]
   }
 ];
+
+// Every roadmap unit includes one concrete Shadowing step. The four entry
+// points rotate by unit number, so learners practise drills and roleplay in a
+// balanced way rather than repeatedly landing in one menu.
+const SHADOWING_MODES = ['daily', 'idioms', 'slang', 'roleplay'] as const;
+const SHADOWING_LABELS: Record<typeof SHADOWING_MODES[number], string> = {
+  daily: 'Daily Conversations',
+  idioms: 'Idioms',
+  slang: 'Slang',
+  roleplay: 'Dialogue Roleplay'
+};
+
+export const MASTER_CURRICULUM: LevelCurriculum[] = BASE_CURRICULUM.map(level => ({
+  ...level,
+  units: level.units.map(unit => {
+    const mode = SHADOWING_MODES[(unit.unitNumber - 1) % SHADOWING_MODES.length];
+    return {
+      ...unit,
+      steps: [
+        ...unit.steps,
+        {
+          id: `${unit.id}-shadowing`,
+          title: `Shadowing: ${SHADOWING_LABELS[mode]}`,
+          type: 'shadowing_task' as const,
+          moduleView: AppView.SHADOWING,
+          description: `Practise ${SHADOWING_LABELS[mode]} using the language of this unit.`,
+          goal: 'Reach the required pronunciation or dialogue score.',
+          shadowingMode: mode,
+          shadowingTheme: unit.title
+        }
+      ]
+    };
+  })
+}));

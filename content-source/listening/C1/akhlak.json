@@ -6,30 +6,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Six months ago, a proposal I had quietly authored over several sleepless weekends was presented to the board under a colleague's name, and I said nothing.",
-      "Narrator: [honestly] I told myself the silence was strategic, that correcting the record mid-meeting would have looked petty, even vindictive, in front of senior leadership.",
-      "Narrator: [wry] What I did not admit to myself was how flattering it felt to watch someone else absorb applause for work I recognized, sentence by sentence, as mine.",
-      "Narrator: [reflective] There is a particular vanity in martyrdom, in privately cataloguing your own unacknowledged contributions while performing indifference to anyone who happens to be watching.",
-      "Narrator: [thoughtful] Over the following weeks, that colleague was assigned to lead the initiative, a natural consequence of appearing to have originated it in the first place.",
-      "Narrator: [uneasy] I found myself rehearsing grievances in the shower, in traffic, in the gaps between meetings, each rehearsal sharpening a resentment I had never voiced aloud.",
+      "Narrator: [thoughtful] Six months ago, a proposal I had quietly authored over several sleepless weekends was presented to the board under a colleague's name, and I said nothing.",
+      "Narrator: I told myself the silence was strategic, that correcting the record mid-meeting would have looked petty, even vindictive, in front of senior leadership.",
+      "Narrator: [carefully] What I did not admit to myself was how flattering it felt to watch someone else absorb applause for work I recognized, sentence by sentence, as mine.",
+      "Narrator: There is a particular vanity in martyrdom, in privately cataloguing your own unacknowledged contributions while performing indifference to anyone who happens to be watching.",
+      "Narrator: [reflective] Over the following weeks, that colleague was assigned to lead the initiative, a natural consequence of appearing to have originated it in the first place.",
+      "Narrator: I found myself rehearsing grievances in the shower, in traffic, in the gaps between meetings, each rehearsal sharpening a resentment I had never voiced aloud.",
       "Narrator: [honestly] Eventually I recognized that my restraint had nothing virtuous in it; I was simply hoarding the injury, saving it for some future occasion when it might prove useful.",
-      "Narrator: [determined] So I requested a quiet conversation, not to reclaim credit publicly, but to be honest with myself about why the omission had wounded me so precisely.",
-      "Narrator: [reflective] My colleague, to her credit, seemed genuinely unaware that the framing had implied sole authorship; she had simply failed to correct an assumption nobody had questioned.",
-      "Narrator: [thoughtful] We agreed she would mention my contribution in the next update, not as a grand correction, but as an accurate footnote to an ongoing project.",
-      "Narrator: [wry] It was, admittedly, a modest resolution to what had felt for weeks like an enormous betrayal, which told me something about how disproportion breeds in silence.",
-      "Narrator: [reflective] Humility, I have come to think, is not the performance of not minding; it is minding honestly enough to say so before resentment calcifies into character.",
-      "Narrator: [peacefully] I still notice the old proposal occasionally cited without my name attached, and mostly, now, I let it pass without rehearsing anything in response."
+      "Narrator: So I requested a quiet conversation, not to reclaim credit publicly, but to be honest with myself about why the omission had wounded me so precisely.",
+      "Narrator: [gently] My colleague, to her credit, seemed genuinely unaware that the framing had implied sole authorship; she had simply failed to correct an assumption nobody had questioned.",
+      "Narrator: We agreed she would mention my contribution in the next update, not as a grand correction, but as an accurate footnote to an ongoing project.",
+      "Narrator: [calmly] It was, admittedly, a modest resolution to what had felt for weeks like an enormous betrayal, which told me something about how disproportion breeds in silence.",
+      "Narrator: Humility, I have come to think, is not the performance of not minding; it is minding honestly enough to say so before resentment calcifies into character.",
+      "Narrator: [encouraging] I still notice the old proposal occasionally cited without my name attached, and mostly, now, I let it pass without rehearsing anything in response."
     ],
     "quiz": [
-      { "question": "What happened to the narrator's proposal six months earlier?", "options": ["It was rejected by the board", "It was presented to the board under a colleague's name", "It was lost before the meeting", "It was praised with her name attached"], "correctIndex": 1, "explanation": "A proposal she had quietly authored was presented to the board under a colleague's name, and she said nothing." },
-      { "question": "What does the narrator admit about her initial silence?", "options": ["It was purely strategic and free of self-interest", "It secretly flattered her to see herself as a martyr while resentment quietly grew", "She genuinely did not care about the credit", "She had already forgotten about the proposal"], "correctIndex": 1, "explanation": "She admits there was vanity in privately cataloguing her contributions while performing indifference, and that her restraint was really hoarding an injury." },
-      { "question": "What happened as a result of the colleague appearing to have originated the work?", "options": ["The colleague was demoted", "The colleague was assigned to lead the initiative", "The project was cancelled", "The narrator was promoted instead"], "correctIndex": 1, "explanation": "The colleague was assigned to lead the initiative, a natural consequence of appearing to have originated it." },
-      { "question": "What did the narrator discover when she finally spoke with her colleague?", "options": ["The colleague had deliberately stolen credit", "The colleague seemed genuinely unaware the framing implied sole authorship", "The colleague refused to discuss it", "The colleague had already resigned"], "correctIndex": 1, "explanation": "Her colleague seemed genuinely unaware that the framing had implied sole authorship, having simply failed to correct an assumption." },
-      { "question": "How does the narrator ultimately define humility?", "options": ["Performing indifference so nobody suspects you mind", "Minding honestly enough to say so before resentment calcifies into character", "Never allowing yourself to feel wounded", "Publicly demanding recognition for every contribution"], "correctIndex": 1, "explanation": "She concludes humility is not pretending not to mind, but minding honestly enough to speak up before resentment hardens into character." }
-    ]
+      {
+        "question": "What happened to the narrator's proposal six months earlier?",
+        "options": [
+          "It was presented to the board under a colleague's name",
+          "It was rejected by the board",
+          "It was lost before the meeting",
+          "It was praised with her name attached"
+        ],
+        "correctIndex": 0,
+        "explanation": "A proposal she had quietly authored was presented to the board under a colleague's name, and she said nothing."
+      },
+      {
+        "question": "What does the narrator admit about her initial silence?",
+        "options": [
+          "It was purely strategic and free of self-interest",
+          "She genuinely did not care about the credit",
+          "She had already forgotten about the proposal",
+          "It secretly flattered her to see herself as a martyr while resentment quietly grew"
+        ],
+        "correctIndex": 3,
+        "explanation": "She admits there was vanity in privately cataloguing her contributions while performing indifference, and that her restraint was really hoarding an injury."
+      },
+      {
+        "question": "What happened as a result of the colleague appearing to have originated the work?",
+        "options": [
+          "The colleague was assigned to lead the initiative",
+          "The colleague was demoted",
+          "The project was cancelled",
+          "The narrator was promoted instead"
+        ],
+        "correctIndex": 0,
+        "explanation": "The colleague was assigned to lead the initiative, a natural consequence of appearing to have originated it."
+      },
+      {
+        "question": "What did the narrator discover when she finally spoke with her colleague?",
+        "options": [
+          "The colleague had deliberately stolen credit",
+          "The colleague refused to discuss it",
+          "The colleague had already resigned",
+          "The colleague seemed genuinely unaware the framing implied sole authorship"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her colleague seemed genuinely unaware that the framing had implied sole authorship, having simply failed to correct an assumption."
+      },
+      {
+        "question": "What definition of humility emerges after the public correction?",
+        "options": [
+          "Performing indifference so nobody suspects you mind",
+          "Never allowing yourself to feel wounded",
+          "Minding honestly enough to say so before resentment calcifies into character",
+          "Publicly demanding recognition for every contribution"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes humility is not pretending not to mind, but minding honestly enough to speak up before resentment hardens into character."
+      },
+      {
+        "question": "Why does the narrator reinterpret silence as vanity rather than humility?",
+        "options": [
+          "He ignored the larger cost created by postponing necessary criticism.",
+          "It enabled private martyrdom while another colleague received visible credit.",
+          "Past sacrifice seemed to entitle him to greater control of the house.",
+          "Anger would consume energy without solving the shipment problem."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It enabled private martyrdom while another colleague received visible credit."
+      },
+      {
+        "question": "How did the uncorrected attribution shape later organisational decisions?",
+        "options": [
+          "Truth can retain careful timing without being weakened.",
+          "Apparent authorship led the colleague to receive leadership of the initiative.",
+          "Pride made both brothers wait indefinitely for the other's apology.",
+          "He delayed disclosure despite knowing the costs had changed."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Apparent authorship led the colleague to receive leadership of the initiative."
+      },
+      {
+        "question": "What function did rehearsing the grievance begin to serve?",
+        "options": [
+          "Ask whether silence serves the listener or the speaker's comfort.",
+          "His explanation sounds petty when translated into the family's present loss.",
+          "It preserved the injury for future use rather than resolving it.",
+          "Reza must honour the price or absorb half the resulting loss."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: It preserved the injury for future use rather than resolving it."
+      },
+      {
+        "question": "Why is the colleague's explanation plausible without being exculpatory?",
+        "options": [
+          "She misunderstood the framing yet still failed to correct sole authorship.",
+          "His silence protected him while Bram invested further in a failing plan.",
+          "Reconciliation does not require complete agreement about property.",
+          "A fair solution does not erase the supplier's poor handling."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: She misunderstood the framing yet still failed to correct sole authorship."
+      },
+      {
+        "question": "How does the narrator finally define humility in relation to resentment?",
+        "options": [
+          "Honesty needs more care, while tact needs an earlier willingness to speak.",
+          "Restored brotherhood becomes more valuable than winning the original dispute.",
+          "Self-control shapes how objections are raised rather than eliminating them.",
+          "It names legitimate hurt before silence hardens it into character."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It names legitimate hurt before silence hardens it into character."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-akhlak-02",
@@ -38,34 +152,151 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rangga", "gender": "male" },
-      { "name": "Dinda", "gender": "female" }
+      {
+        "name": "Rangga",
+        "gender": "male"
+      },
+      {
+        "name": "Dinda",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Rangga: [provocative] You always frame your bluntness as integrity, Dinda, but I sometimes wonder whether it's really just cruelty that's found itself a respectable vocabulary.",
-      "Dinda: [amused] And you always frame your tact as kindness, Rangga, though half the time it looks to me like cowardice wearing a more presentable coat.",
-      "Rangga: [firm] There's a difference between cowardice and consideration. I withheld my opinion of Bram's business plan because the timing would have crushed him unnecessarily.",
-      "Dinda: [pointed] Or you withheld it because disagreeing felt uncomfortable, and you dressed that discomfort up afterward as concern for his feelings.",
-      "Rangga: [defensive] That's an ungenerous reading of a decision that, as far as I can tell, spared someone a devastating conversation he wasn't ready to have.",
-      "Dinda: [thoughtful] Maybe. But he built three more months of momentum on a plan you privately considered doomed, and that cost him more than honesty would have.",
-      "Rangga: [conceding] I hadn't weighed it that way, admittedly. I suppose I measured the discomfort of the conversation rather than the cost of postponing it.",
-      "Dinda: [gently] Honesty isn't a bluntness contest, though, whatever you seem to assume about how I practice it. I choose my timing as carefully as you choose your silence.",
-      "Rangga: [curious] So where's the line between tact that protects someone and tact that simply protects you from an uncomfortable ten minutes?",
-      "Dinda: [reflective] I ask myself whether my silence serves the other person or only my own comfort. If it's the latter, I've just repackaged cowardice.",
-      "Rangga: [honestly] By that measure, my silence with Bram served me more than it served him, however reasonable it felt at the time.",
-      "Dinda: [warmly] That's a harder admission than most people manage.",
-      "Rangga: [wry] Don't get used to it. I still think you could deliver a hard truth with slightly more cushioning than you generally bother with.",
-      "Dinda: [smiling] And I still think you could deliver an easy truth without waiting for the perfect, ever-elusive moment to arrive.",
-      "Rangga: [amused] Perhaps we should each borrow a little from the other, then, before one of us does real damage with our preferred approach.",
-      "Dinda: [warmly] Agreed. Starting with Bram, who deserves an honest conversation from at least one of us, sooner rather than later."
+      "Rangga: [thoughtful] You always frame your bluntness as integrity, Dinda, but I sometimes wonder whether it's really just cruelty that's found itself a respectable vocabulary.",
+      "Dinda: And you always frame your tact as kindness, Rangga, though half the time it looks to me like cowardice wearing a more presentable coat.",
+      "Rangga: [carefully] There's a difference between cowardice and consideration. I withheld my opinion of Bram's business plan because the timing would have crushed him unnecessarily.",
+      "Dinda: Or you withheld it because disagreeing felt uncomfortable, and you dressed that discomfort up afterward as concern for his feelings.",
+      "Rangga: [reflective] That's an ungenerous reading of a decision that, as far as I can tell, spared someone a devastating conversation he wasn't ready to have.",
+      "Dinda: Maybe. But he built three more months of momentum on a plan you privately considered doomed, and that cost him more than honesty would have.",
+      "Rangga: [honestly] I hadn't weighed it that way, admittedly. I suppose I measured the discomfort of the conversation rather than the cost of postponing it.",
+      "Dinda: Honesty isn't a bluntness contest, though, whatever you seem to assume about how I practice it. I choose my timing as carefully as you choose your silence.",
+      "Rangga: [gently] So where's the line between tact that protects someone and tact that simply protects you from an uncomfortable ten minutes?",
+      "Dinda: I ask myself whether my silence serves the other person or only my own comfort. If it's the latter, I've just repackaged cowardice.",
+      "Rangga: [calmly] By that measure, my silence with Bram served me more than it served him, however reasonable it felt at the time.",
+      "Dinda: That's a harder admission than most people manage.",
+      "Rangga: [encouraging] Don't get used to it. I still think you could deliver a hard truth with slightly more cushioning than you generally bother with.",
+      "Dinda: And I still think you could deliver an easy truth without waiting for the perfect, ever-elusive moment to arrive.",
+      "Rangga: [seriously] Perhaps we should each borrow a little from the other, then, before one of us does real damage with our preferred approach.",
+      "Dinda: Agreed. Starting with Bram, who deserves an honest conversation from at least one of us, sooner rather than later."
     ],
     "quiz": [
-      { "question": "What does Rangga accuse Dinda of when it comes to her bluntness?", "options": ["Being too diplomatic", "Dressing up cruelty in a respectable vocabulary", "Never sharing her real opinion", "Only being honest with strangers"], "correctIndex": 1, "explanation": "Rangga suggests her bluntness might really just be cruelty that has found a respectable vocabulary." },
-      { "question": "Why did Rangga withhold his real opinion of Bram's business plan?", "options": ["He agreed with the plan completely", "He believed the timing would have crushed Bram unnecessarily", "He hadn't reviewed the plan yet", "Bram never asked for his opinion"], "correctIndex": 1, "explanation": "Rangga says he withheld his opinion because the timing would have crushed Bram unnecessarily." },
-      { "question": "What cost does Dinda point out from Rangga's silence?", "options": ["Bram lost his job", "Bram built three more months of momentum on a plan Rangga privately considered doomed", "Bram found out from someone else immediately", "There was no real cost"], "correctIndex": 1, "explanation": "Dinda points out that Bram built three more months of momentum on a plan Rangga privately considered doomed." },
-      { "question": "How does Dinda test whether her own silence is justified?", "options": ["She never questions her silence", "She asks whether the silence serves the other person or only her own comfort", "She asks a third party to decide", "She assumes silence is always the safest choice"], "correctIndex": 1, "explanation": "She asks herself whether her silence serves the other person or only her own comfort, calling the latter repackaged cowardice." },
-      { "question": "What do Rangga and Dinda agree to do by the end of the conversation?", "options": ["Avoid Bram entirely", "Each borrow a little from the other's approach, starting with an honest conversation with Bram", "End their friendship over the disagreement", "Let Bram figure things out alone"], "correctIndex": 1, "explanation": "They agree to borrow from each other's approach and that Bram deserves an honest conversation from at least one of them soon." }
-    ]
+      {
+        "question": "What does Rangga accuse Dinda of when it comes to her bluntness?",
+        "options": [
+          "Being too diplomatic",
+          "Dressing up cruelty in a respectable vocabulary",
+          "Never sharing her real opinion",
+          "Only being honest with strangers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rangga suggests her bluntness might really just be cruelty that has found a respectable vocabulary."
+      },
+      {
+        "question": "Why did Rangga withhold his real opinion of Bram's business plan?",
+        "options": [
+          "He agreed with the plan completely",
+          "He believed the timing would have crushed Bram unnecessarily",
+          "He hadn't reviewed the plan yet",
+          "Bram never asked for his opinion"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rangga says he withheld his opinion because the timing would have crushed Bram unnecessarily."
+      },
+      {
+        "question": "What cost does Dinda point out from Rangga's silence?",
+        "options": [
+          "Bram lost his job",
+          "Bram built three more months of momentum on a plan Rangga privately considered doomed",
+          "Bram found out from someone else immediately",
+          "There was no real cost"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dinda points out that Bram built three more months of momentum on a plan Rangga privately considered doomed."
+      },
+      {
+        "question": "How does Dinda test whether her own silence is justified?",
+        "options": [
+          "She never questions her silence",
+          "She asks a third party to decide",
+          "She asks whether the silence serves the other person or only her own comfort",
+          "She assumes silence is always the safest choice"
+        ],
+        "correctIndex": 2,
+        "explanation": "She asks herself whether her silence serves the other person or only her own comfort, calling the latter repackaged cowardice."
+      },
+      {
+        "question": "What do Rangga and Dinda agree to do by the end of the conversation?",
+        "options": [
+          "Avoid Bram entirely",
+          "End their friendship over the disagreement",
+          "Each borrow a little from the other's approach, starting with an honest conversation with Bram",
+          "Let Bram figure things out alone"
+        ],
+        "correctIndex": 2,
+        "explanation": "They agree to borrow from each other's approach and that Bram deserves an honest conversation from at least one of them soon."
+      },
+      {
+        "question": "What retrospective error does Rangga identify in sparing Bram discomfort?",
+        "options": [
+          "He ignored the larger cost created by postponing necessary criticism.",
+          "Past sacrifice seemed to entitle him to greater control of the house.",
+          "Anger would consume energy without solving the shipment problem.",
+          "Later inconvenience cannot convert a commitment into an optional plan."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: He ignored the larger cost created by postponing necessary criticism."
+      },
+      {
+        "question": "How does Dinda reject the idea that honesty requires maximal bluntness?",
+        "options": [
+          "Pride made both brothers wait indefinitely for the other's apology.",
+          "He delayed disclosure despite knowing the costs had changed.",
+          "Keeping a promise unwillingly differs from valuing the promise despite cost.",
+          "Truth can retain careful timing without being weakened."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Truth can retain careful timing without being weakened."
+      },
+      {
+        "question": "Which diagnostic question separates tact from self-protection?",
+        "options": [
+          "Ask whether silence serves the listener or the speaker's comfort.",
+          "His explanation sounds petty when translated into the family's present loss.",
+          "Reza must honour the price or absorb half the resulting loss.",
+          "She expects sufficient inconvenience to make most promises disappear."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Ask whether silence serves the listener or the speaker's comfort."
+      },
+      {
+        "question": "Why does Rangga concede that his tact resembled cowardice?",
+        "options": [
+          "Reconciliation does not require complete agreement about property.",
+          "A fair solution does not erase the supplier's poor handling.",
+          "Career inconvenience carries less weight than freely given commitment.",
+          "His silence protected him while Bram invested further in a failing plan."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: His silence protected him while Bram invested further in a failing plan."
+      },
+      {
+        "question": "What synthesis do both speakers accept at the end?",
+        "options": [
+          "Honesty needs more care, while tact needs an earlier willingness to speak.",
+          "Restored brotherhood becomes more valuable than winning the original dispute.",
+          "Self-control shapes how objections are raised rather than eliminating them.",
+          "Commitment becomes morally meaningful when circumstances make it costly."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Honesty needs more care, while tact needs an earlier willingness to speak."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-akhlak-03",
@@ -74,30 +305,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [measured] For nearly four years, I did not speak to my older brother, not out of dramatic estrangement, but through a slow accumulation of unanswered calls.",
-      "Narrator: [honestly] The dispute began, as these things often do, over something almost embarrassingly small: our father's modest house, and who had the right to decide its fate.",
-      "Narrator: [reflective] I had cared for our father in his final years, and some part of me had quietly decided that sacrifice entitled me to a larger say.",
-      "Narrator: [wry] My brother, who lived abroad and visited rarely, disagreed, and framed his absence not as neglect but as a different, equally valid form of devotion.",
-      "Narrator: [honestly] We argued once, badly, and afterward retreated into a silence that felt, at the time, like principle rather than what it actually was, which was pride.",
-      "Narrator: [thoughtful] I told myself I was waiting for an apology precise enough to satisfy the specific grievance I had rehearsed so many times it had hardened into scripture.",
-      "Narrator: [reflective] What I had not accounted for was how much energy that grudge quietly consumed, how it colored conversations that had nothing to do with him at all.",
-      "Narrator: [honestly] My own children began asking why their uncle never visited, and I realized I had no answer that did not sound, even to me, faintly petty.",
-      "Narrator: [determined] So I called him, not with an apology prepared, but with a question: whether the house still mattered more than the brother attached to it.",
-      "Narrator: [surprised] He was quiet for a long moment, then admitted he had been waiting for the same call, too proud to place it himself.",
-      "Narrator: [reflective] We did not resolve the house that day, and honestly, we still disagree about it, though it no longer feels like the point.",
-      "Narrator: [thoughtful] Forgiveness, I have learned, rarely arrives as a single, cinematic reconciliation; more often it is a grudging willingness to dial a number you have avoided for years.",
-      "Narrator: [peacefully] The house was eventually sold, the proceeds divided without ceremony, and what I kept instead was something far less measurable and far more valuable."
+      "Narrator: [thoughtful] For nearly four years, I did not speak to my older brother, not out of dramatic estrangement, but through a slow accumulation of unanswered calls.",
+      "Narrator: The dispute began, as these things often do, over something almost embarrassingly small: our father's modest house, and who had the right to decide its fate.",
+      "Narrator: [carefully] I had cared for our father in his final years, and some part of me had quietly decided that sacrifice entitled me to a larger say.",
+      "Narrator: My brother, who lived abroad and visited rarely, disagreed, and framed his absence not as neglect but as a different, equally valid form of devotion.",
+      "Narrator: [reflective] We argued once, badly, and afterward retreated into a silence that felt, at the time, like principle rather than what it actually was, which was pride.",
+      "Narrator: I told myself I was waiting for an apology precise enough to satisfy the specific grievance I had rehearsed so many times it had hardened into scripture.",
+      "Narrator: [honestly] What I had not accounted for was how much energy that grudge quietly consumed, how it colored conversations that had nothing to do with him at all.",
+      "Narrator: My own children began asking why their uncle never visited, and I realized I had no answer that did not sound, even to me, faintly petty.",
+      "Narrator: [gently] So I called him, not with an apology prepared, but with a question: whether the house still mattered more than the brother attached to it.",
+      "Narrator: He was quiet for a long moment, then admitted he had been waiting for the same call, too proud to place it himself.",
+      "Narrator: [calmly] We did not resolve the house that day, and honestly, we still disagree about it, though it no longer feels like the point.",
+      "Narrator: Forgiveness, I have learned, rarely arrives as a single, cinematic reconciliation; more often it is a grudging willingness to dial a number you have avoided for years.",
+      "Narrator: [encouraging] The house was eventually sold, the proceeds divided without ceremony, and what I kept instead was something far less measurable and far more valuable."
     ],
     "quiz": [
-      { "question": "What caused the four-year silence between the narrator and his brother?", "options": ["A disagreement over their father's house", "A fight over money owed", "Their father's remarriage", "A political disagreement"], "correctIndex": 0, "explanation": "The dispute began over their father's modest house and who had the right to decide its fate." },
-      { "question": "Why did the narrator feel entitled to a larger say in the decision?", "options": ["He was the older brother", "He had cared for their father in his final years", "He had paid for the house originally", "He lived closer to the property"], "correctIndex": 1, "explanation": "He had cared for their father in his final years and quietly decided that sacrifice entitled him to a larger say." },
-      { "question": "What does the narrator realize the silence actually was, rather than principle?", "options": ["Genuine indifference", "Pride", "A legal strategy", "A misunderstanding neither noticed"], "correctIndex": 1, "explanation": "He realizes the silence felt like principle at the time but was actually pride." },
-      { "question": "What prompted the narrator to finally call his brother?", "options": ["A lawyer's letter about the house", "His own children asking why their uncle never visited", "His brother called him first", "He needed money urgently"], "correctIndex": 1, "explanation": "His children began asking why their uncle never visited, and he had no answer that didn't sound petty, even to himself." },
-      { "question": "How does the narrator describe forgiveness by the end?", "options": ["A single, cinematic reconciliation", "A grudging willingness to dial a number you have avoided for years", "Something that requires winning the argument first", "Impossible once pride is involved"], "correctIndex": 1, "explanation": "He concludes forgiveness rarely arrives as a dramatic reconciliation, but more often as a grudging willingness to make the call." }
-    ]
+      {
+        "question": "What caused the four-year silence between the narrator and his brother?",
+        "options": [
+          "A fight over money owed",
+          "Their father's remarriage",
+          "A political disagreement",
+          "A disagreement over their father's house"
+        ],
+        "correctIndex": 3,
+        "explanation": "The dispute began over their father's modest house and who had the right to decide its fate."
+      },
+      {
+        "question": "Why did the narrator feel entitled to a larger say in the decision?",
+        "options": [
+          "He was the older brother",
+          "He had paid for the house originally",
+          "He had cared for their father in his final years",
+          "He lived closer to the property"
+        ],
+        "correctIndex": 2,
+        "explanation": "He had cared for their father in his final years and quietly decided that sacrifice entitled him to a larger say."
+      },
+      {
+        "question": "What does the narrator realize the silence actually was, rather than principle?",
+        "options": [
+          "Pride",
+          "Genuine indifference",
+          "A legal strategy",
+          "A misunderstanding neither noticed"
+        ],
+        "correctIndex": 0,
+        "explanation": "He realizes the silence felt like principle at the time but was actually pride."
+      },
+      {
+        "question": "What prompted the narrator to finally call his brother?",
+        "options": [
+          "A lawyer's letter about the house",
+          "His brother called him first",
+          "His own children asking why their uncle never visited",
+          "He needed money urgently"
+        ],
+        "correctIndex": 2,
+        "explanation": "His children began asking why their uncle never visited, and he had no answer that didn't sound petty, even to himself."
+      },
+      {
+        "question": "How does the narrator describe forgiveness by the end?",
+        "options": [
+          "A single, cinematic reconciliation",
+          "A grudging willingness to dial a number you have avoided for years",
+          "Something that requires winning the argument first",
+          "Impossible once pride is involved"
+        ],
+        "correctIndex": 1,
+        "explanation": "He concludes forgiveness rarely arrives as a dramatic reconciliation, but more often as a grudging willingness to make the call."
+      },
+      {
+        "question": "What moral claim had the narrator attached to caring for his father?",
+        "options": [
+          "Past sacrifice seemed to entitle him to greater control of the house.",
+          "Anger would consume energy without solving the shipment problem.",
+          "Later inconvenience cannot convert a commitment into an optional plan.",
+          "Reputation protection causes the narrator to damage an innocent colleague."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Past sacrifice seemed to entitle him to greater control of the house."
+      },
+      {
+        "question": "How did silence transform a disputed asset into a lasting estrangement?",
+        "options": [
+          "He delayed disclosure despite knowing the costs had changed.",
+          "Pride made both brothers wait indefinitely for the other's apology.",
+          "Keeping a promise unwillingly differs from valuing the promise despite cost.",
+          "Performed modesty had coexisted with fragile confidence and inflated competence."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Pride made both brothers wait indefinitely for the other's apology."
+      },
+      {
+        "question": "Why do the children's questions disrupt the narrator's justification?",
+        "options": [
+          "Reza must honour the price or absorb half the resulting loss.",
+          "She expects sufficient inconvenience to make most promises disappear.",
+          "It is an accurate public account of one's limitations.",
+          "His explanation sounds petty when translated into the family's present loss."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: His explanation sounds petty when translated into the family's present loss."
+      },
+      {
+        "question": "What does the unresolved disagreement after the call demonstrate?",
+        "options": [
+          "A fair solution does not erase the supplier's poor handling.",
+          "Career inconvenience carries less weight than freely given commitment.",
+          "Reconciliation does not require complete agreement about property.",
+          "It shows that competence can survive honest admission of error."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Reconciliation does not require complete agreement about property."
+      },
+      {
+        "question": "How does the house's eventual sale alter the story's measure of value?",
+        "options": [
+          "Self-control shapes how objections are raised rather than eliminating them.",
+          "Restored brotherhood becomes more valuable than winning the original dispute.",
+          "Commitment becomes morally meaningful when circumstances make it costly.",
+          "Protecting reputation and protecting truth often demand different responses."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Restored brotherhood becomes more valuable than winning the original dispute."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-akhlak-04",
@@ -106,33 +451,150 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Marlina", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Marlina",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Marlina: [calm but pointed] You called this meeting an hour before the shipment deadline to tell me the price has changed, Pak Reza. I'd like to understand why.",
-      "Reza: [apologetic but firm] Costs on our end have shifted since we signed, and continuing at the original price would put us at a loss on this order.",
-      "Marlina: [measured] I understand costs shift. What I don't understand is why I'm hearing about it now, rather than a week ago when you first knew.",
-      "Reza: [uncomfortable] I kept hoping the numbers would resolve themselves without needing this conversation at all, which, in hindsight, was simply avoidance dressed up as optimism.",
-      "Marlina: [steady] I could raise my voice right now, and frankly, some part of me would enjoy it, but it wouldn't get my shipment out any faster.",
-      "Reza: [surprised] I half expected you to walk out of this meeting, honestly. Most clients in your position would have.",
-      "Marlina: [dry] I've considered it. But anger tends to be an expensive indulgence, and I'd rather spend that energy solving the actual problem in front of us.",
-      "Reza: [relieved] What would solving it look like, from where you're sitting?",
-      "Marlina: [practical] Either you honor the original price for this order and renegotiate future ones properly, or you absorb half the difference and we split the discomfort.",
-      "Reza: [thoughtful] The second option is fair, more than fair, given that this delay is entirely of my own making.",
-      "Marlina: [firm] It is fair, and I want to be clear that agreeing to it isn't the same as forgetting how this was handled.",
-      "Reza: [sincere] Understood. And for what it's worth, I should have brought this to you the moment I saw the numbers shifting, not the night before delivery.",
-      "Marlina: [warmly] I appreciate you saying that plainly. Composure isn't the same as having no objection, Pak Reza, it's simply choosing when and how to raise it.",
-      "Reza: [grateful] Noted, and I won't test that composure again if I can help it.",
-      "Marlina: [wry] See that you don't. I'm patient, not infinite."
+      "Marlina: [thoughtful] You called this meeting an hour before the shipment deadline to tell me the price has changed, Pak Reza. I'd like to understand why.",
+      "Reza: Costs on our end have shifted since we signed, and continuing at the original price would put us at a loss on this order.",
+      "Marlina: [carefully] I understand costs shift. What I don't understand is why I'm hearing about it now, rather than a week ago when you first knew.",
+      "Reza: I kept hoping the numbers would resolve themselves without needing this conversation at all, which, in hindsight, was simply avoidance dressed up as optimism.",
+      "Marlina: [reflective] I could raise my voice right now, and frankly, some part of me would enjoy it, but it wouldn't get my shipment out any faster.",
+      "Reza: I half expected you to walk out of this meeting, honestly. Most clients in your position would have.",
+      "Marlina: [honestly] I've considered it. But anger tends to be an expensive indulgence, and I'd rather spend that energy solving the actual problem in front of us.",
+      "Reza: What would solving it look like, from where you're sitting?",
+      "Marlina: [gently] Either you honor the original price for this order and renegotiate future ones properly, or you absorb half the difference and we split the discomfort.",
+      "Reza: The second option is fair, more than fair, given that this delay is entirely of my own making.",
+      "Marlina: [calmly] It is fair, and I want to be clear that agreeing to it isn't the same as forgetting how this was handled.",
+      "Reza: Understood. And for what it's worth, I should have brought this to you the moment I saw the numbers shifting, not the night before delivery.",
+      "Marlina: [encouraging] I appreciate you saying that plainly. Composure isn't the same as having no objection, Pak Reza, it's simply choosing when and how to raise it.",
+      "Reza: Noted, and I won't test that composure again if I can help it.",
+      "Marlina: [seriously] See that you don't. I'm patient, not infinite."
     ],
     "quiz": [
-      { "question": "Why did Reza call the meeting so close to the shipment deadline?", "options": ["To confirm the shipment was on schedule", "To tell Marlina the price has changed", "To cancel the order entirely", "To introduce a new supplier"], "correctIndex": 1, "explanation": "Reza called the meeting an hour before the deadline to tell Marlina the price had changed." },
-      { "question": "Why does Marlina say she doesn't raise her voice, even though part of her wants to?", "options": ["She is afraid of losing the client relationship", "Anger wouldn't get her shipment out any faster", "She never gets angry about anything", "Reza asked her to stay calm"], "correctIndex": 1, "explanation": "She says raising her voice wouldn't get the shipment out any faster, calling anger an expensive indulgence." },
-      { "question": "Why didn't Reza raise the price issue a week earlier?", "options": ["He didn't know about it until the meeting", "He kept hoping the numbers would resolve themselves, which he admits was avoidance dressed up as optimism", "He was on vacation", "He forgot about the shipment"], "correctIndex": 1, "explanation": "Reza admits he hoped the numbers would resolve themselves, which was avoidance dressed up as optimism." },
-      { "question": "What two options does Marlina offer Reza?", "options": ["Cancel the contract or double the order", "Honor the original price and renegotiate properly later, or absorb half the difference now", "Switch suppliers immediately or pay full price forever", "Delay the shipment indefinitely or lose the client"], "correctIndex": 1, "explanation": "She offers either honoring the original price and renegotiating future orders properly, or absorbing half the difference now." },
-      { "question": "How does Marlina describe composure at the end of the conversation?", "options": ["The same as having no objection at all", "Choosing when and how to raise an objection, not the absence of one", "A sign of weakness in negotiation", "Something that means forgetting the incident"], "correctIndex": 1, "explanation": "She says composure isn't the same as having no objection, but simply choosing when and how to raise it." }
-    ]
+      {
+        "question": "Why did Reza call the meeting so close to the shipment deadline?",
+        "options": [
+          "To confirm the shipment was on schedule",
+          "To cancel the order entirely",
+          "To introduce a new supplier",
+          "To tell Marlina the price has changed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reza called the meeting an hour before the deadline to tell Marlina the price had changed."
+      },
+      {
+        "question": "Why does Marlina say she doesn't raise her voice, even though part of her wants to?",
+        "options": [
+          "She is afraid of losing the client relationship",
+          "She never gets angry about anything",
+          "Reza asked her to stay calm",
+          "Anger wouldn't get her shipment out any faster"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says raising her voice wouldn't get the shipment out any faster, calling anger an expensive indulgence."
+      },
+      {
+        "question": "Why didn't Reza raise the price issue a week earlier?",
+        "options": [
+          "He didn't know about it until the meeting",
+          "He kept hoping the numbers would resolve themselves, which he admits was avoidance dressed up as optimism",
+          "He was on vacation",
+          "He forgot about the shipment"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reza admits he hoped the numbers would resolve themselves, which was avoidance dressed up as optimism."
+      },
+      {
+        "question": "What two options does Marlina offer Reza?",
+        "options": [
+          "Cancel the contract or double the order",
+          "Switch suppliers immediately or pay full price forever",
+          "Delay the shipment indefinitely or lose the client",
+          "Honor the original price and renegotiate properly later, or absorb half the difference now"
+        ],
+        "correctIndex": 3,
+        "explanation": "She offers either honoring the original price and renegotiating future orders properly, or absorbing half the difference now."
+      },
+      {
+        "question": "How does Marlina describe composure at the end of the conversation?",
+        "options": [
+          "Choosing when and how to raise an objection, not the absence of one",
+          "The same as having no objection at all",
+          "A sign of weakness in negotiation",
+          "Something that means forgetting the incident"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says composure isn't the same as having no objection, but simply choosing when and how to raise it."
+      },
+      {
+        "question": "Why does Marlina decline the emotional satisfaction of raising her voice?",
+        "options": [
+          "Later inconvenience cannot convert a commitment into an optional plan.",
+          "Reputation protection causes the narrator to damage an innocent colleague.",
+          "Anger would consume energy without solving the shipment problem.",
+          "He called passive tolerance patience while deadlines repeatedly failed."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Anger would consume energy without solving the shipment problem."
+      },
+      {
+        "question": "What admission reveals Reza's optimism as avoidance?",
+        "options": [
+          "Keeping a promise unwillingly differs from valuing the promise despite cost.",
+          "Performed modesty had coexisted with fragile confidence and inflated competence.",
+          "He delayed disclosure despite knowing the costs had changed.",
+          "It tolerates difficulty while deliberately moving toward resolution."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: He delayed disclosure despite knowing the costs had changed."
+      },
+      {
+        "question": "How do Marlina's alternatives allocate responsibility for the late change?",
+        "options": [
+          "Reza must honour the price or absorb half the resulting loss.",
+          "She expects sufficient inconvenience to make most promises disappear.",
+          "It is an accurate public account of one's limitations.",
+          "It tests whether waiting benefits improvement or merely postpones discomfort."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Reza must honour the price or absorb half the resulting loss."
+      },
+      {
+        "question": "Why does accepting the compromise not restore full trust?",
+        "options": [
+          "Career inconvenience carries less weight than freely given commitment.",
+          "A fair solution does not erase the supplier's poor handling.",
+          "It shows that competence can survive honest admission of error.",
+          "Their anxiety and confrontation contrast with passivity's quiet appearance."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: A fair solution does not erase the supplier's poor handling."
+      },
+      {
+        "question": "What account of composure emerges from Marlina's conduct?",
+        "options": [
+          "Commitment becomes morally meaningful when circumstances make it costly.",
+          "Protecting reputation and protecting truth often demand different responses.",
+          "Self-control shapes how objections are raised rather than eliminating them.",
+          "The behaviour is probably avoidance rather than patience."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Self-control shapes how objections are raised rather than eliminating them."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-akhlak-05",
@@ -141,34 +603,151 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Citra", "gender": "female" },
-      { "name": "Hanif", "gender": "male" }
+      {
+        "name": "Citra",
+        "gender": "female"
+      },
+      {
+        "name": "Hanif",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Citra: [tentative] Hanif, do you remember promising, years ago, that you'd be the one to walk my father to his seat if I ever got married?",
-      "Hanif: [warmly] Of course I remember. Why do you ask like you expect me to have forgotten something that specific?",
-      "Citra: [hesitant] Because the wedding is now the same weekend as the conference you've been preparing for since January, and I'd understand if something had to give.",
-      "Hanif: [firm] Nothing has to give. A promise made casually years ago doesn't become optional just because keeping it turned out to be inconvenient.",
-      "Citra: [gently] That's generous of you to say, but conferences like this don't come around twice, and I don't want you resenting a decision made out of obligation.",
-      "Hanif: [thoughtful] I don't think obligation and resentment are automatically the same thing, though people often talk as if they were.",
-      "Citra: [curious] What's the difference, in your mind?",
-      "Hanif: [reflective] Resentment is what happens when you keep a promise while secretly wishing you hadn't made it. I don't wish that, not for a second.",
-      "Citra: [honestly] I suppose I've been quietly testing whether you'd release yourself from it, the way most people would given a good enough excuse.",
-      "Hanif: [wry] I noticed that, actually, and decided not to give you the satisfaction of an easy answer.",
-      "Citra: [laughing softly] Fair enough. So the conference gets rescheduled?",
-      "Hanif: [decided] The conference gets rescheduled. It's a professional inconvenience, not a moral one, and those two things deserve very different weights.",
-      "Citra: [warmly] I don't think I've ever heard anyone describe a scheduling conflict in quite such serious terms.",
-      "Hanif: [smiling] Promises are only serious in the moments they're inconvenient to keep. Otherwise they're just plans, and plans don't require character.",
-      "Citra: [sincerely] Then thank you, properly this time, for a promise I half expected circumstances to quietly erase.",
-      "Hanif: [warmly] Circumstances don't get a vote on this one. I'll be there, conference or no conference."
+      "Citra: [thoughtful] Hanif, do you remember promising, years ago, that you'd be the one to walk my father to his seat if I ever got married?",
+      "Hanif: Of course I remember. Why do you ask like you expect me to have forgotten something that specific?",
+      "Citra: [carefully] Because the wedding is now the same weekend as the conference you've been preparing for since January, and I'd understand if something had to give.",
+      "Hanif: Nothing has to give. A promise made casually years ago doesn't become optional just because keeping it turned out to be inconvenient.",
+      "Citra: [reflective] That's generous of you to say, but conferences like this don't come around twice, and I don't want you resenting a decision made out of obligation.",
+      "Hanif: I don't think obligation and resentment are automatically the same thing, though people often talk as if they were.",
+      "Citra: [honestly] What's the difference, in your mind?",
+      "Hanif: Resentment is what happens when you keep a promise while secretly wishing you hadn't made it. I don't wish that, not for a second.",
+      "Citra: [gently] I suppose I've been quietly testing whether you'd release yourself from it, the way most people would given a good enough excuse.",
+      "Hanif: I noticed that, actually, and decided not to give you the satisfaction of an easy answer.",
+      "Citra: [calmly] Fair enough. So the conference gets rescheduled?",
+      "Hanif: The conference gets rescheduled. It's a professional inconvenience, not a moral one, and those two things deserve very different weights.",
+      "Citra: [encouraging] I don't think I've ever heard anyone describe a scheduling conflict in quite such serious terms.",
+      "Hanif: Promises are only serious in the moments they're inconvenient to keep. Otherwise they're just plans, and plans don't require character.",
+      "Citra: [seriously] Then thank you, properly this time, for a promise I half expected circumstances to quietly erase.",
+      "Hanif: Circumstances don't get a vote on this one. I'll be there, conference or no conference."
     ],
     "quiz": [
-      { "question": "What promise had Hanif made to Citra years earlier?", "options": ["To give a speech at her wedding", "To walk her father to his seat if she ever got married", "To pay for her wedding", "To be her business partner"], "correctIndex": 1, "explanation": "Hanif had promised years ago to be the one to walk Citra's father to his seat at her wedding." },
-      { "question": "Why does Citra think Hanif might need to break the promise?", "options": ["He no longer wants to attend", "The wedding falls on the same weekend as a conference he has prepared for since January", "He is moving abroad", "He disapproves of the marriage"], "correctIndex": 1, "explanation": "The wedding is the same weekend as a conference Hanif has been preparing for since January." },
-      { "question": "How does Hanif distinguish obligation from resentment?", "options": ["He says they are always the same thing", "Resentment is keeping a promise while secretly wishing you hadn't made it, which he does not feel", "Obligation only applies to strangers", "Resentment is a sign of true commitment"], "correctIndex": 1, "explanation": "Hanif explains that resentment is keeping a promise while secretly wishing you hadn't made it, and he insists he doesn't feel that." },
-      { "question": "What does Citra admit she had been doing throughout the conversation?", "options": ["Planning to cancel the wedding", "Quietly testing whether Hanif would release himself from the promise given a good excuse", "Trying to convince Hanif to skip the wedding", "Hiding the conference conflict from him"], "correctIndex": 1, "explanation": "Citra admits she had been quietly testing whether Hanif would release himself from the promise the way most people would." },
-      { "question": "How does Hanif ultimately distinguish a promise from a plan?", "options": ["There is no real difference between them", "Promises are only serious in the moments they're inconvenient to keep, while plans don't require character", "Plans are more important than promises", "Promises can always be rescheduled without consequence"], "correctIndex": 1, "explanation": "Hanif says promises are only serious in the moments they're inconvenient to keep; otherwise they're just plans, which don't require character." }
-    ]
+      {
+        "question": "What promise had Hanif made to Citra years earlier?",
+        "options": [
+          "To walk her father to his seat if she ever got married",
+          "To give a speech at her wedding",
+          "To pay for her wedding",
+          "To be her business partner"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hanif had promised years ago to be the one to walk Citra's father to his seat at her wedding."
+      },
+      {
+        "question": "Why does Citra think Hanif might need to break the promise?",
+        "options": [
+          "The wedding falls on the same weekend as a conference he has prepared for since January",
+          "He no longer wants to attend",
+          "He is moving abroad",
+          "He disapproves of the marriage"
+        ],
+        "correctIndex": 0,
+        "explanation": "The wedding is the same weekend as a conference Hanif has been preparing for since January."
+      },
+      {
+        "question": "How does Hanif distinguish obligation from resentment?",
+        "options": [
+          "He says they are always the same thing",
+          "Obligation only applies to strangers",
+          "Resentment is a sign of true commitment",
+          "Resentment is keeping a promise while secretly wishing you hadn't made it, which he does not feel"
+        ],
+        "correctIndex": 3,
+        "explanation": "Hanif explains that resentment is keeping a promise while secretly wishing you hadn't made it, and he insists he doesn't feel that."
+      },
+      {
+        "question": "What does Citra admit she had been doing throughout the conversation?",
+        "options": [
+          "Planning to cancel the wedding",
+          "Trying to convince Hanif to skip the wedding",
+          "Quietly testing whether Hanif would release himself from the promise given a good excuse",
+          "Hiding the conference conflict from him"
+        ],
+        "correctIndex": 2,
+        "explanation": "Citra admits she had been quietly testing whether Hanif would release himself from the promise the way most people would."
+      },
+      {
+        "question": "How does Hanif ultimately distinguish a promise from a plan?",
+        "options": [
+          "There is no real difference between them",
+          "Plans are more important than promises",
+          "Promises are only serious in the moments they're inconvenient to keep, while plans don't require character",
+          "Promises can always be rescheduled without consequence"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hanif says promises are only serious in the moments they're inconvenient to keep; otherwise they're just plans, which don't require character."
+      },
+      {
+        "question": "Why does Hanif refuse to treat the conference as a release from his promise?",
+        "options": [
+          "Reputation protection causes the narrator to damage an innocent colleague.",
+          "Later inconvenience cannot convert a commitment into an optional plan.",
+          "He called passive tolerance patience while deadlines repeatedly failed.",
+          "Higher-cost purchases require independent review before commitment."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Later inconvenience cannot convert a commitment into an optional plan."
+      },
+      {
+        "question": "What distinction does Hanif draw between obligation and resentment?",
+        "options": [
+          "Performed modesty had coexisted with fragile confidence and inflated competence.",
+          "Keeping a promise unwillingly differs from valuing the promise despite cost.",
+          "It tolerates difficulty while deliberately moving toward resolution.",
+          "The mistake remains recorded while deliberate falsification is prevented."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Keeping a promise unwillingly differs from valuing the promise despite cost."
+      },
+      {
+        "question": "Why does Citra admit she has been testing him?",
+        "options": [
+          "It is an accurate public account of one's limitations.",
+          "It tests whether waiting benefits improvement or merely postpones discomfort.",
+          "Accurate disclosure reveals a process weakness that also needs correction.",
+          "She expects sufficient inconvenience to make most promises disappear."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: She expects sufficient inconvenience to make most promises disappear."
+      },
+      {
+        "question": "How does describing the conflict as professional rather than moral guide the decision?",
+        "options": [
+          "Career inconvenience carries less weight than freely given commitment.",
+          "It shows that competence can survive honest admission of error.",
+          "Their anxiety and confrontation contrast with passivity's quiet appearance.",
+          "It consists of accepting embarrassment when truthful records require it."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Career inconvenience carries less weight than freely given commitment."
+      },
+      {
+        "question": "What claim about character explains why inconvenient promises matter most?",
+        "options": [
+          "Protecting reputation and protecting truth often demand different responses.",
+          "Commitment becomes morally meaningful when circumstances make it costly.",
+          "The behaviour is probably avoidance rather than patience.",
+          "The account remains no less truthful than the event it records."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Commitment becomes morally meaningful when circumstances make it costly."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-akhlak-06",
@@ -177,30 +756,144 @@
     "themeId": "akhlak",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] The presentation collapsed publicly, in front of forty colleagues, when a figure I had been certain of turned out to be quietly, embarrassingly wrong.",
-      "Narrator: [honestly] My first instinct was not humility at all; it was a scramble to explain, to locate blame somewhere adjacent to myself before anyone noticed the silence stretching.",
-      "Narrator: [reflective] I heard myself mention a colleague's incomplete data, technically true, delivered in a tone clearly designed to redirect attention rather than to inform anyone.",
-      "Narrator: [ashamed] Watching that colleague's face shift from confusion to quiet hurt taught me more about my own character than the original error ever could have.",
-      "Narrator: [thoughtful] I had always assumed humility meant thinking poorly of myself, a kind of reflexive self-deprecation I performed well enough at dinner parties and reviews alike.",
-      "Narrator: [honestly] What that afternoon revealed was closer to the opposite problem: an inflated sense of my own competence so fragile it required someone else's reputation to protect it.",
-      "Narrator: [reflective] Real humility, I began to suspect, has very little to do with self-esteem at all; it is simply an accurate account of your own limitations, spoken aloud.",
-      "Narrator: [determined] So I corrected the record the following morning, in the same meeting room, naming the error as entirely mine and the redirection as an unnecessary, cowardly addition.",
-      "Narrator: [surprised] Nobody seemed particularly scandalized by the admission, which surprised me more than the original mistake had; apparently competence survives honesty better than I had assumed.",
-      "Narrator: [thoughtful] My colleague, for her part, accepted the correction with more grace than I had extended her in the moment I needed it most.",
-      "Narrator: [reflective] I have since noticed how often the instinct to protect my reputation and the instinct to protect the truth quietly diverge, without my initially registering the split.",
-      "Narrator: [peacefully] Humility, it turns out, is less a virtue you possess and more a discipline you practice, usually right after discovering how badly you failed at it.",
-      "Narrator: [with a small smile] I still make mistakes publicly, more often than I would like, but I have gotten considerably faster at simply naming them."
+      "Narrator: [thoughtful] The presentation collapsed publicly, in front of forty colleagues, when a figure I had been certain of turned out to be quietly, embarrassingly wrong.",
+      "Narrator: My first instinct was not humility at all; it was a scramble to explain, to locate blame somewhere adjacent to myself before anyone noticed the silence stretching.",
+      "Narrator: [carefully] I heard myself mention a colleague's incomplete data, technically true, delivered in a tone clearly designed to redirect attention rather than to inform anyone.",
+      "Narrator: Watching that colleague's face shift from confusion to quiet hurt taught me more about my own character than the original error ever could have.",
+      "Narrator: [reflective] I had always assumed humility meant thinking poorly of myself, a kind of reflexive self-deprecation I performed well enough at dinner parties and reviews alike.",
+      "Narrator: What that afternoon revealed was closer to the opposite problem: an inflated sense of my own competence so fragile it required someone else's reputation to protect it.",
+      "Narrator: [honestly] Real humility, I began to suspect, has very little to do with self-esteem at all; it is simply an accurate account of your own limitations, spoken aloud.",
+      "Narrator: So I corrected the record the following morning, in the same meeting room, naming the error as entirely mine and the redirection as an unnecessary, cowardly addition.",
+      "Narrator: [gently] Nobody seemed particularly scandalized by the admission, which surprised me more than the original mistake had; apparently competence survives honesty better than I had assumed.",
+      "Narrator: My colleague, for her part, accepted the correction with more grace than I had extended her in the moment I needed it most.",
+      "Narrator: [calmly] I have since noticed how often the instinct to protect my reputation and the instinct to protect the truth quietly diverge, without my initially registering the split.",
+      "Narrator: Humility, it turns out, is less a virtue you possess and more a discipline you practice, usually right after discovering how badly you failed at it.",
+      "Narrator: [encouraging] I still make mistakes publicly, more often than I would like, but I have gotten considerably faster at simply naming them."
     ],
     "quiz": [
-      { "question": "What happened during the narrator's presentation?", "options": ["It was cancelled at the last minute", "A figure she was certain of turned out to be embarrassingly wrong, in front of forty colleagues", "A colleague interrupted her rudely", "The projector malfunctioned"], "correctIndex": 1, "explanation": "The presentation collapsed publicly when a figure she had been certain of turned out to be quietly, embarrassingly wrong." },
-      { "question": "What was the narrator's first instinct after the error was exposed?", "options": ["To admit the mistake immediately", "To scramble to explain and locate blame somewhere adjacent to herself", "To leave the meeting", "To laugh it off"], "correctIndex": 1, "explanation": "Her first instinct was to scramble to explain and locate blame somewhere adjacent to herself, mentioning a colleague's incomplete data." },
-      { "question": "What had the narrator previously assumed humility meant?", "options": ["Speaking honestly about limitations", "Thinking poorly of herself, a kind of reflexive self-deprecation", "Never making mistakes", "Avoiding public speaking"], "correctIndex": 1, "explanation": "She had assumed humility meant thinking poorly of herself, a self-deprecation she performed at dinner parties and reviews." },
-      { "question": "What did the narrator do the following morning?", "options": ["She avoided the topic entirely", "She corrected the record, naming the error as entirely her own and the redirection as cowardly", "She quit her job", "She blamed the same colleague again"], "correctIndex": 1, "explanation": "She corrected the record in the same meeting room, naming the error as her own and the redirection as an unnecessary, cowardly addition." },
-      { "question": "How does the narrator ultimately define humility?", "options": ["A fixed personality trait some people simply have", "An accurate account of your own limitations, spoken aloud, and a discipline practiced after failure", "The same thing as low self-esteem", "Something only necessary after a major public disaster"], "correctIndex": 1, "explanation": "She concludes humility is an accurate account of one's limitations spoken aloud, and a discipline practiced rather than a possessed virtue." }
-    ]
+      {
+        "question": "What happened during the narrator's presentation?",
+        "options": [
+          "It was cancelled at the last minute",
+          "A figure she was certain of turned out to be embarrassingly wrong, in front of forty colleagues",
+          "A colleague interrupted her rudely",
+          "The projector malfunctioned"
+        ],
+        "correctIndex": 1,
+        "explanation": "The presentation collapsed publicly when a figure she had been certain of turned out to be quietly, embarrassingly wrong."
+      },
+      {
+        "question": "What was the narrator's first instinct after the error was exposed?",
+        "options": [
+          "To admit the mistake immediately",
+          "To scramble to explain and locate blame somewhere adjacent to herself",
+          "To leave the meeting",
+          "To laugh it off"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her first instinct was to scramble to explain and locate blame somewhere adjacent to herself, mentioning a colleague's incomplete data."
+      },
+      {
+        "question": "What had the narrator previously assumed humility meant?",
+        "options": [
+          "Thinking poorly of herself, a kind of reflexive self-deprecation",
+          "Speaking honestly about limitations",
+          "Never making mistakes",
+          "Avoiding public speaking"
+        ],
+        "correctIndex": 0,
+        "explanation": "She had assumed humility meant thinking poorly of herself, a self-deprecation she performed at dinner parties and reviews."
+      },
+      {
+        "question": "What did the narrator do the following morning?",
+        "options": [
+          "She avoided the topic entirely",
+          "She quit her job",
+          "She corrected the record, naming the error as entirely her own and the redirection as cowardly",
+          "She blamed the same colleague again"
+        ],
+        "correctIndex": 2,
+        "explanation": "She corrected the record in the same meeting room, naming the error as her own and the redirection as an unnecessary, cowardly addition."
+      },
+      {
+        "question": "How does the narrator ultimately define humility?",
+        "options": [
+          "A fixed personality trait some people simply have",
+          "An accurate account of your own limitations, spoken aloud, and a discipline practiced after failure",
+          "The same thing as low self-esteem",
+          "Something only necessary after a major public disaster"
+        ],
+        "correctIndex": 1,
+        "explanation": "She concludes humility is an accurate account of one's limitations spoken aloud, and a discipline practiced rather than a possessed virtue."
+      },
+      {
+        "question": "What makes blaming incomplete data more revealing than the numerical error?",
+        "options": [
+          "He called passive tolerance patience while deadlines repeatedly failed.",
+          "Higher-cost purchases require independent review before commitment.",
+          "It reduces orders further despite lost revenue and unavailable products.",
+          "Reputation protection causes the narrator to damage an innocent colleague."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Reputation protection causes the narrator to damage an innocent colleague."
+      },
+      {
+        "question": "How does the incident overturn a self-deprecating model of humility?",
+        "options": [
+          "It tolerates difficulty while deliberately moving toward resolution.",
+          "The mistake remains recorded while deliberate falsification is prevented.",
+          "Performed modesty had coexisted with fragile confidence and inflated competence.",
+          "Serious reform consists of repeated administrative corrections rather than spectacle."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Performed modesty had coexisted with fragile confidence and inflated competence."
+      },
+      {
+        "question": "What definition of humility replaces that model?",
+        "options": [
+          "It is an accurate public account of one's limitations.",
+          "It tests whether waiting benefits improvement or merely postpones discomfort.",
+          "Accurate disclosure reveals a process weakness that also needs correction.",
+          "Claims shift from perfect ethics to standards, evidence, risks, and actions."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It is an accurate public account of one's limitations."
+      },
+      {
+        "question": "Why is the room's mild reaction significant to the narrator?",
+        "options": [
+          "Their anxiety and confrontation contrast with passivity's quiet appearance.",
+          "It consists of accepting embarrassment when truthful records require it.",
+          "The same principle governs profitable and inconvenient suppliers.",
+          "It shows that competence can survive honest admission of error."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It shows that competence can survive honest admission of error."
+      },
+      {
+        "question": "What recurring conflict does the narrator learn to detect more quickly?",
+        "options": [
+          "The behaviour is probably avoidance rather than patience.",
+          "The account remains no less truthful than the event it records.",
+          "Protecting reputation and protecting truth often demand different responses.",
+          "It accepts reduced revenue rather than quietly weakening its standard."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Protecting reputation and protecting truth often demand different responses."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-akhlak-07",
@@ -209,35 +902,587 @@
     "themeId": "akhlak",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Farid", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Farid",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] My guest today, Farid, has spent years studying how people confuse patience with simple passivity, and he says the distinction matters more than we think.",
-      "Farid: [composed] It does, and I say that as someone who spent most of my twenties mistaking one for the other, usually to my own detriment.",
-      "Host: [curious] What does that confusion typically look like in practice?",
-      "Farid: [reflective] For years, I called myself patient with a business partner who consistently missed deadlines, when really I was simply avoiding an uncomfortable confrontation.",
-      "Host: [interested] So patience became a kind of cover story for avoidance?",
-      "Farid: [honestly] Exactly. Genuine patience tolerates a difficulty while actively working toward its resolution. What I was practicing tolerated the difficulty and changed absolutely nothing.",
-      "Host: [thoughtful] How did you eventually notice the difference?",
-      "Farid: [wry] A mentor asked me a deceptively simple question: was my patience buying anyone time to improve, or simply buying me time to avoid discomfort?",
-      "Host: [curious] That's a sharp distinction. What changed once you asked yourself that?",
-      "Farid: [reflective] I started setting actual boundaries with that partner, deadlines with real consequences attached, rather than quietly absorbing every missed one as an act of virtue.",
-      "Host: [interested] Did that feel less patient, in the moment, than simply enduring it had?",
-      "Farid: [honestly] Considerably less patient, and considerably more anxious, which is precisely why I had avoided it for so long in the first place.",
-      "Host: [thoughtful] So real patience can look less peaceful from the outside than passivity does.",
-      "Farid: [warmly] Often, yes. Passivity is quiet by nature. Patience sometimes requires an uncomfortable conversation before it can even begin functioning as patience at all.",
-      "Host: [curious] What would you tell someone who suspects they might be confusing the two right now?",
-      "Farid: [gently] Ask what your waiting is actually accomplishing. If nothing is moving, quietly, in the direction of resolution, you're probably not practicing patience.",
-      "Host: [warmly] That's a distinction I suspect a lot of listeners needed to hear today. Thank you, Farid.",
-      "Farid: [sincerely] Thank you for having me, and for asking the question I once needed someone to ask me."
+      "Host: [thoughtful] My guest today, Farid, has spent years studying how people confuse patience with simple passivity, and he says the distinction matters more than we think.",
+      "Farid: It does, and I say that as someone who spent most of my twenties mistaking one for the other, usually to my own detriment.",
+      "Host: [carefully] What does that confusion typically look like in practice?",
+      "Farid: For years, I called myself patient with a business partner who consistently missed deadlines, when really I was simply avoiding an uncomfortable confrontation.",
+      "Host: [reflective] So patience became a kind of cover story for avoidance?",
+      "Farid: Exactly. Genuine patience tolerates a difficulty while actively working toward its resolution. What I was practicing tolerated the difficulty and changed absolutely nothing.",
+      "Host: [honestly] How did you eventually notice the difference?",
+      "Farid: A mentor asked me a deceptively simple question: was my patience buying anyone time to improve, or simply buying me time to avoid discomfort?",
+      "Host: [gently] That's a sharp distinction. What changed once you asked yourself that?",
+      "Farid: I started setting actual boundaries with that partner, deadlines with real consequences attached, rather than quietly absorbing every missed one as an act of virtue.",
+      "Host: [calmly] Did that feel less patient, in the moment, than simply enduring it had?",
+      "Farid: Considerably less patient, and considerably more anxious, which is precisely why I had avoided it for so long in the first place.",
+      "Host: [encouraging] So real patience can look less peaceful from the outside than passivity does.",
+      "Farid: Often, yes. Passivity is quiet by nature. Patience sometimes requires an uncomfortable conversation before it can even begin functioning as patience at all.",
+      "Host: [seriously] What would you tell someone who suspects they might be confusing the two right now?",
+      "Farid: Ask what your waiting is actually accomplishing. If nothing is moving, quietly, in the direction of resolution, you're probably not practicing patience.",
+      "Host: That's a distinction I suspect a lot of listeners needed to hear today. Thank you, Farid.",
+      "Farid: Thank you for having me, and for asking the question I once needed someone to ask me."
     ],
     "quiz": [
-      { "question": "What has Farid spent years studying?", "options": ["How people confuse patience with simple passivity", "How business partnerships fail", "The history of philosophy", "How to set deadlines effectively"], "correctIndex": 0, "explanation": "Farid has studied how people confuse patience with simple passivity, a confusion he admits he lived through himself." },
-      { "question": "What was Farid actually doing when he called himself patient with his business partner?", "options": ["Actively helping the partner improve", "Avoiding an uncomfortable confrontation about missed deadlines", "Reporting the partner to management", "Ending the partnership quietly"], "correctIndex": 1, "explanation": "He admits he was simply avoiding an uncomfortable confrontation, not practicing genuine patience." },
-      { "question": "What question did Farid's mentor ask him?", "options": ["Whether he should quit the partnership", "Whether his patience was buying the partner time to improve or buying himself time to avoid discomfort", "Whether he needed a lawyer", "Whether the deadlines were realistic"], "correctIndex": 1, "explanation": "The mentor asked whether his patience was buying anyone time to improve, or simply buying him time to avoid discomfort." },
-      { "question": "What did Farid start doing after reflecting on that question?", "options": ["Ignoring the partner completely", "Setting actual boundaries and deadlines with real consequences", "Ending all his business partnerships", "Waiting even longer before addressing issues"], "correctIndex": 1, "explanation": "He started setting actual boundaries with real consequences instead of quietly absorbing every missed deadline." },
-      { "question": "According to Farid, how can someone tell if they're confusing patience with passivity?", "options": ["By checking whether they feel calm", "By asking what their waiting is actually accomplishing toward resolution", "By asking others for their opinion", "By waiting even longer to see what happens"], "correctIndex": 1, "explanation": "Farid advises asking what your waiting is actually accomplishing; if nothing is moving toward resolution, it likely isn't patience." }
-    ]
+      {
+        "question": "What has Farid spent years studying?",
+        "options": [
+          "How business partnerships fail",
+          "How people confuse patience with simple passivity",
+          "The history of philosophy",
+          "How to set deadlines effectively"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farid has studied how people confuse patience with simple passivity, a confusion he admits he lived through himself."
+      },
+      {
+        "question": "What was Farid actually doing when he called himself patient with his business partner?",
+        "options": [
+          "Actively helping the partner improve",
+          "Reporting the partner to management",
+          "Ending the partnership quietly",
+          "Avoiding an uncomfortable confrontation about missed deadlines"
+        ],
+        "correctIndex": 3,
+        "explanation": "He admits he was simply avoiding an uncomfortable confrontation, not practicing genuine patience."
+      },
+      {
+        "question": "What question did Farid's mentor ask him?",
+        "options": [
+          "Whether he should quit the partnership",
+          "Whether he needed a lawyer",
+          "Whether the deadlines were realistic",
+          "Whether his patience was buying the partner time to improve or buying himself time to avoid discomfort"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mentor asked whether his patience was buying anyone time to improve, or simply buying him time to avoid discomfort."
+      },
+      {
+        "question": "What did Farid start doing after reflecting on that question?",
+        "options": [
+          "Ignoring the partner completely",
+          "Ending all his business partnerships",
+          "Setting actual boundaries and deadlines with real consequences",
+          "Waiting even longer before addressing issues"
+        ],
+        "correctIndex": 2,
+        "explanation": "He started setting actual boundaries with real consequences instead of quietly absorbing every missed deadline."
+      },
+      {
+        "question": "According to Farid, how can someone tell if they're confusing patience with passivity?",
+        "options": [
+          "By checking whether they feel calm",
+          "By asking others for their opinion",
+          "By asking what their waiting is actually accomplishing toward resolution",
+          "By waiting even longer to see what happens"
+        ],
+        "correctIndex": 2,
+        "explanation": "Farid advises asking what your waiting is actually accomplishing; if nothing is moving toward resolution, it likely isn't patience."
+      },
+      {
+        "question": "How had Farid mislabeled avoidance in his business partnership?",
+        "options": [
+          "He called passive tolerance patience while deadlines repeatedly failed.",
+          "Higher-cost purchases require independent review before commitment.",
+          "It reduces orders further despite lost revenue and unavailable products.",
+          "Private regret cannot repair reputational damage created through wider channels."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: He called passive tolerance patience while deadlines repeatedly failed."
+      },
+      {
+        "question": "What feature distinguishes active patience from unchanged endurance?",
+        "options": [
+          "It tolerates difficulty while deliberately moving toward resolution.",
+          "The mistake remains recorded while deliberate falsification is prevented.",
+          "Serious reform consists of repeated administrative corrections rather than spectacle.",
+          "Blind loyalty and enjoyment of accusatory moral drama."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It tolerates difficulty while deliberately moving toward resolution."
+      },
+      {
+        "question": "Why is the mentor's question diagnostically effective?",
+        "options": [
+          "Accurate disclosure reveals a process weakness that also needs correction.",
+          "It tests whether waiting benefits improvement or merely postpones discomfort.",
+          "Claims shift from perfect ethics to standards, evidence, risks, and actions.",
+          "Delay judgment while preserving evidence and protecting vulnerable funds."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It tests whether waiting benefits improvement or merely postpones discomfort."
+      },
+      {
+        "question": "Why do boundaries feel less patient despite being more constructive?",
+        "options": [
+          "It consists of accepting embarrassment when truthful records require it.",
+          "The same principle governs profitable and inconvenient suppliers.",
+          "Their anxiety and confrontation contrast with passivity's quiet appearance.",
+          "Use proportionate procedures focused on repair, control, and affected stakeholders."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Their anxiety and confrontation contrast with passivity's quiet appearance."
+      },
+      {
+        "question": "What inference follows when waiting produces no movement toward repair?",
+        "options": [
+          "The account remains no less truthful than the event it records.",
+          "It accepts reduced revenue rather than quietly weakening its standard.",
+          "A careful investigative process can honour both duties simultaneously.",
+          "The behaviour is probably avoidance rather than patience."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: The behaviour is probably avoidance rather than patience."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-akhlak-08",
+    "title": "The Expense Line I Could Have Hidden",
+    "level": "C1",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [uneasy] The error appeared in the final hour of our grant project. I had booked a venue above the approved limit, and the finance portal showed only one unresolved expense. If I divided the invoice between “room hire” and “equipment,” both lines would fall below the review threshold.",
+      "Narrator: The categories were technically available, and the equipment had indeed been included. Yet the purpose of splitting the figure would have been concealment, not accuracy.",
+      "Narrator: [honestly] I imagined the consequences of disclosure: an awkward call with the director, a delayed report, perhaps a note on my performance review. Nobody else knew that I had approved the booking before receiving written confirmation of the price.",
+      "Narrator: I entered the full amount under venue costs and attached the invoice. Then I sent the director a brief account: what I had authorised, which checking step I had skipped, and how much remained uncovered. I did not describe the supplier as misleading; our emails showed that I had made an assumption.",
+      "Narrator: [thoughtful] The response was uncomfortable but manageable. We moved a non-essential printing expense, requested formal approval for the remaining difference, and informed the funder rather than hoping the discrepancy would pass unnoticed.",
+      "Narrator: The director also asked why one employee could confirm a booking and categorise the same invoice. We changed the workflow so higher-cost purchases required a second review before commitment.",
+      "Narrator: [reflective] My mistake still appeared in the report. Transparency did not erase responsibility. It prevented one poor decision from becoming a deliberate false record and revealed a weakness in the process.",
+      "Narrator: Integrity often sounds heroic when described from a distance. In practice, it may look like refusing a convenient category at five minutes to closing, then accepting the embarrassment that accurate accounts require. The moral achievement was not perfection. It was declining to make the document less truthful than the event."
+    ],
+    "quiz": [
+      {
+        "question": "Why would splitting the venue invoice be dishonest despite accurate categories?",
+        "options": [
+          "Its purpose would be evading review rather than representing the purchase.",
+          "The supplier is commercially important, making consistent enforcement costly.",
+          "Confidence cannot substitute for direct knowledge and verifiable evidence.",
+          "It was presented to the board under a colleague's name"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Its purpose would be evading review rather than representing the purchase."
+      },
+      {
+        "question": "Which feared consequence most tempted the narrator to conceal the mistake?",
+        "options": [
+          "It may harm workers before their situation and preferences are understood.",
+          "Disclosure could delay reporting and damage the narrator's performance record.",
+          "Help preserve records and report safely without exceeding witnessed facts.",
+          "It secretly flattered her to see herself as a martyr while resentment quietly grew"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Disclosure could delay reporting and damage the narrator's performance record."
+      },
+      {
+        "question": "How does the written account avoid transferring blame to the supplier?",
+        "options": [
+          "It combines external scrutiny with a confidential reporting channel.",
+          "Misuse and authorised reimbursement can produce the same isolated record.",
+          "It identifies the narrator's assumption and skipped verification step.",
+          "The colleague was assigned to lead the initiative"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: It identifies the narrator's assumption and skipped verification step."
+      },
+      {
+        "question": "What practical response follows transparent disclosure?",
+        "options": [
+          "They favour reform over the dramatic simplicity of immediate closure.",
+          "It is a precaution protecting funds, not a final finding of guilt.",
+          "The colleague seemed genuinely unaware the framing implied sole authorship",
+          "The team reallocates spending, seeks approval, and informs the funder."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: The team reallocates spending, seeks approval, and informs the funder."
+      },
+      {
+        "question": "Why does the director question the purchasing workflow as well as the employee?",
+        "options": [
+          "One person could both commit spending and classify the invoice.",
+          "Overtime consent and record-keeping remain inadequate.",
+          "Apply governance or legal remedies and repair enabling controls.",
+          "Minding honestly enough to say so before resentment calcifies into character"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: One person could both commit spending and classify the invoice."
+      },
+      {
+        "question": "What control is introduced to address that structural weakness?",
+        "options": [
+          "It reduces orders further despite lost revenue and unavailable products.",
+          "Higher-cost purchases require independent review before commitment.",
+          "Private regret cannot repair reputational damage created through wider channels.",
+          "It enabled private martyrdom while another colleague received visible credit."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Higher-cost purchases require independent review before commitment."
+      },
+      {
+        "question": "How does transparency affect rather than erase individual responsibility?",
+        "options": [
+          "Serious reform consists of repeated administrative corrections rather than spectacle.",
+          "Blind loyalty and enjoyment of accusatory moral drama.",
+          "The mistake remains recorded while deliberate falsification is prevented.",
+          "Apparent authorship led the colleague to receive leadership of the initiative."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: The mistake remains recorded while deliberate falsification is prevented."
+      },
+      {
+        "question": "What broader benefit comes from refusing the convenient category split?",
+        "options": [
+          "Claims shift from perfect ethics to standards, evidence, risks, and actions.",
+          "Delay judgment while preserving evidence and protecting vulnerable funds.",
+          "It preserved the injury for future use rather than resolving it.",
+          "Accurate disclosure reveals a process weakness that also needs correction."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Accurate disclosure reveals a process weakness that also needs correction."
+      },
+      {
+        "question": "Why is integrity portrayed as ordinary rather than heroic?",
+        "options": [
+          "It consists of accepting embarrassment when truthful records require it.",
+          "The same principle governs profitable and inconvenient suppliers.",
+          "Use proportionate procedures focused on repair, control, and affected stakeholders.",
+          "She misunderstood the framing yet still failed to correct sole authorship."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: It consists of accepting embarrassment when truthful records require it."
+      },
+      {
+        "question": "What is the narrator's actual moral achievement?",
+        "options": [
+          "It accepts reduced revenue rather than quietly weakening its standard.",
+          "The account remains no less truthful than the event it records.",
+          "A careful investigative process can honour both duties simultaneously.",
+          "It names legitimate hurt before silence hardens it into character."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: The account remains no less truthful than the event it records."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-akhlak-09",
+    "title": "When Consistency Costs More Than Applause",
+    "level": "C1",
+    "themeId": "akhlak",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [measured] Our ethical clothing label promised that every supplier would receive the same labour review. Customers praised the policy, and the statement appeared prominently on our website. The real test arrived when our most popular manufacturer failed to provide complete overtime records.",
+      "Narrator: Ending the relationship immediately would have sounded decisive, but it could also have harmed workers before we understood the situation. Ignoring the gap would protect our sales while making the public promise meaningless.",
+      "Narrator: [carefully] We commissioned an independent review, gave workers a confidential channel, and asked the manufacturer for a time-bound corrective plan. We limited new orders during the assessment and published a short notice that did not identify individual employees.",
+      "Narrator: The findings were mixed. Wages met the legal minimum, but overtime consent and record-keeping were inadequate. Several workers wanted improvements, not sudden factory closure. Their preferences did not settle every question, yet they complicated the heroic story our marketing team preferred.",
+      "Narrator: [thoughtful] We agreed on back payments where records supported them, external monitoring, and a deadline for reform. When the supplier missed the first milestone, we reduced orders again. Revenue fell, and customers complained that key items were unavailable.",
+      "Narrator: No dramatic photograph could represent the work. Progress consisted of payroll corrections, revised schedules, repeated interviews, and the possibility that the partnership would still end.",
+      "Narrator: [reflective] The experience changed how we spoke about values. We stopped advertising ourselves as perfectly ethical and began reporting specific standards, evidence, unresolved risks, and actions taken.",
+      "Narrator: Good character in an organisation is not proven by a slogan or one severe gesture. It appears when the same principle governs profitable and inconvenient cases, when affected people are heard without being exposed, and when a company accepts material costs rather than quietly lowering its standard."
+    ],
+    "quiz": [
+      {
+        "question": "Why is the missing overtime documentation a test of the company's values?",
+        "options": [
+          "The supplier is commercially important, making consistent enforcement costly.",
+          "Confidence cannot substitute for direct knowledge and verifiable evidence.",
+          "It was presented to the board under a colleague's name",
+          "Dressing up cruelty in a respectable vocabulary"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: The supplier is commercially important, making consistent enforcement costly."
+      },
+      {
+        "question": "Why does immediate termination appear ethically incomplete?",
+        "options": [
+          "Help preserve records and report safely without exceeding witnessed facts.",
+          "It may harm workers before their situation and preferences are understood.",
+          "It secretly flattered her to see herself as a martyr while resentment quietly grew",
+          "He believed the timing would have crushed Bram unnecessarily"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It may harm workers before their situation and preferences are understood."
+      },
+      {
+        "question": "How does the independent review protect both evidence and workers?",
+        "options": [
+          "Misuse and authorised reimbursement can produce the same isolated record.",
+          "The colleague was assigned to lead the initiative",
+          "It combines external scrutiny with a confidential reporting channel.",
+          "Bram built three more months of momentum on a plan Rangga privately considered doomed"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: It combines external scrutiny with a confidential reporting channel."
+      },
+      {
+        "question": "What do workers' preferences complicate in the marketing team's preferred narrative?",
+        "options": [
+          "It is a precaution protecting funds, not a final finding of guilt.",
+          "The colleague seemed genuinely unaware the framing implied sole authorship",
+          "She asks whether the silence serves the other person or only her own comfort",
+          "They favour reform over the dramatic simplicity of immediate closure."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: They favour reform over the dramatic simplicity of immediate closure."
+      },
+      {
+        "question": "Why do legal minimum wages not resolve the ethical concern?",
+        "options": [
+          "Overtime consent and record-keeping remain inadequate.",
+          "Apply governance or legal remedies and repair enabling controls.",
+          "Minding honestly enough to say so before resentment calcifies into character",
+          "Each borrow a little from the other's approach, starting with an honest conversation with Bram"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Overtime consent and record-keeping remain inadequate."
+      },
+      {
+        "question": "How does the company respond when the first reform milestone is missed?",
+        "options": [
+          "Private regret cannot repair reputational damage created through wider channels.",
+          "It reduces orders further despite lost revenue and unavailable products.",
+          "It enabled private martyrdom while another colleague received visible credit.",
+          "He ignored the larger cost created by postponing necessary criticism."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It reduces orders further despite lost revenue and unavailable products."
+      },
+      {
+        "question": "Why is the absence of a dramatic image relevant to the argument?",
+        "options": [
+          "Blind loyalty and enjoyment of accusatory moral drama.",
+          "Apparent authorship led the colleague to receive leadership of the initiative.",
+          "Serious reform consists of repeated administrative corrections rather than spectacle.",
+          "Truth can retain careful timing without being weakened."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Serious reform consists of repeated administrative corrections rather than spectacle."
+      },
+      {
+        "question": "How does reporting change after the experience?",
+        "options": [
+          "Delay judgment while preserving evidence and protecting vulnerable funds.",
+          "It preserved the injury for future use rather than resolving it.",
+          "Ask whether silence serves the listener or the speaker's comfort.",
+          "Claims shift from perfect ethics to standards, evidence, risks, and actions."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Claims shift from perfect ethics to standards, evidence, risks, and actions."
+      },
+      {
+        "question": "What organisational trait demonstrates consistency rather than branding?",
+        "options": [
+          "The same principle governs profitable and inconvenient suppliers.",
+          "Use proportionate procedures focused on repair, control, and affected stakeholders.",
+          "She misunderstood the framing yet still failed to correct sole authorship.",
+          "His silence protected him while Bram invested further in a failing plan."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: The same principle governs profitable and inconvenient suppliers."
+      },
+      {
+        "question": "Which cost makes the company's stated character materially credible?",
+        "options": [
+          "A careful investigative process can honour both duties simultaneously.",
+          "It accepts reduced revenue rather than quietly weakening its standard.",
+          "It names legitimate hurt before silence hardens it into character.",
+          "Honesty needs more care, while tact needs an earlier willingness to speak."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: It accepts reduced revenue rather than quietly weakening its standard."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-akhlak-10",
+    "title": "A Friend, a Rumour, and the Missing Context",
+    "level": "C1",
+    "themeId": "akhlak",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [serious] Your close friend tells you that a committee leader diverted donation money. He sounds certain and asks you to warn the community. What is your first responsibility?",
+      "Guest: Treat the allegation seriously without treating certainty of tone as proof. Ask what he directly knows, what documents exist, and which proper authority can investigate.",
+      "Moderator: Does loyalty require believing him immediately?",
+      "Guest: [carefully] Loyalty does not require broadcasting an unverified claim. It may require helping him preserve evidence, report safely, and avoid statements that exceed what he witnessed.",
+      "Moderator: Suppose he shows a transfer to the leader's personal account.",
+      "Guest: That is relevant evidence, but context still matters. It could be misuse, an authorised reimbursement, or an account temporarily used under a poor procedure. An independent reviewer should examine records and authority.",
+      "Moderator: What should the organisation tell donors while the review continues?",
+      "Guest: Enough to protect funds and explain the process, without naming people prematurely. Access may need temporary restriction, but precaution is not a final verdict.",
+      "Moderator: [curious] What if the allegation is confirmed?",
+      "Guest: Correct the accounts, pursue appropriate governance or legal steps, inform affected stakeholders, and repair the controls that allowed it. Avoid turning accountability into public humiliation.",
+      "Moderator: And if it is false?",
+      "Guest: Correct the rumour through the channels where it spread. A quiet private apology may not repair a public accusation.",
+      "Moderator: [reflective] Where does character appear in this case?",
+      "Guest: In resisting two temptations: protecting a friend or leader regardless of evidence, and enjoying the moral drama of accusation. Justice requires patience with facts and courage about consequences.",
+      "Moderator: Final principle?",
+      "Guest: Protect people from both financial abuse and reckless suspicion. Those duties compete only when our process is careless."
+    ],
+    "quiz": [
+      {
+        "question": "Why is a friend's confident tone insufficient grounds for warning the community?",
+        "options": [
+          "Confidence cannot substitute for direct knowledge and verifiable evidence.",
+          "It was presented to the board under a colleague's name",
+          "Dressing up cruelty in a respectable vocabulary",
+          "A disagreement over their father's house"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Confidence cannot substitute for direct knowledge and verifiable evidence."
+      },
+      {
+        "question": "What form of loyalty is compatible with evidential caution?",
+        "options": [
+          "It secretly flattered her to see herself as a martyr while resentment quietly grew",
+          "Help preserve records and report safely without exceeding witnessed facts.",
+          "He believed the timing would have crushed Bram unnecessarily",
+          "He had cared for their father in his final years"
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Help preserve records and report safely without exceeding witnessed facts."
+      },
+      {
+        "question": "Why does a transfer to a personal account remain inconclusive?",
+        "options": [
+          "The colleague was assigned to lead the initiative",
+          "Bram built three more months of momentum on a plan Rangga privately considered doomed",
+          "Misuse and authorised reimbursement can produce the same isolated record.",
+          "Pride"
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Misuse and authorised reimbursement can produce the same isolated record."
+      },
+      {
+        "question": "What does temporary access restriction signify during investigation?",
+        "options": [
+          "The colleague seemed genuinely unaware the framing implied sole authorship",
+          "She asks whether the silence serves the other person or only her own comfort",
+          "His own children asking why their uncle never visited",
+          "It is a precaution protecting funds, not a final finding of guilt."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: It is a precaution protecting funds, not a final finding of guilt."
+      },
+      {
+        "question": "How should confirmed misuse be addressed beyond correcting the accounts?",
+        "options": [
+          "Apply governance or legal remedies and repair enabling controls.",
+          "Minding honestly enough to say so before resentment calcifies into character",
+          "Each borrow a little from the other's approach, starting with an honest conversation with Bram",
+          "A grudging willingness to dial a number you have avoided for years"
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Apply governance or legal remedies and repair enabling controls."
+      },
+      {
+        "question": "Why must a false allegation be corrected publicly if it spread publicly?",
+        "options": [
+          "It enabled private martyrdom while another colleague received visible credit.",
+          "Private regret cannot repair reputational damage created through wider channels.",
+          "He ignored the larger cost created by postponing necessary criticism.",
+          "Past sacrifice seemed to entitle him to greater control of the house."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: Private regret cannot repair reputational damage created through wider channels."
+      },
+      {
+        "question": "Which two temptations threaten justice in opposite directions?",
+        "options": [
+          "Apparent authorship led the colleague to receive leadership of the initiative.",
+          "Truth can retain careful timing without being weakened.",
+          "Blind loyalty and enjoyment of accusatory moral drama.",
+          "Pride made both brothers wait indefinitely for the other's apology."
+        ],
+        "correctIndex": 2,
+        "explanation": "This interpretation follows the speaker's reasoning: Blind loyalty and enjoyment of accusatory moral drama."
+      },
+      {
+        "question": "What does patience with facts require once consequences are serious?",
+        "options": [
+          "It preserved the injury for future use rather than resolving it.",
+          "Ask whether silence serves the listener or the speaker's comfort.",
+          "His explanation sounds petty when translated into the family's present loss.",
+          "Delay judgment while preserving evidence and protecting vulnerable funds."
+        ],
+        "correctIndex": 3,
+        "explanation": "This interpretation follows the speaker's reasoning: Delay judgment while preserving evidence and protecting vulnerable funds."
+      },
+      {
+        "question": "How can accountability avoid becoming public humiliation?",
+        "options": [
+          "Use proportionate procedures focused on repair, control, and affected stakeholders.",
+          "She misunderstood the framing yet still failed to correct sole authorship.",
+          "His silence protected him while Bram invested further in a failing plan.",
+          "Reconciliation does not require complete agreement about property."
+        ],
+        "correctIndex": 0,
+        "explanation": "This interpretation follows the speaker's reasoning: Use proportionate procedures focused on repair, control, and affected stakeholders."
+      },
+      {
+        "question": "Why do protection from abuse and protection from suspicion only seem opposed?",
+        "options": [
+          "It names legitimate hurt before silence hardens it into character.",
+          "A careful investigative process can honour both duties simultaneously.",
+          "Honesty needs more care, while tact needs an earlier willingness to speak.",
+          "Restored brotherhood becomes more valuable than winning the original dispute."
+        ],
+        "correctIndex": 1,
+        "explanation": "This interpretation follows the speaker's reasoning: A careful investigative process can honour both duties simultaneously."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "akhlak",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

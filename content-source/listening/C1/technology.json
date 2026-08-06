@@ -6,28 +6,142 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [wry] Day four without my phone, and I've discovered the withdrawal isn't boredom so much as a phantom itch, my thumb twitching toward a pocket that no longer holds anything worth checking.",
-      "Narrator: [reflective] I hadn't expected the silence to feel so loud, if that makes any sense at all, this constant low hum of anticipated notifications that simply never arrives.",
-      "Narrator: [honest] What's most unsettling is realizing how much of my inner monologue had quietly outsourced itself to an audience, narrating my day as though someone were perpetually watching and about to be impressed.",
-      "Narrator: [candid] Without the phone, that narration has nowhere to go, and the silence it leaves behind is oddly disorienting, like a room with the furniture suddenly removed.",
-      "Narrator: [thoughtful] I've also noticed how quickly my attention span recalibrates once nothing is fragmenting it every few minutes; I finished an entire book yesterday without once reaching for a distraction.",
-      "Narrator: [surprised] I'd forgotten that reading could feel immersive rather than effortful, that a sentence could simply unfold without competing against forty other tabs open somewhere in my mind.",
-      "Narrator: [wry] My friends, predictably, assume I'm being dramatic, that this experiment says more about my particular relationship with technology than about technology itself.",
-      "Narrator: [defensive] Maybe that's fair. But I suspect plenty of people share this exact relationship and simply haven't had the discomfort of four days without the device to notice it.",
-      "Narrator: [conflicted] I won't pretend this has been purely liberating, either; I've missed messages that mattered, and there's a real cost to opting out of constant availability that I can't fully wave away.",
-      "Narrator: [determined] Still, when I return the phone to its normal place tomorrow, I want to be deliberate about which habits follow me back and which ones I finally leave behind.",
-      "Narrator: [resolved] Notifications, certainly, stay off. The narration in my head, I hope, stays quiet, addressed to no one but myself."
+      "Narrator: [thoughtful] Day four without my phone, and I've discovered the withdrawal isn't boredom so much as a phantom itch, my thumb twitching toward a pocket that no longer holds anything worth checking.",
+      "Narrator: I hadn't expected the silence to feel so loud, if that makes any sense at all, this constant low hum of anticipated notifications that simply never arrives.",
+      "Narrator: [carefully] What's most unsettling is realizing how much of my inner monologue had quietly outsourced itself to an audience, narrating my day as though someone were perpetually watching and about to be impressed.",
+      "Narrator: Without the phone, that narration has nowhere to go, and the silence it leaves behind is oddly disorienting, like a room with the furniture suddenly removed.",
+      "Narrator: [reflective] I've also noticed how quickly my attention span recalibrates once nothing is fragmenting it every few minutes; I finished an entire book yesterday without once reaching for a distraction.",
+      "Narrator: I'd forgotten that reading could feel immersive rather than effortful, that a sentence could simply unfold without competing against forty other tabs open somewhere in my mind.",
+      "Narrator: [honestly] My friends, predictably, assume I'm being dramatic, that this experiment says more about my particular relationship with technology than about technology itself.",
+      "Narrator: Maybe that's fair. But I suspect plenty of people share this exact relationship and simply haven't had the discomfort of four days without the device to notice it.",
+      "Narrator: [gently] I won't pretend this has been purely liberating, either; I've missed messages that mattered, and there's a real cost to opting out of constant availability that I can't fully wave away.",
+      "Narrator: Still, when I return the phone to its normal place tomorrow, I want to be deliberate about which habits follow me back and which ones I finally leave behind.",
+      "Narrator: [calmly] Notifications, certainly, stay off. The narration in my head, I hope, stays quiet, addressed to no one but myself."
     ],
     "quiz": [
-      { "question": "What does the narrator compare the withdrawal she feels to?", "options": ["Simple boredom", "A phantom itch, her thumb twitching toward an empty pocket", "Physical pain", "Anger at her friends"], "correctIndex": 1, "explanation": "She describes the withdrawal as a phantom itch rather than boredom, her thumb twitching toward a now-empty pocket." },
-      { "question": "What realization unsettles the narrator most?", "options": ["That she has no friends", "That her inner monologue had quietly outsourced itself to an imagined audience", "That her phone is broken", "That she cannot read anymore"], "correctIndex": 1, "explanation": "She realizes her inner monologue had been narrating her day for an imagined watching audience." },
-      { "question": "What did the narrator notice about her attention span?", "options": ["It got worse", "It recalibrated quickly once nothing fragmented it, letting her finish a whole book", "It disappeared entirely", "It had no change at all"], "correctIndex": 1, "explanation": "She noticed her attention span recalibrated quickly, allowing her to finish an entire book without distraction." },
-      { "question": "How do the narrator's friends react to her digital detox?", "options": ["They join her immediately", "They assume she is being dramatic", "They are frightened for her", "They ignore the topic entirely"], "correctIndex": 1, "explanation": "Her friends predictably assume she is being dramatic about the experiment." },
-      { "question": "Does the narrator describe the experience as purely positive?", "options": ["Yes, entirely liberating", "No, she acknowledges missing messages that mattered and a real cost to opting out", "She refuses to say", "She found it completely negative"], "correctIndex": 1, "explanation": "She admits she has missed messages that mattered and there's a real cost to opting out of constant availability." }
-    ]
+      {
+        "question": "What does the narrator compare the withdrawal she feels to?",
+        "options": [
+          "Simple boredom",
+          "A phantom itch, her thumb twitching toward an empty pocket",
+          "Physical pain",
+          "Anger at her friends"
+        ],
+        "correctIndex": 1,
+        "explanation": "She describes the withdrawal as a phantom itch rather than boredom, her thumb twitching toward a now-empty pocket."
+      },
+      {
+        "question": "What realization unsettles the narrator most?",
+        "options": [
+          "That she has no friends",
+          "That her phone is broken",
+          "That her inner monologue had quietly outsourced itself to an imagined audience",
+          "That she cannot read anymore"
+        ],
+        "correctIndex": 2,
+        "explanation": "She realizes her inner monologue had been narrating her day for an imagined watching audience."
+      },
+      {
+        "question": "What did the narrator notice about her attention span?",
+        "options": [
+          "It recalibrated quickly once nothing fragmented it, letting her finish a whole book",
+          "It got worse",
+          "It disappeared entirely",
+          "It had no change at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "She noticed her attention span recalibrated quickly, allowing her to finish an entire book without distraction."
+      },
+      {
+        "question": "How do the narrator's friends react to her digital detox?",
+        "options": [
+          "They assume she is being dramatic",
+          "They join her immediately",
+          "They are frightened for her",
+          "They ignore the topic entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her friends predictably assume she is being dramatic about the experiment."
+      },
+      {
+        "question": "Does the narrator describe the experience as purely positive?",
+        "options": [
+          "Yes, entirely liberating",
+          "She refuses to say",
+          "No, she acknowledges missing messages that mattered and a real cost to opting out",
+          "She found it completely negative"
+        ],
+        "correctIndex": 2,
+        "explanation": "She admits she has missed messages that mattered and there's a real cost to opting out of constant availability."
+      },
+      {
+        "question": "What does the narrator's 'phantom itch' most strongly suggest?",
+        "options": [
+          "Her phone has stopped receiving notifications permanently.",
+          "Her friends have forbidden her from using a phone.",
+          "She is bored because she has no books.",
+          "Her habit is bodily and automatic, not merely a choice to pass time."
+        ],
+        "correctIndex": 3,
+        "explanation": "Her thumb reaches toward an empty pocket before she has chosen to do so."
+      },
+      {
+        "question": "Why does the silence feel disorienting rather than simply peaceful?",
+        "options": [
+          "Her friends make noise during the experiment.",
+          "She expects every silence to contain a missed message.",
+          "The book she reads is difficult to understand.",
+          "The imagined audience for her daily life suddenly has nowhere to receive its narration."
+        ],
+        "correctIndex": 3,
+        "explanation": "She realises that she had silently performed her day for an assumed audience."
+      },
+      {
+        "question": "Which detail prevents the detox from becoming a simple argument against phones?",
+        "options": [
+          "She finishes an entire book without interruption.",
+          "She misses messages that matter and acknowledges the cost of opting out.",
+          "Her friends think she is being dramatic.",
+          "Her thumb reaches for an empty pocket."
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator weighs recovered focus against the real loss of availability."
+      },
+      {
+        "question": "What does the narrator intend to do when the phone returns?",
+        "options": [
+          "Restore every old habit to avoid missing messages.",
+          "Use it only for books and stop contacting friends.",
+          "Choose deliberately which habits return with it.",
+          "Keep it permanently outside the home."
+        ],
+        "correctIndex": 2,
+        "explanation": "She wants a deliberate return, not permanent abstinence or a thoughtless reset."
+      },
+      {
+        "question": "Which conclusion best captures the voice memo's central insight?",
+        "options": [
+          "Connectivity must be rejected to preserve concentration.",
+          "Attention and self-presentation can be reshaped by habitual phone use.",
+          "Friends are the main cause of digital distraction.",
+          "Missing a message is worse than losing focus."
+        ],
+        "correctIndex": 1,
+        "explanation": "The memo connects restored attention with a quieter inner life, while preserving real costs."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-technology-02",
@@ -36,34 +150,151 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Farhan", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Farhan",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [curious] Farhan, you've spent the last year using generative tools in your illustration work. Has it changed how you think about creativity itself?",
-      "Farhan: [thoughtful] Considerably, though not in the direction people usually assume. I expected to feel replaced. Instead I felt exposed, forced to articulate what I was actually contributing beyond craft.",
-      "Host: [probing] What do you mean by exposed?",
-      "Farhan: [candid] The model can render technique competently within seconds, something that took me years to develop. So if technique alone was my value, I'd genuinely have reason to worry.",
-      "Host: [interested] And is technique alone your value?",
-      "Farhan: [reflective] No, and realizing that was clarifying rather than comforting. What I actually offer is judgment, knowing which of a hundred generated options is worth pursuing and which is merely competent noise.",
-      "Host: [challenging] Couldn't that judgment eventually be modeled too, though? Taste seems learnable from enough examples.",
-      "Farhan: [conceding] Possibly, and I try not to be smug about human exceptionalism here. But taste, in my experience, is inseparable from consequence, from having actually failed publicly and revised your instincts accordingly.",
-      "Host: [curious] Meaning the model hasn't failed the way you have?",
-      "Farhan: [firm] Exactly. It has absorbed failure statistically, across millions of examples, but it hasn't lived through the humiliation of a bad exhibition or a client's disappointed silence. That texture matters more than I expected.",
-      "Host: [probing] Does that distinction hold up commercially, though, or is it mostly a philosophical comfort?",
-      "Farhan: [honest] Commercially it's shakier than I'd like to admit. Plenty of clients don't care where judgment came from, only that the output satisfies the brief on schedule and under budget.",
-      "Host: [interested] So where does that leave you?",
-      "Farhan: [determined] Positioning myself around the parts genuinely resistant to automation for now, ambiguous briefs, work requiring trust built over years, projects where the client actually wants a collaborator rather than a vending machine.",
-      "Host: [warmly] A pragmatic answer, if not an entirely reassuring one.",
-      "Farhan: [wry] Reassurance was never really on offer. Adaptation was the only honest option available to any of us."
+      "Host: [thoughtful] Farhan, you've spent the last year using generative tools in your illustration work. Has it changed how you think about creativity itself?",
+      "Farhan: Considerably, though not in the direction people usually assume. I expected to feel replaced. Instead I felt exposed, forced to articulate what I was actually contributing beyond craft.",
+      "Host: [carefully] What do you mean by exposed?",
+      "Farhan: The model can render technique competently within seconds, something that took me years to develop. So if technique alone was my value, I'd genuinely have reason to worry.",
+      "Host: [reflective] And is technique alone your value?",
+      "Farhan: No, and realizing that was clarifying rather than comforting. What I actually offer is judgment, knowing which of a hundred generated options is worth pursuing and which is merely competent noise.",
+      "Host: [honestly] Couldn't that judgment eventually be modeled too, though? Taste seems learnable from enough examples.",
+      "Farhan: Possibly, and I try not to be smug about human exceptionalism here. But taste, in my experience, is inseparable from consequence, from having actually failed publicly and revised your instincts accordingly.",
+      "Host: [gently] Meaning the model hasn't failed the way you have?",
+      "Farhan: Exactly. It has absorbed failure statistically, across millions of examples, but it hasn't lived through the humiliation of a bad exhibition or a client's disappointed silence. That texture matters more than I expected.",
+      "Host: [calmly] Does that distinction hold up commercially, though, or is it mostly a philosophical comfort?",
+      "Farhan: Commercially it's shakier than I'd like to admit. Plenty of clients don't care where judgment came from, only that the output satisfies the brief on schedule and under budget.",
+      "Host: [encouraging] So where does that leave you?",
+      "Farhan: Positioning myself around the parts genuinely resistant to automation for now, ambiguous briefs, work requiring trust built over years, projects where the client actually wants a collaborator rather than a vending machine.",
+      "Host: [seriously] A pragmatic answer, if not an entirely reassuring one.",
+      "Farhan: Reassurance was never really on offer. Adaptation was the only honest option available to any of us."
     ],
     "quiz": [
-      { "question": "How did Farhan feel after a year using generative tools, contrary to expectation?", "options": ["Completely replaced", "Exposed, forced to articulate what he actually contributed beyond craft", "Entirely unaffected", "Angry at the technology"], "correctIndex": 1, "explanation": "He expected to feel replaced but instead felt exposed, forced to define his real contribution beyond technique." },
-      { "question": "What does Farhan say the model can do within seconds?", "options": ["Feel genuine emotion", "Render technique competently, something that took him years to develop", "Fail publicly like a human", "Understand a client's true intentions"], "correctIndex": 1, "explanation": "He says the model can render competent technique within seconds, something he spent years developing." },
-      { "question": "What does Farhan say his actual value is, beyond technique?", "options": ["Speed of production", "Judgment, knowing which generated option is worth pursuing", "Lower pricing", "Marketing skills"], "correctIndex": 1, "explanation": "Farhan says his real value is judgment about which of many generated options is worth pursuing." },
-      { "question": "What does Farhan say the model has not experienced, unlike him?", "options": ["Large datasets", "The humiliation of a bad exhibition or a client's disappointed silence", "Public praise", "Financial success"], "correctIndex": 1, "explanation": "He says the model hasn't lived through the humiliation of a bad exhibition or a disappointed client, unlike him." },
-      { "question": "How does Farhan describe his strategy going forward?", "options": ["Ignoring the technology entirely", "Positioning himself around work resistant to automation, like ambiguous briefs and trust-based collaboration", "Quitting illustration completely", "Relying solely on generative tools"], "correctIndex": 1, "explanation": "He plans to focus on ambiguous briefs and projects where clients want a collaborator rather than a vending machine." }
-    ]
+      {
+        "question": "How did Farhan feel after a year using generative tools, contrary to expectation?",
+        "options": [
+          "Completely replaced",
+          "Exposed, forced to articulate what he actually contributed beyond craft",
+          "Entirely unaffected",
+          "Angry at the technology"
+        ],
+        "correctIndex": 1,
+        "explanation": "He expected to feel replaced but instead felt exposed, forced to define his real contribution beyond technique."
+      },
+      {
+        "question": "What does Farhan say the model can do within seconds?",
+        "options": [
+          "Feel genuine emotion",
+          "Fail publicly like a human",
+          "Render technique competently, something that took him years to develop",
+          "Understand a client's true intentions"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says the model can render competent technique within seconds, something he spent years developing."
+      },
+      {
+        "question": "What does Farhan say his actual value is, beyond technique?",
+        "options": [
+          "Judgment, knowing which generated option is worth pursuing",
+          "Speed of production",
+          "Lower pricing",
+          "Marketing skills"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farhan says his real value is judgment about which of many generated options is worth pursuing."
+      },
+      {
+        "question": "What does Farhan say the model has not experienced, unlike him?",
+        "options": [
+          "Large datasets",
+          "Public praise",
+          "Financial success",
+          "The humiliation of a bad exhibition or a client's disappointed silence"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says the model hasn't lived through the humiliation of a bad exhibition or a disappointed client, unlike him."
+      },
+      {
+        "question": "How does Farhan describe his strategy going forward?",
+        "options": [
+          "Ignoring the technology entirely",
+          "Quitting illustration completely",
+          "Relying solely on generative tools",
+          "Positioning himself around work resistant to automation, like ambiguous briefs and trust-based collaboration"
+        ],
+        "correctIndex": 3,
+        "explanation": "He plans to focus on ambiguous briefs and projects where clients want a collaborator rather than a vending machine."
+      },
+      {
+        "question": "Why does Farhan say the tools made him feel exposed rather than replaced?",
+        "options": [
+          "They made every client reject human collaborators.",
+          "They showed that his value could not rest on technique alone.",
+          "They prevented him from learning new techniques.",
+          "They proved that artistic judgment is unimportant."
+        ],
+        "correctIndex": 1,
+        "explanation": "The tools' rapid technical competence forced him to articulate his contribution beyond craft."
+      },
+      {
+        "question": "What does Farhan identify as his contribution beyond competent technique?",
+        "options": [
+          "Choosing which possibilities deserve to be developed",
+          "Rendering a larger number of images than a model",
+          "Avoiding projects with ambiguous briefs",
+          "Copying techniques from previous exhibitions"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farhan describes judgment as separating worthwhile possibilities from merely competent output."
+      },
+      {
+        "question": "How does Farhan distinguish lived judgment from a model's learned patterns?",
+        "options": [
+          "A model has more emotional reactions to clients than he does.",
+          "He believes models cannot process examples of failure.",
+          "He claims technical skill no longer matters.",
+          "A model learns statistically, while he has revised instincts through lived consequences."
+        ],
+        "correctIndex": 3,
+        "explanation": "Farhan contrasts statistically absorbed failure with personally lived public failure."
+      },
+      {
+        "question": "What commercial pressure qualifies Farhan's account of human judgment?",
+        "options": [
+          "Models cannot meet any commercial brief.",
+          "Clients always demand an artist's personal history.",
+          "Clients may care chiefly that a brief is met cheaply and on time.",
+          "Judgment is impossible to value commercially."
+        ],
+        "correctIndex": 2,
+        "explanation": "Farhan admits that some clients focus on satisfactory output, schedule, and budget."
+      },
+      {
+        "question": "What strategy does Farhan finally describe as realistic?",
+        "options": [
+          "Demanding that clients stop using generative tools",
+          "Proving human creativity is permanently unique",
+          "Returning to technique-only work",
+          "Focusing on ambiguous, trust-based work where collaboration matters"
+        ],
+        "correctIndex": 3,
+        "explanation": "He positions himself around ambiguity, long-built trust, and genuine collaboration rather than reassurance."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-technology-03",
@@ -72,28 +303,142 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [informative] Most people picture privacy violations as something dramatic, a hacker breaching a database, when the far more common version is quieter and considerably more mundane than that.",
-      "Narrator: [explanatory] It's the accumulation of small, seemingly harmless permissions granted over years, a fitness app here, a location setting there, each individually trivial and collectively revealing almost everything about a person's habits.",
-      "Narrator: [thoughtful] What surprised me most, when I actually requested my own data from a few major platforms, wasn't any single alarming entry but the sheer granularity of the pattern assembled from entries I'd forgotten existed.",
-      "Narrator: [reflective] The data didn't just know where I'd been; it inferred, with unsettling accuracy, where I was likely to be next, based on nothing more than accumulated routine.",
-      "Narrator: [candid] I'd always assumed that having nothing to hide made this irrelevant to me personally, a comforting phrase that collapses under any real scrutiny.",
-      "Narrator: [firm] The issue was never really about hiding wrongdoing; it's about who gets to shape the inferences made about you, often for purposes you never consented to and can't meaningfully see.",
-      "Narrator: [informative] A pattern of searches about a health condition, aggregated with purchasing habits and location data, can produce conclusions considerably more invasive than any single data point suggests on its own.",
-      "Narrator: [pragmatic] I'm not advocating for abandoning technology entirely; that ship has sailed for most of us, and the convenience genuinely matters.",
-      "Narrator: [determined] But I have started auditing permissions quarterly now, revoking access that no longer serves an obvious purpose, and reading at least the summary of what I'm agreeing to rather than scrolling straight to accept.",
-      "Narrator: [honest] It's tedious, admittedly, and I doubt most people will adopt the habit widely without stronger incentives or regulation forcing the issue.",
-      "Narrator: [with resolve] Still, the small discipline of occasionally checking what you've quietly agreed to feels like the minimum an informed adult owes their own privacy in this particular era."
+      "Narrator: [thoughtful] Most people picture privacy violations as something dramatic, a hacker breaching a database, when the far more common version is quieter and considerably more mundane than that.",
+      "Narrator: It's the accumulation of small, seemingly harmless permissions granted over years, a fitness app here, a location setting there, each individually trivial and collectively revealing almost everything about a person's habits.",
+      "Narrator: [carefully] What surprised me most, when I actually requested my own data from a few major platforms, wasn't any single alarming entry but the sheer granularity of the pattern assembled from entries I'd forgotten existed.",
+      "Narrator: The data didn't just know where I'd been; it inferred, with unsettling accuracy, where I was likely to be next, based on nothing more than accumulated routine.",
+      "Narrator: [reflective] I'd always assumed that having nothing to hide made this irrelevant to me personally, a comforting phrase that collapses under any real scrutiny.",
+      "Narrator: The issue was never really about hiding wrongdoing; it's about who gets to shape the inferences made about you, often for purposes you never consented to and can't meaningfully see.",
+      "Narrator: [honestly] A pattern of searches about a health condition, aggregated with purchasing habits and location data, can produce conclusions considerably more invasive than any single data point suggests on its own.",
+      "Narrator: I'm not advocating for abandoning technology entirely; that ship has sailed for most of us, and the convenience genuinely matters.",
+      "Narrator: [gently] But I have started auditing permissions quarterly now, revoking access that no longer serves an obvious purpose, and reading at least the summary of what I'm agreeing to rather than scrolling straight to accept.",
+      "Narrator: It's tedious, admittedly, and I doubt most people will adopt the habit widely without stronger incentives or regulation forcing the issue.",
+      "Narrator: [calmly] Still, the small discipline of occasionally checking what you've quietly agreed to feels like the minimum an informed adult owes their own privacy in this particular era."
     ],
     "quiz": [
-      { "question": "How does the narrator say most people picture privacy violations?", "options": ["As slow and gradual", "As something dramatic, like a hacker breaching a database", "As entirely fictional", "As mostly harmless"], "correctIndex": 1, "explanation": "He says most people picture something dramatic like a database breach, when the reality is quieter." },
-      { "question": "What surprised the narrator most when he requested his own data?", "options": ["A single alarming entry", "The sheer granularity of the pattern assembled from entries he'd forgotten existed", "That the platforms had no data on him", "That the data was inaccurate"], "correctIndex": 1, "explanation": "He was surprised not by one alarming entry but by the granularity of the overall pattern." },
-      { "question": "What does the narrator say the data could predict, beyond his past locations?", "options": ["His exact income", "Where he was likely to be next, based on accumulated routine", "His future career", "Nothing beyond history"], "correctIndex": 1, "explanation": "He says the data inferred where he was likely to be next based on accumulated routine." },
-      { "question": "What does the narrator say the real issue with data collection is?", "options": ["Hiding wrongdoing", "Who gets to shape the inferences made about you without meaningful consent", "The cost of data storage", "Slow app performance"], "correctIndex": 1, "explanation": "He says the issue is about who shapes inferences about you, not about hiding wrongdoing." },
-      { "question": "What habit has the narrator adopted regarding his data?", "options": ["Deleting all his accounts", "Auditing permissions quarterly and revoking unnecessary access", "Ignoring the issue completely", "Only using offline devices"], "correctIndex": 1, "explanation": "He now audits permissions quarterly, revoking access that no longer serves an obvious purpose." }
-    ]
+      {
+        "question": "How does the narrator say most people picture privacy violations?",
+        "options": [
+          "As something dramatic, like a hacker breaching a database",
+          "As slow and gradual",
+          "As entirely fictional",
+          "As mostly harmless"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says most people picture something dramatic like a database breach, when the reality is quieter."
+      },
+      {
+        "question": "What surprised the narrator most when he requested his own data?",
+        "options": [
+          "A single alarming entry",
+          "The sheer granularity of the pattern assembled from entries he'd forgotten existed",
+          "That the platforms had no data on him",
+          "That the data was inaccurate"
+        ],
+        "correctIndex": 1,
+        "explanation": "He was surprised not by one alarming entry but by the granularity of the overall pattern."
+      },
+      {
+        "question": "What does the narrator say the data could predict, beyond his past locations?",
+        "options": [
+          "Where he was likely to be next, based on accumulated routine",
+          "His exact income",
+          "His future career",
+          "Nothing beyond history"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says the data inferred where he was likely to be next based on accumulated routine."
+      },
+      {
+        "question": "What does the narrator say the real issue with data collection is?",
+        "options": [
+          "Hiding wrongdoing",
+          "The cost of data storage",
+          "Slow app performance",
+          "Who gets to shape the inferences made about you without meaningful consent"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says the issue is about who shapes inferences about you, not about hiding wrongdoing."
+      },
+      {
+        "question": "What habit has the narrator adopted regarding his data?",
+        "options": [
+          "Auditing permissions quarterly and revoking unnecessary access",
+          "Deleting all his accounts",
+          "Ignoring the issue completely",
+          "Only using offline devices"
+        ],
+        "correctIndex": 0,
+        "explanation": "He now audits permissions quarterly, revoking access that no longer serves an obvious purpose."
+      },
+      {
+        "question": "Why does the narrator challenge the phrase 'nothing to hide'?",
+        "options": [
+          "It makes privacy protections more expensive.",
+          "It ignores who can construct unchosen inferences about a person.",
+          "It proves people should stop using all technology.",
+          "It applies only to people with financial secrets."
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator says the problem is control over inferred conclusions, not hiding wrongdoing."
+      },
+      {
+        "question": "Why is the health-search example more serious than a single permission request?",
+        "options": [
+          "One permission automatically reveals a medical diagnosis.",
+          "Location settings are more dangerous than all other data.",
+          "Combined data can produce invasive conclusions beyond any individual data point.",
+          "Search data never requires consent."
+        ],
+        "correctIndex": 2,
+        "explanation": "The point is the compounded inference created by aggregation, not one isolated item."
+      },
+      {
+        "question": "What is the narrator's practical response to the problem?",
+        "options": [
+          "He audits permissions and removes access without an obvious purpose.",
+          "He deletes every account immediately.",
+          "He waits for a hacker to expose the risk.",
+          "He shares more data to understand the pattern."
+        ],
+        "correctIndex": 3,
+        "explanation": "He adopts a regular audit and reads summaries rather than accepting blindly."
+      },
+      {
+        "question": "What limitation does the narrator acknowledge about individual privacy discipline?",
+        "options": [
+          "It makes regulation unnecessary.",
+          "It guarantees that platforms cannot infer anything.",
+          "Most people may not sustain it without stronger incentives or regulation.",
+          "It requires users to understand all technical code."
+        ],
+        "correctIndex": 2,
+        "explanation": "He calls the habit tedious and doubts it will spread widely without structural pressure."
+      },
+      {
+        "question": "Which conclusion best represents the narrator's position?",
+        "options": [
+          "Technology should be abandoned to protect privacy.",
+          "Convenience outweighs any concern about data inference.",
+          "Only regulation, never personal action, can matter.",
+          "People should make informed checks while recognising the need for wider safeguards."
+        ],
+        "correctIndex": 0,
+        "explanation": "He preserves technology's convenience while arguing for informed habits and stronger incentives."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-technology-04",
@@ -102,34 +447,151 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Laila", "gender": "female" },
-      { "name": "Mother", "gender": "female" }
+      {
+        "name": "Laila",
+        "gender": "female"
+      },
+      {
+        "name": "Mother",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Laila: [pleading] Everyone in my class already has an account. I'm the only one who has to ask permission for literally everything.",
-      "Mother: [calm] I hear that, and I know it's frustrating to feel excluded from something so ordinary to your friends.",
-      "Laila: [frustrated] Then why not just let me? It's not like I'm asking for something dangerous, it's just a place to chat and share pictures.",
-      "Mother: [measured] It's not that I think you're being reckless, Laila. It's that these platforms are designed, deliberately, by people whose job is to keep you scrolling far longer than you'd choose to on your own.",
-      "Laila: [skeptical] That sounds like something from an article, not something that actually applies to me.",
-      "Mother: [gentle] Maybe. But I've watched adults, myself included, get pulled into scrolling for an hour we didn't intend to spend, and we're supposedly better at resisting it than a thirteen-year-old.",
-      "Laila: [defensive] So you just don't trust me.",
-      "Mother: [firm] It's less about trust and more about the fact that the platform is engineered against anyone's willpower, adult or otherwise. That's a design problem, not a character flaw of yours.",
-      "Laila: [quieter] Okay, but what am I supposed to tell my friends? That my mom thinks I can't handle it?",
-      "Mother: [thoughtful] Tell them your family does things differently, and that it's not a judgment of them. Or, if that's too awkward, I'll happily be the villain here, that's a role I can absorb.",
-      "Laila: [half-smiling] You're annoyingly comfortable being the villain.",
-      "Mother: [warmly] Years of practice. Here's what I'll offer, though: we set it up together, with the privacy settings locked down properly, and a shared understanding of what you'll actually use it for.",
-      "Laila: [surprised] Wait, so you're saying yes?",
-      "Mother: [measured] I'm saying conditionally yes, with boundaries neither of us skips because we're tired one evening. Does that sound fair?",
-      "Laila: [relieved] Fair enough. Thank you for actually listening instead of just saying no outright.",
-      "Mother: [gently] That's the deal I want with you generally, not just about apps. Come to me before you assume the answer's no."
+      "Laila: [thoughtful] Everyone in my class already has an account. I'm the only one who has to ask permission for literally everything.",
+      "Mother: I hear that, and I know it's frustrating to feel excluded from something so ordinary to your friends.",
+      "Laila: [carefully] Then why not just let me? It's not like I'm asking for something dangerous, it's just a place to chat and share pictures.",
+      "Mother: It's not that I think you're being reckless, Laila. It's that these platforms are designed, deliberately, by people whose job is to keep you scrolling far longer than you'd choose to on your own.",
+      "Laila: [reflective] That sounds like something from an article, not something that actually applies to me.",
+      "Mother: Maybe. But I've watched adults, myself included, get pulled into scrolling for an hour we didn't intend to spend, and we're supposedly better at resisting it than a thirteen-year-old.",
+      "Laila: [honestly] So you just don't trust me.",
+      "Mother: It's less about trust and more about the fact that the platform is engineered against anyone's willpower, adult or otherwise. That's a design problem, not a character flaw of yours.",
+      "Laila: [gently] Okay, but what am I supposed to tell my friends? That my mom thinks I can't handle it?",
+      "Mother: Tell them your family does things differently, and that it's not a judgment of them. Or, if that's too awkward, I'll happily be the villain here, that's a role I can absorb.",
+      "Laila: [calmly] You're annoyingly comfortable being the villain.",
+      "Mother: Years of practice. Here's what I'll offer, though: we set it up together, with the privacy settings locked down properly, and a shared understanding of what you'll actually use it for.",
+      "Laila: [encouraging] Wait, so you're saying yes?",
+      "Mother: I'm saying conditionally yes, with boundaries neither of us skips because we're tired one evening. Does that sound fair?",
+      "Laila: [seriously] Fair enough. Thank you for actually listening instead of just saying no outright.",
+      "Mother: That's the deal I want with you generally, not just about apps. Come to me before you assume the answer's no."
     ],
     "quiz": [
-      { "question": "What is Laila's initial complaint to her mother?", "options": ["She wants a new phone", "She is the only one in her class who has to ask permission for everything, including the app", "She wants to skip school", "She dislikes her friends"], "correctIndex": 1, "explanation": "Laila complains she is the only one who has to ask permission for something so ordinary to her friends." },
-      { "question": "What is the mother's main concern about the platform?", "options": ["It costs too much money", "It is deliberately designed to keep users scrolling longer than they'd choose to", "It has too many advertisements", "It requires too much storage space"], "correctIndex": 1, "explanation": "The mother explains the platform is engineered to keep users scrolling far longer than intended." },
-      { "question": "How does the mother respond when Laila says she doesn't trust her?", "options": ["She agrees she doesn't trust Laila", "She clarifies it's a design problem affecting anyone's willpower, not a character flaw", "She ends the conversation", "She apologizes and drops the issue"], "correctIndex": 1, "explanation": "The mother says it's about the platform being engineered against anyone's willpower, not a character flaw of Laila's." },
-      { "question": "What example does the mother give to support her point?", "options": ["A news report she read", "Watching adults, including herself, get pulled into scrolling for an hour unintentionally", "A study she conducted", "Advice from a friend"], "correctIndex": 1, "explanation": "The mother mentions watching adults, herself included, get pulled into unintended scrolling despite supposedly greater resistance." },
-      { "question": "What is the final agreement between Laila and her mother?", "options": ["A firm no", "Conditional yes, setting it up together with proper privacy settings and shared boundaries", "Unrestricted access", "Laila must wait one more year"], "correctIndex": 1, "explanation": "The mother offers a conditional yes, setting up the account together with privacy settings and shared boundaries." }
-    ]
+      {
+        "question": "What is Laila's initial complaint to her mother?",
+        "options": [
+          "She is the only one in her class who has to ask permission for everything, including the app",
+          "She wants a new phone",
+          "She wants to skip school",
+          "She dislikes her friends"
+        ],
+        "correctIndex": 0,
+        "explanation": "Laila complains she is the only one who has to ask permission for something so ordinary to her friends."
+      },
+      {
+        "question": "What is the mother's main concern about the platform?",
+        "options": [
+          "It costs too much money",
+          "It has too many advertisements",
+          "It is deliberately designed to keep users scrolling longer than they'd choose to",
+          "It requires too much storage space"
+        ],
+        "correctIndex": 2,
+        "explanation": "The mother explains the platform is engineered to keep users scrolling far longer than intended."
+      },
+      {
+        "question": "How does the mother respond when Laila says she doesn't trust her?",
+        "options": [
+          "She agrees she doesn't trust Laila",
+          "She ends the conversation",
+          "She apologizes and drops the issue",
+          "She clarifies it's a design problem affecting anyone's willpower, not a character flaw"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mother says it's about the platform being engineered against anyone's willpower, not a character flaw of Laila's."
+      },
+      {
+        "question": "What example does the mother give to support her point?",
+        "options": [
+          "A news report she read",
+          "A study she conducted",
+          "Advice from a friend",
+          "Watching adults, including herself, get pulled into scrolling for an hour unintentionally"
+        ],
+        "correctIndex": 3,
+        "explanation": "The mother mentions watching adults, herself included, get pulled into unintended scrolling despite supposedly greater resistance."
+      },
+      {
+        "question": "What is the final agreement between Laila and her mother?",
+        "options": [
+          "A firm no",
+          "Conditional yes, setting it up together with proper privacy settings and shared boundaries",
+          "Unrestricted access",
+          "Laila must wait one more year"
+        ],
+        "correctIndex": 1,
+        "explanation": "The mother offers a conditional yes, setting up the account together with privacy settings and shared boundaries."
+      },
+      {
+        "question": "Why does the parent frame the concern as a design problem?",
+        "correctIndex": 0,
+        "options": [
+          "Platforms are engineered to capture attention beyond willpower.",
+          "Laila has already broken rules.",
+          "Her friends are behaving badly.",
+          "Privacy settings never matter."
+        ],
+        "explanation": "The parent separates platform incentives from a judgment about Laila’s character."
+      },
+      {
+        "question": "What makes the parent’s response conditional rather than simply permissive?",
+        "correctIndex": 1,
+        "options": [
+          "Laila must persuade all her friends.",
+          "They will set it up together with clear privacy boundaries.",
+          "The parent will check every message.",
+          "Laila must avoid all online contact."
+        ],
+        "explanation": "The proposed account includes joint setup, locked privacy settings, and agreed purposes."
+      },
+      {
+        "question": "What does the parent’s willingness to be “the villain” accomplish?",
+        "correctIndex": 2,
+        "options": [
+          "It proves she dislikes technology.",
+          "It shifts responsibility entirely to Laila.",
+          "It protects Laila from presenting the rule as a judgment of friends.",
+          "It ends the conversation immediately."
+        ],
+        "explanation": "She offers to absorb social discomfort while keeping the family boundary."
+      },
+      {
+        "question": "What does Laila’s final response suggest about the conversation?",
+        "correctIndex": 0,
+        "options": [
+          "Being heard made a boundary easier to accept.",
+          "She has stopped wanting contact with friends.",
+          "She believes every app is harmless.",
+          "She expects no rules at all."
+        ],
+        "explanation": "Laila thanks her parent for listening rather than dismissing the request."
+      },
+      {
+        "question": "What wider parenting principle closes the dialogue?",
+        "correctIndex": 1,
+        "options": [
+          "Parents should approve every request.",
+          "Children should ask before assuming the answer is no.",
+          "Friends should set family rules.",
+          "Privacy can replace conversation."
+        ],
+        "explanation": "The parent invites future discussion instead of turning one rule into a permanent refusal."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-technology-05",
@@ -138,27 +600,141 @@
     "themeId": "technology",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I have several hundred contacts saved on my phone, and on a difficult evening last month, I scrolled through nearly all of them without finding a single person I felt comfortable calling.",
-      "Narrator: [honest] That realization was more disorienting than any single lonely night could have been on its own, this sense of being extensively connected while genuinely unreachable.",
-      "Narrator: [thoughtful] It isn't that these connections are fake, exactly. Most of them are perfectly real, colleagues, old classmates, people I genuinely like when we happen to cross paths.",
-      "Narrator: [analytical] What's missing isn't the quantity of relationships but their depth, the accumulated history of showing up for someone repeatedly, in unglamorous, inconvenient ways, until trust becomes something sturdier than familiarity.",
-      "Narrator: [candid] Messaging apps make it deceptively easy to maintain the appearance of closeness, a reaction here, a birthday message there, without ever doing the harder work that closeness actually requires.",
-      "Narrator: [wry] I've mistaken that low-effort maintenance for genuine intimacy more times than I'd like to admit, right up until I needed something real and discovered the friendship couldn't bear the weight.",
-      "Narrator: [reflective] There's research suggesting this isn't merely my own failing, that the sheer volume of shallow interaction technology enables can crowd out the narrower, more demanding kind that sustains people through actual crises.",
-      "Narrator: [determined] So I've started being deliberately unfashionable about it, calling instead of texting, showing up in person even when it's inconvenient, allowing conversations to be awkward rather than curated.",
-      "Narrator: [honest] It's slower, and considerably more vulnerable, since you can't edit a phone call the way you can edit a message before sending it.",
-      "Narrator: [warmly] But three months into this deliberate shift, I have perhaps five people I'd actually call at 2 a.m., which sounds modest until you remember I once had none."
+      "Narrator: [thoughtful] I have several hundred contacts saved on my phone, and on a difficult evening last month, I scrolled through nearly all of them without finding a single person I felt comfortable calling.",
+      "Narrator: That realization was more disorienting than any single lonely night could have been on its own, this sense of being extensively connected while genuinely unreachable.",
+      "Narrator: [carefully] It isn't that these connections are fake, exactly. Most of them are perfectly real, colleagues, old classmates, people I genuinely like when we happen to cross paths.",
+      "Narrator: What's missing isn't the quantity of relationships but their depth, the accumulated history of showing up for someone repeatedly, in unglamorous, inconvenient ways, until trust becomes something sturdier than familiarity.",
+      "Narrator: [reflective] Messaging apps make it deceptively easy to maintain the appearance of closeness, a reaction here, a birthday message there, without ever doing the harder work that closeness actually requires.",
+      "Narrator: I've mistaken that low-effort maintenance for genuine intimacy more times than I'd like to admit, right up until I needed something real and discovered the friendship couldn't bear the weight.",
+      "Narrator: [honestly] There's research suggesting this isn't merely my own failing, that the sheer volume of shallow interaction technology enables can crowd out the narrower, more demanding kind that sustains people through actual crises.",
+      "Narrator: So I've started being deliberately unfashionable about it, calling instead of texting, showing up in person even when it's inconvenient, allowing conversations to be awkward rather than curated.",
+      "Narrator: [gently] It's slower, and considerably more vulnerable, since you can't edit a phone call the way you can edit a message before sending it.",
+      "Narrator: But three months into this deliberate shift, I have perhaps five people I'd actually call at 2 a.m., which sounds modest until you remember I once had none."
     ],
     "quiz": [
-      { "question": "What happened when the narrator scrolled through her contacts on a difficult evening?", "options": ["She found many people to call", "She couldn't find a single person she felt comfortable calling, despite having hundreds of contacts", "She deleted her contacts app", "She called her mother immediately"], "correctIndex": 1, "explanation": "She scrolled through nearly all her contacts without finding a single person she felt comfortable calling." },
-      { "question": "What does the narrator say is actually missing from her connections?", "options": ["The quantity of relationships", "The depth, the accumulated history of showing up for someone repeatedly", "Physical proximity", "Shared interests"], "correctIndex": 1, "explanation": "She says what's missing isn't quantity but depth, the accumulated history of consistently showing up for someone." },
-      { "question": "What does the narrator say messaging apps make deceptively easy?", "options": ["Building real trust", "Maintaining the appearance of closeness without doing the harder work closeness requires", "Avoiding people entirely", "Making phone calls"], "correctIndex": 1, "explanation": "She says messaging apps make it easy to maintain the appearance of closeness without genuine effort." },
-      { "question": "What research does the narrator mention?", "options": ["Research proving technology has no effect on relationships", "Research suggesting shallow interaction can crowd out the deeper kind that sustains people through crises", "Research about phone battery life", "Research about app design colors"], "correctIndex": 1, "explanation": "She cites research suggesting the volume of shallow interaction can crowd out deeper, more demanding connection." },
-      { "question": "What change has the narrator made deliberately?", "options": ["Deleting all social media", "Calling instead of texting and showing up in person, even when inconvenient", "Buying a new phone", "Avoiding all contact with old friends"], "correctIndex": 1, "explanation": "She has started calling instead of texting and showing up in person, allowing conversations to be less curated." }
-    ]
+      {
+        "question": "What happened when the narrator scrolled through her contacts on a difficult evening?",
+        "options": [
+          "She found many people to call",
+          "She deleted her contacts app",
+          "She couldn't find a single person she felt comfortable calling, despite having hundreds of contacts",
+          "She called her mother immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "She scrolled through nearly all her contacts without finding a single person she felt comfortable calling."
+      },
+      {
+        "question": "What does the narrator say is actually missing from her connections?",
+        "options": [
+          "The quantity of relationships",
+          "Physical proximity",
+          "Shared interests",
+          "The depth, the accumulated history of showing up for someone repeatedly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says what's missing isn't quantity but depth, the accumulated history of consistently showing up for someone."
+      },
+      {
+        "question": "What does the narrator say messaging apps make deceptively easy?",
+        "options": [
+          "Building real trust",
+          "Maintaining the appearance of closeness without doing the harder work closeness requires",
+          "Avoiding people entirely",
+          "Making phone calls"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says messaging apps make it easy to maintain the appearance of closeness without genuine effort."
+      },
+      {
+        "question": "What research does the narrator mention?",
+        "options": [
+          "Research proving technology has no effect on relationships",
+          "Research about phone battery life",
+          "Research suggesting shallow interaction can crowd out the deeper kind that sustains people through crises",
+          "Research about app design colors"
+        ],
+        "correctIndex": 2,
+        "explanation": "She cites research suggesting the volume of shallow interaction can crowd out deeper, more demanding connection."
+      },
+      {
+        "question": "What change has the narrator made deliberately?",
+        "options": [
+          "Calling instead of texting and showing up in person, even when inconvenient",
+          "Deleting all social media",
+          "Buying a new phone",
+          "Avoiding all contact with old friends"
+        ],
+        "correctIndex": 0,
+        "explanation": "She has started calling instead of texting and showing up in person, allowing conversations to be less curated."
+      },
+      {
+        "question": "Why do many saved contacts fail to relieve the narrator’s loneliness?",
+        "correctIndex": 0,
+        "options": [
+          "Familiarity lacks the repeated, inconvenient care that builds trust.",
+          "The contacts are all fictional.",
+          "Phones prevent people from talking.",
+          "The narrator dislikes every colleague."
+        ],
+        "explanation": "The monologue contrasts quantity with the history of showing up that creates dependable closeness."
+      },
+      {
+        "question": "What does the narrator say low-effort messaging can disguise?",
+        "correctIndex": 1,
+        "options": [
+          "A stronger family bond.",
+          "The absence of the harder work intimacy requires.",
+          "A lack of internet access.",
+          "A preference for phone calls."
+        ],
+        "explanation": "Reactions and birthday messages can simulate maintenance without deepening a relationship."
+      },
+      {
+        "question": "How does the research claim support the narrator’s reflection?",
+        "correctIndex": 0,
+        "options": [
+          "High volumes of shallow interaction may crowd out sustaining relationships.",
+          "Technology makes all friendships false.",
+          "Crises are caused by messaging apps.",
+          "People need hundreds of contacts."
+        ],
+        "explanation": "The research is used to show that the problem may be structural as well as personal."
+      },
+      {
+        "question": "Why does calling feel more vulnerable than texting?",
+        "correctIndex": 1,
+        "options": [
+          "It requires public attention.",
+          "A live conversation cannot be carefully edited before it reaches someone.",
+          "It guarantees agreement.",
+          "It removes awkwardness."
+        ],
+        "explanation": "The narrator values the less curated, more exposed form of contact."
+      },
+      {
+        "question": "What outcome best measures the narrator’s change?",
+        "correctIndex": 3,
+        "options": [
+          "A larger contact list.",
+          "Fewer awkward conversations.",
+          "More frequent reactions online.",
+          "Having several people to call in a real crisis."
+        ],
+        "explanation": "The meaningful gain is a small number of trustworthy relationships, not maximum reach."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-technology-06",
@@ -167,30 +743,147 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dedi", "gender": "male" },
-      { "name": "Wulan", "gender": "female" }
+      {
+        "name": "Dedi",
+        "gender": "male"
+      },
+      {
+        "name": "Wulan",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Dedi: [uneasy] I finished the quarterly report in twenty minutes today. The assistant drafted most of it, I just edited the framing.",
-      "Wulan: [amused] That sounds like a good problem to have, more time for everything else.",
-      "Dedi: [conflicted] It should feel that way, but instead I spent the rest of the afternoon vaguely anxious, wondering what exactly I'm being paid for if the drafting itself takes no real skill anymore.",
-      "Wulan: [thoughtful] I've had that same unease. Though I wonder if we're mourning a version of the job that was already partly obsolete, all that time spent formatting rather than actually deciding anything.",
-      "Dedi: [considering] Maybe. But formatting felt like proof of effort, something tangible I could point to at the end of a long day.",
-      "Wulan: [pointed] Proof of effort isn't the same as proof of value, though. Nobody's paying us to look busy, however satisfying that used to feel.",
-      "Dedi: [candid] That's uncomfortably accurate. I think what actually unsettles me is that the parts I now spend my time on, judgment calls, prioritizing, pushing back on assumptions, are much harder to point to at a glance.",
-      "Wulan: [agreeing] They're invisible labor, essentially. Nobody applauds you for deciding not to pursue a flawed strategy; they just never see the disaster that didn't happen.",
-      "Dedi: [worried] Which makes me wonder how replaceable that invisible labor actually is, longer term, once the tools get better at anticipating those judgment calls too.",
-      "Wulan: [measured] Possibly, eventually. But someone still has to own the consequences of a wrong call, and I doubt organizations will ever let an algorithm absorb that kind of accountability entirely.",
-      "Dedi: [reflective] Accountability as the last human job. That's a strange thing to find reassuring, and yet somehow it is.",
-      "Wulan: [wry] Reassuring, or at least a decent argument for demanding a raise now that we're apparently the ones holding the risk."
+      "Dedi: [thoughtful] I finished the quarterly report in twenty minutes today. The assistant drafted most of it, I just edited the framing.",
+      "Wulan: That sounds like a good problem to have, more time for everything else.",
+      "Dedi: [carefully] It should feel that way, but instead I spent the rest of the afternoon vaguely anxious, wondering what exactly I'm being paid for if the drafting itself takes no real skill anymore.",
+      "Wulan: I've had that same unease. Though I wonder if we're mourning a version of the job that was already partly obsolete, all that time spent formatting rather than actually deciding anything.",
+      "Dedi: [reflective] Maybe. But formatting felt like proof of effort, something tangible I could point to at the end of a long day.",
+      "Wulan: Proof of effort isn't the same as proof of value, though. Nobody's paying us to look busy, however satisfying that used to feel.",
+      "Dedi: [honestly] That's uncomfortably accurate. I think what actually unsettles me is that the parts I now spend my time on, judgment calls, prioritizing, pushing back on assumptions, are much harder to point to at a glance.",
+      "Wulan: They're invisible labor, essentially. Nobody applauds you for deciding not to pursue a flawed strategy; they just never see the disaster that didn't happen.",
+      "Dedi: [gently] Which makes me wonder how replaceable that invisible labor actually is, longer term, once the tools get better at anticipating those judgment calls too.",
+      "Wulan: Possibly, eventually. But someone still has to own the consequences of a wrong call, and I doubt organizations will ever let an algorithm absorb that kind of accountability entirely.",
+      "Dedi: [calmly] Accountability as the last human job. That's a strange thing to find reassuring, and yet somehow it is.",
+      "Wulan: Reassuring, or at least a decent argument for demanding a raise now that we're apparently the ones holding the risk."
     ],
     "quiz": [
-      { "question": "How long did it take Dedi to finish the quarterly report, and why?", "options": ["Three hours, using his usual method", "Twenty minutes, because the assistant drafted most of it", "All day, due to technical problems", "One week, working with a team"], "correctIndex": 1, "explanation": "Dedi finished the report in twenty minutes because the AI assistant drafted most of it." },
-      { "question": "How did Dedi feel after finishing the report so quickly?", "options": ["Purely relieved", "Vaguely anxious, wondering what he is being paid for", "Angry at his manager", "Bored and indifferent"], "correctIndex": 1, "explanation": "He spent the afternoon vaguely anxious, questioning what he's paid for if drafting requires no real skill anymore." },
-      { "question": "What does Wulan suggest they might be mourning?", "options": ["A pay raise", "A version of the job that was already partly obsolete, focused on formatting rather than deciding", "Their old office", "A previous manager"], "correctIndex": 1, "explanation": "Wulan wonders if they're mourning a version of the job already partly obsolete, centered on formatting rather than decisions." },
-      { "question": "What does Wulan say about proof of effort versus proof of value?", "options": ["They are the same thing", "Proof of effort isn't the same as proof of value; nobody pays them to look busy", "Effort no longer matters at all", "Value is impossible to measure"], "correctIndex": 1, "explanation": "Wulan points out proof of effort isn't proof of value, and nobody is paid simply to look busy." },
-      { "question": "What do Dedi and Wulan conclude might remain a distinctly human role?", "options": ["Formatting documents", "Owning the consequences and accountability of a wrong judgment call", "Typing speed", "Attending meetings"], "correctIndex": 1, "explanation": "They conclude accountability for consequences may remain the last distinctly human job, as organizations won't let an algorithm absorb it." }
-    ]
+      {
+        "question": "How long did it take Dedi to finish the quarterly report, and why?",
+        "options": [
+          "Three hours, using his usual method",
+          "All day, due to technical problems",
+          "One week, working with a team",
+          "Twenty minutes, because the assistant drafted most of it"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dedi finished the report in twenty minutes because the AI assistant drafted most of it."
+      },
+      {
+        "question": "How did Dedi feel after finishing the report so quickly?",
+        "options": [
+          "Vaguely anxious, wondering what he is being paid for",
+          "Purely relieved",
+          "Angry at his manager",
+          "Bored and indifferent"
+        ],
+        "correctIndex": 0,
+        "explanation": "He spent the afternoon vaguely anxious, questioning what he's paid for if drafting requires no real skill anymore."
+      },
+      {
+        "question": "What does Wulan suggest they might be mourning?",
+        "options": [
+          "A pay raise",
+          "Their old office",
+          "A version of the job that was already partly obsolete, focused on formatting rather than deciding",
+          "A previous manager"
+        ],
+        "correctIndex": 2,
+        "explanation": "Wulan wonders if they're mourning a version of the job already partly obsolete, centered on formatting rather than decisions."
+      },
+      {
+        "question": "What does Wulan say about proof of effort versus proof of value?",
+        "options": [
+          "They are the same thing",
+          "Effort no longer matters at all",
+          "Proof of effort isn't the same as proof of value; nobody pays them to look busy",
+          "Value is impossible to measure"
+        ],
+        "correctIndex": 2,
+        "explanation": "Wulan points out proof of effort isn't proof of value, and nobody is paid simply to look busy."
+      },
+      {
+        "question": "What do Dedi and Wulan conclude might remain a distinctly human role?",
+        "options": [
+          "Owning the consequences and accountability of a wrong judgment call",
+          "Formatting documents",
+          "Typing speed",
+          "Attending meetings"
+        ],
+        "correctIndex": 0,
+        "explanation": "They conclude accountability for consequences may remain the last distinctly human job, as organizations won't let an algorithm absorb it."
+      },
+      {
+        "question": "Why does finishing the report quickly create anxiety rather than relief?",
+        "correctIndex": 0,
+        "options": [
+          "The speaker fears visible drafting no longer proves personal value.",
+          "The report has been rejected.",
+          "The assistant made legal errors.",
+          "The speaker dislikes free time."
+        ],
+        "explanation": "The speed raises a question about what the speaker contributes when routine drafting is automated."
+      },
+      {
+        "question": "What distinction does the colleague make about work?",
+        "correctIndex": 1,
+        "options": [
+          "Formatting is always more valuable than judgment.",
+          "Visible effort is not the same as valuable contribution.",
+          "Only automated work has value.",
+          "Longer hours ensure better decisions."
+        ],
+        "explanation": "The colleague redirects attention from looking busy to the decisions an organisation needs."
+      },
+      {
+        "question": "Why is judgment described as invisible labor?",
+        "correctIndex": 1,
+        "options": [
+          "It happens outside an office.",
+          "Its success may be the disaster that never becomes visible.",
+          "It requires no evidence.",
+          "It is carried out only by tools."
+        ],
+        "explanation": "Avoiding a flawed strategy leaves no obvious product to point to, even though it matters."
+      },
+      {
+        "question": "What limits the claim that tools can replace all human work?",
+        "correctIndex": 1,
+        "options": [
+          "Tools cannot draft reports.",
+          "Someone must still own the consequences of a wrong decision.",
+          "Employees refuse to use tools.",
+          "Automation always lowers quality."
+        ],
+        "explanation": "The dialogue treats accountability for outcomes as a continuing human responsibility."
+      },
+      {
+        "question": "Why does the conversation end with a raise?",
+        "correctIndex": 3,
+        "options": [
+          "The report took longer than expected.",
+          "Automation has made work irrelevant.",
+          "The speakers want less responsibility.",
+          "They now see risk ownership as part of their contribution."
+        ],
+        "explanation": "The raise remark follows the recognition that human judgment still carries organisational risk."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c1-technology-07",
@@ -199,32 +892,589 @@
     "themeId": "technology",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [anxious] I actually did it, Reza. I deleted the apps this morning, and now I'm sitting here not knowing what to do with my hands.",
-      "Reza: [encouraging] That's honestly a huge step. How are you feeling, beyond the restlessness?",
-      "Nadia: [candid] Weirdly bereft, if I'm being fully honest, like I've lost access to a room I used to duck into whenever a conversation got even slightly uncomfortable.",
-      "Reza: [understanding] That tracks with what I felt too, when I did this last year. The apps weren't really about entertainment for me, they were an escape hatch from anything remotely difficult.",
-      "Nadia: [worried] Did the restlessness ever fully go away, or does it just get quieter over time?",
-      "Reza: [honest] It gets quieter, though it never entirely disappears. Even now, my thumb occasionally reaches for a phone that isn't holding the apps anymore, out of pure muscle memory.",
-      "Nadia: [frustrated] I keep second-guessing whether this is even proportionate. It's not as if I have some dramatic addiction, I just used them more than I was comfortable admitting.",
-      "Reza: [firm] You don't need a dramatic crisis to justify a boundary, Nadia. Noticing discomfort with a habit is reason enough to change it, regardless of how it compares to someone else's story.",
-      "Nadia: [relieved] I needed to hear that, honestly. I think I've been waiting for permission from some imagined authority on what counts as a real enough problem.",
-      "Reza: [warmly] There isn't an authority handing out permission slips for that. You're allowed to decide something isn't serving you without first proving it nearly ruined your life.",
-      "Nadia: [thoughtful] What did you replace the time with, once the initial restlessness settled down?",
-      "Reza: [reflective] Nothing dramatic, honestly, mostly just longer, uninterrupted conversations and a considerable amount of staring out of windows, which I'd apparently forgotten how to tolerate.",
-      "Nadia: [amused] Staring out of windows sounds suspiciously like something our grandparents would recommend unironically.",
-      "Reza: [laughing] They were apparently onto something the whole time. Call me again tonight if the restlessness spikes. I mean that seriously.",
-      "Nadia: [grateful] I will. Thank you for not making this sound more dramatic or more trivial than it actually is."
+      "Nadia: [thoughtful] I actually did it, Reza. I deleted the apps this morning, and now I'm sitting here not knowing what to do with my hands.",
+      "Reza: That's honestly a huge step. How are you feeling, beyond the restlessness?",
+      "Nadia: [carefully] Weirdly bereft, if I'm being fully honest, like I've lost access to a room I used to duck into whenever a conversation got even slightly uncomfortable.",
+      "Reza: That tracks with what I felt too, when I did this last year. The apps weren't really about entertainment for me, they were an escape hatch from anything remotely difficult.",
+      "Nadia: [reflective] Did the restlessness ever fully go away, or does it just get quieter over time?",
+      "Reza: It gets quieter, though it never entirely disappears. Even now, my thumb occasionally reaches for a phone that isn't holding the apps anymore, out of pure muscle memory.",
+      "Nadia: [honestly] I keep second-guessing whether this is even proportionate. It's not as if I have some dramatic addiction, I just used them more than I was comfortable admitting.",
+      "Reza: You don't need a dramatic crisis to justify a boundary, Nadia. Noticing discomfort with a habit is reason enough to change it, regardless of how it compares to someone else's story.",
+      "Nadia: [gently] I needed to hear that, honestly. I think I've been waiting for permission from some imagined authority on what counts as a real enough problem.",
+      "Reza: There isn't an authority handing out permission slips for that. You're allowed to decide something isn't serving you without first proving it nearly ruined your life.",
+      "Nadia: [calmly] What did you replace the time with, once the initial restlessness settled down?",
+      "Reza: Nothing dramatic, honestly, mostly just longer, uninterrupted conversations and a considerable amount of staring out of windows, which I'd apparently forgotten how to tolerate.",
+      "Nadia: [encouraging] Staring out of windows sounds suspiciously like something our grandparents would recommend unironically.",
+      "Reza: They were apparently onto something the whole time. Call me again tonight if the restlessness spikes. I mean that seriously.",
+      "Nadia: [seriously] I will. Thank you for not making this sound more dramatic or more trivial than it actually is."
     ],
     "quiz": [
-      { "question": "What did Nadia do that morning, prompting the phone call?", "options": ["She bought a new phone", "She deleted the apps and now feels restless", "She joined a new social media platform", "She lost her phone"], "correctIndex": 1, "explanation": "Nadia deleted the apps that morning and is now sitting with restlessness, unsure what to do with her hands." },
-      { "question": "How does Nadia describe her feeling of loss regarding the apps?", "options": ["Complete indifference", "Weirdly bereft, like losing access to a room she used to duck into during uncomfortable conversations", "Overwhelming joy", "Mild curiosity"], "correctIndex": 1, "explanation": "She describes feeling weirdly bereft, comparing the apps to a room she used to escape into during discomfort." },
-      { "question": "What does Reza say about his own restlessness after quitting, a year later?", "options": ["It disappeared completely", "It gets quieter over time but never entirely disappears", "It got worse over time", "He never experienced any restlessness"], "correctIndex": 1, "explanation": "Reza says the restlessness gets quieter over time, though it never entirely disappears, even a year later." },
-      { "question": "What does Reza say about needing a 'dramatic' reason to change a habit?", "options": ["A dramatic crisis is required to justify any change", "Noticing discomfort with a habit is reason enough to change it, regardless of comparison to others", "Only doctors can approve such decisions", "Habits should never be changed suddenly"], "correctIndex": 1, "explanation": "Reza insists noticing discomfort is reason enough to change a habit, without needing a dramatic crisis to justify it." },
-      { "question": "What did Reza replace his app time with?", "options": ["A new hobby business", "Longer, uninterrupted conversations and staring out of windows", "Watching more television", "Nothing at all"], "correctIndex": 1, "explanation": "Reza says he replaced the time mostly with longer conversations and staring out of windows." }
-    ]
+      {
+        "question": "What did Nadia do that morning, prompting the phone call?",
+        "options": [
+          "She bought a new phone",
+          "She joined a new social media platform",
+          "She lost her phone",
+          "She deleted the apps and now feels restless"
+        ],
+        "correctIndex": 3,
+        "explanation": "Nadia deleted the apps that morning and is now sitting with restlessness, unsure what to do with her hands."
+      },
+      {
+        "question": "How does Nadia describe her feeling of loss regarding the apps?",
+        "options": [
+          "Complete indifference",
+          "Overwhelming joy",
+          "Weirdly bereft, like losing access to a room she used to duck into during uncomfortable conversations",
+          "Mild curiosity"
+        ],
+        "correctIndex": 2,
+        "explanation": "She describes feeling weirdly bereft, comparing the apps to a room she used to escape into during discomfort."
+      },
+      {
+        "question": "What does Reza say about his own restlessness after quitting, a year later?",
+        "options": [
+          "It disappeared completely",
+          "It gets quieter over time but never entirely disappears",
+          "It got worse over time",
+          "He never experienced any restlessness"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reza says the restlessness gets quieter over time, though it never entirely disappears, even a year later."
+      },
+      {
+        "question": "What does Reza say about needing a 'dramatic' reason to change a habit?",
+        "options": [
+          "A dramatic crisis is required to justify any change",
+          "Only doctors can approve such decisions",
+          "Noticing discomfort with a habit is reason enough to change it, regardless of comparison to others",
+          "Habits should never be changed suddenly"
+        ],
+        "correctIndex": 2,
+        "explanation": "Reza insists noticing discomfort is reason enough to change a habit, without needing a dramatic crisis to justify it."
+      },
+      {
+        "question": "What did Reza replace his app time with?",
+        "options": [
+          "Longer, uninterrupted conversations and staring out of windows",
+          "A new hobby business",
+          "Watching more television",
+          "Nothing at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reza says he replaced the time mostly with longer conversations and staring out of windows."
+      },
+      {
+        "question": "Why does deleting the apps feel like losing a room?",
+        "correctIndex": 0,
+        "options": [
+          "They had served as an escape from uncomfortable moments.",
+          "The phone no longer works.",
+          "Friends have stopped calling.",
+          "The speaker misses online status."
+        ],
+        "explanation": "Nadia describes the apps as a place she entered when real interaction felt difficult."
+      },
+      {
+        "question": "What principle does Reza offer about setting a boundary?",
+        "correctIndex": 1,
+        "options": [
+          "Only dramatic addiction justifies change.",
+          "Discomfort with a habit can be sufficient reason to change it.",
+          "Other people must approve the decision.",
+          "Boundaries should be temporary."
+        ],
+        "explanation": "Reza rejects the need to prove a crisis before making a proportionate change."
+      },
+      {
+        "question": "How does the dialogue treat proportionality?",
+        "correctIndex": 0,
+        "options": [
+          "A habit need not ruin a life before someone addresses it.",
+          "Every app must be deleted by everyone.",
+          "Mild habits deserve no attention.",
+          "Only experts can choose boundaries."
+        ],
+        "explanation": "The speakers avoid making Nadia’s concern either dramatic or trivial."
+      },
+      {
+        "question": "What replaces app use after the restlessness settles?",
+        "correctIndex": 1,
+        "options": [
+          "A stricter work schedule.",
+          "Longer conversations and tolerating unfilled time.",
+          "A new social platform.",
+          "Constant exercise."
+        ],
+        "explanation": "Reza describes ordinary, uncurated forms of attention rather than a spectacular substitute."
+      },
+      {
+        "question": "Why does Reza ask Nadia to call if restlessness spikes?",
+        "correctIndex": 3,
+        "options": [
+          "To monitor her behaviour.",
+          "To prove she has an addiction.",
+          "To make deletion permanent immediately.",
+          "To offer support without exaggerating the problem."
+        ],
+        "explanation": "The ending provides genuine support while preserving the dialogue’s measured tone."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-technology-08",
+    "title": "The Useful App That Asked for Too Much",
+    "level": "C1",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] Our community centre wanted an app for room bookings and event reminders. The demonstration was smooth, and most people wanted to approve it before the meeting ended.",
+      "Narrator: Then a volunteer asked a simple question: What information does the app collect from someone who only wants to reserve a room?",
+      "Narrator: That question changed the conversation. We asked where data would be stored, who could see it, how long it would be kept, and whether the centre actually needed every field on the sign-up form.",
+      "Narrator: Some information was necessary for a booking. Other data was described as useful for analytics, but nobody could explain how it would help the centre’s actual work.",
+      "Narrator: We chose a smaller form, removed optional tracking where possible, and created separate permissions for volunteers who only needed to view a schedule.",
+      "Narrator: We also wrote a short privacy notice in plain language. A link to a long policy may be legally important, but people should be able to understand the main exchange without becoming experts in technical terms.",
+      "Narrator: The group discussed ordinary mistakes as well. What happens if a reminder is sent to the wrong group? Who responds if someone wants their account closed? How do we prevent private contact details from becoming easy to copy?",
+      "Narrator: These questions did not make us anti-technology. They made us more responsible about the trust we were asking people to give.",
+      "Narrator: Digital tools often arrive as harmless defaults. Yet a default can decide who is included, whose information is visible, and how difficult it is to correct an error.",
+      "Narrator: The final decision was not simply whether the app was useful. It was whether we could explain its use clearly and limit its demands to what the service genuinely required."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the volunteer's initial question change the approval discussion?",
+        "options": [
+          "It exposed that convenience had been assessed without examining the data exchange.",
+          "It showed the demonstration had failed technically.",
+          "It proved volunteers should not use booking software.",
+          "It established that analytics are always unlawful."
+        ],
+        "correctIndex": 0,
+        "explanation": "The group had focused on smooth performance before considering what users would have to provide."
+      },
+      {
+        "question": "What distinction guides the centre's decision about sign-up fields?",
+        "options": [
+          "Fields that make reports attractive versus fields that make staff comfortable",
+          "Information required for bookings versus data merely claimed to be useful",
+          "Data collected by volunteers versus data collected by managers",
+          "Information for reminders versus information for events"
+        ],
+        "correctIndex": 1,
+        "explanation": "The speaker accepts necessary booking data but questions analytics without a concrete purpose."
+      },
+      {
+        "question": "What does the smaller form and separate permissions reveal about the group's approach?",
+        "options": [
+          "It values unrestricted staff access.",
+          "It prefers design choices that are hardest to explain.",
+          "It aims to reduce both collection and unnecessary access.",
+          "It treats privacy notices as a substitute for safeguards."
+        ],
+        "correctIndex": 2,
+        "explanation": "The changes limit what is requested and what each volunteer can see."
+      },
+      {
+        "question": "Why does the speaker favour a short privacy notice alongside a longer policy?",
+        "options": [
+          "A short notice removes any legal need for a full policy.",
+          "Most users already understand technical privacy terms.",
+          "Policies should avoid discussing data retention.",
+          "People need to grasp the main bargain without specialist knowledge."
+        ],
+        "correctIndex": 3,
+        "explanation": "The speaker sees legal documentation and understandable communication as different, complementary needs."
+      },
+      {
+        "question": "What concern links a misdirected reminder, account closure, and copied contact details?",
+        "options": [
+          "Whether the app looks modern enough",
+          "How ordinary failures affect users' control and exposure",
+          "Whether volunteers can work without training",
+          "How quickly the centre can advertise events"
+        ],
+        "correctIndex": 1,
+        "explanation": "These examples test how users can correct mistakes and protect their own information."
+      },
+      {
+        "question": "Which inference about the speaker's view of technology is best supported?",
+        "options": [
+          "Useful tools should be rejected if any error is possible.",
+          "Technical design is neutral once a policy link is provided.",
+          "A tool can be useful while still requiring limits and accountability.",
+          "Only large companies have responsibilities toward users' data."
+        ],
+        "correctIndex": 2,
+        "explanation": "The speaker explicitly rejects an anti-technology reading while requiring responsible conditions."
+      },
+      {
+        "question": "What broader claim does the speaker make about defaults in digital tools?",
+        "options": [
+          "They only affect the appearance of an app.",
+          "They should never be changed after launch.",
+          "They make technical questions less important.",
+          "They can shape inclusion, visibility, and the burden of correcting mistakes."
+        ],
+        "correctIndex": 3,
+        "explanation": "The speaker treats defaults as decisions with consequences, not harmless background settings."
+      },
+      {
+        "question": "If the centre kept every optional field because it might be useful later, which principle would it violate?",
+        "options": [
+          "Data collection should match a genuine service requirement.",
+          "Users should read only short policies.",
+          "Every volunteer needs equal permissions.",
+          "Booking apps should avoid reminders."
+        ],
+        "correctIndex": 0,
+        "explanation": "The final decision requires limiting demands to what the service actually needs."
+      },
+      {
+        "question": "Why is the final decision framed as more than a test of usefulness?",
+        "options": [
+          "The group no longer believes apps can save time.",
+          "The demonstration did not include enough functions.",
+          "The group needs to justify the app's demands and communicate them clearly.",
+          "The centre plans to remove all online services."
+        ],
+        "correctIndex": 2,
+        "explanation": "The conclusion joins clear explanation with limiting collection to genuine needs."
+      },
+      {
+        "question": "Which change would most closely follow the speaker's reasoning?",
+        "options": [
+          "Keep all data indefinitely to improve future analytics.",
+          "Give every volunteer access to full contact records.",
+          "Hide deletion requests inside the complete policy.",
+          "Assign a clear response path for mistakes and account-closure requests."
+        ],
+        "correctIndex": 3,
+        "explanation": "The speaker asks who will respond when ordinary errors or closure requests occur."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-technology-09",
+    "title": "Testing the Website with People Who Use It Differently",
+    "level": "C1",
+    "themeId": "technology",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] Our volunteer team thought the new website was ready because it looked clean on our laptops and the registration form worked during our own tests.",
+      "Narrator: Then a visitor using a screen reader tried to register for an event. Several buttons had no useful labels, the form did not explain errors clearly, and the confirmation message was difficult to reach.",
+      "Narrator: The experience changed our idea of testing. We had checked whether the site worked for people who built it. We had not checked whether it worked for the range of people expected to use it.",
+      "Narrator: We invited feedback from users with different access needs and paid attention to what happened in practice rather than defending what we intended a feature to do.",
+      "Narrator: The repairs were not mysterious: clear headings, readable contrast, keyboard access, descriptive labels, captions where needed, and a contact route that did not require someone to describe their private situation publicly.",
+      "Narrator: We also learned not to treat one tester as a spokesperson for everyone. Accessibility includes many different experiences, and people should not have to volunteer their time endlessly to prove that a service is inclusive.",
+      "Narrator: The launch moved back by two weeks. At first, the delay felt frustrating. Later, we recognised that rushing had been easy only because some users would have carried the extra work of navigating our mistakes.",
+      "Narrator: This is why design has an ethical side. Exclusion can be produced by a missing label, an uncaptioned video, or a support process that assumes every person can call at the same time of day.",
+      "Narrator: The website improved because criticism was treated as useful evidence. That is a lesson for any system: people affected by a design often notice its limits first."
+    ],
+    "quiz": [
+      {
+        "question": "What exposed the weakness in the team's original test process?",
+        "options": [
+          "The site used too many headings.",
+          "A screen-reader user could not complete important parts of registration.",
+          "The team tested after the public launch.",
+          "A visitor asked for an event cancellation."
+        ],
+        "correctIndex": 1,
+        "explanation": "The visitor found unlabeled buttons, unclear errors, and a hard-to-reach confirmation."
+      },
+      {
+        "question": "How did the experience revise the speaker's definition of successful testing?",
+        "options": [
+          "A team should test only the features it built itself.",
+          "A clean layout proves broad usability.",
+          "Testing must include the different people expected to use the service.",
+          "Technical teams should avoid asking visitors for feedback."
+        ],
+        "correctIndex": 2,
+        "explanation": "The original testing worked for builders but not the range of intended users."
+      },
+      {
+        "question": "Why does the narrator stress observing what happens in practice?",
+        "options": [
+          "Intended design can differ from users' actual experience.",
+          "Users should not be told how a site works.",
+          "Feedback matters only after a complete redesign.",
+          "A design team cannot understand accessibility."
+        ],
+        "correctIndex": 0,
+        "explanation": "The speaker contrasts the team's intention with the barriers users actually encountered."
+      },
+      {
+        "question": "Which repair best reflects the speaker's concern for privacy as well as access?",
+        "options": [
+          "Requiring callers to explain their circumstances to get help",
+          "Using one tester's account as the complete accessibility standard",
+          "Replacing captions with a longer privacy policy",
+          "Offering a contact route that avoids public disclosure of private needs"
+        ],
+        "correctIndex": 3,
+        "explanation": "The proposed contact route should not force people to reveal personal circumstances publicly."
+      },
+      {
+        "question": "What does the warning about one tester prevent?",
+        "options": [
+          "Treating personal testimony as unimportant",
+          "Treating one person's experience as representative of every access need",
+          "Delaying all changes until every issue is identical",
+          "Giving users a way to report problems"
+        ],
+        "correctIndex": 1,
+        "explanation": "The speaker values feedback while recognising that accessibility includes diverse experiences."
+      },
+      {
+        "question": "Why did the launch delay later seem more justifiable to the narrator?",
+        "options": [
+          "The delay allowed the team to remove all support options.",
+          "It made the site look more impressive on laptops.",
+          "Rushing would have transferred navigation work onto excluded users.",
+          "The visitor had asked for the event to be cancelled."
+        ],
+        "correctIndex": 2,
+        "explanation": "The delay became an ethical issue once the team saw who would otherwise carry the burden."
+      },
+      {
+        "question": "What is the role of the examples of missing labels and uncaptioned video?",
+        "options": [
+          "They show that exclusion can arise through small design and support choices.",
+          "They prove all websites should use the same layout.",
+          "They show that accessibility concerns only visual design.",
+          "They justify postponing feedback until after launch."
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator uses them to show that seemingly minor choices can create barriers."
+      },
+      {
+        "question": "Which inference follows from treating criticism as useful evidence?",
+        "options": [
+          "Affected users can reveal limitations that designers fail to notice.",
+          "Criticism should be accepted only when it is polite.",
+          "Designers have no responsibility once a form submits.",
+          "Each feature needs approval from only one user."
+        ],
+        "correctIndex": 0,
+        "explanation": "The conclusion says people affected by a system often perceive its limits first."
+      },
+      {
+        "question": "Which proposal most conflicts with the narrator's reasoning?",
+        "options": [
+          "Test keyboard navigation before public release.",
+          "Use descriptive labels for form controls.",
+          "Ask users with varied access needs about their experience.",
+          "Launch on schedule because internal laptop tests were successful."
+        ],
+        "correctIndex": 3,
+        "explanation": "The whole account challenges reliance on the team's own successful laptop testing."
+      },
+      {
+        "question": "What larger standard does the narrator apply to inclusive design?",
+        "options": [
+          "A site is inclusive when its visual style is simple.",
+          "A service should work in practice for diverse users, not merely match designers' intentions.",
+          "Accessibility is complete once one barrier is repaired.",
+          "Support should use one communication method for everyone."
+        ],
+        "correctIndex": 1,
+        "explanation": "The narrator measures inclusion by actual use across different needs."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c1-technology-10",
+    "title": "When a System Makes a Recommendation About a Person",
+    "level": "C1",
+    "themeId": "technology",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Moderator",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Moderator: [thoughtful] A housing organisation is considering software that ranks applications by urgency. What should it ask before trusting the ranking?",
+      "Guest: It should ask what data goes in, what the system is trying to predict, and whether that prediction is actually the question the organisation has a duty to answer.",
+      "Moderator: Why might that be a problem?",
+      "Guest: Past records can contain missing information or earlier unfairness. A tool may repeat a pattern efficiently without proving that the pattern is fair or appropriate today.",
+      "Moderator: Can a human reviewer solve the issue?",
+      "Guest: Only if that reviewer has time, authority, and clear reasons to challenge the recommendation. A person who merely clicks approve is not meaningful oversight.",
+      "Moderator: What should applicants be told?",
+      "Guest: They should know when automated tools affect a process, what information is used, how to correct an error, and how to ask for a review. The explanation must be understandable, not only technically accurate.",
+      "Moderator: Is refusing technology always safer?",
+      "Guest: Not automatically. A carefully governed tool may reduce some inconsistency. The real question is whether its use is proportionate, checked for harm, and accountable to people who bear the consequences.",
+      "Moderator: What is the line we should not cross?",
+      "Guest: A probability score should never become a final judgment about someone’s worth, intention, or rights without proper evidence and a fair process.",
+      "Moderator: What should leaders record?",
+      "Guest: The purpose, data limits, appeal route, review plan, and the person who remains responsible when the system is wrong.",
+      "Moderator: How can an organisation discover mistakes after launch?",
+      "Guest: Track appeals, repeat errors, staff corrections, and experiences that do not fit the usual path. A system should be reviewed when real people begin carrying its consequences, not only before it is announced.",
+      "Moderator: Who needs to see that review?",
+      "Guest: Leaders and suitable oversight bodies, with a clear explanation for affected people about what has been learned and changed."
+    ],
+    "quiz": [
+      {
+        "question": "What is the guest's first test for whether the ranking system deserves trust?",
+        "options": [
+          "Whether it uses the newest available software",
+          "Whether its inputs and prediction match the organisation's actual duty",
+          "Whether it produces rankings faster than staff",
+          "Whether applicants agree with every result"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest asks about inputs, the prediction, and whether that prediction is the right decision question."
+      },
+      {
+        "question": "Why might a technically efficient system still be unsuitable?",
+        "options": [
+          "It may repeat gaps or unfair patterns in past records.",
+          "It cannot be used by a housing organisation.",
+          "Efficiency automatically removes human judgment.",
+          "Past data is always complete and neutral."
+        ],
+        "correctIndex": 0,
+        "explanation": "The guest cautions that efficient repetition is not proof of present fairness."
+      },
+      {
+        "question": "What condition turns human review into meaningful oversight?",
+        "options": [
+          "Reviewers must approve each recommendation quickly.",
+          "Reviewers must know the technical code.",
+          "Reviewers need time, authority, and reasons to challenge results.",
+          "Reviewers should avoid recording disagreements."
+        ],
+        "correctIndex": 2,
+        "explanation": "A person who only clicks approval cannot provide the challenge the guest requires."
+      },
+      {
+        "question": "Which information should applicants receive according to the guest?",
+        "options": [
+          "Only the final score and its technical accuracy",
+          "The organisation's internal budget for software",
+          "A guarantee that no mistake can occur",
+          "The tool's role, the data used, and a way to correct or review errors"
+        ],
+        "correctIndex": 3,
+        "explanation": "The guest asks for understandable notice, correction, and review—not merely technical accuracy."
+      },
+      {
+        "question": "What position does the guest take on refusing technology altogether?",
+        "options": [
+          "It is always the only responsible choice.",
+          "It can be safer, but only where systems are inherently inaccurate.",
+          "It is not automatically safer; governance and accountability matter.",
+          "It is required whenever housing applications are involved."
+        ],
+        "correctIndex": 2,
+        "explanation": "The guest allows that carefully governed tools may reduce some inconsistency."
+      },
+      {
+        "question": "Why is a probability score not enough for a final housing judgment?",
+        "options": [
+          "It cannot identify the fastest applicant.",
+          "It may replace fair evidence and process with an unsupported judgment about a person.",
+          "It is difficult for staff to export.",
+          "It predicts urgency too slowly."
+        ],
+        "correctIndex": 1,
+        "explanation": "The guest rejects turning a score into a judgment about worth, intention, or rights."
+      },
+      {
+        "question": "What does the requested leadership record make possible after a mistake?",
+        "options": [
+          "It makes the ranking secret from applicants.",
+          "It removes responsibility from leaders.",
+          "It shows which decisions need explanation, review, and ownership.",
+          "It guarantees that appeals are never needed."
+        ],
+        "correctIndex": 2,
+        "explanation": "Purpose, data limits, appeal, review, and a responsible person make accountability traceable."
+      },
+      {
+        "question": "Why are appeals and staff corrections useful evidence after launch?",
+        "options": [
+          "They reveal how the system works when people bear its consequences.",
+          "They prove the system must be withdrawn immediately.",
+          "They replace the need for pre-launch testing.",
+          "They make the system's purpose less important."
+        ],
+        "correctIndex": 0,
+        "explanation": "The guest says review must continue when real people begin carrying a system's consequences."
+      },
+      {
+        "question": "Which change best meets the guest's standard of proportional use?",
+        "options": [
+          "Let scores decide every case without exception.",
+          "Use only data relevant to urgency and review signs of harm.",
+          "Hide the appeal route to prevent requests.",
+          "Treat accuracy averages as proof of fairness."
+        ],
+        "correctIndex": 1,
+        "explanation": "This limits use to the purpose and checks outcomes rather than trusting a headline metric."
+      },
+      {
+        "question": "What should oversight bodies receive after review?",
+        "options": [
+          "A technical report that excludes affected people",
+          "Only a list of successful rankings",
+          "A promise that the system will never change",
+          "A clear account of what was learned and changed"
+        ],
+        "correctIndex": 3,
+        "explanation": "The guest calls for a clear explanation of learning and changes for leaders, oversight bodies, and affected people."
+      }
+    ],
+    "qualityReview": {
+      "level": "C1",
+      "theme": "technology",
+      "scriptDecision": "reviewed for advanced inference, source boundaries, responsible application, and varied listening style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

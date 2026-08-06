@@ -6,32 +6,146 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [measured] As a freelance designer, I used to believe that saying yes to every request was simply good customer service, even when the requests kept multiplying.",
-      "Narrator: [reflective] Last spring, I took on a client who seemed straightforward at first, although the project quietly grew larger with almost every email he sent.",
-      "Narrator: [explaining] We had agreed on a fixed price for a basic website, five pages, one round of revisions, delivered within three weeks.",
-      "Narrator: [frustrated] However, by the second week, he was asking for an online store, a blog section, and a completely different color scheme, all without adjusting the budget.",
-      "Narrator: [honestly] At first, I said nothing, because I worried that pushing back might damage the relationship or cost me future work.",
-      "Narrator: [thoughtful] As a result, I found myself working evenings and weekends just to keep pace with requests that were never part of our original agreement.",
-      "Narrator: [determined] Eventually, I realized that if I kept absorbing every extra task silently, he would never understand where the actual boundaries were.",
-      "Narrator: [calm] So I wrote him a clear message, listing everything we had agreed to originally, and everything that had since been added.",
-      "Narrator: [explaining] I proposed two options: either we reduce the project back to its original scope, or we adjust the price to reflect the additional work fairly.",
-      "Narrator: [nervous] I sent that message with my hand practically shaking, half expecting him to disappear and never pay me at all.",
-      "Narrator: [surprised] Instead, he apologized and admitted he hadn't realized how much he had added along the way, despite thinking each request seemed small individually.",
-      "Narrator: [relieved] We agreed on a revised price, and even though the project still took longer than planned, the tension between us mostly disappeared.",
-      "Narrator: [thoughtful] What struck me afterward was how differently he treated me once I had defined clear limits, in spite of my fear that boundaries would offend him.",
-      "Narrator: [reflective] I used to think professionalism meant endless flexibility, but I've learned it actually depends on communicating expectations honestly from the very beginning.",
-      "Narrator: [warmly] Now, whenever a project starts drifting beyond its original scope, I address it immediately rather than letting resentment quietly build underneath a polite smile."
+      "Narrator: [thoughtful] As a freelance designer, I used to believe that saying yes to every request was simply good customer service, even when the requests kept multiplying.",
+      "Narrator: Last spring, I took on a client who seemed straightforward at first, although the project quietly grew larger with almost every email he sent.",
+      "Narrator: [carefully] We had agreed on a fixed price for a basic website, five pages, one round of revisions, delivered within three weeks.",
+      "Narrator: However, by the second week, he was asking for an online store, a blog section, and a completely different color scheme, all without adjusting the budget.",
+      "Narrator: [reflective] At first, I said nothing, because I worried that pushing back might damage the relationship or cost me future work.",
+      "Narrator: As a result, I found myself working evenings and weekends just to keep pace with requests that were never part of our original agreement.",
+      "Narrator: [honestly] Eventually, I realized that if I kept absorbing every extra task silently, he would never understand where the actual boundaries were.",
+      "Narrator: I wrote a clear change record listing the original scope, new requests, work already completed, and effects on price and schedule.",
+      "Narrator: [seriously] I proposed returning to the original scope or approving a revised fee and timeline in writing before additional work continued. I also followed the agreed invoicing and payment terms.",
+      "Narrator: I sent that message with my hand practically shaking, half expecting him to disappear and never pay me at all.",
+      "Narrator: [gently] Instead, he apologized and admitted he hadn't realized how much he had added along the way, despite thinking each request seemed small individually.",
+      "Narrator: We agreed on a revised price, and even though the project still took longer than planned, the tension between us mostly disappeared.",
+      "Narrator: [encouraging] What struck me afterward was how differently he treated me once I had defined clear limits, in spite of my fear that boundaries would offend him.",
+      "Narrator: I used to think professionalism meant endless flexibility, but I've learned it actually depends on communicating expectations honestly from the very beginning.",
+      "Narrator: [sincere] Now I define deliverables, revision limits, payment stages, ownership, acceptance, and a change process at the start, then confirm later changes promptly."
     ],
     "quiz": [
-      { "question": "What was originally agreed for the website project?", "options": ["An online store with ten pages", "Five pages with one round of revisions, in three weeks", "A blog with unlimited revisions", "A logo design only"], "correctIndex": 1, "explanation": "The narrator says they agreed on five pages, one round of revisions, delivered within three weeks." },
-      { "question": "Why did the narrator stay silent at first about the extra requests?", "options": ["She agreed with every change", "She worried pushing back might damage the relationship or cost future work", "She had no other clients", "She didn't notice the changes"], "correctIndex": 1, "explanation": "She admits she worried that pushing back might damage the relationship or cost her future work." },
-      { "question": "What two options did the narrator propose to the client?", "options": ["Cancel the project or refund him", "Reduce the project back to its original scope, or adjust the price fairly", "Finish for free or quit immediately", "Hire another designer"], "correctIndex": 1, "explanation": "She proposed reducing the scope back to the original agreement, or adjusting the price to reflect the extra work." },
-      { "question": "How did the client react to her message?", "options": ["He disappeared without paying", "He apologized and admitted he hadn't realized how much he'd added", "He got angry and cancelled", "He ignored the message completely"], "correctIndex": 1, "explanation": "He apologized, admitting he hadn't realized how much he had added along the way." },
-      { "question": "What lesson does the narrator take from this experience?", "options": ["Professionalism means endless flexibility", "Communicating expectations honestly from the beginning matters more than constant flexibility", "Clients should never be trusted", "Fixed prices never work"], "correctIndex": 1, "explanation": "She concludes that professionalism depends on communicating expectations honestly from the start, not endless flexibility." }
-    ]
+      {
+        "question": "What was originally agreed for the website project?",
+        "options": [
+          "An online store with ten pages",
+          "A blog with unlimited revisions",
+          "Five pages with one round of revisions, in three weeks",
+          "A logo design only"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator says they agreed on five pages, one round of revisions, delivered within three weeks."
+      },
+      {
+        "question": "Why did the narrator stay silent at first about the extra requests?",
+        "options": [
+          "She agreed with every change",
+          "She worried pushing back might damage the relationship or cost future work",
+          "She had no other clients",
+          "She didn't notice the changes"
+        ],
+        "correctIndex": 1,
+        "explanation": "She admits she worried that pushing back might damage the relationship or cost her future work."
+      },
+      {
+        "question": "What two options did the narrator propose to the client?",
+        "options": [
+          "Cancel the project or refund him",
+          "Finish for free or quit immediately",
+          "Hire another designer",
+          "Reduce the project back to its original scope, or adjust the price fairly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She proposed reducing the scope back to the original agreement, or adjusting the price to reflect the extra work."
+      },
+      {
+        "question": "How did the client react to her message?",
+        "options": [
+          "He disappeared without paying",
+          "He got angry and cancelled",
+          "He apologized and admitted he hadn't realized how much he'd added",
+          "He ignored the message completely"
+        ],
+        "correctIndex": 2,
+        "explanation": "He apologized, admitting he hadn't realized how much he had added along the way."
+      },
+      {
+        "question": "What lesson does the narrator take from this experience?",
+        "options": [
+          "Communicating expectations honestly from the beginning matters more than constant flexibility",
+          "Professionalism means endless flexibility",
+          "Clients should never be trusted",
+          "Fixed prices never work"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes that professionalism depends on communicating expectations honestly from the start, not endless flexibility."
+      },
+      {
+        "question": "Why did the project keep expanding?",
+        "options": [
+          "The original agreement included a store",
+          "The narrator removed two pages",
+          "Small separate requests were never evaluated as a combined scope change",
+          "The client refused every email"
+        ],
+        "correctIndex": 2,
+        "explanation": "Individually small additions created a large unpriced workload."
+      },
+      {
+        "question": "What made the narrator’s first response weak?",
+        "options": [
+          "She used a fixed price",
+          "Silence hid the cost and allowed expectations to remain unclear",
+          "She listed the original pages",
+          "She requested payment"
+        ],
+        "correctIndex": 1,
+        "explanation": "Avoiding conflict delayed necessary information."
+      },
+      {
+        "question": "What should a change record specify?",
+        "options": [
+          "Only the preferred colors",
+          "The freelancer’s private expenses",
+          "New deliverables, price, schedule, responsibilities, and approval",
+          "A promise of unlimited revisions"
+        ],
+        "correctIndex": 2,
+        "explanation": "A proper change affects more than the task list."
+      },
+      {
+        "question": "Why is the client’s apology not the only protection needed?",
+        "options": [
+          "Apologies cancel contracts",
+          "Clients never understand websites",
+          "Designers should work without payment",
+          "A repeatable written process should not depend on goodwill"
+        ],
+        "correctIndex": 3,
+        "explanation": "Professional safeguards must survive a less cooperative case."
+      },
+      {
+        "question": "What does the narrator now understand by professionalism?",
+        "options": [
+          "Clear commitments, timely communication, and fair handling of changes",
+          "Agreeing to every request",
+          "Avoiding written records",
+          "Charging without explanation"
+        ],
+        "correctIndex": 0,
+        "explanation": "Boundaries support reliable delivery."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; add written change control, schedule and fee impact, payment protection, and mutual confirmation to the scope-boundary lesson",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-work-02",
@@ -40,36 +154,153 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Reza", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Reza",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Farah: [uneasy] Reza, can I talk to you privately for a moment? I found something in the accounting report that's been bothering me all morning.",
-      "Reza: [curious] Of course. What did you find?",
-      "Farah: [hesitant] I noticed we billed the Hartono client twice for the same shipment, and apparently nobody else has caught it yet.",
-      "Reza: [surprised] Twice? Are you sure it wasn't just a formatting error in the spreadsheet?",
-      "Farah: [firmly] I checked three times before mentioning it. It's a real duplicate, and it means we overcharged them by a significant amount.",
-      "Reza: [concerned] That's serious. Even though it was clearly a mistake, it could easily look like something intentional if we don't handle it carefully.",
-      "Farah: [worried] Exactly, and that's why I'm nervous. If we report it, our manager might ask why the error wasn't caught earlier during the review process.",
-      "Reza: [thoughtful] True, but if we stay quiet and the client eventually notices themselves, the consequences would be far worse for everyone involved.",
-      "Farah: [conflicted] I know that logically, however part of me still wants to just quietly fix the invoice and hope nobody asks questions.",
-      "Reza: [gently] I understand the temptation, but hiding it wouldn't actually protect you. It would only delay a much harder conversation later.",
-      "Farah: [sighing] You're right. Despite how uncomfortable this feels, I'd rather be the person who reported it than the person who covered it up.",
-      "Reza: [supportive] I'll come with you when you tell our manager, so it's clear this was caught through careful review, not carelessness.",
-      "Farah: [relieved] Thank you. That actually makes this so much easier to face than doing it completely alone.",
-      "Reza: [encouraging] Managers generally respect honesty more than perfection anyway. Nobody expects a system with zero errors, only people willing to fix them.",
-      "Farah: [determined] Okay, let's go now, before I lose my nerve and convince myself it isn't worth mentioning.",
-      "Reza: [warmly] That's the right instinct. As a result of this, the client will trust our company even more once we correct it ourselves.",
-      "Farah: [nodding] I hope so. At least I'll know I did the honest thing, even if the conversation is uncomfortable at first.",
-      "Reza: [firmly] It usually is uncomfortable at first. That's exactly why so many people avoid it in the first place."
+      "Farah: [thoughtful] Reza, can I talk to you privately for a moment? I found something in the accounting report that's been bothering me all morning.",
+      "Reza: Of course. What did you find?",
+      "Farah: [carefully] I noticed we billed the Hartono client twice for the same shipment, and apparently nobody else has caught it yet.",
+      "Reza: Twice? Are you sure it wasn't just a formatting error in the spreadsheet?",
+      "Farah: [reflective] I checked three times before mentioning it. It's a real duplicate, and it means we overcharged them by a significant amount.",
+      "Reza: That's serious. Even though it was clearly a mistake, it could easily look like something intentional if we don't handle it carefully.",
+      "Farah: [honestly] Exactly, and that's why I'm nervous. If we report it, our manager might ask why the error wasn't caught earlier during the review process.",
+      "Reza: True, but if we stay quiet and the client eventually notices themselves, the consequences would be far worse for everyone involved.",
+      "Farah: [seriously] I know. Part of me wants to edit it quietly, but that could hide the audit trail and fail to notify everyone affected.",
+      "Reza: I understand the temptation, but hiding it wouldn't actually protect you. It would only delay a much harder conversation later.",
+      "Farah: [gently] You're right. Despite how uncomfortable this feels, I'd rather be the person who reported it than the person who covered it up.",
+      "Reza: I'll come with you when you tell our manager, so it's clear this was caught through careful review, not carelessness.",
+      "Farah: [encouraging] Thank you. That actually makes this so much easier to face than doing it completely alone.",
+      "Reza: I cannot promise how the manager will react. We can preserve the records, report what you verified, follow the correction and client-notification process, and avoid blaming someone before review.",
+      "Farah: [sincere] Okay, let's go now, before I lose my nerve and convince myself it isn't worth mentioning.",
+      "Reza: That is the responsible step. We cannot control the client’s trust, but we can correct the charge, communicate accurately, and review why the control failed.",
+      "Farah: [thoughtful] I hope so. At least I'll know I did the honest thing, even if the conversation is uncomfortable at first.",
+      "Reza: It usually is uncomfortable at first. That's exactly why so many people avoid it in the first place."
     ],
     "quiz": [
-      { "question": "What mistake did Farah discover?", "options": ["A missing payment", "The Hartono client was billed twice for the same shipment", "A wrong shipping address", "A late invoice"], "correctIndex": 1, "explanation": "Farah found that the Hartono client was billed twice for the same shipment." },
-      { "question": "Why is Farah nervous about reporting the mistake?", "options": ["She might lose her job immediately", "The manager might ask why it wasn't caught earlier in the review process", "She doesn't like her manager", "The client already complained"], "correctIndex": 1, "explanation": "She worries the manager might ask why the error wasn't caught earlier during review." },
-      { "question": "What does Reza argue would happen if they stayed quiet?", "options": ["Nothing bad would happen", "The consequences would be far worse if the client noticed it themselves later", "The company would save money", "The client would never find out"], "correctIndex": 1, "explanation": "Reza argues that if the client eventually notices themselves, the consequences would be far worse for everyone." },
-      { "question": "What does Reza offer to do for Farah?", "options": ["Fix the invoice secretly", "Come with her when she tells the manager", "Report it without her", "Ignore the issue"], "correctIndex": 1, "explanation": "Reza offers to come with her when she reports it, so it's clear it was caught through careful review." },
-      { "question": "What does Reza say managers generally respect more than perfection?", "options": ["Speed", "Honesty", "Silence", "Confidence"], "correctIndex": 1, "explanation": "Reza says managers generally respect honesty more than perfection." }
-    ]
+      {
+        "question": "What mistake did Farah discover?",
+        "options": [
+          "A missing payment",
+          "A wrong shipping address",
+          "A late invoice",
+          "The Hartono client was billed twice for the same shipment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Farah found that the Hartono client was billed twice for the same shipment."
+      },
+      {
+        "question": "Why is Farah nervous about reporting the mistake?",
+        "options": [
+          "The manager might ask why it wasn't caught earlier in the review process",
+          "She might lose her job immediately",
+          "She doesn't like her manager",
+          "The client already complained"
+        ],
+        "correctIndex": 0,
+        "explanation": "She worries the manager might ask why the error wasn't caught earlier during review."
+      },
+      {
+        "question": "What does Reza argue would happen if they stayed quiet?",
+        "options": [
+          "Nothing bad would happen",
+          "The company would save money",
+          "The client would never find out",
+          "The consequences would be far worse if the client noticed it themselves later"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reza argues that if the client eventually notices themselves, the consequences would be far worse for everyone."
+      },
+      {
+        "question": "What does Reza offer to do for Farah?",
+        "options": [
+          "Fix the invoice secretly",
+          "Come with her when she tells the manager",
+          "Report it without her",
+          "Ignore the issue"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reza offers to come with her when she reports it, so it's clear it was caught through careful review."
+      },
+      {
+        "question": "What does Reza say managers generally respect more than perfection?",
+        "options": [
+          "Speed",
+          "Silence",
+          "Honesty",
+          "Confidence"
+        ],
+        "correctIndex": 2,
+        "explanation": "Reza says managers generally respect honesty more than perfection."
+      },
+      {
+        "question": "Why would quietly editing the invoice be inadequate?",
+        "options": [
+          "Invoices cannot be edited",
+          "The client prefers duplicate charges",
+          "It could hide the audit trail and fail to notify people affected by the error",
+          "Only managers may read reports"
+        ],
+        "correctIndex": 2,
+        "explanation": "Correction needs documentation and communication."
+      },
+      {
+        "question": "What should Farah bring to the manager?",
+        "options": [
+          "A deleted spreadsheet",
+          "The evidence, affected records, and what she has verified without changing them",
+          "A public accusation",
+          "A promise that no other errors exist"
+        ],
+        "correctIndex": 1,
+        "explanation": "Preserving facts supports investigation."
+      },
+      {
+        "question": "Why is Reza’s support useful?",
+        "options": [
+          "He can change the invoice secretly",
+          "He guarantees the manager’s reaction",
+          "He can contact the client privately",
+          "He can accompany her without taking over the report or hiding responsibility"
+        ],
+        "correctIndex": 3,
+        "explanation": "Support helps action but does not replace procedure."
+      },
+      {
+        "question": "What outcome cannot be promised?",
+        "options": [
+          "That the client will trust the company more after correction",
+          "That the duplicate should be corrected",
+          "That the issue needs escalation",
+          "That evidence should be preserved"
+        ],
+        "correctIndex": 0,
+        "explanation": "An organization controls its response, not another party’s trust."
+      },
+      {
+        "question": "What wider improvement should follow?",
+        "options": [
+          "Blame one employee publicly",
+          "Remove all reviews",
+          "Hide the incident after refunding",
+          "Review the control failure and reduce the chance of recurrence"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ethical correction includes system learning."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; replace quiet invoice editing and promised trust with documented correction, escalation, client notification, record preservation, and process learning",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-work-03",
@@ -78,32 +309,146 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [tired] For nearly two years, I built a reputation as the colleague who never refused extra work, no matter how full my schedule already was.",
-      "Narrator: [reflective] Whenever someone needed a report finished quickly, or a presentation rewritten overnight, they came straight to my desk, confident I would say yes.",
-      "Narrator: [honestly] I liked being seen as reliable, even though the constant extra tasks were slowly draining every ounce of energy I had left.",
-      "Narrator: [thoughtful] Despite feeling exhausted most evenings, I kept accepting new requests, worried that refusing would make me look lazy or uncommitted.",
-      "Narrator: [with feeling] Eventually, my body forced the decision for me. I got sick, seriously enough that I needed a full week away from work.",
-      "Narrator: [reflective] Lying in bed that week, I finally admitted something uncomfortable: I hadn't actually been helping my team, I had been avoiding conflict.",
-      "Narrator: [determined] So when I returned, I decided to change how I responded to requests, even though the idea genuinely terrified me at first.",
-      "Narrator: [explaining] Instead of saying yes immediately, I started asking one simple question: if I take this on, what will I have to postpone?",
-      "Narrator: [honestly] That question changed everything, because it made the real cost of every yes completely visible, both to me and to whoever was asking.",
-      "Narrator: [nervous] The first time I said no to my supervisor, my voice shook slightly, and I braced myself for disappointment or frustration.",
-      "Narrator: [surprised] Instead, she simply nodded and said she hadn't realized how much I already had on my plate that particular week.",
-      "Narrator: [reflective] Nobody had ever assumed I was overwhelmed, mainly because I had never once shown it clearly through my own words.",
-      "Narrator: [warmly] These days, I still help whenever I genuinely can, but I no longer treat every request as an emergency requiring immediate agreement.",
-      "Narrator: [with a small smile] Ironically, since I started saying no occasionally, colleagues seem to trust my yes even more than they did before.",
-      "Narrator: [peacefully] I suppose reliability was never about accepting everything. It was always about being honest concerning what I could actually manage well."
+      "Narrator: [thoughtful] For nearly two years, I built a reputation as the colleague who never refused extra work, no matter how full my schedule already was.",
+      "Narrator: Whenever someone needed a report finished quickly, or a presentation rewritten overnight, they came straight to my desk, confident I would say yes.",
+      "Narrator: [carefully] I liked being seen as reliable, even though the constant extra tasks were slowly draining every ounce of energy I had left.",
+      "Narrator: Despite feeling exhausted most evenings, I kept accepting new requests, worried that refusing would make me look lazy or uncommitted.",
+      "Narrator: [reflective] Eventually I became ill and sought appropriate care, taking a week of leave. I do not claim workload alone diagnosed or caused the illness.",
+      "Narrator: During recovery, I recognized that hiding overload was not helping planning. Managers also had responsibility for staffing, priorities, and a safe workload.",
+      "Narrator: [honestly] So when I returned, I decided to change how I responded to requests, even though the idea genuinely terrified me at first.",
+      "Narrator: Instead of saying yes immediately, I started asking one simple question: if I take this on, what will I have to postpone?",
+      "Narrator: [seriously] That question changed everything, because it made the real cost of every yes completely visible, both to me and to whoever was asking.",
+      "Narrator: The first time I said no to my supervisor, my voice shook slightly, and I braced myself for disappointment or frustration.",
+      "Narrator: [gently] Instead, she simply nodded and said she hadn't realized how much I already had on my plate that particular week.",
+      "Narrator: Nobody had ever assumed I was overwhelmed, mainly because I had never once shown it clearly through my own words.",
+      "Narrator: [encouraging] Now I discuss priorities early and use appropriate support or accommodation channels when health or disability needs are relevant, without sharing unnecessary details.",
+      "Narrator: Ironically, since I started saying no occasionally, colleagues seem to trust my yes even more than they did before.",
+      "Narrator: [sincere] I suppose reliability was never about accepting everything. It was always about being honest concerning what I could actually manage well."
     ],
     "quiz": [
-      { "question": "What reputation did the narrator build over nearly two years?", "options": ["Someone who was always late", "Someone who never refused extra work", "Someone who avoided teamwork", "Someone who complained constantly"], "correctIndex": 1, "explanation": "He built a reputation as the colleague who never refused extra work." },
-      { "question": "What eventually forced the narrator to change?", "options": ["He got promoted", "He got seriously sick and needed a week away from work", "His manager fired him", "He lost a client"], "correctIndex": 1, "explanation": "He got sick, seriously enough that he needed a full week away from work." },
-      { "question": "What question did the narrator start asking himself before accepting new tasks?", "options": ["Will I get paid extra?", "If I take this on, what will I have to postpone?", "Do I like this task?", "Will this impress my boss?"], "correctIndex": 1, "explanation": "He started asking what he would have to postpone if he took on a new task." },
-      { "question": "How did his supervisor react the first time he said no?", "options": ["She was angry and disappointed", "She nodded and said she hadn't realized how much he already had on his plate", "She fired him", "She ignored him"], "correctIndex": 1, "explanation": "She simply nodded and said she hadn't realized how much he already had on his plate that week." },
-      { "question": "What does the narrator conclude about reliability?", "options": ["It means accepting everything", "It means being honest about what he can actually manage well", "It means never sleeping", "It means avoiding all requests"], "correctIndex": 1, "explanation": "He concludes reliability was always about being honest concerning what he could actually manage well." }
-    ]
+      {
+        "question": "What reputation did the narrator build over nearly two years?",
+        "options": [
+          "Someone who was always late",
+          "Someone who never refused extra work",
+          "Someone who avoided teamwork",
+          "Someone who complained constantly"
+        ],
+        "correctIndex": 1,
+        "explanation": "He built a reputation as the colleague who never refused extra work."
+      },
+      {
+        "question": "What eventually forced the narrator to change?",
+        "options": [
+          "He got promoted",
+          "His manager fired him",
+          "He lost a client",
+          "He got seriously sick and needed a week away from work"
+        ],
+        "correctIndex": 3,
+        "explanation": "He got sick, seriously enough that he needed a full week away from work."
+      },
+      {
+        "question": "What question did the narrator start asking himself before accepting new tasks?",
+        "options": [
+          "If I take this on, what will I have to postpone?",
+          "Will I get paid extra?",
+          "Do I like this task?",
+          "Will this impress my boss?"
+        ],
+        "correctIndex": 0,
+        "explanation": "He started asking what he would have to postpone if he took on a new task."
+      },
+      {
+        "question": "How did his supervisor react the first time he said no?",
+        "options": [
+          "She nodded and said she hadn't realized how much he already had on his plate",
+          "She was angry and disappointed",
+          "She fired him",
+          "She ignored him"
+        ],
+        "correctIndex": 0,
+        "explanation": "She simply nodded and said she hadn't realized how much he already had on his plate that week."
+      },
+      {
+        "question": "What does the narrator conclude about reliability?",
+        "options": [
+          "It means being honest about what he can actually manage well",
+          "It means accepting everything",
+          "It means never sleeping",
+          "It means avoiding all requests"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes reliability was always about being honest concerning what he could actually manage well."
+      },
+      {
+        "question": "Why is accepting every task not reliable?",
+        "options": [
+          "Helping colleagues is always wrong",
+          "Supervisors dislike questions",
+          "Hidden overload makes deadlines and quality less predictable",
+          "Schedules never change"
+        ],
+        "correctIndex": 2,
+        "explanation": "Capacity information is necessary for planning."
+      },
+      {
+        "question": "What does the postponement question accomplish?",
+        "options": [
+          "It transfers every task away",
+          "It guarantees overtime pay",
+          "It makes priorities and trade-offs visible to the requester",
+          "It diagnoses exhaustion"
+        ],
+        "correctIndex": 2,
+        "explanation": "The question turns a vague no into a planning decision."
+      },
+      {
+        "question": "Who also owns workload decisions?",
+        "options": [
+          "Clients alone",
+          "The sick employee’s family",
+          "Nobody once tasks are assigned",
+          "Managers and the organization, not only the employee"
+        ],
+        "correctIndex": 3,
+        "explanation": "Systems control staffing and priorities."
+      },
+      {
+        "question": "What should happen if health is affected?",
+        "options": [
+          "Seek appropriate care and use available workplace support or accommodation channels",
+          "Wait until collapse",
+          "Give colleagues a diagnosis",
+          "Accept more work to prove commitment"
+        ],
+        "correctIndex": 0,
+        "explanation": "Health needs are not solved only by saying no."
+      },
+      {
+        "question": "Why does the narrator’s “yes” become more trustworthy?",
+        "options": [
+          "It always means immediate completion",
+          "It reflects actual capacity rather than fear of refusal",
+          "It removes every future conflict",
+          "It requires no prioritization"
+        ],
+        "correctIndex": 1,
+        "explanation": "A credible commitment is capacity-aware."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; avoid presenting illness as a productivity lesson, add timely care, workload ownership, prioritization, accommodation, and limits to individual boundary-setting",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-work-04",
@@ -112,35 +457,152 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Wulan", "gender": "female" },
-      { "name": "Deni", "gender": "male" }
+      {
+        "name": "Wulan",
+        "gender": "female"
+      },
+      {
+        "name": "Deni",
+        "gender": "male"
+      }
     ],
     "script": [
       "Wulan: [thoughtful] Deni, can I get your honest opinion on something? A competitor company offered me a position with a much higher salary.",
-      "Deni: [interested] That's a big decision. How much higher are we talking about, if you don't mind me asking?",
-      "Wulan: [honestly] Almost forty percent more, plus better health benefits, which is honestly hard to ignore given my current expenses.",
-      "Deni: [curious] What's holding you back, then? It sounds like an easy decision on paper, at least financially.",
-      "Wulan: [conflicted] If it were only about money, I would have already accepted. However, I genuinely love the team I work with here.",
-      "Deni: [understanding] That matters more than people usually admit. Salary is important, but it isn't the only thing that determines job satisfaction.",
-      "Wulan: [thoughtful] Also, I'd be starting completely from scratch, learning new systems and building trust with strangers, despite already having seniority here.",
-      "Deni: [considering] True, although starting from scratch occasionally forces growth that staying comfortable never really does.",
-      "Wulan: [honestly] That's a fair point. Part of me worries I'm avoiding the offer simply because change feels frightening, not because staying is actually wiser.",
-      "Deni: [gently] Have you considered mentioning the offer to our own manager, before deciding anything permanently either way?",
-      "Wulan: [surprised] I hadn't thought of that directly. Wouldn't that seem like I'm threatening to leave unless they match the salary?",
-      "Deni: [reassuring] Not necessarily, if you're honest about your reasoning. Most managers would rather negotiate than lose someone valuable without even trying.",
-      "Wulan: [considering] I suppose the worst outcome is simply hearing no, and then I'm exactly where I already am now.",
-      "Deni: [encouraging] Exactly, and in spite of feeling awkward, having that conversation gives you information you don't currently have.",
-      "Wulan: [determined] Okay, I'll request a meeting this week. Even if nothing changes financially, at least I'll finally know where I truly stand.",
-      "Deni: [warmly] Whatever you decide, you've clearly already thought about this far more carefully than a quick decision would suggest.",
-      "Wulan: [grateful] Thank you for listening. Talking it through honestly helped me see the situation far more clearly than worrying alone ever did."
+      "Deni: That's a big decision. How much higher are we talking about, if you don't mind me asking?",
+      "Wulan: [carefully] Almost forty percent more, plus better health benefits, which is honestly hard to ignore given my current expenses.",
+      "Deni: What's holding you back, then? It sounds like an easy decision on paper, at least financially.",
+      "Wulan: [reflective] If it were only about money, I would have already accepted. However, I genuinely love the team I work with here.",
+      "Deni: That matters more than people usually admit. Salary is important, but it isn't the only thing that determines job satisfaction.",
+      "Wulan: [honestly] Also, I'd be starting completely from scratch, learning new systems and building trust with strangers, despite already having seniority here.",
+      "Deni: True, although starting from scratch occasionally forces growth that staying comfortable never really does.",
+      "Wulan: [seriously] That's a fair point. Part of me worries I'm avoiding the offer simply because change feels frightening, not because staying is actually wiser.",
+      "Deni: You could first compare total compensation, role scope, manager, ethics, flexibility, growth, stability, travel, and the effect on people who depend on you.",
+      "Wulan: [gently] I hadn't thought of that directly. Wouldn't that seem like I'm threatening to leave unless they match the salary?",
+      "Deni: A respectful retention conversation may be possible, but check policy and contractual duties. Do not share a confidential offer document or make a threat you are not prepared to follow.",
+      "Wulan: [encouraging] So “no” is not the only risk. The conversation could affect expectations, and the external deadline may continue, so I should plan my response carefully.",
+      "Deni: Yes. Decide what information you need, what terms matter, and whether local professional advice is needed for restrictive clauses or legal questions.",
+      "Wulan: [sincere] Okay, I'll request a meeting this week. Even if nothing changes financially, at least I'll finally know where I truly stand.",
+      "Deni: Whatever you decide, you've clearly already thought about this far more carefully than a quick decision would suggest.",
+      "Wulan: [thoughtful] Thank you for listening. Talking it through honestly helped me see the situation far more clearly than worrying alone ever did."
     ],
     "quiz": [
-      { "question": "What did the competitor company offer Wulan?", "options": ["The same salary with more vacation days", "Almost forty percent more salary plus better health benefits", "A lower salary but a better title", "Free housing"], "correctIndex": 1, "explanation": "Wulan says the offer was almost forty percent more salary, plus better health benefits." },
-      { "question": "What is holding Wulan back from accepting immediately?", "options": ["The commute is too far", "She loves her current team and would be starting from scratch elsewhere", "She dislikes the new company's product", "Her family disapproves"], "correctIndex": 1, "explanation": "She says she loves her current team and would have to start from scratch learning new systems." },
-      { "question": "What does Deni suggest Wulan do before deciding permanently?", "options": ["Accept the offer immediately", "Mention the offer to her current manager", "Ignore the offer completely", "Ask coworkers to decide for her"], "correctIndex": 1, "explanation": "Deni suggests she mention the offer to her manager before deciding anything permanently." },
-      { "question": "Why does Wulan initially hesitate about talking to her manager?", "options": ["She thinks it's illegal", "She worries it might seem like she's threatening to leave unless they match the salary", "She doesn't know her manager well", "She already resigned"], "correctIndex": 1, "explanation": "She worries mentioning the offer would seem like a threat to leave unless they match it." },
-      { "question": "What does Deni say is the worst possible outcome of asking?", "options": ["Getting fired", "Simply hearing no, leaving her exactly where she already is", "Losing her current friends", "Having to relocate"], "correctIndex": 1, "explanation": "Deni points out the worst outcome is simply hearing no, leaving her in her current position." }
-    ]
+      {
+        "question": "What did the competitor company offer Wulan?",
+        "options": [
+          "Almost forty percent more salary plus better health benefits",
+          "The same salary with more vacation days",
+          "A lower salary but a better title",
+          "Free housing"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wulan says the offer was almost forty percent more salary, plus better health benefits."
+      },
+      {
+        "question": "What is holding Wulan back from accepting immediately?",
+        "options": [
+          "The commute is too far",
+          "She loves her current team and would be starting from scratch elsewhere",
+          "She dislikes the new company's product",
+          "Her family disapproves"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she loves her current team and would have to start from scratch learning new systems."
+      },
+      {
+        "question": "What does Deni suggest Wulan do before deciding permanently?",
+        "options": [
+          "Accept the offer immediately",
+          "Ignore the offer completely",
+          "Mention the offer to her current manager",
+          "Ask coworkers to decide for her"
+        ],
+        "correctIndex": 2,
+        "explanation": "Deni suggests she mention the offer to her manager before deciding anything permanently."
+      },
+      {
+        "question": "Why does Wulan initially hesitate about talking to her manager?",
+        "options": [
+          "She thinks it's illegal",
+          "She doesn't know her manager well",
+          "She already resigned",
+          "She worries it might seem like she's threatening to leave unless they match the salary"
+        ],
+        "correctIndex": 3,
+        "explanation": "She worries mentioning the offer would seem like a threat to leave unless they match it."
+      },
+      {
+        "question": "What does Deni say is the worst possible outcome of asking?",
+        "options": [
+          "Getting fired",
+          "Simply hearing no, leaving her exactly where she already is",
+          "Losing her current friends",
+          "Having to relocate"
+        ],
+        "correctIndex": 1,
+        "explanation": "Deni points out the worst outcome is simply hearing no, leaving her in her current position."
+      },
+      {
+        "question": "What financial information matters beyond headline salary?",
+        "options": [
+          "Only the percentage increase",
+          "The company logo",
+          "Benefits, taxes, costs, stability, leave, and total compensation",
+          "Deni’s current salary"
+        ],
+        "correctIndex": 2,
+        "explanation": "A large increase may have different net value."
+      },
+      {
+        "question": "Why might Wulan avoid sharing the offer document?",
+        "options": [
+          "Managers cannot discuss retention",
+          "Competitors never make offers",
+          "The salary is imaginary",
+          "It may contain confidential terms or restrictions"
+        ],
+        "correctIndex": 3,
+        "explanation": "A negotiation should respect obligations."
+      },
+      {
+        "question": "What nonfinancial factors deserve review?",
+        "options": [
+          "Role scope, manager, ethics, culture, flexibility, growth, and security",
+          "Only familiarity with coworkers",
+          "Only fear of change",
+          "Only office distance"
+        ],
+        "correctIndex": 0,
+        "explanation": "The decision has several dimensions."
+      },
+      {
+        "question": "What is wrong with calling a refusal the worst outcome?",
+        "options": [
+          "A refusal always increases salary",
+          "Disclosure could affect relationships or create other risks depending on context",
+          "No workplace has policy",
+          "Offers cannot expire"
+        ],
+        "correctIndex": 1,
+        "explanation": "The dialogue should not promise a harmless negotiation."
+      },
+      {
+        "question": "What is Wulan’s next responsible step?",
+        "options": [
+          "Threaten immediate resignation",
+          "Review terms and obligations, then choose whether and how to discuss retention",
+          "Accept both jobs secretly",
+          "Send confidential documents to coworkers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Preparation precedes negotiation."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; broaden the decision beyond salary and remove casual assumptions that showing a competing offer is always low-risk or permitted",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-work-05",
@@ -149,32 +611,146 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [warmly] Six months ago, I started mentoring a junior analyst named Tia, who was clearly talented but constantly apologized for her own ideas.",
-      "Narrator: [reflective] In our first few meetings, she would present a genuinely strong analysis, then immediately undermine it by saying it was probably wrong anyway.",
-      "Narrator: [thoughtful] I recognized that pattern instantly, mostly because I used to speak about my own work in exactly the same nervous way.",
-      "Narrator: [honestly] Even though her reports were consistently accurate, she seemed convinced that any small mistake would prove she didn't belong on the team.",
-      "Narrator: [gently] One afternoon, I asked her directly why she apologized so often before anyone had even questioned her conclusions.",
-      "Narrator: [reflective] She admitted that in her previous job, a manager had criticized her harshly in front of colleagues, and the fear had never fully disappeared.",
-      "Narrator: [with feeling] That explanation didn't surprise me. A single harsh moment can quietly shape how someone speaks for years afterward, despite time passing.",
-      "Narrator: [determined] So instead of only reviewing her work, I started asking her to defend her own conclusions before I offered any opinion at all.",
-      "Narrator: [explaining] If she said a number seemed wrong, I would ask her to explain why, rather than immediately agreeing or correcting it myself.",
-      "Narrator: [warmly] Slowly, her explanations became firmer, and the constant apologies started disappearing from her sentences, one meeting at a time.",
-      "Narrator: [proud] Last week, she disagreed openly with a senior manager during a meeting, calmly explaining why his assumption was incorrect, using solid evidence.",
-      "Narrator: [pleased] He actually thanked her afterward, admitting her correction had likely saved the department from a costly mistake in the final report.",
-      "Narrator: [reflective] Watching that moment, I felt genuinely proud, not because I had taught her anything technical, but because she had stopped shrinking herself.",
-      "Narrator: [thoughtful] Mentoring taught me that confidence rarely arrives through compliments alone; it grows through being trusted with real responsibility, repeatedly.",
-      "Narrator: [warmly] Tia still has doubts occasionally, as everyone does, but she no longer lets those doubts speak louder than her actual competence."
+      "Narrator: [thoughtful] Six months ago, I started mentoring a junior analyst named Tia, who was clearly talented but constantly apologized for her own ideas.",
+      "Narrator: In our first few meetings, she would present a genuinely strong analysis, then immediately undermine it by saying it was probably wrong anyway.",
+      "Narrator: [carefully] I recognized that pattern instantly, mostly because I used to speak about my own work in exactly the same nervous way.",
+      "Narrator: Even though her reports were consistently accurate, she seemed convinced that any small mistake would prove she didn't belong on the team.",
+      "Narrator: [reflective] One afternoon, I asked her directly why she apologized so often before anyone had even questioned her conclusions.",
+      "Narrator: She admitted that in her previous job, a manager had criticized her harshly in front of colleagues, and the fear had never fully disappeared.",
+      "Narrator: [honestly] I did not diagnose the effect of one event. I listened, kept the disclosure private, asked what support she wanted, and explained relevant workplace channels.",
+      "Narrator: With her agreement, I asked her to connect conclusions to evidence, name uncertainty, and identify what would change her view before I offered feedback.",
+      "Narrator: [seriously] If she said a number seemed wrong, I would ask her to explain why, rather than immediately agreeing or correcting it myself.",
+      "Narrator: Slowly, her explanations became firmer, and the constant apologies started disappearing from her sentences, one meeting at a time.",
+      "Narrator: [gently] Last week, she respectfully questioned a senior manager’s assumption, explained the evidence, and invited the group to check the source.",
+      "Narrator: He actually thanked her afterward, admitting her correction had likely saved the department from a costly mistake in the final report.",
+      "Narrator: [encouraging] Watching that moment, I felt genuinely proud, not because I had taught her anything technical, but because she had stopped shrinking herself.",
+      "Narrator: Mentoring taught me to combine specific feedback, safe responsibility, evidence-based practice, and attention to the team environment rather than praising confidence alone.",
+      "Narrator: [sincere] Tia still has doubts occasionally, as everyone does, but she no longer lets those doubts speak louder than her actual competence."
     ],
     "quiz": [
-      { "question": "What pattern did the narrator notice in Tia's behavior?", "options": ["She never finished her work", "She would present strong analysis, then immediately undermine it by apologizing", "She refused to speak in meetings", "She copied other people's ideas"], "correctIndex": 1, "explanation": "Tia would present strong analysis and then immediately say it was probably wrong anyway." },
-      { "question": "Why did Tia explain she apologized so often?", "options": ["She disliked her job", "A previous manager had criticized her harshly in front of colleagues", "She was naturally quiet", "She had failed a big project once"], "correctIndex": 1, "explanation": "She admitted a previous manager had criticized her harshly in front of colleagues, and the fear stayed with her." },
-      { "question": "What method did the narrator use to help Tia build confidence?", "options": ["Doing Tia's work for her", "Asking Tia to defend her own conclusions before offering an opinion", "Ignoring Tia's mistakes completely", "Giving Tia only easy tasks"], "correctIndex": 1, "explanation": "She started asking Tia to explain and defend her conclusions rather than correcting her immediately." },
-      { "question": "What happened when Tia disagreed with a senior manager last week?", "options": ["She was reprimanded", "She calmly explained his assumption was incorrect using solid evidence, and he thanked her", "She apologized and backed down", "The meeting was cancelled"], "correctIndex": 1, "explanation": "Tia calmly explained why his assumption was incorrect, and he thanked her, admitting it saved the department a mistake." },
-      { "question": "What does the narrator conclude about how confidence grows?", "options": ["Through compliments alone", "Through being trusted with real responsibility, repeatedly", "Through avoiding difficult situations", "Through working alone"], "correctIndex": 1, "explanation": "She concludes confidence grows through being trusted with real responsibility, repeatedly, not through compliments alone." }
-    ]
+      {
+        "question": "What pattern did the narrator notice in Tia's behavior?",
+        "options": [
+          "She never finished her work",
+          "She refused to speak in meetings",
+          "She copied other people's ideas",
+          "She would present strong analysis, then immediately undermine it by apologizing"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tia would present strong analysis and then immediately say it was probably wrong anyway."
+      },
+      {
+        "question": "Why did Tia explain she apologized so often?",
+        "options": [
+          "She disliked her job",
+          "She was naturally quiet",
+          "A previous manager had criticized her harshly in front of colleagues",
+          "She had failed a big project once"
+        ],
+        "correctIndex": 2,
+        "explanation": "She admitted a previous manager had criticized her harshly in front of colleagues, and the fear stayed with her."
+      },
+      {
+        "question": "What method did the narrator use to help Tia build confidence?",
+        "options": [
+          "Doing Tia's work for her",
+          "Ignoring Tia's mistakes completely",
+          "Asking Tia to defend her own conclusions before offering an opinion",
+          "Giving Tia only easy tasks"
+        ],
+        "correctIndex": 2,
+        "explanation": "She started asking Tia to explain and defend her conclusions rather than correcting her immediately."
+      },
+      {
+        "question": "What happened when Tia disagreed with a senior manager last week?",
+        "options": [
+          "She was reprimanded",
+          "She apologized and backed down",
+          "The meeting was cancelled",
+          "She calmly explained his assumption was incorrect using solid evidence, and he thanked her"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tia calmly explained why his assumption was incorrect, and he thanked her, admitting it saved the department a mistake."
+      },
+      {
+        "question": "What does the narrator conclude about how confidence grows?",
+        "options": [
+          "Through being trusted with real responsibility, repeatedly",
+          "Through compliments alone",
+          "Through avoiding difficult situations",
+          "Through working alone"
+        ],
+        "correctIndex": 0,
+        "explanation": "She concludes confidence grows through being trusted with real responsibility, repeatedly, not through compliments alone."
+      },
+      {
+        "question": "What mistake would the mentor make by focusing only on confidence?",
+        "options": [
+          "Confidence always lowers accuracy",
+          "A real quality problem or unsafe team culture could be overlooked",
+          "Mentoring requires public criticism",
+          "Junior staff cannot analyze data"
+        ],
+        "correctIndex": 1,
+        "explanation": "Evidence and environment both need review."
+      },
+      {
+        "question": "How does the mentor respond to Tia’s disclosure?",
+        "options": [
+          "Shares it with the team",
+          "Diagnoses trauma",
+          "Listens, protects privacy, asks what support she wants, and follows relevant channels",
+          "Promises the manager will change"
+        ],
+        "correctIndex": 2,
+        "explanation": "Support remains consent-based and role-appropriate."
+      },
+      {
+        "question": "What did defending conclusions practice?",
+        "options": [
+          "Connecting a claim to evidence and uncertainty before receiving feedback",
+          "Winning every disagreement",
+          "Avoiding correction",
+          "Speaking louder than managers"
+        ],
+        "correctIndex": 0,
+        "explanation": "The method develops reasoning, not performance alone."
+      },
+      {
+        "question": "Why should public disagreement not be the main sign of growth?",
+        "options": [
+          "Managers must never be challenged",
+          "Good judgment may appear through questions, corrections, or private escalation depending on context",
+          "Evidence belongs only in reports",
+          "Confidence has no value"
+        ],
+        "correctIndex": 1,
+        "explanation": "Different situations require different communication."
+      },
+      {
+        "question": "What makes praise useful?",
+        "options": [
+          "It guarantees promotion",
+          "It removes all doubt",
+          "It identifies specific reasoning or behavior rather than offering empty reassurance",
+          "It replaces work evidence"
+        ],
+        "correctIndex": 2,
+        "explanation": "Specific feedback is more informative than general compliments."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; protect the mentee’s privacy, avoid diagnosing long-term harm from one event, and make confidence-building evidence-based rather than dependent on public confrontation",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-work-06",
@@ -183,34 +759,151 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Ilham", "gender": "male" },
-      { "name": "Citra", "gender": "female" }
+      {
+        "name": "Ilham",
+        "gender": "male"
+      },
+      {
+        "name": "Citra",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Ilham: [frustrated] Citra, did you see the new policy? Management wants everyone back in the office four days a week starting next month.",
-      "Citra: [surprised] Four days? I thought the whole point of hybrid work was flexibility. This feels like a step backward to me.",
-      "Ilham: [agreeing] Exactly my reaction. If productivity hasn't actually dropped, then what's really driving this decision?",
-      "Citra: [thoughtful] I heard it's partly about collaboration. Apparently, some managers feel that spontaneous conversations happen less often when everyone works remotely.",
-      "Ilham: [skeptical] Maybe, although I've had plenty of useful conversations over video calls too. It's not as though remote work eliminates collaboration entirely.",
-      "Citra: [considering] That's true for some teams, however I'll admit our newer employees have struggled a bit without in-person guidance.",
-      "Ilham: [conceding] Okay, that's a fair point. Even though I personally prefer working from home, I understand that newer staff might need more direct support.",
-      "Citra: [thoughtful] What if the policy applied differently depending on experience, rather than forcing everyone into the exact same schedule?",
-      "Ilham: [interested] That actually sounds reasonable. Senior employees who've proven they work well remotely shouldn't necessarily be treated the same as brand-new hires.",
-      "Citra: [nodding] Right, and despite understanding the reasoning behind more office time, four days still feels excessive compared to two or three.",
-      "Ilham: [determined] Should we raise this suggestion at Friday's meeting, instead of simply accepting the policy without any discussion at all?",
-      "Citra: [encouraging] Definitely. If we present it calmly, with reasons rather than complaints, management is more likely to actually consider it.",
-      "Ilham: [thoughtful] I'll gather some data on our team's output over the past year, so the argument isn't based purely on personal preference.",
-      "Citra: [pleased] Good idea. Numbers tend to persuade decision-makers far more effectively than frustration alone, no matter how justified that frustration feels.",
-      "Ilham: [warmly] Agreed. Let's meet tomorrow morning to prepare properly, so we're not improvising our argument in front of the whole department.",
-      "Citra: [smiling] Sounds good. Honestly, I feel better already, just knowing we're doing something instead of quietly complaining to each other."
+      "Ilham: [thoughtful] Citra, did you see the new policy? Management wants everyone back in the office four days a week starting next month.",
+      "Citra: Four days? I thought the whole point of hybrid work was flexibility. This feels like a step backward to me.",
+      "Ilham: [carefully] Exactly my reaction. If productivity hasn't actually dropped, then what's really driving this decision?",
+      "Citra: I heard it's partly about collaboration. Apparently, some managers feel that spontaneous conversations happen less often when everyone works remotely.",
+      "Ilham: [reflective] Maybe, although I've had plenty of useful conversations over video calls too. It's not as though remote work eliminates collaboration entirely.",
+      "Citra: That's true for some teams, however I'll admit our newer employees have struggled a bit without in-person guidance.",
+      "Ilham: [honestly] Okay, that's a fair point. Even though I personally prefer working from home, I understand that newer staff might need more direct support.",
+      "Citra: What if the policy identifies which activities genuinely need presence, then allows role-based flexibility and a clear process for disability, health, or care needs?",
+      "Ilham: [seriously] That actually sounds reasonable. Experience may matter, but new and senior staff can each need flexibility or support. The task and individual context are better than a simple category.",
+      "Citra: Right, and despite understanding the reasoning behind more office time, four days still feels excessive compared to two or three.",
+      "Ilham: [gently] Should we raise this suggestion at Friday's meeting, instead of simply accepting the policy without any discussion at all?",
+      "Citra: Definitely. If we present it calmly, with reasons rather than complaints, management is more likely to actually consider it.",
+      "Ilham: [encouraging] I will gather output, quality, collaboration, learning, inclusion, service, security, and wellbeing evidence, and propose a review date for any change.",
+      "Citra: Good. We should combine quantitative data with staff experience and avoid collecting unnecessary private information while evaluating the policy.",
+      "Ilham: [sincere] Agreed. Let's meet tomorrow morning to prepare properly, so we're not improvising our argument in front of the whole department.",
+      "Citra: Sounds good. Honestly, I feel better already, just knowing we're doing something instead of quietly complaining to each other."
     ],
     "quiz": [
-      { "question": "What does the new policy require starting next month?", "options": ["Everyone works fully remote", "Everyone returns to the office four days a week", "Only new employees return to the office", "Nobody works from home ever"], "correctIndex": 1, "explanation": "The new policy requires everyone back in the office four days a week starting next month." },
-      { "question": "What reason does Citra give for why management wants more office time?", "options": ["Lower electricity costs", "Spontaneous conversations and collaboration happen less often remotely", "Employees complained about home offices", "The building needed more use"], "correctIndex": 1, "explanation": "Citra mentions management feels spontaneous conversations happen less often when everyone works remotely." },
-      { "question": "What does Citra say has struggled without in-person guidance?", "options": ["Senior managers", "Newer employees", "The IT department", "Client relationships"], "correctIndex": 1, "explanation": "Citra admits newer employees have struggled a bit without in-person guidance." },
-      { "question": "What compromise idea does Citra suggest?", "options": ["Cancel the policy entirely", "Apply the policy differently depending on employee experience", "Make everyone work six days", "Fire the newer employees"], "correctIndex": 1, "explanation": "Citra suggests the policy could apply differently depending on experience, rather than the same schedule for everyone." },
-      { "question": "What does Ilham plan to gather before Friday's meeting?", "options": ["Signatures for a petition", "Data on their team's output over the past year", "A list of complaints", "New job listings"], "correctIndex": 1, "explanation": "Ilham plans to gather data on the team's output so the argument isn't based purely on personal preference." }
-    ]
+      {
+        "question": "What does the new policy require starting next month?",
+        "options": [
+          "Everyone works fully remote",
+          "Only new employees return to the office",
+          "Everyone returns to the office four days a week",
+          "Nobody works from home ever"
+        ],
+        "correctIndex": 2,
+        "explanation": "The new policy requires everyone back in the office four days a week starting next month."
+      },
+      {
+        "question": "What reason does Citra give for why management wants more office time?",
+        "options": [
+          "Lower electricity costs",
+          "Employees complained about home offices",
+          "Spontaneous conversations and collaboration happen less often remotely",
+          "The building needed more use"
+        ],
+        "correctIndex": 2,
+        "explanation": "Citra mentions management feels spontaneous conversations happen less often when everyone works remotely."
+      },
+      {
+        "question": "What does Citra say has struggled without in-person guidance?",
+        "options": [
+          "Senior managers",
+          "Newer employees",
+          "The IT department",
+          "Client relationships"
+        ],
+        "correctIndex": 1,
+        "explanation": "Citra admits newer employees have struggled a bit without in-person guidance."
+      },
+      {
+        "question": "What compromise idea does Citra suggest?",
+        "options": [
+          "Cancel the policy entirely",
+          "Make everyone work six days",
+          "Fire the newer employees",
+          "Apply the policy differently depending on employee experience"
+        ],
+        "correctIndex": 3,
+        "explanation": "Citra suggests the policy could apply differently depending on experience, rather than the same schedule for everyone."
+      },
+      {
+        "question": "What does Ilham plan to gather before Friday's meeting?",
+        "options": [
+          "Signatures for a petition",
+          "A list of complaints",
+          "New job listings",
+          "Data on their team's output over the past year"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ilham plans to gather data on the team's output so the argument isn't based purely on personal preference."
+      },
+      {
+        "question": "Why is experience level an imperfect rule?",
+        "options": [
+          "New and senior staff can have different tasks, support, disability, or care needs",
+          "Experience never matters",
+          "All roles are remote",
+          "New employees refuse guidance"
+        ],
+        "correctIndex": 0,
+        "explanation": "One category cannot capture every relevant need."
+      },
+      {
+        "question": "What should the policy define?",
+        "options": [
+          "One schedule without reasons",
+          "Only managers’ preferences",
+          "A ban on video calls",
+          "Which activities need presence, what flexibility exists, and how exceptions or adjustments work"
+        ],
+        "correctIndex": 3,
+        "explanation": "Clear purpose makes requirements reviewable."
+      },
+      {
+        "question": "What evidence goes beyond output totals?",
+        "options": [
+          "Office attendance alone",
+          "Employee complaints alone",
+          "The number of desks",
+          "Quality, inclusion, learning, service, security, wellbeing, and collaboration"
+        ],
+        "correctIndex": 3,
+        "explanation": "A workplace policy has several outcomes."
+      },
+      {
+        "question": "Why are accessibility and care mentioned?",
+        "options": [
+          "A standard schedule can create unequal effects that need lawful and fair consideration",
+          "Remote work cures disability",
+          "Care duties remove job standards",
+          "Policies cannot have exceptions"
+        ],
+        "correctIndex": 0,
+        "explanation": "Implementation affects people differently."
+      },
+      {
+        "question": "What is their planned approach?",
+        "options": [
+          "Refuse every office day",
+          "Gather mixed evidence and propose a reviewable role-based framework",
+          "Accept without discussion",
+          "Compare only senior workers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their argument becomes more complete than personal preference."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; make hybrid-work analysis role- and person-specific, include accessibility and care needs, and use broader evidence than output totals",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-work-07",
@@ -219,35 +912,610 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "HR Manager", "gender": "female" },
-      { "name": "Employee", "gender": "male" }
+      {
+        "name": "HR Manager",
+        "gender": "female"
+      },
+      {
+        "name": "Employee",
+        "gender": "male"
+      }
     ],
     "script": [
-      "HR Manager: [warmly] Thank you for agreeing to this exit interview, Arman. We genuinely want honest feedback, even if it's uncomfortable to hear.",
-      "Employee: [calm] I appreciate that. I'll try to be constructive rather than simply listing complaints for the sake of it.",
-      "HR Manager: [curious] Let's start broadly. What's the main reason you decided to leave after three years here?",
-      "Employee: [thoughtful] Honestly, it wasn't one single event. It was more that I stopped seeing a clear path for growth within this department.",
-      "HR Manager: [attentive] Can you say more about that? Did you raise this concern with your manager at any point?",
-      "Employee: [honestly] I did, twice actually, but both times the conversation ended with vague promises about future opportunities that never materialized.",
-      "HR Manager: [understanding] That's valuable to know. Were there other factors, or was the lack of growth essentially the deciding one?",
-      "Employee: [reflective] There was also the workload. Even though I never missed a deadline, the expectations kept increasing without any adjustment to my role or pay.",
-      "HR Manager: [thoughtful] If those two things had been addressed earlier, do you think you would have stayed longer?",
-      "Employee: [honestly] Probably, yes. I didn't want to leave, in spite of how that might sound right now during this conversation.",
+      "HR Manager: [thoughtful] Thank you for joining. I will explain who may see the notes and the confidentiality limits. You may decline a question or request a copy where policy permits.",
+      "Employee: I appreciate that. I'll try to be constructive rather than simply listing complaints for the sake of it.",
+      "HR Manager: [carefully] Let's start broadly. What's the main reason you decided to leave after three years here?",
+      "Employee: Honestly, it wasn't one single event. It was more that I stopped seeing a clear path for growth within this department.",
+      "HR Manager: [reflective] Can you say more about that? Did you raise this concern with your manager at any point?",
+      "Employee: I did, twice actually, but both times the conversation ended with vague promises about future opportunities that never materialized.",
+      "HR Manager: [honestly] That's valuable to know. Were there other factors, or was the lack of growth essentially the deciding one?",
+      "Employee: There was also the workload. Even though I never missed a deadline, the expectations kept increasing without any adjustment to my role or pay.",
+      "HR Manager: [seriously] If those two things had been addressed earlier, do you think you would have stayed longer?",
+      "Employee: Probably, yes. I didn't want to leave, in spite of how that might sound right now during this conversation.",
       "HR Manager: [gently] What would you say to someone considering joining this department today, if they asked you directly?",
-      "Employee: [carefully] I'd tell them the team itself is wonderful, and the work is genuinely interesting, however they should ask clearly about promotion timelines beforehand.",
-      "HR Manager: [nodding] That's fair, and frankly useful feedback for us to take seriously going forward.",
-      "Employee: [thoughtful] I'd also suggest regular growth conversations, not just yearly reviews, so concerns don't quietly build for months before finally boiling over.",
-      "HR Manager: [appreciative] Noted. Is there anything positive you'd want your manager to specifically hear, despite everything else we've discussed today?",
-      "Employee: [warmly] Yes, actually. Tell him I learned more from him in three years than from anyone in my career so far.",
-      "HR Manager: [touched] I will make sure he hears that directly. Thank you for such thoughtful and balanced honesty today, Arman.",
-      "Employee: [sincerely] Thank you for actually listening. That alone makes me feel this conversation was worth having."
+      "Employee: I'd tell them the team itself is wonderful, and the work is genuinely interesting, however they should ask clearly about promotion timelines beforehand.",
+      "HR Manager: [encouraging] That is useful. Specific examples, dates, impact, and possible process changes will help me record it accurately without including unnecessary personal information.",
+      "Employee: I'd also suggest regular growth conversations, not just yearly reviews, so concerns don't quietly build for months before finally boiling over.",
+      "HR Manager: [sincere] Serious safety, harassment, discrimination, fraud, or legal concerns need an appropriate formal channel. Is there also a positive message to record?",
+      "Employee: Yes, actually. Tell him I learned more from him in three years than from anyone in my career so far.",
+      "HR Manager: [thoughtful] I will record and route that message. I cannot guarantee what changes will follow, but I can document the feedback and the next responsible owner.",
+      "Employee: Thank you for actually listening. That alone makes me feel this conversation was worth having."
     ],
     "quiz": [
-      { "question": "What is the main reason Arman gives for leaving?", "options": ["A conflict with a coworker", "He stopped seeing a clear path for growth in the department", "He received a bad performance review", "He wanted to move to another city"], "correctIndex": 1, "explanation": "Arman says he stopped seeing a clear path for growth within the department." },
-      { "question": "How many times did Arman raise his growth concerns with his manager?", "options": ["Never", "Twice, but with vague promises that never materialized", "Once, and it was resolved", "Five times"], "correctIndex": 1, "explanation": "He raised it twice, but both times ended with vague promises that never materialized." },
-      { "question": "What other factor did Arman mention besides lack of growth?", "options": ["Poor office location", "Increasing workload without adjustment to role or pay", "Bad relationships with coworkers", "Lack of vacation days"], "correctIndex": 1, "explanation": "He mentions the workload kept increasing without any adjustment to his role or pay." },
-      { "question": "What advice does Arman give for someone considering joining the department?", "options": ["Avoid the department entirely", "Ask clearly about promotion timelines beforehand", "Never negotiate salary", "Only join if you dislike teamwork"], "correctIndex": 1, "explanation": "He suggests people should ask clearly about promotion timelines before joining." },
-      { "question": "What message does Arman want passed on to his manager?", "options": ["A complaint about unfair treatment", "That he learned more from him in three years than from anyone in his career", "A request for a reference letter", "Nothing at all"], "correctIndex": 1, "explanation": "Arman asks the HR manager to tell his manager he learned more from him than from anyone else in his career." }
-    ]
+      {
+        "question": "What is the main reason Arman gives for leaving?",
+        "options": [
+          "A conflict with a coworker",
+          "He stopped seeing a clear path for growth in the department",
+          "He received a bad performance review",
+          "He wanted to move to another city"
+        ],
+        "correctIndex": 1,
+        "explanation": "Arman says he stopped seeing a clear path for growth within the department."
+      },
+      {
+        "question": "How many times did Arman raise his growth concerns with his manager?",
+        "options": [
+          "Never",
+          "Once, and it was resolved",
+          "Twice, but with vague promises that never materialized",
+          "Five times"
+        ],
+        "correctIndex": 2,
+        "explanation": "He raised it twice, but both times ended with vague promises that never materialized."
+      },
+      {
+        "question": "What other factor did Arman mention besides lack of growth?",
+        "options": [
+          "Increasing workload without adjustment to role or pay",
+          "Poor office location",
+          "Bad relationships with coworkers",
+          "Lack of vacation days"
+        ],
+        "correctIndex": 0,
+        "explanation": "He mentions the workload kept increasing without any adjustment to his role or pay."
+      },
+      {
+        "question": "What advice does Arman give for someone considering joining the department?",
+        "options": [
+          "Avoid the department entirely",
+          "Never negotiate salary",
+          "Only join if you dislike teamwork",
+          "Ask clearly about promotion timelines beforehand"
+        ],
+        "correctIndex": 3,
+        "explanation": "He suggests people should ask clearly about promotion timelines before joining."
+      },
+      {
+        "question": "What message does Arman want passed on to his manager?",
+        "options": [
+          "A complaint about unfair treatment",
+          "A request for a reference letter",
+          "That he learned more from him in three years than from anyone in his career",
+          "Nothing at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "Arman asks the HR manager to tell his manager he learned more from him than from anyone else in his career."
+      },
+      {
+        "question": "Why might an employee limit exit-interview detail?",
+        "options": [
+          "Exit interviews require praise only",
+          "HR already knows every fact",
+          "Employees cannot describe workload",
+          "Confidentiality, future references, legal duties, and retaliation concerns may vary"
+        ],
+        "correctIndex": 3,
+        "explanation": "Honesty should be informed by context and obligations."
+      },
+      {
+        "question": "What type of feedback is strongest?",
+        "options": [
+          "Specific examples, dates, impact, and feasible process changes",
+          "Rumors about named coworkers",
+          "A list of insults",
+          "Promises about other employees"
+        ],
+        "correctIndex": 0,
+        "explanation": "Evidence and actionability improve the record."
+      },
+      {
+        "question": "What should not wait for an exit interview?",
+        "options": [
+          "Serious safety, harassment, discrimination, fraud, or legal concerns needing proper channels",
+          "A positive message to a manager",
+          "A request for a copy of notes",
+          "A career reflection"
+        ],
+        "correctIndex": 0,
+        "explanation": "Some issues require timely formal escalation."
+      },
+      {
+        "question": "What can the HR manager promise?",
+        "options": [
+          "That the department will change",
+          "To record and route feedback accurately, not to guarantee an outcome",
+          "That all comments stay secret in every case",
+          "That Arman will return"
+        ],
+        "correctIndex": 1,
+        "explanation": "The listener controls process commitments, not results."
+      },
+      {
+        "question": "What balance does Arman maintain?",
+        "options": [
+          "He identifies systemic concerns while recognizing valuable people and learning",
+          "He withdraws every criticism",
+          "He shares private colleague files",
+          "He demands a promotion after leaving"
+        ],
+        "correctIndex": 0,
+        "explanation": "Balanced feedback can remain specific."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "revise; add confidentiality and retaliation limits, factual documentation, appropriate reporting channels, and no promise that feedback will produce change",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-work-08",
+    "title": "The Handover That Did Not Share My Password",
+    "level": "B1",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] Two weeks before my annual leave, my manager asked me to prepare a handover for the colleague covering my work.",
+      "Narrator: I first wrote a long document explaining every task, but the document was not enough. Several processes depended on accounts that only I could access.",
+      "Narrator: [carefully] A teammate suggested sending him my password for the month. It sounded quick, yet it would remove accountability and might violate our security policy.",
+      "Narrator: Instead, I listed the work functions he needed and asked the system owners to create approved access under his own identity.",
+      "Narrator: [reflective] They gave him only the permissions required for the temporary role and recorded an end date for the access.",
+      "Narrator: We tested the main tasks together using sample or permitted data, not real customer information copied into a training file.",
+      "Narrator: [honestly] The handover document explained deadlines, decision rules, contact points, current risks, and which situations required approval.",
+      "Narrator: It did not include secret keys, passwords, unnecessary personal details, or confidential notes about colleagues.",
+      "Narrator: [seriously] For one older system, separate access could not be arranged before my leave. We did not work around the control.",
+      "Narrator: My manager reassigned that task to an authorized employee and told clients how urgent requests would be handled.",
+      "Narrator: [gently] We also agreed that I would not monitor routine messages during leave. A genuine emergency had a documented escalation route that did not depend on my private telephone.",
+      "Narrator: On my last working day, my colleague completed a test task while I observed. His questions revealed two instructions that had made sense only in my head.",
+      "Narrator: [encouraging] I rewrote them with examples and added the location of the official policy rather than relying on memory.",
+      "Narrator: When I returned, no one had used my account, and the temporary access had ended as scheduled.",
+      "Narrator: [sincere] There had been one delay, but the record showed who made each decision and why.",
+      "Narrator: A good handover does more than keep work moving. It protects security, preserves accountability, respects leave, and makes hidden knowledge understandable to someone else."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the narrator refuse to share a password?",
+        "options": [
+          "The colleague had forgotten his name",
+          "It would weaken accountability and could violate policy",
+          "The password was too long to type",
+          "Annual leave prevents all system use"
+        ],
+        "correctIndex": 1,
+        "explanation": "Each person needed approved access under their own identity."
+      },
+      {
+        "question": "How was temporary access limited?",
+        "options": [
+          "By sharing one administrator account",
+          "By required permissions and an end date",
+          "By using customer data for practice",
+          "By keeping it forever"
+        ],
+        "correctIndex": 1,
+        "explanation": "Least privilege and expiry reduced risk."
+      },
+      {
+        "question": "What did the handover exclude?",
+        "options": [
+          "Credentials and unnecessary confidential information",
+          "Decision rules",
+          "Deadlines",
+          "Official contact points"
+        ],
+        "correctIndex": 0,
+        "explanation": "Useful instructions were separated from secrets."
+      },
+      {
+        "question": "How was the unsupported older-system task handled?",
+        "options": [
+          "The controls were bypassed",
+          "It was reassigned to someone already authorized",
+          "The narrator cancelled leave",
+          "A client received the password"
+        ],
+        "correctIndex": 1,
+        "explanation": "The team did not solve urgency by breaking access rules."
+      },
+      {
+        "question": "What improved during the test task?",
+        "options": [
+          "Every deadline disappeared",
+          "The colleague gained permanent access",
+          "Two unclear instructions were rewritten with examples",
+          "The policy was deleted"
+        ],
+        "correctIndex": 2,
+        "explanation": "A rehearsal exposed hidden assumptions."
+      },
+      {
+        "question": "Why did the long document fail by itself?",
+        "options": [
+          "It contained too many deadlines",
+          "The manager rejected annual leave",
+          "The colleague could not read",
+          "The covering colleague lacked approved access to required systems"
+        ],
+        "correctIndex": 3,
+        "explanation": "Knowledge and authorization were separate needs."
+      },
+      {
+        "question": "Why did the team use sample or permitted data?",
+        "options": [
+          "Sample data always predicts clients",
+          "Real systems were unavailable",
+          "The colleague owned the records",
+          "Training did not justify copying real customer information"
+        ],
+        "correctIndex": 3,
+        "explanation": "Learning should follow data-use limits."
+      },
+      {
+        "question": "What protected the narrator’s leave?",
+        "options": [
+          "A promise to check every message",
+          "Sharing a private telephone publicly",
+          "A documented emergency route that did not depend on routine personal contact",
+          "Cancelling unresolved tasks"
+        ],
+        "correctIndex": 2,
+        "explanation": "Continuity was designed without erasing time off."
+      },
+      {
+        "question": "What does the one delay show?",
+        "options": [
+          "Password sharing would prevent every delay",
+          "A controlled process may still have imperfection while preserving accountability",
+          "The handover failed completely",
+          "All old systems are secure"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reliability is not the same as zero friction."
+      },
+      {
+        "question": "Which four aims close the account?",
+        "options": [
+          "Security, accountability, respected leave, and understandable knowledge",
+          "Speed, secrecy, overtime, and memory",
+          "Access, sales, travel, and salary",
+          "Automation, ownership, discipline, and profit"
+        ],
+        "correctIndex": 0,
+        "explanation": "The conclusion names the handover’s wider value."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "retain; strong secure-handover monologue covering individual accounts, least privilege, expiry, data minimization, escalation, leave boundaries, and rehearsal",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-work-09",
+    "title": "Why I Declined the Unpaid Recruitment Project",
+    "level": "B1",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] After two interviews for a marketing role, the company sent me a final assessment.",
+      "Narrator: The email asked for a complete campaign strategy, twelve advertisement ideas, and a detailed budget for a product they planned to launch next month.",
+      "Narrator: [carefully] It said the task should take two hours, but producing work at that level would require much longer.",
+      "Narrator: I wanted the job, so my first instinct was to cancel my weekend and complete everything.",
+      "Narrator: [reflective] Then I noticed that candidates had to transfer all rights to the company, whether or not they were hired.",
+      "Narrator: The assignment looked less like a short skills test and more like useful commercial work collected without payment.",
+      "Narrator: [honestly] I replied politely and asked what skill each section measured, how submissions would be protected, who would view them, and whether the company would use candidate ideas.",
+      "Narrator: I offered alternatives: a smaller fictional case, a timed discussion of a previous anonymized project, or a paid trial with clear terms.",
+      "Narrator: [seriously] The recruiter said every candidate had received the same task and nobody else had objected.",
+      "Narrator: Equal treatment did not answer the questions about time, accessibility, confidentiality, ownership, or real business use.",
+      "Narrator: [gently] I also avoided sending examples that contained former clients’ private information. I described my reasoning without exposing work I had no right to share.",
+      "Narrator: Two days later, the company shortened the assessment to a fictional one-page brief and removed the transfer of rights.",
+      "Narrator: [encouraging] I completed that version, although I did not assume the change guaranteed a fair workplace.",
+      "Narrator: During the final conversation, I asked how performance would be evaluated and requested the criteria in writing.",
+      "Narrator: [sincere] I eventually accepted another position whose process used structured interviews and a limited paid exercise.",
+      "Narrator: Declining the original assignment felt risky, but it showed me that recruitment tests should be proportionate to the role and should not turn applicants’ need for work into free production.",
+      "Narrator: [thoughtful] Candidates may have different legal protections, so a difficult case may also require local professional advice, not only a personal email."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the assessment appear commercially useful?",
+        "options": [
+          "It used a fictional product",
+          "It lasted only ten minutes",
+          "It asked about previous experience",
+          "It requested a launch-ready strategy, advertisements, and budget"
+        ],
+        "correctIndex": 3,
+        "explanation": "The task resembled real production work."
+      },
+      {
+        "question": "What clause increased the narrator’s concern?",
+        "options": [
+          "Candidates could ask questions",
+          "Candidates transferred all rights even if not hired",
+          "The recruiter provided a deadline",
+          "The role involved marketing"
+        ],
+        "correctIndex": 1,
+        "explanation": "Ownership applied beyond successful applicants."
+      },
+      {
+        "question": "What alternatives did the narrator offer?",
+        "options": [
+          "A smaller fictional case, an anonymized discussion, or a paid trial",
+          "No evaluation of any kind",
+          "Former clients’ confidential files",
+          "A public competition"
+        ],
+        "correctIndex": 0,
+        "explanation": "The options could test skill more proportionately."
+      },
+      {
+        "question": "Why was “everyone gets the same task” insufficient?",
+        "options": [
+          "Equal treatment is always unlawful",
+          "Other candidates had refused",
+          "The recruiter lacked email",
+          "Consistency did not resolve burden, access, confidentiality, ownership, or use"
+        ],
+        "correctIndex": 3,
+        "explanation": "A uniform process can still have design problems."
+      },
+      {
+        "question": "What lesson does the narrator draw?",
+        "options": [
+          "Applicants should never complete tests",
+          "The longest task selects the best worker",
+          "Recruitment tests should assess skills without extracting disproportionate free work",
+          "Rights clauses do not matter"
+        ],
+        "correctIndex": 2,
+        "explanation": "Proportionality and purpose guide fair assessment."
+      },
+      {
+        "question": "Why did the two-hour estimate matter?",
+        "options": [
+          "It understated the realistic burden of launch-ready work",
+          "Candidates preferred weekend tasks",
+          "The role required timekeeping",
+          "The budget was two hours late"
+        ],
+        "correctIndex": 0,
+        "explanation": "Estimated and actual effort affected fairness."
+      },
+      {
+        "question": "What privacy boundary did the narrator keep?",
+        "options": [
+          "The recruiter received every old file",
+          "Company plans were posted publicly",
+          "Former clients’ confidential work was not sent as proof of skill",
+          "No experience was discussed"
+        ],
+        "correctIndex": 2,
+        "explanation": "A portfolio request does not cancel prior duties."
+      },
+      {
+        "question": "Why did the shorter fictional task improve the process?",
+        "options": [
+          "It guaranteed a fair workplace",
+          "It removed all evaluation",
+          "It could test reasoning with less extraction of real commercial value",
+          "Candidates transferred more rights"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revision better matched assessment purpose."
+      },
+      {
+        "question": "What did the narrator request at the final conversation?",
+        "options": [
+          "Another unpaid campaign",
+          "Written evaluation criteria",
+          "The other candidates’ scores",
+          "A former client list"
+        ],
+        "correctIndex": 1,
+        "explanation": "Criteria make the decision more understandable."
+      },
+      {
+        "question": "Why is local advice mentioned?",
+        "options": [
+          "Personal emails are illegal",
+          "Marketing tests require a lawyer everywhere",
+          "Legal protections and contract rights differ by place and case",
+          "Recruiters cannot change assignments"
+        ],
+        "correctIndex": 2,
+        "explanation": "The text avoids universal legal claims."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "retain; strong recruitment account testing proportionality, commercial use, rights, access, privacy, structured criteria, and local legal limits",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-work-10",
+    "title": "Asking How Promotion Decisions Are Made",
+    "level": "B1",
+    "themeId": "work",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Manager Yusuf",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Sari: [thoughtful] Yusuf, may I ask how promotion decisions are made for the senior analyst role?",
+      "Manager Yusuf: Yes. Are you asking about your development or a specific decision?",
+      "Sari: [carefully] Both. The role was announced after someone had already been chosen, and I do not understand which evidence was considered.",
+      "Manager Yusuf: I see why that feels unclear. I cannot discuss another employee’s private evaluation, but I can explain the criteria and your record.",
+      "Sari: [reflective] What are the criteria?",
+      "Manager Yusuf: They include quality, judgment, collaboration, communication, and sustained next-level responsibility. I will send the documented descriptions.",
+      "Sari: [honestly] How is each area measured? I worry that “leadership presence” can become a personal impression.",
+      "Manager Yusuf: We should use work evidence from a defined period, informed reviewers, consistent scoring, and checks for bias in vague language.",
+      "Sari: [seriously] Does working visibly in the office count more than results produced remotely?",
+      "Manager Yusuf: Location should not be a hidden requirement. Use role-relevant evidence and reasonable adjustments while recognizing genuine in-person needs.",
+      "Sari: [gently] Can I see the evidence used for my own development review?",
+      "Manager Yusuf: Yes, within policy and privacy limits. You can correct factual errors and add relevant work that was missed.",
+      "Sari: [encouraging] I also want feedback before the next opening, not only after a decision.",
+      "Manager Yusuf: Let us make a development plan with specific opportunities, support, dates, and review points. A plan is not a promise of promotion, but it should make expectations clearer.",
+      "Sari: [sincere] Who can review the process if I believe it was inconsistent?",
+      "Manager Yusuf: Human resources provides the formal channel, and the policy explains appeal or concern routes. You may also use any representative or support allowed locally.",
+      "Sari: [thoughtful] Thank you. I wanted transparency, not information about my colleague.",
+      "Manager Yusuf: That distinction matters. Fairness requires explainable criteria and accountable process while still protecting each employee’s confidentiality.",
+      "Sari: Could the team receive the criteria before future roles open?",
+      "Manager Yusuf: Yes. I will propose publishing the framework and application timeline so eligible employees have a meaningful chance to prepare and apply.",
+      "Sari: Then I will review my record and return with questions tied to the written criteria.",
+      "Manager Yusuf: Good. I will also document this conversation and the actions I have agreed to take."
+    ],
+    "quiz": [
+      {
+        "question": "Why is Sari concerned?",
+        "options": [
+          "A role appeared to be filled before the process was clearly announced",
+          "She wants another employee’s salary",
+          "She refuses technical work",
+          "The criteria were published too early"
+        ],
+        "correctIndex": 0,
+        "explanation": "The timing made the process difficult to understand."
+      },
+      {
+        "question": "What information does Yusuf refuse to share?",
+        "options": [
+          "The written role criteria",
+          "Another employee’s private evaluation",
+          "Sari’s own factual record",
+          "The formal review channel"
+        ],
+        "correctIndex": 1,
+        "explanation": "Transparency has a confidentiality boundary."
+      },
+      {
+        "question": "How should vague criteria be controlled?",
+        "options": [
+          "Let one manager rely on memory",
+          "Count office hours only",
+          "Remove all judgment from the role",
+          "Use defined evidence, multiple reviewers, consistent scoring, and bias checks"
+        ],
+        "correctIndex": 3,
+        "explanation": "Several safeguards improve consistency."
+      },
+      {
+        "question": "What does the development plan not guarantee?",
+        "options": [
+          "A future promotion",
+          "Clearer expectations",
+          "Scheduled review points",
+          "Specific support"
+        ],
+        "correctIndex": 0,
+        "explanation": "Development opportunity and selection outcome are distinct."
+      },
+      {
+        "question": "What change will Yusuf propose?",
+        "options": [
+          "Hide the application dates",
+          "Give Sari the role immediately",
+          "Publish criteria and timelines before future openings",
+          "Share every employee file"
+        ],
+        "correctIndex": 2,
+        "explanation": "Earlier information supports meaningful access."
+      },
+      {
+        "question": "What is problematic about “leadership presence”?",
+        "options": [
+          "It can become an undefined personal impression",
+          "Leadership never matters",
+          "Presence means attendance by law",
+          "Only remote workers lead"
+        ],
+        "correctIndex": 0,
+        "explanation": "Vague language can hide inconsistent judgment."
+      },
+      {
+        "question": "Why use several informed reviewers?",
+        "options": [
+          "Multiple evidence-based perspectives can reduce reliance on one person’s impression",
+          "They guarantee identical scores",
+          "They may share private files freely",
+          "Applicants choose their own result"
+        ],
+        "correctIndex": 0,
+        "explanation": "Review structure can improve consistency without promising perfection."
+      },
+      {
+        "question": "What right does Sari have regarding her own evidence?",
+        "options": [
+          "Read every colleague’s evaluation",
+          "Choose the final promotion",
+          "Delete unfavorable facts",
+          "Review it within policy, correct factual errors, and add relevant omissions"
+        ],
+        "correctIndex": 3,
+        "explanation": "Process access is bounded by accuracy and privacy."
+      },
+      {
+        "question": "How is fairness separated from confidentiality?",
+        "options": [
+          "All evaluations must be public",
+          "Nothing about selection can be shared",
+          "Criteria and process can be explained without exposing another employee’s record",
+          "Privacy prevents written criteria"
+        ],
+        "correctIndex": 2,
+        "explanation": "Both values can be protected together."
+      },
+      {
+        "question": "Why does Yusuf document the conversation?",
+        "options": [
+          "To promise Sari the role",
+          "To create accountability for the actions he agreed to take",
+          "To replace the formal policy",
+          "To distribute it to the team"
+        ],
+        "correctIndex": 1,
+        "explanation": "A record supports follow-through."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "work",
+      "scriptDecision": "retain with concise phrasing; strong promotion-process dialogue balancing transparent criteria, evidence, bias controls, privacy, adjustments, appeal, and documented follow-through",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

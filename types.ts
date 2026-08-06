@@ -224,7 +224,7 @@ export interface GrammarLesson {
 }
 
 // --- GUIDED CURRICULUM TYPES ---
-export type CurriculumStepType = 'context_bridge' | 'grammar_lesson' | 'reading_task' | 'listening_task' | 'speaking_practice' | 'quiz';
+export type CurriculumStepType = 'context_bridge' | 'grammar_lesson' | 'reading_task' | 'listening_task' | 'speaking_practice' | 'shadowing_task' | 'quiz';
 
 export interface CurriculumStep {
   id: string;
@@ -236,6 +236,8 @@ export interface CurriculumStep {
   // Specific data for the module to auto-start
   targetId?: string; // Grammar Lesson ID or Theme ID
   promptContext?: string;
+  shadowingMode?: 'daily' | 'idioms' | 'slang' | 'roleplay';
+  shadowingTheme?: string;
 }
 
 export interface CurriculumUnit {
@@ -295,6 +297,10 @@ export interface DailyTask {
   targetLessonId?: string;
   shadowingTaskId?: string;
   shadowingSentenceIds?: string[];
+  shadowingMode?: 'daily' | 'idioms' | 'slang' | 'roleplay';
+  shadowingTheme?: string;
+  shadowingScenarioId?: string;
+  shadowingRole?: 'A' | 'B';
   bridgeId?: string;
   bridgeIds?: string[];
   vocabWordIds?: string[];
@@ -377,6 +383,10 @@ export interface ModuleContext {
   targetLessonId?: string;
   shadowingTaskId?: string;
   shadowingSentenceIds?: string[];
+  shadowingMode?: 'daily' | 'idioms' | 'slang' | 'roleplay';
+  shadowingTheme?: string;
+  shadowingScenarioId?: string;
+  shadowingRole?: 'A' | 'B';
   bridgeId?: string;
   bridgeIds?: string[];
   listeningTopics?: string[];

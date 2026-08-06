@@ -6,37 +6,154 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Salma", "gender": "female" },
-      { "name": "Bayu", "gender": "male" }
+      {
+        "name": "Salma",
+        "gender": "female"
+      },
+      {
+        "name": "Bayu",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Salma: [measured] Bayu, before we get annoyed at each other again, can we actually sit down and rework this chore list properly?",
-      "Bayu: [defensive] I do my share, though. I take the rubbish out most nights, even when I'm exhausted after work.",
-      "Salma: [calm] I'm not denying that, but the rubbish takes two minutes, whereas cleaning the bathroom takes nearly an hour every single week.",
-      "Bayu: [surprised] I hadn't really thought about it that way, to be honest. I assumed all the tasks were roughly equal.",
-      "Salma: [reasoning] That's exactly the problem, we've been splitting tasks by number instead of by how long or unpleasant they actually are.",
-      "Bayu: [thoughtful] Fair enough. So what would you suggest instead, given that some jobs clearly take longer than others?",
-      "Salma: [practical] What if we assigned points instead of tasks? Heavier jobs earn more points, and each week should balance out fairly.",
-      "Bayu: [interested] That could work, provided we both agree honestly on how many points each task deserves beforehand.",
-      "Salma: [firm] Exactly, otherwise we'll end up arguing about points instead of chores, which defeats the whole purpose.",
-      "Bayu: [conceding] Alright, bathroom cleaning gets the highest score then, since neither of us particularly enjoys doing it.",
-      "Salma: [amused] Nobody enjoys it, which is precisely why it kept getting postponed until it became genuinely unpleasant.",
-      "Bayu: [reflective] I suppose I avoided it partly because I never noticed how often it actually needed doing.",
-      "Salma: [understanding] That happens easily when you're not the one usually doing it, even without meaning to ignore it.",
-      "Bayu: [determined] Even so, I want this to feel fair, not like I'm being punished for not noticing sooner.",
-      "Salma: [warmly] It isn't punishment, it's just adjusting something that clearly wasn't working, despite our good intentions at the start.",
-      "Bayu: [agreeing] Alright, let's write the point system down properly tonight, so we're not relying purely on memory later.",
-      "Salma: [pleased] Good. And if either of us falls behind one week, we simply catch up the following week instead of complaining silently.",
-      "Bayu: [smiling] Deal. Honestly, I'd rather have this slightly awkward conversation now than keep quietly resenting each other over a bathroom.",
-      "Salma: [laughing] Same here. Living together works far better when we actually talk, even about something this mundane."
+      "Salma: [thoughtful] Bayu, as adult siblings sharing this home, can we rework the chores before resentment builds again?",
+      "Bayu: I do my share, though. I take the rubbish out most nights, even when I'm exhausted after work.",
+      "Salma: [carefully] I'm not denying that, but the rubbish takes two minutes, whereas cleaning the bathroom takes nearly an hour every single week.",
+      "Bayu: I hadn't really thought about it that way, to be honest. I assumed all the tasks were roughly equal.",
+      "Salma: [reflective] That's exactly the problem, we've been splitting tasks by number instead of by how long or unpleasant they actually are.",
+      "Bayu: Fair enough. So what would you suggest instead, given that some jobs clearly take longer than others?",
+      "Salma: [honestly] Let us compare time, effort, frequency, unpleasantness, planning, work schedules, health, ability, safety, and preferences, then rotate suitable tasks.",
+      "Bayu: That could work, provided we both agree honestly on how many points each task deserves beforehand.",
+      "Salma: [seriously] Exactly, otherwise we'll end up arguing about points instead of chores, which defeats the whole purpose.",
+      "Bayu: Bathroom cleaning needs suitable products, ventilation, equipment, and safe instructions. Disliking it matters, but competence and health matter too.",
+      "Salma: [gently] Nobody enjoys it, which is precisely why it kept getting postponed until it became genuinely unpleasant.",
+      "Bayu: I suppose I avoided it partly because I never noticed how often it actually needed doing.",
+      "Salma: [encouraging] That happens easily when you're not the one usually doing it, even without meaning to ignore it.",
+      "Bayu: Even so, I want this to feel fair, not like I'm being punished for not noticing sooner.",
+      "Salma: [sincere] It isn't punishment, it's just adjusting something that clearly wasn't working, despite our good intentions at the start.",
+      "Bayu: Alright, let's write the point system down properly tonight, so we're not relying purely on memory later.",
+      "Salma: [thoughtful] Good. If capacity changes, we tell each other, rebalance or reschedule, and review the written plan rather than turning chores into silent debt.",
+      "Bayu: Deal. Honestly, I'd rather have this slightly awkward conversation now than keep quietly resenting each other over a bathroom.",
+      "Salma: [carefully] Same here. Living together works far better when we actually talk, even about something this mundane."
     ],
     "quiz": [
-      { "question": "What is Salma's main complaint about the current chore system?", "options": ["Bayu never does any chores", "Tasks are split by number rather than by how long or unpleasant they are", "They have too many chores", "Bayu forgets constantly"], "correctIndex": 1, "explanation": "Salma explains they've been splitting tasks by number instead of by how long or unpleasant they actually are." },
-      { "question": "What system does Salma propose instead?", "options": ["Hiring a cleaner", "Assigning points based on how heavy or unpleasant each task is", "Doing chores randomly", "Splitting the week in half"], "correctIndex": 1, "explanation": "She suggests a point system where heavier jobs earn more points so the week balances out fairly." },
-      { "question": "Why does Bayu say he avoided cleaning the bathroom?", "options": ["He hates cleaning entirely", "He never noticed how often it actually needed doing", "Salma told him not to", "He was too busy every week"], "correctIndex": 1, "explanation": "Bayu admits he never really noticed how often the bathroom needed cleaning." },
-      { "question": "What condition does Bayu set for the point system to work?", "options": ["That Salma does all the chores", "That they both honestly agree on how many points each task deserves", "That points are decided randomly", "That he gets to choose all the points"], "correctIndex": 1, "explanation": "Bayu says the system could work provided they both honestly agree on the point values beforehand." },
-      { "question": "What do they agree to do if someone falls behind one week?", "options": ["Ignore it completely", "Catch up the following week instead of complaining silently", "Stop doing chores altogether", "Argue about it immediately"], "correctIndex": 1, "explanation": "Salma says if either of them falls behind, they simply catch up the following week instead of complaining silently." }
-    ]
+      {
+        "question": "What is Salma's main complaint about the current chore system?",
+        "options": [
+          "Tasks are split by number rather than by how long or unpleasant they are",
+          "Bayu never does any chores",
+          "They have too many chores",
+          "Bayu forgets constantly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Salma explains they've been splitting tasks by number instead of by how long or unpleasant they actually are."
+      },
+      {
+        "question": "What system does Salma propose instead?",
+        "options": [
+          "Assigning points based on how heavy or unpleasant each task is",
+          "Hiring a cleaner",
+          "Doing chores randomly",
+          "Splitting the week in half"
+        ],
+        "correctIndex": 0,
+        "explanation": "She suggests a point system where heavier jobs earn more points so the week balances out fairly."
+      },
+      {
+        "question": "Why does Bayu say he avoided cleaning the bathroom?",
+        "options": [
+          "He hates cleaning entirely",
+          "He never noticed how often it actually needed doing",
+          "Salma told him not to",
+          "He was too busy every week"
+        ],
+        "correctIndex": 1,
+        "explanation": "Bayu admits he never really noticed how often the bathroom needed cleaning."
+      },
+      {
+        "question": "What condition does Bayu set for the point system to work?",
+        "options": [
+          "That Salma does all the chores",
+          "That points are decided randomly",
+          "That he gets to choose all the points",
+          "That they both honestly agree on how many points each task deserves"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bayu says the system could work provided they both honestly agree on the point values beforehand."
+      },
+      {
+        "question": "What do they agree to do if someone falls behind one week?",
+        "options": [
+          "Ignore it completely",
+          "Stop doing chores altogether",
+          "Catch up the following week instead of complaining silently",
+          "Argue about it immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "Salma says if either of them falls behind, they simply catch up the following week instead of complaining silently."
+      },
+      {
+        "question": "Why was counting tasks misleading?",
+        "options": [
+          "Rubbish was never removed",
+          "Bathroom cleaning was optional",
+          "Bayu worked fewer hours",
+          "Tasks differed in time, effort, frequency, and invisible planning"
+        ],
+        "correctIndex": 3,
+        "explanation": "Equal numbers did not mean equal burden."
+      },
+      {
+        "question": "What personal factors should affect rotation?",
+        "options": [
+          "Who complains first",
+          "Only who dislikes a task",
+          "Workload, health, disability, ability, safety, and changing capacity",
+          "Age without any context"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fairness is responsive rather than mechanically identical."
+      },
+      {
+        "question": "Why must competence and safety be considered?",
+        "options": [
+          "A person should not perform a hazardous task without ability, equipment, or instruction",
+          "Every chore is dangerous",
+          "Only professionals may clean",
+          "Points remove all risk"
+        ],
+        "correctIndex": 0,
+        "explanation": "Allocation cannot override safety."
+      },
+      {
+        "question": "What happens after a difficult week?",
+        "options": [
+          "The person is automatically punished",
+          "They communicate, rebalance, or reschedule rather than silently creating debt",
+          "All chores move to one sibling",
+          "The system ends"
+        ],
+        "correctIndex": 1,
+        "explanation": "A flexible review is fairer than rigid catch-up."
+      },
+      {
+        "question": "What keeps the system accountable?",
+        "options": [
+          "A written list and regular review of work that is actually being done",
+          "Memory alone",
+          "A permanent score for each task",
+          "Avoiding awkward conversation"
+        ],
+        "correctIndex": 0,
+        "explanation": "Visibility and revision reduce resentment."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; identify Salma and Bayu as adult siblings and include time, effort, frequency, ability, safety, preference, invisible planning, and review rather than crude task points",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-daily-02",
@@ -45,32 +162,146 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] For years, I dismissed cycling to work as impractical, even though several colleagues had been quietly doing it the whole time.",
-      "Narrator: [honest] My excuses were always the same: the distance, the traffic, and, frankly, my own laziness on cold mornings.",
-      "Narrator: [thoughtful] What actually changed my mind wasn't a health scare or advice from a doctor, but a single ridiculous traffic jam.",
-      "Narrator: [amused] I sat in my car for fifty minutes to cover a distance I could have walked in under an hour.",
-      "Narrator: [determined] That evening, I looked up the cycling route properly, and it turned out to be barely twenty minutes if the roads were clear.",
-      "Narrator: [honest] I still hesitated for another two weeks, mostly because I dreaded arriving at the office looking sweaty and disheveled.",
-      "Narrator: [practical] Eventually, I solved that by packing a change of shirt, which sounds obvious now but hadn't occurred to me at all.",
-      "Narrator: [reflective] The first ride was harder than expected, and as a result, I arrived slightly late and thoroughly out of breath.",
-      "Narrator: [warmly] Even so, something about that ride felt different, less like a chore and more like a small daily achievement.",
-      "Narrator: [thoughtful] Within a month, my fitness improved noticeably, even though improving fitness had never actually been my original goal.",
-      "Narrator: [honest] What surprised me most was the mental clarity, arriving at work already awake instead of groggy from sitting in traffic.",
-      "Narrator: [practical] Financially, it made a real difference too, since fuel and parking costs had quietly been draining my monthly budget.",
-      "Narrator: [reflective] Despite the occasional rainy morning, which admittedly I still dread, I haven't gone back to driving regularly since.",
-      "Narrator: [warmly] My colleagues who cycle now nod at me differently, as if I've finally joined some unspoken, slightly smug club.",
-      "Narrator: [encouraging] If a single traffic jam could change my mind after years of excuses, maybe your excuses aren't as solid as they feel either."
+      "Narrator: [thoughtful] For years, I dismissed cycling to work as impractical, even though several colleagues had been quietly doing it the whole time.",
+      "Narrator: My concerns included distance and traffic. I stopped calling every barrier laziness; disability, care, cost, weather, air, and infrastructure differ.",
+      "Narrator: [carefully] What actually changed my mind wasn't a health scare or advice from a doctor, but a single ridiculous traffic jam.",
+      "Narrator: I sat in my car for fifty minutes to cover a distance I could have walked in under an hour.",
+      "Narrator: [reflective] I checked road rules, a lower-risk route, crossings, lighting, surface, weather and air alerts, secure parking, and workplace changing facilities.",
+      "Narrator: I still hesitated for another two weeks, mostly because I dreaded arriving at the office looking sweaty and disheveled.",
+      "Narrator: [honestly] I used suitable clothing, a correctly fitted cycle and protective equipment required or recommended locally, lights, visibility, water, and a change of shirt.",
+      "Narrator: The first ride was harder than expected, and as a result, I arrived slightly late and thoroughly out of breath.",
+      "Narrator: [seriously] Even so, something about that ride felt different, less like a chore and more like a small daily achievement.",
+      "Narrator: I noticed a personal fitness change, but that does not prescribe cycling for everyone. Health conditions or disability may need individualized advice and adaptations.",
+      "Narrator: [gently] What surprised me most was the mental clarity, arriving at work already awake instead of groggy from sitting in traffic.",
+      "Narrator: Financially, it made a real difference too, since fuel and parking costs had quietly been draining my monthly budget.",
+      "Narrator: [encouraging] Despite the occasional rainy morning, which admittedly I still dread, I haven't gone back to driving regularly since.",
+      "Narrator: My colleagues who cycle now nod at me differently, as if I've finally joined some unspoken, slightly smug club.",
+      "Narrator: [sincere] My plan suits me. Others may reasonably choose walking, public transport, shared travel, remote work, or driving according to safety and need."
     ],
     "quiz": [
-      { "question": "What finally changed the narrator's mind about cycling to work?", "options": ["A doctor's warning", "A ridiculous fifty-minute traffic jam for a short distance", "His colleagues pressured him", "He lost his car"], "correctIndex": 1, "explanation": "He describes sitting in traffic for fifty minutes over a distance he could have walked, which prompted the change." },
-      { "question": "Why did he hesitate for two more weeks before actually cycling?", "options": ["He didn't own a bike", "He dreaded arriving at the office sweaty and disheveled", "The route was too dangerous", "His manager refused"], "correctIndex": 1, "explanation": "He admits he hesitated mainly because he dreaded arriving at work sweaty and disheveled." },
-      { "question": "How did he solve the problem of arriving sweaty?", "options": ["He cycled slower", "He packed a change of shirt", "He showered at a gym", "He stopped cycling"], "correctIndex": 1, "explanation": "He solved it by packing a change of shirt to wear at the office." },
-      { "question": "What surprised him most after he started cycling regularly?", "options": ["How expensive it was", "The mental clarity of arriving awake instead of groggy from traffic", "That he lost his job", "That nobody else cycled"], "correctIndex": 1, "explanation": "He says what surprised him most was the mental clarity of arriving at work already awake." },
-      { "question": "What financial effect did cycling have on him?", "options": ["It cost him more money", "It reduced costs that were quietly draining his monthly budget, like fuel and parking", "It had no financial effect", "He had to buy a new car"], "correctIndex": 1, "explanation": "He notes that fuel and parking costs had been draining his budget, and cycling made a real financial difference." }
-    ]
+      {
+        "question": "What finally changed the narrator's mind about cycling to work?",
+        "options": [
+          "A doctor's warning",
+          "A ridiculous fifty-minute traffic jam for a short distance",
+          "His colleagues pressured him",
+          "He lost his car"
+        ],
+        "correctIndex": 1,
+        "explanation": "He describes sitting in traffic for fifty minutes over a distance he could have walked, which prompted the change."
+      },
+      {
+        "question": "Why did he hesitate for two more weeks before actually cycling?",
+        "options": [
+          "He didn't own a bike",
+          "The route was too dangerous",
+          "He dreaded arriving at the office sweaty and disheveled",
+          "His manager refused"
+        ],
+        "correctIndex": 2,
+        "explanation": "He admits he hesitated mainly because he dreaded arriving at work sweaty and disheveled."
+      },
+      {
+        "question": "How did he solve the problem of arriving sweaty?",
+        "options": [
+          "He packed a change of shirt",
+          "He cycled slower",
+          "He showered at a gym",
+          "He stopped cycling"
+        ],
+        "correctIndex": 0,
+        "explanation": "He solved it by packing a change of shirt to wear at the office."
+      },
+      {
+        "question": "What surprised him most after he started cycling regularly?",
+        "options": [
+          "How expensive it was",
+          "That he lost his job",
+          "That nobody else cycled",
+          "The mental clarity of arriving awake instead of groggy from traffic"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says what surprised him most was the mental clarity of arriving at work already awake."
+      },
+      {
+        "question": "What financial effect did cycling have on him?",
+        "options": [
+          "It cost him more money",
+          "It reduced costs that were quietly draining his monthly budget, like fuel and parking",
+          "It had no financial effect",
+          "He had to buy a new car"
+        ],
+        "correctIndex": 1,
+        "explanation": "He notes that fuel and parking costs had been draining his budget, and cycling made a real financial difference."
+      },
+      {
+        "question": "Why was “laziness” an unhelpful label?",
+        "options": [
+          "Cycling never requires effort",
+          "Barriers may involve safety, disability, cost, care duties, weather, or infrastructure",
+          "Cold weather is imaginary",
+          "Drivers cannot exercise"
+        ],
+        "correctIndex": 1,
+        "explanation": "A moral label can hide real constraints."
+      },
+      {
+        "question": "What did route research need beyond travel time?",
+        "options": [
+          "Only the shortest distance",
+          "Traffic risk, law, lighting, surface, crossings, weather, and secure parking",
+          "Colleagues’ clothing",
+          "A promise of clear roads"
+        ],
+        "correctIndex": 1,
+        "explanation": "A safe route is more than a fast route."
+      },
+      {
+        "question": "Why is his fitness change not a prescription?",
+        "options": [
+          "It is one personal outcome and others may need medical or accessibility guidance",
+          "Fitness cannot change",
+          "Cycling treats every illness",
+          "Doctors oppose commuting"
+        ],
+        "correctIndex": 0,
+        "explanation": "Experience should not become universal health advice."
+      },
+      {
+        "question": "What are valid alternatives?",
+        "options": [
+          "Cycling in every condition",
+          "Skipping work",
+          "Walking, public transport, shared travel, remote work, or driving as needs allow",
+          "Using an unsafe road"
+        ],
+        "correctIndex": 2,
+        "explanation": "The goal is suitable transport, not one moral choice."
+      },
+      {
+        "question": "What finally supports regular cycling?",
+        "options": [
+          "A single traffic jam",
+          "Pressure from smug colleagues",
+          "Ignoring rain",
+          "A checked route, suitable equipment, realistic pace, facilities, and fallback plan"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sustainable change required preparation."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; remove shaming language and add route, road-law, equipment, visibility, weather, air quality, secure parking, fitness, accessibility, and alternatives",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-daily-03",
@@ -79,35 +310,152 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Customer Ratih", "gender": "female" },
-      { "name": "Agent Dimas", "gender": "male" }
+      {
+        "name": "Customer Ratih",
+        "gender": "female"
+      },
+      {
+        "name": "Agent Dimas",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Customer Ratih: [frustrated but polite] Hello, I'm calling about an order that was supposed to arrive four days ago, and it still hasn't shown up.",
-      "Agent Dimas: [professional] I'm sorry to hear that. Could you give me the order number so I can look into what's happened?",
-      "Customer Ratih: [reading] Yes, it's four seven two nine one. I needed this item for a family gathering that already took place yesterday.",
-      "Agent Dimas: [checking] I see the shipment here. It looks like it was delayed at the sorting facility, which unfortunately happens occasionally during busy periods.",
-      "Customer Ratih: [firm] I understand delays happen, but nobody informed me, even though your website promised a specific delivery date at checkout.",
-      "Agent Dimas: [apologetic] You're right to be frustrated, and I apologize that we didn't notify you sooner about this delay.",
-      "Customer Ratih: [reasoning] Given that the item is now essentially useless to me, I'd like to discuss either a refund or a genuine discount.",
-      "Agent Dimas: [thoughtful] That's completely reasonable. I can offer a full refund, or alternatively, you could keep the item and receive thirty percent back.",
-      "Customer Ratih: [considering] Honestly, I'll probably still use it eventually, even though the original occasion has already passed by now.",
-      "Agent Dimas: [helpful] In that case, the partial refund might suit you better, unless you'd genuinely prefer to send the item back entirely.",
-      "Customer Ratih: [deciding] I'll take the partial refund then, provided it's processed quickly rather than taking another two weeks.",
-      "Agent Dimas: [reassuring] It should appear within three to five business days, which is considerably faster than our standard refund process.",
-      "Customer Ratih: [calmer] I appreciate that. Although, I do think your company should notify customers automatically whenever a delay like this occurs.",
-      "Agent Dimas: [agreeing] That's fair feedback, and I'll pass it along, since you're clearly not the only customer who's mentioned this recently.",
-      "Customer Ratih: [warmly] Thank you for actually listening instead of just reading a script. That matters more than you'd probably expect.",
-      "Agent Dimas: [genuine] I appreciate you saying that. Is there anything else I can help resolve for you today, Ratih?",
-      "Customer Ratih: [satisfied] No, that covers everything. Thank you for sorting this out despite the frustrating start to this call."
+      "Customer Ratih: [thoughtful] Hello, I'm calling about an order that was supposed to arrive four days ago, and it still hasn't shown up.",
+      "Agent Dimas: I'm sorry to hear that. First, please confirm you reached our official service channel. I will verify only the identity and order information required by policy.",
+      "Customer Ratih: [carefully] I have completed the approved verification without reading private identifiers aloud unnecessarily. The confirmed delivery date was before yesterday’s family gathering.",
+      "Agent Dimas: I see the shipment here. It looks like it was delayed at the sorting facility, which unfortunately happens occasionally during busy periods.",
+      "Customer Ratih: [reflective] I understand delays happen, but nobody informed me, even though your website promised a specific delivery date at checkout.",
+      "Agent Dimas: You're right to be frustrated, and I apologize that we didn't notify you sooner about this delay.",
+      "Customer Ratih: [honestly] Given that the item is now essentially useless to me, I'd like to discuss either a refund or a genuine discount.",
+      "Agent Dimas: After checking my authority and the current terms, the eligible options are a full refund under the stated return conditions or keeping the item with thirty percent refunded.",
+      "Customer Ratih: [seriously] Honestly, I'll probably still use it eventually, even though the original occasion has already passed by now.",
+      "Agent Dimas: In that case, the partial refund might suit you better, unless you'd genuinely prefer to send the item back entirely.",
+      "Customer Ratih: [gently] I'll take the partial refund then, provided it's processed quickly rather than taking another two weeks.",
+      "Agent Dimas: Our written estimate is three to five business days after processing, but the payment provider may affect when funds appear. I will send confirmation and a reference.",
+      "Customer Ratih: [encouraging] I appreciate that. Although, I do think your company should notify customers automatically whenever a delay like this occurs.",
+      "Agent Dimas: That's fair feedback, and I'll pass it along, since you're clearly not the only customer who's mentioned this recently.",
+      "Customer Ratih: [sincere] Thank you for actually listening instead of just reading a script. That matters more than you'd probably expect.",
+      "Agent Dimas: I appreciate you saying that. Is there anything else I can help resolve for you today, Ratih?",
+      "Customer Ratih: [thoughtful] No, that covers everything. Thank you for sorting this out despite the frustrating start to this call."
     ],
     "quiz": [
-      { "question": "Why is Ratih calling customer service?", "options": ["To cancel her account", "An order that was supposed to arrive four days ago never showed up", "To change her address", "To ask about a new product"], "correctIndex": 1, "explanation": "Ratih explains her order was supposed to arrive four days ago and still hasn't shown up." },
-      { "question": "Why does Ratih say the delay is especially frustrating?", "options": ["She paid too much", "She needed the item for a family gathering that already happened", "The item was the wrong color", "She never received a confirmation email"], "correctIndex": 1, "explanation": "She needed the item for a family gathering that already took place the day before the call." },
-      { "question": "What two options does Dimas offer Ratih?", "options": ["A refund or nothing", "A full refund, or keeping the item with thirty percent back", "Store credit only", "A replacement item only"], "correctIndex": 1, "explanation": "Dimas offers a full refund, or alternatively keeping the item and receiving thirty percent back." },
-      { "question": "What does Ratih ultimately decide to do?", "options": ["Send the item back for a full refund", "Take the partial refund, provided it's processed quickly", "Cancel the order entirely", "Complain to a manager"], "correctIndex": 1, "explanation": "She chooses the partial refund on the condition that it's processed quickly." },
-      { "question": "What feedback does Ratih give about the company's communication?", "options": ["It was too frequent", "They should notify customers automatically when delays occur", "It was perfectly fine", "They should call instead of email"], "correctIndex": 1, "explanation": "Ratih says the company should notify customers automatically whenever a delay like this occurs." }
-    ]
+      {
+        "question": "Why is Ratih calling customer service?",
+        "options": [
+          "To cancel her account",
+          "To change her address",
+          "An order that was supposed to arrive four days ago never showed up",
+          "To ask about a new product"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ratih explains her order was supposed to arrive four days ago and still hasn't shown up."
+      },
+      {
+        "question": "Why does Ratih say the delay is especially frustrating?",
+        "options": [
+          "She paid too much",
+          "She needed the item for a family gathering that already happened",
+          "The item was the wrong color",
+          "She never received a confirmation email"
+        ],
+        "correctIndex": 1,
+        "explanation": "She needed the item for a family gathering that already took place the day before the call."
+      },
+      {
+        "question": "What two options does Dimas offer Ratih?",
+        "options": [
+          "A refund or nothing",
+          "Store credit only",
+          "A full refund, or keeping the item with thirty percent back",
+          "A replacement item only"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dimas offers a full refund, or alternatively keeping the item and receiving thirty percent back."
+      },
+      {
+        "question": "What does Ratih ultimately decide to do?",
+        "options": [
+          "Send the item back for a full refund",
+          "Cancel the order entirely",
+          "Complain to a manager",
+          "Take the partial refund, provided it's processed quickly"
+        ],
+        "correctIndex": 3,
+        "explanation": "She chooses the partial refund on the condition that it's processed quickly."
+      },
+      {
+        "question": "What feedback does Ratih give about the company's communication?",
+        "options": [
+          "It was too frequent",
+          "It was perfectly fine",
+          "They should call instead of email",
+          "They should notify customers automatically when delays occur"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ratih says the company should notify customers automatically whenever a delay like this occurs."
+      },
+      {
+        "question": "Why should Ratih verify the service channel?",
+        "options": [
+          "Telephone support is always fraudulent",
+          "Order details and refunds involve personal and financial information",
+          "The order number is public",
+          "Agents cannot issue refunds"
+        ],
+        "correctIndex": 1,
+        "explanation": "Routine disputes still need privacy controls."
+      },
+      {
+        "question": "What evidence supports the complaint?",
+        "options": [
+          "The confirmed delivery promise, tracking record, and missed occasion",
+          "A rumor about the sorting center",
+          "The agent’s personal opinion",
+          "Another customer’s invoice"
+        ],
+        "correctIndex": 0,
+        "explanation": "Specific records define the failure."
+      },
+      {
+        "question": "What must Dimas confirm before offering remedies?",
+        "options": [
+          "Identity, order, authority, eligibility, amount, return conditions, and current terms",
+          "Ratih’s family history",
+          "The item’s future use only",
+          "A promise from a coworker"
+        ],
+        "correctIndex": 0,
+        "explanation": "A valid remedy follows controlled checks."
+      },
+      {
+        "question": "Why is the refund timing qualified?",
+        "options": [
+          "Refunds are never processed",
+          "Ratih chose a full refund",
+          "Payment providers and current policy may affect when funds appear",
+          "The parcel must arrive first"
+        ],
+        "correctIndex": 2,
+        "explanation": "The agent should not promise what the process cannot guarantee."
+      },
+      {
+        "question": "What systemic feedback does Ratih give?",
+        "options": [
+          "Stop using sorting facilities",
+          "Never offer partial refunds",
+          "Notify customers promptly when a promised delivery changes",
+          "Call every customer publicly"
+        ],
+        "correctIndex": 2,
+        "explanation": "The issue extends beyond her individual remedy."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; use identity verification, minimum order disclosure, documented authority, current written refund terms, and no guaranteed processing time",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-daily-04",
@@ -116,31 +464,145 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honest] I used to mock people who spent their Sunday afternoons cooking five containers of food, assuming it looked far more tedious than it was worth.",
-      "Narrator: [reflective] Then came a particularly chaotic month at work, when I was ordering takeout almost every night despite my shrinking bank balance.",
-      "Narrator: [determined] Something had to change, so, somewhat reluctantly, I decided to try meal prepping for a single trial week.",
-      "Narrator: [practical] I chose three simple recipes, bought ingredients in bulk, and set aside three uninterrupted hours on Sunday afternoon.",
-      "Narrator: [honest] The first attempt was messier than I expected, and I underestimated how long chopping vegetables for five days actually takes.",
-      "Narrator: [amused] By the end, my kitchen looked like a small disaster zone, although the containers lined up in the fridge did look strangely satisfying.",
-      "Narrator: [reflective] Monday morning, though, changed everything. Instead of scrambling for breakfast, I simply grabbed a container and walked out the door.",
-      "Narrator: [warmly] That single moment of ease made the previous day's chaos feel entirely worthwhile, even though I hadn't expected such a small thing to matter.",
-      "Narrator: [thoughtful] As the week continued, I noticed I wasn't just saving money, I was also making fewer impulsive, unhealthy decisions when I felt hungry and tired.",
-      "Narrator: [honest] Not every week has gone smoothly since then. Some Sundays I skip it entirely, and those weeks, predictably, fall apart by Wednesday.",
-      "Narrator: [practical] I've learned to accept that imperfect prepping still beats no prepping, even if it's only two meals instead of five.",
-      "Narrator: [reflective] What surprised me most wasn't the cooking itself, but how much mental energy I saved by not deciding what to eat daily.",
-      "Narrator: [warmly] My friends still tease me about my Sunday ritual, though several of them have quietly started asking for my recipes lately.",
-      "Narrator: [encouraging] If your weekdays constantly feel rushed, one deliberate Sunday afternoon might give you back more time than you'd expect."
+      "Narrator: [thoughtful] I used to mock people who spent their Sunday afternoons cooking five containers of food, assuming it looked far more tedious than it was worth.",
+      "Narrator: Then came a particularly chaotic month at work, when I was ordering takeout almost every night despite my shrinking bank balance.",
+      "Narrator: [carefully] Something had to change, so, somewhat reluctantly, I decided to try meal prepping for a single trial week.",
+      "Narrator: I chose suitable recipes and portions, checked allergies, halal and dietary needs, storage space, safe cooking, cooling, labels, and reheating guidance.",
+      "Narrator: [reflective] The first attempt was messier than I expected, and I underestimated how long chopping vegetables for five days actually takes.",
+      "Narrator: By the end, my kitchen looked like a small disaster zone, although the containers lined up in the fridge did look strangely satisfying.",
+      "Narrator: [honestly] Monday morning, though, changed everything. Instead of scrambling for breakfast, I simply grabbed a container and walked out the door.",
+      "Narrator: That single moment of ease made the previous day's chaos feel entirely worthwhile, even though I hadn't expected such a small thing to matter.",
+      "Narrator: [seriously] I saved money and made fewer rushed choices. Batch cooking is not automatically nutritious or suitable; individual health needs may require qualified advice.",
+      "Narrator: Not every week has gone smoothly since then. Some Sundays I skip it entirely, and those weeks, predictably, fall apart by Wednesday.",
+      "Narrator: [gently] Some weeks I prepare only two meals, freeze suitable portions, or use other safe options. Food outside its safe storage limit is discarded.",
+      "Narrator: What surprised me most wasn't the cooking itself, but how much mental energy I saved by not deciding what to eat daily.",
+      "Narrator: [encouraging] My friends still tease me about my Sunday ritual, though several of them have quietly started asking for my recipes lately.",
+      "Narrator: If weekdays feel rushed, test a plan that fits your time, ability, budget, culture, nutrition, and food-safety needs rather than copying mine."
     ],
     "quiz": [
-      { "question": "What prompted the narrator to try meal prepping?", "options": ["A doctor's advice", "A chaotic month ordering takeout despite her shrinking bank balance", "A friend's challenge", "She lost her job"], "correctIndex": 1, "explanation": "A chaotic month of ordering takeout while watching her bank balance shrink pushed her to try meal prepping." },
-      { "question": "What surprised her about the first meal prep attempt?", "options": ["It was too easy", "Chopping vegetables for five days took longer than expected", "She burned all the food", "She had no ingredients"], "correctIndex": 1, "explanation": "She underestimated how long chopping vegetables for five days actually takes." },
-      { "question": "What changed on the following Monday morning?", "options": ["She overslept", "She simply grabbed a container instead of scrambling for breakfast", "She skipped breakfast entirely", "She went out to eat"], "correctIndex": 1, "explanation": "Instead of scrambling for breakfast, she simply grabbed a prepped container and left." },
-      { "question": "What happens on weeks when she skips meal prepping?", "options": ["Nothing changes", "Those weeks predictably fall apart by Wednesday", "She prepares even more food", "She eats better than usual"], "correctIndex": 1, "explanation": "She admits that weeks she skips prepping predictably fall apart by Wednesday." },
-      { "question": "What surprised her most about the overall habit?", "options": ["How expensive it was", "How much mental energy she saved by not deciding what to eat daily", "That her friends stopped talking to her", "That cooking became boring"], "correctIndex": 1, "explanation": "She says what surprised her most was the mental energy saved from not deciding what to eat every day." }
-    ]
+      {
+        "question": "What prompted the narrator to try meal prepping?",
+        "options": [
+          "A doctor's advice",
+          "A friend's challenge",
+          "A chaotic month ordering takeout despite her shrinking bank balance",
+          "She lost her job"
+        ],
+        "correctIndex": 2,
+        "explanation": "A chaotic month of ordering takeout while watching her bank balance shrink pushed her to try meal prepping."
+      },
+      {
+        "question": "What surprised her about the first meal prep attempt?",
+        "options": [
+          "It was too easy",
+          "She burned all the food",
+          "Chopping vegetables for five days took longer than expected",
+          "She had no ingredients"
+        ],
+        "correctIndex": 2,
+        "explanation": "She underestimated how long chopping vegetables for five days actually takes."
+      },
+      {
+        "question": "What changed on the following Monday morning?",
+        "options": [
+          "She overslept",
+          "She simply grabbed a container instead of scrambling for breakfast",
+          "She skipped breakfast entirely",
+          "She went out to eat"
+        ],
+        "correctIndex": 1,
+        "explanation": "Instead of scrambling for breakfast, she simply grabbed a prepped container and left."
+      },
+      {
+        "question": "What happens on weeks when she skips meal prepping?",
+        "options": [
+          "Nothing changes",
+          "She prepares even more food",
+          "She eats better than usual",
+          "Those weeks predictably fall apart by Wednesday"
+        ],
+        "correctIndex": 3,
+        "explanation": "She admits that weeks she skips prepping predictably fall apart by Wednesday."
+      },
+      {
+        "question": "What surprised her most about the overall habit?",
+        "options": [
+          "How much mental energy she saved by not deciding what to eat daily",
+          "How expensive it was",
+          "That her friends stopped talking to her",
+          "That cooking became boring"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says what surprised her most was the mental energy saved from not deciding what to eat every day."
+      },
+      {
+        "question": "Why is batch cooking not automatically healthy?",
+        "options": [
+          "Containers remove nutrients",
+          "Takeout is always unhealthy",
+          "Sunday cooking treats disease",
+          "Nutrition and suitability depend on ingredients, portions, needs, and medical context"
+        ],
+        "correctIndex": 3,
+        "explanation": "Preparation method alone does not determine health."
+      },
+      {
+        "question": "What food-safety steps are added?",
+        "options": [
+          "Safe cooking, rapid cooling, date labels, correct storage, reheating, and discarding unsafe food",
+          "Leaving food warm all day",
+          "Smelling food as the only test",
+          "Keeping every meal for a week"
+        ],
+        "correctIndex": 0,
+        "explanation": "Batch size increases storage responsibility."
+      },
+      {
+        "question": "What should be checked before cooking for others?",
+        "options": [
+          "Their bank balance",
+          "Their preferred container color",
+          "Whether they tease meal prep",
+          "Allergies, halal requirements, dietary needs, and cross-contact"
+        ],
+        "correctIndex": 3,
+        "explanation": "Shared food needs consent and accurate information."
+      },
+      {
+        "question": "Why does the narrator plan fewer meals sometimes?",
+        "options": [
+          "Two meals are always healthier",
+          "Five containers are forbidden",
+          "Sunday is the only cooking day",
+          "Time, energy, storage, and changing schedules make flexibility more sustainable"
+        ],
+        "correctIndex": 3,
+        "explanation": "The routine adapts instead of failing completely."
+      },
+      {
+        "question": "What is the main nonfinancial benefit?",
+        "options": [
+          "A guaranteed cure for stress",
+          "Fewer rushed decisions during busy weekdays",
+          "No need to choose food again",
+          "Perfect weeks every time"
+        ],
+        "correctIndex": 1,
+        "explanation": "Planning reduced decision load without absolute claims."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; add nutrition and medical individualization, halal and allergy checks, cooling and storage safety, date labels, reheating guidance, waste control, and flexible alternatives",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-daily-05",
@@ -149,36 +611,153 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Wulan", "gender": "female" },
-      { "name": "Hendra", "gender": "male" }
+      {
+        "name": "Wulan",
+        "gender": "female"
+      },
+      {
+        "name": "Hendra",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Wulan: [curious] Hendra, your company finally let everyone choose between office and home permanently, right? How's that actually working out?",
-      "Hendra: [thoughtful] Honestly, better than I expected, although it took a few months before I found a routine that actually functioned.",
-      "Wulan: [interested] What was difficult about it initially, given that working from home always sounded appealing to me?",
-      "Hendra: [honest] The main issue was boundaries. Without a commute separating work from home, my workday kept quietly stretching into the evening.",
-      "Wulan: [nodding] I've heard that from several people, even those who swore remote work would never affect their personal time.",
-      "Hendra: [continuing] Exactly. So I started closing my laptop physically, putting it in a drawer, instead of leaving it open on the table.",
-      "Wulan: [amused] That seems almost dramatic, closing a laptop in a drawer, but I suppose desperate situations need decisive solutions.",
-      "Hendra: [laughing] It sounds silly, yet it worked far better than any app or reminder I'd tried previously.",
-      "Wulan: [curious] What about focus, though? I assume home has more distractions than a proper office environment.",
-      "Hendra: [balanced] It depends. Fewer interruptions from colleagues, certainly, but more temptation to do laundry or scroll my phone.",
-      "Wulan: [thoughtful] So it's a trade-off rather than a clear improvement, despite everyone always talking about it so positively.",
-      "Hendra: [agreeing] Precisely. In spite of the flexibility, I do miss spontaneous conversations that solved problems faster than any scheduled call could.",
-      "Wulan: [considering] Would you ever go back to the office full time, given everything you've experienced so far?",
-      "Hendra: [reflective] Not entirely, no. I'd probably choose a hybrid arrangement, provided my team could still coordinate effectively across different days.",
-      "Wulan: [interested] That seems like the compromise most people I know eventually settle on, once the initial excitement fades.",
-      "Hendra: [nodding] It really does. Complete freedom sounds wonderful in theory, but structure, even loose structure, still matters enormously in practice.",
-      "Wulan: [smiling] Well, whatever you choose, it clearly beats my current commute, which somehow gets longer every single month.",
-      "Hendra: [sympathetic] That does sound miserable. Maybe it's time you asked your own manager about a hybrid option too."
+      "Wulan: [thoughtful] Hendra, your company finally let everyone choose between office and home permanently, right? How's that actually working out?",
+      "Hendra: Honestly, better than I expected, although it took a few months before I found a routine that actually functioned.",
+      "Wulan: [carefully] What was difficult about it initially, given that working from home always sounded appealing to me?",
+      "Hendra: The main issue was boundaries. Without a commute separating work from home, my workday kept quietly stretching into the evening.",
+      "Wulan: [reflective] I've heard that from several people, even those who swore remote work would never affect their personal time.",
+      "Hendra: I used a closing routine, but we also clarified hours, workload, response expectations, handoffs, and genuine urgent channels.",
+      "Wulan: [honestly] That seems almost dramatic, closing a laptop in a drawer, but I suppose desperate situations need decisive solutions.",
+      "Hendra: It sounds silly, yet it worked far better than any app or reminder I'd tried previously.",
+      "Wulan: [seriously] What about focus, though? I assume home has more distractions than a proper office environment.",
+      "Hendra: It depends on role and person. Privacy, security, ergonomics, accessibility, care duties, space, connection, and interruptions all affect suitability.",
+      "Wulan: [gently] So it's a trade-off rather than a clear improvement, despite everyone always talking about it so positively.",
+      "Hendra: Precisely. In spite of the flexibility, I do miss spontaneous conversations that solved problems faster than any scheduled call could.",
+      "Wulan: [encouraging] Would you ever go back to the office full time, given everything you've experienced so far?",
+      "Hendra: Not entirely, no. I prefer hybrid for my role, but it is not a universal answer. The team needs agreed presence, documentation, secure access, meetings, and reasonable adjustments.",
+      "Wulan: [sincere] That seems like the compromise most people I know eventually settle on, once the initial excitement fades.",
+      "Hendra: It really does. Complete freedom sounds wonderful in theory, but structure, even loose structure, still matters enormously in practice.",
+      "Wulan: [thoughtful] Well, whatever you choose, it clearly beats my current commute, which somehow gets longer every single month.",
+      "Hendra: That does sound miserable. Review your role and policy, then raise your needs and evidence through the appropriate process without assuming my arrangement fits yours."
     ],
     "quiz": [
-      { "question": "What was the main difficulty Hendra faced with remote work initially?", "options": ["Poor internet connection", "Boundaries — his workday kept stretching into the evening without a commute separating work from home", "He missed the office building", "He couldn't use a computer"], "correctIndex": 1, "explanation": "Hendra explains that without a commute separating work from home, his workday kept stretching into the evening." },
-      { "question": "What solution did Hendra find for this problem?", "options": ["Working fewer hours officially", "Physically closing his laptop and putting it in a drawer", "Quitting his job", "Hiring an assistant"], "correctIndex": 1, "explanation": "He started closing his laptop physically and putting it in a drawer instead of leaving it open." },
-      { "question": "According to Hendra, what does he miss about the office?", "options": ["The commute itself", "Spontaneous conversations that solved problems faster than scheduled calls", "The office coffee", "Nothing at all"], "correctIndex": 1, "explanation": "He says he misses spontaneous conversations that solved problems faster than any scheduled call could." },
-      { "question": "Would Hendra go back to the office full time?", "options": ["Yes, immediately", "Not entirely; he'd prefer a hybrid arrangement", "He refuses to ever return", "He hasn't decided anything"], "correctIndex": 1, "explanation": "He says he'd probably choose a hybrid arrangement rather than going back full time." },
-      { "question": "What does Wulan say about her own current situation?", "options": ["She already works from home", "Her commute keeps getting longer every month", "She dislikes her manager", "She prefers working full time in an office"], "correctIndex": 1, "explanation": "Wulan mentions her commute somehow gets longer every single month." }
-    ]
+      {
+        "question": "What was the main difficulty Hendra faced with remote work initially?",
+        "options": [
+          "Poor internet connection",
+          "Boundaries — his workday kept stretching into the evening without a commute separating work from home",
+          "He missed the office building",
+          "He couldn't use a computer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Hendra explains that without a commute separating work from home, his workday kept stretching into the evening."
+      },
+      {
+        "question": "What solution did Hendra find for this problem?",
+        "options": [
+          "Working fewer hours officially",
+          "Quitting his job",
+          "Physically closing his laptop and putting it in a drawer",
+          "Hiring an assistant"
+        ],
+        "correctIndex": 2,
+        "explanation": "He started closing his laptop physically and putting it in a drawer instead of leaving it open."
+      },
+      {
+        "question": "According to Hendra, what does he miss about the office?",
+        "options": [
+          "Spontaneous conversations that solved problems faster than scheduled calls",
+          "The commute itself",
+          "The office coffee",
+          "Nothing at all"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says he misses spontaneous conversations that solved problems faster than any scheduled call could."
+      },
+      {
+        "question": "Would Hendra go back to the office full time?",
+        "options": [
+          "Yes, immediately",
+          "He refuses to ever return",
+          "Not entirely; he'd prefer a hybrid arrangement",
+          "He hasn't decided anything"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says he'd probably choose a hybrid arrangement rather than going back full time."
+      },
+      {
+        "question": "What does Wulan say about her own current situation?",
+        "options": [
+          "Her commute keeps getting longer every month",
+          "She already works from home",
+          "She dislikes her manager",
+          "She prefers working full time in an office"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wulan mentions her commute somehow gets longer every single month."
+      },
+      {
+        "question": "Why did the laptop drawer help only one part of the problem?",
+        "options": [
+          "Drawers damage computers",
+          "A physical closing cue did not itself set workload, labor, security, or care boundaries",
+          "Remote work requires no schedule",
+          "Hendra had lost the laptop"
+        ],
+        "correctIndex": 1,
+        "explanation": "Personal ritual and organizational policy solve different issues."
+      },
+      {
+        "question": "What must be suitable at home?",
+        "options": [
+          "Only a fast internet speed",
+          "A visible dining table",
+          "Laundry during meetings",
+          "Authorized private workspace, secure systems, ergonomics, access, and emergency arrangements"
+        ],
+        "correctIndex": 3,
+        "explanation": "Remote work has practical requirements."
+      },
+      {
+        "question": "Why is hybrid not the universal compromise?",
+        "options": [
+          "Every company prohibits it",
+          "Offices always improve focus",
+          "Home always improves wellbeing",
+          "Roles, disabilities, care duties, locations, and team needs differ"
+        ],
+        "correctIndex": 3,
+        "explanation": "One arrangement cannot fit all contexts."
+      },
+      {
+        "question": "What team rules matter?",
+        "options": [
+          "Availability, handoffs, documentation, security, meetings, and genuine urgent channels",
+          "Keeping laptops open all evening",
+          "Sharing accounts",
+          "Spontaneous calls only"
+        ],
+        "correctIndex": 0,
+        "explanation": "Coordination needs explicit design."
+      },
+      {
+        "question": "What should Wulan do before requesting change?",
+        "options": [
+          "Review role and policy, identify needs and evidence, and use the appropriate process",
+          "Assume Hendra’s arrangement is a right everywhere",
+          "Share confidential work at home",
+          "Threaten resignation"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her request needs her own context."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; make remote work conditional on role, authorization, privacy, security, ergonomics, accessibility, care needs, work-time rules, and team coordination",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-daily-06",
@@ -187,31 +766,145 @@
     "themeId": "daily",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [honest] My apartment had quietly become a storage unit disguised as a home, crammed with things I hadn't touched in years.",
-      "Narrator: [reflective] I didn't notice it happening gradually, the way clutter never announces itself until you're suddenly tripping over boxes constantly.",
-      "Narrator: [thoughtful] The decision to change came when a friend visited and asked, quite bluntly, why I owned three broken umbrellas.",
-      "Narrator: [amused] I genuinely couldn't answer her. I just knew, somewhere in my mind, that throwing them away felt wasteful.",
-      "Narrator: [honest] That conversation stayed with me, so the following weekend, I decided to sort through one single room properly.",
-      "Narrator: [reflective] It turned out to be far harder emotionally than I expected, since certain objects carried memories I hadn't considered in years.",
-      "Narrator: [thoughtful] An old jacket reminded me of a job I'd left behind, and letting it go felt like discarding that entire chapter.",
-      "Narrator: [determined] Even so, I forced myself to ask one honest question about each item: would I genuinely miss this in six months?",
-      "Narrator: [honest] Most answers were no, although a small handful of things clearly deserved to stay, regardless of practicality or logic.",
-      "Narrator: [warmly] I kept those items deliberately, understanding that minimalism, at its best, isn't about owning nothing, but about owning intentionally.",
-      "Narrator: [practical] Everything else went into three piles: donate, sell, and, reluctantly, discard what nobody could reasonably use anymore.",
-      "Narrator: [reflective] By the end of that weekend, my apartment felt noticeably lighter, even though physically, I'd barely made a visible dent.",
-      "Narrator: [warmly] What surprised me most was how much calmer I felt afterward, as though the clutter had been quietly weighing on my thoughts too.",
-      "Narrator: [encouraging] If your own space feels heavier than it should, maybe start with something small, like three broken umbrellas you've been quietly avoiding."
+      "Narrator: [thoughtful] My apartment had quietly become a storage unit disguised as a home, crammed with things I hadn't touched in years.",
+      "Narrator: I didn't notice it happening gradually, the way clutter never announces itself until you're suddenly tripping over boxes constantly.",
+      "Narrator: [carefully] The decision to change came when a friend visited and asked, quite bluntly, why I owned three broken umbrellas.",
+      "Narrator: I genuinely couldn't answer her. I just knew, somewhere in my mind, that throwing them away felt wasteful.",
+      "Narrator: [reflective] That conversation stayed with me, so the following weekend, I decided to sort through one single room properly.",
+      "Narrator: It turned out to be far harder emotionally than I expected, since certain objects carried memories I hadn't considered in years.",
+      "Narrator: [honestly] An old jacket reminded me of a job I'd left behind, and letting it go felt like discarding that entire chapter.",
+      "Narrator: I asked about ownership, borrowing, family or estate rights, records, safety, condition, memory, purpose, and realistic future use—not one rigid question.",
+      "Narrator: [seriously] Most answers were no, although a small handful of things clearly deserved to stay, regardless of practicality or logic.",
+      "Narrator: I kept those items deliberately, understanding that minimalism, at its best, isn't about owning nothing, but about owning intentionally.",
+      "Narrator: [gently] Safe, clean, wanted items went only to organizations that accepted them. Hazardous goods followed local rules; data-bearing devices received verified secure erasure.",
+      "Narrator: By the end of that weekend, my apartment felt noticeably lighter, even though physically, I'd barely made a visible dent.",
+      "Narrator: [encouraging] I personally felt calmer, but decluttering is not a promised mental-health treatment. Severe accumulation or distress may need qualified, nonjudgmental support.",
+      "Narrator: If you begin, choose a small safe category, preserve other people’s rights and important records, and use responsible reuse, recycling, or disposal routes."
     ],
     "quiz": [
-      { "question": "What prompted the narrator to start decluttering?", "options": ["He was moving apartments", "A friend bluntly asked why he owned three broken umbrellas", "His landlord complained", "He read an article"], "correctIndex": 1, "explanation": "A friend's blunt question about why he owned three broken umbrellas started the whole process." },
-      { "question": "What made sorting through his belongings emotionally harder than expected?", "options": ["He had too little time", "Certain objects carried memories he hadn't considered in years", "He couldn't find boxes", "His friend judged him"], "correctIndex": 1, "explanation": "He explains that certain objects, like an old jacket, carried memories he hadn't considered in years." },
-      { "question": "What question did he ask himself about each item?", "options": ["How much did this cost?", "Would I genuinely miss this in six months?", "Is this in good condition?", "Would my friend want this?"], "correctIndex": 1, "explanation": "He forced himself to ask whether he would genuinely miss each item in six months." },
-      { "question": "What does the narrator say minimalism is really about?", "options": ["Owning absolutely nothing", "Owning intentionally, not necessarily owning nothing", "Never buying anything new", "Copying other people's homes"], "correctIndex": 1, "explanation": "He concludes that minimalism, at its best, isn't about owning nothing but about owning intentionally." },
-      { "question": "How did he feel by the end of the weekend?", "options": ["More stressed than before", "Noticeably lighter and calmer, even though little had visibly changed", "Regretful about what he discarded", "Exhausted and unsatisfied"], "correctIndex": 1, "explanation": "He says his apartment felt noticeably lighter and he felt calmer, even though he'd barely made a visible dent." }
-    ]
+      {
+        "question": "What prompted the narrator to start decluttering?",
+        "options": [
+          "A friend bluntly asked why he owned three broken umbrellas",
+          "He was moving apartments",
+          "His landlord complained",
+          "He read an article"
+        ],
+        "correctIndex": 0,
+        "explanation": "A friend's blunt question about why he owned three broken umbrellas started the whole process."
+      },
+      {
+        "question": "What made sorting through his belongings emotionally harder than expected?",
+        "options": [
+          "He had too little time",
+          "Certain objects carried memories he hadn't considered in years",
+          "He couldn't find boxes",
+          "His friend judged him"
+        ],
+        "correctIndex": 1,
+        "explanation": "He explains that certain objects, like an old jacket, carried memories he hadn't considered in years."
+      },
+      {
+        "question": "What question did he ask himself about each item?",
+        "options": [
+          "How much did this cost?",
+          "Is this in good condition?",
+          "Would I genuinely miss this in six months?",
+          "Would my friend want this?"
+        ],
+        "correctIndex": 2,
+        "explanation": "He forced himself to ask whether he would genuinely miss each item in six months."
+      },
+      {
+        "question": "What does the narrator say minimalism is really about?",
+        "options": [
+          "Owning intentionally, not necessarily owning nothing",
+          "Owning absolutely nothing",
+          "Never buying anything new",
+          "Copying other people's homes"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes that minimalism, at its best, isn't about owning nothing but about owning intentionally."
+      },
+      {
+        "question": "How did he feel by the end of the weekend?",
+        "options": [
+          "More stressed than before",
+          "Noticeably lighter and calmer, even though little had visibly changed",
+          "Regretful about what he discarded",
+          "Exhausted and unsatisfied"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says his apartment felt noticeably lighter and he felt calmer, even though he'd barely made a visible dent."
+      },
+      {
+        "question": "What should be checked before removing an item?",
+        "options": [
+          "Only whether it is six months old",
+          "Whether a friend dislikes it",
+          "The size of the apartment",
+          "Ownership, borrowing, family rights, records, safety, and whether consent is needed"
+        ],
+        "correctIndex": 3,
+        "explanation": "Not everything present belongs solely to the narrator."
+      },
+      {
+        "question": "Why do digital devices need a separate process?",
+        "options": [
+          "Devices cannot be donated",
+          "Accounts and recoverable personal data may remain after ordinary deletion",
+          "Photographs are never private",
+          "Broken umbrellas store passwords"
+        ],
+        "correctIndex": 1,
+        "explanation": "Decluttering can create data exposure."
+      },
+      {
+        "question": "What makes a donation responsible?",
+        "options": [
+          "Anything is better than disposal",
+          "The donor avoids every fee",
+          "The item is safe, clean, usable, wanted, and accepted by the recipient organization",
+          "Broken goods create more choice"
+        ],
+        "correctIndex": 2,
+        "explanation": "Donation should not transfer waste."
+      },
+      {
+        "question": "Why is feeling calmer described cautiously?",
+        "options": [
+          "Clutter never affects anyone",
+          "It was a personal response, not a guaranteed mental-health treatment",
+          "Only large homes need calm",
+          "Memories should always be discarded"
+        ],
+        "correctIndex": 1,
+        "explanation": "The account avoids a universal clinical claim."
+      },
+      {
+        "question": "What replaces the six-month question alone?",
+        "options": [
+          "Market price only",
+          "A rule to own nothing",
+          "Friends’ opinions",
+          "Purpose, rights, condition, records, memory value, safety, and realistic future use"
+        ],
+        "correctIndex": 3,
+        "explanation": "Intentional ownership uses several considerations."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; add ownership and consent checks, data-bearing device security, safe disposal, donation quality, hazardous items, and no universal mental-health promise",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-daily-07",
@@ -220,35 +913,608 @@
     "themeId": "daily",
     "type": "dialogue",
     "speakers": [
-      { "name": "Neighbor Ibu Sri", "gender": "female" },
-      { "name": "Neighbor Pak Wawan", "gender": "male" }
+      {
+        "name": "Neighbor Ibu Sri",
+        "gender": "female"
+      },
+      {
+        "name": "Neighbor Pak Wawan",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Neighbor Ibu Sri: [polite but tired] Pak Wawan, sorry to bother you at home, but the drilling from your renovation has been going on since six this morning.",
-      "Neighbor Pak Wawan: [apologetic] I'm genuinely sorry about that, Ibu Sri. I honestly assumed the workers would start closer to eight, as we'd originally agreed.",
-      "Neighbor Ibu Sri: [understanding] I don't mind renovations in general, everyone needs to fix their homes eventually, but the early hours are difficult for me.",
-      "Neighbor Pak Wawan: [concerned] Do you work night shifts, by any chance? That would explain why early mornings matter so much to you specifically.",
-      "Neighbor Ibu Sri: [explaining] Yes, exactly. I usually get home around five and finally fall asleep just before the drilling seems to start.",
-      "Neighbor Pak Wawan: [regretful] I had no idea, otherwise I would have mentioned the schedule to you directly before any work began.",
-      "Neighbor Ibu Sri: [reassuring] I appreciate you saying that. I'm not asking you to stop the renovation entirely, just to adjust the starting time slightly.",
-      "Neighbor Pak Wawan: [thoughtful] That seems entirely reasonable. Would nine in the morning work better for your schedule, given how you described it?",
-      "Neighbor Ibu Sri: [relieved] Nine would honestly make a considerable difference. I'd have a few more hours of proper sleep before the noise begins.",
-      "Neighbor Pak Wawan: [determined] Consider it done. I'll speak with the workers today and adjust their start time from tomorrow onward.",
-      "Neighbor Ibu Sri: [grateful] Thank you, Pak Wawan. I know renovations already involve enough stress without adding neighborly disputes on top of everything.",
-      "Neighbor Pak Wawan: [warmly] I'd rather know directly from you than have you quietly resenting the noise for the next two months.",
-      "Neighbor Ibu Sri: [smiling] That's a fair way to think about it. How much longer is the renovation expected to take, roughly speaking?",
-      "Neighbor Pak Wawan: [estimating] About six more weeks, assuming nothing unexpected happens, which, admittedly, renovations rarely respect that assumption fully.",
-      "Neighbor Ibu Sri: [laughing] That sounds about right from what I've heard from other neighbors who've renovated recently around here.",
-      "Neighbor Pak Wawan: [sincere] I'll also let you know in advance whenever something particularly loud is planned, so it doesn't catch you off guard again.",
-      "Neighbor Ibu Sri: [appreciative] That would help enormously, honestly. Small warnings make inconveniences like this so much easier to plan around.",
-      "Neighbor Pak Wawan: [warmly] Consider it agreed then. Thank you for coming to talk instead of simply complaining to the building management first."
+      "Neighbor Ibu Sri: [thoughtful] Pak Wawan, sorry to bother you at home, but the drilling from your renovation has been going on since six this morning.",
+      "Neighbor Pak Wawan: I'm genuinely sorry about that, Ibu Sri. I honestly assumed the workers would start closer to eight, as we'd originally agreed.",
+      "Neighbor Ibu Sri: [carefully] I don't mind renovations in general, everyone needs to fix their homes eventually, but the early hours are difficult for me.",
+      "Neighbor Pak Wawan: You do not need to justify the request with private work or health details. I should verify permitted hours and the building’s renovation rules.",
+      "Neighbor Ibu Sri: [reflective] Thank you. Six o’clock conflicts with the schedule residents were given, and the unexpected noise affects my use of the home.",
+      "Neighbor Pak Wawan: I had no idea, otherwise I would have mentioned the schedule to you directly before any work began.",
+      "Neighbor Ibu Sri: [honestly] I appreciate you saying that. I'm not asking you to stop the renovation entirely, just to adjust the starting time slightly.",
+      "Neighbor Pak Wawan: That seems entirely reasonable. Would nine in the morning work better for your schedule, given how you described it?",
+      "Neighbor Ibu Sri: [seriously] Nine would honestly make a considerable difference. I'd have a few more hours of proper sleep before the noise begins.",
+      "Neighbor Pak Wawan: I will stop starts outside the approved schedule, confirm lawful hours with management, and document the agreed timing with the contractor.",
+      "Neighbor Ibu Sri: [gently] Thank you, Pak Wawan. I know renovations already involve enough stress without adding neighborly disputes on top of everything.",
+      "Neighbor Pak Wawan: I'd rather know directly from you than have you quietly resenting the noise for the next two months.",
+      "Neighbor Ibu Sri: [encouraging] That's a fair way to think about it. How much longer is the renovation expected to take, roughly speaking?",
+      "Neighbor Pak Wawan: About six more weeks, assuming nothing unexpected happens, which, admittedly, renovations rarely respect that assumption fully.",
+      "Neighbor Ibu Sri: [sincere] That sounds about right from what I've heard from other neighbors who've renovated recently around here.",
+      "Neighbor Pak Wawan: I will provide written notice of loud work and changes, plus dust, debris, lift, entrance, and emergency-access impacts and a contact route.",
+      "Neighbor Ibu Sri: [thoughtful] That would help enormously, honestly. Small warnings make inconveniences like this so much easier to plan around.",
+      "Neighbor Pak Wawan: Thank you for speaking with me. Building management remains an appropriate route if rules, records, safety, access, or resolution require it."
     ],
     "quiz": [
-      { "question": "Why does Ibu Sri approach Pak Wawan?", "options": ["To complain about parking", "The drilling from his renovation started at six in the morning, disturbing her sleep", "To ask him to stop renovating completely", "To borrow tools"], "correctIndex": 1, "explanation": "She explains the drilling has been going on since six in the morning, which is difficult given her schedule." },
-      { "question": "Why are early mornings especially difficult for Ibu Sri?", "options": ["She has young children", "She works night shifts and gets home around five, sleeping just before the drilling starts", "She is unwell", "She works from home"], "correctIndex": 1, "explanation": "She reveals she works night shifts, gets home around five, and falls asleep right before the drilling begins." },
-      { "question": "What compromise do they agree on?", "options": ["Stopping the renovation entirely", "Starting the work at nine in the morning instead of six", "Working only on weekends", "Moving the workers to a different house"], "correctIndex": 1, "explanation": "Pak Wawan agrees to have the workers start at nine instead of six." },
-      { "question": "How much longer does Pak Wawan estimate the renovation will take?", "options": ["Two weeks", "About six more weeks, assuming nothing unexpected happens", "One year", "It's already finished"], "correctIndex": 1, "explanation": "He estimates about six more weeks, assuming nothing unexpected happens." },
-      { "question": "What does Pak Wawan promise to do going forward?", "options": ["Nothing further", "Let her know in advance whenever something particularly loud is planned", "Pay for her hotel stays", "Stop all work after five"], "correctIndex": 1, "explanation": "He promises to let her know in advance whenever something particularly loud is planned so it doesn't catch her off guard." }
-    ]
+      {
+        "question": "Why does Ibu Sri approach Pak Wawan?",
+        "options": [
+          "The drilling from his renovation started at six in the morning, disturbing her sleep",
+          "To complain about parking",
+          "To ask him to stop renovating completely",
+          "To borrow tools"
+        ],
+        "correctIndex": 0,
+        "explanation": "She explains the drilling has been going on since six in the morning, which is difficult given her schedule."
+      },
+      {
+        "question": "Why are early mornings especially difficult for Ibu Sri?",
+        "options": [
+          "She has young children",
+          "She is unwell",
+          "She works night shifts and gets home around five, sleeping just before the drilling starts",
+          "She works from home"
+        ],
+        "correctIndex": 2,
+        "explanation": "She reveals she works night shifts, gets home around five, and falls asleep right before the drilling begins."
+      },
+      {
+        "question": "What compromise do they agree on?",
+        "options": [
+          "Stopping the renovation entirely",
+          "Working only on weekends",
+          "Moving the workers to a different house",
+          "Starting the work at nine in the morning instead of six"
+        ],
+        "correctIndex": 3,
+        "explanation": "Pak Wawan agrees to have the workers start at nine instead of six."
+      },
+      {
+        "question": "How much longer does Pak Wawan estimate the renovation will take?",
+        "options": [
+          "Two weeks",
+          "One year",
+          "About six more weeks, assuming nothing unexpected happens",
+          "It's already finished"
+        ],
+        "correctIndex": 2,
+        "explanation": "He estimates about six more weeks, assuming nothing unexpected happens."
+      },
+      {
+        "question": "What does Pak Wawan promise to do going forward?",
+        "options": [
+          "Nothing further",
+          "Pay for her hotel stays",
+          "Let her know in advance whenever something particularly loud is planned",
+          "Stop all work after five"
+        ],
+        "correctIndex": 2,
+        "explanation": "He promises to let her know in advance whenever something particularly loud is planned so it doesn't catch her off guard."
+      },
+      {
+        "question": "Why need Ibu Sri not explain her work schedule?",
+        "options": [
+          "The early-noise concern can be addressed without private employment information",
+          "Night work is forbidden",
+          "Renovations never affect sleep",
+          "Pak Wawan owns the building"
+        ],
+        "correctIndex": 0,
+        "explanation": "A valid request does not require unnecessary disclosure."
+      },
+      {
+        "question": "What must Pak Wawan verify?",
+        "options": [
+          "Ibu Sri’s employer",
+          "Permits, building rules, lawful hours, contractor controls, dust, debris, access, and safety",
+          "Only the expected end date",
+          "Whether neighbors enjoy drilling"
+        ],
+        "correctIndex": 1,
+        "explanation": "Renovation responsibility is broader than start time."
+      },
+      {
+        "question": "What makes nine o’clock provisional?",
+        "options": [
+          "The workers refuse mornings",
+          "No work may start at nine",
+          "It must comply with rules and consider affected residents and required work",
+          "Ibu Sri controls every renovation"
+        ],
+        "correctIndex": 2,
+        "explanation": "A bilateral preference cannot replace building requirements."
+      },
+      {
+        "question": "Why is management not treated as hostile?",
+        "options": [
+          "Neighbors should never speak directly",
+          "It may be the proper channel for records, enforcement, access, or unresolved risk",
+          "Management caused the noise",
+          "Complaints are always public"
+        ],
+        "correctIndex": 1,
+        "explanation": "Direct dialogue and formal process can coexist."
+      },
+      {
+        "question": "What future notice is useful?",
+        "options": [
+          "A promise nothing unexpected occurs",
+          "Worker names and private numbers",
+          "Only the final completion date",
+          "Written schedule, especially loud work, changes, contact route, and safety or access impacts"
+        ],
+        "correctIndex": 3,
+        "explanation": "Specific notice helps planning and accountability."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "revise; remove unnecessary disclosure of a night shift and shame about building management, then add permits, lawful hours, written notice, dust and access controls, and escalation routes",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-daily-08",
+    "title": "The Power-Cut Plan We Tested Before an Emergency",
+    "level": "B1",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] Our apartment building lost electricity for eight hours during a severe storm last year.",
+      "Narrator: My household had torches, but their batteries were empty. One telephone power bank had never been charged, and nobody knew how to open the garage gate manually.",
+      "Narrator: [carefully] We were safe, yet the confusion showed that owning equipment is not the same as having a tested plan.",
+      "Narrator: The next weekend, we checked official local guidance for power cuts and emergencies rather than copying a dramatic survival video.",
+      "Narrator: [reflective] We listed essential needs: lighting, communication, safe drinking water, suitable food, temperature, medical equipment, mobility, and a way to receive verified updates.",
+      "Narrator: A family member uses refrigerated medicine, so we asked the pharmacist and relevant service for product-specific storage advice before an outage occurred.",
+      "Narrator: [honestly] We did not guess how long the medicine remained usable or open the refrigerator repeatedly to check it.",
+      "Narrator: We placed working torches where people could reach them safely and kept spare batteries separate from children.",
+      "Narrator: [seriously] We tested power banks, wrote important contact numbers on paper, and learned the building’s authorized manual access procedure.",
+      "Narrator: Candles were not our first lighting choice because of fire risk. We also never used a fuel-burning generator, grill, or stove indoors or near openings.",
+      "Narrator: [gently] Carbon monoxide cannot be judged reliably by smell, so ventilation guesses are not a substitute for official safety instructions.",
+      "Narrator: Our plan included neighbors who might request agreed assistance, but it did not publish anyone’s medical condition to the whole building.",
+      "Narrator: [encouraging] We clarified who would check shared areas, how to use stairs safely if lifts stopped, and when to call emergency services.",
+      "Narrator: Every few months, we test equipment, replace expired supplies, update contacts, and adapt the plan for seasonal heat, flooding, or other local risks.",
+      "Narrator: [sincere] During the next short outage, the plan did not make the event pleasant, but it reduced avoidable decisions in the dark.",
+      "Narrator: Preparedness now means verified guidance, suitable supplies, practiced roles, privacy, and knowing which problem requires qualified help rather than household improvisation."
+    ],
+    "quiz": [
+      {
+        "question": "What did the first outage reveal?",
+        "options": [
+          "The building had no torches",
+          "Equipment was present but uncharged, untested, or poorly understood",
+          "Every resident needed a generator",
+          "The storm had been predicted for months"
+        ],
+        "correctIndex": 1,
+        "explanation": "Possession alone did not create readiness."
+      },
+      {
+        "question": "Why did they ask about refrigerated medicine early?",
+        "options": [
+          "All medicine can stay warm",
+          "The pharmacist controls electricity",
+          "Storage limits are product-specific and should not be guessed during an outage",
+          "The refrigerator needed repair"
+        ],
+        "correctIndex": 2,
+        "explanation": "Qualified advice supported an individual plan."
+      },
+      {
+        "question": "Why were candles not the first choice?",
+        "options": [
+          "They add a fire risk",
+          "They cannot produce light",
+          "Batteries are always safer",
+          "The building prohibited all flames"
+        ],
+        "correctIndex": 0,
+        "explanation": "The plan preferred lower-risk lighting."
+      },
+      {
+        "question": "What generator behavior is rejected?",
+        "options": [
+          "Testing a power bank",
+          "Writing contacts on paper",
+          "Checking official updates",
+          "Using fuel-burning equipment indoors or near openings"
+        ],
+        "correctIndex": 3,
+        "explanation": "Carbon-monoxide risk requires strict placement guidance."
+      },
+      {
+        "question": "How is privacy protected?",
+        "options": [
+          "Neighbors receive every health detail",
+          "Only family may ask for help",
+          "The plan omits mobility needs",
+          "Assistance is coordinated without broadcasting medical conditions"
+        ],
+        "correctIndex": 3,
+        "explanation": "Useful support does not require public diagnosis."
+      },
+      {
+        "question": "Why was the garage-gate problem important?",
+        "options": [
+          "A normal powered exit could fail and its authorized manual process was unknown",
+          "The family needed a new car",
+          "Garage doors never open manually",
+          "The storm damaged every key"
+        ],
+        "correctIndex": 0,
+        "explanation": "Access procedures belong in outage planning."
+      },
+      {
+        "question": "Why should the refrigerator stay closed?",
+        "options": [
+          "Medicine must never be checked",
+          "Food causes every outage",
+          "Cold air is dangerous",
+          "Unnecessary opening can shorten safe temperature retention"
+        ],
+        "correctIndex": 3,
+        "explanation": "The plan follows product-specific guidance."
+      },
+      {
+        "question": "What makes carbon monoxide especially dangerous?",
+        "options": [
+          "It comes only from candles",
+          "It cannot be reliably detected by human smell",
+          "It is harmless near windows",
+          "Power banks produce it"
+        ],
+        "correctIndex": 1,
+        "explanation": "Sensory guessing cannot establish safety."
+      },
+      {
+        "question": "How are neighbors included?",
+        "options": [
+          "By assigning diagnoses in a group chat",
+          "By entering every home",
+          "Through agreed assistance and roles without public medical disclosure",
+          "By replacing emergency services"
+        ],
+        "correctIndex": 2,
+        "explanation": "Community help retains consent and privacy."
+      },
+      {
+        "question": "Why is the plan tested repeatedly?",
+        "options": [
+          "One successful outage guarantees the future",
+          "Tests consume every battery",
+          "Official guidance expires monthly",
+          "Equipment, contacts, supplies, people, and seasonal risks change"
+        ],
+        "correctIndex": 3,
+        "explanation": "Preparedness is maintained rather than stored once."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "retain; strong household emergency-preparedness monologue covering verified guidance, medical storage, fire and carbon-monoxide risk, accessibility, privacy, roles, and recurring tests",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-daily-09",
+    "title": "The Folder That Made Household Paperwork Easier",
+    "level": "B1",
+    "themeId": "daily",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] For years, important household documents lived in random drawers, email attachments, and photographs on several telephones.",
+      "Narrator: Whenever a bill was questioned or an appliance needed repair, we searched through everything and sometimes sent more personal information than the company required.",
+      "Narrator: [carefully] I decided to organize the records, but I did not begin by scanning every paper into one unprotected folder.",
+      "Narrator: First, each household member identified which documents belonged to them and consented to any shared arrangement.",
+      "Narrator: [reflective] We separated common records, such as warranties and utility references, from private identity, health, employment, and financial documents.",
+      "Narrator: Access followed need. A person arranging an appliance repair could use the warranty without seeing another adult’s bank statement.",
+      "Narrator: [honestly] We checked retention requirements instead of keeping every document forever or destroying records that still had legal, tax, religious, or contractual importance.",
+      "Narrator: Sensitive paper waiting for disposal went through a secure method suitable for our area, not into an open recycling box.",
+      "Narrator: [seriously] For digital copies, we used protected accounts, strong authentication, recovery information, and an encrypted backup stored separately.",
+      "Narrator: A backup was not trusted merely because a progress bar said “complete.” We tested recovery with a noncritical file and documented the steps.",
+      "Narrator: [gently] File names used dates and clear categories but avoided placing full identification numbers in visible names.",
+      "Narrator: We also kept a small emergency index explaining where authorized people could find essential information without exposing the information itself.",
+      "Narrator: [encouraging] When a service requested a document, we confirmed the recipient and purpose, then shared only the required page or field where accepted.",
+      "Narrator: We did not send identity documents through a new chat number simply because the message used an official-looking logo.",
+      "Narrator: [sincere] Every six months, we review access, remove outdated copies safely, update recovery routes, and confirm that the backup can still be read.",
+      "Narrator: The system saves time, but its main value is restraint: knowing what we hold, why we hold it, who may access it, and when it should disappear."
+    ],
+    "quiz": [
+      {
+        "question": "Why was one shared folder inappropriate?",
+        "options": [
+          "Digital files cannot be organized",
+          "Warranties are always public",
+          "Household members had different ownership and privacy needs",
+          "Paper records need no protection"
+        ],
+        "correctIndex": 2,
+        "explanation": "Convenience did not justify universal access."
+      },
+      {
+        "question": "How was access decided?",
+        "options": [
+          "By ownership, consent, and task-related need",
+          "By age alone",
+          "By who owned the scanner",
+          "By placing every file in email"
+        ],
+        "correctIndex": 0,
+        "explanation": "Least access protected private records."
+      },
+      {
+        "question": "Why did they test recovery?",
+        "options": [
+          "A reported backup is not proven until a file can be restored",
+          "Testing encrypts every file",
+          "The first backup had no dates",
+          "Only noncritical files need storage"
+        ],
+        "correctIndex": 0,
+        "explanation": "Recovery verifies practical usability."
+      },
+      {
+        "question": "What did clear file names avoid?",
+        "options": [
+          "Dates and categories",
+          "Document purpose",
+          "Visible full identification numbers",
+          "Household labels"
+        ],
+        "correctIndex": 2,
+        "explanation": "Metadata can reveal sensitive information."
+      },
+      {
+        "question": "How do they respond to a document request?",
+        "options": [
+          "Send the full folder",
+          "Verify recipient and purpose, then share the minimum accepted information",
+          "Trust an official-looking logo",
+          "Use any new chat number"
+        ],
+        "correctIndex": 1,
+        "explanation": "Data minimization applies during routine administration."
+      },
+      {
+        "question": "Why did household members identify document ownership first?",
+        "options": [
+          "Common bills have no owner",
+          "Scanning changes ownership",
+          "Only paper can be private",
+          "Living together did not give everyone authority over each adult’s records"
+        ],
+        "correctIndex": 3,
+        "explanation": "Shared location and shared rights are different."
+      },
+      {
+        "question": "What did the retention review prevent?",
+        "options": [
+          "All document deletion",
+          "Every legal question",
+          "The need for backups",
+          "Both needless storage and premature destruction of required records"
+        ],
+        "correctIndex": 3,
+        "explanation": "Retention has risks in both directions."
+      },
+      {
+        "question": "Why was an emergency index safer than one open folder?",
+        "options": [
+          "Indexes encrypt accounts",
+          "It pointed authorized people to essential information without exposing all contents",
+          "Emergencies cancel privacy",
+          "Only one person could read"
+        ],
+        "correctIndex": 1,
+        "explanation": "Discovery and unrestricted access were separated."
+      },
+      {
+        "question": "What phishing cue appears?",
+        "options": [
+          "A new chat number with an official-looking logo requests identity documents",
+          "A known provider sends a paper bill",
+          "A household member updates consent",
+          "A tested backup completes"
+        ],
+        "correctIndex": 0,
+        "explanation": "Appearance alone does not verify the recipient."
+      },
+      {
+        "question": "What does the final “restraint” mean?",
+        "options": [
+          "Hold and share records only for a known purpose, audience, and period",
+          "Never create household records",
+          "Keep everything permanently",
+          "Give access to all adults"
+        ],
+        "correctIndex": 0,
+        "explanation": "Organization includes controlled reduction."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "retain; strong records-management monologue balancing ownership, consent, least access, retention, secure disposal, authentication, tested recovery, metadata, and data minimization",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-daily-10",
+    "title": "Sharing a Kitchen With a Serious Food Allergy",
+    "level": "B1",
+    "themeId": "daily",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Nisa",
+        "gender": "female"
+      },
+      {
+        "name": "Rina",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Nisa: [thoughtful] Rina, before we share the kitchen, I need to explain that I have a medically diagnosed peanut allergy and carry emergency medicine.",
+      "Rina: Thank you. What has your clinician advised, and what should I do if you cannot speak?",
+      "Nisa: [carefully] I have a written emergency plan. I will show you where the medicine is kept and how emergency services should be contacted, without making you diagnose symptoms.",
+      "Rina: Should we ban packaged food?",
+      "Nisa: [reflective] Let us start with the actual plan and labels rather than panic. My needs may differ from another person’s allergy.",
+      "Rina: What creates the main risk here?",
+      "Nisa: [honestly] Eating peanut is one risk, and residue or shared utensils may matter for me. We need agreed storage, preparation, cleaning, and no guessing about unlabeled food.",
+      "Rina: I often buy snacks from open market containers. I suppose those may have uncertain ingredients or cross-contact.",
+      "Nisa: [seriously] Yes. If reliable ingredient and cross-contact information is missing, please keep them out of our shared preparation area according to our agreement.",
+      "Rina: Can I use the same sponge and wooden spoon after washing them?",
+      "Nisa: [gently] Follow my cleaning plan. Some difficult-to-clean items stay separate, so we will label them.",
+      "Rina: I will not tell guests that the allergy is only a preference. How much health detail may I share?",
+      "Nisa: [encouraging] Tell them the required kitchen rule, not my medical history. Ask before sharing more than safety requires.",
+      "Rina: What if you develop symptoms after eating?",
+      "Nisa: [sincere] Follow the written plan immediately. Do not wait for symptoms to become severe, offer food as treatment, or replace emergency help with an internet search.",
+      "Rina: We should also check that medicine is in date and accessible to you.",
+      "Nisa: [thoughtful] Yes, and I remain responsible for routine review with my clinician. You are a prepared housemate, not my healthcare provider.",
+      "Rina: Can we write the kitchen steps together and review them after our first week?",
+      "Nisa: [carefully] That would help. A calm, specific system protects safety while allowing both of us to use the kitchen without fear or blame.",
+      "Rina: I appreciate the specific process instead of one vague word.",
+      "Nisa: And I appreciate you taking it seriously without taking away my privacy or independence."
+    ],
+    "quiz": [
+      {
+        "question": "What guides Nisa’s arrangements?",
+        "options": [
+          "A rule copied from another allergy",
+          "Her individualized written emergency and kitchen plan",
+          "Rina’s internet search",
+          "A ban on all packaged food"
+        ],
+        "correctIndex": 1,
+        "explanation": "Allergy management is person-specific."
+      },
+      {
+        "question": "Why are unlabeled open foods a concern?",
+        "options": [
+          "Markets cannot sell safe food",
+          "All snacks contain peanuts",
+          "Ingredients or cross-contact may be uncertain",
+          "Labels replace cleaning"
+        ],
+        "correctIndex": 2,
+        "explanation": "Missing reliable information affects risk decisions."
+      },
+      {
+        "question": "What may guests be told?",
+        "options": [
+          "Nisa’s full medical history",
+          "That the allergy is a preference",
+          "The required kitchen rule, with only safety-necessary health information",
+          "Nothing during an emergency"
+        ],
+        "correctIndex": 2,
+        "explanation": "Safety communication can minimize disclosure."
+      },
+      {
+        "question": "What should Rina do during symptoms?",
+        "options": [
+          "Follow the written plan promptly and obtain emergency help as directed",
+          "Wait for severe symptoms",
+          "Offer another food as treatment",
+          "Ask social media first"
+        ],
+        "correctIndex": 0,
+        "explanation": "Prepared action replaces improvisation."
+      },
+      {
+        "question": "How is Rina’s role limited?",
+        "options": [
+          "She chooses Nisa’s medicine",
+          "She diagnoses each reaction",
+          "She reviews the allergy alone",
+          "She is a prepared housemate, not Nisa’s clinician"
+        ],
+        "correctIndex": 3,
+        "explanation": "Shared safety does not transfer healthcare authority."
+      },
+      {
+        "question": "Why does Nisa reject a total packaged-food ban?",
+        "options": [
+          "Packaged foods never contain allergens",
+          "Rina owns the kitchen",
+          "The response should follow her actual clinical plan rather than panic",
+          "Bans treat reactions"
+        ],
+        "correctIndex": 2,
+        "explanation": "Proportionate controls depend on individual risk."
+      },
+      {
+        "question": "What does labelling equipment achieve?",
+        "options": [
+          "It makes agreed separate-use controls visible and repeatable",
+          "It diagnoses contamination",
+          "It replaces cleaning",
+          "It guarantees food safety everywhere"
+        ],
+        "correctIndex": 0,
+        "explanation": "A practical cue supports the plan."
+      },
+      {
+        "question": "Why should symptoms not be watched until severe?",
+        "options": [
+          "Every mild symptom is harmless",
+          "Food treats reactions",
+          "The written emergency plan requires prompt action and delay can be dangerous",
+          "Only Nisa may call for help"
+        ],
+        "correctIndex": 2,
+        "explanation": "Escalation timing follows qualified instructions."
+      },
+      {
+        "question": "Who maintains routine clinical responsibility?",
+        "options": [
+          "Rina alone",
+          "Every guest",
+          "The food seller",
+          "Nisa with her qualified clinician"
+        ],
+        "correctIndex": 3,
+        "explanation": "Prepared assistance does not remove patient agency."
+      },
+      {
+        "question": "What emotional balance closes the dialogue?",
+        "options": [
+          "The kitchen should remain unused",
+          "Serious safety can coexist with privacy, independence, calm, and no blame",
+          "Rina must inspect every meal",
+          "Nisa should hide the allergy"
+        ],
+        "correctIndex": 1,
+        "explanation": "A specific system avoids both dismissal and takeover."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "daily",
+      "scriptDecision": "retain with concise phrasing; strong allergy-safety dialogue with individualized medical planning, cross-contact controls, minimum disclosure, prompt emergency action, medicine checks, and preserved independence",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

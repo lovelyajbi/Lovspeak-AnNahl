@@ -6,30 +6,144 @@
     "themeId": "tauhid",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] For a long time, my prayers were fast. Very fast. I stood, I moved, I finished, and I went back to my phone.",
-      "Narrator: [honestly] I did not really think about the words. My mouth said them, but my mind was somewhere else, thinking about work or messages.",
+      "Narrator: I did not really think about the words. My mouth said them, but my mind was somewhere else, thinking about work or messages.",
       "Narrator: [reflective] One evening, I was very tired. I sat down to pray, and for some reason, I prayed slowly that night.",
-      "Narrator: [softly] I said each word and thought about its meaning. I felt something calm inside me, something I had not felt in a long time.",
-      "Narrator: [gently] After that prayer, I sat quietly for a few minutes. My shoulders felt light, and my mind felt clear.",
-      "Narrator: [warmly] I asked myself, why do I always rush? Allah is not in a hurry to hear me. I am the one who is always rushing.",
+      "Narrator: I said each word and thought about its meaning. I felt something calm inside me, something I had not felt in a long time.",
+      "Narrator: [honestly] After that prayer, I sat quietly for a few minutes. My shoulders felt light, and my mind felt clear.",
+      "Narrator: I asked myself, why do I always rush? Allah is not in a hurry to hear me. I am the one who is always rushing.",
       "Narrator: [determined] So now, I try something new every day. Before I pray, I put my phone in another room.",
-      "Narrator: [thoughtful] I also try to remember one meaning while I pray, even just one word, instead of rushing through the whole thing.",
-      "Narrator: [honestly] Some days I forget completely, and I rush again without even noticing until it is finished.",
-      "Narrator: [gently] But on the days I remember, the difference is clear. My whole body feels different, calmer, less tense.",
+      "Narrator: I also try to remember one meaning while I pray, even just one word, instead of rushing through the whole thing.",
+      "Narrator: [warmly] Some days I forget completely, and I rush again without even noticing until it is finished.",
+      "Narrator: But on the days I remember, the difference is clear. My whole body feels different, calmer, less tense.",
       "Narrator: [peacefully] I still rush sometimes, because life is busy. But now, I notice when I am rushing, and I try to slow down again.",
-      "Narrator: [reflective] My friend once told me that prayer is a conversation, not a task to finish quickly. I think about that often now.",
-      "Narrator: [with a small smile] A short, slow prayer feels better than a long, fast one. That is what I learned this year."
+      "Narrator: My friend once told me that prayer is a conversation, not a task to finish quickly. I think about that often now.",
+      "Narrator: [gently] Prayer feels different when I complete it calmly and pay attention to what I say. That is what I am learning."
     ],
     "quiz": [
-      { "question": "How did the narrator usually pray before this change?", "options": ["Very slowly", "Very fast", "Never", "Only at night"], "correctIndex": 1, "explanation": "The narrator says her prayers were fast and her mind was elsewhere." },
-      { "question": "What happened one tired evening?", "options": ["She skipped her prayer", "She prayed slowly for the first time in a while", "She fell asleep during prayer", "She called a friend instead"], "correctIndex": 1, "explanation": "She sat down tired and, for some reason, prayed slowly that night." },
-      { "question": "How did she feel after that slow prayer?", "options": ["Bored", "Calm and clear", "Angry", "Confused"], "correctIndex": 1, "explanation": "She says her shoulders felt light and her mind felt clear." },
-      { "question": "What does she do now before praying?", "options": ["Nothing different", "Puts her phone in another room", "Prays even faster", "Calls someone first"], "correctIndex": 1, "explanation": "She now puts her phone in another room before praying." },
-      { "question": "What is her final lesson?", "options": ["Long fast prayer is best", "A short, slow prayer feels better than a long, fast one", "Prayer timing does not matter", "She should stop praying at home"], "correctIndex": 1, "explanation": "She concludes a short, slow prayer feels better than a long, fast one." }
-    ]
+      {
+        "question": "How did the narrator usually pray before this change?",
+        "options": [
+          "Very fast",
+          "Very slowly",
+          "Never",
+          "Only at night"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator says her prayers were fast and her mind was elsewhere."
+      },
+      {
+        "question": "What happened one tired evening?",
+        "options": [
+          "She skipped her prayer",
+          "She fell asleep during prayer",
+          "She called a friend instead",
+          "She prayed slowly for the first time in a while"
+        ],
+        "correctIndex": 3,
+        "explanation": "She sat down tired and, for some reason, prayed slowly that night."
+      },
+      {
+        "question": "How did she feel after that slow prayer?",
+        "options": [
+          "Bored",
+          "Angry",
+          "Confused",
+          "Calm and clear"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says her shoulders felt light and her mind felt clear."
+      },
+      {
+        "question": "What does she do now before praying?",
+        "options": [
+          "Nothing different",
+          "Prays even faster",
+          "Calls someone first",
+          "Puts her phone in another room"
+        ],
+        "correctIndex": 3,
+        "explanation": "She now puts her phone in another room before praying."
+      },
+      {
+        "question": "What is her final lesson?",
+        "options": [
+          "Long fast prayer is best",
+          "Prayer timing does not matter",
+          "A short, slow prayer feels better than a long, fast one",
+          "She should stop praying at home"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes a short, slow prayer feels better than a long, fast one."
+      },
+      {
+        "question": "What usually took the narrator’s attention?",
+        "options": [
+          "A market",
+          "A phone",
+          "A train",
+          "A radio"
+        ],
+        "correctIndex": 1,
+        "explanation": "The phone returned to the narrator’s hand immediately."
+      },
+      {
+        "question": "What was different one evening?",
+        "options": [
+          "The prayer was slower and more attentive",
+          "The prayer was skipped",
+          "A friend led the prayer",
+          "The phone rang loudly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tiredness led to an unhurried moment."
+      },
+      {
+        "question": "What does “rushing” mean?",
+        "options": [
+          "Standing quietly",
+          "Learning meanings",
+          "Preparing early",
+          "Moving too quickly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Earlier movements happened with little attention."
+      },
+      {
+        "question": "What helps before prayer now?",
+        "options": [
+          "Opening more apps",
+          "Putting the phone away",
+          "Making a work list",
+          "Calling a friend"
+        ],
+        "correctIndex": 1,
+        "explanation": "Distance from the device reduces distraction."
+      },
+      {
+        "question": "What is the improved lesson?",
+        "options": [
+          "Make every prayer shorter",
+          "Length alone creates focus",
+          "Pray calmly with attention",
+          "Ignore the meaning"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revision values presence, not a length comparison."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "revise; keep practical focus on khushu while avoiding a false choice between short and long prayer",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-tauhid-02",
@@ -38,38 +152,155 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. Today, my guest is Nurul, who wants to talk about trust in Allah. Thank you for joining me, Nurul.",
-      "Guest: [pleasantly] Thank you for having me. This topic is close to my heart.",
-      "Host: [curious] Can you tell our listeners why this topic matters to you?",
-      "Guest: [thoughtful] Yes. Last year, I lost my job suddenly. I did not know what to do next.",
-      "Host: [sympathetically] That sounds very stressful. What helped you through that time?",
-      "Guest: [gently] Honestly, at first, nothing helped. I was scared and angry every day.",
-      "Host: [understanding] That makes sense. When did things start to change for you?",
-      "Guest: [reflective] After some weeks, I started praying more and asking Allah for guidance, not just a new job.",
-      "Host: [interested] Did that change how you felt about the situation?",
-      "Guest: [warmly] Slowly, yes. I stopped feeling like I was alone in this problem.",
-      "Host: [curious] Did you eventually find new work?",
-      "Guest: [smiling] Yes, after two months, a smaller job appeared. It was not perfect, but it was enough.",
-      "Host: [thoughtful] Do you think you would have found it faster if you had not prayed and waited?",
-      "Guest: [honestly] Maybe, maybe not. But I would have been more anxious and tired the whole time.",
-      "Host: [curious] What would you tell someone facing something similar today?",
+      "Host: [thoughtful] Welcome back to the show. Today, my guest is Nurul, who wants to talk about trust in Allah. Thank you for joining me, Nurul.",
+      "Guest: Thank you for having me. This topic is close to my heart.",
+      "Host: [reflective] Can you tell our listeners why this topic matters to you?",
+      "Guest: Yes. Last year, I lost my job suddenly. I did not know what to do next.",
+      "Host: [honestly] That sounds very stressful. What helped you through that time?",
+      "Guest: Honestly, at first, nothing helped. I was scared and angry every day.",
+      "Host: [determined] That makes sense. When did things start to change for you?",
+      "Guest: After some weeks, I started praying more and asking Allah for guidance, not just a new job.",
+      "Host: [warmly] Did that change how you felt about the situation?",
+      "Guest: Slowly, yes. I stopped feeling like I was alone in this problem.",
+      "Host: [peacefully] Did you eventually find new work?",
+      "Guest: Yes, after two months, a smaller job appeared. It was not perfect, but it was enough.",
+      "Host: [gently] Do you think you would have found it faster if you had not prayed and waited?",
+      "Guest: Maybe, maybe not. But I would have been more anxious and tired the whole time.",
+      "Host: What would you tell someone facing something similar today?",
       "Guest: [encouraging] I would say, trust does not mean you stop trying. You still work hard, but your heart feels lighter.",
-      "Host: [curious] Is there anything you would tell your past self, from before all of this happened?",
-      "Guest: [gently] I would say, this hard season will teach you something you cannot learn any other way. Be patient with yourself.",
-      "Host: [smiling] That's beautiful advice, Nurul. Thank you for sharing your story with us today.",
-      "Guest: [warmly] Thank you for listening. I hope it helps someone out there."
+      "Host: Is there anything you would tell your past self, from before all of this happened?",
+      "Guest: I would say, keep taking responsible steps, ask Allah for guidance, and be patient with yourself. You may not understand every part of this test.",
+      "Host: [warmly] That's beautiful advice, Nurul. Thank you for sharing your story with us today.",
+      "Guest: Thank you for listening. I hope it helps someone out there."
     ],
     "quiz": [
-      { "question": "What is the topic of today's podcast episode?", "options": ["Cooking", "Trusting Allah during uncertainty", "Travel tips", "Sports"], "correctIndex": 1, "explanation": "The host introduces the topic as trust in Allah with guest Nurul." },
-      { "question": "What happened to Nurul last year?", "options": ["She got married", "She lost her job suddenly", "She moved abroad", "She started a business"], "correctIndex": 1, "explanation": "Nurul explains she lost her job suddenly last year." },
-      { "question": "How did Nurul feel at first?", "options": ["Calm and confident", "Scared and angry", "Excited", "Indifferent"], "correctIndex": 1, "explanation": "She admits she was scared and angry every day at first." },
-      { "question": "What did Nurul start doing after some weeks?", "options": ["Ignoring the problem", "Praying more and asking for guidance", "Blaming others", "Giving up completely"], "correctIndex": 1, "explanation": "She started praying more and asking Allah for guidance, not just a new job." },
-      { "question": "What advice does Nurul give at the end?", "options": ["Trust means you stop trying", "Trust does not mean you stop trying, but your heart feels lighter", "Trust is impossible during hardship", "Only prayer matters, not effort"], "correctIndex": 1, "explanation": "Nurul says trust does not mean you stop trying, but your heart feels lighter." }
-    ]
+      {
+        "question": "What is the topic of today's podcast episode?",
+        "options": [
+          "Cooking",
+          "Travel tips",
+          "Sports",
+          "Trusting Allah during uncertainty"
+        ],
+        "correctIndex": 3,
+        "explanation": "The host introduces the topic as trust in Allah with guest Nurul."
+      },
+      {
+        "question": "What happened to Nurul last year?",
+        "options": [
+          "She got married",
+          "She lost her job suddenly",
+          "She moved abroad",
+          "She started a business"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nurul explains she lost her job suddenly last year."
+      },
+      {
+        "question": "How did Nurul feel at first?",
+        "options": [
+          "Calm and confident",
+          "Excited",
+          "Scared and angry",
+          "Indifferent"
+        ],
+        "correctIndex": 2,
+        "explanation": "She admits she was scared and angry every day at first."
+      },
+      {
+        "question": "What did Nurul start doing after some weeks?",
+        "options": [
+          "Praying more and asking for guidance",
+          "Ignoring the problem",
+          "Blaming others",
+          "Giving up completely"
+        ],
+        "correctIndex": 0,
+        "explanation": "She started praying more and asking Allah for guidance, not just a new job."
+      },
+      {
+        "question": "What advice does Nurul give at the end?",
+        "options": [
+          "Trust means you stop trying",
+          "Trust does not mean you stop trying, but your heart feels lighter",
+          "Trust is impossible during hardship",
+          "Only prayer matters, not effort"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nurul says trust does not mean you stop trying, but your heart feels lighter."
+      },
+      {
+        "question": "What did Nurul ask Allah for besides work?",
+        "options": [
+          "A larger house",
+          "A quick holiday",
+          "Public praise",
+          "Guidance"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her dua became wider than one result."
+      },
+      {
+        "question": "When did a smaller job appear?",
+        "options": [
+          "After two months",
+          "The next morning",
+          "After one year",
+          "Before she lost work"
+        ],
+        "correctIndex": 0,
+        "explanation": "It was enough though not perfect."
+      },
+      {
+        "question": "Did prayer guarantee a faster job?",
+        "options": [
+          "Yes, immediately",
+          "Yes, after one week",
+          "No, Nurul does not claim that",
+          "The host proves it did"
+        ],
+        "correctIndex": 2,
+        "explanation": "She separates spiritual support from a guaranteed timeline."
+      },
+      {
+        "question": "What does trust not mean?",
+        "options": [
+          "Asking Allah for help",
+          "Working responsibly",
+          "Stopping all effort",
+          "Being patient with oneself"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nurul says a person still tries."
+      },
+      {
+        "question": "What would she tell her past self?",
+        "options": [
+          "Every hardship has one clear lesson",
+          "Anger is never human",
+          "Take responsible steps and be patient",
+          "A perfect job is certain"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revised ending avoids claiming knowledge of every test."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "revise; balance tawakkul, emotional honesty, job-search effort, and uncertainty without promising hardship always teaches one unique lesson",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-tauhid-03",
@@ -78,38 +309,155 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dewi: [tired] Fajar, this week has been so heavy. Meetings, deadlines, more meetings.",
-      "Fajar: [calmly] I know the feeling. How are you managing it?",
-      "Dewi: [sighing] Honestly, not very well. I feel tired all the time now.",
-      "Fajar: [gently] Can I share something that helps me? It sounds small, but it works.",
-      "Dewi: [curious] Please, I need something right now.",
-      "Fajar: [warmly] Every morning, before I open my laptop, I look outside for one minute and say alhamdulillah.",
-      "Dewi: [surprised] Just one minute? That seems too simple to help.",
-      "Fajar: [smiling] I thought so too, at first. But it reminds me that today is a gift, even a hard day.",
-      "Dewi: [thoughtful] I usually open my phone first thing, and I feel stressed before I even start my coffee.",
-      "Fajar: [encouraging] Try it tomorrow. One minute, no phone, just noticing something small you are grateful for.",
-      "Dewi: [considering] Okay, I will try it. What do you usually notice?",
-      "Fajar: [gently] Sometimes the sky, sometimes the smell of coffee, sometimes just being alive and healthy.",
-      "Dewi: [curious] Does it really change your whole day, just one minute?",
-      "Fajar: [honestly] Not every day, but on most days, yes. It resets something in my head before the stress starts.",
-      "Dewi: [thoughtful] I think I have forgotten how to notice small things. Everything feels urgent lately.",
-      "Fajar: [warmly] That happens to all of us sometimes. The urgency is not always real, even when it feels real.",
-      "Dewi: [warmly] That's a nice way to start the day. I think I needed to hear this.",
-      "Fajar: [kindly] We all need reminders sometimes. That's what friends are for.",
-      "Dewi: [smiling] Okay, tomorrow morning, one minute, no phone. I will tell you how it goes.",
-      "Fajar: [warmly] I'll ask you at lunch. Deal?"
+      "Dewi: [thoughtful] Fajar, this week has been so heavy. Meetings, deadlines, more meetings.",
+      "Fajar: I know the feeling. How are you managing it?",
+      "Dewi: [reflective] Honestly, not very well. I feel tired all the time now.",
+      "Fajar: Can I share something that helps me? It sounds small, but it works.",
+      "Dewi: [honestly] Please, I need something right now.",
+      "Fajar: Every morning, before I open my laptop, I look outside for one minute and say alhamdulillah.",
+      "Dewi: [determined] Just one minute? That seems too simple to help.",
+      "Fajar: I thought so too, at first. But it reminds me that today is a gift, even a hard day.",
+      "Dewi: [warmly] I usually open my phone first thing, and I feel stressed before I even start my coffee.",
+      "Fajar: Try it tomorrow. One minute, no phone, just noticing something small you are grateful for.",
+      "Dewi: [peacefully] Okay, I will try it. What do you usually notice?",
+      "Fajar: Sometimes the sky, sometimes the smell of coffee, sometimes just being alive and healthy.",
+      "Dewi: [gently] Does it really change your whole day, just one minute?",
+      "Fajar: Not every day, but on most days, yes. It resets something in my head before the stress starts.",
+      "Dewi: I think I have forgotten how to notice small things. Everything feels urgent lately.",
+      "Fajar: [encouraging] That happens to all of us sometimes. The urgency is not always real, even when it feels real.",
+      "Dewi: That's a nice way to start the day. I think I needed to hear this.",
+      "Fajar: We all need reminders sometimes. That's what friends are for.",
+      "Dewi: [warmly] Okay, tomorrow morning, one minute, no phone. I will tell you how it goes.",
+      "Fajar: I'll ask you at lunch. Deal?"
     ],
     "quiz": [
-      { "question": "How does Dewi describe her week?", "options": ["Relaxing", "Heavy, with meetings and deadlines", "Boring", "Short"], "correctIndex": 1, "explanation": "Dewi says the week has been heavy with meetings and deadlines." },
-      { "question": "What does Fajar do every morning before opening his laptop?", "options": ["Checks his email", "Looks outside for one minute and says alhamdulillah", "Calls a friend", "Drinks three coffees"], "correctIndex": 1, "explanation": "Fajar looks outside for one minute and says alhamdulillah before working." },
-      { "question": "What does Dewi usually do first thing in the morning?", "options": ["Prays quietly", "Opens her phone first", "Goes for a walk", "Reads a book"], "correctIndex": 1, "explanation": "Dewi says she usually opens her phone first thing and feels stressed." },
-      { "question": "What does Fajar suggest Dewi try?", "options": ["Working longer hours", "One minute noticing something to be grateful for, no phone", "Quitting her job", "Sleeping more"], "correctIndex": 1, "explanation": "Fajar suggests one minute without a phone, noticing something small to be grateful for." },
-      { "question": "What does Fajar say he sometimes notices?", "options": ["Only his to-do list", "The sky, coffee smell, or being healthy", "His phone notifications", "Traffic outside"], "correctIndex": 1, "explanation": "Fajar mentions noticing the sky, the smell of coffee, or being alive and healthy." }
-    ]
+      {
+        "question": "How does Dewi describe her week?",
+        "options": [
+          "Relaxing",
+          "Boring",
+          "Short",
+          "Heavy, with meetings and deadlines"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dewi says the week has been heavy with meetings and deadlines."
+      },
+      {
+        "question": "What does Fajar do every morning before opening his laptop?",
+        "options": [
+          "Checks his email",
+          "Calls a friend",
+          "Drinks three coffees",
+          "Looks outside for one minute and says alhamdulillah"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fajar looks outside for one minute and says alhamdulillah before working."
+      },
+      {
+        "question": "What does Dewi usually do first thing in the morning?",
+        "options": [
+          "Opens her phone first",
+          "Prays quietly",
+          "Goes for a walk",
+          "Reads a book"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dewi says she usually opens her phone first thing and feels stressed."
+      },
+      {
+        "question": "What small gratitude practice does Fajar recommend to Dewi?",
+        "options": [
+          "Working longer hours",
+          "Quitting her job",
+          "One minute noticing something to be grateful for, no phone",
+          "Sleeping more"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fajar suggests one minute without a phone, noticing something small to be grateful for."
+      },
+      {
+        "question": "What does Fajar say he sometimes notices?",
+        "options": [
+          "Only his to-do list",
+          "The sky, coffee smell, or being healthy",
+          "His phone notifications",
+          "Traffic outside"
+        ],
+        "correctIndex": 1,
+        "explanation": "Fajar mentions noticing the sky, the smell of coffee, or being alive and healthy."
+      },
+      {
+        "question": "What fills Dewi’s week?",
+        "options": [
+          "Travel and shopping",
+          "Meetings and deadlines",
+          "Family calls",
+          "Medical visits"
+        ],
+        "correctIndex": 1,
+        "explanation": "She describes a heavy work schedule."
+      },
+      {
+        "question": "When does Fajar pause?",
+        "options": [
+          "After leaving work",
+          "Before opening the laptop",
+          "During every meeting",
+          "Before sleeping"
+        ],
+        "correctIndex": 1,
+        "explanation": "His morning pause comes before work starts."
+      },
+      {
+        "question": "What does Dewi usually open first?",
+        "options": [
+          "A window",
+          "Her phone",
+          "A notebook",
+          "The office door"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her normal habit begins with the screen."
+      },
+      {
+        "question": "How long is the suggested pause?",
+        "options": [
+          "One hour",
+          "One afternoon",
+          "One minute",
+          "Ten seconds"
+        ],
+        "correctIndex": 2,
+        "explanation": "The experiment is deliberately small."
+      },
+      {
+        "question": "What is the purpose of noticing small things?",
+        "options": [
+          "To begin with awareness and gratitude",
+          "To remove every deadline",
+          "To avoid doing work",
+          "To judge other workers"
+        ],
+        "correctIndex": 0,
+        "explanation": "The dialogue offers a calm start, not a cure."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "keep; ordinary coworker conversation uses brief observation and gratitude without claiming it solves workload",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-tauhid-04",
@@ -118,31 +466,145 @@
     "themeId": "tauhid",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [warmly] My grandmother lived a hard life. She lost her husband young, and she raised five children alone.",
-      "Narrator: [thoughtful] When I was small, I asked her once, were you angry at Allah for such a hard life?",
-      "Narrator: [gently] She looked at me and smiled. She said, angry? No. Allah gave me strength I did not know I had.",
-      "Narrator: [reflective] I did not understand her answer then. I was too young to understand real hardship.",
-      "Narrator: [softly] Years later, I lost my own job and struggled for many months. I remembered her words often.",
-      "Narrator: [with feeling] During that hard time, small things kept happening. A friend helped me. A stranger gave good advice. Money arrived when I needed it most.",
-      "Narrator: [warmly] I started to see these moments as more than luck. I saw them as Allah's mercy, arriving quietly, again and again.",
-      "Narrator: [thoughtful] I also started calling my grandmother more, asking her questions I never thought to ask when I was young.",
+      "Narrator: [thoughtful] My grandmother lived a hard life. She lost her husband young, and she raised five children alone.",
+      "Narrator: When I was small, I asked her once, were you angry at Allah for such a hard life?",
+      "Narrator: [reflective] She looked at me and smiled. She said, angry? No. Allah gave me strength I did not know I had.",
+      "Narrator: I did not understand her answer then. I was too young to understand real hardship.",
+      "Narrator: [honestly] Years later, I lost my own job and struggled for many months. I remembered her words often.",
+      "Narrator: During that hard time, small things kept happening. A friend helped me. A stranger gave good advice. A small paid task helped with one urgent bill.",
+      "Narrator: [determined] I started to see these moments as more than luck. I saw them as Allah's mercy, arriving quietly, again and again.",
+      "Narrator: I also started calling my grandmother more, asking her questions I never thought to ask when I was young.",
       "Narrator: [warmly] She told me stories I had never heard, about neighbors who helped her, about small jobs that appeared just in time.",
-      "Narrator: [gently] Every story had the same pattern. Hardship, and then, quietly, help arriving from somewhere unexpected.",
+      "Narrator: Her stories helped me notice many forms of mercy, while she also admitted that some questions remained difficult.",
       "Narrator: [peacefully] Now I understand what my grandmother meant. Mercy does not always remove hardship completely.",
-      "Narrator: [gently] Sometimes mercy is the strength to keep walking through it, one day at a time.",
-      "Narrator: [warmly] My grandmother passed away last spring, but her words still visit me on my hardest days.",
-      "Narrator: [with feeling] I hope, one day, my own grandchildren will remember something I said the same way I remember her."
+      "Narrator: Sometimes mercy is the strength to keep walking through it, one day at a time.",
+      "Narrator: [gently] My grandmother passed away last spring, but her words still visit me on my hardest days.",
+      "Narrator: I hope, one day, my own grandchildren will remember something I said the same way I remember her."
     ],
     "quiz": [
-      { "question": "What kind of life did the narrator's grandmother have?", "options": ["Easy and comfortable", "Hard — she lost her husband young and raised five children alone", "Wealthy and quiet", "Short"], "correctIndex": 1, "explanation": "The grandmother lost her husband young and raised five children alone." },
-      { "question": "What question did the narrator ask his grandmother as a child?", "options": ["If she was rich", "If she was angry at Allah for such a hard life", "If she liked her job", "If she missed her country"], "correctIndex": 1, "explanation": "He asked if she was angry at Allah for such a hard life." },
-      { "question": "How did the grandmother answer?", "options": ["She said yes, she was very angry", "She said Allah gave her strength she did not know she had", "She refused to answer", "She cried and left"], "correctIndex": 1, "explanation": "She said Allah gave her strength she did not know she had." },
-      { "question": "What happened to the narrator years later?", "options": ["He got married", "He lost his job and struggled for months", "He moved abroad", "He became rich"], "correctIndex": 1, "explanation": "Years later, the narrator lost his own job and struggled for many months." },
-      { "question": "What does the narrator now understand about mercy?", "options": ["Mercy always removes hardship completely", "Mercy can be the strength to keep walking through hardship", "Mercy is only for the wealthy", "Mercy never comes quietly"], "correctIndex": 1, "explanation": "He concludes mercy is sometimes the strength to keep walking through hardship, one day at a time." }
-    ]
+      {
+        "question": "What kind of life did the narrator's grandmother have?",
+        "options": [
+          "Easy and comfortable",
+          "Wealthy and quiet",
+          "Short",
+          "Hard — she lost her husband young and raised five children alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "The grandmother lost her husband young and raised five children alone."
+      },
+      {
+        "question": "What question did the narrator ask his grandmother as a child?",
+        "options": [
+          "If she was angry at Allah for such a hard life",
+          "If she was rich",
+          "If she liked her job",
+          "If she missed her country"
+        ],
+        "correctIndex": 0,
+        "explanation": "He asked if she was angry at Allah for such a hard life."
+      },
+      {
+        "question": "How did the grandmother answer?",
+        "options": [
+          "She said yes, she was very angry",
+          "She said Allah gave her strength she did not know she had",
+          "She refused to answer",
+          "She cried and left"
+        ],
+        "correctIndex": 1,
+        "explanation": "She said Allah gave her strength she did not know she had."
+      },
+      {
+        "question": "What happened to the narrator years later?",
+        "options": [
+          "He got married",
+          "He moved abroad",
+          "He lost his job and struggled for months",
+          "He became rich"
+        ],
+        "correctIndex": 2,
+        "explanation": "Years later, the narrator lost his own job and struggled for many months."
+      },
+      {
+        "question": "What does the narrator now understand about mercy?",
+        "options": [
+          "Mercy always removes hardship completely",
+          "Mercy is only for the wealthy",
+          "Mercy never comes quietly",
+          "Mercy can be the strength to keep walking through hardship"
+        ],
+        "correctIndex": 3,
+        "explanation": "He concludes mercy is sometimes the strength to keep walking through hardship, one day at a time."
+      },
+      {
+        "question": "How many children did the grandmother raise?",
+        "options": [
+          "Five",
+          "Two",
+          "Seven",
+          "One"
+        ],
+        "correctIndex": 0,
+        "explanation": "She raised them after losing her husband."
+      },
+      {
+        "question": "What did she say Allah gave her?",
+        "options": [
+          "Strength",
+          "A new house",
+          "An easy life",
+          "A public award"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her answer focused on support during hardship."
+      },
+      {
+        "question": "What later hardship did the narrator face?",
+        "options": [
+          "Serious travel delay",
+          "Job loss",
+          "A broken radio",
+          "A missed prayer"
+        ],
+        "correctIndex": 1,
+        "explanation": "The grandmother’s words returned during unemployment."
+      },
+      {
+        "question": "Why did the narrator call more often?",
+        "options": [
+          "To ask for money",
+          "To find a new manager",
+          "To hear and understand her stories",
+          "To plan a reunion"
+        ],
+        "correctIndex": 2,
+        "explanation": "Adult experience created new questions."
+      },
+      {
+        "question": "What balanced idea about mercy remains?",
+        "options": [
+          "Mercy may give support without removing every hardship",
+          "Help always arrives as money",
+          "Hardship follows one fixed pattern",
+          "A believer always knows the reason"
+        ],
+        "correctIndex": 0,
+        "explanation": "The revision avoids promising a visible form."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "revise; keep personal experience of mercy without implying visible help always follows the same pattern",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-tauhid-05",
@@ -151,37 +613,154 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rafi", "gender": "male" },
-      { "name": "Mother", "gender": "female" }
+      {
+        "name": "Rafi",
+        "gender": "male"
+      },
+      {
+        "name": "Mother",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Rafi: [nervous] Mom, they are taking me to surgery in one hour. I am scared.",
-      "Mother: [gently] I know, my son. It is okay to feel scared. That is a normal feeling.",
-      "Rafi: [worried] What if something goes wrong during the operation?",
-      "Mother: [calmly] The doctors are skilled, and they have prepared carefully. But you are right, we cannot control everything.",
-      "Rafi: [quietly] That's the part that scares me the most, not being in control.",
-      "Mother: [warmly] I understand completely. But remember, you were never fully in control, not even on an ordinary day.",
-      "Rafi: [thoughtful] I never really thought about it that way before.",
-      "Mother: [gently] Allah has always been holding your life, even when you felt in control. Today is not so different.",
-      "Rafi: [softly] I want to believe that, Mom. I really do.",
-      "Mother: [gently] It takes practice, my son. I still remind myself of it too, even now.",
-      "Rafi: [curious] Does it ever get easier, this trusting part?",
-      "Mother: [honestly] A little, with time. But mostly, you just keep choosing it, again and again, every time you feel afraid.",
-      "Mother: [encouraging] Say a small prayer before they take you in. Ask for ease, and trust the rest to Allah.",
-      "Rafi: [determined] Okay. I will do that. Thank you for staying on the phone with me.",
-      "Mother: [with love] I am praying for you right now, and I will be here the moment you wake up.",
-      "Rafi: [relieved] That helps more than you know. I feel a little calmer already.",
-      "Mother: [warmly] Good. Breathe slowly, my son. Allah is with you.",
-      "Rafi: [softly] I love you, Mom. I'll see you when I wake up.",
-      "Mother: [with love] I love you too, my son. I will be right there, waiting."
+      "Rafi: [thoughtful] Mom, they are taking me to surgery in one hour. I am scared.",
+      "Mother: I know, my son. It is okay to feel scared. That is a normal feeling.",
+      "Rafi: [reflective] What if something goes wrong during the operation?",
+      "Mother: The doctors are skilled, and they have prepared carefully. But you are right, we cannot control everything.",
+      "Rafi: [honestly] That's the part that scares me the most, not being in control.",
+      "Mother: I understand completely. But remember, you were never fully in control, not even on an ordinary day.",
+      "Rafi: [determined] I never really thought about it that way before.",
+      "Mother: Allah has always been holding your life, even when you felt in control. Today is not so different.",
+      "Rafi: [warmly] I want to believe that, Mom. I really do.",
+      "Mother: It takes practice, my son. I still remind myself of it too, even now.",
+      "Rafi: [peacefully] Does it ever get easier, this trusting part?",
+      "Mother: A little, with time. But mostly, you just keep choosing it, again and again, every time you feel afraid.",
+      "Mother: [gently] Say a small prayer before they take you in. Ask for ease, and trust the rest to Allah.",
+      "Rafi: Okay. I will do that. Thank you for staying on the phone with me.",
+      "Mother: I am praying for you right now, and I will be here the moment you wake up.",
+      "Rafi: [encouraging] That helps more than you know. I feel a little calmer already.",
+      "Mother: Good. Breathe slowly, my son. Allah is with you.",
+      "Rafi: I love you, Mom. I'll see you when I wake up.",
+      "Mother: [warmly] I love you too, my son. I will be right there, waiting."
     ],
     "quiz": [
-      { "question": "What is Rafi about to do?", "options": ["Travel abroad", "Go into surgery", "Start a new job", "Take an exam"], "correctIndex": 1, "explanation": "Rafi says he is being taken to surgery in one hour." },
-      { "question": "What scares Rafi the most?", "options": ["The doctors", "Not being in control", "The hospital food", "Being alone at home"], "correctIndex": 1, "explanation": "Rafi says not being in control is the part that scares him most." },
-      { "question": "What does his mother remind him about control?", "options": ["He was always fully in control", "He was never fully in control, even on ordinary days", "Control does not matter", "Only doctors have control"], "correctIndex": 1, "explanation": "His mother reminds him he was never fully in control, even on an ordinary day." },
-      { "question": "What does the mother suggest Rafi do before surgery?", "options": ["Watch a video", "Say a small prayer asking for ease", "Call more relatives", "Sleep immediately"], "correctIndex": 1, "explanation": "She suggests saying a small prayer asking for ease and trusting the rest to Allah." },
-      { "question": "How does Rafi feel by the end of the call?", "options": ["More scared", "A little calmer", "Angry", "Confused"], "correctIndex": 1, "explanation": "Rafi says he feels a little calmer already after talking with his mother." }
-    ]
+      {
+        "question": "What is Rafi about to do?",
+        "options": [
+          "Travel abroad",
+          "Go into surgery",
+          "Start a new job",
+          "Take an exam"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rafi says he is being taken to surgery in one hour."
+      },
+      {
+        "question": "What scares Rafi the most?",
+        "options": [
+          "Not being in control",
+          "The doctors",
+          "The hospital food",
+          "Being alone at home"
+        ],
+        "correctIndex": 0,
+        "explanation": "Rafi says not being in control is the part that scares him most."
+      },
+      {
+        "question": "What does his mother remind him about control?",
+        "options": [
+          "He was never fully in control, even on ordinary days",
+          "He was always fully in control",
+          "Control does not matter",
+          "Only doctors have control"
+        ],
+        "correctIndex": 0,
+        "explanation": "His mother reminds him he was never fully in control, even on an ordinary day."
+      },
+      {
+        "question": "What does the mother suggest Rafi do before surgery?",
+        "options": [
+          "Watch a video",
+          "Call more relatives",
+          "Say a small prayer asking for ease",
+          "Sleep immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "She suggests saying a small prayer asking for ease and trusting the rest to Allah."
+      },
+      {
+        "question": "How does Rafi feel by the end of the call?",
+        "options": [
+          "More scared",
+          "Angry",
+          "A little calmer",
+          "Confused"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rafi says he feels a little calmer already after talking with his mother."
+      },
+      {
+        "question": "When will the surgery begin?",
+        "options": [
+          "Tomorrow evening",
+          "Next month",
+          "After one week",
+          "In one hour"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rafi calls shortly before the operation."
+      },
+      {
+        "question": "What preparation does the mother mention?",
+        "options": [
+          "Rafi chose the medicine",
+          "The family changed the operation",
+          "No one checked anything",
+          "The doctors have prepared carefully"
+        ],
+        "correctIndex": 3,
+        "explanation": "Trust exists beside medical work."
+      },
+      {
+        "question": "What feeling is accepted as normal?",
+        "options": [
+          "Pride",
+          "Fear",
+          "Boredom",
+          "Anger at staff"
+        ],
+        "correctIndex": 1,
+        "explanation": "The mother does not shame Rafi."
+      },
+      {
+        "question": "What can Rafi do before entering?",
+        "options": [
+          "Cancel without speaking to doctors",
+          "Choose the surgical method",
+          "Ignore every instruction",
+          "Make dua and breathe slowly"
+        ],
+        "correctIndex": 3,
+        "explanation": "The actions are spiritual and calming, not medical advice."
+      },
+      {
+        "question": "What makes Rafi calmer?",
+        "options": [
+          "A guaranteed outcome",
+          "Control over everything",
+          "Leaving the hospital",
+          "His mother’s support and reminder"
+        ],
+        "correctIndex": 3,
+        "explanation": "The call gives presence without a promise."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "keep; compassionate pre-surgery call validates fear, recognizes clinical preparation, uses dua, breathing, and family presence",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-tauhid-06",
@@ -190,30 +769,144 @@
     "themeId": "tauhid",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] People often ask, why does Allah allow bad things to happen to good people?",
-      "Narrator: [gently] I asked this question too, especially after a hard year in my own life.",
+      "Narrator: I asked this question too, especially after a hard year in my own life.",
       "Narrator: [reflective] I do not have a perfect answer, but I want to share what helped me understand a little more.",
-      "Narrator: [calm] First, I learned that this life is not the whole story. It is only one small part of something much bigger.",
-      "Narrator: [thoughtful] Second, I noticed that hard times often taught me things easy times never could, like patience and real gratitude.",
-      "Narrator: [warmly] Third, I remembered that Allah is not distant during hardship. He is often closest during our lowest moments.",
-      "Narrator: [gently] This does not mean pain becomes easy. Pain still hurts, and that is completely normal and human.",
-      "Narrator: [honestly] I still cry sometimes. I still feel angry sometimes, and I no longer feel guilty about those feelings.",
-      "Narrator: [reflective] What changed is what I do after the pain. Instead of staying stuck, I try to look for the lesson quietly hidden inside it.",
-      "Narrator: [peacefully] But understanding these three things changed how I carried my pain, even if it did not remove it completely.",
-      "Narrator: [with hope] Now, when hard things happen, I try to ask a different question. Not why is this happening, but what can I learn, and how is Allah near me right now.",
-      "Narrator: [gently] It is not a perfect trick that removes all sadness. But it helps me move through hard days without feeling completely lost.",
-      "Narrator: [warmly] Maybe you are going through something difficult right now too. I hope this small shift in thinking helps you as much as it helped me."
+      "Narrator: First, I learned that this life is not the whole story. It is only one small part of something much bigger.",
+      "Narrator: [honestly] Second, I noticed that hard times often taught me things easy times never could, like patience and real gratitude.",
+      "Narrator: Third, I remembered that Allah is not distant during hardship. His knowledge, mercy, and care are never absent during hardship.",
+      "Narrator: [determined] This does not mean pain becomes easy. Pain still hurts, and that is completely normal and human.",
+      "Narrator: I still cry sometimes. I still feel angry sometimes, and I no longer feel guilty about those feelings.",
+      "Narrator: [warmly] What changed is what I do after the pain. I try to take the next responsible step, seek support, and avoid forcing a quick lesson from every pain.",
+      "Narrator: But understanding these three things changed how I carried my pain, even if it did not remove it completely.",
+      "Narrator: [peacefully] Now, when hard things happen, I try to ask a different question. I may still ask why, while also asking what safe step I can take and how I can turn to Allah now.",
+      "Narrator: It is not a perfect trick that removes all sadness. But it helps me move through hard days without feeling completely lost.",
+      "Narrator: [gently] Maybe you are going through something difficult right now too. I hope this small shift in thinking helps you as much as it helped me."
     ],
     "quiz": [
-      { "question": "What question does the narrator often hear people ask?", "options": ["Why is life so short", "Why does Allah allow bad things to happen to good people", "Why is prayer difficult", "Why do people get sick"], "correctIndex": 1, "explanation": "The narrator addresses why Allah allows bad things to happen to good people." },
-      { "question": "What is the first thing that helped the narrator understand more?", "options": ["This life is not the whole story", "Bad things never really happen", "Money solves everything", "She stopped asking questions"], "correctIndex": 0, "explanation": "She learned this life is only one small part of something much bigger." },
-      { "question": "What did hard times teach the narrator that easy times could not?", "options": ["Nothing useful", "Patience and real gratitude", "How to avoid problems", "How to ignore feelings"], "correctIndex": 1, "explanation": "She says hard times taught her patience and real gratitude." },
-      { "question": "What does the narrator say about Allah during hardship?", "options": ["He becomes distant", "He is often closest during our lowest moments", "He disappears completely", "He only helps the wealthy"], "correctIndex": 1, "explanation": "She says Allah is often closest during our lowest moments." },
-      { "question": "What new question does she try to ask during hard times now?", "options": ["Why is this happening to me", "What can I learn, and how is Allah near me right now", "When will this end", "Who is to blame"], "correctIndex": 1, "explanation": "She now asks what she can learn and how Allah is near her right now." }
-    ]
+      {
+        "question": "What question does the narrator often hear people ask?",
+        "options": [
+          "Why is life so short",
+          "Why is prayer difficult",
+          "Why do people get sick",
+          "Why does Allah allow bad things to happen to good people"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator addresses why Allah allows bad things to happen to good people."
+      },
+      {
+        "question": "What is the first thing that helped the narrator understand more?",
+        "options": [
+          "Bad things never really happen",
+          "This life is not the whole story",
+          "Money solves everything",
+          "She stopped asking questions"
+        ],
+        "correctIndex": 1,
+        "explanation": "She learned this life is only one small part of something much bigger."
+      },
+      {
+        "question": "What did hard times teach the narrator that easy times could not?",
+        "options": [
+          "Nothing useful",
+          "Patience and real gratitude",
+          "How to avoid problems",
+          "How to ignore feelings"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says hard times taught her patience and real gratitude."
+      },
+      {
+        "question": "What does the narrator say about Allah during hardship?",
+        "options": [
+          "He becomes distant",
+          "He disappears completely",
+          "He is often closest during our lowest moments",
+          "He only helps the wealthy"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says Allah is often closest during our lowest moments."
+      },
+      {
+        "question": "What new question does she try to ask during hard times now?",
+        "options": [
+          "What can I learn, and how is Allah near me right now",
+          "Why is this happening to me",
+          "When will this end",
+          "Who is to blame"
+        ],
+        "correctIndex": 0,
+        "explanation": "She now asks what she can learn and how Allah is near her right now."
+      },
+      {
+        "question": "Does the narrator claim a perfect answer?",
+        "options": [
+          "Yes, in one sentence",
+          "Yes, from personal pain alone",
+          "No",
+          "No, because faith has no guidance"
+        ],
+        "correctIndex": 2,
+        "explanation": "The reflection begins with humility."
+      },
+      {
+        "question": "What truth about this life is mentioned?",
+        "options": [
+          "It has no hardship",
+          "It explains every event now",
+          "It is not the whole story",
+          "It removes the need for help"
+        ],
+        "correctIndex": 2,
+        "explanation": "The hereafter gives a wider frame."
+      },
+      {
+        "question": "Are crying and anger treated as human?",
+        "options": [
+          "Yes",
+          "No, they always show weak faith",
+          "Only crying is allowed",
+          "Only anger is allowed"
+        ],
+        "correctIndex": 0,
+        "explanation": "The narrator allows honest feelings."
+      },
+      {
+        "question": "What should a person avoid forcing?",
+        "options": [
+          "Support from trusted people",
+          "Dua during hardship",
+          "A quick lesson from every pain",
+          "Safe practical steps"
+        ],
+        "correctIndex": 2,
+        "explanation": "The revision rejects simplistic meaning-making."
+      },
+      {
+        "question": "What may help during a hard time?",
+        "options": [
+          "Pretending sadness is gone",
+          "Knowing Allah’s full reason",
+          "Handling everything alone",
+          "Dua, safe help, and the next responsible step"
+        ],
+        "correctIndex": 3,
+        "explanation": "The ending combines faith with support."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "revise; avoid forcing a hidden lesson from suffering and state humility about divine wisdom while allowing emotion and appropriate help",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-tauhid-07",
@@ -222,37 +915,605 @@
     "themeId": "tauhid",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good morning, listeners! Today we are talking about gratitude in hard times. We have a caller on the line. Hello!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call.",
-      "Radio Host: [warmly] Of course! Can you tell us why you called today?",
-      "Caller: [thoughtful] Yes. Honestly, this year has been very hard for my family financially.",
-      "Radio Host: [sympathetically] I'm sorry to hear that. How have you been coping?",
-      "Caller: [reflective] It's strange, but I started writing three things I'm grateful for every night, even small things.",
-      "Radio Host: [curious] What kind of small things do you write?",
-      "Caller: [gently] Sometimes it's just, my children are healthy, or we had food today, or the weather was nice.",
-      "Radio Host: [interested] Has that practice changed anything for you?",
-      "Caller: [warmly] It has not fixed our money problems, but it changed how heavy the problems feel.",
-      "Radio Host: [curious] Do your children know you write this list?",
-      "Caller: [smiling] Actually, we started doing it together at dinner now. Each of us shares one thing.",
-      "Radio Host: [warmly] That sounds like a lovely family habit to build during a hard year.",
-      "Caller: [thoughtful] It is. My youngest daughter always says something funny, and it makes all of us laugh a little.",
-      "Radio Host: [understanding] That's a powerful shift, even without the situation changing completely.",
-      "Caller: [determined] Yes. I still work hard to fix things, but I don't feel hopeless anymore.",
-      "Radio Host: [curious] Would you recommend this practice to other listeners going through hard times?",
-      "Caller: [warmly] Definitely. It costs nothing, takes two minutes, and it genuinely shifted how our whole family feels.",
-      "Radio Host: [encouraging] Thank you so much for sharing that with us this morning.",
-      "Caller: [sincerely] Thank you for listening. I hope it helps someone else out there too."
+      "Radio Host: [thoughtful] Good morning, listeners! Today we are talking about gratitude in hard times. We have a caller on the line. Hello!",
+      "Caller: Hello! Thank you for taking my call.",
+      "Radio Host: [reflective] Of course! Can you tell us why you called today?",
+      "Caller: Yes. Honestly, this year has been very hard for my family financially.",
+      "Radio Host: [honestly] I'm sorry to hear that. How have you been coping?",
+      "Caller: It's strange, but I started writing three things I'm grateful for every night, even small things.",
+      "Radio Host: [determined] What kind of small things do you write?",
+      "Caller: Sometimes it's just, my children are healthy, or we had food today, or the weather was nice.",
+      "Radio Host: [warmly] Has that practice changed anything for you?",
+      "Caller: It has not fixed our money problems, but it changed how heavy the problems feel.",
+      "Radio Host: [peacefully] Do your children know you write this list?",
+      "Caller: Actually, we started doing it together at dinner now. Each of us shares one thing.",
+      "Radio Host: [gently] That sounds like a lovely family habit to build during a hard year.",
+      "Caller: It is. My youngest daughter always says something funny, and it makes all of us laugh a little.",
+      "Radio Host: That's a powerful shift, even without the situation changing completely.",
+      "Caller: [encouraging] Yes. I still work hard to fix things, but I don't feel hopeless anymore.",
+      "Radio Host: Would you recommend this practice to other listeners going through hard times?",
+      "Caller: It helped our family, and others may try a short list while still seeking practical help for their problems.",
+      "Radio Host: [warmly] Thank you so much for sharing that with us this morning.",
+      "Caller: Thank you for listening. I hope it helps someone else out there too."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Cooking tips", "Gratitude in hard times", "Weather forecast", "Sports news"], "correctIndex": 1, "explanation": "The host introduces today's topic as gratitude in hard times." },
-      { "question": "What kind of hardship does the caller mention?", "options": ["Health problems", "Financial hardship for his family", "Losing his home", "A car accident"], "correctIndex": 1, "explanation": "The caller says this year has been very hard financially for his family." },
-      { "question": "What practice did the caller start doing?", "options": ["Praying five times more", "Writing three things he's grateful for every night", "Calling his family daily", "Reading the news less"], "correctIndex": 1, "explanation": "He started writing three things he's grateful for every night, even small things." },
-      { "question": "What kind of things does the caller write down?", "options": ["Only expensive things", "Small things, like children being healthy or having food", "Only future goals", "Nothing specific"], "correctIndex": 1, "explanation": "He mentions small things like children being healthy, having food, or nice weather." },
-      { "question": "How did this practice change things for the caller?", "options": ["It fixed his money problems completely", "It changed how heavy the problems feel, though they still exist", "It made no difference at all", "It made him stop working"], "correctIndex": 1, "explanation": "He says it did not fix the money problems but changed how heavy they feel." }
-    ]
+      {
+        "question": "Which response to difficult times does the radio segment discuss?",
+        "options": [
+          "Gratitude in hard times",
+          "Cooking tips",
+          "Weather forecast",
+          "Sports news"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces today's topic as gratitude in hard times."
+      },
+      {
+        "question": "What kind of hardship does the caller mention?",
+        "options": [
+          "Health problems",
+          "Losing his home",
+          "Financial hardship for his family",
+          "A car accident"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller says this year has been very hard financially for his family."
+      },
+      {
+        "question": "What practice did the caller start doing?",
+        "options": [
+          "Praying five times more",
+          "Writing three things he's grateful for every night",
+          "Calling his family daily",
+          "Reading the news less"
+        ],
+        "correctIndex": 1,
+        "explanation": "He started writing three things he's grateful for every night, even small things."
+      },
+      {
+        "question": "What kind of things does the caller write down?",
+        "options": [
+          "Only expensive things",
+          "Only future goals",
+          "Nothing specific",
+          "Small things, like children being healthy or having food"
+        ],
+        "correctIndex": 3,
+        "explanation": "He mentions small things like children being healthy, having food, or nice weather."
+      },
+      {
+        "question": "How did this practice change things for the caller?",
+        "options": [
+          "It fixed his money problems completely",
+          "It changed how heavy the problems feel, though they still exist",
+          "It made no difference at all",
+          "It made him stop working"
+        ],
+        "correctIndex": 1,
+        "explanation": "He says it did not fix the money problems but changed how heavy they feel."
+      },
+      {
+        "question": "What problem does the family face?",
+        "options": [
+          "A travel mistake",
+          "A stolen phone",
+          "A school reunion",
+          "Financial hardship"
+        ],
+        "correctIndex": 3,
+        "explanation": "Money has been difficult this year."
+      },
+      {
+        "question": "How many things did the caller first write?",
+        "options": [
+          "One",
+          "Three",
+          "Five",
+          "Ten"
+        ],
+        "correctIndex": 1,
+        "explanation": "The list was short each night."
+      },
+      {
+        "question": "Where does the family now share?",
+        "options": [
+          "At dinner",
+          "At work",
+          "On the radio only",
+          "At the market"
+        ],
+        "correctIndex": 0,
+        "explanation": "Each person names one thing."
+      },
+      {
+        "question": "Did the list fix the money problem?",
+        "options": [
+          "Yes, immediately",
+          "No",
+          "Yes, after two minutes",
+          "The host says it did"
+        ],
+        "correctIndex": 1,
+        "explanation": "The caller clearly separates gratitude from finances."
+      },
+      {
+        "question": "What continues beside gratitude?",
+        "options": [
+          "Ignoring bills",
+          "Waiting without action",
+          "Hard work on the real problem",
+          "Telling everyone to copy"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller still works to improve the situation."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "keep with modest wording; gratitude remains a personal family practice that does not replace financial action",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-tauhid-08",
+    "title": "When the Forecast Was Wrong",
+    "level": "A1",
+    "themeId": "tauhid",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] Our neighborhood planned an outdoor food distribution on Sunday. All week, the weather forecast showed a clear morning.",
+      "Narrator: We prepared boxes, tables, and a simple route. On Saturday night, dark clouds appeared and heavy rain began.",
+      "Narrator: [reflective] My first thought was that our work had failed. I complained that the forecast had promised good weather.",
+      "Narrator: An older volunteer reminded me that forecasts are useful human estimates, not control over creation.",
+      "Narrator: [honestly] We believe Allah alone has complete knowledge and power. Our duty was to respond wisely, not speak as if a phone could guarantee the sky.",
+      "Narrator: We moved the distribution to a covered school entrance and called every volunteer with the new address.",
+      "Narrator: [determined] The rain continued on Sunday. Fewer people could walk to us, so two drivers delivered boxes to older residents.",
+      "Narrator: The changed plan required more effort, but it revealed needs we had not noticed. Some people could not have reached the outdoor location even in sunshine.",
+      "Narrator: [warmly] We also served warm soup instead of cold drinks. The school guard helped us find extra chairs.",
+      "Narrator: By noon, all boxes had reached their families. The event looked nothing like our original plan, yet its purpose was fulfilled.",
+      "Narrator: [peacefully] That day corrected two mistakes in me. First, using a forecast should not make me forget that Allah controls the result.",
+      "Narrator: Second, trusting Allah should not make me careless about planning. We still checked information, prepared shelter, and changed our actions.",
+      "Narrator: [gently] Tawakkul joins a believing heart with responsible effort. It is neither confidence in a forecast nor an excuse to avoid work.",
+      "Narrator: Now I say, “If Allah wills,” with more attention. Plans are tools, while outcomes remain with Allah."
+    ],
+    "quiz": [
+      {
+        "question": "What did the forecast show?",
+        "options": [
+          "A week of snow",
+          "Strong wind for a month",
+          "No information",
+          "A clear Sunday morning"
+        ],
+        "correctIndex": 3,
+        "explanation": "The original plan relied on a clear forecast."
+      },
+      {
+        "question": "What happened Saturday night?",
+        "options": [
+          "The school closed forever",
+          "All food disappeared",
+          "Heavy rain began",
+          "The drivers left town"
+        ],
+        "correctIndex": 2,
+        "explanation": "Unexpected rain forced a change."
+      },
+      {
+        "question": "Where did distribution move?",
+        "options": [
+          "To an open field",
+          "To another country",
+          "To a covered school entrance",
+          "To a restaurant kitchen"
+        ],
+        "correctIndex": 2,
+        "explanation": "The covered entrance provided shelter."
+      },
+      {
+        "question": "What new need did they discover?",
+        "options": [
+          "Everyone wanted cold drinks",
+          "Some older residents needed delivery",
+          "Nobody needed food",
+          "The forecast needed repair"
+        ],
+        "correctIndex": 1,
+        "explanation": "The changed route revealed people unable to travel."
+      },
+      {
+        "question": "How is tawakkul explained?",
+        "options": [
+          "No planning at all",
+          "Trust in Allah joined with responsible effort",
+          "Complete trust in a phone forecast",
+          "Waiting without action"
+        ],
+        "correctIndex": 1,
+        "explanation": "Belief and careful action work together."
+      },
+      {
+        "question": "What event was planned?",
+        "options": [
+          "Outdoor food distribution",
+          "A job interview",
+          "A school trip",
+          "A family dinner"
+        ],
+        "correctIndex": 0,
+        "explanation": "The forecast affected a community service plan."
+      },
+      {
+        "question": "Why did the team change location?",
+        "options": [
+          "Heavy rain arrived",
+          "Food was unavailable",
+          "The hall was closed",
+          "No volunteers came"
+        ],
+        "correctIndex": 0,
+        "explanation": "Weather made the outdoor plan unsuitable."
+      },
+      {
+        "question": "Who benefited from delivery help?",
+        "options": [
+          "People unable to reach the site",
+          "Only the drivers",
+          "Weather reporters",
+          "Shop owners"
+        ],
+        "correctIndex": 0,
+        "explanation": "The disruption revealed an access need."
+      },
+      {
+        "question": "What does “forecast” mean?",
+        "options": [
+          "A prediction of weather",
+          "A food list",
+          "A prayer schedule",
+          "A road rule"
+        ],
+        "correctIndex": 0,
+        "explanation": "The expected clear morning changed."
+      },
+      {
+        "question": "How is tawakkul shown?",
+        "options": [
+          "Make no plan",
+          "Expect weather always to agree",
+          "Refuse every change",
+          "Plan well, adapt, and trust Allah with results"
+        ],
+        "correctIndex": 3,
+        "explanation": "Effort and trust work together."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "keep; excellent tawakkul story combines planning, weather change, accessibility, teamwork, and acceptance of outcomes",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-tauhid-09",
+    "title": "The Seed on My Windowsill",
+    "level": "A1",
+    "themeId": "tauhid",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] My niece brought home a bean seed from school and asked me to help her grow it. We placed it in soil beside the window.",
+      "Narrator: Every morning, she checked the pot. For several days, nothing appeared, and she worried that we had done something wrong.",
+      "Narrator: [reflective] We read the instructions again. The soil needed gentle water, light, and time. Pouring more water would not force faster growth.",
+      "Narrator: On the sixth morning, a small green curve broke through the dark soil. My niece called everyone to look.",
+      "Narrator: [honestly] We had planted and watered the seed, but we had not created its life or commanded it to open.",
+      "Narrator: The tiny plant reminded us of Allah's power in ordinary things. A dry-looking seed contains a process we cannot see with our eyes.",
+      "Narrator: [determined] I explained that recognizing Allah as Creator should increase gratitude and responsibility. It should not make us careless with the plant.",
+      "Narrator: We moved the pot when the afternoon sun became too hot. My niece measured the stem once a week instead of pulling it to test its roots.",
+      "Narrator: [warmly] Soon two leaves opened. She drew them in a notebook and wrote the date.",
+      "Narrator: The project was simple science, and learning how plants grow did not reduce wonder. Understanding a process can help us notice order more clearly.",
+      "Narrator: [peacefully] We also spoke about patience. Our actions matter, but growth follows a time Allah allows.",
+      "Narrator: Weeks later, we moved the bean to a larger container. It was still small and needed daily care.",
+      "Narrator: [gently] The plant did not become an object of worship; it was a sign within creation pointing us toward the Creator.",
+      "Narrator: Now, when I water it, I remember to say Alhamdulillah for life, knowledge, and the chance to care for something weak."
+    ],
+    "quiz": [
+      {
+        "question": "What did the niece plant?",
+        "options": [
+          "A rose tree",
+          "A bag of rice",
+          "A piece of fruit",
+          "A bean seed"
+        ],
+        "correctIndex": 3,
+        "explanation": "The school project began with a bean seed."
+      },
+      {
+        "question": "When did the first shoot appear?",
+        "options": [
+          "On the sixth morning",
+          "After one hour",
+          "After one year",
+          "Before planting"
+        ],
+        "correctIndex": 0,
+        "explanation": "The seed remained unseen for several days."
+      },
+      {
+        "question": "What could the family provide?",
+        "options": [
+          "Life itself",
+          "A command for instant growth",
+          "Soil, water, light, time, and care",
+          "New roots by hand"
+        ],
+        "correctIndex": 2,
+        "explanation": "They used proper means but did not create life."
+      },
+      {
+        "question": "How did the niece observe safely?",
+        "options": [
+          "She removed every leaf",
+          "She flooded the soil",
+          "She kept it in darkness",
+          "She measured the stem instead of pulling roots"
+        ],
+        "correctIndex": 3,
+        "explanation": "Careful observation did not harm the plant."
+      },
+      {
+        "question": "What did the plant remind them of?",
+        "options": [
+          "Allah’s creative power and their responsibility",
+          "The need to worship plants",
+          "Science without wonder",
+          "The uselessness of patient care"
+        ],
+        "correctIndex": 0,
+        "explanation": "The created sign increased gratitude toward Allah."
+      },
+      {
+        "question": "Where was the pot placed?",
+        "options": [
+          "Under a bed",
+          "On a train",
+          "Inside a cupboard",
+          "Beside a window"
+        ],
+        "correctIndex": 3,
+        "explanation": "Light came through the window."
+      },
+      {
+        "question": "How often did the niece measure?",
+        "options": [
+          "Every hour",
+          "Once a week",
+          "Once a year",
+          "Never"
+        ],
+        "correctIndex": 1,
+        "explanation": "Weekly measuring avoided harming roots."
+      },
+      {
+        "question": "Why was the pot moved?",
+        "options": [
+          "The soil was missing",
+          "The window broke",
+          "The plant was fully grown",
+          "The afternoon sun became too hot"
+        ],
+        "correctIndex": 3,
+        "explanation": "Care changed with conditions."
+      },
+      {
+        "question": "What could the family control?",
+        "options": [
+          "The creation of life",
+          "Water, light, and care",
+          "The exact day of every leaf",
+          "The seed’s inner power"
+        ],
+        "correctIndex": 1,
+        "explanation": "Their effort had real but limited scope."
+      },
+      {
+        "question": "What does Alhamdulillah express?",
+        "options": [
+          "Fear of the plant",
+          "A request for a grade",
+          "Praise and gratitude to Allah",
+          "A measurement"
+        ],
+        "correctIndex": 2,
+        "explanation": "The plant reminds them of blessings and care."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "keep; concrete seed observation distinguishes human care from Allah creating life and avoids careless root testing",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-tauhid-10",
+    "title": "Effort Before the Interview",
+    "level": "A1",
+    "themeId": "tauhid",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Nadia",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Farah: [thoughtful] Nadia, my job interview is tomorrow, and I keep thinking about everything that could go wrong.",
+      "Nadia: Have you prepared the documents and practiced your answers?",
+      "Farah: [reflective] Yes. My clothes are ready, I checked the route, and I practiced with my brother.",
+      "Nadia: Then you have taken useful steps. What is still worrying you?",
+      "Farah: [honestly] I am afraid another candidate will be better, or the manager will dislike one answer.",
+      "Nadia: Those results are not fully in your control. You can be honest, prepared, and respectful.",
+      "Farah: [determined] I know we should trust Allah, but my heart still feels nervous.",
+      "Nadia: Trust does not always remove every physical feeling. You can feel nervous and still rely on Allah.",
+      "Farah: [warmly] What should I do tonight?",
+      "Nadia: Review briefly, make dua, pray on time, and then rest. More panic study may only make you tired.",
+      "Farah: [peacefully] Should I ask Allah only to give me this exact job?",
+      "Nadia: You may ask for it, and also ask Allah to grant what is best and protect you from what is harmful.",
+      "Farah: [gently] That makes sense. I want the job, but Allah knows the workplace better than I do.",
+      "Nadia: Exactly. Tawakkul is not believing that our preferred result must happen.",
+      "Farah: And it is not arriving unprepared while saying Allah will take care of everything.",
+      "Nadia: [encouraging] Right. We use lawful means and place the final outcome with Allah.",
+      "Farah: Tomorrow I will answer carefully, ask my own questions, and avoid pretending to know things I do not.",
+      "Nadia: That is a strong plan. Honesty matters more than creating a perfect image.",
+      "Farah: [warmly] If they say no, I can learn from the experience and continue applying.",
+      "Nadia: Yes. One decision cannot close every door that Allah may open."
+    ],
+    "quiz": [
+      {
+        "question": "What event worries Farah?",
+        "options": [
+          "A driving test",
+          "A job interview",
+          "A family dinner",
+          "A medical operation"
+        ],
+        "correctIndex": 1,
+        "explanation": "Her interview is scheduled for the next day."
+      },
+      {
+        "question": "What preparation has she completed?",
+        "options": [
+          "Nothing at all",
+          "Documents, clothes, route, and practice",
+          "Only buying food",
+          "Only calling the manager"
+        ],
+        "correctIndex": 1,
+        "explanation": "She has taken several practical steps."
+      },
+      {
+        "question": "What does Nadia suggest tonight?",
+        "options": [
+          "Study without sleeping",
+          "Cancel the interview",
+          "Brief review, dua, prayer, and rest",
+          "Invent better experience"
+        ],
+        "correctIndex": 2,
+        "explanation": "Calm preparation is better than panic."
+      },
+      {
+        "question": "How should Farah ask Allah?",
+        "options": [
+          "For the job and for what is truly best",
+          "Only for praise",
+          "Without accepting any other result",
+          "To avoid all effort"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her dua can include desire and trust in Allah’s knowledge."
+      },
+      {
+        "question": "What is tawakkul here?",
+        "options": [
+          "Using lawful means and entrusting the outcome to Allah",
+          "Expecting one guaranteed result",
+          "Avoiding preparation",
+          "Hiding the truth in an interview"
+        ],
+        "correctIndex": 0,
+        "explanation": "Effort and reliance are held together."
+      },
+      {
+        "question": "What has Farah researched?",
+        "options": [
+          "Train times",
+          "Hospital rules",
+          "Weather forecasts",
+          "The company and role"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her preparation is already practical."
+      },
+      {
+        "question": "What does Nadia advise about rest?",
+        "options": [
+          "Practice all night",
+          "Skip the interview",
+          "Keep checking messages",
+          "Stop preparing at a reasonable time"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sleep is part of responsible readiness."
+      },
+      {
+        "question": "Why not demand only one exact result?",
+        "options": [
+          "The job is certainly wrong",
+          "Allah may know another outcome is better",
+          "Dua cannot mention work",
+          "Preparation has no value"
+        ],
+        "correctIndex": 1,
+        "explanation": "Farah may ask while leaving the result to Allah."
+      },
+      {
+        "question": "What can Farah control?",
+        "options": [
+          "The interviewer’s final decision",
+          "Preparation and honest answers",
+          "Every future job",
+          "The company budget"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tawakkul recognizes the boundary."
+      },
+      {
+        "question": "What should rejection not mean?",
+        "options": [
+          "The interview happened",
+          "One employer said no",
+          "Every door is closed",
+          "More effort may be needed"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nadia keeps hope wider than one decision."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "tauhid",
+      "scriptDecision": "keep; clear interview dialogue defines tawakkul as preparation, dua, honest participation, and acceptance beyond one result",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

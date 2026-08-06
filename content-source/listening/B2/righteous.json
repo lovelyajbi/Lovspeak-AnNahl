@@ -6,29 +6,143 @@
     "themeId": "righteous",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Twice a week, before the sun has fully risen, I cook breakfast for a shelter that houses women who have nowhere else to go, and almost nobody at my office has the faintest idea this is how I spend those mornings.",
-      "Narrator: [thoughtful] It isn't that I've deliberately concealed it, exactly; it's more that whenever the subject drifts anywhere close, I find a way to steer the conversation elsewhere, almost instinctively.",
-      "Narrator: [honestly] Last month, a journalist who was writing a feature on community kitchens somehow tracked me down, having heard about the shift from one of the shelter's coordinators.",
-      "Narrator: [with feeling] She wanted a photograph, a short interview, my name printed beside a headline about quiet acts of kindness that go unnoticed in the city.",
-      "Narrator: [thoughtful] Part of me, I'll admit, was flattered, which surprised me more than the offer itself did, given how little I usually crave that sort of attention.",
-      "Narrator: [reflective] If the article had run, colleagues who currently assume I'm simply bad at replying to early morning messages would have finally understood where I disappear to.",
+      "Narrator: [thoughtful] Twice a week, before the sun has fully risen, I cook breakfast for a shelter that houses women who have nowhere else to go, and almost nobody at my office has the faintest idea this is how I spend those mornings.",
+      "Narrator: It isn't that I've deliberately concealed it, exactly; it's more that whenever the subject drifts anywhere close, I find a way to steer the conversation elsewhere, almost instinctively.",
+      "Narrator: [carefully] Last month, a journalist who was writing a feature on community kitchens somehow tracked me down, having heard about the shift from one of the shelter's coordinators.",
+      "Narrator: She wanted a photograph, a short interview, my name printed beside a headline about quiet acts of kindness that go unnoticed in the city.",
+      "Narrator: [reflective] Part of me, I'll admit, was flattered, which surprised me more than the offer itself did, given how little I usually crave that sort of attention.",
+      "Narrator: If the article had run, colleagues who currently assume I'm simply bad at replying to early morning messages would have finally understood where I disappear to.",
       "Narrator: [honestly] Even so, the more I pictured my face in print, the more uneasy I became, as though something I'd been doing quietly was about to be repurposed into something performed.",
-      "Narrator: [determined] So I turned the offer down, and suggested she interview the shelter's founder instead, since the kitchen would not exist at all without her tireless effort.",
-      "Narrator: [sincere] I don't say this to suggest that nobody should ever be photographed doing good; plenty of good is done publicly for perfectly good reasons.",
-      "Narrator: [thoughtful] For me specifically, though, I've noticed that the moment an act starts feeling like it's being witnessed, some quieter, purer version of my intention starts slipping away.",
-      "Narrator: [reflective] I'd rather keep this particular habit small and unremarkable, something between myself, the tired women eating breakfast, and whoever it is I'm ultimately doing it for.",
-      "Narrator: [peacefully] So the shifts continue, unmentioned and unphotographed, and if my coworkers ever do find out, I suspect it won't be from me."
+      "Narrator: So I turned the offer down, and suggested she interview the shelter's founder instead, since the kitchen would not exist at all without her tireless effort.",
+      "Narrator: [gently] I don't say this to suggest that nobody should ever be photographed doing good; plenty of good is done publicly for perfectly good reasons.",
+      "Narrator: For me specifically, though, I've noticed that the moment an act starts feeling like it's being witnessed, some quieter, purer version of my intention starts slipping away.",
+      "Narrator: [calmly] I'd rather keep this particular habit small and unremarkable, something between myself, the tired women eating breakfast, and whoever it is I'm ultimately doing it for.",
+      "Narrator: So the shifts continue, unmentioned and unphotographed, and if my coworkers ever do find out, I suspect it won't be from me."
     ],
     "quiz": [
-      { "question": "What does the narrator do twice a week before sunrise?", "options": ["She goes running", "She cooks breakfast for a shelter housing women with nowhere else to go", "She attends a work meeting", "She volunteers at a hospital"], "correctIndex": 1, "explanation": "She cooks breakfast for a shelter that houses women who have nowhere else to go, before sunrise, twice a week." },
-      { "question": "How did the journalist learn about her volunteer shifts?", "options": ["The narrator posted about it online", "She heard about it from one of the shelter's coordinators", "A coworker mentioned it", "She saw the narrator by accident"], "correctIndex": 1, "explanation": "The journalist tracked her down after hearing about the shift from one of the shelter's coordinators." },
-      { "question": "What did the journalist offer the narrator?", "options": ["A donation to the shelter", "A photograph and interview for an article about quiet acts of kindness", "A job at the newspaper", "Free cooking equipment"], "correctIndex": 1, "explanation": "She wanted a photograph and a short interview, with the narrator's name printed beside a headline about quiet kindness." },
-      { "question": "Why did the narrator ultimately turn the offer down?", "options": ["She was too busy that week", "She felt something quietly done was about to be repurposed into something performed", "The journalist offended her", "She didn't like the shelter's founder"], "correctIndex": 1, "explanation": "She grew uneasy imagining her face in print, feeling her quiet act would become something performed rather than sincere." },
-      { "question": "Who did she suggest the journalist interview instead?", "options": ["Another volunteer", "The shelter's founder", "One of the women at the shelter", "Her manager"], "correctIndex": 1, "explanation": "She suggested interviewing the shelter's founder, since the kitchen would not exist without her tireless effort." }
-    ]
+      {
+        "question": "What does the narrator do twice a week before sunrise?",
+        "options": [
+          "She cooks breakfast for a shelter housing women with nowhere else to go",
+          "She goes running",
+          "She attends a work meeting",
+          "She volunteers at a hospital"
+        ],
+        "correctIndex": 0,
+        "explanation": "She cooks breakfast for a shelter that houses women who have nowhere else to go, before sunrise, twice a week."
+      },
+      {
+        "question": "How did the journalist learn about her volunteer shifts?",
+        "options": [
+          "The narrator posted about it online",
+          "She heard about it from one of the shelter's coordinators",
+          "A coworker mentioned it",
+          "She saw the narrator by accident"
+        ],
+        "correctIndex": 1,
+        "explanation": "The journalist tracked her down after hearing about the shift from one of the shelter's coordinators."
+      },
+      {
+        "question": "What did the journalist offer the narrator?",
+        "options": [
+          "A donation to the shelter",
+          "A job at the newspaper",
+          "A photograph and interview for an article about quiet acts of kindness",
+          "Free cooking equipment"
+        ],
+        "correctIndex": 2,
+        "explanation": "She wanted a photograph and a short interview, with the narrator's name printed beside a headline about quiet kindness."
+      },
+      {
+        "question": "Why did the narrator ultimately turn the offer down?",
+        "options": [
+          "She felt something quietly done was about to be repurposed into something performed",
+          "She was too busy that week",
+          "The journalist offended her",
+          "She didn't like the shelter's founder"
+        ],
+        "correctIndex": 0,
+        "explanation": "She grew uneasy imagining her face in print, feeling her quiet act would become something performed rather than sincere."
+      },
+      {
+        "question": "Who did she suggest the journalist interview instead?",
+        "options": [
+          "Another volunteer",
+          "One of the women at the shelter",
+          "Her manager",
+          "The shelter's founder"
+        ],
+        "correctIndex": 3,
+        "explanation": "She suggested interviewing the shelter's founder, since the kitchen would not exist without her tireless effort."
+      },
+      {
+        "question": "Why do the narrator's coworkers misunderstand her slow replies on certain mornings?",
+        "options": [
+          "Siti, I need to talk about Dad's care schedule",
+          "What mattered to me was that it arrived without a name",
+          "They do not know she is cooking breakfast at a women's shelter.",
+          "My guest tonight drives for a ride-hailing app"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: They do not know she is cooking breakfast at a women's shelter."
+      },
+      {
+        "question": "How does she redirect the journalist's request for an interview?",
+        "options": [
+          "Growing up, Dad made it fairly obvious you were the one he was proud of",
+          "She declines and recommends interviewing the shelter's founder instead.",
+          "Last week, the wife knocked on my door holding the envelope",
+          "A passenger left a bag on the back seat after a short trip"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She declines and recommends interviewing the shelter's founder instead."
+      },
+      {
+        "question": "Why does she believe the founder deserves the publicity more?",
+        "options": [
+          "I would have understood if you'd stayed away entirely",
+          "She didn't ask me to confirm it",
+          "First, that money wasn't earned by me",
+          "The kitchen exists because of the founder's sustained work."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The kitchen exists because of the founder's sustained work."
+      },
+      {
+        "question": "What personal danger does she associate with being publicly praised?",
+        "options": [
+          "Public attention could turn sincere service into a performance.",
+          "I'll take Tuesdays and Thursdays, you keep the weekends",
+          "Whether that's overthinking a simple kindness, I couldn't say",
+          "He insisted, practically forced a portion into my hands"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Public attention could turn sincere service into a performance."
+      },
+      {
+        "question": "How will she protect this particular act of service?",
+        "options": [
+          "Just show up on Tuesday and let me sleep in for once",
+          "The envelope still goes under the door every month, known or not",
+          "A generous way to close out our conversation",
+          "She will continue volunteering without photographs or announcements."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: She will continue volunteering without photographs or announcements."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-righteous-02",
@@ -37,38 +151,155 @@
     "themeId": "righteous",
     "type": "dialogue",
     "speakers": [
-      { "name": "Siti", "gender": "female" },
-      { "name": "Yoga", "gender": "male" }
+      {
+        "name": "Siti",
+        "gender": "female"
+      },
+      {
+        "name": "Yoga",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Yoga: [tired] Siti, I need to talk about Dad's care schedule. I can't keep taking every single weekend shift.",
-      "Siti: [guarded] I did offer to help back in March, if you remember, and you told me you had it handled.",
-      "Yoga: [sighing] I know, I know. I underestimated how draining this would become, especially now that his memory is slipping too.",
-      "Siti: [carefully] Can I be honest about something that's been sitting with me for weeks?",
-      "Yoga: [wary] Go ahead.",
-      "Siti: [measured] Growing up, Dad made it fairly obvious you were the one he was proud of, and I was the one he simply tolerated.",
-      "Yoga: [defensive] That's not entirely fair, Siti.",
-      "Siti: [gently] Maybe not entirely, but it's not entirely untrue either, and I think it's part of why I've hesitated to volunteer more.",
-      "Yoga: [quiet] I never realized you carried that around all this time.",
-      "Siti: [reflective] I didn't want it to sound like an accusation. I'm telling you because I still want to help, in spite of it.",
-      "Yoga: [surprised] In spite of it? I would have understood if you'd stayed away entirely.",
-      "Siti: [thoughtful] I considered that, honestly. But whatever he did or didn't give me as a father, caring for him now isn't a debt he gets to collect or cancel.",
-      "Yoga: [moved] That's a more generous way of looking at it than I would have managed, in your position.",
-      "Siti: [sincere] It's not generosity toward him, really. It's more that I don't want to become someone who only shows up where love was shown to her first.",
-      "Yoga: [thoughtful] So where does that leave us, practically speaking?",
-      "Siti: [determined] Split the week evenly, starting this Saturday. I'll take Tuesdays and Thursdays, you keep the weekends, and we split appointments as they come up.",
-      "Yoga: [relieved] That sounds fair. More than fair, actually, given everything you've just told me.",
-      "Siti: [warmly] It's fair to him too, which matters more to me than it being fair between us.",
-      "Yoga: [quietly] Thank you, Siti. I don't think I ever properly said that.",
-      "Siti: [gently] You don't need to. Just show up on Tuesday and let me sleep in for once."
+      "Yoga: [thoughtful] Siti, I need to talk about Dad's care schedule. I can't keep taking every single weekend shift.",
+      "Siti: I did offer to help back in March, if you remember, and you told me you had it handled.",
+      "Yoga: [carefully] I know, I know. I underestimated how draining this would become, especially now that his memory is slipping too.",
+      "Siti: Can I be honest about something that's been sitting with me for weeks?",
+      "Yoga: [reflective] Go ahead.",
+      "Siti: Growing up, Dad made it fairly obvious you were the one he was proud of, and I was the one he simply tolerated.",
+      "Yoga: [honestly] That's not entirely fair, Siti.",
+      "Siti: Maybe not entirely, but it's not entirely untrue either, and I think it's part of why I've hesitated to volunteer more.",
+      "Yoga: [gently] I never realized you carried that around all this time.",
+      "Siti: I didn't want it to sound like an accusation. I'm telling you because I still want to help, in spite of it.",
+      "Yoga: [calmly] In spite of it? I would have understood if you'd stayed away entirely.",
+      "Siti: I considered that, honestly. But whatever he did or didn't give me as a father, caring for him now isn't a debt he gets to collect or cancel.",
+      "Yoga: [encouraging] That's a more generous way of looking at it than I would have managed, in your position.",
+      "Siti: It's not generosity toward him, really. It's more that I don't want to become someone who only shows up where love was shown to her first.",
+      "Yoga: [seriously] So where does that leave us, practically speaking?",
+      "Siti: Split the week evenly, starting this Saturday. I'll take Tuesdays and Thursdays, you keep the weekends, and we split appointments as they come up.",
+      "Yoga: That sounds fair. More than fair, actually, given everything you've just told me.",
+      "Siti: It's fair to him too, which matters more to me than it being fair between us.",
+      "Yoga: Thank you, Siti. I don't think I ever properly said that.",
+      "Siti: You don't need to. Just show up on Tuesday and let me sleep in for once."
     ],
     "quiz": [
-      { "question": "Why does Yoga say he can't keep taking every weekend shift?", "options": ["He is moving to another city", "He is exhausted and their father's memory is slipping too", "He no longer wants to help", "He has a new job"], "correctIndex": 1, "explanation": "Yoga admits he underestimated how draining it would become, especially with their father's memory now slipping." },
-      { "question": "What does Siti reveal about their childhood?", "options": ["Their father treated them exactly the same", "Their father was clearly prouder of Yoga while merely tolerating her", "She was the favorite child", "Their father ignored both of them"], "correctIndex": 1, "explanation": "Siti says their father made it obvious Yoga was the one he was proud of, while she was simply tolerated." },
-      { "question": "Why does Siti say she still wants to help despite that history?", "options": ["She wants their father's inheritance", "Caring for him now isn't a debt he gets to collect or cancel", "Yoga forced her to help", "She feels guilty about the past"], "correctIndex": 1, "explanation": "She explains that whatever their father did or didn't give her, caring for him now isn't a debt he can collect or cancel." },
-      { "question": "What arrangement do Siti and Yoga agree on?", "options": ["Yoga will handle everything alone", "Siti takes Tuesdays and Thursdays, Yoga keeps weekends, and they split appointments", "They will hire a stranger", "Siti will take over completely"], "correctIndex": 1, "explanation": "They agree to split the week evenly: Siti takes Tuesdays and Thursdays, Yoga keeps weekends, and appointments are split." },
-      { "question": "Why does Siti say the fairness matters more to their father than between the siblings?", "options": ["She wants credit for being generous", "Because that priority matters more to her than fairness between herself and Yoga", "She wants Yoga to feel guilty", "She doesn't actually think it's fair"], "correctIndex": 1, "explanation": "Siti says the arrangement being fair to their father matters more to her than it being fair between the two of them." }
-    ]
+      {
+        "question": "Why does Yoga say he can't keep taking every weekend shift?",
+        "options": [
+          "He is moving to another city",
+          "He no longer wants to help",
+          "He has a new job",
+          "He is exhausted and their father's memory is slipping too"
+        ],
+        "correctIndex": 3,
+        "explanation": "Yoga admits he underestimated how draining it would become, especially with their father's memory now slipping."
+      },
+      {
+        "question": "What does Siti reveal about their childhood?",
+        "options": [
+          "Their father was clearly prouder of Yoga while merely tolerating her",
+          "Their father treated them exactly the same",
+          "She was the favorite child",
+          "Their father ignored both of them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Siti says their father made it obvious Yoga was the one he was proud of, while she was simply tolerated."
+      },
+      {
+        "question": "Why does Siti say she still wants to help despite that history?",
+        "options": [
+          "She wants their father's inheritance",
+          "Yoga forced her to help",
+          "Caring for him now isn't a debt he gets to collect or cancel",
+          "She feels guilty about the past"
+        ],
+        "correctIndex": 2,
+        "explanation": "She explains that whatever their father did or didn't give her, caring for him now isn't a debt he can collect or cancel."
+      },
+      {
+        "question": "What arrangement do Siti and Yoga agree on?",
+        "options": [
+          "Yoga will handle everything alone",
+          "Siti takes Tuesdays and Thursdays, Yoga keeps weekends, and they split appointments",
+          "They will hire a stranger",
+          "Siti will take over completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "They agree to split the week evenly: Siti takes Tuesdays and Thursdays, Yoga keeps weekends, and appointments are split."
+      },
+      {
+        "question": "Why does Siti say the fairness matters more to their father than between the siblings?",
+        "options": [
+          "She wants credit for being generous",
+          "Because that priority matters more to her than fairness between herself and Yoga",
+          "She wants Yoga to feel guilty",
+          "She doesn't actually think it's fair"
+        ],
+        "correctIndex": 1,
+        "explanation": "Siti says the arrangement being fair to their father matters more to her than it being fair between the two of them."
+      },
+      {
+        "question": "What makes the current care arrangement unsustainable for Yoga?",
+        "options": [
+          "What mattered to me was that it arrived without a name",
+          "My guest tonight drives for a ride-hailing app",
+          "I usually just say I got up for water, which isn't exactly a lie",
+          "Every weekend of care leaves him exhausted as their father's memory worsens."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Every weekend of care leaves him exhausted as their father's memory worsens."
+      },
+      {
+        "question": "Which old family wound helps explain Siti's hesitation to volunteer?",
+        "options": [
+          "Last week, the wife knocked on my door holding the envelope",
+          "A passenger left a bag on the back seat after a short trip",
+          "She felt their father valued Yoga while merely tolerating her.",
+          "She wakes to pray while the rest of the household sleeps"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: She felt their father valued Yoga while merely tolerating her."
+      },
+      {
+        "question": "Why does Siti still choose to care for her father?",
+        "options": [
+          "She refuses to make present care depend entirely on past affection.",
+          "She didn't ask me to confirm it",
+          "First, that money wasn't earned by me",
+          "During a stretch of insomnia two years ago"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She refuses to make present care depend entirely on past affection."
+      },
+      {
+        "question": "What practical division of care do the siblings agree to try?",
+        "options": [
+          "Whether that's overthinking a simple kindness, I couldn't say",
+          "Siti takes two weekdays while Yoga keeps weekends and shares appointments.",
+          "He insisted, practically forced a portion into my hands",
+          "That she mention the habit in their study group to motivate other women"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Siti takes two weekdays while Yoga keeps weekends and shares appointments."
+      },
+      {
+        "question": "What would be a fair response to a relative carrying most caregiving duties?",
+        "options": [
+          "Discuss the burden honestly and assign specific, workable shifts.",
+          "The envelope still goes under the door every month, known or not",
+          "A generous way to close out our conversation",
+          "She worried sharing it would hollow out something that currently feels entirely hers"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Discuss the burden honestly and assign specific, workable shifts."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-righteous-03",
@@ -77,30 +308,144 @@
     "themeId": "righteous",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] For the better part of a year, on the first of every month, I've slipped an envelope of cash under the door of the family renting the unit below mine.",
-      "Narrator: [reflective] Their situation isn't a secret exactly, everyone on the floor knows the father's been out of steady work since the factory downsized, but nobody talks about it.",
-      "Narrator: [honestly] I started small, an amount that wouldn't be missed from my budget, uncertain whether it would even help or go unnoticed among their bills.",
-      "Narrator: [thoughtful] What mattered to me was that it arrived without a name, so receiving it wouldn't cost them anything in dignity, the way a direct offer sometimes does.",
-      "Narrator: [with feeling] Last week, the wife knocked on my door holding the envelope, and I nearly panicked before realizing she wasn't accusing me of anything.",
-      "Narrator: [honestly] She'd worked out, through elimination, that my schedule was the only one matching the timing.",
-      "Narrator: [thoughtful] She didn't ask me to confirm it; she just stood there, eyes wet, saying she wanted whoever it was to know how much it had meant.",
-      "Narrator: [honestly] I could have denied it, but lying to her face felt like a smaller betrayal than being found out, and a betrayal nonetheless.",
-      "Narrator: [thoughtful] Since then, things have been slightly awkward between us, an occasional nod that carries more weight than it used to.",
-      "Narrator: [reflective] I worry that being known might change why I keep doing it, that some quiet corner of my intention could start performing for an audience of one.",
-      "Narrator: [determined] So this month, I asked her not to mention it to anyone, and I've started varying the day I leave it, hoping to blur the pattern again.",
-      "Narrator: [sincere] Whether that's overthinking a simple kindness, I couldn't say, but I'd rather guard it too carefully than let it drift into something I'm secretly proud of.",
-      "Narrator: [peacefully] The envelope still goes under the door every month, known or not, because the reason I started never depended on anyone noticing in the first place."
+      "Narrator: Their situation isn't a secret exactly, everyone on the floor knows the father's been out of steady work since the factory downsized, but nobody talks about it.",
+      "Narrator: [carefully] I started small, an amount that wouldn't be missed from my budget, uncertain whether it would even help or go unnoticed among their bills.",
+      "Narrator: What mattered to me was that it arrived without a name, so receiving it wouldn't cost them anything in dignity, the way a direct offer sometimes does.",
+      "Narrator: [reflective] Last week, the wife knocked on my door holding the envelope, and I nearly panicked before realizing she wasn't accusing me of anything.",
+      "Narrator: She'd worked out, through elimination, that my schedule was the only one matching the timing.",
+      "Narrator: [honestly] She didn't ask me to confirm it; she just stood there, eyes wet, saying she wanted whoever it was to know how much it had meant.",
+      "Narrator: I could have denied it, but lying to her face felt like a smaller betrayal than being found out, and a betrayal nonetheless.",
+      "Narrator: [gently] Since then, things have been slightly awkward between us, an occasional nod that carries more weight than it used to.",
+      "Narrator: I worry that being known might change why I keep doing it, that some quiet corner of my intention could start performing for an audience of one.",
+      "Narrator: [calmly] So this month, I asked her not to mention it to anyone, and I've started varying the day I leave it, hoping to blur the pattern again.",
+      "Narrator: Whether that's overthinking a simple kindness, I couldn't say, but I'd rather guard it too carefully than let it drift into something I'm secretly proud of.",
+      "Narrator: [encouraging] The envelope still goes under the door every month, known or not, because the reason I started never depended on anyone noticing in the first place."
     ],
     "quiz": [
-      { "question": "What has the narrator been doing every month for about a year?", "options": ["Inviting the downstairs family to dinner", "Slipping an envelope of cash under their door", "Lending them his car", "Writing them letters"], "correctIndex": 1, "explanation": "On the first of every month, he slips an envelope of cash under the door of the family renting the unit below his." },
-      { "question": "Why did he keep the gift anonymous?", "options": ["He was embarrassed by the small amount", "So receiving it wouldn't cost them anything in dignity, unlike a direct offer", "He wanted to surprise them on a birthday", "It was against building rules"], "correctIndex": 1, "explanation": "He wanted it to arrive without a name attached so that receiving it wouldn't cost them any dignity." },
-      { "question": "How did the wife figure out it was him?", "options": ["He accidentally told her", "Through a process of elimination based on whose schedule matched the timing", "She found his handwriting on a note", "A neighbor told her directly"], "correctIndex": 1, "explanation": "She worked it out through a process of elimination involving every neighbor on the floor, based on matching schedules." },
-      { "question": "What did the narrator do when she confronted him?", "options": ["He denied it completely", "He told her the truth rather than deny it", "He moved out", "He asked her to pay him back"], "correctIndex": 1, "explanation": "Although tempted to deny it, he told her the truth because lying to her face felt like a smaller but still real betrayal." },
-      { "question": "What is he doing now to protect his intention?", "options": ["He stopped giving the money entirely", "He asked her not to tell anyone and started varying the day he leaves the envelope", "He asks for a receipt each time", "He now gives the money in public"], "correctIndex": 1, "explanation": "He asked her not to mention it to anyone else and started varying the day, hoping to blur the pattern again." }
-    ]
+      {
+        "question": "What has the narrator been doing every month for about a year?",
+        "options": [
+          "Slipping an envelope of cash under their door",
+          "Inviting the downstairs family to dinner",
+          "Lending them his car",
+          "Writing them letters"
+        ],
+        "correctIndex": 0,
+        "explanation": "On the first of every month, he slips an envelope of cash under the door of the family renting the unit below his."
+      },
+      {
+        "question": "Why did he keep the gift anonymous?",
+        "options": [
+          "He was embarrassed by the small amount",
+          "So receiving it wouldn't cost them anything in dignity, unlike a direct offer",
+          "He wanted to surprise them on a birthday",
+          "It was against building rules"
+        ],
+        "correctIndex": 1,
+        "explanation": "He wanted it to arrive without a name attached so that receiving it wouldn't cost them any dignity."
+      },
+      {
+        "question": "How did the wife figure out it was him?",
+        "options": [
+          "He accidentally told her",
+          "She found his handwriting on a note",
+          "Through a process of elimination based on whose schedule matched the timing",
+          "A neighbor told her directly"
+        ],
+        "correctIndex": 2,
+        "explanation": "She worked it out through a process of elimination involving every neighbor on the floor, based on matching schedules."
+      },
+      {
+        "question": "What did the narrator do when she confronted him?",
+        "options": [
+          "He denied it completely",
+          "He told her the truth rather than deny it",
+          "He moved out",
+          "He asked her to pay him back"
+        ],
+        "correctIndex": 1,
+        "explanation": "Although tempted to deny it, he told her the truth because lying to her face felt like a smaller but still real betrayal."
+      },
+      {
+        "question": "What is he doing now to protect his intention?",
+        "options": [
+          "He asked her not to tell anyone and started varying the day he leaves the envelope",
+          "He stopped giving the money entirely",
+          "He asks for a receipt each time",
+          "He now gives the money in public"
+        ],
+        "correctIndex": 0,
+        "explanation": "He asked her not to mention it to anyone else and started varying the day, hoping to blur the pattern again."
+      },
+      {
+        "question": "How had the narrator supported the neighbouring family for about a year?",
+        "options": [
+          "My guest tonight drives for a ride-hailing app",
+          "I usually just say I got up for water, which isn't exactly a lie",
+          "The director praised the onboarding redesign in front of the whole department this morning",
+          "He anonymously placed a cash envelope beneath their door each month."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He anonymously placed a cash envelope beneath their door each month."
+      },
+      {
+        "question": "What allowed the wife to identify the likely donor?",
+        "options": [
+          "A passenger left a bag on the back seat after a short trip",
+          "She wakes to pray while the rest of the household sleeps",
+          "His schedule matched the timing of the envelope deliveries.",
+          "Dimas isn't even around to see the email"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: His schedule matched the timing of the envelope deliveries."
+      },
+      {
+        "question": "Why does he admit the truth instead of denying her suspicion?",
+        "options": [
+          "First, that money wasn't earned by me",
+          "During a stretch of insomnia two years ago",
+          "If nobody corrects it, this becomes the version of events everyone quietly accepts",
+          "A lie would add another betrayal to a well-meant gift."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: A lie would add another betrayal to a well-meant gift."
+      },
+      {
+        "question": "How does he try to restore some anonymity afterward?",
+        "options": [
+          "He insisted, practically forced a portion into my hands",
+          "That she mention the habit in their study group to motivate other women",
+          "He varies the delivery day and asks her to keep silent.",
+          "You did plenty of work refining it"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He varies the delivery day and asks her to keep silent."
+      },
+      {
+        "question": "What principle guides his continued monthly giving?",
+        "options": [
+          "A generous way to close out our conversation",
+          "The family's need matters more than whether his kindness is noticed.",
+          "She worried sharing it would hollow out something that currently feels entirely hers",
+          "I'll just reply privately to the director, thank her"
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The family's need matters more than whether his kindness is noticed."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-righteous-04",
@@ -109,37 +454,154 @@
     "themeId": "righteous",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] My guest tonight drives for a ride-hailing app, and last month he found himself holding cash most of us would struggle to walk away from. Welcome, Pak Dedi.",
-      "Guest: [pleasantly] Thank you for having me. I still find it strange being interviewed about something so ordinary to me.",
-      "Host: [curious] Ordinary is exactly the word I want to challenge. Walk us through what happened.",
-      "Guest: [thoughtful] A passenger left a bag on the back seat after a short trip, and inside it was an envelope stuffed with cash, clearly meant for some kind of payment.",
-      "Host: [interested] Did you count it?",
-      "Guest: [honestly] Eventually, yes, once I'd pulled over somewhere safe. It came to an amount close to two months of my usual income, not a small figure for someone in my line of work.",
-      "Host: [probing] Be honest with our listeners. Did the thought of simply keeping it cross your mind, even briefly?",
-      "Guest: [candidly] Of course it did. I'd be lying if I claimed otherwise, and lying isn't something I want to model for anyone listening.",
+      "Host: [thoughtful] My guest tonight drives for a ride-hailing app, and last month he found himself holding cash most of us would struggle to walk away from. Welcome, Pak Dedi.",
+      "Guest: Thank you for having me. I still find it strange being interviewed about something so ordinary to me.",
+      "Host: [carefully] Ordinary is exactly the word I want to challenge. Walk us through what happened.",
+      "Guest: A passenger left a bag on the back seat after a short trip, and inside it was an envelope stuffed with cash, clearly meant for some kind of payment.",
+      "Host: [reflective] Did you count it?",
+      "Guest: Eventually, yes, once I'd pulled over somewhere safe. It came to an amount close to two months of my usual income, not a small figure for someone in my line of work.",
+      "Host: [honestly] Be honest with our listeners. Did the thought of simply keeping it cross your mind, even briefly?",
+      "Guest: Of course it did. I'd be lying if I claimed otherwise, and lying isn't something I want to model for anyone listening.",
       "Host: [gently] What tipped the scale toward returning it?",
-      "Guest: [reflective] Two things, really. First, that money wasn't earned by me, so keeping it would mean building something on a foundation that was never mine to begin with.",
-      "Guest: [thoughtful] Second, I kept picturing whoever it belonged to, panicking, possibly owing that money to someone else, maybe someone far less forgiving than I would have been.",
-      "Host: [curious] How did you eventually get it back to them?",
-      "Guest: [warmly] The app has a system for this, thankfully. I reported it immediately, and the passenger was traced within a few hours.",
-      "Host: [interested] Was there a reward offered?",
-      "Guest: [honestly] He insisted, practically forced a portion into my hands, but I only accepted enough to cover my fuel that week and nothing more.",
-      "Host: [thoughtful] Some would call that foolish, leaving money like that on the table.",
-      "Guest: [sincere] Maybe by some counting it is. But by mine, whatever I'd have spent that money on wouldn't have brought me the same peace this decision did.",
-      "Host: [warmly] A generous way to close out our conversation. Thank you, Pak Dedi.",
-      "Guest: [warmly] Thank you for listening, and for treating an ordinary decision as though it mattered."
+      "Guest: Two things, really. First, that money wasn't earned by me, so keeping it would mean building something on a foundation that was never mine to begin with.",
+      "Guest: [calmly] Second, I kept picturing whoever it belonged to, panicking, possibly owing that money to someone else, maybe someone far less forgiving than I would have been.",
+      "Host: How did you eventually get it back to them?",
+      "Guest: [encouraging] The app has a system for this, thankfully. I reported it immediately, and the passenger was traced within a few hours.",
+      "Host: Was there a reward offered?",
+      "Guest: [seriously] He insisted, practically forced a portion into my hands, but I only accepted enough to cover my fuel that week and nothing more.",
+      "Host: Some would call that foolish, leaving money like that on the table.",
+      "Guest: Maybe by some counting it is. But by mine, whatever I'd have spent that money on wouldn't have brought me the same peace this decision did.",
+      "Host: A generous way to close out our conversation. Thank you, Pak Dedi.",
+      "Guest: Thank you for listening, and for treating an ordinary decision as though it mattered."
     ],
     "quiz": [
-      { "question": "What did the guest find left in his car?", "options": ["A phone", "A bag containing an envelope stuffed with cash", "A set of documents", "Jewelry"], "correctIndex": 1, "explanation": "A passenger left a bag on the back seat containing an envelope stuffed with cash meant for some kind of payment." },
-      { "question": "Roughly how much money was it?", "options": ["A few thousand rupiah", "Close to two months of his usual income", "Less than one day's earnings", "Exactly one week's fuel cost"], "correctIndex": 1, "explanation": "He says the amount came to close to two months of his usual income." },
-      { "question": "What were the two reasons that tipped him toward returning it?", "options": ["Fear of being caught and a company rule", "The money wasn't his to keep, and worry about the owner's situation", "A friend advised him to", "He didn't need the money"], "correctIndex": 1, "explanation": "He explains that the money wasn't earned by him, and he worried about the owner possibly owing it to someone less forgiving." },
-      { "question": "How did the money get back to the passenger?", "options": ["The guest tracked him down himself", "Through the app's reporting system, which traced the passenger within hours", "The passenger came back to the same spot", "Police intervened"], "correctIndex": 1, "explanation": "He reported it immediately through the app's system, and the passenger was traced within a few hours." },
-      { "question": "How much of the reward did the guest accept?", "options": ["The full amount offered", "Only a small amount, enough to cover his fuel for the week", "He refused all of it", "Half of what was offered"], "correctIndex": 1, "explanation": "Although the passenger insisted, the guest only accepted a small amount, enough to cover his fuel that week." }
-    ]
+      {
+        "question": "What did the guest find left in his car?",
+        "options": [
+          "A bag containing an envelope stuffed with cash",
+          "A phone",
+          "A set of documents",
+          "Jewelry"
+        ],
+        "correctIndex": 0,
+        "explanation": "A passenger left a bag on the back seat containing an envelope stuffed with cash meant for some kind of payment."
+      },
+      {
+        "question": "Roughly how much money was it?",
+        "options": [
+          "A few thousand rupiah",
+          "Less than one day's earnings",
+          "Close to two months of his usual income",
+          "Exactly one week's fuel cost"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says the amount came to close to two months of his usual income."
+      },
+      {
+        "question": "What were the two reasons that tipped him toward returning it?",
+        "options": [
+          "Fear of being caught and a company rule",
+          "A friend advised him to",
+          "He didn't need the money",
+          "The money wasn't his to keep, and worry about the owner's situation"
+        ],
+        "correctIndex": 3,
+        "explanation": "He explains that the money wasn't earned by him, and he worried about the owner possibly owing it to someone less forgiving."
+      },
+      {
+        "question": "How did the money get back to the passenger?",
+        "options": [
+          "The guest tracked him down himself",
+          "Through the app's reporting system, which traced the passenger within hours",
+          "The passenger came back to the same spot",
+          "Police intervened"
+        ],
+        "correctIndex": 1,
+        "explanation": "He reported it immediately through the app's system, and the passenger was traced within a few hours."
+      },
+      {
+        "question": "How much of the reward did the guest accept?",
+        "options": [
+          "The full amount offered",
+          "Only a small amount, enough to cover his fuel for the week",
+          "He refused all of it",
+          "Half of what was offered"
+        ],
+        "correctIndex": 1,
+        "explanation": "Although the passenger insisted, the guest only accepted a small amount, enough to cover his fuel that week."
+      },
+      {
+        "question": "What temptation does the driver admit after finding the cash?",
+        "options": [
+          "I usually just say I got up for water, which isn't exactly a lie",
+          "The director praised the onboarding redesign in front of the whole department this morning",
+          "He briefly considered keeping money worth nearly two months of income.",
+          "The trouble is, my team has a standing Monday tradition of ordering food together"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He briefly considered keeping money worth nearly two months of income."
+      },
+      {
+        "question": "Which two considerations persuaded him to return the bag?",
+        "options": [
+          "She wakes to pray while the rest of the household sleeps",
+          "Dimas isn't even around to see the email",
+          "I could have simply said yes, diet",
+          "The money was not his, and its owner might urgently need it."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: The money was not his, and its owner might urgently need it."
+      },
+      {
+        "question": "How was the passenger located after the discovery?",
+        "options": [
+          "The driver reported the bag through the app's tracing system.",
+          "During a stretch of insomnia two years ago",
+          "If nobody corrects it, this becomes the version of events everyone quietly accepts",
+          "Instead, almost without deciding to, I told the truth, that I was fasting"
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The driver reported the bag through the app's tracing system."
+      },
+      {
+        "question": "Why did he accept only part of the offered reward?",
+        "options": [
+          "That she mention the habit in their study group to motivate other women",
+          "You did plenty of work refining it",
+          "What unsettled me wasn't the questions themselves",
+          "He accepted enough for fuel without turning honesty into a transaction."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He accepted enough for fuel without turning honesty into a transaction."
+      },
+      {
+        "question": "How should someone handle valuable property found after a ride?",
+        "options": [
+          "She worried sharing it would hollow out something that currently feels entirely hers",
+          "I'll just reply privately to the director, thank her",
+          "Secure it, report it promptly, and use the platform's return process.",
+          "The fasting itself hasn't changed at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Secure it, report it promptly, and use the platform's return process."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-righteous-05",
@@ -148,29 +610,143 @@
     "themeId": "righteous",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Nobody in my household knows that I wake most nights, somewhere between three and four, to pray while everyone else is still deeply asleep.",
-      "Narrator: [reflective] It began almost by accident, during a stretch of insomnia two years ago, when I decided the sleepless hours might as well be spent on something worthwhile.",
-      "Narrator: [honestly] What surprised me was how quickly it stopped feeling like a coping strategy and started feeling like the part of my day I actually looked forward to.",
-      "Narrator: [thoughtful] My sister, who shares a wall with my room, occasionally asks whether I've been sleeping poorly, having heard faint movement through the wall at strange hours.",
-      "Narrator: [honestly] I usually just say I got up for water, which isn't exactly a lie, since I do drink a glass afterward, but it isn't the whole truth either.",
-      "Narrator: [reflective] A friend at the mosque once encouraged me to mention it in our small study group, arguing that hearing about it might motivate other women to try it themselves.",
-      "Narrator: [thoughtful] I turned the idea over for days, genuinely unsure whether sharing it would inspire anyone or simply hollow something out that currently feels entirely mine.",
-      "Narrator: [with feeling] There's a particular stillness to praying while the rest of the city sleeps, unwatched, unrecorded, with no possibility of anyone's approval reaching me afterward.",
-      "Narrator: [honestly] If I described it out loud, I suspect some tiny, dishonest part of me would start waking up partly to have something to say about it later.",
-      "Narrator: [reflective] That's not a risk I'm willing to take with the one habit in my life that still feels completely uncontaminated by anyone else's opinion of me.",
-      "Narrator: [sincere] So for now, it stays quiet, between the dark room, the sound of my own voice, and whoever it is I'm actually speaking to at that hour.",
-      "Narrator: [peacefully] Some mornings I'm exhausted by breakfast, and I've stopped minding, because whatever I lose in sleep, I seem to gain back in something steadier and harder to name."
+      "Narrator: It began almost by accident, during a stretch of insomnia two years ago, when I decided the sleepless hours might as well be spent on something worthwhile.",
+      "Narrator: [carefully] What surprised me was how quickly it stopped feeling like a coping strategy and started feeling like the part of my day I actually looked forward to.",
+      "Narrator: My sister, who shares a wall with my room, occasionally asks whether I've been sleeping poorly, having heard faint movement through the wall at strange hours.",
+      "Narrator: [reflective] I usually just say I got up for water, which isn't exactly a lie, since I do drink a glass afterward, but it isn't the whole truth either.",
+      "Narrator: A friend at the mosque once encouraged me to mention it in our small study group, arguing that hearing about it might motivate other women to try it themselves.",
+      "Narrator: [honestly] I turned the idea over for days, genuinely unsure whether sharing it would inspire anyone or simply hollow something out that currently feels entirely mine.",
+      "Narrator: There's a particular stillness to praying while the rest of the city sleeps, unwatched, unrecorded, with no possibility of anyone's approval reaching me afterward.",
+      "Narrator: [gently] If I described it out loud, I suspect some tiny, dishonest part of me would start waking up partly to have something to say about it later.",
+      "Narrator: That's not a risk I'm willing to take with the one habit in my life that still feels completely uncontaminated by anyone else's opinion of me.",
+      "Narrator: [calmly] So for now, it stays quiet, between the dark room, the sound of my own voice, and whoever it is I'm actually speaking to at that hour.",
+      "Narrator: Some mornings I'm exhausted by breakfast, and I've stopped minding, because whatever I lose in sleep, I seem to gain back in something steadier and harder to name."
     ],
     "quiz": [
-      { "question": "What does the narrator do most nights between three and four?", "options": ["She reads a book", "She wakes to pray while the rest of the household sleeps", "She goes for a walk", "She checks her phone"], "correctIndex": 1, "explanation": "She wakes most nights between three and four to pray while everyone else is still deeply asleep." },
-      { "question": "How did this habit begin?", "options": ["A doctor recommended it", "During a stretch of insomnia two years ago", "Her mother taught her as a child", "She read about it online"], "correctIndex": 1, "explanation": "It began almost by accident during a stretch of insomnia two years ago." },
-      { "question": "What does she tell her sister when asked about the noise?", "options": ["She admits the full truth immediately", "She says she got up for water", "She denies hearing anything", "She blames a neighbor"], "correctIndex": 1, "explanation": "She usually just says she got up for water, which is partly true but not the whole truth." },
-      { "question": "What did a friend at the mosque suggest?", "options": ["That she stop praying at night", "That she mention the habit in their study group to motivate other women", "That she change rooms", "That she pray with a group instead"], "correctIndex": 1, "explanation": "The friend suggested she mention it in their study group, arguing it might motivate other women to try it themselves." },
-      { "question": "Why did she decide not to share it?", "options": ["She was too tired to explain", "She worried sharing it would hollow out something that currently feels entirely hers", "Her sister forbade her", "She didn't think anyone would believe her"], "correctIndex": 1, "explanation": "She feared that speaking about it might make a small, dishonest part of her start doing it partly to have something to say later." }
-    ]
+      {
+        "question": "What does the narrator do most nights between three and four?",
+        "options": [
+          "She wakes to pray while the rest of the household sleeps",
+          "She reads a book",
+          "She goes for a walk",
+          "She checks her phone"
+        ],
+        "correctIndex": 0,
+        "explanation": "She wakes most nights between three and four to pray while everyone else is still deeply asleep."
+      },
+      {
+        "question": "How did this habit begin?",
+        "options": [
+          "A doctor recommended it",
+          "Her mother taught her as a child",
+          "During a stretch of insomnia two years ago",
+          "She read about it online"
+        ],
+        "correctIndex": 2,
+        "explanation": "It began almost by accident during a stretch of insomnia two years ago."
+      },
+      {
+        "question": "What does she tell her sister when asked about the noise?",
+        "options": [
+          "She admits the full truth immediately",
+          "She denies hearing anything",
+          "She says she got up for water",
+          "She blames a neighbor"
+        ],
+        "correctIndex": 2,
+        "explanation": "She usually just says she got up for water, which is partly true but not the whole truth."
+      },
+      {
+        "question": "What did a friend at the mosque suggest?",
+        "options": [
+          "That she stop praying at night",
+          "That she change rooms",
+          "That she pray with a group instead",
+          "That she mention the habit in their study group to motivate other women"
+        ],
+        "correctIndex": 3,
+        "explanation": "The friend suggested she mention it in their study group, arguing it might motivate other women to try it themselves."
+      },
+      {
+        "question": "Why did she decide not to share it?",
+        "options": [
+          "She was too tired to explain",
+          "Her sister forbade her",
+          "She didn't think anyone would believe her",
+          "She worried sharing it would hollow out something that currently feels entirely hers"
+        ],
+        "correctIndex": 3,
+        "explanation": "She feared that speaking about it might make a small, dishonest part of her start doing it partly to have something to say later."
+      },
+      {
+        "question": "Why does the narrator usually describe her nightly waking as getting water?",
+        "options": [
+          "The director praised the onboarding redesign in front of the whole department this morning",
+          "She wants to keep her private prayer from attracting attention.",
+          "The trouble is, my team has a standing Monday tradition of ordering food together",
+          "Updates listed quantities received and remaining needs rather than faces."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She wants to keep her private prayer from attracting attention."
+      },
+      {
+        "question": "What originally led her to pray between three and four?",
+        "options": [
+          "A period of insomnia gradually became a quiet worship routine.",
+          "Dimas isn't even around to see the email",
+          "I could have simply said yes, diet",
+          "They feared less personal information would weaken accountability."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A period of insomnia gradually became a quiet worship routine."
+      },
+      {
+        "question": "Why does she reject the suggestion to share the habit publicly?",
+        "options": [
+          "If nobody corrects it, this becomes the version of events everyone quietly accepts",
+          "She fears other people's admiration could alter her intention.",
+          "Instead, almost without deciding to, I told the truth, that I was fasting",
+          "Financial reports, receipts, inventory counts, and independent review."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She fears other people's admiration could alter her intention."
+      },
+      {
+        "question": "What cost does the routine sometimes create by breakfast?",
+        "options": [
+          "She feels tired after sacrificing sleep for the private prayer.",
+          "You did plenty of work refining it",
+          "What unsettled me wasn't the questions themselves",
+          "More recipients collected support directly and volunteers heard fewer rumours."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: She feels tired after sacrificing sleep for the private prayer."
+      },
+      {
+        "question": "How does she evaluate that loss of sleep?",
+        "options": [
+          "I'll just reply privately to the director, thank her",
+          "The prayer gives her an inner steadiness that outweighs the fatigue.",
+          "The fasting itself hasn't changed at all",
+          "It must not take their privacy, voice, or right to receive help quietly."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The prayer gives her an inner steadiness that outweighs the fatigue."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-righteous-06",
@@ -179,36 +755,153 @@
     "themeId": "righteous",
     "type": "dialogue",
     "speakers": [
-      { "name": "Farah", "gender": "female" },
-      { "name": "Iqbal", "gender": "male" }
+      {
+        "name": "Farah",
+        "gender": "female"
+      },
+      {
+        "name": "Iqbal",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Iqbal: [pleased] Did you see the email? The director praised the onboarding redesign in front of the whole department this morning.",
-      "Farah: [uneasy] I saw it. She mentioned my name specifically, which is the part I can't quite sit with.",
-      "Iqbal: [confused] Why not? You led the presentation.",
-      "Farah: [carefully] I presented it, yes, but the redesign itself, the actual structure, came almost entirely from Dimas's draft, back before he went on leave.",
-      "Iqbal: [dismissive] Dimas isn't even around to see the email. Nobody's going to correct the record over a wording mistake.",
-      "Farah: [firm] That's exactly what worries me. If nobody corrects it, this becomes the version of events everyone quietly accepts.",
-      "Iqbal: [reasoning] You did plenty of work refining it, though. It's not as if you're taking credit for something you never touched.",
-      "Farah: [thoughtful] I refined it, I agree, but refining someone else's foundation isn't the same as building it, and the email makes it sound like the second thing.",
-      "Iqbal: [hesitant] So what exactly are you proposing? Reply-all with a correction?",
-      "Farah: [measured] Nothing that dramatic. I'll just reply privately to the director, thank her, and mention that the core structure was Dimas's contribution before he left.",
-      "Iqbal: [skeptical] That could easily look like false modesty, you realize, especially since nobody's forcing you to say anything.",
-      "Farah: [steady] I've thought about that too, and honestly, I'd rather risk looking falsely modest than let credit settle somewhere it didn't actually belong.",
-      "Iqbal: [curious] Would you still send that message if the director never brought it up publicly at all?",
-      "Farah: [without hesitation] Yes, probably even more so, since there'd be no audience to perform the gesture in front of.",
-      "Iqbal: [reflective] I don't think I would have thought to send that message at all, if I'm being honest with myself.",
-      "Farah: [gently] Most people wouldn't, and I don't think that makes anyone dishonest, exactly, just a little less careful about where credit quietly drifts.",
-      "Iqbal: [warmly] Send it, then. And when Dimas is back, tell him yourself, before the email version becomes the only one anyone remembers.",
-      "Farah: [determined] I will. It's a small correction, but I'd rather make it now than explain it away later."
+      "Iqbal: [thoughtful] Did you see the email? The director praised the onboarding redesign in front of the whole department this morning.",
+      "Farah: I saw it. She mentioned my name specifically, which is the part I can't quite sit with.",
+      "Iqbal: [carefully] Why not? You led the presentation.",
+      "Farah: I presented it, yes, but the redesign itself, the actual structure, came almost entirely from Dimas's draft, back before he went on leave.",
+      "Iqbal: [reflective] Dimas isn't even around to see the email. Nobody's going to correct the record over a wording mistake.",
+      "Farah: That's exactly what worries me. If nobody corrects it, this becomes the version of events everyone quietly accepts.",
+      "Iqbal: [honestly] You did plenty of work refining it, though. It's not as if you're taking credit for something you never touched.",
+      "Farah: I refined it, I agree, but refining someone else's foundation isn't the same as building it, and the email makes it sound like the second thing.",
+      "Iqbal: [gently] So what exactly are you proposing? Reply-all with a correction?",
+      "Farah: Nothing that dramatic. I'll just reply privately to the director, thank her, and mention that the core structure was Dimas's contribution before he left.",
+      "Iqbal: [calmly] That could easily look like false modesty, you realize, especially since nobody's forcing you to say anything.",
+      "Farah: I've thought about that too, and honestly, I'd rather risk looking falsely modest than let credit settle somewhere it didn't actually belong.",
+      "Iqbal: [encouraging] Would you still send that message if the director never brought it up publicly at all?",
+      "Farah: Yes, probably even more so, since there'd be no audience to perform the gesture in front of.",
+      "Iqbal: [seriously] I don't think I would have thought to send that message at all, if I'm being honest with myself.",
+      "Farah: Most people wouldn't, and I don't think that makes anyone dishonest, exactly, just a little less careful about where credit quietly drifts.",
+      "Iqbal: Send it, then. And when Dimas is back, tell him yourself, before the email version becomes the only one anyone remembers.",
+      "Farah: I will. It's a small correction, but I'd rather make it now than explain it away later."
     ],
     "quiz": [
-      { "question": "What did the director's email praise?", "options": ["A marketing campaign", "The onboarding redesign, mentioning Farah's name specifically", "A budget proposal", "A hiring decision"], "correctIndex": 1, "explanation": "The director praised the onboarding redesign in front of the whole department and mentioned Farah's name specifically." },
-      { "question": "Why is Farah uneasy about receiving that credit?", "options": ["She wasn't involved in the project at all", "The core structure came almost entirely from Dimas's draft before he went on leave", "She dislikes public praise in general", "The director made a factual error about the project's timeline"], "correctIndex": 1, "explanation": "Farah explains that the actual structure came almost entirely from Dimas's draft, before he went on leave." },
-      { "question": "What does Farah decide to do about it?", "options": ["Reply-all to correct the record publicly", "Reply privately to the director and mention Dimas's contribution", "Say nothing and let it go", "Ask Dimas to complain himself"], "correctIndex": 1, "explanation": "She plans to reply privately to the director, thank her, and mention that the core structure was Dimas's contribution." },
-      { "question": "What does Iqbal warn Farah's message might look like?", "options": ["An attempt to get promoted", "False modesty", "An attack on the director", "A complaint about workload"], "correctIndex": 1, "explanation": "Iqbal warns that her message could easily look like false modesty since nobody is forcing her to say anything." },
-      { "question": "Would Farah still send the message if the praise had never been public?", "options": ["No, she would only bother if others were watching", "Yes, probably even more so, since there would be no audience for the gesture", "She isn't sure", "She would wait for Dimas to ask her to"], "correctIndex": 1, "explanation": "Farah says she would send it even more readily without an audience, since there would be nothing to perform in front of." }
-    ]
+      {
+        "question": "What did the director's email praise?",
+        "options": [
+          "A marketing campaign",
+          "A budget proposal",
+          "A hiring decision",
+          "The onboarding redesign, mentioning Farah's name specifically"
+        ],
+        "correctIndex": 3,
+        "explanation": "The director praised the onboarding redesign in front of the whole department and mentioned Farah's name specifically."
+      },
+      {
+        "question": "Why is Farah uneasy about receiving that credit?",
+        "options": [
+          "She wasn't involved in the project at all",
+          "She dislikes public praise in general",
+          "The core structure came almost entirely from Dimas's draft before he went on leave",
+          "The director made a factual error about the project's timeline"
+        ],
+        "correctIndex": 2,
+        "explanation": "Farah explains that the actual structure came almost entirely from Dimas's draft, before he went on leave."
+      },
+      {
+        "question": "What does Farah decide to do about it?",
+        "options": [
+          "Reply privately to the director and mention Dimas's contribution",
+          "Reply-all to correct the record publicly",
+          "Say nothing and let it go",
+          "Ask Dimas to complain himself"
+        ],
+        "correctIndex": 0,
+        "explanation": "She plans to reply privately to the director, thank her, and mention that the core structure was Dimas's contribution."
+      },
+      {
+        "question": "What does Iqbal warn Farah's message might look like?",
+        "options": [
+          "An attempt to get promoted",
+          "An attack on the director",
+          "A complaint about workload",
+          "False modesty"
+        ],
+        "correctIndex": 3,
+        "explanation": "Iqbal warns that her message could easily look like false modesty since nobody is forcing her to say anything."
+      },
+      {
+        "question": "Would Farah still send the message if the praise had never been public?",
+        "options": [
+          "Yes, probably even more so, since there would be no audience for the gesture",
+          "No, she would only bother if others were watching",
+          "She isn't sure",
+          "She would wait for Dimas to ask her to"
+        ],
+        "correctIndex": 0,
+        "explanation": "Farah says she would send it even more readily without an audience, since there would be nothing to perform in front of."
+      },
+      {
+        "question": "Why is Farah uncomfortable with the director's praise?",
+        "options": [
+          "The trouble is, my team has a standing Monday tradition of ordering food together",
+          "The praised redesign was built mainly on Dimas's earlier structure.",
+          "Updates listed quantities received and remaining needs rather than faces.",
+          "The team should remove that person's image from the material."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The praised redesign was built mainly on Dimas's earlier structure."
+      },
+      {
+        "question": "How does Iqbal initially minimise the attribution problem?",
+        "options": [
+          "I could have simply said yes, diet",
+          "They feared less personal information would weaken accountability.",
+          "He calls it a wording mistake because Dimas is absent.",
+          "Aid must not depend on revealing identity, diagnosis, or hardship."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He calls it a wording mistake because Dimas is absent."
+      },
+      {
+        "question": "What distinction does Farah make about her own contribution?",
+        "options": [
+          "Instead, almost without deciding to, I told the truth, that I was fasting",
+          "Refining a design is different from creating its foundation.",
+          "Financial reports, receipts, inventory counts, and independent review.",
+          "Use only necessary details covered by specific consent."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Refining a design is different from creating its foundation."
+      },
+      {
+        "question": "How does she plan to correct the record without making a spectacle?",
+        "options": [
+          "What unsettled me wasn't the questions themselves",
+          "She will privately tell the director that Dimas created the core structure.",
+          "More recipients collected support directly and volunteers heard fewer rumours.",
+          "Audited figures, clear procedures, and responsible reporting."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: She will privately tell the director that Dimas created the core structure."
+      },
+      {
+        "question": "Why would she correct the credit even if the praise were private?",
+        "options": [
+          "The fasting itself hasn't changed at all",
+          "It must not take their privacy, voice, or right to receive help quietly.",
+          "Accuracy matters independently of receiving public approval for honesty.",
+          "Crowding does not replace guardian permission and appropriate safeguards."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Accuracy matters independently of receiving public approval for honesty."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b2-righteous-07",
@@ -217,29 +910,590 @@
     "themeId": "righteous",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] Every Monday, I keep a voluntary fast, a habit I picked up almost two years ago after a difficult season made me want something steady to hold onto.",
-      "Narrator: [reflective] I've never announced it at work, partly because I dislike being asked questions I'd rather not turn into a whole conversation over lunch.",
-      "Narrator: [honestly] The trouble is, my team has a standing Monday tradition of ordering food together, and my empty plate has started drawing more attention than I'd like.",
-      "Narrator: [with feeling] Last week, a new colleague asked, loudly enough for half the table to hear, whether I was on some kind of diet, and something about the question made me flinch.",
-      "Narrator: [thoughtful] I could have simply said yes, diet, and let the conversation end there without any further explanation required of me.",
-      "Narrator: [honestly] Instead, almost without deciding to, I told the truth, that I was fasting, though I kept the explanation as brief as I possibly could manage.",
-      "Narrator: [reflective] Predictably, that opened a small flood of questions, why, how often, whether it was difficult, none of them unkind, but all of them more attention than I wanted.",
-      "Narrator: [thoughtful] Afterward, I found myself wishing I'd simply said nothing was wrong and let them assume I wasn't hungry that particular day.",
-      "Narrator: [honestly] What unsettled me wasn't the questions themselves, but noticing how badly I wanted the whole table to see me as disciplined, rather than simply fasting quietly like any other Monday.",
-      "Narrator: [reflective] That single flicker of wanting to be admired for it told me more about my own heart than the fast itself ever has.",
-      "Narrator: [determined] So this week, when someone glanced at my plate again, I only said I wasn't very hungry, and let the conversation move somewhere else entirely.",
-      "Narrator: [sincere] It felt like a small, almost invisible correction, choosing plainness over the version of the story that would have made me look good.",
-      "Narrator: [peacefully] The fasting itself hasn't changed at all; what changed is how carefully I'm trying to keep it between myself and the only audience that ever mattered."
+      "Narrator: I've never announced it at work, partly because I dislike being asked questions I'd rather not turn into a whole conversation over lunch.",
+      "Narrator: [carefully] The trouble is, my team has a standing Monday tradition of ordering food together, and my empty plate has started drawing more attention than I'd like.",
+      "Narrator: Last week, a new colleague asked, loudly enough for half the table to hear, whether I was on some kind of diet, and something about the question made me flinch.",
+      "Narrator: [reflective] I could have simply said yes, diet, and let the conversation end there without any further explanation required of me.",
+      "Narrator: Instead, almost without deciding to, I told the truth, that I was fasting, though I kept the explanation as brief as I possibly could manage.",
+      "Narrator: [honestly] Predictably, that opened a small flood of questions, why, how often, whether it was difficult, none of them unkind, but all of them more attention than I wanted.",
+      "Narrator: Afterward, I found myself wishing I'd simply said nothing was wrong and let them assume I wasn't hungry that particular day.",
+      "Narrator: [gently] What unsettled me wasn't the questions themselves, but noticing how badly I wanted the whole table to see me as disciplined, rather than simply fasting quietly like any other Monday.",
+      "Narrator: That single flicker of wanting to be admired for it told me more about my own heart than the fast itself ever has.",
+      "Narrator: [calmly] So this week, when someone glanced at my plate again, I only said I wasn't very hungry, and let the conversation move somewhere else entirely.",
+      "Narrator: It felt like a small, almost invisible correction, choosing plainness over the version of the story that would have made me look good.",
+      "Narrator: [encouraging] The fasting itself hasn't changed at all; what changed is how carefully I'm trying to keep it between myself and the only audience that ever mattered."
     ],
     "quiz": [
-      { "question": "What habit has the narrator kept for almost two years?", "options": ["A daily gym routine", "A voluntary fast every Monday", "A weekly journal", "A strict diet plan"], "correctIndex": 1, "explanation": "Every Monday, he keeps a voluntary fast, a habit he picked up almost two years ago." },
-      { "question": "What makes keeping it private difficult at work?", "options": ["His manager requires medical records", "His team has a standing Monday tradition of ordering food together", "He works from home", "He has no coworkers"], "correctIndex": 1, "explanation": "His team's standing Monday tradition of ordering food together makes his empty plate draw attention." },
-      { "question": "What happened last week at lunch?", "options": ["He was fired for not eating", "A new colleague loudly asked if he was on a diet", "He fainted from hunger", "His manager praised his discipline"], "correctIndex": 1, "explanation": "A new colleague asked, loudly enough for half the table to hear, whether he was on some kind of diet." },
-      { "question": "What unsettled the narrator most after explaining he was fasting?", "options": ["That people didn't believe him", "Noticing how badly he wanted to be seen as disciplined rather than just fasting quietly", "That he broke his fast accidentally", "That his coworkers stopped inviting him to lunch"], "correctIndex": 1, "explanation": "He was unsettled by noticing his own desire to be admired for the fast rather than simply doing it quietly." },
-      { "question": "What did he do differently the following week?", "options": ["He skipped the lunch entirely", "He said he wasn't very hungry and let the conversation move on", "He announced his fasting schedule to the whole team", "He asked to stop the lunch tradition"], "correctIndex": 1, "explanation": "When someone glanced at his plate again, he only said he wasn't very hungry, choosing plainness over drawing attention." }
-    ]
+      {
+        "question": "What habit has the narrator kept for almost two years?",
+        "options": [
+          "A voluntary fast every Monday",
+          "A daily gym routine",
+          "A weekly journal",
+          "A strict diet plan"
+        ],
+        "correctIndex": 0,
+        "explanation": "Every Monday, he keeps a voluntary fast, a habit he picked up almost two years ago."
+      },
+      {
+        "question": "What makes keeping it private difficult at work?",
+        "options": [
+          "His manager requires medical records",
+          "He works from home",
+          "He has no coworkers",
+          "His team has a standing Monday tradition of ordering food together"
+        ],
+        "correctIndex": 3,
+        "explanation": "His team's standing Monday tradition of ordering food together makes his empty plate draw attention."
+      },
+      {
+        "question": "What happened last week at lunch?",
+        "options": [
+          "A new colleague loudly asked if he was on a diet",
+          "He was fired for not eating",
+          "He fainted from hunger",
+          "His manager praised his discipline"
+        ],
+        "correctIndex": 0,
+        "explanation": "A new colleague asked, loudly enough for half the table to hear, whether he was on some kind of diet."
+      },
+      {
+        "question": "What unsettled the narrator most after explaining he was fasting?",
+        "options": [
+          "That people didn't believe him",
+          "That he broke his fast accidentally",
+          "Noticing how badly he wanted to be seen as disciplined rather than just fasting quietly",
+          "That his coworkers stopped inviting him to lunch"
+        ],
+        "correctIndex": 2,
+        "explanation": "He was unsettled by noticing his own desire to be admired for the fast rather than simply doing it quietly."
+      },
+      {
+        "question": "What did he do differently the following week?",
+        "options": [
+          "He said he wasn't very hungry and let the conversation move on",
+          "He skipped the lunch entirely",
+          "He announced his fasting schedule to the whole team",
+          "He asked to stop the lunch tradition"
+        ],
+        "correctIndex": 0,
+        "explanation": "When someone glanced at his plate again, he only said he wasn't very hungry, choosing plainness over drawing attention."
+      },
+      {
+        "question": "Why does the Monday lunch tradition complicate the narrator's private fast?",
+        "options": [
+          "Updates listed quantities received and remaining needs rather than faces.",
+          "His empty plate repeatedly attracts questions from colleagues.",
+          "The team should remove that person's image from the material.",
+          "They should ask why and listen before choosing another method."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: His empty plate repeatedly attracts questions from colleagues."
+      },
+      {
+        "question": "What reaction reveals a problem in his intention after he explains the fast?",
+        "options": [
+          "They feared less personal information would weaken accountability.",
+          "Aid must not depend on revealing identity, diagnosis, or hardship.",
+          "The voucher may be unusable, while landlord contact could create risk.",
+          "He notices that he wants colleagues to admire his discipline."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He notices that he wants colleagues to admire his discipline."
+      },
+      {
+        "question": "How does he answer a similar question the following Monday?",
+        "options": [
+          "Financial reports, receipts, inventory counts, and independent review.",
+          "Use only necessary details covered by specific consent.",
+          "He simply says he is not very hungry and changes the subject.",
+          "They should have meaningful input whenever circumstances allow."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: He simply says he is not very hungry and changes the subject."
+      },
+      {
+        "question": "Why does he prefer the less impressive explanation?",
+        "options": [
+          "More recipients collected support directly and volunteers heard fewer rumours.",
+          "Plainness protects the fast from becoming a source of praise.",
+          "Audited figures, clear procedures, and responsible reporting.",
+          "Thanks for aid is not informed consent to publish hardship."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Plainness protects the fast from becoming a source of praise."
+      },
+      {
+        "question": "What remains unchanged despite his new way of answering coworkers?",
+        "options": [
+          "It must not take their privacy, voice, or right to receive help quietly.",
+          "Crowding does not replace guardian permission and appropriate safeguards.",
+          "Use an established emergency process with verification, privacy, and records.",
+          "He continues the voluntary Monday fast."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: He continues the voluntary Monday fast."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-righteous-08",
+    "title": "The Pantry List Without Names",
+    "level": "B2",
+    "themeId": "righteous",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [quietly] Our community pantry once managed requests through a public messaging group. A volunteer would post a family's name, neighbourhood, and list of needs, then ask who could help. Donations arrived quickly, but so did questions that the family had never agreed to answer.",
+      "Narrator: One recipient later told us she avoided the centre because people recognised her situation. She was grateful for the food and embarrassed by the exposure. Her response forced us to examine a process we had praised as efficient.",
+      "Narrator: [carefully] We replaced public profiles with numbered requests. Only two authorised coordinators could see contact details. Donors received the information necessary to provide suitable items—household size, allergies disclosed for the purpose, and delivery timing—without receiving a person's story.",
+      "Narrator: We also stopped photographing collections unless everyone identifiable had freely consented. A refusal did not affect access to support. Progress updates showed quantities and remaining needs rather than faces.",
+      "Narrator: [reflective] The change required more administration. Coordinators needed secure records, clear deletion dates, and a method for checking duplicate requests without treating applicants like suspects.",
+      "Narrator: Some donors worried that privacy would reduce accountability. We responded with financial reports, purchase receipts, inventory counts, and independent review. Accountability could focus on the organisation's conduct instead of exposing recipients.",
+      "Narrator: [warmly] Within three months, more people collected support directly, and volunteers reported fewer rumours. We could not measure dignity with a number, but we could remove practices that clearly threatened it.",
+      "Narrator: Service is not only about what reaches a person's hands. It is also about what we refuse to take from them in return: their privacy, their voice, or the right to receive help without becoming someone else's story."
+    ],
+    "quiz": [
+      {
+        "question": "How did the pantry originally share families' requests with potential donors?",
+        "options": [
+          "Volunteers posted names, neighbourhoods, and needs in a public group.",
+          "The team is producing a fundraising video for its service work.",
+          "A family supposedly needs rent money that same night.",
+          "They do not know she is cooking breakfast at a women's shelter."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Volunteers posted names, neighbourhoods, and needs in a public group."
+      },
+      {
+        "question": "Why did one recipient begin avoiding the community centre?",
+        "options": [
+          "They should decide what information the campaign genuinely requires.",
+          "People recognised her hardship from the pantry's public messages.",
+          "The claim and its personal details have not been verified.",
+          "She declines and recommends interviewing the shelter's founder instead."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: People recognised her hardship from the pantry's public messages."
+      },
+      {
+        "question": "What made the volunteers reconsider a process they had called efficient?",
+        "options": [
+          "Refusal brings pressure, shame, or a threat to the volunteer's role.",
+          "A trusted organisation or authorised coordinator should check it privately.",
+          "A recipient felt grateful for food but humiliated by exposure.",
+          "The kitchen exists because of the founder's sustained work."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A recipient felt grateful for food but humiliated by exposure."
+      },
+      {
+        "question": "How were personal profiles replaced in the revised system?",
+        "options": [
+          "It can film supplies, willing staff, verified totals, or illustrations.",
+          "They should not redistribute documents containing private family details.",
+          "Public attention could turn sincere service into a performance.",
+          "Numbered requests hid identities from everyone except two authorised coordinators."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Numbered requests hid identities from everyone except two authorised coordinators."
+      },
+      {
+        "question": "Under what condition could collection photographs still be taken?",
+        "options": [
+          "Every identifiable person had to give free and informed consent.",
+          "A participant may agree initially and later withdraw permission.",
+          "It can report totals, support categories, and payment records.",
+          "She will continue volunteering without photographs or announcements."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Every identifiable person had to give free and informed consent."
+      },
+      {
+        "question": "How did the pantry report progress without displaying recipients?",
+        "options": [
+          "The team should remove that person's image from the material.",
+          "Updates listed quantities received and remaining needs rather than faces.",
+          "They should ask why and listen before choosing another method.",
+          "They do not know she is cooking breakfast at a women's shelter."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Updates listed quantities received and remaining needs rather than faces."
+      },
+      {
+        "question": "Why did some donors resist the stronger privacy rules?",
+        "options": [
+          "Aid must not depend on revealing identity, diagnosis, or hardship.",
+          "The voucher may be unusable, while landlord contact could create risk.",
+          "They feared less personal information would weaken accountability.",
+          "She declines and recommends interviewing the shelter's founder instead."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: They feared less personal information would weaken accountability."
+      },
+      {
+        "question": "What evidence replaced public stories as proof of responsible management?",
+        "options": [
+          "Use only necessary details covered by specific consent.",
+          "They should have meaningful input whenever circumstances allow.",
+          "The kitchen exists because of the founder's sustained work.",
+          "Financial reports, receipts, inventory counts, and independent review."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Financial reports, receipts, inventory counts, and independent review."
+      },
+      {
+        "question": "What change occurred within three months of the privacy reform?",
+        "options": [
+          "More recipients collected support directly and volunteers heard fewer rumours.",
+          "Audited figures, clear procedures, and responsible reporting.",
+          "Thanks for aid is not informed consent to publish hardship.",
+          "Public attention could turn sincere service into a performance."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: More recipients collected support directly and volunteers heard fewer rumours."
+      },
+      {
+        "question": "What does the narrator say service must avoid taking from recipients?",
+        "options": [
+          "Crowding does not replace guardian permission and appropriate safeguards.",
+          "It must not take their privacy, voice, or right to receive help quietly.",
+          "Use an established emergency process with verification, privacy, and records.",
+          "She will continue volunteering without photographs or announcements."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: It must not take their privacy, voice, or right to receive help quietly."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-righteous-09",
+    "title": "Why the Volunteer Said No to the Camera",
+    "level": "B2",
+    "themeId": "righteous",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [curious] We are filming a fundraising video, and one volunteer refuses to appear. Is that a problem?",
+      "Guest: No. Participation in service does not create an obligation to become publicity. Ask what information the campaign truly needs.",
+      "Host: The organiser says a smiling group photo will attract more donors.",
+      "Guest: [carefully] It may, but consent must still be free. If refusing creates pressure, shame, or a threat to someone's role, the permission is not meaningful.",
+      "Host: What alternatives can the team use?",
+      "Guest: Film supplies being packed, interview a willing coordinator, show verified totals, or use illustrations. The campaign can demonstrate work without identifying every person involved.",
+      "Host: Suppose the volunteer initially agrees and changes her mind after recording.",
+      "Guest: The team should have explained withdrawal terms beforehand. If publication has not happened, remove her image. If material is already public, respond promptly and explain what can realistically be taken down.",
+      "Host: [thoughtful] Does privacy also apply to aid recipients?",
+      "Guest: Even more carefully. Their access to help must never depend on sharing a face, name, diagnosis, or personal hardship. Use only necessary details and obtain specific consent.",
+      "Host: Some viewers distrust videos without personal stories.",
+      "Guest: Then build trust through audited figures, clear processes, and responsible reporting. Emotional exposure is not the only evidence that work is real.",
+      "Host: What about children in the background?",
+      "Guest: Avoid identifiable images unless lawful, informed guardian permission and appropriate safeguards are in place. A crowded event is not automatic consent.",
+      "Host: [reflective] So the volunteer's “no” can improve the whole campaign.",
+      "Guest: Exactly. It reminds the team to ask whether visibility serves the mission or simply makes good intentions easier to display."
+    ],
+    "quiz": [
+      {
+        "question": "What project creates the disagreement about appearing on camera?",
+        "options": [
+          "The team is producing a fundraising video for its service work.",
+          "A family supposedly needs rent money that same night.",
+          "They do not know she is cooking breakfast at a women's shelter.",
+          "Every weekend of care leaves him exhausted as their father's memory worsens."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: The team is producing a fundraising video for its service work."
+      },
+      {
+        "question": "What should organisers identify before asking volunteers to appear?",
+        "options": [
+          "The claim and its personal details have not been verified.",
+          "They should decide what information the campaign genuinely requires.",
+          "She declines and recommends interviewing the shelter's founder instead.",
+          "She felt their father valued Yoga while merely tolerating her."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: They should decide what information the campaign genuinely requires."
+      },
+      {
+        "question": "When does a volunteer's apparent permission cease to be meaningful?",
+        "options": [
+          "A trusted organisation or authorised coordinator should check it privately.",
+          "The kitchen exists because of the founder's sustained work.",
+          "Refusal brings pressure, shame, or a threat to the volunteer's role.",
+          "She refuses to make present care depend entirely on past affection."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Refusal brings pressure, shame, or a threat to the volunteer's role."
+      },
+      {
+        "question": "How can the campaign show its work without filming every volunteer?",
+        "options": [
+          "They should not redistribute documents containing private family details.",
+          "Public attention could turn sincere service into a performance.",
+          "Siti takes two weekdays while Yoga keeps weekends and shares appointments.",
+          "It can film supplies, willing staff, verified totals, or illustrations."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: It can film supplies, willing staff, verified totals, or illustrations."
+      },
+      {
+        "question": "What possibility should consent procedures explain before recording begins?",
+        "options": [
+          "A participant may agree initially and later withdraw permission.",
+          "It can report totals, support categories, and payment records.",
+          "She will continue volunteering without photographs or announcements.",
+          "Discuss the burden honestly and assign specific, workable shifts."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A participant may agree initially and later withdraw permission."
+      },
+      {
+        "question": "What should happen if a participant withdraws before publication?",
+        "options": [
+          "They should ask why and listen before choosing another method.",
+          "The team should remove that person's image from the material.",
+          "They do not know she is cooking breakfast at a women's shelter.",
+          "Every weekend of care leaves him exhausted as their father's memory worsens."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The team should remove that person's image from the material."
+      },
+      {
+        "question": "Which condition must never be attached to a recipient's access to aid?",
+        "options": [
+          "The voucher may be unusable, while landlord contact could create risk.",
+          "She declines and recommends interviewing the shelter's founder instead.",
+          "Aid must not depend on revealing identity, diagnosis, or hardship.",
+          "She felt their father valued Yoga while merely tolerating her."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: Aid must not depend on revealing identity, diagnosis, or hardship."
+      },
+      {
+        "question": "How should information about aid recipients be selected for publicity?",
+        "options": [
+          "They should have meaningful input whenever circumstances allow.",
+          "The kitchen exists because of the founder's sustained work.",
+          "She refuses to make present care depend entirely on past affection.",
+          "Use only necessary details covered by specific consent."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: Use only necessary details covered by specific consent."
+      },
+      {
+        "question": "What can establish public trust without emotional personal stories?",
+        "options": [
+          "Audited figures, clear procedures, and responsible reporting.",
+          "Thanks for aid is not informed consent to publish hardship.",
+          "Public attention could turn sincere service into a performance.",
+          "Siti takes two weekdays while Yoga keeps weekends and shares appointments."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Audited figures, clear procedures, and responsible reporting."
+      },
+      {
+        "question": "Why are children in a crowded background not automatically available to film?",
+        "options": [
+          "Use an established emergency process with verification, privacy, and records.",
+          "Crowding does not replace guardian permission and appropriate safeguards.",
+          "She will continue volunteering without photographs or announcements.",
+          "Discuss the burden honestly and assign specific, workable shifts."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Crowding does not replace guardian permission and appropriate safeguards."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b2-righteous-10",
+    "title": "Urgent Need, Careful Help",
+    "level": "B2",
+    "themeId": "righteous",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Host: [serious] A message says a family needs rent money tonight. Hundreds of people are forwarding it. Should we donate immediately?",
+      "Guest: Urgency deserves attention, but forwarding unverified personal details can cause harm. Contact a trusted organisation or an authorised coordinator who can verify the need privately.",
+      "Host: What if verification takes time the family does not have?",
+      "Guest: [carefully] Use an established emergency process. The organisation may contact the landlord directly with consent, provide temporary support, or separate immediate assistance from a fuller assessment.",
+      "Host: The post includes identity documents as proof.",
+      "Guest: Do not redistribute them. Identification numbers, addresses, and children's details should not be circulating in public groups.",
+      "Host: How can donors know their money was used properly?",
+      "Guest: The organisation can report the amount received, the category of support, and the payment record without revealing the family's identity.",
+      "Host: [curious] Suppose the family declines the form of help offered.",
+      "Guest: Ask why and listen. A voucher may be unusable in their area, or direct contact with a landlord may create risk. Recipients should have meaningful input where possible.",
+      "Host: Can volunteers discuss the case afterward as an inspiring story?",
+      "Guest: Only with specific, informed consent, and even then the details should be limited. Gratitude is not permission to publish someone's hardship.",
+      "Host: [reflective] What if the original message turns out to be false?",
+      "Guest: Correct it in the same channels, stop collecting, secure or return funds according to the organisation's policy, and avoid accusing an individual before facts are established.",
+      "Host: So compassion and caution are not opposites?",
+      "Guest: No. Careful verification, privacy, and transparent records help compassion reach real needs without creating a second harm."
+    ],
+    "quiz": [
+      {
+        "question": "What urgent claim begins spreading through hundreds of messages?",
+        "options": [
+          "A family supposedly needs rent money that same night.",
+          "They do not know she is cooking breakfast at a women's shelter.",
+          "Every weekend of care leaves him exhausted as their father's memory worsens.",
+          "He anonymously placed a cash envelope beneath their door each month."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: A family supposedly needs rent money that same night."
+      },
+      {
+        "question": "Why is immediate forwarding potentially harmful despite compassionate intentions?",
+        "options": [
+          "She declines and recommends interviewing the shelter's founder instead.",
+          "The claim and its personal details have not been verified.",
+          "She felt their father valued Yoga while merely tolerating her.",
+          "His schedule matched the timing of the envelope deliveries."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: The claim and its personal details have not been verified."
+      },
+      {
+        "question": "Who should verify the family's need without exposing them publicly?",
+        "options": [
+          "The kitchen exists because of the founder's sustained work.",
+          "She refuses to make present care depend entirely on past affection.",
+          "A trusted organisation or authorised coordinator should check it privately.",
+          "A lie would add another betrayal to a well-meant gift."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: A trusted organisation or authorised coordinator should check it privately."
+      },
+      {
+        "question": "How should donors treat identity documents included as proof?",
+        "options": [
+          "Public attention could turn sincere service into a performance.",
+          "Siti takes two weekdays while Yoga keeps weekends and shares appointments.",
+          "He varies the delivery day and asks her to keep silent.",
+          "They should not redistribute documents containing private family details."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: They should not redistribute documents containing private family details."
+      },
+      {
+        "question": "What can an organisation report while keeping the family anonymous?",
+        "options": [
+          "It can report totals, support categories, and payment records.",
+          "She will continue volunteering without photographs or announcements.",
+          "Discuss the burden honestly and assign specific, workable shifts.",
+          "The family's need matters more than whether his kindness is noticed."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: It can report totals, support categories, and payment records."
+      },
+      {
+        "question": "What should volunteers do if the family rejects the proposed assistance?",
+        "options": [
+          "They do not know she is cooking breakfast at a women's shelter.",
+          "They should ask why and listen before choosing another method.",
+          "Every weekend of care leaves him exhausted as their father's memory worsens.",
+          "He anonymously placed a cash envelope beneath their door each month."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: They should ask why and listen before choosing another method."
+      },
+      {
+        "question": "Why might a voucher or landlord payment fail to help safely?",
+        "options": [
+          "She declines and recommends interviewing the shelter's founder instead.",
+          "She felt their father valued Yoga while merely tolerating her.",
+          "The voucher may be unusable, while landlord contact could create risk.",
+          "His schedule matched the timing of the envelope deliveries."
+        ],
+        "correctIndex": 2,
+        "explanation": "This matches the audio: The voucher may be unusable, while landlord contact could create risk."
+      },
+      {
+        "question": "How much influence should recipients have over the support provided?",
+        "options": [
+          "The kitchen exists because of the founder's sustained work.",
+          "She refuses to make present care depend entirely on past affection.",
+          "A lie would add another betrayal to a well-meant gift.",
+          "They should have meaningful input whenever circumstances allow."
+        ],
+        "correctIndex": 3,
+        "explanation": "This matches the audio: They should have meaningful input whenever circumstances allow."
+      },
+      {
+        "question": "Why does receiving gratitude not authorise volunteers to tell the family's story?",
+        "options": [
+          "Thanks for aid is not informed consent to publish hardship.",
+          "Public attention could turn sincere service into a performance.",
+          "Siti takes two weekdays while Yoga keeps weekends and shares appointments.",
+          "He varies the delivery day and asks her to keep silent."
+        ],
+        "correctIndex": 0,
+        "explanation": "This matches the audio: Thanks for aid is not informed consent to publish hardship."
+      },
+      {
+        "question": "How can urgent compassion remain careful rather than passive?",
+        "options": [
+          "She will continue volunteering without photographs or announcements.",
+          "Use an established emergency process with verification, privacy, and records.",
+          "Discuss the burden honestly and assign specific, workable shifts.",
+          "The family's need matters more than whether his kindness is noticed."
+        ],
+        "correctIndex": 1,
+        "explanation": "This matches the audio: Use an established emergency process with verification, privacy, and records."
+      }
+    ],
+    "qualityReview": {
+      "level": "B2",
+      "theme": "righteous",
+      "scriptDecision": "reviewed for B2 comprehension, evidence-based inference, ethical boundaries, and varied audio style",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

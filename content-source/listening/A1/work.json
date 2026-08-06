@@ -6,32 +6,146 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] My first job was at a small shop near my house. I was twenty years old, and I knew almost nothing about working life.",
-      "Narrator: [honestly] On my first day, I was so nervous that I dropped a box of cups in front of a customer. My face turned completely red.",
-      "Narrator: [gently] The manager just laughed a little and said, everyone breaks something on their first day, don't worry about it.",
-      "Narrator: [reflective] That small moment taught me something important. Mistakes are normal, and people usually remember how you handle them, not the mistake itself.",
+      "Narrator: [warmly] My first job was at a small shop near my house. I was twenty years old, and I knew almost nothing about working life.",
+      "Narrator: On my first day, I was so nervous that I dropped a box of cups in front of a customer. My face turned completely red.",
+      "Narrator: [honestly] The manager just laughed a little and said, everyone breaks something on their first day, don't worry about it.",
+      "Narrator: That small moment taught me something important. Mistakes are normal, and people usually remember how you handle them, not the mistake itself.",
       "Narrator: [thoughtful] I worked there for two years, folding clothes, using the cash register, and helping customers find what they needed.",
-      "Narrator: [honestly] The pay was small, and the hours were long. Some days I stood for eight hours straight without a real break.",
-      "Narrator: [warmly] But I also learned things school never taught me, like how to stay calm when a customer is angry, and how to work as a team.",
-      "Narrator: [reflective] My coworker Sinta became a close friend during that time. We covered each other's shifts and shared lunch almost every day.",
-      "Narrator: [thoughtful] One day, a customer shouted at me because we didn't have the size she wanted. I wanted to cry, but I stayed polite instead.",
-      "Narrator: [gently] Later, my manager told me she was proud of how I handled it. That comment meant more to me than any paycheck.",
-      "Narrator: [with a small smile] I eventually left that job for something better, but I still think about it often, especially on hard days at my current job.",
-      "Narrator: [warmly] It taught me patience, and it taught me that every job, even a small one, can teach you something worth keeping.",
-      "Narrator: [peacefully] Now, when I train new employees, I try to be as patient as my first manager was with me.",
-      "Narrator: [thoughtful] I remember how scared I felt on that first day, and I try to make new people feel less alone.",
-      "Narrator: [warmly] A first job is never really about the money. It's about learning who you become when things get difficult."
+      "Narrator: The pay was small, and the hours were long. Some days I stood for eight hours straight without a real break.",
+      "Narrator: [carefully] But I also learned things school never taught me, like how to stay calm when a customer is angry, and how to work as a team.",
+      "Narrator: My coworker Sinta became a close friend during that time. We covered each other's shifts and shared lunch almost every day.",
+      "Narrator: [reflective] One day, a customer shouted at me because we didn't have the size she wanted. I wanted to cry, but I stayed polite instead.",
+      "Narrator: Later, my manager told me she was proud of how I handled it. That comment meant more to me than any paycheck.",
+      "Narrator: [practically] I eventually left that job for something better, but I still think about it often, especially on hard days at my current job.",
+      "Narrator: It taught me patience, and it taught me that every job, even a small one, can teach you something worth keeping.",
+      "Narrator: [calmly] Now, when I train new employees, I try to be as patient as my first manager was with me.",
+      "Narrator: I remember how scared I felt on that first day, and I try to make new people feel less alone.",
+      "Narrator: [encouraging] Income matters, and a first job can also teach how we respond when work becomes difficult."
     ],
     "quiz": [
-      { "question": "What happened on the narrator's first day at her first job?", "options": ["She was late", "She dropped a box of cups in front of a customer", "She quit immediately", "She forgot her name tag"], "correctIndex": 1, "explanation": "She dropped a box of cups in front of a customer and her face turned red." },
-      { "question": "How did the manager react to the mistake?", "options": ["He got angry", "He laughed a little and said everyone breaks something on their first day", "He fired her", "He said nothing at all"], "correctIndex": 1, "explanation": "The manager laughed a little and told her everyone breaks something on their first day." },
-      { "question": "How long did the narrator work at that shop?", "options": ["One week", "Two years", "Ten years", "One month"], "correctIndex": 1, "explanation": "She says she worked there for two years." },
-      { "question": "What did the narrator do when a customer shouted at her?", "options": ["She shouted back", "She stayed polite even though she wanted to cry", "She walked away", "She called her manager to complain"], "correctIndex": 1, "explanation": "She wanted to cry but stayed polite instead when the customer shouted at her." },
-      { "question": "What does the narrator try to do now when training new employees?", "options": ["Ignore them", "Be as patient as her first manager was with her", "Make them nervous on purpose", "Give them the hardest tasks first"], "correctIndex": 1, "explanation": "She tries to be as patient with new employees as her first manager was with her." }
-    ]
+      {
+        "question": "What happened on the narrator's first day at her first job?",
+        "options": [
+          "She was late",
+          "She dropped a box of cups in front of a customer",
+          "She quit immediately",
+          "She forgot her name tag"
+        ],
+        "correctIndex": 1,
+        "explanation": "She dropped a box of cups in front of a customer and her face turned red."
+      },
+      {
+        "question": "How did the manager react to the mistake?",
+        "options": [
+          "He got angry",
+          "He fired her",
+          "He said nothing at all",
+          "He laughed a little and said everyone breaks something on their first day"
+        ],
+        "correctIndex": 3,
+        "explanation": "The manager laughed a little and told her everyone breaks something on their first day."
+      },
+      {
+        "question": "How long did the narrator work at that shop?",
+        "options": [
+          "Two years",
+          "One week",
+          "Ten years",
+          "One month"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she worked there for two years."
+      },
+      {
+        "question": "What did the narrator do when a customer shouted at her?",
+        "options": [
+          "She shouted back",
+          "She walked away",
+          "She stayed polite even though she wanted to cry",
+          "She called her manager to complain"
+        ],
+        "correctIndex": 2,
+        "explanation": "She wanted to cry but stayed polite instead when the customer shouted at her."
+      },
+      {
+        "question": "What does the narrator try to do now when training new employees?",
+        "options": [
+          "Ignore them",
+          "Be as patient as her first manager was with her",
+          "Make them nervous on purpose",
+          "Give them the hardest tasks first"
+        ],
+        "correctIndex": 1,
+        "explanation": "She tries to be as patient with new employees as her first manager was with her."
+      },
+      {
+        "question": "Where was the first job?",
+        "options": [
+          "At a large airport",
+          "At a hospital",
+          "At a small shop near home",
+          "At a radio station"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator began work at age twenty."
+      },
+      {
+        "question": "What mistake happened first?",
+        "options": [
+          "A shelf fell",
+          "The wrong change was given",
+          "A report was late",
+          "A phone was stolen"
+        ],
+        "correctIndex": 1,
+        "explanation": "The manager responded to a common new-worker error."
+      },
+      {
+        "question": "How did the manager respond?",
+        "options": [
+          "By shouting publicly",
+          "Calmly and with teaching",
+          "By ending the job",
+          "By ignoring the customer"
+        ],
+        "correctIndex": 1,
+        "explanation": "The response allowed learning."
+      },
+      {
+        "question": "How does the narrator train people now?",
+        "options": [
+          "By leaving them alone",
+          "With no feedback",
+          "By expecting perfection",
+          "With patience remembered from the first job"
+        ],
+        "correctIndex": 3,
+        "explanation": "Earlier treatment shapes current leadership."
+      },
+      {
+        "question": "What is the balanced final lesson?",
+        "options": [
+          "Work can provide income and teach character",
+          "Money never matters",
+          "Every hard job is good",
+          "Mistakes have no effect"
+        ],
+        "correctIndex": 0,
+        "explanation": "The revision respects both livelihood and growth."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "revise lightly; retain first-job growth while acknowledging income matters and avoiding an absolute conclusion",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-work-02",
@@ -40,40 +154,157 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Maya, who changed her career completely at age thirty. Thanks for joining me, Maya.",
-      "Guest: [pleasantly] Thank you for having me. This topic still feels close to my heart.",
-      "Host: [curious] Can you tell listeners what your job was before the change?",
-      "Guest: [thoughtful] I worked in accounting for almost eight years. It was stable, but I felt bored every single day.",
-      "Host: [interested] What made you finally decide to change careers?",
-      "Guest: [honestly] One Monday morning, I sat at my desk and realized I couldn't remember the last time I felt excited about work.",
-      "Host: [sympathetically] That sounds like a difficult realization. What did you do next?",
-      "Guest: [reflective] I started taking evening classes in graphic design, just two nights a week, while keeping my accounting job.",
-      "Host: [curious] Wasn't that exhausting, working full time and studying at night?",
-      "Guest: [honestly] Extremely. Some nights I fell asleep with my laptop still open. But I felt more alive than I had in years.",
-      "Host: [interested] How did your family react to this big change?",
-      "Guest: [warmly] My husband was supportive from the start, but my parents worried about the money and the risk.",
-      "Host: [curious] Did their worry make you doubt yourself?",
-      "Guest: [honestly] Sometimes, yes. But I kept reminding myself that staying unhappy also has a cost, even if it's quieter.",
-      "Host: [curious] When did you finally leave your accounting job?",
-      "Guest: [smiling] After eighteen months of studying, I got a small design job. The salary was lower, but I said yes immediately.",
-      "Host: [interested] Do you regret leaving accounting behind?",
+      "Guest: Thank you for having me. This topic still feels close to my heart.",
+      "Host: [honestly] Can you tell listeners what your job was before the change?",
+      "Guest: I worked in accounting for almost eight years. It was stable, but I felt bored every single day.",
+      "Host: [thoughtful] What made you finally decide to change careers?",
+      "Guest: One Monday morning, I sat at my desk and realized I couldn't remember the last time I felt excited about work.",
+      "Host: [carefully] That sounds like a difficult realization. What did you do next?",
+      "Guest: I started taking evening classes in graphic design, just two nights a week, while keeping my accounting job.",
+      "Host: [reflective] Wasn't that exhausting, working full time and studying at night?",
+      "Guest: Extremely. Some nights I fell asleep with my laptop still open. But I felt more alive than I had in years.",
+      "Host: [practically] How did your family react to this big change?",
+      "Guest: My husband was supportive from the start, but my parents worried about the money and the risk.",
+      "Host: [calmly] Did their worry make you doubt yourself?",
+      "Guest: Sometimes, yes. But I kept reminding myself that staying unhappy also has a cost, even if it's quieter.",
+      "Host: [encouraging] When did you finally leave your accounting job?",
+      "Guest: After eighteen months of studying, I got a small design job. The salary was lower, but I said yes immediately.",
+      "Host: Do you regret leaving accounting behind?",
       "Guest: [warmly] Not for one single day. I earn less now, but I finally look forward to Monday mornings.",
-      "Host: [curious] What advice would you give someone thinking about changing careers?",
-      "Guest: [encouraging] Start small before you leap. Take one class, learn one new skill, and see how it feels before you quit anything.",
-      "Host: [smiling] That's excellent advice, Maya. Thank you so much for sharing your story with us today.",
-      "Guest: [warmly] Thank you for listening. I hope it helps someone stuck at their own desk right now."
+      "Host: What advice would you give someone thinking about changing careers?",
+      "Guest: Start small before you leap. Take one class, learn one new skill, and see how it feels before you quit anything.",
+      "Host: [pleasantly] That's excellent advice, Maya. Thank you so much for sharing your story with us today.",
+      "Guest: Thank you for listening. I hope it helps someone stuck at their own desk right now."
     ],
     "quiz": [
-      { "question": "What was Maya's job before her career change?", "options": ["Teacher", "Accountant", "Nurse", "Graphic designer from the start"], "correctIndex": 1, "explanation": "Maya worked in accounting for almost eight years before changing careers." },
-      { "question": "What did Maya realize one Monday morning?", "options": ["She wanted a raise", "She couldn't remember the last time she felt excited about work", "She wanted to move cities", "She was going to be promoted"], "correctIndex": 1, "explanation": "She realized she couldn't remember the last time she felt excited about work." },
-      { "question": "How did Maya start learning graphic design?", "options": ["She quit her job immediately", "She took evening classes two nights a week", "She hired a private tutor", "She watched videos on weekends only"], "correctIndex": 1, "explanation": "She started taking evening classes in graphic design two nights a week while working." },
-      { "question": "How did Maya's parents react to her plans?", "options": ["They were fully supportive", "They worried about the money and the risk", "They refused to speak to her", "They didn't know about it"], "correctIndex": 1, "explanation": "Her parents worried about the money and the risk of the career change." },
-      { "question": "What advice does Maya give to people considering a career change?", "options": ["Quit immediately without a plan", "Start small, learn one new skill, and see how it feels", "Never change careers", "Only change jobs after age forty"], "correctIndex": 1, "explanation": "Maya advises starting small, learning one new skill first, before making a bigger leap." }
-    ]
+      {
+        "question": "What was Maya's job before her career change?",
+        "options": [
+          "Accountant",
+          "Teacher",
+          "Nurse",
+          "Graphic designer from the start"
+        ],
+        "correctIndex": 0,
+        "explanation": "Maya worked in accounting for almost eight years before changing careers."
+      },
+      {
+        "question": "What did Maya realize one Monday morning?",
+        "options": [
+          "She wanted a raise",
+          "She wanted to move cities",
+          "She couldn't remember the last time she felt excited about work",
+          "She was going to be promoted"
+        ],
+        "correctIndex": 2,
+        "explanation": "She realized she couldn't remember the last time she felt excited about work."
+      },
+      {
+        "question": "How did Maya start learning graphic design?",
+        "options": [
+          "She took evening classes two nights a week",
+          "She quit her job immediately",
+          "She hired a private tutor",
+          "She watched videos on weekends only"
+        ],
+        "correctIndex": 0,
+        "explanation": "She started taking evening classes in graphic design two nights a week while working."
+      },
+      {
+        "question": "How did Maya's parents react to her plans?",
+        "options": [
+          "They were fully supportive",
+          "They refused to speak to her",
+          "They didn't know about it",
+          "They worried about the money and the risk"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her parents worried about the money and the risk of the career change."
+      },
+      {
+        "question": "What advice does Maya give to people considering a career change?",
+        "options": [
+          "Quit immediately without a plan",
+          "Start small, learn one new skill, and see how it feels",
+          "Never change careers",
+          "Only change jobs after age forty"
+        ],
+        "correctIndex": 1,
+        "explanation": "Maya advises starting small, learning one new skill first, before making a bigger leap."
+      },
+      {
+        "question": "How old was Maya when changing career?",
+        "options": [
+          "Twenty",
+          "Forty",
+          "Thirty",
+          "Eighteen"
+        ],
+        "correctIndex": 2,
+        "explanation": "The title and introduction give her age."
+      },
+      {
+        "question": "What sign showed she needed change?",
+        "options": [
+          "She dreaded returning to the desk",
+          "Her parents chose design",
+          "The office closed",
+          "Her husband lost work"
+        ],
+        "correctIndex": 0,
+        "explanation": "A Monday realization made dissatisfaction clear."
+      },
+      {
+        "question": "How did she begin learning?",
+        "options": [
+          "With courses beside her current job",
+          "By resigning immediately",
+          "By buying a company",
+          "Without practice"
+        ],
+        "correctIndex": 0,
+        "explanation": "The change began gradually."
+      },
+      {
+        "question": "Why were her parents worried?",
+        "options": [
+          "The design colors",
+          "Her husband’s opinion",
+          "The podcast length",
+          "Money and risk"
+        ],
+        "correctIndex": 3,
+        "explanation": "Their concern focused on stability."
+      },
+      {
+        "question": "What does Maya recommend first?",
+        "options": [
+          "Quit tomorrow",
+          "Test the new path before a full move",
+          "Ignore finances",
+          "Expect instant success"
+        ],
+        "correctIndex": 1,
+        "explanation": "Small trials provide evidence and reduce risk."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; career-change podcast includes gradual study, portfolio work, family financial concern, and practical testing before leaving",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-work-03",
@@ -82,38 +313,155 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dewi", "gender": "female" },
-      { "name": "Fajar", "gender": "male" }
+      {
+        "name": "Dewi",
+        "gender": "female"
+      },
+      {
+        "name": "Fajar",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dewi: [tired] Fajar, I don't think I can survive another week like this one. Three deadlines, all in the same week.",
-      "Fajar: [calmly] I saw your calendar. It looked completely full, honestly. How are you holding up?",
-      "Dewi: [sighing] Not great. I stayed until nine last night, and I still didn't finish the report.",
-      "Fajar: [concerned] Did you tell our manager the workload is too much right now?",
-      "Dewi: [hesitant] Not yet. I don't want to seem like I can't handle my job.",
-      "Fajar: [gently] Asking for help isn't the same as failing, Dewi. Everyone on this team is drowning this week.",
-      "Dewi: [thoughtful] Maybe you're right. I keep thinking I should just push through it alone.",
-      "Fajar: [warmly] I talked to our manager yesterday about my own deadline. She moved it back two days without any problem.",
-      "Dewi: [surprised] Really? I didn't know that was even an option.",
-      "Fajar: [encouraging] It usually is, if you explain it calmly and early, before everything becomes urgent and messy.",
-      "Dewi: [considering] Okay, I'll talk to her this afternoon. What exactly did you say to her?",
-      "Fajar: [gently] I just said I had three big tasks and needed help deciding which one truly mattered most this week.",
-      "Dewi: [thoughtful] That sounds much better than what I was planning, which was just complaining loudly.",
-      "Fajar: [smiling] Complaining feels good for a minute, but it doesn't move any deadlines.",
-      "Dewi: [laughing a little] Fair point. I also haven't eaten a proper lunch in four days.",
-      "Fajar: [warmly] That explains why you look so tired. Come eat with me now, before this conversation continues.",
-      "Dewi: [relieved] Actually, yes. I think I forgot that taking a break is allowed.",
-      "Fajar: [kindly] We all forget that sometimes. Let's go, and then you can plan what to say to our manager.",
-      "Dewi: [grateful] Thanks, Fajar. I feel a little less alone with all of this now.",
-      "Fajar: [warmly] That's what coworkers are for. We're in this messy week together."
+      "Dewi: [warmly] Fajar, I don't think I can survive another week like this one. Three deadlines, all in the same week.",
+      "Fajar: I saw your calendar. It looked completely full, honestly. How are you holding up?",
+      "Dewi: [honestly] Not great. I stayed until nine last night, and I still didn't finish the report.",
+      "Fajar: Did you tell our manager the workload is too much right now?",
+      "Dewi: [thoughtful] Not yet. I don't want to seem like I can't handle my job.",
+      "Fajar: Asking for help isn't the same as failing, Dewi. Everyone on this team is drowning this week.",
+      "Dewi: [carefully] Maybe you're right. I keep thinking I should just push through it alone.",
+      "Fajar: I talked to our manager yesterday about my own deadline. She moved it back two days without any problem.",
+      "Dewi: [reflective] Really? I didn't know that was even an option.",
+      "Fajar: It usually is, if you explain it calmly and early, before everything becomes urgent and messy.",
+      "Dewi: [practically] Okay, I'll talk to her this afternoon. What exactly did you say to her?",
+      "Fajar: I just said I had three big tasks and needed help deciding which one truly mattered most this week.",
+      "Dewi: [calmly] That sounds much better than what I was planning, which was just complaining loudly.",
+      "Fajar: Complaining feels good for a minute, but it doesn't move any deadlines.",
+      "Dewi: [encouraging] Fair point. I also haven't eaten a proper lunch in four days.",
+      "Fajar: That explains why you look so tired. Come eat with me now, before this conversation continues.",
+      "Dewi: Actually, yes. I think I forgot that taking a break is allowed.",
+      "Fajar: [warmly] We all forget that sometimes. Let's go, and then you can plan what to say to our manager.",
+      "Dewi: Thanks, Fajar. I feel a little less alone with all of this now.",
+      "Fajar: That's what coworkers are for. We're in this messy week together."
     ],
     "quiz": [
-      { "question": "Why is Dewi so stressed this week?", "options": ["She lost her job", "She has three deadlines in the same week", "She is moving apartments", "Her computer broke"], "correctIndex": 1, "explanation": "Dewi has three deadlines all in the same week and stayed late without finishing." },
-      { "question": "Why hasn't Dewi told her manager about the workload?", "options": ["She already told her", "She doesn't want to seem like she can't handle her job", "The manager is on vacation", "She forgot to"], "correctIndex": 1, "explanation": "Dewi says she doesn't want to seem like she can't handle her job." },
-      { "question": "What happened when Fajar talked to the manager about his own deadline?", "options": ["He was told no", "She moved it back two days without any problem", "He got in trouble", "Nothing changed"], "correctIndex": 1, "explanation": "Fajar's manager moved his deadline back two days without any problem." },
-      { "question": "What had Dewi not done properly for four days?", "options": ["Slept", "Eaten a proper lunch", "Answered emails", "Taken the bus"], "correctIndex": 1, "explanation": "Dewi admits she hasn't eaten a proper lunch in four days." },
-      { "question": "What do Dewi and Fajar decide to do?", "options": ["Quit their jobs", "Go eat lunch together, then Dewi will talk to the manager", "Work through the night again", "Avoid the manager completely"], "correctIndex": 1, "explanation": "They decide to go eat lunch together, and Dewi will talk to the manager afterward." }
-    ]
+      {
+        "question": "Why is Dewi so stressed this week?",
+        "options": [
+          "She lost her job",
+          "She is moving apartments",
+          "Her computer broke",
+          "She has three deadlines in the same week"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dewi has three deadlines all in the same week and stayed late without finishing."
+      },
+      {
+        "question": "Why hasn't Dewi told her manager about the workload?",
+        "options": [
+          "She already told her",
+          "The manager is on vacation",
+          "She doesn't want to seem like she can't handle her job",
+          "She forgot to"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dewi says she doesn't want to seem like she can't handle her job."
+      },
+      {
+        "question": "What happened when Fajar talked to the manager about his own deadline?",
+        "options": [
+          "He was told no",
+          "He got in trouble",
+          "She moved it back two days without any problem",
+          "Nothing changed"
+        ],
+        "correctIndex": 2,
+        "explanation": "Fajar's manager moved his deadline back two days without any problem."
+      },
+      {
+        "question": "What had Dewi not done properly for four days?",
+        "options": [
+          "Slept",
+          "Answered emails",
+          "Taken the bus",
+          "Eaten a proper lunch"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dewi admits she hasn't eaten a proper lunch in four days."
+      },
+      {
+        "question": "What do Dewi and Fajar decide to do?",
+        "options": [
+          "Quit their jobs",
+          "Go eat lunch together, then Dewi will talk to the manager",
+          "Work through the night again",
+          "Avoid the manager completely"
+        ],
+        "correctIndex": 1,
+        "explanation": "They decide to go eat lunch together, and Dewi will talk to the manager afterward."
+      },
+      {
+        "question": "How late did Dewi work?",
+        "options": [
+          "Until nine",
+          "Until noon",
+          "Until seven in the morning",
+          "She left early"
+        ],
+        "correctIndex": 0,
+        "explanation": "Long hours still did not finish the report."
+      },
+      {
+        "question": "Why was Dewi silent?",
+        "options": [
+          "The manager was away",
+          "No deadlines existed",
+          "Fajar asked her not to speak",
+          "She feared looking unable to cope"
+        ],
+        "correctIndex": 3,
+        "explanation": "Image concerns delayed useful communication."
+      },
+      {
+        "question": "What did Fajar ask the manager?",
+        "options": [
+          "For a new job",
+          "Which task mattered most",
+          "To cancel every project",
+          "For a longer lunch only"
+        ],
+        "correctIndex": 1,
+        "explanation": "Priority was clearer than vague complaint."
+      },
+      {
+        "question": "What basic need had Dewi missed?",
+        "options": [
+          "A proper lunch",
+          "A full week of sleep",
+          "A train home",
+          "A medical visit"
+        ],
+        "correctIndex": 0,
+        "explanation": "Four days without proper lunch added to fatigue."
+      },
+      {
+        "question": "What is their next sequence?",
+        "options": [
+          "Work alone all night",
+          "Complain publicly",
+          "Ignore all deadlines",
+          "Eat, prepare, then speak to the manager"
+        ],
+        "correctIndex": 3,
+        "explanation": "Support leads to a concrete conversation."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; practical coworker dialogue supports early workload communication, priority-setting, meals, and teamwork",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-work-04",
@@ -122,32 +470,146 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
       "Narrator: [warmly] My first real manager was a quiet man named Pak Hendra. He rarely raised his voice, but his words always stayed with me.",
-      "Narrator: [thoughtful] When I started that job, I was confident, maybe too confident, about my own skills.",
+      "Narrator: When I started that job, I was confident, maybe too confident, about my own skills.",
       "Narrator: [honestly] After my first big project, I expected praise. Instead, he sat me down and pointed out three clear mistakes.",
-      "Narrator: [reflective] At first, I felt hurt. I thought he didn't like my work, or maybe he didn't like me personally.",
-      "Narrator: [gently] But he said something I never forgot. He said, I only give feedback to people I believe can improve.",
-      "Narrator: [thoughtful] I didn't understand that fully until months later, when a coworker left the company without ever hearing honest feedback from anyone.",
-      "Narrator: [softly] Nobody had bothered correcting her mistakes, because nobody thought it was worth the effort or the awkward conversation.",
-      "Narrator: [warmly] That's when I understood Pak Hendra's honesty was actually a form of respect, not criticism for its own sake.",
+      "Narrator: At first, I felt hurt. I thought he didn't like my work, or maybe he didn't like me personally.",
+      "Narrator: [thoughtful] But he said something I never forgot. He said, I only give feedback to people I believe can improve.",
+      "Narrator: I didn't understand that fully until months later, when a coworker left the company without ever hearing honest feedback from anyone.",
+      "Narrator: [carefully] Nobody had bothered correcting her mistakes, because nobody thought it was worth the effort or the awkward conversation.",
+      "Narrator: That's when I understood Pak Hendra's honesty was actually a form of respect, not criticism for its own sake.",
       "Narrator: [reflective] After that, I started asking for feedback instead of waiting for it, even when it felt uncomfortable to hear.",
-      "Narrator: [honestly] Some feedback still stings, even now. Nobody truly enjoys hearing about their weaknesses out loud.",
-      "Narrator: [gently] But I learned to separate the feedback from my own worth as a person. A mistake is not the same as failure.",
-      "Narrator: [warmly] Years later, I became a manager myself, and I try to give feedback the way Pak Hendra gave it to me.",
-      "Narrator: [thoughtful] Clearly, kindly, and always with a reason behind it, never just to make someone feel small.",
-      "Narrator: [peacefully] Pak Hendra retired two years ago, but I still hear his calm voice whenever I sit down to review someone's work.",
-      "Narrator: [with feeling] A good manager doesn't just manage tasks. A good manager helps people become better than they were before."
+      "Narrator: Some feedback still stings, even now. Nobody truly enjoys hearing about their weaknesses out loud.",
+      "Narrator: [practically] But I learned to separate the feedback from my own worth as a person. A mistake is not the same as failure.",
+      "Narrator: Years later, I became a manager myself, and I try to give feedback the way Pak Hendra gave it to me.",
+      "Narrator: [calmly] Clearly, kindly, and always with a reason behind it, never just to make someone feel small.",
+      "Narrator: Pak Hendra retired two years ago, but I still hear his calm voice whenever I sit down to review someone's work.",
+      "Narrator: [encouraging] A good manager doesn't just manage tasks. A good manager helps people become better than they were before."
     ],
     "quiz": [
-      { "question": "How did the narrator feel before his first big project review?", "options": ["Nervous and unsure", "Confident, maybe too confident", "Indifferent", "Excited to quit"], "correctIndex": 1, "explanation": "He says he was confident, maybe too confident, about his own skills." },
-      { "question": "What did Pak Hendra do after the narrator's first big project?", "options": ["He gave only praise", "He pointed out three clear mistakes", "He ignored the project", "He fired the narrator"], "correctIndex": 1, "explanation": "Pak Hendra sat him down and pointed out three clear mistakes." },
-      { "question": "What did Pak Hendra say about why he gives feedback?", "options": ["He gives feedback to everyone equally", "He only gives feedback to people he believes can improve", "He never gives feedback", "He gives feedback to punish people"], "correctIndex": 1, "explanation": "Pak Hendra said he only gives feedback to people he believes can improve." },
-      { "question": "What happened to a coworker who never received honest feedback?", "options": ["She got promoted quickly", "She left the company without ever hearing honest feedback", "She became the manager", "She won an award"], "correctIndex": 1, "explanation": "A coworker left the company without ever hearing honest feedback from anyone." },
-      { "question": "How does the narrator try to give feedback now that he is a manager?", "options": ["Harshly, to toughen people up", "Clearly, kindly, and always with a reason behind it", "Rarely, to avoid conflict", "Only in writing, never in person"], "correctIndex": 1, "explanation": "He tries to give feedback clearly, kindly, and always with a reason behind it." }
-    ]
+      {
+        "question": "How did the narrator feel before his first big project review?",
+        "options": [
+          "Confident, maybe too confident",
+          "Nervous and unsure",
+          "Indifferent",
+          "Excited to quit"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says he was confident, maybe too confident, about his own skills."
+      },
+      {
+        "question": "What did Pak Hendra do after the narrator's first big project?",
+        "options": [
+          "He gave only praise",
+          "He pointed out three clear mistakes",
+          "He ignored the project",
+          "He fired the narrator"
+        ],
+        "correctIndex": 1,
+        "explanation": "Pak Hendra sat him down and pointed out three clear mistakes."
+      },
+      {
+        "question": "What did Pak Hendra say about why he gives feedback?",
+        "options": [
+          "He gives feedback to everyone equally",
+          "He never gives feedback",
+          "He only gives feedback to people he believes can improve",
+          "He gives feedback to punish people"
+        ],
+        "correctIndex": 2,
+        "explanation": "Pak Hendra said he only gives feedback to people he believes can improve."
+      },
+      {
+        "question": "What happened to a coworker who never received honest feedback?",
+        "options": [
+          "She got promoted quickly",
+          "She became the manager",
+          "She won an award",
+          "She left the company without ever hearing honest feedback"
+        ],
+        "correctIndex": 3,
+        "explanation": "A coworker left the company without ever hearing honest feedback from anyone."
+      },
+      {
+        "question": "How does the narrator try to give feedback now that he is a manager?",
+        "options": [
+          "Harshly, to toughen people up",
+          "Clearly, kindly, and always with a reason behind it",
+          "Rarely, to avoid conflict",
+          "Only in writing, never in person"
+        ],
+        "correctIndex": 1,
+        "explanation": "He tries to give feedback clearly, kindly, and always with a reason behind it."
+      },
+      {
+        "question": "How did Pak Hendra usually speak?",
+        "options": [
+          "By shouting",
+          "Only by email",
+          "Through other workers",
+          "Quietly"
+        ],
+        "correctIndex": 3,
+        "explanation": "His calm style made words memorable."
+      },
+      {
+        "question": "What happened after the big project?",
+        "options": [
+          "He offered only praise",
+          "He canceled the project",
+          "He gave honest detailed feedback",
+          "He said nothing"
+        ],
+        "correctIndex": 2,
+        "explanation": "Specific review supported growth."
+      },
+      {
+        "question": "Why did he give correction?",
+        "options": [
+          "He disliked the narrator",
+          "He wanted public attention",
+          "He believed the narrator could improve",
+          "He had no other tasks"
+        ],
+        "correctIndex": 2,
+        "explanation": "Expectation was framed as respect."
+      },
+      {
+        "question": "What happened without honest feedback?",
+        "options": [
+          "A coworker repeated problems",
+          "Every task improved",
+          "The manager became clearer",
+          "The team needed no review"
+        ],
+        "correctIndex": 0,
+        "explanation": "Silence can block learning."
+      },
+      {
+        "question": "How does the narrator now give feedback?",
+        "options": [
+          "With personal insults",
+          "Only after failure",
+          "Clearly, kindly, and specifically",
+          "Without examples"
+        ],
+        "correctIndex": 2,
+        "explanation": "The learned method combines truth and dignity."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; strong feedback story distinguishes specific respectful correction from silence or personal attack",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-work-05",
@@ -156,37 +618,154 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rafi", "gender": "male" },
-      { "name": "Recruiter", "gender": "female" }
+      {
+        "name": "Rafi",
+        "gender": "male"
+      },
+      {
+        "name": "Recruiter",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Recruiter: [pleasantly] Hi, is this Rafi? This is Nina, calling from the company you interviewed with last week.",
-      "Rafi: [nervous] Yes, this is Rafi. Hi, Nina. Thank you for calling.",
-      "Recruiter: [warmly] I have good news. The team really liked your interview, and we'd like to offer you the position.",
-      "Rafi: [excited] Really? Wow, thank you so much. I wasn't expecting a call so soon.",
-      "Recruiter: [smiling] We move quickly when we find someone we're excited about. Do you have a few minutes to discuss details?",
-      "Rafi: [eagerly] Yes, of course. What would the salary and starting date look like?",
-      "Recruiter: [clearly] The salary is what we discussed in the interview, and we'd like you to start in three weeks, if possible.",
-      "Rafi: [thoughtful] Three weeks should work. I need to give notice at my current job first, though.",
-      "Recruiter: [understanding] That's completely normal. Just let us know the exact date once you confirm it with them.",
-      "Rafi: [curious] Can I ask about the team I'd be working with? I met two people during the interview.",
-      "Recruiter: [warmly] You'd report to Ibu Sari, the team lead, and there are four other people on the design team.",
-      "Rafi: [interested] That sounds like a good size, not too big, not too small.",
-      "Recruiter: [agreeing] Most people say the same thing. It's easy to get to know everyone within the first month.",
-      "Rafi: [honestly] Can I take one day to think it over? This is a big decision for me.",
-      "Recruiter: [understanding] Absolutely, take your time. Just let me know by Friday, if that works for your schedule.",
-      "Rafi: [grateful] That works perfectly. Thank you again for this opportunity, Nina.",
-      "Recruiter: [warmly] You earned it, Rafi. Your interview answers were thoughtful, and the team noticed that immediately.",
-      "Rafi: [smiling] That means a lot. I'll call you back tomorrow with my answer.",
-      "Recruiter: [kindly] Sounds great. I hope it's good news. Talk soon, Rafi."
+      "Recruiter: [warmly] Hi, is this Rafi? This is Nina, calling from the company you interviewed with last week.",
+      "Rafi: Yes, this is Rafi. Hi, Nina. Thank you for calling.",
+      "Recruiter: [honestly] I have good news. The team really liked your interview, and we'd like to offer you the position.",
+      "Rafi: Really? Wow, thank you so much. I wasn't expecting a call so soon.",
+      "Recruiter: [thoughtful] We move quickly when we find someone we're excited about. Do you have a few minutes to discuss details?",
+      "Rafi: Yes, of course. What would the salary and starting date look like?",
+      "Recruiter: [carefully] The salary is what we discussed in the interview, and we'd like you to start in three weeks, if possible.",
+      "Rafi: Three weeks should work. I need to give notice at my current job first, though.",
+      "Recruiter: [reflective] That's completely normal. Just let us know the exact date once you confirm it with them.",
+      "Rafi: Can I ask about the team I'd be working with? I met two people during the interview.",
+      "Recruiter: [practically] You'd report to Ibu Sari, the team lead, and there are four other people on the design team.",
+      "Rafi: That sounds like a good size, not too big, not too small.",
+      "Recruiter: [calmly] Most people say the same thing. It's easy to get to know everyone within the first month.",
+      "Rafi: Can I take one day to think it over? This is a big decision for me.",
+      "Recruiter: [encouraging] Absolutely, take your time. Just let me know by Friday, if that works for your schedule.",
+      "Rafi: That works perfectly. Thank you again for this opportunity, Nina.",
+      "Recruiter: You earned it, Rafi. Your interview answers were thoughtful, and the team noticed that immediately.",
+      "Rafi: [warmly] That means a lot. I'll call you back tomorrow with my answer.",
+      "Recruiter: Sounds great. I hope it's good news. Talk soon, Rafi."
     ],
     "quiz": [
-      { "question": "Why is Nina calling Rafi?", "options": ["To reject his application", "To offer him the position", "To reschedule the interview", "To ask for more documents"], "correctIndex": 1, "explanation": "Nina calls to tell Rafi the team liked his interview and wants to offer him the position." },
-      { "question": "When does the company want Rafi to start?", "options": ["Immediately", "In three weeks", "In six months", "Next year"], "correctIndex": 1, "explanation": "Nina says they'd like Rafi to start in three weeks, if possible." },
-      { "question": "Why does Rafi say three weeks should work but with a condition?", "options": ["He needs to travel first", "He needs to give notice at his current job first", "He needs to finish school", "He needs a visa"], "correctIndex": 1, "explanation": "Rafi says he needs to give notice at his current job first." },
-      { "question": "Who would Rafi report to on the design team?", "options": ["Nina", "Ibu Sari, the team lead", "The company owner", "No one specific"], "correctIndex": 1, "explanation": "Rafi would report to Ibu Sari, the team lead, with four other people on the team." },
-      { "question": "What does Rafi ask for before giving his final answer?", "options": ["A higher salary", "One day to think it over", "A tour of the office", "More vacation days"], "correctIndex": 1, "explanation": "Rafi asks for one day to think it over since it is a big decision." }
-    ]
+      {
+        "question": "Why is Nina calling Rafi?",
+        "options": [
+          "To offer him the position",
+          "To reject his application",
+          "To reschedule the interview",
+          "To ask for more documents"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nina calls to tell Rafi the team liked his interview and wants to offer him the position."
+      },
+      {
+        "question": "When does the company want Rafi to start?",
+        "options": [
+          "Immediately",
+          "In three weeks",
+          "In six months",
+          "Next year"
+        ],
+        "correctIndex": 1,
+        "explanation": "Nina says they'd like Rafi to start in three weeks, if possible."
+      },
+      {
+        "question": "Why does Rafi say three weeks should work but with a condition?",
+        "options": [
+          "He needs to travel first",
+          "He needs to give notice at his current job first",
+          "He needs to finish school",
+          "He needs a visa"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rafi says he needs to give notice at his current job first."
+      },
+      {
+        "question": "Who would Rafi report to on the design team?",
+        "options": [
+          "Nina",
+          "The company owner",
+          "Ibu Sari, the team lead",
+          "No one specific"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rafi would report to Ibu Sari, the team lead, with four other people on the team."
+      },
+      {
+        "question": "What does Rafi ask for before giving his final answer?",
+        "options": [
+          "A higher salary",
+          "A tour of the office",
+          "More vacation days",
+          "One day to think it over"
+        ],
+        "correctIndex": 3,
+        "explanation": "Rafi asks for one day to think it over since it is a big decision."
+      },
+      {
+        "question": "Who calls Rafi?",
+        "options": [
+          "Recruiter Nina",
+          "His manager",
+          "A customer",
+          "A radio host"
+        ],
+        "correctIndex": 0,
+        "explanation": "She represents the company interviewed with."
+      },
+      {
+        "question": "What start date is discussed?",
+        "options": [
+          "The same afternoon",
+          "A date after his notice period",
+          "One year later",
+          "Before the interview"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rafi must finish current responsibilities."
+      },
+      {
+        "question": "Why is three weeks conditional?",
+        "options": [
+          "He needs a passport",
+          "He needs to confirm his notice requirement",
+          "The team has no manager",
+          "The salary is unknown forever"
+        ],
+        "correctIndex": 1,
+        "explanation": "Existing employment terms matter."
+      },
+      {
+        "question": "What team information does he ask?",
+        "options": [
+          "Restaurant menu",
+          "Train schedule",
+          "Family address",
+          "Manager and coworkers"
+        ],
+        "correctIndex": 3,
+        "explanation": "He wants to understand reporting structure."
+      },
+      {
+        "question": "What must arrive before acceptance?",
+        "options": [
+          "A public announcement",
+          "A new laptop",
+          "A written offer with details",
+          "A verbal promise only"
+        ],
+        "correctIndex": 2,
+        "explanation": "Written terms allow a careful decision."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; realistic recruiter call supports questions, notice obligations, written terms, and time before a decision",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-work-06",
@@ -195,31 +774,145 @@
     "themeId": "work",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] Everyone has bad days at work. Some days, nothing goes right, no matter how hard you try.",
-      "Narrator: [honestly] I used to let one bad meeting ruin my entire day, even the parts that had nothing to do with work.",
-      "Narrator: [reflective] Last month, I made a real mistake in front of my whole team during a presentation. My mind went completely blank.",
-      "Narrator: [gently] For the rest of that day, I replayed the moment over and over, feeling embarrassed every single time.",
+      "Narrator: [warmly] Everyone has bad days at work. Some days, nothing goes right, no matter how hard you try.",
+      "Narrator: I used to let one bad meeting ruin my entire day, even the parts that had nothing to do with work.",
+      "Narrator: [honestly] Last month, I made a real mistake in front of my whole team during a presentation. My mind went completely blank.",
+      "Narrator: For the rest of that day, I replayed the moment over and over, feeling embarrassed every single time.",
       "Narrator: [thoughtful] That night, I talked to a close friend who also works in an office. She said something simple but useful.",
-      "Narrator: [warmly] She said, a bad meeting is one hour of your day, not the whole day, and definitely not the whole month.",
-      "Narrator: [reflective] Since then, I've tried a small trick. When something goes wrong, I give myself exactly ten minutes to feel upset.",
-      "Narrator: [honestly] I let myself feel annoyed or embarrassed, fully, without pretending everything is fine when it clearly isn't.",
-      "Narrator: [gently] After those ten minutes, I try to ask one question. What is one small thing I can control right now?",
-      "Narrator: [thoughtful] Sometimes the answer is small, like sending one clear email, or simply taking a short walk outside the building.",
-      "Narrator: [warmly] I also learned to separate one mistake from my whole ability as a worker. One error doesn't erase months of good work.",
-      "Narrator: [honestly] I still have hard days, plenty of them. Nobody figures this out perfectly, no matter how experienced they become.",
-      "Narrator: [peacefully] But now, a difficult morning doesn't automatically ruin my whole evening the way it used to.",
-      "Narrator: [with a small smile] I go home, I eat dinner, and I remind myself that tomorrow is a completely new day at the office."
+      "Narrator: She said, a bad meeting is one hour of your day, not the whole day, and definitely not the whole month.",
+      "Narrator: [carefully] Since then, I've tried a small trick. When something goes wrong, I often give myself about ten quiet minutes to feel upset, though another person may need a different healthy pause.",
+      "Narrator: I let myself feel annoyed or embarrassed, fully, without pretending everything is fine when it clearly isn't.",
+      "Narrator: [reflective] After those ten minutes, I try to ask one question. What is one small thing I can control right now?",
+      "Narrator: Sometimes the answer is small, like sending one clear email, or simply taking a short walk outside the building.",
+      "Narrator: [practically] I also learned to separate one mistake from my whole ability as a worker. One error doesn't erase months of good work.",
+      "Narrator: I still have hard days, plenty of them. Nobody figures this out perfectly, no matter how experienced they become.",
+      "Narrator: [calmly] But now, a difficult morning doesn't automatically ruin my whole evening the way it used to.",
+      "Narrator: I go home, I eat dinner, and I remind myself that tomorrow is a completely new day at the office."
     ],
     "quiz": [
-      { "question": "What did the narrator used to let one bad meeting do?", "options": ["Improve her mood", "Ruin her entire day", "Make her leave the job", "Nothing at all"], "correctIndex": 1, "explanation": "She used to let one bad meeting ruin her entire day, even unrelated parts." },
-      { "question": "What happened during her presentation last month?", "options": ["She was praised by her manager", "She made a mistake in front of her whole team and her mind went blank", "She finished early", "She was not allowed to present"], "correctIndex": 1, "explanation": "She made a real mistake during the presentation and her mind went completely blank." },
-      { "question": "What did her friend tell her about a bad meeting?", "options": ["It ruins the whole month", "It's one hour of the day, not the whole day", "It should be ignored completely", "It means she should quit"], "correctIndex": 1, "explanation": "Her friend said a bad meeting is one hour of the day, not the whole day or month." },
-      { "question": "What trick does the narrator now use after something goes wrong?", "options": ["She ignores her feelings completely", "She gives herself ten minutes to feel upset, then asks what she can control", "She calls her manager immediately", "She takes the rest of the week off"], "correctIndex": 1, "explanation": "She gives herself ten minutes to feel upset, then asks what small thing she can control." },
-      { "question": "What does the narrator remind herself about mistakes?", "options": ["One error erases months of good work", "One mistake doesn't erase her whole ability as a worker", "Mistakes should never happen", "Only beginners make mistakes"], "correctIndex": 1, "explanation": "She reminds herself that one mistake doesn't erase months of good work." }
-    ]
+      {
+        "question": "What did the narrator used to let one bad meeting do?",
+        "options": [
+          "Improve her mood",
+          "Make her leave the job",
+          "Ruin her entire day",
+          "Nothing at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "She used to let one bad meeting ruin her entire day, even unrelated parts."
+      },
+      {
+        "question": "What happened during her presentation last month?",
+        "options": [
+          "She made a mistake in front of her whole team and her mind went blank",
+          "She was praised by her manager",
+          "She finished early",
+          "She was not allowed to present"
+        ],
+        "correctIndex": 0,
+        "explanation": "She made a real mistake during the presentation and her mind went completely blank."
+      },
+      {
+        "question": "What did her friend tell her about a bad meeting?",
+        "options": [
+          "It's one hour of the day, not the whole day",
+          "It ruins the whole month",
+          "It should be ignored completely",
+          "It means she should quit"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her friend said a bad meeting is one hour of the day, not the whole day or month."
+      },
+      {
+        "question": "What trick does the narrator now use after something goes wrong?",
+        "options": [
+          "She ignores her feelings completely",
+          "She gives herself ten minutes to feel upset, then asks what she can control",
+          "She calls her manager immediately",
+          "She takes the rest of the week off"
+        ],
+        "correctIndex": 1,
+        "explanation": "She gives herself ten minutes to feel upset, then asks what small thing she can control."
+      },
+      {
+        "question": "What does the narrator remind herself about mistakes?",
+        "options": [
+          "One error erases months of good work",
+          "One mistake doesn't erase her whole ability as a worker",
+          "Mistakes should never happen",
+          "Only beginners make mistakes"
+        ],
+        "correctIndex": 1,
+        "explanation": "She reminds herself that one mistake doesn't erase months of good work."
+      },
+      {
+        "question": "What happened during the presentation?",
+        "options": [
+          "The narrator’s mind went blank",
+          "The manager left",
+          "The laptop was stolen",
+          "The meeting was canceled"
+        ],
+        "correctIndex": 0,
+        "explanation": "A public mistake triggered embarrassment."
+      },
+      {
+        "question": "What did the friend separate?",
+        "options": [
+          "Work from income",
+          "Lunch from dinner",
+          "Email from reports",
+          "One bad hour from the whole day"
+        ],
+        "correctIndex": 3,
+        "explanation": "The event did not need to define everything."
+      },
+      {
+        "question": "What question follows the emotion?",
+        "options": [
+          "Who should I blame?",
+          "How can I hide it?",
+          "Why work again?",
+          "What small thing can I control now?"
+        ],
+        "correctIndex": 3,
+        "explanation": "The method turns toward action."
+      },
+      {
+        "question": "Which small action is mentioned?",
+        "options": [
+          "Send one clear email or walk briefly",
+          "Quit immediately",
+          "Repeat the presentation all night",
+          "Ignore the mistake"
+        ],
+        "correctIndex": 0,
+        "explanation": "A manageable response restores direction."
+      },
+      {
+        "question": "What does one error not erase?",
+        "options": [
+          "The need to correct it",
+          "The whole presentation",
+          "Months of good work",
+          "A manager’s feedback"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ability is not reduced to one moment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep with softer timing; personal recovery method separates one error from overall ability and chooses a controllable next step",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-work-07",
@@ -228,39 +921,610 @@
     "themeId": "work",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good morning, listeners! Today we're talking about workplace burnout. We have a caller on the line. Hello there!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this morning.",
-      "Radio Host: [warmly] Of course! What made you want to call in about this topic today?",
-      "Caller: [thoughtful] Honestly, I've been working overtime for almost six months straight, and I finally reached my limit last week.",
-      "Radio Host: [sympathetically] I'm sorry to hear that. What happened exactly, if you don't mind sharing?",
-      "Caller: [reflective] I sat at my desk on Monday and just couldn't focus on anything. I felt completely empty, not just tired.",
-      "Radio Host: [curious] Did you recognize that feeling as burnout right away?",
-      "Caller: [honestly] Not at first. I thought I just needed one good night of sleep, but the feeling didn't go away.",
-      "Radio Host: [interested] What did you finally decide to do about it?",
-      "Caller: [warmly] I spoke with my manager and asked for two days off, just to rest without checking any messages at all.",
-      "Radio Host: [curious] How did your manager respond to that request?",
-      "Caller: [smiling] Much better than I expected. She said she had noticed I looked tired for weeks already.",
-      "Radio Host: [understanding] That must have been a relief, hearing that she already saw the signs.",
-      "Caller: [thoughtful] It was. I think I hid it well, but apparently not as well as I believed.",
-      "Radio Host: [curious] What did those two days off actually look like for you?",
-      "Caller: [gently] I slept a lot, cooked simple meals, and went for short walks without my phone in my pocket.",
-      "Radio Host: [interested] Did it fully solve the problem, or was it just a small pause?",
-      "Caller: [honestly] Just a pause, really. But it gave me enough energy to start setting real limits on my working hours now.",
-      "Radio Host: [curious] What limits have you set since coming back to work?",
-      "Caller: [determined] I stop answering messages after seven in the evening, and I take my full lunch break every single day.",
-      "Radio Host: [encouraging] That sounds like real progress. Thank you so much for sharing your story with us this morning.",
-      "Caller: [sincerely] Thank you for listening. I hope someone out there recognizes these signs a little earlier than I did."
+      "Radio Host: [warmly] Good morning, listeners! Today we're talking about workplace burnout. We have a caller on the line. Hello there!",
+      "Caller: Hello! Thank you for taking my call this morning.",
+      "Radio Host: [honestly] Of course! What made you want to call in about this topic today?",
+      "Caller: Honestly, I've been working overtime for almost six months straight, and I finally reached my limit last week.",
+      "Radio Host: [thoughtful] I'm sorry to hear that. What happened exactly, if you don't mind sharing?",
+      "Caller: I sat at my desk on Monday and just couldn't focus on anything. I felt completely empty, not just tired.",
+      "Radio Host: [carefully] Did you know what the continuing tiredness and poor focus meant?",
+      "Caller: No. I avoided diagnosing myself and later arranged appropriate health support when the symptoms continued.",
+      "Radio Host: [reflective] What did you finally decide to do about it?",
+      "Caller: I spoke with my manager and asked for two days off, just to rest without checking any messages at all.",
+      "Radio Host: [practically] How did your manager respond to that request?",
+      "Caller: Much better than I expected. She said she had noticed I looked tired for weeks already.",
+      "Radio Host: [calmly] That must have been a relief, hearing that she already saw the signs.",
+      "Caller: It was. I think I hid it well, but apparently not as well as I believed.",
+      "Radio Host: [encouraging] What did those two days off actually look like for you?",
+      "Caller: I slept a lot, cooked simple meals, and went for short walks without my phone in my pocket.",
+      "Radio Host: Did it fully solve the problem, or was it just a small pause?",
+      "Caller: [warmly] Just a pause. I also discussed workload changes and knew I should seek qualified health care if the symptoms continued or became severe.",
+      "Radio Host: What limits have you set since coming back to work?",
+      "Caller: I stop answering messages after seven in the evening, and I take my full lunch break every single day.",
+      "Radio Host: [pleasantly] That sounds like real progress. Thank you so much for sharing your story with us this morning.",
+      "Caller: Thank you for listening. I hope someone out there recognizes these signs a little earlier than I did."
     ],
     "quiz": [
-      { "question": "What is today's radio segment about?", "options": ["Job interviews", "Workplace burnout", "Vacation planning", "Office parties"], "correctIndex": 1, "explanation": "The host introduces today's topic as workplace burnout." },
-      { "question": "How long had the caller been working overtime before he reached his limit?", "options": ["Two weeks", "Almost six months straight", "One year", "Three days"], "correctIndex": 1, "explanation": "The caller says he had been working overtime for almost six months straight." },
-      { "question": "What did the caller ask his manager for?", "options": ["A raise", "Two days off to rest without checking messages", "A new job title", "A different team"], "correctIndex": 1, "explanation": "He asked his manager for two days off to rest without checking any messages." },
-      { "question": "How did the manager respond to the request?", "options": ["She refused", "She said she had already noticed he looked tired for weeks", "She was surprised and confused", "She ignored the request"], "correctIndex": 1, "explanation": "The manager responded well and said she had noticed he looked tired for weeks already." },
-      { "question": "What limit has the caller set since coming back to work?", "options": ["Working more hours", "Stopping messages after seven in the evening and taking his full lunch break", "Never taking breaks", "Working only weekends"], "correctIndex": 1, "explanation": "He now stops answering messages after seven in the evening and takes his full lunch break daily." }
-    ]
+      {
+        "question": "Which work-related strain is discussed in the radio segment?",
+        "options": [
+          "Job interviews",
+          "Vacation planning",
+          "Office parties",
+          "Workplace burnout"
+        ],
+        "correctIndex": 3,
+        "explanation": "The host introduces today's topic as workplace burnout."
+      },
+      {
+        "question": "How long had the caller been working overtime before he reached his limit?",
+        "options": [
+          "Almost six months straight",
+          "Two weeks",
+          "One year",
+          "Three days"
+        ],
+        "correctIndex": 0,
+        "explanation": "The caller says he had been working overtime for almost six months straight."
+      },
+      {
+        "question": "What did the caller ask his manager for?",
+        "options": [
+          "A raise",
+          "Two days off to rest without checking messages",
+          "A new job title",
+          "A different team"
+        ],
+        "correctIndex": 1,
+        "explanation": "He asked his manager for two days off to rest without checking any messages."
+      },
+      {
+        "question": "How did the manager respond to the request?",
+        "options": [
+          "She refused",
+          "She was surprised and confused",
+          "She ignored the request",
+          "She said she had already noticed he looked tired for weeks"
+        ],
+        "correctIndex": 3,
+        "explanation": "The manager responded well and said she had noticed he looked tired for weeks already."
+      },
+      {
+        "question": "What limit has the caller set since coming back to work?",
+        "options": [
+          "Stopping messages after seven in the evening and taking his full lunch break",
+          "Working more hours",
+          "Never taking breaks",
+          "Working only weekends"
+        ],
+        "correctIndex": 0,
+        "explanation": "He now stops answering messages after seven in the evening and takes his full lunch break daily."
+      },
+      {
+        "question": "How long had overtime continued?",
+        "options": [
+          "Two days",
+          "Almost six months",
+          "One week",
+          "Several years"
+        ],
+        "correctIndex": 1,
+        "explanation": "The long pattern came before the crisis."
+      },
+      {
+        "question": "What did the caller feel at the desk?",
+        "options": [
+          "Excited and energetic",
+          "Hungry only",
+          "Empty and unable to focus",
+          "Ready for more overtime"
+        ],
+        "correctIndex": 2,
+        "explanation": "The symptoms went beyond ordinary tiredness."
+      },
+      {
+        "question": "Who did the caller speak with?",
+        "options": [
+          "Only the radio audience",
+          "A customer",
+          "Nobody",
+          "The manager"
+        ],
+        "correctIndex": 3,
+        "explanation": "Workplace communication led to time off."
+      },
+      {
+        "question": "Did two days solve everything?",
+        "options": [
+          "Yes, completely",
+          "No, they made it worse",
+          "No, they were only a pause",
+          "Yes, the job ended"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller says longer changes were needed."
+      },
+      {
+        "question": "What should happen if symptoms continue?",
+        "options": [
+          "Diagnose from a radio story",
+          "Work more hours",
+          "Hide all signs",
+          "Seek qualified health support"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revision adds an important safety boundary."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "revise; prevent self-diagnosis and clarify that leave is a pause, with manager support and professional health advice if symptoms continue",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-work-08",
+    "title": "The Handover Note That Saved Monday",
+    "level": "A1",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] Before taking three days of leave, I believed my team knew everything about my tasks. We sat in the same room and spoke every day.",
+      "Narrator: On my final afternoon, my manager asked for a short handover note. I nearly wrote only, “Please check my email if needed.”",
+      "Narrator: [honestly] Then I imagined my coworker opening hundreds of messages while a customer waited. I made a clearer page.",
+      "Narrator: For each active task, I wrote its current position, next action, deadline, and the person to contact.",
+      "Narrator: [thoughtful] I included links to shared files, but I did not copy passwords or private customer data into the note.",
+      "Narrator: I marked one task as urgent because a supplier needed an answer on Monday morning. Two other tasks could wait until I returned.",
+      "Narrator: [carefully] Before leaving, I spent ten minutes with Laila, the coworker covering my work. She asked about one unclear deadline.",
+      "Narrator: Her question helped me find an error. I had written Tuesday, but the supplier's email clearly said Monday.",
+      "Narrator: [reflective] During my leave, nobody called me. At first, I worried this meant something had gone wrong.",
+      "Narrator: When I returned, Laila showed me the completed supplier task. The handover had given her enough information and authority to act.",
+      "Narrator: [practically] She also added two notes about decisions she made. I could continue the work without asking her to remember every detail.",
+      "Narrator: The process taught me that a handover is not a list of everything I know. It is a path for the next person.",
+      "Narrator: [calmly] Clear priorities matter because every task cannot be urgent. Safe shared access matters because useful links should not expose secrets.",
+      "Narrator: Now I update a small handover page each Friday, even when no leave is planned.",
+      "Narrator: [encouraging] The note takes a few minutes, but it protects customers, coworkers, and my own rest when I am away."
+    ],
+    "quiz": [
+      {
+        "question": "Why did the manager request a note?",
+        "options": [
+          "The office was closing",
+          "The narrator was taking three days of leave",
+          "A customer sent a gift",
+          "The narrator was changing careers"
+        ],
+        "correctIndex": 1,
+        "explanation": "The note would cover work during a short absence."
+      },
+      {
+        "question": "What did each task entry include?",
+        "options": [
+          "Only the task title",
+          "A personal password",
+          "The narrator’s holiday photos",
+          "Status, next action, deadline, and contact"
+        ],
+        "correctIndex": 3,
+        "explanation": "The handover gave actionable details."
+      },
+      {
+        "question": "What information was kept out?",
+        "options": [
+          "Deadlines",
+          "Shared-file links",
+          "Passwords and private customer data",
+          "Contact names"
+        ],
+        "correctIndex": 2,
+        "explanation": "Security was part of the handover."
+      },
+      {
+        "question": "What error did Laila catch?",
+        "options": [
+          "A customer name was missing",
+          "The leave dates were wrong",
+          "A supplier had no email",
+          "A Monday deadline was written as Tuesday"
+        ],
+        "correctIndex": 3,
+        "explanation": "A quick discussion corrected the urgent date."
+      },
+      {
+        "question": "How does the narrator describe a handover?",
+        "options": [
+          "A path for the next person",
+          "A copy of every thought",
+          "A private diary",
+          "A list where all tasks are urgent"
+        ],
+        "correctIndex": 0,
+        "explanation": "The best note helps another person act safely."
+      },
+      {
+        "question": "Why was conversation alone insufficient?",
+        "options": [
+          "The team never spoke",
+          "The manager disliked notes",
+          "Details could be forgotten while the narrator was away",
+          "All tasks were finished"
+        ],
+        "correctIndex": 2,
+        "explanation": "A shared room did not guarantee shared knowledge."
+      },
+      {
+        "question": "What did every task entry identify?",
+        "options": [
+          "Private passwords",
+          "Status, deadline, next action, and contact",
+          "Only the title",
+          "Personal health data"
+        ],
+        "correctIndex": 1,
+        "explanation": "The note focused on needed operational facts."
+      },
+      {
+        "question": "Why exclude sensitive information?",
+        "options": [
+          "The team needed no access",
+          "The note was public advertising",
+          "The handover should not expose private data",
+          "Deadlines were secret"
+        ],
+        "correctIndex": 2,
+        "explanation": "Useful sharing still follows data boundaries."
+      },
+      {
+        "question": "What mistake did Laila catch?",
+        "options": [
+          "A supplier name was missing",
+          "Leave lasted four days",
+          "Monday was written as Tuesday",
+          "The customer had no order"
+        ],
+        "correctIndex": 2,
+        "explanation": "Peer review protected the deadline."
+      },
+      {
+        "question": "How did the note protect rest?",
+        "options": [
+          "Coworkers could act without contacting the person on leave",
+          "It canceled every task",
+          "It removed the manager",
+          "It extended leave forever"
+        ],
+        "correctIndex": 0,
+        "explanation": "Good preparation reduces interruption."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; excellent handover story covers owner, status, deadline, next step, contacts, data boundaries, peer review, and genuine leave",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-work-09",
+    "title": "My First Honest Estimate",
+    "level": "A1",
+    "themeId": "work",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] Early in my new job, a manager asked when I could finish a report. I wanted to look fast and confident.",
+      "Narrator: Without checking the files, I said, “Tomorrow morning.” The manager looked pleased, and I felt proud for about ten minutes.",
+      "Narrator: [honestly] Then I opened the folder. Two data sheets were incomplete, and I needed information from another department.",
+      "Narrator: I worked late but could not finish an accurate report. The next morning, I had to admit that my promise was not realistic.",
+      "Narrator: [thoughtful] My manager was disappointed, not because the task needed more time, but because she had planned a meeting around my answer.",
+      "Narrator: She showed me how to make an estimate. First, understand the result. Then list the steps, check dependencies, and add time for review.",
+      "Narrator: [carefully] For the revised plan, I contacted the other department before giving a new date. They could send the missing data by Wednesday.",
+      "Narrator: I estimated one day to check the data and half a day to write and review. I promised Thursday afternoon.",
+      "Narrator: [reflective] This answer sounded slower, but it was based on real information. I sent a short update when the data arrived.",
+      "Narrator: On Thursday, I finished two hours early. I used that time to check names, totals, and the final chart.",
+      "Narrator: [practically] The report was accepted without correction. More importantly, the manager could plan her meeting with confidence.",
+      "Narrator: I learned that a quick promise is not the same as good service. An honest estimate protects other people's schedules.",
+      "Narrator: [calmly] Now, if I do not know, I say, “Let me check the steps and reply in thirty minutes.”",
+      "Narrator: That sentence does not make me look weak. It shows that my answer will be responsible.",
+      "Narrator: [encouraging] Reliable work is not always the fastest answer. It is a clear promise built on what the task truly requires."
+    ],
+    "quiz": [
+      {
+        "question": "What did the narrator promise too quickly?",
+        "options": [
+          "A report by the next morning",
+          "A new job for a coworker",
+          "A meeting in one year",
+          "A completed office building"
+        ],
+        "correctIndex": 0,
+        "explanation": "He estimated before checking the task."
+      },
+      {
+        "question": "Why could he not meet the promise?",
+        "options": [
+          "He forgot how to write",
+          "The manager canceled the task",
+          "Data was incomplete and another department was needed",
+          "His computer had no folder"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hidden dependencies made the estimate unrealistic."
+      },
+      {
+        "question": "Why was the manager disappointed?",
+        "options": [
+          "The report was too early",
+          "He asked one question",
+          "The office was quiet",
+          "She had planned a meeting around his answer"
+        ],
+        "correctIndex": 3,
+        "explanation": "His unreliable date affected another schedule."
+      },
+      {
+        "question": "What new deadline did he give?",
+        "options": [
+          "The same morning",
+          "One month later",
+          "No deadline at all",
+          "Thursday afternoon"
+        ],
+        "correctIndex": 3,
+        "explanation": "He made a checked, realistic commitment."
+      },
+      {
+        "question": "What phrase does he use when unsure now?",
+        "options": [
+          "“It will be ready now”",
+          "“Ask someone else”",
+          "“Let me check the steps and reply in thirty minutes”",
+          "“Deadlines do not matter”"
+        ],
+        "correctIndex": 2,
+        "explanation": "A short checking period produces a responsible answer."
+      },
+      {
+        "question": "What image did the narrator want to show?",
+        "options": [
+          "Careful and uncertain",
+          "Fast and confident",
+          "Tired and confused",
+          "Quiet and unavailable"
+        ],
+        "correctIndex": 1,
+        "explanation": "The quick promise was meant to impress."
+      },
+      {
+        "question": "What hidden work was missed?",
+        "options": [
+          "Buying equipment",
+          "Checking data and reviewing writing",
+          "Calling customers",
+          "Traveling to a supplier"
+        ],
+        "correctIndex": 1,
+        "explanation": "The first estimate ignored task parts."
+      },
+      {
+        "question": "When should a likely delay be communicated?",
+        "options": [
+          "As early as possible",
+          "After the deadline passes",
+          "Only when a manager asks",
+          "After hiding the problem"
+        ],
+        "correctIndex": 0,
+        "explanation": "Early notice protects planning and trust."
+      },
+      {
+        "question": "How was the new estimate built?",
+        "options": [
+          "A random guess",
+          "One day for data and half a day for writing and review",
+          "The fastest possible answer",
+          "Another worker’s promise"
+        ],
+        "correctIndex": 1,
+        "explanation": "Breaking down work improved realism."
+      },
+      {
+        "question": "Why check before making a promise?",
+        "options": [
+          "It guarantees no mistake",
+          "The deadline can match the real work",
+          "It removes all uncertainty",
+          "It makes every task faster"
+        ],
+        "correctIndex": 1,
+        "explanation": "A reliable answer comes from understanding the task."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; realistic estimation lesson replaces confidence theater with task breakdown, review time, uncertainty, and early communication",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-work-10",
+    "title": "A Fairer Meeting Schedule",
+    "level": "A1",
+    "themeId": "work",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Daniel",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Sari: [warmly] Daniel, can we review the time of our weekly team meeting?",
+      "Daniel: Is Wednesday at eight no longer working for you?",
+      "Sari: [honestly] I can attend, but I take my mother to a clinic twice a month. I have missed important decisions.",
+      "Daniel: I did not know that. Two remote teammates also join very late in their time zone.",
+      "Sari: [thoughtful] Could we choose a time that shares the difficulty more fairly?",
+      "Daniel: Yes. Let us check everyone's working hours instead of guessing.",
+      "Sari: [carefully] I made a table. Tuesday at ten works for six people, but one teammate teaches a client class then.",
+      "Daniel: What about Thursday at two?",
+      "Sari: [reflective] That works for everyone except me once a month, and I can move that appointment.",
+      "Daniel: It sounds better than making the same people struggle every week.",
+      "Sari: [practically] Agreed. We should also ask whether every topic needs a live meeting.",
+      "Daniel: The project updates could be written before Thursday. Then meeting time can focus on decisions and questions.",
+      "Sari: [calmly] That may reduce the meeting from sixty minutes to thirty-five.",
+      "Daniel: Shorter meetings would help the teammate joining near the end of her day.",
+      "Sari: [encouraging] How will we make sure absent people are not forgotten?",
+      "Daniel: We can record decisions in the shared note, with an owner and deadline for each action.",
+      "Sari: Let us propose Thursday at two for a one-month trial and invite comments privately too.",
+      "Daniel: [warmly] Why privately?",
+      "Sari: Some people may hesitate to discuss care duties or personal schedules in a large group.",
+      "Daniel: Good point. Fair planning needs information, but people should control what they share.",
+      "Sari: [pleasantly] I will send the proposal today. After four meetings, we will review attendance and make another adjustment if needed."
+    ],
+    "quiz": [
+      {
+        "question": "Why does Sari miss some Wednesday meetings?",
+        "options": [
+          "She takes her mother to a clinic",
+          "She teaches a class",
+          "She travels every week",
+          "She forgets the time"
+        ],
+        "correctIndex": 0,
+        "explanation": "A regular care duty conflicts twice a month."
+      },
+      {
+        "question": "Who else has difficulty?",
+        "options": [
+          "Only the manager",
+          "Remote teammates in a late time zone",
+          "Every client",
+          "Nobody else"
+        ],
+        "correctIndex": 1,
+        "explanation": "The fixed time also affects distant colleagues."
+      },
+      {
+        "question": "What time do they propose?",
+        "options": [
+          "Thursday at two",
+          "Wednesday at eight",
+          "Tuesday at ten",
+          "Friday at midnight"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thursday at two is the most workable option."
+      },
+      {
+        "question": "How may they shorten meetings?",
+        "options": [
+          "Remove all decisions",
+          "Speak faster without notes",
+          "Invite more people",
+          "Write updates first and discuss decisions live"
+        ],
+        "correctIndex": 3,
+        "explanation": "Asynchronous updates save live time."
+      },
+      {
+        "question": "Why invite private comments?",
+        "options": [
+          "To hide the meeting time",
+          "To exclude remote workers",
+          "To avoid all feedback",
+          "People may not want to reveal personal duties publicly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Privacy can support fair schedule planning."
+      },
+      {
+        "question": "What personal duty affects Sari?",
+        "options": [
+          "A weekly flight",
+          "Teaching a night class",
+          "Cooking team lunch",
+          "Taking a parent to an appointment"
+        ],
+        "correctIndex": 3,
+        "explanation": "Wednesday timing clashes with care."
+      },
+      {
+        "question": "Who else struggles with the time?",
+        "options": [
+          "Only the manager",
+          "Every customer",
+          "A colleague in another time zone",
+          "Nobody"
+        ],
+        "correctIndex": 2,
+        "explanation": "The issue affects more than one person."
+      },
+      {
+        "question": "What may replace some live topics?",
+        "options": [
+          "Longer meetings",
+          "Private photos",
+          "Extra calls",
+          "Written updates"
+        ],
+        "correctIndex": 3,
+        "explanation": "Not every item needs real-time discussion."
+      },
+      {
+        "question": "Why allow private comments?",
+        "options": [
+          "To hide the meeting time",
+          "Some constraints may be personal",
+          "To exclude colleagues",
+          "To avoid all feedback"
+        ],
+        "correctIndex": 1,
+        "explanation": "People may not want to explain needs publicly."
+      },
+      {
+        "question": "What follows four trial meetings?",
+        "options": [
+          "Make the time permanent",
+          "Cancel the team",
+          "Review attendance and adjust",
+          "Add more topics"
+        ],
+        "correctIndex": 2,
+        "explanation": "The schedule remains testable and responsive."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "work",
+      "scriptDecision": "keep; inclusive scheduling dialogue considers care duties, time zones, async updates, agenda length, private feedback, trial, and review",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

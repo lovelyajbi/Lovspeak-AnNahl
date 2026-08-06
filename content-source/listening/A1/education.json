@@ -6,33 +6,147 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] For most of school, I believed I was simply not smart. Numbers confused me, and I always felt behind everyone else in class.",
-      "Narrator: [thoughtful] Teachers moved fast, and I was too embarrassed to raise my hand and ask them to explain something again.",
-      "Narrator: [reflective] In my last year of high school, a new math teacher joined our school. Her name was Ibu Ratna.",
-      "Narrator: [gently] On the first day, she said something I never forgot. She said, nobody in this room is stupid, only unprepared.",
-      "Narrator: [warmly] She stayed after class every week for students who wanted extra help, without ever making anyone feel embarrassed for asking.",
-      "Narrator: [honestly] I went to her almost every Friday, nervous each time, sure she would eventually get tired of my questions.",
-      "Narrator: [softly] She never did. She explained the same idea five different ways until something finally made sense in my head.",
-      "Narrator: [thoughtful] Slowly, my grades improved, not dramatically, but enough that I stopped dreading math tests every single week.",
-      "Narrator: [with feeling] More importantly, something changed inside me. I started believing that struggling with a subject did not mean I was incapable.",
-      "Narrator: [reflective] Years later, I went back to studying, this time for a certificate in accounting, something I never imagined possible before.",
-      "Narrator: [warmly] Whenever a lesson felt difficult, I remembered her voice, calm and patient, telling me to try one more time.",
-      "Narrator: [gently] I finished that course last year, and I sent her a message to thank her for everything she taught me.",
-      "Narrator: [with a small smile] She wrote back and said she still remembers me clearly, the quiet student who never gave up asking questions.",
-      "Narrator: [peacefully] Now, when I meet someone struggling to learn something new, I try to speak the same patient words she once gave me.",
-      "Narrator: [warmly] A good teacher does not just teach a subject. She teaches you that learning is still possible, no matter how late it starts.",
-      "Narrator: [gently] I think about her often, especially when a new challenge at work makes me feel small and unprepared again."
+      "Narrator: [discouraged] For most of school, I believed I was simply not smart. Numbers confused me, and I always felt behind everyone else in class.",
+      "Narrator: Teachers moved fast, and I was too embarrassed to raise my hand and ask them to explain something again.",
+      "Narrator: In my last year of high school, a new math teacher joined our school. Her name was Ibu Ratna.",
+      "Narrator: [warmly] On the first day, she said something I never forgot. She said, nobody in this room is stupid, only unprepared.",
+      "Narrator: She stayed after class every week for students who wanted extra help, without ever making anyone feel embarrassed for asking.",
+      "Narrator: [nervous] I went to her almost every Friday, nervous each time, sure she would eventually get tired of my questions.",
+      "Narrator: She never did. She explained the same idea five different ways until something finally made sense in my head.",
+      "Narrator: Slowly, my grades improved, not dramatically, but enough that I stopped feeling afraid of math tests every single week.",
+      "Narrator: [hopeful] More importantly, something changed inside me. I started believing that struggling with a subject did not mean I could never learn it.",
+      "Narrator: Years later, I went back to studying, this time for a certificate in accounting, something I never imagined possible before.",
+      "Narrator: Whenever a lesson felt difficult, I remembered her voice, calm and patient, telling me to try one more time.",
+      "Narrator: [proud] I finished that course last year, and I sent her a message to thank her for everything she taught me.",
+      "Narrator: She wrote back and said she still remembers me clearly, the quiet student who never gave up asking questions.",
+      "Narrator: Now, when I meet someone struggling to learn something new, I try to speak the same patient words she once gave me.",
+      "Narrator: A good teacher does not just teach a subject. She teaches you that learning is still possible, no matter how late it starts.",
+      "Narrator: [encouraging] I think about her often, especially when a new challenge at work makes me feel small and unprepared again."
     ],
     "quiz": [
-      { "question": "What did the narrator believe about herself for most of school?", "options": ["That she was the smartest student", "That she was simply not smart", "That she hated her teachers", "That school was too easy"], "correctIndex": 1, "explanation": "She says she believed she was simply not smart, and numbers always confused her." },
-      { "question": "What did Ibu Ratna say on her first day teaching?", "options": ["Everyone must study alone", "Nobody in this room is stupid, only unprepared", "Math is too hard for most people", "Only fast students will pass"], "correctIndex": 1, "explanation": "She told the class that nobody was stupid, only unprepared." },
-      { "question": "What did the teacher do every week for students who needed help?", "options": ["She ignored their questions", "She stayed after class for extra help", "She gave them extra homework only", "She sent them to another teacher"], "correctIndex": 1, "explanation": "She stayed after class every week for students who wanted extra help." },
-      { "question": "What did the narrator study years later, as an adult?", "options": ["Medicine", "A certificate in accounting", "Art history", "Engineering"], "correctIndex": 1, "explanation": "She went back to studying for a certificate in accounting years later." },
-      { "question": "What is the narrator's final lesson about a good teacher?", "options": ["A good teacher only teaches facts", "A good teacher shows you learning is still possible no matter how late it starts", "A good teacher should never be thanked", "A good teacher makes students feel small"], "correctIndex": 1, "explanation": "She concludes a good teacher shows you that learning is still possible, no matter how late it starts." }
-    ]
+      {
+        "question": "What did the narrator believe about herself for most of school?",
+        "options": [
+          "That she was the smartest student",
+          "That she was simply not smart",
+          "That she hated her teachers",
+          "That school was too easy"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she believed she was simply not smart, and numbers always confused her."
+      },
+      {
+        "question": "What did Ibu Ratna say on her first day teaching?",
+        "options": [
+          "Nobody in this room is stupid, only unprepared",
+          "Everyone must study alone",
+          "Math is too hard for most people",
+          "Only fast students will pass"
+        ],
+        "correctIndex": 0,
+        "explanation": "She told the class that nobody was stupid, only unprepared."
+      },
+      {
+        "question": "What did the teacher do every week for students who needed help?",
+        "options": [
+          "She stayed after class for extra help",
+          "She ignored their questions",
+          "She gave them extra homework only",
+          "She sent them to another teacher"
+        ],
+        "correctIndex": 0,
+        "explanation": "She stayed after class every week for students who wanted extra help."
+      },
+      {
+        "question": "What did the narrator study years later, as an adult?",
+        "options": [
+          "Medicine",
+          "Art history",
+          "Engineering",
+          "A certificate in accounting"
+        ],
+        "correctIndex": 3,
+        "explanation": "She went back to studying for a certificate in accounting years later."
+      },
+      {
+        "question": "What is the narrator's final lesson about a good teacher?",
+        "options": [
+          "A good teacher only teaches facts",
+          "A good teacher should never be thanked",
+          "A good teacher shows you learning is still possible no matter how late it starts",
+          "A good teacher makes students feel small"
+        ],
+        "correctIndex": 2,
+        "explanation": "She concludes a good teacher shows you that learning is still possible, no matter how late it starts."
+      },
+      {
+        "question": "Why did the narrator avoid asking questions?",
+        "options": [
+          "The teacher left early",
+          "She felt embarrassed",
+          "The class had no numbers",
+          "She forgot her homework"
+        ],
+        "correctIndex": 1,
+        "explanation": "She worried about looking slow in front of the class."
+      },
+      {
+        "question": "What does “unprepared” mean here?",
+        "options": [
+          "Unable to learn",
+          "Too old for school",
+          "Not ready yet",
+          "Finished with the lesson"
+        ],
+        "correctIndex": 2,
+        "explanation": "Ibu Ratna separates being unready from being unable."
+      },
+      {
+        "question": "How did Ibu Ratna explain difficult ideas?",
+        "options": [
+          "Only with a textbook",
+          "By giving more tests",
+          "Through one quick answer",
+          "In several different ways"
+        ],
+        "correctIndex": 3,
+        "explanation": "She changed her explanation until the idea became clear."
+      },
+      {
+        "question": "What showed the narrator’s confidence had grown?",
+        "options": [
+          "She later studied accounting",
+          "She stopped attending Friday help",
+          "She avoided every test",
+          "She changed math teachers"
+        ],
+        "correctIndex": 0,
+        "explanation": "The adult certificate was something she once thought impossible."
+      },
+      {
+        "question": "How does the narrator use the lesson now?",
+        "options": [
+          "She speaks patiently to other learners",
+          "She teaches only mathematics",
+          "She avoids new work challenges",
+          "She sends weekly tests to Ibu Ratna"
+        ],
+        "correctIndex": 0,
+        "explanation": "She passes the teacher’s encouragement to people who are struggling."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; inspiring adult-learning story with clear support and result",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-education-02",
@@ -41,36 +155,153 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
       "Host: [warmly] Welcome back to the show. Today my guest is Andi, who went back to university at twenty-eight after years of working. Thanks for joining me.",
-      "Guest: [pleasantly] Thank you for having me. I still feel a little strange calling myself a student again.",
-      "Host: [curious] What made you decide to go back to school after so long?",
+      "Guest: [slightly nervous] Thank you for having me. I still feel a little strange calling myself a student again.",
+      "Host: What made you decide to go back to school after so long?",
       "Guest: [thoughtful] I worked in a warehouse for years, and I wanted a job with more stability, so I chose to study logistics management.",
-      "Host: [interested] Was it difficult to sit in a classroom again after being away for so long?",
+      "Host: Was it difficult to sit in a classroom again after being away for so long?",
       "Guest: [honestly] Extremely difficult, especially the first month. I felt slower than the younger students, and my memory felt rusty.",
-      "Host: [sympathetically] Did you ever consider quitting during that first month?",
-      "Guest: [reflective] Almost every day, actually. But I kept thinking about my daughter, and I wanted her to see me finish something hard.",
-      "Host: [curious] How did you manage studying while also working part time?",
-      "Guest: [gently] I studied early in the morning, before my shift, when the house was quiet and my mind was still fresh.",
-      "Host: [interested] What surprised you most about being an older student?",
-      "Guest: [warmly] Honestly, the younger students were kind. Several of them helped me with computer skills I had never used before.",
-      "Host: [curious] Do you think age was actually a disadvantage in the classroom?",
-      "Guest: [thoughtful] Less than I expected. I was slower with technology, but I understood work and responsibility better than some classmates.",
-      "Host: [curious] What would you tell someone your age who is scared to go back to school?",
+      "Host: Did you ever consider quitting during that first month?",
+      "Guest: Almost every day, actually. But I kept thinking about my daughter, and I wanted her to see me finish something hard.",
+      "Host: How did you manage studying while also working part time?",
+      "Guest: [determined] I studied early in the morning, before my shift, when the house was quiet and my mind was still fresh.",
+      "Host: What surprised you most about being an older student?",
+      "Guest: Honestly, the younger students were kind. Several of them helped me with computer skills I had never used before.",
+      "Host: Do you think age was actually a disadvantage in the classroom?",
+      "Guest: Less than I expected. I was slower with technology, but I understood work and responsibility better than some classmates.",
+      "Host: What would you tell someone your age who is scared to go back to school?",
       "Guest: [encouraging] I would say the fear never fully disappears, but it gets smaller every single week you keep showing up.",
-      "Host: [smiling] That's wonderful advice, Andi. Thank you for sharing your story with us today.",
-      "Guest: [warmly] Thank you for listening. I hope it helps someone finally register for that class they keep postponing."
+      "Host: That's wonderful advice, Andi. Thank you for sharing your story with us today.",
+      "Guest: [hopeful] Thank you for listening. I hope it helps someone finally register for that class they keep postponing."
     ],
     "quiz": [
-      { "question": "How old was Andi when he went back to university?", "options": ["Eighteen", "Twenty-eight", "Forty", "Twenty-two"], "correctIndex": 1, "explanation": "The host introduces Andi as someone who went back to university at twenty-eight." },
-      { "question": "What did Andi choose to study?", "options": ["Medicine", "Logistics management", "Cooking", "Music"], "correctIndex": 1, "explanation": "Andi says he wanted more job stability, so he chose logistics management." },
-      { "question": "What kept Andi from quitting during his difficult first month?", "options": ["His boss threatened him", "Thinking about his daughter", "A scholarship deadline", "A bet with a friend"], "correctIndex": 1, "explanation": "He says he kept thinking about his daughter and wanted her to see him finish something hard." },
-      { "question": "When did Andi study while also working part time?", "options": ["Late at night", "Early in the morning before his shift", "During his lunch break", "On weekends only"], "correctIndex": 1, "explanation": "He studied early in the morning before his shift, when the house was quiet." },
-      { "question": "What surprised Andi about the younger students?", "options": ["They were unfriendly", "They were kind and helped him with computer skills", "They ignored him completely", "They dropped out quickly"], "correctIndex": 1, "explanation": "He says the younger students were kind and helped him with computer skills he had never used." }
-    ]
+      {
+        "question": "How old was Andi when he went back to university?",
+        "options": [
+          "Twenty-eight",
+          "Eighteen",
+          "Forty",
+          "Twenty-two"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces Andi as someone who went back to university at twenty-eight."
+      },
+      {
+        "question": "What did Andi choose to study?",
+        "options": [
+          "Medicine",
+          "Logistics management",
+          "Cooking",
+          "Music"
+        ],
+        "correctIndex": 1,
+        "explanation": "Andi says he wanted more job stability, so he chose logistics management."
+      },
+      {
+        "question": "What kept Andi from quitting during his difficult first month?",
+        "options": [
+          "His boss threatened him",
+          "A scholarship deadline",
+          "A bet with a friend",
+          "Thinking about his daughter"
+        ],
+        "correctIndex": 3,
+        "explanation": "He says he kept thinking about his daughter and wanted her to see him finish something hard."
+      },
+      {
+        "question": "When did Andi study while also working part time?",
+        "options": [
+          "Early in the morning before his shift",
+          "Late at night",
+          "During his lunch break",
+          "On weekends only"
+        ],
+        "correctIndex": 0,
+        "explanation": "He studied early in the morning before his shift, when the house was quiet."
+      },
+      {
+        "question": "What surprised Andi about the younger students?",
+        "options": [
+          "They were unfriendly",
+          "They ignored him completely",
+          "They were kind and helped him with computer skills",
+          "They dropped out quickly"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says the younger students were kind and helped him with computer skills he had never used."
+      },
+      {
+        "question": "Why did Andi want a different job?",
+        "options": [
+          "He disliked every class",
+          "He wanted more stability",
+          "His daughter changed schools",
+          "The warehouse moved"
+        ],
+        "correctIndex": 1,
+        "explanation": "He hoped education could lead to steadier work."
+      },
+      {
+        "question": "What does “rusty” mean when Andi describes his memory?",
+        "options": [
+          "Broken and impossible to fix",
+          "Not as strong after little use",
+          "Fast and ready",
+          "Full of new technology"
+        ],
+        "correctIndex": 1,
+        "explanation": "Years away from class made study skills feel less familiar."
+      },
+      {
+        "question": "Why did Andi study early in the morning?",
+        "options": [
+          "His shift ended at sunrise",
+          "The house and his mind were quiet",
+          "University required it",
+          "His daughter taught the class"
+        ],
+        "correctIndex": 1,
+        "explanation": "He chose a calm time before work."
+      },
+      {
+        "question": "What strength did Andi bring as an older student?",
+        "options": [
+          "Faster computer skills",
+          "More free time",
+          "Experience with work and responsibility",
+          "Better memory than everyone"
+        ],
+        "correctIndex": 2,
+        "explanation": "His years of work gave him useful adult experience."
+      },
+      {
+        "question": "What does Andi mean when fear gets smaller?",
+        "options": [
+          "Classes become shorter each week",
+          "Every hard task disappears",
+          "Age changes during the course",
+          "Regular attendance builds confidence"
+        ],
+        "correctIndex": 3,
+        "explanation": "Continuing to show up makes school feel less frightening."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; podcast uses adult work and family motivation with understandable context",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-education-03",
@@ -79,38 +310,155 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Rani", "gender": "female" },
-      { "name": "Bayu", "gender": "male" }
+      {
+        "name": "Rani",
+        "gender": "female"
+      },
+      {
+        "name": "Bayu",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Rani: [stressed] Bayu, I still don't understand this statistics chapter, and the exam is tomorrow morning.",
+      "Rani: [panicked] Bayu, I still don't understand this statistics chapter, and the exam is tomorrow morning.",
       "Bayu: [calmly] Okay, let's slow down. Which part is confusing you the most right now?",
-      "Rani: [frustrated] Standard deviation. I read the definition five times, and it still doesn't make sense to me.",
-      "Bayu: [gently] Let's try an example instead of the definition. Do you understand what an average is?",
-      "Rani: [thoughtful] Yes, that part is easy. It's everything after that gets confusing.",
-      "Bayu: [encouraging] Standard deviation just shows how spread out the numbers are from that average. That's really all it means.",
-      "Rani: [considering] Okay, so a small number means the data is close together, and a big number means it's spread out?",
-      "Bayu: [smiling] Exactly. You explained it better than our textbook did.",
-      "Rani: [relieved] That actually makes sense now. Why didn't anyone explain it that simply before?",
-      "Bayu: [warmly] Sometimes textbooks make simple ideas sound complicated. It happens to me too, honestly.",
-      "Rani: [curious] Can we go through one more practice problem together before I go home?",
-      "Bayu: [agreeable] Of course. Let's use the data from question three, the one about exam scores.",
-      "Rani: [focused] Okay, I'll calculate the average first, then figure out the differences.",
-      "Bayu: [encouraging] Good, take your time. There's no rush tonight, we have a few more hours.",
-      "Rani: [determined] Thank you for staying late to help me with this. I was starting to panic before you arrived.",
-      "Bayu: [kindly] That's what study partners are for. Besides, explaining it helps me remember it too.",
-      "Rani: [smiling] Deal. Next time you're stuck on something, I'm helping you.",
-      "Bayu: [warmly] I'll hold you to that. Now, back to this problem, let's finish it together.",
-      "Rani: [grateful] Honestly, I don't think I could pass this exam tomorrow without your help tonight.",
-      "Bayu: [reassuring] You would have figured it out eventually. You just needed someone to slow the pace down with you."
+      "Rani: Standard deviation. I read the definition five times, and it still doesn't make sense to me.",
+      "Bayu: Let's try an example instead of the definition. Do you understand what an average is?",
+      "Rani: Yes, that part is easy. It's everything after that gets confusing.",
+      "Bayu: [patiently] Standard deviation just shows how spread out the numbers are from that average. That's really all it means.",
+      "Rani: Okay, so a small number means the data is close together, and a big number means it's spread out?",
+      "Bayu: [relieved] Exactly. You explained it better than our textbook did.",
+      "Rani: That actually makes sense now. Why didn't anyone explain it that simply before?",
+      "Bayu: Sometimes textbooks make simple ideas sound complicated. It happens to me too, honestly.",
+      "Rani: Can we go through one more practice problem together before I go home?",
+      "Bayu: Of course. Let's use the data from question three, the one about exam scores.",
+      "Rani: Okay, I'll calculate the average first, then figure out the differences.",
+      "Bayu: [focused] Good, take your time. There's no rush tonight, we have a few more hours.",
+      "Rani: Thank you for staying late to help me with this. I was starting to panic before you arrived.",
+      "Bayu: That's what study partners are for. Besides, explaining it helps me remember it too.",
+      "Rani: Deal. Next time you're stuck on something, I'm helping you.",
+      "Bayu: [grateful] I'll hold you to that. Now, back to this problem, let's finish it together.",
+      "Rani: Honestly, I don't think I could pass this exam tomorrow without your help tonight.",
+      "Bayu: [encouraging] You would have figured it out eventually. You just needed someone to slow the pace down with you."
     ],
     "quiz": [
-      { "question": "What subject are Rani and Bayu studying together?", "options": ["History", "Statistics", "Chemistry", "Grammar"], "correctIndex": 1, "explanation": "They are studying statistics because Rani has an exam the next morning." },
-      { "question": "Which specific concept confuses Rani?", "options": ["The average", "Standard deviation", "Multiplication", "Probability"], "correctIndex": 1, "explanation": "Rani says standard deviation is the part that confuses her the most." },
-      { "question": "How does Bayu explain standard deviation?", "options": ["It shows how spread out the numbers are from the average", "It is another word for average", "It only applies to large numbers", "It cannot be explained simply"], "correctIndex": 0, "explanation": "Bayu explains that standard deviation shows how spread out the numbers are from the average." },
-      { "question": "What do they do after Rani understands the concept?", "options": ["They stop studying immediately", "They work through a practice problem about exam scores", "They call their teacher", "They switch to a different subject"], "correctIndex": 1, "explanation": "They go through one more practice problem using the data about exam scores." },
-      { "question": "What does Rani promise Bayu at the end?", "options": ["To stop asking for help", "To help him next time he's stuck on something", "To buy him dinner", "To skip the exam"], "correctIndex": 1, "explanation": "Rani promises that next time Bayu is stuck on something, she will help him." }
-    ]
+      {
+        "question": "What subject are Rani and Bayu studying together?",
+        "options": [
+          "History",
+          "Chemistry",
+          "Statistics",
+          "Grammar"
+        ],
+        "correctIndex": 2,
+        "explanation": "They are studying statistics because Rani has an exam the next morning."
+      },
+      {
+        "question": "Which specific concept confuses Rani?",
+        "options": [
+          "The average",
+          "Multiplication",
+          "Standard deviation",
+          "Probability"
+        ],
+        "correctIndex": 2,
+        "explanation": "Rani says standard deviation is the part that confuses her the most."
+      },
+      {
+        "question": "How does Bayu explain standard deviation?",
+        "options": [
+          "It is another word for average",
+          "It only applies to large numbers",
+          "It shows how spread out the numbers are from the average",
+          "It cannot be explained simply"
+        ],
+        "correctIndex": 2,
+        "explanation": "Bayu explains that standard deviation shows how spread out the numbers are from the average."
+      },
+      {
+        "question": "What do they do after Rani understands the concept?",
+        "options": [
+          "They work through a practice problem about exam scores",
+          "They stop studying immediately",
+          "They call their teacher",
+          "They switch to a different subject"
+        ],
+        "correctIndex": 0,
+        "explanation": "They go through one more practice problem using the data about exam scores."
+      },
+      {
+        "question": "What does Rani promise Bayu at the end?",
+        "options": [
+          "To stop asking for help",
+          "To help him next time he's stuck on something",
+          "To buy him dinner",
+          "To skip the exam"
+        ],
+        "correctIndex": 1,
+        "explanation": "Rani promises that next time Bayu is stuck on something, she will help him."
+      },
+      {
+        "question": "Why does Bayu use an example first?",
+        "options": [
+          "The exam has no definitions",
+          "Rani already solved the problem",
+          "The textbook was missing",
+          "The definition did not help Rani"
+        ],
+        "correctIndex": 3,
+        "explanation": "A concrete example makes the difficult words easier."
+      },
+      {
+        "question": "What does “spread out” mean for the numbers?",
+        "options": [
+          "Written on different pages",
+          "Copied by many students",
+          "Placed below the average",
+          "Farther apart from one another"
+        ],
+        "correctIndex": 3,
+        "explanation": "Bayu uses the phrase to explain distance from the average."
+      },
+      {
+        "question": "What does Rani calculate first in the practice problem?",
+        "options": [
+          "The final grade",
+          "The exam time",
+          "The average",
+          "The chapter number"
+        ],
+        "correctIndex": 2,
+        "explanation": "She begins with the idea she already understands."
+      },
+      {
+        "question": "How does teaching help Bayu?",
+        "options": [
+          "It helps him remember too",
+          "It gives him a new textbook",
+          "It ends the study session",
+          "It changes tomorrow’s exam"
+        ],
+        "correctIndex": 0,
+        "explanation": "Explaining the idea strengthens his own learning."
+      },
+      {
+        "question": "Why does Rani understand after Bayu’s help?",
+        "options": [
+          "He gives her the exam answers",
+          "He slows down and uses simple words",
+          "He studies alone first",
+          "He removes the practice problem"
+        ],
+        "correctIndex": 1,
+        "explanation": "The pace and explanation match what she needs."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; the difficult term is explained immediately with a simple example",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-education-04",
@@ -119,33 +467,147 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [warmly] My father never finished secondary school. He started working at fourteen, and books were never really part of his life.",
-      "Narrator: [thoughtful] When I was young, I sometimes felt embarrassed that he couldn't help me with my homework the way other fathers could.",
-      "Narrator: [reflective] But at fifty, something surprising happened. My father decided to learn how to read English, slowly, using an old phrasebook.",
-      "Narrator: [gently] Every evening after dinner, he sat at the table with that small book, moving his finger slowly under each line.",
-      "Narrator: [honestly] At first, I thought it was a strange hobby for a man his age, something that would not last more than a week.",
-      "Narrator: [softly] Months passed, and he kept going, one page some nights, sometimes just a few words on tired nights.",
-      "Narrator: [warmly] I asked him once why he was doing this so late in life. He said, learning late is still learning, my son.",
-      "Narrator: [thoughtful] He told me he simply wanted to read the labels on medicine bottles without asking anyone for help.",
-      "Narrator: [with feeling] That small, humble goal stayed with me. He was not trying to become fluent, just a little more capable.",
-      "Narrator: [reflective] Watching him struggle patiently with simple words taught me something my own classes never had.",
-      "Narrator: [gently] I used to give up quickly when something felt hard, closing the book after only a few frustrating minutes.",
-      "Narrator: [warmly] Now, when I study something difficult, I think of my father's finger moving slowly under those English words.",
-      "Narrator: [determined] I remind myself that slow progress is still progress, and starting late is still better than never starting.",
-      "Narrator: [peacefully] My father can now read simple instructions on his own, something that once felt completely out of reach for him.",
-      "Narrator: [with a small smile] He is not fluent, and he never wanted to be. He just wanted to understand a little more than yesterday.",
-      "Narrator: [warmly] That, I think, is the quietest and truest kind of education, the kind nobody grades but changes you completely."
+      "Narrator: [reflective] My father never finished secondary school. He started working at fourteen, and books were never really part of his life.",
+      "Narrator: When I was young, I sometimes felt embarrassed that he couldn't help me with my homework the way other fathers could.",
+      "Narrator: But at fifty, something surprising happened. My father decided to learn how to read English, slowly, using an old phrasebook.",
+      "Narrator: [surprised] Every evening after dinner, he sat at the table with that small book, moving his finger slowly under each line.",
+      "Narrator: At first, I thought it was a strange hobby for a man his age, something that would not last more than a week.",
+      "Narrator: [patiently] Months passed, and he kept going, one page some nights, sometimes just a few words on tired nights.",
+      "Narrator: I asked him once why he was doing this so late in life. He said, learning late is still learning, my son.",
+      "Narrator: He told me he simply wanted to read the labels on medicine bottles without asking anyone for help.",
+      "Narrator: [warmly] That small, humble goal stayed with me. He was not trying to become fluent, just a little more capable.",
+      "Narrator: Watching him struggle patiently with simple words taught me something my own classes never had.",
+      "Narrator: I used to give up quickly when something felt hard, closing the book after only a few frustrating minutes.",
+      "Narrator: [determined] Now, when I study something difficult, I think of my father's finger moving slowly under those English words.",
+      "Narrator: I remind myself that slow progress is still progress, and starting late is still better than never starting.",
+      "Narrator: My father can now read simple instructions on his own, something that once felt impossible for him before.",
+      "Narrator: He is not fluent, and he never wanted to be. He just wanted to understand a little more than yesterday.",
+      "Narrator: [proud] That, I think, is a quiet and honest kind of education, the kind nobody grades but changes you completely."
     ],
     "quiz": [
-      { "question": "What did the narrator's father do at fourteen?", "options": ["He started university", "He started working, and books were never part of his life", "He became a teacher", "He traveled abroad"], "correctIndex": 1, "explanation": "The father started working at fourteen, and books were never really part of his life." },
-      { "question": "What did the father decide to learn at fifty?", "options": ["How to drive", "How to read English using an old phrasebook", "How to cook", "How to use a computer"], "correctIndex": 1, "explanation": "At fifty, the father decided to learn how to read English, using an old phrasebook." },
-      { "question": "Why did the father want to learn English?", "options": ["To travel overseas", "To read the labels on medicine bottles without help", "To get a promotion", "To teach his grandchildren"], "correctIndex": 1, "explanation": "He told his son he simply wanted to read medicine labels without asking anyone for help." },
-      { "question": "What lesson did the narrator take from watching his father?", "options": ["Learning late is pointless", "Slow progress is still progress", "Only young people can learn well", "Books are not useful"], "correctIndex": 1, "explanation": "The narrator reminds himself that slow progress is still progress, and starting late beats never starting." },
-      { "question": "What can the father do now?", "options": ["Speak English fluently", "Read simple instructions on his own", "Teach English classes", "Write full letters in English"], "correctIndex": 1, "explanation": "The father can now read simple instructions on his own, though he is not fluent." }
-    ]
+      {
+        "question": "What did the narrator's father do at fourteen?",
+        "options": [
+          "He started university",
+          "He became a teacher",
+          "He traveled abroad",
+          "He started working, and books were never part of his life"
+        ],
+        "correctIndex": 3,
+        "explanation": "The father started working at fourteen, and books were never really part of his life."
+      },
+      {
+        "question": "What did the father decide to learn at fifty?",
+        "options": [
+          "How to drive",
+          "How to cook",
+          "How to read English using an old phrasebook",
+          "How to use a computer"
+        ],
+        "correctIndex": 2,
+        "explanation": "At fifty, the father decided to learn how to read English, using an old phrasebook."
+      },
+      {
+        "question": "Why did the father want to learn English?",
+        "options": [
+          "To travel overseas",
+          "To read the labels on medicine bottles without help",
+          "To get a promotion",
+          "To teach his grandchildren"
+        ],
+        "correctIndex": 1,
+        "explanation": "He told his son he simply wanted to read medicine labels without asking anyone for help."
+      },
+      {
+        "question": "What lesson did the narrator take from watching his father?",
+        "options": [
+          "Learning late is pointless",
+          "Only young people can learn well",
+          "Slow progress is still progress",
+          "Books are not useful"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator reminds himself that slow progress is still progress, and starting late beats never starting."
+      },
+      {
+        "question": "What can the father do now?",
+        "options": [
+          "Speak English fluently",
+          "Teach English classes",
+          "Write full letters in English",
+          "Read simple instructions on his own"
+        ],
+        "correctIndex": 3,
+        "explanation": "The father can now read simple instructions on his own, though he is not fluent."
+      },
+      {
+        "question": "How did the father study each evening?",
+        "options": [
+          "He followed each line with his finger",
+          "He listened to a university class",
+          "He asked his son to read everything",
+          "He memorized a whole page"
+        ],
+        "correctIndex": 0,
+        "explanation": "He used a slow physical method with the phrasebook."
+      },
+      {
+        "question": "What does “fluent” mean here?",
+        "options": [
+          "Able to use the language easily",
+          "Able to read one label",
+          "Ready to start learning",
+          "Interested in medicine"
+        ],
+        "correctIndex": 0,
+        "explanation": "The father does not aim for easy use of all English."
+      },
+      {
+        "question": "Why was the medicine-label goal important?",
+        "options": [
+          "He wanted to become a doctor",
+          "He wanted more independence",
+          "He needed a school grade",
+          "He planned to teach English"
+        ],
+        "correctIndex": 1,
+        "explanation": "Reading labels himself would reduce his need to ask others."
+      },
+      {
+        "question": "What changed in the narrator’s study habits?",
+        "options": [
+          "He stopped using books",
+          "He studied only English labels",
+          "He waited until age fifty",
+          "He continued longer when work felt hard"
+        ],
+        "correctIndex": 3,
+        "explanation": "Watching his father made slow progress feel valuable."
+      },
+      {
+        "question": "What is the main contrast in the story?",
+        "options": [
+          "Fast learning is better than slow learning",
+          "School grades matter more than daily skills",
+          "Young learners always know more",
+          "A small goal creates a big personal change"
+        ],
+        "correctIndex": 3,
+        "explanation": "The father seeks only simple reading, but the effort inspires his son deeply."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; meaningful family story with one clear and realistic learning goal",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-education-05",
@@ -154,36 +616,153 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Dita", "gender": "female" },
-      { "name": "Mentor", "gender": "male" }
+      {
+        "name": "Dita",
+        "gender": "female"
+      },
+      {
+        "name": "Mentor",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Dita: [anxious] Pak Hendra, I'm sorry to call so late. My certification exam is tomorrow morning, and I'm completely panicking.",
+      "Dita: [panicked] Pak Hendra, I'm sorry to call so late. My certification exam is tomorrow morning, and I'm completely panicking.",
       "Mentor: [calmly] It's fine, Dita, don't apologize. Tell me what's making you panic exactly.",
-      "Dita: [worried] I studied for weeks, but tonight I opened my notes and suddenly nothing looks familiar anymore.",
-      "Mentor: [gently] That happens to almost everyone before a big exam. Your brain is tired, not empty.",
-      "Dita: [quietly] What if I forget everything the moment I sit down tomorrow?",
-      "Mentor: [reassuring] You won't forget everything. You might forget one small detail, and your mind will still find the rest.",
-      "Dita: [thoughtful] I never thought about it that way. I've been imagining total failure all evening.",
-      "Mentor: [warmly] Fear likes to exaggerate the worst outcome. Let's talk about what you actually know well.",
-      "Dita: [considering] Okay. I think I understand the main concepts. It's the small details I keep mixing up.",
-      "Mentor: [encouraging] That's actually a strong position. Most exams test understanding more than tiny details.",
-      "Dita: [curious] Should I keep studying tonight, or try to rest instead?",
-      "Mentor: [advising] Close your notes within the next hour. Tired studying tonight will not help you more than sleep will.",
-      "Dita: [relieved] That's honestly a relief to hear. Part of me thought I had to study until morning.",
-      "Mentor: [kindly] I remember my own certification exam. I barely slept, and I performed worse because of it.",
-      "Dita: [softly] Thank you for always answering when I call, even at strange hours like this one.",
-      "Mentor: [warmly] That's what mentors are for. Now go rest, and message me after the exam tomorrow.",
-      "Dita: [determined] I will. Thank you again, Pak Hendra. I feel calmer already.",
+      "Dita: I studied for weeks, but tonight I opened my notes and suddenly nothing looks familiar anymore.",
+      "Mentor: That happens to almost everyone before a big exam. Your brain is tired, not empty.",
+      "Dita: [reassuring] What if I forget everything the moment I sit down tomorrow?",
+      "Mentor: You won't forget everything. You might forget one small detail, and your mind will still find the rest.",
+      "Dita: I never thought about it that way. I've been imagining total failure all evening.",
+      "Mentor: Fear likes to exaggerate the worst outcome. Let's talk about what you actually know well.",
+      "Dita: [thoughtful] Okay. I think I understand the main concepts. It's the small details I keep mixing up.",
+      "Mentor: That's actually a strong position. Most exams test understanding more than tiny details.",
+      "Dita: Should I keep studying tonight, or try to rest instead?",
+      "Mentor: Close your notes within the next hour. Tired studying tonight will not help you more than sleep will.",
+      "Dita: [firmly] That's honestly a relief to hear. Part of me thought I had to study until morning.",
+      "Mentor: I remember my own certification exam. I barely slept, and I performed worse because of it.",
+      "Dita: Thank you for always answering when I call, even at strange hours like this one.",
+      "Mentor: That's what mentors are for. Now go rest, and message me after the exam tomorrow.",
+      "Dita: [relieved] I will. Thank you again, Pak Hendra. I feel calmer already.",
       "Mentor: [encouraging] Good. You've prepared more than you realize. Trust that tomorrow, and believe in your own work."
     ],
     "quiz": [
-      { "question": "Why is Dita calling her mentor?", "options": ["To cancel her exam", "Because she is panicking the night before her certification exam", "To ask for a new mentor", "To celebrate finishing her studies"], "correctIndex": 1, "explanation": "Dita calls because her certification exam is tomorrow morning and she is panicking." },
-      { "question": "What does the mentor say fear tends to do?", "options": ["Fear always tells the truth", "Fear likes to exaggerate the worst outcome", "Fear helps you study better", "Fear only affects weak students"], "correctIndex": 1, "explanation": "The mentor tells Dita that fear likes to exaggerate the worst outcome." },
-      { "question": "What does the mentor advise Dita to do that night?", "options": ["Keep studying until morning", "Close her notes soon and rest instead", "Call more friends for help", "Retake practice tests all night"], "correctIndex": 1, "explanation": "The mentor advises her to close her notes within the hour and rest instead of studying tired." },
-      { "question": "What does the mentor share about his own exam experience?", "options": ["He passed easily every time", "He barely slept before his own exam and performed worse", "He never took a certification exam", "He always studied all night successfully"], "correctIndex": 1, "explanation": "He shares that he barely slept before his own certification exam and performed worse because of it." },
-      { "question": "How does Dita feel by the end of the call?", "options": ["More panicked", "Calmer", "Angry", "Confused"], "correctIndex": 1, "explanation": "Dita says she feels calmer already after speaking with her mentor." }
-    ]
+      {
+        "question": "Why is Dita calling her mentor?",
+        "options": [
+          "Because she is panicking the night before her certification exam",
+          "To cancel her exam",
+          "To ask for a new mentor",
+          "To celebrate finishing her studies"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dita calls because her certification exam is tomorrow morning and she is panicking."
+      },
+      {
+        "question": "What does the mentor say fear tends to do?",
+        "options": [
+          "Fear always tells the truth",
+          "Fear helps you study better",
+          "Fear likes to exaggerate the worst outcome",
+          "Fear only affects weak students"
+        ],
+        "correctIndex": 2,
+        "explanation": "The mentor tells Dita that fear likes to exaggerate the worst outcome."
+      },
+      {
+        "question": "What does the mentor advise Dita to do that night?",
+        "options": [
+          "Close her notes soon and rest instead",
+          "Keep studying until morning",
+          "Call more friends for help",
+          "Retake practice tests all night"
+        ],
+        "correctIndex": 0,
+        "explanation": "The mentor advises her to close her notes within the hour and rest instead of studying tired."
+      },
+      {
+        "question": "What does the mentor share about his own exam experience?",
+        "options": [
+          "He passed easily every time",
+          "He never took a certification exam",
+          "He barely slept before his own exam and performed worse",
+          "He always studied all night successfully"
+        ],
+        "correctIndex": 2,
+        "explanation": "He shares that he barely slept before his own certification exam and performed worse because of it."
+      },
+      {
+        "question": "How does Dita feel by the end of the call?",
+        "options": [
+          "Calmer",
+          "More panicked",
+          "Angry",
+          "Confused"
+        ],
+        "correctIndex": 0,
+        "explanation": "Dita says she feels calmer already after speaking with her mentor."
+      },
+      {
+        "question": "Why do Dita’s notes look unfamiliar?",
+        "options": [
+          "She studied the wrong subject",
+          "The exam has changed",
+          "Her mentor took the notes",
+          "Her brain is tired"
+        ],
+        "correctIndex": 3,
+        "explanation": "Pak Hendra explains that tiredness is affecting her view."
+      },
+      {
+        "question": "What does “exaggerate” mean here?",
+        "options": [
+          "Explain a detail clearly",
+          "Forget every lesson",
+          "Prepare for many weeks",
+          "Make a problem seem bigger"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fear makes Dita imagine complete failure instead of a small mistake."
+      },
+      {
+        "question": "What does Dita say she understands well?",
+        "options": [
+          "Every small detail",
+          "The main concepts",
+          "Her mentor’s exam",
+          "The morning schedule"
+        ],
+        "correctIndex": 1,
+        "explanation": "She is strong in the central ideas but mixes up details."
+      },
+      {
+        "question": "Why does Pak Hendra recommend sleep?",
+        "options": [
+          "The exam begins late",
+          "Tired study may hurt performance",
+          "Dita has finished every question",
+          "The notes are no longer useful"
+        ],
+        "correctIndex": 1,
+        "explanation": "His own sleepless exam experience ended badly."
+      },
+      {
+        "question": "What is Pak Hendra’s purpose in the call?",
+        "options": [
+          "Help Dita see her preparation more calmly",
+          "Teach a new exam subject",
+          "Tell her to study until morning",
+          "Change the certification date"
+        ],
+        "correctIndex": 0,
+        "explanation": "He challenges her worst fears and gives a realistic plan."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; supportive mentor call gives concrete exam-night advice",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-education-06",
@@ -192,32 +771,146 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] At thirty, I walked into a university classroom for the first time in nearly ten years, feeling completely out of place.",
-      "Narrator: [honestly] Most of my classmates looked barely twenty, typing quickly on laptops while I still preferred writing notes by hand.",
-      "Narrator: [nervous] During the first week, I sat near the back, worried someone would ask why a woman my age was still studying.",
-      "Narrator: [reflective] I had worked in retail for years, tired and unfulfilled, before finally deciding to study nursing, something I had wanted since childhood.",
-      "Narrator: [honestly] My family was supportive, but a few relatives quietly asked why I was starting over so late in life.",
-      "Narrator: [determined] I told them the same thing every time. Late is still earlier than never starting at all.",
-      "Narrator: [thoughtful] The first semester was brutal. I had forgotten how to study, how to memorize, how to sit through long lectures.",
-      "Narrator: [gently] I failed one quiz badly and cried quietly in my car afterward, wondering if I had made a huge mistake.",
-      "Narrator: [warmly] A younger classmate named Vina noticed I was struggling and offered to study together twice a week.",
-      "Narrator: [softly] She never treated me differently because of my age. She simply treated me like someone learning alongside her.",
-      "Narrator: [with feeling] Slowly, my confidence grew. I learned to organize my notes properly and to ask questions without feeling embarrassed.",
-      "Narrator: [reflective] By the second semester, my grades improved, and studying finally felt like progress instead of constant struggle.",
-      "Narrator: [warmly] Now, halfway through the program, I no longer worry about my age in that classroom.",
-      "Narrator: [peacefully] I look around sometimes and realize half the room is focused entirely on their own work, not judging mine.",
-      "Narrator: [with a small smile] I still write my notes by hand, and nobody has ever laughed at me for it, not once."
+      "Narrator: [nervous] At thirty, I walked into a university classroom for the first time in nearly ten years, feeling completely out of place.",
+      "Narrator: Most of my classmates looked barely twenty, typing quickly on laptops while I still preferred writing notes by hand.",
+      "Narrator: During the first week, I sat near the back, worried someone would ask why a woman my age was still studying.",
+      "Narrator: [hopeful] I had worked in retail for years, tired and unhappy with the work, before finally deciding to study nursing, something I had wanted since childhood.",
+      "Narrator: My family was supportive, but a few relatives quietly asked why I was starting over so late in life.",
+      "Narrator: I told them the same thing every time. Late is still earlier than never starting at all.",
+      "Narrator: [determined] The first semester was very hard. I had forgotten how to study, how to memorize, how to sit through long lectures.",
+      "Narrator: [discouraged] I failed one quiz badly and cried quietly in my car afterward, wondering if I had made a huge mistake.",
+      "Narrator: A younger classmate named Vina noticed I was struggling and offered to study together twice a week.",
+      "Narrator: [warmly] She never treated me differently because of my age. She simply treated me like someone learning alongside her.",
+      "Narrator: Slowly, my confidence grew. I learned to organize my notes properly and to ask questions without feeling embarrassed.",
+      "Narrator: By the second semester, my grades improved, and studying finally felt like progress instead of a problem every day.",
+      "Narrator: [proud] Now, halfway through the program, I no longer worry about my age in that classroom.",
+      "Narrator: I look around sometimes and realize half the room is focused entirely on their own work, not judging mine.",
+      "Narrator: [confident] I still write my notes by hand, and nobody has ever laughed at me for it, not once."
     ],
     "quiz": [
-      { "question": "How old was the narrator when she returned to university?", "options": ["Twenty", "Thirty", "Forty-five", "Fifty"], "correctIndex": 1, "explanation": "She walked into a university classroom at thirty for the first time in nearly ten years." },
-      { "question": "What field did the narrator choose to study?", "options": ["Business", "Nursing", "Law", "Engineering"], "correctIndex": 1, "explanation": "She decided to study nursing, something she had wanted since childhood." },
-      { "question": "What happened after she failed a quiz badly?", "options": ["She quit school immediately", "She cried quietly in her car", "She complained to her teacher", "She celebrated with friends"], "correctIndex": 1, "explanation": "She failed one quiz badly and cried quietly in her car afterward." },
-      { "question": "Who helped the narrator study during her struggles?", "options": ["Her mother", "A younger classmate named Vina", "Her old retail manager", "A private tutor"], "correctIndex": 1, "explanation": "A younger classmate named Vina noticed her struggling and offered to study together twice a week." },
-      { "question": "What does the narrator no longer worry about, halfway through the program?", "options": ["Her grades", "Her age in the classroom", "Her family's opinion", "Her tuition fees"], "correctIndex": 1, "explanation": "She says she no longer worries about her age in that classroom." }
-    ]
+      {
+        "question": "How old was the narrator when she returned to university?",
+        "options": [
+          "Twenty",
+          "Forty-five",
+          "Thirty",
+          "Fifty"
+        ],
+        "correctIndex": 2,
+        "explanation": "She walked into a university classroom at thirty for the first time in nearly ten years."
+      },
+      {
+        "question": "What field did the narrator choose to study?",
+        "options": [
+          "Business",
+          "Nursing",
+          "Law",
+          "Engineering"
+        ],
+        "correctIndex": 1,
+        "explanation": "She decided to study nursing, something she had wanted since childhood."
+      },
+      {
+        "question": "What happened after she failed a quiz badly?",
+        "options": [
+          "She quit school immediately",
+          "She cried quietly in her car",
+          "She complained to her teacher",
+          "She celebrated with friends"
+        ],
+        "correctIndex": 1,
+        "explanation": "She failed one quiz badly and cried quietly in her car afterward."
+      },
+      {
+        "question": "Who helped the narrator study during her struggles?",
+        "options": [
+          "Her mother",
+          "Her old retail manager",
+          "A younger classmate named Vina",
+          "A private tutor"
+        ],
+        "correctIndex": 2,
+        "explanation": "A younger classmate named Vina noticed her struggling and offered to study together twice a week."
+      },
+      {
+        "question": "What does the narrator no longer worry about, halfway through the program?",
+        "options": [
+          "Her age in the classroom",
+          "Her grades",
+          "Her family's opinion",
+          "Her tuition fees"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says she no longer worries about her age in that classroom."
+      },
+      {
+        "question": "Why did the narrator sit near the back?",
+        "options": [
+          "She could not see the front",
+          "Vina saved the other seats",
+          "The lecture was too long",
+          "She worried others would judge her age"
+        ],
+        "correctIndex": 3,
+        "explanation": "She felt different from the younger students."
+      },
+      {
+        "question": "What does “starting over” mean here?",
+        "options": [
+          "Repeating the same school day",
+          "Leaving university after one week",
+          "Writing the notes again",
+          "Beginning a new path later in life"
+        ],
+        "correctIndex": 3,
+        "explanation": "Relatives saw nursing study as a new life direction."
+      },
+      {
+        "question": "What happened before Vina offered help?",
+        "options": [
+          "The narrator finished the program",
+          "The narrator failed a quiz and felt upset",
+          "Vina changed to retail work",
+          "The family stopped supporting her"
+        ],
+        "correctIndex": 1,
+        "explanation": "The failed quiz was a low point before support arrived."
+      },
+      {
+        "question": "How did Vina treat the narrator?",
+        "options": [
+          "Like a much older teacher",
+          "Like another learner",
+          "Like someone unable to study",
+          "Like a retail customer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Vina focused on studying together, not the age difference."
+      },
+      {
+        "question": "What did the narrator discover about classmates?",
+        "options": [
+          "They were focused on their own work",
+          "They laughed at handwritten notes",
+          "They all studied nursing as children",
+          "They wanted her to leave"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her fear of constant judgment was larger than the reality."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; simplify difficult emotional vocabulary while preserving the adult return-to-study arc",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a1-education-07",
@@ -226,35 +919,604 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "female" },
-      { "name": "Caller", "gender": "male" }
+      {
+        "name": "Radio Host",
+        "gender": "female"
+      },
+      {
+        "name": "Caller",
+        "gender": "male"
+      }
     ],
     "script": [
       "Radio Host: [cheerfully] Good morning, listeners! Today we're talking about online courses for busy working adults. We have a caller on the line. Hello!",
-      "Caller: [a little nervous] Hello! Thank you for taking my call this morning.",
-      "Radio Host: [warmly] Of course! Tell us, what online course have you been taking recently?",
-      "Caller: [thoughtful] I've been studying graphic design online, two evenings a week, alongside my full time job.",
-      "Radio Host: [curious] What made you choose an online course instead of a regular class?",
+      "Caller: [warmly] Hello! Thank you for taking my call this morning.",
+      "Radio Host: Of course! Tell us, what online course have you been taking recently?",
+      "Caller: I've been studying graphic design online, two evenings a week, alongside my full time job.",
+      "Radio Host: What made you choose an online course instead of a regular class?",
       "Caller: [honestly] My work schedule changes often, so a fixed classroom time was simply impossible for me.",
-      "Radio Host: [interested] How do you manage motivation without a teacher standing in front of you?",
-      "Caller: [reflective] Honestly, it was hard at first. I paused my subscription twice before finally staying consistent.",
-      "Radio Host: [sympathetically] What finally helped you stay consistent with the lessons?",
-      "Caller: [gently] I started scheduling it like a real appointment, the same two evenings every single week, no exceptions.",
-      "Radio Host: [curious] Did you set any specific goal to keep yourself motivated?",
-      "Caller: [warmly] Yes, I wanted to finish one small project every month, something I could actually show my friends.",
-      "Radio Host: [interested] Has this new skill changed anything for you at work?",
-      "Caller: [smiling] Actually, yes. My manager noticed my designs for our team newsletter and gave me a small new project.",
-      "Radio Host: [curious] Would you recommend online courses to other busy adults listening today?",
-      "Caller: [warmly] Definitely, but only if you treat it seriously, like a real class, not something to finish someday.",
-      "Radio Host: [encouraging] That's excellent advice. Thank you so much for sharing your experience with us this morning.",
-      "Caller: [sincerely] Thank you for listening. I hope it encourages someone to finally start that course they keep delaying."
+      "Radio Host: How do you manage motivation without a teacher standing in front of you?",
+      "Caller: Honestly, it was hard at first. I paused my subscription twice before finally staying consistent.",
+      "Radio Host: What finally helped you stay consistent with the lessons?",
+      "Caller: [determined] I started scheduling it like a real appointment, the same two evenings every single week, no exceptions.",
+      "Radio Host: Did you set any specific goal to keep yourself motivated?",
+      "Caller: Yes, I wanted to finish one small project every month, something I could actually show my friends.",
+      "Radio Host: Has this new skill changed anything for you at work?",
+      "Caller: [proud] Actually, yes. My manager noticed my designs for our team newsletter and gave me a small new project.",
+      "Radio Host: Would you recommend online courses to other busy adults listening today?",
+      "Caller: Definitely, but only if you treat it seriously, like a real class, not something to finish someday.",
+      "Radio Host: That's excellent advice. Thank you so much for sharing your experience with us this morning.",
+      "Caller: [encouraging] Thank you for listening. I hope it encourages someone to finally start that course they keep delaying."
     ],
     "quiz": [
-      { "question": "What online course has the caller been taking?", "options": ["Accounting", "Graphic design", "Cooking", "Photography"], "correctIndex": 1, "explanation": "The caller says he has been studying graphic design online, two evenings a week." },
-      { "question": "Why did the caller choose an online course instead of a regular class?", "options": ["He dislikes classrooms", "His work schedule changes often, so a fixed class time was impossible", "It was cheaper", "His friends recommended it"], "correctIndex": 1, "explanation": "He explains his work schedule changes often, making a fixed classroom time impossible." },
-      { "question": "What finally helped the caller stay consistent with his lessons?", "options": ["Studying only when he felt like it", "Scheduling it like a real appointment, the same evenings every week", "Quitting his job", "Studying with a large group"], "correctIndex": 1, "explanation": "He started scheduling the course like a real appointment on the same two evenings every week." },
-      { "question": "What happened after the caller developed his new skill?", "options": ["Nothing changed at work", "His manager noticed his designs and gave him a small new project", "He lost his job", "He stopped working on the newsletter"], "correctIndex": 1, "explanation": "His manager noticed his designs for the team newsletter and gave him a small new project." },
-      { "question": "What advice does the caller give other busy adults?", "options": ["Online courses are not worth it", "Treat the course seriously, like a real class", "Only young people should try online courses", "Never set a schedule for studying"], "correctIndex": 1, "explanation": "He advises treating an online course seriously, like a real class, not something to finish someday." }
-    ]
+      {
+        "question": "What online course has the caller been taking?",
+        "options": [
+          "Accounting",
+          "Cooking",
+          "Graphic design",
+          "Photography"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller says he has been studying graphic design online, two evenings a week."
+      },
+      {
+        "question": "Why did the caller choose an online course instead of a regular class?",
+        "options": [
+          "He dislikes classrooms",
+          "It was cheaper",
+          "His work schedule changes often, so a fixed class time was impossible",
+          "His friends recommended it"
+        ],
+        "correctIndex": 2,
+        "explanation": "He explains his work schedule changes often, making a fixed classroom time impossible."
+      },
+      {
+        "question": "What finally helped the caller stay consistent with his lessons?",
+        "options": [
+          "Studying only when he felt like it",
+          "Quitting his job",
+          "Scheduling it like a real appointment, the same evenings every week",
+          "Studying with a large group"
+        ],
+        "correctIndex": 2,
+        "explanation": "He started scheduling the course like a real appointment on the same two evenings every week."
+      },
+      {
+        "question": "What happened after the caller developed his new skill?",
+        "options": [
+          "Nothing changed at work",
+          "He lost his job",
+          "He stopped working on the newsletter",
+          "His manager noticed his designs and gave him a small new project"
+        ],
+        "correctIndex": 3,
+        "explanation": "His manager noticed his designs for the team newsletter and gave him a small new project."
+      },
+      {
+        "question": "What advice does the caller give other busy adults?",
+        "options": [
+          "Treat the course seriously, like a real class",
+          "Online courses are not worth it",
+          "Only young people should try online courses",
+          "Never set a schedule for studying"
+        ],
+        "correctIndex": 0,
+        "explanation": "He advises treating an online course seriously, like a real class, not something to finish someday."
+      },
+      {
+        "question": "Why did the caller pause the course twice?",
+        "options": [
+          "The course ended early",
+          "The manager requested it",
+          "The projects were too easy",
+          "It was hard to continue alone"
+        ],
+        "correctIndex": 3,
+        "explanation": "Without a fixed routine, the online lessons were difficult to maintain."
+      },
+      {
+        "question": "What does “consistent” mean here?",
+        "options": [
+          "Finishing in one night",
+          "Changing courses often",
+          "Continuing regularly",
+          "Studying only at work"
+        ],
+        "correctIndex": 2,
+        "explanation": "The caller now studies on the same two evenings each week."
+      },
+      {
+        "question": "Why does the caller finish one project each month?",
+        "options": [
+          "A visible result supports motivation",
+          "The course requires twelve jobs",
+          "Friends complete the projects",
+          "The manager pays for each one"
+        ],
+        "correctIndex": 0,
+        "explanation": "A small finished design shows real progress."
+      },
+      {
+        "question": "How did the course create a work opportunity?",
+        "options": [
+          "The caller became a teacher",
+          "The manager noticed newsletter designs",
+          "The schedule stopped changing",
+          "The company opened a school"
+        ],
+        "correctIndex": 1,
+        "explanation": "Using the new skill made it visible at work."
+      },
+      {
+        "question": "What mistake does the caller warn against?",
+        "options": [
+          "Choosing a course online",
+          "Treating the course as something for later",
+          "Showing projects to friends",
+          "Scheduling two study evenings"
+        ],
+        "correctIndex": 1,
+        "explanation": "Online flexibility still needs serious regular action."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; short radio call-in has clear routine, goal, and workplace result",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-education-08",
+    "title": "The Question I Finally Asked",
+    "level": "A1",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [uncertain] In my evening English class, I understood most lessons, but one grammar point confused me for three weeks.",
+      "Narrator: Each time the teacher asked whether we had questions, I looked down. Everyone else seemed ready to continue.",
+      "Narrator: [worried] I was afraid my question was too simple. I copied examples from the board and promised to study them alone.",
+      "Narrator: At home, the examples still made no sense. I completed exercises by guessing and felt more worried each week.",
+      "Narrator: One Tuesday, the teacher gave us a short task. I made the same mistake in every sentence.",
+      "Narrator: [gently] She did not criticize me. She placed a small mark beside the first answer and asked me to visit her desk after class.",
+      "Narrator: I expected a long explanation, but she used two colored pens and one clear example. Suddenly, I saw the difference.",
+      "Narrator: [relieved] Then she said that several students had made the same mistake. They had also been quiet when she invited questions.",
+      "Narrator: The next lesson, I raised my hand. My voice felt weak, yet I asked her to explain one instruction again.",
+      "Narrator: [nervous] Two classmates nodded with relief. One of them thanked me during the break because he had been confused too.",
+      "Narrator: That moment changed how I see questions. A question is not proof that a student is slow or unprepared.",
+      "Narrator: [thoughtful] It is information for the teacher. It shows where the lesson needs another example, a slower step, or different words.",
+      "Narrator: I still try to solve problems independently first. I read my notes and attempt the exercise.",
+      "Narrator: But if I remain confused, I now ask. Ten honest seconds in class can save an hour of guessing at home.",
+      "Narrator: [confident] Learning became easier when I stopped trying to look perfect and started trying to understand."
+    ],
+    "quiz": [
+      {
+        "question": "How long had the grammar point confused the narrator?",
+        "options": [
+          "One day",
+          "Six months",
+          "Three weeks",
+          "One year"
+        ],
+        "correctIndex": 2,
+        "explanation": "The narrator had remained confused for three weeks."
+      },
+      {
+        "question": "Why did she stay quiet?",
+        "options": [
+          "She disliked the teacher",
+          "She forgot the lesson",
+          "She wanted to leave early",
+          "She feared the question was too simple"
+        ],
+        "correctIndex": 3,
+        "explanation": "She worried that others would think the question was simple."
+      },
+      {
+        "question": "How did the teacher explain the point?",
+        "options": [
+          "With two colored pens and one clear example",
+          "With a long video",
+          "With a difficult book",
+          "With a group exam"
+        ],
+        "correctIndex": 0,
+        "explanation": "A simple visual example made the difference clear."
+      },
+      {
+        "question": "How did classmates react when she later asked a question?",
+        "options": [
+          "They laughed loudly",
+          "They left the class",
+          "They showed relief because some were also confused",
+          "They changed the subject"
+        ],
+        "correctIndex": 2,
+        "explanation": "Other students had needed the explanation too."
+      },
+      {
+        "question": "What did the narrator learn?",
+        "options": [
+          "Good students never ask questions",
+          "Guessing is always faster",
+          "Homework should be avoided",
+          "Questions help teachers see what needs clarification"
+        ],
+        "correctIndex": 3,
+        "explanation": "An honest question supports understanding for both learner and teacher."
+      },
+      {
+        "question": "What happened when the narrator guessed at home?",
+        "options": [
+          "She understood every example",
+          "She finished the course",
+          "She asked classmates online",
+          "She repeated the same mistake"
+        ],
+        "correctIndex": 3,
+        "explanation": "Guessing did not solve the grammar confusion."
+      },
+      {
+        "question": "What does “criticize” mean in this story?",
+        "options": [
+          "Explain with colored pens",
+          "Speak negatively about a mistake",
+          "Invite a student to a desk",
+          "Give another short task"
+        ],
+        "correctIndex": 1,
+        "explanation": "The teacher did not shame the narrator for wrong answers."
+      },
+      {
+        "question": "Why were two classmates relieved?",
+        "options": [
+          "The task had been canceled",
+          "They knew every answer",
+          "The break started early",
+          "They also needed the explanation"
+        ],
+        "correctIndex": 3,
+        "explanation": "The narrator’s question helped students who had stayed quiet."
+      },
+      {
+        "question": "When does the narrator ask for help now?",
+        "options": [
+          "After trying notes and the exercise first",
+          "Before reading any instruction",
+          "Only after three weeks",
+          "Whenever another student asks"
+        ],
+        "correctIndex": 0,
+        "explanation": "She first works independently, then asks if confusion remains."
+      },
+      {
+        "question": "What did asking one question save?",
+        "options": [
+          "The need to attend class",
+          "More time spent guessing at home",
+          "The teacher’s colored pens",
+          "Every future grammar mistake"
+        ],
+        "correctIndex": 1,
+        "explanation": "A brief question gave a faster path to understanding."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; strong classroom story that directly models healthy question asking",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-education-09",
+    "title": "Learning Through a Museum Audio Guide",
+    "level": "A1",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] I usually walk through museums quickly. I read a few labels, take several photos, and forget most details by the next day.",
+      "Narrator: Last weekend, I visited a small history museum that offered an audio guide. I borrowed headphones at the front desk.",
+      "Narrator: [curious] The guide did not speak all the time. At each room, it asked me to stop in front of one object.",
+      "Narrator: First, I studied an old travel bag. The voice described its owner, a teacher who crossed several towns by train.",
+      "Narrator: [thoughtful] I noticed repairs on the handle and a faded name inside. Those details made the bag feel like part of a real life.",
+      "Narrator: In another room, the guide played street sounds from the past. I heard bicycle bells, market sellers, and an old bus.",
+      "Narrator: I closed my eyes for a moment. The room was quiet, but the audio helped me imagine a busy morning many years ago.",
+      "Narrator: [immersed] The guide sometimes asked a question before giving information. Why was one side of a tool darker than the other?",
+      "Narrator: I looked carefully and made a guess. Then the answer explained how workers held the tool near a fire.",
+      "Narrator: [curious] Because I had guessed first, I remembered the explanation. I was not only receiving facts; I was looking for evidence.",
+      "Narrator: I spent almost two hours in the museum and took only three photos. Still, I remembered much more on the way home.",
+      "Narrator: [satisfied] The visit taught me that learning can become deeper when we slow down and use more than our eyes.",
+      "Narrator: Listening, observing, and asking small questions turned ordinary objects into stories.",
+      "Narrator: [inspired] Next time I visit a new place, I will look for a guide or create my own questions instead of rushing from room to room."
+    ],
+    "quiz": [
+      {
+        "question": "What did the narrator usually do in museums?",
+        "options": [
+          "Worked as a guide",
+          "Drew every object",
+          "Stayed all day",
+          "Walked quickly and forgot many details"
+        ],
+        "correctIndex": 3,
+        "explanation": "He usually rushed, photographed things, and forgot them."
+      },
+      {
+        "question": "What was the first object in the audio guide?",
+        "options": [
+          "An old travel bag",
+          "A gold coin",
+          "A bicycle",
+          "A school desk"
+        ],
+        "correctIndex": 0,
+        "explanation": "The first focused object was an old travel bag."
+      },
+      {
+        "question": "What old street sounds did he hear?",
+        "options": [
+          "Bells, sellers, and a bus",
+          "Airplanes and ships",
+          "Rain and thunder",
+          "Music from a concert"
+        ],
+        "correctIndex": 0,
+        "explanation": "The recording included bicycle bells, sellers, and an old bus."
+      },
+      {
+        "question": "Why did questions help him remember?",
+        "options": [
+          "He wrote every word",
+          "He repeated the tour twice",
+          "He guessed before hearing the explanation",
+          "He bought a book"
+        ],
+        "correctIndex": 2,
+        "explanation": "Making a guess made the answer more memorable."
+      },
+      {
+        "question": "How did this visit differ from earlier visits?",
+        "options": [
+          "He left more quickly",
+          "He took fewer photos but remembered more",
+          "He saw no objects",
+          "He spoke to every visitor"
+        ],
+        "correctIndex": 1,
+        "explanation": "Slower, active listening led to better memory."
+      },
+      {
+        "question": "What detail made the travel bag feel real?",
+        "options": [
+          "Its high price",
+          "Repairs and a faded name",
+          "A new handle",
+          "The room number"
+        ],
+        "correctIndex": 1,
+        "explanation": "Signs of long use connected the object with a person’s life."
+      },
+      {
+        "question": "What does “faded” mean?",
+        "options": [
+          "Written in a bright color",
+          "Recently added",
+          "Less clear after a long time",
+          "Hidden by a label"
+        ],
+        "correctIndex": 2,
+        "explanation": "The old name inside the bag was no longer strong or clear."
+      },
+      {
+        "question": "Why did the narrator close his eyes?",
+        "options": [
+          "To imagine the old street through sound",
+          "To avoid seeing the travel bag",
+          "To answer a written question",
+          "To rest after two hours"
+        ],
+        "correctIndex": 0,
+        "explanation": "The bells, sellers, and bus created a picture through listening."
+      },
+      {
+        "question": "What happened before the guide explained the dark tool?",
+        "options": [
+          "The narrator made a guess",
+          "The narrator took a photo",
+          "A worker entered the room",
+          "The guide changed rooms"
+        ],
+        "correctIndex": 0,
+        "explanation": "Thinking first made the later answer easier to remember."
+      },
+      {
+        "question": "How was the narrator more active during this visit?",
+        "options": [
+          "He moved through rooms faster",
+          "He took many more photos",
+          "He read every label aloud",
+          "He observed, listened, and answered questions"
+        ],
+        "correctIndex": 3,
+        "explanation": "The guide asked him to use evidence instead of only receiving facts."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; museum audio-guide format adds observational listening variety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a1-education-10",
+    "title": "Choosing a Study Partner",
+    "level": "A1",
+    "themeId": "education",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Alya",
+        "gender": "female"
+      },
+      {
+        "name": "Mariam",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Alya: [hopeful] Mariam, would you like to study together for the language test next month?",
+      "Mariam: [careful] Maybe. I enjoy studying with friends, but our last group talked more than it studied.",
+      "Alya: I remember. Six people were too many, and nobody had a clear plan.",
+      "Mariam: What kind of study session are you suggesting this time?",
+      "Alya: [practical] Only the two of us, twice a week, for forty-five minutes after work.",
+      "Mariam: That sounds realistic. What would we do during those forty-five minutes?",
+      "Alya: For the first ten minutes, we can review vocabulary and test each other without looking at notes.",
+      "Mariam: Then perhaps we could practice one listening exercise and compare our answers.",
+      "Alya: [agreeing] Good idea. We should explain why we chose each answer, not only check the answer key.",
+      "Mariam: I also need speaking practice. Could we finish with a short role-play each time?",
+      "Alya: [enthusiastic] Yes. We can use situations from the course, such as visiting a clinic or asking for directions.",
+      "Mariam: Where should we meet? The café near work is convenient, but the music is sometimes loud.",
+      "Alya: The public library has a small discussion room. We can reserve it online for free.",
+      "Mariam: [relieved] Perfect. I want us to agree on one more thing: if either person is tired, we still begin on time.",
+      "Alya: Agreed, but we can choose a lighter activity instead of canceling the whole session.",
+      "Mariam: I like that. A short useful meeting is better than waiting for a perfect evening.",
+      "Alya: Shall we try Tuesday and Thursday for two weeks, then review whether it helps?",
+      "Mariam: Yes. I will reserve Tuesday's room, and you can choose our first listening exercise.",
+      "Alya: [confident] Deal. I feel calmer already because the plan is specific.",
+      "Mariam: Me too. A good study partner is helpful, but a clear routine makes the partnership work."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the last study group ineffective?",
+        "options": [
+          "It was too large and lacked a plan",
+          "The room was too cold",
+          "The test was canceled",
+          "Nobody had a book"
+        ],
+        "correctIndex": 0,
+        "explanation": "Six people talked without following a clear plan."
+      },
+      {
+        "question": "How often will Alya and Mariam meet?",
+        "options": [
+          "Every morning",
+          "Twice a week",
+          "Once a month",
+          "Only before the test"
+        ],
+        "correctIndex": 1,
+        "explanation": "They plan two sessions each week."
+      },
+      {
+        "question": "What will they do after vocabulary review?",
+        "options": [
+          "Go home immediately",
+          "Watch a film",
+          "Practice listening and compare reasons",
+          "Write a long essay"
+        ],
+        "correctIndex": 2,
+        "explanation": "Listening practice follows the opening vocabulary review."
+      },
+      {
+        "question": "Where will they study?",
+        "options": [
+          "In a loud café",
+          "At the office desk",
+          "In a library discussion room",
+          "On a bus"
+        ],
+        "correctIndex": 2,
+        "explanation": "They choose a free discussion room at the library."
+      },
+      {
+        "question": "What will happen after two weeks?",
+        "options": [
+          "They will take the final test",
+          "They will review whether the plan helps",
+          "They will invite six people",
+          "They will stop studying"
+        ],
+        "correctIndex": 1,
+        "explanation": "The first two weeks are a trial of their routine."
+      },
+      {
+        "question": "Why do they choose only two people?",
+        "options": [
+          "The library allows only two",
+          "The test has two questions",
+          "Their coworkers cannot study",
+          "The last group was too large"
+        ],
+        "correctIndex": 3,
+        "explanation": "A smaller group will be easier to organize and focus."
+      },
+      {
+        "question": "What does “role-play” mean here?",
+        "options": [
+          "Listen to a recorded lesson",
+          "Write vocabulary without notes",
+          "Reserve a library room",
+          "Practice a situation by acting it out"
+        ],
+        "correctIndex": 3,
+        "explanation": "They will act through situations such as a clinic visit."
+      },
+      {
+        "question": "Why do they explain their listening answers?",
+        "options": [
+          "The answer key is missing",
+          "The library requires speaking",
+          "Reasons show how they understood the audio",
+          "The test is only about grammar"
+        ],
+        "correctIndex": 2,
+        "explanation": "They want to learn from the thinking, not only check a letter."
+      },
+      {
+        "question": "What will they do when tired?",
+        "options": [
+          "Cancel every session",
+          "Study for twice as long",
+          "Choose an easier activity and still meet",
+          "Move to the loud café"
+        ],
+        "correctIndex": 2,
+        "explanation": "A lighter session keeps the routine without demanding perfect energy."
+      },
+      {
+        "question": "Why does the plan make them calmer?",
+        "options": [
+          "The time, place, and tasks are clear",
+          "The language test is canceled",
+          "They have already passed",
+          "Six friends will join them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Specific decisions reduce uncertainty about studying."
+      }
+    ],
+    "qualityReview": {
+      "level": "A1",
+      "theme": "education",
+      "scriptDecision": "keep; concrete study plan balances vocabulary, listening, speaking, place, and review",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

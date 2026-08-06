@@ -4,11 +4,12 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Level, CurriculumUnit, CurriculumStep, AppView, ModuleProps, ModuleContext, ThematicBridgeContent } from '../types';
 import { MASTER_CURRICULUM } from '../data/curriculum';
 import { THEMATIC_BRIDGES } from '../data/thematicBridges';
-import { getRoadmapProgress, completeRoadmapUnit } from '../services/storage';
+import { getRoadmapProgress, completeRoadmapUnit, getActivityLogs } from '../services/storage';
 import { LEVELS } from '../constants';
 import { audioService } from '../services/audioService';
 import { READING_MANIFEST } from '../data/readingManifest';
 import { LISTENING_MANIFEST } from '../data/listeningManifest';
+import { SHADOWING_DATA } from '../src/constants/shadowingData';
 
 // The curriculum's own step titles are hand-authored narrative labels (e.g. "Choosing Eid Clothes")
 // that rarely match the actual static content behind targetId (the 14 static themes are broad
@@ -25,12 +26,49 @@ const getStepDisplayTitle = (step: CurriculumStep): string => {
   return step.title;
 };
 
+const getShadowingMainCategory = (theme: typeof SHADOWING_DATA[number]) => {
+  if (theme.mainCategory) return theme.mainCategory;
+  if (theme.category === 'Idioms & Slang') return 'Idioms';
+  if (theme.category === 'Slang') return 'Slang';
+  return 'Daily Conversations';
+};
+
+const getRoadmapShadowingSelection = (unit: CurriculumUnit, step: CurriculumStep) => {
+  const mode = step.shadowingMode;
+  if (!mode || mode === 'roleplay') return { shadowingMode: mode, shadowingTheme: step.shadowingTheme || unit.title };
+
+  const mainCategory = mode === 'daily' ? 'Daily Conversations' : mode === 'idioms' ? 'Idioms' : 'Slang';
+  const isIslamicTopic = /islam|mosque|ramadan|eid|halal|hajj|umrah|zakat|prophet|sunnah|quran|deen|adab|akhlaq/i.test(`${unit.title} ${unit.vocabTheme}`);
+  const preferredSubcategory = isIslamicTopic ? 'Islamic' : 'General';
+  const allowedDifficulties = unit.level === 'A1' || unit.level === 'A2'
+    ? new Set(['Easy'])
+    : unit.level === 'B1'
+      ? new Set(['Easy', 'Medium'])
+      : new Set(['Medium', 'Hard']);
+  const preferred = SHADOWING_DATA
+    .filter(theme => getShadowingMainCategory(theme) === mainCategory && (theme.subCategory || (theme.category === 'Islamic' ? 'Islamic' : 'General')) === preferredSubcategory)
+    .flatMap(theme => theme.tasks.filter(task => allowedDifficulties.has(task.difficulty)).map(task => ({ task, theme })));
+  const fallback = SHADOWING_DATA
+    .flatMap(theme => theme.tasks.filter(task => allowedDifficulties.has(task.difficulty)).map(task => ({ task, theme })));
+  const pool = preferred.length > 0 ? preferred : fallback;
+  if (pool.length === 0) return { shadowingMode: mode, shadowingTheme: step.shadowingTheme || unit.title };
+  const hash = unit.id.split('').reduce((total, char) => total + char.charCodeAt(0), 0);
+  const selected = pool[hash % pool.length];
+  return {
+    shadowingMode: mode,
+    shadowingTheme: step.shadowingTheme || unit.title,
+    shadowingTaskId: selected.task.id,
+    shadowingSentenceIds: [selected.task.id]
+  };
+};
+
 interface RoadmapModuleProps extends ModuleProps {
   onNavigateToModule: (view: AppView, context: ModuleContext) => void;
 }
 
 const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initialContext }) => {
   const [progress, setProgress] = useState<string[]>([]);
+  const [stepScores, setStepScores] = useState<Record<string, number>>({});
   const [selectedUnit, setSelectedUnit] = useState<CurriculumUnit | null>(null);
   const [activeLevelFilter, setActiveLevelFilter] = useState<Level | 'ALL'>('ALL');
   const [viewMode, setViewMode] = useState<'ROADMAP' | 'LIBRARY'>('ROADMAP');
@@ -40,6 +78,14 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
 
   useEffect(() => {
     setProgress(getRoadmapProgress());
+    const scores: Record<string, number> = {};
+    getActivityLogs().forEach(log => {
+      const stepId = log.metadata?.stepId;
+      if (stepId && log.metadata?.completed) {
+        scores[stepId] = Math.max(scores[stepId] || 0, log.score || 0);
+      }
+    });
+    setStepScores(scores);
   }, []);
 
   useEffect(() => {
@@ -72,6 +118,9 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
 
     if (!selectedUnit) return;
 
+    const shadowingSelection = step.type === 'shadowing_task'
+      ? getRoadmapShadowingSelection(selectedUnit, step)
+      : {};
     const context: ModuleContext = {
       unitId: selectedUnit.id,
       stepId: step.id,
@@ -83,7 +132,8 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
       grammarFocus: selectedUnit.grammarFocus,
       vocabTheme: selectedUnit.vocabTheme,
       targetLessonId: step.targetId,
-      promptContext: step.promptContext
+      promptContext: step.promptContext,
+      ...shadowingSelection
     };
 
     onNavigateToModule(step.moduleView, context);
@@ -508,6 +558,7 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
               <div className="space-y-2.5 overflow-y-auto custom-scrollbar pr-1 flex-1 pb-4">
                 {selectedUnit.steps.map((step, sIdx) => {
                   const stepCompleted = isStepCompleted(step.id);
+                  const stepScore = stepScores[step.id];
 
                   return (
                     <div key={step.id} className="relative">
@@ -548,6 +599,13 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
                           <p className="text-[10px] text-gray-500 dark:text-gray-400 font-medium mt-0.5 line-clamp-1 opacity-70 italic">{step.goal}</p>
                         </div>
 
+                        {stepCompleted && stepScore !== undefined && (
+                          <div className="text-right shrink-0 pr-1">
+                            <div className="text-[8px] font-black uppercase tracking-widest text-green-600/70">Score</div>
+                            <div className="text-sm font-black text-green-700 dark:text-green-300">{Math.round(stepScore)}%</div>
+                          </div>
+                        )}
+
                         {!stepCompleted && (
                           <div className="w-7 h-7 rounded-lg bg-lovelya-600 text-white flex items-center justify-center shadow-md group-hover/btn:scale-110 group-hover/btn:rotate-6 transition-all duration-200 shrink-0">
                             <i className="fas fa-play text-[9px] pl-0.5"></i>
@@ -571,13 +629,16 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
               {!isUnitCompleted(selectedUnit.id) && (
                 <button
                   onClick={() => {
+                    if (!selectedUnit.steps.every(step => isStepCompleted(step.id))) return;
                     completeRoadmapUnit(selectedUnit.id);
                     setProgress(getRoadmapProgress());
                     setSelectedUnit(null);
                   }}
-                  className="flex-[2] py-2.5 bg-green-600 text-white font-black rounded-xl shadow-lg hover:bg-green-700 transition active:scale-95 text-xs uppercase tracking-widest flex items-center justify-center gap-2"
+                  disabled={!selectedUnit.steps.every(step => isStepCompleted(step.id))}
+                  className="flex-[2] py-2.5 bg-green-600 text-white font-black rounded-xl shadow-lg hover:bg-green-700 transition active:scale-95 text-xs uppercase tracking-widest flex items-center justify-center gap-2 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-green-600 disabled:active:scale-100"
                 >
-                  <i className="fas fa-medal"></i> Claim Mastery
+                  <i className={`fas ${selectedUnit.steps.every(step => isStepCompleted(step.id)) ? 'fa-medal' : 'fa-lock'}`}></i>
+                  {selectedUnit.steps.every(step => isStepCompleted(step.id)) ? 'Claim Mastery' : 'Complete All Steps'}
                 </button>
               )}
             </div>

@@ -198,7 +198,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
             <i className={`fas fa-rotate-right text-[10px] ${isRefreshing ? 'fa-spin' : ''}`}></i>
           </button>
 
-          <button
+            <button
             onClick={() => setIsDark(!isDark)}
             className="w-8 h-8 rounded-lg bg-gray-50 dark:bg-gray-800 flex items-center justify-center text-gray-500 dark:text-gray-400 hover:text-lovelya-600 transition"
           >
@@ -206,6 +206,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
           </button>
 
           <button
+            data-tour="navigation"
             onClick={() => {
               audioService.play('nav');
               setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -258,7 +259,7 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
           </div>
 
           {/* Navigation - Scrollable Area */}
-          <nav data-tour="sidebar-nav" className="flex-1 px-4 py-2 space-y-8 overflow-y-auto custom-scrollbar pb-4">
+          <nav className="flex-1 px-4 py-2 space-y-8 overflow-y-auto custom-scrollbar pb-4">
             {navGroups.map((group, idx) => (
               <div key={idx}>
                 <div className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-3 px-4 opacity-80">{group.title}</div>
@@ -272,7 +273,13 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
                     return (
                       <button
                         key={item.id}
-                        data-tour={item.id === AppView.ROADMAP ? 'roadmap-nav' : undefined}
+                        data-tour={item.id === AppView.HOME
+                          ? 'navigation'
+                          : item.id === AppView.ROADMAP
+                            ? 'roadmap-navigation'
+                            : item.id === AppView.PROFILE
+                              ? 'profile-navigation'
+                              : undefined}
                         onClick={() => {
                           audioService.play('nav');
                           onNavigate(item.id);
@@ -405,11 +412,12 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
         </div>
 
         {/* Bottom Navigation for Mobile */}
-        <div data-tour="bottom-nav" className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-100 dark:border-gray-800 px-2 py-1.5 flex justify-around items-center z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-100 dark:border-gray-800 px-2 py-1.5 flex justify-around items-center z-50 shadow-[0_-10px_30px_rgba(0,0,0,0.05)]">
           {[
             { id: AppView.HOME, label: 'Home', icon: 'fa-house' },
             { id: AppView.TASKS, label: 'Tugas', icon: 'fa-clipboard-check' },
             { id: AppView.ROADMAP, label: 'Roadmap', icon: 'fa-map-marked-alt' },
+            { id: AppView.GAMES, label: 'Games', icon: 'fa-gamepad' },
             { id: AppView.PROFILE, label: 'Profile', icon: 'fa-user-circle' },
             { id: AppView.SETTINGS, label: 'Settings', icon: 'fa-cog' },
           ].map(item => {
@@ -417,7 +425,13 @@ const Layout: React.FC<LayoutProps> = ({ currentView, onNavigate, children, user
             return (
               <button
                 key={item.id}
-                data-tour={item.id === AppView.ROADMAP ? 'roadmap-nav-mobile' : undefined}
+                data-tour={item.id === AppView.HOME
+                  ? 'navigation'
+                  : item.id === AppView.ROADMAP
+                    ? 'roadmap-navigation'
+                    : item.id === AppView.PROFILE
+                      ? 'profile-navigation'
+                      : undefined}
                 onClick={() => {
                   audioService.play('nav');
                   onNavigate(item.id);

@@ -6,33 +6,147 @@
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] I had studied the language for two years before this trip, although I never once used it with a real person.",
-      "Narrator: [nervous] When my connecting train was cancelled, I realized I would have to speak it properly for the first time, whether I felt ready or not.",
-      "Narrator: [reflective] The station was crowded, and the announcement board only showed information in a language I could barely read.",
-      "Narrator: [worried] For a moment, I considered just pointing at my ticket and hoping someone would understand my situation without words.",
-      "Narrator: [determined] But then I remembered why I had studied so hard, so I walked up to the information counter and simply began.",
-      "Narrator: [with feeling] My sentences were slow and a little broken, but the man behind the counter listened patiently until I finished explaining.",
-      "Narrator: [surprised] He answered in the same language, slowly at first, because he noticed I needed a little extra time to understand.",
-      "Narrator: [warmly] He told me there was a later train, although it would arrive almost three hours after my original one.",
-      "Narrator: [thoughtful] I asked a follow-up question, something about which platform, and he smiled because my grammar was actually correct that time.",
-      "Narrator: [gently] While I waited, I sat near a small café and ordered food using only the local language, no translation app at all.",
-      "Narrator: [with a small smile] The waiter corrected one word gently, without making me feel embarrassed, and I thanked him properly before he walked away.",
-      "Narrator: [reflective] Three hours earlier, I would have called this delay a disaster, something that ruined my careful schedule completely.",
-      "Narrator: [peacefully] Instead, it became the moment my studying finally connected to something real, something I could actually use with strangers.",
-      "Narrator: [warmly] When my new train finally arrived, I boarded feeling different than I had that morning, calmer and strangely proud of myself.",
-      "Narrator: [thoughtful] I still make mistakes constantly when I speak, and I probably always will, at least for many more years.",
-      "Narrator: [with a small smile] But that afternoon at the station taught me that mistakes are not failures, because people usually want to help you anyway."
+      "Narrator: [warmly] I had studied the language for two years before this trip, although I never once used it with a real person.",
+      "Narrator: When my connecting train was cancelled, I realized I would have to speak it properly for the first time, whether I felt ready or not.",
+      "Narrator: [thoughtful] The station was crowded, and the announcement board only showed information in a language I could barely read.",
+      "Narrator: For a moment, I considered just pointing at my ticket and hoping someone would understand my situation without words.",
+      "Narrator: [carefully] But then I remembered why I had studied so hard, so I walked up to the information counter and simply began.",
+      "Narrator: My sentences were slow and a little broken, but the man behind the counter listened patiently until I finished explaining.",
+      "Narrator: [reflective] He answered in the same language, slowly at first, because he noticed I needed a little extra time to understand.",
+      "Narrator: He told me there was a later train, although it would arrive almost three hours after my original one.",
+      "Narrator: [honestly] I asked a follow-up question, something about which platform, and he smiled because my grammar was actually correct that time.",
+      "Narrator: While I waited, I sat near a small café and ordered food using only the local language, no translation app at all.",
+      "Narrator: [gently] The waiter corrected one word gently, without making me feel embarrassed, and I thanked him properly before he walked away.",
+      "Narrator: Three hours earlier, I would have called this delay a disaster, something that ruined my careful schedule completely.",
+      "Narrator: [encouraging] Instead, it became the moment my studying finally connected to something real, something I could actually use with strangers.",
+      "Narrator: When my new train finally arrived, I boarded feeling different than I had that morning, calmer and strangely proud of myself.",
+      "Narrator: [sincere] I still make mistakes constantly when I speak, and I probably always will, at least for many more years.",
+      "Narrator: But that afternoon at the station taught me that mistakes are not failures, because people usually want to help you anyway."
     ],
     "quiz": [
-      { "question": "Why did the narrator need to speak the local language for the first time?", "options": ["She lost her passport", "Her connecting train was cancelled", "She missed her flight", "Her phone stopped working"], "correctIndex": 1, "explanation": "Her connecting train was cancelled, so she had to explain her situation at the information counter." },
-      { "question": "How did the man at the information counter respond to her broken sentences?", "options": ["He ignored her", "He listened patiently and answered slowly", "He told her to leave", "He called someone else"], "correctIndex": 1, "explanation": "The man listened patiently until she finished, then answered slowly because she needed extra time." },
-      { "question": "How long would she have to wait for the later train?", "options": ["Thirty minutes", "Almost three hours", "One full day", "Ten minutes"], "correctIndex": 1, "explanation": "The man told her the later train would arrive almost three hours after her original one." },
-      { "question": "What did the narrator do while waiting at the café?", "options": ["She used a translation app", "She ordered food using only the local language", "She stayed silent", "She called home"], "correctIndex": 1, "explanation": "She ordered food using only the local language, without any translation app." },
-      { "question": "What did the narrator conclude about mistakes by the end of the story?", "options": ["Mistakes ruin every trip", "Mistakes are not failures, because people usually want to help", "Mistakes should be avoided by staying silent", "Mistakes mean you should stop studying"], "correctIndex": 1, "explanation": "She concludes mistakes are not failures because people usually want to help you anyway." }
-    ]
+      {
+        "question": "Why did the narrator need to speak the local language for the first time?",
+        "options": [
+          "Her connecting train was cancelled",
+          "She lost her passport",
+          "She missed her flight",
+          "Her phone stopped working"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her connecting train was cancelled, so she had to explain her situation at the information counter."
+      },
+      {
+        "question": "How did the man at the information counter respond to her broken sentences?",
+        "options": [
+          "He ignored her",
+          "He told her to leave",
+          "He called someone else",
+          "He listened patiently and answered slowly"
+        ],
+        "correctIndex": 3,
+        "explanation": "The man listened patiently until she finished, then answered slowly because she needed extra time."
+      },
+      {
+        "question": "How long would she have to wait for the later train?",
+        "options": [
+          "Thirty minutes",
+          "One full day",
+          "Almost three hours",
+          "Ten minutes"
+        ],
+        "correctIndex": 2,
+        "explanation": "The man told her the later train would arrive almost three hours after her original one."
+      },
+      {
+        "question": "What did the narrator do while waiting at the café?",
+        "options": [
+          "She used a translation app",
+          "She stayed silent",
+          "She ordered food using only the local language",
+          "She called home"
+        ],
+        "correctIndex": 2,
+        "explanation": "She ordered food using only the local language, without any translation app."
+      },
+      {
+        "question": "What did the narrator conclude about mistakes by the end of the story?",
+        "options": [
+          "Mistakes ruin every trip",
+          "Mistakes should be avoided by staying silent",
+          "Mistakes mean you should stop studying",
+          "Mistakes are not failures, because people usually want to help"
+        ],
+        "correctIndex": 3,
+        "explanation": "She concludes mistakes are not failures because people usually want to help you anyway."
+      },
+      {
+        "question": "What forces the narrator to use the language?",
+        "options": [
+          "A waiter refuses translation",
+          "The ticket has no destination",
+          "The station closes",
+          "A canceled connection requires new travel information"
+        ],
+        "correctIndex": 3,
+        "explanation": "A real problem creates purposeful communication."
+      },
+      {
+        "question": "How does the counter worker support understanding?",
+        "options": [
+          "He changes the language immediately",
+          "He corrects every grammar mistake",
+          "He points without speaking",
+          "He listens and answers more slowly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Adjusted pace makes the exchange accessible."
+      },
+      {
+        "question": "What does the platform question show?",
+        "options": [
+          "The new train is canceled",
+          "The narrator can continue beyond a memorized opening",
+          "The worker knows her teacher",
+          "The ticket is invalid"
+        ],
+        "correctIndex": 1,
+        "explanation": "A follow-up demonstrates interactive skill."
+      },
+      {
+        "question": "Why is the café exchange valuable?",
+        "options": [
+          "It proves apps are useless",
+          "It gives another low-risk chance to communicate",
+          "The food is free",
+          "The waiter grades her"
+        ],
+        "correctIndex": 1,
+        "explanation": "Practice continues in a normal setting."
+      },
+      {
+        "question": "What is the realistic confidence lesson?",
+        "options": [
+          "Mistakes can coexist with successful communication and polite help",
+          "Everyone will always understand",
+          "Grammar no longer matters",
+          "Two years guarantees fluency"
+        ],
+        "correctIndex": 0,
+        "explanation": "The result is progress, not perfection."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "keep; authentic language-learning story uses a staffed counter, follow-up questions, correction, and acceptance of mistakes",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-travel-02",
@@ -41,38 +155,155 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Receptionist", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Receptionist",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Receptionist: [pleasantly] Good evening, welcome. Could I have your name and confirmation number, please?",
-      "Guest: [tired] Good evening. It's under Karim, and I booked a double room for three nights.",
-      "Receptionist: [checking screen] Let me look. I'm sorry, sir, but I only see a booking for one night under that name.",
-      "Guest: [surprised] That can't be right. I have the confirmation email right here on my phone, showing three nights clearly.",
-      "Receptionist: [apologetic] I believe you completely. It looks like our system made an error when your reservation was updated last week.",
-      "Guest: [frustrated] I flew eight hours today because I trusted that booking. I really can't sleep on the street tonight.",
-      "Receptionist: [calmly] Of course not, and you won't need to. Let me see what I can arrange while you wait a moment.",
-      "Guest: [sighing] I appreciate that. I'm just exhausted, so I apologize if I sound impatient right now.",
-      "Receptionist: [warmly] It's completely understandable, sir. Mistakes like this are frustrating, especially after such a long journey.",
-      "Receptionist: [typing] Good news. We have a suite available for the same three nights, at no extra cost, because of our error.",
-      "Guest: [relieved] Really? That's incredibly kind. I honestly expected an argument, not an upgrade.",
-      "Receptionist: [smiling] We would rather fix our mistake properly than leave a guest with a difficult first night.",
-      "Guest: [grateful] Thank you so much. Does the suite include breakfast, or should I ask about that separately?",
-      "Receptionist: [informative] It includes breakfast every morning until ten, served on the second floor near the garden.",
-      "Guest: [curious] Wonderful. Is there anything I need to sign before heading up to my room?",
-      "Receptionist: [helpfully] Just this form, confirming your new room number and the corrected dates for your stay.",
-      "Guest: [nodding] Of course. Here you are, signed. Thank you again for handling this so quickly.",
-      "Receptionist: [kindly] You're very welcome. Your room is on the sixth floor, number six-twelve, with a lovely view of the harbor.",
-      "Guest: [smiling] That sounds perfect after the day I've had. I appreciate your patience with me tonight.",
-      "Receptionist: [warmly] Enjoy your stay, sir, and please let us know if anything else needs correcting."
+      "Receptionist: [warmly] Good evening, welcome. Could I have your name and confirmation number, please?",
+      "Guest: Good evening. It's under Karim, and I booked a double room for three nights.",
+      "Receptionist: [thoughtful] Let me look. I'm sorry, sir, but I only see a booking for one night under that name.",
+      "Guest: That can't be right. I have the confirmation email right here on my phone, showing three nights clearly.",
+      "Receptionist: [carefully] I believe you completely. It looks like our system made an error when your reservation was updated last week.",
+      "Guest: I flew eight hours today because I trusted that booking. I really can't sleep on the street tonight.",
+      "Receptionist: [reflective] Of course not, and you won't need to. Let me see what I can arrange while you wait a moment.",
+      "Guest: I appreciate that. I'm just exhausted, so I apologize if I sound impatient right now.",
+      "Receptionist: [honestly] It's completely understandable, sir. Mistakes like this are frustrating, especially after such a long journey.",
+      "Receptionist: Good news. We have a suite available for the same three nights, at no extra cost, because of our error.",
+      "Guest: [gently] Really? That's incredibly kind. I honestly expected an argument, not an upgrade.",
+      "Receptionist: We would rather fix our mistake properly than leave a guest with a difficult first night.",
+      "Guest: [encouraging] Thank you so much. Does the suite include breakfast, or should I ask about that separately?",
+      "Receptionist: It includes breakfast every morning until ten, served on the second floor near the garden.",
+      "Guest: [sincere] Wonderful. Is there anything I need to sign before heading up to my room?",
+      "Receptionist: Just this form, confirming your new room number and the corrected dates for your stay.",
+      "Guest: Of course. Here you are, signed. Thank you again for handling this so quickly.",
+      "Receptionist: You're very welcome. Your room is on the sixth floor, number six-twelve, with a lovely view of the harbor.",
+      "Guest: That sounds perfect after the day I've had. I appreciate your patience with me tonight.",
+      "Receptionist: Enjoy your stay, sir, and please let us know if anything else needs correcting."
     ],
     "quiz": [
-      { "question": "What problem does the guest discover at check-in?", "options": ["His room is already occupied", "The hotel only shows a booking for one night instead of three", "His credit card was declined", "The hotel lost his luggage"], "correctIndex": 1, "explanation": "The receptionist finds only a one-night booking, though he had booked three nights." },
-      { "question": "Why did the system show the wrong number of nights?", "options": ["The guest changed it himself", "The system made an error when his reservation was updated", "He never actually booked online", "The hotel was fully booked"], "correctIndex": 1, "explanation": "The receptionist explains the system made an error when his reservation was updated last week." },
-      { "question": "How does the receptionist resolve the situation?", "options": ["She cancels his stay", "She offers a suite for the same three nights at no extra cost", "She sends him to another hotel", "She charges him double"], "correctIndex": 1, "explanation": "She offers a suite for the same three nights at no extra cost because of the hotel's error." },
-      { "question": "What does the suite include according to the receptionist?", "options": ["Nothing extra", "Breakfast every morning until ten", "Free airport transport", "A rental car"], "correctIndex": 1, "explanation": "She tells him the suite includes breakfast every morning until ten, served near the garden." },
-      { "question": "Where is the guest's new room located?", "options": ["First floor, room one-oh-one", "Sixth floor, room six-twelve, with a harbor view", "Basement level", "Tenth floor with no view"], "correctIndex": 1, "explanation": "The receptionist tells him his room is on the sixth floor, number six-twelve, with a view of the harbor." }
-    ]
+      {
+        "question": "What problem does the guest discover at check-in?",
+        "options": [
+          "His room is already occupied",
+          "His credit card was declined",
+          "The hotel only shows a booking for one night instead of three",
+          "The hotel lost his luggage"
+        ],
+        "correctIndex": 2,
+        "explanation": "The receptionist finds only a one-night booking, though he had booked three nights."
+      },
+      {
+        "question": "Why did the system show the wrong number of nights?",
+        "options": [
+          "The guest changed it himself",
+          "The system made an error when his reservation was updated",
+          "He never actually booked online",
+          "The hotel was fully booked"
+        ],
+        "correctIndex": 1,
+        "explanation": "The receptionist explains the system made an error when his reservation was updated last week."
+      },
+      {
+        "question": "How does the receptionist resolve the situation?",
+        "options": [
+          "She offers a suite for the same three nights at no extra cost",
+          "She cancels his stay",
+          "She sends him to another hotel",
+          "She charges him double"
+        ],
+        "correctIndex": 0,
+        "explanation": "She offers a suite for the same three nights at no extra cost because of the hotel's error."
+      },
+      {
+        "question": "What does the suite include according to the receptionist?",
+        "options": [
+          "Nothing extra",
+          "Free airport transport",
+          "Breakfast every morning until ten",
+          "A rental car"
+        ],
+        "correctIndex": 2,
+        "explanation": "She tells him the suite includes breakfast every morning until ten, served near the garden."
+      },
+      {
+        "question": "Where is the guest's new room located?",
+        "options": [
+          "First floor, room one-oh-one",
+          "Basement level",
+          "Tenth floor with no view",
+          "Sixth floor, room six-twelve, with a harbor view"
+        ],
+        "correctIndex": 3,
+        "explanation": "The receptionist tells him his room is on the sixth floor, number six-twelve, with a view of the harbor."
+      },
+      {
+        "question": "What evidence does Karim provide?",
+        "options": [
+          "A photograph of the suite",
+          "A restaurant receipt",
+          "A second passport",
+          "A confirmation email showing three nights"
+        ],
+        "correctIndex": 3,
+        "explanation": "The written booking allows the error to be checked."
+      },
+      {
+        "question": "Why does the receptionist ask him to wait?",
+        "options": [
+          "The hotel is closing",
+          "Breakfast has started",
+          "She needs time to find an available solution",
+          "His phone is charging"
+        ],
+        "correctIndex": 2,
+        "explanation": "The pause supports problem-solving."
+      },
+      {
+        "question": "Who bears the extra suite cost?",
+        "options": [
+          "The hotel because it is correcting its error",
+          "Karim’s airline",
+          "The breakfast staff",
+          "Another guest"
+        ],
+        "correctIndex": 0,
+        "explanation": "The upgrade is explicitly at no extra charge."
+      },
+      {
+        "question": "Why does Karim sign a form?",
+        "options": [
+          "It cancels breakfast",
+          "It records the new room and corrected dates",
+          "It changes his name",
+          "It reports the receptionist"
+        ],
+        "correctIndex": 1,
+        "explanation": "Documentation confirms the repair."
+      },
+      {
+        "question": "What communication skill helps both people?",
+        "options": [
+          "They ignore the email",
+          "The receptionist promises before checking",
+          "Karim explains his frustration without abuse and the receptionist gives specific next steps",
+          "Karim accepts one night"
+        ],
+        "correctIndex": 2,
+        "explanation": "Calm specificity moves the issue toward resolution."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "keep; clear service-recovery dialogue uses evidence, corrected dates, documented terms, and calm communication",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-travel-03",
@@ -81,148 +312,607 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Sari", "gender": "female" },
-      { "name": "Dewi", "gender": "female" }
+      {
+        "name": "Sari",
+        "gender": "female"
+      },
+      {
+        "name": "Dewi",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Sari: [excited] So, I made a list of six cities we could visit, although I know we only have ten days total.",
-      "Dewi: [laughing] Six cities in ten days? Sari, we'll spend the whole trip on buses instead of actually seeing anything.",
-      "Sari: [defensive] I just don't want to waste this trip by staying in one place the entire time.",
-      "Dewi: [gently] I understand that, but I'd rather see three cities properly than rush through six of them exhausted.",
-      "Sari: [thoughtful] That's fair, actually. When you say it that way, my plan does sound a little unrealistic.",
-      "Dewi: [warmly] What if we picked your top three cities instead, and spent three or four days in each one?",
-      "Sari: [considering] Okay, that works for me. I definitely want to see the old town with the famous market.",
-      "Dewi: [nodding] Agreed, that's on my list too. What's your second choice, since we both want the market city?",
-      "Sari: [enthusiastic] The coastal town, because I've wanted to see that lighthouse since I was a teenager.",
-      "Dewi: [smiling] Perfect, I'm happy with that. For the third city, could we choose somewhere with mountains?",
-      "Sari: [curious] Sure, although I've never really hiked before. Is that something you want to do a lot?",
-      "Dewi: [reassuring] Just one easy trail, nothing difficult. I want to see the sunrise from somewhere high, that's all.",
-      "Sari: [warmly] That actually sounds beautiful. I'm surprised I never suggested something like that myself.",
-      "Dewi: [thoughtful] So we have the market city, the coastal town, and the mountain village. Should we book trains between them now?",
-      "Sari: [determined] Yes, let's book everything tonight before the prices increase again like they did last month.",
-      "Dewi: [practical] Good idea. I'll also book our first hotel, since I found one with excellent reviews near the market.",
-      "Sari: [grateful] Thank you for slowing my plan down, honestly. I would have exhausted us both within four days.",
-      "Dewi: [affectionately] That's what best friends are for, telling each other when six cities is simply too many.",
-      "Sari: [laughing] Fair enough. Three cities, ten days, and hopefully a lot less running between train stations."
+      "Sari: [warmly] So, I made a list of six cities we could visit, although I know we only have ten days total.",
+      "Dewi: Six cities in ten days? Sari, we'll spend the whole trip on buses instead of actually seeing anything.",
+      "Sari: [thoughtful] I just don't want to waste this trip by staying in one place the entire time.",
+      "Dewi: I understand that, but I'd rather see three cities properly than rush through six of them exhausted.",
+      "Sari: [carefully] That's fair, actually. When you say it that way, my plan does sound a little unrealistic.",
+      "Dewi: What if we picked your top three cities instead, and spent three or four days in each one?",
+      "Sari: [reflective] Okay, that works for me. I definitely want to see the old town with the famous market.",
+      "Dewi: Agreed, that's on my list too. What's your second choice, since we both want the market city?",
+      "Sari: [honestly] The coastal town, because I've wanted to see that lighthouse since I was a teenager.",
+      "Dewi: Perfect, I'm happy with that. For the third city, could we choose somewhere with mountains?",
+      "Sari: [gently] Sure, although I've never really hiked before. Is that something you want to do a lot?",
+      "Dewi: Perhaps one suitable trail. Before choosing sunrise, we must check weather, daylight, our ability, local guidance, transport, and whether a registered guide is needed.",
+      "Sari: [encouraging] That actually sounds beautiful. I'm surprised I never suggested something like that myself.",
+      "Dewi: So we have the market city, the coastal town, and the mountain village. Should we book trains between them now?",
+      "Sari: [sincere] First let’s total transport, lodging, halal food, insurance, and emergency money. We should also check prayer access and cancellation terms.",
+      "Dewi: I will verify the hotel’s location, recent reviews, safety, room arrangement, and policies. Then we can approve any non-refundable booking together.",
+      "Sari: Thank you for slowing my plan down, honestly. I would have exhausted us both within four days.",
+      "Dewi: That's what best friends are for, telling each other when six cities is simply too many.",
+      "Sari: Three cities, ten days, rest between journeys, and a trail with a weather and turnaround plan—not a rushed checklist."
     ],
     "quiz": [
-      { "question": "What was Sari's original plan for the ten-day trip?", "options": ["Staying in one city the whole time", "Visiting six cities", "Not traveling at all", "Visiting only two cities"], "correctIndex": 1, "explanation": "Sari originally made a list of six cities she wanted to visit in ten days." },
-      { "question": "Why does Dewi disagree with the six-city plan?", "options": ["She dislikes traveling by bus", "They would spend the trip traveling instead of really seeing anything", "She wants to stay home", "It costs too much money"], "correctIndex": 1, "explanation": "Dewi worries they would spend the whole trip on buses instead of actually seeing anything." },
-      { "question": "What compromise do they reach?", "options": ["Visiting six cities quickly", "Choosing three cities and spending three or four days in each", "Cancelling the trip", "Staying only in the mountain village"], "correctIndex": 1, "explanation": "They agree to pick three cities and spend three or four days in each one." },
-      { "question": "Why does Sari want to see the coastal town?", "options": ["For the food", "Because she has wanted to see the lighthouse since she was a teenager", "Because it's cheap", "Her family lives there"], "correctIndex": 1, "explanation": "Sari says she has wanted to see the lighthouse since she was a teenager." },
-      { "question": "What does Dewi want to do in the mountain village?", "options": ["A difficult multi-day hike", "One easy trail to see the sunrise from somewhere high", "Nothing outdoors at all", "Visit a museum"], "correctIndex": 1, "explanation": "Dewi wants to do just one easy trail and see the sunrise from somewhere high." }
-    ]
+      {
+        "question": "What was Sari's original plan for the ten-day trip?",
+        "options": [
+          "Visiting six cities",
+          "Staying in one city the whole time",
+          "Not traveling at all",
+          "Visiting only two cities"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sari originally made a list of six cities she wanted to visit in ten days."
+      },
+      {
+        "question": "Why does Dewi disagree with the six-city plan?",
+        "options": [
+          "She dislikes traveling by bus",
+          "They would spend the trip traveling instead of really seeing anything",
+          "She wants to stay home",
+          "It costs too much money"
+        ],
+        "correctIndex": 1,
+        "explanation": "Dewi worries they would spend the whole trip on buses instead of actually seeing anything."
+      },
+      {
+        "question": "What compromise do they reach?",
+        "options": [
+          "Visiting six cities quickly",
+          "Choosing three cities and spending three or four days in each",
+          "Cancelling the trip",
+          "Staying only in the mountain village"
+        ],
+        "correctIndex": 1,
+        "explanation": "They agree to pick three cities and spend three or four days in each one."
+      },
+      {
+        "question": "Why does Sari want to see the coastal town?",
+        "options": [
+          "For the food",
+          "Because it's cheap",
+          "Her family lives there",
+          "Because she has wanted to see the lighthouse since she was a teenager"
+        ],
+        "correctIndex": 3,
+        "explanation": "Sari says she has wanted to see the lighthouse since she was a teenager."
+      },
+      {
+        "question": "What does Dewi want to do in the mountain village?",
+        "options": [
+          "A difficult multi-day hike",
+          "Nothing outdoors at all",
+          "Visit a museum",
+          "One easy trail to see the sunrise from somewhere high"
+        ],
+        "correctIndex": 3,
+        "explanation": "Dewi wants to do just one easy trail and see the sunrise from somewhere high."
+      },
+      {
+        "question": "Why is six cities rejected?",
+        "options": [
+          "The cities have no trains",
+          "Travel time would consume the ten-day trip",
+          "Only one hotel is available",
+          "Sari dislikes markets"
+        ],
+        "correctIndex": 1,
+        "explanation": "The schedule conflicts with the experience they want."
+      },
+      {
+        "question": "What planning category is added before booking?",
+        "options": [
+          "Only souvenir prices",
+          "The number of photographs",
+          "A total budget with transport, lodging, food, insurance, and emergency money",
+          "A list of strangers to meet"
+        ],
+        "correctIndex": 2,
+        "explanation": "A route must also be financially workable."
+      },
+      {
+        "question": "How do they protect worship and dietary needs?",
+        "options": [
+          "Check prayer access, timing, and reliable halal food options",
+          "Assume every place has them",
+          "Skip prayers while traveling",
+          "Eat only at the hotel"
+        ],
+        "correctIndex": 0,
+        "explanation": "Relevant needs are researched early."
+      },
+      {
+        "question": "What must happen before the sunrise trail?",
+        "options": [
+          "Buy tickets immediately",
+          "Check route, weather, daylight, ability, guide needs, and a turnaround plan",
+          "Walk alone in darkness",
+          "Choose the highest mountain"
+        ],
+        "correctIndex": 1,
+        "explanation": "An easy label is not enough evidence of safety."
+      },
+      {
+        "question": "When will they make non-refundable bookings?",
+        "options": [
+          "Whenever prices feel urgent",
+          "Before checking passports",
+          "After both review the route, terms, and total cost",
+          "After arriving"
+        ],
+        "correctIndex": 2,
+        "explanation": "Shared travel decisions need informed agreement."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "revise; keep the same-gender trip while adding realistic budget, worship, food, health, weather, and hiking safety decisions",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-travel-04",
-    "title": "What the Mountain Guide Taught Me About Patience",
+    "title": "The Mountain Guide Who Helped Me Turn Back",
     "level": "A2",
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] I signed up for a three-day trek because the photos online looked peaceful, not because I understood what real hiking involved.",
-      "Narrator: [honestly] Within the first hour, I was already breathing heavily, while our guide walked calmly beside me without any effort at all.",
-      "Narrator: [thoughtful] I kept apologizing for slowing the group down, embarrassed that everyone was clearly waiting for me at every turn.",
-      "Narrator: [warmly] The guide, an older man named Pak Rudi, simply said, the mountain isn't going anywhere, so why are you rushing toward it?",
-      "Narrator: [with a small smile] I laughed, although I didn't fully understand what he meant until later that same afternoon.",
-      "Narrator: [reflective] By the second day, my legs ached badly, and I honestly considered turning back before we reached the halfway camp.",
-      "Narrator: [gently] Pak Rudi noticed my frustration and suggested we stop for ten minutes, even though nobody else in the group needed a break.",
-      "Narrator: [thoughtful] We sat quietly, and he pointed toward a small bird resting on a branch nearby, saying nothing else for a while.",
-      "Narrator: [with feeling] Somehow, that silence helped more than any encouraging words could have, because I stopped focusing on how far we still had to walk.",
-      "Narrator: [warmly] When we continued, my pace felt different, slower but steadier, and I stopped comparing myself to the faster hikers ahead.",
-      "Narrator: [reflective] On the final morning, we woke before sunrise to reach the summit, walking the last hour almost entirely in darkness.",
-      "Narrator: [with feeling] When the sun finally rose above the clouds, I understood exactly why Pak Rudi never seemed to hurry through anything.",
-      "Narrator: [peacefully] He had probably seen hundreds of sunrises from that same spot, yet he watched this one like it was his first.",
-      "Narrator: [thoughtful] Later, I asked him how he stayed so patient after guiding so many exhausted, complaining travelers over the years.",
-      "Narrator: [warmly] He said patience isn't something you have naturally, it's something you practice every single day, on the mountain and off it.",
-      "Narrator: [with a small smile] I still think about that answer whenever I feel rushed, long after that trek ended and I returned home."
+      "Narrator: [reflective] I booked a three-day trek because the photographs looked peaceful. I did not study the distance, height, or fitness guidance carefully enough.",
+      "Narrator: Our registered guide, Pak Rudi, checked equipment, weather, emergency contacts, and health information before we started.",
+      "Narrator: [honestly] During the first hour, I breathed heavily and felt embarrassed as the group slowed down.",
+      "Narrator: Pak Rudi asked about chest pain, dizziness, and unusual weakness. I had none, but my pace was too fast for my ability.",
+      "Narrator: [carefully] He moved me near him, reminded me to drink, and shortened my steps. He said pace should support safe breathing, not pride.",
+      "Narrator: At camp, he checked my painful feet. We treated a small blister and discussed the next day’s route.",
+      "Narrator: [thoughtful] The summit plan required an early start, but the group also had a strict turnaround time and weather limits.",
+      "Narrator: Pak Rudi explained that reaching the top was optional. Returning safely was part of the plan, not a failure.",
+      "Narrator: [determined] The next morning, my leg pain increased after the first section. I told him instead of hiding it.",
+      "Narrator: We stopped, checked the symptoms, and chose a lower viewpoint with another guide while the prepared group continued.",
+      "Narrator: [reflective] I felt disappointed when I saw the summit above us. Then the clouds thickened, and I understood why decisions could not depend on a photograph.",
+      "Narrator: The lower viewpoint was beautiful. More importantly, I could return in daylight without making the injury worse.",
+      "Narrator: [warmly] Pak Rudi never promised that patience would deliver the result I wanted. He taught steady effort with attention to safety and limits.",
+      "Narrator: At home, I trained gradually and consulted a health professional about the repeated pain before planning another trek.",
+      "Narrator: [sincere] I still hope to reach a summit one day. Now success means preparing honestly, following qualified guidance, and being willing to turn back."
     ],
     "quiz": [
-      { "question": "Why did the narrator sign up for the trek?", "options": ["He was an experienced hiker", "The photos online looked peaceful", "His friend forced him to go", "He needed exercise for work"], "correctIndex": 1, "explanation": "He signed up because the photos online looked peaceful, not because he understood real hiking." },
-      { "question": "What did Pak Rudi say when the narrator apologized for being slow?", "options": ["To hurry up immediately", "That the mountain isn't going anywhere, so there's no need to rush", "That he should quit the trek", "Nothing at all"], "correctIndex": 1, "explanation": "Pak Rudi said the mountain isn't going anywhere, so why rush toward it." },
-      { "question": "What did Pak Rudi do when the narrator felt frustrated on day two?", "options": ["He told him to keep pushing forward", "He suggested a ten-minute break and pointed at a bird", "He sent him back alone", "He ignored him"], "correctIndex": 1, "explanation": "He suggested stopping for ten minutes and pointed toward a small bird resting nearby, saying little else." },
-      { "question": "When did the group reach the summit?", "options": ["At noon on the first day", "Before sunrise, walking the last hour in darkness", "In the evening of the second day", "They never reached it"], "correctIndex": 1, "explanation": "They woke before sunrise and walked the last hour almost entirely in darkness to reach the summit." },
-      { "question": "According to Pak Rudi, how does someone become patient?", "options": ["It comes naturally to some people", "It is something you practice every single day", "It only happens on mountains", "It cannot be learned"], "correctIndex": 1, "explanation": "He said patience isn't natural, it's something you practice every single day, on the mountain and off it." }
-    ]
+      {
+        "question": "What information did the narrator fail to study?",
+        "options": [
+          "Distance, height, and fitness guidance",
+          "The guide’s favorite bird",
+          "The sunrise color",
+          "The hotel menu"
+        ],
+        "correctIndex": 0,
+        "explanation": "The booking decision relied too much on images."
+      },
+      {
+        "question": "What symptom is actually present at camp?",
+        "options": [
+          "Chest pain",
+          "A small foot blister",
+          "Severe dizziness",
+          "A broken leg"
+        ],
+        "correctIndex": 1,
+        "explanation": "The guide treats the reported problem."
+      },
+      {
+        "question": "Who accompanies the narrator to the lower viewpoint?",
+        "options": [
+          "No one",
+          "A stranger from the internet",
+          "Another guide",
+          "The fastest hiker"
+        ],
+        "correctIndex": 2,
+        "explanation": "The alternate route remains supervised."
+      },
+      {
+        "question": "Why is daylight mentioned?",
+        "options": [
+          "The narrator can return more safely before dark",
+          "The summit opens only at night",
+          "Birds require sunlight",
+          "The camp has no lamps"
+        ],
+        "correctIndex": 0,
+        "explanation": "Timing is part of risk control."
+      },
+      {
+        "question": "What happens before another trek is planned?",
+        "options": [
+          "Gradual training and professional advice about repeated pain",
+          "An immediate harder booking",
+          "Ignoring the injury",
+          "Buying only a camera"
+        ],
+        "correctIndex": 0,
+        "explanation": "Preparation responds to the earlier limitation."
+      },
+      {
+        "question": "What mistake does the narrator make before booking?",
+        "options": [
+          "Hiring a registered guide",
+          "Packing water",
+          "Choosing from peaceful photos without checking the trek requirements",
+          "Reading the weather report"
+        ],
+        "correctIndex": 2,
+        "explanation": "Images do not show difficulty or risk."
+      },
+      {
+        "question": "What does Pak Rudi check when breathing becomes difficult?",
+        "options": [
+          "Symptoms, pace, water, and whether continuing is safe",
+          "Only the summit time",
+          "The other hikers’ photographs",
+          "The narrator’s social-media page"
+        ],
+        "correctIndex": 0,
+        "explanation": "A guide responds medically and practically, not only poetically."
+      },
+      {
+        "question": "What does a turnaround time mean?",
+        "options": [
+          "The mountain closes permanently",
+          "The fastest hikers win",
+          "Everyone walks in darkness",
+          "The group returns if they cannot reach a point by a safe time"
+        ],
+        "correctIndex": 3,
+        "explanation": "A preset limit prevents summit pressure."
+      },
+      {
+        "question": "Why does the narrator skip the summit?",
+        "options": [
+          "The guide refuses all breaks",
+          "The sunrise is canceled",
+          "The trail has no view",
+          "Pain and pace make the safer viewpoint the right choice that day"
+        ],
+        "correctIndex": 3,
+        "explanation": "Turning back can be a successful safety decision."
+      },
+      {
+        "question": "How is patience defined in the ending?",
+        "options": [
+          "Ignoring pain",
+          "Steady responsible action without forcing an unsafe result",
+          "Moving more slowly than everyone",
+          "Reaching every planned destination"
+        ],
+        "correctIndex": 1,
+        "explanation": "Patience includes limits and judgment."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "replace; turn a romanticized difficult trek into a guided, paced hike with health checks, daylight limits, and permission to turn back",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-travel-05",
-    "title": "A Podcast on Traveling with a Small Budget",
+    "title": "The Real Cost of a Budget Trip",
     "level": "A2",
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] Welcome back to the show. Today my guest is Yusuf, who traveled through four countries last year on a very tight budget. Thanks for joining me.",
-      "Guest: [pleasantly] Thanks for inviting me. I'm always happy to talk about budget travel, since I made so many mistakes learning it myself.",
-      "Host: [curious] How small was your budget, exactly, for those four countries?",
-      "Guest: [honestly] I had saved enough for two months, although I honestly wasn't sure it would actually last that long.",
-      "Host: [interested] What was the biggest expense you had to control carefully?",
-      "Guest: [thoughtful] Accommodation, definitely. So I stayed in hostels almost every night, and sometimes with families through a homestay app.",
-      "Host: [curious] Did staying with strangers ever feel uncomfortable or risky to you?",
-      "Guest: [reassuring] Occasionally nervous at first, but I always read reviews carefully before booking, and it worked out well every time.",
-      "Host: [interested] What about food? That can get expensive quickly when you're eating out every day.",
-      "Guest: [warmly] I avoided restaurants near famous attractions, because they're always overpriced, and instead ate where local workers actually eat lunch.",
-      "Host: [curious] That's smart. How did you find those places, since guidebooks rarely mention them?",
-      "Guest: [smiling] I just asked people, honestly. Taxi drivers, shop owners, anyone friendly enough to answer a quick question.",
-      "Host: [interested] What about transportation between the four countries? Flights add up fast.",
-      "Guest: [informative] I took overnight buses whenever possible, because they saved money on both transport and a night's accommodation at once.",
-      "Host: [curious] Did you ever feel like the budget travel limited your experience negatively?",
-      "Guest: [reflective] Sometimes, although honestly, the cheapest experiences often became my favorite memories, more than any expensive tour ever did.",
-      "Host: [curious] Can you give an example of that?",
-      "Guest: [warmly] A free walking tour led by a local student taught me more history than any paid museum ticket did that month.",
-      "Host: [smiling] What's your one piece of advice for someone planning their first budget trip?",
-      "Guest: [encouraging] Plan carefully, but stay flexible, because the best moments usually happen outside whatever you actually planned."
+      "Host: [warmly] Yusuf, you traveled through four countries on a limited budget. What was your biggest planning mistake?",
+      "Yusuf: I first counted flights and beds only. I forgot insurance, visas, local transport, phone access, laundry, health needs, and emergency money.",
+      "Host: [thoughtful] How did you rebuild the budget?",
+      "Yusuf: I listed essential costs by country, checked entry rules from official sources, and kept a reserve that I did not treat as spending money.",
+      "Host: Accommodation is often the largest cost. Did you simply choose the cheapest bed?",
+      "Yusuf: [carefully] No. I checked recent reviews, location, secure storage, room arrangement, cancellation terms, and whether the booking channel was verified.",
+      "Host: What about staying with strangers through an app?",
+      "Yusuf: A platform does not remove risk. I preferred established accommodation that met my privacy and safety needs. If using a hosted stay, I would verify carefully and share plans with trusted people.",
+      "Host: [curious] Many budget travelers use overnight buses to save one hotel night.",
+      "Yusuf: I used one only after checking the operator, route, arrival place, and safe onward transport. Losing sleep or arriving alone at 3 a.m. can make a cheap ticket costly.",
+      "Host: How did you manage food?",
+      "Yusuf: [thoughtful] I checked reliable halal options, bought simple groceries where appropriate, carried water, and avoided assuming that “local” always meant safe or lawful for me.",
+      "Host: Did the budget leave room for prayer and rest?",
+      "Yusuf: Yes. I checked prayer access and built slower days into the route. Exhaustion can damage judgment and health.",
+      "Host: What if the reserve becomes too small before departure?",
+      "Yusuf: [honestly] Shorten or postpone the trip. Travel is not worth unsafe debt or having no response to illness, delay, or a lost card.",
+      "Host: Did low-cost activities still add value?",
+      "Yusuf: Certainly. Public parks, community museums, and verified walking tours were meaningful, but I checked fees and tipped fairly where appropriate.",
+      "Host: [encouraging] Give us one final rule.",
+      "Yusuf: Budget for the safe total journey, not the cheapest advertisement. Flexibility works best when essential needs and an emergency plan are already protected."
     ],
     "quiz": [
-      { "question": "How many countries did Yusuf travel through on his budget trip?", "options": ["Two", "Four", "Six", "One"], "correctIndex": 1, "explanation": "The host mentions Yusuf traveled through four countries last year on a tight budget." },
-      { "question": "How long did Yusuf's savings need to last?", "options": ["One week", "Two months", "One year", "Ten days"], "correctIndex": 1, "explanation": "Yusuf says he had saved enough for two months, unsure if it would actually last." },
-      { "question": "What was Yusuf's biggest controlled expense?", "options": ["Food", "Accommodation", "Souvenirs", "Transportation only"], "correctIndex": 1, "explanation": "Yusuf says accommodation was the biggest expense, so he mostly stayed in hostels and homestays." },
-      { "question": "How did Yusuf usually find affordable places to eat?", "options": ["He only ate at his hostel", "By asking local people like taxi drivers and shop owners", "By using expensive guidebooks", "He skipped meals often"], "correctIndex": 1, "explanation": "He asked local people, such as taxi drivers and shop owners, rather than relying on guidebooks." },
-      { "question": "What is Yusuf's advice for someone planning their first budget trip?", "options": ["Plan every minute strictly", "Plan carefully but stay flexible", "Avoid talking to strangers", "Only travel with expensive tours"], "correctIndex": 1, "explanation": "He advises planning carefully but staying flexible, since the best moments happen outside the plan." }
-    ]
+      {
+        "question": "How many countries did Yusuf visit?",
+        "options": [
+          "One",
+          "Seven",
+          "Twelve",
+          "Four"
+        ],
+        "correctIndex": 3,
+        "explanation": "The trip still spans four countries."
+      },
+      {
+        "question": "What money must not be treated as normal spending?",
+        "options": [
+          "The food budget",
+          "The museum fee",
+          "The emergency reserve",
+          "The phone plan"
+        ],
+        "correctIndex": 2,
+        "explanation": "The reserve protects disruptions."
+      },
+      {
+        "question": "What risk can a 3 a.m. arrival create?",
+        "options": [
+          "Unsafe onward travel while tired and alone",
+          "A free hotel breakfast",
+          "A shorter visa process",
+          "A daytime walking tour"
+        ],
+        "correctIndex": 0,
+        "explanation": "A cheap ticket may shift costs and risk."
+      },
+      {
+        "question": "What should a traveler do if the reserve is insufficient?",
+        "options": [
+          "Use unsafe debt",
+          "Remove insurance first",
+          "Shorten or postpone the trip",
+          "Travel without a return plan"
+        ],
+        "correctIndex": 2,
+        "explanation": "Affordability includes an emergency response."
+      },
+      {
+        "question": "What low-cost activities are mentioned?",
+        "options": [
+          "Private flights",
+          "Luxury shopping",
+          "Unverified home visits",
+          "Parks, community museums, and verified walking tours"
+        ],
+        "correctIndex": 3,
+        "explanation": "Meaningful activity need not be expensive."
+      },
+      {
+        "question": "What is missing from a price-only travel budget?",
+        "options": [
+          "Photographs",
+          "Luxury restaurants",
+          "Four country names",
+          "Insurance, visas, health needs, local transport, communication, and emergency money"
+        ],
+        "correctIndex": 3,
+        "explanation": "Cheap bookings can hide essential costs."
+      },
+      {
+        "question": "Why does Yusuf avoid treating overnight transport as free lodging?",
+        "options": [
+          "All buses are expensive",
+          "Poor rest and unsafe arrival times may create new risks",
+          "Night travel is always forbidden",
+          "Hostels require daytime arrival"
+        ],
+        "correctIndex": 1,
+        "explanation": "Savings must be weighed against safety and health."
+      },
+      {
+        "question": "How does he assess accommodation?",
+        "options": [
+          "One positive comment",
+          "A stranger’s invitation",
+          "The lowest number only",
+          "Recent reviews, location, locks, policies, room arrangement, and verified booking channels"
+        ],
+        "correctIndex": 3,
+        "explanation": "Several relevant checks reduce risk."
+      },
+      {
+        "question": "What Islamic needs are planned?",
+        "options": [
+          "Lawful food, prayer, privacy, and appropriate accommodation arrangements",
+          "Only souvenir shopping",
+          "A public performance",
+          "Skipping worship during travel"
+        ],
+        "correctIndex": 0,
+        "explanation": "Budget planning includes values and practice."
+      },
+      {
+        "question": "What is the final advice?",
+        "options": [
+          "Borrow for every trip",
+          "Plan a safe total cost and keep an emergency reserve instead of chasing the cheapest option",
+          "Visit many countries quickly",
+          "Ask any stranger for help"
+        ],
+        "correctIndex": 1,
+        "explanation": "Affordability includes resilience."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "replace; remove risky stranger-stay and overnight-bus shortcuts and teach a complete, ethical budget with safety and contingency funds",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-travel-06",
-    "title": "The Business Trip That Became a Family Reunion",
+    "title": "Finding Relatives During a Work Trip",
     "level": "A2",
     "themeId": "travel",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] I flew to my grandmother's hometown for a work conference, expecting three boring days of meetings and nothing else.",
-      "Narrator: [honestly] I had never actually visited that city before, although my grandmother talked about it constantly when I was a child.",
-      "Narrator: [reflective] On my second evening, with a free hour before dinner, I decided to walk toward the old neighborhood she always described.",
-      "Narrator: [curious] I found the street she mentioned, and almost by accident, I noticed a shop with our unusual family name painted above the door.",
-      "Narrator: [surprised] My heart started beating faster, because that name isn't common at all, even in this large city.",
-      "Narrator: [nervous] I walked inside, unsure what to say, and asked the woman behind the counter if she recognized my grandmother's name.",
-      "Narrator: [with feeling] She stared at me for a long moment, then said, quietly, that could only be my father's sister you're describing.",
-      "Narrator: [emotional] We were cousins, apparently, separated for decades after our grandparents moved to different cities during difficult years.",
-      "Narrator: [warmly] She called her husband immediately, and within twenty minutes, half the family had gathered inside that small shop.",
-      "Narrator: [with feeling] Nobody there had ever met me, yet they hugged me like I had simply been away on a long trip somewhere.",
-      "Narrator: [reflective] I missed my dinner reservation completely, and honestly, I didn't care about that meeting schedule anymore.",
-      "Narrator: [thoughtful] Instead, I sat in their small kitchen for hours, listening to stories about my grandmother as a young woman, decades before I existed.",
-      "Narrator: [with a small smile] They showed me old photographs I had never seen, including one of her laughing beside a bicycle in that exact street.",
-      "Narrator: [warmly] My conference continued the next morning as planned, although my mind kept drifting back to that kitchen throughout every session.",
-      "Narrator: [peacefully] I called my grandmother that same night, and she cried when I described the shop and everyone's faces.",
-      "Narrator: [with feeling] I went on that trip for work, but I came home having found a part of my family I never knew was still there.",
-      "Narrator: [warmly] Now, whenever people ask about business travel, I tell them the best meetings sometimes happen after the actual meetings end."
+      "Narrator: [thoughtful] I traveled to my grandmother’s hometown for a work conference. I had never visited, although she often described the old neighborhood.",
+      "Narrator: On my second day, I had free time before a required dinner and walked along the street she had named.",
+      "Narrator: [curious] A shop sign carried our uncommon family name. It caught my attention, but a shared name was not proof of a relationship.",
+      "Narrator: I entered and introduced myself without giving private details. I asked whether the owner knew an older family with that surname.",
+      "Narrator: [carefully] The woman mentioned one first name that matched my grandmother’s brother. I asked whether she was comfortable verifying the connection by telephone.",
+      "Narrator: I called my grandmother through her known number and explained where I was. She agreed to speak with the woman.",
+      "Narrator: [emotional] They exchanged family details that strangers would not easily know. My grandmother recognized her voice and confirmed that we were related.",
+      "Narrator: Only then did I share more about myself. We greeted one another warmly while respecting personal comfort and Islamic family boundaries.",
+      "Narrator: [reflective] Other relatives wanted to gather immediately, but I still had a work responsibility. I informed the conference organizer and attended the required part of dinner.",
+      "Narrator: We arranged a later visit in the shop’s family area. Nobody pressured me to leave work without notice.",
+      "Narrator: [warmly] During the visit, they showed old photographs privately. We asked permission before copying or sending any image.",
+      "Narrator: I heard stories about my grandmother’s youth, but I treated them as family memories, not verified history in every detail.",
+      "Narrator: [thoughtful] That evening I called my grandmother again. She was emotional and chose which relatives could receive her current contact information.",
+      "Narrator: The discovery was joyful because curiosity was followed by verification, consent, and careful communication.",
+      "Narrator: [sincere] I returned from the business trip with new family connections and a useful rule: an exciting clue should open a respectful question, not remove normal boundaries."
     ],
     "quiz": [
-      { "question": "Why did the narrator originally travel to that city?", "options": ["For a family wedding", "For a work conference", "For a vacation", "To visit her grandmother directly"], "correctIndex": 1, "explanation": "She flew there for a work conference, expecting three boring days of meetings." },
-      { "question": "What did she notice on the street her grandmother had described?", "options": ["Her old school", "A shop with their unusual family name above the door", "A photograph of herself", "Nothing unusual"], "correctIndex": 1, "explanation": "She noticed a shop with their unusual family name painted above the door." },
-      { "question": "Who was the woman behind the counter?", "options": ["A stranger with no connection", "Her cousin, related through her grandmother's brother", "Her grandmother herself", "A tour guide"], "correctIndex": 1, "explanation": "The woman turned out to be her cousin, and she was the daughter of her grandmother's sibling." },
-      { "question": "What did the narrator miss because of this discovery?", "options": ["Her flight home", "Her dinner reservation", "The whole conference", "Her hotel check-in"], "correctIndex": 1, "explanation": "She missed her dinner reservation completely because she stayed with her newfound family instead." },
-      { "question": "How did the narrator's grandmother react when she heard the story?", "options": ["She was uninterested", "She cried when told about the shop and everyone's faces", "She didn't believe it", "She had already known"], "correctIndex": 1, "explanation": "The narrator called her grandmother that night, and she cried upon hearing the story." }
-    ]
+      {
+        "question": "Why is the narrator in the city?",
+        "options": [
+          "To attend a work conference",
+          "To search for relatives full-time",
+          "To buy the shop",
+          "To lead a tour"
+        ],
+        "correctIndex": 0,
+        "explanation": "The trip begins with a professional purpose."
+      },
+      {
+        "question": "What clue appears on the street?",
+        "options": [
+          "A confirmed birth certificate",
+          "A message from the hotel",
+          "An uncommon family name on a shop sign",
+          "A conference photograph"
+        ],
+        "correctIndex": 2,
+        "explanation": "The sign starts a question but does not prove kinship."
+      },
+      {
+        "question": "Who confirms the relationship?",
+        "options": [
+          "A social-media follower",
+          "The narrator’s grandmother during a consented call",
+          "The conference organizer",
+          "A taxi driver"
+        ],
+        "correctIndex": 1,
+        "explanation": "Verification uses a known family source."
+      },
+      {
+        "question": "Why is the family gathering delayed?",
+        "options": [
+          "The shop immediately closes",
+          "Nobody wants to meet",
+          "The narrator first completes a required work dinner",
+          "The grandmother refuses contact"
+        ],
+        "correctIndex": 2,
+        "explanation": "Professional obligations remain active."
+      },
+      {
+        "question": "Who controls sharing the grandmother’s contact details?",
+        "options": [
+          "Every new relative",
+          "The shop customers",
+          "The narrator’s employer",
+          "The grandmother herself"
+        ],
+        "correctIndex": 3,
+        "explanation": "Consent continues after identity is confirmed."
+      },
+      {
+        "question": "What first attracts the narrator’s attention?",
+        "options": [
+          "A relative calls from the conference",
+          "A shop sign uses the same uncommon family name",
+          "The hotel displays a photograph",
+          "A stranger knows the work schedule"
+        ],
+        "correctIndex": 1,
+        "explanation": "The name is a clue, not proof."
+      },
+      {
+        "question": "Why does she avoid announcing private family details?",
+        "options": [
+          "The shop is too noisy",
+          "Her grandmother has no phone",
+          "The conference bans family contact",
+          "A shared surname does not confirm identity or trust"
+        ],
+        "correctIndex": 3,
+        "explanation": "Verification should precede disclosure."
+      },
+      {
+        "question": "How is the possible relationship checked?",
+        "options": [
+          "The shop owner guesses",
+          "A photograph is posted publicly",
+          "Grandmother confirms details during a call with consent",
+          "The narrator checks social media only"
+        ],
+        "correctIndex": 2,
+        "explanation": "A known family source helps verify the link."
+      },
+      {
+        "question": "What does the narrator do about the work dinner?",
+        "options": [
+          "She disappears without notice",
+          "She cancels the conference",
+          "She informs the organizer and attends her required part before the family visit",
+          "She sends the cousin instead"
+        ],
+        "correctIndex": 2,
+        "explanation": "Unexpected joy does not remove professional responsibility."
+      },
+      {
+        "question": "What boundary remains after verification?",
+        "options": [
+          "People greet in ways appropriate to relationship, comfort, and Islamic limits",
+          "Every new relative must hug",
+          "All photographs become public",
+          "Private stories may be recorded freely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Kinship does not cancel consent or boundaries."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "replace; verify the family connection before disclosure or physical familiarity and preserve work obligations during the trip",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "a2-travel-07",
@@ -231,37 +921,607 @@
     "themeId": "travel",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [cheerfully] Good evening, listeners! Tonight we want stories about kindness from strangers while traveling. Our first caller is on the line. Hello!",
-      "Caller: [warmly] Hello! I have a story from a night train I took two winters ago, if that counts.",
-      "Radio Host: [encouraging] Perfect, exactly what we're looking for tonight. Please, go ahead.",
-      "Caller: [reflective] I was traveling alone, heading home after a difficult week, and I hadn't slept properly in days.",
-      "Radio Host: [gently] What happened once you boarded the train that night?",
-      "Caller: [thoughtful] An older woman sat across from me, and although I usually avoid conversations with strangers, she started talking anyway.",
-      "Radio Host: [curious] Did that bother you, given how tired you already were?",
-      "Caller: [honestly] At first, yes, a little. But something about her voice was calm, so I found myself answering her questions.",
-      "Radio Host: [interested] What did you two talk about during the journey?",
-      "Caller: [warmly] Everything, actually. My job, my family, even why my eyes looked so tired that particular evening.",
-      "Radio Host: [curious] Did you tell her what was really bothering you?",
-      "Caller: [emotional] Eventually, yes. I mentioned I had lost my job that week, something I hadn't told anyone else yet.",
-      "Radio Host: [sympathetically] That's a heavy thing to carry alone. How did she respond?",
-      "Caller: [with feeling] She didn't offer advice immediately. She just listened, which honestly was exactly what I needed at that moment.",
-      "Radio Host: [curious] Did she say anything that stayed with you afterward?",
-      "Caller: [softly] She said, every closed door on a train eventually opens onto a different platform, so don't panic about this one yet.",
-      "Radio Host: [warmly] That's a beautiful way to put it. Did you ever see her again after that train ride?",
-      "Caller: [reflective] No, she left at an earlier station than mine, and we never exchanged information, not even names.",
-      "Radio Host: [curious] Do you think about her often, even now, years later?",
-      "Caller: [warmly] Constantly, actually. Especially whenever I face something uncertain, I remember her calm voice on that quiet night train."
+      "Radio Host: [warmly] Good evening, listeners! Tonight we want stories about kindness from strangers while traveling. Our first caller is on the line. Hello!",
+      "Caller: Hello! I have a story from a night train I took two winters ago, if that counts.",
+      "Radio Host: [thoughtful] Perfect, exactly what we're looking for tonight. Please, go ahead.",
+      "Caller: I was traveling alone, heading home after a difficult week, and I hadn't slept properly in days.",
+      "Radio Host: [carefully] What happened once you boarded the train that night?",
+      "Caller: An older woman sat across from me, and although I usually avoid conversations with strangers, she started talking anyway.",
+      "Radio Host: [reflective] Did that bother you, given how tired you already were?",
+      "Caller: At first, yes, a little. But something about her voice was calm, so I found myself answering her questions.",
+      "Radio Host: [honestly] What did you two talk about during the journey?",
+      "Caller: We spoke generally about work and family. I did not share my address, documents, employer details, or exact route with someone I had just met.",
+      "Radio Host: [gently] Did you tell her what was really bothering you?",
+      "Caller: I said I had received difficult job news. We remained in the staffed public carriage, and I kept my ticket, phone, and bag secure.",
+      "Radio Host: [encouraging] That's a heavy thing to carry alone. How did she respond?",
+      "Caller: She listened without pressing for details or promising a solution. She also encouraged me to contact someone I trusted after arriving.",
+      "Radio Host: [sincere] Did she say anything that stayed with you afterward?",
+      "Caller: She said, every closed door on a train eventually opens onto a different platform, so don't panic about this one yet.",
+      "Radio Host: That's a beautiful way to put it. Did you ever see her again after that train ride?",
+      "Caller: No. We did not exchange contact details, and I did not accept transport or move to a private place. Her respectful kindness was enough.",
+      "Radio Host: Do you think about her often, even now, years later?",
+      "Caller: I remember her calm words, but I also called my family after arrival and began checking official employment and financial support the next morning."
     ],
     "quiz": [
-      { "question": "What topic is tonight's radio segment about?", "options": ["Cheap flight deals", "Kindness from strangers while traveling", "Airport delays", "Best train routes"], "correctIndex": 1, "explanation": "The host introduces tonight's topic as stories about kindness from strangers while traveling." },
-      { "question": "Why was the caller so tired when she boarded the train?", "options": ["She had just finished a marathon", "She was heading home after a difficult week and hadn't slept properly", "She had a long flight before it", "She was recovering from an illness"], "correctIndex": 1, "explanation": "She was traveling home after a difficult week and hadn't slept properly in days." },
-      { "question": "What difficult news did the caller share with the older woman?", "options": ["She was moving abroad", "She had lost her job that week", "Her flight was cancelled", "She was ending a friendship"], "correctIndex": 1, "explanation": "She mentioned she had lost her job that week, something she hadn't told anyone else yet." },
-      { "question": "What did the older woman mainly do while the caller talked?", "options": ["Gave lots of advice immediately", "Listened, which was exactly what the caller needed", "Ignored her completely", "Fell asleep"], "correctIndex": 1, "explanation": "The woman didn't offer advice immediately; she just listened, which was what the caller needed." },
-      { "question": "Did the caller ever see the woman again?", "options": ["Yes, they became close friends", "No, the woman left at an earlier station and they never exchanged names", "Yes, they still talk regularly", "No, because the caller left first"], "correctIndex": 1, "explanation": "The woman left at an earlier station, and they never exchanged information, not even names." }
-    ]
+      {
+        "question": "What topic is tonight's radio segment about?",
+        "options": [
+          "Cheap flight deals",
+          "Airport delays",
+          "Best train routes",
+          "Kindness from strangers while traveling"
+        ],
+        "correctIndex": 3,
+        "explanation": "The host introduces tonight's topic as stories about kindness from strangers while traveling."
+      },
+      {
+        "question": "Why was the caller so tired when she boarded the train?",
+        "options": [
+          "She had just finished a marathon",
+          "She was heading home after a difficult week and hadn't slept properly",
+          "She had a long flight before it",
+          "She was recovering from an illness"
+        ],
+        "correctIndex": 1,
+        "explanation": "She was traveling home after a difficult week and hadn't slept properly in days."
+      },
+      {
+        "question": "What difficult news did the caller share with the older woman?",
+        "options": [
+          "She had lost her job that week",
+          "She was moving abroad",
+          "Her flight was cancelled",
+          "She was ending a friendship"
+        ],
+        "correctIndex": 0,
+        "explanation": "She mentioned she had lost her job that week, something she hadn't told anyone else yet."
+      },
+      {
+        "question": "What did the older woman mainly do while the caller talked?",
+        "options": [
+          "Gave lots of advice immediately",
+          "Ignored her completely",
+          "Listened, which was exactly what the caller needed",
+          "Fell asleep"
+        ],
+        "correctIndex": 2,
+        "explanation": "The woman didn't offer advice immediately; she just listened, which was what the caller needed."
+      },
+      {
+        "question": "Did the caller ever see the woman again?",
+        "options": [
+          "Yes, they became close friends",
+          "No, the woman left at an earlier station and they never exchanged names",
+          "Yes, they still talk regularly",
+          "No, because the caller left first"
+        ],
+        "correctIndex": 1,
+        "explanation": "The woman left at an earlier station, and they never exchanged information, not even names."
+      },
+      {
+        "question": "Why is the caller vulnerable on the train?",
+        "options": [
+          "She is alone, exhausted, and carrying upsetting news",
+          "The carriage has no seats",
+          "The host knows her employer",
+          "The older woman takes her ticket"
+        ],
+        "correctIndex": 0,
+        "explanation": "Fatigue can reduce judgment."
+      },
+      {
+        "question": "What information does she choose not to share?",
+        "options": [
+          "That she had a difficult week",
+          "A general feeling of worry",
+          "The fact that the train is moving",
+          "Her exact address, employer details, documents, or onward route"
+        ],
+        "correctIndex": 3,
+        "explanation": "A helpful conversation does not require identifying information."
+      },
+      {
+        "question": "What makes the setting safer?",
+        "options": [
+          "They move to an empty compartment",
+          "She accepts a private ride",
+          "They remain in a staffed public carriage with belongings secure",
+          "They exchange passwords"
+        ],
+        "correctIndex": 2,
+        "explanation": "Visible public space and control of property reduce risk."
+      },
+      {
+        "question": "How does the older woman help?",
+        "options": [
+          "She offers a guaranteed job",
+          "She listens without demanding details or promising a solution",
+          "She asks for money",
+          "She contacts the employer"
+        ],
+        "correctIndex": 1,
+        "explanation": "Kindness respects the traveler’s limits."
+      },
+      {
+        "question": "What action follows after arrival?",
+        "options": [
+          "She relies only on the stranger’s sentence",
+          "The caller contacts a trusted person and begins checking employment support",
+          "She follows the woman home",
+          "She posts the meeting publicly"
+        ],
+        "correctIndex": 1,
+        "explanation": "Emotional comfort is paired with real support."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "revise; preserve kindness while modeling boundaries for a tired solo traveler speaking with an unknown person",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-travel-08",
+    "title": "The Guesthouse With No Lift",
+    "level": "A2",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] I booked a small guesthouse for a trip with my aunt. The website described it as “easy to access,” so I assumed her walking stick would not be a problem.",
+      "Narrator: Two days before travel, I called to ask about the entrance. The owner explained that our room was on the third floor and the building had no lift.",
+      "Narrator: [thoughtful] “Easy to access” meant close to the train station, not physically accessible. I had understood the phrase differently.",
+      "Narrator: The ground-floor room was already booked. Instead of hoping my aunt could manage the stairs, I discussed the options with her.",
+      "Narrator: [carefully] She preferred changing accommodation, even if it meant staying farther from the old town. Comfort and safety mattered more than the view I had chosen.",
+      "Narrator: I contacted the booking service and explained that the listing language was unclear. The guesthouse allowed cancellation without a fee.",
+      "Narrator: [reflective] For the new hotel, I asked specific questions: step-free entrance, lift size, bathroom rails, distance from lift to room, and seating near reception.",
+      "Narrator: The receptionist sent current photos and measurements. My aunt reviewed them before we confirmed.",
+      "Narrator: [honestly] We also checked the route from the bus stop. A short distance on a map can still include steep ground or broken pavement.",
+      "Narrator: The second hotel was fifteen minutes farther from tourist sites, but a direct bus stopped near its entrance.",
+      "Narrator: [gently] During the trip, my aunt could enter and leave independently. We used our energy for the visit rather than struggling with stairs.",
+      "Narrator: I learned that words such as “accessible,” “near,” and “easy” need details. Different travelers have different needs.",
+      "Narrator: [encouraging] Asking clear questions is not being difficult. It helps a business provide accurate information and prevents unsafe surprises.",
+      "Narrator: I later sent polite feedback to the first guesthouse suggesting “near the station, stairs only” instead of the confusing phrase.",
+      "Narrator: [sincere] Good travel planning begins by asking the actual traveler, not deciding what they should be able to manage."
+    ],
+    "quiz": [
+      {
+        "question": "What did “easy to access” mean to the guesthouse?",
+        "options": [
+          "It was near the station",
+          "It had a large lift",
+          "Every room was on the ground floor",
+          "It provided wheelchairs"
+        ],
+        "correctIndex": 0,
+        "explanation": "The phrase described location, not physical access."
+      },
+      {
+        "question": "What problem did the first room have?",
+        "options": [
+          "It was on the third floor with no lift",
+          "It had no bed",
+          "It was far from all transport",
+          "It was already canceled"
+        ],
+        "correctIndex": 0,
+        "explanation": "The stairs created an unsuitable condition."
+      },
+      {
+        "question": "Who decided that changing was preferable?",
+        "options": [
+          "The first hotel owner alone",
+          "A bus driver",
+          "The aunt after discussing options",
+          "Nobody"
+        ],
+        "correctIndex": 2,
+        "explanation": "The actual traveler chose what felt safe."
+      },
+      {
+        "question": "What evidence did the new hotel send?",
+        "options": [
+          "A general slogan",
+          "Old customer names",
+          "Current photos and measurements",
+          "A restaurant menu only"
+        ],
+        "correctIndex": 2,
+        "explanation": "Specific evidence helped them verify access."
+      },
+      {
+        "question": "What is the central lesson?",
+        "options": [
+          "Ask specific questions based on the traveler’s needs",
+          "Assume all access words mean the same thing",
+          "Choose views over safety",
+          "Avoid discussing limitations"
+        ],
+        "correctIndex": 0,
+        "explanation": "Clear details prevent unsafe travel surprises."
+      },
+      {
+        "question": "Why is “easy to access” ambiguous?",
+        "options": [
+          "The phrase means stairs only",
+          "The aunt has no walking stick",
+          "Every guest defines it equally",
+          "It describes station distance, not physical accessibility"
+        ],
+        "correctIndex": 3,
+        "explanation": "General labels need feature-level detail."
+      },
+      {
+        "question": "Who chooses to change accommodation?",
+        "options": [
+          "The narrator alone",
+          "The first owner",
+          "The bus driver",
+          "The aunt after reviewing her own needs and options"
+        ],
+        "correctIndex": 3,
+        "explanation": "The actual traveler keeps decision authority."
+      },
+      {
+        "question": "Why are measurements useful?",
+        "options": [
+          "They allow the aunt to compare real spaces with her needs",
+          "They guarantee perfect service",
+          "They replace photographs",
+          "They show tourist prices"
+        ],
+        "correctIndex": 0,
+        "explanation": "Specific evidence is better than a label."
+      },
+      {
+        "question": "What can a short map distance hide?",
+        "options": [
+          "The hotel’s breakfast menu",
+          "Steep ground, broken pavement, or other route barriers",
+          "The room number",
+          "Train ticket rules"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accessibility includes the journey to the entrance."
+      },
+      {
+        "question": "How does feedback help the first guesthouse?",
+        "options": [
+          "It forces installation of a lift",
+          "Clear “near station, stairs only” wording prevents another misunderstanding",
+          "It hides the location",
+          "It promises universal access"
+        ],
+        "correctIndex": 1,
+        "explanation": "Accurate description supports informed choice."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "keep; exemplary accessible-travel planning asks the traveler, verifies exact features, and checks the full route",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-travel-09",
+    "title": "A Market Tour Without Bargaining for Sport",
+    "level": "A2",
+    "themeId": "travel",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [warmly] During a city tour, our guide took us to a traditional craft market. Before entering, he explained that some prices were fixed and others allowed polite bargaining.",
+      "Narrator: He warned us not to bargain only for entertainment. A very small difference for a visitor could matter to a seller.",
+      "Narrator: [thoughtful] At the first stall, I liked a woven bag. I asked the price and whether it was made by the seller's family.",
+      "Narrator: The seller explained the material, the hours of work, and which part came from another village. Her price was higher than the factory bags nearby.",
+      "Narrator: [carefully] I asked whether there was a smaller version within my budget. She showed me one and offered a modest reduction because I bought two gifts.",
+      "Narrator: The exchange felt respectful. I did not pretend to walk away, criticize the quality, or compare her work with cheap machine-made products.",
+      "Narrator: [reflective] Another tourist repeatedly offered less than half the price for a wooden box. The seller eventually stopped the conversation.",
+      "Narrator: Our guide later explained that bargaining customs do not remove basic dignity. We should learn local practice instead of copying dramatic market scenes from videos.",
+      "Narrator: [honestly] I also checked whether the craft used any protected animal material. The seller showed a label stating that it used local plantation wood.",
+      "Narrator: The label was useful, although responsible buying may require more research for expensive or unusual products.",
+      "Narrator: [gently] I kept receipts and followed the rules about what could be brought home through customs.",
+      "Narrator: The market visit became more than finding the lowest price. I learned about materials, labor, and the people connected to an object.",
+      "Narrator: [encouraging] Travel spending can support local work, but only if visitors act honestly and avoid treating sellers as part of a game.",
+      "Narrator: I left with one smaller bag, a clear story about its making, and respect for the price I had agreed to.",
+      "Narrator: [sincere] A good purchase feels fair after the excitement of the trip has ended."
+    ],
+    "quiz": [
+      {
+        "question": "What did the guide explain before entering?",
+        "options": [
+          "Some prices were fixed and some negotiable",
+          "Every item was free",
+          "No visitors could buy",
+          "All prices should be cut in half"
+        ],
+        "correctIndex": 0,
+        "explanation": "Different stalls used different price customs."
+      },
+      {
+        "question": "Why did the bag cost more?",
+        "options": [
+          "The seller disliked visitors",
+          "It was made by a machine",
+          "No other bags existed",
+          "It involved materials and many hours of craft work"
+        ],
+        "correctIndex": 3,
+        "explanation": "The seller explained the labor behind the item."
+      },
+      {
+        "question": "How did the narrator stay within budget?",
+        "options": [
+          "Insulted the quality",
+          "Asked for a smaller version",
+          "Offered almost nothing",
+          "Took the bag without paying"
+        ],
+        "correctIndex": 1,
+        "explanation": "A different product size created a fair solution."
+      },
+      {
+        "question": "What environmental detail was checked?",
+        "options": [
+          "The market’s paint color",
+          "The seller’s travel plans",
+          "Whether protected animal material was used",
+          "The number of tourists"
+        ],
+        "correctIndex": 2,
+        "explanation": "Responsible buying included material origin."
+      },
+      {
+        "question": "What is the lesson about bargaining?",
+        "options": [
+          "Treat sellers as entertainment",
+          "The lowest price is always fair",
+          "Pretend every product is poor",
+          "Follow local practice while respecting labor and dignity"
+        ],
+        "correctIndex": 3,
+        "explanation": "Cultural custom does not remove ethical conduct."
+      },
+      {
+        "question": "Why should visitors not bargain only for sport?",
+        "options": [
+          "Every market price is fixed",
+          "Bargaining is never local custom",
+          "A tiny saving to them may materially affect the seller",
+          "Guides set all prices"
+        ],
+        "correctIndex": 2,
+        "explanation": "Power and value differ between buyer and seller."
+      },
+      {
+        "question": "How does the narrator solve the budget problem?",
+        "options": [
+          "Claim the bag is low quality",
+          "Offer less than half",
+          "Hide the budget",
+          "Ask for a smaller item rather than insult the original work"
+        ],
+        "correctIndex": 3,
+        "explanation": "The alternative respects both limit and labor."
+      },
+      {
+        "question": "Why is the wood label not always enough?",
+        "options": [
+          "Labels are never useful",
+          "Customs ignores materials",
+          "Plantation wood is an animal product",
+          "Expensive or unusual products may need stronger verification"
+        ],
+        "correctIndex": 3,
+        "explanation": "Evidence needs depend on risk."
+      },
+      {
+        "question": "What behavior ends another negotiation?",
+        "options": [
+          "Asking one polite question",
+          "Repeated extreme low offers",
+          "Requesting a receipt",
+          "Learning about materials"
+        ],
+        "correctIndex": 1,
+        "explanation": "Custom does not excuse disrespect."
+      },
+      {
+        "question": "What makes the purchase fair afterward?",
+        "options": [
+          "An informed agreed price, lawful material, and respect for the maker",
+          "Winning the lowest possible price",
+          "Avoiding receipts",
+          "Treating the seller as entertainment"
+        ],
+        "correctIndex": 0,
+        "explanation": "The value is ethical beyond travel excitement."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "keep; thoughtful market narrative balances local custom, fair bargaining, labor dignity, product evidence, and customs rules",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "a2-travel-10",
+    "title": "The Missed Connection at Midnight",
+    "level": "A2",
+    "themeId": "travel",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Hani",
+        "gender": "female"
+      },
+      {
+        "name": "Airport Agent",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Hani: [warmly] Excuse me, our first flight arrived late, and the connection to Jakarta has already left.",
+      "Airport Agent: May I see both boarding passes? Were the flights purchased on the same booking?",
+      "Hani: [thoughtful] Yes, they are on one ticket. My checked bag was supposed to transfer automatically.",
+      "Airport Agent: Thank you. The airline can rebook you because the missed connection resulted from the first delay.",
+      "Hani: [carefully] When is the next available flight?",
+      "Airport Agent: There is one tomorrow at ten fifteen. I can confirm two seats now.",
+      "Hani: [reflective] It is nearly midnight. Does the airline provide accommodation?",
+      "Airport Agent: For this type of delay, yes. The voucher includes a hotel, transport, and breakfast. Keep your receipts for any approved extra expense.",
+      "Hani: [honestly] What will happen to our checked bag?",
+      "Airport Agent: The system shows it is still at this airport. It will be placed on tomorrow's flight, but keep medicine and valuables in your hand luggage.",
+      "Hani: [gently] My mother's regular medicine is in her carry-on, thankfully. She also needs step-free transport.",
+      "Airport Agent: I will add accessibility assistance to the hotel shuttle and tomorrow's departure. Please confirm whether she can walk short distances.",
+      "Hani: [encouraging] She can walk slowly with a stick, but long queues are difficult.",
+      "Airport Agent: I have recorded that. Assistance staff will meet you at the check-in area two hours before departure.",
+      "Hani: [sincere] Could you print the new itinerary and hotel address? Our phone batteries are low.",
+      "Airport Agent: Of course. Here are the documents and a charging point beside the information desk.",
+      "Hani: Should we go through immigration now?",
+      "Airport Agent: Follow the blue transfer-hotel signs. Staff there will check the entry process for your passports.",
+      "Hani: Thank you for explaining each step. We were worried we would need to buy new tickets.",
+      "Airport Agent: You are welcome. Read the voucher conditions, rest tonight, and check the flight screen again in the morning."
+    ],
+    "quiz": [
+      {
+        "question": "Why was the connection missed?",
+        "options": [
+          "The first flight arrived late",
+          "Hani reached the airport late",
+          "The ticket had the wrong city",
+          "The flight left early without notice"
+        ],
+        "correctIndex": 0,
+        "explanation": "The inbound delay caused the missed flight."
+      },
+      {
+        "question": "Why can the airline rebook them?",
+        "options": [
+          "They have no luggage",
+          "Both flights are on one booking",
+          "It is midnight",
+          "They paid cash"
+        ],
+        "correctIndex": 1,
+        "explanation": "A protected through-ticket covers the disrupted connection."
+      },
+      {
+        "question": "What does the voucher include?",
+        "options": [
+          "New clothes",
+          "Hotel, transport, and breakfast",
+          "A private airplane",
+          "Unlimited shopping"
+        ],
+        "correctIndex": 1,
+        "explanation": "The airline provides overnight basics."
+      },
+      {
+        "question": "What accessibility need is recorded?",
+        "options": [
+          "A special meal only",
+          "No walking at all",
+          "Step-free help and difficulty with long queues",
+          "A larger suitcase"
+        ],
+        "correctIndex": 2,
+        "explanation": "The mother uses a stick and needs reduced walking and waiting."
+      },
+      {
+        "question": "What practical help does the agent give?",
+        "options": [
+          "A promise without documents",
+          "A new passport",
+          "Printed plans, directions, and charging information",
+          "The checked bag immediately"
+        ],
+        "correctIndex": 2,
+        "explanation": "Clear next steps reduce uncertainty overnight."
+      },
+      {
+        "question": "Why does the agent ask whether flights share one booking?",
+        "options": [
+          "It determines meal choice",
+          "It locates the charging point",
+          "It changes passport nationality",
+          "It affects the airline’s responsibility for the missed connection"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ticket structure matters to rebooking."
+      },
+      {
+        "question": "What should remain in hand luggage?",
+        "options": [
+          "All checked furniture",
+          "Hotel breakfast",
+          "The boarding gate screen",
+          "Medicine, valuables, and essential items"
+        ],
+        "correctIndex": 3,
+        "explanation": "Critical items should remain accessible during disruption."
+      },
+      {
+        "question": "How is accessibility made specific?",
+        "options": [
+          "Hani explains walking ability and difficulty with long queues",
+          "The agent writes “help” only",
+          "Her mother is asked to climb stairs",
+          "The hotel decides without them"
+        ],
+        "correctIndex": 0,
+        "explanation": "Functional detail guides suitable assistance."
+      },
+      {
+        "question": "Why print the itinerary?",
+        "options": [
+          "Paper is required for every traveler",
+          "Their phone batteries are low",
+          "The flight screen is broken",
+          "The bag has arrived"
+        ],
+        "correctIndex": 1,
+        "explanation": "A backup keeps next steps available."
+      },
+      {
+        "question": "Who confirms immigration requirements?",
+        "options": [
+          "Hani guesses from signs",
+          "Staff at the transfer-hotel process for their passports",
+          "The hotel driver",
+          "Another passenger"
+        ],
+        "correctIndex": 1,
+        "explanation": "Border procedures can vary and need official handling."
+      }
+    ],
+    "qualityReview": {
+      "level": "A2",
+      "theme": "travel",
+      "scriptDecision": "keep; excellent disruption dialogue verifies booking responsibility, baggage, medication, accessibility, documents, and border procedure",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

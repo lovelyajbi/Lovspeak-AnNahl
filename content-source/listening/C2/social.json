@@ -6,28 +6,142 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] For roughly ten years, I carried a version of an apology to my brother that I revised endlessly in my head but never once actually spoke aloud to him.",
-      "Narrator: [honestly] Each iteration grew more eloquent, more precisely calibrated to acknowledge every grievance, and each iteration remained, conveniently, entirely theoretical, unburdened by the risk of his actual response.",
-      "Narrator: [thoughtful] I told myself I was waiting for the right moment, a phrase that in retrospect functioned less as patience and more as an alibi for cowardice dressed in more dignified clothing.",
-      "Narrator: [with feeling] The estrangement itself had originated in something almost embarrassingly petty, a business disagreement neither of us handled with any particular grace, compounded by years of neither party willing to concede first.",
+      "Narrator: [thoughtful] For roughly ten years, I carried a version of an apology to my brother that I revised endlessly in my head but never once actually spoke aloud to him.",
+      "Narrator: Each iteration grew more eloquent, more precisely calibrated to acknowledge every grievance, and each iteration remained, conveniently, entirely theoretical, unburdened by the risk of his actual response.",
+      "Narrator: [carefully] I told myself I was waiting for the right moment, a phrase that in retrospect functioned less as patience and more as an alibi for cowardice dressed in more dignified clothing.",
+      "Narrator: The estrangement itself had originated in something almost embarrassingly petty, a business disagreement neither of us handled with any particular grace, compounded by years of neither party willing to concede first.",
       "Narrator: [reflective] What kept the silence intact wasn't the original grievance, which had long since lost its sharpness, but the accumulated weight of pride that made the first word feel disproportionately costly.",
-      "Narrator: [honestly] My mother's illness, unglamorously, is what finally dislodged the impasse, the sudden clarifying possibility that one of us might run out of time before the rehearsed apology ever left my mouth.",
-      "Narrator: [with feeling] I called him from the hospital corridor, delivered perhaps a third of my carefully polished speech before abandoning the script entirely and simply saying I had missed him more than my pride ever permitted me to admit.",
-      "Narrator: [gently] He was quiet long enough that I assumed I'd misjudged everything, and then he said, simply, that he'd been rehearsing an equally elaborate apology of his own for nearly as long.",
-      "Narrator: [thoughtful] We'd each spent a decade perfecting speeches the other never needed to hear in full, when a single imperfect sentence would have sufficed years earlier.",
-      "Narrator: [reflective] I think often now about how pride disguises itself as prudence, insisting we wait for eloquence when what estrangement actually requires is simply the nerve to speak badly, promptly, and often.",
-      "Narrator: [with a small smile] My brother and I talk weekly now, about nothing consequential, mostly, which after ten years of curated silence feels like an almost indecent luxury."
+      "Narrator: My mother's illness, unglamorously, is what finally dislodged the impasse, the sudden clarifying possibility that one of us might run out of time before the rehearsed apology ever left my mouth.",
+      "Narrator: [honestly] I called him from the hospital corridor, delivered perhaps a third of my carefully polished speech before abandoning the script entirely and simply saying I had missed him more than my pride ever permitted me to admit.",
+      "Narrator: He was quiet long enough that I assumed I'd misjudged everything, and then he said, simply, that he'd been rehearsing an equally elaborate apology of his own for nearly as long.",
+      "Narrator: [gently] We'd each spent a decade perfecting speeches the other never needed to hear in full, when a single imperfect sentence would have sufficed years earlier.",
+      "Narrator: I think often now about how pride disguises itself as prudence, insisting we wait for eloquence when what estrangement actually requires is simply the nerve to speak badly, promptly, and often.",
+      "Narrator: [calmly] My brother and I talk weekly now, about nothing consequential, mostly, which after ten years of curated silence feels like an almost indecent luxury."
     ],
     "quiz": [
-      { "question": "What did the narrator do for roughly ten years regarding an apology to his brother?", "options": ["He delivered it immediately after the disagreement", "He revised it endlessly in his head but never actually spoke it aloud", "He wrote it in letters he never sent", "He asked a mediator to deliver it"], "correctIndex": 1, "explanation": "He carried a version of the apology that he revised endlessly in his head but never once actually spoke aloud." },
-      { "question": "What does the narrator say his waiting for 'the right moment' actually functioned as?", "options": ["Genuine patience and wisdom", "An alibi for cowardice dressed in more dignified clothing", "A strategic business decision", "Advice from a therapist"], "correctIndex": 1, "explanation": "He admits the phrase functioned less as patience and more as an alibi for cowardice dressed in more dignified clothing." },
-      { "question": "What originally caused the estrangement between the brothers?", "options": ["A disagreement about their mother", "A business disagreement neither handled with particular grace", "A disagreement over inheritance", "A misunderstanding about a wedding"], "correctIndex": 1, "explanation": "The estrangement originated in a business disagreement neither of them handled with any particular grace." },
-      { "question": "What finally prompted the narrator to call his brother?", "options": ["A mutual friend's intervention", "His mother's illness and the possibility one of them might run out of time", "A reminder on his calendar", "His brother calling him first"], "correctIndex": 1, "explanation": "His mother's illness dislodged the impasse, raising the possibility one of them might run out of time before the apology was spoken." },
-      { "question": "What did the narrator learn about pride and eloquence from this experience?", "options": ["Eloquent apologies are always necessary", "Pride disguises itself as prudence, when what's needed is the nerve to speak badly, promptly, and often", "Waiting is always the wisest strategy", "Apologies should be perfected before being delivered"], "correctIndex": 1, "explanation": "He concludes pride disguises itself as prudence, when estrangement actually requires the nerve to speak badly, promptly, and often." }
-    ]
+      {
+        "question": "What did the narrator do for roughly ten years regarding an apology to his brother?",
+        "options": [
+          "He revised it endlessly in his head but never actually spoke it aloud",
+          "He delivered it immediately after the disagreement",
+          "He wrote it in letters he never sent",
+          "He asked a mediator to deliver it"
+        ],
+        "correctIndex": 0,
+        "explanation": "He carried a version of the apology that he revised endlessly in his head but never once actually spoke aloud."
+      },
+      {
+        "question": "What does the narrator say his waiting for 'the right moment' actually functioned as?",
+        "options": [
+          "Genuine patience and wisdom",
+          "An alibi for cowardice dressed in more dignified clothing",
+          "A strategic business decision",
+          "Advice from a therapist"
+        ],
+        "correctIndex": 1,
+        "explanation": "He admits the phrase functioned less as patience and more as an alibi for cowardice dressed in more dignified clothing."
+      },
+      {
+        "question": "What originally caused the estrangement between the brothers?",
+        "options": [
+          "A disagreement about their mother",
+          "A disagreement over inheritance",
+          "A business disagreement neither handled with particular grace",
+          "A misunderstanding about a wedding"
+        ],
+        "correctIndex": 2,
+        "explanation": "The estrangement originated in a business disagreement neither of them handled with any particular grace."
+      },
+      {
+        "question": "What finally prompted the narrator to call his brother?",
+        "options": [
+          "A mutual friend's intervention",
+          "A reminder on his calendar",
+          "His brother calling him first",
+          "His mother's illness and the possibility one of them might run out of time"
+        ],
+        "correctIndex": 3,
+        "explanation": "His mother's illness dislodged the impasse, raising the possibility one of them might run out of time before the apology was spoken."
+      },
+      {
+        "question": "What did the narrator learn about pride and eloquence from this experience?",
+        "options": [
+          "Pride disguises itself as prudence, when what's needed is the nerve to speak badly, promptly, and often",
+          "Eloquent apologies are always necessary",
+          "Waiting is always the wisest strategy",
+          "Apologies should be perfected before being delivered"
+        ],
+        "correctIndex": 0,
+        "explanation": "He concludes pride disguises itself as prudence, when estrangement actually requires the nerve to speak badly, promptly, and often."
+      },
+      {
+        "question": "What central claim does “The Apology I Rehearsed for a Decade and Never Delivered” develop?",
+        "options": [
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Chosen family can provide care while still containing conflict.",
+          "Quiet support can create obligations that deserve recognition."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Apology I Rehearsed for a Decade and Never Delivered”?",
+        "options": [
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "The interview shows belonging is built through mutual obligations.",
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The woman’s steady conduct changes the narrator’s understanding of debt."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “The Apology I Rehearsed for a Decade and Never Delivered”?",
+        "options": [
+          "Private envy should not dictate public behaviour.",
+          "Affection does not erase the need for boundaries and consent.",
+          "Gratitude should not expose another person’s private service.",
+          "The harmed person is not obliged to receive an apology."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Apology I Rehearsed for a Decade and Never Delivered”?",
+        "options": [
+          "The narrator considers consent and timing before reaching out.",
+          "The narrator chooses sincere congratulations and self-examination.",
+          "Participants discuss repair without assuming identical needs.",
+          "The narrator seeks a respectful form of acknowledgement."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “The Apology I Rehearsed for a Decade and Never Delivered”?",
+        "options": [
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Social support is stronger when power and dependency are named.",
+          "Repair can include recognition without turning care into performance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-social-02",
@@ -36,32 +150,149 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Naila", "gender": "female" },
-      { "name": "Tariq", "gender": "male" }
+      {
+        "name": "Naila",
+        "gender": "female"
+      },
+      {
+        "name": "Tariq",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Naila: [hesitant] Tariq, can I confess something slightly embarrassing? Amina got the fellowship we both applied for, and my first reaction wasn't congratulations, it was something closer to nausea.",
-      "Tariq: [gently] That's not embarrassing, that's just honest. The uncomfortable feelings usually arrive first; the generous ones take a little longer to catch up.",
-      "Naila: [honestly] I texted her congratulations immediately, of course, all the appropriate exclamation points, and I meant it, mostly, while simultaneously wanting to disappear for the rest of the week.",
-      "Tariq: [thoughtful] Those two things aren't actually contradictory, whatever guilt is currently insisting to you. You can be genuinely glad for her and genuinely grieving your own disappointment at once.",
+      "Naila: [thoughtful] Tariq, can I confess something slightly embarrassing? Amina got the fellowship we both applied for, and my first reaction wasn't congratulations, it was something closer to nausea.",
+      "Tariq: That's not embarrassing, that's just honest. The uncomfortable feelings usually arrive first; the generous ones take a little longer to catch up.",
+      "Naila: [carefully] I texted her congratulations immediately, of course, all the appropriate exclamation points, and I meant it, mostly, while simultaneously wanting to disappear for the rest of the week.",
+      "Tariq: Those two things aren't actually contradictory, whatever guilt is currently insisting to you. You can be genuinely glad for her and genuinely grieving your own disappointment at once.",
       "Naila: [reflective] It's the simultaneity that unsettles me, though. Shouldn't real friendship produce something cleaner than this, admiration uncomplicated by envy?",
-      "Tariq: [wry] I'd be suspicious of anyone claiming their friendships never produce a complicated feeling. That usually means they've stopped being honest with themselves, not that they've achieved some enviable purity.",
-      "Naila: [considering] Maybe. I keep circling back to whether the envy says something damning about my character that I'd rather not examine too closely.",
-      "Tariq: [firmly] Envy examined honestly is just information, evidence of what you actually want, not a verdict on your worth as a friend. It's what you do with it that matters.",
-      "Naila: [curious] What am I supposed to do with it, then, besides quietly resent someone who's done nothing wrong?",
-      "Tariq: [warmly] Let it clarify your own ambitions rather than curdle into resentment. Amina's fellowship changes nothing about whether your own work deserves pursuing.",
-      "Naila: [thoughtful] That's fair, though it's considerably easier to hear than to actually practice at eleven at night, scrolling through her announcement post for the fourth time.",
-      "Tariq: [kindly] Nobody's asking you to skip the eleven o'clock scrolling entirely. Just don't let it convince you the friendship or your own worth is somehow diminished.",
-      "Naila: [warmly] Thank you for not pretending I'm a terrible person for feeling this, and also not pretending the feeling doesn't matter.",
-      "Tariq: [smiling] That's a fairly accurate description of what friends are actually for, present company included."
+      "Tariq: I'd be suspicious of anyone claiming their friendships never produce a complicated feeling. That usually means they've stopped being honest with themselves, not that they've achieved some enviable purity.",
+      "Naila: [honestly] Maybe. I keep circling back to whether the envy says something damning about my character that I'd rather not examine too closely.",
+      "Tariq: Envy examined honestly is just information, evidence of what you actually want, not a verdict on your worth as a friend. It's what you do with it that matters.",
+      "Naila: [gently] What am I supposed to do with it, then, besides quietly resent someone who's done nothing wrong?",
+      "Tariq: Let it clarify your own ambitions rather than curdle into resentment. Amina's fellowship changes nothing about whether your own work deserves pursuing.",
+      "Naila: [calmly] That's fair, though it's considerably easier to hear than to actually practice at eleven at night, scrolling through her announcement post for the fourth time.",
+      "Tariq: Nobody's asking you to skip the eleven o'clock scrolling entirely. Just don't let it convince you the friendship or your own worth is somehow diminished.",
+      "Naila: [encouraging] Thank you for not pretending I'm a terrible person for feeling this, and also not pretending the feeling doesn't matter.",
+      "Tariq: That's a fairly accurate description of what friends are actually for, present company included."
     ],
     "quiz": [
-      { "question": "What was Naila's first reaction upon learning Amina received the fellowship?", "options": ["Pure, uncomplicated joy", "Something closer to nausea, rather than immediate congratulations", "Complete indifference", "Anger at Amina directly"], "correctIndex": 1, "explanation": "Naila's first reaction wasn't congratulations but something closer to nausea." },
-      { "question": "What does Tariq say about the uncomfortable feelings arriving first?", "options": ["They mean the friendship is broken", "They usually arrive first, and the generous feelings take longer to catch up", "They should never be acknowledged", "They only happen to insecure people"], "correctIndex": 1, "explanation": "Tariq says uncomfortable feelings usually arrive first, and the generous ones take a little longer to catch up." },
-      { "question": "What does Tariq say about claiming friendships never produce complicated feelings?", "options": ["It's an admirable achievement", "He'd be suspicious of it, since it usually means someone isn't being honest with themselves", "It's the healthiest kind of friendship", "It's impossible to determine either way"], "correctIndex": 1, "explanation": "Tariq says he'd be suspicious of anyone claiming their friendships never produce complicated feelings, calling it dishonesty rather than purity." },
-      { "question": "How does Tariq characterize envy examined honestly?", "options": ["A verdict on someone's worth as a friend", "Just information, evidence of what you actually want", "A sign of a broken friendship", "Something that should never be felt"], "correctIndex": 1, "explanation": "Tariq says envy examined honestly is just information, evidence of what you actually want, not a verdict on your character." },
-      { "question": "What does Tariq suggest Naila do with her envy?", "options": ["Suppress it completely and never think about it", "Let it clarify her own ambitions rather than curdle into resentment", "Confront Amina about it directly", "Give up on her own goals entirely"], "correctIndex": 1, "explanation": "Tariq suggests letting the envy clarify her own ambitions rather than letting it curdle into resentment." }
-    ]
+      {
+        "question": "What was Naila's first reaction upon learning Amina received the fellowship?",
+        "options": [
+          "Something closer to nausea, rather than immediate congratulations",
+          "Pure, uncomplicated joy",
+          "Complete indifference",
+          "Anger at Amina directly"
+        ],
+        "correctIndex": 0,
+        "explanation": "Naila's first reaction wasn't congratulations but something closer to nausea."
+      },
+      {
+        "question": "What does Tariq say about the uncomfortable feelings arriving first?",
+        "options": [
+          "They mean the friendship is broken",
+          "They usually arrive first, and the generous feelings take longer to catch up",
+          "They should never be acknowledged",
+          "They only happen to insecure people"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tariq says uncomfortable feelings usually arrive first, and the generous ones take a little longer to catch up."
+      },
+      {
+        "question": "What does Tariq say about claiming friendships never produce complicated feelings?",
+        "options": [
+          "It's an admirable achievement",
+          "It's the healthiest kind of friendship",
+          "He'd be suspicious of it, since it usually means someone isn't being honest with themselves",
+          "It's impossible to determine either way"
+        ],
+        "correctIndex": 2,
+        "explanation": "Tariq says he'd be suspicious of anyone claiming their friendships never produce complicated feelings, calling it dishonesty rather than purity."
+      },
+      {
+        "question": "How does Tariq characterize envy examined honestly?",
+        "options": [
+          "A verdict on someone's worth as a friend",
+          "A sign of a broken friendship",
+          "Something that should never be felt",
+          "Just information, evidence of what you actually want"
+        ],
+        "correctIndex": 3,
+        "explanation": "Tariq says envy examined honestly is just information, evidence of what you actually want, not a verdict on your character."
+      },
+      {
+        "question": "What does Tariq suggest Naila do with her envy?",
+        "options": [
+          "Let it clarify her own ambitions rather than curdle into resentment",
+          "Suppress it completely and never think about it",
+          "Confront Amina about it directly",
+          "Give up on her own goals entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "Tariq suggests letting the envy clarify her own ambitions rather than letting it curdle into resentment."
+      },
+      {
+        "question": "What central claim does “Congratulating a Friend Whose Success Stings a Little” develop?",
+        "options": [
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "Chosen family can provide care while still containing conflict.",
+          "Quiet support can create obligations that deserve recognition."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “Congratulating a Friend Whose Success Stings a Little”?",
+        "options": [
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The interview shows belonging is built through mutual obligations.",
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "The woman’s steady conduct changes the narrator’s understanding of debt."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “Congratulating a Friend Whose Success Stings a Little”?",
+        "options": [
+          "The harmed person is not obliged to receive an apology.",
+          "Affection does not erase the need for boundaries and consent.",
+          "Gratitude should not expose another person’s private service.",
+          "Private envy should not dictate public behaviour."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “Congratulating a Friend Whose Success Stings a Little”?",
+        "options": [
+          "The narrator chooses sincere congratulations and self-examination.",
+          "The narrator considers consent and timing before reaching out.",
+          "Participants discuss repair without assuming identical needs.",
+          "The narrator seeks a respectful form of acknowledgement."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “Congratulating a Friend Whose Success Stings a Little”?",
+        "options": [
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Social support is stronger when power and dependency are named.",
+          "Repair can include recognition without turning care into performance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-social-03",
@@ -70,34 +301,151 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "female" },
-      { "name": "Guest", "gender": "male" }
+      {
+        "name": "Host",
+        "gender": "female"
+      },
+      {
+        "name": "Guest",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Host: [warmly] My guest researches what's popularly termed chosen family, networks of deliberate closeness built outside blood or marriage. Welcome, Dr. Nasrullah.",
-      "Guest: [pleasantly] Thank you. It's a term I use somewhat cautiously, given how easily it's been flattened into a slogan rather than examined as an actual social phenomenon.",
-      "Host: [curious] What gets lost in that flattening, in your view?",
-      "Guest: [thoughtful] Mostly the difficulty. Chosen family sounds effortlessly warm in a caption, but sustaining it requires the same unglamorous negotiation, obligation, and occasional resentment that biological family involves, minus the presumed permanence.",
-      "Host: [following] So the absence of blood ties doesn't simplify the relationship, it complicates it further?",
-      "Guest: [explaining] In certain respects, yes. Biological family carries an assumed durability, however imperfect, that chosen bonds must continually reaffirm, since nothing structurally obligates anyone to remain.",
-      "Host: [interested] Does that fragility make chosen family somehow less legitimate as a concept?",
-      "Guest: [firmly] Not remotely less legitimate, merely differently constituted. If anything, the continual reaffirmation required makes the closeness more deliberate, less something people simply drift into by circumstance of birth.",
-      "Host: [curious] You've written about the tension between chosen family and traditional obligations to biological relatives. How do people typically navigate that?",
-      "Guest: [candid] Poorly, initially, in my observation. There's often an unspoken guilt in investing deeply in chosen bonds while biological relationships feel comparatively neglected or strained.",
-      "Host: [thoughtful] Is there a way to hold both without one perpetually undermining the other?",
-      "Guest: [warmly] The healthiest cases I've documented treat it as expansion rather than substitution. Chosen family supplements rather than replaces, filling gaps biological family, for whatever reason, couldn't fill.",
-      "Host: [curious] What would you say to someone whose biological family disapproves of the closeness they've built elsewhere?",
-      "Guest: [gently] I'd say the disapproval often masks a quieter grief, that connection was sought and found outside the relationships they'd assumed were sufficient. That grief deserves acknowledgment, even amid disagreement.",
-      "Host: [smiling] A genuinely nuanced account of something usually reduced to a hashtag. Thank you, Dr. Nasrullah.",
-      "Guest: [warmly] Thank you for resisting the reduction and letting the complexity actually breathe."
+      "Host: [thoughtful] My guest researches what's popularly termed chosen family, networks of deliberate closeness built outside blood or marriage. Welcome, Dr. Nasrullah.",
+      "Guest: Thank you. It's a term I use somewhat cautiously, given how easily it's been flattened into a slogan rather than examined as an actual social phenomenon.",
+      "Host: [carefully] What gets lost in that flattening, in your view?",
+      "Guest: Mostly the difficulty. Chosen family sounds effortlessly warm in a caption, but sustaining it requires the same unglamorous negotiation, obligation, and occasional resentment that biological family involves, minus the presumed permanence.",
+      "Host: [reflective] So the absence of blood ties doesn't simplify the relationship, it complicates it further?",
+      "Guest: In certain respects, yes. Biological family carries an assumed durability, however imperfect, that chosen bonds must continually reaffirm, since nothing structurally obligates anyone to remain.",
+      "Host: [honestly] Does that fragility make chosen family somehow less legitimate as a concept?",
+      "Guest: Not remotely less legitimate, merely differently constituted. If anything, the continual reaffirmation required makes the closeness more deliberate, less something people simply drift into by circumstance of birth.",
+      "Host: [gently] You've written about the tension between chosen family and traditional obligations to biological relatives. How do people typically navigate that?",
+      "Guest: Poorly, initially, in my observation. There's often an unspoken guilt in investing deeply in chosen bonds while biological relationships feel comparatively neglected or strained.",
+      "Host: [calmly] Is there a way to hold both without one perpetually undermining the other?",
+      "Guest: The healthiest cases I've documented treat it as expansion rather than substitution. Chosen family supplements rather than replaces, filling gaps biological family, for whatever reason, couldn't fill.",
+      "Host: [encouraging] What would you say to someone whose biological family disapproves of the closeness they've built elsewhere?",
+      "Guest: I'd say the disapproval often masks a quieter grief, that connection was sought and found outside the relationships they'd assumed were sufficient. That grief deserves acknowledgment, even amid disagreement.",
+      "Host: [seriously] A genuinely nuanced account of something usually reduced to a hashtag. Thank you, Dr. Nasrullah.",
+      "Guest: Thank you for resisting the reduction and letting the complexity actually breathe."
     ],
     "quiz": [
-      { "question": "What does Dr. Nasrullah say gets lost when chosen family is flattened into a slogan?", "options": ["The joy of the relationships", "The difficulty — sustaining it requires the same negotiation and occasional resentment as biological family, minus presumed permanence", "The financial cost involved", "Nothing significant is lost"], "correctIndex": 1, "explanation": "He says the difficulty gets lost; sustaining chosen family requires the same unglamorous negotiation as biological family, without presumed permanence." },
-      { "question": "Why does Dr. Nasrullah say the absence of blood ties can complicate a relationship further?", "options": ["Because blood ties are always stronger", "Because nothing structurally obligates anyone to remain, so chosen bonds must continually reaffirm themselves", "Because chosen family members always leave eventually", "Because it requires legal paperwork"], "correctIndex": 1, "explanation": "He explains that chosen bonds must continually reaffirm themselves since nothing structurally obligates anyone to remain, unlike assumed biological durability." },
-      { "question": "How do people typically navigate tension between chosen family and biological obligations, per Dr. Nasrullah's observation?", "options": ["Effortlessly and without difficulty", "Poorly, initially, often with unspoken guilt about neglecting biological relationships", "By cutting off biological family entirely", "By ignoring chosen family instead"], "correctIndex": 1, "explanation": "He observes people navigate this poorly at first, often with unspoken guilt about investing in chosen bonds while biological ties feel neglected." },
-      { "question": "How do the healthiest cases Dr. Nasrullah documented treat chosen family?", "options": ["As a complete substitution for biological family", "As expansion rather than substitution, filling gaps biological family couldn't fill", "As a temporary phase to outgrow", "As irrelevant to biological relationships"], "correctIndex": 1, "explanation": "The healthiest cases treat chosen family as expansion rather than substitution, supplementing rather than replacing biological ties." },
-      { "question": "What does Dr. Nasrullah say disapproval from biological family often masks?", "options": ["Simple jealousy with no deeper meaning", "A quieter grief that connection was sought outside relationships they'd assumed were sufficient", "A desire for more attention", "Nothing worth acknowledging"], "correctIndex": 1, "explanation": "He says the disapproval often masks a quieter grief that connection was found outside relationships assumed to be sufficient." }
-    ]
+      {
+        "question": "What tension does the interview identify within chosen family?",
+        "options": [
+          "Care can coexist with conflict and obligation.",
+          "All chosen families avoid disagreement.",
+          "Belonging requires identical boundaries.",
+          "Privacy prevents all repair."
+        ],
+        "correctIndex": 0,
+        "explanation": "The interview treats chosen family as meaningful but not free of ordinary relational tensions."
+      },
+      {
+        "question": "Why does Dr. Nasrullah say the absence of blood ties can complicate a relationship further?",
+        "options": [
+          "Because blood ties are always stronger",
+          "Because nothing structurally obligates anyone to remain, so chosen bonds must continually reaffirm themselves",
+          "Because chosen family members always leave eventually",
+          "Because it requires legal paperwork"
+        ],
+        "correctIndex": 1,
+        "explanation": "He explains that chosen bonds must continually reaffirm themselves since nothing structurally obligates anyone to remain, unlike assumed biological durability."
+      },
+      {
+        "question": "How do people typically navigate tension between chosen family and biological obligations, per Dr. Nasrullah's observation?",
+        "options": [
+          "Effortlessly and without difficulty",
+          "By cutting off biological family entirely",
+          "Poorly, initially, often with unspoken guilt about neglecting biological relationships",
+          "By ignoring chosen family instead"
+        ],
+        "correctIndex": 2,
+        "explanation": "He observes people navigate this poorly at first, often with unspoken guilt about investing in chosen bonds while biological ties feel neglected."
+      },
+      {
+        "question": "How do the healthiest cases Dr. Nasrullah documented treat chosen family?",
+        "options": [
+          "As a complete substitution for biological family",
+          "As a temporary phase to outgrow",
+          "As irrelevant to biological relationships",
+          "As expansion rather than substitution, filling gaps biological family couldn't fill"
+        ],
+        "correctIndex": 3,
+        "explanation": "The healthiest cases treat chosen family as expansion rather than substitution, supplementing rather than replacing biological ties."
+      },
+      {
+        "question": "What does Dr. Nasrullah say disapproval from biological family often masks?",
+        "options": [
+          "A quieter grief that connection was sought outside relationships they'd assumed were sufficient",
+          "Simple jealousy with no deeper meaning",
+          "A desire for more attention",
+          "Nothing worth acknowledging"
+        ],
+        "correctIndex": 0,
+        "explanation": "He says the disapproval often masks a quieter grief that connection was found outside relationships assumed to be sufficient."
+      },
+      {
+        "question": "What central claim does “An Interview on Chosen Family and Its Discontents” develop?",
+        "options": [
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Chosen family can provide care while still containing conflict.",
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "Quiet support can create obligations that deserve recognition."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “An Interview on Chosen Family and Its Discontents”?",
+        "options": [
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "The interview shows belonging is built through mutual obligations.",
+          "The woman’s steady conduct changes the narrator’s understanding of debt."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “An Interview on Chosen Family and Its Discontents”?",
+        "options": [
+          "The harmed person is not obliged to receive an apology.",
+          "Private envy should not dictate public behaviour.",
+          "Gratitude should not expose another person’s private service.",
+          "Affection does not erase the need for boundaries and consent."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “An Interview on Chosen Family and Its Discontents”?",
+        "options": [
+          "Participants discuss repair without assuming identical needs.",
+          "The narrator considers consent and timing before reaching out.",
+          "The narrator chooses sincere congratulations and self-examination.",
+          "The narrator seeks a respectful form of acknowledgement."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “An Interview on Chosen Family and Its Discontents”?",
+        "options": [
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Social support is stronger when power and dependency are named.",
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Repair can include recognition without turning care into performance."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-social-04",
@@ -106,29 +454,143 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [reflective] My mentor died last winter, unremarkably, in the manner of people who spend a lifetime avoiding the spotlight even in their exits.",
-      "Narrator: [honestly] I hadn't spoken to her in nearly two years, an absence I justified at the time as simple busyness, though I suspect now it was something closer to avoidance.",
-      "Narrator: [thoughtful] She'd never once raised her voice with me, not in a decade of my occasionally maddening stubbornness, and I've come to understand only belatedly how rare and deliberate that restraint actually was.",
-      "Narrator: [with feeling] Most guidance I received elsewhere arrived wrapped in urgency, in the implicit suggestion that I was perpetually one misstep from ruining everything irreparably.",
-      "Narrator: [honestly] Hers arrived differently, unhurried, almost maddeningly patient, the kind of counsel that trusted I'd eventually arrive at the right conclusion without being frog-marched there.",
-      "Narrator: [reflective] I resented that patience occasionally, wanted the urgency instead, some clearer signal that my mistakes mattered enough to provoke visible alarm.",
-      "Narrator: [gently] Only now, sorting through what she actually gave me, do I recognize that her calm wasn't indifference at all, it was a kind of faith, extended toward someone who hadn't yet earned it.",
-      "Narrator: [with feeling] At her memorial, three other women I'd never met described, in strikingly similar language, exactly the same unhurried patience I'd assumed was reserved specifically for me.",
-      "Narrator: [thoughtful] It was, apparently, simply who she was, a well she drew from repeatedly for anyone who happened to wander into her orbit needing it.",
-      "Narrator: [reflective] I think now about the debts we accrue toward people who never once presented a bill, who simply extended what they had and trusted it would eventually be repaid forward, to someone else entirely.",
-      "Narrator: [with a small smile] I've started, tentatively, extending that same unhurried patience to a younger colleague who reminds me uncomfortably of my own stubborn younger self.",
-      "Narrator: [peacefully] It feels like the only honest way left to settle an account with someone no longer here to collect it."
+      "Narrator: [thoughtful] My mentor died last winter, unremarkably, in the manner of people who spend a lifetime avoiding the spotlight even in their exits.",
+      "Narrator: I hadn't spoken to her in nearly two years, an absence I justified at the time as simple busyness, though I suspect now it was something closer to avoidance.",
+      "Narrator: [carefully] She'd never once raised her voice with me, not in a decade of my occasionally maddening stubbornness, and I've come to understand only belatedly how rare and deliberate that restraint actually was.",
+      "Narrator: Most guidance I received elsewhere arrived wrapped in urgency, in the implicit suggestion that I was perpetually one misstep from ruining everything irreparably.",
+      "Narrator: [reflective] Hers arrived differently, unhurried, almost maddeningly patient, the kind of counsel that trusted I'd eventually arrive at the right conclusion without being frog-marched there.",
+      "Narrator: I resented that patience occasionally, wanted the urgency instead, some clearer signal that my mistakes mattered enough to provoke visible alarm.",
+      "Narrator: [honestly] Only now, sorting through what she actually gave me, do I recognize that her calm wasn't indifference at all, it was a kind of faith, extended toward someone who hadn't yet earned it.",
+      "Narrator: At her memorial, three other women I'd never met described, in strikingly similar language, exactly the same unhurried patience I'd assumed was reserved specifically for me.",
+      "Narrator: [gently] It was, apparently, simply who she was, a well she drew from repeatedly for anyone who happened to wander into her orbit needing it.",
+      "Narrator: I think now about the debts we accrue toward people who never once presented a bill, who simply extended what they had and trusted it would eventually be repaid forward, to someone else entirely.",
+      "Narrator: [calmly] I've started, tentatively, extending that same unhurried patience to a younger colleague who reminds me uncomfortably of my own stubborn younger self.",
+      "Narrator: It feels like the only honest way left to settle an account with someone no longer here to collect it."
     ],
     "quiz": [
-      { "question": "How long had the narrator gone without speaking to her mentor before her death?", "options": ["A few weeks", "Nearly two years", "One month", "Five years"], "correctIndex": 1, "explanation": "She hadn't spoken to her mentor in nearly two years before her death." },
-      { "question": "What did the narrator come to understand about her mentor's restraint in never raising her voice?", "options": ["It meant the mentor didn't care", "It was rare and deliberate, something she only understood belatedly", "It was simply a personality flaw", "It made the mentor seem weak"], "correctIndex": 1, "explanation": "She came to understand only belatedly how rare and deliberate her mentor's restraint actually was." },
-      { "question": "How did the narrator initially feel about her mentor's patience?", "options": ["Grateful immediately", "She resented it occasionally, wanting urgency instead as a clearer signal that mistakes mattered", "Completely indifferent to it", "She never noticed it at all"], "correctIndex": 1, "explanation": "She resented that patience occasionally, wanting urgency instead, some clearer signal her mistakes mattered enough to provoke alarm." },
-      { "question": "What did the narrator learn at the memorial from other women she'd never met?", "options": ["That her mentor had been unkind to others", "That the same unhurried patience she'd assumed was reserved for her was simply who her mentor was", "That her mentor had no other mentees", "That her mentor regretted mentoring anyone"], "correctIndex": 1, "explanation": "Three women described the same unhurried patience, revealing it wasn't reserved specifically for the narrator but simply who her mentor was." },
-      { "question": "What is the narrator doing now to settle her debt to her late mentor?", "options": ["Writing a book about her", "Extending that same unhurried patience to a younger colleague who reminds her of herself", "Nothing at all", "Avoiding mentorship entirely"], "correctIndex": 1, "explanation": "She has started extending that same unhurried patience to a younger colleague who reminds her of her own stubborn younger self." }
-    ]
+      {
+        "question": "How long had the narrator gone without speaking to her mentor before her death?",
+        "options": [
+          "Nearly two years",
+          "A few weeks",
+          "One month",
+          "Five years"
+        ],
+        "correctIndex": 0,
+        "explanation": "She hadn't spoken to her mentor in nearly two years before her death."
+      },
+      {
+        "question": "What did the narrator come to understand about her mentor's restraint in never raising her voice?",
+        "options": [
+          "It meant the mentor didn't care",
+          "It was rare and deliberate, something she only understood belatedly",
+          "It was simply a personality flaw",
+          "It made the mentor seem weak"
+        ],
+        "correctIndex": 1,
+        "explanation": "She came to understand only belatedly how rare and deliberate her mentor's restraint actually was."
+      },
+      {
+        "question": "How did the narrator initially feel about her mentor's patience?",
+        "options": [
+          "Grateful immediately",
+          "Completely indifferent to it",
+          "She resented it occasionally, wanting urgency instead as a clearer signal that mistakes mattered",
+          "She never noticed it at all"
+        ],
+        "correctIndex": 2,
+        "explanation": "She resented that patience occasionally, wanting urgency instead, some clearer signal her mistakes mattered enough to provoke alarm."
+      },
+      {
+        "question": "What did the narrator learn at the memorial from other women she'd never met?",
+        "options": [
+          "That her mentor had been unkind to others",
+          "That her mentor had no other mentees",
+          "That her mentor regretted mentoring anyone",
+          "That the same unhurried patience she'd assumed was reserved for her was simply who her mentor was"
+        ],
+        "correctIndex": 3,
+        "explanation": "Three women described the same unhurried patience, revealing it wasn't reserved specifically for the narrator but simply who her mentor was."
+      },
+      {
+        "question": "What is the narrator doing now to settle her debt to her late mentor?",
+        "options": [
+          "Extending that same unhurried patience to a younger colleague who reminds her of herself",
+          "Writing a book about her",
+          "Nothing at all",
+          "Avoiding mentorship entirely"
+        ],
+        "correctIndex": 0,
+        "explanation": "She has started extending that same unhurried patience to a younger colleague who reminds her of her own stubborn younger self."
+      },
+      {
+        "question": "What central claim does “The Quiet Debt I Owed the Woman Who Never Raised Her Voice” develop?",
+        "options": [
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Quiet support can create obligations that deserve recognition.",
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "Chosen family can provide care while still containing conflict."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Quiet Debt I Owed the Woman Who Never Raised Her Voice”?",
+        "options": [
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "The woman’s steady conduct changes the narrator’s understanding of debt.",
+          "The interview shows belonging is built through mutual obligations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “The Quiet Debt I Owed the Woman Who Never Raised Her Voice”?",
+        "options": [
+          "The harmed person is not obliged to receive an apology.",
+          "Private envy should not dictate public behaviour.",
+          "Affection does not erase the need for boundaries and consent.",
+          "Gratitude should not expose another person’s private service."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Quiet Debt I Owed the Woman Who Never Raised Her Voice”?",
+        "options": [
+          "The narrator seeks a respectful form of acknowledgement.",
+          "The narrator considers consent and timing before reaching out.",
+          "The narrator chooses sincere congratulations and self-examination.",
+          "Participants discuss repair without assuming identical needs."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “The Quiet Debt I Owed the Woman Who Never Raised Her Voice”?",
+        "options": [
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Repair can include recognition without turning care into performance.",
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Social support is stronger when power and dependency are named."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-social-05",
@@ -137,33 +599,150 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Zubaidah", "gender": "female" },
-      { "name": "Hakim", "gender": "male" }
+      {
+        "name": "Zubaidah",
+        "gender": "female"
+      },
+      {
+        "name": "Hakim",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Zubaidah: [shaky] Hakim, it's me. I'm at the hospital with my father. I didn't know who else to call at this hour, and I'm sorry for waking you.",
-      "Hakim: [immediately alert] Don't apologize, not for a second. Tell me what's happening, and tell me slowly, I'm not going anywhere.",
-      "Zubaidah: [trembling] He collapsed at home. The paramedics stabilized him, but nobody's told me anything concrete yet, and the not-knowing is somehow worse than whatever they might eventually say.",
-      "Hakim: [steady] That uncertainty is genuinely its own particular torment. Are you sitting down somewhere, or still standing in a hallway pacing?",
-      "Zubaidah: [quietly] Sitting, technically, though pacing feels more accurate to what's happening internally.",
-      "Hakim: [gently] I'm coming down there. You shouldn't be sitting in that waiting room processing this entirely alone, regardless of what the doctors eventually say.",
-      "Zubaidah: [protesting] You don't have to, honestly, it's the middle of the night, and there's nothing practical you could actually do once you arrived.",
-      "Hakim: [firm] There's nothing practical about most of what matters in a moment like this, and I'm coming anyway. Being unhelpful in person still beats you being alone with this.",
-      "Zubaidah: [softly] I keep replaying this morning, wondering if I missed something, some sign I should have caught before he collapsed.",
-      "Hakim: [gently] That instinct to comb backward for warning signs is nearly universal in moments like this, and it's rarely accurate. Hindsight invents clarity that wasn't actually available to you at the time.",
-      "Zubaidah: [with feeling] Logically, I believe you. It's not stopping the replaying, though, not even slightly.",
-      "Hakim: [warmly] It won't, probably, not tonight. I'm not trying to argue you out of feeling it, just reminding you it isn't evidence of anything you actually failed to do.",
-      "Zubaidah: [grateful] Thank you for not pretending you have answers you don't have, and for coming anyway despite that.",
-      "Hakim: [sincerely] Twenty minutes, maybe less if the roads stay clear. Call me the instant a doctor tells you anything, whatever it is.",
-      "Zubaidah: [relieved] I will. Just knowing you're already driving makes this waiting room feel marginally less unbearable."
+      "Zubaidah: [thoughtful] Hakim, it's me. I'm at the hospital with my father. I didn't know who else to call at this hour, and I'm sorry for waking you.",
+      "Hakim: Don't apologize, not for a second. Tell me what's happening, and tell me slowly, I'm not going anywhere.",
+      "Zubaidah: [carefully] He collapsed at home. The paramedics stabilized him, but nobody's told me anything concrete yet, and the not-knowing is somehow worse than whatever they might eventually say.",
+      "Hakim: That uncertainty is genuinely its own particular torment. Are you sitting down somewhere, or still standing in a hallway pacing?",
+      "Zubaidah: [reflective] Sitting, technically, though pacing feels more accurate to what's happening internally.",
+      "Hakim: I'm coming down there. You shouldn't be sitting in that waiting room processing this entirely alone, regardless of what the doctors eventually say.",
+      "Zubaidah: [honestly] You don't have to, honestly, it's the middle of the night, and there's nothing practical you could actually do once you arrived.",
+      "Hakim: There's nothing practical about most of what matters in a moment like this, and I'm coming anyway. Being unhelpful in person still beats you being alone with this.",
+      "Zubaidah: [gently] I keep replaying this morning, wondering if I missed something, some sign I should have caught before he collapsed.",
+      "Hakim: That instinct to comb backward for warning signs is nearly universal in moments like this, and it's rarely accurate. Hindsight invents clarity that wasn't actually available to you at the time.",
+      "Zubaidah: [calmly] Logically, I believe you. It's not stopping the replaying, though, not even slightly.",
+      "Hakim: It won't, probably, not tonight. I'm not trying to argue you out of feeling it, just reminding you it isn't evidence of anything you actually failed to do.",
+      "Zubaidah: [encouraging] Thank you for not pretending you have answers you don't have, and for coming anyway despite that.",
+      "Hakim: Twenty minutes, maybe less if the roads stay clear. Call me the instant a doctor tells you anything, whatever it is.",
+      "Zubaidah: [seriously] I will. Just knowing you're already driving makes this waiting room feel marginally less unbearable."
     ],
     "quiz": [
-      { "question": "Why is Zubaidah calling Hakim at this hour?", "options": ["She wants to discuss work", "She is at the hospital with her father, who collapsed at home", "She locked herself out of her apartment", "She needs a ride to the airport"], "correctIndex": 1, "explanation": "Zubaidah is at the hospital because her father collapsed at home, and paramedics stabilized him." },
-      { "question": "What does Zubaidah say is somehow worse than whatever the doctors might eventually say?", "options": ["The cost of the hospital visit", "The not-knowing, the uncertainty itself", "The uncomfortable waiting room chairs", "Having to call people at night"], "correctIndex": 1, "explanation": "Zubaidah says the not-knowing is somehow worse than whatever the doctors might eventually say." },
-      { "question": "Why does Hakim insist on coming to the hospital despite Zubaidah's protests?", "options": ["He has medical training that could help", "Being unhelpful in person still beats her being alone with this", "He needs to pick something up nearby", "The doctors requested his presence"], "correctIndex": 1, "explanation": "Hakim says there's nothing practical about most of what matters in this moment, and being unhelpful in person still beats her being alone." },
-      { "question": "What does Hakim say about Zubaidah's instinct to replay the morning for missed warning signs?", "options": ["It proves she failed to notice something important", "It's nearly universal in such moments and rarely accurate, since hindsight invents clarity that wasn't available at the time", "She should stop thinking entirely", "It means she needs therapy immediately"], "correctIndex": 1, "explanation": "Hakim says this instinct is nearly universal and rarely accurate, since hindsight invents clarity that wasn't actually available at the time." },
-      { "question": "What does Hakim ask Zubaidah to do once a doctor provides information?", "options": ["Wait until morning to tell him", "Call him the instant a doctor tells her anything, whatever it is", "Text him a summary later", "Handle it entirely on her own"], "correctIndex": 1, "explanation": "Hakim asks Zubaidah to call him the instant a doctor tells her anything, whatever it turns out to be." }
-    ]
+      {
+        "question": "Why is Zubaidah calling Hakim at this hour?",
+        "options": [
+          "She is at the hospital with her father, who collapsed at home",
+          "She wants to discuss work",
+          "She locked herself out of her apartment",
+          "She needs a ride to the airport"
+        ],
+        "correctIndex": 0,
+        "explanation": "Zubaidah is at the hospital because her father collapsed at home, and paramedics stabilized him."
+      },
+      {
+        "question": "What does Zubaidah say is somehow worse than whatever the doctors might eventually say?",
+        "options": [
+          "The cost of the hospital visit",
+          "The not-knowing, the uncertainty itself",
+          "The uncomfortable waiting room chairs",
+          "Having to call people at night"
+        ],
+        "correctIndex": 1,
+        "explanation": "Zubaidah says the not-knowing is somehow worse than whatever the doctors might eventually say."
+      },
+      {
+        "question": "Why does Hakim insist on coming to the hospital despite Zubaidah's protests?",
+        "options": [
+          "He has medical training that could help",
+          "He needs to pick something up nearby",
+          "Being unhelpful in person still beats her being alone with this",
+          "The doctors requested his presence"
+        ],
+        "correctIndex": 2,
+        "explanation": "Hakim says there's nothing practical about most of what matters in this moment, and being unhelpful in person still beats her being alone."
+      },
+      {
+        "question": "What should guide support in an emergency waiting area?",
+        "options": [
+          "Taking control from the affected person.",
+          "Withholding all practical help.",
+          "Treating urgency as consent.",
+          "Asking what help is wanted while respecting agency."
+        ],
+        "correctIndex": 3,
+        "explanation": "Urgency does not remove the person’s dignity or right to shape support."
+      },
+      {
+        "question": "What does Hakim ask Zubaidah to do once a doctor provides information?",
+        "options": [
+          "Call him the instant a doctor tells her anything, whatever it is",
+          "Wait until morning to tell him",
+          "Text him a summary later",
+          "Handle it entirely on her own"
+        ],
+        "correctIndex": 0,
+        "explanation": "Hakim asks Zubaidah to call him the instant a doctor tells her anything, whatever it turns out to be."
+      },
+      {
+        "question": "What central claim does “The Call From the Emergency Room Waiting Area” develop?",
+        "options": [
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Emergency stress can intensify powerlessness and communication risk.",
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "Chosen family can provide care while still containing conflict."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “The Call From the Emergency Room Waiting Area”?",
+        "options": [
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "The waiting area reveals who controls information and access.",
+          "The interview shows belonging is built through mutual obligations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “The Call From the Emergency Room Waiting Area”?",
+        "options": [
+          "The harmed person is not obliged to receive an apology.",
+          "Private envy should not dictate public behaviour.",
+          "Affection does not erase the need for boundaries and consent.",
+          "Urgency does not cancel a person’s right to dignity and consent."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “The Call From the Emergency Room Waiting Area”?",
+        "options": [
+          "The caller asks what support is wanted rather than taking over.",
+          "The narrator considers consent and timing before reaching out.",
+          "The narrator chooses sincere congratulations and self-examination.",
+          "Participants discuss repair without assuming identical needs."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “The Call From the Emergency Room Waiting Area”?",
+        "options": [
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Accountable care combines practical help with respect for agency.",
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Social support is stronger when power and dependency are named."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-social-06",
@@ -172,28 +751,142 @@
     "themeId": "social",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [reflective] Twenty years ago, arriving in this city knowing nobody, I spent my first Ramadan breaking fast alone in a rented room, eating dates from a plastic bag over the sink.",
-      "Narrator: [honestly] I remember telling myself it was temporary, a single difficult season I'd simply endure before the loneliness resolved itself naturally, as though belonging were something that accrued automatically with time.",
-      "Narrator: [thoughtful] It didn't, of course, not on its own. Belonging, I eventually learned, is considerably less passive than I'd assumed, something built rather than simply waited for.",
-      "Narrator: [reflective] The following year, I invited two coworkers I barely knew to break fast at my apartment, an invitation extended with an awkwardness I still cringe recalling.",
-      "Narrator: [with feeling] They came, somewhat hesitantly, and something about that first shared iftar, however modest, however overcooked the rice, cracked open a door I hadn't realized was sealed shut.",
-      "Narrator: [honestly] Word spread, as these things quietly do, and by the third year, my small apartment could no longer accommodate whoever wanted to attend.",
-      "Narrator: [thoughtful] What began as a single lonely man's improvised solution became, gradually and without any deliberate planning on my part, something the neighborhood simply expected each Ramadan.",
-      "Narrator: [with feeling] I've hosted widowers with nowhere else to go, students too far from home to travel back, entire families who simply preferred company to their own quiet dining rooms.",
+      "Narrator: [thoughtful] Twenty years ago, arriving in this city knowing nobody, I spent my first Ramadan breaking fast alone in a rented room, eating dates from a plastic bag over the sink.",
+      "Narrator: I remember telling myself it was temporary, a single difficult season I'd simply endure before the loneliness resolved itself naturally, as though belonging were something that accrued automatically with time.",
+      "Narrator: [carefully] It didn't, of course, not on its own. Belonging, I eventually learned, is considerably less passive than I'd assumed, something built rather than simply waited for.",
+      "Narrator: The following year, I invited two coworkers I barely knew to break fast at my apartment, an invitation extended with an awkwardness I still cringe recalling.",
+      "Narrator: [reflective] They came, somewhat hesitantly, and something about that first shared iftar, however modest, however overcooked the rice, cracked open a door I hadn't realized was sealed shut.",
+      "Narrator: Word spread, as these things quietly do, and by the third year, my small apartment could no longer accommodate whoever wanted to attend.",
+      "Narrator: [honestly] What began as a single lonely man's improvised solution became, gradually and without any deliberate planning on my part, something the neighborhood simply expected each Ramadan.",
+      "Narrator: I've hosted widowers with nowhere else to go, students too far from home to travel back, entire families who simply preferred company to their own quiet dining rooms.",
       "Narrator: [gently] What strikes me most, twenty years on, is how little any of this required exceptional generosity on my part, merely the willingness to extend an invitation I once desperately wished someone had extended to me.",
-      "Narrator: [reflective] Community, I've come to think, rarely announces itself; it has to be convened, deliberately, by someone willing to absorb the initial awkwardness of asking.",
-      "Narrator: [warmly] These days, I rarely have to send the invitations myself. Someone always beats me to it, which feels, after two decades, like the entire quiet point finally realized."
+      "Narrator: Community, I've come to think, rarely announces itself; it has to be convened, deliberately, by someone willing to absorb the initial awkwardness of asking.",
+      "Narrator: [calmly] These days, I rarely have to send the invitations myself. Someone always beats me to it, which feels, after two decades, like the entire quiet point finally realized."
     ],
     "quiz": [
-      { "question": "How did the narrator spend his first Ramadan in the city?", "options": ["Surrounded by new friends", "Breaking fast alone in a rented room, eating dates from a plastic bag", "At a large community mosque event", "Traveling back to his home country"], "correctIndex": 1, "explanation": "He spent his first Ramadan breaking fast alone in a rented room, eating dates from a plastic bag over the sink." },
-      { "question": "What did the narrator eventually learn about belonging?", "options": ["It accrues automatically with time", "It is considerably less passive than assumed, something built rather than simply waited for", "It is impossible to achieve as an outsider", "It requires wealth and status"], "correctIndex": 1, "explanation": "He learned belonging is considerably less passive than he'd assumed, something built rather than simply waited for." },
-      { "question": "What did the narrator do the following year?", "options": ["Moved to a different city", "Invited two coworkers he barely knew to break fast at his apartment", "Joined a large mosque committee", "Stopped observing Ramadan traditions"], "correctIndex": 1, "explanation": "He invited two coworkers he barely knew to break fast at his apartment, despite feeling awkward about it." },
-      { "question": "Who has the narrator hosted over the years, according to the monologue?", "options": ["Only close relatives", "Widowers, students far from home, and families who preferred company", "Only people from his home country", "Strangers he found online"], "correctIndex": 1, "explanation": "He has hosted widowers with nowhere else to go, students too far from home to travel back, and families who preferred company." },
-      { "question": "What does the narrator conclude about community?", "options": ["It announces itself naturally without effort", "It rarely announces itself; it has to be convened by someone willing to absorb the initial awkwardness of asking", "It is impossible to build deliberately", "It only exists among blood relatives"], "correctIndex": 1, "explanation": "He concludes community rarely announces itself; it has to be convened deliberately by someone willing to absorb the initial awkwardness of asking." }
-    ]
+      {
+        "question": "How did the narrator spend his first Ramadan in the city?",
+        "options": [
+          "Breaking fast alone in a rented room, eating dates from a plastic bag",
+          "Surrounded by new friends",
+          "At a large community mosque event",
+          "Traveling back to his home country"
+        ],
+        "correctIndex": 0,
+        "explanation": "He spent his first Ramadan breaking fast alone in a rented room, eating dates from a plastic bag over the sink."
+      },
+      {
+        "question": "What did the narrator eventually learn about belonging?",
+        "options": [
+          "It accrues automatically with time",
+          "It is considerably less passive than assumed, something built rather than simply waited for",
+          "It is impossible to achieve as an outsider",
+          "It requires wealth and status"
+        ],
+        "correctIndex": 1,
+        "explanation": "He learned belonging is considerably less passive than he'd assumed, something built rather than simply waited for."
+      },
+      {
+        "question": "What did the narrator do the following year?",
+        "options": [
+          "Moved to a different city",
+          "Joined a large mosque committee",
+          "Invited two coworkers he barely knew to break fast at his apartment",
+          "Stopped observing Ramadan traditions"
+        ],
+        "correctIndex": 2,
+        "explanation": "He invited two coworkers he barely knew to break fast at his apartment, despite feeling awkward about it."
+      },
+      {
+        "question": "Who has the narrator hosted over the years, according to the monologue?",
+        "options": [
+          "Only close relatives",
+          "Only people from his home country",
+          "Strangers he found online",
+          "Widowers, students far from home, and families who preferred company"
+        ],
+        "correctIndex": 3,
+        "explanation": "He has hosted widowers with nowhere else to go, students too far from home to travel back, and families who preferred company."
+      },
+      {
+        "question": "What makes a recurring community ritual genuinely welcoming?",
+        "options": [
+          "Reviewing who may be excluded and adjusting practice.",
+          "Keeping every custom unchanged.",
+          "Assuming attendance proves belonging.",
+          "Avoiding feedback after gatherings."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account argues that hospitality needs review as community needs change."
+      },
+      {
+        "question": "What central claim does “What Twenty Years of Ramadan Iftars Taught Me About Belonging” develop?",
+        "options": [
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Belonging grows through repeated hospitality, not one symbolic event.",
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "Chosen family can provide care while still containing conflict."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “What Twenty Years of Ramadan Iftars Taught Me About Belonging”?",
+        "options": [
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "Years of iftars reveal changing participants and unspoken exclusions.",
+          "The interview shows belonging is built through mutual obligations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “What Twenty Years of Ramadan Iftars Taught Me About Belonging”?",
+        "options": [
+          "The harmed person is not obliged to receive an apology.",
+          "Private envy should not dictate public behaviour.",
+          "Affection does not erase the need for boundaries and consent.",
+          "Tradition should not hide who is left outside a gathering."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “What Twenty Years of Ramadan Iftars Taught Me About Belonging”?",
+        "options": [
+          "The narrator adjusts practice in response to overlooked needs.",
+          "The narrator considers consent and timing before reaching out.",
+          "The narrator chooses sincere congratulations and self-examination.",
+          "Participants discuss repair without assuming identical needs."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “What Twenty Years of Ramadan Iftars Taught Me About Belonging”?",
+        "options": [
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Community rituals need review if they are to remain welcoming.",
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Social support is stronger when power and dependency are named."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "c2-social-07",
@@ -202,33 +895,588 @@
     "themeId": "social",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Tonight's guest studies how digital messaging has reshaped the texture of close relationships, a subject that provokes strong opinions in nearly everyone. Welcome, Dr. Wardah.",
-      "Guest: [pleasantly] Thank you. And yes, everyone has a theory, usually delivered with considerably more confidence than the actual research supports.",
-      "Host: [curious] Let's start with the popular verdict, then. Has texting genuinely degraded intimacy, or is that simply generational anxiety dressed up as science?",
-      "Guest: [measured] Neither, quite. The honest answer is that it's redistributed intimacy rather than diminished it outright, concentrated it into different, sometimes thinner channels.",
-      "Host: [following] Thinner how, specifically?",
-      "Guest: [explaining] Text strips away tone, pause, the physical presence that once forced people to sit with discomfort rather than simply leaving a message unanswered until composure returned.",
-      "Host: [concerned] So difficult conversations get avoided rather than actually resolved?",
-      "Guest: [nodding] Frequently, yes. There's a particular modern habit of relegating anything genuinely vulnerable to text specifically because it permits withdrawal, a kind of intimacy attempted at a safe remove.",
-      "Host: [curious] Is there anything texting has genuinely improved, or is this purely a story of erosion?",
-      "Guest: [thoughtful] Considerably more than erosion, actually. It sustains contact across distances that would have simply dissolved relationships a generation ago, sheer geographic separation no longer guarantees drift.",
-      "Host: [interested] So the technology itself isn't the villain of this story?",
-      "Guest: [firmly] Rarely is technology the villain in these narratives; it's usually how we deploy it. The same phone sustaining a distant friendship beautifully can also become the mechanism avoiding a necessary difficult conversation nearby.",
-      "Host: [curious] What would you recommend to listeners worried their closest relationships have become dangerously text-dependent?",
-      "Guest: [encouraging] A simple diagnostic: notice which conversations you're routing to text specifically to avoid discomfort, and deliberately move exactly those particular ones back into a voice or a room.",
-      "Host: [smiling] Refreshingly practical, for a subject usually buried in abstraction. Thank you, Dr. Wardah.",
-      "Guest: [warmly] Thank you for resisting the easy nostalgia and actually sitting with the nuance instead."
+      "Host: [thoughtful] Tonight's guest studies how digital messaging has reshaped the texture of close relationships, a subject that provokes strong opinions in nearly everyone. Welcome, Dr. Wardah.",
+      "Guest: Thank you. And yes, everyone has a theory, usually delivered with considerably more confidence than the actual research supports.",
+      "Host: [carefully] Let's start with the popular verdict, then. Has texting genuinely degraded intimacy, or is that simply generational anxiety dressed up as science?",
+      "Guest: Neither, quite. The honest answer is that it's redistributed intimacy rather than diminished it outright, concentrated it into different, sometimes thinner channels.",
+      "Host: [reflective] Thinner how, specifically?",
+      "Guest: Text strips away tone, pause, the physical presence that once forced people to sit with discomfort rather than simply leaving a message unanswered until composure returned.",
+      "Host: [honestly] So difficult conversations get avoided rather than actually resolved?",
+      "Guest: Frequently, yes. There's a particular modern habit of relegating anything genuinely vulnerable to text specifically because it permits withdrawal, a kind of intimacy attempted at a safe remove.",
+      "Host: [gently] Is there anything texting has genuinely improved, or is this purely a story of erosion?",
+      "Guest: Considerably more than erosion, actually. It sustains contact across distances that would have simply dissolved relationships a generation ago, sheer geographic separation no longer guarantees drift.",
+      "Host: [calmly] So the technology itself isn't the villain of this story?",
+      "Guest: Rarely is technology the villain in these narratives; it's usually how we deploy it. The same phone sustaining a distant friendship beautifully can also become the mechanism avoiding a necessary difficult conversation nearby.",
+      "Host: [encouraging] What would you recommend to listeners worried their closest relationships have become dangerously text-dependent?",
+      "Guest: A simple diagnostic: notice which conversations you're routing to text specifically to avoid discomfort, and deliberately move exactly those particular ones back into a voice or a room.",
+      "Host: [seriously] Refreshingly practical, for a subject usually buried in abstraction. Thank you, Dr. Wardah.",
+      "Guest: Thank you for resisting the easy nostalgia and actually sitting with the nuance instead."
     ],
     "quiz": [
-      { "question": "What does Dr. Wardah say texting has actually done to intimacy, rather than simply diminishing it?", "options": ["Eliminated it entirely", "Redistributed it, concentrating it into different, sometimes thinner channels", "Made it identical to in-person intimacy", "Had no measurable effect whatsoever"], "correctIndex": 1, "explanation": "She says texting has redistributed intimacy rather than diminished it outright, concentrating it into thinner channels." },
-      { "question": "What does Dr. Wardah say text strips away from communication?", "options": ["Only the written words themselves", "Tone, pause, and the physical presence that once forced people to sit with discomfort", "Nothing significant at all", "The ability to communicate quickly"], "correctIndex": 1, "explanation": "She explains text strips away tone, pause, and physical presence that once forced people to sit with discomfort rather than avoid it." },
-      { "question": "According to Dr. Wardah, why do people relegate vulnerable conversations to text?", "options": ["Because text is always clearer", "Because it permits withdrawal, a kind of intimacy attempted at a safe remove", "Because it saves money", "Because in-person conversation is illegal"], "correctIndex": 1, "explanation": "She says vulnerable conversations get relegated to text specifically because it permits withdrawal, intimacy attempted at a safe remove." },
-      { "question": "What has texting genuinely improved, according to Dr. Wardah?", "options": ["Nothing has improved", "It sustains contact across distances that would have dissolved relationships a generation ago", "It has replaced the need for any real relationships", "It only benefits business communication"], "correctIndex": 1, "explanation": "She says texting sustains contact across distances that would have simply dissolved relationships a generation ago." },
-      { "question": "What diagnostic does Dr. Wardah recommend to listeners?", "options": ["Delete all messaging apps immediately", "Notice which conversations are routed to text to avoid discomfort, and move those specifically back to voice or in person", "Only communicate by phone call from now on", "Avoid difficult conversations altogether"], "correctIndex": 1, "explanation": "She recommends noticing which conversations are routed to text specifically to avoid discomfort, and moving exactly those back into voice or a room." }
-    ]
+      {
+        "question": "What does Dr. Wardah say texting has actually done to intimacy, rather than simply diminishing it?",
+        "options": [
+          "Redistributed it, concentrating it into different, sometimes thinner channels",
+          "Eliminated it entirely",
+          "Made it identical to in-person intimacy",
+          "Had no measurable effect whatsoever"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says texting has redistributed intimacy rather than diminished it outright, concentrating it into thinner channels."
+      },
+      {
+        "question": "What does Dr. Wardah say text strips away from communication?",
+        "options": [
+          "Only the written words themselves",
+          "Tone, pause, and the physical presence that once forced people to sit with discomfort",
+          "Nothing significant at all",
+          "The ability to communicate quickly"
+        ],
+        "correctIndex": 1,
+        "explanation": "She explains text strips away tone, pause, and physical presence that once forced people to sit with discomfort rather than avoid it."
+      },
+      {
+        "question": "According to Dr. Wardah, why do people relegate vulnerable conversations to text?",
+        "options": [
+          "Because text is always clearer",
+          "Because it saves money",
+          "Because it permits withdrawal, a kind of intimacy attempted at a safe remove",
+          "Because in-person conversation is illegal"
+        ],
+        "correctIndex": 2,
+        "explanation": "She says vulnerable conversations get relegated to text specifically because it permits withdrawal, intimacy attempted at a safe remove."
+      },
+      {
+        "question": "What has texting genuinely improved, according to Dr. Wardah?",
+        "options": [
+          "Nothing has improved",
+          "It has replaced the need for any real relationships",
+          "It only benefits business communication",
+          "It sustains contact across distances that would have dissolved relationships a generation ago"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says texting sustains contact across distances that would have simply dissolved relationships a generation ago."
+      },
+      {
+        "question": "What limit does the radio segment place on digital contact?",
+        "options": [
+          "Frequent messages automatically create intimacy.",
+          "Texting can connect without replacing attentive presence.",
+          "Privacy is irrelevant online.",
+          "Boundaries prevent all connection."
+        ],
+        "correctIndex": 1,
+        "explanation": "The segment distinguishes convenient contact from sustained, consensual relationship."
+      },
+      {
+        "question": "What central claim does “A Radio Segment on Whether Texting Has Replaced Real Intimacy” develop?",
+        "options": [
+          "An apology delayed for years can become a way of avoiding repair.",
+          "Texting can connect people while also avoiding difficult presence.",
+          "Mixed feelings about a friend’s success need not become disloyalty.",
+          "Chosen family can provide care while still containing conflict."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which evidence best supports the reasoning in “A Radio Segment on Whether Texting Has Replaced Real Intimacy”?",
+        "options": [
+          "Rehearsal without contact preserves the speaker’s comfort.",
+          "The sting reveals comparison rather than a reason to diminish the friend.",
+          "The segment contrasts quick contact with sustained attentive conversation.",
+          "The interview shows belonging is built through mutual obligations."
+        ],
+        "correctIndex": 2,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which qualification protects people in “A Radio Segment on Whether Texting Has Replaced Real Intimacy”?",
+        "options": [
+          "The harmed person is not obliged to receive an apology.",
+          "Private envy should not dictate public behaviour.",
+          "Affection does not erase the need for boundaries and consent.",
+          "Digital access does not automatically create intimacy or consent."
+        ],
+        "correctIndex": 3,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "Which response best expresses the speaker’s stance in “A Radio Segment on Whether Texting Has Replaced Real Intimacy”?",
+        "options": [
+          "The speakers consider boundaries and safer ways to reconnect.",
+          "The narrator considers consent and timing before reaching out.",
+          "The narrator chooses sincere congratulations and self-examination.",
+          "Participants discuss repair without assuming identical needs."
+        ],
+        "correctIndex": 0,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      },
+      {
+        "question": "What implication follows most clearly from “A Radio Segment on Whether Texting Has Replaced Real Intimacy”?",
+        "options": [
+          "Accountable repair accepts that forgiveness cannot be demanded.",
+          "Relationship repair requires more than message frequency.",
+          "Friendship can survive difficult feeling through honest restraint.",
+          "Social support is stronger when power and dependency are named."
+        ],
+        "correctIndex": 1,
+        "explanation": "The answer follows from the account’s reasoning about consent, power, and accountable repair."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-social-08",
+    "title": "The Noticeboard Argument Was Really About Belonging",
+    "level": "C2",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] A residents’ association received complaints about posters in the shared entrance: too many notices, too many languages, too much clutter. The first proposal was simply to remove everything.",
+      "Narrator: At the meeting, an older resident explained that the notices were how she learned about repairs. A new parent said translated information was the only reason her neighbour knew where to ask for help. The wall was not merely untidy; it was a fragile public square.",
+      "Narrator: We measured the space, reviewed the types of information, and found that essential notices were mixed with expired advertisements and private disputes written as public warnings.",
+      "Narrator: The solution was neither unrestricted display nor total removal. We created clear sections, dates, translation guidance for core information, and a process for urgent updates.",
+      "Narrator: One question changed the tone: Who becomes less able to participate if this system is simplified? It moved the group beyond preferences about visual order.",
+      "Narrator: We also set limits. The board could not be used to identify individuals, share unverified allegations, or publish private contact details. Community communication needs protection against humiliation and misinformation.",
+      "Narrator: The new arrangement was not glamorous. But it made the hallway easier to navigate and made several residents feel that the building recognised their presence.",
+      "Narrator: Social trust is often built through these modest systems. A noticeboard, a group chat, or a meeting agenda can either widen access or quietly announce whose needs count.",
+      "Narrator: The lesson was not to preserve every message. It was to design shared spaces with enough order for people to find what matters and enough care to avoid excluding those who rely on them."
+    ],
+    "quiz": [
+      {
+        "question": "What stance emerges from the contested noticeboard?",
+        "options": [
+          "Shared spaces should be assessed by the access and belonging they enable, not by tidiness alone.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that shared spaces should be assessed by the access and belonging they enable, not by tidiness alone."
+      },
+      {
+        "question": "Which evidence in the contested noticeboard disrupts the obvious interpretation?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Residents describe notices as their route to repairs, help, and translated information.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that residents describe notices as their route to repairs, help, and translated information."
+      },
+      {
+        "question": "What does the speaker refuse to assume about the contested noticeboard?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A clutter problem can be real without making the information itself disposable.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a clutter problem can be real without making the information itself disposable."
+      },
+      {
+        "question": "How should someone act after encountering the contested noticeboard?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Redesign the noticeboard with clear categories and language access rather than removing it wholesale."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that redesign the noticeboard with clear categories and language access rather than removing it wholesale."
+      },
+      {
+        "question": "Which shortcut does the speaker reject in the contested noticeboard?",
+        "options": [
+          "seeing public information only as visual clutter.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that seeing public information only as visual clutter"
+      },
+      {
+        "question": "Why does the contested noticeboard call for slower reasoning?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A clutter problem can be real without making the information itself disposable.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a clutter problem can be real without making the information itself disposable."
+      },
+      {
+        "question": "What consequence could follow if the warning in the contested noticeboard is missed?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Shared spaces should be assessed by the access and belonging they enable, not by tidiness alone.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that shared spaces should be assessed by the access and belonging they enable, not by tidiness alone."
+      },
+      {
+        "question": "Which choice runs against the insight drawn from the contested noticeboard?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "seeing public information only as visual clutter."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that seeing public information only as visual clutter"
+      },
+      {
+        "question": "How does the contested noticeboard define sound judgement?",
+        "options": [
+          "Redesign the noticeboard with clear categories and language access rather than removing it wholesale.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that redesign the noticeboard with clear categories and language access rather than removing it wholesale."
+      },
+      {
+        "question": "What enduring lesson does the speaker draw from the contested noticeboard?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Shared spaces should be assessed by the access and belonging they enable, not by tidiness alone.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that shared spaces should be assessed by the access and belonging they enable, not by tidiness alone."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-social-09",
+    "title": "After the Volunteer Group Lost Its Momentum",
+    "level": "C2",
+    "themeId": "social",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [reflective] Our weekend food distribution project did not end because people stopped caring. It stalled because care had been organised around a few tireless individuals who had never been asked what they could sustainably carry.",
+      "Narrator: When one coordinator became ill, no one knew the supplier contacts, the collection schedule, or which families had requested particular arrangements. The project had commitment but little continuity.",
+      "Narrator: At the review meeting, we resisted the easy story that volunteers had become unreliable. The more accurate story was that responsibilities had remained invisible until a crisis exposed them.",
+      "Narrator: We made a simple map: receiving donations, checking suitability, packing, transport, safeguarding, communication, and finance. Each role received a named owner, a backup, and a brief written guide.",
+      "Narrator: We also narrowed the project’s promise. Instead of claiming to serve every request immediately, we published collection days and a respectful route for urgent referrals to established services.",
+      "Narrator: This mattered because overpromising can harm the people a project exists to help. A volunteer’s good intention does not make an uncertain commitment safe to rely upon.",
+      "Narrator: The group began holding short debriefs. They asked what had worked, what had created strain, and what information should not be kept in informal chats because it was private.",
+      "Narrator: Within two months, the project was smaller but steadier. New volunteers could enter without depending on personal favours, and no one person had to perform endless availability to prove dedication.",
+      "Narrator: Community service becomes more durable when its structure honours both recipients and volunteers. Reliability is itself a form of care.",
+      "Narrator: [carefully] The group protected dignity by keeping only what was necessary for the service, limiting access, and explaining why information was held rather than allowing private details to circulate as volunteer gossip."
+    ],
+    "quiz": [
+      {
+        "question": "Which governing principle is tested in the food project after its coordinator became ill?",
+        "options": [
+          "Volunteer projects endure when knowledge and responsibility are shared.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that volunteer projects endure when knowledge and responsibility are shared instead of resting on a few generous people."
+      },
+      {
+        "question": "What detail from the food project after its coordinator became ill prevents a simple reading?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "When one coordinator became ill, nobody knew supplier contacts, schedules, or family arrangements.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that when one coordinator became ill, nobody knew supplier contacts, schedules, or family arrangements."
+      },
+      {
+        "question": "Which qualification matters most when judging the food project after its coordinator became ill?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Commitment alone does not create continuity if operational knowledge stays private.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that commitment alone does not create continuity if operational knowledge stays private."
+      },
+      {
+        "question": "Which next step best puts the lesson from the food project after its coordinator became ill into practice?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Document roles and contacts, rotate responsibility, and ask what people can sustain."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that document roles and contacts, rotate responsibility, and ask what people can sustain."
+      },
+      {
+        "question": "What false move lies beneath the problem in the food project after its coordinator became ill?",
+        "options": [
+          "equating devotion with an unlimited capacity to carry a project.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that equating devotion with an unlimited capacity to carry a project"
+      },
+      {
+        "question": "What makes a one-step answer inadequate for the food project after its coordinator became ill?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Commitment alone does not create continuity if operational knowledge stays private.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that commitment alone does not create continuity if operational knowledge stays private."
+      },
+      {
+        "question": "If people repeat the criticised approach to the food project after its coordinator became ill, what is jeopardised?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Volunteer projects endure when knowledge and responsibility are shared.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that volunteer projects endure when knowledge and responsibility are shared instead of resting on a few generous people."
+      },
+      {
+        "question": "What would the speaker object to after reflecting on the food project after its coordinator became ill?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "equating devotion with an unlimited capacity to carry a project."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that equating devotion with an unlimited capacity to carry a project"
+      },
+      {
+        "question": "What responsibility does the speaker attach to the food project after its coordinator became ill?",
+        "options": [
+          "Document roles and contacts, rotate responsibility, and ask what people can sustain.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that document roles and contacts, rotate responsibility, and ask what people can sustain."
+      },
+      {
+        "question": "Which conclusion best honours the concern revealed by the food project after its coordinator became ill?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Volunteer projects endure when knowledge and responsibility are shared.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that volunteer projects endure when knowledge and responsibility are shared instead of resting on a few generous people."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "c2-social-10",
+    "title": "When a Group Chat Stops Feeling Safe",
+    "level": "C2",
+    "themeId": "social",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Interviewer",
+        "gender": "female"
+      },
+      {
+        "name": "Analyst",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Interviewer: [thoughtful] A local group chat began as a place for practical updates, then became a source of rumours and personal criticism. What is the first repair?",
+      "Analyst: Name the purpose of the space. If no one agrees whether it is for announcements, discussion, emergency help, or social conversation, conflict will be managed through private power rather than clear expectations.",
+      "Interviewer: Should moderators simply delete controversial messages?",
+      "Analyst: They need transparent criteria. Removing private information, abuse, unverified allegations, or urgent misinformation can protect members. But arbitrary moderation creates a different kind of distrust.",
+      "Interviewer: What about a message that has already hurt someone?",
+      "Analyst: Move the repair away from public spectacle where possible. The person affected should have agency over what is shared, and the group should learn enough to prevent repetition without demanding private details.",
+      "Interviewer: Can a written code of conduct sound excessive?",
+      "Analyst: Not if it is brief and usable. It can state the purpose, privacy boundaries, how to report concerns, and the difference between disagreement and personal attack.",
+      "Interviewer: How do members help?",
+      "Analyst: Pause before forwarding, verify before claiming, and avoid treating a screenshot as proof of a whole story. Digital traces are partial and easily decontextualised.",
+      "Interviewer: What does success look like?",
+      "Analyst: A space where people can receive useful information, raise concerns without fear, and disagree without turning one another into content.",
+      "Interviewer: Can conflict ever be discussed publicly?",
+      "Analyst: Sometimes a general lesson or a shared rule must be public, but the aim should be prevention and accountability—not satisfying the group’s appetite for a person’s private explanation.",
+      "Interviewer: What should moderators remember?",
+      "Analyst: Their own messages set the temperature. A calm, specific response can prevent a crowd from turning uncertainty into punishment."
+    ],
+    "quiz": [
+      {
+        "question": "What principle should guide a reading of the group chat damaged by rumours?",
+        "options": [
+          "A group chat becomes safer when its purpose and boundaries are named before conflict is left.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that a group chat becomes safer when its purpose and boundaries are named before conflict is left to informal power."
+      },
+      {
+        "question": "Which observation makes the case in the group chat damaged by rumours less straightforward?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "No shared agreement exists about whether the chat is for notices, discussion, emergencies, or social talk.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that no shared agreement exists about whether the chat is for notices, discussion, emergencies, or social talk."
+      },
+      {
+        "question": "Which restraint prevents the group chat damaged by rumours from being oversimplified?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Rules need fair application and cannot replace direct repair when harm has already occurred.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that rules need fair application and cannot replace direct repair when harm has already occurred."
+      },
+      {
+        "question": "What would a proportionate response to the group chat damaged by rumours look like?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "Agree the purpose, moderation process, and route for concerns in the open."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that agree the purpose, moderation process, and route for concerns in the open."
+      },
+      {
+        "question": "Which instinct does the speaker ask listeners to resist in the group chat damaged by rumours?",
+        "options": [
+          "letting rumours and private influence define the space.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that letting rumours and private influence define the space"
+      },
+      {
+        "question": "What makes the speaker treat the group chat damaged by rumours with caution rather than certainty?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Rules need fair application and cannot replace direct repair when harm has already occurred.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that rules need fair application and cannot replace direct repair when harm has already occurred."
+      },
+      {
+        "question": "What harm may follow from ignoring the lesson of the group chat damaged by rumours?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "A group chat becomes safer when its purpose and boundaries are named before conflict is left.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 2,
+        "explanation": "The account emphasises that a group chat becomes safer when its purpose and boundaries are named before conflict is left to informal power."
+      },
+      {
+        "question": "What would repeat the very mistake highlighted by the group chat damaged by rumours?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule.",
+          "letting rumours and private influence define the space."
+        ],
+        "correctIndex": 3,
+        "explanation": "The account emphasises that letting rumours and private influence define the space"
+      },
+      {
+        "question": "How should a listener weigh the issue raised by the group chat damaged by rumours?",
+        "options": [
+          "Agree the purpose, moderation process, and route for concerns in the open.",
+          "Treat the first convenient impression as enough evidence.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 0,
+        "explanation": "The account emphasises that agree the purpose, moderation process, and route for concerns in the open."
+      },
+      {
+        "question": "Which takeaway best reflects the reasoning developed through the group chat damaged by rumours?",
+        "options": [
+          "Treat the first convenient impression as enough evidence.",
+          "A group chat becomes safer when its purpose and boundaries are named before conflict is left.",
+          "Prioritise appearance and speed over affected people.",
+          "Assume one experience proves a universal rule."
+        ],
+        "correctIndex": 1,
+        "explanation": "The account emphasises that a group chat becomes safer when its purpose and boundaries are named before conflict is left to informal power."
+      }
+    ],
+    "qualityReview": {
+      "level": "C2",
+      "theme": "social",
+      "scriptDecision": "reviewed for nuanced inference, epistemic humility, source boundaries, proportional action, and high-stakes safety",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]

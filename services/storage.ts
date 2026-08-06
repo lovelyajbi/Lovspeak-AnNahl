@@ -354,6 +354,7 @@ export const getUserProfile = (): UserProfile => {
     if (data) {
         const profile = JSON.parse(data);
         if (profile.xp === undefined) profile.xp = 0;
+        if (!profile.level) profile.level = 'A1';
         return profile;
     }
     return { name: 'Lovelies', avatar: 'fa-user', level: 'A1', xp: 0 };

@@ -6,29 +6,143 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
       "Narrator: [thoughtful] When my manager first suggested I apply for a master's program, my instinct was to laugh, because between my job and my daughter, I genuinely couldn't imagine where the extra hours would come from.",
-      "Narrator: [honestly] Still, the idea kept resurfacing whenever I hit a ceiling at work, watching colleagues with advanced degrees move into roles I felt qualified for in every way except on paper.",
-      "Narrator: [reflective] So I spent a month researching part-time programs, and even though the tuition made me nervous, I eventually convinced myself that waiting for a perfect moment would mean waiting forever.",
-      "Narrator: [determined] I enrolled in a evening program, and I told myself that as long as I studied consistently, even in small blocks, I would eventually get through it.",
-      "Narrator: [honestly] The first semester nearly broke me, though, because I underestimated how draining it is to sit through lectures after a full day of meetings.",
-      "Narrator: [gently] What kept me going wasn't motivation, honestly, since motivation disappeared fairly quickly; it was the schedule I had built, one that didn't depend on how I felt each evening.",
-      "Narrator: [reflective] I also had to accept that my daughter would sometimes see me exhausted and distracted, which is a trade-off no parent enjoys making, however necessary it feels.",
-      "Narrator: [warmly] Despite all of that, something shifted around the second semester, once the material connected to problems I actually faced at work.",
-      "Narrator: [with feeling] Suddenly the theory wasn't abstract anymore; it explained decisions my own team had struggled with for years, and that made the exhaustion feel worthwhile.",
-      "Narrator: [thoughtful] Provided I keep this pace, I should finish within two years, which sounded impossibly slow when I began but now feels almost close.",
-      "Narrator: [peacefully] I've learned that ambition doesn't always look dramatic; sometimes it's just showing up to another lecture despite wanting nothing more than your own bed.",
-      "Narrator: [warmly] Whenever a colleague mentions feeling stuck, I tell them the ceiling isn't always as fixed as it seems, provided you're willing to trade some comfort for a few years."
+      "Narrator: Still, the idea kept resurfacing whenever I hit a ceiling at work, watching colleagues with advanced degrees move into roles I felt qualified for in every way except on paper.",
+      "Narrator: [carefully] I checked recognition, entry and role requirements, teaching support, total costs, finance terms, schedule, accessibility, workload, and alternatives before choosing a part-time program.",
+      "Narrator: I enrolled in a evening program, and I told myself that as long as I studied consistently, even in small blocks, I would eventually get through it.",
+      "Narrator: [reflective] The first semester was unsustainable. I discussed workload, health, study support, and realistic pacing rather than treating severe exhaustion as proof of commitment.",
+      "Narrator: What kept me going wasn't motivation, honestly, since motivation disappeared fairly quickly; it was the schedule I had built, one that didn't depend on how I felt each evening.",
+      "Narrator: [honestly] Our family agreed on childcare, protected time together, backup care, and a review point. My daughter’s needs were not an automatic cost she had to absorb.",
+      "Narrator: Despite all of that, something shifted around the second semester, once the material connected to problems I actually faced at work.",
+      "Narrator: [seriously] Suddenly the theory wasn't abstract anymore; it explained decisions my own team had struggled with for years, and that made the exhaustion feel worthwhile.",
+      "Narrator: Provided I keep this pace, I should finish within two years, which sounded impossibly slow when I began but now feels almost close.",
+      "Narrator: [gently] I've learned that ambition doesn't always look dramatic; sometimes it's just showing up to another lecture despite wanting nothing more than your own bed.",
+      "Narrator: I tell colleagues to examine the real barrier and compare recognized study, workplace learning, mentoring, role change, cost, care, health, and likely—not guaranteed—outcomes."
     ],
     "quiz": [
-      { "question": "What was the narrator's first reaction when her manager suggested the master's program?", "options": ["Excitement", "She laughed, unsure where the extra hours would come from", "Immediate agreement", "Anger"], "correctIndex": 1, "explanation": "She says her instinct was to laugh, because she couldn't imagine finding the extra hours between her job and her daughter." },
-      { "question": "What convinced her to finally enroll?", "options": ["A pay raise", "Realizing waiting for a perfect moment would mean waiting forever", "Her daughter's request", "A scholarship offer"], "correctIndex": 1, "explanation": "After researching programs, she concluded that waiting for a perfect moment would mean waiting forever." },
-      { "question": "What kept her going during the hardest weeks, according to the narrator?", "options": ["Motivation", "The schedule she had built, which didn't depend on her mood", "Her manager's pressure", "Financial rewards"], "correctIndex": 1, "explanation": "She says motivation disappeared quickly, so it was the schedule that kept her going, not how she felt each evening." },
-      { "question": "What changed around the second semester?", "options": ["She quit the program", "The material connected to real problems she faced at work", "Her tuition was refunded", "She switched to a different school"], "correctIndex": 1, "explanation": "She says the theory stopped feeling abstract once it connected to problems her own team had struggled with." },
-      { "question": "What does the narrator tell colleagues who feel stuck in their careers?", "options": ["To quit their jobs", "That the ceiling isn't always as fixed as it seems if they're willing to trade comfort", "To ignore further education", "That degrees don't matter"], "correctIndex": 1, "explanation": "She tells them the ceiling isn't always fixed, provided they're willing to trade some comfort for a few years." }
-    ]
+      {
+        "question": "What was the narrator's first reaction when her manager suggested the master's program?",
+        "options": [
+          "She laughed, unsure where the extra hours would come from",
+          "Excitement",
+          "Immediate agreement",
+          "Anger"
+        ],
+        "correctIndex": 0,
+        "explanation": "She says her instinct was to laugh, because she couldn't imagine finding the extra hours between her job and her daughter."
+      },
+      {
+        "question": "What convinced her to finally enroll?",
+        "options": [
+          "A pay raise",
+          "Realizing waiting for a perfect moment would mean waiting forever",
+          "Her daughter's request",
+          "A scholarship offer"
+        ],
+        "correctIndex": 1,
+        "explanation": "After researching programs, she concluded that waiting for a perfect moment would mean waiting forever."
+      },
+      {
+        "question": "What kept her going during the hardest weeks, according to the narrator?",
+        "options": [
+          "Motivation",
+          "The schedule she had built, which didn't depend on her mood",
+          "Her manager's pressure",
+          "Financial rewards"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says motivation disappeared quickly, so it was the schedule that kept her going, not how she felt each evening."
+      },
+      {
+        "question": "What changed around the second semester?",
+        "options": [
+          "She quit the program",
+          "Her tuition was refunded",
+          "She switched to a different school",
+          "The material connected to real problems she faced at work"
+        ],
+        "correctIndex": 3,
+        "explanation": "She says the theory stopped feeling abstract once it connected to problems her own team had struggled with."
+      },
+      {
+        "question": "What does the narrator tell colleagues who feel stuck in their careers?",
+        "options": [
+          "To quit their jobs",
+          "To ignore further education",
+          "That the ceiling isn't always as fixed as it seems if they're willing to trade comfort",
+          "That degrees don't matter"
+        ],
+        "correctIndex": 2,
+        "explanation": "She tells them the ceiling isn't always fixed, provided they're willing to trade some comfort for a few years."
+      },
+      {
+        "question": "Why did the narrator research recognition?",
+        "options": [
+          "Every master’s guarantees promotion",
+          "A degree’s value depends partly on the provider, program, and intended role",
+          "Tuition defines quality",
+          "Managers grant accreditation"
+        ],
+        "correctIndex": 1,
+        "explanation": "The credential needed a verified purpose."
+      },
+      {
+        "question": "What belongs in the full cost?",
+        "options": [
+          "Tuition alone",
+          "Only application fees",
+          "Her colleagues’ salaries",
+          "Tuition, materials, travel, childcare, lost time, finance terms, and emergency margin"
+        ],
+        "correctIndex": 3,
+        "explanation": "Affordability extends beyond the advertised fee."
+      },
+      {
+        "question": "Why is her daughter not simply a “trade-off”?",
+        "options": [
+          "Care arrangements and the child’s wellbeing require planning and consent from responsible adults",
+          "Children prevent all study",
+          "Parents must hide tiredness",
+          "The manager chooses childcare"
+        ],
+        "correctIndex": 0,
+        "explanation": "Ambition does not erase care duties."
+      },
+      {
+        "question": "What should happen if exhaustion harms health or safety?",
+        "options": [
+          "Add more classes",
+          "Use appropriate health, academic, work, and family support rather than push through automatically",
+          "Ignore warning signs",
+          "Let the schedule decide"
+        ],
+        "correctIndex": 1,
+        "explanation": "Persistence needs limits."
+      },
+      {
+        "question": "What can she honestly tell colleagues?",
+        "options": [
+          "Every ceiling is fixed",
+          "Comfort must always be sacrificed",
+          "Explore suitable routes and costs without promising one degree will remove a career barrier",
+          "Advanced study is the only route"
+        ],
+        "correctIndex": 2,
+        "explanation": "Her experience offers questions, not a guarantee."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; add accreditation, finance, childcare consent, health, employer boundaries, support, and alternatives rather than glorifying exhaustion or promising career mobility",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-education-02",
@@ -37,34 +151,151 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Nadia", "gender": "female" },
-      { "name": "Yusuf", "gender": "male" }
+      {
+        "name": "Nadia",
+        "gender": "female"
+      },
+      {
+        "name": "Yusuf",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Nadia: [tired] I'm thinking of skipping tomorrow's lecture and just reading the material myself. I retain more that way anyway.",
-      "Yusuf: [skeptical] I get that reading alone works for you sometimes, but this professor rarely repeats what's in the textbook, so you might miss something important.",
-      "Nadia: [defensive] True, although attending hasn't exactly guaranteed I understand things faster than just working through it at my own pace.",
-      "Yusuf: [gently] Fair point, but there's also the discussion afterward, where other students ask questions neither of us would have thought of alone.",
-      "Nadia: [considering] I hadn't really weighed that part. I suppose I focus on the content and forget the conversation adds something too.",
-      "Yusuf: [thoughtful] Exactly, and even though the lecture itself sometimes drags, the questions people raise usually clarify whatever confused me in the reading.",
+      "Nadia: [thoughtful] I'm thinking of skipping tomorrow's lecture and just reading the material myself. I retain more that way anyway.",
+      "Yusuf: I get that reading alone works for you sometimes, but this professor rarely repeats what's in the textbook, so you might miss something important.",
+      "Nadia: [carefully] True, although attending hasn't exactly guaranteed I understand things faster than just working through it at my own pace.",
+      "Yusuf: Fair point, but there's also the discussion afterward, where other students ask questions neither of us would have thought of alone.",
+      "Nadia: [reflective] I hadn't really weighed that part. I suppose I focus on the content and forget the conversation adds something too.",
+      "Yusuf: Exactly, and even though the lecture itself sometimes drags, the questions people raise usually clarify whatever confused me in the reading.",
       "Nadia: [honestly] My real issue is that I've been exhausted lately, and sitting through ninety minutes feels harder than it used to.",
-      "Yusuf: [sympathetically] That's a legitimate reason, not just laziness. Have you considered going for the first half and leaving if you're genuinely struggling?",
-      "Nadia: [surprised] I never thought that was allowed, honestly. I assumed it was all or nothing.",
-      "Yusuf: [reassuring] It isn't. As long as you're not disruptive, most professors don't mind, provided you're not doing it every single week.",
-      "Nadia: [thoughtful] That actually sounds reasonable. I could catch the main explanation, then study the rest independently once I'm less drained.",
-      "Yusuf: [encouraging] Exactly, and if something still confuses you afterward, you could email the professor instead of assuming you'll never understand it.",
-      "Nadia: [warmly] I appreciate you pushing back on this, honestly. I would have just skipped it entirely without thinking it through.",
-      "Yusuf: [smiling] That's what study partners are for, I suppose, even when it means being the annoying voice of reason.",
-      "Nadia: [determined] Alright, half the lecture tomorrow, then home to finish the rest on my own terms.",
-      "Yusuf: [warmly] Deal. And if you're still exhausted next week, we can talk about your sleep schedule instead of just your study habits."
+      "Yusuf: That's a legitimate reason, not just laziness. I cannot decide that partial attendance is allowed. Check the syllabus or ask the professor or student-support office about requirements and approved options.",
+      "Nadia: [seriously] I never thought that was allowed, honestly. I assumed it was all or nothing.",
+      "Yusuf: Policies differ. Ask about absence, recordings, accessible materials, participation alternatives, disability support, and how missed learning should be completed.",
+      "Nadia: [gently] I will contact the authorized staff today and follow the approved plan rather than assuming attendance is all-or-nothing.",
+      "Yusuf: Exactly, and if something still confuses you afterward, you could email the professor instead of assuming you'll never understand it.",
+      "Nadia: [encouraging] I appreciate you pushing back on this, honestly. I would have just skipped it entirely without thinking it through.",
+      "Yusuf: That's what study partners are for, I suppose, even when it means being the annoying voice of reason.",
+      "Nadia: [sincere] Alright, half the lecture tomorrow, then home to finish the rest on my own terms.",
+      "Yusuf: Deal. If exhaustion persists or affects safety and function, seek suitable health and student support. I can listen, but I should not diagnose or prescribe sleep."
     ],
     "quiz": [
-      { "question": "Why did Nadia want to skip tomorrow's lecture?", "options": ["She dislikes the professor", "She thinks she retains more reading the material herself", "She has another exam", "She is moving to a new city"], "correctIndex": 1, "explanation": "Nadia says she is thinking of skipping the lecture because she retains more reading the material herself." },
-      { "question": "What does Yusuf say the lecture offers besides the textbook content?", "options": ["Free snacks", "A discussion where other students raise questions they wouldn't think of alone", "Extra credit points", "A shorter exam"], "correctIndex": 1, "explanation": "Yusuf points out the discussion afterward, where other students ask questions neither of them would have thought of alone." },
-      { "question": "What is Nadia's real reason for wanting to skip, beyond the content?", "options": ["She is bored", "She has been exhausted lately and ninety minutes feels hard", "She forgot the class time", "She dislikes group work"], "correctIndex": 1, "explanation": "Nadia admits she has been exhausted lately, making the ninety-minute lecture feel harder than before." },
-      { "question": "What compromise does Yusuf suggest?", "options": ["Skip every lecture", "Attend the first half and leave if genuinely struggling", "Drop the course", "Record the lecture instead"], "correctIndex": 1, "explanation": "Yusuf suggests going for the first half and leaving if she is genuinely struggling, as long as it's not every week." },
-      { "question": "What do they agree to do about future exhaustion?", "options": ["Ignore it", "Talk about her sleep schedule next week if she's still tired", "Report it to the professor", "Cancel their study partnership"], "correctIndex": 1, "explanation": "Yusuf says if she's still exhausted next week, they can talk about her sleep schedule instead of just study habits." }
-    ]
+      {
+        "question": "Why did Nadia want to skip tomorrow's lecture?",
+        "options": [
+          "She thinks she retains more reading the material herself",
+          "She dislikes the professor",
+          "She has another exam",
+          "She is moving to a new city"
+        ],
+        "correctIndex": 0,
+        "explanation": "Nadia says she is thinking of skipping the lecture because she retains more reading the material herself."
+      },
+      {
+        "question": "What does Yusuf say the lecture offers besides the textbook content?",
+        "options": [
+          "A discussion where other students raise questions they wouldn't think of alone",
+          "Free snacks",
+          "Extra credit points",
+          "A shorter exam"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf points out the discussion afterward, where other students ask questions neither of them would have thought of alone."
+      },
+      {
+        "question": "What is Nadia's real reason for wanting to skip, beyond the content?",
+        "options": [
+          "She is bored",
+          "She forgot the class time",
+          "She has been exhausted lately and ninety minutes feels hard",
+          "She dislikes group work"
+        ],
+        "correctIndex": 2,
+        "explanation": "Nadia admits she has been exhausted lately, making the ninety-minute lecture feel harder than before."
+      },
+      {
+        "question": "What compromise does Yusuf suggest?",
+        "options": [
+          "Attend the first half and leave if genuinely struggling",
+          "Skip every lecture",
+          "Drop the course",
+          "Record the lecture instead"
+        ],
+        "correctIndex": 0,
+        "explanation": "Yusuf suggests going for the first half and leaving if she is genuinely struggling, as long as it's not every week."
+      },
+      {
+        "question": "What do they agree to do about future exhaustion?",
+        "options": [
+          "Ignore it",
+          "Talk about her sleep schedule next week if she's still tired",
+          "Report it to the professor",
+          "Cancel their study partnership"
+        ],
+        "correctIndex": 1,
+        "explanation": "Yusuf says if she's still exhausted next week, they can talk about her sleep schedule instead of just study habits."
+      },
+      {
+        "question": "Why cannot Yusuf approve partial attendance?",
+        "options": [
+          "Only the course’s actual policy and authorized staff can determine attendance arrangements",
+          "Students may never leave a room",
+          "Nadia has no timetable",
+          "Reading is prohibited"
+        ],
+        "correctIndex": 0,
+        "explanation": "A peer cannot invent institutional permission."
+      },
+      {
+        "question": "What should Nadia clarify first?",
+        "options": [
+          "Whether Yusuf finds lectures boring",
+          "The professor’s private schedule",
+          "Other students’ grades",
+          "Attendance requirements, learning outcomes, recordings or materials, and available support"
+        ],
+        "correctIndex": 3,
+        "explanation": "The plan needs authoritative information."
+      },
+      {
+        "question": "Why does persistent exhaustion need attention?",
+        "options": [
+          "It proves poor motivation",
+          "It may affect health, safety, disability access, or study capacity and has many possible causes",
+          "Lectures cause every illness",
+          "Sleep advice from Yusuf is treatment"
+        ],
+        "correctIndex": 1,
+        "explanation": "A study partner should not diagnose it."
+      },
+      {
+        "question": "What is a responsible short-term plan?",
+        "options": [
+          "Leave secretly every week",
+          "Copy another student’s work",
+          "Ignore required discussion",
+          "Use approved absence or access arrangements and obtain missed content through permitted channels"
+        ],
+        "correctIndex": 3,
+        "explanation": "Flexibility remains within course rules."
+      },
+      {
+        "question": "What does Yusuf offer appropriately?",
+        "options": [
+          "Diagnose her sleep",
+          "Guarantee special treatment",
+          "Help identify questions and support Nadia in contacting authorized staff",
+          "Write the assessment"
+        ],
+        "correctIndex": 2,
+        "explanation": "Peer support can facilitate rather than decide."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; remove peer permission to leave class, then use course policy, disability and health support, legitimate absence routes, accessible materials, and qualified review of persistent exhaustion",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-education-03",
@@ -73,68 +304,299 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Professor Hana", "gender": "female" },
-      { "name": "Wulan", "gender": "female" }
+      {
+        "name": "Professor Hana",
+        "gender": "female"
+      },
+      {
+        "name": "Wulan",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Professor Hana: [gently] Wulan, you've submitted almost nothing since our last meeting. What's actually going on with the thesis?",
-      "Wulan: [ashamed] Honestly, I keep opening the document and closing it again without writing a single sentence.",
-      "Professor Hana: [curious] Is it that you don't know what to write, or that you're afraid of writing it badly?",
-      "Wulan: [quietly] The second one, I think. Every sentence feels wrong as soon as I type it.",
-      "Professor Hana: [understanding] That's more common than you'd expect, even among students who eventually write excellent theses.",
-      "Wulan: [surprised] Really? You always seem so certain about everything you publish.",
-      "Professor Hana: [laughing softly] My first drafts are embarrassing, Wulan. Nobody sees those except me, and occasionally my patient husband.",
-      "Wulan: [thoughtful] I suppose I assumed good writers just produce good sentences immediately, without all this struggling.",
-      "Professor Hana: [firmly] That assumption is exactly what's paralyzing you. Writing badly first is not a failure, it's simply the process.",
-      "Wulan: [considering] So you're suggesting I just write something terrible on purpose?",
-      "Professor Hana: [warmly] In a sense, yes. Give yourself permission to write a rough paragraph today, knowing you'll revise it later.",
-      "Wulan: [hesitant] What if the rough version is so bad that revising feels impossible too?",
-      "Professor Hana: [reassuring] Then we revise it together, sentence by sentence, until it says roughly what you mean.",
-      "Wulan: [relieved] That actually sounds manageable, unlike the vague pressure of writing a flawless chapter alone.",
-      "Professor Hana: [encouraging] Exactly. Send me one rough page by Friday, regardless of how unfinished it feels to you.",
-      "Wulan: [determined] Okay. Even if it's messy, I'll send something rather than nothing this time.",
-      "Professor Hana: [warmly] Good. And Wulan, the blank page will always feel worse than any imperfect page you actually write.",
-      "Wulan: [smiling] I'll try to remember that the next time I'm staring at an empty document at midnight."
+      "Professor Hana: [thoughtful] Wulan, you've submitted almost nothing since our last meeting. What's actually going on with the thesis?",
+      "Wulan: Honestly, I keep opening the document and closing it again without writing a single sentence.",
+      "Professor Hana: [carefully] Is the barrier scope, evidence, method, language, access, wellbeing, fear of imperfection, or something else? I will not diagnose it from one answer.",
+      "Wulan: The second one, I think. Every sentence feels wrong as soon as I type it.",
+      "Professor Hana: [reflective] That's more common than you'd expect, even among students who eventually write excellent theses.",
+      "Wulan: Really? You always seem so certain about everything you publish.",
+      "Professor Hana: [honestly] My first drafts are rough. I protect student and research confidentiality and do not share supervised work with family or unauthorized readers.",
+      "Wulan: I suppose I assumed good writers just produce good sentences immediately, without all this struggling.",
+      "Professor Hana: [seriously] That assumption is exactly what's paralyzing you. Writing badly first is not a failure, it's simply the process.",
+      "Wulan: So you're suggesting I just write something terrible on purpose?",
+      "Professor Hana: [gently] In a sense, yes. Draft one bounded paragraph with honest sources. Rough work still follows citation, research ethics, data security, originality, and permitted-tool rules.",
+      "Wulan: What if the rough version is so bad that revising feels impossible too?",
+      "Professor Hana: [encouraging] Then we revise it together, sentence by sentence, until it says roughly what you mean.",
+      "Wulan: That actually sounds manageable, unlike the vague pressure of writing a flawless chapter alone.",
+      "Professor Hana: [sincere] Exactly. Send one rough page through the official secure channel by our agreed deadline; then we can identify the next specific support.",
+      "Wulan: Okay. Even if it's messy, I'll send something rather than nothing this time.",
+      "Professor Hana: [thoughtful] Good. And Wulan, the blank page will always feel worse than any imperfect page you actually write.",
+      "Wulan: I will also stop treating midnight work as the only path and use academic-skills, disability, language, or wellbeing support if relevant."
     ],
     "quiz": [
-      { "question": "What has Wulan been doing instead of writing?", "options": ["Working a second job", "Opening the document and closing it without writing anything", "Reading unrelated books", "Traveling"], "correctIndex": 1, "explanation": "Wulan admits she keeps opening the document and closing it again without writing a single sentence." },
-      { "question": "What does Wulan say is really stopping her from writing?", "options": ["Lack of ideas", "Fear of writing badly", "Lack of time", "A broken computer"], "correctIndex": 1, "explanation": "Wulan admits she fears writing badly, since every sentence feels wrong as soon as she types it." },
-      { "question": "What does Professor Hana reveal about her own writing process?", "options": ["She never struggles", "Her first drafts are embarrassing and only she and her husband see them", "She never publishes anything", "She writes perfectly on the first try"], "correctIndex": 1, "explanation": "Professor Hana admits her first drafts are embarrassing, seen only by her and occasionally her husband." },
-      { "question": "What does Professor Hana say writing badly first actually is?", "options": ["A sign of failure", "Simply part of the process", "A waste of time", "Something only beginners do"], "correctIndex": 1, "explanation": "She tells Wulan that writing badly first is not a failure, it's simply the process." },
-      { "question": "What does Professor Hana ask Wulan to send by Friday?", "options": ["A complete finished chapter", "One rough page, regardless of how unfinished it feels", "A list of references", "Nothing, just a status update"], "correctIndex": 1, "explanation": "Professor Hana asks Wulan to send one rough page by Friday, regardless of how unfinished it feels." }
-    ]
+      {
+        "question": "What has Wulan been doing instead of writing?",
+        "options": [
+          "Working a second job",
+          "Reading unrelated books",
+          "Traveling",
+          "Opening the document and closing it without writing anything"
+        ],
+        "correctIndex": 3,
+        "explanation": "Wulan admits she keeps opening the document and closing it again without writing a single sentence."
+      },
+      {
+        "question": "What does Wulan say is really stopping her from writing?",
+        "options": [
+          "Fear of writing badly",
+          "Lack of ideas",
+          "Lack of time",
+          "A broken computer"
+        ],
+        "correctIndex": 0,
+        "explanation": "Wulan admits she fears writing badly, since every sentence feels wrong as soon as she types it."
+      },
+      {
+        "question": "What does Professor Hana reveal about her own writing process?",
+        "options": [
+          "Her first drafts are embarrassing and only she and her husband see them",
+          "She never struggles",
+          "She never publishes anything",
+          "She writes perfectly on the first try"
+        ],
+        "correctIndex": 0,
+        "explanation": "Professor Hana admits her first drafts are embarrassing, seen only by her and occasionally her husband."
+      },
+      {
+        "question": "What does Professor Hana say writing badly first actually is?",
+        "options": [
+          "A sign of failure",
+          "A waste of time",
+          "Something only beginners do",
+          "Simply part of the process"
+        ],
+        "correctIndex": 3,
+        "explanation": "She tells Wulan that writing badly first is not a failure, it's simply the process."
+      },
+      {
+        "question": "What does Professor Hana ask Wulan to send by Friday?",
+        "options": [
+          "A complete finished chapter",
+          "A list of references",
+          "One rough page, regardless of how unfinished it feels",
+          "Nothing, just a status update"
+        ],
+        "correctIndex": 2,
+        "explanation": "Professor Hana asks Wulan to send one rough page by Friday, regardless of how unfinished it feels."
+      },
+      {
+        "question": "What is Professor Hana careful not to diagnose?",
+        "options": [
+          "Whether the thesis has a title",
+          "The Friday deadline",
+          "The cause of Wulan’s avoidance from a brief conversation",
+          "Her own drafting style"
+        ],
+        "correctIndex": 2,
+        "explanation": "Similar behavior may have different causes."
+      },
+      {
+        "question": "Why is one rough page useful?",
+        "options": [
+          "Bad writing should be submitted as final",
+          "It is a bounded diagnostic step that can receive specific feedback",
+          "Page length proves competence",
+          "Revision is unnecessary"
+        ],
+        "correctIndex": 1,
+        "explanation": "A small artifact reveals where support is needed."
+      },
+      {
+        "question": "What rules still apply to a rough draft?",
+        "options": [
+          "No academic rules apply before final submission",
+          "Sources may be invented",
+          "Private data may be pasted anywhere",
+          "Citation, research ethics, data security, originality, and disclosed permitted assistance"
+        ],
+        "correctIndex": 3,
+        "explanation": "Draft status does not suspend integrity."
+      },
+      {
+        "question": "How are boundaries protected?",
+        "options": [
+          "Her husband edits student work",
+          "Wulan sends passwords",
+          "The professor offers constant contact",
+          "Feedback uses official secure channels and agreed hours rather than private family access or midnight pressure"
+        ],
+        "correctIndex": 3,
+        "explanation": "Support should remain professional."
+      },
+      {
+        "question": "What broader support may be relevant?",
+        "options": [
+          "A punishment for every delay",
+          "Academic-skills, disability, language, wellbeing, or research-method support according to need",
+          "Only motivational advice",
+          "Another student’s thesis"
+        ],
+        "correctIndex": 1,
+        "explanation": "Procrastination can signal different barriers."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; preserve supervision boundaries and confidentiality, assess barriers without diagnosis, set staged research tasks, follow academic integrity, and avoid normalizing midnight work",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-education-04",
-    "title": "Tutoring Kids in a Neighborhood Without Much Money",
+    "title": "Learning My Role as a Community-Center Tutor",
     "level": "B1",
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "male" }
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
     ],
     "script": [
-      "Narrator: [thoughtful] I started tutoring in that neighborhood almost by accident, after a coworker mentioned that the local community center needed volunteers, and I had nothing better to do on Sunday afternoons.",
-      "Narrator: [honestly] My first session was humbling, because despite my confidence with the material, I had no idea how to explain fractions to a room of restless nine-year-olds.",
-      "Narrator: [reflective] Within weeks, though, I noticed something that surprised me: these kids weren't behind because they lacked ability, but because nobody had ever explained things slowly enough for them.",
-      "Narrator: [gently] One boy, Dimas, refused to speak during the first month, answering every question with a shrug, as if expecting to be wrong regardless of what he said.",
-      "Narrator: [warmly] Instead of correcting him quickly, I started asking him to explain his thinking out loud, even when his answer was wrong, so he'd trust that mistakes weren't punished here.",
-      "Narrator: [thoughtful] Slowly, his shrugs became actual sentences, and his sentences became genuine questions, which felt like a far bigger victory than any test score.",
+      "Narrator: [thoughtful] I applied to a community-center tutoring program. Before meeting children, I completed its screening, safeguarding, role, curriculum, privacy, and reporting requirements.",
+      "Narrator: My first session was humbling, because despite my confidence with the material, I had no idea how to explain fractions to a room of restless nine-year-olds.",
+      "Narrator: [carefully] I could observe learning responses, but I could not declare why a child struggled. Teachers and relevant specialists handled assessment and individualized support.",
+      "Narrator: One boy, Dimas, refused to speak during the first month, answering every question with a shrug, as if expecting to be wrong regardless of what he said.",
+      "Narrator: [reflective] Instead of correcting him quickly, I started asking him to explain his thinking out loud, even when his answer was wrong, so he'd trust that mistakes weren't punished here.",
+      "Narrator: Slowly, his shrugs became actual sentences, and his sentences became genuine questions, which felt like a far bigger victory than any test score.",
       "Narrator: [honestly] What struck me most, however, wasn't the academic progress but how little these children expected from adults who had promised to help before.",
-      "Narrator: [reflective] Several mentioned tutors who had quit after a few sessions, so consistency alone, just showing up every single Sunday, mattered more than any clever teaching method.",
-      "Narrator: [with feeling] Six months in, Dimas solved a multiplication problem on the board in front of everyone, something unthinkable when we started.",
-      "Narrator: [warmly] He looked at me afterward, not for approval exactly, but almost in disbelief that he'd actually gotten it right.",
-      "Narrator: [thoughtful] I've since realized that despite having far less time than a certified teacher, showing up reliably can matter as much as expertise does.",
-      "Narrator: [peacefully] I no longer see this as charity toward them; if anything, they taught me more about patience than any classroom of mine ever did.",
-      "Narrator: [gently] Even though I still don't always know the right explanation immediately, I've learned that admitting confusion openly builds more trust than pretending certainty."
+      "Narrator: Reliable attendance mattered, yet consistency did not replace qualified teachers, safeguarding, special support, curriculum, or stable resources.",
+      "Narrator: [seriously] Six months in, Dimas solved a multiplication problem on the board in front of everyone, something unthinkable when we started.",
+      "Narrator: He looked at me afterward, not for approval exactly, but almost in disbelief that he'd actually gotten it right.",
+      "Narrator: [gently] I learned that a supervised volunteer can support practice and encouragement without claiming equivalence to a qualified teacher.",
+      "Narrator: I no longer see this as charity toward them; if anything, they taught me more about patience than any classroom of mine ever did.",
+      "Narrator: [encouraging] When unsure, I use approved materials or ask the supervisor. I never invent an explanation or share a child’s name, image, history, or progress publicly."
     ],
     "quiz": [
-      { "question": "How did the narrator start tutoring in the neighborhood?", "options": ["He was assigned by his employer", "A coworker mentioned the community center needed volunteers", "He answered a newspaper ad", "He was required to for a course"], "correctIndex": 1, "explanation": "A coworker mentioned the local community center needed volunteers, and he had nothing better to do on Sundays." },
-      { "question": "What did the narrator realize about why the kids seemed behind?", "options": ["They lacked ability", "Nobody had ever explained things slowly enough for them", "They didn't want to learn", "Their school was closed"], "correctIndex": 1, "explanation": "He noticed the kids weren't behind because they lacked ability, but because nobody had explained things slowly enough." },
-      { "question": "How did Dimas behave during the first month?", "options": ["He talked constantly", "He refused to speak, answering with a shrug", "He skipped every session", "He argued with the narrator"], "correctIndex": 1, "explanation": "Dimas refused to speak during the first month, answering every question with a shrug." },
-      { "question": "What did the narrator learn mattered more than clever teaching methods?", "options": ["Expensive materials", "Consistency, just showing up every single Sunday", "Strict discipline", "Testing frequently"], "correctIndex": 1, "explanation": "He says consistency, just showing up every single Sunday, mattered more than any clever teaching method, since past tutors had quit." },
-      { "question": "What happened six months in, involving Dimas?", "options": ["He stopped attending", "He solved a multiplication problem on the board in front of everyone", "He failed a test", "He moved away"], "correctIndex": 1, "explanation": "Six months in, Dimas solved a multiplication problem on the board in front of everyone, something unthinkable at the start." }
-    ]
+      {
+        "question": "How did the narrator start tutoring in the neighborhood?",
+        "options": [
+          "A coworker mentioned the community center needed volunteers",
+          "He was assigned by his employer",
+          "He answered a newspaper ad",
+          "He was required to for a course"
+        ],
+        "correctIndex": 0,
+        "explanation": "A coworker mentioned the local community center needed volunteers, and he had nothing better to do on Sundays."
+      },
+      {
+        "question": "What did the narrator realize about why the kids seemed behind?",
+        "options": [
+          "They lacked ability",
+          "Nobody had ever explained things slowly enough for them",
+          "They didn't want to learn",
+          "Their school was closed"
+        ],
+        "correctIndex": 1,
+        "explanation": "He noticed the kids weren't behind because they lacked ability, but because nobody had explained things slowly enough."
+      },
+      {
+        "question": "How did Dimas behave during the first month?",
+        "options": [
+          "He talked constantly",
+          "He skipped every session",
+          "He refused to speak, answering with a shrug",
+          "He argued with the narrator"
+        ],
+        "correctIndex": 2,
+        "explanation": "Dimas refused to speak during the first month, answering every question with a shrug."
+      },
+      {
+        "question": "What did the narrator learn mattered more than clever teaching methods?",
+        "options": [
+          "Expensive materials",
+          "Strict discipline",
+          "Consistency, just showing up every single Sunday",
+          "Testing frequently"
+        ],
+        "correctIndex": 2,
+        "explanation": "He says consistency, just showing up every single Sunday, mattered more than any clever teaching method, since past tutors had quit."
+      },
+      {
+        "question": "What happened six months in, involving Dimas?",
+        "options": [
+          "He stopped attending",
+          "He solved a multiplication problem on the board in front of everyone",
+          "He failed a test",
+          "He moved away"
+        ],
+        "correctIndex": 1,
+        "explanation": "Six months in, Dimas solved a multiplication problem on the board in front of everyone, something unthinkable at the start."
+      },
+      {
+        "question": "Why is “without much money” removed from the framing?",
+        "options": [
+          "Tutoring may occur only in wealthy areas",
+          "The center hid its address",
+          "Money never affects education",
+          "A neighborhood should not be reduced to deficit or assumed need"
+        ],
+        "correctIndex": 3,
+        "explanation": "The revised title and account respect community dignity."
+      },
+      {
+        "question": "What did onboarding establish?",
+        "options": [
+          "The volunteer could teach anything",
+          "Parents waived every right",
+          "Safeguarding, background requirements, role limits, curriculum, supervision, reporting, and privacy",
+          "Children’s stories were public"
+        ],
+        "correctIndex": 2,
+        "explanation": "Work with minors needs institutional controls."
+      },
+      {
+        "question": "Why was Dimas not labelled as lacking confidence or ability?",
+        "options": [
+          "He always knew the answer",
+          "Volunteers cannot ask questions",
+          "Silence and errors do not establish a diagnosis, capacity, or cause",
+          "Tests are meaningless"
+        ],
+        "correctIndex": 2,
+        "explanation": "Observation should remain limited."
+      },
+      {
+        "question": "What is consistency unable to replace?",
+        "options": [
+          "Qualified teaching, special support, safeguarding, and stable program resources",
+          "A friendly greeting",
+          "Regular attendance",
+          "Clear explanations"
+        ],
+        "correctIndex": 0,
+        "explanation": "Reliability helps but is not equivalent to expertise."
+      },
+      {
+        "question": "How is child privacy protected?",
+        "options": [
+          "All success is posted online",
+          "Volunteers keep personal files",
+          "Parents receive other children’s scores",
+          "No unnecessary names, images, histories, or progress details are shared outside authorized channels"
+        ],
+        "correctIndex": 3,
+        "explanation": "Educational stories should not expose minors."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; remove poverty and ability stereotypes, place child safeguarding and curriculum under the center, distinguish volunteer support from qualified teaching, and protect child privacy",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-education-05",
@@ -143,37 +605,154 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Host", "gender": "male" },
-      { "name": "Guest", "gender": "female" }
+      {
+        "name": "Host",
+        "gender": "male"
+      },
+      {
+        "name": "Guest",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Host: [warmly] Today's guest spent eleven years as an accountant before retraining as a nurse. Thanks for joining me, Ratna.",
-      "Host: [curious] What made you consider such a drastic change after over a decade in one field?",
-      "Guest: [thoughtful] Honestly, I'd grown comfortable, but comfort had started to feel indistinguishable from boredom, if that makes sense.",
-      "Host: [interested] It does. Was there a specific moment that pushed you toward nursing, though, rather than just general dissatisfaction?",
-      "Guest: [reflective] My father was hospitalized for several weeks, and watching the nurses care for him, I felt something I hadn't felt at my desk in years.",
-      "Host: [curious] Even though that experience moved you emotionally, retraining still required years of night classes. How did you manage both?",
-      "Guest: [honestly] Badly, at first. I underestimated how tired I'd be studying anatomy after eight hours of spreadsheets.",
-      "Host: [sympathetically] Did you ever consider quitting the program once you started?",
-      "Guest: [honestly] Constantly, particularly during exam weeks, when I questioned whether starting over at thirty-four was reckless rather than brave.",
-      "Host: [curious] What convinced you to continue despite those doubts?",
-      "Guest: [warmly] A classmate reminded me that in five years, that time would pass regardless, whether or not I finished the program.",
-      "Host: [thoughtful] That's a compelling way to think about it. Did your accounting background turn out useless in nursing?",
-      "Guest: [smiling] Surprisingly not. The attention to detail translated directly, even though the subject matter felt worlds apart.",
-      "Host: [interested] How did your family react to the decision initially?",
-      "Guest: [honestly] My husband supported me immediately, whereas my mother worried I was throwing away years of seniority for uncertainty.",
-      "Host: [curious] What would you tell someone considering a similar leap right now?",
-      "Guest: [encouraging] Provided you're willing to feel like a beginner again, the discomfort is temporary, but staying stuck rarely is.",
-      "Host: [smiling] Beautifully put, Ratna. Thank you for sharing your story with us today.",
-      "Guest: [warmly] Thank you for having me. I hope it nudges someone off the fence they've been sitting on."
+      "Host: [thoughtful] Today's guest spent eleven years as an accountant before retraining as a nurse. Thanks for joining me, Ratna.",
+      "Host: What made you consider such a drastic change after over a decade in one field?",
+      "Guest: [carefully] Honestly, I'd grown comfortable, but comfort had started to feel indistinguishable from boredom, if that makes sense.",
+      "Host: It does. Was there a specific moment that pushed you toward nursing, though, rather than just general dissatisfaction?",
+      "Guest: [reflective] A family hospital experience motivated me, but I protect my father’s medical privacy. Inspiration did not establish my suitability or competence.",
+      "Host: Even though that experience moved you emotionally, retraining still required years of night classes. How did you manage both?",
+      "Guest: [honestly] Before enrolling, I checked accredited education, entry, clinical placement, licensing, cost, schedule, health, background, care, and support requirements. The workload still required adjustment.",
+      "Host: Did you ever consider quitting the program once you started?",
+      "Guest: [seriously] Constantly, particularly during exam weeks, when I questioned whether starting over at thirty-four was reckless rather than brave.",
+      "Host: What convinced you to continue despite those doubts?",
+      "Guest: [gently] A classmate reminded me that in five years, that time would pass regardless, whether or not I finished the program.",
+      "Host: That's a compelling way to think about it. Did your accounting background turn out useless in nursing?",
+      "Guest: [encouraging] Attention to detail transferred, but accounting did not replace supervised clinical learning, patient safety, communication, or formal competence assessment.",
+      "Host: How did your family react to the decision initially?",
+      "Guest: [sincere] My husband supported me immediately, whereas my mother worried I was throwing away years of seniority for uncertainty.",
+      "Host: What would you tell someone considering a similar leap right now?",
+      "Guest: [thoughtful] Investigate the regulated pathway, finances, care, health, aptitude, and alternatives. Discomfort and outcomes vary; no story guarantees qualification or employment.",
+      "Host: Beautifully put, Ratna. Thank you for sharing your story with us today.",
+      "Guest: [carefully] Thank you for having me. I hope it nudges someone off the fence they've been sitting on."
     ],
     "quiz": [
-      { "question": "What was Ratna's original career before retraining?", "options": ["Teacher", "Accountant", "Engineer", "Lawyer"], "correctIndex": 1, "explanation": "The host introduces her as someone who spent eleven years as an accountant before retraining as a nurse." },
-      { "question": "What specific event pushed Ratna toward nursing?", "options": ["A pay cut", "Her father's hospitalization and watching the nurses care for him", "A friend's advice", "Losing her accounting job"], "correctIndex": 1, "explanation": "Her father was hospitalized for several weeks, and watching the nurses care for him moved her." },
-      { "question": "How did Ratna initially handle studying while working full-time?", "options": ["Perfectly, with no difficulty", "Badly, underestimating how tired she'd be after a full workday", "She quit her job immediately", "She hired a tutor"], "correctIndex": 1, "explanation": "She admits she managed badly at first, underestimating how tired she'd be studying anatomy after eight hours of spreadsheets." },
-      { "question": "What did a classmate say that convinced Ratna to continue?", "options": ["That nursing pays more", "That five years would pass regardless, whether or not she finished the program", "That accounting was a dead end", "That she should quit instead"], "correctIndex": 1, "explanation": "A classmate reminded her that in five years, that time would pass regardless of whether she finished the program." },
-      { "question": "How did Ratna's husband and mother react differently?", "options": ["Both opposed her", "Her husband supported her immediately, while her mother worried about lost seniority", "Both were indifferent", "Her mother supported her but her husband did not"], "correctIndex": 1, "explanation": "Her husband supported her immediately, whereas her mother worried she was throwing away years of seniority for uncertainty." }
-    ]
+      {
+        "question": "What was Ratna's original career before retraining?",
+        "options": [
+          "Accountant",
+          "Teacher",
+          "Engineer",
+          "Lawyer"
+        ],
+        "correctIndex": 0,
+        "explanation": "The host introduces her as someone who spent eleven years as an accountant before retraining as a nurse."
+      },
+      {
+        "question": "What specific event pushed Ratna toward nursing?",
+        "options": [
+          "A pay cut",
+          "A friend's advice",
+          "Losing her accounting job",
+          "Her father's hospitalization and watching the nurses care for him"
+        ],
+        "correctIndex": 3,
+        "explanation": "Her father was hospitalized for several weeks, and watching the nurses care for him moved her."
+      },
+      {
+        "question": "How did Ratna initially handle studying while working full-time?",
+        "options": [
+          "Perfectly, with no difficulty",
+          "Badly, underestimating how tired she'd be after a full workday",
+          "She quit her job immediately",
+          "She hired a tutor"
+        ],
+        "correctIndex": 1,
+        "explanation": "She admits she managed badly at first, underestimating how tired she'd be studying anatomy after eight hours of spreadsheets."
+      },
+      {
+        "question": "What did a classmate say that convinced Ratna to continue?",
+        "options": [
+          "That nursing pays more",
+          "That accounting was a dead end",
+          "That five years would pass regardless, whether or not she finished the program",
+          "That she should quit instead"
+        ],
+        "correctIndex": 2,
+        "explanation": "A classmate reminded her that in five years, that time would pass regardless of whether she finished the program."
+      },
+      {
+        "question": "How did Ratna's husband and mother react differently?",
+        "options": [
+          "Her husband supported her immediately, while her mother worried about lost seniority",
+          "Both opposed her",
+          "Both were indifferent",
+          "Her mother supported her but her husband did not"
+        ],
+        "correctIndex": 0,
+        "explanation": "Her husband supported her immediately, whereas her mother worried she was throwing away years of seniority for uncertainty."
+      },
+      {
+        "question": "Why did caring for her father not qualify Ratna as a nurse?",
+        "options": [
+          "Family members cannot observe care",
+          "Accounting forbids health study",
+          "Emotion has no value",
+          "Inspiration is different from accredited education, supervised competence, and authorization"
+        ],
+        "correctIndex": 3,
+        "explanation": "Motivation does not replace professional requirements."
+      },
+      {
+        "question": "What did Ratna verify before enrolling?",
+        "options": [
+          "Only the course advertisement",
+          "Entry, accreditation, clinical placement, licensing, cost, schedule, health, and background requirements",
+          "Her father’s records",
+          "A guaranteed hospital job"
+        ],
+        "correctIndex": 1,
+        "explanation": "Regulated work requires a complete pathway."
+      },
+      {
+        "question": "How did accounting remain relevant?",
+        "options": [
+          "It removed clinical training",
+          "Attention to detail and transferable skills helped, while clinical skills still needed assessment",
+          "It guaranteed licensing",
+          "It replaced patient communication"
+        ],
+        "correctIndex": 1,
+        "explanation": "Transferable ability has limits."
+      },
+      {
+        "question": "Why is “discomfort is temporary” revised?",
+        "options": [
+          "Beginners never feel discomfort",
+          "Career change is always permanent",
+          "Difficulty, disability, finance, care, and outcomes vary and cannot be promised",
+          "Older students cannot qualify"
+        ],
+        "correctIndex": 2,
+        "explanation": "Encouragement should not erase real constraints."
+      },
+      {
+        "question": "What must Ratna protect when discussing motivation?",
+        "options": [
+          "The school’s marketing plan",
+          "Her father’s medical privacy and dignity",
+          "Her former salary only",
+          "A classmate’s exam result"
+        ],
+        "correctIndex": 1,
+        "explanation": "A family experience is not public clinical data."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; make nursing a regulated transition requiring accredited education, supervised clinical competence, licensing, finances, health, patient privacy, and no guaranteed temporary discomfort",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-education-06",
@@ -182,30 +761,144 @@
     "themeId": "education",
     "type": "monologue",
     "speakers": [
-      { "name": "Narrator", "gender": "female" }
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Narrator: [honestly] During my final year, a classmate accidentally left his answer key open on his laptop screen during a practice exam, angled just enough that I could read it.",
-      "Narrator: [thoughtful] For a few seconds, I genuinely considered glancing at it, since two of the questions had completely stumped me, and passing that exam mattered enormously to my scholarship.",
-      "Narrator: [reflective] What stopped me wasn't some dramatic moral revelation; it was the quiet, uncomfortable thought that even if nobody ever found out, I would know.",
-      "Narrator: [honestly] I looked away and stared at my own blank answer instead, which felt oddly harder than the temptation itself had been.",
-      "Narrator: [gently] I ended up guessing on both questions and got them wrong, dropping my score by nearly ten points, which stung more than I expected it to.",
-      "Narrator: [thoughtful] Afterward, I told myself I'd made the obviously right choice, though honestly, in the moment, it hadn't felt obvious at all.",
-      "Narrator: [with feeling] A week later, that same classmate was caught copying answers during the actual final exam, and the consequences were severe, a suspension that delayed his graduation by a full year.",
-      "Narrator: [reflective] I remember feeling relieved rather than superior, because I recognized how easily that could have been me, had circumstances been slightly different that day.",
-      "Narrator: [honestly] It made me reconsider what integrity actually means; it isn't a personality trait you either have or lack, but a series of small, unglamorous decisions repeated under pressure.",
-      "Narrator: [thoughtful] I've since made worse decisions in other areas of my life, so I don't tell this story to claim moral superiority over anyone.",
+      "Narrator: [thoughtful] During my final year, a classmate accidentally left his answer key open on his laptop screen during a practice exam, angled just enough that I could read it.",
+      "Narrator: For a few seconds, I genuinely considered glancing at it, since two of the questions had completely stumped me, and passing that exam mattered enormously to my scholarship.",
+      "Narrator: [carefully] What stopped me wasn't some dramatic moral revelation; it was the quiet, uncomfortable thought that even if nobody ever found out, I would know.",
+      "Narrator: I looked away and alerted the proctor privately. Staff secured the screen and documented the possible exposure without asking me to investigate.",
+      "Narrator: [reflective] I ended up guessing on both questions and got them wrong, dropping my score by nearly ten points, which stung more than I expected it to.",
+      "Narrator: Afterward, I told myself I'd made the obviously right choice, though honestly, in the moment, it hadn't felt obvious at all.",
+      "Narrator: [honestly] The institution reviewed whether other students saw the key and whether questions remained valid. I was not entitled to another student’s confidential disciplinary record.",
+      "Narrator: I felt relief rather than superiority. Reporting the exposure protected fairness better than merely looking away while leaving the key available.",
+      "Narrator: [seriously] It made me reconsider what integrity actually means; it isn't a personality trait you either have or lack, but a series of small, unglamorous decisions repeated under pressure.",
+      "Narrator: I've since made worse decisions in other areas of my life, so I don't tell this story to claim moral superiority over anyone.",
       "Narrator: [gently] Still, whenever cutting a corner feels tempting now, I remember that blank answer sheet, and how much lighter I felt turning it in unfinished but honest.",
-      "Narrator: [peacefully] The ten points I lost that day taught me something no grade could measure, that some scores simply aren't worth the ones you'd have to hide from yourself.",
-      "Narrator: [warmly] I passed that course eventually anyway, though slightly later than planned, and I've never once regretted staring at my own blank page instead."
+      "Narrator: The ten points I lost that day taught me something no grade could measure, that some scores simply aren't worth the ones you'd have to hide from yourself.",
+      "Narrator: [encouraging] I passed that course eventually anyway, though slightly later than planned, and I've never once regretted staring at my own blank page instead."
     ],
     "quiz": [
-      { "question": "What did the narrator's classmate accidentally leave visible during a practice exam?", "options": ["His phone", "His answer key on his laptop screen", "A textbook", "His notes on paper"], "correctIndex": 1, "explanation": "A classmate accidentally left his answer key open on his laptop screen, angled so she could read it." },
-      { "question": "What stopped the narrator from looking at the answers?", "options": ["A teacher noticed her", "The quiet thought that even if nobody found out, she would know", "Her classmate covered the screen", "She wasn't tempted at all"], "correctIndex": 1, "explanation": "She says it wasn't a dramatic revelation but the uncomfortable thought that even if nobody found out, she would know." },
-      { "question": "What was the result of her guessing on the two questions?", "options": ["She got them both correct", "She got them wrong, dropping her score by nearly ten points", "The exam was cancelled", "She was given extra time"], "correctIndex": 1, "explanation": "She ended up guessing on both questions and got them wrong, dropping her score by nearly ten points." },
-      { "question": "What happened to the classmate a week later?", "options": ["Nothing happened", "He was caught copying during the actual final exam and suspended for a year", "He transferred schools", "He apologized publicly"], "correctIndex": 1, "explanation": "The classmate was caught copying answers during the actual final exam and suspended, delaying his graduation by a year." },
-      { "question": "What did the narrator conclude integrity actually is?", "options": ["A fixed personality trait", "A series of small, unglamorous decisions repeated under pressure", "Something only exceptional people have", "Irrelevant to everyday life"], "correctIndex": 1, "explanation": "She concludes integrity isn't a trait you either have or lack, but small decisions repeated under pressure." }
-    ]
+      {
+        "question": "What was visible during the practice exam?",
+        "options": [
+          "A classmate’s answer key on a laptop",
+          "The narrator’s scholarship letter",
+          "A final grade list",
+          "A teacher’s private email"
+        ],
+        "correctIndex": 0,
+        "explanation": "The key created an assessment exposure."
+      },
+      {
+        "question": "What did the narrator do first?",
+        "options": [
+          "Copied two answers",
+          "Looked away from the answers",
+          "Closed the classmate’s laptop",
+          "Sent a photograph"
+        ],
+        "correctIndex": 1,
+        "explanation": "She refused the immediate temptation."
+      },
+      {
+        "question": "What should have happened next?",
+        "options": [
+          "The key should remain visible",
+          "The classmate should be accused publicly",
+          "The narrator should leave without explanation",
+          "The proctor should have been notified promptly"
+        ],
+        "correctIndex": 3,
+        "explanation": "Authorized staff needed to control the exposure."
+      },
+      {
+        "question": "What happened to the narrator’s score?",
+        "options": [
+          "The exam was automatically passed",
+          "The scholarship ended immediately",
+          "Two guesses were wrong and the score fell",
+          "The key improved the grade"
+        ],
+        "correctIndex": 2,
+        "explanation": "The honest choice had an academic cost in the story."
+      },
+      {
+        "question": "What does the narrator learn?",
+        "options": [
+          "Integrity is repeated action under pressure, not a claim of superiority",
+          "Honest work always earns the highest score",
+          "Rules matter only when discovered",
+          "One good decision proves perfect character"
+        ],
+        "correctIndex": 0,
+        "explanation": "The conclusion remains humble."
+      },
+      {
+        "question": "What should the narrator have done when the key was visible?",
+        "options": [
+          "Look away and notify the proctor so exposure could be controlled and documented",
+          "Continue the exam silently",
+          "Photograph the screen as proof",
+          "Tell classmates afterward"
+        ],
+        "correctIndex": 0,
+        "explanation": "Protecting integrity requires more than personal restraint."
+      },
+      {
+        "question": "Why might the practice exam need review?",
+        "options": [
+          "Other students may have seen the key and question security may be affected",
+          "Every wrong answer must be removed",
+          "The narrator lost ten points",
+          "Practice work has no rules"
+        ],
+        "correctIndex": 0,
+        "explanation": "The institution must assess broader exposure."
+      },
+      {
+        "question": "Why is the classmate’s later sanction removed?",
+        "options": [
+          "Misconduct has no consequences",
+          "The narrator caused the copying",
+          "Schools cannot investigate",
+          "A student’s disciplinary details require privacy and fair process"
+        ],
+        "correctIndex": 3,
+        "explanation": "Moral learning should not expose another person."
+      },
+      {
+        "question": "What pressure affected the narrator?",
+        "options": [
+          "A request from the classmate",
+          "A public ranking",
+          "Scholarship consequences and two unanswered questions",
+          "The proctor’s instruction to copy"
+        ],
+        "correctIndex": 2,
+        "explanation": "The temptation had a specific context."
+      },
+      {
+        "question": "How is integrity defined?",
+        "options": [
+          "A fixed trait only some people possess",
+          "Honest repeated choices plus reporting conditions that threaten fairness",
+          "Perfect grades",
+          "Private guilt alone"
+        ],
+        "correctIndex": 1,
+        "explanation": "Integrity includes action toward the system."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; require immediate reporting of an exposed answer key, protect assessment integrity and classmate privacy, and avoid using another disciplinary case as a dramatic moral device",
+      "reviewedAt": "2026-07-30"
+    }
   },
   {
     "id": "b1-education-07",
@@ -214,35 +907,609 @@
     "themeId": "education",
     "type": "dialogue",
     "speakers": [
-      { "name": "Radio Host", "gender": "male" },
-      { "name": "Caller", "gender": "female" }
+      {
+        "name": "Radio Host",
+        "gender": "male"
+      },
+      {
+        "name": "Caller",
+        "gender": "female"
+      }
     ],
     "script": [
-      "Radio Host: [energetically] We're discussing whether online courses can truly replace classroom learning. On the line, we have Sinta, a working parent. Welcome!",
-      "Caller: [confidently] Thanks for having me. I finished an entire certification online last year, so I clearly believe it's possible.",
-      "Radio Host: [curious] What made online learning work for you specifically, as opposed to a traditional classroom?",
-      "Caller: [thoughtful] Flexibility, mainly. As a single mother, I couldn't attend fixed evening classes, whereas recorded lectures let me study after my son fell asleep.",
-      "Radio Host: [pressing] Even so, critics argue that without face-to-face discussion, students miss out on deeper understanding. How do you respond to that?",
-      "Caller: [honestly] It's a fair concern, and I won't pretend the discussion forums fully replaced real conversation, because they genuinely didn't.",
-      "Radio Host: [interested] So you'd admit something was lost, despite the convenience gained?",
-      "Caller: [reflective] Absolutely, something was lost. However, for someone in my situation, an imperfect course I could actually finish beat a perfect one I couldn't attend at all.",
-      "Radio Host: [curious] Did you ever feel isolated, studying alone without classmates around you?",
-      "Caller: [honestly] Constantly, especially during difficult modules, when a five-minute conversation would have solved what took me an hour of confused searching.",
-      "Radio Host: [thoughtful] Despite that isolation, would you still recommend the online route to other working parents?",
-      "Caller: [warmly] I would, provided they understand it demands more self-discipline than a classroom does, since nobody's checking whether you actually watched the lecture.",
-      "Radio Host: [curious] What would you say to critics who dismiss online certifications as less credible than traditional degrees?",
-      "Caller: [firmly] I'd say credibility depends on what you actually learned and applied, not merely on which building you sat in while learning it.",
-      "Radio Host: [interested] That's a strong point. Do you think classrooms will eventually disappear entirely?",
-      "Caller: [thoughtful] I doubt it, honestly. Some subjects, especially hands-on ones, still need physical practice that a screen simply can't replicate.",
-      "Radio Host: [smiling] A balanced answer. Thank you so much for calling in today, Sinta.",
-      "Caller: [warmly] Thank you for having me. I hope other parents hesitating out there give it a genuine try."
+      "Radio Host: [thoughtful] We're discussing whether online courses can truly replace classroom learning. On the line, we have Sinta, a working parent. Welcome!",
+      "Caller: Thanks for having me. I finished an entire certification online last year, so I clearly believe it's possible.",
+      "Radio Host: [carefully] What made online learning work for you specifically, as opposed to a traditional classroom?",
+      "Caller: Flexibility, mainly. As a single mother, I couldn't attend fixed evening classes, whereas recorded lectures let me study after my son fell asleep.",
+      "Radio Host: [reflective] Even so, critics argue that without face-to-face discussion, students miss out on deeper understanding. How do you respond to that?",
+      "Caller: It's a fair concern, and I won't pretend the discussion forums fully replaced real conversation, because they genuinely didn't.",
+      "Radio Host: [honestly] So you'd admit something was lost, despite the convenience gained?",
+      "Caller: Absolutely, something was lost. However, for someone in my situation, an imperfect course I could actually finish beat a perfect one I couldn't attend at all.",
+      "Radio Host: [seriously] Did you ever feel isolated, studying alone without classmates around you?",
+      "Caller: Constantly, especially during difficult modules, when a five-minute conversation would have solved what took me an hour of confused searching.",
+      "Radio Host: [gently] Despite that isolation, would you still recommend the online route to other working parents?",
+      "Caller: I would ask them to check recognition, outcomes, assessment, support, accessibility, technology, privacy, cost, care, and practical requirements. Design matters as well as self-management.",
+      "Radio Host: [encouraging] What would you say to critics who dismiss online certifications as less credible than traditional degrees?",
+      "Caller: Credibility depends on the intended role, recognized provider or award where required, valid assessment, identity controls, and evidence of learning—not location alone.",
+      "Radio Host: [sincere] That's a strong point. Do you think classrooms will eventually disappear entirely?",
+      "Caller: I doubt it, honestly. Some outcomes require authorized equipment, supervised practice, safety checks, and observed competence. Online theory can support but not automatically replace them.",
+      "Radio Host: [thoughtful] A balanced answer. Thank you so much for calling in today, Sinta.",
+      "Caller: Thank you. Parents and other learners should choose the format that is recognized, accessible, safe, affordable, and realistic for their circumstances."
     ],
     "quiz": [
-      { "question": "What did Sinta complete online last year?", "options": ["A university degree", "An entire certification", "A cooking class", "A driving course"], "correctIndex": 1, "explanation": "Sinta says she finished an entire certification online last year." },
-      { "question": "Why did online learning work well for Sinta specifically?", "options": ["It was free", "The flexibility let her study after her son fell asleep, since she couldn't attend fixed evening classes", "Her employer required it", "It had no exams"], "correctIndex": 1, "explanation": "As a single mother, she couldn't attend fixed evening classes, but recorded lectures let her study after her son fell asleep." },
-      { "question": "What does Sinta admit was lost with online learning?", "options": ["Nothing was lost", "Real, face-to-face discussion that forums didn't fully replace", "The course content itself", "Access to certificates"], "correctIndex": 1, "explanation": "She admits the discussion forums didn't fully replace real conversation, so something genuinely was lost." },
-      { "question": "What does Sinta say online learning demands more of than a classroom?", "options": ["Money", "Self-discipline, since nobody checks whether you watched the lecture", "Technology skills", "Group work"], "correctIndex": 1, "explanation": "She says she'd recommend it provided people understand it demands more self-discipline than a classroom does." },
-      { "question": "Does Sinta think classrooms will disappear entirely?", "options": ["Yes, completely", "No, since some hands-on subjects still need physical practice", "She refuses to answer", "Yes, within five years"], "correctIndex": 1, "explanation": "She doubts classrooms will disappear, since some hands-on subjects still need physical practice a screen can't replicate." }
-    ]
+      {
+        "question": "What did Sinta complete online last year?",
+        "options": [
+          "An entire certification",
+          "A university degree",
+          "A cooking class",
+          "A driving course"
+        ],
+        "correctIndex": 0,
+        "explanation": "Sinta says she finished an entire certification online last year."
+      },
+      {
+        "question": "Why did online learning work well for Sinta specifically?",
+        "options": [
+          "It was free",
+          "Her employer required it",
+          "It had no exams",
+          "The flexibility let her study after her son fell asleep, since she couldn't attend fixed evening classes"
+        ],
+        "correctIndex": 3,
+        "explanation": "As a single mother, she couldn't attend fixed evening classes, but recorded lectures let her study after her son fell asleep."
+      },
+      {
+        "question": "What does Sinta admit was lost with online learning?",
+        "options": [
+          "Nothing was lost",
+          "The course content itself",
+          "Real, face-to-face discussion that forums didn't fully replace",
+          "Access to certificates"
+        ],
+        "correctIndex": 2,
+        "explanation": "She admits the discussion forums didn't fully replace real conversation, so something genuinely was lost."
+      },
+      {
+        "question": "What does Sinta say online learning demands more of than a classroom?",
+        "options": [
+          "Money",
+          "Self-discipline, since nobody checks whether you watched the lecture",
+          "Technology skills",
+          "Group work"
+        ],
+        "correctIndex": 1,
+        "explanation": "She says she'd recommend it provided people understand it demands more self-discipline than a classroom does."
+      },
+      {
+        "question": "Does Sinta think classrooms will disappear entirely?",
+        "options": [
+          "Yes, completely",
+          "She refuses to answer",
+          "Yes, within five years",
+          "No, since some hands-on subjects still need physical practice"
+        ],
+        "correctIndex": 3,
+        "explanation": "She doubts classrooms will disappear, since some hands-on subjects still need physical practice a screen can't replicate."
+      },
+      {
+        "question": "Why did recorded lectures support Sinta?",
+        "options": [
+          "They fit her care schedule and could be revisited",
+          "Online courses require no deadlines",
+          "Her son completed modules",
+          "Every parent studies at night"
+        ],
+        "correctIndex": 0,
+        "explanation": "Flexibility addressed a particular constraint."
+      },
+      {
+        "question": "What should be checked before enrollment?",
+        "options": [
+          "The building’s location only",
+          "Recognition, outcomes, assessment, support, access, data use, cost, and practical requirements",
+          "Testimonials only",
+          "Whether classrooms will disappear"
+        ],
+        "correctIndex": 1,
+        "explanation": "Suitability requires verifiable details."
+      },
+      {
+        "question": "Why is “self-discipline” an incomplete explanation?",
+        "options": [
+          "Learners have no responsibility",
+          "Recorded lectures guarantee success",
+          "Classrooms require no effort",
+          "Course design, disability, language, technology, care, and support also affect participation"
+        ],
+        "correctIndex": 3,
+        "explanation": "Achievement is not merely personal willpower."
+      },
+      {
+        "question": "What cannot a screen alone establish for some subjects?",
+        "options": [
+          "Any theoretical knowledge",
+          "Student identity",
+          "Written reflection",
+          "Observed safe practical competence"
+        ],
+        "correctIndex": 3,
+        "explanation": "Some outcomes require supervised practice."
+      },
+      {
+        "question": "How is credibility judged responsibly?",
+        "options": [
+          "Only by what a learner says was applied",
+          "Only by a physical campus",
+          "By recognized purpose, valid assessment, evidence of outcomes, and requirements of the intended role",
+          "By course length alone"
+        ],
+        "correctIndex": 2,
+        "explanation": "Neither delivery mode nor self-report is sufficient."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "revise; qualify online-course credibility through recognition, assessment, identity and privacy controls, accessibility, support, practical competence, and learner context",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-education-08",
+    "title": "The Certificate Program I Checked Before Paying",
+    "level": "B1",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] An advertisement promised that a six-week certificate would qualify me for a new professional role and double my salary.",
+      "Narrator: The website displayed logos from several companies, a countdown discount, and testimonials from graduates with impressive job titles.",
+      "Narrator: [carefully] I nearly paid that evening because the offer said only twelve places remained.",
+      "Narrator: Then I looked for the exact qualification name, awarding body, entry requirements, assessment method, instructor credentials, and recognition needed for the role.",
+      "Narrator: [reflective] The provider said the course was “internationally accredited,” but it did not identify the accreditor or link to an official register.",
+      "Narrator: I contacted the relevant professional or education authority through its own website, not through the number in the advertisement.",
+      "Narrator: [honestly] The authority explained that the occupation required a different recognized qualification and supervised practice. This short course could be useful development, but it could not grant the advertised professional status.",
+      "Narrator: I asked the provider in writing about total fees, recurring charges, refund and cancellation terms, learning support, accessibility, data use, complaints, and whether the company logos represented formal partnerships.",
+      "Narrator: [seriously] Two logos referred only to past students’ employers, not endorsements. The countdown also restarted the next morning.",
+      "Narrator: I spoke to graduates through independent channels and asked about teaching quality, workload, assessment, and outcomes rather than requesting private salary records.",
+      "Narrator: [gently] Some valued the course, while others said feedback was limited. Their experiences informed me but did not guarantee my result.",
+      "Narrator: I compared two recognized programs, checked schedules against work and family responsibilities, and built a budget including equipment, travel, and examination fees.",
+      "Narrator: [encouraging] I also asked my employer what evidence it would accept for the role without assuming a manager’s verbal answer changed formal requirements.",
+      "Narrator: I chose a longer recognized route with clear assessment and support. It did not promise employment or a salary increase.",
+      "Narrator: [sincere] The careful review delayed my start by one term, but it protected far more time and money than the countdown discount could save.",
+      "Narrator: Education marketing may sell hope. A responsible learner converts that hope into specific questions about recognition, cost, evidence, support, privacy, and realistic outcomes."
+    ],
+    "quiz": [
+      {
+        "question": "What was unclear about “internationally accredited”?",
+        "options": [
+          "The provider did not name a verifiable accreditor or register",
+          "The course had no title",
+          "International study is never recognized",
+          "The website used no logos"
+        ],
+        "correctIndex": 0,
+        "explanation": "A broad label could not be independently checked."
+      },
+      {
+        "question": "What did the relevant authority clarify?",
+        "options": [
+          "The short course guaranteed employment",
+          "The countdown was official",
+          "The role required another recognized qualification and supervised practice",
+          "Every employer accepted the certificate"
+        ],
+        "correctIndex": 2,
+        "explanation": "Professional eligibility had formal requirements."
+      },
+      {
+        "question": "Why were the company logos misleading?",
+        "options": [
+          "Companies may never appear on course sites",
+          "The logos were the wrong color",
+          "Graduates had no jobs",
+          "They reflected some graduates’ employers rather than formal endorsements"
+        ],
+        "correctIndex": 3,
+        "explanation": "Visual association did not prove partnership."
+      },
+      {
+        "question": "Why were graduate stories limited evidence?",
+        "options": [
+          "Graduates cannot assess teaching",
+          "Independent contact is unlawful",
+          "They described individual experiences but could not guarantee another learner’s outcome",
+          "Salary determines course quality"
+        ],
+        "correctIndex": 2,
+        "explanation": "Testimonials are useful but not conclusive."
+      },
+      {
+        "question": "What did the narrator finally choose?",
+        "options": [
+          "The cheapest six-week offer",
+          "A recognized route with clear assessment and support but no job guarantee",
+          "A course without examinations",
+          "A program chosen only by the manager"
+        ],
+        "correctIndex": 1,
+        "explanation": "Verification guided the decision."
+      },
+      {
+        "question": "What did the restarting countdown suggest?",
+        "options": [
+          "The final place was sold",
+          "The authority controlled enrollment",
+          "The course began each morning",
+          "The scarcity claim may have been a recurring marketing device"
+        ],
+        "correctIndex": 3,
+        "explanation": "Repeated urgency weakened the claim."
+      },
+      {
+        "question": "Why did the narrator contact an external authority?",
+        "options": [
+          "Authorities choose every student",
+          "The manager requested it",
+          "The provider’s claim needed independent confirmation for the intended occupation",
+          "Testimonials were confidential"
+        ],
+        "correctIndex": 2,
+        "explanation": "Recognition should be verified at its source."
+      },
+      {
+        "question": "What did independent graduate contact improve?",
+        "options": [
+          "It guaranteed salary data",
+          "It proved accreditation",
+          "It reduced provider selection of only favorable testimonials",
+          "It removed privacy obligations"
+        ],
+        "correctIndex": 2,
+        "explanation": "Source independence broadens evidence."
+      },
+      {
+        "question": "Why did the narrator ask the employer too?",
+        "options": [
+          "A manager can override licensing",
+          "Role acceptance can have organizational criteria in addition to formal requirements",
+          "The employer pays every fee",
+          "Authorities lack registers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Several decision-makers may matter."
+      },
+      {
+        "question": "What does the final route refuse to promise?",
+        "options": [
+          "Employment or a salary increase",
+          "Recognized assessment",
+          "Learning support",
+          "A clear schedule"
+        ],
+        "correctIndex": 0,
+        "explanation": "A credible course still cannot control labor outcomes."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "retain; strong course-selection monologue testing accreditation, professional requirements, endorsements, outcomes, total cost, privacy, support, and marketing pressure",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-education-09",
+    "title": "The Interview Recording I Could Not Reuse Automatically",
+    "level": "B1",
+    "themeId": "education",
+    "type": "monologue",
+    "speakers": [
+      {
+        "name": "Narrator",
+        "gender": "male"
+      }
+    ],
+    "script": [
+      "Narrator: [thoughtful] For a university project, I interviewed ten small-business owners about changes in their neighborhood.",
+      "Narrator: Each participant received clear information about the study, recording, topics, voluntary participation, withdrawal, storage, access, and intended class report.",
+      "Narrator: [carefully] They consented to that specific project. I mistakenly assumed the recordings could later become examples in a public online course.",
+      "Narrator: My supervisor stopped me before I uploaded anything. She explained that useful educational material does not cancel the conditions under which personal data was collected.",
+      "Narrator: [reflective] The original form allowed our research team to analyze recordings and use de-identified quotations in the assessed report.",
+      "Narrator: It did not permit public audio, commercial reuse, voice cloning, a different audience, or permanent storage.",
+      "Narrator: [honestly] Removing names would not fully anonymize the interviews. Voices, businesses, locations, events, and combinations of details could identify people.",
+      "Narrator: We reviewed the institution’s ethics approval, policy, retention schedule, and applicable data-protection requirements.",
+      "Narrator: [seriously] For the original report, we removed unnecessary details, used participant codes, restricted files to approved accounts, and separated the code key from the transcripts.",
+      "Narrator: Transcription software was used only if institutionally approved for the data. We did not upload recordings to a convenient public service.",
+      "Narrator: [gently] Quotations were checked for meaning and context. We did not edit hesitant speech to make a participant appear less informed or combine sentences into a claim the person had not made.",
+      "Narrator: For the online course, we created new fictional examples performed by volunteers under a separate agreement.",
+      "Narrator: [encouraging] Where a real case was pedagogically important, the team considered fresh consent, but recognized that consent might still be unsuitable if power, privacy, or future harm could not be managed.",
+      "Narrator: At the end of the retention period, authorized records followed the approved secure deletion or archive process.",
+      "Narrator: [sincere] I learned that “educational use” is not one unlimited permission.",
+      "Narrator: Ethical research respects purpose, audience, identity risk, participant control, accurate representation, secure tools, and the promise made at the moment someone agreed to speak."
+    ],
+    "quiz": [
+      {
+        "question": "What did participants originally permit?",
+        "options": [
+          "Research analysis and de-identified quotations in the class report",
+          "Public audio in any future course",
+          "Commercial voice cloning",
+          "Permanent unrestricted storage"
+        ],
+        "correctIndex": 0,
+        "explanation": "Consent had a defined project and audience."
+      },
+      {
+        "question": "Why was removing names insufficient?",
+        "options": [
+          "Names are required in every transcript",
+          "Voices and contextual details could still identify participants",
+          "All businesses were anonymous",
+          "Audio contains no identity"
+        ],
+        "correctIndex": 1,
+        "explanation": "Anonymity depends on more than one field."
+      },
+      {
+        "question": "What controlled transcription software use?",
+        "options": [
+          "The cheapest subscription",
+          "A student’s personal account",
+          "Institutional approval for the particular data",
+          "The software’s advertising claim"
+        ],
+        "correctIndex": 2,
+        "explanation": "Convenience did not establish permission."
+      },
+      {
+        "question": "How were quotations protected from distortion?",
+        "options": [
+          "Every hesitation was deleted",
+          "Separate sentences were combined",
+          "Participants were made to sound identical",
+          "Meaning and context were preserved without inventing a stronger claim"
+        ],
+        "correctIndex": 3,
+        "explanation": "Accuracy includes representation, not only words."
+      },
+      {
+        "question": "What replaced the unapproved public recordings?",
+        "options": [
+          "The same audio without names",
+          "New fictional examples under a separate agreement",
+          "Secret copies of transcripts",
+          "A public link to raw files"
+        ],
+        "correctIndex": 1,
+        "explanation": "New material avoided extending old consent."
+      },
+      {
+        "question": "Why could voice identify a participant?",
+        "options": [
+          "Every voice is legally public",
+          "Audio cannot be edited",
+          "Speech and contextual details can reveal identity even without a name",
+          "Codes contain names"
+        ],
+        "correctIndex": 2,
+        "explanation": "De-identification is not automatic anonymity."
+      },
+      {
+        "question": "Why was public transcription software avoided?",
+        "options": [
+          "Automatic transcription is always inaccurate",
+          "The institution had not approved it for the protected data",
+          "Only paper transcripts are ethical",
+          "Participants disliked computers"
+        ],
+        "correctIndex": 1,
+        "explanation": "Tool convenience did not determine authorization."
+      },
+      {
+        "question": "What would sentence combining risk?",
+        "options": [
+          "Creating a claim the participant did not make",
+          "Making the report too short",
+          "Revealing the interviewer’s name",
+          "Changing the file format"
+        ],
+        "correctIndex": 0,
+        "explanation": "Accurate representation includes context."
+      },
+      {
+        "question": "Why might fresh consent still be unsuitable?",
+        "options": [
+          "Consent can never change",
+          "Power, privacy, or future harm may prevent a genuinely safe reuse",
+          "Education is not a valid purpose",
+          "Fictional examples require no agreement"
+        ],
+        "correctIndex": 1,
+        "explanation": "Permission is not the only ethical condition."
+      },
+      {
+        "question": "What promise controls the project?",
+        "options": [
+          "The student’s later preference",
+          "The public course deadline",
+          "A software default",
+          "The terms given when each person agreed to participate"
+        ],
+        "correctIndex": 3,
+        "explanation": "Ethics follows the original relationship."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "retain; strong research-ethics monologue limiting consent by purpose and audience, managing re-identification, tools, quotation accuracy, retention, and new educational use",
+      "reviewedAt": "2026-07-30"
+    }
+  },
+  {
+    "id": "b1-education-10",
+    "title": "When Homework Feedback Suggested an AI Tool",
+    "level": "B1",
+    "themeId": "education",
+    "type": "dialogue",
+    "speakers": [
+      {
+        "name": "Parent Layla",
+        "gender": "female"
+      },
+      {
+        "name": "Teacher Maryam",
+        "gender": "female"
+      }
+    ],
+    "script": [
+      "Parent Layla: [thoughtful] Maryam, the feedback says my son’s homework may have been generated. Has he been accused of cheating?",
+      "Teacher Maryam: No judgment has been made. A software indicator can be wrong and cannot decide the case.",
+      "Parent Layla: [carefully] What evidence will you consider?",
+      "Teacher Maryam: The assignment history, sources, drafts, his explanation of the ideas, classwork, the exact policy he received, and any access or language factors.",
+      "Parent Layla: [reflective] May I see another student’s paper to compare the style?",
+      "Teacher Maryam: I cannot share another student’s work or result. I can explain the criteria and show you the records concerning your son within policy.",
+      "Parent Layla: [honestly] He says he used a tool only to suggest a clearer sentence. Is that allowed?",
+      "Teacher Maryam: The course policy permits specified spelling and language support but requires original reasoning and disclosure of approved assistance. We need to establish what actually happened.",
+      "Parent Layla: [seriously] Should he give you his private account password or full chat history?",
+      "Teacher Maryam: No. We collect only information necessary under school policy. Credentials must never be shared, and unrelated personal conversations remain private.",
+      "Parent Layla: [gently] What happens while you review it?",
+      "Teacher Maryam: He may explain his process with a support person present where allowed. The reviewer will document evidence, avoid public discussion, and use the school’s fair procedure.",
+      "Parent Layla: [encouraging] If he misunderstood the instructions, does that remove responsibility?",
+      "Teacher Maryam: Not automatically. Clarity, age, teaching, access, intent, and impact affect the response, but learning standards still matter.",
+      "Parent Layla: [sincere] Could he demonstrate the skill again?",
+      "Teacher Maryam: That may be one appropriate option if policy permits, alongside teaching on citation, disclosure, and acceptable tool use. It is not a secret replacement of the original record.",
+      "Parent Layla: [thoughtful] How can we prevent confusion next time?",
+      "Teacher Maryam: Give examples of permitted, restricted, and prohibited assistance before the task; design stages that show learning; provide accessible alternatives; and explain how data is handled.",
+      "Parent Layla: [carefully] I also do not want him labelled by one incident.",
+      "Teacher Maryam: Neither do I. We address the evidence and behavior, provide an appeal route, preserve confidentiality, and avoid turning uncertainty into a character judgment.",
+      "Parent Layla: Thank you. I will discuss honesty with him without deciding the facts before he has been heard.",
+      "Teacher Maryam: That supports both integrity and fairness—the student remains accountable, and the school remains accountable for a reliable process."
+    ],
+    "quiz": [
+      {
+        "question": "Why is the software indicator insufficient?",
+        "options": [
+          "It can be wrong and cannot decide misconduct alone",
+          "The school prohibits all software",
+          "It contains another student’s paper",
+          "Parents choose the result"
+        ],
+        "correctIndex": 0,
+        "explanation": "A signal requires broader evidence."
+      },
+      {
+        "question": "What evidence may be reviewed?",
+        "options": [
+          "Only the final writing style",
+          "Another student’s private file",
+          "Drafts, sources, history, classwork, explanation, policy, and access factors",
+          "A public vote"
+        ],
+        "correctIndex": 2,
+        "explanation": "Several sources help reconstruct the process."
+      },
+      {
+        "question": "What information should the student not provide?",
+        "options": [
+          "An explanation of his ideas",
+          "Relevant drafts",
+          "Approved support details",
+          "Passwords or unrelated private conversations"
+        ],
+        "correctIndex": 3,
+        "explanation": "Investigation must remain proportionate."
+      },
+      {
+        "question": "Why might a new demonstration be used?",
+        "options": [
+          "To hide the concern",
+          "To guarantee innocence",
+          "To punish another student",
+          "To assess learning if policy permits, without erasing the original record"
+        ],
+        "correctIndex": 3,
+        "explanation": "Reassessment can support evidence and education."
+      },
+      {
+        "question": "How does the teacher avoid labelling?",
+        "options": [
+          "Publish the indicator result",
+          "Assume intent from one task",
+          "Remove all accountability",
+          "Focus on evidence and behavior, confidentiality, hearing, and appeal"
+        ],
+        "correctIndex": 3,
+        "explanation": "Fair process separates a concern from identity."
+      },
+      {
+        "question": "Why does Layla not receive another paper?",
+        "options": [
+          "Comparison is never useful",
+          "Another student’s privacy is not necessary to explain her son’s criteria",
+          "The papers were deleted",
+          "Parents cannot see school records"
+        ],
+        "correctIndex": 1,
+        "explanation": "Transparency should not expose unrelated learners."
+      },
+      {
+        "question": "What distinction does the policy draw?",
+        "options": [
+          "All automated help is cheating",
+          "Any tool may write the assignment",
+          "Specified language support may be allowed while original reasoning and disclosure remain required",
+          "Spelling support proves originality"
+        ],
+        "correctIndex": 2,
+        "explanation": "Permitted assistance is bounded."
+      },
+      {
+        "question": "Why may a support person attend?",
+        "options": [
+          "To answer every question",
+          "To decide the result",
+          "To reveal other students’ cases",
+          "To help the student participate fairly where policy allows"
+        ],
+        "correctIndex": 3,
+        "explanation": "Procedural support does not replace testimony."
+      },
+      {
+        "question": "What does staged task design provide?",
+        "options": [
+          "A way to hide tool use",
+          "Evidence of learning development before the final submission",
+          "Fewer instructions",
+          "Automatic guilt detection"
+        ],
+        "correctIndex": 1,
+        "explanation": "Process evidence can reduce uncertainty."
+      },
+      {
+        "question": "Who is accountable at the end?",
+        "options": [
+          "Both the student for honest work and the school for fair reliable procedure",
+          "Only the detection software",
+          "Only the parent",
+          "Only the teacher’s intuition"
+        ],
+        "correctIndex": 0,
+        "explanation": "Integrity and due process are mutual duties."
+      }
+    ],
+    "qualityReview": {
+      "level": "B1",
+      "theme": "education",
+      "scriptDecision": "retain with concise phrasing; strong academic-integrity dialogue using multiple evidence sources, proportionate privacy, defined policy, hearing, reassessment, education, confidentiality, and appeal",
+      "reviewedAt": "2026-07-30"
+    }
   }
 ]
