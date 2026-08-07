@@ -10,7 +10,8 @@ import { SHADOWING_DATA } from '../constants/shadowingData';
 import {
   AdminAccessRecord, AdminUser, AdminUserDetail, deleteFeedback, deleteReply, getAdminAccess, getAdminUserDetail,
   createAdminAssignment, createAdminBroadcast, getAdminUsers, getReplies, grantAdminAccess, retakeAssignment, revokeAdminAccess, sendFeedback, sendReply, tasksForPlan,
-  AdminAssignmentRecipientResult, AdminAssignmentSummary, AdminBroadcastSummary, getAssignmentRecipientResults, listAssignments, listBroadcasts, deleteAssignment, deleteBroadcast
+  AdminAssignmentRecipientResult, AdminAssignmentSummary, AdminBroadcastSummary, getAssignmentRecipientResults, listAssignments, listBroadcasts, deleteAssignment, deleteBroadcast,
+  subscribeToAdminUserActivity
 } from '../../services/admin';
 
 type Period = 'week' | 'month' | 'all';
@@ -450,13 +451,13 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       setDetailLoading(false);
     } finally { setLoading(false); }
   };
-  const loadDetailsFor = async (targets: AdminUser[]) => {
-    const missing = targets.filter(item => !details[item.uid]);
-    if (!missing.length) return;
+  const loadDetailsFor = async (targets: AdminUser[], { force = false }: { force?: boolean } = {}) => {
+    const targetsToLoad = force ? targets : targets.filter(item => !details[item.uid]);
+    if (!targetsToLoad.length) return;
     setDetailLoading(true);
     try {
-      for (let index = 0; index < missing.length; index += 8) {
-        const batch = missing.slice(index, index + 8);
+      for (let index = 0; index < targetsToLoad.length; index += 8) {
+        const batch = targetsToLoad.slice(index, index + 8);
         const entries = await Promise.all(batch.map(async item => [item.uid, await getAdminUserDetail(item)] as const));
         setDetails(current => ({ ...current, ...Object.fromEntries(entries) }));
       }
@@ -489,6 +490,15 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     // Keep that heavier load out of the initial overview screen.
     if (isAdmin && ['users', 'attention', 'comments'].includes(section) && users.length) void loadDetailsFor(users);
   }, [isAdmin, section, users.length]);
+  useEffect(() => {
+    if (!isAdmin || !selected) return;
+    // Keep the profile being viewed up to date. We intentionally do not watch
+    // all users, because a class can have 100 learners and that would make
+    // Firebase reads unnecessarily expensive.
+    return subscribeToAdminUserActivity(selected.uid, () => {
+      void loadDetailsFor([selected], { force: true });
+    });
+  }, [isAdmin, selected?.uid]);
   useEffect(() => {
     if (!selected || detailTab !== 'comments') return;
     const feedbackItems = details[selected.uid]?.feedback || [];
@@ -534,7 +544,11 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     const url = URL.createObjectURL(blob);
     const anchor = document.createElement('a'); anchor.href = url; anchor.download = `lovspeak-monitoring-${new Date().toISOString().slice(0, 10)}.csv`; anchor.click(); URL.revokeObjectURL(url);
   };
-  const openUser = (target: AdminUser, tab: DetailTab = 'progress') => { setSelected(target); setDetailTab(tab); setFeedback(''); setTaskId(''); void loadDetailsFor([target]); };
+  const openUser = (target: AdminUser, tab: DetailTab = 'progress') => {
+    setSelected(target); setDetailTab(tab); setFeedback(''); setTaskId('');
+    // Do not trust an older empty cache when an admin opens a learner profile.
+    void loadDetailsFor([target], { force: true });
+  };
   const [submittingFeedback, setSubmittingFeedback] = useState(false);
   const [submittingReplyId, setSubmittingReplyId] = useState<string | null>(null);
   const [accessBusy, setAccessBusy] = useState(false);

@@ -1,6 +1,6 @@
 import {
   addDoc, collection, deleteDoc, doc, getDoc, getDocs, limit, orderBy, query,
-  setDoc, updateDoc, where, writeBatch
+  onSnapshot, setDoc, updateDoc, where, writeBatch
 } from 'firebase/firestore';
 import { db } from '../src/firebase';
 import { realtimeDb } from '../src/firebase';
@@ -168,6 +168,17 @@ export const getAdminUserDetail = async (user: AdminUser): Promise<AdminUserDeta
     )
   };
 };
+
+/**
+ * Watches only the learner profile currently opened by an admin. This keeps
+ * the detail panel current without creating listeners for an entire class.
+ */
+export const subscribeToAdminUserActivity = (uid: string, onChange: () => void) =>
+  onSnapshot(
+    query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100)),
+    () => onChange(),
+    (error) => console.error(`Unable to watch activity for ${uid}:`, error)
+  );
 
 /**
  * Rolling retention: keeps every collection small so reads stay cheap and the UI light.
