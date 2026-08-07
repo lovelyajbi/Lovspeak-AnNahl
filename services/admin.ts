@@ -348,6 +348,13 @@ export interface AdminAssignmentSummary extends AdminAssignment {
   recipientIds?: string[];
 }
 
+/** A recipient's latest evaluated result for one admin-created assignment. */
+export interface AdminAssignmentRecipientResult {
+  uid: string;
+  assignment: UserAssignment | null;
+  error?: boolean;
+}
+
 export interface AdminBroadcastSummary {
   id: string;
   title: string;
@@ -360,6 +367,38 @@ export interface AdminBroadcastSummary {
 export const listAssignments = async (): Promise<AdminAssignmentSummary[]> => {
   const snap = await getDocs(query(collection(db, 'assignments'), orderBy('createdAt', 'desc'), limit(RETENTION.assignmentHistory)));
   return snap.docs.map(item => ({ id: item.id, ...item.data() } as AdminAssignmentSummary));
+};
+
+/**
+ * Loads the actual result of one assignment for each recipient. The status is
+ * evaluated with the same activity and roadmap evidence used in the learner's
+ * task inbox, so the admin never sees a stale client-only "completed" flag.
+ * Requests are batched to keep a class of up to 100 learners responsive.
+ */
+export const getAssignmentRecipientResults = async (assignmentId: string, recipientIds: string[]): Promise<AdminAssignmentRecipientResult[]> => {
+  const loadRecipient = async (uid: string): Promise<AdminAssignmentRecipientResult> => {
+    try {
+      const [assignmentSnap, activitySnap, roadmapSnap] = await Promise.all([
+        getDoc(doc(db, `userAssignments/${uid}/items/${assignmentId}`)),
+        getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100))),
+        getDoc(doc(db, `users/${uid}/progress/roadmap`))
+      ]);
+      if (!assignmentSnap.exists()) return { uid, assignment: null };
+      const assignment = { id: assignmentSnap.id, ...assignmentSnap.data() } as UserAssignment;
+      const activities = activitySnap.docs.map(item => item.data() as ActivityLog);
+      const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
+      return { uid, assignment: evaluateAssignment(assignment, activities, roadmapUnits) };
+    } catch (error) {
+      console.error(`Unable to load assignment ${assignmentId} for ${uid}:`, error);
+      return { uid, assignment: null, error: true };
+    }
+  };
+
+  const results: AdminAssignmentRecipientResult[] = [];
+  for (let index = 0; index < recipientIds.length; index += 10) {
+    results.push(...await Promise.all(recipientIds.slice(index, index + 10).map(loadRecipient)));
+  }
+  return results;
 };
 
 export const listBroadcasts = async (): Promise<AdminBroadcastSummary[]> => {
