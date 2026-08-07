@@ -86,10 +86,12 @@ export interface AssignmentTarget {
   packTitle?: string;
   packStepIds?: string[];
   stepId?: string;
+  targetLessonId?: string;
   shadowingTaskId?: string;
   title?: string;
   theme?: string;
   topic?: string;
+  promptContext?: string;
   minScore?: number;
   targetDurationSeconds?: number;
   requireQuiz?: boolean;
@@ -372,6 +374,10 @@ export interface AssessmentResult {
 
 export interface ModuleContext {
   taskId?: string;
+  // A task issued by an admin is not a Daily Plan task. Keeping its own id
+  // prevents assignment results from being mistaken for Daily Plan progress.
+  assignmentId?: string;
+  assignmentKind?: AssignmentKind;
   unitId?: string;
   stepId?: string;
   type?: 'unit' | 'daily' | 'assignment' | 'assessment';

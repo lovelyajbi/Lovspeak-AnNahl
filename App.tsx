@@ -451,25 +451,46 @@ const App: React.FC = () => {
       setAssignedTasks(items => items.map(item => item.id === assignment.id ? { ...item, readAt: new Date().toISOString() } : item));
     }
     const target = assignment.target;
-    const targetView = target.moduleView || (target.kind === 'roadmap_pack' ? AppView.ROADMAP : AppView.HOME);
-    if (targetView === AppView.HOME) return;
+    const assignmentViewByKind: Record<UserAssignment['target']['kind'], AppView> = {
+      roadmap_pack: AppView.ROADMAP,
+      grammar: AppView.GRAMMAR,
+      reading: AppView.READING,
+      listening: AppView.LISTENING,
+      speaking: AppView.LIVE,
+      shadowing: AppView.SHADOWING
+    };
+    // Older assignments may not yet contain moduleView. Always derive a safe
+    // destination from the assignment kind so "Mulai kerjakan" never appears
+    // to do nothing.
+    const targetView = target.moduleView || assignmentViewByKind[target.kind];
     acknowledgeModuleUpdate(targetView);
     setActiveTaskId(null);
     setModuleContext({
       autoStart: true,
-      type: target.kind === 'roadmap_pack' ? 'unit' : 'assignment',
+      type: 'assignment',
+      assignmentId: assignment.id,
+      assignmentKind: target.kind,
       level: userProfile?.level || 'A1',
       title: target.title || target.topic || target.theme || assignment.title,
       desc: assignment.description || 'Tugas khusus dari admin.',
       unitId: target.packId,
       stepId: target.stepId,
+      targetLessonId: target.targetLessonId,
       shadowingTaskId: target.shadowingTaskId,
       minScore: target.minScore,
       goalMinutes: target.targetDurationSeconds ? Math.ceil(target.targetDurationSeconds / 60) : undefined,
-      promptContext: target.topic || target.theme,
-      taskId: assignment.id
+      promptContext: target.promptContext || target.topic || target.theme
     });
     setView(targetView);
+  };
+
+  const refreshAssignedTasks = async () => {
+    if (!user) return;
+    try {
+      setAssignedTasks(await getUserAssignments(user.uid));
+    } catch (error) {
+      console.warn('[LovSpeak] unable to refresh assignment status', error);
+    }
   };
   const handleNavigate = (targetView: AppView) => {
     acknowledgeModuleUpdate(targetView);
@@ -526,9 +547,11 @@ const App: React.FC = () => {
   };
 
   const completeActiveTask = () => {
-    const isRoadmapStep = moduleContext?.type === 'unit' && Boolean(moduleContext.stepId);
+    const isAssignment = Boolean(moduleContext?.assignmentId);
+    const isRoadmapStep = Boolean(moduleContext?.stepId) &&
+      (moduleContext?.type === 'unit' || moduleContext?.assignmentKind === 'roadmap_pack');
     // Roadmap and Daily Plan are independent progress lanes.
-    if (!activeTaskId && !isRoadmapStep) return;
+    if (!activeTaskId && !isRoadmapStep && !isAssignment) return;
     if (!userProfile) return;
     let isGoalTask = false;
     let xpGained = 0;
@@ -587,10 +610,29 @@ const App: React.FC = () => {
     }
 
     setToast({
-      message: xpGained > 0 ? `Task Completed! +${xpGained} XP` : 'Task Updated!',
+      message: isAssignment ? 'Tugas admin selesai dan status diperbarui.' : xpGained > 0 ? `Task Completed! +${xpGained} XP` : 'Task Updated!',
       type: 'success'
     });
     setActiveTaskId(null);
+    if (isAssignment) {
+      void refreshAssignedTasks();
+      // A roadmap-pack assignment contains several missions. Return to its
+      // open pack after each completed step; other assignment types return to
+      // the user task list immediately.
+      if (moduleContext?.assignmentKind === 'roadmap_pack') {
+        setModuleContext({
+          ...moduleContext,
+          type: 'assignment',
+          stepId: undefined,
+          autoStart: true
+        });
+        setView(AppView.ROADMAP);
+      } else {
+        setModuleContext(null);
+        setView(AppView.TASKS);
+      }
+      return;
+    }
     if (isRoadmapStep) {
       // Keep the unit context so RoadmapModule can reopen the same mission.
       setView(AppView.ROADMAP);

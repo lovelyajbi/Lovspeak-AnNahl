@@ -148,6 +148,11 @@ const getCategoryStyles = (category: string) => {
 };
 
 const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
+  const completeButtonLabel = initialContext?.type === 'assignment'
+    ? 'Selesaikan tugas admin'
+    : initialContext?.type === 'unit'
+      ? 'Complete & Back to Roadmap'
+      : 'Complete Daily Task';
   const [activeLevel, setActiveLevel] = useState<1 | 2 | 3 | 4 | 5>(1);
   const [selectedMainFolder, setSelectedMainFolder] = useState<'Daily Conversations' | 'Idioms' | 'Slang' | null>(null);
   const [selectedSubFolder, setSelectedSubFolder] = useState<'General' | 'Islamic' | null>(null);
@@ -182,7 +187,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const { isListening: isDialogueListening, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
 
   const isDailyRoleplay = initialContext?.type === 'daily' && initialContext.autoStart && initialContext.shadowingMode === 'roleplay';
-  const isRoadmapRoleplay = initialContext?.type === 'unit' && initialContext.autoStart && initialContext.shadowingMode === 'roleplay';
+  const isRoadmapRoleplay = (initialContext?.type === 'unit' || initialContext?.assignmentKind === 'roadmap_pack') && initialContext?.autoStart && initialContext.shadowingMode === 'roleplay';
   const dialoguePassFloor = isDailyRoleplay ? 70 : 80;
   const dialogueTargetScore = initialContext?.minScore || 80;
 
@@ -696,6 +701,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                       completed: true,
                       taskScores,
                       planTaskId: initialContext?.taskId,
+                      assignmentId: initialContext?.assignmentId,
                       stepId: initialContext?.stepId,
                       shadowingMode: initialContext?.shadowingMode || 'daily',
                       source: initialContext?.type || 'daily'
@@ -982,6 +988,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         completed,
         taskId: selectedTask.id,
         planTaskId: initialContext?.taskId,
+        assignmentId: initialContext?.assignmentId,
         stepId: initialContext?.stepId,
         taskTitle: selectedTask.title,
         shadowingMode: initialContext?.shadowingMode || 'manual',
@@ -1202,7 +1209,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                       }}
                       className="flex-1 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-xs md:text-sm"
                     >
-                      <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : 'Complete Daily Task'}
+                      <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
                     </button>
                   ) : (
                     <button
@@ -1457,7 +1464,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       <div className="flex flex-col gap-3">
         {(isDailyRoleplay || isRoadmapRoleplay) && dialogueSummary?.passed && (
           <button onClick={() => onComplete?.()} className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black uppercase tracking-widest text-xs">
-            <i className="fas fa-check-circle mr-2"></i> {isRoadmapRoleplay ? 'Complete & Back to Roadmap' : 'Complete Daily Task'}
+            <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
           </button>
         )}
         <button onClick={() => { setDialogueLineResults({}); setDialogueSummary(null); setLineIndex(0); setDialogueMatch(null); setRevealedHints(new Set()); dialogueStartedAtRef.current = Date.now(); setDialogueStage(isDailyRoleplay ? 'play' : 'scenarios'); }} className="w-full py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-black uppercase tracking-widest text-xs">

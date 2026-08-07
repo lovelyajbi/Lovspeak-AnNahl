@@ -42,18 +42,77 @@ const toMillis = (value: any): number | null => {
   return null;
 };
 
-const assignmentIsComplete = (assignment: UserAssignment, activities: ActivityLog[], roadmapUnits: string[]) => {
+const assignmentActivityType: Partial<Record<AssignmentTarget['kind'], AppView>> = {
+  grammar: AppView.GRAMMAR,
+  reading: AppView.READING,
+  listening: AppView.LISTENING,
+  speaking: AppView.LIVE,
+  shadowing: AppView.SHADOWING
+};
+
+/**
+ * Derives task status from the learner's actual activity/progress instead of
+ * trusting a client-side "complete" flag. It works for both the learner inbox
+ * and the admin dashboard, and keeps retake cut-offs intact.
+ */
+const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[], roadmapUnits: string[]): UserAssignment => {
   const target = assignment.target;
-  if (target.kind === 'roadmap_pack') return Boolean(target.packStepIds?.length) && target.packStepIds!.every(stepId => roadmapUnits.includes(stepId));
-  const activityType: Partial<Record<string, AppView>> = { grammar: AppView.GRAMMAR, reading: AppView.READING, listening: AppView.LISTENING, speaking: AppView.LIVE, shadowing: AppView.SHADOWING };
   const retakeAt = (assignment as UserAssignment & { retakeAt?: string }).retakeAt;
   const cutoffIso = retakeAt && retakeAt > assignment.createdAt ? retakeAt : assignment.createdAt;
   const cutoff = new Date(cutoffIso).getTime();
-  const relevant = activities.filter(item => item.type === activityType[target.kind] && new Date(item.date).getTime() >= cutoff);
-  if (!relevant.length) return false;
-  if (target.kind === 'speaking' && target.targetDurationSeconds) return relevant.some(item => (item.durationSeconds || 0) >= target.targetDurationSeconds!);
-  return relevant.some(item => target.minScore === undefined || item.score >= target.minScore);
+
+  if (target.kind === 'roadmap_pack') {
+    const total = target.packStepIds?.length || 0;
+    const completed = target.packStepIds?.filter(stepId => roadmapUnits.includes(stepId)).length || 0;
+    const isComplete = total > 0 && completed === total;
+    return {
+      ...assignment,
+      status: isComplete ? 'completed' : assignment.status === 'completed' ? 'assigned' : assignment.status,
+      completedAt: isComplete ? assignment.completedAt || new Date().toISOString() : undefined,
+      progressLabel: total ? `${completed}/${total} misi dalam pack selesai` : 'Target pack belum tersedia'
+    };
+  }
+
+  const expectedType = assignmentActivityType[target.kind];
+  const relevant = activities.filter(item => {
+    if (item.type !== expectedType || new Date(item.date).getTime() < cutoff) return false;
+    const metadata = item.metadata || {};
+    // New activities carry a precise assignment id. Older assignments still
+    // receive a safe fallback based on their configured material/task target.
+    if (metadata.assignmentId) return metadata.assignmentId === assignment.id;
+    if (target.shadowingTaskId) return metadata.taskId === target.shadowingTaskId;
+    if (target.targetLessonId) return metadata.materialId === target.targetLessonId;
+    return true;
+  });
+
+  const bestScore = relevant.length
+    ? Math.max(...relevant.map(item => Number.isFinite(item.score) ? item.score : 0))
+    : undefined;
+  const bestDurationSeconds = relevant.length
+    ? Math.max(...relevant.map(item => Number.isFinite(item.durationSeconds) ? item.durationSeconds : 0))
+    : undefined;
+
+  const completedActivity = target.kind === 'speaking'
+    ? relevant.find(item => !target.targetDurationSeconds || (item.durationSeconds || 0) >= target.targetDurationSeconds)
+    : relevant.find(item => target.minScore !== undefined
+      ? item.score >= target.minScore
+      : item.metadata?.completed === true);
+  const isComplete = Boolean(completedActivity);
+  const scoreLabel = bestScore === undefined ? 'Belum ada hasil' : `Nilai terbaik ${Math.round(bestScore)}%`;
+  const durationLabel = bestDurationSeconds === undefined ? 'Belum ada sesi' : `${Math.floor(bestDurationSeconds / 60)}m ${bestDurationSeconds % 60}d`;
+
+  return {
+    ...assignment,
+    status: isComplete ? 'completed' : assignment.status === 'completed' ? 'assigned' : assignment.status,
+    completedAt: isComplete ? assignment.completedAt || completedActivity?.date || new Date().toISOString() : undefined,
+    bestScore: target.kind === 'speaking' ? assignment.bestScore : bestScore,
+    bestDurationSeconds: target.kind === 'speaking' ? bestDurationSeconds : assignment.bestDurationSeconds,
+    progressLabel: target.kind === 'speaking' ? `Durasi terbaik ${durationLabel}` : scoreLabel
+  };
 };
+
+const evaluateAssignments = (assignments: UserAssignment[], activities: ActivityLog[], roadmapUnits: string[]) =>
+  assignments.map(assignment => evaluateAssignment(assignment, activities, roadmapUnits));
 
 const MASTER_ADMIN_EMAIL = ((import.meta as { env?: Record<string, string | undefined> }).env?.VITE_ADMIN_MASTER_EMAIL || 'lovelyatrial@gmail.com').toLowerCase();
 
@@ -92,10 +151,11 @@ export const getAdminUserDetail = async (user: AdminUser): Promise<AdminUserDeta
     roadmapUnits,
     activities,
     feedback: feedbackSnap.docs.map(item => ({ id: item.id, ...item.data() } as AdminFeedback)).sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
-    assignments: assignmentSnap.docs.slice(0, RETENTION.assignmentsPerUser).map(item => {
-      const assignment = { id: item.id, ...item.data() } as UserAssignment;
-      return assignmentIsComplete(assignment, activities, roadmapUnits) ? { ...assignment, status: 'completed' as const, completedAt: assignment.completedAt || nowIso() } : assignment;
-    })
+    assignments: evaluateAssignments(
+      assignmentSnap.docs.slice(0, RETENTION.assignmentsPerUser).map(item => ({ id: item.id, ...item.data() } as UserAssignment)),
+      activities,
+      roadmapUnits
+    )
   };
 };
 
@@ -239,8 +299,15 @@ export const createAdminAssignment = async (input: {
 };
 
 export const getUserAssignments = async (uid: string): Promise<UserAssignment[]> => {
-  const snap = await getDocs(query(collection(db, `userAssignments/${uid}/items`), orderBy('createdAt', 'desc'), limit(100)));
-  return snap.docs.map(item => ({ id: item.id, ...item.data() } as UserAssignment));
+  const [assignmentSnap, activitySnap, roadmapSnap] = await Promise.all([
+    getDocs(query(collection(db, `userAssignments/${uid}/items`), orderBy('createdAt', 'desc'), limit(100))),
+    getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100))),
+    getDoc(doc(db, `users/${uid}/progress/roadmap`))
+  ]);
+  const assignments = assignmentSnap.docs.map(item => ({ id: item.id, ...item.data() } as UserAssignment));
+  const activities = activitySnap.docs.map(item => item.data() as ActivityLog);
+  const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
+  return evaluateAssignments(assignments, activities, roadmapUnits);
 };
 
 export const markUserAssignmentRead = async (uid: string, assignmentId: string) =>

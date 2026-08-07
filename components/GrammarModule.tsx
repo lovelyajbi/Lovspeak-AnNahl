@@ -11,6 +11,11 @@ import { getLessonBank, pickQuizSet, pickPracticePrompt } from '../services/gram
 import MindMapRenderer from './MindMapRenderer';
 
 const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
+  const completeButtonLabel = initialContext?.type === 'assignment'
+    ? 'Selesaikan tugas admin'
+    : initialContext?.type === 'unit'
+      ? 'Complete & Back to Roadmap'
+      : `Complete Daily Task +${initialContext?.xpReward || 15} XP`;
   const [selectedLesson, setSelectedLesson] = useState<GrammarLesson | null>(null);
   const [activeTab, setActiveTab] = useState<'explanation' | 'practice' | 'mindmap' | 'quiz'>('explanation');
   const [userInput, setUserInput] = useState('');
@@ -166,6 +171,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       metadata: {
         completed: finalScore >= targetMinScore,
         planTaskId: initialContext?.taskId,
+        assignmentId: initialContext?.assignmentId,
         stepId: initialContext?.stepId,
         materialId: selectedLesson?.id || initialContext?.targetLessonId,
         materialTitle: selectedLesson?.title,
@@ -204,6 +210,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         metadata: {
           completed: evaluation.score >= targetMinScore,
           planTaskId: initialContext?.taskId,
+          assignmentId: initialContext?.assignmentId,
           stepId: initialContext?.stepId,
           materialId: selectedLesson?.id || initialContext?.targetLessonId,
           materialTitle: selectedLesson?.title,
@@ -364,7 +371,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 onClick={() => onComplete?.()}
                 className="w-full py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-base shadow-xl uppercase tracking-widest"
               >
-                <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
+                <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
               </button>
             ) : (
               <button 
@@ -621,7 +628,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                         onClick={() => onComplete?.()}
                         className="w-full mt-3 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-sm shadow-lg uppercase tracking-widest"
                       >
-                        <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
+                        <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
                       </button>
                     )}
                   </div>

@@ -192,9 +192,31 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
         await createAdminBroadcast({ title, message: broadcastMessage, createdBy: adminUid, recipientIds: ids });
         onMessage(`Broadcast terkirim ke ${ids.length} user.`); setTitle(''); setBroadcastMessage(''); return;
       }
+      const moduleViewByKind: Record<Exclude<AssignmentKind, 'roadmap_pack'>, AppView> = {
+        grammar: AppView.GRAMMAR,
+        reading: AppView.READING,
+        listening: AppView.LISTENING,
+        speaking: AppView.LIVE,
+        shadowing: AppView.SHADOWING
+      };
       const target: AssignmentTarget = kind === 'roadmap_pack'
         ? { kind, packId: targetPack?.id, packTitle: targetPack?.title, packStepIds: targetPack?.stepIds, moduleView: AppView.ROADMAP }
-        : { kind, stepId: targetStep?.id, shadowingTaskId: kind === 'shadowing' ? selectedShadowTask?.id : undefined, title: targetStep?.title || selectedShadowTask?.title || theme || title, theme: ['reading', 'listening'].includes(kind) ? theme : undefined, topic: kind === 'speaking' ? theme : undefined, moduleView: targetStep ? ({ grammar_lesson: AppView.GRAMMAR, reading_task: AppView.READING, listening_task: AppView.LISTENING, speaking_practice: AppView.LIVE } as Record<string, AppView>)[targetStep.type] : kind === 'shadowing' ? AppView.SHADOWING : undefined, minScore: minScore ? Number(minScore) : undefined, targetDurationSeconds: kind === 'speaking' && duration ? Number(duration) * 60 : undefined, requireQuiz: ['grammar', 'listening'].includes(kind) };
+        : {
+          kind,
+          stepId: targetStep?.id,
+          targetLessonId: targetStep?.targetId,
+          shadowingTaskId: kind === 'shadowing' ? selectedShadowTask?.id : undefined,
+          title: targetStep?.title || selectedShadowTask?.title || theme || title,
+          theme: ['reading', 'listening'].includes(kind) ? theme : undefined,
+          topic: kind === 'speaking' ? theme : undefined,
+          promptContext: targetStep?.promptContext || theme || undefined,
+          moduleView: targetStep
+            ? ({ grammar_lesson: AppView.GRAMMAR, reading_task: AppView.READING, listening_task: AppView.LISTENING, speaking_practice: AppView.LIVE } as Record<string, AppView>)[targetStep.type]
+            : moduleViewByKind[kind],
+          minScore: minScore ? Number(minScore) : undefined,
+          targetDurationSeconds: kind === 'speaking' && duration ? Number(duration) * 60 : undefined,
+          requireQuiz: ['grammar', 'listening'].includes(kind)
+        };
       await createAdminAssignment({ title: title || `Tugas ${target.packTitle || target.title || target.kind}`, description, target, dueAt: dueAt ? new Date(dueAt).toISOString() : null, createdBy: adminUid, recipientMode, recipientIds: ids });
       onMessage(`Tugas berhasil dibagikan ke ${ids.length} user.`); setTitle(''); setDescription(''); setTargetKey(''); setTheme(''); setShadowThemeId(''); setShadowingTaskId(''); setMinScore(''); setDuration(''); setDueAt('');
     } catch (error) { console.error('Admin assignment write failed:', error); onMessage(assignmentWriteError(error)); }

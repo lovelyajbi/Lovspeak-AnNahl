@@ -21,12 +21,18 @@ const getTextCacheKey = (text: string) => {
 };
 
 const getMissionKey = (context?: ModuleContext | null) => {
+  if (context?.assignmentId) return `assignment:${context.assignmentId}`;
   if (context?.taskId) return `daily:${context.taskId}`;
   if (context?.stepId) return `roadmap:${context.stepId}`;
   return `manual:${context?.title || ''}`;
 };
 
 const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
+  const completeButtonLabel = initialContext?.type === 'assignment'
+    ? 'Selesaikan tugas admin'
+    : initialContext?.type === 'unit'
+      ? 'Complete & Back to Roadmap'
+      : `Complete Daily Task +${initialContext?.xpReward || 15} XP`;
   const handleComplete = () => {
     localStorage.removeItem('lovspeak_state_listening');
     onComplete?.();
@@ -278,7 +284,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const autoLaunchedKeyRef = useRef<string | null>(null);
   useEffect(() => {
     if (initialContext?.autoStart) {
-      const key = `${initialContext.taskId || ''}|${initialContext.stepId || ''}|${initialContext.targetLessonId || ''}|${initialContext.title}`;
+      const key = `${initialContext.assignmentId || initialContext.taskId || ''}|${initialContext.stepId || ''}|${initialContext.targetLessonId || ''}|${initialContext.title}`;
       if (autoLaunchedKeyRef.current === key) return;
       autoLaunchedKeyRef.current = key;
       autoLaunch(initialContext);
@@ -290,7 +296,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
     // Determine title and topic
     let finalTitle = ctx.title;
-    let finalTopic = ctx.vocabTheme || 'General';
+    let finalTopic = ctx.promptContext || ctx.vocabTheme || ctx.title || 'General';
 
     if (ctx.type === 'daily') {
       finalTitle = ctx.title.replace(/^Listening:\s*/i, '');
@@ -303,7 +309,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       try {
         const state = JSON.parse(savedStateStr);
         const contextKey = getMissionKey(ctx);
-        const isMissionContext = Boolean(ctx.taskId || ctx.stepId);
+        const isMissionContext = Boolean(ctx.assignmentId || ctx.taskId || ctx.stepId);
         const isSameSavedTask = state.missionKey
           ? state.missionKey === contextKey
           : !isMissionContext && state.initialTitle === ctx.title;
@@ -993,6 +999,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       metadata: {
         completed: finalScore >= targetMinScore,
         planTaskId: initialContext?.taskId,
+        assignmentId: initialContext?.assignmentId,
         stepId: initialContext?.stepId,
         materialId: activeStaticItemId || initialContext?.targetLessonId,
         materialTitle: selectedTitle,
@@ -1637,7 +1644,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           {initialContext?.autoStart && score >= (initialContext?.minScore || 80) && (
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleComplete}
               className="w-full py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-sm shadow-lg uppercase tracking-widest">
-                <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
+                <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
             </motion.button>
           )}
           {initialContext?.autoStart && score < (initialContext?.minScore || 80) && (

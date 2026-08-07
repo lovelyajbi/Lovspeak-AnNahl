@@ -19,12 +19,18 @@ interface WordAnalysis {
 
 const normalizeTaskTitle = (title?: string) => (title || '').replace(/^Reading:\s*/i, '').trim();
 const getMissionKey = (context?: ModuleContext | null) => {
+  if (context?.assignmentId) return `assignment:${context.assignmentId}`;
   if (context?.taskId) return `daily:${context.taskId}`;
   if (context?.stepId) return `roadmap:${context.stepId}`;
   return `manual:${normalizeTaskTitle(context?.title)}`;
 };
 
 const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
+  const completeButtonLabel = initialContext?.type === 'assignment'
+    ? 'Selesaikan tugas admin'
+    : initialContext?.type === 'unit'
+      ? 'Complete & Back to Roadmap'
+      : `Complete Daily Task +${initialContext?.xpReward || 15} XP`;
   const handleComplete = () => {
     localStorage.removeItem('lovspeak_state_reading');
     onComplete?.();
@@ -302,7 +308,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   const autoLaunchedKeyRef = useRef<string | null>(null);
   useEffect(() => {
     if (initialContext?.autoStart) {
-      const key = `${initialContext.taskId || ''}|${initialContext.stepId || ''}|${initialContext.targetLessonId || ''}|${initialContext.title}`;
+      const key = `${initialContext.assignmentId || initialContext.taskId || ''}|${initialContext.stepId || ''}|${initialContext.targetLessonId || ''}|${initialContext.title}`;
       if (autoLaunchedKeyRef.current === key) return;
       autoLaunchedKeyRef.current = key;
       autoLaunch(initialContext);
@@ -938,6 +944,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
               metadata: {
                 completed: score >= targetMinScore,
                 planTaskId: initialContext?.taskId,
+                assignmentId: initialContext?.assignmentId,
                 stepId: initialContext?.stepId,
                 materialId: initialContext?.targetLessonId,
                 materialTitle: content.title,
@@ -1232,6 +1239,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
           metadata: {
             completed: result.overall >= (initialContext?.minScore || 85),
             planTaskId: initialContext?.taskId,
+            assignmentId: initialContext?.assignmentId,
             stepId: initialContext?.stepId,
             materialId: initialContext?.targetLessonId,
             materialTitle: selectedTitle,
@@ -1848,7 +1856,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                       onClick={handleComplete}
                       className="px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-base shadow-xl uppercase tracking-widest hover:shadow-2xl transition-all active:scale-95"
                     >
-                      <i className="fas fa-check-circle mr-2"></i> {initialContext?.type === 'unit' ? 'Complete & Back to Roadmap' : `Complete Daily Task +${initialContext?.xpReward || 15} XP`}
+                      <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
                     </button>
                   </div>
                 )}

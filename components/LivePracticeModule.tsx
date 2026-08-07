@@ -705,7 +705,12 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
         durationSeconds: Math.round((Date.now() - sessionStartTimeRef.current) / 1000),
         score: 0,
         accuracy: 0,
-        details: `Voice Call: ${initialContext?.title || customTopic || 'General'}`
+        details: `Voice Call: ${initialContext?.title || customTopic || 'General'}`,
+        metadata: {
+          completed: Boolean(initialContext?.assignmentId) && ((initialContext?.accumulatedSeconds || 0) + elapsedSeconds >= targetSeconds),
+          assignmentId: initialContext?.assignmentId,
+          source: initialContext?.type || 'manual'
+        }
       });
     }
 

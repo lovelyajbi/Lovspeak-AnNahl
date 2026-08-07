@@ -121,10 +121,13 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
     const shadowingSelection = step.type === 'shadowing_task'
       ? getRoadmapShadowingSelection(selectedUnit, step)
       : {};
+    const assignmentContext = initialContext?.assignmentId
+      ? { type: 'assignment' as const, assignmentId: initialContext.assignmentId, assignmentKind: initialContext.assignmentKind }
+      : { type: 'unit' as const };
     const context: ModuleContext = {
       unitId: selectedUnit.id,
       stepId: step.id,
-      type: 'unit',
+      ...assignmentContext,
       autoStart: true,
       level: selectedUnit.level,
       title: getStepDisplayTitle(step),
