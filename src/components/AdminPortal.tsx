@@ -123,6 +123,14 @@ const metricForUser = (user: AdminUser, detail: AdminUserDetail | undefined, per
 
 const trendIcon = (trend: UserMetric['trend']) => trend === 'up' ? '↗' : trend === 'down' ? '↘' : trend === 'steady' ? '→' : '—';
 const trendText = (trend: UserMetric['trend']) => trend === 'up' ? 'Meningkat' : trend === 'down' ? 'Menurun' : trend === 'steady' ? 'Stabil' : 'Belum cukup data';
+const assignmentWriteError = (error: unknown) => {
+  const detail = error as { code?: string; message?: string };
+  const message = detail?.message || '';
+  if (detail?.code === 'permission-denied' || message.toLowerCase().includes('permission')) return 'Pengiriman ditolak oleh Firestore Rules. Pastikan rules terbaru sudah di-deploy dan akun ini masih admin.';
+  if (message.includes('Unsupported field value') || message.includes('undefined')) return 'Data tugas belum lengkap. Pilih target tugas lalu coba lagi.';
+  if (detail?.code === 'unavailable' || message.toLowerCase().includes('network')) return 'Firebase sedang tidak dapat dijangkau. Periksa koneksi lalu coba lagi.';
+  return 'Tugas belum terkirim. Coba lagi; bila tetap gagal, muat ulang halaman admin.';
+};
 
 const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; onMessage: (message: string) => void; initialRecipientIds?: string[] | null; onConsumePrefill?: () => void }> = ({ users, adminUid, onMessage, initialRecipientIds, onConsumePrefill }) => {
   const [mode, setMode] = useState<'assignment' | 'broadcast'>('assignment');
@@ -189,7 +197,7 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
         : { kind, stepId: targetStep?.id, shadowingTaskId: kind === 'shadowing' ? selectedShadowTask?.id : undefined, title: targetStep?.title || selectedShadowTask?.title || theme || title, theme: ['reading', 'listening'].includes(kind) ? theme : undefined, topic: kind === 'speaking' ? theme : undefined, moduleView: targetStep ? ({ grammar_lesson: AppView.GRAMMAR, reading_task: AppView.READING, listening_task: AppView.LISTENING, speaking_practice: AppView.LIVE } as Record<string, AppView>)[targetStep.type] : kind === 'shadowing' ? AppView.SHADOWING : undefined, minScore: minScore ? Number(minScore) : undefined, targetDurationSeconds: kind === 'speaking' && duration ? Number(duration) * 60 : undefined, requireQuiz: ['grammar', 'listening'].includes(kind) };
       await createAdminAssignment({ title: title || `Tugas ${target.packTitle || target.title || target.kind}`, description, target, dueAt: dueAt ? new Date(dueAt).toISOString() : null, createdBy: adminUid, recipientMode, recipientIds: ids });
       onMessage(`Tugas berhasil dibagikan ke ${ids.length} user.`); setTitle(''); setDescription(''); setTargetKey(''); setTheme(''); setShadowThemeId(''); setShadowingTaskId(''); setMinScore(''); setDuration(''); setDueAt('');
-    } catch (error) { console.error(error); onMessage('Tugas/broadcast belum terkirim. Periksa koneksi Firebase.'); }
+    } catch (error) { console.error('Admin assignment write failed:', error); onMessage(assignmentWriteError(error)); }
     finally { setSending(false); }
   };
   return <section className="admin-card admin-table-card">

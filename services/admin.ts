@@ -180,6 +180,20 @@ export const tasksForPlan = (plan: LearningPlan | null): DailyTask[] => plan ? [
 
 const nowIso = () => new Date().toISOString();
 
+// Firestore rejects `undefined` at any depth. Assignment targets intentionally
+// have optional fields, so remove only undefined values while preserving null,
+// false, zero, and empty strings when they are explicitly supplied.
+const stripUndefined = <T>(value: T): T => {
+  if (Array.isArray(value)) return value.map(item => stripUndefined(item)) as T;
+  if (value && typeof value === 'object') {
+    return Object.entries(value as Record<string, unknown>).reduce<Record<string, unknown>>((clean, [key, item]) => {
+      if (item !== undefined) clean[key] = stripUndefined(item);
+      return clean;
+    }, {}) as T;
+  }
+  return value;
+};
+
 /** Creates an assignment and fan-outs a small per-user inbox record. Chunking keeps this safe for classes of 100+ users. */
 export const createAdminAssignment = async (input: {
   title: string;
@@ -195,7 +209,7 @@ export const createAdminAssignment = async (input: {
   const assignment: Omit<AdminAssignment, 'id'> & { recipientIds: string[] } = {
     title: input.title.trim(),
     description: input.description?.trim() || '',
-    target: input.target,
+    target: stripUndefined(input.target),
     dueAt: input.dueAt || null,
     recipientMode: input.recipientMode,
     recipientCount: input.recipientIds.length,
@@ -205,10 +219,10 @@ export const createAdminAssignment = async (input: {
   };
 
   const writes = [
-    { ref: assignmentRef, data: assignment },
+    { ref: assignmentRef, data: stripUndefined(assignment) },
     ...input.recipientIds.map(uid => ({
       ref: doc(db, `userAssignments/${uid}/items/${assignmentRef.id}`),
-      data: { ...assignment, assignmentId: assignmentRef.id, status: 'assigned', attempts: 0, createdAt }
+      data: stripUndefined({ ...assignment, assignmentId: assignmentRef.id, status: 'assigned', attempts: 0, createdAt })
     })),
     ...input.recipientIds.map(uid => ({
       ref: doc(collection(db, `userNotifications/${uid}/items`)),
