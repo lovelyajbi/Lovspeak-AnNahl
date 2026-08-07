@@ -12,6 +12,8 @@ export interface AdminUser {
   uid: string;
   email: string;
   name: string;
+  /** Other profile UIDs that belong to the same normalized email. */
+  linkedUids?: string[];
   level?: string;
   xp?: number;
   isActive?: boolean;
@@ -137,21 +139,38 @@ export const getAdminUsers = async (): Promise<AdminUser[]> => {
     get(ref(realtimeDb, 'presence'))
   ]);
   const presence = presenceSnap.val() || {};
-  return snap.docs.map((item) => {
+  const rawUsers = snap.docs.map((item) => {
     const data = item.data() as UserProfile & { email?: string; isActive?: boolean; lastSeenAt?: number; isOnline?: boolean };
     return { uid: item.id, email: data.email || '', name: data.name || 'User', level: data.level, xp: data.xp || 0, isActive: data.isActive, isOnline: Boolean(presence[item.id]?.online), lastSeenAt: toMillis(presence[item.id]?.lastSeenAt) };
   });
+  const idsByEmail = new Map<string, string[]>();
+  rawUsers.forEach(item => {
+    const email = item.email.trim().toLowerCase();
+    if (!email) return;
+    idsByEmail.set(email, [...(idsByEmail.get(email) || []), item.uid]);
+  });
+  return rawUsers.map(item => ({
+    ...item,
+    linkedUids: idsByEmail.get(item.email.trim().toLowerCase()) || [item.uid]
+  }));
 };
 
 export const getAdminUserDetail = async (user: AdminUser): Promise<AdminUserDetail> => {
-  const [planSnap, roadmapSnap, activitySnap, feedbackSnap, assignmentSnap] = await Promise.all([
+  const linkedUids = Array.from(new Set(user.linkedUids?.length ? user.linkedUids : [user.uid]));
+  const [planSnap, roadmapSnap, activitySnaps, feedbackSnap, assignmentSnap] = await Promise.all([
     getDoc(doc(db, `users/${user.uid}/settings/plan`)),
     getDoc(doc(db, `users/${user.uid}/progress/roadmap`)),
-    getDocs(query(collection(db, `users/${user.uid}/activity`), orderBy('date', 'desc'), limit(100))),
+    Promise.all(linkedUids.map(uid => getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100))))),
     getDocs(query(collection(db, 'feedback'), where('recipientId', '==', user.uid), limit(100))),
     getDocs(query(collection(db, `userAssignments/${user.uid}/items`), orderBy('createdAt', 'desc'), limit(RETENTION.assignmentsPerUser + 30)))
   ]);
-  const activities = activitySnap.docs.map(item => item.data() as ActivityLog);
+  const activityById = new Map<string, ActivityLog>();
+  activitySnaps.forEach(activitySnap => activitySnap.docs.forEach(item => {
+    const activity = item.data() as ActivityLog;
+    const key = `${activity.date}:${activity.type}:${activity.id || item.id}`;
+    if (!activityById.has(key)) activityById.set(key, activity);
+  }));
+  const activities = Array.from(activityById.values()).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 100);
   const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
   const assignmentExcess = assignmentSnap.docs.slice(RETENTION.assignmentsPerUser);
   if (assignmentExcess.length) quietly(Promise.all(assignmentExcess.map(item => deleteDoc(item.ref))));

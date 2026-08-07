@@ -488,8 +488,8 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   useEffect(() => {
     // The full user list needs complete metrics for ranking and filters.
     // Keep that heavier load out of the initial overview screen.
-    if (isAdmin && ['users', 'attention', 'comments'].includes(section) && users.length) void loadDetailsFor(users);
-  }, [isAdmin, section, users.length]);
+    if (isAdmin && ['overview', 'users', 'attention', 'comments'].includes(section) && users.length) void loadDetailsFor(users);
+  }, [isAdmin, section, users.length, detailRevision]);
   useEffect(() => {
     if (!isAdmin || !selected) return;
     // Keep the profile being viewed up to date. We intentionally do not watch
