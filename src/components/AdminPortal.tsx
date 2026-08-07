@@ -11,7 +11,7 @@ import {
   AdminAccessRecord, AdminUser, AdminUserDetail, deleteFeedback, deleteReply, getAdminAccess, getAdminUserDetail,
   createAdminAssignment, createAdminBroadcast, getAdminUsers, getReplies, grantAdminAccess, retakeAssignment, revokeAdminAccess, sendFeedback, sendReply, tasksForPlan,
   AdminAssignmentRecipientResult, AdminAssignmentSummary, AdminBroadcastSummary, getAssignmentRecipientResults, listAssignments, listBroadcasts, deleteAssignment, deleteBroadcast,
-  subscribeToAdminUserActivity
+  subscribeToAdminUserActivity, migrateLearningData
 } from '../../services/admin';
 
 type Period = 'week' | 'month' | 'all';
@@ -379,6 +379,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   const [historyRange, setHistoryRange] = useState<HistoryRange>('today');
   const [historyDate, setHistoryDate] = useState('');
   const [resultAssignment, setResultAssignment] = useState<AdminAssignmentSummary | null>(null);
+  const [migrationBusy, setMigrationBusy] = useState(false);
   const [assignmentResults, setAssignmentResults] = useState<AdminAssignmentRecipientResult[]>([]);
   const [assignmentResultsLoading, setAssignmentResultsLoading] = useState(false);
 
@@ -623,6 +624,22 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       await refreshAccess();
     } catch { setMessage('Akses admin belum dapat dicabut. Coba lagi.'); }
     finally { setAccessBusy(false); }
+  };
+  const migrateLegacyLearningData = async () => {
+    const sourceUid = 'Cb4MsGdrViei3RDnAzLBROFJBuD3';
+    const targetUid = 'bl4NDEMYt0f5qJ7FAd6jKMfBjeK2';
+    if (migrationBusy || !window.confirm('Salin activity dan progress dari Lovelya Trial ke akun Syarief? Data sumber tidak akan dihapus.')) return;
+    setMigrationBusy(true);
+    try {
+      const result = await migrateLearningData(sourceUid, targetUid);
+      setMessage(`Migrasi selesai: ${result.copied} dokumen disalin ke akun Syarief. Data sumber tetap aman.`);
+      setDetails(current => { const next = { ...current }; delete next[targetUid]; return next; });
+      setDetailRevision(value => value + 1);
+      await refresh({ resetDetails: true });
+    } catch (error) {
+      console.error(error);
+      setMessage('Migrasi belum berhasil. Pastikan Anda login sebagai admin dan rules Firebase terbaru sudah aktif.');
+    } finally { setMigrationBusy(false); }
   };
   const handleBulkSendComment = async () => {
     const text = bulkCommentText.trim();
@@ -995,7 +1012,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
               <Pager {...historyPager} />
             </section>}
           </>}
-          {section === 'access' && <section className="admin-card admin-table-card"><div className="admin-card-head"><div><span className="admin-eyebrow">Keamanan</span><h2>Kelola akses admin</h2><p>Hanya user yang sudah memiliki akun LovSpeak yang dapat diberikan akses admin.</p></div></div><div className="admin-access-form"><select className="feedback-select" value={accessUserId} onChange={event => setAccessUserId(event.target.value)}><option value="">Pilih user yang akan diberi akses</option>{users.filter(item => item.uid !== user.uid && !adminAccess.some(access => access.uid === item.uid)).map(item => <option key={item.uid} value={item.uid}>{item.name} · {item.email || 'tanpa email'}</option>)}</select><button className="feedback-send" disabled={accessBusy || !accessUserId} onClick={() => void handleGrantAdmin()}>{accessBusy ? 'Memproses…' : 'Berikan akses admin'}</button></div><div className="attention-list"><div className="access-row"><div className="attention-avatar">{MASTER_ADMIN_EMAIL.slice(0, 1).toUpperCase()}</div><div><b>Admin Utama</b><small>{MASTER_ADMIN_EMAIL} · tidak dapat dicabut</small></div><span className="admin-pill">Bawaan sistem</span></div>{accessPager.visible.map(access => <div className="access-row" key={access.uid}><AvatarBubble name={access.name || access.email} size={31} className="attention-avatar" /><div><b>{access.name || 'Admin'}</b><small>{access.email || 'Email tidak tersedia'} · ditambahkan {formatShortDate(access.createdAt)}</small></div><button className="delete-text ml-auto" disabled={accessBusy} onClick={() => void handleRevokeAdmin(access)}>Cabut akses</button></div>)}</div><Pager {...accessPager} /></section>}
+          {section === 'access' && <section className="admin-card admin-table-card"><div className="admin-card-head"><div><span className="admin-eyebrow">Keamanan</span><h2>Kelola akses admin</h2><p>Hanya user yang sudah memiliki akun LovSpeak yang dapat diberikan akses admin.</p></div></div><div className="admin-access-form"><select className="feedback-select" value={accessUserId} onChange={event => setAccessUserId(event.target.value)}><option value="">Pilih user yang akan diberi akses</option>{users.filter(item => item.uid !== user.uid && !adminAccess.some(access => access.uid === item.uid)).map(item => <option key={item.uid} value={item.uid}>{item.name} · {item.email || 'tanpa email'}</option>)}</select><button className="feedback-send" disabled={accessBusy || !accessUserId} onClick={() => void handleGrantAdmin()}>{accessBusy ? 'Memproses…' : 'Berikan akses admin'}</button></div><div className="attention-list"><div className="access-row"><div className="attention-avatar">{MASTER_ADMIN_EMAIL.slice(0, 1).toUpperCase()}</div><div><b>Admin Utama</b><small>{MASTER_ADMIN_EMAIL} · tidak dapat dicabut</small></div><span className="admin-pill">Bawaan sistem</span></div>{accessPager.visible.map(access => <div className="access-row" key={access.uid}><AvatarBubble name={access.name || access.email} size={31} className="attention-avatar" /><div><b>{access.name || 'Admin'}</b><small>{access.email || 'Email tidak tersedia'} · ditambahkan {formatShortDate(access.createdAt)}</small></div><button className="delete-text ml-auto" disabled={accessBusy} onClick={() => void handleRevokeAdmin(access)}>Cabut akses</button></div>)}</div><Pager {...accessPager} /><div className="admin-card" style={{ marginTop: 16, border: '1px dashed var(--line)', boxShadow: 'none' }}><span className="admin-eyebrow">Pemulihan data</span><h3 style={{ margin: '4px 0', fontSize: 15 }}>Salin activity & progress ke akun Syarief</h3><p style={{ margin: '6px 0 12px', color: 'var(--muted)', fontSize: 11, lineHeight: 1.5 }}>Menyalin data dari UID Lovelya Trial ke UID Syarief dalam batch. Data sumber tidak dihapus.</p><button className="feedback-send" disabled={migrationBusy} onClick={() => void migrateLegacyLearningData()}>{migrationBusy ? 'Menyalin data…' : 'Mulai pemulihan data'}</button></div></section>}
         </>}
       </main>
     </div>

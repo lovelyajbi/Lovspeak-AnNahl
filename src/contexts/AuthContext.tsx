@@ -29,6 +29,22 @@ interface AuthContextType {
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
+// A browser can switch Google accounts without emitting a signed-out state
+// first. Keep the local cache tied to the Firebase UID so one learner's
+// unsynced activity/progress can never be merged into another learner.
+const LOCAL_SESSION_UID_KEY = 'lovspeak_session_uid';
+const clearLearnerSessionCache = () => {
+  clearAllLocalData();
+  [
+    'lovspeak_state_reading',
+    'lovspeak_state_listening',
+    'lovspeak_state_vocab',
+    'lovspeak_state_games',
+    'lovspeak_state_diary',
+    'lovelya_recent_assessment_packs',
+  ].forEach((key) => localStorage.removeItem(key));
+};
+
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
@@ -66,6 +82,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       setHasApiKey(getGeminiApiKeys().length > 0);
       
       if (firebaseUser) {
+        const previousUid = localStorage.getItem(LOCAL_SESSION_UID_KEY);
+        // If the marker is missing (for example after an older app version),
+        // reset once before the first cloud sync as well. Firestore then
+        // repopulates the cache from this UID only.
+        if (previousUid !== firebaseUser.uid) {
+          clearLearnerSessionCache();
+        }
+        localStorage.setItem(LOCAL_SESSION_UID_KEY, firebaseUser.uid);
         // Keep the admin's normal LovSpeak entry point, but do not block a
         // trusted admin account behind the student activation screen.
         // Awaited (not fire-and-forget): granted admins need a Firestore round
@@ -145,6 +169,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         }).catch(console.error);
 
       } else {
+        localStorage.removeItem(LOCAL_SESSION_UID_KEY);
         setIsAdmin(false);
         setIsActive(false);
         setHasApiKey(false);
@@ -188,7 +213,8 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signout = async () => {
     try {
       await logout();
-      clearAllLocalData();
+      clearLearnerSessionCache();
+      localStorage.removeItem(LOCAL_SESSION_UID_KEY);
     } catch (e) {
       console.error("Signout error:", e);
     }

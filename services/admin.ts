@@ -199,6 +199,54 @@ export const subscribeToAdminUserActivity = (uid: string, onChange: () => void) 
     (error) => console.error(`Unable to watch activity for ${uid}:`, error)
   );
 
+export interface LearningDataMigrationResult {
+  copied: number;
+  collections: Record<string, number>;
+}
+
+/**
+ * Copies learner data between two Firebase UIDs in batches. This is an
+ * explicit, admin-only recovery operation: identity/access documents are not
+ * touched and the source remains intact until the admin verifies the result.
+ */
+export const migrateLearningData = async (sourceUid: string, targetUid: string): Promise<LearningDataMigrationResult> => {
+  if (!sourceUid || !targetUid || sourceUid === targetUid) throw new Error('UID sumber dan tujuan tidak valid.');
+  const sources = [
+    { label: 'activity', path: `users/${sourceUid}/activity`, targetPath: `users/${targetUid}/activity` },
+    { label: 'progress', path: `users/${sourceUid}/progress`, targetPath: `users/${targetUid}/progress` },
+    { label: 'reading_progress', path: `users/${sourceUid}/reading_progress`, targetPath: `users/${targetUid}/reading_progress` },
+    { label: 'settings/plan', path: `users/${sourceUid}/settings/plan`, targetPath: `users/${targetUid}/settings/plan`, single: true }
+  ];
+  const collections: Record<string, number> = {};
+  let copied = 0;
+  let batch = writeBatch(db);
+  let batchSize = 0;
+  const commit = async () => {
+    if (!batchSize) return;
+    await batch.commit();
+    batch = writeBatch(db);
+    batchSize = 0;
+  };
+  for (const source of sources) {
+    const sourceDocs = source.single
+      ? [await getDoc(doc(db, source.path))]
+      : (await getDocs(collection(db, source.path))).docs;
+    let count = 0;
+    for (const sourceDoc of sourceDocs) {
+      if (!sourceDoc.exists()) continue;
+      const destination = source.single ? doc(db, source.targetPath) : doc(db, `${source.targetPath}/${sourceDoc.id}`);
+      batch.set(destination, sourceDoc.data(), { merge: true });
+      batchSize += 1;
+      count += 1;
+      copied += 1;
+      if (batchSize >= 450) await commit();
+    }
+    collections[source.label] = count;
+  }
+  await commit();
+  return { copied, collections };
+};
+
 /**
  * Rolling retention: keeps every collection small so reads stay cheap and the UI light.
  * Trims run fire-and-forget AFTER the main action succeeds — they never block the UI
