@@ -250,6 +250,8 @@ const TasksModule: React.FC<TasksModuleProps> = ({ user, assignments, onStartAss
                       <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] font-bold text-gray-400">
                         <span><i className="far fa-calendar-plus mr-1" />Ditugaskan {formatDate(assignment.createdAt)}</span>
                         {due && <span className={due.danger ? 'text-rose-500' : ''}><i className="far fa-clock mr-1" />{due.text}</span>}
+                        {assignment.target.minScore !== undefined && <span className="text-lovelya-600 dark:text-lovelya-300"><i className="fas fa-bullseye mr-1" />Target lulus {assignment.target.minScore}%</span>}
+                        {assignment.target.targetDurationSeconds !== undefined && <span className="text-lovelya-600 dark:text-lovelya-300"><i className="fas fa-stopwatch mr-1" />Target {Math.ceil(assignment.target.targetDurationSeconds / 60)} menit</span>}
                         {typeof assignment.bestScore === 'number' && <span className="text-emerald-600"><i className="fas fa-star mr-1" />Nilai {assignment.bestScore}</span>}
                         {assignment.attempts > 0 && <span><i className="fas fa-repeat mr-1" />{assignment.attempts}× dicoba</span>}
                       </div>

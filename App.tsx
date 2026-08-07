@@ -33,11 +33,11 @@ const TasksModule = lazy(() => import('./components/TasksModule'));
 import SplashScreen from './components/SplashScreen';
 import InstallPrompt from './src/components/InstallPrompt';
 import { ApiLimitModal } from './components/ApiLimitModal';
-import { getUserAssignments, getUserNotifications, markNotificationRead, markUserAssignmentRead } from './services/admin';
+import { DEFAULT_ASSIGNMENT_MIN_SCORE, getUserAssignments, getUserNotifications, markNotificationRead, markUserAssignmentRead } from './services/admin';
 import ErrorBoundary from './src/components/ErrorBoundary';
 
 // App version — must match APP_VERSION in sw.js. Bump on every deploy.
-const APP_VERSION = '2.1.2';
+const APP_VERSION = '2.1.3';
 
 // Bump a module's release value whenever it receives a meaningful content or
 // experience update. Each badge is dismissed independently after that module
@@ -477,7 +477,7 @@ const App: React.FC = () => {
       stepId: target.stepId,
       targetLessonId: target.targetLessonId,
       shadowingTaskId: target.shadowingTaskId,
-      minScore: target.minScore,
+      minScore: target.minScore ?? (['grammar', 'reading', 'listening', 'shadowing'].includes(target.kind) ? DEFAULT_ASSIGNMENT_MIN_SCORE : undefined),
       goalMinutes: target.targetDurationSeconds ? Math.ceil(target.targetDurationSeconds / 60) : undefined,
       promptContext: target.promptContext || target.topic || target.theme
     });
@@ -610,12 +610,15 @@ const App: React.FC = () => {
     }
 
     setToast({
-      message: isAssignment ? 'Tugas admin selesai dan status diperbarui.' : xpGained > 0 ? `Task Completed! +${xpGained} XP` : 'Task Updated!',
+      message: isAssignment ? 'Tugas admin berhasil diselesaikan.' : xpGained > 0 ? `Task Completed! +${xpGained} XP` : 'Task Updated!',
       type: 'success'
     });
     setActiveTaskId(null);
     if (isAssignment) {
       void refreshAssignedTasks();
+      // A second refresh picks up the confirmed Firestore write as well. The
+      // immediate refresh already sees the local activity record.
+      window.setTimeout(() => void refreshAssignedTasks(), 900);
       // A roadmap-pack assignment contains several missions. Return to its
       // open pack after each completed step; other assignment types return to
       // the user task list immediately.
@@ -664,8 +667,15 @@ const App: React.FC = () => {
       initialContext: moduleContext
     };
 
+    const isAdminAssignment = moduleContext?.type === 'assignment' && moduleContext.assignmentKind !== 'roadmap_pack';
+    const scoreTarget = moduleContext?.minScore;
+    const durationTarget = moduleContext?.goalMinutes;
     return (
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 w-full transition-all duration-300">
+        {isAdminAssignment && <div className="mb-4 flex items-start gap-3 rounded-2xl border border-lovelya-200 bg-lovelya-50 px-4 py-3 text-lovelya-900 shadow-sm dark:border-lovelya-800 dark:bg-lovelya-900/20 dark:text-lovelya-100">
+          <i className="fas fa-clipboard-check mt-0.5 text-lovelya-600 dark:text-lovelya-300" />
+          <div><b className="block text-xs md:text-sm">Tugas dari admin</b><p className="mt-0.5 text-[11px] leading-relaxed md:text-xs">{scoreTarget !== undefined ? <>Target nilai minimal <b>{scoreTarget}%</b>. Setelah nilai tercapai, tekan <b>Selesaikan tugas admin</b>.</> : durationTarget ? <>Target speaking minimal <b>{durationTarget} menit</b>. Hentikan sesi setelah target tercapai untuk menyelesaikan tugas.</> : <>Selesaikan aktivitas ini sesuai instruksi admin.</>}</p></div>
+        </div>}
         {(() => {
           switch (view) {
             case AppView.READING: return <ReadingModule {...commonProps} />;

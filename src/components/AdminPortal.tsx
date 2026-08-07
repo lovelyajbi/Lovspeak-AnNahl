@@ -19,6 +19,7 @@ type ThemeMode = 'light' | 'dark';
 type DetailTab = 'progress' | 'tasks' | 'comments';
 type UserFilter = 'all' | 'attention' | 'online' | 'low-score' | 'inactive' | 'daily-incomplete';
 type UserSort = 'score-desc' | 'score-asc' | 'progress-desc' | 'progress-asc' | 'recent';
+type HistoryRange = 'today' | 'week' | 'month' | 'date' | 'all';
 
 type UserMetric = {
   user: AdminUser;
@@ -59,6 +60,20 @@ const formatDuration = (seconds = 0) => {
 };
 const formatShortDate = (date?: string) => date ? new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short' }).format(new Date(date)) : '—';
 const formatLastSeen = (value?: number | null) => value ? new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(value)) : 'Belum tercatat';
+const localDateKey = (value: Date) => `${value.getFullYear()}-${String(value.getMonth() + 1).padStart(2, '0')}-${String(value.getDate()).padStart(2, '0')}`;
+const matchesHistoryRange = (value: string, range: HistoryRange, selectedDate: string) => {
+  if (!value || range === 'all') return true;
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return false;
+  const now = new Date();
+  if (range === 'today') return localDateKey(date) === localDateKey(now);
+  if (range === 'date') return Boolean(selectedDate) && localDateKey(date) === selectedDate;
+  if (range === 'month') return date.getFullYear() === now.getFullYear() && date.getMonth() === now.getMonth();
+  const weekStart = new Date(now);
+  weekStart.setHours(0, 0, 0, 0);
+  weekStart.setDate(weekStart.getDate() - 6);
+  return date >= weekStart && date <= now;
+};
 const isSpeaking = (activity: ActivityLog) => activity.type === AppView.LIVE || activity.type === AppView.SHADOWING;
 const isScored = (activity: ActivityLog) => SCORABLE.has(activity.type);
 const withinPeriod = (date: string, period: Period) => period === 'all' || Date.now() - new Date(date).getTime() <= (period === 'week' ? 7 : 30) * DAY;
@@ -177,7 +192,7 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
   const [theme, setTheme] = useState('');
   const [shadowThemeId, setShadowThemeId] = useState('');
   const [shadowingTaskId, setShadowingTaskId] = useState('');
-  const [minScore, setMinScore] = useState('');
+  const [minScore, setMinScore] = useState('75');
   const [duration, setDuration] = useState('');
   const [dueAt, setDueAt] = useState('');
   const [broadcastMessage, setBroadcastMessage] = useState('');
@@ -217,6 +232,8 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
       if (['reading', 'listening'].includes(kind) && contentMode === 'library' && !selectedContentItem) { onMessage('Pilih level, tema, lalu judul materi terlebih dahulu.'); return; }
       if (['reading', 'listening'].includes(kind) && contentMode === 'custom' && !theme.trim()) { onMessage('Isi tema custom terlebih dahulu.'); return; }
       if (kind === 'speaking' && !theme.trim()) { onMessage('Isi topik speaking terlebih dahulu.'); return; }
+      if (['grammar', 'reading', 'listening', 'shadowing'].includes(kind) && (!minScore || Number(minScore) < 0 || Number(minScore) > 100)) { onMessage('Tentukan nilai minimum antara 0–100 untuk tugas ini.'); return; }
+      if (kind === 'speaking' && (!duration || Number(duration) <= 0)) { onMessage('Tentukan target durasi speaking dalam menit.'); return; }
       const targetPreview = kind === 'roadmap_pack' ? targetPack?.title : targetStep?.title || selectedContentItem?.title || selectedShadowTask?.title || theme || '—';
       const duePreview = dueAt ? new Date(dueAt).toLocaleString('id-ID', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' }) : 'tanpa tenggat';
       const preview = `Kirim TUGAS ke ${recipientLabel}?\n\nJudul: ${title.trim() || '(otomatis)'}\nJenis: ${kindLabel[kind]}\nTarget: ${targetPreview}\nTenggat: ${duePreview}${minScore ? `\nNilai minimum: ${minScore}%` : ''}${duration ? `\nTarget durasi: ${duration} menit` : ''}\n\nYakin kirim?`;
@@ -254,7 +271,7 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
           requireQuiz: ['grammar', 'listening'].includes(kind)
         };
       await createAdminAssignment({ title: title || `Tugas ${target.packTitle || target.title || target.kind}`, description, target, dueAt: dueAt ? new Date(dueAt).toISOString() : null, createdBy: adminUid, recipientMode, recipientIds: ids });
-      onMessage(`Tugas berhasil dibagikan ke ${ids.length} user.`); setTitle(''); setDescription(''); setTargetKey(''); setTheme(''); setRoadmapLevel(''); setGrammarLevel(''); setContentLevel(''); setContentThemeId(''); setContentItemId(''); setShadowThemeId(''); setShadowingTaskId(''); setMinScore(''); setDuration(''); setDueAt('');
+      onMessage(`Tugas berhasil dibagikan ke ${ids.length} user.`); setTitle(''); setDescription(''); setTargetKey(''); setTheme(''); setRoadmapLevel(''); setGrammarLevel(''); setContentLevel(''); setContentThemeId(''); setContentItemId(''); setShadowThemeId(''); setShadowingTaskId(''); setMinScore(['grammar', 'reading', 'listening', 'shadowing'].includes(kind) ? '75' : ''); setDuration(''); setDueAt('');
     } catch (error) { console.error('Admin assignment write failed:', error); onMessage(assignmentWriteError(error)); }
     finally { setSending(false); }
   };
@@ -268,7 +285,7 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
       </>}
       <div className="assignment-grid">
         <input className="feedback-select" value={title} onChange={event => setTitle(event.target.value)} placeholder={mode === 'broadcast' ? 'Judul pesan' : 'Judul tugas (opsional)'} />
-        {mode === 'assignment' && <select className="feedback-select" value={kind} onChange={event => { setKind(event.target.value as AssignmentKind); setTargetKey(''); setRoadmapLevel(''); setGrammarLevel(''); setContentMode('library'); setContentLevel(''); setContentThemeId(''); setContentItemId(''); setTheme(''); setShadowThemeId(''); setShadowingTaskId(''); }}><option value="roadmap_pack">Roadmap · satu pack</option><option value="grammar">Grammar · materi + kuis</option><option value="reading">Reading</option><option value="listening">Listening + kuis</option><option value="speaking">Speaking · topik + durasi</option><option value="shadowing">Shadowing · materi + nilai minimum</option></select>}
+        {mode === 'assignment' && <select className="feedback-select" value={kind} onChange={event => { const nextKind = event.target.value as AssignmentKind; setKind(nextKind); setTargetKey(''); setRoadmapLevel(''); setGrammarLevel(''); setContentMode('library'); setContentLevel(''); setContentThemeId(''); setContentItemId(''); setTheme(''); setShadowThemeId(''); setShadowingTaskId(''); setMinScore(['grammar', 'reading', 'listening', 'shadowing'].includes(nextKind) ? '75' : ''); setDuration(''); }}><option value="roadmap_pack">Roadmap · satu pack</option><option value="grammar">Grammar · materi + kuis</option><option value="reading">Reading</option><option value="listening">Listening + kuis</option><option value="speaking">Speaking · topik + durasi</option><option value="shadowing">Shadowing · materi + nilai minimum</option></select>}
       </div>
       {mode === 'broadcast' ? <textarea className="feedback-textarea" value={broadcastMessage} onChange={event => setBroadcastMessage(event.target.value)} placeholder="Tulis pesan untuk semua penerima…" /> : <>
         {kind === 'roadmap_pack' && <div className="assignment-grid"><select className="feedback-select" value={roadmapLevel} onChange={event => { setRoadmapLevel(event.target.value); setTargetKey(''); }}><option value="">Semua level roadmap</option>{['A1', 'A2', 'B1', 'B2', 'C1', 'C2'].map(level => <option key={level} value={level}>{level}</option>)}</select><select className="feedback-select" value={targetKey} onChange={event => setTargetKey(event.target.value)}><option value="">Pilih pack roadmap</option>{visiblePacks.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select></div>}
@@ -276,11 +293,52 @@ const AdminAssignmentsPanel: React.FC<{ users: AdminUser[]; adminUid: string; on
         {['reading', 'listening'].includes(kind) && <div className="assignment-target-picker"><div className="assignment-picker-head"><b>Materi {kind === 'reading' ? 'Reading' : 'Listening'}</b><div className="feedback-controls assignment-choice"><button className={contentMode === 'library' ? 'active' : ''} onClick={() => setContentMode('library')}>Pilih dari koleksi</button><button className={contentMode === 'custom' ? 'active' : ''} onClick={() => setContentMode('custom')}>Tema custom</button></div></div>{contentMode === 'library' ? <div className="assignment-grid assignment-grid-three"><select className="feedback-select" value={contentLevel} onChange={event => { setContentLevel(event.target.value); setContentThemeId(''); setContentItemId(''); }}><option value="">Level</option>{contentLevels.map(level => <option key={level} value={level}>{level}</option>)}</select><select className="feedback-select" value={contentThemeId} onChange={event => { setContentThemeId(event.target.value); setContentItemId(''); }} disabled={!contentLevel}><option value="">{contentLevel ? 'Tema' : 'Pilih level dahulu'}</option>{contentThemeIds.map(themeId => <option key={themeId} value={themeId}>{themeLabel(themeId)}</option>)}</select><select className="feedback-select" value={contentItemId} onChange={event => setContentItemId(event.target.value)} disabled={!contentThemeId}><option value="">{contentThemeId ? 'Judul materi' : 'Pilih tema dahulu'}</option>{contentItems.filter(item => item.level === contentLevel && item.themeId === contentThemeId).map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select></div> : <input className="feedback-select" value={theme} onChange={event => setTheme(event.target.value)} placeholder="Tema custom yang akan dibuat oleh modul" />}</div>}
         {kind === 'shadowing' && <div className="assignment-grid"><select className="feedback-select" value={shadowThemeId} onChange={event => { setShadowThemeId(event.target.value); setShadowingTaskId(''); }}><option value="">Pilih tema Shadowing</option>{SHADOWING_DATA.map(themeItem => <option key={themeItem.id} value={themeItem.id}>{themeItem.title} · {themeItem.subCategory || themeItem.category}</option>)}</select><select className="feedback-select" value={shadowingTaskId} onChange={event => setShadowingTaskId(event.target.value)} disabled={!selectedShadowTheme}><option value="">{selectedShadowTheme ? 'Pilih judul tugas spesifik' : 'Pilih tema terlebih dahulu'}</option>{selectedShadowTheme?.tasks.map(task => <option key={task.id} value={task.id}>{task.title} · {task.difficulty}</option>)}</select></div>}
         {kind === 'speaking' && <input className="feedback-select" value={theme} onChange={event => setTheme(event.target.value)} placeholder="Topik speaking, contoh: memperkenalkan diri" />}
-        <div className="assignment-grid">{['grammar', 'reading', 'listening', 'shadowing'].includes(kind) && <input className="feedback-select" type="number" min="0" max="100" value={minScore} onChange={event => setMinScore(event.target.value)} placeholder="Nilai minimum (opsional)" />}{kind === 'speaking' && <input className="feedback-select" type="number" min="1" value={duration} onChange={event => setDuration(event.target.value)} placeholder="Target durasi menit (opsional)" />}<input className="feedback-select" type="datetime-local" value={dueAt} onChange={event => setDueAt(event.target.value)} /></div><textarea className="feedback-textarea" value={description} onChange={event => setDescription(event.target.value)} placeholder="Instruksi singkat untuk user (opsional)" />
+        <div className="assignment-grid">{['grammar', 'reading', 'listening', 'shadowing'].includes(kind) && <input className="feedback-select" type="number" min="0" max="100" value={minScore} onChange={event => setMinScore(event.target.value)} placeholder="Nilai minimum untuk lulus" />}{kind === 'speaking' && <input className="feedback-select" type="number" min="1" value={duration} onChange={event => setDuration(event.target.value)} placeholder="Target durasi menit" />}<input className="feedback-select" type="datetime-local" value={dueAt} onChange={event => setDueAt(event.target.value)} /></div><textarea className="feedback-textarea" value={description} onChange={event => setDescription(event.target.value)} placeholder="Instruksi singkat untuk user (opsional)" />
       </>}
       <button className="feedback-send" disabled={sending} onClick={() => void submit()}>{sending ? 'Mengirim…' : mode === 'broadcast' ? 'Kirim broadcast' : 'Bagikan tugas'}</button>
     </div>
   </section>;
+};
+
+const AssignmentResultsModal: React.FC<{
+  assignment: AdminAssignmentSummary;
+  users: AdminUser[];
+  results: AdminAssignmentRecipientResult[];
+  loading: boolean;
+  onClose: () => void;
+}> = ({ assignment, users, results, loading, onClose }) => {
+  const counts = useMemo(() => results.reduce((current, result) => {
+    const status = assignmentResultStatus(result.assignment, result.error);
+    if (status.label === 'Lulus') current.passed += 1;
+    else if (status.label === 'Belum dikerjakan') current.notStarted += 1;
+    else if (result.assignment) current.inProgress += 1;
+    else current.unavailable += 1;
+    return current;
+  }, { passed: 0, inProgress: 0, notStarted: 0, unavailable: 0 }), [results]);
+  const pager = usePaged(results, 12);
+
+  return <div className="assignment-modal-overlay" onMouseDown={onClose} role="presentation">
+    <section className="assignment-modal" onMouseDown={event => event.stopPropagation()} role="dialog" aria-modal="true" aria-label={`Hasil tugas ${assignment.title}`}>
+      <header className="assignment-modal-head">
+        <div><span className="admin-eyebrow">Hasil tugas</span><h2>{assignment.title}</h2><p>{assignment.target.title || assignment.target.packTitle || assignment.target.topic || assignment.target.theme || assignment.target.kind} · {assignment.recipientCount} penerima · dikirim {formatShortDate(assignment.createdAt)}</p></div>
+        <button type="button" className="detail-close" onClick={onClose} title="Tutup hasil"><i className="fas fa-xmark" /></button>
+      </header>
+      <div className="assignment-modal-targets">
+        {assignment.target.minScore !== undefined && <span className="admin-pill"><i className="fas fa-bullseye mr-1" />Target nilai {assignment.target.minScore}%</span>}
+        {assignment.target.targetDurationSeconds && <span className="admin-pill"><i className="fas fa-stopwatch mr-1" />Target {formatDuration(assignment.target.targetDurationSeconds)}</span>}
+        {assignment.dueAt && <span className="admin-pill"><i className="far fa-calendar mr-1" />Tenggat {formatShortDate(assignment.dueAt)}</span>}
+      </div>
+      {loading ? <div className="assignment-results-loading"><i className="fas fa-circle-notch fa-spin" /> Memuat hasil {assignment.recipientCount} penerima…</div> : !results.length ? <div className="assignment-results-loading">Belum ada hasil yang dapat ditampilkan.</div> : <>
+        <div className="assignment-modal-summary"><span><b>{counts.passed}</b>Lulus</span><span><b>{counts.inProgress}</b>Belum mencapai target</span><span><b>{counts.notStarted}</b>Belum dikerjakan</span>{counts.unavailable > 0 && <span><b>{counts.unavailable}</b>Data tidak tersedia</span>}</div>
+        <div className="assignment-result-table-wrap"><table className="assignment-result-table"><thead><tr><th>User</th><th>Hasil terbaru</th><th>Status</th></tr></thead><tbody>{pager.visible.map(result => {
+          const recipient = users.find(userItem => userItem.uid === result.uid);
+          const status = assignmentResultStatus(result.assignment, result.error);
+          return <tr key={result.uid}><td><div className="user-cell"><AvatarBubble name={recipient?.name || 'User'} size={30} /><div><b>{recipient?.name || 'User tidak ditemukan'}</b><span>{recipient?.email || result.uid}</span></div></div></td><td>{status.detail}</td><td><span className={`assignment-result-status ${status.tone}`}>{status.label}</span></td></tr>;
+        })}</tbody></table></div>
+        <Pager {...pager} />
+      </>}
+    </section>
+  </div>;
 };
 
 const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Promise<void> }> = ({ user, isAdmin, onLogout }) => {
@@ -317,7 +375,9 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   const [assignmentHistory, setAssignmentHistory] = useState<AdminAssignmentSummary[]>([]);
   const [broadcastHistory, setBroadcastHistory] = useState<AdminBroadcastSummary[]>([]);
   const [historyLoading, setHistoryLoading] = useState(false);
-  const [expandedAssignmentId, setExpandedAssignmentId] = useState<string | null>(null);
+  const [historyRange, setHistoryRange] = useState<HistoryRange>('today');
+  const [historyDate, setHistoryDate] = useState('');
+  const [resultAssignment, setResultAssignment] = useState<AdminAssignmentSummary | null>(null);
   const [assignmentResults, setAssignmentResults] = useState<AdminAssignmentRecipientResult[]>([]);
   const [assignmentResultsLoading, setAssignmentResultsLoading] = useState(false);
 
@@ -340,15 +400,10 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     catch { setAssignmentHistory(previous); setMessage('Tugas tidak dapat dihapus. Coba lagi.'); }
   };
   const openAssignmentResults = async (item: AdminAssignmentSummary) => {
-    if (expandedAssignmentId === item.id) {
-      setExpandedAssignmentId(null);
-      setAssignmentResults([]);
-      return;
-    }
     const recipientIds = item.recipientIds?.length
       ? item.recipientIds
       : item.recipientMode === 'all' ? users.map(userItem => userItem.uid) : [];
-    setExpandedAssignmentId(item.id);
+    setResultAssignment(item);
     setAssignmentResults([]);
     if (!recipientIds.length) {
       setMessage('Daftar penerima tugas lama ini tidak tersedia.');
@@ -361,6 +416,11 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       console.error(error);
       setMessage('Hasil tugas tidak dapat dimuat. Coba lagi.');
     } finally { setAssignmentResultsLoading(false); }
+  };
+  const closeAssignmentResults = () => {
+    setResultAssignment(null);
+    setAssignmentResults([]);
+    setAssignmentResultsLoading(false);
   };
   const handleDeleteBroadcast = async (item: AdminBroadcastSummary) => {
     if (!window.confirm(`Hapus broadcast "${item.title}"? Notifikasi yang sudah terkirim tetap ada di sisi user.`)) return;
@@ -634,27 +694,19 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       setMessage('Tugas dikembalikan ke user untuk retake.');
     } catch { setMessage('Retake belum dapat disimpan.'); }
   };
-  const assignmentResultCounts = useMemo(() => assignmentResults.reduce((counts, result) => {
-    const status = assignmentResultStatus(result.assignment, result.error);
-    if (status.label === 'Lulus') counts.passed += 1;
-    else if (status.label === 'Belum dikerjakan') counts.notStarted += 1;
-    else if (result.assignment) counts.inProgress += 1;
-    return counts;
-  }, { passed: 0, inProgress: 0, notStarted: 0 }), [assignmentResults]);
-
   if (!isAdmin) return <div className="min-h-screen grid place-items-center p-6 bg-slate-50 text-slate-900"><div className="max-w-sm text-center"><div className="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 grid place-items-center mx-auto"><i className="fas fa-lock" /></div><h1 className="text-xl font-black mt-5">Akses admin tidak tersedia</h1><p className="text-sm text-slate-500 mt-2">Akun ini belum memiliki hak akses admin LovSpeak.</p><button onClick={onLogout} className="mt-5 px-4 py-3 rounded-xl bg-slate-900 text-white font-bold">Keluar</button></div></div>;
 
   const commentUsers = useMemo(() => metrics.filter(item => (item.detail?.feedback || []).length && `${item.user.name} ${item.user.email}`.toLowerCase().includes(query.toLowerCase())).sort((a, b) => (b.detail?.feedback.length || 0) - (a.detail?.feedback.length || 0)), [metrics, query]);
   const historyItems = useMemo(() => [
     ...assignmentHistory.map(item => ({ type: 'assignment' as const, assignment: item, broadcast: null as AdminBroadcastSummary | null, createdAt: item.createdAt || '' })),
     ...broadcastHistory.map(item => ({ type: 'broadcast' as const, assignment: null as AdminAssignmentSummary | null, broadcast: item, createdAt: item.createdAt || '' }))
-  ].sort((a, b) => b.createdAt.localeCompare(a.createdAt)), [assignmentHistory, broadcastHistory]);
+  ].filter(item => matchesHistoryRange(item.createdAt, historyRange, historyDate)).sort((a, b) => b.createdAt.localeCompare(a.createdAt)), [assignmentHistory, broadcastHistory, historyRange, historyDate]);
   const attentionPager = usePaged(attention);
   const commentsPager = usePaged(commentUsers);
   const historyPager = usePaged(historyItems);
   const accessPager = usePaged(adminAccess);
   const resetPagers = [attentionPager.setPage, commentsPager.setPage, historyPager.setPage, accessPager.setPage];
-  useEffect(() => { resetPagers.forEach(reset => reset(1)); }, [section]);
+  useEffect(() => { resetPagers.forEach(reset => reset(1)); }, [section, historyRange, historyDate]);
 
   const navItems: { id: Section; icon: string; label: string; count?: number }[] = [
     { id: 'overview', icon: 'fa-grid-2', label: 'Overview' }, { id: 'users', icon: 'fa-users', label: 'Semua User', count: users.length },
@@ -752,6 +804,13 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
 .assignment-history-detail{color:var(--accent-strong);font-size:10px;font-weight:800;white-space:nowrap}
 .assignment-history-detail i{margin-left:5px;font-size:9px}
 .assignment-history-row .delete-text{margin:0 0 0 8px;align-self:center}
+.assignment-modal-overlay{position:fixed;inset:0;z-index:90;display:grid;place-items:center;padding:22px;background:rgba(13,18,29,.48);backdrop-filter:blur(4px)}
+.assignment-modal{width:min(940px,100%);max-height:min(760px,calc(100vh - 44px));overflow:hidden;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-radius:22px;box-shadow:0 24px 70px rgba(0,0,0,.28);animation:assignmentModalIn .2s ease-out}
+@keyframes assignmentModalIn{from{transform:translateY(12px);opacity:0}to{transform:translateY(0);opacity:1}}
+.assignment-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:22px 24px 14px;border-bottom:1px solid var(--line)}.assignment-modal-head h2{margin:5px 0 0;font-size:20px;letter-spacing:-.025em}.assignment-modal-head p{margin:5px 0 0;color:var(--muted);font-size:11px;line-height:1.45}
+.assignment-modal-targets{display:flex;gap:7px;flex-wrap:wrap;padding:12px 24px 0}.assignment-modal-targets .admin-pill{background:var(--accent-soft);color:var(--accent-strong)}
+.assignment-modal-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;padding:14px 24px}.assignment-modal-summary span{padding:10px 12px;background:var(--subtle);border-radius:11px;color:var(--muted);font-size:10px;font-weight:700}.assignment-modal-summary b{display:block;font-size:19px;color:var(--text);margin-bottom:3px}
+.assignment-result-table-wrap{min-height:0;overflow:auto;margin:0 24px;border:1px solid var(--line);border-radius:12px}.assignment-result-table{width:100%;border-collapse:collapse;font-size:12px;min-width:620px}.assignment-result-table th{position:sticky;top:0;background:var(--subtle);padding:10px 13px;text-align:left;border-bottom:1px solid var(--line);font-size:9px;color:var(--muted);letter-spacing:.07em;text-transform:uppercase}.assignment-result-table td{padding:10px 13px;border-bottom:1px solid var(--line);color:var(--muted);vertical-align:middle}.assignment-result-table tr:last-child td{border-bottom:0}.assignment-result-table td:first-child{color:var(--text);min-width:210px}.assignment-result-table td:nth-child(2){line-height:1.45}.assignment-modal .admin-pagination{padding:12px 24px}
 .assignment-results-panel{margin:0 6px 12px;padding:13px;border:1px solid var(--line);background:var(--subtle);border-radius:12px}
 .assignment-results-head{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;flex-wrap:wrap}
 .assignment-results-head b{display:block;font-size:12px}.assignment-results-head small{display:block;font-size:10px;color:var(--muted);margin-top:3px}
@@ -841,6 +900,9 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   .assignment-history-detail{display:none}
   .assignment-results-panel{margin:0 2px 10px;padding:11px}
   .assignment-result-status{font-size:8px;padding:5px 6px}
+  .assignment-modal-overlay{padding:10px}
+  .assignment-modal{max-height:calc(100vh - 20px);border-radius:16px}
+  .assignment-modal-head{padding:17px 16px 12px}.assignment-modal-head h2{font-size:17px}.assignment-modal-targets{padding:10px 16px 0}.assignment-modal-summary{padding:12px 16px;gap:6px}.assignment-modal-summary span{padding:8px;font-size:9px}.assignment-modal-summary b{font-size:16px}.assignment-result-table-wrap{margin:0 16px}.assignment-modal .admin-pagination{padding:11px 16px}
   .admin-table{font-size:11px;min-width:640px}
   .admin-table th{padding:9px 14px;font-size:9px}
   .admin-table td{padding:11px 14px}
@@ -892,40 +954,21 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
             </div>
             {assignmentTab === 'compose' && <AdminAssignmentsPanel users={users} adminUid={user.uid} onMessage={setMessage} initialRecipientIds={prefilledRecipients} onConsumePrefill={() => setPrefilledRecipients(null)} />}
             {assignmentTab === 'history' && <section className="admin-card admin-table-card">
-              <div className="admin-table-toolbar"><div><span className="admin-eyebrow">Audit trail</span><h2 className="text-[16px] font-black mt-1 mb-0">Riwayat tugas & broadcast</h2><p className="text-[12px] text-[var(--muted)] mt-1 mb-0">Semua yang pernah dikirim, terbaru dulu. Hapus jika perlu bersihkan riwayat.</p></div><button className="admin-icon-button" onClick={() => void loadHistory()} title="Muat ulang riwayat"><i className={`fas fa-rotate-right ${historyLoading ? 'fa-spin' : ''}`} /></button></div>
+              <div className="admin-table-toolbar"><div><span className="admin-eyebrow">Audit trail</span><h2 className="text-[16px] font-black mt-1 mb-0">Riwayat tugas & broadcast</h2><p className="text-[12px] text-[var(--muted)] mt-1 mb-0">Pilih periode untuk menampilkan kiriman yang relevan. Riwayat ditampilkan per halaman.</p></div><div className="admin-table-controls"><select className="admin-filter" value={historyRange} onChange={event => setHistoryRange(event.target.value as HistoryRange)} aria-label="Periode riwayat"><option value="today">Hari ini</option><option value="week">7 hari terakhir</option><option value="month">Bulan ini</option><option value="date">Pilih tanggal</option><option value="all">Semua waktu</option></select>{historyRange === 'date' && <input className="admin-filter" type="date" value={historyDate} onChange={event => setHistoryDate(event.target.value)} aria-label="Tanggal riwayat" />}<button className="admin-icon-button" onClick={() => void loadHistory()} title="Muat ulang riwayat"><i className={`fas fa-rotate-right ${historyLoading ? 'fa-spin' : ''}`} /></button></div></div>
               <div className="attention-list">
-                {historyLoading && !assignmentHistory.length && !broadcastHistory.length && <div className="admin-empty"><i className="fas fa-circle-notch fa-spin mr-2" />Memuat riwayat…</div>}
-                {!historyLoading && !assignmentHistory.length && !broadcastHistory.length && <div className="admin-empty">Belum ada tugas atau broadcast yang pernah dikirim.</div>}
-                {historyPager.visible.map(entry => entry.type === 'assignment' && entry.assignment ? <React.Fragment key={`a-${entry.assignment.id}`}>
-                  <div className="attention-row assignment-history-row">
-                    <button type="button" className="assignment-history-open" onClick={() => void openAssignmentResults(entry.assignment!)} aria-expanded={expandedAssignmentId === entry.assignment.id}>
+                {historyLoading && !historyItems.length && <div className="admin-empty"><i className="fas fa-circle-notch fa-spin mr-2" />Memuat riwayat…</div>}
+                {!historyLoading && !historyItems.length && <div className="admin-empty">Tidak ada tugas atau broadcast pada periode yang dipilih.</div>}
+                {historyPager.visible.map(entry => entry.type === 'assignment' && entry.assignment ? <div key={`a-${entry.assignment.id}`} className="attention-row assignment-history-row">
+                    <button type="button" className="assignment-history-open" onClick={() => void openAssignmentResults(entry.assignment!)}>
                       <div className="attention-avatar" style={{ background: '#e0f2fe', color: '#0284c7' }}><i className="fas fa-clipboard-check" /></div>
                       <div style={{ flex: 1 }}>
                         <b>{entry.assignment.title}</b>
                         <small>Tugas · {entry.assignment.target?.kind || '—'} · {entry.assignment.recipientCount} penerima · {formatShortDate(entry.assignment.createdAt)}{entry.assignment.dueAt ? ` · tenggat ${formatShortDate(entry.assignment.dueAt)}` : ''}</small>
                       </div>
-                      <span className="assignment-history-detail">Hasil <i className={`fas fa-chevron-${expandedAssignmentId === entry.assignment.id ? 'up' : 'down'}`} /></span>
+                      <span className="assignment-history-detail">Lihat hasil <i className="fas fa-arrow-up-right-from-square" /></span>
                     </button>
                     <button className="delete-text" onClick={() => void handleDeleteAssignment(entry.assignment!)}>Hapus</button>
-                  </div>
-                  {expandedAssignmentId === entry.assignment.id && <div className="assignment-results-panel">
-                    <div className="assignment-results-head"><div><b>Hasil penerima</b><small>Status dihitung dari aktivitas, nilai, dan progress roadmap terbaru.</small></div>{entry.assignment.target.minScore !== undefined && <span className="admin-pill">Target nilai {entry.assignment.target.minScore}%</span>}{entry.assignment.target.targetDurationSeconds && <span className="admin-pill">Target {formatDuration(entry.assignment.target.targetDurationSeconds)}</span>}</div>
-                    {assignmentResultsLoading && <div className="assignment-results-loading"><i className="fas fa-circle-notch fa-spin" /> Memuat hasil {entry.assignment.recipientCount} penerima…</div>}
-                    {!assignmentResultsLoading && !assignmentResults.length && <div className="assignment-results-loading">Belum ada hasil yang dapat ditampilkan.</div>}
-                    {!assignmentResultsLoading && assignmentResults.length > 0 && <>
-                      <div className="assignment-result-summary"><span><b>{assignmentResultCounts.passed}</b> lulus</span><span><b>{assignmentResultCounts.inProgress}</b> belum mencapai target</span><span><b>{assignmentResultCounts.notStarted}</b> belum dikerjakan</span></div>
-                      <div className="assignment-result-list">{assignmentResults.map(result => {
-                        const recipient = users.find(userItem => userItem.uid === result.uid);
-                        const status = assignmentResultStatus(result.assignment, result.error);
-                        return <div className="assignment-result-row" key={result.uid}>
-                          <AvatarBubble name={recipient?.name || 'User'} size={30} />
-                          <div className="assignment-result-user"><b>{recipient?.name || 'User tidak ditemukan'}</b><small>{recipient?.email || result.uid}</small><small className="assignment-result-detail">{status.detail}</small></div>
-                          <span className={`assignment-result-status ${status.tone}`}>{status.label}</span>
-                        </div>;
-                      })}</div>
-                    </>}
-                  </div>}
-                </React.Fragment> : entry.broadcast ? <div key={`b-${entry.broadcast.id}`} className="attention-row" style={{ cursor: 'default' }}>
+                </div> : entry.broadcast ? <div key={`b-${entry.broadcast.id}`} className="attention-row" style={{ cursor: 'default' }}>
                   <div className="attention-avatar" style={{ background: '#fef3c7', color: '#b45309' }}><i className="fas fa-bullhorn" /></div>
                   <div style={{ flex: 1 }}>
                     <b>{entry.broadcast.title}</b>
@@ -977,6 +1020,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     </div>}
     <TourGuide steps={ADMIN_TOUR_STEPS} isOpen={showTour} onClose={() => setShowTour(false)} storageKey={TOUR_KEY_ADMIN} mobileBreakpoint={960} />
     {selected && selectedMetric && <DetailPanelV2 user={selected} metric={selectedMetric} detail={selectedDetail} activities={selectedActivities} scored={selectedScored} speaking={selectedSpeaking} period={period} tab={detailTab} setTab={setDetailTab} feedback={feedback} setFeedback={setFeedback} feedbackScope={feedbackScope} setFeedbackScope={setFeedbackScope} taskId={taskId} setTaskId={setTaskId} onClose={() => setSelected(null)} onSubmitFeedback={submitFeedback} submittingFeedback={submittingFeedback} submittingReplyId={submittingReplyId} replies={replies} replyDrafts={replyDrafts} setReplyDrafts={setReplyDrafts} onReply={submitReply} onDeleteFeedback={removeFeedback} onDeleteReply={removeReply} onRetakeAssignment={handleRetakeAssignment} onPrintReport={() => printUserReport(selected)} />}
+    {resultAssignment && <AssignmentResultsModal key={resultAssignment.id} assignment={resultAssignment} users={users} results={assignmentResults} loading={assignmentResultsLoading} onClose={closeAssignmentResults} />}
   </div>;
 };
 

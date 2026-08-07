@@ -149,7 +149,7 @@ const getCategoryStyles = (category: string) => {
 
 const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
   const completeButtonLabel = initialContext?.type === 'assignment'
-    ? 'Selesaikan tugas admin'
+    ? 'Target tercapai — selesaikan tugas admin'
     : initialContext?.type === 'unit'
       ? 'Complete & Back to Roadmap'
       : 'Complete Daily Task';

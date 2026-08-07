@@ -2,7 +2,7 @@
 const CACHE_NAME = 'lovspeak-cache-v13';
 
 // App version — must match APP_VERSION in App.tsx
-const APP_VERSION = '2.1.2';
+const APP_VERSION = '2.1.3';
 
 // Only cache truly static, rarely-changing assets
 const ASSETS_TO_CACHE = [

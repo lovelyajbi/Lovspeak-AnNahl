@@ -6,6 +6,7 @@ import { db } from '../src/firebase';
 import { realtimeDb } from '../src/firebase';
 import { get, ref } from 'firebase/database';
 import { ActivityLog, AdminAssignment, AdminFeedback, AdminReply, AppView, AssignmentTarget, DailyTask, LearningPlan, UserAssignment, UserNotification, UserProfile } from '../types';
+import { getActivityLogs } from './storage';
 
 export interface AdminUser {
   uid: string;
@@ -50,13 +51,20 @@ const assignmentActivityType: Partial<Record<AssignmentTarget['kind'], AppView>>
   shadowing: AppView.SHADOWING
 };
 
+// Every score-based admin task needs one visible, consistent passing target.
+// Older tasks without a saved target are normalized at read time as 75%.
+export const DEFAULT_ASSIGNMENT_MIN_SCORE = 75;
+const scoreBasedAssignmentKinds = new Set<AssignmentTarget['kind']>(['grammar', 'reading', 'listening', 'shadowing']);
+
 /**
  * Derives task status from the learner's actual activity/progress instead of
  * trusting a client-side "complete" flag. It works for both the learner inbox
  * and the admin dashboard, and keeps retake cut-offs intact.
  */
 const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[], roadmapUnits: string[]): UserAssignment => {
-  const target = assignment.target;
+  const target = scoreBasedAssignmentKinds.has(assignment.target.kind) && assignment.target.minScore === undefined
+    ? { ...assignment.target, minScore: DEFAULT_ASSIGNMENT_MIN_SCORE }
+    : assignment.target;
   const retakeAt = (assignment as UserAssignment & { retakeAt?: string }).retakeAt;
   const cutoffIso = retakeAt && retakeAt > assignment.createdAt ? retakeAt : assignment.createdAt;
   const cutoff = new Date(cutoffIso).getTime();
@@ -67,6 +75,7 @@ const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[
     const isComplete = total > 0 && completed === total;
     return {
       ...assignment,
+      target,
       status: isComplete ? 'completed' : assignment.status === 'completed' ? 'assigned' : assignment.status,
       completedAt: isComplete ? assignment.completedAt || new Date().toISOString() : undefined,
       progressLabel: total ? `${completed}/${total} misi dalam pack selesai` : 'Target pack belum tersedia'
@@ -103,6 +112,7 @@ const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[
 
   return {
     ...assignment,
+    target,
     status: isComplete ? 'completed' : assignment.status === 'completed' ? 'assigned' : assignment.status,
     completedAt: isComplete ? assignment.completedAt || completedActivity?.date || new Date().toISOString() : undefined,
     bestScore: target.kind === 'speaking' ? assignment.bestScore : bestScore,
@@ -305,7 +315,13 @@ export const getUserAssignments = async (uid: string): Promise<UserAssignment[]>
     getDoc(doc(db, `users/${uid}/progress/roadmap`))
   ]);
   const assignments = assignmentSnap.docs.map(item => ({ id: item.id, ...item.data() } as UserAssignment));
-  const activities = activitySnap.docs.map(item => item.data() as ActivityLog);
+  const remoteActivities = activitySnap.docs.map(item => item.data() as ActivityLog);
+  // logActivity writes to local storage before its Firestore request resolves.
+  // Merging it here prevents the learner from returning to Tasks and briefly
+  // seeing an already-passed assignment as unfinished.
+  const assignmentIds = new Set(assignments.map(item => item.id));
+  const pendingLocalActivities = getActivityLogs().filter(item => Boolean(item.metadata?.assignmentId) && assignmentIds.has(String(item.metadata?.assignmentId)));
+  const activities = Array.from(new Map([...remoteActivities, ...pendingLocalActivities].map(item => [item.id, item])).values());
   const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
   return evaluateAssignments(assignments, activities, roadmapUnits);
 };

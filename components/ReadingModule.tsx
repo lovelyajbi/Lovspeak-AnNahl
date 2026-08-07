@@ -27,7 +27,7 @@ const getMissionKey = (context?: ModuleContext | null) => {
 
 const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
   const completeButtonLabel = initialContext?.type === 'assignment'
-    ? 'Selesaikan tugas admin'
+    ? 'Target tercapai — selesaikan tugas admin'
     : initialContext?.type === 'unit'
       ? 'Complete & Back to Roadmap'
       : `Complete Daily Task +${initialContext?.xpReward || 15} XP`;
@@ -1509,12 +1509,21 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
               >
                 <i className="fas fa-redo mr-1.5"></i> Retry
               </button>
-              <button
-                onClick={() => setStep('titles')}
-                className="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-fuchsia-500 to-rose-500 text-white font-black text-xs uppercase tracking-widest shadow-lg transition-all active:scale-95"
-              >
-                <i className="fas fa-forward mr-1.5"></i> New Topic
-              </button>
+              {initialContext?.type === 'assignment' && translateResult.overall >= (initialContext.minScore ?? 75) ? (
+                <button
+                  onClick={handleComplete}
+                  className="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-green-500 to-emerald-600 text-white font-black text-xs uppercase tracking-widest shadow-lg transition-all active:scale-95"
+                >
+                  <i className="fas fa-check-circle mr-1.5"></i> {completeButtonLabel}
+                </button>
+              ) : (
+                <button
+                  onClick={() => setStep('titles')}
+                  className="flex-1 py-3.5 rounded-xl bg-gradient-to-r from-fuchsia-500 to-rose-500 text-white font-black text-xs uppercase tracking-widest shadow-lg transition-all active:scale-95"
+                >
+                  <i className="fas fa-forward mr-1.5"></i> New Topic
+                </button>
+              )}
             </div>
           </motion.div>
         )}
