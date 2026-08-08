@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { User } from 'firebase/auth';
 import { makeBarChart, makeBarSeries, makeChartSpace, makeLineChart } from '@office-kit/xlsx/chart';
-import { addChartAt } from '@office-kit/xlsx/drawing';
+import { addChartAt, makeColor, makeShapeProperties, makeSolidFill, makeSrgbColor } from '@office-kit/xlsx/drawing';
 import { workbookToBytes } from '@office-kit/xlsx/io';
 import { addWorksheet, createWorkbook } from '@office-kit/xlsx/workbook';
 import { addExcelTable, setColumnWidths, setFreezePanes, writeRange } from '@office-kit/xlsx/worksheet';
+import { formatAsHeader, setRangeAlignment, setRangeBackgroundColor, setRangeFont, setRangeNumberFormat, setRangeWrapText } from '@office-kit/xlsx/styles';
 import { ActivityLog, AdminAssignment, AdminFeedback, AdminReply, AppView, AssignmentKind, AssignmentTarget, DailyTask, UserAssignment } from '../../types';
 import { MASTER_CURRICULUM } from '../../data/curriculum';
 import { READING_MANIFEST } from '../../data/readingManifest';
@@ -20,6 +21,9 @@ import {
 } from '../../services/admin';
 
 type Period = 'week' | 'month' | 'all';
+type ExportRange = 'today' | 'week' | 'month' | 'calendar-month' | 'all' | 'custom';
+type DateWindow = { from: number; to: number };
+type ExportMode = 'summary' | 'full';
 type Section = 'overview' | 'users' | 'attention' | 'comments' | 'assignments' | 'access';
 type ThemeMode = 'light' | 'dark';
 type DetailTab = 'progress' | 'tasks' | 'comments';
@@ -82,7 +86,34 @@ const matchesHistoryRange = (value: string, range: HistoryRange, selectedDate: s
 };
 const isSpeaking = (activity: ActivityLog) => activity.type === AppView.LIVE || activity.type === AppView.SHADOWING;
 const isScored = (activity: ActivityLog) => SCORABLE.has(activity.type);
-const withinPeriod = (date: string, period: Period) => period === 'all' || Date.now() - new Date(date).getTime() <= (period === 'week' ? 7 : 30) * DAY;
+const withinPeriod = (date: string, period: Period | DateWindow) => {
+  if (typeof period === 'object') {
+    const time = new Date(date).getTime();
+    return Number.isFinite(time) && time >= period.from && time <= period.to;
+  }
+  return period === 'all' || Date.now() - new Date(date).getTime() <= (period === 'week' ? 7 : 30) * DAY;
+};
+const exportWindow = (range: ExportRange, startDate = '', endDate = ''): DateWindow | undefined => {
+  if (range === 'all') return undefined;
+  const now = new Date();
+  if (range === 'today') {
+    const from = new Date(now); from.setHours(0, 0, 0, 0);
+    const to = new Date(now); to.setHours(23, 59, 59, 999);
+    return { from: from.getTime(), to: to.getTime() };
+  }
+  if (range === 'week' || range === 'month') return { from: Date.now() - (range === 'week' ? 7 : 30) * DAY, to: Date.now() };
+  if (range === 'calendar-month') {
+    const from = new Date(now.getFullYear(), now.getMonth(), 1);
+    const to = new Date(now.getFullYear(), now.getMonth() + 1, 0, 23, 59, 59, 999);
+    return { from: from.getTime(), to: to.getTime() };
+  }
+  if (!startDate || !endDate) return undefined;
+  const from = new Date(`${startDate}T00:00:00`);
+  const to = new Date(`${endDate}T23:59:59.999`);
+  if (Number.isNaN(from.getTime()) || Number.isNaN(to.getTime()) || from > to) return undefined;
+  return { from: from.getTime(), to: to.getTime() };
+};
+const exportRangeLabel = (range: ExportRange, startDate = '', endDate = '') => range === 'today' ? 'Hari ini' : range === 'week' ? '7 hari terakhir' : range === 'month' ? '30 hari terakhir' : range === 'calendar-month' ? 'Bulan kalender berjalan' : range === 'custom' ? `${startDate || '…'} s/d ${endDate || '…'}` : 'Semua waktu';
 const average = (items: ActivityLog[]) => items.length ? Math.round(items.reduce((total, item) => total + item.score, 0) / items.length) : null;
 const activityName = (activity: ActivityLog) => CATEGORY_LABELS[activity.type] || (isSpeaking(activity) ? 'Speaking' : activity.type.replace('_', ' '));
 
@@ -109,7 +140,7 @@ const usePaged = <T,>(items: T[], size = PAGE_SIZE) => {
 const Pager: React.FC<{ page: number; pageCount: number; setPage: React.Dispatch<React.SetStateAction<number>>; total?: number }> = ({ page, pageCount, setPage, total }) =>
   pageCount > 1 ? <div className="admin-pagination"><button type="button" disabled={page === 1} onClick={() => setPage(current => current - 1)}>Sebelumnya</button><span>Halaman {page} dari {pageCount}{total !== undefined ? ` · ${total} data` : ''}</span><button type="button" disabled={page === pageCount} onClick={() => setPage(current => current + 1)}>Berikutnya</button></div> : null;
 
-const metricForUser = (user: AdminUser, detail: AdminUserDetail | undefined, period: Period): UserMetric => {
+const metricForUser = (user: AdminUser, detail: AdminUserDetail | undefined, period: Period | DateWindow): UserMetric => {
   const allActivities = detail?.activities || [];
   const activities = allActivities.filter(item => withinPeriod(item.date, period));
   const scored = activities.filter(isScored);
@@ -158,7 +189,15 @@ type DashboardRows = {
   scoreBands: ExportCell[][];
   top: ExportCell[][];
   attention: ExportCell[][];
+  categories: ExportCell[][];
   daily: ExportCell[][];
+};
+
+const excelColumn = (index: number) => {
+  let value = index;
+  let label = '';
+  while (value > 0) { const remainder = (value - 1) % 26; label = String.fromCharCode(65 + remainder) + label; value = Math.floor((value - 1) / 26); }
+  return label;
 };
 
 const writeExportTable = (workbook: ReturnType<typeof createWorkbook>, title: string, headers: string[], rows: ExportCell[][], widths: number[], tableName: string) => {
@@ -166,7 +205,11 @@ const writeExportTable = (workbook: ReturnType<typeof createWorkbook>, title: st
   writeRange(worksheet, 'A1', [headers, ...rows]);
   setColumnWidths(worksheet, widths);
   setFreezePanes(worksheet, 'A2');
-  if (rows.length) addExcelTable(workbook, worksheet, { name: tableName, ref: `A1:${String.fromCharCode(64 + headers.length)}${rows.length + 1}`, columns: headers, style: 'TableStyleMedium2' });
+  const lastColumn = excelColumn(headers.length);
+  formatAsHeader(workbook, worksheet, `A1:${lastColumn}1`, { fillColor: 'E9458B', fontColor: 'FFFFFF' });
+  setRangeWrapText(workbook, worksheet, `A1:${lastColumn}${Math.max(1, rows.length + 1)}`, true);
+  setRangeAlignment(workbook, worksheet, `A1:${lastColumn}${Math.max(1, rows.length + 1)}`, { vertical: 'center' });
+  if (rows.length) addExcelTable(workbook, worksheet, { name: tableName, ref: `A1:${lastColumn}${rows.length + 1}`, columns: headers, style: 'TableStyleMedium2' });
   return worksheet;
 };
 
@@ -183,6 +226,9 @@ const buildDashboardRows = (metrics: UserMetric[]): DashboardRows => {
   const attention = metrics.filter(item => item.attentionReason || item.average === null || (item.average !== null && item.average < 60))
     .sort((a, b) => (a.average ?? -1) - (b.average ?? -1)).slice(0, 10)
     .map(item => [item.user.name, item.average === null ? 0 : item.average, item.attentionReason || 'Belum ada nilai']);
+  const categories = metrics.length === 1
+    ? Object.entries(metrics[0].categories).map(([key, value]) => [CATEGORY_LABELS[key] || key, value === null ? '—' : value, value === null ? 'Belum ada data' : 'Nilai rata-rata'])
+    : [];
   const dailyMap = new Map<string, { total: number; count: number; users: Set<string> }>();
   metrics.forEach(item => item.activities.filter(isScored).forEach(activity => {
     const date = activity.date.slice(0, 10);
@@ -190,12 +236,13 @@ const buildDashboardRows = (metrics: UserMetric[]): DashboardRows => {
     row.total += activity.score; row.count += 1; row.users.add(item.user.uid); dailyMap.set(date, row);
   }));
   const daily = Array.from(dailyMap.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([date, row]) => [date, Math.round(row.total / row.count), row.users.size]);
-  return { scoreBands, top, attention, daily };
+  return { scoreBands, top, attention, categories, daily };
 };
 
 const addDashboardChart = (worksheet: ReturnType<typeof addWorksheet>, chart: Parameters<typeof makeChartSpace>[0]['plotArea']['chart'], title: string, at: string, widthPx: number, heightPx: number, valMax?: number) => {
-  addChartAt(worksheet, at, { space: makeChartSpace({ plotArea: { chart, valAx: valMax ? { scaling: { min: 0, max: valMax }, majorUnit: valMax === 100 ? 20 : undefined } : undefined }, title, legend: { position: 'r' } }) }, { widthPx, heightPx });
+  addChartAt(worksheet, at, { space: makeChartSpace({ plotArea: { chart, valAx: valMax ? { scaling: { min: 0, max: valMax }, majorUnit: valMax === 100 ? 20 : undefined, majorGridlines: true } : { majorGridlines: true } }, title, legend: { position: 'r' }, spPr: makeShapeProperties({ fill: makeSolidFill(makeColor(makeSrgbColor('FFFFFF'))) }) }) }, { widthPx, heightPx });
 };
+const chartSeries = (series: ReturnType<typeof makeBarSeries>, color: string) => ({ ...series, spPr: makeShapeProperties({ fill: makeSolidFill(makeColor(makeSrgbColor(color))) }) });
 
 const writeDashboard = (workbook: ReturnType<typeof createWorkbook>, metrics: UserMetric[], periodLabel: string, scopeLabel: string) => {
   const worksheet = addWorksheet(workbook, 'Dashboard', { index: 0 });
@@ -215,25 +262,37 @@ const writeDashboard = (workbook: ReturnType<typeof createWorkbook>, metrics: Us
     ['Daily Plan selesai hari ini', completedPlans, 'User yang menyelesaikan seluruh Daily Plan'],
     ['Total durasi speaking', formatDuration(totalSpeaking), 'Gabungan speaking dan shadowing']
   ]);
+  setRangeBackgroundColor(workbook, worksheet, 'A1:C1', 'FCE7F3');
+  setRangeAlignment(workbook, worksheet, 'A1:C9', { vertical: 'center' });
+  setRangeWrapText(workbook, worksheet, 'A1:C9', true);
+  formatAsHeader(workbook, worksheet, 'A5:C5', { fillColor: 'E9458B', fontColor: 'FFFFFF' });
+  setRangeNumberFormat(workbook, worksheet, 'B6:B8', '#,##0');
+  setRangeFont(workbook, worksheet, 'A1:C1', { name: 'Aptos Display', size: 16, bold: true, color: { rgb: 'C7286C' } });
   setColumnWidths(worksheet, [24, 20, 42, 24, 20, 20, 24, 20, 24, 16, 16, 16]);
   setFreezePanes(worksheet, 'A5');
   writeRange(worksheet, 'A46', [['Rentang nilai', 'Jumlah user'], ...dashboard.scoreBands]);
-  writeRange(worksheet, 'D46', [['User performa tertinggi', 'Nilai rata-rata', 'Daily Plan'], ...dashboard.top]);
+  writeRange(worksheet, 'D46', metrics.length === 1
+    ? [['Kategori', 'Nilai rata-rata', 'Keterangan'], ...dashboard.categories]
+    : [['User performa tertinggi', 'Nilai rata-rata', 'Daily Plan'], ...dashboard.top]);
   writeRange(worksheet, 'G46', [['User perlu perhatian', 'Nilai rata-rata', 'Alasan'], ...dashboard.attention]);
   writeRange(worksheet, 'J46', [['Tanggal', 'Nilai rata-rata', 'User aktif'], ...dashboard.daily]);
   if (dashboard.scoreBands.length) {
     addExcelTable(workbook, worksheet, { name: 'DashboardScoreBands', ref: `A46:B${46 + dashboard.scoreBands.length}`, columns: ['Rentang nilai', 'Jumlah user'], style: 'TableStyleMedium2' });
-    addDashboardChart(worksheet, makeBarChart({ barDir: 'col', grouping: 'clustered', series: [makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Jumlah user' }, cat: { ref: `Dashboard!$A$47:$A$51`, cacheKind: 'str', cache: dashboard.scoreBands.map(row => String(row[0])) }, val: { ref: `Dashboard!$B$47:$B$51`, cache: dashboard.scoreBands.map(row => Number(row[1]) || 0) } })] }), 'Distribusi nilai user', 'A11', 560, 290);
+    addDashboardChart(worksheet, makeBarChart({ barDir: 'col', grouping: 'clustered', series: [chartSeries(makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Jumlah user' }, cat: { ref: `Dashboard!$A$47:$A$51`, cacheKind: 'str', cache: dashboard.scoreBands.map(row => String(row[0])) }, val: { ref: `Dashboard!$B$47:$B$51`, cache: dashboard.scoreBands.map(row => Number(row[1]) || 0) } }), 'E9458B')] }), 'Distribusi nilai user', 'A11', 560, 290);
   }
-  if (dashboard.top.length) {
+  if (dashboard.top.length && metrics.length > 1) {
     addExcelTable(workbook, worksheet, { name: 'DashboardTopUsers', ref: `D46:F${46 + dashboard.top.length}`, columns: ['User performa tertinggi', 'Nilai rata-rata', 'Daily Plan'], style: 'TableStyleMedium2' });
-    addDashboardChart(worksheet, makeBarChart({ barDir: 'bar', grouping: 'clustered', series: [makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$D$47:$D$${46 + dashboard.top.length}`, cacheKind: 'str', cache: dashboard.top.map(row => String(row[0])) }, val: { ref: `Dashboard!$E$47:$E$${46 + dashboard.top.length}`, cache: dashboard.top.map(row => Number(row[1]) || 0) } })] }), '10 user dengan nilai tertinggi', 'G11', 620, 290, 100);
+    addDashboardChart(worksheet, makeBarChart({ barDir: 'bar', grouping: 'clustered', series: [chartSeries(makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$D$47:$D$${46 + dashboard.top.length}`, cacheKind: 'str', cache: dashboard.top.map(row => String(row[0])) }, val: { ref: `Dashboard!$E$47:$E$${46 + dashboard.top.length}`, cache: dashboard.top.map(row => Number(row[1]) || 0) } }), '4385EE')] }), '10 user dengan nilai tertinggi', 'G11', 620, 290, 100);
+  }
+  if (dashboard.categories.length) {
+    addExcelTable(workbook, worksheet, { name: 'DashboardCategoryScores', ref: `D46:F${46 + dashboard.categories.length}`, columns: ['Kategori', 'Nilai rata-rata', 'Keterangan'], style: 'TableStyleMedium2' });
+    addDashboardChart(worksheet, makeBarChart({ barDir: 'col', grouping: 'clustered', series: [chartSeries(makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$D$47:$D$${46 + dashboard.categories.length}`, cacheKind: 'str', cache: dashboard.categories.map(row => String(row[0])) }, val: { ref: `Dashboard!$E$47:$E$${46 + dashboard.categories.length}`, cache: dashboard.categories.map(row => Number(row[1]) || 0) } }), '7C5CE5')] }), 'Performa per kategori', 'G11', 620, 290, 100);
   }
   if (dashboard.attention.length) addExcelTable(workbook, worksheet, { name: 'DashboardAttentionUsers', ref: `G46:I${46 + dashboard.attention.length}`, columns: ['User perlu perhatian', 'Nilai rata-rata', 'Alasan'], style: 'TableStyleMedium2' });
   if (dashboard.daily.length) {
     addExcelTable(workbook, worksheet, { name: 'DashboardDailyTrend', ref: `J46:L${46 + dashboard.daily.length}`, columns: ['Tanggal', 'Nilai rata-rata', 'User aktif'], style: 'TableStyleMedium2' });
     const trendSeries = {
-      ...makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$J$47:$J$${46 + dashboard.daily.length}`, cacheKind: 'str', cache: dashboard.daily.map(row => String(row[0])) }, val: { ref: `Dashboard!$K$47:$K$${46 + dashboard.daily.length}`, cache: dashboard.daily.map(row => Number(row[1]) || 0) } }),
+      ...chartSeries(makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$J$47:$J$${46 + dashboard.daily.length}`, cacheKind: 'str', cache: dashboard.daily.map(row => String(row[0])) }, val: { ref: `Dashboard!$K$47:$K$${46 + dashboard.daily.length}`, cache: dashboard.daily.map(row => Number(row[1]) || 0) } }), 'E9458B'),
       marker: { symbol: 'circle' as const, size: 5 }
     };
     addDashboardChart(worksheet, makeLineChart({ grouping: 'standard', series: [trendSeries] as never }), 'Perkembangan nilai harian', 'A28', 1100, 300, 100);
@@ -241,7 +300,7 @@ const writeDashboard = (workbook: ReturnType<typeof createWorkbook>, metrics: Us
   return worksheet;
 };
 
-const buildExportRows = (metrics: UserMetric[], details: Record<string, AdminUserDetail>): ExportRows => {
+const buildExportRows = (metrics: UserMetric[], details: Record<string, AdminUserDetail>, window?: DateWindow): ExportRows => {
   const categoryKeys = [AppView.READING, AppView.LISTENING, AppView.GRAMMAR, AppView.SHADOWING];
   const summary = metrics.map((item, index) => [
     metrics.length > 1 ? index + 1 : '—', item.user.uid, item.user.name, item.user.email || '', item.user.level || '—',
@@ -272,7 +331,7 @@ const buildExportRows = (metrics: UserMetric[], details: Record<string, AdminUse
         dailyMap.set(key, row);
       }
     });
-    (detail?.assignments || []).forEach(assignment => {
+    (detail?.assignments || []).filter(assignment => !window || withinPeriod(assignment.createdAt, window)).forEach(assignment => {
       const status = assignmentResultStatus(assignment);
       assignments.push([
         item.user.name, item.user.email || '', assignment.title, assignment.target.kind,
@@ -281,7 +340,7 @@ const buildExportRows = (metrics: UserMetric[], details: Record<string, AdminUse
         assignment.attempts || 0, assignment.dueAt ? formatShortDate(assignment.dueAt) : '—', assignment.completedAt ? formatShortDate(assignment.completedAt) : '—'
       ]);
     });
-    (detail?.feedback || []).forEach(feedback => comments.push([
+    (detail?.feedback || []).filter(feedback => !window || withinPeriod(feedback.createdAt, window)).forEach(feedback => comments.push([
       item.user.name, item.user.email || '', formatShortDate(feedback.createdAt), feedback.authorName,
       feedback.scope === 'task' ? 'Tentang task' : 'Umum', feedback.taskTitle || '—', feedback.message, feedback.readAt ? 'Sudah dibaca' : 'Belum dibaca'
     ]));
@@ -537,6 +596,11 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   const [assignmentResultsLoading, setAssignmentResultsLoading] = useState(false);
   const [exportOpen, setExportOpen] = useState(false);
   const [exportUserUid, setExportUserUid] = useState('');
+  const [exportUserQuery, setExportUserQuery] = useState('');
+  const [exportRange, setExportRange] = useState<ExportRange>('month');
+  const [exportStartDate, setExportStartDate] = useState('');
+  const [exportEndDate, setExportEndDate] = useState('');
+  const [exportMode, setExportMode] = useState<ExportMode>('full');
   const [exportBusy, setExportBusy] = useState(false);
 
   const loadHistory = async () => {
@@ -689,13 +753,21 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     if (userFilter === 'daily-incomplete') return item.dailyTasks.length > 0 && !item.dailyTasks.every(task => task.isCompleted);
     return true;
   }).sort((a, b) => userSort === 'score-asc' ? (a.average ?? 101) - (b.average ?? 101) : userSort === 'progress-desc' ? b.completionRate - a.completionRate : userSort === 'progress-asc' ? a.completionRate - b.completionRate : userSort === 'recent' ? (b.lastActivity || '').localeCompare(a.lastActivity || '') : (b.average ?? -1) - (a.average ?? -1) || b.completionRate - a.completionRate);
-  const openExportDialog = () => { setExportUserUid(selected?.uid || ''); setExportOpen(true); };
+  const openExportDialog = () => {
+    setExportUserUid(selected?.uid || '');
+    setExportUserQuery('');
+    setExportRange(period === 'week' ? 'week' : period === 'month' ? 'month' : 'all');
+    setExportStartDate(''); setExportEndDate(''); setExportMode('full'); setExportOpen(true);
+  };
   const exportReport = async (scope: 'all' | 'user') => {
     const targetUsers = scope === 'all' ? users : users.filter(item => item.uid === exportUserUid);
     if (!targetUsers.length) { setMessage('Pilih user terlebih dahulu untuk diekspor.'); return; }
+    if (exportRange === 'custom' && (!exportStartDate || !exportEndDate || !exportWindow(exportRange, exportStartDate, exportEndDate))) { setMessage('Pilih tanggal mulai dan selesai yang valid.'); return; }
     setExportBusy(true);
     setMessage('Menyiapkan laporan Excel…');
     try {
+      const selectedWindow = exportWindow(exportRange, exportStartDate, exportEndDate);
+      const selectedPeriodLabel = exportRangeLabel(exportRange, exportStartDate, exportEndDate);
       const freshDetails: Record<string, AdminUserDetail> = {};
       for (let index = 0; index < targetUsers.length; index += 8) {
         const batch = targetUsers.slice(index, index + 8);
@@ -704,28 +776,30 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       }
       setDetails(current => ({ ...current, ...freshDetails }));
       const exportedMetrics = targetUsers
-        .map(target => metricForUser(target, freshDetails[target.uid], period))
+        .map(target => metricForUser(target, freshDetails[target.uid], selectedWindow || 'all'))
         .sort((a, b) => (b.average ?? -1) - (a.average ?? -1) || b.completionRate - a.completionRate);
-      const rows = buildExportRows(exportedMetrics, freshDetails);
+      const rows = buildExportRows(exportedMetrics, freshDetails, selectedWindow);
       const workbook = createWorkbook();
       const scopeLabel = scope === 'all' ? `Seluruh user (${targetUsers.length})` : `${targetUsers[0].name} · ${targetUsers[0].email || 'email belum tersedia'}`;
-      writeDashboard(workbook, exportedMetrics, periodLabel, scopeLabel);
+      writeDashboard(workbook, exportedMetrics, selectedPeriodLabel, scopeLabel);
       writeExportTable(workbook, 'Ringkasan User',
         ['Peringkat', 'UID Firebase', 'Nama', 'Email', 'Level', 'Status', 'Terakhir online', 'Nilai rata-rata', 'Progress Daily Plan', 'Daily Plan selesai', 'Roadmap pack', 'Reading', 'Listening', 'Grammar', 'Shadowing', 'Durasi speaking', 'Tren nilai', 'Fokus', 'Aktivitas terakhir'],
         rows.summary, [10, 28, 24, 32, 10, 12, 20, 16, 20, 18, 15, 12, 12, 12, 12, 18, 18, 28, 18], 'RingkasanUserTable');
-      writeExportTable(workbook, 'Aktivitas Detail',
-        ['Nama', 'Email', 'Tanggal', 'Modul', 'Kode modul', 'Detail / jawaban', 'Nilai', 'Akurasi', 'Durasi', 'Sumber tugas'],
-        rows.activities, [24, 32, 14, 16, 16, 60, 12, 12, 16, 24], 'AktivitasDetailTable');
-      writeExportTable(workbook, 'Perkembangan Harian',
-        ['Tanggal', 'Nama', 'Email', 'Nilai rata-rata', 'Reading', 'Listening', 'Grammar', 'Shadowing', 'Jumlah aktivitas'],
-        rows.daily, [14, 24, 32, 18, 12, 12, 12, 12, 18], 'PerkembanganHarianTable');
-      writeExportTable(workbook, 'Tugas Admin',
-        ['Nama', 'Email', 'Judul tugas', 'Jenis', 'Target', 'Nilai minimum', 'Nilai terbaik', 'Status', 'Percobaan', 'Tenggat', 'Selesai pada'],
-        rows.assignments, [24, 32, 32, 16, 42, 16, 16, 20, 12, 16, 16], 'TugasAdminTable');
-      writeExportTable(workbook, 'Komentar',
-        ['Nama', 'Email', 'Tanggal', 'Dari admin', 'Jenis', 'Task', 'Komentar', 'Status dibaca'],
-        rows.comments, [24, 32, 14, 24, 18, 28, 70, 18], 'KomentarTable');
-      const periodName = period === 'week' ? '7-hari' : period === 'month' ? '30-hari' : 'semua-waktu';
+      if (exportMode === 'full') {
+        writeExportTable(workbook, 'Aktivitas Detail',
+          ['Nama', 'Email', 'Tanggal', 'Modul', 'Kode modul', 'Detail / jawaban', 'Nilai', 'Akurasi', 'Durasi', 'Sumber tugas'],
+          rows.activities, [24, 32, 14, 16, 16, 60, 12, 12, 16, 24], 'AktivitasDetailTable');
+        writeExportTable(workbook, 'Perkembangan Harian',
+          ['Tanggal', 'Nama', 'Email', 'Nilai rata-rata', 'Reading', 'Listening', 'Grammar', 'Shadowing', 'Jumlah aktivitas'],
+          rows.daily, [14, 24, 32, 18, 12, 12, 12, 12, 18], 'PerkembanganHarianTable');
+        writeExportTable(workbook, 'Tugas Admin',
+          ['Nama', 'Email', 'Judul tugas', 'Jenis', 'Target', 'Nilai minimum', 'Nilai terbaik', 'Status', 'Percobaan', 'Tenggat', 'Selesai pada'],
+          rows.assignments, [24, 32, 32, 16, 42, 16, 16, 20, 12, 16, 16], 'TugasAdminTable');
+        writeExportTable(workbook, 'Komentar',
+          ['Nama', 'Email', 'Tanggal', 'Dari admin', 'Jenis', 'Task', 'Komentar', 'Status dibaca'],
+          rows.comments, [24, 32, 14, 24, 18, 28, 70, 18], 'KomentarTable');
+      }
+      const periodName = exportRange === 'today' ? 'hari-ini' : exportRange === 'week' ? '7-hari' : exportRange === 'month' ? '30-hari' : exportRange === 'calendar-month' ? 'bulan-berjalan' : exportRange === 'custom' ? `${exportStartDate}-sampai-${exportEndDate}` : 'semua-waktu';
       const name = scope === 'all' ? 'semua-user' : (targetUsers[0].name || 'user').toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
       const bytes = await workbookToBytes(workbook);
       const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
@@ -738,12 +812,18 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       link.remove();
       window.setTimeout(() => URL.revokeObjectURL(url), 1000);
       setExportOpen(false);
-      setMessage(`Laporan Excel selesai dibuat untuk ${targetUsers.length} user.`);
+      setMessage(`Laporan Excel ${exportMode === 'full' ? 'lengkap' : 'ringkas'} selesai dibuat untuk ${targetUsers.length} user.`);
     } catch (error) {
       console.error(error);
       setMessage('Laporan belum dapat dibuat. Pastikan koneksi Firebase tersedia lalu coba lagi.');
     } finally { setExportBusy(false); }
   };
+  const exportCandidates = users.slice().sort((a, b) => a.name.localeCompare(b.name));
+  const selectedExportUser = users.find(item => item.uid === exportUserUid);
+  const matchingExportUsers = exportCandidates.filter(item => `${item.name} ${item.email}`.toLowerCase().includes(exportUserQuery.toLowerCase()));
+  const filteredExportUsers = selectedExportUser && !matchingExportUsers.slice(0, 12).some(item => item.uid === selectedExportUser.uid)
+    ? [selectedExportUser, ...matchingExportUsers.filter(item => item.uid !== selectedExportUser.uid).slice(0, 11)]
+    : matchingExportUsers.slice(0, 12);
   const openUser = (target: AdminUser, tab: DetailTab = 'progress') => {
     setSelected(target); setDetailTab(tab); setFeedback(''); setTaskId('');
     // Do not trust an older empty cache when an admin opens a learner profile.
@@ -985,6 +1065,8 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
 .performance-map{background-image:linear-gradient(to right,color-mix(in srgb,var(--line) 60%,transparent) 1px,transparent 1px),linear-gradient(to bottom,color-mix(in srgb,var(--line) 60%,transparent) 1px,transparent 1px)}
 
 .admin-panel-overlay{background:rgba(13,18,29,.42);backdrop-filter:blur(3px);animation:fadeIn .18s ease-out}
+.export-modal{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:min(650px,94%);max-height:min(760px,calc(100vh - 32px));overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 24px 70px rgba(0,0,0,.24)}
+.export-modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;padding-bottom:15px;border-bottom:1px solid var(--line)}.export-modal-head h3{font-size:20px;margin:6px 0 4px;letter-spacing:-.03em}.export-modal-head p{font-size:11px;color:var(--muted);line-height:1.5;margin:0;max-width:510px}.export-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:15px}.export-label{display:block;font-size:10px;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);font-weight:900;margin:0 0 6px}.export-control{width:100%;margin:0;box-sizing:border-box}.export-range-note{display:flex;align-items:center;gap:8px;margin-top:12px;padding:10px 12px;background:var(--accent-soft);color:var(--accent-strong);border-radius:10px;font-size:11px;font-weight:700;line-height:1.4}.export-user-section{margin-top:17px;padding-top:16px;border-top:1px solid var(--line)}.export-section-head{display:flex;justify-content:space-between;gap:10px;align-items:baseline;margin-bottom:7px}.export-section-head>span{font-size:10px;color:var(--muted);text-align:right}.export-user-list{display:grid;gap:5px;max-height:224px;overflow:auto;margin-top:8px;padding:3px}.export-user-option{width:100%;display:flex;align-items:center;gap:10px;border:1px solid transparent;background:var(--subtle);color:var(--text);border-radius:11px;padding:9px 10px;text-align:left;cursor:pointer;transition:border-color .15s ease,background .15s ease}.export-user-option:hover,.export-user-option.selected{border-color:var(--accent);background:var(--accent-soft)}.export-user-option>span{min-width:0;flex:1}.export-user-option b{display:block;font-size:12px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.export-user-option small{display:block;color:var(--muted);font-size:10px;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.export-user-option>i{color:var(--accent-strong);font-size:12px}.export-user-empty,.export-user-more{text-align:center;color:var(--muted);font-size:11px;padding:16px 8px}.export-user-more{padding:8px;font-style:italic}.export-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:17px}.export-footnote{font-size:10px;line-height:1.45;color:var(--muted);margin:12px 0 0;text-align:center}
 .admin-detail{animation:slideInRight .28s cubic-bezier(.2,.7,.3,1);box-shadow:-20px 0 50px rgba(0,0,0,.15)}
 @keyframes fadeIn{from{opacity:0}to{opacity:1}}
 @keyframes slideInRight{from{transform:translateX(20px);opacity:0}to{transform:translateX(0);opacity:1}}
@@ -1145,6 +1227,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   .score-chart{margin-top:10px}
   .feedback-controls button{padding:8px 12px;font-size:12px}
   .admin-alert{font-size:12px;padding:10px 13px}
+  .export-modal{padding:18px;border-radius:17px}.export-modal-head h3{font-size:17px}.export-grid,.export-actions{grid-template-columns:1fr}.export-section-head{align-items:flex-start;flex-direction:column}.export-section-head>span{text-align:left}.export-user-list{max-height:185px}
 }
 @media(max-width:420px){
   .admin-kpis{grid-template-columns:1fr;gap:8px}
@@ -1237,20 +1320,17 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
       </div>
     </div>}
     {exportOpen && <div className="admin-panel-overlay" onMouseDown={() => !exportBusy && setExportOpen(false)}>
-      <div onMouseDown={event => event.stopPropagation()} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 'min(480px,92%)', background: 'var(--panel)', border: '1px solid var(--line)', borderRadius: 18, padding: 22, boxShadow: 'var(--shadow)' }}>
-        <span className="admin-eyebrow">Ekspor laporan</span>
-        <h3 style={{ margin: '6px 0 4px', fontSize: 17 }}>Pilih data yang ingin diunduh</h3>
-        <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>File Excel berisi tabel ringkasan, aktivitas detail, perkembangan harian, tugas admin, dan komentar.</p>
-        <div style={{ marginTop: 8, fontSize: 11, color: 'var(--accent-strong)', fontWeight: 800 }}>Periode aktif: {periodLabel}</div>
-        <select className="feedback-select" style={{ marginTop: 14 }} value={exportUserUid} onChange={event => setExportUserUid(event.target.value)} disabled={exportBusy} aria-label="Pilih user untuk ekspor">
-          <option value="">Pilih satu user untuk ekspor per user</option>
-          {users.slice().sort((a, b) => a.name.localeCompare(b.name)).map(item => <option key={item.uid} value={item.uid}>{item.name} · {item.email || item.uid}</option>)}
-        </select>
-        <div style={{ display: 'grid', gap: 8, marginTop: 12 }}>
-          <button className="feedback-send" style={{ margin: 0 }} disabled={exportBusy || !exportUserUid} onClick={() => void exportReport('user')}>{exportBusy ? 'Menyiapkan…' : 'Ekspor user ini'}</button>
-          <button className="feedback-send" style={{ margin: 0, background: 'var(--subtle)', color: 'var(--text)', boxShadow: 'none' }} disabled={exportBusy || !users.length} onClick={() => void exportReport('all')}>{exportBusy ? 'Menyiapkan…' : `Ekspor seluruh user (${users.length})`}</button>
+      <div className="export-modal" onMouseDown={event => event.stopPropagation()}>
+        <div className="export-modal-head"><div><span className="admin-eyebrow">Ekspor laporan</span><h3>Susun laporan Excel</h3><p>Gunakan rentang pendek agar file tetap ringan. Semua tabel memiliki filter dan sortir di header.</p></div><button className="detail-close" onClick={() => setExportOpen(false)} disabled={exportBusy} aria-label="Tutup ekspor">×</button></div>
+        <div className="export-grid">
+          <div><label className="export-label">Rentang data</label><select className="admin-filter export-control" value={exportRange} onChange={event => setExportRange(event.target.value as ExportRange)} disabled={exportBusy}><option value="today">Hari ini</option><option value="week">7 hari terakhir</option><option value="month">30 hari terakhir</option><option value="calendar-month">Bulan kalender berjalan</option><option value="custom">Pilih tanggal</option><option value="all">Semua waktu</option></select></div>
+          <div><label className="export-label">Format laporan</label><select className="admin-filter export-control" value={exportMode} onChange={event => setExportMode(event.target.value as ExportMode)} disabled={exportBusy}><option value="summary">Ringkas · dashboard + ringkasan</option><option value="full">Lengkap · semua detail</option></select></div>
         </div>
-        <button type="button" onClick={() => setExportOpen(false)} disabled={exportBusy} style={{ display: 'block', margin: '14px auto 0', border: 0, background: 'transparent', color: 'var(--muted)', font: 'inherit', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}>Batal</button>
+        {exportRange === 'custom' && <div className="export-grid"><div><label className="export-label">Mulai</label><input className="admin-filter export-control" type="date" value={exportStartDate} onChange={event => setExportStartDate(event.target.value)} disabled={exportBusy} /></div><div><label className="export-label">Selesai</label><input className="admin-filter export-control" type="date" value={exportEndDate} onChange={event => setExportEndDate(event.target.value)} disabled={exportBusy} /></div></div>}
+        <div className="export-range-note"><i className="fas fa-calendar-days" /> {exportRangeLabel(exportRange, exportStartDate, exportEndDate)} · {exportMode === 'full' ? 'detail aktivitas, tugas, dan komentar ikut diambil' : 'hanya ringkasan untuk file paling ringan'}</div>
+        <div className="export-user-section"><div className="export-section-head"><label className="export-label">User</label><span>{selectedExportUser ? `Terpilih: ${selectedExportUser.name}` : 'Semua user dapat dipilih lewat tombol di bawah'}</span></div><input className="feedback-select export-control" value={exportUserQuery} onChange={event => setExportUserQuery(event.target.value)} placeholder="Cari nama atau email user…" disabled={exportBusy} /><div className="export-user-list">{filteredExportUsers.map(item => <button type="button" key={item.uid} className={`export-user-option ${exportUserUid === item.uid ? 'selected' : ''}`} onClick={() => setExportUserUid(item.uid)} disabled={exportBusy}><AvatarBubble name={item.name} size={34} /><span><b>{item.name}</b><small>{item.email || 'Email belum tersedia'} · {item.level || 'Level belum dipilih'}</small></span><i className={`fas ${exportUserUid === item.uid ? 'fa-circle-check' : 'fa-chevron-right'}`} /></button>)}{!filteredExportUsers.length && <div className="export-user-empty">User tidak ditemukan.</div>}{exportCandidates.length > 12 && !exportUserQuery && <div className="export-user-more">Tampilkan hasil dengan mencari nama atau email.</div>}</div></div>
+        <div className="export-actions"><button className="feedback-send" style={{ margin: 0 }} disabled={exportBusy || !exportUserUid} onClick={() => void exportReport('user')}>{exportBusy ? 'Menyiapkan…' : 'Ekspor user terpilih'}</button><button className="feedback-send" style={{ margin: 0, background: 'var(--subtle)', color: 'var(--text)', boxShadow: 'none' }} disabled={exportBusy || !users.length} onClick={() => void exportReport('all')}>{exportBusy ? 'Menyiapkan…' : `Ekspor semua user (${users.length})`}</button></div>
+        <p className="export-footnote">Dashboard menyesuaikan otomatis: laporan kelas memakai distribusi nilai dan Top 10, laporan satu user memakai grafik kategori dan tren hariannya.</p>
       </div>
     </div>}
     {bulkCommentOpen && <div className="admin-panel-overlay" onMouseDown={() => !bulkSending && setBulkCommentOpen(false)}>
