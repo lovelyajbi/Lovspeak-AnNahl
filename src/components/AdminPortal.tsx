@@ -1,5 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { User } from 'firebase/auth';
+import { makeBarChart, makeBarSeries, makeChartSpace, makeLineChart } from '@office-kit/xlsx/chart';
+import { addChartAt } from '@office-kit/xlsx/drawing';
+import { workbookToBytes } from '@office-kit/xlsx/io';
+import { addWorksheet, createWorkbook } from '@office-kit/xlsx/workbook';
+import { addExcelTable, setColumnWidths, setFreezePanes, writeRange } from '@office-kit/xlsx/worksheet';
 import { ActivityLog, AdminAssignment, AdminFeedback, AdminReply, AppView, AssignmentKind, AssignmentTarget, DailyTask, UserAssignment } from '../../types';
 import { MASTER_CURRICULUM } from '../../data/curriculum';
 import { READING_MANIFEST } from '../../data/readingManifest';
@@ -138,6 +143,154 @@ const metricForUser = (user: AdminUser, detail: AdminUserDetail | undefined, per
     completed: dailyCompleted, totalTasks: totalAssigned, completionRate, dailyTasks, dailyCompleted, roadmapCompleted, roadmapTotal, liveSeconds, shadowingSeconds, speakingSeconds,
     lastActivity, trend, attentionReason, categories: categoryValues
   };
+};
+
+type ExportCell = string | number | boolean | null | undefined;
+type ExportRows = {
+  summary: ExportCell[][];
+  activities: ExportCell[][];
+  daily: ExportCell[][];
+  assignments: ExportCell[][];
+  comments: ExportCell[][];
+};
+
+type DashboardRows = {
+  scoreBands: ExportCell[][];
+  top: ExportCell[][];
+  attention: ExportCell[][];
+  daily: ExportCell[][];
+};
+
+const writeExportTable = (workbook: ReturnType<typeof createWorkbook>, title: string, headers: string[], rows: ExportCell[][], widths: number[], tableName: string) => {
+  const worksheet = addWorksheet(workbook, title);
+  writeRange(worksheet, 'A1', [headers, ...rows]);
+  setColumnWidths(worksheet, widths);
+  setFreezePanes(worksheet, 'A2');
+  if (rows.length) addExcelTable(workbook, worksheet, { name: tableName, ref: `A1:${String.fromCharCode(64 + headers.length)}${rows.length + 1}`, columns: headers, style: 'TableStyleMedium2' });
+  return worksheet;
+};
+
+const buildDashboardRows = (metrics: UserMetric[]): DashboardRows => {
+  const scoreBands = [
+    ['Belum ada nilai', metrics.filter(item => item.average === null).length],
+    ['0–59', metrics.filter(item => item.average !== null && item.average < 60).length],
+    ['60–74', metrics.filter(item => item.average !== null && item.average >= 60 && item.average < 75).length],
+    ['75–89', metrics.filter(item => item.average !== null && item.average >= 75 && item.average < 90).length],
+    ['90–100', metrics.filter(item => item.average !== null && item.average >= 90).length]
+  ];
+  const ranked = metrics.filter(item => item.average !== null).sort((a, b) => (b.average || 0) - (a.average || 0)).slice(0, 10);
+  const top = ranked.map(item => [item.user.name, item.average || 0, item.completionRate]);
+  const attention = metrics.filter(item => item.attentionReason || item.average === null || (item.average !== null && item.average < 60))
+    .sort((a, b) => (a.average ?? -1) - (b.average ?? -1)).slice(0, 10)
+    .map(item => [item.user.name, item.average === null ? 0 : item.average, item.attentionReason || 'Belum ada nilai']);
+  const dailyMap = new Map<string, { total: number; count: number; users: Set<string> }>();
+  metrics.forEach(item => item.activities.filter(isScored).forEach(activity => {
+    const date = activity.date.slice(0, 10);
+    const row = dailyMap.get(date) || { total: 0, count: 0, users: new Set<string>() };
+    row.total += activity.score; row.count += 1; row.users.add(item.user.uid); dailyMap.set(date, row);
+  }));
+  const daily = Array.from(dailyMap.entries()).sort(([a], [b]) => a.localeCompare(b)).map(([date, row]) => [date, Math.round(row.total / row.count), row.users.size]);
+  return { scoreBands, top, attention, daily };
+};
+
+const addDashboardChart = (worksheet: ReturnType<typeof addWorksheet>, chart: Parameters<typeof makeChartSpace>[0]['plotArea']['chart'], title: string, at: string, widthPx: number, heightPx: number, valMax?: number) => {
+  addChartAt(worksheet, at, { space: makeChartSpace({ plotArea: { chart, valAx: valMax ? { scaling: { min: 0, max: valMax }, majorUnit: valMax === 100 ? 20 : undefined } : undefined }, title, legend: { position: 'r' } }) }, { widthPx, heightPx });
+};
+
+const writeDashboard = (workbook: ReturnType<typeof createWorkbook>, metrics: UserMetric[], periodLabel: string, scopeLabel: string) => {
+  const worksheet = addWorksheet(workbook, 'Dashboard', { index: 0 });
+  const dashboard = buildDashboardRows(metrics);
+  const validScores = metrics.map(item => item.average).filter((value): value is number => value !== null);
+  const meanScore = validScores.length ? Math.round(validScores.reduce((sum, value) => sum + value, 0) / validScores.length) : null;
+  const completedPlans = metrics.filter(item => item.dailyTasks.length > 0 && item.dailyTasks.every(task => task.isCompleted)).length;
+  const totalSpeaking = metrics.reduce((sum, item) => sum + item.speakingSeconds, 0);
+  writeRange(worksheet, 'A1', [
+    ['LOVSPEAK LMS · Dashboard laporan'],
+    ['Cakupan', scopeLabel],
+    ['Periode', periodLabel],
+    [],
+    ['Indikator', 'Nilai', 'Keterangan'],
+    ['Total user', metrics.length, 'User yang masuk dalam laporan'],
+    ['Rata-rata nilai kelas', meanScore === null ? '—' : meanScore, 'Rata-rata dari user yang sudah punya nilai'],
+    ['Daily Plan selesai hari ini', completedPlans, 'User yang menyelesaikan seluruh Daily Plan'],
+    ['Total durasi speaking', formatDuration(totalSpeaking), 'Gabungan speaking dan shadowing']
+  ]);
+  setColumnWidths(worksheet, [24, 20, 42, 24, 20, 20, 24, 20, 24, 16, 16, 16]);
+  setFreezePanes(worksheet, 'A5');
+  writeRange(worksheet, 'A46', [['Rentang nilai', 'Jumlah user'], ...dashboard.scoreBands]);
+  writeRange(worksheet, 'D46', [['User performa tertinggi', 'Nilai rata-rata', 'Daily Plan'], ...dashboard.top]);
+  writeRange(worksheet, 'G46', [['User perlu perhatian', 'Nilai rata-rata', 'Alasan'], ...dashboard.attention]);
+  writeRange(worksheet, 'J46', [['Tanggal', 'Nilai rata-rata', 'User aktif'], ...dashboard.daily]);
+  if (dashboard.scoreBands.length) {
+    addExcelTable(workbook, worksheet, { name: 'DashboardScoreBands', ref: `A46:B${46 + dashboard.scoreBands.length}`, columns: ['Rentang nilai', 'Jumlah user'], style: 'TableStyleMedium2' });
+    addDashboardChart(worksheet, makeBarChart({ barDir: 'col', grouping: 'clustered', series: [makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Jumlah user' }, cat: { ref: `Dashboard!$A$47:$A$51`, cacheKind: 'str', cache: dashboard.scoreBands.map(row => String(row[0])) }, val: { ref: `Dashboard!$B$47:$B$51`, cache: dashboard.scoreBands.map(row => Number(row[1]) || 0) } })] }), 'Distribusi nilai user', 'A11', 560, 290);
+  }
+  if (dashboard.top.length) {
+    addExcelTable(workbook, worksheet, { name: 'DashboardTopUsers', ref: `D46:F${46 + dashboard.top.length}`, columns: ['User performa tertinggi', 'Nilai rata-rata', 'Daily Plan'], style: 'TableStyleMedium2' });
+    addDashboardChart(worksheet, makeBarChart({ barDir: 'bar', grouping: 'clustered', series: [makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$D$47:$D$${46 + dashboard.top.length}`, cacheKind: 'str', cache: dashboard.top.map(row => String(row[0])) }, val: { ref: `Dashboard!$E$47:$E$${46 + dashboard.top.length}`, cache: dashboard.top.map(row => Number(row[1]) || 0) } })] }), '10 user dengan nilai tertinggi', 'G11', 620, 290, 100);
+  }
+  if (dashboard.attention.length) addExcelTable(workbook, worksheet, { name: 'DashboardAttentionUsers', ref: `G46:I${46 + dashboard.attention.length}`, columns: ['User perlu perhatian', 'Nilai rata-rata', 'Alasan'], style: 'TableStyleMedium2' });
+  if (dashboard.daily.length) {
+    addExcelTable(workbook, worksheet, { name: 'DashboardDailyTrend', ref: `J46:L${46 + dashboard.daily.length}`, columns: ['Tanggal', 'Nilai rata-rata', 'User aktif'], style: 'TableStyleMedium2' });
+    const trendSeries = {
+      ...makeBarSeries({ idx: 0, tx: { kind: 'literal', value: 'Nilai rata-rata' }, cat: { ref: `Dashboard!$J$47:$J$${46 + dashboard.daily.length}`, cacheKind: 'str', cache: dashboard.daily.map(row => String(row[0])) }, val: { ref: `Dashboard!$K$47:$K$${46 + dashboard.daily.length}`, cache: dashboard.daily.map(row => Number(row[1]) || 0) } }),
+      marker: { symbol: 'circle' as const, size: 5 }
+    };
+    addDashboardChart(worksheet, makeLineChart({ grouping: 'standard', series: [trendSeries] as never }), 'Perkembangan nilai harian', 'A28', 1100, 300, 100);
+  }
+  return worksheet;
+};
+
+const buildExportRows = (metrics: UserMetric[], details: Record<string, AdminUserDetail>): ExportRows => {
+  const categoryKeys = [AppView.READING, AppView.LISTENING, AppView.GRAMMAR, AppView.SHADOWING];
+  const summary = metrics.map((item, index) => [
+    metrics.length > 1 ? index + 1 : '—', item.user.uid, item.user.name, item.user.email || '', item.user.level || '—',
+    item.user.isOnline ? 'Online' : 'Offline', formatLastSeen(item.user.lastSeenAt), item.average === null ? '—' : item.average,
+    `${item.completionRate}%`, item.dailyTasks.length ? `${item.dailyCompleted}/${item.dailyTasks.length}` : '—',
+    `${item.roadmapCompleted}/${item.roadmapTotal}`, ...categoryKeys.map(key => item.categories[key] === null ? '—' : item.categories[key]),
+    formatDuration(item.speakingSeconds), trendText(item.trend), item.attentionReason || 'On track', formatShortDate(item.lastActivity)
+  ]);
+
+  const activities: ExportCell[][] = [];
+  const dailyMap = new Map<string, { user: UserMetric['user']; date: string; total: number; count: number; category: Record<string, { total: number; count: number }> }>();
+  const assignments: ExportCell[][] = [];
+  const comments: ExportCell[][] = [];
+  metrics.forEach(item => {
+    const detail = details[item.user.uid];
+    item.activities.forEach(activity => {
+      activities.push([
+        item.user.name, item.user.email || '', activity.date.slice(0, 10), activityName(activity), activity.type,
+        activity.details || '', typeof activity.score === 'number' ? activity.score : '—', typeof activity.accuracy === 'number' ? activity.accuracy : '—',
+        formatDuration(activity.durationSeconds), activity.metadata?.source || activity.metadata?.assignmentId || '—'
+      ]);
+      if (isScored(activity)) {
+        const key = `${item.user.uid}|${activity.date.slice(0, 10)}`;
+        const row = dailyMap.get(key) || { user: item.user, date: activity.date.slice(0, 10), total: 0, count: 0, category: {} };
+        row.total += activity.score; row.count += 1;
+        const category = row.category[activity.type] || { total: 0, count: 0 };
+        category.total += activity.score; category.count += 1; row.category[activity.type] = category;
+        dailyMap.set(key, row);
+      }
+    });
+    (detail?.assignments || []).forEach(assignment => {
+      const status = assignmentResultStatus(assignment);
+      assignments.push([
+        item.user.name, item.user.email || '', assignment.title, assignment.target.kind,
+        assignment.target.packTitle || assignment.target.title || assignment.target.topic || assignment.target.theme || '—',
+        assignment.target.minScore ?? '—', assignment.bestScore ?? '—', status.label,
+        assignment.attempts || 0, assignment.dueAt ? formatShortDate(assignment.dueAt) : '—', assignment.completedAt ? formatShortDate(assignment.completedAt) : '—'
+      ]);
+    });
+    (detail?.feedback || []).forEach(feedback => comments.push([
+      item.user.name, item.user.email || '', formatShortDate(feedback.createdAt), feedback.authorName,
+      feedback.scope === 'task' ? 'Tentang task' : 'Umum', feedback.taskTitle || '—', feedback.message, feedback.readAt ? 'Sudah dibaca' : 'Belum dibaca'
+    ]));
+  });
+  const daily = Array.from(dailyMap.values()).sort((a, b) => `${a.user.name}-${a.date}`.localeCompare(`${b.user.name}-${b.date}`)).map(row => [
+    row.date, row.user.name, row.user.email || '', Math.round(row.total / row.count),
+    ...categoryKeys.map(key => row.category[key] ? Math.round(row.category[key].total / row.category[key].count) : '—'), row.count
+  ]);
+  return { summary, activities, daily, assignments, comments };
 };
 
 const trendIcon = (trend: UserMetric['trend']) => trend === 'up' ? '↗' : trend === 'down' ? '↘' : trend === 'steady' ? '→' : '—';
@@ -382,6 +535,9 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
   const [migrationBusy, setMigrationBusy] = useState(false);
   const [assignmentResults, setAssignmentResults] = useState<AdminAssignmentRecipientResult[]>([]);
   const [assignmentResultsLoading, setAssignmentResultsLoading] = useState(false);
+  const [exportOpen, setExportOpen] = useState(false);
+  const [exportUserUid, setExportUserUid] = useState('');
+  const [exportBusy, setExportBusy] = useState(false);
 
   const loadHistory = async () => {
     setHistoryLoading(true);
@@ -533,17 +689,60 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     if (userFilter === 'daily-incomplete') return item.dailyTasks.length > 0 && !item.dailyTasks.every(task => task.isCompleted);
     return true;
   }).sort((a, b) => userSort === 'score-asc' ? (a.average ?? 101) - (b.average ?? 101) : userSort === 'progress-desc' ? b.completionRate - a.completionRate : userSort === 'progress-asc' ? a.completionRate - b.completionRate : userSort === 'recent' ? (b.lastActivity || '').localeCompare(a.lastActivity || '') : (b.average ?? -1) - (a.average ?? -1) || b.completionRate - a.completionRate);
-  const exportReport = () => {
-    const scope = userFilter === 'all' && !query ? metrics : applyUserFilterSort(metrics);
-    const headers = ['Peringkat', 'Nama', 'Email', 'Status', 'Nilai rata-rata', 'Progress Daily Plan', 'Durasi speaking', 'Tren', 'Fokus', 'Aktivitas terakhir'];
-    const rows = scope.map((item, index) => [
-      index + 1, item.user.name, item.user.email || '', item.user.isOnline ? 'Online' : 'Offline', item.average === null ? '' : `${item.average}%`,
-      `${item.completionRate}%`, formatDuration(item.speakingSeconds), trendText(item.trend), item.attentionReason || 'On track', formatShortDate(item.lastActivity)
-    ]);
-    const csv = [headers, ...rows].map(row => row.map(value => `"${String(value).replace(/"/g, '""')}"`).join(',')).join('\n');
-    const blob = new Blob([`\uFEFF${csv}`], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const anchor = document.createElement('a'); anchor.href = url; anchor.download = `lovspeak-monitoring-${new Date().toISOString().slice(0, 10)}.csv`; anchor.click(); URL.revokeObjectURL(url);
+  const openExportDialog = () => { setExportUserUid(selected?.uid || ''); setExportOpen(true); };
+  const exportReport = async (scope: 'all' | 'user') => {
+    const targetUsers = scope === 'all' ? users : users.filter(item => item.uid === exportUserUid);
+    if (!targetUsers.length) { setMessage('Pilih user terlebih dahulu untuk diekspor.'); return; }
+    setExportBusy(true);
+    setMessage('Menyiapkan laporan Excel…');
+    try {
+      const freshDetails: Record<string, AdminUserDetail> = {};
+      for (let index = 0; index < targetUsers.length; index += 8) {
+        const batch = targetUsers.slice(index, index + 8);
+        const entries = await Promise.all(batch.map(async target => [target.uid, await getAdminUserDetail(target)] as const));
+        entries.forEach(([uid, detail]) => { freshDetails[uid] = detail; });
+      }
+      setDetails(current => ({ ...current, ...freshDetails }));
+      const exportedMetrics = targetUsers
+        .map(target => metricForUser(target, freshDetails[target.uid], period))
+        .sort((a, b) => (b.average ?? -1) - (a.average ?? -1) || b.completionRate - a.completionRate);
+      const rows = buildExportRows(exportedMetrics, freshDetails);
+      const workbook = createWorkbook();
+      const scopeLabel = scope === 'all' ? `Seluruh user (${targetUsers.length})` : `${targetUsers[0].name} · ${targetUsers[0].email || 'email belum tersedia'}`;
+      writeDashboard(workbook, exportedMetrics, periodLabel, scopeLabel);
+      writeExportTable(workbook, 'Ringkasan User',
+        ['Peringkat', 'UID Firebase', 'Nama', 'Email', 'Level', 'Status', 'Terakhir online', 'Nilai rata-rata', 'Progress Daily Plan', 'Daily Plan selesai', 'Roadmap pack', 'Reading', 'Listening', 'Grammar', 'Shadowing', 'Durasi speaking', 'Tren nilai', 'Fokus', 'Aktivitas terakhir'],
+        rows.summary, [10, 28, 24, 32, 10, 12, 20, 16, 20, 18, 15, 12, 12, 12, 12, 18, 18, 28, 18], 'RingkasanUserTable');
+      writeExportTable(workbook, 'Aktivitas Detail',
+        ['Nama', 'Email', 'Tanggal', 'Modul', 'Kode modul', 'Detail / jawaban', 'Nilai', 'Akurasi', 'Durasi', 'Sumber tugas'],
+        rows.activities, [24, 32, 14, 16, 16, 60, 12, 12, 16, 24], 'AktivitasDetailTable');
+      writeExportTable(workbook, 'Perkembangan Harian',
+        ['Tanggal', 'Nama', 'Email', 'Nilai rata-rata', 'Reading', 'Listening', 'Grammar', 'Shadowing', 'Jumlah aktivitas'],
+        rows.daily, [14, 24, 32, 18, 12, 12, 12, 12, 18], 'PerkembanganHarianTable');
+      writeExportTable(workbook, 'Tugas Admin',
+        ['Nama', 'Email', 'Judul tugas', 'Jenis', 'Target', 'Nilai minimum', 'Nilai terbaik', 'Status', 'Percobaan', 'Tenggat', 'Selesai pada'],
+        rows.assignments, [24, 32, 32, 16, 42, 16, 16, 20, 12, 16, 16], 'TugasAdminTable');
+      writeExportTable(workbook, 'Komentar',
+        ['Nama', 'Email', 'Tanggal', 'Dari admin', 'Jenis', 'Task', 'Komentar', 'Status dibaca'],
+        rows.comments, [24, 32, 14, 24, 18, 28, 70, 18], 'KomentarTable');
+      const periodName = period === 'week' ? '7-hari' : period === 'month' ? '30-hari' : 'semua-waktu';
+      const name = scope === 'all' ? 'semua-user' : (targetUsers[0].name || 'user').toLowerCase().replace(/[^a-z0-9]+/gi, '-').replace(/^-|-$/g, '');
+      const bytes = await workbookToBytes(workbook);
+      const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `lovspeak-laporan-${name}-${periodName}-${new Date().toISOString().slice(0, 10)}.xlsx`;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      window.setTimeout(() => URL.revokeObjectURL(url), 1000);
+      setExportOpen(false);
+      setMessage(`Laporan Excel selesai dibuat untuk ${targetUsers.length} user.`);
+    } catch (error) {
+      console.error(error);
+      setMessage('Laporan belum dapat dibuat. Pastikan koneksi Firebase tersedia lalu coba lagi.');
+    } finally { setExportBusy(false); }
   };
   const openUser = (target: AdminUser, tab: DetailTab = 'progress') => {
     setSelected(target); setDetailTab(tab); setFeedback(''); setTaskId('');
@@ -958,7 +1157,7 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
     <div className="admin-layout">
       <aside className="admin-side"><div className="admin-brand"><div className="admin-brand-mark"><i className="fas fa-heart" /></div><div><b>LOVSPEAK</b><span>ADMIN CONSOLE</span></div></div><nav className="admin-nav" data-tour="admin-nav">{navItems.map(item => <button key={item.id} data-tour={item.id === 'users' ? 'admin-users-nav' : item.id === 'assignments' ? 'admin-assignments-nav' : undefined} onClick={() => setSection(item.id)} className={section === item.id ? 'active' : ''}><i className={`fas ${item.icon}`} />{item.label}{item.count !== undefined && <span className="count">{item.count}</span>}</button>)}</nav><div className="admin-side-bottom"><button className="admin-return" onClick={() => window.location.assign('/')}><i className="fas fa-arrow-left mr-2" />Kembali ke LovSpeak</button></div></aside>
       <main className="admin-main">
-        <header className="admin-top"><div><span className="admin-eyebrow">LovSpeak LMS</span><h1><i className={`fas ${SectionIcons[section]} section-icon`} />{section === 'overview' ? 'Overview kelas' : section === 'users' ? 'Semua user' : section === 'attention' ? 'Perlu perhatian' : section === 'comments' ? 'Komentar user' : section === 'assignments' ? 'Tugas & broadcast' : 'Akses admin'}</h1><p>{section === 'overview' ? 'Pantau kondisi kelas dan temukan user yang perlu dibantu.' : section === 'access' ? 'Kelola hak akses tanpa mencampurkannya dengan monitoring user.' : section === 'assignments' ? 'Bagikan tugas terarah, tenggat, dan pesan kelas dari satu tempat.' : 'Data diperbarui dari aktivitas LovSpeak.'}</p></div><div className="admin-tools"><button className="admin-back-btn mobile-hide" onClick={() => window.location.assign('/')} title="Kembali ke LovSpeak"><i className="fas fa-arrow-left" /><span>Kembali ke LovSpeak</span></button><button data-tour="admin-refresh" className="admin-icon-button" onClick={() => void refresh({ resetDetails: true })} title="Muat ulang data"><i className={`fas fa-rotate-right ${loading || detailLoading ? 'fa-spin' : ''}`} /></button><button className="admin-icon-button mobile-hide" onClick={exportReport} title="Unduh laporan Excel-compatible"><i className="fas fa-file-export" /></button><button className="admin-icon-button mobile-hide" onClick={() => saveTheme(theme === 'light' ? 'dark' : 'light')} title="Ganti mode"><i className={`fas fa-${theme === 'light' ? 'moon' : 'sun'}`} /></button><button className="admin-icon-button mobile-hide" onClick={onLogout} title="Keluar"><i className="fas fa-arrow-right-from-bracket" /></button></div></header>
+        <header className="admin-top"><div><span className="admin-eyebrow">LovSpeak LMS</span><h1><i className={`fas ${SectionIcons[section]} section-icon`} />{section === 'overview' ? 'Overview kelas' : section === 'users' ? 'Semua user' : section === 'attention' ? 'Perlu perhatian' : section === 'comments' ? 'Komentar user' : section === 'assignments' ? 'Tugas & broadcast' : 'Akses admin'}</h1><p>{section === 'overview' ? 'Pantau kondisi kelas dan temukan user yang perlu dibantu.' : section === 'access' ? 'Kelola hak akses tanpa mencampurkannya dengan monitoring user.' : section === 'assignments' ? 'Bagikan tugas terarah, tenggat, dan pesan kelas dari satu tempat.' : 'Data diperbarui dari aktivitas LovSpeak.'}</p></div><div className="admin-tools"><button className="admin-back-btn mobile-hide" onClick={() => window.location.assign('/')} title="Kembali ke LovSpeak"><i className="fas fa-arrow-left" /><span>Kembali ke LovSpeak</span></button><button data-tour="admin-refresh" className="admin-icon-button" onClick={() => void refresh({ resetDetails: true })} title="Muat ulang data"><i className={`fas fa-rotate-right ${loading || detailLoading ? 'fa-spin' : ''}`} /></button><button className="admin-icon-button mobile-hide" onClick={openExportDialog} title="Unduh laporan Excel"><i className="fas fa-file-export" /></button><button className="admin-icon-button mobile-hide" onClick={() => saveTheme(theme === 'light' ? 'dark' : 'light')} title="Ganti mode"><i className={`fas fa-${theme === 'light' ? 'moon' : 'sun'}`} /></button><button className="admin-icon-button mobile-hide" onClick={onLogout} title="Keluar"><i className="fas fa-arrow-right-from-bracket" /></button></div></header>
         {message && <div className="admin-alert">{message}</div>}
         {detailLoading && <div className="admin-alert" style={{ background: 'var(--accent-soft)', color: 'var(--accent-strong)', borderColor: 'var(--line)' }}>Ringkasan user sudah tampil. Detail nilai dan aktivitas sedang dilengkapi…</div>}
         {loading && !users.length ? <>
@@ -1029,12 +1228,29 @@ const AdminPortal: React.FC<{ user: User; isAdmin: boolean; onLogout: () => Prom
           <button onClick={() => { setSection('comments'); setMoreOpen(false); }}><i className="fas fa-message" style={{ color: '#4385ee' }} />Komentar</button>
           <button onClick={() => { setSection('access'); setMoreOpen(false); }}><i className="fas fa-shield-halved" style={{ color: '#7c5ce5' }} />Akses Admin<span className="admin-more-count">{adminAccess.length + 1}</span></button>
           <div className="admin-more-divider" />
-          <button onClick={() => { exportReport(); setMoreOpen(false); }}><i className="fas fa-file-export" style={{ color: '#14a88b' }} />Unduh laporan Excel</button>
+          <button onClick={() => { openExportDialog(); setMoreOpen(false); }}><i className="fas fa-file-export" style={{ color: '#14a88b' }} />Unduh laporan Excel</button>
           <button onClick={() => saveTheme(theme === 'light' ? 'dark' : 'light')}><i className={`fas fa-${theme === 'light' ? 'moon' : 'sun'}`} style={{ color: '#f0a020' }} />{theme === 'light' ? 'Mode malam' : 'Mode terang'}</button>
           <div className="admin-more-divider" />
           <button onClick={() => window.location.assign('/')}><i className="fas fa-arrow-left" style={{ color: 'var(--accent-strong)' }} />Kembali ke LovSpeak</button>
           <button className="danger" onClick={() => void onLogout()}><i className="fas fa-arrow-right-from-bracket" />Keluar</button>
         </div>
+      </div>
+    </div>}
+    {exportOpen && <div className="admin-panel-overlay" onMouseDown={() => !exportBusy && setExportOpen(false)}>
+      <div onMouseDown={event => event.stopPropagation()} style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', width: 'min(480px,92%)', background: 'var(--panel)', border: '1px solid var(--line)', borderRadius: 18, padding: 22, boxShadow: 'var(--shadow)' }}>
+        <span className="admin-eyebrow">Ekspor laporan</span>
+        <h3 style={{ margin: '6px 0 4px', fontSize: 17 }}>Pilih data yang ingin diunduh</h3>
+        <p style={{ fontSize: 12, color: 'var(--muted)', margin: 0, lineHeight: 1.5 }}>File Excel berisi tabel ringkasan, aktivitas detail, perkembangan harian, tugas admin, dan komentar.</p>
+        <div style={{ marginTop: 8, fontSize: 11, color: 'var(--accent-strong)', fontWeight: 800 }}>Periode aktif: {periodLabel}</div>
+        <select className="feedback-select" style={{ marginTop: 14 }} value={exportUserUid} onChange={event => setExportUserUid(event.target.value)} disabled={exportBusy} aria-label="Pilih user untuk ekspor">
+          <option value="">Pilih satu user untuk ekspor per user</option>
+          {users.slice().sort((a, b) => a.name.localeCompare(b.name)).map(item => <option key={item.uid} value={item.uid}>{item.name} · {item.email || item.uid}</option>)}
+        </select>
+        <div style={{ display: 'grid', gap: 8, marginTop: 12 }}>
+          <button className="feedback-send" style={{ margin: 0 }} disabled={exportBusy || !exportUserUid} onClick={() => void exportReport('user')}>{exportBusy ? 'Menyiapkan…' : 'Ekspor user ini'}</button>
+          <button className="feedback-send" style={{ margin: 0, background: 'var(--subtle)', color: 'var(--text)', boxShadow: 'none' }} disabled={exportBusy || !users.length} onClick={() => void exportReport('all')}>{exportBusy ? 'Menyiapkan…' : `Ekspor seluruh user (${users.length})`}</button>
+        </div>
+        <button type="button" onClick={() => setExportOpen(false)} disabled={exportBusy} style={{ display: 'block', margin: '14px auto 0', border: 0, background: 'transparent', color: 'var(--muted)', font: 'inherit', fontSize: 12, fontWeight: 800, cursor: 'pointer' }}>Batal</button>
       </div>
     </div>}
     {bulkCommentOpen && <div className="admin-panel-overlay" onMouseDown={() => !bulkSending && setBulkCommentOpen(false)}>
