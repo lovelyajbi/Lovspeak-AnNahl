@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ModuleProps, AppView } from '../types';
 import { getUserProfile, logActivity, getGameProgress, unlockNextLevel, getVocab } from '../services/storage';
@@ -199,16 +199,117 @@ const isAnswerCorrect = (input: string, target: string, useFuzzy: boolean = fals
     return normalize(input) === normalize(target);
 };
 
+const normalizeSpeechOverlapTokens = (text: string): string[] => text
+    .toLowerCase()
+    .replace(/[’']/g, "'")
+    .replace(/[^a-z0-9\s]/g, ' ')
+    .trim()
+    .split(/\s+/)
+    .filter(Boolean);
+
+const appendSpeechWithoutOverlap = (existing: string, incoming: string): string => {
+    const left = existing.trim().split(/\s+/).filter(Boolean);
+    const right = incoming.trim().split(/\s+/).filter(Boolean);
+    if (!left.length) return right.join(' ');
+    if (!right.length) return left.join(' ');
+
+    const comparableLeft = normalizeSpeechOverlapTokens(left.join(' '));
+    const comparableRight = normalizeSpeechOverlapTokens(right.join(' '));
+    const maxOverlap = Math.min(comparableLeft.length, comparableRight.length);
+    let overlap = 0;
+    for (let size = 1; size <= maxOverlap; size++) {
+        if (comparableLeft.slice(-size).join(' ') === comparableRight.slice(0, size).join(' ')) overlap = size;
+    }
+    return [...left, ...right.slice(overlap)].join(' ').trim();
+};
+
+type GameSpeechStatus = 'idle' | 'starting' | 'listening' | 'stopping' | 'error';
+
 const useSpeechRecognition = () => {
-    const [isListening, setIsListening] = useState(false);
+    const [status, setStatus] = useState<GameSpeechStatus>('idle');
     const [transcript, setTranscript] = useState('');
+    const [speechError, setSpeechError] = useState('');
     const recognitionRef = useRef<any>(null);
-    // The browser engine ends a session on any short pause; we auto-restart until
-    // the user explicitly stops, accumulating text across sessions so nothing is lost.
-    // (Rebuilding each session's text from e.results avoids the Android duplication bug.)
-    const manualStopRef = useRef(false);
+    const shouldListenRef = useRef(false);
+    const sessionRunningRef = useRef(false);
+    const generationRef = useRef(0);
+    const restartTimerRef = useRef<number | null>(null);
+    const stopFallbackTimerRef = useRef<number | null>(null);
+    const maxDurationTimerRef = useRef<number | null>(null);
+    const fatalErrorRef = useRef(false);
+    const restartFailuresRef = useRef(0);
     const accumulatedRef = useRef('');
-    const sessionRef = useRef('');
+    const finalResultsRef = useRef(new Map<number, string>());
+    const interimResultsRef = useRef(new Map<number, string>());
+    const flushSessionRef = useRef<(includeInterim: boolean) => void>(() => {});
+
+    const clearTimers = useCallback(() => {
+        [restartTimerRef, stopFallbackTimerRef, maxDurationTimerRef].forEach(ref => {
+            if (ref.current !== null) window.clearTimeout(ref.current);
+            ref.current = null;
+        });
+    }, []);
+
+    const resetTranscript = useCallback((value: string = '') => {
+        accumulatedRef.current = value;
+        finalResultsRef.current.clear();
+        interimResultsRef.current.clear();
+        setTranscript(value);
+    }, []);
+
+    const stopListening = useCallback(() => {
+        if (!shouldListenRef.current) return;
+        shouldListenRef.current = false;
+        generationRef.current += 1;
+        clearTimers();
+        setStatus('stopping');
+        try { recognitionRef.current?.stop(); } catch { /* A mobile session may have just ended. */ }
+
+        // Some Android engines never emit onend after stop(). Force a clean UI reset.
+        stopFallbackTimerRef.current = window.setTimeout(() => {
+            if (shouldListenRef.current) return;
+            try { recognitionRef.current?.abort(); } catch { /* Already inactive. */ }
+            sessionRunningRef.current = false;
+            flushSessionRef.current(true);
+            setStatus('idle');
+        }, 1000);
+    }, [clearTimers]);
+
+    const startListening = useCallback(() => {
+        const rec = recognitionRef.current;
+        if (!rec || shouldListenRef.current) {
+            if (!rec) {
+                setSpeechError('Pengenalan suara belum didukung. Gunakan Chrome terbaru dan izinkan mikrofon.');
+                setStatus('error');
+            }
+            return;
+        }
+
+        clearTimers();
+        shouldListenRef.current = true;
+        fatalErrorRef.current = false;
+        restartFailuresRef.current = 0;
+        sessionRunningRef.current = false;
+        generationRef.current += 1;
+        const generation = generationRef.current;
+        resetTranscript('');
+        setSpeechError('');
+        setStatus('starting');
+        try {
+            rec.start();
+            sessionRunningRef.current = true;
+        } catch {
+            shouldListenRef.current = false;
+            setSpeechError('Mikrofon belum siap. Ketuk rekam sekali lagi.');
+            setStatus('error');
+            return;
+        }
+
+        // Safety limit if the game view changes without delivering a normal stop event.
+        maxDurationTimerRef.current = window.setTimeout(() => {
+            if (shouldListenRef.current && generationRef.current === generation) stopListening();
+        }, 40000);
+    }, [clearTimers, resetTranscript, stopListening]);
 
     useEffect(() => {
         const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -217,59 +318,122 @@ const useSpeechRecognition = () => {
         rec.lang = 'en-US';
         rec.continuous = true;
         rec.interimResults = true;
+        rec.maxAlternatives = 1;
+
+        const flushSession = (includeInterim: boolean) => {
+            const finalText = Array.from(finalResultsRef.current.entries())
+                .sort(([a], [b]) => a - b)
+                .map(([, text]) => text)
+                .join(' ')
+                .trim();
+            const interimText = includeInterim
+                ? Array.from(interimResultsRef.current.entries())
+                    .sort(([a], [b]) => a - b)
+                    .map(([, text]) => text)
+                    .join(' ')
+                    .trim()
+                : '';
+            accumulatedRef.current = appendSpeechWithoutOverlap(
+                accumulatedRef.current,
+                appendSpeechWithoutOverlap(finalText, interimText)
+            );
+            finalResultsRef.current.clear();
+            interimResultsRef.current.clear();
+            setTranscript(accumulatedRef.current);
+        };
+        flushSessionRef.current = flushSession;
+
+        const scheduleRestart = () => {
+            const generation = generationRef.current;
+            restartTimerRef.current = window.setTimeout(() => {
+                if (!shouldListenRef.current || generation !== generationRef.current || sessionRunningRef.current) return;
+                try {
+                    rec.start();
+                    sessionRunningRef.current = true;
+                    restartFailuresRef.current = 0;
+                    setStatus('starting');
+                } catch {
+                    if (shouldListenRef.current && generation === generationRef.current) {
+                        restartFailuresRef.current += 1;
+                        if (restartFailuresRef.current >= 4) {
+                            shouldListenRef.current = false;
+                            fatalErrorRef.current = true;
+                            setSpeechError('Mikrofon tidak dapat disambungkan kembali. Ketuk rekam untuk mencoba lagi.');
+                            setStatus('error');
+                        } else {
+                            restartTimerRef.current = window.setTimeout(scheduleRestart, 350);
+                        }
+                    }
+                }
+            }, 250);
+        };
+
+        rec.onstart = () => {
+            if (shouldListenRef.current) setStatus('listening');
+        };
         rec.onresult = (e: any) => {
-            let session = '';
-            for (let i = 0; i < e.results.length; i++) {
-                session += e.results[i][0].transcript + ' ';
+            // Only replace the results that changed. Android repeatedly returns
+            // cumulative interim hypotheses, which must never be appended as new speech.
+            for (let index = e.resultIndex; index < e.results.length; index++) {
+                const result = e.results[index];
+                const text = result?.[0]?.transcript?.trim();
+                if (!text) continue;
+                if (result.isFinal) {
+                    finalResultsRef.current.set(index, text);
+                    interimResultsRef.current.delete(index);
+                } else {
+                    interimResultsRef.current.set(index, text);
+                }
             }
-            sessionRef.current = session.trim();
-            setTranscript((accumulatedRef.current + ' ' + sessionRef.current).trim());
+            const finalText = Array.from(finalResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
+            const interimText = Array.from(interimResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
+            setTranscript(appendSpeechWithoutOverlap(accumulatedRef.current, appendSpeechWithoutOverlap(finalText, interimText)));
         };
         rec.onend = () => {
-            accumulatedRef.current = (accumulatedRef.current + ' ' + sessionRef.current).trim();
-            sessionRef.current = '';
-            if (manualStopRef.current) {
-                setIsListening(false);
+            sessionRunningRef.current = false;
+            flushSession(true);
+            if (!shouldListenRef.current) {
+                clearTimers();
+                setStatus(fatalErrorRef.current ? 'error' : 'idle');
                 return;
             }
-            try {
-                rec.start();
-            } catch {
-                setTimeout(() => {
-                    if (manualStopRef.current) { setIsListening(false); return; }
-                    try { rec.start(); } catch { setIsListening(false); }
-                }, 150);
-            }
+            scheduleRestart();
         };
         rec.onerror = (e: any) => {
-            if (e?.error === 'not-allowed' || e?.error === 'service-not-allowed') {
-                manualStopRef.current = true;
+            const reason = e?.error || 'unknown';
+            if (reason === 'not-allowed' || reason === 'service-not-allowed' || reason === 'audio-capture') {
+                shouldListenRef.current = false;
+                fatalErrorRef.current = true;
+                clearTimers();
+                setSpeechError('Mikrofon tidak tersedia. Periksa izin mikrofon lalu coba lagi.');
+                setStatus('error');
+            } else if (reason === 'network') {
+                setSpeechError('Layanan pengenalan suara sedang terganggu. Silakan coba lagi.');
             }
-            // Other errors (no-speech, aborted, network) fall through to onend, which restarts.
         };
         recognitionRef.current = rec;
-        return () => { manualStopRef.current = true; try { rec.stop(); } catch { /* already stopped */ } };
-    }, []);
 
-    const startListening = () => {
-        if (recognitionRef.current && !isListening) {
-            try {
-                manualStopRef.current = false;
-                accumulatedRef.current = '';
-                sessionRef.current = '';
-                setTranscript(''); // Clear previous attempt
-                recognitionRef.current.start();
-                setIsListening(true);
-            } catch (e) { console.error("Mic start error", e); }
-        }
-    };
-    const stopListening = () => {
-        if (recognitionRef.current && isListening) {
-            manualStopRef.current = true;
-            try { recognitionRef.current.stop(); } catch { setIsListening(false); }
-        }
-    };
-    return { isListening, transcript, startListening, stopListening, setTranscript };
+        const stopForBackground = () => {
+            if (!document.hidden || !shouldListenRef.current) return;
+            shouldListenRef.current = false;
+            generationRef.current += 1;
+            clearTimers();
+            try { rec.abort(); } catch { /* Already inactive. */ }
+            flushSession(true);
+            setStatus('idle');
+        };
+        document.addEventListener('visibilitychange', stopForBackground);
+        return () => {
+            document.removeEventListener('visibilitychange', stopForBackground);
+            shouldListenRef.current = false;
+            clearTimers();
+            try { rec.abort(); } catch { /* Already inactive. */ }
+            recognitionRef.current = null;
+        };
+    }, [clearTimers]);
+
+    const isListening = status === 'starting' || status === 'listening' || status === 'stopping';
+    return { isListening, status, speechError, transcript, startListening, stopListening, setTranscript: resetTranscript };
 };
 
 const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
@@ -292,7 +456,7 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
     const [scrambleAnswer, setScrambleAnswer] = useState<string[]>([]);
     const [wordAnalysis, setWordAnalysis] = useState<{ word: string, status: 'correct' | 'incorrect', isFunction: boolean }[]>([]);
 
-    const { isListening, transcript, startListening, stopListening, setTranscript } = useSpeechRecognition();
+    const { isListening, status: speechStatus, speechError, transcript, startListening, stopListening, setTranscript } = useSpeechRecognition();
 
     // Kept for backward compatibility with persisted navigation state
     const [currentLevelPage, setCurrentLevelPage] = useState(1);
@@ -339,6 +503,13 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
         window.addEventListener('keydown', handleKeyDown);
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [selectedCategory, gameState, isListening, feedback]);
+
+    // Never leave the microphone running after the user exits a voice game.
+    useEffect(() => {
+        if (gameState !== 'playing' || !['interpreter', 'read_aloud'].includes(selectedCategory || '')) {
+            stopListening();
+        }
+    }, [gameState, selectedCategory, stopListening]);
 
     useEffect(() => {
         let timer: any;
@@ -1011,14 +1182,29 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
                                         <div className="flex flex-col items-center gap-5">
                                             <div className="relative">
                                                 {isListening && <motion.div animate={{ scale: [1, 1.5, 1] }} transition={{ duration: 1.5, repeat: Infinity }} className="absolute inset-0 rounded-full bg-indigo-500/20" />}
-                                                <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleMic}
-                                                    className={`w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-xl transition-all relative z-10 ${isListening ? 'bg-gradient-to-br from-indigo-500 to-blue-600 text-white ring-4 ring-indigo-300/30' : 'bg-white dark:bg-gray-800 text-indigo-500 border-2 border-indigo-100 dark:border-indigo-800'}`}>
+                                                <motion.button type="button" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }} onClick={toggleMic}
+                                                    disabled={speechStatus === 'stopping'}
+                                                    aria-label={isListening ? 'Stop recording' : 'Start recording'}
+                                                    className={`w-20 h-20 md:w-24 md:h-24 rounded-full flex items-center justify-center text-2xl md:text-3xl shadow-xl transition-all touch-manipulation disabled:opacity-60 disabled:cursor-not-allowed relative z-10 ${isListening ? 'bg-gradient-to-br from-indigo-500 to-blue-600 text-white ring-4 ring-indigo-300/30' : 'bg-white dark:bg-gray-800 text-indigo-500 border-2 border-indigo-100 dark:border-indigo-800'}`}>
                                                     <i className={`fas ${isListening ? 'fa-stop' : 'fa-microphone'}`}></i>
                                                 </motion.button>
                                             </div>
                                             <div className="space-y-2">
-                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{isListening ? 'Listening... Click to Stop' : 'Click or Press Space'}</p>
+                                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
+                                                    {speechStatus === 'starting'
+                                                        ? 'Preparing microphone...'
+                                                        : speechStatus === 'stopping'
+                                                            ? 'Finishing speech...'
+                                                            : speechStatus === 'listening'
+                                                                ? 'Listening... Click to Stop'
+                                                                : 'Click or Press Space'}
+                                                </p>
                                                 <div className="min-h-[40px] px-5 py-2.5 bg-white dark:bg-gray-800 rounded-full border border-gray-100 dark:border-gray-700 text-base font-bold text-indigo-600 shadow-sm">{userInput || '...'}</div>
+                                                {speechError && (
+                                                    <p role="alert" className="max-w-sm px-4 py-2 rounded-xl bg-rose-50 dark:bg-rose-900/20 text-rose-600 dark:text-rose-300 text-xs font-bold normal-case tracking-normal">
+                                                        {speechError}
+                                                    </p>
+                                                )}
                                             </div>
                                         </div>
                                     </>
