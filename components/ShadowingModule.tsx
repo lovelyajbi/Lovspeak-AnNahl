@@ -7,40 +7,143 @@ import { analyzePronunciationAudio } from '../services/gemini';
 import { ttsService } from '../services/ttsService';
 import { getDialogueScenarios } from '../services/dialogueContent';
 
-const calculateTextSimilarity = (s1: string, s2: string): number => {
-  const normalize = (s: string) => s.toLowerCase().trim().replace(/[.,/#!$%^&*;:{}=\-_`~()?]/g, '').replace(/\s{2,}/g, ' ');
-  const str1 = normalize(s1);
-  const str2 = normalize(s2);
-  if (str1 === str2) return 1.0;
-  if (str1.length === 0 || str2.length === 0) return 0.0;
+const normalizeSpeechTokens = (text: string): string[] => text
+  .toLowerCase()
+  .replace(/[’']/g, "'")
+  .replace(/\bi'm\b/g, 'i am')
+  .replace(/\bcan't\b/g, 'cannot')
+  .replace(/\bwon't\b/g, 'will not')
+  .replace(/\bwhat's\b/g, 'what is')
+  .replace(/\bthat's\b/g, 'that is')
+  .replace(/\bthere's\b/g, 'there is')
+  .replace(/\b(um|uh|erm)\b/g, ' ')
+  .replace(/[^a-z0-9\s]/g, ' ')
+  .trim()
+  .split(/\s+/)
+  .filter(Boolean);
 
-  const costs: number[] = [];
-  for (let i = 0; i <= str1.length; i++) {
-    let lastValue = i;
-    for (let j = 0; j <= str2.length; j++) {
-      if (i === 0) costs[j] = j;
-      else if (j > 0) {
-        let newValue = costs[j - 1];
-        if (str1.charAt(i - 1) !== str2.charAt(j - 1)) newValue = Math.min(Math.min(newValue, lastValue), costs[j]) + 1;
-        costs[j - 1] = lastValue;
-        lastValue = newValue;
-      }
-    }
-    if (i > 0) costs[str2.length] = lastValue;
+const normalizeOverlapTokens = (text: string): string[] => text
+  .toLowerCase()
+  .replace(/[’']/g, "'")
+  .replace(/[^a-z0-9\s]/g, ' ')
+  .trim()
+  .split(/\s+/)
+  .filter(Boolean);
+
+const appendWithoutOverlap = (existing: string, incoming: string): string => {
+  const left = existing.trim().split(/\s+/).filter(Boolean);
+  const right = incoming.trim().split(/\s+/).filter(Boolean);
+  if (!left.length) return right.join(' ');
+  if (!right.length) return left.join(' ');
+  const comparableLeft = normalizeOverlapTokens(left.join(' '));
+  const comparableRight = normalizeOverlapTokens(right.join(' '));
+  const maxOverlap = Math.min(comparableLeft.length, comparableRight.length);
+  let overlap = 0;
+  for (let size = 1; size <= maxOverlap; size++) {
+    if (comparableLeft.slice(-size).join(' ') === comparableRight.slice(0, size).join(' ')) overlap = size;
   }
-  const distance = costs[str2.length];
-  return 1.0 - distance / Math.max(str1.length, str2.length);
+  return [...left, ...right.slice(overlap)].join(' ').trim();
 };
 
+const calculateTextSimilarity = (spoken: string, expected: string): number => {
+  const actual = normalizeSpeechTokens(spoken);
+  const target = normalizeSpeechTokens(expected);
+  if (!actual.length || !target.length) return 0;
+  if (actual.join(' ') === target.join(' ')) return 1;
+  const previous = Array.from({ length: target.length + 1 }, (_, index) => index);
+  for (let i = 1; i <= actual.length; i++) {
+    let diagonal = previous[0];
+    previous[0] = i;
+    for (let j = 1; j <= target.length; j++) {
+      const above = previous[j];
+      previous[j] = actual[i - 1] === target[j - 1]
+        ? diagonal
+        : Math.min(previous[j] + 1, previous[j - 1] + 1, diagonal + 1);
+      diagonal = above;
+    }
+  }
+  return Math.max(0, 1 - previous[target.length] / Math.max(actual.length, target.length));
+};
+
+type DialogueSpeechStatus = 'idle' | 'starting' | 'listening' | 'stopping' | 'error';
+
 const useDialogueSpeech = () => {
-  const [isListening, setIsListening] = useState(false);
+  const [status, setStatus] = useState<DialogueSpeechStatus>('idle');
   const [transcript, setTranscript] = useState('');
+  const [speechError, setSpeechError] = useState('');
   const recognitionRef = useRef<any>(null);
-  // The browser SpeechRecognition engine ends a session on any short pause;
-  // we auto-restart until the user explicitly taps stop, accumulating text across sessions.
-  const manualStopRef = useRef(false);
+  const shouldListenRef = useRef(false);
+  const sessionRunningRef = useRef(false);
+  const generationRef = useRef(0);
+  const restartTimerRef = useRef<number | null>(null);
+  const stopFallbackTimerRef = useRef<number | null>(null);
+  const maxDurationTimerRef = useRef<number | null>(null);
+  const fatalErrorRef = useRef(false);
+  const restartFailuresRef = useRef(0);
   const accumulatedRef = useRef('');
-  const sessionRef = useRef('');
+  const finalResultsRef = useRef(new Map<number, string>());
+  const interimResultsRef = useRef(new Map<number, string>());
+  const flushSessionRef = useRef<(includeInterim: boolean) => void>(() => {});
+
+  const clearTimers = useCallback(() => {
+    [restartTimerRef, stopFallbackTimerRef, maxDurationTimerRef].forEach(ref => {
+      if (ref.current !== null) window.clearTimeout(ref.current);
+      ref.current = null;
+    });
+  }, []);
+  const resetTranscript = useCallback((value: string = '') => {
+    accumulatedRef.current = value;
+    finalResultsRef.current.clear();
+    interimResultsRef.current.clear();
+    setTranscript(value);
+  }, []);
+  const stopListening = useCallback(() => {
+    if (!shouldListenRef.current) return;
+    shouldListenRef.current = false;
+    generationRef.current += 1;
+    clearTimers();
+    setStatus('stopping');
+    try { recognitionRef.current?.stop(); } catch { /* A session may have just ended on Android. */ }
+    stopFallbackTimerRef.current = window.setTimeout(() => {
+      if (shouldListenRef.current) return;
+      try { recognitionRef.current?.abort(); } catch { /* Already inactive. */ }
+      sessionRunningRef.current = false;
+      flushSessionRef.current(true);
+      setStatus('idle');
+    }, 1000);
+  }, [clearTimers]);
+  const startListening = useCallback(() => {
+    const rec = recognitionRef.current;
+    if (!rec || shouldListenRef.current) {
+      if (!rec) {
+        setSpeechError('Pengenalan suara belum didukung di browser ini. Gunakan Chrome terbaru dan izinkan mikrofon.');
+        setStatus('error');
+      }
+      return;
+    }
+    clearTimers();
+    shouldListenRef.current = true;
+    fatalErrorRef.current = false;
+    restartFailuresRef.current = 0;
+    sessionRunningRef.current = false;
+    generationRef.current += 1;
+    const generation = generationRef.current;
+    resetTranscript('');
+    setSpeechError('');
+    setStatus('starting');
+    try {
+      rec.start();
+      sessionRunningRef.current = true;
+      setStatus('listening');
+    } catch {
+      shouldListenRef.current = false;
+      setSpeechError('Mikrofon belum siap. Coba ketuk rekam sekali lagi.');
+      setStatus('error');
+    }
+    maxDurationTimerRef.current = window.setTimeout(() => {
+      if (shouldListenRef.current && generationRef.current === generation) stopListening();
+    }, 30000);
+  }, [clearTimers, resetTranscript, stopListening]);
 
   useEffect(() => {
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
@@ -49,57 +152,95 @@ const useDialogueSpeech = () => {
     rec.lang = 'en-US';
     rec.continuous = true;
     rec.interimResults = true;
-    rec.onresult = (e: any) => {
-      let session = '';
-      for (let i = 0; i < e.results.length; i++) session += e.results[i][0].transcript + ' ';
-      sessionRef.current = session.trim();
-      setTranscript((accumulatedRef.current + ' ' + sessionRef.current).trim());
+    rec.maxAlternatives = 1;
+    const flushSession = (includeInterim: boolean) => {
+      const finalText = Array.from(finalResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ').trim();
+      const interimText = includeInterim ? Array.from(interimResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ').trim() : '';
+      accumulatedRef.current = appendWithoutOverlap(accumulatedRef.current, appendWithoutOverlap(finalText, interimText));
+      finalResultsRef.current.clear();
+      interimResultsRef.current.clear();
+      setTranscript(accumulatedRef.current);
+    };
+    flushSessionRef.current = flushSession;
+    const scheduleRestart = () => {
+      const generation = generationRef.current;
+      restartTimerRef.current = window.setTimeout(() => {
+        if (!shouldListenRef.current || generation !== generationRef.current || sessionRunningRef.current) return;
+        try {
+          rec.start();
+          sessionRunningRef.current = true;
+          restartFailuresRef.current = 0;
+          setStatus('listening');
+        } catch {
+          if (shouldListenRef.current && generation === generationRef.current) {
+            restartFailuresRef.current += 1;
+            if (restartFailuresRef.current >= 4) {
+              shouldListenRef.current = false;
+              fatalErrorRef.current = true;
+              setSpeechError('Mikrofon tidak dapat disambungkan kembali. Ketuk rekam untuk mencoba lagi.');
+              setStatus('error');
+            } else {
+              restartTimerRef.current = window.setTimeout(scheduleRestart, 350);
+            }
+          }
+        }
+      }, 250);
+    };
+    rec.onresult = (event: any) => {
+      for (let index = event.resultIndex; index < event.results.length; index++) {
+        const result = event.results[index];
+        const text = result?.[0]?.transcript?.trim();
+        if (!text) continue;
+        if (result.isFinal) {
+          finalResultsRef.current.set(index, text);
+          interimResultsRef.current.delete(index);
+        } else interimResultsRef.current.set(index, text);
+      }
+      const finalText = Array.from(finalResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
+      const interimText = Array.from(interimResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
+      setTranscript(appendWithoutOverlap(accumulatedRef.current, appendWithoutOverlap(finalText, interimText)));
     };
     rec.onend = () => {
-      accumulatedRef.current = (accumulatedRef.current + ' ' + sessionRef.current).trim();
-      sessionRef.current = '';
-      if (manualStopRef.current) {
-        setIsListening(false);
+      sessionRunningRef.current = false;
+      flushSession(true);
+      if (!shouldListenRef.current) {
+        clearTimers();
+        setStatus(fatalErrorRef.current ? 'error' : 'idle');
         return;
       }
-      try {
-        rec.start();
-      } catch {
-        setTimeout(() => {
-          if (manualStopRef.current) { setIsListening(false); return; }
-          try { rec.start(); } catch { setIsListening(false); }
-        }, 150);
-      }
+      scheduleRestart();
     };
-    rec.onerror = (e: any) => {
-      if (e?.error === 'not-allowed' || e?.error === 'service-not-allowed') {
-        manualStopRef.current = true;
-      }
-      // Other errors (no-speech, aborted, network) fall through to onend, which restarts.
+    rec.onerror = (event: any) => {
+      const reason = event?.error || 'unknown';
+      if (reason === 'not-allowed' || reason === 'service-not-allowed' || reason === 'audio-capture') {
+        shouldListenRef.current = false;
+        fatalErrorRef.current = true;
+        clearTimers();
+        setSpeechError('Mikrofon tidak tersedia. Periksa izin mikrofon lalu coba lagi.');
+        setStatus('error');
+      } else if (reason === 'network') setSpeechError('Layanan pengenalan suara sedang terganggu. Rekaman tetap dapat dicoba lagi.');
     };
     recognitionRef.current = rec;
-    return () => { manualStopRef.current = true; try { rec.stop(); } catch { /* already stopped */ } };
-  }, []);
-
-  const startListening = () => {
-    if (recognitionRef.current && !isListening) {
-      try {
-        manualStopRef.current = false;
-        accumulatedRef.current = '';
-        sessionRef.current = '';
-        setTranscript('');
-        recognitionRef.current.start();
-        setIsListening(true);
-      } catch (e) { console.error('Mic start error', e); }
-    }
-  };
-  const stopListening = () => {
-    if (recognitionRef.current && isListening) {
-      manualStopRef.current = true;
-      try { recognitionRef.current.stop(); } catch { setIsListening(false); }
-    }
-  };
-  return { isListening, transcript, startListening, stopListening, setTranscript };
+    const stopForBackground = () => {
+      if (!document.hidden || !shouldListenRef.current) return;
+      shouldListenRef.current = false;
+      generationRef.current += 1;
+      clearTimers();
+      try { rec.abort(); } catch { /* Already inactive. */ }
+      flushSession(true);
+      setStatus('idle');
+    };
+    document.addEventListener('visibilitychange', stopForBackground);
+    return () => {
+      document.removeEventListener('visibilitychange', stopForBackground);
+      shouldListenRef.current = false;
+      clearTimers();
+      try { rec.abort(); } catch { /* Already inactive. */ }
+      recognitionRef.current = null;
+    };
+  }, [clearTimers]);
+  const isListening = status === 'starting' || status === 'listening' || status === 'stopping';
+  return { isListening, status, speechError, transcript, startListening, stopListening, setTranscript: resetTranscript };
 };
 
 interface FeedbackDetail {
@@ -184,7 +325,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const [completedDialogueScores, setCompletedDialogueScores] = useState<Record<string, number>>({});
   const dialogueStartedAtRef = useRef<number>(0);
   const launchedDailyDialogueRef = useRef<string | null>(null);
-  const { isListening: isDialogueListening, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
+  const { isListening: isDialogueListening, status: dialogueSpeechStatus, speechError: dialogueSpeechError, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
 
   const isDailyRoleplay = initialContext?.type === 'daily' && initialContext.autoStart && initialContext.shadowingMode === 'roleplay';
   const isRoadmapRoleplay = (initialContext?.type === 'unit' || initialContext?.assignmentKind === 'roadmap_pack') && initialContext?.autoStart && initialContext.shadowingMode === 'roleplay';
@@ -229,6 +370,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   };
 
   const exitDialogueRoleplay = () => {
+    stopDialogueListening();
     setDialogueStage(null);
     setSelectedDialogueCategory(null);
     setSelectedScenario(null);
@@ -245,6 +387,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const dialogueCategories = Array.from(new Set(dialogueScenarios.map(s => s.category)));
 
   const playDialogueLine = (text: string) => {
+    stopDialogueListening();
     setIsDialoguePlaying(true);
     ttsService.speak(text, 'en-US', 0.95, 1.0, () => setIsDialoguePlaying(false), () => setIsDialoguePlaying(false));
   };
@@ -326,6 +469,10 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [lineIndex, dialogueStage]);
+
+  useEffect(() => {
+    if (dialogueStage !== 'play') stopDialogueListening();
+  }, [dialogueStage, stopDialogueListening]);
 
   useEffect(() => {
     if (!isDialogueListening && dialogueTranscript && isMyTurn && currentDialogueLine) {
@@ -1409,14 +1556,30 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
             {dialogueTranscript && (
               <p className="text-[11px] text-gray-400 font-bold mb-2">You said: "{dialogueTranscript}"</p>
             )}
+            {dialogueSpeechError && (
+              <p className="text-[10px] text-rose-500 font-bold mb-2 text-center">{dialogueSpeechError}</p>
+            )}
             <div className="flex flex-col items-center gap-2">
               <button
+                type="button"
+                aria-label={isDialogueListening ? 'Stop recording' : 'Start recording'}
+                disabled={dialogueSpeechStatus === 'stopping' || isDialoguePlaying}
                 onClick={() => isDialogueListening ? stopDialogueListening() : startDialogueListening()}
-                className={`w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg transition-all ${isDialogueListening ? 'bg-rose-500 animate-pulse scale-110' : 'bg-gradient-to-br from-lovelya-500 to-rose-600 hover:scale-105'}`}
+                className={`w-14 h-14 rounded-full flex items-center justify-center text-white shadow-lg transition-all touch-manipulation disabled:opacity-60 disabled:cursor-not-allowed ${isDialogueListening ? 'bg-rose-500 animate-pulse scale-110' : 'bg-gradient-to-br from-lovelya-500 to-rose-600 hover:scale-105'}`}
               >
                 <i className={`fas ${isDialogueListening ? 'fa-stop' : 'fa-microphone'}`}></i>
               </button>
-              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">{isDialogueListening ? 'Mendengarkan... ketuk stop jika selesai' : 'Tap to record'}</span>
+              <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest text-center">
+                {isDialoguePlaying
+                  ? 'Tunggu audio selesai'
+                  : dialogueSpeechStatus === 'starting'
+                    ? 'Menyiapkan mikrofon...'
+                    : dialogueSpeechStatus === 'stopping'
+                      ? 'Menyelesaikan ucapan...'
+                      : isDialogueListening
+                        ? 'Mendengarkan... ketuk stop jika selesai'
+                        : 'Tap to record'}
+              </span>
               {dialogueMatch !== null && !matchPassed && (
                 <div className="flex flex-col items-center gap-2 mt-1">
                   <span className="inline-flex items-center gap-1 text-[10px] font-black text-amber-600 bg-amber-100 dark:bg-amber-900/30 px-3 py-1 rounded-full">
@@ -1434,7 +1597,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                 <i className="fas fa-check"></i> {dialogueMatch}% match — nice!
               </span>
             )}
-            <button onClick={advanceDialogueLine} className="w-full py-3 bg-gradient-to-r from-lovelya-500 to-rose-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg hover:scale-[1.02] transition-all">
+            <button type="button" disabled={isDialoguePlaying} onClick={advanceDialogueLine} className="w-full py-3 bg-gradient-to-r from-lovelya-500 to-rose-600 text-white rounded-2xl font-black text-xs uppercase tracking-widest shadow-lg hover:scale-[1.02] transition-all disabled:opacity-60 disabled:cursor-not-allowed">
               {isMyTurn ? 'Continue' : (isDialoguePlaying ? 'Playing...' : 'Continue')} <i className="fas fa-chevron-right ml-2"></i>
             </button>
           </div>
