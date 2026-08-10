@@ -81,8 +81,8 @@ const useDialogueSpeech = () => {
   const fatalErrorRef = useRef(false);
   const restartFailuresRef = useRef(0);
   const accumulatedRef = useRef('');
-  const finalResultsRef = useRef(new Map<number, string>());
-  const interimResultsRef = useRef(new Map<number, string>());
+  const sessionFinalSnapshotRef = useRef('');
+  const sessionSnapshotRef = useRef('');
   const flushSessionRef = useRef<(includeInterim: boolean) => void>(() => {});
 
   const clearTimers = useCallback(() => {
@@ -93,8 +93,8 @@ const useDialogueSpeech = () => {
   }, []);
   const resetTranscript = useCallback((value: string = '') => {
     accumulatedRef.current = value;
-    finalResultsRef.current.clear();
-    interimResultsRef.current.clear();
+    sessionFinalSnapshotRef.current = '';
+    sessionSnapshotRef.current = '';
     setTranscript(value);
   }, []);
   const stopListening = useCallback(() => {
@@ -154,11 +154,12 @@ const useDialogueSpeech = () => {
     rec.interimResults = true;
     rec.maxAlternatives = 1;
     const flushSession = (includeInterim: boolean) => {
-      const finalText = Array.from(finalResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ').trim();
-      const interimText = includeInterim ? Array.from(interimResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ').trim() : '';
-      accumulatedRef.current = appendWithoutOverlap(accumulatedRef.current, appendWithoutOverlap(finalText, interimText));
-      finalResultsRef.current.clear();
-      interimResultsRef.current.clear();
+      const segment = includeInterim
+        ? sessionSnapshotRef.current
+        : sessionFinalSnapshotRef.current;
+      accumulatedRef.current = appendWithoutOverlap(accumulatedRef.current, segment);
+      sessionFinalSnapshotRef.current = '';
+      sessionSnapshotRef.current = '';
       setTranscript(accumulatedRef.current);
     };
     flushSessionRef.current = flushSession;
@@ -187,18 +188,24 @@ const useDialogueSpeech = () => {
       }, 250);
     };
     rec.onresult = (event: any) => {
-      for (let index = event.resultIndex; index < event.results.length; index++) {
+      // Treat the complete result list as the authoritative snapshot. Android
+      // may revise, remove, or split interim hypotheses into cumulative entries
+      // such as "yes", "yes I", "yes I think". Rebuilding and merging overlap
+      // prevents both stale phantom words and triangular repetition.
+      let finalSnapshot = '';
+      let fullSnapshot = '';
+      for (let index = 0; index < event.results.length; index++) {
         const result = event.results[index];
         const text = result?.[0]?.transcript?.trim();
         if (!text) continue;
+        fullSnapshot = appendWithoutOverlap(fullSnapshot, text);
         if (result.isFinal) {
-          finalResultsRef.current.set(index, text);
-          interimResultsRef.current.delete(index);
-        } else interimResultsRef.current.set(index, text);
+          finalSnapshot = appendWithoutOverlap(finalSnapshot, text);
+        }
       }
-      const finalText = Array.from(finalResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
-      const interimText = Array.from(interimResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
-      setTranscript(appendWithoutOverlap(accumulatedRef.current, appendWithoutOverlap(finalText, interimText)));
+      sessionFinalSnapshotRef.current = finalSnapshot;
+      sessionSnapshotRef.current = fullSnapshot;
+      setTranscript(appendWithoutOverlap(accumulatedRef.current, fullSnapshot));
     };
     rec.onend = () => {
       sessionRunningRef.current = false;

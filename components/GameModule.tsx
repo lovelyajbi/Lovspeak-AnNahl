@@ -239,8 +239,8 @@ const useSpeechRecognition = () => {
     const fatalErrorRef = useRef(false);
     const restartFailuresRef = useRef(0);
     const accumulatedRef = useRef('');
-    const finalResultsRef = useRef(new Map<number, string>());
-    const interimResultsRef = useRef(new Map<number, string>());
+    const sessionFinalSnapshotRef = useRef('');
+    const sessionSnapshotRef = useRef('');
     const flushSessionRef = useRef<(includeInterim: boolean) => void>(() => {});
 
     const clearTimers = useCallback(() => {
@@ -252,8 +252,8 @@ const useSpeechRecognition = () => {
 
     const resetTranscript = useCallback((value: string = '') => {
         accumulatedRef.current = value;
-        finalResultsRef.current.clear();
-        interimResultsRef.current.clear();
+        sessionFinalSnapshotRef.current = '';
+        sessionSnapshotRef.current = '';
         setTranscript(value);
     }, []);
 
@@ -321,24 +321,12 @@ const useSpeechRecognition = () => {
         rec.maxAlternatives = 1;
 
         const flushSession = (includeInterim: boolean) => {
-            const finalText = Array.from(finalResultsRef.current.entries())
-                .sort(([a], [b]) => a - b)
-                .map(([, text]) => text)
-                .join(' ')
-                .trim();
-            const interimText = includeInterim
-                ? Array.from(interimResultsRef.current.entries())
-                    .sort(([a], [b]) => a - b)
-                    .map(([, text]) => text)
-                    .join(' ')
-                    .trim()
-                : '';
-            accumulatedRef.current = appendSpeechWithoutOverlap(
-                accumulatedRef.current,
-                appendSpeechWithoutOverlap(finalText, interimText)
-            );
-            finalResultsRef.current.clear();
-            interimResultsRef.current.clear();
+            const segment = includeInterim
+                ? sessionSnapshotRef.current
+                : sessionFinalSnapshotRef.current;
+            accumulatedRef.current = appendSpeechWithoutOverlap(accumulatedRef.current, segment);
+            sessionFinalSnapshotRef.current = '';
+            sessionSnapshotRef.current = '';
             setTranscript(accumulatedRef.current);
         };
         flushSessionRef.current = flushSession;
@@ -372,22 +360,23 @@ const useSpeechRecognition = () => {
             if (shouldListenRef.current) setStatus('listening');
         };
         rec.onresult = (e: any) => {
-            // Only replace the results that changed. Android repeatedly returns
-            // cumulative interim hypotheses, which must never be appended as new speech.
-            for (let index = e.resultIndex; index < e.results.length; index++) {
+            // Rebuild from the current browser snapshot. Android can expose
+            // cumulative entries ("yes", "yes I", "yes I think") and can
+            // remove an old interim guess when it revises the sentence.
+            let finalSnapshot = '';
+            let fullSnapshot = '';
+            for (let index = 0; index < e.results.length; index++) {
                 const result = e.results[index];
                 const text = result?.[0]?.transcript?.trim();
                 if (!text) continue;
+                fullSnapshot = appendSpeechWithoutOverlap(fullSnapshot, text);
                 if (result.isFinal) {
-                    finalResultsRef.current.set(index, text);
-                    interimResultsRef.current.delete(index);
-                } else {
-                    interimResultsRef.current.set(index, text);
+                    finalSnapshot = appendSpeechWithoutOverlap(finalSnapshot, text);
                 }
             }
-            const finalText = Array.from(finalResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
-            const interimText = Array.from(interimResultsRef.current.entries()).sort(([a], [b]) => a - b).map(([, text]) => text).join(' ');
-            setTranscript(appendSpeechWithoutOverlap(accumulatedRef.current, appendSpeechWithoutOverlap(finalText, interimText)));
+            sessionFinalSnapshotRef.current = finalSnapshot;
+            sessionSnapshotRef.current = fullSnapshot;
+            setTranscript(appendSpeechWithoutOverlap(accumulatedRef.current, fullSnapshot));
         };
         rec.onend = () => {
             sessionRunningRef.current = false;
