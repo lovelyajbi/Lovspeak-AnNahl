@@ -52,10 +52,63 @@ const isPermissionError = (e: any): boolean => {
         msg.toLowerCase().includes("unauthorized");
 };
 
-export const MODEL_CASCADE_SMART = ['gemini-3.5-flash', 'gemini-2.5-flash', 'gemini-3-flash-preview', 'gemini-3.1-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-3.1-pro-preview', 'gemini-2.5-pro', 'gemini-pro-latest'];
-export const MODEL_CASCADE_LITE = ['gemini-3.5-flash', 'gemini-3.1-flash-lite', 'gemini-2.5-flash-lite', 'gemini-2.0-flash-lite', 'gemini-2.5-flash', 'gemini-3-flash-preview'];
-export const MODEL_CASCADE_TTS = ['gemini-2.5-pro-preview-tts', 'gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts'];
-export const MODEL_CASCADE_PRO = ['gemini-3.5-flash', 'gemini-3.1-pro-preview', 'gemini-3-flash-preview', 'gemini-2.5-pro', 'gemini-pro-latest', 'gemini-2.5-flash'];
+// Central model registry. Keep modality-specific models isolated: Live models
+// cannot be used for generateContent, and TTS models only return audio.
+export const GEMINI_MODELS = {
+    LIVE: 'gemini-3.1-flash-live-preview',
+    TTS_PRIMARY: 'gemini-3.1-flash-tts-preview',
+    TEXT_SMART: 'gemini-3.7-flash',
+    TEXT_LITE: 'gemini-3.5-flash-lite',
+    TEXT_PRO: 'gemini-3.1-pro-preview'
+} as const;
+
+export const MODEL_CASCADE_SMART = [
+    GEMINI_MODELS.TEXT_SMART,
+    'gemini-3.6-flash',
+    'gemini-3.5-flash',
+    GEMINI_MODELS.TEXT_PRO,
+    'gemini-2.5-pro',
+    'gemini-3-flash-preview',
+    'gemini-2.5-flash',
+    GEMINI_MODELS.TEXT_LITE,
+    'gemini-3.1-flash-lite',
+    'gemini-2.5-flash-lite'
+];
+
+export const MODEL_CASCADE_LITE = [
+    GEMINI_MODELS.TEXT_LITE,
+    'gemini-3.1-flash-lite',
+    'gemini-2.5-flash-lite',
+    'gemini-2.5-flash',
+    'gemini-3.5-flash',
+    'gemini-3.6-flash',
+    GEMINI_MODELS.TEXT_SMART
+];
+
+export const MODEL_CASCADE_TTS = [
+    GEMINI_MODELS.TTS_PRIMARY,
+    'gemini-2.5-pro-preview-tts',
+    'gemini-2.5-flash-preview-tts'
+];
+
+export const MODEL_CASCADE_PRO = [
+    GEMINI_MODELS.TEXT_PRO,
+    'gemini-2.5-pro',
+    GEMINI_MODELS.TEXT_SMART,
+    'gemini-3.6-flash',
+    'gemini-3.5-flash',
+    'gemini-3-flash-preview',
+    'gemini-2.5-flash'
+];
+
+export const MODEL_CASCADE_CHAT = [
+    GEMINI_MODELS.TEXT_LITE,
+    'gemini-3.1-flash-lite',
+    'gemini-2.5-flash',
+    'gemini-3.5-flash',
+    'gemini-3.6-flash',
+    GEMINI_MODELS.TEXT_SMART
+];
 
 const COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours
 const ACCESS_DENIED_COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours — model not available for this account
@@ -119,13 +172,13 @@ async function callGeminiWithRotation<T>(modelName: string | string[], fn: (clie
     const keys = getGeminiApiKeys();
     if (!keys || keys.length === 0) throw new Error("API_KEY_MISSING");
 
-    // Automatically map old single models to the new powerful cascade arrays!
+    // Map each workload's primary model to its modality-safe fallback cascade.
     let models = Array.isArray(modelName) ? modelName : [modelName];
     if (typeof modelName === 'string') {
-        if (modelName === 'gemini-2.5-flash' || modelName === 'gemini-3.5-flash') models = MODEL_CASCADE_SMART;
-        else if (modelName === 'gemini-2.5-flash-lite') models = MODEL_CASCADE_LITE;
-        else if (modelName === 'gemini-3-flash-preview') models = MODEL_CASCADE_PRO;
-        else if (modelName === 'gemini-2.5-flash-preview-tts') models = MODEL_CASCADE_TTS;
+        if (modelName === GEMINI_MODELS.TEXT_SMART) models = MODEL_CASCADE_SMART;
+        else if (modelName === GEMINI_MODELS.TEXT_LITE) models = MODEL_CASCADE_LITE;
+        else if (modelName === GEMINI_MODELS.TEXT_PRO) models = MODEL_CASCADE_PRO;
+        else if (modelName === GEMINI_MODELS.TTS_PRIMARY) models = MODEL_CASCADE_TTS;
     }
 
     const executeRotationForModel = async (targetModel: string): Promise<T> => {
@@ -447,7 +500,7 @@ const getLanguageInstruction = () => {
 };
 
 export const analyzeDiaryEntry = async (text: string, level: string): Promise<GrammarResult> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `
         Act as a friendly English Tutor and Islamic Coach. 
@@ -471,7 +524,7 @@ export const analyzeDiaryEntry = async (text: string, level: string): Promise<Gr
         }`;
 
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-lite',
+            model: MODEL,
             contents: prompt,
             config: {
                 responseMimeType: 'application/json'
@@ -494,7 +547,7 @@ export interface TranslationResult {
 }
 
 export const generateTranslationText = async (level: string, theme: string, isIslamic: boolean, title?: string): Promise<{ paragraphs: string[], answerKey: string }> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `You are an expert language teacher. Generate a SHORT Indonesian text for an English translation exercise.
         Target CEFR Level: ${level}
@@ -526,7 +579,7 @@ export const generateTranslationText = async (level: string, theme: string, isIs
 };
 
 export const evaluateTranslation = async (indonesianText: string, audioBase64: string, mimeType: string, level: string, answerKey: string): Promise<TranslationResult> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `You are a senior English examiner evaluating a translation exercise.
         ${getLanguageInstruction()}
@@ -597,7 +650,7 @@ export const generateAssessmentTest = async (): Promise<AssessmentQuestion[]> =>
 };
 
 export const evaluateAssessment = async (responses: any[]): Promise<AssessmentResult> => {
-    const MODEL = 'gemini-3-flash-preview';
+    const MODEL = GEMINI_MODELS.TEXT_PRO;
     return callGeminiWithRotation(MODEL, async (ai) => {
         // Build enhanced summary with grammar scoring details
         const grammarResponses = responses.filter(r => r.type === 'grammar');
@@ -708,7 +761,7 @@ USE THIS DATA to determine grammar proficiency:
 // --- GRAMMAR SERVICES ---
 
 export const generateGrammarTask = async (lessonTitle: string, level: string = 'A1'): Promise<string> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Create a specific grammar writing task for the topic: "${lessonTitle}". 
         - The user's English proficiency is CEFR Level: ${level}.
@@ -731,14 +784,14 @@ export const generateGrammarTask = async (lessonTitle: string, level: string = '
 };
 
 export const analyzeGrammar = async (text: string, taskContext: string): Promise<GrammarResult> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `
         Analyze this English writing for grammar. Task: ${taskContext}. Text: "${text}".
         ${getLanguageInstruction()}
         Return JSON: { "correctedText": "...", "generalFeedback": "...", "score": 0-100, "errors": [{ "mistake": "...", "correction": "...", "explanation": "..." }] }`;
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-lite',
+            model: MODEL,
             contents: prompt,
             config: {
                 responseMimeType: 'application/json'
@@ -749,7 +802,7 @@ export const analyzeGrammar = async (text: string, taskContext: string): Promise
 };
 
 export const generateGrammarQuiz = async (lessonTitle: string, content: string, level: string): Promise<QuizQuestion[]> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Create 10 MCQ English grammar quiz items for the topic: "${lessonTitle}" at ${level} level. 
         ${getLanguageInstruction()}
@@ -773,7 +826,7 @@ export const generateGrammarQuiz = async (lessonTitle: string, content: string, 
 // --- GAME SERVICES ---
 
 export const generateGameData = async (category: string, context: string, level: number, count: number): Promise<any[]> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     let schemaPrompt = "";
     switch (category) {
         case 'visual': schemaPrompt = `{ "data": [{ "emojis": "string (ONLY use 2-4 STANDARD, universally supported emojis. DO NOT invent emojis. Emojis MUST logically and accurately describe the answer)", "answer": "string", "clue": "string" }] }`; break;
@@ -821,7 +874,7 @@ export const generateGameData = async (category: string, context: string, level:
 };
 
 export const generateVocabDetails = async (word: string): Promise<{ synonyms: string[], examples: string[], ipa: string }> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `
         Provide vocabulary details for the English word: "${word}".
@@ -851,7 +904,7 @@ export const generateVocabDetails = async (word: string): Promise<{ synonyms: st
 };
 
 export const generateVocabReviewGame = async (vocabItems: { english: string, indonesian: string }[], count: number, level: number, context: string = 'general'): Promise<any[]> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const baseWords = vocabItems.length > 0
             ? `Based on these words: ${JSON.stringify(vocabItems)}`
@@ -906,7 +959,7 @@ export const generateVocabReviewGame = async (vocabItems: { english: string, ind
 // --- READING & LISTENING SERVICES ---
 
 export const generateReadingTitles = async (level: string, theme: string, isIslamic: boolean): Promise<string[]> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `You are a master curriculum designer. Generate 12 highly engaging, unique, and deeply interesting English reading titles for CEFR level ${level}.
         Theme: ${theme}.
@@ -931,7 +984,7 @@ export const generateReadingTitles = async (level: string, theme: string, isIsla
 };
 
 export const generateReadingContentStream = async (title: string, level: string, theme: string, isIslamic: boolean) => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `You are an expert English author and educator for language learners. Write an exceptionally engaging, high-quality reading article (4-6 paragraphs) titled "${title}" strictly for CEFR level ${level}.
         Theme: ${theme}.
@@ -958,7 +1011,7 @@ export const generateReadingContentStream = async (title: string, level: string,
 };
 
 export const generateReadingContent = async (title: string, level: string, theme: string, isIslamic: boolean): Promise<ReadingContent> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `You are an expert English content writer for language learners. Write an engaging reading article (4-6 paragraphs) titled "${title}" strictly for CEFR level ${level}.
         Theme: ${theme}.
@@ -975,7 +1028,7 @@ export const generateReadingContent = async (title: string, level: string, theme
         { "title": "${title}", "paragraphs": ["string"] }`;
 
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-lite',
+            model: MODEL,
             contents: prompt,
             config: {
                 responseMimeType: 'application/json',
@@ -987,7 +1040,7 @@ export const generateReadingContent = async (title: string, level: string, theme
 };
 
 export const generateListeningTitles = async (level: string, type: string, theme: string, isIslamic: boolean): Promise<string[]> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `You are a master curriculum designer. Generate 12 highly engaging, unique, and deeply interesting English listening ${type} titles for CEFR level ${level}.
         Theme: ${theme}.
@@ -1024,7 +1077,7 @@ const inferGender = (name: string): 'male' | 'female' => {
 };
 
 export const generateListeningContent = async (title: string, level: string, type: string, theme: string, isIslamic: boolean, accent: string = 'Default'): Promise<ListeningContentResult> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         let accentScriptInstruction = '';
         if (accent && accent !== 'Default') {
@@ -1145,7 +1198,7 @@ Return ONLY this JSON structure (NO quiz, ONLY script and speakers):
 
 // --- FALLBACK: Script-only generation (used if combined call fails entirely) ---
 export const generateListeningScript = async (title: string, level: string, type: string, theme: string, isIslamic: boolean, accent: string = 'Default'): Promise<string> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const durationTargets: Record<string, string> = {
             A1: '240-300',
@@ -1185,7 +1238,7 @@ export const generateListeningScript = async (title: string, level: string, type
 };
 
 export const generateListeningQuiz = async (script: string, level: string): Promise<QuizQuestion[]> => {
-    const MODEL = 'gemini-2.5-flash';
+    const MODEL = GEMINI_MODELS.TEXT_SMART;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Create exactly 10 MCQ comprehension questions for this English script at ${level} level: "${script}".
         ${getLanguageInstruction()}
@@ -1207,15 +1260,7 @@ export const generateListeningQuiz = async (script: string, level: string): Prom
 };
 
 export const analyzePronunciationAudio = async (text: string, base64: string, mime: string) => {
-    const MODEL = [
-        'gemini-2.5-flash',
-        'gemini-3.5-flash',
-        'gemini-3.1-pro-preview',
-        'gemini-3-flash-preview',
-        'gemini-2.5-pro',
-        'gemini-3.1-flash-lite',
-        'gemini-2.5-flash-lite'
-    ];
+    const MODEL = MODEL_CASCADE_PRO;
     return callGeminiWithRotation(MODEL, async (ai) => {
         // Split target text to get word count for coverage check
         const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
@@ -1297,7 +1342,7 @@ Return JSON:
 };
 
 export const transcribeAudio = async (base64: string, mime: string): Promise<string> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const response = await ai.models.generateContent({
             model: MODEL,
@@ -1416,7 +1461,7 @@ CRITICALLY IMPORTANT ACTING RULES:
 Sound like a real, passionate human naturally speaking. NEVER sound like an AI reading text monotonously. Perform this text now:\n\n${text}`;
 
         const response = await ai.models.generateContent({
-            model: 'gemini-2.5-flash-preview-tts',
+            model: GEMINI_MODELS.TTS_PRIMARY,
             contents: [{ parts: [{ text: prompt }] }],
             config
         });
@@ -1575,7 +1620,7 @@ export const translateText = async (text: string, direction: 'en-id' | 'id-en'):
 };
 
 export const getWordIPA = async (word: string): Promise<string> => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Give the International Phonetic Alphabet (IPA) for the English word: "${word}". Return only the IPA symbols in slashes.`;
         const response = await ai.models.generateContent({
@@ -1589,7 +1634,7 @@ export const getWordIPA = async (word: string): Promise<string> => {
 };
 
 export const generateSingleReadingTitle = async (level: string, theme: string, isIslamic: boolean) => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Generate ONE unique and catchy English reading title for level ${level}, theme: ${theme}. 
         ${isIslamic ? 'Include Islamic context.' : ''} 
@@ -1608,7 +1653,7 @@ export const generateSingleReadingTitle = async (level: string, theme: string, i
 };
 
 export const generateSingleListeningTitle = async (level: string, type: string, theme: string, isIslamic: boolean) => {
-    const MODEL = 'gemini-2.5-flash-lite';
+    const MODEL = GEMINI_MODELS.TEXT_LITE;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `Generate ONE unique and catchy English listening ${type} title for level ${level}, theme: ${theme}. 
         ${isIslamic ? 'Include Islamic context.' : ''} 
@@ -1626,7 +1671,7 @@ export const generateSingleListeningTitle = async (level: string, type: string, 
 };
 
 export const generateWeeklyInsight = async (logs: any[], profileName: string): Promise<string> => {
-    const MODEL = 'gemini-3-flash-preview';
+    const MODEL = GEMINI_MODELS.TEXT_PRO;
     return callGeminiWithRotation(MODEL, async (ai) => {
         const prompt = `
         Act as a professional, data-driven, yet friendly English Tutor and Islamic Coach.

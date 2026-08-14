@@ -3,8 +3,8 @@ import React, { useRef, useEffect, useState } from 'react';
 import { GoogleGenAI, LiveServerMessage, Modality } from '@google/genai';
 import { decodeAudioData, createPcmBlob, base64ToUint8Array, pcmToWav, downsampleBuffer } from '../utils/audio';
 import { ModuleProps, AppView } from '../types';
-import { logActivity, getGeminiApiKey, getUserProfile } from '../services/storage';
-import { generateTTSAudio } from '../services/gemini';
+import { logActivity, getGeminiApiKeys, getUserProfile } from '../services/storage';
+import { generateTTSAudio, GEMINI_MODELS } from '../services/gemini';
 import { motion, AnimatePresence } from 'motion/react';
 
 const STRICT_FILTER = `
@@ -30,6 +30,58 @@ const ROLEPLAY_SCENARIOS = [
   { icon: 'fa-graduation-cap', label: 'Campus', prompt: 'First day at university. I am the new student, you are a helpful senior student.' },
 ];
 
+const LIVE_MODEL = GEMINI_MODELS.LIVE;
+const LIVE_INPUT_RATE = 16000;
+const LIVE_AUDIO_BATCH_SAMPLES = 1280; // 80 ms at 16 kHz: responsive without flooding WebSocket.
+const LIVE_CONNECT_TIMEOUT_MS = 20000;
+const LIVE_RESPONSE_TIMEOUT_MS = 20000;
+const LIVE_STABLE_CONNECTION_MS = 30000;
+const LIVE_DIAGNOSTICS_KEY = 'lovspeak_live_diagnostics';
+
+type LiveFailureKind = 'network' | 'quota' | 'auth' | 'access' | 'server' | 'timeout' | 'audio' | 'goaway' | 'unknown';
+
+const classifyLiveFailure = (error: any): LiveFailureKind => {
+  const code = Number(error?.code || error?.status || 0);
+  const detail = [error?.message, error?.reason, error?.error?.message, code || '']
+    .filter(Boolean)
+    .join(' ')
+    .toLowerCase();
+
+  if (/429|quota|rate.?limit|resource.?exhausted/.test(detail)) return 'quota';
+  if (/401|api.?key.?not.?valid|invalid.?api.?key|unauthenticated/.test(detail)) return 'auth';
+  if (/403|permission.?denied|forbidden|model.?access/.test(detail)) return 'access';
+  if (/timeout|timed.?out/.test(detail)) return 'timeout';
+  if (/microphone|audio.?capture|notreadable|track.?ended/.test(detail)) return 'audio';
+  if (/go.?away|going.?away/.test(detail)) return 'goaway';
+  if (/500|502|503|504|1011|internal|unavailable|server/.test(detail)) return 'server';
+  if (/offline|network|websocket|1006|abnormal|connection/.test(detail)) return 'network';
+  return 'unknown';
+};
+
+const liveFailureStatus = (kind: LiveFailureKind): string => {
+  switch (kind) {
+    case 'quota': return 'API limit reached. Trying another key...';
+    case 'auth': return 'API key rejected. Trying another key...';
+    case 'access': return 'Live model unavailable for this key...';
+    case 'audio': return 'Microphone connection was interrupted...';
+    case 'timeout': return 'Connection timed out. Retrying...';
+    case 'server': return 'AI service is temporarily unavailable...';
+    case 'goaway': return 'Refreshing the live connection...';
+    default: return typeof navigator === 'undefined' || navigator.onLine ? 'Reconnecting...' : 'Waiting for internet...';
+  }
+};
+
+const recordLiveDiagnostic = (code: string, details: Record<string, string | number | boolean> = {}) => {
+  try {
+    const existing = JSON.parse(localStorage.getItem(LIVE_DIAGNOSTICS_KEY) || '[]');
+    const safeEntries = Array.isArray(existing) ? existing.slice(-19) : [];
+    safeEntries.push({ at: new Date().toISOString(), code, ...details });
+    localStorage.setItem(LIVE_DIAGNOSTICS_KEY, JSON.stringify(safeEntries));
+  } catch {
+    // Diagnostics must never affect the learning session.
+  }
+};
+
 const drawVisualizer = (canvas: HTMLCanvasElement, dataArray: Uint8Array) => {
   const ctx = canvas.getContext('2d');
   if (!ctx) return;
@@ -53,6 +105,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const [isConnected, setIsConnected] = useState(false);
   const [isConnecting, setIsConnecting] = useState(false);
   const [status, setStatus] = useState('Ready to connect');
+  const [needsAudioResume, setNeedsAudioResume] = useState(false);
+  const [lastDiagnosticCode, setLastDiagnosticCode] = useState('');
   const [customTopic, setCustomTopic] = useState(initialContext?.title || '');
   const [speakingMode, setSpeakingMode] = useState<'guided' | 'free' | 'roleplay'>(initialContext?.speakingMode || 'guided');
   const [aiVoice, setAiVoice] = useState<string>('Zephyr');
@@ -130,11 +184,126 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const reconnectInFlightRef = useRef<boolean>(false);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const connectTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const stableConnectionTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const goAwayTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const watchdogTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sessionGenerationRef = useRef(0);
+  const activeKeyIndexRef = useRef(0);
+  const failedKeyIndicesRef = useRef<Set<number>>(new Set());
+  const resumptionHandleRef = useRef<string | null>(null);
+  const connectionUsedResumptionRef = useRef(false);
+  const lastOutputAudioAtRef = useRef(0);
+  const lastVoiceActivityAtRef = useRef(0);
+  const awaitingResponseRef = useRef(false);
+  const speechActiveRef = useRef(false);
+  const audioBatchBufferRef = useRef<Float32Array>(new Float32Array(LIVE_AUDIO_BATCH_SAMPLES));
+  const audioBatchOffsetRef = useRef(0);
+  const outputPlaybackChainRef = useRef<Promise<void>>(Promise.resolve());
+  const outputEpochRef = useRef(0);
+  const pendingOutputAudioRef = useRef<Array<{ data: string; generation: number }>>([]);
+  const goAwayPendingRef = useRef(false);
+  const goAwayTurnCompleteRef = useRef(false);
+  const responseWatchStartedAtRef = useRef(0);
+  const micMutedAtRef = useRef(0);
+  const recoverTimedOutTurnRef = useRef(false);
+  const startSessionRef = useRef<(forceReconnect?: boolean) => void>(() => {});
+  const scheduleReconnectRef = useRef<(delayMs: number, kind?: LiveFailureKind) => void>(() => {});
+  const resumeAudioContextsRef = useRef<() => Promise<boolean>>(async () => false);
   // AudioWorklet: track the node and whether the module has been loaded into the current AudioContext.
   // The module only needs to be loaded once per AudioContext instance.
   const workletNodeRef = useRef<AudioWorkletNode | null>(null);
   const workletModuleLoadedRef = useRef<boolean>(false);
+
+  const noteLiveDiagnostic = (code: string, details: Record<string, string | number | boolean> = {}) => {
+    setLastDiagnosticCode(code);
+    recordLiveDiagnostic(code, {
+      model: LIVE_MODEL,
+      attempt: reconnectCountRef.current,
+      keySlot: activeKeyIndexRef.current + 1,
+      ...details,
+    });
+  };
+
+  const getLiveKeys = (): string[] => {
+    const savedKeys = getGeminiApiKeys().map(key => key.trim()).filter(Boolean);
+    if (savedKeys.length > 0) return savedKeys;
+    const fallback = (process.env.API_KEY as string | undefined)?.trim();
+    return fallback ? [fallback] : [];
+  };
+
+  function enqueueOutputAudio(data: string, generation: number) {
+    const epoch = outputEpochRef.current;
+    outputPlaybackChainRef.current = outputPlaybackChainRef.current
+      .catch(() => {})
+      .then(async () => {
+        if (generation !== sessionGenerationRef.current || epoch !== outputEpochRef.current) return;
+        const ctx = outputAudioContextRef.current;
+        if (!ctx || ctx.state === 'closed') return;
+
+        if (ctx.state !== 'running') {
+          try { await ctx.resume(); } catch { /* A user gesture may be required. */ }
+        }
+        if (ctx.state !== 'running') {
+          pendingOutputAudioRef.current.push({ data, generation });
+          pendingOutputAudioRef.current = pendingOutputAudioRef.current.slice(-100);
+          setNeedsAudioResume(true);
+          setStatus('Tap to resume AI audio');
+          noteLiveDiagnostic('LIVE_AUDIO_SUSPENDED');
+          return;
+        }
+
+        const buffer = await decodeAudioData(base64ToUint8Array(data), ctx);
+        if (
+          generation !== sessionGenerationRef.current ||
+          epoch !== outputEpochRef.current
+        ) return;
+
+        nextStartTimeRef.current = Math.max(nextStartTimeRef.current, ctx.currentTime);
+        const source = ctx.createBufferSource();
+        source.buffer = buffer;
+        source.connect(ctx.destination);
+        source.addEventListener('ended', () => {
+          sourcesRef.current.delete(source);
+          if (sourcesRef.current.size === 0 && connectionActiveRef.current) {
+            if (goAwayPendingRef.current && goAwayTurnCompleteRef.current) {
+              scheduleReconnectRef.current(250, 'goaway');
+            } else {
+              setStatus(initialContext?.title || customTopic || 'Listening...');
+            }
+          }
+        });
+        source.start(nextStartTimeRef.current);
+        nextStartTimeRef.current += buffer.duration;
+        sourcesRef.current.add(source);
+        lastOutputAudioAtRef.current = Date.now();
+        awaitingResponseRef.current = false;
+        setStatus('AI is speaking...');
+      })
+      .catch(error => {
+        noteLiveDiagnostic('LIVE_AUDIO_PLAYBACK_ERROR');
+        console.warn('Unable to play live response audio:', error);
+      });
+  }
+
+  const resumeAudioContexts = async (): Promise<boolean> => {
+    const contexts = [inputAudioContextRef.current, outputAudioContextRef.current]
+      .filter((ctx): ctx is AudioContext => Boolean(ctx && ctx.state !== 'closed'));
+    await Promise.allSettled(contexts.map(ctx => ctx.state === 'running' ? Promise.resolve() : ctx.resume()));
+
+    const inputReady = !inputAudioContextRef.current || inputAudioContextRef.current.state === 'running';
+    const outputReady = !outputAudioContextRef.current || outputAudioContextRef.current.state === 'running';
+    const ready = inputReady && outputReady;
+    setNeedsAudioResume(!ready);
+
+    if (ready) {
+      const pending = pendingOutputAudioRef.current.splice(0);
+      pending.forEach(item => enqueueOutputAudio(item.data, item.generation));
+      if (connectionActiveRef.current && sourcesRef.current.size === 0) {
+        setStatus(initialContext?.title || customTopic || 'Listening...');
+      }
+    }
+    return ready;
+  };
 
   useEffect(() => {
     let interval: any;
@@ -161,7 +330,18 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     if (connectionStartInFlightRef.current || connectionActiveRef.current || reconnectInFlightRef.current) return;
     connectionStartInFlightRef.current = true;
     const sessionGeneration = ++sessionGenerationRef.current;
-    const isReconnect = forceReconnect || isReconnectingRef.current || hasGreetedRef.current;
+    const isReconnect = hasGreetedRef.current;
+    const isFreshUserStart = !forceReconnect && !isReconnectingRef.current && !isReconnect;
+    if (isFreshUserStart) {
+      reconnectCountRef.current = 0;
+      activeKeyIndexRef.current = 0;
+      failedKeyIndicesRef.current.clear();
+      resumptionHandleRef.current = null;
+      connectionUsedResumptionRef.current = false;
+      sessionStartTimeRef.current = 0;
+      setLastDiagnosticCode('');
+      recoverTimedOutTurnRef.current = false;
+    }
     // Reset the user-stopped flag so auto-reconnect works for new sessions
     userStoppedRef.current = false;
     // Reset reconnecting flag only on fresh user-initiated sessions
@@ -251,8 +431,29 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       }
 
       streamRef.current = stream;
+      const audioTrack = stream.getAudioTracks()[0];
+      if (audioTrack) {
+        audioTrack.onended = () => {
+          if (sessionGeneration !== sessionGenerationRef.current || userStoppedRef.current) return;
+          noteLiveDiagnostic('LIVE_MIC_TRACK_ENDED');
+          scheduleReconnectRef.current(500, 'audio');
+        };
+        audioTrack.onmute = () => {
+          if (sessionGeneration === sessionGenerationRef.current && connectionActiveRef.current) {
+            micMutedAtRef.current = Date.now();
+            setStatus('Microphone paused by device...');
+          }
+        };
+        audioTrack.onunmute = () => {
+          if (sessionGeneration === sessionGenerationRef.current && connectionActiveRef.current) {
+            micMutedAtRef.current = 0;
+            void resumeAudioContexts();
+          }
+        };
+      }
 
-      const apiKey = getGeminiApiKey() || (process.env.API_KEY as string);
+      const liveKeys = getLiveKeys();
+      const apiKey = liveKeys[activeKeyIndexRef.current];
       if (!apiKey) {
         stream.getTracks().forEach(track => track.stop());
         streamRef.current = null;
@@ -393,12 +594,18 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           : `\nStart by greeting the user and asking how their day is going.`;
       }
 
+      const resumptionHandle = resumptionHandleRef.current;
+      connectionUsedResumptionRef.current = Boolean(isReconnect && resumptionHandle);
       const sessionPromise = ai.live.connect({
-        model: 'gemini-3.1-flash-live-preview',
+        model: LIVE_MODEL,
         config: {
           responseModalities: [Modality.AUDIO],
           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: aiVoice } } },
           systemInstruction: instructions,
+          sessionResumption: connectionUsedResumptionRef.current
+            ? { handle: resumptionHandle as string }
+            : {},
+          contextWindowCompression: { slidingWindow: {} },
         },
         callbacks: {
           onopen: () => {
@@ -420,41 +627,80 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             setIsConnecting(false);
             reconnectInFlightRef.current = false;
             setStatus(initialContext?.title || customTopic || 'Listening...');
-            sessionStartTimeRef.current = Date.now();
+            if (!isReconnect || sessionStartTimeRef.current <= 0) sessionStartTimeRef.current = Date.now();
+            goAwayPendingRef.current = false;
+            goAwayTurnCompleteRef.current = false;
+            setNeedsAudioResume(false);
+            inputCtx.onstatechange = () => {
+              if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
+              if (inputCtx.state === 'suspended') setNeedsAudioResume(true);
+            };
+            outputCtx.onstatechange = () => {
+              if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
+              if (outputCtx.state === 'suspended') setNeedsAudioResume(true);
+            };
 
-            if (isReconnect) {
-              sessionPromise.then((session) => {
-                try {
-                  // Add continuation context without completing the turn, so it
-                  // does not trigger an unsolicited response or another greeting.
-                  session.sendClientContent({
-                    turns: [{
-                      role: 'user',
-                      parts: [{
-                        text: '[Technical context: this is the same ongoing call after an automatic reconnect. The greeting already happened. Continue only after my next spoken words and do not greet again.]'
-                      }]
-                    }],
-                    turnComplete: false
-                  });
-                } catch(e) { console.error('Failed to restore reconnect context', e); }
-              });
-            } else {
+            if (stableConnectionTimerRef.current) clearTimeout(stableConnectionTimerRef.current);
+            stableConnectionTimerRef.current = setTimeout(() => {
+              if (sessionGeneration === sessionGenerationRef.current && connectionActiveRef.current) {
+                reconnectCountRef.current = 0;
+                setLastDiagnosticCode('');
+              }
+            }, LIVE_STABLE_CONNECTION_MS);
+
+            if (!isReconnect) {
               hasGreetedRef.current = true;
+              awaitingResponseRef.current = true;
+              responseWatchStartedAtRef.current = Date.now();
               sessionPromise.then((session) => {
                 try {
-                  session.sendClientContent({ turns: [{ role: 'user', parts: [{ text: 'Hello! The audio connection is now established. Please start speaking immediately and greet me as instructed.' }] }], turnComplete: true });
+                  session.sendRealtimeInput({ text: 'The audio connection is ready. Begin the new session now and greet me as instructed.' });
                 } catch(e) { console.error('Failed to trigger initial prompt', e); }
+              });
+            } else if (recoverTimedOutTurnRef.current) {
+              recoverTimedOutTurnRef.current = false;
+              awaitingResponseRef.current = true;
+              responseWatchStartedAtRef.current = Date.now();
+              sessionPromise.then((session) => {
+                try {
+                  session.sendRealtimeInput({
+                    text: connectionUsedResumptionRef.current
+                      ? 'Continue now by answering my latest spoken message. Do not greet again.'
+                      : 'The voice connection was restored. Briefly ask me to continue or repeat my last sentence. Do not greet again.'
+                  });
+                } catch (error) {
+                  console.warn('Failed to trigger recovered live response:', error);
+                }
               });
             }
 
             const source = inputCtx.createMediaStreamSource(stream);
             inputSourceNodeRef.current = source;
             const actualInputRate = inputCtx.sampleRate;
-            const GEMINI_RATE = 16000;
+            audioBatchOffsetRef.current = 0;
+            const sendPcmBatch = (audioData: Float32Array) => {
+              if (audioData.length === 0) return;
+              const pcmBlob = createPcmBlob(audioData);
+              sessionPromise.then((session) => {
+                if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
+                try {
+                  session.sendRealtimeInput({ audio: pcmBlob });
+                } catch (error) {
+                  console.warn('Unable to send live audio batch:', error);
+                }
+              }).catch(error => console.warn('Live audio session unavailable:', error));
+            };
 
-            // Shared audio chunk handler — used by both AudioWorklet and ScriptProcessorNode paths.
-            // This ensures identical processing logic regardless of which API is available.
-            const sendAudioChunk = (rawData: Float32Array) => {
+            const flushAudioBatch = () => {
+              const length = audioBatchOffsetRef.current;
+              if (length <= 0) return;
+              sendPcmBatch(audioBatchBufferRef.current.slice(0, length));
+              audioBatchOffsetRef.current = 0;
+            };
+            // Both capture paths feed this batching layer. Sending 80 ms packets
+            // keeps voice interaction responsive while avoiding hundreds of
+            // WebSocket messages per second on Android.
+            const enqueueAudioChunk = (rawData: Float32Array) => {
               if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
 
               if (canvasRef.current) {
@@ -466,19 +712,32 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
 
               // Downsample if device native rate differs from Gemini's 16000 Hz requirement.
               // Critical for iPad/Safari and many Android devices with 44100/48000 Hz native rate.
-              const audioData = actualInputRate !== GEMINI_RATE
-                ? downsampleBuffer(rawData, actualInputRate, GEMINI_RATE)
+              let sumSquares = 0;
+              for (let i = 0; i < rawData.length; i++) sumSquares += rawData[i] * rawData[i];
+              const rms = Math.sqrt(sumSquares / Math.max(rawData.length, 1));
+              const now = Date.now();
+              if (rms > 0.012) {
+                speechActiveRef.current = true;
+                lastVoiceActivityAtRef.current = now;
+                awaitingResponseRef.current = true;
+                responseWatchStartedAtRef.current = now;
+              } else if (speechActiveRef.current && now - lastVoiceActivityAtRef.current > 1200) {
+                speechActiveRef.current = false;
+              }
+
+              const audioData = actualInputRate !== LIVE_INPUT_RATE
+                ? downsampleBuffer(rawData, actualInputRate, LIVE_INPUT_RATE)
                 : rawData;
 
-              const pcmBlob = createPcmBlob(audioData);
-              sessionPromise.then((session) => {
-                if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
-                try {
-                  session.sendRealtimeInput({ audio: pcmBlob });
-                } catch (error) {
-                  console.warn('Unable to send live audio chunk:', error);
-                }
-              }).catch(error => console.warn('Live audio session unavailable:', error));
+              let readOffset = 0;
+              while (readOffset < audioData.length) {
+                const remaining = LIVE_AUDIO_BATCH_SAMPLES - audioBatchOffsetRef.current;
+                const count = Math.min(remaining, audioData.length - readOffset);
+                audioBatchBufferRef.current.set(audioData.subarray(readOffset, readOffset + count), audioBatchOffsetRef.current);
+                audioBatchOffsetRef.current += count;
+                readOffset += count;
+                if (audioBatchOffsetRef.current === LIVE_AUDIO_BATCH_SAMPLES) flushAudioBatch();
+              }
             };
 
             if (useAudioWorklet) {
@@ -488,7 +747,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
                 const workletNode = new AudioWorkletNode(inputCtx, 'pcm-audio-processor');
                 workletNodeRef.current = workletNode;
                 workletNode.port.onmessage = (event) => {
-                  sendAudioChunk(event.data as Float32Array);
+                  enqueueAudioChunk(event.data as Float32Array);
                 };
                 source.connect(workletNode);
                 workletNode.connect(inputCtx.destination);
@@ -497,7 +756,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
                 console.warn('[Audio] AudioWorkletNode creation failed, using ScriptProcessorNode:', workletCreateErr);
                 const scriptProcessor = inputCtx.createScriptProcessor(4096, 1, 1);
                 scriptProcessorNodeRef.current = scriptProcessor;
-                scriptProcessor.onaudioprocess = (e) => { sendAudioChunk(e.inputBuffer.getChannelData(0)); };
+                scriptProcessor.onaudioprocess = (e) => { enqueueAudioChunk(e.inputBuffer.getChannelData(0)); };
                 source.connect(scriptProcessor);
                 scriptProcessor.connect(inputCtx.destination);
               }
@@ -506,55 +765,70 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
               // Deprecated but still functional on older browsers (e.g. Safari < 14.5, older Chrome).
               const scriptProcessor = inputCtx.createScriptProcessor(4096, 1, 1);
               scriptProcessorNodeRef.current = scriptProcessor;
-              scriptProcessor.onaudioprocess = (e) => { sendAudioChunk(e.inputBuffer.getChannelData(0)); };
+              scriptProcessor.onaudioprocess = (e) => { enqueueAudioChunk(e.inputBuffer.getChannelData(0)); };
               source.connect(scriptProcessor);
               scriptProcessor.connect(inputCtx.destination);
             }
           },
-          onmessage: async (msg: LiveServerMessage) => {
+          onmessage: (msg: LiveServerMessage) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
-            const audioData = msg.serverContent?.modelTurn?.parts?.[0]?.inlineData?.data;
-            if (audioData && outputAudioContextRef.current) {
-              const ctx = outputAudioContextRef.current;
-              try {
-                const buffer = await decodeAudioData(base64ToUint8Array(audioData), ctx);
-                if (sessionGeneration !== sessionGenerationRef.current || ctx.state === 'closed') return;
+            const update = msg.sessionResumptionUpdate;
+            if (update?.resumable && update.newHandle) {
+              resumptionHandleRef.current = update.newHandle;
+            }
 
-                nextStartTimeRef.current = Math.max(nextStartTimeRef.current, ctx.currentTime);
-                const source = ctx.createBufferSource();
-                source.buffer = buffer;
-                source.connect(ctx.destination);
-                source.addEventListener('ended', () => {
-                  sourcesRef.current.delete(source);
-                });
-                source.start(nextStartTimeRef.current);
-                nextStartTimeRef.current += buffer.duration;
-                sourcesRef.current.add(source);
-              } catch (error) {
-                if (sessionGeneration === sessionGenerationRef.current) {
-                  console.warn('Unable to play live response audio:', error);
-                }
+            for (const part of msg.serverContent?.modelTurn?.parts || []) {
+              const inlineData = part.inlineData;
+              if (inlineData?.data && (!inlineData.mimeType || inlineData.mimeType.startsWith('audio/'))) {
+                enqueueOutputAudio(inlineData.data, sessionGeneration);
               }
             }
 
             const interrupted = msg.serverContent?.interrupted;
             if (interrupted) {
+              outputEpochRef.current += 1;
+              pendingOutputAudioRef.current = [];
+              outputPlaybackChainRef.current = Promise.resolve();
               for (const source of sourcesRef.current.values()) {
                 try { source.stop(); } catch (e) { }
-                sourcesRef.current.delete(source);
               }
+              sourcesRef.current.clear();
               nextStartTimeRef.current = 0;
             }
+
+            if (msg.goAway) {
+              goAwayPendingRef.current = true;
+              goAwayTurnCompleteRef.current = false;
+              noteLiveDiagnostic('LIVE_GO_AWAY');
+              setStatus(liveFailureStatus('goaway'));
+              if (goAwayTimerRef.current) clearTimeout(goAwayTimerRef.current);
+              const secondsLeft = Number.parseFloat((msg.goAway.timeLeft || '').replace('s', ''));
+              const reconnectBeforeDeadlineMs = Number.isFinite(secondsLeft)
+                ? Math.max(1000, Math.min((secondsLeft * 1000) - 1500, 30000))
+                : 10000;
+              goAwayTimerRef.current = setTimeout(
+                () => scheduleReconnect(250, 'goaway'),
+                reconnectBeforeDeadlineMs
+              );
+            }
+
+            if (msg.serverContent?.turnComplete && goAwayPendingRef.current) {
+              goAwayTurnCompleteRef.current = true;
+              if (sourcesRef.current.size === 0) scheduleReconnect(250, 'goaway');
+            }
           },
-          onclose: () => {
+          onclose: (event) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
-            console.log("Session Closed");
-            scheduleReconnect(1500);
+            const kind = classifyLiveFailure(event);
+            noteLiveDiagnostic(`LIVE_CLOSED_${kind.toUpperCase()}`, { closeCode: event.code || 0 });
+            scheduleReconnect(1000, kind);
           },
           onerror: (err) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
             console.error("Live Error:", err);
-            scheduleReconnect(2000);
+            const kind = classifyLiveFailure(err);
+            noteLiveDiagnostic(`LIVE_ERROR_${kind.toUpperCase()}`);
+            scheduleReconnect(1000, kind);
           }
         }
       });
@@ -567,9 +841,10 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           !userStoppedRef.current
         ) {
           console.warn('Live session connection timed out');
-          scheduleReconnect(1000);
+          noteLiveDiagnostic('LIVE_CONNECT_TIMEOUT');
+          scheduleReconnect(1000, 'timeout');
         }
-      }, 15000);
+      }, LIVE_CONNECT_TIMEOUT_MS);
 
       sessionPromise.then(session => {
         if (sessionGeneration !== sessionGenerationRef.current) {
@@ -578,7 +853,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       }).catch(error => {
         if (sessionGeneration === sessionGenerationRef.current) {
           console.error('Live session connection failed:', error);
-          scheduleReconnect(1000);
+          noteLiveDiagnostic('LIVE_CONNECT_REJECTED');
+          scheduleReconnect(1000, classifyLiveFailure(error));
         }
       });
 
@@ -587,21 +863,43 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       reconnectInFlightRef.current = false;
       connectionStartInFlightRef.current = false;
       cleanupSessionResources(false, true);
-      inputAudioContextRef.current?.close().catch(() => {});
-      outputAudioContextRef.current?.close().catch(() => {});
-      inputAudioContextRef.current = null;
-      outputAudioContextRef.current = null;
-      setStatus('Connection failed');
-      setIsConnecting(false);
+      const kind = classifyLiveFailure(e);
+      noteLiveDiagnostic(`LIVE_START_${kind.toUpperCase()}`);
+      scheduleReconnect(1000, kind);
     }
   };
 
-  const scheduleReconnect = (delayMs: number) => {
+  const scheduleReconnect = (delayMs: number, kind: LiveFailureKind = 'unknown') => {
     if (reconnectInFlightRef.current || userStoppedRef.current || !isMountedRef.current) return;
+    if (kind === 'timeout' && hasGreetedRef.current) recoverTimedOutTurnRef.current = true;
+
+    const liveKeys = getLiveKeys();
+    if (kind === 'quota' || kind === 'auth' || kind === 'access') {
+      failedKeyIndicesRef.current.add(activeKeyIndexRef.current);
+      const nextKeyIndex = liveKeys.findIndex((_, index) => !failedKeyIndicesRef.current.has(index));
+      if (nextKeyIndex >= 0) {
+        activeKeyIndexRef.current = nextKeyIndex;
+        // A resumption token belongs to the original API project/session and
+        // must not be reused after rotating to another key.
+        resumptionHandleRef.current = null;
+        noteLiveDiagnostic(`LIVE_KEY_ROTATED_${kind.toUpperCase()}`, { nextKeySlot: nextKeyIndex + 1 });
+      } else {
+        stopSession(false);
+        const finalStatus = kind === 'quota'
+          ? 'All API keys have reached their limit'
+          : kind === 'access'
+            ? 'Live Speaking is unavailable for the saved API keys'
+            : 'Saved API keys were rejected';
+        setStatus(finalStatus);
+        setLastDiagnosticCode(`LIVE_ALL_KEYS_${kind.toUpperCase()}`);
+        return;
+      }
+    }
 
     if (reconnectCountRef.current >= MAX_RECONNECTS) {
       stopSession(false);
-      setStatus('Connection Error');
+      setStatus(navigator.onLine ? 'Unable to restore the live session' : 'Waiting for internet');
+      setLastDiagnosticCode('LIVE_RECONNECT_EXHAUSTED');
       return;
     }
 
@@ -610,16 +908,25 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     isReconnectingRef.current = true;
     sessionGenerationRef.current += 1;
     cleanupSessionResources(true, true);
-    setStatus('Reconnecting...');
+    setStatus(liveFailureStatus(kind));
+
+    if (!navigator.onLine) {
+      reconnectInFlightRef.current = false;
+      setStatus('Waiting for internet...');
+      return;
+    }
+
+    const backoff = Math.min(8000, Math.max(750, delayMs) * (2 ** Math.min(reconnectCountRef.current, 3)));
+    const jitter = Math.floor(Math.random() * 301);
 
     reconnectTimerRef.current = setTimeout(() => {
       reconnectTimerRef.current = null;
       if (isMountedRef.current && !userStoppedRef.current) {
         reconnectCountRef.current += 1;
         reconnectInFlightRef.current = false;
-        startSession(true);
+        startSessionRef.current(true);
       }
-    }, delayMs);
+    }, backoff + jitter);
   };
 
   // Lightweight cleanup: releases media/stream resources without closing AudioContexts.
@@ -631,6 +938,16 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const cleanupSessionResources = (keepConnecting = false, closeSession = false) => {
     if (connectTimeoutRef.current) clearTimeout(connectTimeoutRef.current);
     connectTimeoutRef.current = null;
+    if (stableConnectionTimerRef.current) clearTimeout(stableConnectionTimerRef.current);
+    stableConnectionTimerRef.current = null;
+    if (goAwayTimerRef.current) clearTimeout(goAwayTimerRef.current);
+    goAwayTimerRef.current = null;
+    goAwayPendingRef.current = false;
+    goAwayTurnCompleteRef.current = false;
+    audioBatchOffsetRef.current = 0;
+    speechActiveRef.current = false;
+    awaitingResponseRef.current = false;
+    micMutedAtRef.current = 0;
 
     if (scriptProcessorNodeRef.current) {
       scriptProcessorNodeRef.current.onaudioprocess = null;
@@ -648,7 +965,12 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     }
 
     if (streamRef.current) {
-      streamRef.current.getTracks().forEach(t => t.stop());
+      streamRef.current.getTracks().forEach(t => {
+        t.onended = null;
+        t.onmute = null;
+        t.onunmute = null;
+        t.stop();
+      });
       streamRef.current = null;
     }
 
@@ -666,6 +988,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     }
     sourcesRef.current.clear();
     nextStartTimeRef.current = 0;
+    outputEpochRef.current += 1;
+    outputPlaybackChainRef.current = Promise.resolve();
+    pendingOutputAudioRef.current = [];
 
     connectionActiveRef.current = false;
     connectionStartInFlightRef.current = false;
@@ -682,7 +1007,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     sessionGenerationRef.current += 1;
 
     // Capture connection state BEFORE cleanup resets it
-    const wasConnected = isConnected;
+    const wasConnected = connectionActiveRef.current;
 
     cleanupSessionResources(false, true);
 
@@ -697,6 +1022,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     closeCtx(outputAudioContextRef.current);
     inputAudioContextRef.current = null;
     outputAudioContextRef.current = null;
+    setNeedsAudioResume(false);
 
     if (wasConnected && sessionStartTimeRef.current > 0) {
       logActivity({
@@ -721,6 +1047,11 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     reconnectCountRef.current = 0;
     isReconnectingRef.current = false;
     hasGreetedRef.current = false;
+    failedKeyIndicesRef.current.clear();
+    activeKeyIndexRef.current = 0;
+    resumptionHandleRef.current = null;
+    connectionUsedResumptionRef.current = false;
+    recoverTimedOutTurnRef.current = false;
 
     // Only trigger completion logic when in mission mode (opened from daily task)
     if (triggerComplete && isMissionActive && onComplete) {
@@ -741,6 +1072,97 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       onComplete();
     }
   };
+
+  // Keep browser lifecycle callbacks on the newest render without repeatedly
+  // registering global listeners.
+  startSessionRef.current = startSession;
+  scheduleReconnectRef.current = scheduleReconnect;
+  resumeAudioContextsRef.current = resumeAudioContexts;
+
+  useEffect(() => {
+    const handleVisibilityChange = () => {
+      if (document.visibilityState !== 'visible' || userStoppedRef.current) return;
+      void resumeAudioContextsRef.current();
+      const track = streamRef.current?.getAudioTracks()[0];
+      if (connectionActiveRef.current && (!track || track.readyState === 'ended')) {
+        noteLiveDiagnostic('LIVE_MIC_MISSING_AFTER_RESUME');
+        scheduleReconnectRef.current(500, 'audio');
+      }
+    };
+
+    const handleOnline = () => {
+      if (
+        isReconnectingRef.current &&
+        !userStoppedRef.current &&
+        !connectionActiveRef.current &&
+        !connectionStartInFlightRef.current
+      ) {
+        reconnectInFlightRef.current = false;
+        setStatus('Internet restored. Reconnecting...');
+        startSessionRef.current(true);
+      }
+    };
+
+    const handleOffline = () => {
+      if (!userStoppedRef.current && (connectionActiveRef.current || isReconnectingRef.current)) {
+        setStatus('Waiting for internet...');
+        noteLiveDiagnostic('LIVE_BROWSER_OFFLINE');
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('online', handleOnline);
+    window.addEventListener('offline', handleOffline);
+
+    watchdogTimerRef.current = setInterval(() => {
+      if (!connectionActiveRef.current || userStoppedRef.current) return;
+
+      const track = streamRef.current?.getAudioTracks()[0];
+      if (!track || track.readyState === 'ended') {
+        noteLiveDiagnostic('LIVE_WATCHDOG_MIC_ENDED');
+        scheduleReconnectRef.current(500, 'audio');
+        return;
+      }
+      if (
+        track.muted &&
+        micMutedAtRef.current > 0 &&
+        document.visibilityState === 'visible' &&
+        Date.now() - micMutedAtRef.current > 10000
+      ) {
+        noteLiveDiagnostic('LIVE_WATCHDOG_MIC_MUTED');
+        scheduleReconnectRef.current(500, 'audio');
+        return;
+      }
+
+      const contextsSuspended = inputAudioContextRef.current?.state === 'suspended'
+        || outputAudioContextRef.current?.state === 'suspended';
+      if (contextsSuspended && document.visibilityState === 'visible') {
+        void resumeAudioContextsRef.current();
+      }
+
+      const responseStartedAt = responseWatchStartedAtRef.current;
+      if (
+        awaitingResponseRef.current &&
+        !speechActiveRef.current &&
+        sourcesRef.current.size === 0 &&
+        responseStartedAt > 0 &&
+        Date.now() - responseStartedAt > LIVE_RESPONSE_TIMEOUT_MS &&
+        lastOutputAudioAtRef.current < responseStartedAt
+      ) {
+        awaitingResponseRef.current = false;
+        noteLiveDiagnostic('LIVE_RESPONSE_TIMEOUT');
+        scheduleReconnectRef.current(500, 'timeout');
+      }
+    }, 2000);
+
+    return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
+      window.removeEventListener('online', handleOnline);
+      window.removeEventListener('offline', handleOffline);
+      if (watchdogTimerRef.current) clearInterval(watchdogTimerRef.current);
+      watchdogTimerRef.current = null;
+    };
+  }, []);
 
   return (
     <motion.div 
@@ -1203,6 +1625,17 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           </div>
         ) : (
           <div className={`${isMissionActive ? 'space-y-1.5' : 'space-y-2 md:space-y-3'}`}>
+            {needsAudioResume && (
+              <motion.button
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                onClick={() => void resumeAudioContexts()}
+                className="w-full rounded-xl bg-amber-400 text-amber-950 font-black py-2.5 text-xs shadow-md flex items-center justify-center gap-2"
+              >
+                <i className="fas fa-volume-up"></i>
+                TAP TO RESUME AUDIO
+              </motion.button>
+            )}
             <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
               onClick={() => stopSession(true)}
               className={`w-full rounded-xl font-black shadow-lg flex items-center justify-center gap-2 transition-all ${
@@ -1229,6 +1662,11 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           <i className="fas fa-info-circle mr-1 text-gray-300"></i>
           Lovelya will listen continuously. Speak naturally and wait for her response.
         </p>
+        {!isConnected && !isConnecting && lastDiagnosticCode && (
+          <p className="text-center text-[8px] font-bold tracking-wide text-gray-400">
+            Diagnostic: {lastDiagnosticCode}
+          </p>
+        )}
       </div>
     </motion.div>
   );

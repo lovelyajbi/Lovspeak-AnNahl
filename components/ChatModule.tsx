@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { GoogleGenAI, Chat } from "@google/genai";
 import ReactMarkdown from 'react-markdown';
 import { getUserProfile, saveVocab, getCustomCategories, saveCustomCategory, CustomCategory, getGeminiApiKeys } from '../services/storage';
-import { transcribeAudio, analyzePronunciationAudio, translateText } from '../services/gemini';
+import { transcribeAudio, analyzePronunciationAudio, translateText, MODEL_CASCADE_CHAT } from '../services/gemini';
 import { ModuleProps, AppView } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
 import { audioService } from '../services/audioService';
@@ -42,7 +42,7 @@ const QUICK_ACTIONS = [
   { label: "Explain Islamic term", prompt: "Can you explain the meaning of 'Taqwa' in English?" },
 ];
 
-const CHAT_MODEL_CASCADE = ['gemini-3.1-flash-lite', 'gemini-3.5-flash-lite', 'gemini-2.5-flash'];
+const CHAT_MODEL_CASCADE = MODEL_CASCADE_CHAT;
 
 const getErrorMessage = (error: any) => (error?.message || error?.toString() || '').toLowerCase();
 const isQuotaError = (error: any) => {

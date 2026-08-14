@@ -1,8 +1,8 @@
 // CACHE VERSION: Bump this number to force all clients to update immediately
-const CACHE_NAME = 'lovspeak-cache-v14';
+const CACHE_NAME = 'lovspeak-cache-v16';
 
 // App version — must match APP_VERSION in App.tsx
-const APP_VERSION = '2.1.4';
+const APP_VERSION = '2.1.6';
 
 // Only cache truly static, rarely-changing assets
 const ASSETS_TO_CACHE = [
