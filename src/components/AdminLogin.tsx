@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { auth } from '../firebase';
 import { signInWithCustomToken } from 'firebase/auth';
+import { useAuth } from '../contexts/AuthContext';
 
 const AdminLogin: React.FC = () => {
+  const { accessMessage } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -24,6 +26,7 @@ const AdminLogin: React.FC = () => {
     <form onSubmit={submit} className="w-full max-w-md rounded-[2rem] border border-white/10 bg-slate-900 p-7 md:p-9 shadow-2xl">
       <div className="w-14 h-14 rounded-2xl bg-violet-500/20 text-violet-300 grid place-items-center mb-6"><i className="fas fa-shield-halved text-2xl"></i></div>
       <p className="text-xs font-black uppercase tracking-[.25em] text-violet-300">LovSpeak LMS</p><h1 className="text-3xl font-black mt-1">Login Admin</h1><p className="text-slate-400 mt-2 text-sm">Masukkan username dan password admin.</p>
+      {accessMessage && <div role="alert" className="mt-5 rounded-xl border border-amber-400/30 bg-amber-400/10 px-4 py-3 text-sm font-semibold leading-5 text-amber-100">{accessMessage}</div>}
       <label className="block mt-6 text-sm font-bold">Username admin<input required type="text" autoComplete="username" value={username} onChange={event => setUsername(event.target.value)} className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-violet-400" /></label>
       <label className="block mt-4 text-sm font-bold">Password<input required type="password" value={password} onChange={event => setPassword(event.target.value)} className="mt-2 w-full rounded-xl border border-slate-700 bg-slate-950 px-4 py-3 outline-none focus:border-violet-400" /></label>
       {error && <p className="mt-4 text-sm text-rose-300">{error}</p>}

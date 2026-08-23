@@ -11,13 +11,26 @@ service cloud.firestore {
       return isAuthenticated() && request.auth.uid == userId;
     }
 
+    // A seat is granted only by the server-side capacity gate. It is never
+    // writable by a learner, so client code cannot manufacture access.
+    function hasAccessSeat() {
+      return isAuthenticated() &&
+        exists(/databases/$(database)/documents/accessSeats/$(request.auth.uid));
+    }
+
+    function isOwnerWithAccess(userId) {
+      return isOwner(userId) && hasAccessSeat();
+    }
+
     function isBootstrapAdmin() {
       return isAuthenticated() && (request.auth.token.email == "lovelyatrial@gmail.com" || request.auth.token.adminMaster == true);
     }
 
     function isAdmin() {
-      return isBootstrapAdmin() ||
-        (isAuthenticated() && exists(/databases/$(database)/documents/adminAccess/$(request.auth.uid)));
+      // Admin privileges are also seats: an admin UID cannot bypass the
+      // account cap merely because an adminAccess document exists.
+      return hasAccessSeat() && (isBootstrapAdmin() ||
+        exists(/databases/$(database)/documents/adminAccess/$(request.auth.uid)));
     }
 
     // Master Settings (Activation Code)
@@ -29,14 +42,22 @@ service cloud.firestore {
 
     // User Profile
     match /users/{userId} {
-      allow read: if isOwner(userId) || isAdmin();
-      allow create: if isAuthenticated() && request.auth.uid == userId;
-      allow update: if isOwner(userId) || isAdmin();
+      allow read: if isOwnerWithAccess(userId) || isAdmin();
+      allow create: if isOwnerWithAccess(userId) || isAdmin();
+      allow update: if isOwnerWithAccess(userId) || isAdmin();
       
       // Subcollections (Diary, Vocab, Activity, Settings)
       match /{allSubcollections=**} {
-        allow read, write: if isOwner(userId) || isAdmin();
+        allow read, write: if isOwnerWithAccess(userId) || isAdmin();
       }
+    }
+
+    // Seat records are server-managed. Admins can audit them, but learners
+    // cannot read, create, update, or delete their own seat.
+    match /accessSeats/{userId} {
+      allow read: if isAdmin();
+      // Firebase Admin SDK writes bypass rules; browser clients never may.
+      allow write: if false;
     }
 
     match /adminAccess/{userId} {
@@ -45,21 +66,23 @@ service cloud.firestore {
     }
 
     match /feedback/{feedbackId} {
-      allow read: if isAdmin() || (isAuthenticated() && resource.data.recipientId == request.auth.uid);
+      allow read: if isAdmin() || (hasAccessSeat() && resource.data.recipientId == request.auth.uid);
       allow create: if isAdmin();
       allow update: if isAdmin() ||
-        (isAuthenticated() && resource.data.recipientId == request.auth.uid &&
+        (hasAccessSeat() && resource.data.recipientId == request.auth.uid &&
          request.resource.data.diff(resource.data).affectedKeys().hasOnly(['readAt']));
-      allow delete: if isAdmin() || (isAuthenticated() && resource.data.recipientId == request.auth.uid);
+      allow delete: if isAdmin() || (hasAccessSeat() && resource.data.recipientId == request.auth.uid);
 
       match /replies/{replyId} {
         allow read: if isAdmin() || (isAuthenticated() &&
+          hasAccessSeat() &&
           get(/databases/$(database)/documents/feedback/$(feedbackId)).data.recipientId == request.auth.uid);
         allow create: if isAdmin() || (isAuthenticated() &&
+          hasAccessSeat() &&
           get(/databases/$(database)/documents/feedback/$(feedbackId)).data.recipientId == request.auth.uid &&
           request.resource.data.authorId == request.auth.uid);
         allow update: if isAdmin();
-        allow delete: if isAdmin() || (isAuthenticated() && resource.data.authorId == request.auth.uid);
+        allow delete: if isAdmin() || (hasAccessSeat() && resource.data.authorId == request.auth.uid);
       }
     }
 
@@ -70,9 +93,9 @@ service cloud.firestore {
     }
 
     match /userAssignments/{userId}/items/{assignmentId} {
-      allow read: if isOwner(userId) || isAdmin();
+      allow read: if isOwnerWithAccess(userId) || isAdmin();
       allow create: if isAdmin();
-      allow update: if isAdmin() || (isOwner(userId) &&
+      allow update: if isAdmin() || (isOwnerWithAccess(userId) &&
         request.resource.data.diff(resource.data).affectedKeys().hasOnly(['readAt']) &&
         request.resource.data.readAt is string);
       allow delete: if isAdmin();
@@ -83,12 +106,12 @@ service cloud.firestore {
     }
 
     match /userNotifications/{userId}/items/{notificationId} {
-      allow read: if isOwner(userId) || isAdmin();
+      allow read: if isOwnerWithAccess(userId) || isAdmin();
       allow create: if isAdmin();
-      allow update: if isAdmin() || (isOwner(userId) &&
+      allow update: if isAdmin() || (isOwnerWithAccess(userId) &&
         request.resource.data.diff(resource.data).affectedKeys().hasOnly(['readAt']) &&
         request.resource.data.readAt is string);
-      allow delete: if isOwner(userId) || isAdmin();
+      allow delete: if isOwnerWithAccess(userId) || isAdmin();
     }
   }
 }

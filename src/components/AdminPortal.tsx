@@ -240,7 +240,7 @@ const buildDashboardRows = (metrics: UserMetric[]): DashboardRows => {
 };
 
 const addDashboardChart = (worksheet: ReturnType<typeof addWorksheet>, chart: Parameters<typeof makeChartSpace>[0]['plotArea']['chart'], title: string, at: string, widthPx: number, heightPx: number, valMax?: number) => {
-  addChartAt(worksheet, at, { space: makeChartSpace({ plotArea: { chart, valAx: valMax ? { scaling: { min: 0, max: valMax }, majorUnit: valMax === 100 ? 20 : undefined, majorGridlines: true } : { majorGridlines: true } }, title, legend: { position: 'r' }, spPr: makeShapeProperties({ fill: makeSolidFill(makeColor(makeSrgbColor('FFFFFF'))) }) }) }, { widthPx, heightPx });
+  addChartAt(worksheet, at, { space: makeChartSpace({ plotArea: { chart, valAx: { axId: 2, crossAx: 1, ...(valMax ? { scaling: { min: 0, max: valMax }, majorUnit: valMax === 100 ? 20 : undefined } : {}), majorGridlines: true } }, title, legend: { position: 'r' }, spPr: makeShapeProperties({ fill: makeSolidFill(makeColor(makeSrgbColor('FFFFFF'))) }) }) }, { widthPx, heightPx });
 };
 const chartSeries = (series: ReturnType<typeof makeBarSeries>, color: string) => ({ ...series, spPr: makeShapeProperties({ fill: makeSolidFill(makeColor(makeSrgbColor(color))) }) });
 

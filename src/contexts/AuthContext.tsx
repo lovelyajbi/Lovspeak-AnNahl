@@ -7,12 +7,11 @@ import {
   syncFromCloud,
   getGeminiApiKeys,
   clearAllLocalData,
-  migrateLegacyAccess,
   resolveAccessState,
-  syncScalevAccessByEmail,
 } from '../../services/storage';
 import { isAdminUser } from '../../services/admin';
 import { startPresence } from '../../services/presence';
+import { verifyAccountAccess } from '../../services/accessGate';
 
 interface AuthContextType {
   user: User | null;
@@ -22,6 +21,7 @@ interface AuthContextType {
   isSyncing: boolean;
   isLoggingIn: boolean;
   isAdmin: boolean;
+  accessMessage: string | null;
   login: () => Promise<void>;
   signout: () => Promise<void>;
   refreshStatus: () => Promise<void>;
@@ -63,25 +63,47 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [isSyncing, setIsSyncing] = useState(false);
   const [isLoggingIn, setIsLoggingIn] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
+  const [accessMessage, setAccessMessage] = useState<string | null>(null);
 
   useEffect(() => {
     let unsubscribeStatus: (() => void) | null = null;
     let stopPresence: (() => void) | null = null;
-    const readLocalProfile = () => {
-      const raw = localStorage.getItem('lovelya_profile');
-      if (!raw) return null;
-      try {
-        return JSON.parse(raw);
-      } catch (e) {
-        return null;
-      }
-    };
-
     const unsubscribeAuth = onAuthStateChanged(auth, async (firebaseUser) => {
+      setLoading(true);
+      if (unsubscribeStatus) {
+        unsubscribeStatus();
+        unsubscribeStatus = null;
+      }
+      if (stopPresence) {
+        stopPresence();
+        stopPresence = null;
+      }
       setUser(firebaseUser);
       setHasApiKey(getGeminiApiKeys().length > 0);
       
       if (firebaseUser) {
+        // Seat assignment is server-enforced and runs before any Firestore
+        // profile/activity sync. A denied account is signed out immediately,
+        // so a Google user can never open the app by bypassing the UI.
+        const access = await verifyAccountAccess(firebaseUser).catch(() => ({
+          allowed: false,
+          reason: 'service_unavailable' as const,
+          message: 'Akses LovSpeak belum dapat diverifikasi. Silakan coba lagi beberapa saat kemudian.',
+        }));
+        if (!access.allowed) {
+          setAccessMessage(access.message || 'Akses LovSpeak saat ini sedang penuh. Silakan hubungi admin untuk informasi lebih lanjut.');
+          setUser(null);
+          setIsAdmin(false);
+          setIsActive(false);
+          setIsSyncing(false);
+          clearLearnerSessionCache();
+          localStorage.removeItem(LOCAL_SESSION_UID_KEY);
+          try { await logout(); } catch (error) { console.error('Denied account signout failed:', error); }
+          setLoading(false);
+          return;
+        }
+        setAccessMessage(null);
+        setIsActive(true);
         const previousUid = localStorage.getItem(LOCAL_SESSION_UID_KEY);
         // If the marker is missing (for example after an older app version),
         // reset once before the first cloud sync as well. Firestore then
@@ -118,26 +140,10 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         // Real-time status sync
         unsubscribeStatus = onSnapshot(doc(db, `users/${firebaseUser.uid}`), (snap) => {
           if (snap.exists()) {
-            const data = snap.data();
-            const localProfile = readLocalProfile();
-            const resolvedAccess = resolveAccessState(data, localProfile);
-            setIsActive(adminSession || resolvedAccess);
-
-            if (!adminSession && !resolvedAccess) {
-              syncScalevAccessByEmail({
-                uid: firebaseUser.uid,
-                email: firebaseUser.email,
-                displayName: firebaseUser.displayName,
-              })
-                .then((synced) => {
-                  if (synced) setIsActive(true);
-                })
-                .catch(console.error);
-            } else if (!adminSession && !data.isActive) {
-              setDoc(doc(db, `users/${firebaseUser.uid}`), {
-                isActive: true,
-              }, { merge: true }).catch(console.error);
-            }
+            // The server seat check has already granted access. Keep this
+            // true even when an older profile has not yet replicated its
+            // `isActive` field to this client.
+            setIsActive(true);
           } else {
             // New user - minimal doc to ensure it exists
             setDoc(doc(db, `users/${firebaseUser.uid}`), {
@@ -145,28 +151,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
               name: firebaseUser.displayName,
               createdAt: new Date().toISOString()
             }, { merge: true })
-              .then(() => {
-                if (adminSession) setIsActive(true);
-                return syncScalevAccessByEmail({
-                uid: firebaseUser.uid,
-                email: firebaseUser.email,
-                displayName: firebaseUser.displayName,
-                });
-              })
-              .then((synced) => {
-                if (synced) setIsActive(true);
-              })
+              .then(() => setIsActive(true))
               .catch(console.error);
           }
         }, (err) => {
           console.error("Status snapshot error:", err);
         });
-
-        migrateLegacyAccess({
-          uid: firebaseUser.uid,
-          email: firebaseUser.email,
-          displayName: firebaseUser.displayName,
-        }).catch(console.error);
 
       } else {
         localStorage.removeItem(LOCAL_SESSION_UID_KEY);
@@ -244,22 +234,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const refreshStatus = async () => {
     setHasApiKey(getGeminiApiKeys().length > 0);
     if (user) {
-      await syncScalevAccessByEmail({
-        uid: user.uid,
-        email: user.email,
-        displayName: user.displayName,
-      });
-      await migrateLegacyAccess({
-        uid: user.uid,
-        email: user.email,
-        displayName: user.displayName,
-      });
       await checkStatus(user.uid);
     }
   };
 
   return (
-    <AuthContext.Provider value={{ user, loading, isActive, hasApiKey, isSyncing, isLoggingIn, isAdmin, login, signout, refreshStatus }}>
+    <AuthContext.Provider value={{ user, loading, isActive, hasApiKey, isSyncing, isLoggingIn, isAdmin, accessMessage, login, signout, refreshStatus }}>
       {children}
     </AuthContext.Provider>
   );

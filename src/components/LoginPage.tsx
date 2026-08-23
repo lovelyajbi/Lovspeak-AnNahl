@@ -6,7 +6,7 @@ import InstallPrompt from './InstallPrompt';
 
 /** Focused entry screen for both learners and staff. */
 const LoginPage: React.FC = () => {
-  const { login, isLoggingIn } = useAuth();
+  const { login, isLoggingIn, accessMessage } = useAuth();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [adminLoading, setAdminLoading] = useState(false);
@@ -51,6 +51,8 @@ const LoginPage: React.FC = () => {
             <p className="text-xs font-black uppercase tracking-[.22em] text-lovelya-600 dark:text-lovelya-300">Selamat datang</p>
             <h2 className="mt-2 text-3xl font-black">Masuk ke LovSpeak</h2>
             <p className="mt-2 text-sm text-slate-500 dark:text-gray-400">Pilih cara masuk sesuai akun Anda.</p>
+
+            {accessMessage && <div role="alert" className="mt-5 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-semibold leading-5 text-amber-800 dark:border-amber-900/50 dark:bg-amber-950/30 dark:text-amber-200">{accessMessage}</div>}
 
             <button type="button" onClick={() => login()} disabled={isLoggingIn} className="mt-8 flex w-full items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3.5 font-bold text-slate-700 shadow-sm transition hover:border-lovelya-300 hover:bg-lovelya-50 disabled:opacity-60 dark:border-gray-700 dark:bg-gray-800 dark:text-white dark:hover:bg-gray-700">
               <i className="fab fa-google text-lg text-[#4285F4]" />
