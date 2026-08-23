@@ -37,7 +37,7 @@ import { DEFAULT_ASSIGNMENT_MIN_SCORE, getUserAssignments, getUserNotifications,
 import ErrorBoundary from './src/components/ErrorBoundary';
 
 // App version — must match APP_VERSION in sw.js. Bump on every deploy.
-const APP_VERSION = '2.1.6';
+const APP_VERSION = '2.1.7';
 
 // Bump a module's release value whenever it receives a meaningful content or
 // experience update. Each badge is dismissed independently after that module

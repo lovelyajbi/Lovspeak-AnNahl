@@ -65,9 +65,87 @@ const calculateTextSimilarity = (spoken: string, expected: string): number => {
   return Math.max(0, 1 - previous[target.length] / Math.max(actual.length, target.length));
 };
 
+// Some Android speech engines occasionally return their growing hypotheses as
+// one flattened sentence ("yes yes I yes I think ...") instead of replacing
+// the previous hypothesis. Daily roleplay is especially susceptible because it
+// moves through several microphone turns in one session. Keep normal results
+// untouched and only recover a compact, high-confidence window when the raw
+// result is clearly much longer than the sentence the learner was asked to say.
+const stabilizeDailyDialogueTranscript = (spoken: string, expected: string): string => {
+  const rawWords = spoken.trim().split(/\s+/).filter(Boolean);
+  const expectedWords = normalizeOverlapTokens(expected);
+  if (!rawWords.length || !expectedWords.length) return spoken.trim();
+
+  const suspiciousLength = rawWords.length >= Math.max(expectedWords.length + 4, Math.ceil(expectedWords.length * 1.5));
+  const normalizedRawWords = normalizeOverlapTokens(spoken);
+  const duplicateCount = normalizedRawWords.length - new Set(normalizedRawWords).size;
+  const suspiciousRepetition = normalizedRawWords.length >= 3
+    && duplicateCount >= 2
+    && duplicateCount / normalizedRawWords.length >= 0.4;
+  if (!suspiciousLength && !suspiciousRepetition) return spoken.trim();
+
+  const fullSimilarity = calculateTextSimilarity(spoken, expected);
+  const minimumWindow = Math.min(rawWords.length, Math.max(1, expectedWords.length - 2));
+  const maximumWindow = Math.min(rawWords.length, expectedWords.length + 2);
+  let bestText = spoken.trim();
+  let bestSimilarity = fullSimilarity;
+  let bestLengthDelta = Math.abs(rawWords.length - expectedWords.length);
+
+  for (let length = minimumWindow; length <= maximumWindow; length++) {
+    for (let start = 0; start + length <= rawWords.length; start++) {
+      const candidate = rawWords.slice(start, start + length).join(' ');
+      const similarity = calculateTextSimilarity(candidate, expected);
+      const lengthDelta = Math.abs(length - expectedWords.length);
+      if (similarity > bestSimilarity || (similarity === bestSimilarity && lengthDelta < bestLengthDelta)) {
+        bestText = candidate;
+        bestSimilarity = similarity;
+        bestLengthDelta = lengthDelta;
+      }
+    }
+  }
+
+  if (suspiciousRepetition && bestSimilarity < 0.6) {
+    // For a short flattened result such as "one one one is one one", retain
+    // only words that can occur once in the requested sentence and in the same
+    // order. This is deliberately limited to heavily repetitive results.
+    const rawTokens = normalizeOverlapTokens(spoken);
+    const rows = rawTokens.length + 1;
+    const columns = expectedWords.length + 1;
+    const table = Array.from({ length: rows }, () => Array<number>(columns).fill(0));
+    for (let i = 1; i < rows; i++) {
+      for (let j = 1; j < columns; j++) {
+        table[i][j] = rawTokens[i - 1] === expectedWords[j - 1]
+          ? table[i - 1][j - 1] + 1
+          : Math.max(table[i - 1][j], table[i][j - 1]);
+      }
+    }
+    const recovered: string[] = [];
+    let i = rawTokens.length;
+    let j = expectedWords.length;
+    while (i > 0 && j > 0) {
+      if (rawTokens[i - 1] === expectedWords[j - 1]) {
+        recovered.unshift(rawWords[i - 1]);
+        i -= 1;
+        j -= 1;
+      } else if (table[i - 1][j] >= table[i][j - 1]) {
+        i -= 1;
+      } else {
+        j -= 1;
+      }
+    }
+    if (recovered.length > 0 && recovered.length < rawWords.length) return recovered.join(' ');
+  }
+
+  // Do not hide genuine mistakes or unrelated speech. Cropping is allowed only
+  // when it finds substantially stronger evidence of the requested sentence.
+  return bestSimilarity >= 0.6 && bestSimilarity >= fullSimilarity + 0.12
+    ? bestText
+    : spoken.trim();
+};
+
 type DialogueSpeechStatus = 'idle' | 'starting' | 'listening' | 'stopping' | 'error';
 
-const useDialogueSpeech = () => {
+const useDialogueSpeech = (sessionKey: string) => {
   const [status, setStatus] = useState<DialogueSpeechStatus>('idle');
   const [transcript, setTranscript] = useState('');
   const [speechError, setSpeechError] = useState('');
@@ -146,6 +224,15 @@ const useDialogueSpeech = () => {
   }, [clearTimers, resetTranscript, stopListening]);
 
   useEffect(() => {
+    shouldListenRef.current = false;
+    sessionRunningRef.current = false;
+    fatalErrorRef.current = false;
+    restartFailuresRef.current = 0;
+    clearTimers();
+    resetTranscript('');
+    setSpeechError('');
+    setStatus('idle');
+
     const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
     if (!SpeechRecognition) return;
     const rec = new SpeechRecognition();
@@ -245,7 +332,7 @@ const useDialogueSpeech = () => {
       try { rec.abort(); } catch { /* Already inactive. */ }
       recognitionRef.current = null;
     };
-  }, [clearTimers]);
+  }, [clearTimers, resetTranscript, sessionKey]);
   const isListening = status === 'starting' || status === 'listening' || status === 'stopping';
   return { isListening, status, speechError, transcript, startListening, stopListening, setTranscript: resetTranscript };
 };
@@ -330,12 +417,15 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const [hintLimitMessage, setHintLimitMessage] = useState('');
   const [completedTasksData, setCompletedTasksData] = useState<Record<string, number>>({});
   const [completedDialogueScores, setCompletedDialogueScores] = useState<Record<string, number>>({});
-  const dialogueStartedAtRef = useRef<number>(0);
-  const launchedDailyDialogueRef = useRef<string | null>(null);
-  const { isListening: isDialogueListening, status: dialogueSpeechStatus, speechError: dialogueSpeechError, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech();
-
   const isDailyRoleplay = initialContext?.type === 'daily' && initialContext.autoStart && initialContext.shadowingMode === 'roleplay';
   const isRoadmapRoleplay = (initialContext?.type === 'unit' || initialContext?.assignmentKind === 'roadmap_pack') && initialContext?.autoStart && initialContext.shadowingMode === 'roleplay';
+  const dialogueStartedAtRef = useRef<number>(0);
+  const launchedDailyDialogueRef = useRef<string | null>(null);
+  const dialogueSpeechSessionKey = isDailyRoleplay
+    ? `daily:${initialContext?.taskId || 'task'}:${lineIndex}`
+    : 'manual';
+  const { isListening: isDialogueListening, status: dialogueSpeechStatus, speechError: dialogueSpeechError, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech(dialogueSpeechSessionKey);
+
   const dialoguePassFloor = isDailyRoleplay ? 70 : 80;
   const dialogueTargetScore = initialContext?.minScore || 80;
 
@@ -401,6 +491,9 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
   const currentDialogueLine = selectedScenario ? selectedScenario.lines[lineIndex] : null;
   const isMyTurn = !!currentDialogueLine && currentDialogueLine.speaker === selectedRole;
+  const evaluatedDialogueTranscript = isDailyRoleplay && currentDialogueLine
+    ? stabilizeDailyDialogueTranscript(dialogueTranscript, currentDialogueLine.english)
+    : dialogueTranscript;
 
   const getHintAdjustedScore = (rawScore: number, hintsUsed: number) => {
     if (!isDailyRoleplay) return rawScore;
@@ -482,12 +575,11 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   }, [dialogueStage, stopDialogueListening]);
 
   useEffect(() => {
-    if (!isDialogueListening && dialogueTranscript && isMyTurn && currentDialogueLine) {
-      const sim = calculateTextSimilarity(dialogueTranscript, currentDialogueLine.english);
+    if (!isDialogueListening && evaluatedDialogueTranscript && isMyTurn && currentDialogueLine) {
+      const sim = calculateTextSimilarity(evaluatedDialogueTranscript, currentDialogueLine.english);
       setDialogueMatch(Math.round(sim * 100));
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isDialogueListening]);
+  }, [isDialogueListening, evaluatedDialogueTranscript, isMyTurn, currentDialogueLine]);
 
   const advanceDialogueLine = () => {
     if (!selectedScenario) return;
@@ -1560,8 +1652,8 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               </div>
               {hintLimitMessage && <p className="mt-2 text-[10px] font-bold text-amber-600">{hintLimitMessage}</p>}
             </div>
-            {dialogueTranscript && (
-              <p className="text-[11px] text-gray-400 font-bold mb-2">You said: "{dialogueTranscript}"</p>
+            {evaluatedDialogueTranscript && (
+              <p className="text-[11px] text-gray-400 font-bold mb-2">You said: "{evaluatedDialogueTranscript}"</p>
             )}
             {dialogueSpeechError && (
               <p className="text-[10px] text-rose-500 font-bold mb-2 text-center">{dialogueSpeechError}</p>
