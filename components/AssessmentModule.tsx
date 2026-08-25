@@ -4,6 +4,7 @@ import { motion } from 'motion/react';
 import { ModuleProps, AssessmentQuestion, AssessmentResult } from '../types';
 import { generateAssessmentTest, evaluateAssessment } from '../services/gemini';
 import { saveUserProfile, getUserProfile } from '../services/storage';
+import { ResultActions, ResultCard, ResultHeader, ResultMetric, ResultSection, resultButtonClass } from './ResultUI';
 
 const AssessmentModule: React.FC<ModuleProps> = ({ onComplete, onAssessmentResult }) => {
   const [status, setStatus] = useState<'intro' | 'loading' | 'testing' | 'evaluating' | 'results'>('intro');
@@ -143,27 +144,16 @@ const AssessmentModule: React.FC<ModuleProps> = ({ onComplete, onAssessmentResul
 
   if (status === 'results' && result) {
     return (
-      <div className="max-w-2xl mx-auto text-center space-y-6 md:space-y-8 animate-bounce-in py-6 md:py-10 px-2 md:px-0">
-        <div className="bg-white dark:bg-gray-800 p-8 md:p-12 rounded-3xl md:rounded-[4rem] shadow-2xl border border-gray-100 dark:border-gray-700 relative overflow-hidden">
-           <div className="absolute top-0 right-0 -mr-16 -mt-16 w-48 h-48 md:w-64 md:h-64 bg-lovelya-500/10 rounded-full blur-3xl"></div>
-           <h3 className="text-[8px] md:text-[10px] font-black text-gray-400 uppercase tracking-[0.2em] md:tracking-[0.4em] mb-4 md:mb-6">Placement Result</h3>
-           <div className="text-7xl md:text-[10rem] font-black text-lovelya-600 leading-none mb-4 md:mb-6 drop-shadow-xl">{result.detectedLevel}</div>
-           <div className="text-left bg-gray-50 dark:bg-gray-700/50 p-4 md:p-6 rounded-2xl text-sm md:text-base text-gray-700 dark:text-gray-200 whitespace-pre-wrap max-h-64 overflow-y-auto mt-4 mx-auto w-full shadow-inner leading-relaxed">
-             {result.summary}
-           </div>
-           
-           <div className="grid grid-cols-3 gap-2 md:gap-4 mt-6 md:mt-10">
-              {['speaking', 'grammar', 'writing'].map(sec => (
-                  <div key={sec} className="p-2.5 md:p-4 bg-gray-50 dark:bg-gray-700 rounded-xl md:rounded-2xl border border-gray-100 dark:border-gray-600">
-                      <div className="text-[7px] md:text-[9px] font-black uppercase text-gray-400 mb-0.5 md:mb-1 tracking-widest">{sec}</div>
-                      <div className="text-xs md:text-base font-bold text-gray-800 dark:text-white">{(result.sections as any)[sec]?.score}%</div>
-                  </div>
-              ))}
-           </div>
-        </div>
-        <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.97 }} onClick={() => onAssessmentResult ? onAssessmentResult(result) : onComplete?.()} className="w-full py-3.5 bg-gradient-to-r from-violet-500 to-purple-600 text-white rounded-xl font-black text-sm shadow-xl transition">
-          Continue to Set Up Plan ➔
-        </motion.button>
+      <div className="max-w-3xl mx-auto animate-bounce-in py-4 md:py-8 px-2 md:px-0">
+        <ResultCard className="p-4 md:p-7 space-y-4 md:space-y-5">
+          <ResultHeader icon="fa-compass" eyebrow="Placement result" title="Your starting level is ready" description="This result will help LovSpeak arrange the right learning path for you." />
+          <div className="grid grid-cols-1 min-[390px]:grid-cols-[0.7fr_1.3fr] gap-3">
+            <div className="rounded-2xl border border-lovelya-100 dark:border-lovelya-800/60 bg-lovelya-50 dark:bg-lovelya-900/20 p-4 md:p-5 flex flex-col justify-center"><p className="text-[9px] font-black uppercase tracking-[0.16em] text-lovelya-600 dark:text-lovelya-400">Detected level</p><div className="mt-1 text-5xl md:text-6xl font-black leading-none text-lovelya-700 dark:text-lovelya-300">{result.detectedLevel}</div></div>
+            <ResultSection title="Assessment summary" icon="fa-message" className="bg-white dark:bg-gray-800"><p className="max-h-48 overflow-y-auto custom-scrollbar whitespace-pre-wrap pr-1 text-xs md:text-sm leading-relaxed text-gray-700 dark:text-gray-200">{result.summary}</p></ResultSection>
+          </div>
+          <div className="grid grid-cols-3 gap-2 md:gap-3">{['speaking', 'grammar', 'writing'].map(sec => <ResultMetric key={sec} label={sec} value={`${(result.sections as any)[sec]?.score}%`} icon={sec === 'speaking' ? 'fa-microphone' : sec === 'grammar' ? 'fa-spell-check' : 'fa-pen'} tone="primary" />)}</div>
+          <ResultActions><motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} onClick={() => onAssessmentResult ? onAssessmentResult(result) : onComplete?.()} className={resultButtonClass.accent}>Continue to Set Up Plan <i className="fas fa-arrow-right ml-2"></i></motion.button></ResultActions>
+        </ResultCard>
       </div>
     );
   }

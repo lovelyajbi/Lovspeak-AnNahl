@@ -6,6 +6,7 @@ import { logActivity, completeRoadmapUnit, getActivityLogs } from '../services/s
 import { analyzePronunciationAudio } from '../services/gemini';
 import { ttsService } from '../services/ttsService';
 import { getDialogueScenarios } from '../services/dialogueContent';
+import { ResultActions, ResultCard, ResultHeader, ResultMetric, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
 
 const normalizeSpeechTokens = (text: string): string[] => text
   .toLowerCase()
@@ -1396,33 +1397,25 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                 animate={{ scale: 1, opacity: 1, y: 0 }}
                 className="w-full"
               >
-                <div className={`p-6 md:p-8 rounded-[2rem] md:rounded-[3rem] backdrop-blur-2xl border shadow-2xl relative overflow-hidden ${feedbackDetail.score >= (initialContext?.minScore || 80)
-                    ? 'bg-gradient-to-br from-emerald-50/90 to-teal-100/90 dark:from-emerald-900/60 dark:to-teal-900/60 border-emerald-200/50 dark:border-emerald-700/50 shadow-emerald-500/20'
-                    : 'bg-gradient-to-br from-amber-50/90 to-orange-100/90 dark:from-amber-900/60 dark:to-orange-900/60 border-amber-200/50 dark:border-amber-700/50 shadow-amber-500/20'
-                  }`}>
-
-                  <div className={`absolute top-0 right-0 w-64 h-64 rounded-full blur-[100px] opacity-30 ${feedbackDetail.score >= (initialContext?.minScore || 80) ? 'bg-emerald-400' : 'bg-amber-400'
-                    }`}></div>
-
-                  <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10 relative z-10">
-                    <div className="relative w-32 h-32 md:w-40 md:h-40 flex items-center justify-center shrink-0">
+                <div className="p-4 md:p-6 rounded-[1.5rem] md:rounded-[2rem] border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-[0_18px_55px_-34px_rgba(15,23,42,0.5)] relative overflow-hidden">
+                  <div className="h-px absolute inset-x-0 top-0 bg-gradient-to-r from-transparent via-lovelya-300/70 to-transparent"></div>
+                  <div className="mb-4 md:mb-5"><ResultHeader icon="fa-microphone-lines" eyebrow="Shadowing result" title="Pronunciation feedback" description="Review your score and the words that need another try." tone={feedbackDetail.score >= (initialContext?.minScore || 80) ? 'success' : 'warning'} /></div>
+                  <div className="grid grid-cols-1 md:grid-cols-[auto_1fr] items-center gap-4 md:gap-6 relative z-10">
+                    <div className="relative w-28 h-28 md:w-32 md:h-32 flex items-center justify-center shrink-0 mx-auto">
                       <svg className="w-full h-full transform -rotate-90 drop-shadow-lg" viewBox="0 0 100 100">
-                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" className="text-white/30 dark:text-black/30" strokeWidth="8" />
+                        <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" className="text-gray-100 dark:text-gray-700" strokeWidth="6" />
                         <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor"
                           className={`${feedbackDetail.score >= (initialContext?.minScore || 80) ? 'text-emerald-500 dark:text-emerald-400' : 'text-amber-500 dark:text-amber-400'} transition-all duration-1500 ease-out`}
-                          strokeWidth="8" strokeDasharray="283" strokeDashoffset={283 - (283 * feedbackDetail.score) / 100} strokeLinecap="round" />
+                          strokeWidth="6" strokeDasharray="283" strokeDashoffset={283 - (283 * feedbackDetail.score) / 100} strokeLinecap="round" />
                       </svg>
                       <div className="absolute inset-0 flex flex-col items-center justify-center">
-                        <span className={`text-4xl md:text-5xl font-black drop-shadow-sm ${feedbackDetail.score >= (initialContext?.minScore || 80) ? 'text-emerald-700 dark:text-emerald-300' : 'text-amber-700 dark:text-amber-300'}`}>{feedbackDetail.score}</span>
+                        <span className={`text-3xl md:text-4xl font-black ${feedbackDetail.score >= (initialContext?.minScore || 80) ? 'text-emerald-700 dark:text-emerald-300' : 'text-amber-700 dark:text-amber-300'}`}>{feedbackDetail.score}</span>
                         <span className="text-[9px] font-black uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400 mt-1">Score</span>
                       </div>
                     </div>
 
-                    <div className="flex-1 text-center md:text-left space-y-4">
-                      <div className="bg-white/40 dark:bg-black/20 p-4 rounded-2xl border border-white/30 dark:border-white/5">
-                        <h5 className="text-[10px] md:text-xs font-black uppercase tracking-widest mb-2 opacity-70">AI Analysis</h5>
-                        <p className="text-sm md:text-base text-gray-800 dark:text-gray-100 font-bold leading-relaxed">{feedbackDetail.tips}</p>
-                      </div>
+                    <div className="flex-1 text-left space-y-3">
+                      <ResultSection title="Tutor analysis" icon="fa-sparkles" tone="primary"><p className="text-xs md:text-sm text-gray-700 dark:text-gray-200 font-medium leading-relaxed">{feedbackDetail.tips}</p></ResultSection>
 
                       {feedbackDetail.incorrectWords.length > 0 && (
                         <div className="flex flex-wrap gap-2 justify-center md:justify-start items-center p-3 bg-rose-50/80 dark:bg-rose-900/40 rounded-xl border border-rose-100 dark:border-rose-800/50">
@@ -1439,10 +1432,10 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                   </div>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mt-6">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 mt-4 md:mt-5">
                   <button
                     onClick={() => setFeedbackDetail(null)}
-                    className="flex-1 py-4 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md text-gray-700 dark:text-gray-200 border border-gray-200/50 dark:border-gray-700/50 rounded-2xl font-black hover:bg-white dark:hover:bg-gray-700 shadow-lg hover:shadow-xl transition-all uppercase tracking-widest text-xs md:text-sm"
+                    className={resultButtonClass.secondary}
                   >
                     <i className="fas fa-redo-alt mr-2"></i> Try Again
                   </button>
@@ -1453,7 +1446,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                         if (initialContext?.stepId) completeRoadmapUnit(initialContext.stepId);
                         onComplete?.();
                       }}
-                      className="flex-1 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black shadow-xl hover:shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-xs md:text-sm"
+                      className={resultButtonClass.success}
                     >
                       <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
                     </button>
@@ -1489,7 +1482,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                           setActiveLevel(4);
                         }
                       }}
-                      className="flex-1 py-4 bg-gradient-to-r from-lovelya-500 to-rose-500 text-white rounded-2xl font-black shadow-xl shadow-lovelya-300/50 hover:shadow-2xl hover:scale-[1.02] transition-all uppercase tracking-widest text-xs md:text-sm"
+                      className={resultButtonClass.accent}
                     >
                       Continue <i className="fas fa-chevron-right ml-2"></i>
                     </button>
@@ -1705,7 +1698,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     );
   };
 
-  const renderDialogueComplete = () => (
+  const renderLegacyDialogueComplete = () => (
     <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="max-w-md mx-auto bg-white/90 dark:bg-gray-800/90 rounded-3xl shadow-xl border border-lovelya-200/50 dark:border-lovelya-700/30 p-8 text-center space-y-5">
       <div className="w-16 h-16 bg-lovelya-100 dark:bg-lovelya-900/30 rounded-3xl flex items-center justify-center mx-auto">
         <i className="fas fa-check-circle text-3xl text-lovelya-600"></i>
@@ -1736,6 +1729,20 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           Back to Shadowing
         </button>
       </div>
+    </motion.div>
+  );
+
+  const renderDialogueComplete = () => (
+    <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} className="max-w-lg mx-auto px-1">
+      <ResultCard className="p-4 md:p-6 space-y-4 md:space-y-5">
+        <ResultHeader icon="fa-comments" eyebrow="Roleplay result" title="Dialogue complete" description={selectedScenario?.title} tone={dialogueSummary?.passed ? 'success' : 'warning'} />
+        {dialogueSummary && <div className="grid grid-cols-1 min-[390px]:grid-cols-[1.2fr_0.8fr] gap-3"><ResultScore score={dialogueSummary.score} suffix="%" label="Dialogue score" caption={dialogueSummary.passed ? 'Daily target achieved' : `Need ${dialogueTargetScore}% average`} icon={dialogueSummary.passed ? 'fa-check' : 'fa-arrow-trend-up'} tone={dialogueSummary.passed ? 'success' : 'warning'} /><div className="grid grid-cols-2 min-[390px]:grid-cols-1 gap-2"><ResultMetric label="Your turns" value={dialogueSummary.turns} icon="fa-microphone" /><ResultMetric label="Hints used" value={dialogueSummary.hintsUsed} icon="fa-lightbulb" tone={dialogueSummary.hintsUsed > 0 ? 'warning' : 'success'} /></div></div>}
+        <ResultActions>
+          {(isDailyRoleplay || isRoadmapRoleplay) && dialogueSummary?.passed && <button onClick={() => onComplete?.()} className={resultButtonClass.success}><i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}</button>}
+          <button onClick={() => { setDialogueLineResults({}); setDialogueSummary(null); setLineIndex(0); setDialogueMatch(null); setRevealedHints(new Set()); dialogueStartedAtRef.current = Date.now(); setDialogueStage(isDailyRoleplay ? 'play' : 'scenarios'); }} className={resultButtonClass.primary}>{isDailyRoleplay ? 'Try Again' : 'Try Another Situation'}</button>
+          <button onClick={exitDialogueRoleplay} className={resultButtonClass.secondary}>Back to Shadowing</button>
+        </ResultActions>
+      </ResultCard>
     </motion.div>
   );
 

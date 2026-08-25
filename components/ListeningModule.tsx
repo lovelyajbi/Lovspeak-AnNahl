@@ -7,6 +7,7 @@ import { getStaticListeningIndex, getStaticListeningItem, getStaticListeningLibr
 import { audioService } from '../services/audioService';
 import { base64ToUint8Array, pcmToWav, cacheAudioBlob, getCachedAudioBlob } from '../utils/audio';
 import { motion, AnimatePresence } from 'motion/react';
+import { ResultActions, ResultCard, ResultChip, ResultHeader, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
 
 // Listening themes now use the global THEMES constant (14 themes, shared with Reading)
 
@@ -68,6 +69,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const prefetchingRef = useRef(false);
   const staticPrefetchingRef = useRef(false);
   const selectionRequestRef = useRef(0);
+  const customRequestRef = useRef(0);
 
   // Player State
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
@@ -957,11 +959,13 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       setSelectedTitle(customTitle);
       processSelection(customTitle, customTopic, false);
     } else {
+      const requestId = ++customRequestRef.current;
       setError('');
       setLoading(true);
       setStatusMsg('Generating topics...');
       try {
         const generated = await generateListeningTitles(level, type, customTopic, false);
+        if (requestId !== customRequestRef.current) return;
         if (!generated || generated.length === 0) {
           throw new Error("No titles were generated. Please try again.");
         }
@@ -969,12 +973,15 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         setCurrentPage(1);
         setStep('titles');
       } catch (e: any) {
+        if (requestId !== customRequestRef.current) return;
         console.error(e);
         setError(e.message || 'Failed to generate titles. Try again.');
         setTitles([]);
       } finally {
-        setLoading(false);
-        setStatusMsg('');
+        if (requestId === customRequestRef.current) {
+          setLoading(false);
+          setStatusMsg('');
+        }
       }
     }
   };
@@ -1066,10 +1073,27 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     }
   };
 
+  const returnToListeningHome = () => {
+    customRequestRef.current += 1;
+    selectionRequestRef.current += 1;
+    setIsCustomMode(false);
+    setStep('setup');
+    setCustomTopic('');
+    setCustomTitle('');
+    setSelectedTitle('');
+    setTitles([]);
+    setCurrentPage(1);
+    setError('');
+    setLoading(false);
+    setStatusMsg('');
+    setShowTitleModal(false);
+    setNewCustomTitle('');
+  };
+
   const renderSetup = () => (
     <motion.div initial={{ opacity: 0, y: 15 }} animate={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto px-4 py-6 md:py-10">
-      <button onClick={() => onNavigate?.(AppView.HOME)} className="mb-5 text-gray-400 hover:text-gray-600 font-black transition-all flex items-center gap-2 uppercase text-[10px] tracking-widest">
-        <i className="fas fa-arrow-left"></i> Home
+      <button onClick={() => isCustomMode ? returnToListeningHome() : onNavigate?.(AppView.HOME)} className="mb-5 text-gray-400 hover:text-gray-600 font-black transition-all flex items-center gap-2 uppercase text-[10px] tracking-widest">
+        <i className="fas fa-arrow-left"></i> {isCustomMode ? 'Ruang Dengar' : 'Home'}
       </button>
 
       {/* Hero header */}
@@ -1194,7 +1218,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
       ) : (
         <motion.div initial={{ opacity: 0, y: -5 }} animate={{ opacity: 1, y: 0 }} className="bg-white dark:bg-gray-800 rounded-2xl p-4 md:p-6 shadow-sm border border-gray-100 dark:border-gray-700 space-y-4">
           <button
-            onClick={() => setIsCustomMode(false)}
+            onClick={returnToListeningHome}
             className="text-[10px] font-black text-gray-400 hover:text-pink-500 uppercase tracking-widest flex items-center gap-2 transition-colors mb-1"
           >
             <i className="fas fa-chevron-left text-[8px]"></i> Kembali ke Ruang Dengar
@@ -1234,7 +1258,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     return (
       <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4 md:space-y-5 max-w-4xl mx-auto pb-20 px-2 md:px-0">
         <div className="flex items-center justify-between bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm p-3 md:p-4 rounded-xl shadow-sm border border-gray-100 dark:border-gray-700">
-          <button onClick={() => setStep('setup')} className="text-gray-400 hover:text-gray-700 flex items-center gap-2 font-bold text-[10px] md:text-xs uppercase tracking-widest"><i className="fas fa-arrow-left"></i> Back</button>
+          <button onClick={() => isCustomMode ? returnToListeningHome() : setStep('setup')} className="text-gray-400 hover:text-gray-700 flex items-center gap-2 font-bold text-[10px] md:text-xs uppercase tracking-widest"><i className="fas fa-arrow-left"></i> Back</button>
           <div className="flex items-center gap-2.5">
             <span className="bg-gradient-to-r from-pink-500 to-rose-500 text-white px-2.5 py-1 rounded-lg text-[9px] md:text-[10px] font-black uppercase">{level}</span>
             <span className="font-bold text-gray-600 dark:text-gray-300 text-[10px] md:text-xs">{isCustomMode ? customTopic : THEMES.find(t => t.id === themeId)?.name}</span>
@@ -1261,7 +1285,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         ) : filteredTitles.length === 0 ? (
           <div className="text-center py-16 bg-white dark:bg-gray-800 rounded-2xl border-2 border-dashed border-gray-200 dark:border-gray-700">
             <p className="text-gray-400 font-bold text-sm mb-3">No suggestions found.</p>
-            <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={() => setStep('setup')} className="px-5 py-2 bg-pink-500 text-white rounded-xl font-bold text-xs">Go Back</motion.button>
+            <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={() => isCustomMode ? returnToListeningHome() : setStep('setup')} className="px-5 py-2 bg-pink-500 text-white rounded-xl font-bold text-xs">Go Back</motion.button>
           </div>
         ) : (
           <>
@@ -1589,7 +1613,7 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     </motion.div>
   );
 
-  const renderResult = () => (
+  const renderLegacyResult = () => (
     <motion.div initial={{ scale: 0.95, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} className="max-w-2xl mx-auto text-center bg-white dark:bg-gray-800 p-6 md:p-10 rounded-2xl md:rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 mx-2 md:mx-auto">
       <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring', stiffness: 200 }}
         className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl flex items-center justify-center text-3xl md:text-4xl mx-auto mb-4 md:mb-5 shadow-xl text-white ${score >= 70 ? 'bg-gradient-to-br from-green-400 to-emerald-600' : 'bg-gradient-to-br from-amber-400 to-orange-500'}`}>
@@ -1656,6 +1680,20 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
           <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={() => { setStep('setup'); setScore(0); setQuiz([]); if (audioUrl) URL.revokeObjectURL(audioUrl); setAudioUrl(null); setHasListenedToEnd(false); }} className="px-8 py-2.5 md:py-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-200 rounded-xl font-black hover:bg-gray-200 transition text-sm">Back to Menu</motion.button>
         </div>
       )}
+    </motion.div>
+  );
+
+  const renderResult = () => (
+    <motion.div initial={{ y: 12, opacity: 0 }} animate={{ y: 0, opacity: 1 }} className="max-w-3xl mx-auto px-2 md:px-0 pb-20">
+      <ResultCard className="p-4 md:p-6 space-y-4 md:space-y-5">
+        <ResultHeader icon="fa-headphones" eyebrow="Listening result" title={score >= 70 ? 'Great listening work' : 'Review and try once more'} description="See your comprehension score and review every answer below." tone={score >= 70 ? 'success' : 'warning'} />
+        <div className="grid grid-cols-1 min-[390px]:grid-cols-[1.1fr_0.9fr] gap-3">
+          <ResultScore score={score} suffix="%" label="Comprehension score" caption={`${userAnswers.filter((answer, index) => answer === quiz[index]?.correctIndex).length} of ${quiz.length} answers correct`} icon={score >= 70 ? 'fa-trophy' : 'fa-headphones-simple'} tone={score >= 70 ? 'success' : 'warning'} />
+          <div className="rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/30 p-4 flex flex-col justify-center gap-2"><p className="text-[9px] font-black uppercase tracking-[0.16em] text-gray-400">Progress</p><div className="flex items-center gap-1.5">{[...Array(3)].map((_, i) => <motion.i key={i} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 + i * 0.08 }} className={`fas fa-star text-lg ${i < Math.ceil(score / 100 * 3) ? 'text-amber-400' : 'text-gray-200 dark:text-gray-700'}`} />)}</div><ResultChip tone={score >= (initialContext?.minScore || 80) ? 'success' : 'warning'} icon={score >= (initialContext?.minScore || 80) ? 'fa-check' : 'fa-arrow-trend-up'}>{score >= (initialContext?.minScore || 80) ? 'Target achieved' : `Target ${initialContext?.minScore || 80}%`}</ResultChip></div>
+        </div>
+        <ResultSection title="Answer review" icon="fa-list-check" className="bg-white dark:bg-gray-800"><div className="max-h-[19rem] overflow-y-auto custom-scrollbar space-y-2 pr-1">{quiz.map((q, idx) => { const isCorrect = userAnswers[idx] === q.correctIndex; return <div key={idx} className="rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50/70 dark:bg-gray-900/30 p-3"><div className="flex items-start gap-2.5"><span className={`mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-[9px] font-black ${isCorrect ? 'bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-300' : 'bg-rose-100 text-rose-700 dark:bg-rose-900/30 dark:text-rose-300'}`}>{idx + 1}</span><div className="min-w-0 flex-1"><p className="text-xs md:text-sm font-bold leading-relaxed text-gray-800 dark:text-gray-100">{q.question}</p>{q.options && q.options.length > 0 && userAnswers[idx] !== undefined && userAnswers[idx] >= 0 && <div className="mt-1.5 text-[10px] md:text-xs leading-relaxed"><p className={isCorrect ? 'text-emerald-600 dark:text-emerald-400 font-bold' : 'text-rose-500 dark:text-rose-400'}>Your answer: {q.options[userAnswers[idx]] || '(No answer)'}</p>{!isCorrect && <p className="mt-0.5 text-emerald-600 dark:text-emerald-400 font-bold">Correct: {q.options[q.correctIndex]}</p>}</div>}{q.explanation && <p className="mt-1.5 text-[10px] md:text-xs leading-relaxed text-gray-400">{q.explanation}</p>}</div></div></div>; })}</div></ResultSection>
+        {isMissionMode ? <ResultActions>{allTopicsComplete ? <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleComplete} className={resultButtonClass.success}><i className="fas fa-gift mr-2"></i> Complete Mission +{missionXpReward} XP</motion.button> : completedTopics.has(missionTopicIndex) && missionTopicIndex < missionLength - 1 ? <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={goToNextTopic} className={resultButtonClass.primary}>Next Topic <i className="fas fa-chevron-right ml-1"></i></motion.button> : <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={() => { setStep('player'); setScore(0); setUserAnswers([]); }} className={resultButtonClass.accent}>Try Again</motion.button>}</ResultActions> : <ResultActions>{initialContext?.autoStart && score >= (initialContext?.minScore || 80) && <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={handleComplete} className={resultButtonClass.success}><i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}</motion.button>}{initialContext?.autoStart && score < (initialContext?.minScore || 80) && <motion.button whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} onClick={() => { setStep('player'); setScore(0); setUserAnswers([]); }} className={resultButtonClass.accent}><i className="fas fa-redo mr-1"></i> Try Again</motion.button>}<motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={() => { setStep('setup'); setScore(0); setQuiz([]); if (audioUrl) URL.revokeObjectURL(audioUrl); setAudioUrl(null); setHasListenedToEnd(false); }} className={resultButtonClass.secondary}>Back to Menu</motion.button></ResultActions>}
+      </ResultCard>
     </motion.div>
   );
 

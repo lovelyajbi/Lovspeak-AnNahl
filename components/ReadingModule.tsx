@@ -9,6 +9,7 @@ import { audioService } from '../services/audioService';
 import { ttsService } from '../services/ttsService';
 import { getStaticReadingIndex, getStaticReadingItem, getStaticReadingLibrarySummary } from '../services/readingContent';
 import { savePendingRecording, getPendingRecording, deletePendingRecording } from '../services/pendingRecordings';
+import { ResultActions, ResultCard, ResultHeader, ResultMetric, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
 
 interface WordAnalysis {
   word: string;
@@ -1400,12 +1401,11 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         {translateResult && !translateLoading && (
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
             {/* Overall Score Hero */}
-            <div className={`bg-gradient-to-br ${getScoreGradient(translateResult.overall)} rounded-2xl p-5 md:p-6 text-center text-white shadow-xl relative overflow-hidden`}>
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.15),transparent_50%)]"></div>
+            <div className="rounded-2xl border border-lovelya-100 dark:border-lovelya-800/60 bg-lovelya-50 dark:bg-lovelya-900/20 p-4 md:p-5 text-left shadow-sm relative overflow-hidden">
               <div className="relative">
-                <p className="text-[10px] font-black uppercase tracking-[0.25em] text-white/70 mb-2">Overall Score</p>
-                <div className="text-5xl md:text-6xl font-black mb-1">{translateResult.overall}%</div>
-                <p className="text-white/80 text-xs font-bold">Level {level} • Translation Practice</p>
+                <p className="text-[9px] md:text-[10px] font-black uppercase tracking-[0.16em] text-lovelya-600 dark:text-lovelya-400 mb-1">Translation result</p>
+                <div className="text-4xl md:text-5xl font-black text-lovelya-700 dark:text-lovelya-300">{translateResult.overall}%</div>
+                <p className="text-gray-500 dark:text-gray-400 text-xs font-medium mt-1">Level {level} • Overall score</p>
               </div>
             </div>
 
@@ -1427,13 +1427,13 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             </div>
 
             {/* Feedback */}
-            <div className="bg-blue-50 dark:bg-blue-900/10 rounded-xl p-4 border border-blue-100 dark:border-blue-800/30">
+            <div className="bg-lovelya-50 dark:bg-lovelya-900/20 rounded-2xl p-4 border border-lovelya-100 dark:border-lovelya-800/40">
               <div className="flex items-start gap-3">
-                <div className="w-8 h-8 rounded-lg bg-blue-100 dark:bg-blue-800/30 flex items-center justify-center shrink-0">
-                  <i className="fas fa-comment-dots text-blue-500 text-sm"></i>
+                <div className="w-8 h-8 rounded-lg bg-lovelya-100 dark:bg-lovelya-800/30 flex items-center justify-center shrink-0">
+                  <i className="fas fa-comment-dots text-lovelya-500 text-sm"></i>
                 </div>
                 <div>
-                  <p className="text-[10px] font-black text-blue-600 dark:text-blue-400 uppercase tracking-widest mb-1">AI Feedback</p>
+                  <p className="text-[10px] font-black text-lovelya-600 dark:text-lovelya-400 uppercase tracking-widest mb-1">Tutor Feedback</p>
                   <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm font-medium leading-relaxed">{translateResult.feedback}</p>
                 </div>
               </div>
@@ -1817,11 +1817,11 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
             <div id="analysis-results-anchor" className="pt-2"></div>
             {analysisResult && (
-              <div id="analysis-results" className="mt-8 md:mt-12 pt-8 md:pt-10 border-t-4 border-gray-50 dark:border-gray-800 animate-slide-up space-y-6 md:space-y-10">
-                <div className="flex items-center gap-4 md:gap-6"><div className="w-10 h-10 md:w-16 md:h-16 rounded-2xl md:rounded-3xl bg-lovelya-600 text-white flex items-center justify-center shadow-xl"><i className="fas fa-chart-line text-lg md:text-3xl"></i></div><h2 className="text-xl md:text-3xl lg:text-4xl font-black text-gray-800 dark:text-white uppercase tracking-tighter">Performance Analysis</h2></div>
-                <div className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-10">
-                  <div className="p-8 md:p-12 bg-gray-50 dark:bg-gray-800/50 rounded-3xl md:rounded-[3rem] text-center shadow-inner border border-white dark:border-gray-700"><div className="text-4xl md:text-7xl font-black text-lovelya-600">{Math.round(analysisResult.score)}</div><div className="text-[10px] md:text-sm lg:text-base font-black text-gray-400 uppercase tracking-[0.3em] mt-3 md:mt-5">Performance Score</div></div>
-                  <div className="p-8 md:p-12 bg-green-50 dark:bg-green-900/10 rounded-3xl md:rounded-[3rem] text-center shadow-inner border border-white dark:border-gray-700"><div className="text-4xl md:text-7xl font-black text-green-600">{Math.round(analysisResult.accuracy)}%</div><div className="text-[10px] md:text-sm lg:text-base font-black text-green-500 uppercase tracking-[0.3em] mt-3 md:mt-5">Pronunciation Accuracy</div></div>
+              <div id="analysis-results" className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-gray-100 dark:border-gray-800 animate-slide-up space-y-4 md:space-y-5">
+                <div className="flex items-center gap-3 md:gap-4"><div className="w-10 h-10 md:w-12 md:h-12 rounded-xl md:rounded-2xl bg-lovelya-600 text-white flex items-center justify-center shadow-lg"><i className="fas fa-chart-line text-sm md:text-base"></i></div><div><p className="text-[9px] font-black uppercase tracking-[0.18em] text-lovelya-600">Reading result</p><h2 className="text-lg md:text-2xl font-black text-gray-900 dark:text-white">Performance Analysis</h2></div></div>
+                <div className="grid grid-cols-1 min-[390px]:grid-cols-2 gap-3">
+                  <div className="p-4 md:p-5 bg-lovelya-50 dark:bg-lovelya-900/20 rounded-2xl border border-lovelya-100 dark:border-lovelya-800/60"><div className="text-4xl md:text-5xl font-black text-lovelya-700 dark:text-lovelya-300">{Math.round(analysisResult.score)}</div><div className="text-[9px] md:text-[10px] font-black text-gray-500 uppercase tracking-[0.16em] mt-1">Performance Score</div></div>
+                  <div className="p-4 md:p-5 bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border border-emerald-100 dark:border-emerald-800/60"><div className="text-4xl md:text-5xl font-black text-emerald-700 dark:text-emerald-300">{Math.round(analysisResult.accuracy)}%</div><div className="text-[9px] md:text-[10px] font-black text-gray-500 uppercase tracking-[0.16em] mt-1">Pronunciation Accuracy</div></div>
                 </div>
 
                 {/* Word breakdown — so the color-coded words above don't need to be re-scanned manually */}
@@ -1851,10 +1851,9 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 )}
 
                 <div className="grid grid-cols-1">
-                  <div className="bg-white dark:bg-gray-800 p-8 md:p-16 lg:p-20 rounded-3xl md:rounded-[4rem] border border-gray-100 dark:border-gray-700 shadow-xl relative overflow-hidden group">
-                    <div className="absolute top-0 right-0 w-32 h-32 md:w-64 md:h-64 bg-lovelya-50 dark:bg-lovelya-900/10 rounded-full -mr-16 -mt-16 group-hover:scale-110 transition-transform duration-700"></div>
-                    <span className="text-[10px] md:text-sm lg:text-base font-black text-lovelya-600 dark:text-lovelya-400 uppercase tracking-[0.4em] block mb-6 md:mb-10 relative z-10">Mastery Feedback</span>
-                    <p className="text-gray-700 dark:text-gray-300 text-base md:text-lg lg:text-xl leading-relaxed md:leading-snug lg:leading-normal relative z-10 font-medium italic">{analysisResult.feedback}</p>
+                  <div className="bg-white dark:bg-gray-800 p-4 md:p-5 rounded-2xl border border-lovelya-100 dark:border-lovelya-800/60 shadow-sm">
+                    <span className="text-[9px] md:text-[10px] font-black text-lovelya-600 dark:text-lovelya-400 uppercase tracking-[0.16em] block mb-2">Mastery Feedback</span>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed font-medium">{analysisResult.feedback}</p>
                   </div>
                 </div>
 
@@ -1863,7 +1862,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                   <div className="mt-8 text-center">
                     <button
                       onClick={handleComplete}
-                      className="px-10 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-base shadow-xl uppercase tracking-widest hover:shadow-2xl transition-all active:scale-95"
+                    className={`${resultButtonClass.success} max-w-xl mx-auto`}
                     >
                       <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
                     </button>

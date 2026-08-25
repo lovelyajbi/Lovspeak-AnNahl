@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { ResultActions, ResultCard, ResultChip, ResultHeader, ResultSection, resultButtonClass } from './ResultUI';
 import { VocabItem, ModuleProps, AppView } from '../types';
 import {
   getVocab, saveVocab, updateVocab, deleteVocab,
@@ -426,30 +427,22 @@ const VocabularyModule: React.FC<ModuleProps> = ({ onComplete, onNavigate, initi
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
-              className="bg-white dark:bg-gray-800 p-8 md:p-10 rounded-3xl shadow-xl border border-green-200 dark:border-green-800 text-center space-y-6"
+              className="w-full"
             >
-              <div className="w-20 h-20 bg-green-100 dark:bg-green-900/30 rounded-3xl flex items-center justify-center mx-auto">
-                <i className="fas fa-check-circle text-4xl text-green-500"></i>
-              </div>
-              <div>
-                <h2 className="text-2xl font-black text-gray-800 dark:text-white mb-1">Mission Complete!</h2>
-                <p className="text-sm text-gray-500">You've learned all {totalWords} words</p>
-              </div>
-              <div className="flex flex-wrap justify-center gap-2">
-                {missionWords.map(w => (
-                  <span key={w.id} className="px-3 py-1.5 bg-green-50 dark:bg-green-900/20 text-green-700 dark:text-green-300 rounded-full text-xs font-bold border border-green-100 dark:border-green-800">
-                    {w.english}
-                  </span>
-                ))}
-              </div>
-              <motion.button
+              <ResultCard className="p-4 md:p-6 space-y-4 md:space-y-5">
+                <ResultHeader icon="fa-layer-group" eyebrow="Vocabulary result" title="Mission complete" description={`You reviewed all ${totalWords} words in this set.`} tone="success" />
+                <ResultSection title="Words reviewed" icon="fa-check-double" tone="success" className="bg-white dark:bg-gray-800">
+                  <div className="flex flex-wrap gap-2">{missionWords.map(w => <ResultChip key={w.id} tone="success">{w.english}</ResultChip>)}</div>
+                </ResultSection>
+                <ResultActions>
+                <motion.button
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={() => onComplete?.()}
-                className="w-full py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-2xl font-black text-sm uppercase tracking-widest shadow-xl shadow-green-200/50 hover:shadow-2xl transition-all"
-              >
-                <i className="fas fa-gift mr-2"></i> Claim Rewards +{initialContext?.xpReward || 15} XP
-              </motion.button>
+                className={resultButtonClass.success}
+                ><i className="fas fa-gift mr-2"></i> Claim Rewards +{initialContext?.xpReward || 15} XP</motion.button>
+                </ResultActions>
+              </ResultCard>
             </motion.div>
           ) : currentWord ? (
             <motion.div

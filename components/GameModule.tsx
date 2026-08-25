@@ -6,6 +6,7 @@ import { getUserProfile, logActivity, getGameProgress, unlockNextLevel, getVocab
 import { generateGameData, generateVocabReviewGame } from '../services/gemini';
 import { getGameBankItems } from '../services/gameContent';
 import { audioService } from '../services/audioService';
+import { ResultActions, ResultCard, ResultHeader, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
 
 type GameCategory = 'visual' | 'grammar_strike' | 'odd_one_out' | 'arcade' | 'scramble' | 'knowledge' | 'interpreter' | 'read_aloud' | 'vocab_master';
 type GameContext = 'islamic' | 'general';
@@ -1232,36 +1233,24 @@ const GameModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
             }
 
             {gameState === 'result' && (
-                <div className="flex flex-col items-center justify-center min-h-[60vh] text-center animate-bounce-in space-y-6 px-4">
-                    <motion.div initial={{ scale: 0, rotate: -20 }} animate={{ scale: 1, rotate: 0 }} transition={{ type: 'spring', stiffness: 200 }} className="text-7xl md:text-8xl">🏆</motion.div>
-                    <h2 className="text-3xl md:text-5xl font-black text-gray-900 dark:text-white">Victory!</h2>
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ delay: 0.3 }} className={`bg-gradient-to-br ${currentGameConfig?.gradient || 'from-lovelya-400 to-lovelya-700'} p-6 md:p-8 rounded-3xl shadow-xl`}>
-                        <p className="text-5xl md:text-7xl font-black text-white">{score}</p>
-                        <p className="text-white/70 text-xs font-black uppercase tracking-widest mt-1">Total Score</p>
-                    </motion.div>
-                    <div className="flex gap-1.5">
-                        {[...Array(3)].map((_, i) => (
-                            <motion.i key={i} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 + i * 0.15 }} className={`fas fa-star text-2xl md:text-3xl ${i < Math.ceil(score / (items.length * 10 * (selectedLevel || 1)) * 3) ? 'text-amber-400' : 'text-gray-200 dark:text-gray-700'}`} />
-                        ))}
-                    </div>
-                    <div className="flex gap-3 mt-4">
-                        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setGameState('levels')} className="px-6 py-3 md:px-8 md:py-4 bg-white dark:bg-gray-800 text-gray-600 dark:text-gray-300 rounded-2xl font-black border border-gray-100 dark:border-gray-700 shadow-sm text-sm md:text-base">Next Level</motion.button>
-                        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setGameState('menu')} className="px-6 py-3 md:px-8 md:py-4 bg-gray-100 dark:bg-gray-800 text-gray-500 rounded-2xl font-bold text-sm md:text-base">All Games</motion.button>
-                    </div>
+                <div className="flex items-center justify-center min-h-[60vh] animate-bounce-in px-2 md:px-4">
+                    <ResultCard className="w-full max-w-xl p-4 md:p-6 space-y-4 md:space-y-5">
+                        <ResultHeader icon="fa-trophy" eyebrow="Game result" title="Level complete" description={currentGameConfig?.label || 'Great work—your score is ready.'} tone="success" />
+                        <div className="grid grid-cols-1 min-[390px]:grid-cols-[1.1fr_0.9fr] gap-3">
+                            <ResultScore score={score} label="Total score" icon="fa-gamepad" tone="success" />
+                            <ResultSection title="Rating" icon="fa-star" className="flex flex-col justify-center">
+                                <div className="flex gap-1.5">{[...Array(3)].map((_, i) => <motion.i key={i} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 + i * 0.1 }} className={`fas fa-star text-xl ${i < Math.ceil(score / (items.length * 10 * (selectedLevel || 1)) * 3) ? 'text-amber-400' : 'text-gray-200 dark:text-gray-700'}`} />)}</div>
+                                <p className="mt-2 text-[10px] text-gray-500">Keep playing to improve your personal best.</p>
+                            </ResultSection>
+                        </div>
+                        <ResultActions><motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} onClick={() => setGameState('levels')} className={resultButtonClass.accent}>Next Level</motion.button><motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} onClick={() => setGameState('menu')} className={resultButtonClass.secondary}>All Games</motion.button></ResultActions>
+                    </ResultCard>
                 </div>
             )}
 
             {gameState === 'game_over' && (
-                <div className="flex flex-col items-center justify-center min-h-[60vh] text-center animate-bounce-in space-y-6 px-4">
-                    <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ type: 'spring' }} className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-gradient-to-br from-red-400 to-rose-600 flex items-center justify-center text-white text-4xl md:text-5xl shadow-xl">
-                        <i className="fas fa-heart-crack"></i>
-                    </motion.div>
-                    <h2 className="text-3xl md:text-4xl font-black text-gray-800 dark:text-white">Game Over</h2>
-                    <p className="text-gray-400 font-medium text-sm">You scored <span className="font-black text-gray-800 dark:text-white">{score}</span> points. Try again!</p>
-                    <div className="flex gap-3">
-                        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => startGame(selectedLevel)} className={`px-8 py-3.5 md:px-10 md:py-4 bg-gradient-to-r ${currentGameConfig?.gradient || 'from-red-500 to-rose-600'} text-white rounded-2xl font-black text-sm md:text-base shadow-xl`}>Try Again</motion.button>
-                        <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} onClick={() => setGameState('menu')} className="px-8 py-3.5 md:px-10 md:py-4 bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-300 rounded-2xl font-bold text-sm md:text-base">Menu</motion.button>
-                    </div>
+                <div className="flex items-center justify-center min-h-[60vh] animate-bounce-in px-2 md:px-4">
+                    <ResultCard className="w-full max-w-xl p-4 md:p-6 space-y-4 md:space-y-5"><ResultHeader icon="fa-heart-crack" eyebrow="Game result" title="Let’s give it another try" description="Your progress is saved for this round. Review and try again when ready." tone="danger" /><ResultScore score={score} label="Total score" icon="fa-arrow-rotate-right" tone="danger" /><ResultActions><motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} onClick={() => startGame(selectedLevel)} className={resultButtonClass.accent}>Try Again</motion.button><motion.button whileHover={{ y: -2 }} whileTap={{ scale: 0.98 }} onClick={() => setGameState('menu')} className={resultButtonClass.secondary}>Menu</motion.button></ResultActions></ResultCard>
                 </div>
             )}
         </div >

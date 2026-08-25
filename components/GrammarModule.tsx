@@ -9,6 +9,7 @@ import { analyzeGrammar, generateGrammarTask, generateGrammarQuiz } from '../ser
 import { logActivity, completeRoadmapUnit, getActivityLogs } from '../services/storage';
 import { getLessonBank, pickQuizSet, pickPracticePrompt } from '../services/grammarContent';
 import MindMapRenderer from './MindMapRenderer';
+import { ResultActions, ResultCard, ResultHeader, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
 
 const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
   const completeButtonLabel = initialContext?.type === 'assignment'
@@ -262,6 +263,26 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     return { task: taskPart, hint: hintPart };
   };
 
+  const renderWritingResult = (showMissionActions = false) => {
+    if (!result) return null;
+    const target = initialContext?.minScore || 80;
+    const passed = result.score >= target;
+    return (
+      <motion.div initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }}>
+        <ResultCard className="p-4 md:p-6 space-y-4 md:space-y-5">
+          <ResultHeader icon="fa-spell-check" eyebrow="Grammar result" title={passed ? 'Your writing is on track' : 'A few details need attention'} description="Review the improved version and each correction before continuing." tone={passed ? 'success' : 'warning'} />
+          <div className="grid grid-cols-1 min-[390px]:grid-cols-[0.85fr_1.15fr] gap-3">
+            <ResultScore score={result.score} label={showMissionActions ? 'Mission score' : 'Quality score'} caption={passed ? 'Target achieved' : `Target ${target}`} icon={passed ? 'fa-check' : 'fa-pen-ruler'} tone={passed ? 'success' : 'warning'} />
+            <ResultSection title={showMissionActions ? 'Tutor note' : 'Teacher feedback'} icon="fa-comment-dots" tone="primary"><p className="text-xs md:text-sm leading-relaxed text-gray-700 dark:text-gray-200 font-medium">{result.generalFeedback}</p></ResultSection>
+          </div>
+          <ResultSection title="Improved version" icon="fa-wand-magic-sparkles" tone="success" className="bg-white dark:bg-gray-800"><p className="text-sm md:text-base leading-relaxed text-gray-800 dark:text-gray-100 font-medium whitespace-pre-wrap">{result.correctedText}</p></ResultSection>
+          {result.errors.length > 0 && <ResultSection title={`Key improvements · ${result.errors.length}`} icon="fa-list-check" className="bg-white dark:bg-gray-800"><div className="space-y-2.5">{result.errors.map((err, i) => <div key={i} className="rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50/70 dark:bg-gray-900/30 p-3 md:p-4"><div className="grid gap-2 md:grid-cols-2"><div><span className="text-[8px] md:text-[9px] font-black uppercase tracking-wider text-rose-500">Your text</span><p className="mt-1 text-xs md:text-sm text-gray-400 line-through leading-relaxed">{err.mistake}</p></div><div><span className="text-[8px] md:text-[9px] font-black uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Correction</span><p className="mt-1 text-xs md:text-sm text-gray-800 dark:text-white font-bold leading-relaxed">{err.correction}</p></div></div><p className="mt-2 border-t border-gray-100 dark:border-gray-700 pt-2 text-[10px] md:text-xs leading-relaxed text-gray-500 dark:text-gray-400">{err.explanation}</p></div>)}</div></ResultSection>}
+          {showMissionActions && <ResultActions>{passed ? <button onClick={() => onComplete?.()} className={resultButtonClass.success}><i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}</button> : <button onClick={() => { setResult(null); setUserInput(''); }} className={resultButtonClass.accent}><i className="fas fa-redo mr-2"></i> Try Again</button>}</ResultActions>}
+        </ResultCard>
+      </motion.div>
+    );
+  };
+
   if (step === 'custom_task') {
     const taskData = parseTaskContent(grammarTask);
     const userLevel = initialContext?.level || 'A1';
@@ -325,7 +346,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
           </div>
         </div>
 
-        {result && (
+        {false && result && (
           <motion.div initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-3xl shadow-xl border border-lovelya-100 space-y-8">
             <div className="flex justify-between items-center pb-6 border-b border-gray-100 dark:border-gray-700">
               <div className="flex items-center gap-4">
@@ -383,6 +404,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             )}
           </motion.div>
         )}
+        {renderWritingResult(true)}
       </motion.div>
     );
   }
@@ -571,7 +593,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 <motion.button whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} onClick={handleCheckGrammar} disabled={loading || loadingTask || !userInput.trim()} className="w-full py-3.5 bg-gradient-to-r from-rose-500 to-pink-600 text-white rounded-xl font-black text-sm shadow-xl transition disabled:opacity-30">{loading ? <><i className="fas fa-circle-notch fa-spin mr-2"></i> Analyzing...</> : 'Check Grammar'}</motion.button>
               </div>
             </div>
-            {result && (
+            {false && result && (
               <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-3xl shadow-xl border border-lovelya-100 animate-bounce-in space-y-8">
                 <div className="flex justify-between items-center pb-6 border-b border-gray-100 dark:border-gray-700"><div className="flex items-center gap-4"><div className="text-5xl font-black text-lovelya-600">{result.score}</div><div><div className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Quality Score</div><div className="text-xs md:text-sm font-bold text-gray-600 dark:text-gray-400">{result.score >= 80 ? 'Excellent!' : result.score >= 60 ? 'Good Progress' : 'Keep Practicing'}</div></div></div><i className="fas fa-award text-4xl text-yellow-400"></i></div>
                 <div className="space-y-4"><h4 className="text-[10px] font-black uppercase text-gray-400 tracking-widest">Corrected Text</h4><div className="p-6 bg-green-50 dark:bg-green-900/10 rounded-2xl text-green-800 dark:text-green-200 leading-relaxed font-medium text-[10px] md:text-sm">{result.correctedText}</div></div>
@@ -579,6 +601,7 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                 <div className="p-6 bg-lovelya-50 dark:bg-lovelya-900/20 rounded-2xl"><span className="text-[10px] font-black uppercase text-lovelya-600 tracking-widest block mb-2">Teacher Feedback</span><p className="text-gray-700 dark:text-gray-200 font-medium text-[10px] md:text-sm">{result.generalFeedback}</p></div>
               </div>
             )}
+            {renderWritingResult()}
           </div>
         )}
 
@@ -608,30 +631,17 @@ const GrammarModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
               <div className="space-y-8">
                 {/* Quiz Results Summary */}
                 {quizSubmitted && (
-                  <div className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-3xl shadow-xl border border-lovelya-100 dark:border-gray-700 animate-bounce-in text-center space-y-4">
-                    <div className="flex justify-center gap-2">
-                      {[...Array(3)].map((_, i) => (
-                        <i key={i} className={`fas fa-star text-3xl ${i < Math.round(quizScore / 33) ? 'text-yellow-400' : 'text-gray-200'}`}></i>
-                      ))}
-                    </div>
-                    <h2 className="text-5xl font-black text-lovelya-600">{quizScore}%</h2>
-                    <p className="text-gray-500 font-bold uppercase tracking-widest">Quiz Completed!</p>
-                    <button
-                      onClick={handleGenerateLessonQuiz}
-                      className="text-xs font-bold text-lovelya-500 hover:underline"
-                    >
-                      <i className="fas fa-rotate mr-1"></i> Try different questions
-                    </button>
+                  <ResultCard className="p-4 md:p-6 space-y-4 text-left animate-bounce-in">
+                    <ResultHeader icon="fa-clipboard-check" eyebrow="Grammar quiz" title="Quiz completed" description="Review your score, then inspect the marked answers below." tone={quizScore >= (initialContext?.minScore || 80) ? 'success' : 'warning'} />
+                    <div className="grid grid-cols-1 min-[390px]:grid-cols-2 gap-3"><ResultScore score={quizScore} suffix="%" label="Quiz score" icon="fa-star" tone={quizScore >= (initialContext?.minScore || 80) ? 'success' : 'warning'} /><ResultSection title="Answer summary" icon="fa-list-check"><p className="text-2xl font-black text-gray-900 dark:text-white">{quizAnswers.filter((answer, index) => answer === currentQuiz[index]?.correctIndex).length}<span className="text-sm text-gray-400"> / {currentQuiz.length}</span></p><p className="mt-1 text-[10px] text-gray-500">questions answered correctly</p></ResultSection></div>
+                    <ResultActions>
+                    <button onClick={handleGenerateLessonQuiz} className={resultButtonClass.secondary}><i className="fas fa-rotate mr-1"></i> Try different questions</button>
                     {/* Complete Task button for daily missions */}
                     {initialContext?.autoStart && quizScore >= (initialContext?.minScore || 80) && (
-                      <button
-                        onClick={() => onComplete?.()}
-                        className="w-full mt-3 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl font-black text-sm shadow-lg uppercase tracking-widest"
-                      >
-                        <i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}
-                      </button>
+                      <button onClick={() => onComplete?.()} className={resultButtonClass.success}><i className="fas fa-check-circle mr-2"></i> {completeButtonLabel}</button>
                     )}
-                  </div>
+                    </ResultActions>
+                  </ResultCard>
                 )}
 
                 <div className="space-y-6">
