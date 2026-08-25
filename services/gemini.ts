@@ -67,19 +67,14 @@ export const MODEL_CASCADE_SMART = [
     'gemini-3.6-flash',
     'gemini-3.5-flash',
     GEMINI_MODELS.TEXT_PRO,
-    'gemini-2.5-pro',
     'gemini-3-flash-preview',
-    'gemini-2.5-flash',
     GEMINI_MODELS.TEXT_LITE,
-    'gemini-3.1-flash-lite',
-    'gemini-2.5-flash-lite'
+    'gemini-3.1-flash-lite'
 ];
 
 export const MODEL_CASCADE_LITE = [
     GEMINI_MODELS.TEXT_LITE,
     'gemini-3.1-flash-lite',
-    'gemini-2.5-flash-lite',
-    'gemini-2.5-flash',
     'gemini-3.5-flash',
     'gemini-3.6-flash',
     GEMINI_MODELS.TEXT_SMART
@@ -93,18 +88,15 @@ export const MODEL_CASCADE_TTS = [
 
 export const MODEL_CASCADE_PRO = [
     GEMINI_MODELS.TEXT_PRO,
-    'gemini-2.5-pro',
     GEMINI_MODELS.TEXT_SMART,
     'gemini-3.6-flash',
     'gemini-3.5-flash',
-    'gemini-3-flash-preview',
-    'gemini-2.5-flash'
+    'gemini-3-flash-preview'
 ];
 
 export const MODEL_CASCADE_CHAT = [
     GEMINI_MODELS.TEXT_LITE,
     'gemini-3.1-flash-lite',
-    'gemini-2.5-flash',
     'gemini-3.5-flash',
     'gemini-3.6-flash',
     GEMINI_MODELS.TEXT_SMART
@@ -114,20 +106,28 @@ const COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours
 const ACCESS_DENIED_COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours — model not available for this account
 
 // --- PERSISTENT COOLDOWNS ---
-const getModelCooldowns = (): Record<string, number> => {
-    const data = localStorage.getItem('lovelya_api_cooldowns_model');
-    return data ? JSON.parse(data) : {};
+const readCooldownMap = (storageKey: string): Record<string, number> => {
+    const data = localStorage.getItem(storageKey);
+    if (!data) return {};
+    try {
+        const parsed = JSON.parse(data);
+        if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+        return Object.fromEntries(
+            Object.entries(parsed).filter((entry): entry is [string, number] =>
+                typeof entry[1] === 'number' && Number.isFinite(entry[1]) && entry[1] > Date.now()
+            )
+        );
+    } catch {
+        localStorage.removeItem(storageKey);
+        return {};
+    }
 };
 
-const getModelAccessDenied = (): Record<string, number> => {
-    const data = localStorage.getItem('lovelya_api_access_model');
-    return data ? JSON.parse(data) : {};
-};
+const getModelCooldowns = (): Record<string, number> => readCooldownMap('lovelya_api_cooldowns_model');
 
-const getKeyModelCooldowns = (): Record<string, number> => {
-    const data = localStorage.getItem('lovelya_api_cooldowns_key_model');
-    return data ? JSON.parse(data) : {};
-};
+const getModelAccessDenied = (): Record<string, number> => readCooldownMap('lovelya_api_access_model');
+
+const getKeyModelCooldowns = (): Record<string, number> => readCooldownMap('lovelya_api_cooldowns_key_model');
 
 const syncCooldownsToCloud = () => {
     syncToFirestore('settings/api_cooldowns', {
@@ -167,10 +167,21 @@ export const resetApiCooldowns = () => {
     for (const key in modelKeyIndices) delete modelKeyIndices[key];
 };
 
+interface RotationOptions {
+    attemptTimeoutMs?: number;
+    totalTimeoutMs?: number;
+    maxTimeoutsPerModel?: number;
+}
+
 // Wrapper for automatic rotation on quota errors and model fallbacks
-async function callGeminiWithRotation<T>(modelName: string | string[], fn: (client: ReturnType<typeof getAiClient>) => Promise<T>): Promise<T> {
+async function callGeminiWithRotation<T>(
+    modelName: string | string[],
+    fn: (client: ReturnType<typeof getAiClient>) => Promise<T>,
+    options: RotationOptions = {}
+): Promise<T> {
     const keys = getGeminiApiKeys();
     if (!keys || keys.length === 0) throw new Error("API_KEY_MISSING");
+    const deadline = options.totalTimeoutMs ? Date.now() + options.totalTimeoutMs : Number.POSITIVE_INFINITY;
 
     // Map each workload's primary model to its modality-safe fallback cascade.
     let models = Array.isArray(modelName) ? modelName : [modelName];
@@ -184,8 +195,10 @@ async function callGeminiWithRotation<T>(modelName: string | string[], fn: (clie
     const executeRotationForModel = async (targetModel: string): Promise<T> => {
         const startIndex = modelKeyIndices[targetModel] ?? 0;
         let attemptedKeys = 0;
+        let timedOutKeys = 0;
 
         while (attemptedKeys < keys.length) {
+            if (Date.now() >= deadline) throw new Error("AI_ROTATION_TIMEOUT");
             const currentKeyIndex = (startIndex + attemptedKeys) % keys.length;
             const cooldownKey = `${currentKeyIndex}_${targetModel}`;
 
@@ -212,10 +225,31 @@ async function callGeminiWithRotation<T>(modelName: string | string[], fn: (clie
                     }
                 } as any;
 
-                const result = await fn(proxyClient);
-                modelKeyIndices[targetModel] = currentKeyIndex;
+                const remainingMs = deadline - Date.now();
+                const attemptTimeoutMs = options.attemptTimeoutMs
+                    ? Math.max(1000, Math.min(options.attemptTimeoutMs, remainingMs))
+                    : 0;
+                const request = fn(proxyClient);
+                const result = attemptTimeoutMs > 0
+                    ? await withTimeout(request, attemptTimeoutMs, 'AI_ATTEMPT')
+                    : await request;
+                // Spread consecutive calls across API projects to reduce RPM spikes.
+                modelKeyIndices[targetModel] = (currentKeyIndex + 1) % keys.length;
                 return result;
             } catch (e: any) {
+                const errorMessage = e?.message || e?.toString() || '';
+                if (errorMessage.includes('AI_ATTEMPT_TIMEOUT') || errorMessage.includes('AI_ROTATION_TIMEOUT')) {
+                    timedOutKeys += 1;
+                    console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} timed out. Trying another key or model...`);
+                    setKeyModelCooldown(cooldownKey, Date.now() + 60 * 1000);
+                    const timeoutLimit = options.maxTimeoutsPerModel ?? 2;
+                    if (keys.length > 1 && (attemptedKeys + 1) < keys.length && timedOutKeys < timeoutLimit && Date.now() < deadline) {
+                        attemptedKeys++;
+                        continue;
+                    }
+                    throw new Error("AI_MODEL_TIMEOUT");
+                }
+
                 // Quota/rate-limit errors: rotate to next key
                 if (isQuotaError(e)) {
                     console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} exhausted. Cooldown 6h. Trying next key...`);
@@ -260,6 +294,7 @@ async function callGeminiWithRotation<T>(modelName: string | string[], fn: (clie
     };
 
     for (let i = 0; i < models.length; i++) {
+        if (Date.now() >= deadline) throw new Error("AI_REQUEST_TIMEOUT");
         const currentModel = models[i];
         const cooldownUntil = getModelCooldowns()[currentModel] || 0;
         const accessDeniedUntil = getModelAccessDenied()[currentModel] || 0;
@@ -272,6 +307,13 @@ async function callGeminiWithRotation<T>(modelName: string | string[], fn: (clie
         try {
             return await executeRotationForModel(currentModel);
         } catch (e: any) {
+            if (e.message === "AI_MODEL_TIMEOUT" || e.message === "AI_ROTATION_TIMEOUT") {
+                console.warn(`[AI-FALLBACK] ${currentModel} timed out. Trying the next model...`);
+                setModelAccessDenied(currentModel, Date.now() + 60 * 1000);
+                if (i === models.length - 1 || Date.now() >= deadline) throw new Error("AI_REQUEST_TIMEOUT");
+                continue;
+            }
+
             if (e.message === "QUOTA_EXHAUSTED") {
                 console.warn(`[AI-FALLBACK] ${currentModel} exhausted on all keys. Cooldown for 6 hours.`);
                 setModelCooldown(currentModel, Date.now() + COOLDOWN_MS);
@@ -1338,6 +1380,10 @@ Return JSON:
             throw new Error("Invalid analysis format from AI");
         }
         return result;
+    }, {
+        attemptTimeoutMs: 25000,
+        totalTimeoutMs: 90000,
+        maxTimeoutsPerModel: 2
     });
 };
 

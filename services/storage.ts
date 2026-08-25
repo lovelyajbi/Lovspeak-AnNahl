@@ -133,18 +133,25 @@ export const getGeminiApiKeys = (): string[] => {
     const data = localStorage.getItem(KEY_GEMINI_API_KEYS);
     if (!data) {
         // Migration: check if legacy key exists
-        const legacy = localStorage.getItem(KEY_GEMINI_API_KEY);
+        const legacy = localStorage.getItem(KEY_GEMINI_API_KEY)?.trim();
         return legacy ? [legacy] : [];
     }
     try {
-        return JSON.parse(data);
+        const parsed = JSON.parse(data);
+        if (!Array.isArray(parsed)) return [];
+        return Array.from(new Set(
+            parsed
+                .filter((key): key is string => typeof key === 'string')
+                .map(key => key.trim())
+                .filter(Boolean)
+        ));
     } catch (e) {
         return [];
     }
 };
 
 export const saveGeminiApiKeys = async (keys: string[]) => {
-    const cleanKeys = keys.filter(k => k.trim() !== "");
+    const cleanKeys = Array.from(new Set(keys.map(key => key.trim()).filter(Boolean)));
     localStorage.setItem(KEY_GEMINI_API_KEYS, JSON.stringify(cleanKeys));
     // Update legacy key as well for backward compatibility
     if (cleanKeys.length > 0) {

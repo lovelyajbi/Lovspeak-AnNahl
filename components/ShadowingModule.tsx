@@ -177,7 +177,12 @@ const useDialogueSpeech = (sessionKey: string) => {
     setTranscript(value);
   }, []);
   const stopListening = useCallback(() => {
-    if (!shouldListenRef.current) return;
+    if (!shouldListenRef.current && !sessionRunningRef.current) {
+      clearTimers();
+      try { recognitionRef.current?.abort(); } catch { /* Already inactive. */ }
+      setStatus('idle');
+      return;
+    }
     shouldListenRef.current = false;
     generationRef.current += 1;
     clearTimers();
@@ -189,7 +194,7 @@ const useDialogueSpeech = (sessionKey: string) => {
       sessionRunningRef.current = false;
       flushSessionRef.current(true);
       setStatus('idle');
-    }, 1000);
+    }, 1500);
   }, [clearTimers]);
   const startListening = useCallback(() => {
     const rec = recognitionRef.current;
@@ -212,8 +217,6 @@ const useDialogueSpeech = (sessionKey: string) => {
     setStatus('starting');
     try {
       rec.start();
-      sessionRunningRef.current = true;
-      setStatus('listening');
     } catch {
       shouldListenRef.current = false;
       setSpeechError('Mikrofon belum siap. Coba ketuk rekam sekali lagi.');
@@ -241,6 +244,15 @@ const useDialogueSpeech = (sessionKey: string) => {
     rec.continuous = true;
     rec.interimResults = true;
     rec.maxAlternatives = 1;
+    rec.onstart = () => {
+      sessionRunningRef.current = true;
+      restartFailuresRef.current = 0;
+      if (!shouldListenRef.current) {
+        try { rec.stop(); } catch { /* The stop fallback will abort it. */ }
+        return;
+      }
+      setStatus('listening');
+    };
     const flushSession = (includeInterim: boolean) => {
       const segment = includeInterim
         ? sessionSnapshotRef.current
@@ -257,9 +269,6 @@ const useDialogueSpeech = (sessionKey: string) => {
         if (!shouldListenRef.current || generation !== generationRef.current || sessionRunningRef.current) return;
         try {
           rec.start();
-          sessionRunningRef.current = true;
-          restartFailuresRef.current = 0;
-          setStatus('listening');
         } catch {
           if (shouldListenRef.current && generation === generationRef.current) {
             restartFailuresRef.current += 1;
@@ -423,7 +432,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
   const dialogueStartedAtRef = useRef<number>(0);
   const launchedDailyDialogueRef = useRef<string | null>(null);
   const dialogueSpeechSessionKey = isDailyRoleplay
-    ? `daily:${initialContext?.taskId || 'task'}:${lineIndex}`
+    ? `daily:${initialContext?.taskId || 'task'}`
     : 'manual';
   const { isListening: isDialogueListening, status: dialogueSpeechStatus, speechError: dialogueSpeechError, transcript: dialogueTranscript, startListening: startDialogueListening, stopListening: stopDialogueListening, setTranscript: setDialogueTranscript } = useDialogueSpeech(dialogueSpeechSessionKey);
 
@@ -736,37 +745,56 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
 
           try {
             const reader = new FileReader();
-            reader.readAsDataURL(audioBlob);
             reader.onloadend = async () => {
-              const base64data = reader.result?.toString().split(',')[1];
-              if (!base64data) throw new Error("Failed to read audio");
+              try {
+                const base64data = reader.result?.toString().split(',')[1];
+                if (!base64data) throw new Error("Failed to read audio");
 
-              // Call real AI
-              const result = await analyzePronunciationAudio(selectedTask.text, base64data, mimeType);
+                // Call real AI. The service rotates both key and model and has
+                // a total timeout, so this callback cannot leave the UI hanging.
+                const result = await analyzePronunciationAudio(selectedTask.text, base64data, mimeType);
 
-              // Calculate Score based on actual word analysis against target text
-              // The AI now returns ALL target words (correct, incorrect, or missed)
-              const targetWordCount = selectedTask.text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0).length;
-              const analysisCount = result.wordAnalysis.length;
-              // Use the larger of targetWordCount and analysisCount as denominator
-              // to avoid inflated scores if AI returns fewer words
-              const totalWords = Math.max(targetWordCount, analysisCount);
-              const correctWords = result.wordAnalysis.filter((w: any) => w.status === 'correct').length;
-              const incorrectWordsList = result.wordAnalysis
-                .filter((w: any) => w.status === 'incorrect' || w.status === 'missed')
-                .map((w: any) => w.word);
+                // Calculate Score based on actual word analysis against target text
+                // The AI now returns ALL target words (correct, incorrect, or missed)
+                const targetWordCount = selectedTask.text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0).length;
+                const analysisCount = result.wordAnalysis.length;
+                // Use the larger of targetWordCount and analysisCount as denominator
+                // to avoid inflated scores if AI returns fewer words
+                const totalWords = Math.max(targetWordCount, analysisCount);
+                const correctWords = result.wordAnalysis.filter((w: any) => w.status === 'correct').length;
+                const incorrectWordsList = result.wordAnalysis
+                  .filter((w: any) => w.status === 'incorrect' || w.status === 'missed')
+                  .map((w: any) => w.word);
 
-              // Pure ratio score: correct / total target words * 100
-              // No free bonus points — 0 correct = 0 score
-              const score = totalWords === 0 ? 0 : Math.round((correctWords / totalWords) * 100);
+                // Pure ratio score: correct / total target words * 100
+                // No free bonus points — 0 correct = 0 score
+                const score = totalWords === 0 ? 0 : Math.round((correctWords / totalWords) * 100);
 
+                setFeedbackDetail({
+                  score: score,
+                  incorrectWords: incorrectWordsList,
+                  tips: result.feedback
+                });
+              } catch (e) {
+                console.error("Audio analysis failed", e);
+                setFeedbackDetail({
+                  score: 0,
+                  incorrectWords: [],
+                  tips: "Analisis suara belum berhasil. Silakan coba lagi; key dan model cadangan sudah dicoba otomatis."
+                });
+              } finally {
+                setIsAnalyzing(false);
+              }
+            };
+            reader.onerror = () => {
               setFeedbackDetail({
-                score: score,
-                incorrectWords: incorrectWordsList,
-                tips: result.feedback
+                score: 0,
+                incorrectWords: [],
+                tips: "Rekaman tidak dapat dibaca. Silakan rekam ulang."
               });
               setIsAnalyzing(false);
             };
+            reader.readAsDataURL(audioBlob);
           } catch (e) {
             console.error("Audio processing failed", e);
             setFeedbackDetail({

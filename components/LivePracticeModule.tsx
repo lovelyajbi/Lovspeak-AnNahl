@@ -225,13 +225,16 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   };
 
   const getLiveKeys = (): string[] => {
-    const savedKeys = getGeminiApiKeys().map(key => key.trim()).filter(Boolean);
+    const savedKeys = Array.from(new Set(getGeminiApiKeys().map(key => key.trim()).filter(Boolean)));
     if (savedKeys.length > 0) return savedKeys;
     const fallback = (process.env.API_KEY as string | undefined)?.trim();
     return fallback ? [fallback] : [];
   };
 
   function enqueueOutputAudio(data: string, generation: number) {
+    // A greeting counts only after the server has actually produced audio.
+    // Merely opening the socket is not proof that this key can serve Live audio.
+    if (generation === sessionGenerationRef.current) hasGreetedRef.current = true;
     const epoch = outputEpochRef.current;
     outputPlaybackChainRef.current = outputPlaybackChainRef.current
       .catch(() => {})
@@ -649,7 +652,6 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             }, LIVE_STABLE_CONNECTION_MS);
 
             if (!isReconnect) {
-              hasGreetedRef.current = true;
               awaitingResponseRef.current = true;
               responseWatchStartedAtRef.current = Date.now();
               sessionPromise.then((session) => {
@@ -874,7 +876,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     if (kind === 'timeout' && hasGreetedRef.current) recoverTimedOutTurnRef.current = true;
 
     const liveKeys = getLiveKeys();
-    if (kind === 'quota' || kind === 'auth' || kind === 'access') {
+    if (kind === 'quota' || kind === 'auth' || kind === 'access' || kind === 'timeout') {
       failedKeyIndicesRef.current.add(activeKeyIndexRef.current);
       const nextKeyIndex = liveKeys.findIndex((_, index) => !failedKeyIndicesRef.current.has(index));
       if (nextKeyIndex >= 0) {
@@ -889,7 +891,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           ? 'All API keys have reached their limit'
           : kind === 'access'
             ? 'Live Speaking is unavailable for the saved API keys'
-            : 'Saved API keys were rejected';
+            : kind === 'timeout'
+              ? 'No saved API key produced a Live response'
+              : 'Saved API keys were rejected';
         setStatus(finalStatus);
         setLastDiagnosticCode(`LIVE_ALL_KEYS_${kind.toUpperCase()}`);
         return;
