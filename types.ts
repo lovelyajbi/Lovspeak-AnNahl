@@ -325,6 +325,7 @@ export interface LearningPlan {
   daysPerWeek: number;
   dailyTasks: DailyTask[];
   yesterdayTasks?: DailyTask[];
+  dailyTaskHistory?: Record<string, DailyTask[]>;
   startDate?: string;
   lastGeneratedDate: string;
   updatedAt?: string;

@@ -124,7 +124,11 @@ export const generateDailyTasks = (
       ? Math.max(0, Math.floor((normalizedToday.getTime() - normalizedPlanStart.getTime()) / 86400000))
       : Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / 86400000);
   const dailyTheme = curriculum[relativePlanDay % curriculum.length];
-  const taskDateKey = today.toISOString().split('T')[0];
+  const taskDateKey = [
+    today.getFullYear(),
+    String(today.getMonth() + 1).padStart(2, '0'),
+    String(today.getDate()).padStart(2, '0'),
+  ].join('-');
 
   const hasIslamic = targetIds.includes('islamic');
 

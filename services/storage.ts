@@ -8,6 +8,11 @@ import {
     doc, getDoc, setDoc, collection, getDocs, deleteDoc,
     query, orderBy, limit, onSnapshot, getDocFromServer, where
 } from 'firebase/firestore';
+import {
+    mergeDailyTaskLists,
+    mergeLearningPlanHistories,
+    normalizeLearningPlanHistory,
+} from './learningPlanHistory';
 
 // --- Error Handling ---
 enum OperationType {
@@ -383,11 +388,15 @@ export const saveUserProfile = (profile: UserProfile) => {
 // --- LEARNING PLAN ---
 export const getLearningPlan = (): LearningPlan | null => {
     const data = localStorage.getItem(KEY_PLAN);
-    return data ? JSON.parse(data) : null;
+    return data ? normalizeLearningPlanHistory(JSON.parse(data)) : null;
 };
 
 export const saveLearningPlan = (plan: LearningPlan) => {
-    const planToSave: LearningPlan = { ...plan, schemaVersion: 2, updatedAt: new Date().toISOString() };
+    const planToSave = normalizeLearningPlanHistory({
+        ...plan,
+        schemaVersion: 3,
+        updatedAt: new Date().toISOString(),
+    });
     localStorage.setItem(KEY_PLAN, JSON.stringify(planToSave));
     syncToFirestore('settings/plan', planToSave);
 };
@@ -769,30 +778,16 @@ const hasMeaningfulLocalProfile = (profile: any): boolean => Boolean(
     profile && (profile.xp > 0 || profile.level && profile.level !== 'A1' || (profile.name && profile.name !== 'Lovelies'))
 );
 
-const mergeTaskProgress = (primary: any, other?: any) => {
-    if (!other) return primary;
-    return {
-        ...other,
-        ...primary,
-        isCompleted: Boolean(primary.isCompleted || other.isCompleted),
-        accumulatedSeconds: Math.max(primary.accumulatedSeconds || 0, other.accumulatedSeconds || 0) || undefined,
-    };
-};
-
 const mergePlanProgress = (primary: LearningPlan, other: LearningPlan): LearningPlan => {
-    const mergeTasks = (tasks: any[] = [], alternate: any[] = []) => {
-        const alternateById = new Map(alternate.map(task => [task.id, task]));
-        return tasks.map(task => mergeTaskProgress(task, alternateById.get(task.id)));
-    };
     const sameDailyPlan = primary.lastGeneratedDate === other.lastGeneratedDate
         && primary.currentLevel === other.currentLevel;
-    return sameDailyPlan ? {
+    return normalizeLearningPlanHistory({
         ...primary,
-        dailyTasks: mergeTasks(primary.dailyTasks, other.dailyTasks),
-        yesterdayTasks: primary.yesterdayTasks || other.yesterdayTasks
-            ? mergeTasks(primary.yesterdayTasks || other.yesterdayTasks || [], other.yesterdayTasks || primary.yesterdayTasks || [])
-            : undefined,
-    } : primary;
+        dailyTasks: sameDailyPlan
+            ? mergeDailyTaskLists(primary.dailyTasks, other.dailyTasks)
+            : primary.dailyTasks,
+        dailyTaskHistory: mergeLearningPlanHistories(primary, other),
+    });
 };
 
 const resolveLearningPlan = (cloudPlan: LearningPlan, localPlan: LearningPlan | null): { plan: LearningPlan; shouldUpload: boolean } => {
@@ -814,7 +809,11 @@ const resolveLearningPlan = (cloudPlan: LearningPlan, localPlan: LearningPlan | 
         secondary = primary === localPlan ? cloudPlan : localPlan;
         shouldUpload = primary === localPlan;
     }
-    return { plan: mergePlanProgress(primary, secondary), shouldUpload };
+    const plan = mergePlanProgress(primary, secondary);
+    const normalizedCloud = normalizeLearningPlanHistory(cloudPlan);
+    const mergedCloudDataChanged = JSON.stringify(plan.dailyTasks) !== JSON.stringify(normalizedCloud.dailyTasks)
+        || JSON.stringify(plan.dailyTaskHistory) !== JSON.stringify(normalizedCloud.dailyTaskHistory);
+    return { plan, shouldUpload: shouldUpload || mergedCloudDataChanged };
 };
 
 // --- INITIAL SYNC FROM CLOUD ---

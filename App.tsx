@@ -5,6 +5,12 @@ import { AppView, LearningPlan, Level, DailyTask, UserProfile, AssessmentResult,
 import { LEARNING_TARGETS, LEARNING_INTENSITIES, LEVEL_DEFINITIONS, LEVELS, ISLAMIC_QUOTES, THEMES } from './constants';
 import { getLearningPlan, saveLearningPlan, getUserProfile, saveUserProfile, completeRoadmapUnit } from './services/storage';
 import { generateDailyTasks, generateGoogleCalendarUrl } from './services/planner';
+import {
+  getPlanTasksForDate,
+  normalizeLearningPlanHistory,
+  planDateKeyToDate,
+  shiftPlanDateKey,
+} from './services/learningPlanHistory';
 import Layout from './components/Layout';
 import { useAuth } from './src/contexts/AuthContext';
 import AdminPortal from './src/components/AdminPortal';
@@ -229,35 +235,50 @@ const App: React.FC = () => {
 
     const storedPlan = getLearningPlan();
     if (storedPlan) {
-      const normalizedStoredPlan = storedPlan.startDate
+      const normalizedStoredPlan = normalizeLearningPlanHistory(storedPlan.startDate
         ? storedPlan
-        : { ...storedPlan, startDate: storedPlan.lastGeneratedDate };
+        : { ...storedPlan, startDate: storedPlan.lastGeneratedDate });
       const todayWIB = getWIBDateString();
-      if (normalizedStoredPlan.lastGeneratedDate !== todayWIB) {
-        // Check if exactly 1 day passed
-        const lastDate = new Date(normalizedStoredPlan.lastGeneratedDate);
-        const todayDate = new Date(todayWIB);
-        const diffTime = todayDate.getTime() - lastDate.getTime();
-        const diffDays = Math.round(diffTime / (1000 * 60 * 60 * 24));
-
-        let newYesterdayTasks = undefined;
-        if (diffDays === 1 && normalizedStoredPlan.dailyTasks) {
-          newYesterdayTasks = normalizedStoredPlan.dailyTasks;
+      const dateChanged = normalizedStoredPlan.lastGeneratedDate !== todayWIB;
+      const previousDateKey = shiftPlanDateKey(todayWIB, -1);
+      const shouldHaveYesterday = Boolean(
+        previousDateKey
+        && normalizedStoredPlan.startDate
+        && normalizedStoredPlan.startDate <= previousDateKey,
+      );
+      const missingYesterday = Boolean(
+        shouldHaveYesterday
+        && previousDateKey
+        && !normalizedStoredPlan.dailyTaskHistory?.[previousDateKey]?.length,
+      );
+      if (dateChanged || missingYesterday) {
+        const dailyTaskHistory = { ...(normalizedStoredPlan.dailyTaskHistory || {}) };
+        if (shouldHaveYesterday && previousDateKey && !dailyTaskHistory[previousDateKey]?.length) {
+          dailyTaskHistory[previousDateKey] = generateDailyTasks(
+            normalizedStoredPlan.targetIds,
+            normalizedStoredPlan.intensityId,
+            normalizedStoredPlan.currentLevel,
+            planDateKeyToDate(previousDateKey),
+            normalizedStoredPlan.startDate,
+          );
         }
 
-        const newTasks = generateDailyTasks(
-          normalizedStoredPlan.targetIds,
-          normalizedStoredPlan.intensityId,
-          normalizedStoredPlan.currentLevel,
-          undefined,
-          normalizedStoredPlan.startDate
-        );
-        const refreshedPlan: LearningPlan = {
+        const newTasks = dateChanged
+          ? generateDailyTasks(
+              normalizedStoredPlan.targetIds,
+              normalizedStoredPlan.intensityId,
+              normalizedStoredPlan.currentLevel,
+              planDateKeyToDate(todayWIB),
+              normalizedStoredPlan.startDate
+            )
+          : normalizedStoredPlan.dailyTasks;
+        const refreshedPlan = normalizeLearningPlanHistory({
           ...normalizedStoredPlan,
           dailyTasks: newTasks,
-          yesterdayTasks: newYesterdayTasks,
+          dailyTaskHistory,
+          yesterdayTasks: previousDateKey ? dailyTaskHistory[previousDateKey] : undefined,
           lastGeneratedDate: todayWIB
-        };
+        });
         saveLearningPlan(refreshedPlan);
         setPlan(refreshedPlan);
       } else {
@@ -322,16 +343,26 @@ const App: React.FC = () => {
     if (tempTargets.length > 0 && tempIntensity && tempLevel) {
       try {
         const planStartDate = getWIBDateString();
-        const generatedTasks = generateDailyTasks(tempTargets, tempIntensity, tempLevel, undefined, planStartDate);
-        const newPlan: LearningPlan = {
+        const generatedTasks = generateDailyTasks(
+          tempTargets,
+          tempIntensity,
+          tempLevel,
+          planDateKeyToDate(planStartDate),
+          planStartDate,
+        );
+        const previousHistory = plan
+          ? normalizeLearningPlanHistory(plan).dailyTaskHistory
+          : undefined;
+        const newPlan = normalizeLearningPlanHistory({
           targetIds: tempTargets,
           intensityId: tempIntensity,
           currentLevel: tempLevel,
           daysPerWeek: tempDays,
           dailyTasks: generatedTasks,
+          dailyTaskHistory: previousHistory,
           startDate: planStartDate,
           lastGeneratedDate: planStartDate
-        };
+        } satisfies LearningPlan);
 
         saveLearningPlan(newPlan);
         setPlan(newPlan);
@@ -702,10 +733,16 @@ const App: React.FC = () => {
             default:
               const activeTargetData = plan ? LEARNING_TARGETS.filter(t => plan.targetIds.includes(t.id)) : [];
               const currentLevel = userProfile?.level || 'A1';
-              const tasks = dashboardView === 'yesterday' ? (plan?.yesterdayTasks || []) : (plan?.dailyTasks || []);
+              const todayWIB = getWIBDateString();
+              const selectedDateKey = dashboardView === 'yesterday'
+                ? (shiftPlanDateKey(todayWIB, -1) || todayWIB)
+                : todayWIB;
+              const tasks = dashboardView === 'yesterday'
+                ? getPlanTasksForDate(plan, selectedDateKey)
+                : (plan?.dailyTasks || []);
               const completedTasks = tasks.filter(t => t.isCompleted).length;
               const progressPercent = tasks.length > 0 ? Math.round((completedTasks / tasks.length) * 100) : 0;
-              const planDayNumber = getPlanDayNumber(plan?.startDate, getWIBDateString());
+              const planDayNumber = getPlanDayNumber(plan?.startDate, selectedDateKey);
 
               return (
                 <div className="space-y-4 md:space-y-6 lg:space-y-8 animate-fade-in pb-10">
@@ -730,7 +767,7 @@ const App: React.FC = () => {
                           </span>
                         </h1>
                         <p className="text-lovelya-100 text-[8px] md:text-xs lg:text-base font-medium max-w-2xl opacity-90 leading-relaxed md:leading-snug">
-                          Ready to continue? {tasks.length - completedTasks} tasks left today. Keep up the great work!
+                          Ready to continue? {tasks.length - completedTasks} tasks left {dashboardView === 'yesterday' ? 'from yesterday' : 'today'}. Keep up the great work!
                         </p>
                       </div>
                       <div data-tour="hero-actions" className="flex flex-row md:flex-row gap-2 w-full md:w-auto self-stretch md:self-center">
@@ -911,11 +948,18 @@ const App: React.FC = () => {
                               <div className="grid gap-3 lg:gap-4 animate-slide-up">
                                 <div className="text-[9px] lg:text-xs font-black text-gray-400 uppercase tracking-[0.2em] mb-1 px-2 flex items-center justify-between">
                                   <div className="flex items-center gap-2">
-                                    <span className="bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-600 dark:text-lovelya-400 px-2 py-0.5 rounded-md font-black">Day {Math.min(Math.max(1, (planDayNumber || 1) - (dashboardView === 'yesterday' ? 1 : 0)), 30)} / 30</span>
+                                    <span className="bg-lovelya-100 dark:bg-lovelya-900/40 text-lovelya-600 dark:text-lovelya-400 px-2 py-0.5 rounded-md font-black">Day {Math.min(Math.max(1, planDayNumber || 1), 30)} / 30</span>
                                     <span>Strategy</span>
                                   </div>
                                   <span className="text-lovelya-600 dark:text-lovelya-400">{dashboardView === 'yesterday' ? 'Yesterday' : getWIBDateString()}</span>
                                 </div>
+                                {tasks.length === 0 && (
+                                  <div className="rounded-2xl border border-dashed border-gray-200 bg-white/70 px-5 py-10 text-center dark:border-gray-700 dark:bg-gray-800/60">
+                                    <i className="far fa-calendar-check mb-3 text-2xl text-lovelya-400"></i>
+                                    <p className="text-sm font-black text-gray-700 dark:text-gray-200">No missions were scheduled for yesterday.</p>
+                                    <p className="mt-1 text-xs text-gray-400">Your current plan and progress are still safe.</p>
+                                  </div>
+                                )}
                                 {tasks.map((task) => (
                                   <div
                                     key={task.id}
