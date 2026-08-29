@@ -36,10 +36,9 @@ export const normalizePronunciationAnalysis = (
   if (!raw || typeof raw !== 'object' || targetWords.length === 0) return null;
   const payload = raw as Record<string, unknown>;
 
-  if (Array.isArray(payload.statuses)) {
-    if (payload.statuses.length !== targetWords.length) return null;
-    const statuses = payload.statuses.map(normalizeStatus);
-    if (statuses.some(status => status === null)) return null;
+  const buildCompactResult = (statuses: Array<PronunciationWordStatus | null>) => {
+    if (statuses.length !== targetWords.length || statuses.some(status => status === null)) return null;
+
     const detailsByIndex = new Map<number, string>();
     if (payload.errors !== undefined && !Array.isArray(payload.errors)) return null;
     for (const item of (payload.errors as unknown[] | undefined) || []) {
@@ -50,6 +49,7 @@ export const normalizePronunciationAnalysis = (
       if (!Number.isInteger(index) || index < 0 || index >= targetWords.length || !details) return null;
       detailsByIndex.set(index, details);
     }
+
     return {
       feedback: normalizeFeedback(payload.feedback),
       wordAnalysis: targetWords.map((word, index) => ({
@@ -60,6 +60,17 @@ export const normalizePronunciationAnalysis = (
           : '',
       })),
     };
+  };
+
+  // Accept the new one-character-per-word response and the previous array
+  // response so older/cached model output remains compatible.
+  if (typeof payload.statusMap === 'string') {
+    const codes = payload.statusMap.toLowerCase().replace(/\s+/g, '').split('');
+    return buildCompactResult(codes.map(normalizeStatus));
+  }
+
+  if (Array.isArray(payload.statuses)) {
+    return buildCompactResult(payload.statuses.map(normalizeStatus));
   }
 
   if (Array.isArray(payload.wordAnalysis) && payload.wordAnalysis.length === targetWords.length) {

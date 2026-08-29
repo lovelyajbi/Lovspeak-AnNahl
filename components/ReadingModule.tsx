@@ -873,6 +873,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     setError('');
 
     const keyForThisAttempt = recordingKey;
+    const analysisController = new AbortController();
 
     try {
       if (blob.size < 800) throw new Error('AUDIO_TOO_SHORT');
@@ -888,13 +889,21 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
       let watchdogId: number | undefined;
       const watchdog = new Promise<never>((_, reject) => {
-        watchdogId = window.setTimeout(() => reject(new Error('ANALYSIS_WATCHDOG_TIMEOUT')), 82000);
+        watchdogId = window.setTimeout(() => {
+          reject(new Error('ANALYSIS_WATCHDOG_TIMEOUT'));
+          analysisController.abort();
+        }, 82000);
       });
       const cancellation = new Promise<never>((_, reject) => {
-        analysisCancelRef.current = () => reject(new Error('ANALYSIS_CANCELLED'));
+        analysisCancelRef.current = () => {
+          reject(new Error('ANALYSIS_CANCELLED'));
+          analysisController.abort();
+        };
       });
       const result: any = await Promise.race([
-        analyzeReadingPronunciationAudio(targetText, base64, blob.type || 'audio/webm'),
+        analyzeReadingPronunciationAudio(targetText, base64, blob.type || 'audio/webm', {
+          abortSignal: analysisController.signal
+        }),
         watchdog,
         cancellation
       ]).finally(() => {
@@ -1011,7 +1020,9 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       } else if (code.includes('REFERENCE_TEXT_EMPTY')) {
         setError('Reference text is empty. Please reopen the task to reload the reading text.');
       } else if (code.includes('API_LIMIT')) {
-        setError('All available AI keys are currently at their limit. Your recording is saved; please resend it later.');
+        setError('The AI models needed for Reading have reached their current quota. Your recording is saved; please resend it later. Other AI features may still be available.');
+      } else if (code.includes('MODEL_ACCESS') || code.includes('MODELS_COOLDOWN')) {
+        setError('Reading analysis is temporarily unavailable while its models recover. Your recording is saved; please resend it shortly.');
       } else if (code.includes('TIMEOUT') || code.includes('NETWORK')) {
         setError('The analysis connection took too long. Your recording is saved; tap resend when the connection is stable.');
       } else {

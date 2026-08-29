@@ -3,6 +3,16 @@ import { GoogleGenAI, Type, Modality, ThinkingLevel } from "@google/genai";
 import { ReadingContent, GrammarResult, AssessmentQuestion, AssessmentResult, QuizQuestion } from "../types";
 import { getGeminiApiKey, getGeminiApiKeys, getAppLanguage, syncToFirestore } from "./storage";
 import { normalizePronunciationAnalysis } from "./pronunciationAnalysis";
+import {
+    AI_ROTATION_POLICY_STORAGE_KEY,
+    AI_ROTATION_POLICY_VERSION,
+    AiCooldownReason,
+    fingerprintApiKey,
+    getQuotaCooldownDecision,
+    hasAllKeysLimitedForModel,
+    makeKeyModelCooldownId,
+    QUOTA_DAILY_COOLDOWN_MS
+} from "./aiRotationPolicy";
 
 declare global {
     interface Window {
@@ -15,6 +25,7 @@ declare global {
 
 // We track the starting index per model to maximize quota usage across calls
 const modelKeyIndices: Record<string, number> = {};
+let lastKeySetSignature = '';
 
 const getAiClient = (modelName: string, keyIndex: number = 0) => {
     const keys = getGeminiApiKeys();
@@ -27,42 +38,63 @@ const getAiClient = (modelName: string, keyIndex: number = 0) => {
     return new GoogleGenAI({ apiKey });
 };
 
+const getErrorDiagnosticText = (error: any): string => {
+    const parts: unknown[] = [error?.message, error?.status, error?.statusText, error?.code];
+    try {
+        parts.push(JSON.stringify(error?.details || error?.error || ''));
+    } catch {
+        // The standard fields above are still enough when metadata is circular.
+    }
+    return parts.filter(Boolean).join(' ').toLowerCase();
+};
+
 // Helper to check if an error is a genuine quota/rate-limit error
 const isQuotaError = (e: any): boolean => {
-    const msg = e?.message || e?.toString() || '';
+    const msg = getErrorDiagnosticText(e);
     return msg.includes("429") ||
-        msg.toLowerCase().includes("quota") ||
-        msg.toLowerCase().includes("rate limit") ||
-        msg.toLowerCase().includes("resource has been exhausted");
+        msg.includes("quota") ||
+        msg.includes("rate limit") ||
+        msg.includes("resource_exhausted") ||
+        msg.includes("resource has been exhausted");
 };
 
 // Helper: Definitively invalid API key — Google explicitly says "API key not valid"
 const isDefinitelyInvalidKey = (e: any): boolean => {
-    const msg = e?.message || e?.toString() || '';
-    return msg.toLowerCase().includes('api key not valid') ||
-        msg.toLowerCase().includes('api_key_invalid') ||
-        msg.toLowerCase().includes('invalid api key');
+    const msg = getErrorDiagnosticText(e);
+    return msg.includes('api key not valid') ||
+        msg.includes('api_key_invalid') ||
+        msg.includes('invalid api key');
 };
 
 // Helper: Generic permission/access error — could be model access, region, or key issue
 const isPermissionError = (e: any): boolean => {
-    const msg = e?.message || e?.toString() || '';
+    const msg = getErrorDiagnosticText(e);
     return msg.includes("403") ||
-        msg.toLowerCase().includes("permission denied") ||
-        msg.toLowerCase().includes("forbidden") ||
-        msg.toLowerCase().includes("unauthorized");
+        msg.includes("permission_denied") ||
+        msg.includes("permission denied") ||
+        msg.includes("forbidden") ||
+        msg.includes("unauthorized");
 };
 
 // Retry short-lived transport/server failures on the next model instead of
 // leaving a feature stuck on an endless loading state.
 const isTransientNetworkError = (e: any): boolean => {
-    const msg = (e?.message || e?.toString() || '').toLowerCase();
+    const msg = getErrorDiagnosticText(e);
     return /\b(408|425|502|504)\b/.test(msg) ||
+        msg.includes('deadline_exceeded') ||
         msg.includes('network error') ||
         msg.includes('failed to fetch') ||
         msg.includes('fetch failed') ||
         msg.includes('connection reset') ||
         msg.includes('temporarily unavailable');
+};
+
+const isTransientServiceError = (e: any): boolean => {
+    const msg = getErrorDiagnosticText(e);
+    return /\b(500|502|503|504)\b/.test(msg) ||
+        msg.includes('unavailable') ||
+        msg.includes('internal server error') ||
+        msg.includes('service unavailable');
 };
 
 // Central model registry. Keep modality-specific models isolated: Live models
@@ -151,12 +183,57 @@ const getModelAccessDenied = (): Record<string, number> => readCooldownMap('love
 
 const getKeyModelCooldowns = (): Record<string, number> => readCooldownMap('lovelya_api_cooldowns_key_model');
 
+interface KeyModelCooldownMeta {
+    until: number;
+    reason: AiCooldownReason;
+    updatedAt: number;
+    quotaHits?: number;
+    quotaFirstSeenAt?: number;
+    quotaDaily?: boolean;
+}
+
+const KEY_MODEL_COOLDOWN_META = 'lovelya_api_cooldowns_key_model_meta';
+
+const getKeyModelCooldownMeta = (): Record<string, KeyModelCooldownMeta> => {
+    const raw = localStorage.getItem(KEY_MODEL_COOLDOWN_META);
+    if (!raw) return {};
+    try {
+        const parsed = JSON.parse(raw);
+        if (!parsed || typeof parsed !== 'object' || Array.isArray(parsed)) return {};
+        const now = Date.now();
+        return Object.fromEntries(
+            Object.entries(parsed).filter((entry): entry is [string, KeyModelCooldownMeta] => {
+                const value = entry[1] as Partial<KeyModelCooldownMeta> | null;
+                if (!value || typeof value.until !== 'number' || !Number.isFinite(value.until) ||
+                    typeof value.updatedAt !== 'number' || !Number.isFinite(value.updatedAt) ||
+                    typeof value.reason !== 'string') return false;
+                const hasActiveCooldown = value.until > now;
+                const hasRecentQuotaHistory = value.reason === 'quota' &&
+                    typeof value.quotaFirstSeenAt === 'number' && Number.isFinite(value.quotaFirstSeenAt) &&
+                    value.quotaFirstSeenAt <= now && now < value.quotaFirstSeenAt + QUOTA_DAILY_COOLDOWN_MS &&
+                    typeof value.quotaHits === 'number' && value.quotaHits >= 1;
+                return hasActiveCooldown || hasRecentQuotaHistory;
+            })
+        );
+    } catch {
+        localStorage.removeItem(KEY_MODEL_COOLDOWN_META);
+        return {};
+    }
+};
+
+let cooldownSyncTimer: ReturnType<typeof setTimeout> | null = null;
 const syncCooldownsToCloud = () => {
-    syncToFirestore('settings/api_cooldowns', {
-        modelCooldowns: getModelCooldowns(),
-        modelAccessDenied: getModelAccessDenied(),
-        keyModelCooldowns: getKeyModelCooldowns()
-    });
+    if (cooldownSyncTimer) clearTimeout(cooldownSyncTimer);
+    cooldownSyncTimer = setTimeout(() => {
+        cooldownSyncTimer = null;
+        syncToFirestore('settings/api_cooldowns', {
+            policyVersion: AI_ROTATION_POLICY_VERSION,
+            modelCooldowns: getModelCooldowns(),
+            modelAccessDenied: getModelAccessDenied(),
+            keyModelCooldowns: getKeyModelCooldowns(),
+            keyModelCooldownMeta: getKeyModelCooldownMeta()
+        });
+    }, 500);
 };
 
 const setModelCooldown = (model: string, timestamp: number) => {
@@ -173,11 +250,42 @@ const setModelAccessDenied = (model: string, timestamp: number) => {
     syncCooldownsToCloud();
 };
 
-const setKeyModelCooldown = (key: string, timestamp: number) => {
+const setKeyModelCooldown = (key: string, timestamp: number, reason: AiCooldownReason) => {
     const cooldowns = getKeyModelCooldowns();
     cooldowns[key] = timestamp;
     localStorage.setItem('lovelya_api_cooldowns_key_model', JSON.stringify(cooldowns));
+    const metadata = getKeyModelCooldownMeta();
+    metadata[key] = { until: timestamp, reason, updatedAt: Date.now() };
+    localStorage.setItem(KEY_MODEL_COOLDOWN_META, JSON.stringify(metadata));
     syncCooldownsToCloud();
+};
+
+const setQuotaKeyModelCooldown = (key: string, error: unknown) => {
+    const now = Date.now();
+    const metadata = getKeyModelCooldownMeta();
+    const previous = metadata[key];
+    const decision = getQuotaCooldownDecision(
+        error,
+        previous?.reason === 'quota' && previous.quotaHits && previous.quotaFirstSeenAt
+            ? { count: previous.quotaHits, firstLimitedAt: previous.quotaFirstSeenAt }
+            : null,
+        now
+    );
+
+    const cooldowns = getKeyModelCooldowns();
+    cooldowns[key] = decision.until;
+    localStorage.setItem('lovelya_api_cooldowns_key_model', JSON.stringify(cooldowns));
+    metadata[key] = {
+        until: decision.until,
+        reason: 'quota',
+        updatedAt: now,
+        quotaHits: decision.count,
+        quotaFirstSeenAt: decision.firstLimitedAt,
+        quotaDaily: decision.isDaily
+    };
+    localStorage.setItem(KEY_MODEL_COOLDOWN_META, JSON.stringify(metadata));
+    syncCooldownsToCloud();
+    return decision;
 };
 
 // Reset cooldowns when user updates their API keys
@@ -185,15 +293,50 @@ export const resetApiCooldowns = () => {
     localStorage.removeItem('lovelya_api_cooldowns_model');
     localStorage.removeItem('lovelya_api_access_model');
     localStorage.removeItem('lovelya_api_cooldowns_key_model');
+    localStorage.removeItem(KEY_MODEL_COOLDOWN_META);
+    localStorage.setItem(AI_ROTATION_POLICY_STORAGE_KEY, String(AI_ROTATION_POLICY_VERSION));
     syncCooldownsToCloud();
     for (const key in modelKeyIndices) delete modelKeyIndices[key];
+    for (const key in healthyKeyPreferences) delete healthyKeyPreferences[key];
+    lastKeySetSignature = '';
 };
 
 interface RotationOptions {
     attemptTimeoutMs?: number;
     totalTimeoutMs?: number;
     maxTimeoutsPerModel?: number;
+    maxTransientErrorsPerModel?: number;
+    maxTotalAttempts?: number;
+    abortSignal?: AbortSignal;
+    workload?: string;
 }
+
+interface HealthyKeyPreference {
+    keyIndex: number;
+    consecutiveUses: number;
+    lastSuccessAt: number;
+}
+
+// Prefer a recently-successful key once more, then resume round-robin so one
+// project does not absorb all traffic and hit its quota prematurely.
+const healthyKeyPreferences: Record<string, HealthyKeyPreference> = {};
+const HEALTHY_KEY_TTL_MS = 10 * 60 * 1000;
+
+const ensureRotationPolicyVersion = () => {
+    if (localStorage.getItem(AI_ROTATION_POLICY_STORAGE_KEY) === String(AI_ROTATION_POLICY_VERSION)) return;
+
+    // Discard cooldowns written by the old index-based policy. Keeping them
+    // could attach a previous key's cooldown to a different key after reorder.
+    localStorage.removeItem('lovelya_api_cooldowns_model');
+    localStorage.removeItem('lovelya_api_access_model');
+    localStorage.removeItem('lovelya_api_cooldowns_key_model');
+    localStorage.removeItem(KEY_MODEL_COOLDOWN_META);
+    localStorage.setItem(AI_ROTATION_POLICY_STORAGE_KEY, String(AI_ROTATION_POLICY_VERSION));
+    for (const key in modelKeyIndices) delete modelKeyIndices[key];
+    for (const key in healthyKeyPreferences) delete healthyKeyPreferences[key];
+    lastKeySetSignature = '';
+    syncCooldownsToCloud();
+};
 
 // Wrapper for automatic rotation on quota errors and model fallbacks
 async function callGeminiWithRotation<T>(
@@ -201,9 +344,26 @@ async function callGeminiWithRotation<T>(
     fn: (client: ReturnType<typeof getAiClient>) => Promise<T>,
     options: RotationOptions = {}
 ): Promise<T> {
+    ensureRotationPolicyVersion();
     const keys = getGeminiApiKeys();
     if (!keys || keys.length === 0) throw new Error("API_KEY_MISSING");
+    const keyFingerprints = await Promise.all(keys.map(fingerprintApiKey));
+    const keySetSignature = keyFingerprints.join('|');
+    if (lastKeySetSignature && lastKeySetSignature !== keySetSignature) {
+        for (const key in modelKeyIndices) delete modelKeyIndices[key];
+        for (const key in healthyKeyPreferences) delete healthyKeyPreferences[key];
+    }
+    lastKeySetSignature = keySetSignature;
     const deadline = options.totalTimeoutMs ? Date.now() + options.totalTimeoutMs : Number.POSITIVE_INFINITY;
+    const maxCostlyAttempts = options.maxTotalAttempts ?? Number.POSITIVE_INFINITY;
+    let costlyAttempts = 0;
+    let workloadKeyCursor = 0;
+    let skippedModels = 0;
+    let sawTransientFailure = false;
+    let sawAccessFailure = false;
+    let lastFailure: any = null;
+    const quotaLimitedKeysByModel = new Map<string, Set<number>>();
+    const invalidKeys = new Set<number>();
 
     // Map each workload's primary model to its modality-safe fallback cascade.
     let models = Array.isArray(modelName) ? modelName : [modelName];
@@ -215,14 +375,25 @@ async function callGeminiWithRotation<T>(
     }
 
     const executeRotationForModel = async (targetModel: string): Promise<T> => {
-        const startIndex = modelKeyIndices[targetModel] ?? 0;
+        const recentHealthy = healthyKeyPreferences[targetModel];
+        const canReuseHealthy = recentHealthy &&
+            Date.now() - recentHealthy.lastSuccessAt < HEALTHY_KEY_TTL_MS &&
+            recentHealthy.consecutiveUses < 2 &&
+            Date.now() >= (getKeyModelCooldowns()[makeKeyModelCooldownId(keyFingerprints[recentHealthy.keyIndex], targetModel)] || 0);
+        const startIndex = canReuseHealthy
+            ? recentHealthy.keyIndex
+            : (modelKeyIndices[targetModel] ?? workloadKeyCursor);
         let attemptedKeys = 0;
         let timedOutKeys = 0;
+        let transientKeys = 0;
+        let executedKeys = 0;
 
         while (attemptedKeys < keys.length) {
+            if (options.abortSignal?.aborted) throw new Error("AI_REQUEST_CANCELLED");
             if (Date.now() >= deadline) throw new Error("AI_ROTATION_TIMEOUT");
+            if (costlyAttempts >= maxCostlyAttempts) throw new Error("AI_RETRY_BUDGET_EXHAUSTED");
             const currentKeyIndex = (startIndex + attemptedKeys) % keys.length;
-            const cooldownKey = `${currentKeyIndex}_${targetModel}`;
+            const cooldownKey = makeKeyModelCooldownId(keyFingerprints[currentKeyIndex], targetModel);
 
             // Skip this specific key for this specific model if it's on cooldown
             if (Date.now() < (getKeyModelCooldowns()[cooldownKey] || 0)) {
@@ -230,8 +401,13 @@ async function callGeminiWithRotation<T>(
                 continue;
             }
 
+            const attemptController = new AbortController();
+            const abortFromCaller = () => attemptController.abort();
+            options.abortSignal?.addEventListener('abort', abortFromCaller, { once: true });
+
             try {
                 const baseClient = getAiClient(targetModel, currentKeyIndex);
+                executedKeys += 1;
 
                 // Proxy client to force the active model on inner calls
                 const proxyClient = {
@@ -239,10 +415,24 @@ async function callGeminiWithRotation<T>(
                     models: {
                         ...baseClient.models,
                         generateContent: async (params: any) => {
-                            return await baseClient.models.generateContent({ ...params, model: targetModel });
+                            return await baseClient.models.generateContent({
+                                ...params,
+                                model: targetModel,
+                                config: {
+                                    ...(params?.config || {}),
+                                    abortSignal: attemptController.signal
+                                }
+                            });
                         },
                         generateContentStream: async (params: any) => {
-                            return await baseClient.models.generateContentStream({ ...params, model: targetModel });
+                            return await baseClient.models.generateContentStream({
+                                ...params,
+                                model: targetModel,
+                                config: {
+                                    ...(params?.config || {}),
+                                    abortSignal: attemptController.signal
+                                }
+                            });
                         }
                     }
                 } as any;
@@ -251,22 +441,42 @@ async function callGeminiWithRotation<T>(
                 const attemptTimeoutMs = options.attemptTimeoutMs
                     ? Math.max(1000, Math.min(options.attemptTimeoutMs, remainingMs))
                     : 0;
+                costlyAttempts += 1;
                 const request = fn(proxyClient);
                 const result = attemptTimeoutMs > 0
-                    ? await withTimeout(request, attemptTimeoutMs, 'AI_ATTEMPT')
+                    ? await withTimeout(request, attemptTimeoutMs, 'AI_ATTEMPT', () => attemptController.abort())
                     : await request;
                 // Spread consecutive calls across API projects to reduce RPM spikes.
                 modelKeyIndices[targetModel] = (currentKeyIndex + 1) % keys.length;
+                workloadKeyCursor = (currentKeyIndex + 1) % keys.length;
+                const previousHealthy = healthyKeyPreferences[targetModel];
+                healthyKeyPreferences[targetModel] = {
+                    keyIndex: currentKeyIndex,
+                    consecutiveUses: previousHealthy?.keyIndex === currentKeyIndex
+                        ? previousHealthy.consecutiveUses + 1
+                        : 1,
+                    lastSuccessAt: Date.now()
+                };
                 return result;
             } catch (e: any) {
+                if (options.abortSignal?.aborted) throw new Error("AI_REQUEST_CANCELLED");
+                if (healthyKeyPreferences[targetModel]?.keyIndex === currentKeyIndex) {
+                    delete healthyKeyPreferences[targetModel];
+                }
                 const errorMessage = e?.message || e?.toString() || '';
+                const nextKeyIndex = (currentKeyIndex + 1) % keys.length;
+                modelKeyIndices[targetModel] = nextKeyIndex;
+                workloadKeyCursor = nextKeyIndex;
+
                 if (errorMessage.includes('AI_ATTEMPT_TIMEOUT') || errorMessage.includes('AI_ROTATION_TIMEOUT')) {
                     timedOutKeys += 1;
+                    sawTransientFailure = true;
+                    lastFailure = e;
                     console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} timed out. Trying another key or model...`);
-                    setKeyModelCooldown(cooldownKey, Date.now() + 60 * 1000);
+                    setKeyModelCooldown(cooldownKey, Date.now() + 60 * 1000, 'timeout');
                     const timeoutLimit = options.maxTimeoutsPerModel ?? 2;
-                    if (keys.length > 1 && (attemptedKeys + 1) < keys.length && timedOutKeys < timeoutLimit && Date.now() < deadline) {
-                        attemptedKeys++;
+                    attemptedKeys += 1;
+                    if (attemptedKeys < keys.length && timedOutKeys < timeoutLimit && costlyAttempts < maxCostlyAttempts && Date.now() < deadline) {
                         continue;
                     }
                     throw new Error("AI_MODEL_TIMEOUT");
@@ -274,22 +484,33 @@ async function callGeminiWithRotation<T>(
 
                 // Quota/rate-limit errors: rotate to next key
                 if (isQuotaError(e)) {
-                    console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} exhausted. Cooldown 6h. Trying next key...`);
-                    setKeyModelCooldown(cooldownKey, Date.now() + COOLDOWN_MS);
-                    if (keys.length > 1 && (attemptedKeys + 1) < keys.length) {
-                        attemptedKeys++;
+                    // A quota rejection is normally returned before audio inference,
+                    // so it should not consume the safety budget for costly attempts.
+                    costlyAttempts = Math.max(0, costlyAttempts - 1);
+                    const modelQuotaKeys = quotaLimitedKeysByModel.get(targetModel) || new Set<number>();
+                    modelQuotaKeys.add(currentKeyIndex);
+                    quotaLimitedKeysByModel.set(targetModel, modelQuotaKeys);
+                    const quotaDecision = setQuotaKeyModelCooldown(cooldownKey, e);
+                    const remainingCooldownMs = Math.max(0, quotaDecision.until - Date.now());
+                    const quotaCooldownLabel = quotaDecision.isDaily
+                        ? `daily until 24h after the first limit (hit #${quotaDecision.count})`
+                        : `${Math.ceil(remainingCooldownMs / (60 * 1000))}m`;
+                    console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} reached quota. Cooldown ${quotaCooldownLabel}. Trying next key...`);
+                    attemptedKeys += 1;
+                    if (attemptedKeys < keys.length && Date.now() < deadline) {
                         continue;
                     }
-                    modelKeyIndices[targetModel] = (currentKeyIndex + 1) % keys.length;
                     throw new Error("QUOTA_EXHAUSTED");
                 }
 
                 // Definitively invalid API key — Google explicitly says "API key not valid"
                 if (isDefinitelyInvalidKey(e)) {
+                    costlyAttempts = Math.max(0, costlyAttempts - 1);
+                    invalidKeys.add(currentKeyIndex);
                     console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} is invalid. Cooldown 6h. Trying next key...`);
-                    setKeyModelCooldown(cooldownKey, Date.now() + COOLDOWN_MS);
-                    if (keys.length > 1 && (attemptedKeys + 1) < keys.length) {
-                        attemptedKeys++;
+                    setKeyModelCooldown(cooldownKey, Date.now() + COOLDOWN_MS, 'invalid');
+                    attemptedKeys += 1;
+                    if (attemptedKeys < keys.length && Date.now() < deadline) {
                         continue;
                     }
                     console.error(`[AI-KEY-ERROR] ${targetModel}: All keys confirmed invalid by Google.`);
@@ -298,78 +519,117 @@ async function callGeminiWithRotation<T>(
 
                 // Generic 403/permission error — likely model not available for this account
                 if (isPermissionError(e)) {
+                    costlyAttempts = Math.max(0, costlyAttempts - 1);
+                    sawAccessFailure = true;
+                    lastFailure = e;
                     console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} got permission error. Cooldown 6h. Trying next key...`);
-                    setKeyModelCooldown(cooldownKey, Date.now() + ACCESS_DENIED_COOLDOWN_MS);
-                    if (keys.length > 1 && (attemptedKeys + 1) < keys.length) {
-                        attemptedKeys++;
+                    setKeyModelCooldown(cooldownKey, Date.now() + ACCESS_DENIED_COOLDOWN_MS, 'permission');
+                    attemptedKeys += 1;
+                    if (attemptedKeys < keys.length && Date.now() < deadline) {
                         continue;
                     }
                     console.error(`[AI-ACCESS] ${targetModel}: All keys got permission error (model likely not available for this account).`);
                     throw new Error("MODEL_ACCESS_DENIED");
                 }
 
+                if (isTransientNetworkError(e) || isTransientServiceError(e)) {
+                    transientKeys += 1;
+                    sawTransientFailure = true;
+                    lastFailure = e;
+                    const isServiceFailure = isTransientServiceError(e);
+                    setKeyModelCooldown(
+                        cooldownKey,
+                        Date.now() + (isServiceFailure ? 2 * 60 * 1000 : 60 * 1000),
+                        isServiceFailure ? 'server' : 'network'
+                    );
+                    console.warn(`[AI-ROTATION] ${targetModel}: Key #${currentKeyIndex + 1} had a temporary ${isServiceFailure ? 'service' : 'network'} error. Trying another key or model...`);
+                    const transientLimit = options.maxTransientErrorsPerModel ?? 2;
+                    attemptedKeys += 1;
+                    if (attemptedKeys < keys.length && transientKeys < transientLimit && costlyAttempts < maxCostlyAttempts && Date.now() < deadline) {
+                        continue;
+                    }
+                    throw new Error("AI_MODEL_TEMPORARY");
+                }
+
                 console.error(`[AI-ERROR] ${targetModel}: Non-quota error on Key #${currentKeyIndex + 1}:`, e.message);
                 throw e;
+            } finally {
+                options.abortSignal?.removeEventListener('abort', abortFromCaller);
             }
         }
-        throw new Error("QUOTA_EXHAUSTED");
+        throw new Error(executedKeys === 0 ? "AI_KEYS_COOLDOWN" : "AI_UNAVAILABLE");
     };
 
     for (let i = 0; i < models.length; i++) {
-        if (Date.now() >= deadline) throw new Error("AI_REQUEST_TIMEOUT");
+        if (options.abortSignal?.aborted) throw new Error("AI_REQUEST_CANCELLED");
+        if (Date.now() >= deadline || costlyAttempts >= maxCostlyAttempts) break;
         const currentModel = models[i];
         const cooldownUntil = getModelCooldowns()[currentModel] || 0;
         const accessDeniedUntil = getModelAccessDenied()[currentModel] || 0;
 
         // Skip models on quota cooldown or access-denied cooldown
         if (Date.now() < cooldownUntil || Date.now() < accessDeniedUntil) {
+            skippedModels += 1;
             continue;
         }
 
         try {
             return await executeRotationForModel(currentModel);
         } catch (e: any) {
+            lastFailure = e;
+            if (e.message === "AI_REQUEST_CANCELLED") throw e;
+            if (e.message === "AI_RETRY_BUDGET_EXHAUSTED") break;
+            if (e.message === "AI_KEYS_COOLDOWN") {
+                skippedModels += 1;
+                continue;
+            }
+
             if (e.message === "AI_INVALID_RESPONSE") {
                 console.warn(`[AI-FALLBACK] ${currentModel} returned malformed analysis. Trying the next model...`);
                 if (i === models.length - 1) throw e;
                 continue;
             }
 
-            if (isTransientNetworkError(e)) {
-                console.warn(`[AI-FALLBACK] ${currentModel} had a temporary connection failure. Trying the next model...`);
-                if (i === models.length - 1) throw new Error("AI_NETWORK_ERROR");
+            if (e.message === "AI_MODEL_TEMPORARY" || isTransientNetworkError(e) || isTransientServiceError(e)) {
+                sawTransientFailure = true;
+                console.warn(`[AI-FALLBACK] ${currentModel} had a temporary connection/service failure. Trying the next model...`);
+                if (i === models.length - 1) break;
                 continue;
             }
 
             if (e.message === "AI_MODEL_TIMEOUT" || e.message === "AI_ROTATION_TIMEOUT") {
+                sawTransientFailure = true;
                 console.warn(`[AI-FALLBACK] ${currentModel} timed out. Trying the next model...`);
-                setModelAccessDenied(currentModel, Date.now() + 60 * 1000);
-                if (i === models.length - 1 || Date.now() >= deadline) throw new Error("AI_REQUEST_TIMEOUT");
+                // Do not disable the model globally: only the timed-out key/model
+                // pairs were cooled down above. Other projects may still be healthy.
+                if (i === models.length - 1 || Date.now() >= deadline) break;
                 continue;
             }
 
             if (e.message === "QUOTA_EXHAUSTED") {
-                console.warn(`[AI-FALLBACK] ${currentModel} exhausted on all keys. Cooldown for 6 hours.`);
-                setModelCooldown(currentModel, Date.now() + COOLDOWN_MS);
-                if (i === models.length - 1) {
-                    console.error(`[AI-LIMIT] All models exhausted in cascade!`);
-                    window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached'));
-                    throw new Error("API_LIMIT_TOTAL");
+                const allModelKeysLimited = hasAllKeysLimitedForModel(quotaLimitedKeysByModel, currentModel, keys.length);
+                console.warn(`[AI-FALLBACK] ${currentModel} ${allModelKeysLimited ? 'exhausted on all keys' : 'hit quota before the retry deadline'}. Trying the next model...`);
+                if (allModelKeysLimited) {
+                    const activeCooldowns = getKeyModelCooldowns();
+                    const recoveryTimes = keyFingerprints
+                        .map(fingerprint => activeCooldowns[makeKeyModelCooldownId(fingerprint, currentModel)] || 0)
+                        .filter(timestamp => timestamp > Date.now());
+                    if (recoveryTimes.length === keys.length) {
+                        // Reopen this model as soon as the first project key is eligible.
+                        setModelCooldown(currentModel, Math.min(...recoveryTimes));
+                    }
                 }
+                if (i === models.length - 1) break;
                 continue;
             }
 
             // Generic 403/permission error: model not available for this account
             // Cooldown this specific model and try the next one — do NOT declare key invalid
             if (e.message === "MODEL_ACCESS_DENIED") {
+                sawAccessFailure = true;
                 console.warn(`[AI-FALLBACK] ${currentModel} not available for this account. Cooldown for 6 hours.`);
                 setModelAccessDenied(currentModel, Date.now() + ACCESS_DENIED_COOLDOWN_MS);
-                if (i === models.length - 1) {
-                    // All models unavailable for this account — treat as limit, NOT invalid key
-                    console.error(`[AI-LIMIT] All models in cascade unavailable for this account.`);
-                    window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached'));
-                    throw new Error("API_LIMIT_TOTAL");
-                }
+                if (i === models.length - 1) break;
                 continue;
             }
 
@@ -378,7 +638,7 @@ async function callGeminiWithRotation<T>(
             if (e.message === "DEFINITE_KEY_INVALID") {
                 console.warn(`[AI-FALLBACK] ${currentModel} failed on all keys. Cooldown for 6 hours.`);
                 setModelCooldown(currentModel, Date.now() + COOLDOWN_MS);
-                if (i === models.length - 1) {
+                if (invalidKeys.size === keys.length) {
                     // ALL models (including stable fallbacks) confirm the key is invalid
                     console.error(`[AI-KEY-ERROR] All models confirm: API key is invalid.`);
                     window.dispatchEvent(new CustomEvent('lovelya_api_key_invalid'));
@@ -398,22 +658,35 @@ async function callGeminiWithRotation<T>(
                 continue;
             }
 
-            // 500/503: server error — short cooldown (5 min) since it may be transient
-            if (msg.includes("500") || msg.includes("503")) {
-                console.warn(`[AI-FALLBACK] ${currentModel} server error. Short cooldown (5 min). Trying next...`, msg);
-                setModelAccessDenied(currentModel, Date.now() + 5 * 60 * 1000);
-                if (i === models.length - 1) {
-                    throw e;
-                }
-                continue;
-            }
-
             throw e;
         }
     }
 
-    window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached'));
-    throw new Error("API_LIMIT_TOTAL");
+    if (options.abortSignal?.aborted) throw new Error("AI_REQUEST_CANCELLED");
+
+    // Only show a quota message after every configured project key returned a
+    // real quota/rate-limit error. Cooldowns, timeouts, 403, 5xx, and malformed
+    // responses must never be presented as "all API keys exhausted".
+    const fullyQuotaLimitedModel = models.find(model =>
+        hasAllKeysLimitedForModel(quotaLimitedKeysByModel, model, keys.length)
+    );
+    if (fullyQuotaLimitedModel) {
+        window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached', {
+            detail: { workload: options.workload || 'AI', model: fullyQuotaLimitedModel }
+        }));
+        throw new Error("API_LIMIT_TOTAL");
+    }
+    if (invalidKeys.size === keys.length) {
+        window.dispatchEvent(new CustomEvent('lovelya_api_key_invalid'));
+        throw new Error("API_KEY_INVALID");
+    }
+    if (sawTransientFailure || Date.now() >= deadline || costlyAttempts >= maxCostlyAttempts) {
+        throw new Error("AI_REQUEST_TIMEOUT");
+    }
+    if (sawAccessFailure) throw new Error("MODEL_ACCESS_DENIED");
+    if (skippedModels > 0) throw new Error("AI_MODELS_COOLDOWN");
+    if (lastFailure) throw lastFailure;
+    throw new Error("AI_UNAVAILABLE");
 }
 
 export const safeParseJSON = (text: string | undefined, fallback: any) => {
@@ -438,9 +711,17 @@ const handleApiError = (e: any) => {
     throw e;
 };
 
-const withTimeout = <T>(promise: Promise<T>, ms: number, label: string): Promise<T> => {
+const withTimeout = <T>(
+    promise: Promise<T>,
+    ms: number,
+    label: string,
+    onTimeout?: () => void
+): Promise<T> => {
     return new Promise<T>((resolve, reject) => {
-        const timeoutId = window.setTimeout(() => reject(new Error(`${label}_TIMEOUT`)), ms);
+        const timeoutId = window.setTimeout(() => {
+            onTimeout?.();
+            reject(new Error(`${label}_TIMEOUT`));
+        }, ms);
         promise.then(
             value => {
                 window.clearTimeout(timeoutId);
@@ -1342,44 +1623,41 @@ export const generateListeningQuiz = async (script: string, level: string): Prom
     }).catch(e => handleApiError(e));
 };
 
-export const analyzeReadingPronunciationAudio = async (text: string, base64: string, mime: string) => {
+export const analyzeReadingPronunciationAudio = async (
+    text: string,
+    base64: string,
+    mime: string,
+    options: { abortSignal?: AbortSignal } = {}
+) => {
     const MODEL = MODEL_CASCADE_AUDIO_ANALYSIS;
     const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
-    const isLongRecording = targetWords.length > 180 || base64.length > 2_500_000;
+    const estimatedAudioSeconds = Math.max(1, Math.round((base64.length * 0.75) / 6000));
+    const isShortRecording = targetWords.length <= 90 && estimatedAudioSeconds <= 90;
+    const isLongRecording = targetWords.length > 180 || estimatedAudioSeconds > 190 || base64.length > 2_500_000;
+    const attemptTimeoutMs = isLongRecording ? 32000 : (isShortRecording ? 20000 : 24000);
+    const totalTimeoutMs = isLongRecording ? 75000 : (isShortRecording ? 48000 : 60000);
 
     return callGeminiWithRotation(MODEL, async (ai) => {
-        const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
+        const prompt = `Evaluate the learner's recording against TARGET WORDS in exact order.
 
-TARGET TEXT the user should read aloud:
+TARGET WORDS:
 "${text}"
 
-Total target words: ${targetWords.length}
+N=${targetWords.length}
 
 ${getLanguageInstruction()}
 
-EVALUATION RULES:
-1. **Listen carefully** to every word the user says in the audio.
-2. **Compare each spoken word** against the corresponding target word, in order.
-3. Return exactly one compact status for every target word:
-   - "c": clearly spoken and recognizable; a minor accent is acceptable.
-   - "i": spoken but significantly mispronounced.
-   - "m": skipped or not spoken.
-4. **Be honest and accurate**. Do NOT default to "correct" — actually evaluate each word. A score of 100% should only happen when pronunciation is genuinely good.
-5. **Check for these common errors**:
-   - Wrong vowel sounds (e.g., "ship" vs "sheep", "bed" vs "bad")
-   - Dropped consonants (e.g., "wor" instead of "world")
-   - Wrong word stress (e.g., "reCORD" vs "REcord")
-   - Added syllables (e.g., "es-top" instead of "stop")
-   - Substituted sounds (e.g., "th" → "d", "v" → "f")
-6. The statuses array MUST contain exactly ${targetWords.length} items in target-text order.
-7. If the audio is silent, empty, or unintelligible, mark ALL words as "missed".
+Return one lowercase character per target word in statusMap:
+- c = clearly recognizable as the target word; accept a minor Indonesian accent.
+- i = attempted but significantly mispronounced through a wrong vowel, consonant, stress, added/dropped syllable, or a sound that changes the word.
+- m = skipped, silent, or unintelligible.
 
-Only add an errors item for a word marked "i". Its index is zero-based. Keep feedback concise and actionable.
+Do not guess unheard words or default words to correct. statusMap MUST contain exactly ${targetWords.length} characters in target order. If the audio is silent, return ${targetWords.length} "m" characters. Only add errors for "i" words, using zero-based indexes. Keep feedback to one brief, actionable sentence.
 
 Return JSON:
 {
   "feedback": "brief specific tip",
-  "statuses": ["c", "i", "m"],
+  "statusMap": "ccimmc",
   "errors": [{ "index": 1, "details": "brief explanation" }]
 }`;
 
@@ -1397,10 +1675,7 @@ Return JSON:
                     type: Type.OBJECT,
                     properties: {
                         feedback: { type: Type.STRING },
-                        statuses: {
-                            type: Type.ARRAY,
-                            items: { type: Type.STRING }
-                        },
+                        statusMap: { type: Type.STRING },
                         errors: {
                             type: Type.ARRAY,
                             items: {
@@ -1413,7 +1688,7 @@ Return JSON:
                             }
                         }
                     },
-                    required: ["feedback", "statuses", "errors"]
+                    required: ["feedback", "statusMap", "errors"]
                 },
                 thinkingConfig: { thinkingBudget: 0 },
                 temperature: 0.1,
@@ -1425,9 +1700,13 @@ Return JSON:
         if (!normalized) throw new Error("AI_INVALID_RESPONSE");
         return normalized;
     }, {
-        attemptTimeoutMs: isLongRecording ? 32000 : 24000,
-        totalTimeoutMs: isLongRecording ? 75000 : 60000,
-        maxTimeoutsPerModel: 1
+        attemptTimeoutMs,
+        totalTimeoutMs,
+        maxTimeoutsPerModel: 2,
+        maxTransientErrorsPerModel: 2,
+        maxTotalAttempts: 5,
+        abortSignal: options.abortSignal,
+        workload: 'analisis pronunciation Reading'
     });
 };
 

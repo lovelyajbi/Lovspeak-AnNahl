@@ -13,6 +13,10 @@ import {
     mergeLearningPlanHistories,
     normalizeLearningPlanHistory,
 } from './learningPlanHistory';
+import {
+    AI_ROTATION_POLICY_STORAGE_KEY,
+    AI_ROTATION_POLICY_VERSION,
+} from './aiRotationPolicy';
 
 // --- Error Handling ---
 enum OperationType {
@@ -871,9 +875,15 @@ export const syncFromCloud = async () => {
                     if (d.id === 'api_key') localStorage.setItem(KEY_GEMINI_API_KEY, data.key);
                     if (d.id === 'api_keys') localStorage.setItem(KEY_GEMINI_API_KEYS, JSON.stringify(data.keys));
                     if (d.id === 'api_cooldowns') {
-                        if (data.modelCooldowns) localStorage.setItem('lovelya_api_cooldowns_model', JSON.stringify(data.modelCooldowns));
-                        if (data.modelAccessDenied) localStorage.setItem('lovelya_api_access_model', JSON.stringify(data.modelAccessDenied));
-                        if (data.keyModelCooldowns) localStorage.setItem('lovelya_api_cooldowns_key_model', JSON.stringify(data.keyModelCooldowns));
+                        // Old cooldown documents used key positions (0, 1, 2...).
+                        // Never restore those into the fingerprint-based policy.
+                        if (data.policyVersion === AI_ROTATION_POLICY_VERSION) {
+                            localStorage.setItem(AI_ROTATION_POLICY_STORAGE_KEY, String(AI_ROTATION_POLICY_VERSION));
+                            if (data.modelCooldowns) localStorage.setItem('lovelya_api_cooldowns_model', JSON.stringify(data.modelCooldowns));
+                            if (data.modelAccessDenied) localStorage.setItem('lovelya_api_access_model', JSON.stringify(data.modelAccessDenied));
+                            if (data.keyModelCooldowns) localStorage.setItem('lovelya_api_cooldowns_key_model', JSON.stringify(data.keyModelCooldowns));
+                            if (data.keyModelCooldownMeta) localStorage.setItem('lovelya_api_cooldowns_key_model_meta', JSON.stringify(data.keyModelCooldownMeta));
+                        }
                     }
                     if (d.id === 'theme') localStorage.setItem(KEY_THEME_COLOR, data.color);
                     if (d.id === 'categories') localStorage.setItem(KEY_CUSTOM_CATS, JSON.stringify(data.categories));

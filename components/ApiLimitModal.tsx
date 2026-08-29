@@ -11,9 +11,12 @@ interface ApiLimitModalProps {
 
 export const ApiLimitModal: React.FC<ApiLimitModalProps> = ({ onNavigateToSettings }) => {
     const [modalType, setModalType] = useState<ModalType>(null);
+    const [limitWorkload, setLimitWorkload] = useState('fitur AI ini');
 
     useEffect(() => {
-        const handleLimitReached = () => {
+        const handleLimitReached = (event: Event) => {
+            const workload = (event as CustomEvent<{ workload?: string }>).detail?.workload;
+            setLimitWorkload(workload || 'fitur AI ini');
             setModalType('limit');
         };
 
@@ -52,11 +55,11 @@ export const ApiLimitModal: React.FC<ApiLimitModalProps> = ({ onNavigateToSettin
                         </div>
 
                         <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-3">
-                            {isLimit ? 'API Key Telah Habis' : 'API Key Tidak Valid'}
+                            {isLimit ? 'Batas AI Tercapai' : 'API Key Tidak Valid'}
                         </h3>
                         <p className="text-gray-500 dark:text-gray-400 font-medium text-sm leading-relaxed mb-6">
                             {isLimit 
-                                ? 'Wah, sepertinya Anda belajar sangat giat hari ini! Semua kuota kunci AI Anda sudah terpakai maksimal.'
+                                ? `Kuota model yang dibutuhkan ${limitWorkload} sedang mencapai batas. Fitur AI lain mungkin masih dapat digunakan. Silakan coba lagi setelah kuota tersedia.`
                                 : 'API Key yang Anda masukkan sepertinya tidak valid atau salah. Silakan periksa kembali dan pastikan key sudah benar.'
                             }
                         </p>
