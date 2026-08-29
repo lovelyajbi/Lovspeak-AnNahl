@@ -2,6 +2,7 @@
 import { GoogleGenAI, Type, Modality, ThinkingLevel } from "@google/genai";
 import { ReadingContent, GrammarResult, AssessmentQuestion, AssessmentResult, QuizQuestion } from "../types";
 import { getGeminiApiKey, getGeminiApiKeys, getAppLanguage, syncToFirestore } from "./storage";
+import { normalizePronunciationAnalysis } from "./pronunciationAnalysis";
 
 declare global {
     interface Window {
@@ -52,6 +53,18 @@ const isPermissionError = (e: any): boolean => {
         msg.toLowerCase().includes("unauthorized");
 };
 
+// Retry short-lived transport/server failures on the next model instead of
+// leaving a feature stuck on an endless loading state.
+const isTransientNetworkError = (e: any): boolean => {
+    const msg = (e?.message || e?.toString() || '').toLowerCase();
+    return /\b(408|425|502|504)\b/.test(msg) ||
+        msg.includes('network error') ||
+        msg.includes('failed to fetch') ||
+        msg.includes('fetch failed') ||
+        msg.includes('connection reset') ||
+        msg.includes('temporarily unavailable');
+};
+
 // Central model registry. Keep modality-specific models isolated: Live models
 // cannot be used for generateContent, and TTS models only return audio.
 export const GEMINI_MODELS = {
@@ -92,6 +105,15 @@ export const MODEL_CASCADE_PRO = [
     'gemini-3.6-flash',
     'gemini-3.5-flash',
     'gemini-3-flash-preview'
+];
+
+// Audio analysis is latency-sensitive. Use capable Flash models first and
+// retain Pro as the final quality fallback for difficult recordings.
+export const MODEL_CASCADE_AUDIO_ANALYSIS = [
+    GEMINI_MODELS.TEXT_SMART,
+    'gemini-3.6-flash',
+    'gemini-3.5-flash',
+    GEMINI_MODELS.TEXT_PRO
 ];
 
 export const MODEL_CASCADE_CHAT = [
@@ -307,6 +329,18 @@ async function callGeminiWithRotation<T>(
         try {
             return await executeRotationForModel(currentModel);
         } catch (e: any) {
+            if (e.message === "AI_INVALID_RESPONSE") {
+                console.warn(`[AI-FALLBACK] ${currentModel} returned malformed analysis. Trying the next model...`);
+                if (i === models.length - 1) throw e;
+                continue;
+            }
+
+            if (isTransientNetworkError(e)) {
+                console.warn(`[AI-FALLBACK] ${currentModel} had a temporary connection failure. Trying the next model...`);
+                if (i === models.length - 1) throw new Error("AI_NETWORK_ERROR");
+                continue;
+            }
+
             if (e.message === "AI_MODEL_TIMEOUT" || e.message === "AI_ROTATION_TIMEOUT") {
                 console.warn(`[AI-FALLBACK] ${currentModel} timed out. Trying the next model...`);
                 setModelAccessDenied(currentModel, Date.now() + 60 * 1000);
@@ -405,12 +439,19 @@ const handleApiError = (e: any) => {
 };
 
 const withTimeout = <T>(promise: Promise<T>, ms: number, label: string): Promise<T> => {
-    return Promise.race([
-        promise,
-        new Promise<T>((_, reject) => {
-            setTimeout(() => reject(new Error(`${label}_TIMEOUT`)), ms);
-        })
-    ]);
+    return new Promise<T>((resolve, reject) => {
+        const timeoutId = window.setTimeout(() => reject(new Error(`${label}_TIMEOUT`)), ms);
+        promise.then(
+            value => {
+                window.clearTimeout(timeoutId);
+                resolve(value);
+            },
+            error => {
+                window.clearTimeout(timeoutId);
+                reject(error);
+            }
+        );
+    });
 };
 
 const STRICT_FILTER = `
@@ -1301,12 +1342,101 @@ export const generateListeningQuiz = async (script: string, level: string): Prom
     }).catch(e => handleApiError(e));
 };
 
+export const analyzeReadingPronunciationAudio = async (text: string, base64: string, mime: string) => {
+    const MODEL = MODEL_CASCADE_AUDIO_ANALYSIS;
+    const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
+    const isLongRecording = targetWords.length > 180 || base64.length > 2_500_000;
+
+    return callGeminiWithRotation(MODEL, async (ai) => {
+        const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
+
+TARGET TEXT the user should read aloud:
+"${text}"
+
+Total target words: ${targetWords.length}
+
+${getLanguageInstruction()}
+
+EVALUATION RULES:
+1. **Listen carefully** to every word the user says in the audio.
+2. **Compare each spoken word** against the corresponding target word, in order.
+3. Return exactly one compact status for every target word:
+   - "c": clearly spoken and recognizable; a minor accent is acceptable.
+   - "i": spoken but significantly mispronounced.
+   - "m": skipped or not spoken.
+4. **Be honest and accurate**. Do NOT default to "correct" — actually evaluate each word. A score of 100% should only happen when pronunciation is genuinely good.
+5. **Check for these common errors**:
+   - Wrong vowel sounds (e.g., "ship" vs "sheep", "bed" vs "bad")
+   - Dropped consonants (e.g., "wor" instead of "world")
+   - Wrong word stress (e.g., "reCORD" vs "REcord")
+   - Added syllables (e.g., "es-top" instead of "stop")
+   - Substituted sounds (e.g., "th" → "d", "v" → "f")
+6. The statuses array MUST contain exactly ${targetWords.length} items in target-text order.
+7. If the audio is silent, empty, or unintelligible, mark ALL words as "missed".
+
+Only add an errors item for a word marked "i". Its index is zero-based. Keep feedback concise and actionable.
+
+Return JSON:
+{
+  "feedback": "brief specific tip",
+  "statuses": ["c", "i", "m"],
+  "errors": [{ "index": 1, "details": "brief explanation" }]
+}`;
+
+        const response = await ai.models.generateContent({
+            model: Array.isArray(MODEL) ? MODEL[0] : MODEL,
+            contents: {
+                parts: [
+                    { inlineData: { data: base64, mimeType: mime } },
+                    { text: prompt }
+                ]
+            },
+            config: {
+                responseMimeType: 'application/json',
+                responseSchema: {
+                    type: Type.OBJECT,
+                    properties: {
+                        feedback: { type: Type.STRING },
+                        statuses: {
+                            type: Type.ARRAY,
+                            items: { type: Type.STRING }
+                        },
+                        errors: {
+                            type: Type.ARRAY,
+                            items: {
+                                type: Type.OBJECT,
+                                properties: {
+                                    index: { type: Type.INTEGER },
+                                    details: { type: Type.STRING }
+                                },
+                                required: ["index", "details"]
+                            }
+                        }
+                    },
+                    required: ["feedback", "statuses", "errors"]
+                },
+                thinkingConfig: { thinkingBudget: 0 },
+                temperature: 0.1,
+                maxOutputTokens: Math.min(4096, Math.max(1024, targetWords.length * 8))
+            }
+        });
+
+        const normalized = normalizePronunciationAnalysis(targetWords, safeParseJSON(response.text, null));
+        if (!normalized) throw new Error("AI_INVALID_RESPONSE");
+        return normalized;
+    }, {
+        attemptTimeoutMs: isLongRecording ? 32000 : 24000,
+        totalTimeoutMs: isLongRecording ? 75000 : 60000,
+        maxTimeoutsPerModel: 1
+    });
+};
+
+// Shadowing keeps its established verbose contract and quality-first cascade.
+// Reading uses the separate compact, latency-optimized function above.
 export const analyzePronunciationAudio = async (text: string, base64: string, mime: string) => {
     const MODEL = MODEL_CASCADE_PRO;
     return callGeminiWithRotation(MODEL, async (ai) => {
-        // Split target text to get word count for coverage check
         const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
-
         const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
 
 TARGET TEXT the user should read aloud:
@@ -1376,9 +1506,7 @@ Return JSON:
         });
 
         const result = safeParseJSON(response.text, null);
-        if (!result || !Array.isArray(result.wordAnalysis)) {
-            throw new Error("Invalid analysis format from AI");
-        }
+        if (!result || !Array.isArray(result.wordAnalysis)) throw new Error("Invalid analysis format from AI");
         return result;
     }, {
         attemptTimeoutMs: 25000,

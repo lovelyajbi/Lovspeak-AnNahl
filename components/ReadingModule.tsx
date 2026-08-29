@@ -3,13 +3,15 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Level, Theme, ReadingContent, ModuleProps, AppView, VocabItem, ModuleContext, ReadingIndexItem, StaticReadingTranslateItem } from '../types';
 import { LEVELS, THEMES, AVATAR_ICONS } from '../constants';
 import { THEMATIC_BRIDGES } from '../data/thematicBridges';
-import { generateReadingTitles, generateReadingContent, generateReadingContentStream, analyzePronunciationAudio, getWordIPA, translateText, generateSingleReadingTitle, safeParseJSON, generateTranslationText, evaluateTranslation, TranslationResult } from '../services/gemini';
+import { generateReadingTitles, generateReadingContent, generateReadingContentStream, analyzeReadingPronunciationAudio, getWordIPA, translateText, generateSingleReadingTitle, safeParseJSON, generateTranslationText, evaluateTranslation, TranslationResult } from '../services/gemini';
 import { saveProgress, getCachedTitles, setCachedTitles, getCachedContent, setCachedContent, logActivity, saveVocab, completeRoadmapUnit, saveCustomCategory, getCustomCategories, CustomCategory } from '../services/storage';
 import { audioService } from '../services/audioService';
 import { ttsService } from '../services/ttsService';
 import { getStaticReadingIndex, getStaticReadingItem, getStaticReadingLibrarySummary } from '../services/readingContent';
 import { savePendingRecording, getPendingRecording, deletePendingRecording } from '../services/pendingRecordings';
+import { translateStaticVocabWord } from '../services/staticVocabTranslation';
 import { ResultActions, ResultCard, ResultHeader, ResultMetric, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
+import { useAuth } from '../src/contexts/AuthContext';
 
 interface WordAnalysis {
   word: string;
@@ -26,7 +28,26 @@ const getMissionKey = (context?: ModuleContext | null) => {
   return `manual:${normalizeTaskTitle(context?.title)}`;
 };
 
+const getSupportedRecordingMimeType = (): string | undefined => {
+  if (typeof MediaRecorder === 'undefined' || !MediaRecorder.isTypeSupported) return undefined;
+  return ['audio/webm;codecs=opus', 'audio/webm', 'audio/mp4', 'audio/ogg;codecs=opus']
+    .find(type => MediaRecorder.isTypeSupported(type));
+};
+
+const readBlobAsBase64 = (blob: Blob): Promise<string> => new Promise((resolve, reject) => {
+  const reader = new FileReader();
+  reader.onload = () => {
+    const value = typeof reader.result === 'string' ? reader.result : '';
+    const commaIndex = value.indexOf(',');
+    if (commaIndex < 0) reject(new Error('AUDIO_READ_FAILED'));
+    else resolve(value.slice(commaIndex + 1));
+  };
+  reader.onerror = () => reject(reader.error || new Error('AUDIO_READ_FAILED'));
+  reader.readAsDataURL(blob);
+});
+
 const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNavigate }) => {
+  const { user: authUser } = useAuth();
   const completeButtonLabel = initialContext?.type === 'assignment'
     ? 'Target tercapai — selesaikan tugas admin'
     : initialContext?.type === 'unit'
@@ -94,6 +115,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   // UI Helpers
   const [fontSize, setFontSize] = useState(18);
   const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const analysisRunRef = useRef(0);
+  const analysisCancelRef = useRef<(() => void) | null>(null);
   const chunksRef = useRef<Blob[]>([]);
   const [selectedWordInfo, setSelectedWordInfo] = useState<{ word: string, ipa: string, rect?: DOMRect } | null>(null);
   const [ipaLoading, setIpaLoading] = useState(false);
@@ -120,13 +143,13 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
   const missionReadingIds = initialContext?.readingItemIds || [];
 
   // Recovery of a recording whose AI analysis failed (e.g. offline, API error).
-  // Only tracked for Daily Plan / Roadmap tasks (initialContext.taskId present) so free-practice
-  // reading isn't polluted with cached blobs.
+  // The key is user-scoped and material-scoped, including manual practice.
   const [currentReadingItemId, setCurrentReadingItemId] = useState('');
   const [pendingRecording, setPendingRecording] = useState<Blob | null>(null);
   const [isResendingRecording, setIsResendingRecording] = useState(false);
-  const recordingKey = initialContext?.taskId
-    ? `${initialContext.taskId}::${currentReadingItemId || content?.title || ''}`
+  const recordingIdentity = currentReadingItemId || content?.title || selectedTitle;
+  const recordingKey = recordingIdentity
+    ? `${authUser?.uid || 'local'}::reading::${getMissionKey(initialContext)}::${recordingIdentity}`
     : null;
 
   // Vocabulary Save Modal
@@ -149,6 +172,18 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
   const startTimeRef = useRef<number>(0);
 
+  useEffect(() => () => {
+    analysisCancelRef.current?.();
+    analysisCancelRef.current = null;
+    analysisRunRef.current += 1;
+    const recorder = mediaRecorderRef.current;
+    if (recorder) {
+      recorder.onstop = null;
+      if (recorder.state !== 'inactive') recorder.stop();
+      recorder.stream.getTracks().forEach(track => track.stop());
+    }
+  }, []);
+
   // --- PERSISTENCE LOGIC ---
   useEffect(() => {
     // Load saved state (even for autoStart, to support resume)
@@ -168,6 +203,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         setTitleIdMap(state.titleIdMap || {});
         setContent(state.content || null);
         setSelectedTitle(state.selectedTitle || '');
+        setCurrentReadingItemId(state.currentReadingItemId || state.titleIdMap?.[state.selectedTitle] || '');
         const restoredWordList = state.wordList?.length ? state.wordList : (state.content ? buildWordList(state.content) : []);
         setWordList(restoredWordList);
         setAnalysisResult(state.analysisResult || null);
@@ -297,13 +333,13 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       missionKey: getMissionKey(initialContext),
       step, level, theme, themeCategory, practiceType, customTopic, customTitle,
       titles, titleIdMap, content, selectedTitle, wordList, analysisResult,
-      fontSize, isFocusMode, currentPage, missionBridgeIndex,
+      currentReadingItemId, fontSize, isFocusMode, currentPage, missionBridgeIndex,
       completedBridgesArr: Array.from(completedBridges),
       missionReadingIndex,
       completedReadingItemsArr: Array.from(completedReadingItems)
     };
     localStorage.setItem('lovspeak_state_reading', JSON.stringify(stateToSave));
-  }, [step, level, theme, themeCategory, practiceType, customTopic, customTitle, titles, titleIdMap, content, selectedTitle, wordList, analysisResult, fontSize, isFocusMode, currentPage, missionBridgeIndex, completedBridges, missionReadingIndex, completedReadingItems]);
+  }, [step, level, theme, themeCategory, practiceType, customTopic, customTitle, titles, titleIdMap, content, selectedTitle, wordList, analysisResult, currentReadingItemId, fontSize, isFocusMode, currentPage, missionBridgeIndex, completedBridges, missionReadingIndex, completedReadingItems]);
 
   // --- AUTO START LOGIC ---
   const autoLaunchedKeyRef = useRef<string | null>(null);
@@ -522,8 +558,10 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     setLoading(true);
     setStatusMsg('Translating...');
     try {
-      const trans = await translateText(word, 'en-id');
-      setSaveTransInput(trans.translation);
+      const translation = currentReadingItemId
+        ? await translateStaticVocabWord(word)
+        : (await translateText(word, 'en-id')).translation;
+      setSaveTransInput(translation);
       setShowSaveModal(true);
     } catch (e) {
       setShowSaveModal(true);
@@ -652,6 +690,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     setError('');
     setSelectedTitle(title);
     setStreamingText('');
+    setCurrentReadingItemId('');
     startTimeRef.current = Date.now();
     const currentThemeName = themeCategory === 'custom' ? customTopic : theme.name;
     const isIslamicLocal = themeCategory === 'islamic';
@@ -826,6 +865,9 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
   const processAnalysis = async (blob: Blob) => {
     if (!content) return;
+    analysisCancelRef.current?.();
+    const runId = ++analysisRunRef.current;
+    const startedAt = Date.now();
     setLoading(true);
     setStatusMsg('Analyzing pronunciation...');
     setError('');
@@ -833,73 +875,53 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     const keyForThisAttempt = recordingKey;
 
     try {
-      const reader = new FileReader();
-      reader.onloadend = async () => {
-        try {
-          const base64 = (reader.result as string).split(',')[1];
-          // Use the actual words from the wordList to ensure consistency
-          const effectiveWordList = wordList.length > 0
-            ? wordList
-            : (content ? buildWordList(content) : []);
-          const targetText = effectiveWordList.map(w => w.word).join(' ');
+      if (blob.size < 800) throw new Error('AUDIO_TOO_SHORT');
+      if (keyForThisAttempt) {
+        await savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
+        setPendingRecording(blob);
+      }
 
-          if (!targetText.trim()) {
-            setError("Reference text is empty. Please reopen the task to reload the reading text.");
-            setLoading(false);
-            setStatusMsg('');
-            return;
-          }
+      const base64 = await readBlobAsBase64(blob);
+      const effectiveWordList = wordList.length > 0 ? wordList : buildWordList(content);
+      const targetText = effectiveWordList.map(w => w.word).join(' ');
+      if (!targetText.trim()) throw new Error('REFERENCE_TEXT_EMPTY');
 
-          const result: any = await analyzePronunciationAudio(targetText, base64, blob.type || 'audio/webm');
+      let watchdogId: number | undefined;
+      const watchdog = new Promise<never>((_, reject) => {
+        watchdogId = window.setTimeout(() => reject(new Error('ANALYSIS_WATCHDOG_TIMEOUT')), 82000);
+      });
+      const cancellation = new Promise<never>((_, reject) => {
+        analysisCancelRef.current = () => reject(new Error('ANALYSIS_CANCELLED'));
+      });
+      const result: any = await Promise.race([
+        analyzeReadingPronunciationAudio(targetText, base64, blob.type || 'audio/webm'),
+        watchdog,
+        cancellation
+      ]).finally(() => {
+        if (watchdogId !== undefined) window.clearTimeout(watchdogId);
+        if (analysisRunRef.current === runId) analysisCancelRef.current = null;
+      });
 
-          if (result && result.wordAnalysis) {
-            const newWordList = [...effectiveWordList];
-            const aiWords = result.wordAnalysis || [];
+      if (analysisRunRef.current !== runId) return;
+      if (!result || !Array.isArray(result.wordAnalysis) || result.wordAnalysis.length !== effectiveWordList.length) {
+        throw new Error('AI_INVALID_RESPONSE');
+      }
 
-            let aiIdx = 0;
-            let origIdx = 0;
-            let correctCount = 0;
-            let incorrectCount = 0;
-            let missedCount = 0;
-
-            // Reset all to unread for this new recording
-            newWordList.forEach((w) => {
-              w.status = 'unread';
-              w.errorDetails = '';
-            });
-
-            while (aiIdx < aiWords.length && origIdx < newWordList.length) {
-              const aiData = aiWords[aiIdx];
-              const aiClean = aiData.word.toLowerCase().replace(/[^a-z0-9]/g, '');
-
-              let foundMatch = -1;
-              for (let i = 0; i < 5 && origIdx + i < newWordList.length; i++) {
-                if (newWordList[origIdx + i].clean === aiClean) {
-                  foundMatch = origIdx + i;
-                  break;
-                }
-              }
-
-              if (foundMatch !== -1) {
-                newWordList[foundMatch].status = aiData.status;
-                newWordList[foundMatch].errorDetails = aiData.errorDetails || '';
-
-                if (aiData.status === 'correct') {
-                  correctCount++;
-                } else if (aiData.status === 'missed') {
-                  missedCount++;
-                } else {
-                  incorrectCount++;
-                }
-
-                origIdx = foundMatch + 1;
-                aiIdx++;
-              } else {
-                aiIdx++;
-              }
-            }
-
-            setWordList(newWordList);
+      let correctCount = 0;
+      let incorrectCount = 0;
+      let missedCount = 0;
+      const newWordList = effectiveWordList.map((word, index) => {
+        const aiData = result.wordAnalysis[index];
+        if (aiData.status === 'correct') correctCount++;
+        else if (aiData.status === 'incorrect') incorrectCount++;
+        else missedCount++;
+        return {
+          ...word,
+          status: aiData.status === 'missed' ? 'unread' : aiData.status,
+          errorDetails: aiData.errorDetails || ''
+        } as WordAnalysis;
+      });
+      setWordList(newWordList);
 
             const totalOriginalWords = newWordList.length;
             const totalReadWords = correctCount + incorrectCount; // ONLY words actually attempted
@@ -965,67 +987,102 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
 
             // Scroll to results with a slight delay to ensure rendering
             setTimeout(() => {
+              if (analysisRunRef.current !== runId) return;
               const element = document.getElementById('analysis-results-anchor');
               if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
               }
             }, 800);
-          } else {
-            setError("AI could not provide an analysis. Please try recording again.");
-            if (keyForThisAttempt) {
-              savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
-              setPendingRecording(blob);
-            }
-          }
-        } catch (innerError) {
-          console.error("Inner Analysis Error:", innerError);
-          setError("An error occurred during analysis. Your recording has been saved — you can leave and resend it later.");
-          if (keyForThisAttempt) {
-            savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
-            setPendingRecording(blob);
-          }
-        } finally {
-          setLoading(false);
-          setStatusMsg('');
-        }
-      };
-      reader.onerror = () => {
-        setError("Failed to read audio data.");
-        setLoading(false);
-        if (keyForThisAttempt) {
-          savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
-          setPendingRecording(blob);
-        }
-      };
-      reader.readAsDataURL(blob);
-    } catch (e) {
-      console.error("Outer Analysis Error:", e);
-      setError("Failed to start analysis. Your recording has been saved — you can leave and resend it later.");
-      setLoading(false);
-      setStatusMsg('');
+      console.info('[ReadingAnalysis] completed', {
+        durationMs: Date.now() - startedAt,
+        audioBytes: blob.size,
+        targetWords: effectiveWordList.length
+      });
+    } catch (e: any) {
+      if (analysisRunRef.current !== runId) return;
+      console.error('[ReadingAnalysis] failed', {
+        code: e?.message || 'UNKNOWN',
+        durationMs: Date.now() - startedAt,
+        audioBytes: blob.size
+      });
+      const code = e?.message || '';
+      if (code.includes('AUDIO_TOO_SHORT')) {
+        setError('The recording is too short or empty. Please record your reading again.');
+      } else if (code.includes('REFERENCE_TEXT_EMPTY')) {
+        setError('Reference text is empty. Please reopen the task to reload the reading text.');
+      } else if (code.includes('API_LIMIT')) {
+        setError('All available AI keys are currently at their limit. Your recording is saved; please resend it later.');
+      } else if (code.includes('TIMEOUT') || code.includes('NETWORK')) {
+        setError('The analysis connection took too long. Your recording is saved; tap resend when the connection is stable.');
+      } else {
+        setError('Analysis could not be completed. Your recording is saved; you can resend it without recording again.');
+      }
       if (keyForThisAttempt) {
-        savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
+        await savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
         setPendingRecording(blob);
+      }
+    } finally {
+      if (analysisRunRef.current === runId) {
+        setLoading(false);
+        setStatusMsg('');
       }
     }
   };
 
+  const cancelAnalysis = () => {
+    analysisCancelRef.current?.();
+    analysisCancelRef.current = null;
+    analysisRunRef.current += 1;
+    setLoading(false);
+    setStatusMsg('');
+    setError('Analysis cancelled. Your recording is saved and ready to resend.');
+  };
+
   const startRecording = async () => {
+    let stream: MediaStream | null = null;
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      mediaRecorderRef.current = new MediaRecorder(stream);
+      stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          channelCount: { ideal: 1 },
+          echoCancellation: true,
+          noiseSuppression: true,
+          autoGainControl: true
+        }
+      });
+      const mimeType = getSupportedRecordingMimeType();
+      let recorder: MediaRecorder;
+      try {
+        recorder = new MediaRecorder(stream, {
+          ...(mimeType ? { mimeType } : {}),
+          audioBitsPerSecond: 48000
+        });
+      } catch {
+        recorder = new MediaRecorder(stream);
+      }
+      mediaRecorderRef.current = recorder;
+      let recorderFailed = false;
       chunksRef.current = [];
-      mediaRecorderRef.current.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data); };
-      mediaRecorderRef.current.onstop = () => {
-        const blob = new Blob(chunksRef.current, { type: 'audio/webm' });
+      recorder.ondataavailable = (e) => { if (e.data.size > 0) chunksRef.current.push(e.data); };
+      recorder.onerror = (event) => {
+        recorderFailed = true;
+        console.error('Reading recorder error:', event);
+        setIsRecording(false);
+        setError('The recorder stopped unexpectedly. Please check microphone access and try again.');
+        stream?.getTracks().forEach(track => track.stop());
+      };
+      recorder.onstop = () => {
+        stream?.getTracks().forEach(track => track.stop());
+        if (recorderFailed) return;
+        const actualMimeType = recorder.mimeType || chunksRef.current[0]?.type || mimeType || 'audio/webm';
+        const blob = new Blob(chunksRef.current, { type: actualMimeType });
         setAudioBlob(blob);
         processAnalysis(blob);
-        stream.getTracks().forEach(track => track.stop());
       };
-      mediaRecorderRef.current.start();
+      recorder.start(1000);
       setIsRecording(true);
     } catch (err) {
       console.error("Mic error:", err);
+      stream?.getTracks().forEach(track => track.stop());
       setError("Microphone access denied. Please enable microphone permissions.");
     }
   };
@@ -2311,9 +2368,18 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
               </div>
               <div className="text-[11px] text-gray-400 font-medium max-w-[220px] leading-relaxed">
                 {statusMsg.includes('Analyzing')
-                  ? 'AI is carefully evaluating your pronunciation. This may take a few seconds...'
+                  ? 'Your recording is saved while pronunciation is evaluated. You can cancel and resend it later.'
                   : 'AI is crafting a personalized lesson for your proficiency level. Please wait...'}
               </div>
+              {statusMsg.includes('Analyzing') && (
+                <button
+                  type="button"
+                  onClick={cancelAnalysis}
+                  className="w-full rounded-2xl border border-gray-200 dark:border-gray-600 px-4 py-3 text-xs font-black uppercase tracking-wider text-gray-600 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                >
+                  Cancel &amp; Save Recording
+                </button>
+              )}
             </motion.div>
           </motion.div>
         )}

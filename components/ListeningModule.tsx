@@ -3,6 +3,7 @@ import { Level, ModuleProps, AppView, ModuleContext, QuizQuestion, Theme } from 
 import { LEVELS, THEMES, AVATAR_ICONS } from '../constants';
 import { generateListeningTitles, generateListeningContent, generateListeningScript, generateListeningQuiz, generateTTSAudio, generateSingleListeningTitle, translateText, TranslationResult } from '../services/gemini';
 import { saveProgress, getCachedTitles, setCachedTitles, getCachedContent, setCachedContent, logActivity, saveVocab, completeRoadmapUnit, saveCustomCategory, getCustomCategories, CustomCategory, getActivityLogs } from '../services/storage';
+import { translateStaticVocabWord } from '../services/staticVocabTranslation';
 import { getStaticListeningIndex, getStaticListeningItem, getStaticListeningLibrarySummary } from '../services/listeningContent';
 import { audioService } from '../services/audioService';
 import { base64ToUint8Array, pcmToWav, cacheAudioBlob, getCachedAudioBlob } from '../utils/audio';
@@ -1049,8 +1050,10 @@ const ListeningModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
     setTranslation(null);
 
     try {
-      const trans = await translateText(cleanWord, 'en-id');
-      setTranslation(trans);
+      const translationText = activeStaticItemId
+        ? await translateStaticVocabWord(cleanWord)
+        : (await translateText(cleanWord, 'en-id')).translation;
+      setTranslation({ translation: translationText });
     } catch (e) {
       console.error(e);
       setTranslation({ translation: 'Gagal menerjemahkan. Coba lagi.' });
