@@ -33,9 +33,11 @@ const ROLEPLAY_SCENARIOS = [
 const LIVE_MODEL = GEMINI_MODELS.LIVE;
 const LIVE_INPUT_RATE = 16000;
 const LIVE_AUDIO_BATCH_SAMPLES = 1280; // 80 ms at 16 kHz: responsive without flooding WebSocket.
-const LIVE_CONNECT_TIMEOUT_MS = 20000;
-const LIVE_RESPONSE_TIMEOUT_MS = 20000;
-const LIVE_STABLE_CONNECTION_MS = 30000;
+const LIVE_CONNECT_TIMEOUT_MS = 25000;
+const LIVE_GREETING_RESPONSE_TIMEOUT_MS = 25000;
+const LIVE_RESPONSE_TIMEOUT_MS = 35000;
+const LIVE_STABLE_CONNECTION_MS = 20000;
+const LIVE_OUTPUT_ECHO_TAIL_MS = 300;
 const LIVE_DIAGNOSTICS_KEY = 'lovspeak_live_diagnostics';
 
 type LiveFailureKind = 'network' | 'quota' | 'auth' | 'access' | 'server' | 'timeout' | 'audio' | 'goaway' | 'unknown';
@@ -175,7 +177,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const connectionStartInFlightRef = useRef<boolean>(false);
   // Track reconnection attempts to avoid infinite loops
   const reconnectCountRef = useRef<number>(0);
-  const MAX_RECONNECTS = 5;
+  const MAX_RECONNECTS = 8;
   // Track if component is still mounted to avoid state updates after unmount
   const isMountedRef = useRef<boolean>(true);
   // Track if this is a reconnection (to avoid repeated greetings)
@@ -189,10 +191,17 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const watchdogTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const sessionGenerationRef = useRef(0);
   const activeKeyIndexRef = useRef(0);
+  // Hard failures (quota/auth/access) are skipped for the rest of this call.
+  // Mid-call timeouts require two strikes before rotation because one slow
+  // response can be a mobile-network hiccup. A key that never produces the
+  // opening greeting rotates immediately when another saved key is available.
   const failedKeyIndicesRef = useRef<Set<number>>(new Set());
+  const keyTimeoutCountsRef = useRef<Map<number, number>>(new Map());
   const resumptionHandleRef = useRef<string | null>(null);
   const connectionUsedResumptionRef = useRef(false);
   const lastOutputAudioAtRef = useRef(0);
+  const lastOutputPlaybackEndedAtRef = useRef(0);
+  const lastServerActivityAtRef = useRef(0);
   const lastVoiceActivityAtRef = useRef(0);
   const awaitingResponseRef = useRef(false);
   const speechActiveRef = useRef(false);
@@ -206,6 +215,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const responseWatchStartedAtRef = useRef(0);
   const micMutedAtRef = useRef(0);
   const recoverTimedOutTurnRef = useRef(false);
+  const recoverDisconnectedTurnRef = useRef(false);
   const startSessionRef = useRef<(forceReconnect?: boolean) => void>(() => {});
   const scheduleReconnectRef = useRef<(delayMs: number, kind?: LiveFailureKind) => void>(() => {});
   const resumeAudioContextsRef = useRef<() => Promise<boolean>>(async () => false);
@@ -234,7 +244,14 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   function enqueueOutputAudio(data: string, generation: number) {
     // A greeting counts only after the server has actually produced audio.
     // Merely opening the socket is not proof that this key can serve Live audio.
-    if (generation === sessionGenerationRef.current) hasGreetedRef.current = true;
+    if (generation === sessionGenerationRef.current) {
+      hasGreetedRef.current = true;
+      // Actual audio proves this key can serve Live responses. Clear only its
+      // transient timeout history; hard quota/auth failures stay isolated.
+      keyTimeoutCountsRef.current.delete(activeKeyIndexRef.current);
+      reconnectCountRef.current = 0;
+      setLastDiagnosticCode('');
+    }
     const epoch = outputEpochRef.current;
     outputPlaybackChainRef.current = outputPlaybackChainRef.current
       .catch(() => {})
@@ -267,6 +284,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
         source.connect(ctx.destination);
         source.addEventListener('ended', () => {
           sourcesRef.current.delete(source);
+          lastOutputPlaybackEndedAtRef.current = Date.now();
           if (sourcesRef.current.size === 0 && connectionActiveRef.current) {
             if (goAwayPendingRef.current && goAwayTurnCompleteRef.current) {
               scheduleReconnectRef.current(250, 'goaway');
@@ -339,11 +357,13 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       reconnectCountRef.current = 0;
       activeKeyIndexRef.current = 0;
       failedKeyIndicesRef.current.clear();
+      keyTimeoutCountsRef.current.clear();
       resumptionHandleRef.current = null;
       connectionUsedResumptionRef.current = false;
       sessionStartTimeRef.current = 0;
       setLastDiagnosticCode('');
       recoverTimedOutTurnRef.current = false;
+      recoverDisconnectedTurnRef.current = false;
     }
     // Reset the user-stopped flag so auto-reconnect works for new sessions
     userStoppedRef.current = false;
@@ -401,10 +421,21 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           throw new Error('Browser does not support microphone access or is in an insecure context');
         }
 
-        // Use simpler constraints first to avoid OverconstrainedError on some mobile devices
-        stream = await navigator.mediaDevices.getUserMedia({
-          audio: true
-        });
+        // Ask mobile browsers to suppress speaker echo and background noise.
+        // Fall back to generic audio if a device rejects any ideal constraint.
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            audio: {
+              channelCount: { ideal: 1 },
+              echoCancellation: { ideal: true },
+              noiseSuppression: { ideal: true },
+              autoGainControl: { ideal: true }
+            }
+          });
+        } catch (constraintError: any) {
+          if (!['OverconstrainedError', 'NotSupportedError', 'TypeError'].includes(constraintError?.name)) throw constraintError;
+          stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+        }
       } catch (micErr: any) {
         console.error("Mic Error Detail:", micErr);
         let errorMsg = 'Microphone access denied';
@@ -456,6 +487,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       }
 
       const liveKeys = getLiveKeys();
+      if (liveKeys.length > 0 && activeKeyIndexRef.current >= liveKeys.length) {
+        activeKeyIndexRef.current = 0;
+      }
       const apiKey = liveKeys[activeKeyIndexRef.current];
       if (!apiKey) {
         stream.getTracks().forEach(track => track.stop());
@@ -646,8 +680,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             if (stableConnectionTimerRef.current) clearTimeout(stableConnectionTimerRef.current);
             stableConnectionTimerRef.current = setTimeout(() => {
               if (sessionGeneration === sessionGenerationRef.current && connectionActiveRef.current) {
-                reconnectCountRef.current = 0;
-                setLastDiagnosticCode('');
+                // A socket staying open is not enough to prove Live audio works.
+                // Reconnect counters are reset only when real AI audio arrives.
+                noteLiveDiagnostic('LIVE_SOCKET_STABLE');
               }
             }, LIVE_STABLE_CONNECTION_MS);
 
@@ -659,16 +694,24 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
                   session.sendRealtimeInput({ text: 'The audio connection is ready. Begin the new session now and greet me as instructed.' });
                 } catch(e) { console.error('Failed to trigger initial prompt', e); }
               });
-            } else if (recoverTimedOutTurnRef.current) {
+            } else if (
+              recoverTimedOutTurnRef.current ||
+              recoverDisconnectedTurnRef.current ||
+              !connectionUsedResumptionRef.current
+            ) {
+              const timedOutTurn = recoverTimedOutTurnRef.current;
               recoverTimedOutTurnRef.current = false;
+              recoverDisconnectedTurnRef.current = false;
               awaitingResponseRef.current = true;
               responseWatchStartedAtRef.current = Date.now();
               sessionPromise.then((session) => {
                 try {
                   session.sendRealtimeInput({
-                    text: connectionUsedResumptionRef.current
-                      ? 'Continue now by answering my latest spoken message. Do not greet again.'
-                      : 'The voice connection was restored. Briefly ask me to continue or repeat my last sentence. Do not greet again.'
+                    text: !connectionUsedResumptionRef.current
+                      ? 'The voice connection was restored without conversation state. Briefly ask me to repeat my last sentence. Do not greet again.'
+                      : timedOutTurn
+                        ? 'Continue now by answering my latest spoken message. Do not greet again.'
+                        : 'Continue naturally from where the conversation paused. If there is no unanswered message, briefly ask me to continue. Do not greet again.'
                   });
                 } catch (error) {
                   console.warn('Failed to trigger recovered live response:', error);
@@ -718,6 +761,18 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
               for (let i = 0; i < rawData.length; i++) sumSquares += rawData[i] * rawData[i];
               const rms = Math.sqrt(sumSquares / Math.max(rawData.length, 1));
               const now = Date.now();
+
+              // Do not send the device speaker's AI voice back into the Live
+              // session. This is the main cause of false interruption/choppy
+              // replies on phones. A short tail covers acoustic echo after the
+              // final output buffer; the microphone resumes automatically.
+              const aiOutputCanEcho = sourcesRef.current.size > 0 ||
+                now - lastOutputPlaybackEndedAtRef.current < LIVE_OUTPUT_ECHO_TAIL_MS;
+              if (aiOutputCanEcho) {
+                speechActiveRef.current = false;
+                return;
+              }
+
               if (rms > 0.012) {
                 speechActiveRef.current = true;
                 lastVoiceActivityAtRef.current = now;
@@ -774,6 +829,10 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           },
           onmessage: (msg: LiveServerMessage) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
+            lastServerActivityAtRef.current = Date.now();
+            if (awaitingResponseRef.current && sourcesRef.current.size === 0) {
+              responseWatchStartedAtRef.current = lastServerActivityAtRef.current;
+            }
             const update = msg.sessionResumptionUpdate;
             if (update?.resumable && update.newHandle) {
               resumptionHandleRef.current = update.newHandle;
@@ -874,11 +933,34 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const scheduleReconnect = (delayMs: number, kind: LiveFailureKind = 'unknown') => {
     if (reconnectInFlightRef.current || userStoppedRef.current || !isMountedRef.current) return;
     if (kind === 'timeout' && hasGreetedRef.current) recoverTimedOutTurnRef.current = true;
+    if (
+      hasGreetedRef.current &&
+      (kind === 'network' || kind === 'server' || kind === 'audio' || kind === 'unknown')
+    ) recoverDisconnectedTurnRef.current = true;
 
     const liveKeys = getLiveKeys();
-    if (kind === 'quota' || kind === 'auth' || kind === 'access' || kind === 'timeout') {
+    let shouldRotateKey = kind === 'quota' || kind === 'auth' || kind === 'access';
+    if (kind === 'timeout') {
+      const timeoutCount = (keyTimeoutCountsRef.current.get(activeKeyIndexRef.current) || 0) + 1;
+      keyTimeoutCountsRef.current.set(activeKeyIndexRef.current, timeoutCount);
+      const openingGreetingFailed = !hasGreetedRef.current && liveKeys.length > 1;
+      shouldRotateKey = openingGreetingFailed || timeoutCount >= 2;
+      noteLiveDiagnostic(
+        shouldRotateKey ? (openingGreetingFailed ? 'LIVE_KEY_NO_GREETING' : 'LIVE_KEY_TIMEOUT_TWICE') : 'LIVE_KEY_TIMEOUT_RETRY',
+        { timeoutCount, openingGreetingFailed },
+      );
+    }
+
+    if (shouldRotateKey) {
       failedKeyIndicesRef.current.add(activeKeyIndexRef.current);
-      const nextKeyIndex = liveKeys.findIndex((_, index) => !failedKeyIndicesRef.current.has(index));
+      let nextKeyIndex = -1;
+      for (let offset = 1; offset <= liveKeys.length; offset++) {
+        const candidate = (activeKeyIndexRef.current + offset) % Math.max(liveKeys.length, 1);
+        if (!failedKeyIndicesRef.current.has(candidate)) {
+          nextKeyIndex = candidate;
+          break;
+        }
+      }
       if (nextKeyIndex >= 0) {
         activeKeyIndexRef.current = nextKeyIndex;
         // A resumption token belongs to the original API project/session and
@@ -951,6 +1033,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     audioBatchOffsetRef.current = 0;
     speechActiveRef.current = false;
     awaitingResponseRef.current = false;
+    responseWatchStartedAtRef.current = 0;
+    lastServerActivityAtRef.current = 0;
     micMutedAtRef.current = 0;
 
     if (scriptProcessorNodeRef.current) {
@@ -991,6 +1075,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       try { source.stop(); } catch (e) { }
     }
     sourcesRef.current.clear();
+    lastOutputPlaybackEndedAtRef.current = Date.now();
     nextStartTimeRef.current = 0;
     outputEpochRef.current += 1;
     outputPlaybackChainRef.current = Promise.resolve();
@@ -1052,10 +1137,12 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     isReconnectingRef.current = false;
     hasGreetedRef.current = false;
     failedKeyIndicesRef.current.clear();
+    keyTimeoutCountsRef.current.clear();
     activeKeyIndexRef.current = 0;
     resumptionHandleRef.current = null;
     connectionUsedResumptionRef.current = false;
     recoverTimedOutTurnRef.current = false;
+    recoverDisconnectedTurnRef.current = false;
 
     // Only trigger completion logic when in mission mode (opened from daily task)
     if (triggerComplete && isMissionActive && onComplete) {
@@ -1145,12 +1232,15 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       }
 
       const responseStartedAt = responseWatchStartedAtRef.current;
+      const activeResponseTimeoutMs = hasGreetedRef.current
+        ? LIVE_RESPONSE_TIMEOUT_MS
+        : LIVE_GREETING_RESPONSE_TIMEOUT_MS;
       if (
         awaitingResponseRef.current &&
         !speechActiveRef.current &&
         sourcesRef.current.size === 0 &&
         responseStartedAt > 0 &&
-        Date.now() - responseStartedAt > LIVE_RESPONSE_TIMEOUT_MS &&
+        Date.now() - responseStartedAt > activeResponseTimeoutMs &&
         lastOutputAudioAtRef.current < responseStartedAt
       ) {
         awaitingResponseRef.current = false;

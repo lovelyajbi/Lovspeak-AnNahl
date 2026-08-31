@@ -943,6 +943,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             result.correctCount = correctCount;
             result.incorrectCount = incorrectCount;
             result.missedCount = missedCount;
+            result.attemptedCount = totalReadWords;
+            result.coverage = totalOriginalWords > 0 ? (totalReadWords / totalOriginalWords) * 100 : 0;
 
             setAnalysisResult(result);
 
@@ -1017,6 +1019,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       const code = e?.message || '';
       if (code.includes('AUDIO_TOO_SHORT')) {
         setError('The recording is too short or empty. Please record your reading again.');
+      } else if (code.includes('AUDIO_NOT_RECOGNIZED')) {
+        setError('No reliable speech could be verified in this recording. Your recording is saved; check the microphone and resend it or record again.');
       } else if (code.includes('REFERENCE_TEXT_EMPTY')) {
         setError('Reference text is empty. Please reopen the task to reload the reading text.');
       } else if (code.includes('API_LIMIT')) {
@@ -1060,6 +1064,11 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
           autoGainControl: true
         }
       });
+      // A new recording is a new attempt. Never leave an older score visible
+      // while the new audio is being captured or analysed.
+      setAnalysisResult(null);
+      setError('');
+      setWordList(prev => prev.map(word => ({ ...word, status: 'neutral', errorDetails: '' })));
       const mimeType = getSupportedRecordingMimeType();
       let recorder: MediaRecorder;
       try {
@@ -1906,6 +1915,9 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                         <i className="fas fa-circle-minus"></i> {analysisResult.missedCount} missed
                       </span>
                     )}
+                    <span className="flex items-center gap-2 bg-lovelya-50 dark:bg-lovelya-900/20 text-lovelya-700 dark:text-lovelya-300 px-4 py-2 rounded-xl font-black text-xs md:text-sm">
+                      <i className="fas fa-book-open-reader"></i> {analysisResult.attemptedCount}/{wordList.length} read · {Math.round(analysisResult.coverage)}% coverage
+                    </span>
                     <button
                       onClick={() => {
                         const el = document.getElementById('reading-article-start');
@@ -1922,6 +1934,12 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                   <div className="bg-white dark:bg-gray-800 p-4 md:p-5 rounded-2xl border border-lovelya-100 dark:border-lovelya-800/60 shadow-sm">
                     <span className="text-[9px] md:text-[10px] font-black text-lovelya-600 dark:text-lovelya-400 uppercase tracking-[0.16em] block mb-2">Mastery Feedback</span>
                     <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed font-medium">{analysisResult.feedback}</p>
+                    {analysisResult.heardTranscript && (
+                      <details className="mt-3 rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-900/30 px-3 py-2.5">
+                        <summary className="cursor-pointer text-[10px] md:text-xs font-black uppercase tracking-wider text-gray-500 dark:text-gray-400">Words detected from your recording</summary>
+                        <p className="mt-2 text-xs md:text-sm leading-relaxed text-gray-600 dark:text-gray-300">{analysisResult.heardTranscript}</p>
+                      </details>
+                    )}
                   </div>
                 </div>
 

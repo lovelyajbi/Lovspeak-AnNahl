@@ -2,7 +2,11 @@
 import { GoogleGenAI, Type, Modality, ThinkingLevel } from "@google/genai";
 import { ReadingContent, GrammarResult, AssessmentQuestion, AssessmentResult, QuizQuestion } from "../types";
 import { getGeminiApiKey, getGeminiApiKeys, getAppLanguage, syncToFirestore } from "./storage";
-import { normalizePronunciationAnalysis } from "./pronunciationAnalysis";
+import {
+    alignReadingAudioToTarget,
+    normalizePronunciationAnalysis,
+    normalizeReadingAudioTranscription
+} from "./pronunciationAnalysis";
 import {
     AI_ROTATION_POLICY_STORAGE_KEY,
     AI_ROTATION_POLICY_VERSION,
@@ -1638,27 +1642,27 @@ export const analyzeReadingPronunciationAudio = async (
     const totalTimeoutMs = isLongRecording ? 75000 : (isShortRecording ? 48000 : 60000);
 
     return callGeminiWithRotation(MODEL, async (ai) => {
-        const prompt = `Evaluate the learner's recording against TARGET WORDS in exact order.
+        // Deliberately do not include the target passage in this request. The
+        // transcript must come from audio evidence, not from completing words
+        // that the learner never said. Alignment against the target is local.
+        const prompt = `Transcribe this English learner recording from audio evidence only.
 
-TARGET WORDS:
-"${text}"
-
-N=${targetWords.length}
-
-${getLanguageInstruction()}
-
-Return one lowercase character per target word in statusMap:
-- c = clearly recognizable as the target word; accept a minor Indonesian accent.
-- i = attempted but significantly mispronounced through a wrong vowel, consonant, stress, added/dropped syllable, or a sound that changes the word.
-- m = skipped, silent, or unintelligible.
-
-Do not guess unheard words or default words to correct. statusMap MUST contain exactly ${targetWords.length} characters in target order. If the audio is silent, return ${targetWords.length} "m" characters. Only add errors for "i" words, using zero-based indexes. Keep feedback to one brief, actionable sentence.
+IMPORTANT:
+- The expected passage is intentionally NOT provided. Never guess or complete it.
+- Return every word actually heard, in spoken order, including repetitions.
+- spokenWords must contain one spoken token per array item, with no punctuation-only items.
+- Do not translate, paraphrase, silently correct grammar, or add omitted words.
+- Accept a normal Indonesian accent as clear.
+- Add a pronunciationIssues entry only when a spoken token has a clearly audible pronunciation problem (wrong vowel/consonant, dropped or added syllable, or seriously misplaced stress).
+- A pause or slow delivery is not a pronunciation error.
+- Use audioStatus "silence" only when there is no intelligible speech.
+- Use audioStatus "unusable" only when noise/corruption prevents reliable transcription.
 
 Return JSON:
 {
-  "feedback": "brief specific tip",
-  "statusMap": "ccimmc",
-  "errors": [{ "index": 1, "details": "brief explanation" }]
+  "audioStatus": "speech" | "silence" | "unusable",
+  "spokenWords": ["every", "word", "actually", "heard"],
+  "pronunciationIssues": [{ "spokenIndex": 2, "details": "Brief, specific pronunciation correction." }]
 }`;
 
         const response = await ai.models.generateContent({
@@ -1674,44 +1678,54 @@ Return JSON:
                 responseSchema: {
                     type: Type.OBJECT,
                     properties: {
-                        feedback: { type: Type.STRING },
-                        statusMap: { type: Type.STRING },
-                        errors: {
+                        audioStatus: { type: Type.STRING },
+                        spokenWords: {
+                            type: Type.ARRAY,
+                            items: { type: Type.STRING }
+                        },
+                        pronunciationIssues: {
                             type: Type.ARRAY,
                             items: {
                                 type: Type.OBJECT,
                                 properties: {
-                                    index: { type: Type.INTEGER },
+                                    spokenIndex: { type: Type.INTEGER },
                                     details: { type: Type.STRING }
                                 },
-                                required: ["index", "details"]
+                                required: ["spokenIndex", "details"]
                             }
                         }
                     },
-                    required: ["feedback", "statusMap", "errors"]
+                    required: ["audioStatus", "spokenWords", "pronunciationIssues"]
                 },
-                thinkingConfig: { thinkingBudget: 0 },
-                temperature: 0.1,
-                maxOutputTokens: Math.min(4096, Math.max(1024, targetWords.length * 8))
+                temperature: 0,
+                maxOutputTokens: Math.min(6144, Math.max(1536, targetWords.length * 12))
             }
         });
 
-        const normalized = normalizePronunciationAnalysis(targetWords, safeParseJSON(response.text, null));
-        if (!normalized) throw new Error("AI_INVALID_RESPONSE");
-        return normalized;
+        const transcription = normalizeReadingAudioTranscription(safeParseJSON(response.text, null));
+        if (!transcription) throw new Error("AI_INVALID_RESPONSE");
+        if (transcription.audioStatus !== 'speech') throw new Error("AUDIO_NOT_RECOGNIZED");
+        // Reject obviously malformed expansion without turning recording length
+        // into a score. A retry is safer than displaying an unverifiable result.
+        if (transcription.spokenWords.length > Math.max(targetWords.length * 2, targetWords.length + 80)) {
+            throw new Error("AI_INVALID_RESPONSE");
+        }
+        const aligned = alignReadingAudioToTarget(targetWords, transcription);
+        if (!aligned) throw new Error("AI_INVALID_RESPONSE");
+        return aligned;
     }, {
         attemptTimeoutMs,
         totalTimeoutMs,
         maxTimeoutsPerModel: 2,
         maxTransientErrorsPerModel: 2,
-        maxTotalAttempts: 5,
+        maxTotalAttempts: 4,
         abortSignal: options.abortSignal,
         workload: 'analisis pronunciation Reading'
     });
 };
 
 // Shadowing keeps its established verbose contract and quality-first cascade.
-// Reading uses the separate compact, latency-optimized function above.
+// Reading uses evidence-first transcription plus deterministic local alignment.
 export const analyzePronunciationAudio = async (text: string, base64: string, mime: string) => {
     const MODEL = MODEL_CASCADE_PRO;
     return callGeminiWithRotation(MODEL, async (ai) => {
