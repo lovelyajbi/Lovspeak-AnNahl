@@ -4,6 +4,7 @@ import { ModuleProps, ShadowingTask, AppView, ModuleContext, DialogueScenario } 
 import { SHADOWING_DATA, ShadowingTheme } from '../src/constants/shadowingData';
 import { logActivity, completeRoadmapUnit, getActivityLogs } from '../services/storage';
 import { analyzePronunciationAudio } from '../services/gemini';
+import { createAiDiagnosticRequestId, recordAiDiagnostic } from '../services/aiDiagnostics';
 import { ttsService } from '../services/ttsService';
 import { getDialogueScenarios } from '../services/dialogueContent';
 import { ResultActions, ResultCard, ResultHeader, ResultMetric, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
@@ -741,6 +742,15 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         recorder.onstop = async () => {
           setIsAnalyzing(true);
           const audioBlob = new Blob(audioChunks.current, { type: mimeType });
+          const diagnosticModule = 'Shadowing pronunciation analysis';
+          const diagnosticRequestId = createAiDiagnosticRequestId(diagnosticModule);
+          const diagnosticStartedAt = Date.now();
+          recordAiDiagnostic({
+            requestId: diagnosticRequestId,
+            module: diagnosticModule,
+            phase: 'recording_received',
+            details: { audioBytes: audioBlob.size, mimeType }
+          });
           stream.getTracks().forEach(track => track.stop());
 
           try {
@@ -749,10 +759,23 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               try {
                 const base64data = reader.result?.toString().split(',')[1];
                 if (!base64data) throw new Error("Failed to read audio");
+                recordAiDiagnostic({
+                  requestId: diagnosticRequestId,
+                  module: diagnosticModule,
+                  phase: 'recording_prepared_for_ai',
+                  details: { audioBytes: audioBlob.size, encodedCharacters: base64data.length }
+                });
 
                 // Call real AI. The service rotates both key and model and has
                 // a total timeout, so this callback cannot leave the UI hanging.
-                const result = await analyzePronunciationAudio(selectedTask.text, base64data, mimeType);
+                const result = await analyzePronunciationAudio(selectedTask.text, base64data, mimeType, { diagnosticRequestId });
+
+                recordAiDiagnostic({
+                  requestId: diagnosticRequestId,
+                  module: diagnosticModule,
+                  phase: 'score_calculation_started',
+                  details: { analyzedWords: result.wordAnalysis.length }
+                });
 
                 // Calculate Score based on actual word analysis against target text
                 // The AI now returns ALL target words (correct, incorrect, or missed)
@@ -775,8 +798,24 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                   incorrectWords: incorrectWordsList,
                   tips: result.feedback
                 });
+                recordAiDiagnostic({
+                  requestId: diagnosticRequestId,
+                  module: diagnosticModule,
+                  phase: 'request_completed',
+                  durationMs: Date.now() - diagnosticStartedAt,
+                  details: { score, correctWords, totalWords, incorrectWords: incorrectWordsList.length }
+                });
               } catch (e) {
                 console.error("Audio analysis failed", e);
+                recordAiDiagnostic({
+                  requestId: diagnosticRequestId,
+                  module: diagnosticModule,
+                  phase: 'request_failed',
+                  level: 'error',
+                  durationMs: Date.now() - diagnosticStartedAt,
+                  code: (e as any)?.message || 'SHADOWING_ANALYSIS_FAILED',
+                  message: (e as any)?.message || String(e)
+                });
                 setFeedbackDetail({
                   score: 0,
                   incorrectWords: [],
@@ -787,6 +826,14 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               }
             };
             reader.onerror = () => {
+              recordAiDiagnostic({
+                requestId: diagnosticRequestId,
+                module: diagnosticModule,
+                phase: 'request_failed',
+                level: 'error',
+                durationMs: Date.now() - diagnosticStartedAt,
+                code: 'RECORDING_READ_FAILED'
+              });
               setFeedbackDetail({
                 score: 0,
                 incorrectWords: [],
@@ -794,6 +841,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
               });
               setIsAnalyzing(false);
             };
+            recordAiDiagnostic({ requestId: diagnosticRequestId, module: diagnosticModule, phase: 'recording_encoding_started' });
             reader.readAsDataURL(audioBlob);
           } catch (e) {
             console.error("Audio processing failed", e);

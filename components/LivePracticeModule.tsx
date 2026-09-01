@@ -92,6 +92,7 @@ const recordLiveDiagnostic = (code: string, details: Record<string, string | num
       model,
       keySlot,
       attempt,
+      durationMs: typeof details.durationMs === 'number' ? details.durationMs : undefined,
       code,
       details,
     });
@@ -221,6 +222,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const connectionUsedResumptionRef = useRef(false);
   const lastOutputAudioAtRef = useRef(0);
   const lastOutputPlaybackEndedAtRef = useRef(0);
+  const lastVisualizerDrawAtRef = useRef(0);
   const lastServerActivityAtRef = useRef(0);
   const lastVoiceActivityAtRef = useRef(0);
   const awaitingResponseRef = useRef(false);
@@ -265,12 +267,14 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     // A greeting counts only after the server has actually produced audio.
     // Merely opening the socket is not proof that this key can serve Live audio.
     if (generation === sessionGenerationRef.current) {
+      const isOpeningAudio = !hasGreetedRef.current;
       hasGreetedRef.current = true;
       // Actual audio proves this key can serve Live responses. Clear only its
       // transient timeout history; hard quota/auth failures stay isolated.
       keyTimeoutCountsRef.current.delete(activeKeyIndexRef.current);
       reconnectCountRef.current = 0;
       setLastDiagnosticCode('');
+      if (isOpeningAudio) noteLiveDiagnostic('LIVE_GREETING_AUDIO_RECEIVED');
     }
     const epoch = outputEpochRef.current;
     outputPlaybackChainRef.current = outputPlaybackChainRef.current
@@ -313,12 +317,15 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             }
           }
         });
+        const wasPlaybackIdle = sourcesRef.current.size === 0;
         source.start(nextStartTimeRef.current);
         nextStartTimeRef.current += buffer.duration;
         sourcesRef.current.add(source);
         lastOutputAudioAtRef.current = Date.now();
         awaitingResponseRef.current = false;
-        setStatus('AI is speaking...');
+        // A Live response arrives as many small PCM packets. Updating React for
+        // every packet blocks the browser's message handler on slower phones.
+        if (wasPlaybackIdle) setStatus('AI is speaking...');
       })
       .catch(error => {
         noteLiveDiagnostic('LIVE_AUDIO_PLAYBACK_ERROR');
@@ -395,6 +402,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     }
     setIsConnecting(true);
     setStatus(isReconnect ? 'Reconnecting...' : 'Connecting to AI...');
+    noteLiveDiagnostic(isReconnect ? 'LIVE_RECONNECT_STARTED' : 'LIVE_CONNECT_STARTED');
 
     try {
       // IPAD/SAFARI FIX — INTENTIONAL ORDER, NOT A BUG:
@@ -752,6 +760,22 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
                 !connectionActiveRef.current ||
                 !realtimeInputEnabledRef.current
               ) return false;
+
+              // The SDK's onclose callback can arrive a few audio frames after
+              // the native WebSocket has already entered CLOSING. Inspect the
+              // current SDK connection when available so those queued frames
+              // are discarded instead of producing a CLOSED-state error storm.
+              const socketReadyState = session?.conn?.ws?.readyState;
+              if (typeof socketReadyState === 'number' && socketReadyState !== WebSocket.OPEN) {
+                realtimeInputEnabledRef.current = false;
+                if (!realtimeSendFailureHandledRef.current) {
+                  realtimeSendFailureHandledRef.current = true;
+                  const kind: LiveFailureKind = goAwayPendingRef.current ? 'goaway' : 'network';
+                  noteLiveDiagnostic('LIVE_SEND_SOCKET_NOT_OPEN', { socketReadyState });
+                  scheduleReconnectRef.current(250, kind);
+                }
+                return false;
+              }
               try {
                 session.sendRealtimeInput(payload);
                 return true;
@@ -786,7 +810,11 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             const enqueueAudioChunk = (rawData: Float32Array) => {
               if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
 
-              if (canvasRef.current) {
+              const now = Date.now();
+              // The worklet can deliver about 125 microphone callbacks/second.
+              // A 20 fps meter looks equally fluid and keeps audio callbacks light.
+              if (canvasRef.current && now - lastVisualizerDrawAtRef.current >= 50) {
+                lastVisualizerDrawAtRef.current = now;
                 const step = Math.max(1, Math.floor(rawData.length / 100));
                 const dataArray = new Uint8Array(100);
                 for (let i = 0; i < 100; i++) dataArray[i] = Math.abs(rawData[i * step] || 0) * 255;
@@ -798,8 +826,6 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
               let sumSquares = 0;
               for (let i = 0; i < rawData.length; i++) sumSquares += rawData[i] * rawData[i];
               const rms = Math.sqrt(sumSquares / Math.max(rawData.length, 1));
-              const now = Date.now();
-
               // Do not send the device speaker's AI voice back into the Live
               // session. This is the main cause of false interruption/choppy
               // replies on phones. A short tail covers acoustic echo after the
@@ -1148,6 +1174,14 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   };
 
   const stopSession = (triggerComplete = true) => {
+    const liveDurationMs = sessionStartTimeRef.current > 0 ? Date.now() - sessionStartTimeRef.current : 0;
+    if (isMountedRef.current) noteLiveDiagnostic('LIVE_SESSION_STOPPED', { durationMs: liveDurationMs });
+    else recordLiveDiagnostic('LIVE_SESSION_STOPPED', {
+      model: LIVE_MODEL,
+      attempt: reconnectCountRef.current,
+      keySlot: activeKeyIndexRef.current + 1,
+      durationMs: liveDurationMs,
+    });
     // Mark as user-initiated stop to prevent auto-reconnect
     userStoppedRef.current = true;
     if (reconnectTimerRef.current) clearTimeout(reconnectTimerRef.current);

@@ -53,10 +53,17 @@ self.addEventListener('message', (event) => {
 self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
 
+  // Firebase Auth, Firestore, Gemini, and other external APIs must be handled
+  // directly by the browser/their SDK. Intercepting them here turns ordinary
+  // network retries into rejected FetchEvent promises and can disrupt sessions.
+  // Non-GET requests are never cache candidates either.
+  if (url.origin !== self.location.origin || event.request.method !== 'GET') {
+    return;
+  }
+
   // NEVER cache HTML, JS, or TSX files - always fetch from network
   // This ensures UI changes are always reflected immediately
   if (
-    event.request.method !== 'GET' ||
     url.pathname.endsWith('.html') ||
     url.pathname.endsWith('.js') ||
     url.pathname.endsWith('.jsx') ||

@@ -309,6 +309,8 @@ interface RotationOptions {
     maxTotalAttempts?: number;
     abortSignal?: AbortSignal;
     workload?: string;
+    diagnosticRequestId?: string;
+    keepActiveAfterSuccess?: boolean;
 }
 
 interface AiAttemptDiagnosticContext {
@@ -355,7 +357,7 @@ async function callGeminiWithRotation<T>(
 ): Promise<T> {
     ensureRotationPolicyVersion();
     const module = options.workload || 'AI';
-    const requestId = createAiDiagnosticRequestId(module);
+    const requestId = options.diagnosticRequestId || createAiDiagnosticRequestId(module);
     const requestStartedAt = Date.now();
     const keys = getGeminiApiKeys();
     if (!keys || keys.length === 0) {
@@ -436,12 +438,12 @@ async function callGeminiWithRotation<T>(
             const attemptController = new AbortController();
             const abortFromCaller = () => attemptController.abort();
             options.abortSignal?.addEventListener('abort', abortFromCaller, { once: true });
+            const attemptStartedAt = Date.now();
 
             try {
                 const baseClient = getAiClient(targetModel, currentKeyIndex);
                 executedKeys += 1;
                 diagnosticAttempt += 1;
-                const attemptStartedAt = Date.now();
                 const diagnosticContext: AiAttemptDiagnosticContext = {
                     requestId,
                     module,
@@ -461,7 +463,11 @@ async function callGeminiWithRotation<T>(
                     models: {
                         ...baseClient.models,
                         generateContent: async (params: any) => {
-                            return await baseClient.models.generateContent({
+                            recordAiDiagnostic({
+                                ...diagnosticContext,
+                                phase: 'request_sent_waiting_ai'
+                            });
+                            const response = await baseClient.models.generateContent({
                                 ...params,
                                 model: targetModel,
                                 config: {
@@ -469,9 +475,18 @@ async function callGeminiWithRotation<T>(
                                     abortSignal: attemptController.signal
                                 }
                             });
+                            recordAiDiagnostic({
+                                ...diagnosticContext,
+                                phase: 'ai_response_received'
+                            });
+                            return response;
                         },
                         generateContentStream: async (params: any) => {
-                            return await baseClient.models.generateContentStream({
+                            recordAiDiagnostic({
+                                ...diagnosticContext,
+                                phase: 'stream_request_sent_waiting_ai'
+                            });
+                            const stream = await baseClient.models.generateContentStream({
                                 ...params,
                                 model: targetModel,
                                 config: {
@@ -479,6 +494,11 @@ async function callGeminiWithRotation<T>(
                                     abortSignal: attemptController.signal
                                 }
                             });
+                            recordAiDiagnostic({
+                                ...diagnosticContext,
+                                phase: 'ai_stream_opened'
+                            });
+                            return stream;
                         }
                     }
                 } as any;
@@ -497,6 +517,13 @@ async function callGeminiWithRotation<T>(
                     phase: 'attempt_succeeded',
                     durationMs: Date.now() - attemptStartedAt
                 });
+                if (!options.keepActiveAfterSuccess) {
+                    recordAiDiagnostic({
+                        ...diagnosticContext,
+                        phase: 'request_completed',
+                        durationMs: Date.now() - requestStartedAt
+                    });
+                }
                 // Spread consecutive calls across API projects to reduce RPM spikes.
                 modelKeyIndices[targetModel] = (currentKeyIndex + 1) % keys.length;
                 workloadKeyCursor = (currentKeyIndex + 1) % keys.length;
@@ -524,6 +551,7 @@ async function callGeminiWithRotation<T>(
                     keySlot: currentKeyIndex + 1,
                     keyId: keyFingerprints[currentKeyIndex].slice(0, 10),
                     attempt: diagnosticAttempt,
+                    durationMs: Date.now() - attemptStartedAt,
                     code: errorMessage || 'UNKNOWN_ERROR',
                     message: errorMessage,
                     details: { status: Number(e?.status || e?.code || 0) || 0 }
@@ -988,7 +1016,7 @@ export const analyzeDiaryEntry = async (text: string, level: string): Promise<Gr
             }
         });
         return safeParseJSON(response.text, { correctedText: text, generalFeedback: 'Analysis failed', errors: [], score: 0 });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Diary analysis' }).catch(e => handleApiError(e));
 };
 
 // --- TRANSLATION PRACTICE SERVICES ---
@@ -1032,7 +1060,7 @@ export const generateTranslationText = async (level: string, theme: string, isIs
             config: { responseMimeType: 'application/json', thinkingConfig: { thinkingBudget: 0 } }
         });
         return safeParseJSON(response.text, { paragraphs: [], answerKey: '' });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Reading translation material' }).catch(e => handleApiError(e));
 };
 
 export const evaluateTranslation = async (indonesianText: string, audioBase64: string, mimeType: string, level: string, answerKey: string): Promise<TranslationResult> => {
@@ -1081,7 +1109,7 @@ export const evaluateTranslation = async (indonesianText: string, audioBase64: s
             config: { responseMimeType: 'application/json' }
         });
         return safeParseJSON(response.text, { completion: 0, accuracy: 0, pronunciation: 0, overall: 0, corrections: [], answerKey: '', feedback: 'Evaluation failed.' });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Reading translation evaluation' }).catch(e => handleApiError(e));
 };
 
 // --- ASSESSMENT SERVICES ---
@@ -1212,7 +1240,7 @@ USE THIS DATA to determine grammar proficiency:
         });
 
         return safeParseJSON(response.text, { detectedLevel: 'A1', overallScore: 0 });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Placement assessment evaluation' }).catch(e => handleApiError(e));
 };
 
 // --- GRAMMAR SERVICES ---
@@ -1237,7 +1265,7 @@ export const generateGrammarTask = async (lessonTitle: string, level: string = '
             }
         });
         return response.text?.trim() || `[TASK] Buatlah 3-5 kalimat singkat untuk berlatih ${lessonTitle}. [HINT] Gunakan kata-kata yang sederhana.`;
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Grammar task generation' }).catch(e => handleApiError(e));
 };
 
 export const analyzeGrammar = async (text: string, taskContext: string): Promise<GrammarResult> => {
@@ -1255,7 +1283,7 @@ export const analyzeGrammar = async (text: string, taskContext: string): Promise
             }
         });
         return safeParseJSON(response.text, { correctedText: text, generalFeedback: 'Error', errors: [], score: 0 });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Grammar writing analysis' }).catch(e => handleApiError(e));
 };
 
 export const generateGrammarQuiz = async (lessonTitle: string, content: string, level: string): Promise<QuizQuestion[]> => {
@@ -1277,7 +1305,7 @@ export const generateGrammarQuiz = async (lessonTitle: string, content: string, 
         });
         const data = safeParseJSON(response.text, { quiz: [] });
         return validateMCQItems(data.quiz);
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Grammar quiz generation' }).catch(e => handleApiError(e));
 };
 
 // --- GAME SERVICES ---
@@ -1327,7 +1355,7 @@ export const generateGameData = async (category: string, context: string, level:
         });
         const parsed = safeParseJSON(response.text, { data: [] });
         return validateGameItems(parsed.data || [], category);
-    }).catch(e => handleApiError(e));
+    }, { workload: `Games ${category} generation` }).catch(e => handleApiError(e));
 };
 
 export const generateVocabDetails = async (word: string): Promise<{ synonyms: string[], examples: string[], ipa: string }> => {
@@ -1357,7 +1385,7 @@ export const generateVocabDetails = async (word: string): Promise<{ synonyms: st
             }
         });
         return safeParseJSON(response.text, { ipa: '', synonyms: [], examples: [] });
-    }).catch(e => ({ ipa: '', synonyms: [], examples: [] }));
+    }, { workload: 'Vocabulary detail generation' }).catch(e => ({ ipa: '', synonyms: [], examples: [] }));
 };
 
 export const generateVocabReviewGame = async (vocabItems: { english: string, indonesian: string }[], count: number, level: number, context: string = 'general'): Promise<any[]> => {
@@ -1407,7 +1435,7 @@ export const generateVocabReviewGame = async (vocabItems: { english: string, ind
         });
         const data = safeParseJSON(response.text, { quiz: [] });
         return validateMCQItems(data.quiz || []);
-    }).catch(e => {
+    }, { workload: 'Vocabulary review game generation' }).catch(e => {
         console.error("Vocab Game Error:", e);
         return [];
     });
@@ -1437,7 +1465,7 @@ export const generateReadingTitles = async (level: string, theme: string, isIsla
             }
         });
         return safeParseJSON(response.text, { titles: [] }).titles;
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Reading title generation' }).catch(e => handleApiError(e));
 };
 
 export const generateReadingContentStream = async (title: string, level: string, theme: string, isIslamic: boolean) => {
@@ -1464,7 +1492,7 @@ export const generateReadingContentStream = async (title: string, level: string,
                 thinkingConfig: { thinkingBudget: 0 }
             }
         });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Reading content streaming' }).catch(e => handleApiError(e));
 };
 
 export const generateReadingContent = async (title: string, level: string, theme: string, isIslamic: boolean): Promise<ReadingContent> => {
@@ -1493,7 +1521,7 @@ export const generateReadingContent = async (title: string, level: string, theme
             }
         });
         return safeParseJSON(response.text, { title, paragraphs: [] });
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Reading content generation' }).catch(e => handleApiError(e));
 };
 
 export const generateListeningTitles = async (level: string, type: string, theme: string, isIslamic: boolean): Promise<string[]> => {
@@ -1516,7 +1544,7 @@ export const generateListeningTitles = async (level: string, type: string, theme
             }
         });
         return safeParseJSON(response.text, { titles: [] }).titles;
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Listening title generation' }).catch(e => handleApiError(e));
 };
 
 // --- LISTENING CONTENT (Script + Speakers only, quiz generated separately for speed) ---
@@ -1650,7 +1678,7 @@ Return ONLY this JSON structure (NO quiz, ONLY script and speakers):
         parsed.quiz = [];
 
         return parsed;
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Listening content generation' }).catch(e => handleApiError(e));
 };
 
 // --- FALLBACK: Script-only generation (used if combined call fails entirely) ---
@@ -1691,7 +1719,7 @@ export const generateListeningScript = async (title: string, level: string, type
             config: { thinkingConfig: { thinkingBudget: 0 } }
         });
         return response.text || "";
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Listening script generation' }).catch(e => handleApiError(e));
 };
 
 export const generateListeningQuiz = async (script: string, level: string): Promise<QuizQuestion[]> => {
@@ -1713,14 +1741,14 @@ export const generateListeningQuiz = async (script: string, level: string): Prom
             }
         });
         return validateMCQItems(safeParseJSON(response.text, { quiz: [] }).quiz);
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Listening quiz generation' }).catch(e => handleApiError(e));
 };
 
 export const analyzeReadingPronunciationAudio = async (
     text: string,
     base64: string,
     mime: string,
-    options: { abortSignal?: AbortSignal } = {}
+    options: { abortSignal?: AbortSignal; diagnosticRequestId?: string } = {}
 ) => {
     // Reading deliberately uses the long-standing quality-first evaluator
     // that was used before the 29 August optimization experiments. Keep its
@@ -1797,6 +1825,11 @@ Return JSON:
             }
         });
 
+        recordAiDiagnostic({
+            ...diagnostic,
+            phase: 'reading_response_validating',
+            details: { expectedWords: targetWords.length, responseCharacters: response.text?.length || 0 }
+        });
         const result = safeParseJSON(response.text, null);
         if (!result || !Array.isArray(result.wordAnalysis)) {
             recordAiDiagnostic({
@@ -1827,15 +1860,22 @@ Return JSON:
         // the active audio inference to finish. Only an explicit user cancel
         // aborts the request.
         abortSignal: options.abortSignal,
-        workload: 'analisis pronunciation Reading'
+        workload: 'Reading pronunciation analysis',
+        diagnosticRequestId: options.diagnosticRequestId,
+        keepActiveAfterSuccess: true
     });
 };
 
 // Shadowing keeps its established verbose contract and quality-first cascade.
 // Reading uses a separate direct audio-versus-target analysis above.
-export const analyzePronunciationAudio = async (text: string, base64: string, mime: string) => {
+export const analyzePronunciationAudio = async (
+    text: string,
+    base64: string,
+    mime: string,
+    options: { diagnosticRequestId?: string } = {}
+) => {
     const MODEL = MODEL_CASCADE_PRO;
-    return callGeminiWithRotation(MODEL, async (ai) => {
+    return callGeminiWithRotation(MODEL, async (ai, diagnostic) => {
         const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
         const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
 
@@ -1905,13 +1945,21 @@ Return JSON:
             }
         });
 
+        recordAiDiagnostic({
+            ...diagnostic,
+            phase: 'shadowing_response_validating',
+            details: { responseCharacters: response.text?.length || 0 }
+        });
         const result = safeParseJSON(response.text, null);
         if (!result || !Array.isArray(result.wordAnalysis)) throw new Error("Invalid analysis format from AI");
         return result;
     }, {
         attemptTimeoutMs: 25000,
         totalTimeoutMs: 90000,
-        maxTimeoutsPerModel: 2
+        maxTimeoutsPerModel: 2,
+        workload: 'Shadowing pronunciation analysis',
+        diagnosticRequestId: options.diagnosticRequestId,
+        keepActiveAfterSuccess: true
     });
 };
 
@@ -1930,7 +1978,7 @@ export const transcribeAudio = async (base64: string, mime: string): Promise<str
             }
         });
         return response.text?.trim() || "";
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Speech transcription' }).catch(e => handleApiError(e));
 };
 
 // Voice pools for variety (separated to avoid narrator sounding like a dialogue character)
@@ -2045,7 +2093,7 @@ Sound like a real, passionate human naturally speaking. NEVER sound like an AI r
             throw new Error('TTS model returned no audio data');
         }
         return audioData;
-    }).catch(e => handleApiError(e));
+    }, { workload: 'Audio TTS generation' }).catch(e => handleApiError(e));
 };
 
 export interface SimpleTranslationResult {
@@ -2204,7 +2252,7 @@ export const getWordIPA = async (word: string): Promise<string> => {
             }
         });
         return response.text?.trim() || "";
-    }).catch(e => "");
+    }, { workload: 'Vocabulary IPA lookup' }).catch(e => "");
 };
 
 export const generateSingleReadingTitle = async (level: string, theme: string, isIslamic: boolean) => {
@@ -2223,7 +2271,7 @@ export const generateSingleReadingTitle = async (level: string, theme: string, i
             }
         });
         return safeParseJSON(response.text, { title: "New Topic" }).title;
-    }).catch(e => "New Topic");
+    }, { workload: 'Reading single title generation' }).catch(e => "New Topic");
 };
 
 export const generateSingleListeningTitle = async (level: string, type: string, theme: string, isIslamic: boolean) => {
@@ -2241,7 +2289,7 @@ export const generateSingleListeningTitle = async (level: string, type: string, 
             }
         });
         return safeParseJSON(response.text, { title: "New Topic" }).title;
-    }).catch(e => "New Topic");
+    }, { workload: 'Listening single title generation' }).catch(e => "New Topic");
 };
 
 export const generateWeeklyInsight = async (logs: any[], profileName: string): Promise<string> => {
@@ -2275,7 +2323,7 @@ export const generateWeeklyInsight = async (logs: any[], profileName: string): P
             }
         });
         return response.text?.trim() || "";
-    }).catch(e => {
+    }, { workload: 'Profile weekly insight' }).catch(e => {
         console.error("Weekly Insight Error:", e);
         return `"Keep up the great work, ${profileName}! Consistency is the key to mastering a new language. You're doing better than you think!"`;
     });

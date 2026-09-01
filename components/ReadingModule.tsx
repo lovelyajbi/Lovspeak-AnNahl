@@ -10,6 +10,7 @@ import { ttsService } from '../services/ttsService';
 import { getStaticReadingIndex, getStaticReadingItem, getStaticReadingLibrarySummary } from '../services/readingContent';
 import { savePendingRecording, getPendingRecording, deletePendingRecording } from '../services/pendingRecordings';
 import { translateStaticVocabWord } from '../services/staticVocabTranslation';
+import { createAiDiagnosticRequestId, recordAiDiagnostic } from '../services/aiDiagnostics';
 import { ResultActions, ResultCard, ResultHeader, ResultMetric, ResultScore, ResultSection, resultButtonClass } from './ResultUI';
 import { useAuth } from '../src/contexts/AuthContext';
 
@@ -868,6 +869,12 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
     analysisCancelRef.current?.();
     const runId = ++analysisRunRef.current;
     const startedAt = Date.now();
+    const diagnosticModule = 'Reading pronunciation analysis';
+    const diagnosticRequestId = createAiDiagnosticRequestId(diagnosticModule);
+    const noteAnalysisStage = (phase: string, details?: Record<string, unknown>, level?: 'info' | 'warn' | 'error') => {
+      recordAiDiagnostic({ requestId: diagnosticRequestId, module: diagnosticModule, phase, details, level });
+    };
+    noteAnalysisStage('recording_received', { audioBytes: blob.size, mimeType: blob.type || 'audio/webm' });
     setLoading(true);
     setStatusMsg('Analyzing pronunciation...');
     setError('');
@@ -880,12 +887,16 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       if (keyForThisAttempt) {
         await savePendingRecording(keyForThisAttempt, blob, blob.type || 'audio/webm');
         setPendingRecording(blob);
+        noteAnalysisStage('recording_saved_for_retry', { audioBytes: blob.size });
       }
 
+      noteAnalysisStage('recording_encoding_started', { audioBytes: blob.size });
       const base64 = await readBlobAsBase64(blob);
+      noteAnalysisStage('recording_prepared_for_ai', { audioBytes: blob.size, encodedCharacters: base64.length });
       const effectiveWordList = wordList.length > 0 ? wordList : buildWordList(content);
       const targetText = effectiveWordList.map(w => w.word).join(' ');
       if (!targetText.trim()) throw new Error('REFERENCE_TEXT_EMPTY');
+      noteAnalysisStage('reference_text_prepared', { targetWords: effectiveWordList.length });
 
       // Slow audio inference is not a failure. Keep the active request alive
       // and only reassure the learner that analysis is still progressing.
@@ -902,7 +913,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       });
       const result: any = await Promise.race([
         analyzeReadingPronunciationAudio(targetText, base64, blob.type || 'audio/webm', {
-          abortSignal: analysisController.signal
+          abortSignal: analysisController.signal,
+          diagnosticRequestId
         }),
         cancellation
       ]).finally(() => {
@@ -914,6 +926,10 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       if (!result || !Array.isArray(result.wordAnalysis)) {
         throw new Error('AI_INVALID_RESPONSE');
       }
+      noteAnalysisStage('matching_ai_result_to_reference', {
+        targetWords: effectiveWordList.length,
+        analyzedWords: result.wordAnalysis.length
+      });
 
       // Restore the proven pre-29-August matcher. AI output remains evaluated
       // with the original quality prompt, while harmless punctuation or a
@@ -958,6 +974,7 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         aiIndex += 1;
       }
 
+      noteAnalysisStage('score_calculation_started', { targetWords: newWordList.length });
       const correctCount = newWordList.filter(word => word.status === 'correct').length;
       const incorrectCount = newWordList.filter(word => word.status === 'incorrect').length;
       const missedCount = newWordList.length - correctCount - incorrectCount;
@@ -977,6 +994,14 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             result.attemptedCount = totalReadWords;
             result.coverage = totalOriginalWords > 0 ? (totalReadWords / totalOriginalWords) * 100 : 0;
 
+            noteAnalysisStage('score_calculated', {
+              score: Math.round(calculatedScore),
+              accuracy: Math.round(calculatedAccuracy),
+              correctWords: correctCount,
+              incorrectWords: incorrectCount,
+              missedWords: missedCount
+            });
+
             setAnalysisResult(result);
 
             // Analysis succeeded: this recording no longer needs to be kept around for retry.
@@ -988,6 +1013,8 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
             // Save progress
             const score = Math.round(calculatedScore);
             const accuracy = Math.round(calculatedAccuracy);
+
+            noteAnalysisStage('result_persisting', { score, accuracy });
 
             saveProgress({
               level,
@@ -1027,6 +1054,20 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
               setError(`Goal not met: You need at least ${targetMinScore}% score to complete this mission. Please try practicing again!`);
             }
 
+            recordAiDiagnostic({
+              requestId: diagnosticRequestId,
+              module: diagnosticModule,
+              phase: 'request_completed',
+              durationMs: Date.now() - startedAt,
+              details: {
+                score,
+                accuracy,
+                correctWords: correctCount,
+                incorrectWords: incorrectCount,
+                missedWords: missedCount
+              }
+            });
+
             // Scroll to results with a slight delay to ensure rendering
             setTimeout(() => {
               if (analysisRunRef.current !== runId) return;
@@ -1042,6 +1083,16 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       });
     } catch (e: any) {
       if (analysisRunRef.current !== runId) return;
+      recordAiDiagnostic({
+        requestId: diagnosticRequestId,
+        module: diagnosticModule,
+        phase: 'request_failed',
+        level: 'error',
+        durationMs: Date.now() - startedAt,
+        code: e?.message || 'UNKNOWN',
+        message: e?.message || String(e),
+        details: { audioBytes: blob.size }
+      });
       console.error('[ReadingAnalysis] failed', {
         code: e?.message || 'UNKNOWN',
         durationMs: Date.now() - startedAt,

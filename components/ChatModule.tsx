@@ -367,6 +367,13 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
         throw lastError || new Error('AI_CHAT_FAILED');
       }
 
+      recordAiDiagnostic({
+        requestId: diagnosticRequestId,
+        module: 'AI Tutor Chat',
+        phase: 'request_completed',
+        durationMs: Date.now() - diagnosticStartedAt,
+      });
+
       // Final parsing for metadata
       const corrections: Correction[] = [];
       const vocab: VocabSuggestion[] = [];
