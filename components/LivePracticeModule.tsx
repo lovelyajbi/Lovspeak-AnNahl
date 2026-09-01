@@ -191,6 +191,10 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const userStoppedRef = useRef<boolean>(false);
   const connectionActiveRef = useRef<boolean>(false);
   const connectionStartInFlightRef = useRef<boolean>(false);
+  // Audio capture can outlive a WebSocket by a few callbacks. Gate every send
+  // separately from the UI connection flag so a closing socket is never fed.
+  const realtimeInputEnabledRef = useRef<boolean>(false);
+  const realtimeSendFailureHandledRef = useRef<boolean>(false);
   // Track reconnection attempts to avoid infinite loops
   const reconnectCountRef = useRef<number>(0);
   const MAX_RECONNECTS = 8;
@@ -367,6 +371,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     if (connectionStartInFlightRef.current || connectionActiveRef.current || reconnectInFlightRef.current) return;
     connectionStartInFlightRef.current = true;
     const sessionGeneration = ++sessionGenerationRef.current;
+    realtimeInputEnabledRef.current = false;
+    realtimeSendFailureHandledRef.current = false;
     const isReconnect = hasGreetedRef.current;
     const isFreshUserStart = !forceReconnect && !isReconnectingRef.current && !isReconnect;
     if (isFreshUserStart) {
@@ -675,6 +681,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             if (connectTimeoutRef.current) clearTimeout(connectTimeoutRef.current);
             connectTimeoutRef.current = null;
             connectionActiveRef.current = true;
+            realtimeInputEnabledRef.current = true;
+            realtimeSendFailureHandledRef.current = false;
             connectionStartInFlightRef.current = false;
             setIsConnected(true);
             setIsConnecting(false);
@@ -706,9 +714,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
               awaitingResponseRef.current = true;
               responseWatchStartedAtRef.current = Date.now();
               sessionPromise.then((session) => {
-                try {
-                  session.sendRealtimeInput({ text: 'The audio connection is ready. Begin the new session now and greet me as instructed.' });
-                } catch(e) { console.error('Failed to trigger initial prompt', e); }
+                sendRealtimeInputSafely(session, {
+                  text: 'The audio connection is ready. Begin the new session now and greet me as instructed.'
+                });
               });
             } else if (
               recoverTimedOutTurnRef.current ||
@@ -721,17 +729,13 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
               awaitingResponseRef.current = true;
               responseWatchStartedAtRef.current = Date.now();
               sessionPromise.then((session) => {
-                try {
-                  session.sendRealtimeInput({
-                    text: !connectionUsedResumptionRef.current
-                      ? 'The voice connection was restored without conversation state. Briefly ask me to repeat my last sentence. Do not greet again.'
-                      : timedOutTurn
-                        ? 'Continue now by answering my latest spoken message. Do not greet again.'
-                        : 'Continue naturally from where the conversation paused. If there is no unanswered message, briefly ask me to continue. Do not greet again.'
-                  });
-                } catch (error) {
-                  console.warn('Failed to trigger recovered live response:', error);
-                }
+                sendRealtimeInputSafely(session, {
+                  text: !connectionUsedResumptionRef.current
+                    ? 'The voice connection was restored without conversation state. Briefly ask me to repeat my last sentence. Do not greet again.'
+                    : timedOutTurn
+                      ? 'Continue now by answering my latest spoken message. Do not greet again.'
+                      : 'Continue naturally from where the conversation paused. If there is no unanswered message, briefly ask me to continue. Do not greet again.'
+                });
               });
             }
 
@@ -739,16 +743,34 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             inputSourceNodeRef.current = source;
             const actualInputRate = inputCtx.sampleRate;
             audioBatchOffsetRef.current = 0;
+            const sendRealtimeInputSafely = (
+              session: any,
+              payload: { text?: string; audio?: ReturnType<typeof createPcmBlob> }
+            ) => {
+              if (
+                sessionGeneration !== sessionGenerationRef.current ||
+                !connectionActiveRef.current ||
+                !realtimeInputEnabledRef.current
+              ) return false;
+              try {
+                session.sendRealtimeInput(payload);
+                return true;
+              } catch (error) {
+                realtimeInputEnabledRef.current = false;
+                if (!realtimeSendFailureHandledRef.current) {
+                  realtimeSendFailureHandledRef.current = true;
+                  const kind = classifyLiveFailure(error);
+                  noteLiveDiagnostic(`LIVE_SEND_${kind.toUpperCase()}`);
+                  scheduleReconnectRef.current(250, kind);
+                }
+                return false;
+              }
+            };
             const sendPcmBatch = (audioData: Float32Array) => {
               if (audioData.length === 0) return;
               const pcmBlob = createPcmBlob(audioData);
               sessionPromise.then((session) => {
-                if (sessionGeneration !== sessionGenerationRef.current || !connectionActiveRef.current) return;
-                try {
-                  session.sendRealtimeInput({ audio: pcmBlob });
-                } catch (error) {
-                  console.warn('Unable to send live audio batch:', error);
-                }
+                sendRealtimeInputSafely(session, { audio: pcmBlob });
               }).catch(error => console.warn('Live audio session unavailable:', error));
             };
 
@@ -874,6 +896,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
             }
 
             if (msg.goAway) {
+              // The server is retiring this socket. Stop microphone packets
+              // immediately; continuing to send causes a CLOSED-state storm.
+              realtimeInputEnabledRef.current = false;
               goAwayPendingRef.current = true;
               goAwayTurnCompleteRef.current = false;
               noteLiveDiagnostic('LIVE_GO_AWAY');
@@ -896,12 +921,14 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           },
           onclose: (event) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
+            realtimeInputEnabledRef.current = false;
             const kind = classifyLiveFailure(event);
             noteLiveDiagnostic(`LIVE_CLOSED_${kind.toUpperCase()}`, { closeCode: event.code || 0 });
             scheduleReconnect(1000, kind);
           },
           onerror: (err) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
+            realtimeInputEnabledRef.current = false;
             console.error("Live Error:", err);
             const kind = classifyLiveFailure(err);
             noteLiveDiagnostic(`LIVE_ERROR_${kind.toUpperCase()}`);
@@ -947,7 +974,9 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   };
 
   const scheduleReconnect = (delayMs: number, kind: LiveFailureKind = 'unknown') => {
-    if (reconnectInFlightRef.current || userStoppedRef.current || !isMountedRef.current) return;
+    if (userStoppedRef.current || !isMountedRef.current) return;
+    realtimeInputEnabledRef.current = false;
+    if (reconnectInFlightRef.current) return;
     if (kind === 'timeout' && hasGreetedRef.current) recoverTimedOutTurnRef.current = true;
     if (
       hasGreetedRef.current &&
@@ -1047,6 +1076,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     goAwayPendingRef.current = false;
     goAwayTurnCompleteRef.current = false;
     audioBatchOffsetRef.current = 0;
+    realtimeInputEnabledRef.current = false;
+    realtimeSendFailureHandledRef.current = false;
     speechActiveRef.current = false;
     awaitingResponseRef.current = false;
     responseWatchStartedAtRef.current = 0;

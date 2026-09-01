@@ -1,8 +1,7 @@
 
-import { GoogleGenAI, Type, Modality, ThinkingLevel } from "@google/genai";
+import { GoogleGenAI, Type, Modality } from "@google/genai";
 import { ReadingContent, GrammarResult, AssessmentQuestion, AssessmentResult, QuizQuestion } from "../types";
 import { getGeminiApiKey, getGeminiApiKeys, getAppLanguage, syncToFirestore } from "./storage";
-import { normalizePronunciationAnalysis } from "./pronunciationAnalysis";
 import {
     AI_ROTATION_POLICY_STORAGE_KEY,
     AI_ROTATION_POLICY_VERSION,
@@ -1723,37 +1722,46 @@ export const analyzeReadingPronunciationAudio = async (
     mime: string,
     options: { abortSignal?: AbortSignal } = {}
 ) => {
-    const MODEL = MODEL_CASCADE_AUDIO_ANALYSIS;
+    // Reading deliberately uses the long-standing quality-first evaluator
+    // that was used before the 29 August optimization experiments. Keep its
+    // prompt and response contract stable; optimize only transport/rotation.
+    const MODEL = MODEL_CASCADE_PRO;
     const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
 
     return callGeminiWithRotation(MODEL, async (ai, diagnostic) => {
         const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
 
-TARGET TEXT the learner should read aloud:
+TARGET TEXT the user should read aloud:
 "${text}"
 
 Total target words: ${targetWords.length}
 
 ${getLanguageInstruction()}
 
-Listen to the complete audio first, then compare only what is actually heard with the target text in order.
-
 EVALUATION RULES:
-1. Return exactly one wordAnalysis item for every target word, in the original target order.
-2. Mark "correct" only when that target word is audibly spoken and its pronunciation is recognizable. Accept a normal Indonesian accent.
-3. Mark "incorrect" only when the word is attempted but has a clearly significant pronunciation problem, such as a wrong vowel/consonant, dropped or added syllable, or seriously misplaced stress.
-4. Mark "missed" when the target word is skipped, the recording ends before it, or it cannot be heard reliably.
-5. Never mark a word correct merely because it appears in TARGET TEXT. The target is a comparison reference, not evidence that the word was spoken.
-6. Pauses and slow delivery are not pronunciation errors. If the learner stops partway through, every remaining target word must be "missed".
-7. If the audio is silent, empty, or unusable, mark every target word "missed".
-8. errorDetails must be a brief, specific correction for "incorrect" words and an empty string for "correct" or "missed" words.
-9. Keep feedback brief and mention the most useful pronunciation improvement.
+1. **Listen carefully** to every word the user says in the audio.
+2. **Compare each spoken word** against the corresponding word in the target text, in order.
+3. Mark each word with one of these statuses:
+   - "correct": The word is clearly spoken AND recognizable as the target word. Minor accent is OK.
+   - "incorrect": The word is spoken but mispronounced significantly — wrong vowel sounds, dropped/added syllables, wrong stress, or sounds like a different word.
+   - "missed": The word from the target text was completely skipped/not spoken at all.
+4. **Be honest and accurate**. Do NOT default to "correct" — actually evaluate each word. A score of 100% should only happen when pronunciation is genuinely good.
+5. **Check for these common errors**:
+   - Wrong vowel sounds (e.g., "ship" vs "sheep", "bed" vs "bad")
+   - Dropped consonants (e.g., "wor" instead of "world")
+   - Wrong word stress (e.g., "reCORD" vs "REcord")
+   - Added syllables (e.g., "es-top" instead of "stop")
+   - Substituted sounds (e.g., "th" → "d", "v" → "f")
+6. **Every word in the target text MUST appear** in your wordAnalysis — either as "correct", "incorrect", or "missed". The total number of items in wordAnalysis must equal ${targetWords.length}.
+7. If the audio is silent, empty, or unintelligible, mark ALL words as "missed".
+
+Provide specific, actionable feedback in the "feedback" field mentioning which words need work and how to improve.
 
 Return JSON:
 {
-  "feedback": "Brief, specific pronunciation guidance.",
+  "feedback": "string — specific tips mentioning problem words",
   "wordAnalysis": [
-    { "word": "the exact target word", "status": "correct" | "incorrect" | "missed", "errorDetails": "" }
+    { "word": "target_word", "status": "correct" | "incorrect" | "missed", "errorDetails": "string (required if incorrect, explain what was wrong)" }
   ]
 }`;
 
@@ -1785,62 +1793,39 @@ Return JSON:
                         }
                     },
                     required: ["feedback", "wordAnalysis"]
-                },
-                thinkingConfig: { thinkingLevel: ThinkingLevel.LOW },
-                maxOutputTokens: Math.min(8192, Math.max(2048, targetWords.length * 18))
+                }
             }
         });
 
-        const parsed = safeParseJSON(response.text, null);
-        const normalized = normalizePronunciationAnalysis(targetWords, parsed);
-        if (!normalized) {
-            const payload = parsed && typeof parsed === 'object' ? parsed as Record<string, unknown> : null;
-            const verboseItems = Array.isArray(payload?.wordAnalysis) ? payload.wordAnalysis : null;
-            const compactItems = Array.isArray(payload?.statuses) ? payload.statuses : null;
-            const statusMap = typeof payload?.statusMap === 'string' ? payload.statusMap : null;
-            const reason = !response.text
-                ? 'EMPTY_RESPONSE'
-                : !parsed
-                    ? 'INVALID_JSON'
-                    : verboseItems
-                        ? 'WORD_ANALYSIS_INVALID'
-                        : compactItems
-                            ? 'STATUSES_INVALID'
-                            : statusMap
-                                ? 'STATUS_MAP_INVALID'
-                                : 'ANALYSIS_FIELDS_MISSING';
+        const result = safeParseJSON(response.text, null);
+        if (!result || !Array.isArray(result.wordAnalysis)) {
             recordAiDiagnostic({
                 ...diagnostic,
                 phase: 'reading_result_rejected',
                 level: 'error',
-                code: reason,
+                code: !response.text ? 'EMPTY_RESPONSE' : !result ? 'INVALID_JSON' : 'WORD_ANALYSIS_MISSING',
                 details: {
                     expectedWords: targetWords.length,
-                    receivedWords: verboseItems?.length ?? compactItems?.length ?? statusMap?.replace(/\s+/g, '').length ?? 0,
+                    receivedWords: 0,
                     responseCharacters: response.text?.length || 0
                 }
             });
             throw new Error("AI_INVALID_RESPONSE");
         }
-        const statusCounts = normalized.wordAnalysis.reduce((counts, item) => {
-            counts[item.status] += 1;
-            return counts;
-        }, { correct: 0, incorrect: 0, missed: 0 });
         recordAiDiagnostic({
             ...diagnostic,
             phase: 'reading_result_accepted',
             details: {
                 expectedWords: targetWords.length,
-                correct: statusCounts.correct,
-                incorrect: statusCounts.incorrect,
-                missed: statusCounts.missed,
+                receivedWords: result.wordAnalysis.length,
                 responseCharacters: response.text?.length || 0
             }
         });
-        return normalized;
+        return result;
     }, {
-        maxTransientErrorsPerModel: 1,
-        maxTotalAttempts: 2,
+        // No automatic analysis timeout: the stable historical flow allowed
+        // the active audio inference to finish. Only an explicit user cancel
+        // aborts the request.
         abortSignal: options.abortSignal,
         workload: 'analisis pronunciation Reading'
     });

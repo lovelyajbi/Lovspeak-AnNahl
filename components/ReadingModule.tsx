@@ -911,24 +911,56 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       });
 
       if (analysisRunRef.current !== runId) return;
-      if (!result || !Array.isArray(result.wordAnalysis) || result.wordAnalysis.length !== effectiveWordList.length) {
+      if (!result || !Array.isArray(result.wordAnalysis)) {
         throw new Error('AI_INVALID_RESPONSE');
       }
 
-      let correctCount = 0;
-      let incorrectCount = 0;
-      let missedCount = 0;
-      const newWordList = effectiveWordList.map((word, index) => {
-        const aiData = result.wordAnalysis[index];
-        if (aiData.status === 'correct') correctCount++;
-        else if (aiData.status === 'incorrect') incorrectCount++;
-        else missedCount++;
-        return {
-          ...word,
-          status: aiData.status === 'missed' ? 'unread' : aiData.status,
-          errorDetails: aiData.errorDetails || ''
-        } as WordAnalysis;
-      });
+      // Restore the proven pre-29-August matcher. AI output remains evaluated
+      // with the original quality prompt, while harmless punctuation or a
+      // slightly shorter returned array no longer discards the whole result.
+      const newWordList = effectiveWordList.map(word => ({
+        ...word,
+        status: 'unread',
+        errorDetails: ''
+      } as WordAnalysis));
+      const aiWords = result.wordAnalysis as Array<{
+        word?: unknown;
+        status?: unknown;
+        errorDetails?: unknown;
+      }>;
+      let aiIndex = 0;
+      let originalIndex = 0;
+
+      while (aiIndex < aiWords.length && originalIndex < newWordList.length) {
+        const aiData = aiWords[aiIndex];
+        const aiStatus = typeof aiData?.status === 'string' ? aiData.status.toLowerCase() : '';
+        const aiClean = String(aiData?.word || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+        if (!aiClean || !['correct', 'incorrect', 'missed'].includes(aiStatus)) {
+          aiIndex += 1;
+          continue;
+        }
+
+        let foundMatch = -1;
+        for (let offset = 0; offset < 5 && originalIndex + offset < newWordList.length; offset += 1) {
+          if (newWordList[originalIndex + offset].clean === aiClean) {
+            foundMatch = originalIndex + offset;
+            break;
+          }
+        }
+
+        if (foundMatch !== -1) {
+          newWordList[foundMatch].status = aiStatus === 'missed' ? 'unread' : aiStatus as WordAnalysis['status'];
+          newWordList[foundMatch].errorDetails = typeof aiData.errorDetails === 'string'
+            ? aiData.errorDetails
+            : '';
+          originalIndex = foundMatch + 1;
+        }
+        aiIndex += 1;
+      }
+
+      const correctCount = newWordList.filter(word => word.status === 'correct').length;
+      const incorrectCount = newWordList.filter(word => word.status === 'incorrect').length;
+      const missedCount = newWordList.length - correctCount - incorrectCount;
       setWordList(newWordList);
 
             const totalOriginalWords = newWordList.length;
