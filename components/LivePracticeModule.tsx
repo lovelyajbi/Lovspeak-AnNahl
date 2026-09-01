@@ -984,7 +984,20 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     ) recoverDisconnectedTurnRef.current = true;
 
     const liveKeys = getLiveKeys();
-    let shouldRotateKey = kind === 'quota' || kind === 'auth' || kind === 'access';
+    // Browsers frequently hide the server's close reason for a rejected Live
+    // handshake and expose it only as a generic WebSocket/network close. If a
+    // key has not produced even the opening audio, retrying that same key traps
+    // the UI in an endless "Reconnecting" loop. Treat every non-microphone
+    // failure before the first audio response as a failure of this key for the
+    // current call, then try the next saved project key.
+    const openingHandshakeFailed = !hasGreetedRef.current &&
+      liveKeys.length > 1 &&
+      kind !== 'audio' &&
+      kind !== 'goaway';
+    let shouldRotateKey = kind === 'quota' ||
+      kind === 'auth' ||
+      kind === 'access' ||
+      openingHandshakeFailed;
     if (kind === 'timeout') {
       const timeoutCount = (keyTimeoutCountsRef.current.get(activeKeyIndexRef.current) || 0) + 1;
       keyTimeoutCountsRef.current.set(activeKeyIndexRef.current, timeoutCount);
