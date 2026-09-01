@@ -2,11 +2,7 @@
 import { GoogleGenAI, Type, Modality, ThinkingLevel } from "@google/genai";
 import { ReadingContent, GrammarResult, AssessmentQuestion, AssessmentResult, QuizQuestion } from "../types";
 import { getGeminiApiKey, getGeminiApiKeys, getAppLanguage, syncToFirestore } from "./storage";
-import {
-    alignReadingAudioToTarget,
-    normalizePronunciationAnalysis,
-    normalizeReadingAudioTranscription
-} from "./pronunciationAnalysis";
+import { normalizePronunciationAnalysis } from "./pronunciationAnalysis";
 import {
     AI_ROTATION_POLICY_STORAGE_KEY,
     AI_ROTATION_POLICY_VERSION,
@@ -1635,34 +1631,36 @@ export const analyzeReadingPronunciationAudio = async (
 ) => {
     const MODEL = MODEL_CASCADE_AUDIO_ANALYSIS;
     const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
-    const estimatedAudioSeconds = Math.max(1, Math.round((base64.length * 0.75) / 6000));
-    const isShortRecording = targetWords.length <= 90 && estimatedAudioSeconds <= 90;
-    const isLongRecording = targetWords.length > 180 || estimatedAudioSeconds > 190 || base64.length > 2_500_000;
-    const attemptTimeoutMs = isLongRecording ? 32000 : (isShortRecording ? 20000 : 24000);
-    const totalTimeoutMs = isLongRecording ? 75000 : (isShortRecording ? 48000 : 60000);
 
     return callGeminiWithRotation(MODEL, async (ai) => {
-        // Deliberately do not include the target passage in this request. The
-        // transcript must come from audio evidence, not from completing words
-        // that the learner never said. Alignment against the target is local.
-        const prompt = `Transcribe this English learner recording from audio evidence only.
+        const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
 
-IMPORTANT:
-- The expected passage is intentionally NOT provided. Never guess or complete it.
-- Return every word actually heard, in spoken order, including repetitions.
-- spokenWords must contain one spoken token per array item, with no punctuation-only items.
-- Do not translate, paraphrase, silently correct grammar, or add omitted words.
-- Accept a normal Indonesian accent as clear.
-- Add a pronunciationIssues entry only when a spoken token has a clearly audible pronunciation problem (wrong vowel/consonant, dropped or added syllable, or seriously misplaced stress).
-- A pause or slow delivery is not a pronunciation error.
-- Use audioStatus "silence" only when there is no intelligible speech.
-- Use audioStatus "unusable" only when noise/corruption prevents reliable transcription.
+TARGET TEXT the learner should read aloud:
+"${text}"
+
+Total target words: ${targetWords.length}
+
+${getLanguageInstruction()}
+
+Listen to the complete audio first, then compare only what is actually heard with the target text in order.
+
+EVALUATION RULES:
+1. Return exactly one wordAnalysis item for every target word, in the original target order.
+2. Mark "correct" only when that target word is audibly spoken and its pronunciation is recognizable. Accept a normal Indonesian accent.
+3. Mark "incorrect" only when the word is attempted but has a clearly significant pronunciation problem, such as a wrong vowel/consonant, dropped or added syllable, or seriously misplaced stress.
+4. Mark "missed" when the target word is skipped, the recording ends before it, or it cannot be heard reliably.
+5. Never mark a word correct merely because it appears in TARGET TEXT. The target is a comparison reference, not evidence that the word was spoken.
+6. Pauses and slow delivery are not pronunciation errors. If the learner stops partway through, every remaining target word must be "missed".
+7. If the audio is silent, empty, or unusable, mark every target word "missed".
+8. errorDetails must be a brief, specific correction for "incorrect" words and an empty string for "correct" or "missed" words.
+9. Keep feedback brief and mention the most useful pronunciation improvement.
 
 Return JSON:
 {
-  "audioStatus": "speech" | "silence" | "unusable",
-  "spokenWords": ["every", "word", "actually", "heard"],
-  "pronunciationIssues": [{ "spokenIndex": 2, "details": "Brief, specific pronunciation correction." }]
+  "feedback": "Brief, specific pronunciation guidance.",
+  "wordAnalysis": [
+    { "word": "the exact target word", "status": "correct" | "incorrect" | "missed", "errorDetails": "" }
+  ]
 }`;
 
         const response = await ai.models.generateContent({
@@ -1678,54 +1676,40 @@ Return JSON:
                 responseSchema: {
                     type: Type.OBJECT,
                     properties: {
-                        audioStatus: { type: Type.STRING },
-                        spokenWords: {
-                            type: Type.ARRAY,
-                            items: { type: Type.STRING }
-                        },
-                        pronunciationIssues: {
+                        feedback: { type: Type.STRING },
+                        wordAnalysis: {
                             type: Type.ARRAY,
                             items: {
                                 type: Type.OBJECT,
                                 properties: {
-                                    spokenIndex: { type: Type.INTEGER },
-                                    details: { type: Type.STRING }
+                                    word: { type: Type.STRING },
+                                    status: { type: Type.STRING },
+                                    errorDetails: { type: Type.STRING }
                                 },
-                                required: ["spokenIndex", "details"]
+                                required: ["word", "status", "errorDetails"]
                             }
                         }
                     },
-                    required: ["audioStatus", "spokenWords", "pronunciationIssues"]
+                    required: ["feedback", "wordAnalysis"]
                 },
-                temperature: 0,
-                maxOutputTokens: Math.min(6144, Math.max(1536, targetWords.length * 12))
+                thinkingConfig: { thinkingLevel: ThinkingLevel.LOW },
+                maxOutputTokens: Math.min(8192, Math.max(2048, targetWords.length * 18))
             }
         });
 
-        const transcription = normalizeReadingAudioTranscription(safeParseJSON(response.text, null));
-        if (!transcription) throw new Error("AI_INVALID_RESPONSE");
-        if (transcription.audioStatus !== 'speech') throw new Error("AUDIO_NOT_RECOGNIZED");
-        // Reject obviously malformed expansion without turning recording length
-        // into a score. A retry is safer than displaying an unverifiable result.
-        if (transcription.spokenWords.length > Math.max(targetWords.length * 2, targetWords.length + 80)) {
-            throw new Error("AI_INVALID_RESPONSE");
-        }
-        const aligned = alignReadingAudioToTarget(targetWords, transcription);
-        if (!aligned) throw new Error("AI_INVALID_RESPONSE");
-        return aligned;
+        const normalized = normalizePronunciationAnalysis(targetWords, safeParseJSON(response.text, null));
+        if (!normalized) throw new Error("AI_INVALID_RESPONSE");
+        return normalized;
     }, {
-        attemptTimeoutMs,
-        totalTimeoutMs,
-        maxTimeoutsPerModel: 2,
-        maxTransientErrorsPerModel: 2,
-        maxTotalAttempts: 4,
+        maxTransientErrorsPerModel: 1,
+        maxTotalAttempts: 2,
         abortSignal: options.abortSignal,
         workload: 'analisis pronunciation Reading'
     });
 };
 
 // Shadowing keeps its established verbose contract and quality-first cascade.
-// Reading uses evidence-first transcription plus deterministic local alignment.
+// Reading uses a separate direct audio-versus-target analysis above.
 export const analyzePronunciationAudio = async (text: string, base64: string, mime: string) => {
     const MODEL = MODEL_CASCADE_PRO;
     return callGeminiWithRotation(MODEL, async (ai) => {

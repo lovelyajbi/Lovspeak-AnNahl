@@ -887,13 +887,13 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
       const targetText = effectiveWordList.map(w => w.word).join(' ');
       if (!targetText.trim()) throw new Error('REFERENCE_TEXT_EMPTY');
 
-      let watchdogId: number | undefined;
-      const watchdog = new Promise<never>((_, reject) => {
-        watchdogId = window.setTimeout(() => {
-          reject(new Error('ANALYSIS_WATCHDOG_TIMEOUT'));
-          analysisController.abort();
-        }, 82000);
-      });
+      // Slow audio inference is not a failure. Keep the active request alive
+      // and only reassure the learner that analysis is still progressing.
+      const slowNoticeId = window.setTimeout(() => {
+        if (analysisRunRef.current === runId) {
+          setStatusMsg('AI is still analyzing your recording...');
+        }
+      }, 45000);
       const cancellation = new Promise<never>((_, reject) => {
         analysisCancelRef.current = () => {
           reject(new Error('ANALYSIS_CANCELLED'));
@@ -904,10 +904,9 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
         analyzeReadingPronunciationAudio(targetText, base64, blob.type || 'audio/webm', {
           abortSignal: analysisController.signal
         }),
-        watchdog,
         cancellation
       ]).finally(() => {
-        if (watchdogId !== undefined) window.clearTimeout(watchdogId);
+        window.clearTimeout(slowNoticeId);
         if (analysisRunRef.current === runId) analysisCancelRef.current = null;
       });
 
@@ -1934,12 +1933,6 @@ const ReadingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, onNa
                   <div className="bg-white dark:bg-gray-800 p-4 md:p-5 rounded-2xl border border-lovelya-100 dark:border-lovelya-800/60 shadow-sm">
                     <span className="text-[9px] md:text-[10px] font-black text-lovelya-600 dark:text-lovelya-400 uppercase tracking-[0.16em] block mb-2">Mastery Feedback</span>
                     <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base leading-relaxed font-medium">{analysisResult.feedback}</p>
-                    {analysisResult.heardTranscript && (
-                      <details className="mt-3 rounded-xl border border-gray-100 dark:border-gray-700 bg-gray-50/80 dark:bg-gray-900/30 px-3 py-2.5">
-                        <summary className="cursor-pointer text-[10px] md:text-xs font-black uppercase tracking-wider text-gray-500 dark:text-gray-400">Words detected from your recording</summary>
-                        <p className="mt-2 text-xs md:text-sm leading-relaxed text-gray-600 dark:text-gray-300">{analysisResult.heardTranscript}</p>
-                      </details>
-                    )}
                   </div>
                 </div>
 
