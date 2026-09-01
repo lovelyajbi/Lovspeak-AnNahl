@@ -1,6 +1,8 @@
 export type AiCooldownReason = 'quota' | 'timeout' | 'network' | 'server' | 'permission' | 'invalid';
 
-export const AI_ROTATION_POLICY_VERSION = 3;
+// Version 4 clears cooldowns produced by the previous policy, which could
+// incorrectly treat a generic 400 request error as six-hour model downtime.
+export const AI_ROTATION_POLICY_VERSION = 4;
 export const AI_ROTATION_POLICY_STORAGE_KEY = 'lovelya_api_rotation_policy_version';
 
 const MINUTE_MS = 60 * 1000;

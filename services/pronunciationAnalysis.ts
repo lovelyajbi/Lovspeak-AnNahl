@@ -106,13 +106,15 @@ export const normalizePronunciationAnalysis = (
     return buildCompactResult(payload.statuses.map(normalizeStatus));
   }
 
-  // Backward-compatible parser if a model returns the previous verbose shape.
+  // Direct Reading analysis returns one item per target position. The target
+  // word is already known locally, so formatting differences in the redundant
+  // AI `word` field must not discard an otherwise complete analysis.
   if (Array.isArray(payload.wordAnalysis) && payload.wordAnalysis.length === targetWords.length) {
     const normalizedItems = payload.wordAnalysis.map((item, index) => {
       if (!item || typeof item !== 'object') return null;
       const wordItem = item as Record<string, unknown>;
       const status = normalizeStatus(wordItem.status);
-      if (!status || cleanWord(wordItem.word) !== cleanWord(targetWords[index])) return null;
+      if (!status) return null;
       return {
         word: targetWords[index],
         status,

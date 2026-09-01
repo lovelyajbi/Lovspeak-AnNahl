@@ -3,6 +3,7 @@ import { GoogleGenAI, Chat } from "@google/genai";
 import ReactMarkdown from 'react-markdown';
 import { getUserProfile, saveVocab, getCustomCategories, saveCustomCategory, CustomCategory, getGeminiApiKeys } from '../services/storage';
 import { transcribeAudio, analyzePronunciationAudio, translateText, MODEL_CASCADE_CHAT } from '../services/gemini';
+import { createAiDiagnosticRequestId, recordAiDiagnostic } from '../services/aiDiagnostics';
 import { ModuleProps, AppView } from '../types';
 import { motion, AnimatePresence } from 'motion/react';
 import { audioService } from '../services/audioService';
@@ -243,6 +244,8 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
     setIsTyping(true);
 
     const aiMsgId = `ai-${Date.now()}`;
+    const diagnosticRequestId = createAiDiagnosticRequestId('AI Tutor Chat');
+    const diagnosticStartedAt = Date.now();
     const aiMsg: Message = { id: aiMsgId, role: 'model', text: '', timestamp: new Date() };
     setMessages(prev => [...prev, aiMsg]);
 
@@ -277,6 +280,15 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
 
       for (let index = 0; index < candidates.length; index++) {
         const candidate = candidates[index];
+        const attemptStartedAt = Date.now();
+        recordAiDiagnostic({
+          requestId: diagnosticRequestId,
+          module: 'AI Tutor Chat',
+          phase: 'attempt_started',
+          model: candidate.model,
+          keySlot: candidate.keyIndex + 1,
+          attempt: index + 1,
+        });
         try {
           if (index > 0 || !chatSessionRef.current) {
             createChatSession(candidate.model, candidate.keyIndex, historyBeforeCurrentMessage);
@@ -305,9 +317,30 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
           }
 
           hasSuccessfulStream = true;
+          recordAiDiagnostic({
+            requestId: diagnosticRequestId,
+            module: 'AI Tutor Chat',
+            phase: 'attempt_succeeded',
+            model: candidate.model,
+            keySlot: candidate.keyIndex + 1,
+            attempt: index + 1,
+            durationMs: Date.now() - attemptStartedAt,
+          });
           break;
         } catch (streamError) {
           lastError = streamError;
+          recordAiDiagnostic({
+            requestId: diagnosticRequestId,
+            module: 'AI Tutor Chat',
+            phase: 'attempt_failed',
+            level: 'error',
+            model: candidate.model,
+            keySlot: candidate.keyIndex + 1,
+            attempt: index + 1,
+            durationMs: Date.now() - attemptStartedAt,
+            code: (streamError as any)?.message || 'AI_CHAT_ATTEMPT_FAILED',
+            message: (streamError as any)?.message || String(streamError),
+          });
           console.warn(`[AI-CHAT-ROTATION] ${candidate.model} with Key #${candidate.keyIndex + 1} failed:`, streamError);
 
           if (fullText.trim() && !isQuotaError(streamError) && !isInvalidKeyError(streamError) && !isPermissionError(streamError) && !isModelFallbackError(streamError)) {
@@ -321,6 +354,14 @@ const ChatModule: React.FC<ModuleProps> = ({ onComplete, onNavigate }) => {
       }
 
       if (!hasSuccessfulStream) {
+        recordAiDiagnostic({
+          requestId: diagnosticRequestId,
+          module: 'AI Tutor Chat',
+          phase: 'request_failed',
+          level: 'error',
+          durationMs: Date.now() - diagnosticStartedAt,
+          code: lastError?.message || 'AI_CHAT_FAILED',
+        });
         if (isQuotaError(lastError)) window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached'));
         if (isInvalidKeyError(lastError)) window.dispatchEvent(new CustomEvent('lovelya_api_key_invalid'));
         throw lastError || new Error('AI_CHAT_FAILED');

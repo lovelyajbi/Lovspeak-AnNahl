@@ -5,6 +5,7 @@ import { decodeAudioData, createPcmBlob, base64ToUint8Array, pcmToWav, downsampl
 import { ModuleProps, AppView } from '../types';
 import { logActivity, getGeminiApiKeys, getUserProfile } from '../services/storage';
 import { generateTTSAudio, GEMINI_MODELS } from '../services/gemini';
+import { createAiDiagnosticRequestId, recordAiDiagnostic } from '../services/aiDiagnostics';
 import { motion, AnimatePresence } from 'motion/react';
 
 const STRICT_FILTER = `
@@ -39,6 +40,7 @@ const LIVE_RESPONSE_TIMEOUT_MS = 35000;
 const LIVE_STABLE_CONNECTION_MS = 20000;
 const LIVE_OUTPUT_ECHO_TAIL_MS = 300;
 const LIVE_DIAGNOSTICS_KEY = 'lovspeak_live_diagnostics';
+const LIVE_DIAGNOSTIC_REQUEST_ID = createAiDiagnosticRequestId('Live Speaking');
 
 type LiveFailureKind = 'network' | 'quota' | 'auth' | 'access' | 'server' | 'timeout' | 'audio' | 'goaway' | 'unknown';
 
@@ -79,6 +81,20 @@ const recordLiveDiagnostic = (code: string, details: Record<string, string | num
     const safeEntries = Array.isArray(existing) ? existing.slice(-19) : [];
     safeEntries.push({ at: new Date().toISOString(), code, ...details });
     localStorage.setItem(LIVE_DIAGNOSTICS_KEY, JSON.stringify(safeEntries));
+    const model = typeof details.model === 'string' ? details.model : LIVE_MODEL;
+    const keySlot = typeof details.keySlot === 'number' ? details.keySlot : undefined;
+    const attempt = typeof details.attempt === 'number' ? details.attempt : undefined;
+    recordAiDiagnostic({
+      requestId: LIVE_DIAGNOSTIC_REQUEST_ID,
+      module: 'Live Speaking',
+      phase: code,
+      level: /ERROR|REJECTED|EXHAUSTED|ALL_KEYS/.test(code) ? 'error' : /TIMEOUT|ROTATED|CLOSED|GO_AWAY/.test(code) ? 'warn' : 'info',
+      model,
+      keySlot,
+      attempt,
+      code,
+      details,
+    });
   } catch {
     // Diagnostics must never affect the learning session.
   }

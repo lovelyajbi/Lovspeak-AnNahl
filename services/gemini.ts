@@ -13,6 +13,7 @@ import {
     makeKeyModelCooldownId,
     QUOTA_DAILY_COOLDOWN_MS
 } from "./aiRotationPolicy";
+import { createAiDiagnosticRequestId, recordAiDiagnostic } from "./aiDiagnostics";
 
 declare global {
     interface Window {
@@ -311,6 +312,15 @@ interface RotationOptions {
     workload?: string;
 }
 
+interface AiAttemptDiagnosticContext {
+    requestId: string;
+    module: string;
+    model: string;
+    keySlot: number;
+    keyId: string;
+    attempt: number;
+}
+
 interface HealthyKeyPreference {
     keyIndex: number;
     consecutiveUses: number;
@@ -341,12 +351,18 @@ const ensureRotationPolicyVersion = () => {
 // Wrapper for automatic rotation on quota errors and model fallbacks
 async function callGeminiWithRotation<T>(
     modelName: string | string[],
-    fn: (client: ReturnType<typeof getAiClient>) => Promise<T>,
+    fn: (client: ReturnType<typeof getAiClient>, diagnostic: AiAttemptDiagnosticContext) => Promise<T>,
     options: RotationOptions = {}
 ): Promise<T> {
     ensureRotationPolicyVersion();
+    const module = options.workload || 'AI';
+    const requestId = createAiDiagnosticRequestId(module);
+    const requestStartedAt = Date.now();
     const keys = getGeminiApiKeys();
-    if (!keys || keys.length === 0) throw new Error("API_KEY_MISSING");
+    if (!keys || keys.length === 0) {
+        recordAiDiagnostic({ requestId, module, phase: 'request_failed', level: 'error', code: 'API_KEY_MISSING' });
+        throw new Error("API_KEY_MISSING");
+    }
     const keyFingerprints = await Promise.all(keys.map(fingerprintApiKey));
     const keySetSignature = keyFingerprints.join('|');
     if (lastKeySetSignature && lastKeySetSignature !== keySetSignature) {
@@ -373,6 +389,13 @@ async function callGeminiWithRotation<T>(
         else if (modelName === GEMINI_MODELS.TEXT_PRO) models = MODEL_CASCADE_PRO;
         else if (modelName === GEMINI_MODELS.TTS_PRIMARY) models = MODEL_CASCADE_TTS;
     }
+    recordAiDiagnostic({
+        requestId,
+        module,
+        phase: 'request_started',
+        details: { modelCount: models.length, keyCount: keys.length, models }
+    });
+    let diagnosticAttempt = 0;
 
     const executeRotationForModel = async (targetModel: string): Promise<T> => {
         const recentHealthy = healthyKeyPreferences[targetModel];
@@ -397,6 +420,16 @@ async function callGeminiWithRotation<T>(
 
             // Skip this specific key for this specific model if it's on cooldown
             if (Date.now() < (getKeyModelCooldowns()[cooldownKey] || 0)) {
+                recordAiDiagnostic({
+                    requestId,
+                    module,
+                    phase: 'key_skipped_cooldown',
+                    level: 'warn',
+                    model: targetModel,
+                    keySlot: currentKeyIndex + 1,
+                    keyId: keyFingerprints[currentKeyIndex].slice(0, 10),
+                    details: { remainingMs: (getKeyModelCooldowns()[cooldownKey] || 0) - Date.now() }
+                });
                 attemptedKeys++;
                 continue;
             }
@@ -408,6 +441,20 @@ async function callGeminiWithRotation<T>(
             try {
                 const baseClient = getAiClient(targetModel, currentKeyIndex);
                 executedKeys += 1;
+                diagnosticAttempt += 1;
+                const attemptStartedAt = Date.now();
+                const diagnosticContext: AiAttemptDiagnosticContext = {
+                    requestId,
+                    module,
+                    model: targetModel,
+                    keySlot: currentKeyIndex + 1,
+                    keyId: keyFingerprints[currentKeyIndex].slice(0, 10),
+                    attempt: diagnosticAttempt
+                };
+                recordAiDiagnostic({
+                    ...diagnosticContext,
+                    phase: 'attempt_started'
+                });
 
                 // Proxy client to force the active model on inner calls
                 const proxyClient = {
@@ -442,10 +489,15 @@ async function callGeminiWithRotation<T>(
                     ? Math.max(1000, Math.min(options.attemptTimeoutMs, remainingMs))
                     : 0;
                 costlyAttempts += 1;
-                const request = fn(proxyClient);
+                const request = fn(proxyClient, diagnosticContext);
                 const result = attemptTimeoutMs > 0
                     ? await withTimeout(request, attemptTimeoutMs, 'AI_ATTEMPT', () => attemptController.abort())
                     : await request;
+                recordAiDiagnostic({
+                    ...diagnosticContext,
+                    phase: 'attempt_succeeded',
+                    durationMs: Date.now() - attemptStartedAt
+                });
                 // Spread consecutive calls across API projects to reduce RPM spikes.
                 modelKeyIndices[targetModel] = (currentKeyIndex + 1) % keys.length;
                 workloadKeyCursor = (currentKeyIndex + 1) % keys.length;
@@ -464,6 +516,19 @@ async function callGeminiWithRotation<T>(
                     delete healthyKeyPreferences[targetModel];
                 }
                 const errorMessage = e?.message || e?.toString() || '';
+                recordAiDiagnostic({
+                    requestId,
+                    module,
+                    phase: 'attempt_failed',
+                    level: 'error',
+                    model: targetModel,
+                    keySlot: currentKeyIndex + 1,
+                    keyId: keyFingerprints[currentKeyIndex].slice(0, 10),
+                    attempt: diagnosticAttempt,
+                    code: errorMessage || 'UNKNOWN_ERROR',
+                    message: errorMessage,
+                    details: { status: Number(e?.status || e?.code || 0) || 0 }
+                });
                 const nextKeyIndex = (currentKeyIndex + 1) % keys.length;
                 modelKeyIndices[targetModel] = nextKeyIndex;
                 workloadKeyCursor = nextKeyIndex;
@@ -569,6 +634,14 @@ async function callGeminiWithRotation<T>(
 
         // Skip models on quota cooldown or access-denied cooldown
         if (Date.now() < cooldownUntil || Date.now() < accessDeniedUntil) {
+            recordAiDiagnostic({
+                requestId,
+                module,
+                phase: 'model_skipped_cooldown',
+                level: 'warn',
+                model: currentModel,
+                details: { remainingMs: Math.max(cooldownUntil, accessDeniedUntil) - Date.now() }
+            });
             skippedModels += 1;
             continue;
         }
@@ -585,6 +658,7 @@ async function callGeminiWithRotation<T>(
             }
 
             if (e.message === "AI_INVALID_RESPONSE") {
+                recordAiDiagnostic({ requestId, module, phase: 'model_fallback', level: 'warn', model: currentModel, code: 'AI_INVALID_RESPONSE' });
                 console.warn(`[AI-FALLBACK] ${currentModel} returned malformed analysis. Trying the next model...`);
                 if (i === models.length - 1) throw e;
                 continue;
@@ -647,14 +721,25 @@ async function callGeminiWithRotation<T>(
                 continue;
             }
 
-            // 400/404: model not found, bad parameter, or deprecated — cooldown and try next model
+            // A 404/model-not-found error is model-specific and may be cooled
+            // down. A generic 400 is usually a request/schema problem; never
+            // poison that model for six hours because of a malformed request.
             const msg = e?.message || e?.toString() || '';
-            if (msg.includes("400") || msg.includes("404")) {
-                console.warn(`[AI-FALLBACK] ${currentModel} failed with ${msg.includes("404") ? '404' : '400'} error. Cooldown for 6 hours. Trying next...`, msg);
+            const diagnosticText = getErrorDiagnosticText(e);
+            const isModelNotFound = msg.includes("404") ||
+                (diagnosticText.includes('model') && diagnosticText.includes('not found'));
+            if (isModelNotFound) {
+                console.warn(`[AI-FALLBACK] ${currentModel} was not found. Cooldown for 6 hours. Trying next...`, msg);
                 setModelAccessDenied(currentModel, Date.now() + ACCESS_DENIED_COOLDOWN_MS);
                 if (i === models.length - 1) {
                     throw e;
                 }
+                continue;
+            }
+            if (msg.includes("400")) {
+                recordAiDiagnostic({ requestId, module, phase: 'bad_request', level: 'error', model: currentModel, code: 'HTTP_400', message: msg });
+                console.warn(`[AI-FALLBACK] ${currentModel} rejected the request format. Trying one compatible model without applying a cooldown...`);
+                if (i === models.length - 1) throw e;
                 continue;
             }
 
@@ -671,20 +756,29 @@ async function callGeminiWithRotation<T>(
         hasAllKeysLimitedForModel(quotaLimitedKeysByModel, model, keys.length)
     );
     if (fullyQuotaLimitedModel) {
+        recordAiDiagnostic({ requestId, module, phase: 'request_failed', level: 'error', model: fullyQuotaLimitedModel, code: 'API_LIMIT_TOTAL', durationMs: Date.now() - requestStartedAt });
         window.dispatchEvent(new CustomEvent('lovelya_api_limit_reached', {
             detail: { workload: options.workload || 'AI', model: fullyQuotaLimitedModel }
         }));
         throw new Error("API_LIMIT_TOTAL");
     }
     if (invalidKeys.size === keys.length) {
+        recordAiDiagnostic({ requestId, module, phase: 'request_failed', level: 'error', code: 'API_KEY_INVALID', durationMs: Date.now() - requestStartedAt });
         window.dispatchEvent(new CustomEvent('lovelya_api_key_invalid'));
         throw new Error("API_KEY_INVALID");
     }
     if (sawTransientFailure || Date.now() >= deadline || costlyAttempts >= maxCostlyAttempts) {
+        recordAiDiagnostic({ requestId, module, phase: 'request_failed', level: 'error', code: 'AI_REQUEST_TIMEOUT', durationMs: Date.now() - requestStartedAt });
         throw new Error("AI_REQUEST_TIMEOUT");
     }
-    if (sawAccessFailure) throw new Error("MODEL_ACCESS_DENIED");
-    if (skippedModels > 0) throw new Error("AI_MODELS_COOLDOWN");
+    if (sawAccessFailure) {
+        recordAiDiagnostic({ requestId, module, phase: 'request_failed', level: 'error', code: 'MODEL_ACCESS_DENIED', durationMs: Date.now() - requestStartedAt });
+        throw new Error("MODEL_ACCESS_DENIED");
+    }
+    if (skippedModels > 0) {
+        recordAiDiagnostic({ requestId, module, phase: 'request_failed', level: 'error', code: 'AI_MODELS_COOLDOWN', durationMs: Date.now() - requestStartedAt });
+        throw new Error("AI_MODELS_COOLDOWN");
+    }
     if (lastFailure) throw lastFailure;
     throw new Error("AI_UNAVAILABLE");
 }
@@ -1632,7 +1726,7 @@ export const analyzeReadingPronunciationAudio = async (
     const MODEL = MODEL_CASCADE_AUDIO_ANALYSIS;
     const targetWords = text.replace(/[.,!?;:'"()]/g, '').split(/\s+/).filter(w => w.length > 0);
 
-    return callGeminiWithRotation(MODEL, async (ai) => {
+    return callGeminiWithRotation(MODEL, async (ai, diagnostic) => {
         const prompt = `You are a strict but fair English pronunciation evaluator for language learners.
 
 TARGET TEXT the learner should read aloud:
@@ -1697,8 +1791,52 @@ Return JSON:
             }
         });
 
-        const normalized = normalizePronunciationAnalysis(targetWords, safeParseJSON(response.text, null));
-        if (!normalized) throw new Error("AI_INVALID_RESPONSE");
+        const parsed = safeParseJSON(response.text, null);
+        const normalized = normalizePronunciationAnalysis(targetWords, parsed);
+        if (!normalized) {
+            const payload = parsed && typeof parsed === 'object' ? parsed as Record<string, unknown> : null;
+            const verboseItems = Array.isArray(payload?.wordAnalysis) ? payload.wordAnalysis : null;
+            const compactItems = Array.isArray(payload?.statuses) ? payload.statuses : null;
+            const statusMap = typeof payload?.statusMap === 'string' ? payload.statusMap : null;
+            const reason = !response.text
+                ? 'EMPTY_RESPONSE'
+                : !parsed
+                    ? 'INVALID_JSON'
+                    : verboseItems
+                        ? 'WORD_ANALYSIS_INVALID'
+                        : compactItems
+                            ? 'STATUSES_INVALID'
+                            : statusMap
+                                ? 'STATUS_MAP_INVALID'
+                                : 'ANALYSIS_FIELDS_MISSING';
+            recordAiDiagnostic({
+                ...diagnostic,
+                phase: 'reading_result_rejected',
+                level: 'error',
+                code: reason,
+                details: {
+                    expectedWords: targetWords.length,
+                    receivedWords: verboseItems?.length ?? compactItems?.length ?? statusMap?.replace(/\s+/g, '').length ?? 0,
+                    responseCharacters: response.text?.length || 0
+                }
+            });
+            throw new Error("AI_INVALID_RESPONSE");
+        }
+        const statusCounts = normalized.wordAnalysis.reduce((counts, item) => {
+            counts[item.status] += 1;
+            return counts;
+        }, { correct: 0, incorrect: 0, missed: 0 });
+        recordAiDiagnostic({
+            ...diagnostic,
+            phase: 'reading_result_accepted',
+            details: {
+                expectedWords: targetWords.length,
+                correct: statusCounts.correct,
+                incorrect: statusCounts.incorrect,
+                missed: statusCounts.missed,
+                responseCharacters: response.text?.length || 0
+            }
+        });
         return normalized;
     }, {
         maxTransientErrorsPerModel: 1,
