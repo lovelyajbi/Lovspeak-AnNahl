@@ -1,8 +1,8 @@
 // CACHE VERSION: Bump this number to force all clients to update immediately
-const CACHE_NAME = 'lovspeak-cache-v23';
+const CACHE_NAME = 'lovspeak-cache-v24';
 
 // App version — must match APP_VERSION in App.tsx
-const APP_VERSION = '2.1.13';
+const APP_VERSION = '2.1.14';
 
 // Only cache truly static, rarely-changing assets
 const ASSETS_TO_CACHE = [
@@ -65,7 +65,9 @@ self.addEventListener('fetch', (event) => {
     url.pathname.endsWith('.css') ||
     url.pathname === '/'
   ) {
-    event.respondWith(fetch(event.request));
+    // Also bypass the browser HTTP cache. A hashed JS bundle is safe to cache,
+    // but stale HTML can keep pointing at an older bundle after deployment.
+    event.respondWith(fetch(event.request, { cache: 'no-store' }));
     return;
   }
 

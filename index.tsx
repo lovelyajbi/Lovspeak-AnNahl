@@ -75,8 +75,13 @@ window.addEventListener('load', () => {
 // 1. Mandatory Service Worker Registration (Must be very early)
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
-      .then(reg => console.log('SW Registered with scope:', reg.scope))
+    navigator.serviceWorker.register('/sw.js', { scope: '/', updateViaCache: 'none' })
+      .then(reg => {
+        console.log('SW Registered with scope:', reg.scope);
+        // Check on every app load instead of waiting for the browser's periodic
+        // service-worker update window.
+        void reg.update();
+      })
       .catch(err => console.log('SW Registration failed:', err));
   });
 }

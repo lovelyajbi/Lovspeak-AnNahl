@@ -43,7 +43,8 @@ import { DEFAULT_ASSIGNMENT_MIN_SCORE, getUserAssignments, getUserNotifications,
 import ErrorBoundary from './src/components/ErrorBoundary';
 
 // App version — must match APP_VERSION in sw.js. Bump on every deploy.
-const APP_VERSION = '2.1.13';
+const APP_VERSION = '2.1.14';
+console.info(`[LovSpeak] Running app version ${APP_VERSION}`);
 
 // Bump a module's release value whenever it receives a meaningful content or
 // experience update. Each badge is dismissed independently after that module
