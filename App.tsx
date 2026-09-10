@@ -142,8 +142,11 @@ const getPlanDayNumber = (startDate?: string, currentDate?: string) => {
 
 const isAssignmentPastDue = (assignment: UserAssignment) => Boolean(
   assignment.dueAt &&
-  assignment.status !== 'completed' &&
-  new Date(assignment.dueAt).getTime() < Date.now()
+  new Date(assignment.dueAt).getTime() < Date.now() &&
+  !(() => {
+    const retakeAt = (assignment as UserAssignment & { retakeAt?: string }).retakeAt;
+    return Boolean(retakeAt && new Date(retakeAt).getTime() > new Date(assignment.dueAt!).getTime());
+  })()
 );
 
 const App: React.FC = () => {

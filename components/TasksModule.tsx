@@ -15,10 +15,18 @@ interface TasksModuleProps {
 
 const dayjs = (iso?: string | null) => (iso ? new Date(iso) : null);
 
+const hasActiveRetake = (assignment: UserAssignment) => {
+  const retakeAt = (assignment as UserAssignment & { retakeAt?: string }).retakeAt;
+  return Boolean(retakeAt && Number.isFinite(new Date(retakeAt).getTime()) && new Date(retakeAt).getTime() > new Date(assignment.dueAt || 0).getTime());
+};
+
+const isDeadlinePassed = (assignment: UserAssignment) => Boolean(
+  assignment.dueAt && new Date(assignment.dueAt).getTime() < Date.now() && !hasActiveRetake(assignment)
+);
+
 const isExpired = (assignment: UserAssignment) => {
-  if (!assignment.dueAt) return false;
   if (assignment.status === 'completed') return false;
-  return new Date(assignment.dueAt).getTime() < Date.now();
+  return isDeadlinePassed(assignment);
 };
 
 const effectiveStatus = (assignment: UserAssignment): Filter => {
@@ -319,7 +327,7 @@ const TasksModule: React.FC<TasksModuleProps> = ({ user, assignments, onStartAss
                           <i className="fas fa-lock" /> Tenggat sudah lewat — hubungi admin untuk retake
                         </div>
                       )}
-                      {status === 'completed' && (
+                      {status === 'completed' && !isDeadlinePassed(assignment) && (
                         <button
                           type="button"
                           onClick={() => onStartAssignment(assignment)}
@@ -327,6 +335,11 @@ const TasksModule: React.FC<TasksModuleProps> = ({ user, assignments, onStartAss
                         >
                           <i className="fas fa-eye" /> Buka ulang
                         </button>
+                      )}
+                      {status === 'completed' && isDeadlinePassed(assignment) && (
+                        <div className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-500 dark:bg-gray-800 dark:text-gray-400">
+                          <i className="fas fa-lock" /> Tugas terkunci setelah tenggat
+                        </div>
                       )}
                     </div>
                   </div>
