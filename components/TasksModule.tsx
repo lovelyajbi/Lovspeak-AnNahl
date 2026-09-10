@@ -305,7 +305,7 @@ const TasksModule: React.FC<TasksModuleProps> = ({ user, assignments, onStartAss
                     {assignment.progressLabel && <p className="mt-3 text-[11px] text-gray-500">{assignment.progressLabel}</p>}
 
                     <div className="mt-4 flex flex-wrap gap-2">
-                      {status !== 'completed' && (
+                      {status !== 'completed' && status !== 'expired' && (
                         <button
                           type="button"
                           onClick={() => onStartAssignment(assignment)}
@@ -313,6 +313,11 @@ const TasksModule: React.FC<TasksModuleProps> = ({ user, assignments, onStartAss
                         >
                           <i className="fas fa-play" /> {status === 'needs_retake' ? 'Retake tugas' : 'Mulai kerjakan'}
                         </button>
+                      )}
+                      {status === 'expired' && (
+                        <div className="inline-flex items-center gap-2 rounded-xl bg-slate-100 px-4 py-2.5 text-xs font-black text-slate-500 dark:bg-gray-800 dark:text-gray-400">
+                          <i className="fas fa-lock" /> Tenggat sudah lewat — hubungi admin untuk retake
+                        </div>
                       )}
                       {status === 'completed' && (
                         <button

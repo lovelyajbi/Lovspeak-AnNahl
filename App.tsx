@@ -140,6 +140,12 @@ const getPlanDayNumber = (startDate?: string, currentDate?: string) => {
   return Math.max(1, Math.floor((current.getTime() - start.getTime()) / 86400000) + 1);
 };
 
+const isAssignmentPastDue = (assignment: UserAssignment) => Boolean(
+  assignment.dueAt &&
+  assignment.status !== 'completed' &&
+  new Date(assignment.dueAt).getTime() < Date.now()
+);
+
 const App: React.FC = () => {
   const { user, loading, isActive, hasApiKey, isSyncing = false, isAdmin, signout } = useAuth();
   const [view, setView] = useState<AppView>(AppView.HOME);
@@ -478,6 +484,10 @@ const App: React.FC = () => {
   };
 
   const handleStartAssignment = async (assignment: UserAssignment) => {
+    if (isAssignmentPastDue(assignment)) {
+      setToast({ message: 'Tenggat tugas ini sudah lewat. Hubungi admin jika perlu retake.', type: 'info' });
+      return;
+    }
     if (user) {
       await markUserAssignmentRead(user.uid, assignment.id).catch(() => undefined);
       setAssignedTasks(items => items.map(item => item.id === assignment.id ? { ...item, readAt: new Date().toISOString() } : item));
@@ -893,14 +903,14 @@ const App: React.FC = () => {
                               <div className="bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl p-4 md:p-5 lg:p-6 shadow-sm border-2 border-lovelya-300 dark:border-lovelya-700/70 ring-4 ring-lovelya-50 dark:ring-lovelya-900/20">
                                 <div className="flex items-center justify-between gap-3 mb-3 md:mb-4">
                                   <h3 className="font-black text-gray-800 dark:text-white text-sm md:text-base lg:text-lg flex items-center gap-2"><i className="fas fa-clipboard-check text-lovelya-500" /> Tugas dari Admin</h3>
-                                  <span className="text-[10px] md:text-xs font-black text-white bg-lovelya-500 px-2.5 py-1 rounded-full shrink-0">{assignedTasks.filter(item => item.status !== 'completed').length} aktif</span>
+                                  <span className="text-[10px] md:text-xs font-black text-white bg-lovelya-500 px-2.5 py-1 rounded-full shrink-0">{assignedTasks.filter(item => item.status !== 'completed' && !isAssignmentPastDue(item)).length} aktif</span>
                                 </div>
                                 <div className="space-y-2 md:space-y-2.5 max-h-[22rem] overflow-y-auto pr-0.5">
                                   {assignedTasks.map(assignment => (
-                                    <button key={assignment.id} type="button" onClick={() => void handleStartAssignment(assignment)} className="w-full text-left rounded-xl md:rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 p-3 md:p-3.5 hover:border-lovelya-300 hover:bg-lovelya-50/50 dark:hover:bg-gray-700 transition-colors">
-                                      <div className="flex items-start justify-between gap-3"><span className="font-black text-xs md:text-sm text-gray-800 dark:text-white">{assignment.title}</span><i className="fas fa-arrow-up-right-from-square text-lovelya-500 text-[11px] md:text-xs shrink-0 mt-0.5" /></div>
+                                    <button key={assignment.id} type="button" onClick={() => void handleStartAssignment(assignment)} className={`w-full text-left rounded-xl md:rounded-2xl border border-gray-100 dark:border-gray-700 bg-gray-50 dark:bg-gray-700/50 p-3 md:p-3.5 transition-colors ${isAssignmentPastDue(assignment) ? 'opacity-65 hover:border-rose-200' : 'hover:border-lovelya-300 hover:bg-lovelya-50/50 dark:hover:bg-gray-700'}`}>
+                                      <div className="flex items-start justify-between gap-3"><span className="font-black text-xs md:text-sm text-gray-800 dark:text-white">{assignment.title}</span><i className={`fas ${isAssignmentPastDue(assignment) ? 'fa-lock text-slate-400' : 'fa-arrow-up-right-from-square text-lovelya-500'} text-[11px] md:text-xs shrink-0 mt-0.5`} /></div>
                                       <div className="mt-1 text-[10px] md:text-xs text-gray-500 dark:text-gray-300">{assignment.target.packTitle || assignment.target.title || assignment.target.topic || assignment.target.theme || assignment.target.kind}</div>
-                                      <div className="mt-2 flex items-center gap-2 text-[9px] md:text-[10px] font-bold text-gray-400"><span>{assignment.status === 'completed' ? 'Selesai' : assignment.status === 'needs_retake' ? 'Perlu retake' : 'Belum selesai'}</span>{assignment.dueAt && <span>· Tenggat {new Date(assignment.dueAt).toLocaleDateString('id-ID')}</span>}</div>
+                                      <div className="mt-2 flex items-center gap-2 text-[9px] md:text-[10px] font-bold text-gray-400"><span>{assignment.status === 'completed' ? 'Selesai' : assignment.status === 'needs_retake' ? 'Perlu retake' : isAssignmentPastDue(assignment) ? 'Tenggat lewat' : 'Belum selesai'}</span>{assignment.dueAt && <span>· Tenggat {new Date(assignment.dueAt).toLocaleDateString('id-ID')}</span>}</div>
                                     </button>
                                   ))}
                                 </div>
