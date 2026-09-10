@@ -1,7 +1,9 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import type { DecodedIdToken, UserRecord } from 'firebase-admin/auth';
 import { FieldValue } from 'firebase-admin/firestore';
-import { getFirebaseAdmin } from './_firebaseAdmin';
+// Keep the explicit extension: Vercel runs this server function as native ESM
+// after compilation, where extensionless relative imports are not resolvable.
+import { getFirebaseAdmin } from './_firebaseAdmin.js';
 
 const ACCESS_FULL_MESSAGE = 'Akses LovSpeak saat ini sedang penuh. Silakan hubungi admin untuk informasi lebih lanjut.';
 const ACCESS_UNAVAILABLE_MESSAGE = 'Akses LovSpeak belum dapat diverifikasi. Silakan coba lagi beberapa saat kemudian.';
