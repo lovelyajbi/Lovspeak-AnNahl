@@ -102,27 +102,27 @@ const isTransientServiceError = (e: any): boolean => {
 export const GEMINI_MODELS = {
     LIVE: 'gemini-3.1-flash-live-preview',
     TTS_PRIMARY: 'gemini-3.1-flash-tts-preview',
-    TEXT_SMART: 'gemini-3.7-flash',
+    TEXT_SMART: 'gemini-3.8-flash',
+    TEXT_FLASH: 'gemini-3.7-flash',
     TEXT_LITE: 'gemini-3.5-flash-lite',
-    TEXT_PRO: 'gemini-3.1-pro-preview'
+    TEXT_PRO: 'gemini-3.1-pro-preview',
+    TEXT_FAST: 'gemini-3.1-flash-lite'
 } as const;
 
 export const MODEL_CASCADE_SMART = [
     GEMINI_MODELS.TEXT_SMART,
-    'gemini-3.6-flash',
-    'gemini-3.5-flash',
+    GEMINI_MODELS.TEXT_FLASH,
     GEMINI_MODELS.TEXT_PRO,
-    'gemini-3-flash-preview',
     GEMINI_MODELS.TEXT_LITE,
-    'gemini-3.1-flash-lite'
+    GEMINI_MODELS.TEXT_FAST
 ];
 
 export const MODEL_CASCADE_LITE = [
     GEMINI_MODELS.TEXT_LITE,
-    'gemini-3.1-flash-lite',
-    'gemini-3.5-flash',
-    'gemini-3.6-flash',
-    GEMINI_MODELS.TEXT_SMART
+    GEMINI_MODELS.TEXT_FAST,
+    GEMINI_MODELS.TEXT_SMART,
+    GEMINI_MODELS.TEXT_FLASH,
+    GEMINI_MODELS.TEXT_PRO
 ];
 
 export const MODEL_CASCADE_TTS = [
@@ -134,26 +134,27 @@ export const MODEL_CASCADE_TTS = [
 export const MODEL_CASCADE_PRO = [
     GEMINI_MODELS.TEXT_PRO,
     GEMINI_MODELS.TEXT_SMART,
-    'gemini-3.6-flash',
-    'gemini-3.5-flash',
-    'gemini-3-flash-preview'
+    GEMINI_MODELS.TEXT_FLASH,
+    GEMINI_MODELS.TEXT_LITE,
+    GEMINI_MODELS.TEXT_FAST
 ];
 
 // Audio analysis is latency-sensitive. Use capable Flash models first and
 // retain Pro as the final quality fallback for difficult recordings.
 export const MODEL_CASCADE_AUDIO_ANALYSIS = [
     GEMINI_MODELS.TEXT_SMART,
-    'gemini-3.6-flash',
-    'gemini-3.5-flash',
-    GEMINI_MODELS.TEXT_PRO
+    GEMINI_MODELS.TEXT_FLASH,
+    GEMINI_MODELS.TEXT_PRO,
+    GEMINI_MODELS.TEXT_LITE,
+    GEMINI_MODELS.TEXT_FAST
 ];
 
 export const MODEL_CASCADE_CHAT = [
     GEMINI_MODELS.TEXT_LITE,
-    'gemini-3.1-flash-lite',
-    'gemini-3.5-flash',
-    'gemini-3.6-flash',
-    GEMINI_MODELS.TEXT_SMART
+    GEMINI_MODELS.TEXT_FAST,
+    GEMINI_MODELS.TEXT_SMART,
+    GEMINI_MODELS.TEXT_FLASH,
+    GEMINI_MODELS.TEXT_PRO
 ];
 
 const COOLDOWN_MS = 6 * 60 * 60 * 1000; // 6 hours

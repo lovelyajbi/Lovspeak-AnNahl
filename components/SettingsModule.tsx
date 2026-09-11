@@ -242,7 +242,7 @@ const SettingsModule: React.FC<ModuleProps> = () => {
 
             {/* Tutorial Video Link */}
             <a
-              href="https://youtu.be/L1uiW--pyTE"
+              href="https://www.youtube.com/watch?v=XpGZagBvmEA"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-3 p-3 mb-4 bg-gradient-to-r from-red-50 via-red-50 to-orange-50 dark:from-red-900/20 dark:via-red-900/15 dark:to-orange-900/10 rounded-xl border border-red-100 dark:border-red-800/40 hover:border-red-300 dark:hover:border-red-700 hover:shadow-md hover:shadow-red-100/50 dark:hover:shadow-red-900/20 transition-all duration-300 cursor-pointer"
