@@ -626,6 +626,9 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
         metadata: {
           completed: passed,
           taskId: initialContext?.taskId,
+          planTaskId: initialContext?.taskId,
+          assignmentId: initialContext?.assignmentId,
+          stepId: initialContext?.stepId,
           taskTitle: selectedScenario.title,
           shadowingMode: 'roleplay',
           scenarioId: selectedScenario.id,
@@ -1027,7 +1030,7 @@ const ShadowingModule: React.FC<ModuleProps> = ({ onComplete, initialContext, on
                       assignmentId: initialContext?.assignmentId,
                       stepId: initialContext?.stepId,
                       shadowingMode: initialContext?.shadowingMode || 'daily',
-                      source: initialContext?.type || 'daily'
+                      source: initialContext?.type || 'manual'
                     }
                   });
                   setCompletedTasksData(previous => taskScores.reduce((next, item) => ({ ...next, [item.id]: Math.max(next[item.id] || 0, item.score) }), previous));

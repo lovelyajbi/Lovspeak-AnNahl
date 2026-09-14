@@ -5,8 +5,9 @@ import {
 import { db } from '../src/firebase';
 import { realtimeDb } from '../src/firebase';
 import { get, ref } from 'firebase/database';
-import { ActivityLog, AdminAssignment, AdminFeedback, AdminReply, AppView, AssignmentTarget, DailyTask, LearningPlan, UserAssignment, UserNotification, UserProfile } from '../types';
+import { ActivityLog, AdminAssignment, AdminFeedback, AdminReply, AppView, AssignmentStatus, AssignmentTarget, DailyTask, LearningPlan, UserAssignment, UserNotification, UserProfile } from '../types';
 import { getActivityLogs } from './storage';
+import { isAdminAssignmentActivity } from './activitySource';
 
 export interface AdminUser {
   uid: string;
@@ -23,7 +24,6 @@ export interface AdminUser {
 
 export interface AdminUserDetail extends AdminUser {
   plan: LearningPlan | null;
-  roadmapUnits: string[];
   activities: ActivityLog[];
   feedback: AdminFeedback[];
   assignments: UserAssignment[];
@@ -36,6 +36,9 @@ export interface AdminAccessRecord {
   grantedBy?: string;
   createdAt?: string;
 }
+
+const ADMIN_DASHBOARD_ACTIVITY_LIMIT = 100;
+export const ADMIN_REPORT_ACTIVITY_LIMIT = 300;
 
 const toMillis = (value: any): number | null => {
   if (!value) return null;
@@ -63,24 +66,46 @@ const scoreBasedAssignmentKinds = new Set<AssignmentTarget['kind']>(['grammar', 
  * trusting a client-side "complete" flag. It works for both the learner inbox
  * and the admin dashboard, and keeps retake cut-offs intact.
  */
-const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[], roadmapUnits: string[]): UserAssignment => {
+const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[]): UserAssignment => {
   const target = scoreBasedAssignmentKinds.has(assignment.target.kind) && assignment.target.minScore === undefined
     ? { ...assignment.target, minScore: DEFAULT_ASSIGNMENT_MIN_SCORE }
     : assignment.target;
-  const retakeAt = (assignment as UserAssignment & { retakeAt?: string }).retakeAt;
+  const retakeAt = assignment.retakeAt;
   const cutoffIso = retakeAt && retakeAt > assignment.createdAt ? retakeAt : assignment.createdAt;
   const cutoff = new Date(cutoffIso).getTime();
 
   if (target.kind === 'roadmap_pack') {
     const total = target.packStepIds?.length || 0;
-    const completed = target.packStepIds?.filter(stepId => roadmapUnits.includes(stepId)).length || 0;
+    const roadmapActivities = activities.filter(item =>
+      isAdminAssignmentActivity(item)
+      && item.metadata?.assignmentId === assignment.id
+      && new Date(item.date).getTime() >= cutoff
+    );
+    const assignmentStepIds = new Set(
+      roadmapActivities
+        .filter(item => item.metadata?.completed === true)
+        .map(item => String(item.metadata?.stepId || ''))
+        .filter(Boolean)
+    );
+    const completed = target.packStepIds?.filter(stepId => assignmentStepIds.has(stepId)).length || 0;
+    const latestStepActivity = roadmapActivities
+      .sort((a, b) => b.date.localeCompare(a.date))[0];
     const isComplete = total > 0 && completed === total;
+    const nextStatus: AssignmentStatus = isComplete
+      ? 'completed'
+      : completed > 0 || assignment.readAt
+        ? 'in_progress'
+        : assignment.status === 'completed'
+          ? 'assigned'
+          : assignment.status;
     return {
       ...assignment,
       target,
-      status: isComplete ? 'completed' : assignment.status === 'completed' ? 'assigned' : assignment.status,
-      completedAt: isComplete ? assignment.completedAt || new Date().toISOString() : undefined,
-      progressLabel: total ? `${completed}/${total} misi dalam pack selesai` : 'Target pack belum tersedia'
+      status: nextStatus,
+      completedAt: isComplete ? assignment.completedAt || latestStepActivity?.date || new Date().toISOString() : undefined,
+      attempts: assignmentStepIds.size,
+      lastAttemptAt: latestStepActivity?.date,
+      progressLabel: total ? `${completed}/${total} misi assignment dalam pack selesai` : 'Target pack belum tersedia'
     };
   }
 
@@ -88,12 +113,10 @@ const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[
   const relevant = activities.filter(item => {
     if (item.type !== expectedType || new Date(item.date).getTime() < cutoff) return false;
     const metadata = item.metadata || {};
-    // New activities carry a precise assignment id. Older assignments still
-    // receive a safe fallback based on their configured material/task target.
-    if (metadata.assignmentId) return metadata.assignmentId === assignment.id;
-    if (target.shadowingTaskId) return metadata.taskId === target.shadowingTaskId;
-    if (target.targetLessonId) return metadata.materialId === target.targetLessonId;
-    return true;
+    // Assignment results must carry the exact assignment id. Matching only by
+    // module/material allowed Daily Plan or manual work to satisfy an admin
+    // assignment accidentally.
+    return isAdminAssignmentActivity(item) && metadata.assignmentId === assignment.id;
   });
 
   const bestScore = relevant.length
@@ -102,6 +125,7 @@ const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[
   const bestDurationSeconds = relevant.length
     ? Math.max(...relevant.map(item => Number.isFinite(item.durationSeconds) ? item.durationSeconds : 0))
     : undefined;
+  const latestActivity = [...relevant].sort((a, b) => b.date.localeCompare(a.date))[0];
 
   const completedActivity = target.kind === 'speaking'
     ? relevant.find(item => !target.targetDurationSeconds || (item.durationSeconds || 0) >= target.targetDurationSeconds)
@@ -109,22 +133,35 @@ const evaluateAssignment = (assignment: UserAssignment, activities: ActivityLog[
       ? item.score >= target.minScore
       : item.metadata?.completed === true);
   const isComplete = Boolean(completedActivity);
+  const nextStatus: AssignmentStatus = isComplete
+    ? 'completed'
+    : relevant.length > 0
+      ? 'needs_retake'
+      : assignment.readAt
+        ? 'in_progress'
+        : assignment.status === 'completed'
+          ? 'assigned'
+          : assignment.status;
   const scoreLabel = bestScore === undefined ? 'Belum ada hasil' : `Nilai terbaik ${Math.round(bestScore)}%`;
   const durationLabel = bestDurationSeconds === undefined ? 'Belum ada sesi' : `${Math.floor(bestDurationSeconds / 60)}m ${bestDurationSeconds % 60}d`;
 
   return {
     ...assignment,
     target,
-    status: isComplete ? 'completed' : assignment.status === 'completed' ? 'assigned' : assignment.status,
+    attempts: relevant.length,
+    status: nextStatus,
     completedAt: isComplete ? assignment.completedAt || completedActivity?.date || new Date().toISOString() : undefined,
     bestScore: target.kind === 'speaking' ? assignment.bestScore : bestScore,
+    lastScore: target.kind === 'speaking' ? assignment.lastScore : latestActivity?.score,
     bestDurationSeconds: target.kind === 'speaking' ? bestDurationSeconds : assignment.bestDurationSeconds,
+    lastDurationSeconds: target.kind === 'speaking' ? latestActivity?.durationSeconds : assignment.lastDurationSeconds,
+    lastAttemptAt: latestActivity?.date,
     progressLabel: target.kind === 'speaking' ? `Durasi terbaik ${durationLabel}` : scoreLabel
   };
 };
 
-const evaluateAssignments = (assignments: UserAssignment[], activities: ActivityLog[], roadmapUnits: string[]) =>
-  assignments.map(assignment => evaluateAssignment(assignment, activities, roadmapUnits));
+const evaluateAssignments = (assignments: UserAssignment[], activities: ActivityLog[]) =>
+  assignments.map(assignment => evaluateAssignment(assignment, activities));
 
 const MASTER_ADMIN_EMAIL = ((import.meta as { env?: Record<string, string | undefined> }).env?.VITE_ADMIN_MASTER_EMAIL || 'lovelyatrial@gmail.com').toLowerCase();
 
@@ -155,12 +192,12 @@ export const getAdminUsers = async (): Promise<AdminUser[]> => {
   }));
 };
 
-export const getAdminUserDetail = async (user: AdminUser): Promise<AdminUserDetail> => {
+export const getAdminUserDetail = async (user: AdminUser, requestedActivityLimit = ADMIN_DASHBOARD_ACTIVITY_LIMIT): Promise<AdminUserDetail> => {
+  const activityLimit = Math.max(1, Math.min(ADMIN_REPORT_ACTIVITY_LIMIT, Math.floor(requestedActivityLimit)));
   const linkedUids = Array.from(new Set(user.linkedUids?.length ? user.linkedUids : [user.uid]));
-  const [planSnap, roadmapSnap, activitySnaps, feedbackSnap, assignmentSnap] = await Promise.all([
+  const [planSnap, activitySnaps, feedbackSnap, assignmentSnap] = await Promise.all([
     getDoc(doc(db, `users/${user.uid}/settings/plan`)),
-    getDoc(doc(db, `users/${user.uid}/progress/roadmap`)),
-    Promise.all(linkedUids.map(uid => getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100))))),
+    Promise.all(linkedUids.map(uid => getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(activityLimit))))),
     getDocs(query(collection(db, 'feedback'), where('recipientId', '==', user.uid), limit(100))),
     getDocs(query(collection(db, `userAssignments/${user.uid}/items`), orderBy('createdAt', 'desc'), limit(RETENTION.assignmentsPerUser + 30)))
   ]);
@@ -170,20 +207,17 @@ export const getAdminUserDetail = async (user: AdminUser): Promise<AdminUserDeta
     const key = `${activity.date}:${activity.type}:${activity.id || item.id}`;
     if (!activityById.has(key)) activityById.set(key, activity);
   }));
-  const activities = Array.from(activityById.values()).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, 100);
-  const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
+  const activities = Array.from(activityById.values()).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()).slice(0, activityLimit);
   const assignmentExcess = assignmentSnap.docs.slice(RETENTION.assignmentsPerUser);
   if (assignmentExcess.length) quietly(Promise.all(assignmentExcess.map(item => deleteDoc(item.ref))));
   return {
     ...user,
     plan: planSnap.exists() ? planSnap.data() as LearningPlan : null,
-    roadmapUnits,
     activities,
     feedback: feedbackSnap.docs.map(item => ({ id: item.id, ...item.data() } as AdminFeedback)).sort((a, b) => b.createdAt.localeCompare(a.createdAt)),
     assignments: evaluateAssignments(
       assignmentSnap.docs.slice(0, RETENTION.assignmentsPerUser).map(item => ({ id: item.id, ...item.data() } as UserAssignment)),
-      activities,
-      roadmapUnits
+      activities
     )
   };
 };
@@ -387,10 +421,9 @@ export const createAdminAssignment = async (input: {
 };
 
 export const getUserAssignments = async (uid: string): Promise<UserAssignment[]> => {
-  const [assignmentSnap, activitySnap, roadmapSnap] = await Promise.all([
+  const [assignmentSnap, activitySnap] = await Promise.all([
     getDocs(query(collection(db, `userAssignments/${uid}/items`), orderBy('createdAt', 'desc'), limit(100))),
-    getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100))),
-    getDoc(doc(db, `users/${uid}/progress/roadmap`))
+    getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100)))
   ]);
   const assignments = assignmentSnap.docs.map(item => ({ id: item.id, ...item.data() } as UserAssignment));
   const remoteActivities = activitySnap.docs.map(item => item.data() as ActivityLog);
@@ -400,8 +433,7 @@ export const getUserAssignments = async (uid: string): Promise<UserAssignment[]>
   const assignmentIds = new Set(assignments.map(item => item.id));
   const pendingLocalActivities = getActivityLogs().filter(item => Boolean(item.metadata?.assignmentId) && assignmentIds.has(String(item.metadata?.assignmentId)));
   const activities = Array.from(new Map([...remoteActivities, ...pendingLocalActivities].map(item => [item.id, item])).values());
-  const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
-  return evaluateAssignments(assignments, activities, roadmapUnits);
+  return evaluateAssignments(assignments, activities);
 };
 
 export const markUserAssignmentRead = async (uid: string, assignmentId: string) =>
@@ -465,23 +497,21 @@ export const listAssignments = async (): Promise<AdminAssignmentSummary[]> => {
 
 /**
  * Loads the actual result of one assignment for each recipient. The status is
- * evaluated with the same activity and roadmap evidence used in the learner's
+ * evaluated with the same assignment-tagged activity used in the learner's
  * task inbox, so the admin never sees a stale client-only "completed" flag.
  * Requests are batched to keep a class of up to 100 learners responsive.
  */
 export const getAssignmentRecipientResults = async (assignmentId: string, recipientIds: string[]): Promise<AdminAssignmentRecipientResult[]> => {
   const loadRecipient = async (uid: string): Promise<AdminAssignmentRecipientResult> => {
     try {
-      const [assignmentSnap, activitySnap, roadmapSnap] = await Promise.all([
+      const [assignmentSnap, activitySnap] = await Promise.all([
         getDoc(doc(db, `userAssignments/${uid}/items/${assignmentId}`)),
-        getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100))),
-        getDoc(doc(db, `users/${uid}/progress/roadmap`))
+        getDocs(query(collection(db, `users/${uid}/activity`), orderBy('date', 'desc'), limit(100)))
       ]);
       if (!assignmentSnap.exists()) return { uid, assignment: null };
       const assignment = { id: assignmentSnap.id, ...assignmentSnap.data() } as UserAssignment;
       const activities = activitySnap.docs.map(item => item.data() as ActivityLog);
-      const roadmapUnits = roadmapSnap.exists() ? roadmapSnap.data().units || [] : [];
-      return { uid, assignment: evaluateAssignment(assignment, activities, roadmapUnits) };
+      return { uid, assignment: evaluateAssignment(assignment, activities) };
     } catch (error) {
       console.error(`Unable to load assignment ${assignmentId} for ${uid}:`, error);
       return { uid, assignment: null, error: true };

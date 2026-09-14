@@ -1217,7 +1217,10 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
         details: `Voice Call: ${initialContext?.title || customTopic || 'General'}`,
         metadata: {
           completed: Boolean(initialContext?.assignmentId) && ((initialContext?.accumulatedSeconds || 0) + elapsedSeconds >= targetSeconds),
+          planTaskId: initialContext?.taskId,
           assignmentId: initialContext?.assignmentId,
+          stepId: initialContext?.stepId,
+          materialTitle: initialContext?.title || customTopic || 'General',
           source: initialContext?.type || 'manual'
         }
       });

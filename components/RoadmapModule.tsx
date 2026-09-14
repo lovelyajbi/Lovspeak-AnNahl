@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Level, CurriculumUnit, CurriculumStep, AppView, ModuleProps, ModuleContext, ThematicBridgeContent } from '../types';
 import { MASTER_CURRICULUM } from '../data/curriculum';
 import { THEMATIC_BRIDGES } from '../data/thematicBridges';
-import { getRoadmapProgress, completeRoadmapUnit, getActivityLogs } from '../services/storage';
+import { getRoadmapProgress, completeRoadmapUnit, getActivityLogs, logActivity } from '../services/storage';
 import { LEVELS } from '../constants';
 import { audioService } from '../services/audioService';
 import { READING_MANIFEST } from '../data/readingManifest';
@@ -68,6 +68,7 @@ interface RoadmapModuleProps extends ModuleProps {
 
 const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initialContext }) => {
   const [progress, setProgress] = useState<string[]>([]);
+  const [assignmentProgress, setAssignmentProgress] = useState<string[]>([]);
   const [stepScores, setStepScores] = useState<Record<string, number>>({});
   const [selectedUnit, setSelectedUnit] = useState<CurriculumUnit | null>(null);
   const [activeLevelFilter, setActiveLevelFilter] = useState<Level | 'ALL'>('ALL');
@@ -79,14 +80,25 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
   useEffect(() => {
     setProgress(getRoadmapProgress());
     const scores: Record<string, number> = {};
-    getActivityLogs().forEach(log => {
+    const logs = getActivityLogs();
+    const assignmentCutoff = initialContext?.assignmentCutoff ? new Date(initialContext.assignmentCutoff).getTime() : 0;
+    const assignmentLogs = initialContext?.assignmentId
+      ? logs.filter(log =>
+        log.metadata?.assignmentId === initialContext.assignmentId
+        && log.metadata?.completed === true
+        && new Date(log.date).getTime() >= assignmentCutoff
+      )
+      : [];
+    setAssignmentProgress(Array.from(new Set(assignmentLogs.map(log => String(log.metadata?.stepId || '')).filter(Boolean))));
+    logs.forEach(log => {
+      if (initialContext?.assignmentId && (log.metadata?.assignmentId !== initialContext.assignmentId || new Date(log.date).getTime() < assignmentCutoff)) return;
       const stepId = log.metadata?.stepId;
       if (stepId && log.metadata?.completed) {
         scores[stepId] = Math.max(scores[stepId] || 0, log.score || 0);
       }
     });
     setStepScores(scores);
-  }, []);
+  }, [initialContext?.assignmentId, initialContext?.assignmentCutoff]);
 
   useEffect(() => {
     if (!initialContext?.unitId) return;
@@ -94,8 +106,14 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
     if (unit) setSelectedUnit(unit);
   }, [initialContext?.unitId]);
 
-  const isUnitCompleted = (unitId: string) => progress.includes(unitId);
-  const isStepCompleted = (stepId: string) => progress.includes(stepId);
+  const isStepCompleted = (stepId: string) => initialContext?.assignmentId
+    ? assignmentProgress.includes(stepId)
+    : progress.includes(stepId);
+  const isUnitCompleted = (unitId: string) => {
+    if (!initialContext?.assignmentId) return progress.includes(unitId);
+    const unit = MASTER_CURRICULUM.flatMap(level => level.units).find(item => item.id === unitId);
+    return Boolean(unit?.steps.length && unit.steps.every(step => assignmentProgress.includes(step.id)));
+  };
 
   const handleUnitClick = (unit: CurriculumUnit) => {
     audioService.play('tap');
@@ -111,6 +129,27 @@ const RoadmapModule: React.FC<RoadmapModuleProps> = ({ onNavigateToModule, initi
         if (!isStepCompleted(step.id)) {
           completeRoadmapUnit(step.id);
           setProgress(getRoadmapProgress());
+        }
+        // A bridge normally belongs only to the learner's private Roadmap.
+        // When the Roadmap pack was assigned by an admin, write a precise
+        // assignment result so that manual Roadmap progress cannot satisfy it.
+        if (initialContext?.assignmentId) {
+          setAssignmentProgress(current => current.includes(step.id) ? current : [...current, step.id]);
+          void logActivity({
+            type: AppView.ROADMAP,
+            date: new Date().toISOString(),
+            durationSeconds: 0,
+            score: 100,
+            accuracy: 100,
+            details: step.title,
+            metadata: {
+              completed: true,
+              assignmentId: initialContext.assignmentId,
+              stepId: step.id,
+              materialTitle: step.title,
+              source: 'assignment'
+            }
+          });
         }
       }
       return;

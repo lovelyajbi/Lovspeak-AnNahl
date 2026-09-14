@@ -112,10 +112,14 @@ export interface AdminAssignment {
 export interface UserAssignment extends AdminAssignment {
   status: AssignmentStatus;
   attempts: number;
+  retakeAt?: string;
   readAt?: string;
   completedAt?: string;
   bestScore?: number;
+  lastScore?: number;
   bestDurationSeconds?: number;
+  lastDurationSeconds?: number;
+  lastAttemptAt?: string;
   progressLabel?: string;
 }
 
@@ -379,6 +383,8 @@ export interface ModuleContext {
   // prevents assignment results from being mistaken for Daily Plan progress.
   assignmentId?: string;
   assignmentKind?: AssignmentKind;
+  /** Ignore evidence written before this assignment/retake attempt. */
+  assignmentCutoff?: string;
   unitId?: string;
   stepId?: string;
   type?: 'unit' | 'daily' | 'assignment' | 'assessment';

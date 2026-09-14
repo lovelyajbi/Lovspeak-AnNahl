@@ -16,7 +16,7 @@ interface TasksModuleProps {
 const dayjs = (iso?: string | null) => (iso ? new Date(iso) : null);
 
 const hasActiveRetake = (assignment: UserAssignment) => {
-  const retakeAt = (assignment as UserAssignment & { retakeAt?: string }).retakeAt;
+  const retakeAt = assignment.retakeAt;
   return Boolean(retakeAt && Number.isFinite(new Date(retakeAt).getTime()) && new Date(retakeAt).getTime() > new Date(assignment.dueAt || 0).getTime());
 };
 

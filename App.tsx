@@ -515,6 +515,7 @@ const App: React.FC = () => {
       type: 'assignment',
       assignmentId: assignment.id,
       assignmentKind: target.kind,
+      assignmentCutoff: assignment.retakeAt || assignment.createdAt,
       level: userProfile?.level || 'A1',
       title: target.title || target.topic || target.theme || assignment.title,
       desc: assignment.description || 'Tugas khusus dari admin.',
