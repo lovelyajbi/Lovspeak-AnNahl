@@ -101,7 +101,11 @@ const isTransientServiceError = (e: any): boolean => {
 // cannot be used for generateContent, and TTS models only return audio.
 export const GEMINI_MODELS = {
     LIVE: 'gemini-3.1-flash-live-preview',
-    TTS_PRIMARY: 'gemini-3.1-flash-tts-preview',
+    TTS_PRIMARY: 'gemini-3.8-flash-tts',
+    TTS_LITE: 'gemini-3.8-flash-lite-tts',
+    TTS_STANDARD: 'gemini-3.1-flash-tts-preview',
+    TTS_PRO_PREVIEW: 'gemini-2.5-pro-preview-tts',
+    TTS_FLASH_PREVIEW: 'gemini-2.5-flash-preview-tts',
     TEXT_SMART: 'gemini-3.8-flash',
     TEXT_FLASH: 'gemini-3.7-flash',
     TEXT_LITE: 'gemini-3.5-flash-lite',
@@ -127,8 +131,10 @@ export const MODEL_CASCADE_LITE = [
 
 export const MODEL_CASCADE_TTS = [
     GEMINI_MODELS.TTS_PRIMARY,
-    'gemini-2.5-pro-preview-tts',
-    'gemini-2.5-flash-preview-tts'
+    GEMINI_MODELS.TTS_LITE,
+    GEMINI_MODELS.TTS_STANDARD,
+    GEMINI_MODELS.TTS_PRO_PREVIEW,
+    GEMINI_MODELS.TTS_FLASH_PREVIEW
 ];
 
 export const MODEL_CASCADE_PRO = [
