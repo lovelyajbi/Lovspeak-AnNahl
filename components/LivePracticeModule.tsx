@@ -125,6 +125,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
   const [isConnecting, setIsConnecting] = useState(false);
   const [status, setStatus] = useState('Ready to connect');
   const [needsAudioResume, setNeedsAudioResume] = useState(false);
+  const [recognizedSpeech, setRecognizedSpeech] = useState<string[]>([]);
   const [lastDiagnosticCode, setLastDiagnosticCode] = useState('');
   const [customTopic, setCustomTopic] = useState(initialContext?.title || '');
   const [speakingMode, setSpeakingMode] = useState<'guided' | 'free' | 'roleplay'>(initialContext?.speakingMode || 'guided');
@@ -383,6 +384,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
     const isReconnect = hasGreetedRef.current;
     const isFreshUserStart = !forceReconnect && !isReconnectingRef.current && !isReconnect;
     if (isFreshUserStart) {
+      setRecognizedSpeech([]);
       reconnectCountRef.current = 0;
       activeKeyIndexRef.current = 0;
       failedKeyIndicesRef.current.clear();
@@ -596,36 +598,47 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       const modeInstructions = speakingMode === 'guided'
         ? `MODE: GUIDED PRACTICE.
       - You are an active English COACH, not just a conversation partner.
-      - After each user response: 1) Acknowledge what they said, 2) If there's a grammar or vocabulary mistake, gently correct it with the better phrasing, 3) Ask a follow-up question to keep them talking.
-      - Suggest more natural/native-sounding alternatives when appropriate (e.g., "Nice! A native speaker might say '...' instead").
-      - Keep your responses to 2-4 sentences MAX. The user needs more talking time than you.
-      - Every 3-4 exchanges, introduce a new vocabulary word or useful phrase related to the topic.`
+      - Respond to what the learner meant first. Correct at most one clear, useful language error briefly, then ask one related question.
+      - Keep turns within the response length selected in the app. Introduce vocabulary only when it fits naturally.`
         : speakingMode === 'roleplay'
         ? `MODE: IMMERSIVE ROLEPLAY.
       - You are in an immersive roleplay scenario based on the Topic provided below.
       - FULLY IMMERSE yourself in your assigned character role (e.g., waiter, doctor, interviewer). Act EXACTLY like that real person would in that situation.
-      - Stay 100% in character throughout the entire conversation. Never break character.
+      - Stay in character unless the user clearly asks to stop or switch modes.
       - Use natural, realistic dialogue with appropriate vocabulary and expressions for the scenario and the user's level.
       - At the start, set the scene briefly (e.g., "Welcome to Bella Cucina! Table for one? Right this way!").
       - Create situational challenges naturally (e.g., "I'm sorry, we're out of the salmon today. Can I recommend something else?").
-      - If the user makes English mistakes, don't explicitly correct them. Instead, naturally model the correct form in your response.
+      - Do not interrupt the scene to correct English. Give a short in-character hint only if the user asks for help.
       - Keep responses concise and realistic for your character. A waiter doesn't give speeches.
       - If the user says "stop roleplay" or "end scenario", exit the roleplay and give brief feedback on their performance.`
         : `MODE: FREE TALK / NATURAL CONVERSATION.
       - You are a friendly conversation partner, NOT a teacher.
       - Talk naturally about the topic as if chatting with a friend.
       - Do NOT correct mistakes unless the user specifically asks.
-      - Keep responses to 2-3 sentences. Be casual, warm, and fun.
-      - Share your own "opinions" and ask casual questions to keep the flow going.`;
+      - Keep responses within the length selected in the app. Be warm and relevant; ask at most one natural follow-up question.`;
 
       let instructions = `You are Lovelya, a friendly and helpful English tutor and personal coach.
       This is a real-time voice conversation.
+
+      LANGUAGE AND LISTENING RULES (apply in every mode and after reconnect):
+      - Speak in English throughout the session, including explanations, corrections, roleplay, and clarification questions. The Islamic greetings specified below are the only language exception. If the user speaks another language, respond in simple English without switching languages.
+      - Base your answer only on speech you actually heard clearly and conversation context available in this session. Never invent the user's words, intentions, personal details, or an unheard question.
+      - If speech is unclear, incomplete, or ambiguous, ask one short clarification question in English, such as "Could you repeat that, please?" Do not guess a different sentence or correct words you did not hear clearly.
+      - Silence, background sounds, and connection recovery instructions are not user speech. Wait for the user to finish. Do not interpret silence as an answer.
+      - After reconnect, answer a previous message only if its actual content is available. Otherwise ask the user to repeat it. Never fabricate missing conversation history.
 
       ${STRICT_FILTER}
 
       ${accentInstruction}
 
       ${modeInstructions}
+
+      ACTIVE MODE RULES — these rules take priority over any conflicting mode examples above:
+      - GUIDED: Respond to what the learner meant first. Correct at most one clear, useful language error in a brief natural sentence, then ask one related question. Never correct uncertain audio.
+      - ROLEPLAY: Stay in the assigned role and advance the scene by one natural step. Do not teach or correct during the scene unless asked. If the user asks to stop or switch modes, leave the role immediately.
+      - FREE TALK: Respond to the specific point the user made. Do not correct unless asked; ask at most one relevant question, and only when it helps the conversation.
+      - A clear spoken request to switch to Guided, Roleplay, or Free Talk changes the active conversation behavior immediately and for the rest of the session. Do not claim to change the app's selected mode. If unclear which mode they want, ask briefly.
+      - Keep every turn within the response length selected in the app. Never add a correction, praise, or question just to fill space.
 
       YOUR CORE BEHAVIOR:
       1. GREETING: ${isReconnect ? 'This is a CONTINUATION of an existing call after a technical reconnect. The greeting already happened earlier. NEVER greet again, NEVER say Assalamualaikum, NEVER introduce yourself, and NEVER restart the conversation. Your first spoken response after reconnect must directly answer or continue from the user\'s next words.' : `At the beginning of this new session, greet the user with "Assalamualaikum", address them by their name (${userName}), and introduce yourself as Lovelya.`}
@@ -635,8 +648,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
       ${responseLength === 'short' ? `CRITICAL CONSTRAINT: Your ENTIRE response must be 15 words or fewer. ONE short sentence ONLY. This is NON-NEGOTIABLE — if you exceed 15 words you have FAILED. Still be warm (e.g. "Great answer! What food do you like?") but NEVER elaborate, NEVER add follow-up explanations. Count your words before responding.` : responseLength === 'long' ? `You may use 40-60 words per response (3-4 sentences). Add helpful detail, examples, gentle corrections with alternatives, and follow-up questions. Still conversational — do NOT lecture or monologue.` : `Keep each response to 20-30 words (about 2 short sentences). Be warm and natural but concise. The user needs MORE speaking time than you. Do NOT over-explain.`}
       5. SALAM ETIQUETTE: ${isReconnect ? 'Do NOT initiate Assalamualaikum after reconnect. Only reply with "Waalaikumussalam" if the user clearly and explicitly says "Assalamualaikum" again after reconnect.' : 'If the user says "Assalamualaikum" at any point, you MUST respond with "Waalaikumussalam" before continuing.'}
       6. CONFIDENCE BUILDER: Be extremely encouraging. Praise their effort and progress.
-      7. MODE SWITCHING: If the user says things like "let's just chat", "free talk", "no corrections please", switch to free talk mode. If they say "help me practice", "correct me", "guided mode", switch to guided coaching mode.
-      8. ANTI-BLANK LIFELINE: If the user is silent, says "I don't know", or struggles to answer, DO NOT force them. Gently offer 2 verbal multiple-choice options they can simply repeat. (e.g. "It's okay! You can say 'I love reading' or 'I like cooking'. Which one is you?")
+      7. MODE SWITCHING: Follow the ACTIVE MODE RULES above. When leaving roleplay, stop speaking as the character. If a request is unclear, ask which mode the learner wants.
+      8. HELP WHEN ASKED: If the user clearly says "I don't know" or asks for help, gently offer two short example answers in English. Label them as examples, not as something the user said. During silence, wait rather than inventing an answer or starting a new topic.
       9. AUTOMATIC ROLEPLAY: If the user asks to "roleplay" (e.g. job interview, ordering food, negotiating), IMMERSE YOURSELF FULLY in the persona requested. Act exactly like that character (e.g., a strict HR manager, a friendly waiter). Stay in character until the user says "stop roleplay".
       10. SESSION WRAP-UP: If the user indicates they want to end the session (e.g. "Goodbye", "That's all", "I'm done"), BEFORE saying goodbye, quickly summarize 1 or 2 key takeaways from the session (e.g. 1 mispronounced word or 1 grammar rule). Praise them, then end with "Wassalamualaikum". DO NOT make the wrap-up too long. Keep it short and sweet.
 
@@ -667,6 +680,7 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
         model: LIVE_MODEL,
         config: {
           responseModalities: [Modality.AUDIO],
+          inputAudioTranscription: {},
           speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName: aiVoice } } },
           systemInstruction: instructions,
           sessionResumption: connectionUsedResumptionRef.current
@@ -741,8 +755,8 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
                   text: !connectionUsedResumptionRef.current
                     ? 'The voice connection was restored without conversation state. Briefly ask me to repeat my last sentence. Do not greet again.'
                     : timedOutTurn
-                      ? 'Continue now by answering my latest spoken message. Do not greet again.'
-                      : 'Continue naturally from where the conversation paused. If there is no unanswered message, briefly ask me to continue. Do not greet again.'
+                      ? 'The connection recovered after a response delay. Answer the latest user message only if its actual content is available in the resumed context. Otherwise ask in English: Could you repeat that, please? Do not guess or greet again.'
+                      : 'The connection recovered. Continue only from conversation content actually available in the resumed context. If it is missing or unclear, ask in English: Could you repeat that, please? Do not invent previous speech or greet again.'
                 });
               });
             }
@@ -894,6 +908,10 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           onmessage: (msg: LiveServerMessage) => {
             if (sessionGeneration !== sessionGenerationRef.current) return;
             lastServerActivityAtRef.current = Date.now();
+            const recognizedInput = msg.serverContent?.inputTranscription?.text?.trim();
+            if (recognizedInput) {
+              setRecognizedSpeech((previous) => [...previous, recognizedInput].slice(-3));
+            }
             if (awaitingResponseRef.current && sourcesRef.current.size === 0) {
               responseWatchStartedAtRef.current = lastServerActivityAtRef.current;
             }
@@ -1816,6 +1834,21 @@ const LivePracticeModule: React.FC<ModuleProps> = ({ initialContext, onComplete,
           </div>
         ) : (
           <div className={`${isMissionActive ? 'space-y-1.5' : 'space-y-2 md:space-y-3'}`}>
+            <div
+              role="log"
+              aria-live="polite"
+              aria-label="Live speech transcript"
+              className={`rounded-xl border border-white/70 bg-white/75 text-left shadow-sm ${isMissionActive ? 'px-2.5 py-1.5' : 'px-3 py-2'}`}
+            >
+              <div className={`mb-0.5 font-black uppercase tracking-wider text-lovelya-600 ${isMissionActive ? 'text-[7px]' : 'text-[8px] md:text-[9px]'}`}>
+                LIVE TRANSCRIPT · RECOGNIZED SPEECH
+              </div>
+              <div className={`max-h-12 overflow-y-auto break-words text-gray-700 ${isMissionActive ? 'text-[9px] leading-snug' : 'text-[10px] md:text-xs leading-snug'}`}>
+                {recognizedSpeech.length > 0
+                  ? recognizedSpeech.map((phrase, index) => <p key={`${index}-${phrase}`}>{phrase}</p>)
+                  : <p className="text-gray-400">Your recognized speech will appear here.</p>}
+              </div>
+            </div>
             {needsAudioResume && (
               <motion.button
                 initial={{ opacity: 0, y: 6 }}
